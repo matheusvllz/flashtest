@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Hospedagem é Netlify (não Cloudflare, o default do template): o balão do
+  // tutor depende de uma server function rodando de verdade em produção para
+  // chamar a OpenAI, então o preset precisa casar com onde o app é hospedado.
+  nitro: { preset: "netlify" },
 });

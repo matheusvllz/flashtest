@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Nitro 3 exige Node ^20.19 ou >=22.12 (ver node_modules/nitro/package.json).
+# Fixamos 22 LTS — sem isso o Netlify pode cair num runtime mais antigo que o
+# mínimo suportado.
+[build.environment]
+  NODE_VERSION = "22"

@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Netlify (build output + CLI local state)
+.netlify/
+
 # Segredos do servidor — a chave da OpenAI mora aqui e NUNCA vai pro repo.
 # O padrão é abrangente de propósito (`.env*` pega .env.production, .env.staging
 # etc.) e o exemplo sem segredo é reintroduzido logo abaixo.
