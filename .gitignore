@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Segredos do servidor — a chave da OpenAI mora aqui e NUNCA vai pro repo.
+# O padrão é abrangente de propósito (`.env*` pega .env.production, .env.staging
+# etc.) e o exemplo sem segredo é reintroduzido logo abaixo.
+.env*
+!.env.example
+
+# Chaves e certificados, caso algum dia entrem na pasta
+*.pem
+*.key
+*.p12
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

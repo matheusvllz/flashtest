@@ -1,0 +1,353 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import { ImagePlus, Send, X } from "lucide-react";
+import { Bolt } from "@/components/AppShell";
+import {
+  closeTutor,
+  consumeTutorAutoPrompt,
+  openTutor,
+  performanceFacts,
+  pushTutorMessage,
+  useAppState,
+} from "@/lib/store";
+import { askTutor, type TutorImage } from "@/lib/tutor";
+import type { TutorContext } from "@/lib/tutor-prompt";
+
+/** Ritmo da revelação. Palavra a palavra, com respiro depois de pontuação forte. */
+const MS_POR_PALAVRA = 22;
+const MS_APOS_PONTUACAO = 150;
+
+/**
+ * Quebra o texto em "palavra + espaço que a segue", e não em tokens soltos:
+ * assim cada tique revela UMA palavra. Separar o espaço num token próprio
+ * dobrava o número de tiques (e o tempo total) sem nada aparecer na tela.
+ * O `join("")` dos pedaços reconstrói o texto original, quebras de linha
+ * inclusive — o que importa porque o balão usa `whitespace-pre-line`.
+ */
+function emPalavras(texto: string): string[] {
+  return texto.match(/\s*\S+\s*/g) ?? (texto ? [texto] : []);
+}
+
+function prefereMenosMovimento() {
+  return (
+    typeof window !== "undefined" &&
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches === true
+  );
+}
+
+/**
+ * Revela o texto palavra a palavra, com cursor piscando — a resposta "nasce"
+ * na tela em vez de aparecer pronta.
+ *
+ * A resposta já chegou inteira do servidor; isto é ritmo de leitura, não
+ * streaming. Foi a escolha deliberada: streaming real pelo RPC da server
+ * function (que serializa com seroval) seria risco novo em cima do que já está
+ * validado, e o ganho percebido é o mesmo. Tocar na mensagem completa na hora,
+ * para quem não quer esperar.
+ */
+function TextoRevelado({
+  text,
+  onProgresso,
+  onFim,
+}: {
+  text: string;
+  onProgresso?: () => void;
+  onFim?: () => void;
+}) {
+  const tokens = useMemo(() => emPalavras(text), [text]);
+  const [visiveis, setVisiveis] = useState(() => (prefereMenosMovimento() ? tokens.length : 0));
+  const terminou = visiveis >= tokens.length;
+
+  useEffect(() => {
+    if (terminou) return;
+    const atual = tokens[visiveis]?.trim() ?? "";
+    const espera = /[.!?…:]$/.test(atual) ? MS_APOS_PONTUACAO : MS_POR_PALAVRA;
+    const id = setTimeout(() => setVisiveis((v) => v + 1), espera);
+    return () => clearTimeout(id);
+  }, [visiveis, tokens, terminou]);
+
+  useEffect(() => {
+    onProgresso?.();
+    if (terminou) onFim?.();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visiveis, terminou]);
+
+  return (
+    <span
+      onClick={() => setVisiveis(tokens.length)}
+      // O texto completo fica no rótulo desde o início: leitor de tela não
+      // deve ouvir a resposta saindo aos pedaços.
+      aria-label={text}
+    >
+      <span aria-hidden>{tokens.slice(0, visiveis).join("")}</span>
+      {!terminou && <span className="caret-tutor" aria-hidden />}
+    </span>
+  );
+}
+
+/**
+ * Balão global do tutor (SDD 12, Development 2, entregável 1).
+ *
+ * Fica fixo no canto inferior direito de todas as telas pós-quiz. É a única
+ * interface de IA do app — o chat de tela cheia que existia dentro de /study foi
+ * absorvido por aqui, para o aluno nunca perder a questão de vista ao perguntar.
+ */
+export function TutorBubble() {
+  const s = useAppState();
+  const { open, messages, focus } = s.tutor;
+  const [draft, setDraft] = useState("");
+  const [pending, setPending] = useState(false);
+  const [image, setImage] = useState<{ preview: string; payload: TutorImage } | null>(null);
+  /**
+   * Índice da mensagem que está sendo revelada agora. Só a resposta recém-chegada
+   * anima: ao reabrir o balão, o histórico aparece pronto (ninguém quer ver a
+   * conversa inteira ser redigitada).
+   */
+  const [revelando, setRevelando] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  function rolarParaOFim(suave = true) {
+    scrollRef.current?.scrollTo({
+      top: scrollRef.current.scrollHeight,
+      behavior: suave ? "smooth" : "auto",
+    });
+  }
+
+  useEffect(() => {
+    rolarParaOFim();
+  }, [messages.length, pending, open]);
+
+  // Fechar no meio da revelação não deixa a mensagem pendurada: ao reabrir, o
+  // histórico já aparece completo.
+  useEffect(() => {
+    if (!open) setRevelando(null);
+  }, [open]);
+
+  // Pergunta disparada pelo próprio app (o aluno errou uma questão).
+  useEffect(() => {
+    if (!s.tutor.autoPrompt || pending) return;
+    const prompt = s.tutor.autoPrompt;
+    consumeTutorAutoPrompt();
+    void send(prompt);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [s.tutor.autoPrompt]);
+
+  async function send(text: string) {
+    if (pending) return;
+    const attached = image;
+    // Só a foto, sem texto, já é um pedido válido — é o "1 toque de wow" do SDD.
+    const prompt = text.trim() || (attached ? "Me ajuda com essa questão da foto." : "");
+    if (!prompt) return;
+
+    setDraft("");
+    setImage(null);
+    pushTutorMessage({ role: "user", content: prompt, hasImage: !!attached });
+    setPending(true);
+
+    const context: TutorContext = {
+      firstName: (s.prefs.name || "estudante").split(" ")[0],
+      targetInstitution: s.prefs.targetInstitution,
+      targetCourse: s.prefs.targetCourse,
+      level: s.prefs.level,
+      gaps: s.quiz.gaps.map((g) => ({ subjectName: g.subjectName, topic: g.topic })),
+      performance: performanceFacts(s),
+      focus,
+    };
+
+    // A resposta entra logo depois da pergunta que acabamos de empilhar.
+    const indiceDaResposta = messages.length + 1;
+
+    try {
+      const reply = await askTutor({
+        data: {
+          messages: [...messages, { role: "user", content: prompt }],
+          context,
+          image: attached?.payload ?? null,
+        },
+      });
+      pushTutorMessage({ role: "assistant", content: reply.text });
+    } catch {
+      pushTutorMessage({
+        role: "assistant",
+        content: "Não consegui pensar agora. Tenta de novo daqui a pouco.",
+      });
+    } finally {
+      setPending(false);
+      setRevelando(indiceDaResposta);
+    }
+  }
+
+  function attach(file: File) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const url = String(reader.result);
+      const base64 = url.split(",")[1];
+      if (!base64) return;
+      setImage({ preview: url, payload: { mediaType: file.type, data: base64 } });
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // Sugestões mudam conforme o aluno está numa questão ou não.
+  const suggestions = focus
+    ? focus.chosen && focus.chosen !== focus.correct
+      ? [
+          "Por que minha resposta está errada?",
+          "Explica de forma mais simples",
+          "Me dá outra parecida",
+        ]
+      : ["Me dá uma dica", "O que devo observar no enunciado?", "Explica de forma mais simples"]
+    : ["Quais são minhas lacunas?", "Como estou indo?", "O que eu estudo agora?"];
+
+  if (!open) {
+    return (
+      <button
+        onClick={() => openTutor()}
+        aria-label="Abrir tutor de IA"
+        className="fixed bottom-24 right-[max(1rem,calc(50%-13.75rem+1rem))] z-40 grid h-14 w-14 place-items-center rounded-full bg-navy shadow-[0_8px_24px_-6px_rgba(2,16,78,0.5)] transition active:scale-95"
+      >
+        <Bolt size={26} />
+      </button>
+    );
+  }
+
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-50 mx-auto flex max-h-[80vh] w-full max-w-[440px] flex-col rounded-t-2xl bg-navy text-white shadow-[0_-8px_40px_-8px_rgba(2,16,78,0.5)]">
+      <header className="flex items-center justify-between px-5 pt-4 pb-3">
+        <div className="flex items-center gap-2">
+          <Bolt size={18} />
+          <span className="font-display text-base font-bold">Tutor Flash Test</span>
+        </div>
+        <button onClick={closeTutor} aria-label="Fechar tutor" className="text-navy-mist">
+          <X size={20} />
+        </button>
+      </header>
+
+      {focus && (
+        <p className="mx-5 mb-2 rounded-lg bg-white/[0.07] px-3 py-2 text-[11px] font-semibold text-navy-mist">
+          Falando sobre: {focus.topic} · {focus.subjectName}
+        </p>
+      )}
+
+      <div ref={scrollRef} className="flex-1 space-y-3 overflow-y-auto px-5 pb-3">
+        {messages.length === 0 && (
+          <div className="rounded-2xl rounded-bl-sm bg-white/[0.07] px-4 py-3 text-sm leading-relaxed text-white">
+            {focus
+              ? `Sobre essa questão de ${focus.topic} — o que travou?`
+              : "Me pergunta o que quiser sobre seus estudos. Também leio foto de questão."}
+          </div>
+        )}
+
+        {messages.map((m, i) =>
+          m.role === "user" ? (
+            <div
+              key={i}
+              className="ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-yellow px-4 py-2.5 text-sm font-medium text-navy"
+            >
+              {m.hasImage && <span className="mr-1.5 opacity-70">📷</span>}
+              {m.content}
+            </div>
+          ) : (
+            <div
+              key={i}
+              className="mr-auto max-w-[88%] whitespace-pre-line rounded-2xl rounded-bl-sm bg-white/[0.07] px-4 py-3 text-sm leading-relaxed text-white"
+            >
+              {i === revelando ? (
+                <TextoRevelado
+                  // `key` pelo conteúdo: se a mesma posição receber outra
+                  // resposta, a revelação recomeça em vez de continuar no meio.
+                  key={m.content}
+                  text={m.content}
+                  onProgresso={() => rolarParaOFim(false)}
+                  onFim={() => setRevelando(null)}
+                />
+              ) : (
+                m.content
+              )}
+            </div>
+          ),
+        )}
+
+        {pending && (
+          <div className="mr-auto flex gap-1.5 rounded-2xl rounded-bl-sm bg-white/[0.07] px-4 py-4">
+            {[0, 150, 300].map((delay) => (
+              <span
+                key={delay}
+                className="h-1.5 w-1.5 animate-pulse rounded-full bg-yellow"
+                style={{ animationDelay: `${delay}ms` }}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="border-t border-white/10 px-5 pt-3 pb-5">
+        {!pending && (
+          <div className="mb-2.5 flex gap-2 overflow-x-auto pb-1">
+            {suggestions.map((sug) => (
+              <button
+                key={sug}
+                onClick={() => send(sug)}
+                className="shrink-0 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white"
+              >
+                {sug}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {image && (
+          <div className="mb-2.5 flex items-center gap-2 rounded-lg bg-white/[0.07] p-2">
+            <img src={image.preview} alt="" className="h-12 w-12 rounded object-cover" />
+            <span className="flex-1 text-xs font-semibold text-navy-mist">Foto anexada</span>
+            <button
+              onClick={() => setImage(null)}
+              aria-label="Remover foto"
+              className="text-navy-mist"
+            >
+              <X size={16} />
+            </button>
+          </div>
+        )}
+
+        <div className="flex items-center gap-2">
+          <input
+            ref={fileRef}
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            className="hidden"
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) attach(f);
+              e.target.value = "";
+            }}
+          />
+          <button
+            onClick={() => fileRef.current?.click()}
+            aria-label="Anexar foto de questão"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-[10px] bg-white/10 text-white"
+          >
+            <ImagePlus size={18} />
+          </button>
+          <input
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") send(draft);
+            }}
+            placeholder="Pergunta qualquer coisa..."
+            className="min-w-0 flex-1 rounded-[10px] border border-white/15 bg-white/[0.07] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-navy-mist focus:border-yellow"
+          />
+          <button
+            onClick={() => send(draft)}
+            disabled={pending || (!draft.trim() && !image)}
+            aria-label="Enviar"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-[10px] bg-yellow text-navy disabled:opacity-30"
+          >
+            <Send size={18} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
