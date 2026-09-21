@@ -36,7 +36,7 @@ function Video() {
   return (
     <AppShell title="Videoaula">
       <div className="px-5 pt-4 space-y-4 pb-8">
-        <div className="relative aspect-video overflow-hidden rounded-2xl bg-navy">
+        <div className="relative aspect-video overflow-hidden rounded-2xl bg-abismo">
           {playing && embedUrl ? (
             <iframe
               src={embedUrl}
@@ -55,7 +55,7 @@ function Video() {
               <div className="absolute inset-0 bg-black/30 transition group-hover:bg-black/40" />
               <div className="absolute inset-0 grid place-items-center">
                 <div className="grid h-16 w-16 place-items-center rounded-full bg-white/95 shadow-lg">
-                  <PlayCircle size={40} className="text-navy" />
+                  <PlayCircle size={40} className="text-abismo" />
                 </div>
               </div>
             </button>
@@ -67,27 +67,27 @@ function Video() {
         </div>
 
         <div>
-          <p className="text-xs font-bold uppercase text-navy-2">
+          <p className="text-xs font-bold uppercase text-nevoa">
             {q.subjectName} · {q.topic}
           </p>
-          <h2 className="mt-1 font-display text-xl font-bold text-navy">
+          <h2 className="mt-1 font-display text-xl font-bold text-abismo">
             {q.videoSuggestion.title}
           </h2>
-          <p className="mt-2 text-sm text-navy-2">Nível {q.difficulty}</p>
+          <p className="mt-2 text-sm text-nevoa">Nível {q.difficulty}</p>
         </div>
 
         <div className="card-soft p-4">
-          <h3 className="font-display font-bold text-navy">O que você vai aprender</h3>
-          <p className="mt-2 text-sm text-navy">{q.explanation}</p>
+          <h3 className="font-display font-bold text-abismo">O que você vai aprender</h3>
+          <p className="mt-2 text-sm text-abismo">{q.explanation}</p>
         </div>
 
         <a href={watchUrl} target="_blank" rel="noreferrer" className="btn-primary w-full">
           <PlayCircle size={16} /> Assistir no YouTube
         </a>
-        <a href={searchUrl} target="_blank" rel="noreferrer" className="btn-outline w-full">
+        <a href={searchUrl} target="_blank" rel="noreferrer" className="btn-ghost w-full">
           <ExternalLink size={14} /> Buscar mais aulas
         </a>
-        <Link to="/study" className="btn-outline w-full">
+        <Link to="/study" className="btn-ghost w-full">
           Voltar aos estudos
         </Link>
       </div>

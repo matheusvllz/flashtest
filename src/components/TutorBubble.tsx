@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ImagePlus, Send, X } from "lucide-react";
-import { Bolt } from "@/components/AppShell";
+import { ImagePlus, Image as ImageIcon, Send, X } from "lucide-react";
+import { FocaMark } from "@/components/brand/FocaMark";
 import {
   closeTutor,
   consumeTutorAutoPrompt,
@@ -204,34 +204,39 @@ export function TutorBubble() {
       <button
         onClick={() => openTutor()}
         aria-label="Abrir tutor de IA"
-        className="fixed bottom-24 right-[max(1rem,calc(50%-13.75rem+1rem))] z-40 grid h-14 w-14 place-items-center rounded-full bg-navy shadow-[0_8px_24px_-6px_rgba(2,16,78,0.5)] transition active:scale-95"
+        className="fixed bottom-24 right-[max(1rem,calc(50%-13.75rem+1rem))] z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-gelo bg-cards shadow-[0_3px_0_var(--color-gelo)] transition active:translate-y-[3px] active:shadow-none"
       >
-        <Bolt size={26} />
+        {/* "Respira" quando o app tem uma pergunta pendente pro aluno (errou uma questão) — sinaliza sem interromper. */}
+        <FocaMark size={40} decorative motion={s.tutor.autoPrompt ? "breathe" : "none"} />
       </button>
     );
   }
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 mx-auto flex max-h-[80vh] w-full max-w-[440px] flex-col rounded-t-2xl bg-navy text-white shadow-[0_-8px_40px_-8px_rgba(2,16,78,0.5)]">
+    <div className="sheet fixed inset-x-0 bottom-0 z-50 mx-auto flex max-h-[80vh] w-full max-w-[440px] flex-col">
       <header className="flex items-center justify-between px-5 pt-4 pb-3">
         <div className="flex items-center gap-2">
-          <Bolt size={18} />
-          <span className="font-display text-base font-bold">Tutor Flash Test</span>
+          <FocaMark size={28} decorative />
+          <span className="font-display text-base font-bold text-abismo">Foca</span>
         </div>
-        <button onClick={closeTutor} aria-label="Fechar tutor" className="text-navy-mist">
+        <button
+          onClick={closeTutor}
+          aria-label="Fechar tutor"
+          className="grid h-11 w-11 place-items-center text-nevoa"
+        >
           <X size={20} />
         </button>
       </header>
 
       {focus && (
-        <p className="mx-5 mb-2 rounded-lg bg-white/[0.07] px-3 py-2 text-[11px] font-semibold text-navy-mist">
+        <p className="chip mx-5 mb-2 self-start">
           Falando sobre: {focus.topic} · {focus.subjectName}
         </p>
       )}
 
-      <div ref={scrollRef} className="flex-1 space-y-3 overflow-y-auto px-5 pb-3">
+      <div ref={scrollRef} className="surface-pauta flex-1 space-y-3 overflow-y-auto px-5 pb-3">
         {messages.length === 0 && (
-          <div className="rounded-2xl rounded-bl-sm bg-white/[0.07] px-4 py-3 text-sm leading-relaxed text-white">
+          <div className="rounded-lg rounded-bl-md border-2 border-gelo bg-neve px-4 py-3 text-sm leading-relaxed text-abismo">
             {focus
               ? `Sobre essa questão de ${focus.topic} — o que travou?`
               : "Me pergunta o que quiser sobre seus estudos. Também leio foto de questão."}
@@ -242,15 +247,17 @@ export function TutorBubble() {
           m.role === "user" ? (
             <div
               key={i}
-              className="ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-yellow px-4 py-2.5 text-sm font-medium text-navy"
+              className="ml-auto max-w-[85%] rounded-lg rounded-br-md bg-mar px-4 py-2.5 text-sm font-medium text-white"
             >
-              {m.hasImage && <span className="mr-1.5 opacity-70">📷</span>}
+              {m.hasImage && (
+                <ImageIcon size={13} className="mr-1.5 inline-block align-text-bottom opacity-80" />
+              )}
               {m.content}
             </div>
           ) : (
             <div
               key={i}
-              className="mr-auto max-w-[88%] whitespace-pre-line rounded-2xl rounded-bl-sm bg-white/[0.07] px-4 py-3 text-sm leading-relaxed text-white"
+              className="mr-auto max-w-[88%] whitespace-pre-line rounded-lg rounded-bl-md border-2 border-gelo bg-neve px-4 py-3 text-sm leading-relaxed text-abismo"
             >
               {i === revelando ? (
                 <TextoRevelado
@@ -269,11 +276,11 @@ export function TutorBubble() {
         )}
 
         {pending && (
-          <div className="mr-auto flex gap-1.5 rounded-2xl rounded-bl-sm bg-white/[0.07] px-4 py-4">
+          <div className="mr-auto flex gap-1.5 rounded-lg rounded-bl-md border-2 border-gelo bg-neve px-4 py-4">
             {[0, 150, 300].map((delay) => (
               <span
                 key={delay}
-                className="h-1.5 w-1.5 animate-pulse rounded-full bg-yellow"
+                className="h-1.5 w-1.5 animate-pulse rounded-full bg-nevoa"
                 style={{ animationDelay: `${delay}ms` }}
               />
             ))}
@@ -281,15 +288,11 @@ export function TutorBubble() {
         )}
       </div>
 
-      <div className="border-t border-white/10 px-5 pt-3 pb-5">
+      <div className="border-t-2 border-gelo bg-cards px-5 pt-3 pb-5">
         {!pending && (
           <div className="mb-2.5 flex gap-2 overflow-x-auto pb-1">
             {suggestions.map((sug) => (
-              <button
-                key={sug}
-                onClick={() => send(sug)}
-                className="shrink-0 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white"
-              >
+              <button key={sug} onClick={() => send(sug)} className="chip shrink-0">
                 {sug}
               </button>
             ))}
@@ -297,14 +300,10 @@ export function TutorBubble() {
         )}
 
         {image && (
-          <div className="mb-2.5 flex items-center gap-2 rounded-lg bg-white/[0.07] p-2">
+          <div className="mb-2.5 flex items-center gap-2 rounded-lg border-2 border-gelo bg-neve p-2">
             <img src={image.preview} alt="" className="h-12 w-12 rounded object-cover" />
-            <span className="flex-1 text-xs font-semibold text-navy-mist">Foto anexada</span>
-            <button
-              onClick={() => setImage(null)}
-              aria-label="Remover foto"
-              className="text-navy-mist"
-            >
+            <span className="flex-1 text-xs font-semibold text-nevoa">Foto anexada</span>
+            <button onClick={() => setImage(null)} aria-label="Remover foto" className="text-nevoa">
               <X size={16} />
             </button>
           </div>
@@ -325,7 +324,7 @@ export function TutorBubble() {
           <button
             onClick={() => fileRef.current?.click()}
             aria-label="Anexar foto de questão"
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-[10px] bg-white/10 text-white"
+            className="btn-outline h-11 w-11 shrink-0 p-0"
           >
             <ImagePlus size={18} />
           </button>
@@ -336,13 +335,13 @@ export function TutorBubble() {
               if (e.key === "Enter") send(draft);
             }}
             placeholder="Pergunta qualquer coisa..."
-            className="min-w-0 flex-1 rounded-[10px] border border-white/15 bg-white/[0.07] px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-navy-mist focus:border-yellow"
+            className="input-ds min-w-0 flex-1 text-base"
           />
           <button
             onClick={() => send(draft)}
             disabled={pending || (!draft.trim() && !image)}
             aria-label="Enviar"
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-[10px] bg-yellow text-navy disabled:opacity-30"
+            className="btn-primary h-11 w-11 shrink-0 rounded-full p-0"
           >
             <Send size={18} />
           </button>

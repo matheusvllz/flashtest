@@ -19,6 +19,11 @@ export type Prefs = {
   dailyLessons: number; // aulas de 60s por dia (a unidade de estudo, ver SDD 12)
   selectedTopics: Record<string, string[]>; // subjectId -> topicIds
   topicMode: "chose" | "recommend" | "skip" | null;
+  /** Toggles sensoriais (docs/18-plano-reestilizacao-rabisco.md §10, docs/16-gamificacao-e-dopamina.md §3/§4). */
+  sound: boolean;
+  haptics: boolean;
+  /** "auto" segue o sistema (docs/18 §12.4, D4). */
+  theme: "auto" | "light" | "dark";
 };
 
 /** Resposta de calibração dada durante o quiz de entrada. */
@@ -59,6 +64,25 @@ export type Progress = {
    * aulas de 60s, então os dois pilares alimentam um progresso só.
    */
   lessons: Record<string, LessonProgress>;
+  /**
+   * Registro honesto de atividade (docs/18-plano-reestilizacao-rabisco.md §6,
+   * §9). Datas em ISO `YYYY-MM-DD`, sempre locais (nunca UTC — ver `hojeISO`).
+   * Guarda até 60 dias; é o que faz a meta diária, o calendário semanal e o
+   * "voltou depois de sumir" refletirem a realidade em vez de números soltos.
+   */
+  activityDays: string[];
+  /** Maior sequência já alcançada — mostrado como alvo depois de quebrar (docs/16 §6). */
+  bestStreak: number;
+  /** Congelamentos automáticos acumuláveis até 2 (docs/16 §6). */
+  streakFreezes: number;
+  /** O dia de hoje. Ler sempre via `atividadeHoje()`, nunca direto — vira estale à meia-noite. */
+  today: {
+    date: string;
+    lessons: number;
+    flashcards: number;
+    redacao: number;
+    celebrouMeta: boolean;
+  };
 };
 
 export type AppState = {
@@ -83,9 +107,37 @@ export type AppState = {
   offline: { downloaded: boolean };
 };
 
-// v2: o quiz unificado substituiu signup+onboarding e a unidade virou "aula de 60s",
-// então o formato salvo mudou o suficiente para invalidar o estado antigo.
-const KEY = "flashtest.state.v2";
+// v3: rebranding para Foca (docs/17 Fase 8). O formato é o mesmo da v2; a chave
+// antiga é lida uma vez e copiada, para não apagar o progresso de quem já usou.
+// Os campos de honestidade da Fase 6 do docs/18 são aditivos — não precisou v4.
+const KEY = "foca.state.v3";
+const LEGACY_KEY = "flashtest.state.v2";
+
+/** Data local em ISO `YYYY-MM-DD` — nunca `toISOString()`, que é UTC e vira o dia errado à noite no Brasil. */
+function hojeISO(d: Date = new Date()): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function inicioDoDia(d: Date): Date {
+  const c = new Date(d);
+  c.setHours(0, 0, 0, 0);
+  return c;
+}
+
+/** Dias corridos entre `lastStudyDate` (formato `toDateString()`) e `agora`. `null` = nunca houve atividade. */
+function diasDesde(lastStudyDate: string | null, agora: Date): number | null {
+  if (!lastStudyDate) return null;
+  const last = inicioDoDia(new Date(lastStudyDate));
+  const hoje = inicioDoDia(agora);
+  return Math.round((hoje.getTime() - last.getTime()) / 86400000);
+}
+
+function todayBucketVazio(iso: string): Progress["today"] {
+  return { date: iso, lessons: 0, flashcards: 0, redacao: 0, celebrouMeta: false };
+}
 
 const defaultState: AppState = {
   authed: false,
@@ -106,6 +158,11 @@ const defaultState: AppState = {
     dailyLessons: 3,
     selectedTopics: {},
     topicMode: null,
+    // Primeiro uso começa com som ligado, mas com aviso visível de como
+    // desligar (docs/16-gamificacao-e-dopamina.md §3, regra 3).
+    sound: true,
+    haptics: true,
+    theme: "auto",
   },
   progress: {
     answered: 0,
@@ -121,6 +178,10 @@ const defaultState: AppState = {
     xp: 0,
     achievements: [],
     lessons: {},
+    activityDays: [],
+    bestStreak: 0,
+    streakFreezes: 1,
+    today: todayBucketVazio(hojeISO()),
   },
   quiz: { answers: [], gaps: [], completedAt: null },
   tutor: { open: false, messages: [], focus: null, autoPrompt: null },
@@ -134,14 +195,29 @@ const listeners = new Set<() => void>();
 function load() {
   if (typeof window === "undefined") return;
   try {
-    const raw = localStorage.getItem(KEY);
+    let raw = localStorage.getItem(KEY);
+    if (raw === null) {
+      const legacy = localStorage.getItem(LEGACY_KEY);
+      if (legacy !== null) {
+        raw = legacy;
+        localStorage.setItem(KEY, legacy);
+      }
+    }
     if (raw) {
       const parsed = JSON.parse(raw);
+      const iso = hojeISO();
+      const parsedToday = parsed.progress?.today;
       state = {
         ...defaultState,
         ...parsed,
         prefs: { ...defaultState.prefs, ...(parsed.prefs || {}) },
-        progress: { ...defaultState.progress, ...(parsed.progress || {}) },
+        progress: {
+          ...defaultState.progress,
+          ...(parsed.progress || {}),
+          // Vira estale à meia-noite: se o dia mudou desde a última gravação,
+          // o balde de hoje reseta ao carregar (docs/18 §15 Fase 6).
+          today: parsedToday && parsedToday.date === iso ? parsedToday : todayBucketVazio(iso),
+        },
         quiz: { ...defaultState.quiz, ...(parsed.quiz || {}) },
         // O balão sempre volta fechado e sem foco: o histórico persiste, o
         // estado de UI não.
@@ -196,6 +272,55 @@ export function useHydrated() {
   return s;
 }
 
+/**
+ * Registra presença do dia — a peça central da honestidade do produto
+ * (docs/16-gamificacao-e-dopamina.md §6, docs/18-plano-reestilizacao-rabisco.md
+ * §9). Chamada por toda ação que conta como "estudou hoje": responder uma
+ * questão da aula de 60s, concluir uma lição de redação, revisar um flashcard.
+ *
+ * Streak: incrementa se a última atividade foi ontem; se foi anteontem e há
+ * congelamento disponível, consome 1 e mantém a sequência viva; senão quebra
+ * para 1. Isto substitui o comportamento anterior (incrementava a cada dia
+ * novo, não importa o tamanho do intervalo) — a correção está autorizada por
+ * `docs/16` §6 e registrada no plano como a única mudança de comportamento
+ * desta fase.
+ */
+function registrarAtividade(s: AppState, tipo: "lesson" | "flashcard" | "redacao") {
+  const agora = new Date();
+  const iso = hojeISO(agora);
+  const hojeDS = agora.toDateString();
+
+  if (s.progress.today.date !== iso) s.progress.today = todayBucketVazio(iso);
+  if (tipo === "lesson") s.progress.today.lessons += 1;
+  if (tipo === "flashcard") s.progress.today.flashcards += 1;
+  if (tipo === "redacao") s.progress.today.redacao += 1;
+
+  if (!s.progress.activityDays.includes(iso)) {
+    s.progress.activityDays.push(iso);
+    if (s.progress.activityDays.length > 60) s.progress.activityDays.shift();
+    // A cada 7 dias de atividade acumulados, +1 congelamento (docs/16 §6).
+    if (s.progress.activityDays.length % 7 === 0) {
+      s.progress.streakFreezes = Math.min(2, s.progress.streakFreezes + 1);
+    }
+  }
+
+  if (s.progress.lastStudyDate !== hojeDS) {
+    const gap = diasDesde(s.progress.lastStudyDate, agora);
+    if (gap === null) {
+      s.progress.streak = 1; // primeira atividade de sempre
+    } else if (gap === 1) {
+      s.progress.streak += 1; // veio ontem — sequência viva
+    } else if (gap === 2 && s.progress.streakFreezes > 0) {
+      s.progress.streakFreezes -= 1; // perdeu 1 dia, mas tinha congelamento
+      s.progress.streak += 1;
+    } else {
+      s.progress.streak = 1; // quebrou de verdade
+    }
+    s.progress.lastStudyDate = hojeDS;
+    s.progress.bestStreak = Math.max(s.progress.bestStreak, s.progress.streak);
+  }
+}
+
 export function login(email: string, name: string) {
   setState((s) => {
     s.authed = true;
@@ -217,9 +342,16 @@ export function completeQuiz(answers: QuizAnswer[], gaps: Gap[]) {
     s.authed = true;
     s.onboarded = true;
     s.progress.xp += 50;
+    // Só na primeira vez (streak 0): refazer o diagnóstico depois não mexe na
+    // sequência. Mantém a condição original; só passa a alimentar também os
+    // campos novos de honestidade (docs/18 §15 Fase 6).
     if (s.progress.streak === 0) {
+      const agora = new Date();
       s.progress.streak = 1;
-      s.progress.lastStudyDate = new Date().toDateString();
+      s.progress.bestStreak = Math.max(s.progress.bestStreak, 1);
+      s.progress.lastStudyDate = agora.toDateString();
+      const iso = hojeISO(agora);
+      if (!s.progress.activityDays.includes(iso)) s.progress.activityDays.push(iso);
     }
     return s;
   });
@@ -276,11 +408,7 @@ export function completeLesson(
     s.progress.xp += xpAwarded;
     // A trilha conta para a sequência tanto quanto a aula de 60s: o que o
     // produto premia é ter estudado hoje, não qual pilar foi tocado.
-    const today = new Date().toDateString();
-    if (s.progress.lastStudyDate !== today) {
-      s.progress.streak += 1;
-      s.progress.lastStudyDate = today;
-    }
+    registrarAtividade(s, "redacao");
     return s;
   });
 
@@ -292,6 +420,106 @@ export function isLessonUnlocked(licoes: Array<{ id: string }>, lessonId: string
   const idx = licoes.findIndex((l) => l.id === lessonId);
   if (idx <= 0) return idx === 0;
   return Boolean(s.progress.lessons[licoes[idx - 1].id]);
+}
+
+/* ------------------------------------------------------------- aula de 60s --- */
+
+/**
+ * Registra a resposta de uma questão da aula de 60s (docs/18-plano-
+ * reestilizacao-rabisco.md §15 Fase 6). Movido de `study.tsx` pra cá pra sair
+ * do terceiro bloco duplicado de streak — mesmos incrementos e mesmo XP
+ * (+15 acerto, +5 erro) de antes.
+ *
+ * NÃO chama `registrarAtividade` aqui: uma aula tem 2 questões (`LESSON_SIZE`
+ * em `study.tsx`), e `docs/16` §6 conta streak/meta por AULA concluída, não
+ * por questão — ver `registrarAulaConcluida()`.
+ */
+export function registrarResposta(
+  q: { id: string; subject: string; subjectName: string; topic: string },
+  correct: boolean,
+) {
+  setState((s) => {
+    s.progress.answered += 1;
+    if (!s.progress.completedQuestions.includes(q.id)) s.progress.completedQuestions.push(q.id);
+    if (correct) s.progress.correct += 1;
+    s.progress.bySubject[q.subject] ??= { answered: 0, correct: 0 };
+    s.progress.bySubject[q.subject].answered += 1;
+    if (correct) s.progress.bySubject[q.subject].correct += 1;
+    s.progress.byTopic[q.topic] ??= { answered: 0, correct: 0 };
+    s.progress.byTopic[q.topic].answered += 1;
+    if (correct) s.progress.byTopic[q.topic].correct += 1;
+    s.progress.xp += correct ? 15 : 5;
+    return s;
+  });
+}
+
+/** Fecha a aula de 60s: incrementa o contador de aulas da vida E a atividade de hoje. */
+export function registrarAulaConcluida() {
+  setState((s) => {
+    s.progress.lessonsCompleted += 1;
+    registrarAtividade(s, "lesson");
+    return s;
+  });
+}
+
+/* -------------------------------------------------------------- flashcards --- */
+
+/** Revisar um flashcard conta como atividade do dia (docs/16 §6: "qualquer atividade completada"). */
+export function registrarRevisaoFlashcard() {
+  setState((s) => {
+    registrarAtividade(s, "flashcard");
+    return s;
+  });
+}
+
+/* --------------------------------------------------------- nível e prefs --- */
+
+/** 10 patamares fixos, derivados de XP (docs/18 §9). Não confundir com `prefs.level` (nível escolar). */
+const NIVEL_TABELA = [0, 100, 250, 450, 700, 1000, 1400, 1900, 2500, 3200];
+
+export function nivelDeXp(xp: number): {
+  nivel: number;
+  atual: number;
+  proximo: number;
+  pct: number;
+} {
+  let nivel = 1;
+  for (let i = 1; i < NIVEL_TABELA.length; i++) {
+    if (xp >= NIVEL_TABELA[i]) nivel = i + 1;
+  }
+  const base = NIVEL_TABELA[nivel - 1];
+  const proximoBase = NIVEL_TABELA[nivel];
+  if (proximoBase === undefined) return { nivel, atual: xp - base, proximo: 0, pct: 100 };
+  const atual = xp - base;
+  const proximo = proximoBase - base;
+  return { nivel, atual, proximo, pct: Math.min(100, Math.round((atual / proximo) * 100)) };
+}
+
+export function setPrefs(partial: Partial<Pick<Prefs, "sound" | "haptics" | "theme">>) {
+  setState((s) => {
+    Object.assign(s.prefs, partial);
+    return s;
+  });
+}
+
+/** Marca a meta diária como já celebrada hoje — evita repetir a animação/som a cada visita ao dashboard. */
+export function marcarMetaCelebrada() {
+  setState((s) => {
+    s.progress.today.celebrouMeta = true;
+    return s;
+  });
+}
+
+/** Dias corridos desde a última atividade. `Infinity` = nunca houve. Usado pelo gatilho de "acolhedora" (docs/15 §3.2). */
+export function diasSemAtividade(s: AppState): number {
+  const gap = diasDesde(s.progress.lastStudyDate, new Date());
+  return gap ?? Infinity;
+}
+
+/** Leitura honesta do balde de hoje — nunca ler `s.progress.today` direto: ele fica estale até a próxima atividade virar o dia. */
+export function atividadeHoje(s: AppState): Progress["today"] {
+  const iso = hojeISO();
+  return s.progress.today.date === iso ? s.progress.today : todayBucketVazio(iso);
 }
 
 /* ---------------------------------------------------------------- tutor --- */

@@ -75,7 +75,7 @@ export function MatchPairsView({
             ? correct
               ? "bg-success text-white"
               : "bg-error text-white"
-            : "bg-yellow text-navy",
+            : "bg-mar text-white",
         )}
         aria-hidden
       >
@@ -85,15 +85,15 @@ export function MatchPairsView({
   }
 
   const cellBase =
-    "relative flex min-h-[52px] w-full items-center justify-center rounded-xl border-2 px-2 py-2 text-center text-[13px] font-semibold leading-snug transition-all duration-150";
+    "relative flex min-h-[52px] w-full items-center justify-center rounded-xl border-2 px-2 py-2 text-center text-[13px] font-semibold leading-snug shadow-[0_2px_0_var(--color-gelo)] transition-all duration-150";
 
   return (
     <div className="space-y-3">
-      <p className="font-display text-lg font-bold leading-snug text-navy">
+      <p className="font-display text-lg font-bold leading-snug text-abismo">
         {exercise.instrucao ?? "Combine as duas colunas"}
       </p>
-      <p className="flex items-center gap-1.5 rounded-lg bg-cloud px-3 py-2 text-[11px] font-semibold text-navy-2">
-        <Hand size={14} className="shrink-0 text-gold-dark" aria-hidden />
+      <p className="flex items-center gap-1.5 rounded-lg bg-neve px-3 py-2 text-[11px] font-semibold text-nevoa">
+        <Hand size={14} className="shrink-0 text-mar-fundo" aria-hidden />
         Toque numa opção da esquerda e depois no par dela na direita.
       </p>
       <div className="grid grid-cols-2 gap-2.5">
@@ -111,14 +111,14 @@ export function MatchPairsView({
                   !checked && "active:scale-95",
                   !checked &&
                     selectedLeft === i &&
-                    "scale-[1.03] border-navy bg-navy/[0.08] text-navy ring-2 ring-yellow/50",
+                    "scale-[1.03] border-mar bg-mar/8 text-abismo ring-2 ring-mar/40",
                   !checked &&
                     selectedLeft !== i &&
                     pairs[i] < 0 &&
-                    "border-mist bg-white text-slate",
-                  !checked && pairs[i] >= 0 && "border-navy/50 bg-navy/[0.04] text-navy",
-                  checked && pairIsCorrect(i) && "border-success bg-success/10 text-navy",
-                  checked && !pairIsCorrect(i) && "border-error bg-error/10 text-navy",
+                    "border-gelo bg-cards text-abismo",
+                  !checked && pairs[i] >= 0 && "border-mar/50 bg-mar/[0.06] text-abismo",
+                  checked && pairIsCorrect(i) && "border-success bg-success/10 text-abismo",
+                  checked && !pairIsCorrect(i) && "border-error bg-error/10 text-abismo",
                   checked && "cursor-default",
                 )}
               >
@@ -146,15 +146,18 @@ export function MatchPairsView({
                   !checked &&
                     selectedLeft !== null &&
                     pairedWith < 0 &&
-                    "border-navy/40 bg-navy/[0.02] text-slate",
+                    "border-mar/40 bg-mar/[0.03] text-abismo",
                   !checked &&
                     selectedLeft === null &&
                     pairedWith < 0 &&
-                    "border-mist bg-white text-slate",
-                  !checked && pairedWith >= 0 && "border-navy/50 bg-navy/[0.04] text-navy",
-                  checked && pairedWith >= 0 && correct && "border-success bg-success/10 text-navy",
-                  checked && pairedWith >= 0 && !correct && "border-error bg-error/10 text-navy",
-                  checked && pairedWith < 0 && "border-mist bg-white opacity-45",
+                    "border-gelo bg-cards text-abismo",
+                  !checked && pairedWith >= 0 && "border-mar/50 bg-mar/[0.06] text-abismo",
+                  checked &&
+                    pairedWith >= 0 &&
+                    correct &&
+                    "border-success bg-success/10 text-abismo",
+                  checked && pairedWith >= 0 && !correct && "border-error bg-error/10 text-abismo",
+                  checked && pairedWith < 0 && "border-gelo bg-cards opacity-45",
                   checked && "cursor-default",
                 )}
               >

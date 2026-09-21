@@ -33,20 +33,26 @@ function Premium() {
     <AppShell title="Premium">
       <div className="px-5 pt-4 space-y-4">
         <div
-          className="rounded-3xl p-5 text-navy"
-          style={{ background: "linear-gradient(135deg,#FEB803,#FFD466)" }}
+          className="card-soft p-5"
+          style={{
+            background: "color-mix(in srgb, var(--color-recompensa) 20%, var(--color-cards))",
+            borderColor: "var(--color-recompensa)",
+          }}
         >
-          <Sparkles />
-          <h2 className="mt-2 font-display text-2xl font-bold">FlashTest Premium</h2>
-          <p className="mt-1 text-sm">Preço a definir · Em breve</p>
+          <Sparkles className="text-abismo" />
+          <h2 className="mt-2 font-display text-2xl font-bold text-abismo">Foca Premium</h2>
+          <p className="mt-1 text-sm text-abismo">Preço a definir · Em breve</p>
         </div>
 
         <div className="card-soft p-4">
-          <h3 className="font-display font-bold text-navy">Benefícios</h3>
-          <ul className="mt-3 space-y-2">
+          <h3 className="font-display font-bold text-abismo">Benefícios</h3>
+          <ul className="mt-3 space-y-2.5">
             {benefits.map((b) => (
-              <li key={b} className="flex items-start gap-2 text-sm text-navy">
-                <Check size={16} className="mt-0.5 shrink-0" style={{ color: "#FEB803" }} /> {b}
+              <li key={b} className="flex items-start gap-3 text-sm text-abismo">
+                <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-mar/12">
+                  <Check size={14} className="text-mar-fundo" />
+                </span>
+                {b}
               </li>
             ))}
           </ul>
@@ -68,13 +74,13 @@ function Premium() {
 
         {trial.active && !expired && (
           <div className="card-soft p-4">
-            <div className="flex items-center gap-2 text-xs font-bold text-navy-2">
+            <div className="flex items-center gap-2 text-xs font-bold text-nevoa">
               <Clock size={14} /> TESTE ATIVO
             </div>
-            <p className="mt-2 font-display text-lg font-bold text-navy">
+            <p className="mt-2 font-display text-lg font-bold text-abismo">
               Tempo restante: {hours}h {mins}min
             </p>
-            <p className="mt-1 text-xs text-navy-2">
+            <p className="mt-1 text-xs text-nevoa">
               Aproveite IA sem limite, videoaulas e estatísticas completas.
             </p>
           </div>
@@ -82,9 +88,9 @@ function Premium() {
 
         {expired && (
           <div className="card-soft p-4">
-            <p className="font-display font-bold text-navy">Seu teste gratuito terminou.</p>
-            <p className="mt-1 text-sm text-navy-2">
-              Continue acompanhando o FlashTest para conhecer os planos de assinatura.
+            <p className="font-display font-bold text-abismo">Seu teste gratuito terminou.</p>
+            <p className="mt-1 text-sm text-nevoa">
+              Continue acompanhando a Foca para conhecer os planos de assinatura.
             </p>
             <div className="mt-3 grid grid-cols-2 gap-2">
               <button
@@ -99,12 +105,12 @@ function Premium() {
               >
                 Voltar ao gratuito
               </button>
-              <button className="btn-navy">Quero ser avisado</button>
+              <button className="btn-abismo">Quero ser avisado</button>
             </div>
           </div>
         )}
 
-        <p className="text-center text-[11px] text-navy-2">
+        <p className="text-center text-[11px] text-nevoa">
           Não solicitamos cartão. Sem cobrança automática.
         </p>
         <Link to="/dashboard" className="btn-outline w-full">

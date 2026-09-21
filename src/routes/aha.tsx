@@ -1,14 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Bolt, PhoneFrame } from "@/components/AppShell";
+import { Flame } from "lucide-react";
+import { PhoneFrame } from "@/components/AppShell";
+import { FocaMark } from "@/components/brand/FocaMark";
+import { FocaSays } from "@/components/brand/FocaSays";
+import { ProgressBar } from "@/components/ds/ProgressBar";
+import { StatTile } from "@/components/ds/StatTile";
+import { XpChip } from "@/components/ds/XpChip";
 import { useAppState } from "@/lib/store";
 
 export const Route = createFileRoute("/aha")({ component: Aha, ssr: false });
 
-const SEVERITY: Record<string, { label: string; color: string; fill: number }> = {
-  alta: { label: "Lacuna alta", color: "#C0392B", fill: 82 },
-  média: { label: "Lacuna média", color: "#FEB803", fill: 55 },
-  baixa: { label: "A confirmar", color: "#8B91A8", fill: 30 },
+/** Badge de severidade sem vermelho — erro é só feedback de resposta (docs/18 §13.4). */
+const SEVERITY: Record<string, { label: string; badgeClass: string; fill: number }> = {
+  alta: { label: "Lacuna alta", badgeClass: "bg-mar/12 text-mar-fundo", fill: 82 },
+  média: { label: "Lacuna média", badgeClass: "bg-gelo text-abismo", fill: 55 },
+  baixa: { label: "A confirmar", badgeClass: "bg-alert/15 text-abismo", fill: 30 },
 };
 
 /**
@@ -34,26 +41,26 @@ function Aha() {
 
   return (
     <PhoneFrame>
-      <div className="relative min-h-screen overflow-hidden bg-navy px-6 pt-14 pb-32 text-white">
-        <div className="pointer-events-none absolute -right-16 -top-16 opacity-[0.07]">
-          <Bolt size={280} />
+      <div className="relative min-h-screen overflow-hidden bg-neve px-6 pt-14 pb-32">
+        <div className="pointer-events-none absolute -right-16 -top-16 opacity-[0.06]">
+          <FocaMark variant="line-dark" size={280} decorative />
         </div>
 
         <div className="relative">
-          <div className="ds-label" style={{ color: "#FEB803" }}>
-            Diagnóstico pronto
-          </div>
-          <h1 className="mt-3 font-display text-[32px] font-bold leading-[1.1] tracking-tight">
+          <FocaSays slot="aha" expression="surpresa" size={64} />
+
+          <div className="ds-label mt-6">Diagnóstico pronto</div>
+          <h1 className="mt-3 font-display text-[32px] font-bold leading-[1.1] tracking-tight text-abismo">
             Já entendi você, {firstName}.
           </h1>
-          <p className="mt-3 text-[15px] leading-relaxed text-navy-mist">
+          <p className="mt-3 text-[15px] leading-relaxed text-nevoa">
             Pra{" "}
             {s.prefs.targetCourse && s.prefs.targetCourse !== "Ainda não decidi" ? (
               <>
-                <span className="font-semibold text-white">{s.prefs.targetCourse}</span> em{" "}
+                <span className="font-semibold text-abismo">{s.prefs.targetCourse}</span> em{" "}
               </>
             ) : null}
-            <span className="font-semibold text-white">{target}</span>, estas são as 3 lacunas que
+            <span className="font-semibold text-abismo">{target}</span>, estas são as 3 lacunas que
             mais custam pontos hoje. É por elas que suas aulas de 60s começam.
           </p>
 
@@ -64,7 +71,7 @@ function Aha() {
               return (
                 <div
                   key={g.topic}
-                  className="rounded-2xl bg-white/[0.07] p-4 transition-all duration-500"
+                  className="card-soft p-4 transition-all duration-500"
                   style={{
                     opacity: show ? 1 : 0,
                     transform: show ? "translateY(0)" : "translateY(12px)",
@@ -73,59 +80,55 @@ function Aha() {
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="font-display text-2xl font-bold text-yellow">{i + 1}</span>
-                        <span className="font-display text-[17px] font-bold leading-tight">
+                        <span className="font-mono text-2xl font-bold text-mar-fundo">{i + 1}</span>
+                        <span className="font-display text-[17px] font-bold leading-tight text-abismo">
                           {g.topic}
                         </span>
                       </div>
-                      <p className="mt-1 text-xs font-semibold text-navy-mist">{g.subjectName}</p>
+                      <p className="mt-1 text-xs font-semibold text-nevoa">{g.subjectName}</p>
                     </div>
                     <span
-                      className="shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold"
-                      style={{
-                        background: `${sev.color}26`,
-                        color: sev.color === "#8B91A8" ? "#AEB8E8" : sev.color,
-                      }}
+                      className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${sev.badgeClass}`}
                     >
                       {sev.label}
                     </span>
                   </div>
-                  <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                    <div
-                      className="h-full rounded-full transition-all duration-700"
-                      style={{ width: show ? `${sev.fill}%` : "0%", background: sev.color }}
+                  <div className="mt-3">
+                    <ProgressBar
+                      value={show ? sev.fill : 0}
+                      tone="caneta"
+                      label={`Severidade de ${g.topic}`}
                     />
                   </div>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-navy-mist">{g.reason}</p>
+                  <p className="mt-2.5 text-[13px] leading-relaxed text-nevoa">{g.reason}</p>
                 </div>
               );
             })}
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-3">
-            <div className="rounded-2xl bg-white/[0.07] p-4">
+            <div className="card-soft p-4">
               <div className="flex items-center gap-1.5">
-                <Bolt size={15} />
-                <span className="text-[11px] font-bold uppercase tracking-wider text-navy-mist">
+                <FocaMark size={16} decorative />
+                <span className="text-[11px] font-bold uppercase tracking-wider text-nevoa">
                   XP inicial
                 </span>
               </div>
-              <p className="mt-1.5 font-display text-2xl font-bold">{s.progress.xp}</p>
+              <div className="mt-2">
+                <XpChip amount={s.progress.xp} />
+              </div>
             </div>
-            <div className="rounded-2xl bg-white/[0.07] p-4">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-navy-mist">
-                Sequência
-              </span>
-              <p className="mt-1.5 font-display text-2xl font-bold">
-                Dia {s.progress.streak || 1} <span className="text-yellow">🔥</span>
-              </p>
-            </div>
+            <StatTile
+              icon={<Flame size={18} />}
+              label="Sequência"
+              value={`Dia ${s.progress.streak || 1}`}
+            />
           </div>
         </div>
 
-        <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 bg-navy px-6 pt-3 pb-6">
+        <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
           <Link to="/dashboard" className="btn-primary w-full">
-            <Bolt size={18} color="#02104E" /> Entrar no meu plano
+            Entrar no meu plano
           </Link>
         </footer>
       </div>

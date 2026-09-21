@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/AppShell";
-import { useAppState, setState } from "@/lib/store";
+import { EmptyState } from "@/components/ds/EmptyState";
+import { useAppState, setState, registrarRevisaoFlashcard } from "@/lib/store";
 import { QUESTIONS } from "@/data/questions";
-import { RotateCw, Check, X, Bookmark, BookmarkCheck } from "lucide-react";
+import { RotateCw, Check, CheckCheck, Minus, X, Bookmark, BookmarkCheck } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/flashcards")({ component: Flashcards, ssr: false });
 
@@ -51,6 +53,9 @@ function Flashcards() {
       };
       return st;
     });
+    // Revisar um flashcard conta como atividade do dia (docs/16 §6) — não dá XP,
+    // flashcard nunca deu XP nesse app e não é o caso de começar agora.
+    registrarRevisaoFlashcard();
     setFlip(false);
     setI((v) => (v + 1) % Math.max(1, filtered.length));
   }
@@ -61,22 +66,20 @@ function Flashcards() {
         <div className="flex gap-2">
           <button
             onClick={() => setFilter("all")}
-            className={`chip ${filter === "all" ? "" : ""}`}
-            style={filter === "all" ? { background: "#02104E", color: "#fff" } : {}}
+            className={cn("chip", filter === "all" && "chip-on")}
           >
             Todos
           </button>
           <button
             onClick={() => setFilter("saved")}
-            className={`chip`}
-            style={filter === "saved" ? { background: "#02104E", color: "#fff" } : {}}
+            className={cn("chip", filter === "saved" && "chip-on")}
           >
             Salvos ({s.progress.savedFlashcards.length})
           </button>
           <select
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="ml-auto rounded-full border border-mist bg-white px-3 py-1.5 text-xs font-semibold text-navy"
+            className="input-ds ml-auto w-auto min-h-9 py-1.5 text-xs font-semibold"
           >
             {subjects.map((x) => (
               <option key={x}>{x}</option>
@@ -85,13 +88,11 @@ function Flashcards() {
         </div>
 
         {!card ? (
-          <div className="card-soft p-8 text-center text-sm text-navy-2">
-            Nenhum flashcard nessa seleção.
-          </div>
+          <EmptyState text="Nenhum flashcard nessa seleção." />
         ) : (
           <>
             <div className="flex items-center justify-between">
-              <div className="text-xs font-semibold text-navy-2">
+              <div className="text-xs font-semibold text-nevoa">
                 Cartão {i + 1} de {filtered.length}
               </div>
               <button
@@ -105,7 +106,7 @@ function Flashcards() {
                     return st;
                   })
                 }
-                className="inline-flex items-center gap-1.5 rounded-full border border-mist bg-white px-3 py-1.5 text-xs font-bold text-navy"
+                className="chip"
               >
                 {card.saved ? (
                   <>
@@ -118,47 +119,59 @@ function Flashcards() {
                 )}
               </button>
             </div>
-            <button
-              onClick={() => setFlip((f) => !f)}
-              className="card-soft flex min-h-[240px] w-full flex-col justify-between p-6 text-left"
-            >
-              <div className="text-xs font-bold uppercase text-navy-2">
-                {card.subject} · {card.topic}
-              </div>
-              <div className="my-6 font-display text-xl font-bold text-navy">
-                {flip ? card.back : card.front}
-              </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-navy-2">
-                <RotateCw size={12} /> Toque para virar
-              </div>
-            </button>
+
+            <div className="[perspective:1000px]">
+              <button
+                onClick={() => setFlip((f) => !f)}
+                aria-label="Virar cartão"
+                className="relative block min-h-[260px] w-full text-left"
+                style={{
+                  transformStyle: "preserve-3d",
+                  transition: "transform 200ms",
+                  transform: flip ? "rotateY(180deg)" : "rotateY(0deg)",
+                }}
+              >
+                <div
+                  className="card-soft absolute inset-0 flex flex-col justify-between p-6"
+                  style={{ backfaceVisibility: "hidden" }}
+                >
+                  <p className="ds-label">
+                    {card.subject} · {card.topic}
+                  </p>
+                  <p className="my-6 font-display text-xl font-bold text-abismo">{card.front}</p>
+                  <p className="flex items-center gap-2 text-xs font-semibold text-nevoa">
+                    <RotateCw size={12} /> Toque para virar
+                  </p>
+                </div>
+                <div
+                  className="card-soft absolute inset-0 flex flex-col justify-between p-6"
+                  style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+                >
+                  <p className="ds-label">
+                    {card.subject} · {card.topic}
+                  </p>
+                  <p className="my-6 font-display text-xl font-bold text-abismo">{card.back}</p>
+                  <p className="flex items-center gap-2 text-xs font-semibold text-nevoa">
+                    <RotateCw size={12} /> Toque para virar
+                  </p>
+                </div>
+              </button>
+            </div>
 
             <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => grade("hard")}
-                className="rounded-2xl bg-amber-50 py-3 text-xs font-bold text-amber-700"
-              >
-                Difícil
+              <button onClick={() => grade("hard")} className="btn-outline">
+                <Minus size={14} /> Difícil
               </button>
-              <button
-                onClick={() => grade("easy")}
-                className="rounded-2xl bg-blue-50 py-3 text-xs font-bold text-blue-700"
-              >
-                Fácil
+              <button onClick={() => grade("easy")} className="btn-outline">
+                <CheckCheck size={14} /> Fácil
               </button>
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => grade("again")}
-                className="rounded-2xl bg-red-50 py-3 text-xs font-bold text-red-600"
-              >
-                <X size={14} className="mx-auto" /> Não lembrei
+              <button onClick={() => grade("again")} className="btn-outline">
+                <X size={14} /> Não lembrei
               </button>
-              <button
-                onClick={() => grade("good")}
-                className="rounded-2xl bg-emerald-50 py-3 text-xs font-bold text-emerald-700"
-              >
-                <Check size={14} className="mx-auto" /> Lembrei
+              <button onClick={() => grade("good")} className="btn-outline">
+                <Check size={14} /> Lembrei
               </button>
             </div>
           </>

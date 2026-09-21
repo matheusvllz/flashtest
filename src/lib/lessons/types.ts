@@ -6,9 +6,9 @@
  * descreve exercícios nestes formatos. Tipo de questão novo = estender a
  * union + registrar 1 componente no registry.
  *
- * Origem: motor do app de redação (SDD 12, D3). Portado para o Flash Test com
+ * Origem: motor do app de redação (SDD 12, D3). Portado para a Foca com
  * o design system oficial e SEM os mascotes do app de origem — quem explica é
- * o tutor do Flash Test (identidade do raio), não um personagem (SDD 12, §0).
+ * a própria Foca, mascote e tutor do app (docs/15).
  */
 
 export type ExamProfile = "enem";

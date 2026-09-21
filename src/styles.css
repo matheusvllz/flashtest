@@ -4,32 +4,45 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Tokens oficiais do design system Flash Test v1.0 (Flash Test - design System.html).
-   Navy 70% · Gold 8% · Neutros 22% — gold é energia (CTA/streak/destaque), nunca fundo grande. */
+/* Tokens oficiais da marca Foca — paleta Rabisco na Margem
+   (docs/brand/foca-rabisco-branding.md, docs/18-plano-reestilizacao-rabisco.md).
+   Grafite (abismo) é tinta — texto/contorno, nunca fundo grande. Caneta (mar) é o
+   único accent de ação/seleção/progresso. Marca-texto (recompensa) é XP/streak/marco.
+   Sucesso e Erro: SÓ feedback de resposta certa/errada, nunca decorativos. */
 @theme inline {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  --color-navy: #02104e; /* Ink Navy — primária */
-  --color-royal: #17297a; /* Royal — navy claro, superfícies sobre navy */
-  --color-yellow: #feb803; /* Flash Gold — acento */
-  --color-gold-dark: #b57f00; /* Gold escuro — texto de acento sobre branco */
-  --color-glow: #ffd466; /* Glow — gradientes e realces suaves */
-  --color-success: #0aa35a;
-  --color-error: #c0392b;
-  --color-slate: #3a4066; /* corpo de texto sobre branco */
-  --color-navy-2: #8b91a8; /* texto secundário / labels */
-  --color-navy-mist: #aeb8e8; /* texto secundário sobre navy */
-  --color-cloud: #f7f6f9; /* fundo de página */
-  --color-ink: #02104e;
-  --color-mist: #ececf3; /* bordas e divisores */
+  /* Cada token abaixo aponta pra uma variável "base" (sem --color-) redefinida
+     em :root/.dark. Tailwind v4 GRAVA O VALOR LITERAL de um `@theme inline`
+     declarado como hex puro — a redefinição em `.dark` nunca chegaria às
+     classes geradas (bg-neve, text-abismo…) sem essa indireção. As @utility
+     escritas à mão (card-soft, chip…) já usavam var() direto e funcionavam;
+     isso é o que faltava pras classes Tailwind comuns também virarem escuras. */
+  --color-abismo: var(--abismo); /* Grafite de Lápis — primária escura, texto forte, botão secundário */
+  --color-mar: var(--mar); /* Caneta — accent de ação: progresso, seleção, foco */
+  --color-mar-fundo: var(--mar-fundo); /* Caneta escurecida p/ contraste em texto/link sobre fundo claro */
+  --color-gelo: var(--gelo); /* Borda do papel — bordas suaves, chips, skeleton */
+  --color-neve: var(--neve); /* Papel — fundo de página */
+  --color-coral: var(--mar); /* Caneta — accent de recompensa (unificado com --color-mar) */
+  --color-coral-claro: var(--coral-claro); /* Caneta clara — gradientes de recompensa, badges leves */
+  --color-pelo: var(--pelo); /* Papel Pautado — texto secundário sobre escuro; borda de input */
+  --color-pelo-sombra: var(--pelo-sombra); /* severidade baixa, sombra do mascote */
+  --color-nevoa: var(--nevoa); /* texto secundário sobre claro, placeholders */
+  --color-cards: var(--cards); /* fundo de cards e superfícies elevadas */
+  --color-success: var(--success);
+  --color-success-texto: var(--success-texto); /* título "Acertou" sobre cards — 2e9e5b/branco reprova texto (3.4:1) */
+  --color-alert: var(--alert); /* atenção / severidade baixa */
+  --color-recompensa: var(--alert); /* D1 (docs/18 §14): marca-texto de XP/streak/marco — fundo, texto abismo */
+  --color-error: var(--error);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-sm: 10px;
+  --radius-md: 6px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 28px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -51,25 +64,82 @@
 }
 
 :root {
-  --radius: 0.625rem; /* 10px — raio de botão do design system */
-  --radius-card: 1rem; /* 16px — raio de card do design system */
-  --background: #ffffff;
-  --foreground: #02104e;
+  --radius: 1rem; /* 16px — raio de botão do design system (docs/18 §6.3) */
+  --radius-card: 1.25rem; /* 20px — raio de card do design system */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Variáveis base da paleta Rabisco — claro. Referenciadas por --color-* acima. */
+  --abismo: #3a3a3c;
+  --mar: #2e6bff;
+  --mar-fundo: #1e4fcc;
+  --gelo: #e1dfda;
+  --neve: #f6f5f1;
+  --coral-claro: #8fb0ff;
+  --pelo: #d6d6d4;
+  --pelo-sombra: #737075;
+  --nevoa: #737075;
+  --cards: #ffffff;
+  --success: #2e9e5b;
+  --success-texto: #1f7a45;
+  --alert: #d9a017;
+  --error: #c23b3b;
+
+  --background: #f6f5f1;
+  --foreground: #26262a;
   --card: #ffffff;
-  --card-foreground: #02104e;
-  --primary: #02104e;
+  --card-foreground: #26262a;
+  --primary: #3a3a3c;
   --primary-foreground: #ffffff;
-  --secondary: #3a4066;
-  --secondary-foreground: #ffffff;
-  --muted: #ececf3;
-  --muted-foreground: #8b91a8;
-  --accent: #feb803;
-  --accent-foreground: #02104e;
-  --destructive: #c0392b;
+  --secondary: #e1dfda;
+  --secondary-foreground: #26262a;
+  --muted: #e1dfda;
+  --muted-foreground: #737075;
+  --accent: #2e6bff;
+  --accent-foreground: #ffffff;
+  --destructive: #c23b3b;
   --destructive-foreground: #ffffff;
-  --border: #ececf3;
-  --input: #e6e5ee;
-  --ring: #feb803;
+  --border: #e1dfda;
+  --input: #d6d6d4;
+  --ring: #2e6bff;
+}
+
+/* Modo escuro. Ativa com a classe `.dark` no <html>, aplicada por um script
+   inline em __root.tsx a partir de prefs.theme (ou do sistema, default "auto"). */
+.dark {
+  /* Mesmas variáveis base, valores escuros — é isso que a indireção acima faz propagar. */
+  --abismo: #f3f1ec;
+  --mar: #5c8cff;
+  --mar-fundo: #9fc0ff;
+  --gelo: #38352f;
+  --neve: #1c1b18;
+  --coral-claro: #b9ceff;
+  --pelo: #55534e;
+  --pelo-sombra: #a6a29a;
+  --nevoa: #a6a29a;
+  --cards: #262523;
+  --success: #45b876;
+  --success-texto: #45b876;
+  --alert: #e8b23d;
+  --error: #d65b5b;
+
+  --background: #1c1b18;
+  --foreground: #f3f1ec;
+  --card: #262523;
+  --card-foreground: #f3f1ec;
+  --primary: #f3f1ec;
+  --primary-foreground: #1c1b18;
+  --secondary: #38352f;
+  --secondary-foreground: #f3f1ec;
+  --muted: #38352f;
+  --muted-foreground: #a6a29a;
+  --accent: #5c8cff;
+  --accent-foreground: #1c1b18;
+  --destructive: #d65b5b;
+  --destructive-foreground: #1c1b18;
+  --border: #38352f;
+  --input: #55534e;
+  --ring: #5c8cff;
 }
 
 @layer base {
@@ -78,7 +148,7 @@
   }
   html,
   body {
-    background: #f7f6f9;
+    background: var(--color-neve);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -90,39 +160,85 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
+  :focus-visible {
+    outline: 3px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+  button,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
+/* Botões "apertáveis" (docs/18 §7.1, §4 — princípio Duolingo: elevação por
+   aresta, não por sombra). :active desce e a aresta some — é o único
+   feedback tátil visual que o app tinha zero de antes desta fase. */
 @utility btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--color-yellow);
-  color: var(--color-navy);
+  min-height: 52px;
+  padding: 0 1.25rem;
+  border-radius: var(--radius);
+  background: var(--color-mar);
+  color: #fff;
   font-weight: 700;
   font-family: var(--font-display);
-  padding: 0.85rem 1.5rem;
-  border-radius: var(--radius);
+  font-size: 1rem;
+  box-shadow: 0 4px 0 var(--color-mar-fundo);
+  transform: translateY(0);
   transition:
-    transform 0.15s ease,
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
     filter 0.15s ease;
-}
-@utility btn-primary-hover {
-  filter: brightness(1.04);
-  transform: translateY(-1px);
+  &:hover {
+    filter: brightness(1.06);
+  }
+  &:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--color-mar-fundo);
+  }
+  &:disabled {
+    opacity: 0.4;
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+  }
 }
 
-@utility btn-navy {
+@utility btn-abismo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--color-navy);
-  color: #fff;
-  font-weight: 600;
-  font-family: var(--font-display);
-  padding: 0.85rem 1.5rem;
+  min-height: 52px;
+  padding: 0 1.25rem;
   border-radius: var(--radius);
+  background: var(--color-abismo);
+  color: var(--color-cards);
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  box-shadow: 0 4px 0 rgb(0 0 0 / 0.35);
+  transform: translateY(0);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    filter 0.15s ease;
+  &:hover {
+    filter: brightness(1.08);
+  }
+  &:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 rgb(0 0 0 / 0.35);
+  }
+  &:disabled {
+    opacity: 0.4;
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+  }
 }
 
 @utility btn-outline {
@@ -130,59 +246,112 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #fff;
-  color: var(--color-navy);
+  min-height: 52px;
+  padding: 0 1.25rem;
+  border-radius: var(--radius);
+  background: var(--color-cards);
+  color: var(--color-abismo);
   font-weight: 600;
   font-family: var(--font-display);
-  padding: 0.75rem 1.4rem;
-  border-radius: var(--radius);
-  border: 1.5px solid var(--color-navy);
+  font-size: 1rem;
+  border: 2px solid var(--color-gelo);
+  box-shadow: 0 3px 0 var(--color-gelo);
+  transform: translateY(0);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+  &:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--color-gelo);
+  }
+  &:disabled {
+    opacity: 0.4;
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+  }
 }
 
-/* Variante neutra do outline: para ações secundárias que não devem competir com o CTA. */
+/* Variante neutra: para ações secundárias que não devem competir com o CTA
+   (escape hatch — "Voltar ao início", "Sair mesmo assim"). Sem borda, sem
+   aresta: é deliberadamente o degrau mais discreto dos três botões. */
 @utility btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #fff;
-  color: var(--color-slate);
-  font-weight: 600;
-  font-family: var(--font-display);
-  padding: 0.75rem 1.4rem;
+  min-height: 44px;
+  padding: 0 1.1rem;
   border-radius: var(--radius);
-  border: 1.5px solid #d8d6e0;
+  background: transparent;
+  color: var(--color-nevoa);
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 }
 
 @utility card-soft {
-  background: #fff;
+  background: var(--color-cards);
   border-radius: var(--radius-card);
-  border: 1px solid var(--color-mist);
+  border: 2px solid var(--color-gelo);
+}
+
+/* Cartão tocável: mesma superfície do card-soft, com affordance de toque
+   (docs/18 §7.4). Usar em qualquer card-soft que também seja um Link. */
+@utility card-press {
+  background: var(--color-cards);
+  border-radius: var(--radius-card);
+  border: 2px solid var(--color-gelo);
+  box-shadow: 0 3px 0 var(--color-gelo);
+  transform: translateY(0);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+  &:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
 }
 
 @utility chip {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.75rem;
+  min-height: 36px;
+  padding: 0 0.875rem;
   border-radius: 999px;
-  background: #f0eff5;
-  color: var(--color-slate);
-  font-size: 0.75rem;
+  background: var(--color-gelo);
+  color: var(--color-abismo);
+  font-size: 0.8125rem;
   font-weight: 600;
+  border: 2px solid transparent;
 }
 
-/* Label do design system: Space Grotesk 12/700, tracking largo, gold escuro. */
+/* Estado selecionado do chip (docs/18 §7.5, §8 princípio: seleção com borda,
+   não só cor, pra não se confundir com o accent de foco). */
+@utility chip-on {
+  background: color-mix(in srgb, var(--color-mar) 12%, transparent);
+  border-color: var(--color-mar);
+  color: var(--color-mar-fundo);
+  font-weight: 700;
+}
+
+/* Label do design system: Space Grotesk 12/700, tracking largo. Mar Fundo sobre claro;
+   sobre escuro usar style={{ color: "var(--color-mar)" }}. */
 @utility ds-label {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-gold-dark);
+  color: var(--color-mar-fundo);
 }
 
-/* Microanimações (SDD 12, D3 §6). Curtas e discretas de propósito: elas
+/* Microanimações (SDD 12, D3 §6; docs/18 §6.6). Curtas e discretas de propósito: elas
    pontuam o acerto e a subida de XP, sem virar espetáculo a cada toque.
    Todas respeitam `prefers-reduced-motion` no final deste arquivo. */
 @keyframes ft-pop-in {
@@ -232,11 +401,11 @@
   }
   20%,
   60% {
-    transform: translateX(-5px);
+    transform: translateX(-4px);
   }
   40%,
   80% {
-    transform: translateX(5px);
+    transform: translateX(4px);
   }
 }
 
@@ -250,7 +419,48 @@
   animation: ft-xp-rise 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 @utility anim-shake {
-  animation: ft-shake 0.4s ease-in-out both;
+  /* docs/18 §6.6: reduzida de 400ms/5px para 180ms/4px — "shake longo humilha" (16 §5). */
+  animation: ft-shake 0.18s ease-in-out both;
+}
+
+@keyframes ft-bump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ft-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+@keyframes ft-float-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@utility anim-bump {
+  animation: ft-bump 0.22s var(--ease-out) both;
+}
+@utility anim-breathe {
+  animation: ft-breathe 2.4s var(--ease-out) infinite;
+}
+@utility anim-float-in {
+  animation: ft-float-in 0.4s var(--ease-out) both;
 }
 
 /* Cursor do tutor: pisca enquanto a resposta é revelada palavra a palavra.
@@ -274,7 +484,7 @@
   height: 1.05em;
   margin-left: 0.12em;
   border-radius: 1px;
-  background: var(--color-yellow);
+  background: var(--color-coral);
   vertical-align: -0.16em;
   animation: ft-caret 1s steps(1, end) infinite;
 }
@@ -290,7 +500,7 @@
   }
 }
 @utility skeleton {
-  background: var(--color-mist);
+  background: var(--color-gelo);
   border-radius: var(--radius);
   animation: ft-pulse 1.4s ease-in-out infinite;
 }
@@ -307,11 +517,46 @@
 
 @utility input-ds {
   width: 100%;
-  border: 1.5px solid #e0dfe9;
+  min-height: 52px;
+  border: 2px solid var(--color-gelo);
   border-radius: var(--radius);
   padding: 0.75rem 0.875rem;
-  font-size: 0.95rem;
-  color: var(--color-navy);
-  background: #fff;
+  font-size: 1rem;
+  color: var(--color-abismo);
+  background: var(--color-cards);
   outline: none;
+  transition: border-color 0.15s ease;
+  &:focus {
+    border-color: var(--color-mar);
+  }
+}
+
+/* Fundo de "caderno" (docs/18 §5, §7.13): linhas de pauta muito claras. Uso
+   deliberadamente raro — hero do dashboard, celebração, corpo do balão da
+   Foca. Em qualquer outro lugar vira ruído. */
+@utility surface-pauta {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 27px,
+    color-mix(in srgb, var(--color-gelo) 60%, transparent) 27px 28px
+  );
+}
+
+/* "Marca-texto": fundo de recompensa (XP, streak, marco) com texto grafite —
+   nunca amarelo como cor de texto sobre branco, que reprova contraste
+   (docs/18 D1, §6.1). */
+@utility mark-texto {
+  background: linear-gradient(104deg, transparent 4%, var(--color-recompensa) 4% 96%, transparent 96%);
+  padding: 0 0.15em;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Folha que sobe do rodapé — feedback de resposta, balão do tutor, modais
+   (docs/18 §6.5, elevação nível 3: a única sombra de verdade do sistema). */
+@utility sheet {
+  background: var(--color-cards);
+  border-radius: var(--radius-3xl) var(--radius-3xl) 0 0;
+  box-shadow: 0 -8px 24px -8px rgb(38 38 42 / 0.25);
 }

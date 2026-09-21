@@ -14,16 +14,16 @@ export function FillBlankView({
 
   return (
     <div className="space-y-4">
-      <p className="font-display text-lg font-bold leading-snug text-navy">Complete a frase</p>
-      <p className="rounded-xl border border-mist bg-white px-4 py-4 text-[17px] leading-relaxed text-slate">
+      <p className="font-display text-lg font-bold leading-snug text-abismo">Complete a frase</p>
+      <p className="rounded-xl border-2 border-gelo bg-cards px-4 py-4 text-[17px] leading-relaxed text-abismo">
         {antes}
         <span
           className={cn(
             "mx-1 inline-block min-w-[72px] rounded-md border-b-2 px-2 text-center align-baseline font-bold transition-colors",
-            !preenchido && "border-dashed border-navy-2 text-transparent",
-            preenchido && !checked && "border-navy bg-navy/10 text-navy",
-            checked && acertou && "border-success bg-success/15 text-navy",
-            checked && !acertou && "border-error bg-error/15 text-navy",
+            !preenchido && "border-dashed border-gelo text-transparent",
+            preenchido && !checked && "border-mar bg-mar/10 text-abismo",
+            checked && acertou && "border-success bg-success/15 text-abismo",
+            checked && !acertou && "border-error bg-error/15 text-abismo",
           )}
         >
           {preenchido ?? "____"}
@@ -41,16 +41,16 @@ export function FillBlankView({
               disabled={checked}
               onClick={() => onAnswer(selected ? null : i)}
               className={cn(
-                "rounded-full border-2 px-4 py-2 text-[15px] font-semibold transition-all duration-150",
-                !checked && "active:scale-95 hover:border-navy/40",
-                !checked && selected && "border-navy bg-navy/10 text-navy",
-                !checked && !selected && "border-mist bg-white text-slate",
-                checked && i === exercise.correta && "border-success bg-success/10 text-navy",
+                "min-h-9 rounded-full border-2 px-4 py-2 text-[15px] font-semibold transition-all duration-150",
+                !checked && "active:scale-95 hover:border-mar/40",
+                !checked && selected && "border-mar bg-mar/8 text-mar-fundo",
+                !checked && !selected && "border-gelo bg-cards text-abismo",
+                checked && i === exercise.correta && "border-success bg-success/10 text-abismo",
                 checked &&
                   selected &&
                   i !== exercise.correta &&
-                  "border-error bg-error/10 text-navy",
-                checked && !selected && i !== exercise.correta && "border-mist bg-white opacity-45",
+                  "border-error bg-error/10 text-abismo",
+                checked && !selected && i !== exercise.correta && "border-gelo bg-cards opacity-45",
                 checked && "cursor-default",
               )}
             >

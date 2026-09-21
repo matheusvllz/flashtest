@@ -1,0 +1,126 @@
+/* ============================================================
+   Foca — tokens da direção "Rabisco na Margem" (14/20)
+   Grafite de lápis + papel pautado + uma canetinha azul-elétrica de gel.
+   Caneta (mar/coral, unificados num accent só) é ação/recompensa,
+   nunca fundo. Sucesso e Erro: só feedback de resposta certa/errada,
+   nunca decorativos.
+
+   COMO INTEGRAR: substitua o bloco `@theme inline { ... }` e o bloco
+   `:root { ... }` do seu src/styles.css atual pelos dois blocos abaixo,
+   e acrescente o bloco `.dark { ... }` (novo — o arquivo atual ainda
+   não tinha modo escuro implementado). Mantém os mesmos NOMES de
+   variável que o projeto já usa (--color-abismo, --color-mar, etc.),
+   só troca os valores — nenhum @utility (btn-primary, chip, ds-label...)
+   precisa mudar.
+
+   PENDÊNCIA MANUAL: algumas @utility do arquivo atual usam "#fff"
+   fixo em vez de var(--color-cards) (ex.: card-soft, btn-outline,
+   input-ds). Pra o modo escuro funcionar 100% nelas também, troque
+   esses "#fff" por var(--color-cards) nesse arquivo depois de colar.
+   ============================================================ */
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-abismo: #3a3a3c; /* Grafite de Lápis — primária escura, texto forte, botão secundário */
+  --color-mar: #2e6bff; /* Caneta — accent de ação: progresso, seleção, foco */
+  --color-mar-fundo: #1e4fcc; /* Caneta escurecida p/ contraste em texto/link sobre fundo claro */
+  --color-gelo: #e1dfda; /* Borda do papel — bordas suaves, chips, skeleton */
+  --color-neve: #f6f5f1; /* Papel — fundo de página */
+  --color-coral: #2e6bff; /* Caneta — accent de recompensa: CTA, XP, streak (unificado com --color-mar) */
+  --color-coral-claro: #8fb0ff; /* Caneta clara — gradientes de recompensa, badges leves */
+  --color-pelo: #d6d6d4; /* Papel Pautado — texto secundário sobre escuro; borda de input */
+  --color-pelo-sombra: #737075; /* severidade baixa, sombra do mascote */
+  --color-nevoa: #737075; /* texto secundário sobre claro, placeholders */
+  --color-cards: #ffffff; /* NOVO — fundo de cards e superfícies elevadas */
+  --color-success: #2e9e5b;
+  --color-alert: #d9a017; /* NOVO — atenção / severidade baixa */
+  --color-error: #c23b3b;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.625rem; /* 10px — raio de botão do design system */
+  --radius-card: 1rem; /* 16px — raio de card do design system */
+  --background: #f6f5f1;
+  --foreground: #26262a;
+  --card: #ffffff;
+  --card-foreground: #26262a;
+  --primary: #3a3a3c;
+  --primary-foreground: #ffffff;
+  --secondary: #e1dfda;
+  --secondary-foreground: #26262a;
+  --muted: #e1dfda;
+  --muted-foreground: #737075;
+  --accent: #2e6bff;
+  --accent-foreground: #ffffff;
+  --destructive: #c23b3b;
+  --destructive-foreground: #ffffff;
+  --border: #e1dfda;
+  --input: #d6d6d4;
+  --ring: #2e6bff;
+}
+
+/* Modo escuro — novo. Ativa com a classe `.dark` no <html>/<body>,
+   conforme o @custom-variant dark (&:is(.dark *)) já declarado no
+   arquivo original. */
+.dark {
+  --color-abismo: #f3f1ec;
+  --color-mar: #5c8cff;
+  --color-mar-fundo: #9fc0ff;
+  --color-gelo: #38352f;
+  --color-neve: #1c1b18;
+  --color-coral: #5c8cff;
+  --color-coral-claro: #b9ceff;
+  --color-pelo: #55534e;
+  --color-pelo-sombra: #a6a29a;
+  --color-nevoa: #a6a29a;
+  --color-cards: #262523;
+  --color-success: #45b876;
+  --color-alert: #e8b23d;
+  --color-error: #d65b5b;
+
+  --background: #1c1b18;
+  --foreground: #f3f1ec;
+  --card: #262523;
+  --card-foreground: #f3f1ec;
+  --primary: #f3f1ec;
+  --primary-foreground: #1c1b18;
+  --secondary: #38352f;
+  --secondary-foreground: #f3f1ec;
+  --muted: #38352f;
+  --muted-foreground: #a6a29a;
+  --accent: #5c8cff;
+  --accent-foreground: #1c1b18;
+  --destructive: #d65b5b;
+  --destructive-foreground: #1c1b18;
+  --border: #38352f;
+  --input: #55534e;
+  --ring: #5c8cff;
+}

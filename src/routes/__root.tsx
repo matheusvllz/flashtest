@@ -11,26 +11,25 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { BRAND, PALETTE } from "../lib/brand";
+import { PhoneFrame } from "../components/AppShell";
+import { FocaMark } from "../components/brand/FocaMark";
+import { fala } from "../lib/voz";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
+    <PhoneFrame>
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-6 text-center">
+        <FocaMark expression="entediada" size={96} decorative />
+        <div>
+          <h1 className="font-display text-xl font-bold text-abismo">Essa página não existe.</h1>
+          <p className="mt-2 text-sm text-nevoa">{fala("404")}</p>
         </div>
+        <Link to="/" className="btn-primary mt-2">
+          Voltar ao início
+        </Link>
       </div>
-    </div>
+    </PhoneFrame>
   );
 }
 
@@ -42,33 +41,31 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
+    <PhoneFrame>
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-6 text-center">
+        <FocaMark expression="entediada" size={96} decorative />
+        <div>
+          <h1 className="font-display text-xl font-bold text-abismo">Isso aqui não carregou.</h1>
+          <p className="mt-2 text-sm text-nevoa">
+            Deu ruim do nosso lado. Tenta de novo ou volta pro início.
+          </p>
+        </div>
+        <div className="mt-2 flex w-full flex-col gap-2">
           <button
             onClick={() => {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="btn-primary w-full"
           >
-            Try again
+            Tentar de novo
           </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Go home
+          <a href="/" className="btn-ghost w-full">
+            Voltar ao início
           </a>
         </div>
       </div>
-    </div>
+    </PhoneFrame>
   );
 }
 
@@ -77,16 +74,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { name: "theme-color", content: "#02104E" },
-      { title: "Flash Test — Constância que aprova" },
+      { name: "theme-color", content: PALETTE.neve, media: "(prefers-color-scheme: light)" },
+      { name: "theme-color", content: PALETTE.neveDark, media: "(prefers-color-scheme: dark)" },
+      { title: `${BRAND.name} — ${BRAND.tagline}` },
       {
         name: "description",
-        content:
-          "Preparação para ENEM e vestibular em aulas de 60 segundos. A IA mapeia suas lacunas e monta o treino diário.",
+        content: BRAND.description,
       },
-      { property: "og:title", content: "Flash Test" },
-      { property: "og:description", content: "Constância que aprova." },
+      { property: "og:title", content: BRAND.name },
+      { property: "og:description", content: BRAND.tagline },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/branding/foca/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -95,9 +93,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/branding/foca/icon-192.png", type: "image/png", sizes: "192x192" },
+      { rel: "apple-touch-icon", href: "/branding/foca/apple-touch-icon.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -106,11 +106,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+/**
+ * Aplica `.dark` no <html> ANTES do primeiro paint, lendo `prefs.theme`
+ * ("auto" | "light" | "dark") de `foca.state.v3` — sem isso, o app pisca
+ * claro e depois escurece em quem usa o SO no escuro (docs/18 §12.4, D4).
+ * `prefs.theme` só existe no store a partir da Fase 6; até lá o default é
+ * "auto" e o script só respeita o sistema. Silencioso de propósito: um erro
+ * aqui não pode impedir o app de renderizar.
+ */
+const DARK_MODE_SCRIPT = `(function(){try{
+  var raw = localStorage.getItem("foca.state.v3");
+  var theme = "auto";
+  if (raw) {
+    var parsed = JSON.parse(raw);
+    if (parsed && parsed.prefs && parsed.prefs.theme) theme = parsed.prefs.theme;
+  }
+  var dark = theme === "dark" || (theme === "auto" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  if (dark) document.documentElement.classList.add("dark");
+}catch(e){}})();`;
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <script dangerouslySetInnerHTML={{ __html: DARK_MODE_SCRIPT }} />
       </head>
       <body>
         {children}

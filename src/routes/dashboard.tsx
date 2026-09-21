@@ -1,81 +1,116 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { AppShell, Bolt } from "@/components/AppShell";
-import { useAppState } from "@/lib/store";
+import { useEffect } from "react";
+import { ChevronRight, Layers, PenLine, Trophy, Check } from "lucide-react";
+import { AppShell } from "@/components/AppShell";
+import { FocaSays } from "@/components/brand/FocaSays";
+import { GoalRing } from "@/components/ds/GoalRing";
+import { ProgressBar } from "@/components/ds/ProgressBar";
+import {
+  atividadeHoje,
+  diasSemAtividade,
+  marcarMetaCelebrada,
+  nivelDeXp,
+  useAppState,
+} from "@/lib/store";
 import { allLessonsInOrder, TOTAL_LICOES } from "@/content/trilhas";
-import { Flame, Target, TrendingUp, Layers, Check, PenLine, Trophy } from "lucide-react";
+import { play as tocarSom } from "@/lib/sfx";
+import { vibrar } from "@/lib/haptics";
 
 export const Route = createFileRoute("/dashboard")({ component: Dashboard, ssr: false });
 
 function Dashboard() {
   const s = useAppState();
   const p = s.prefs;
-  const doneToday = s.progress.lessonsCompleted;
+  // Honesto: reflete o dia de hoje, não o total da vida (docs/18 §1.2 — bug corrigido).
+  const hoje = atividadeHoje(s);
+  const goal = p.dailyLessons;
+  const doneToday = hoje.lessons;
+  const metaFechada = doneToday >= goal;
+  const dias = diasSemAtividade(s);
+  const nivel = nivelDeXp(s.progress.xp);
   const licoesFeitas = Object.keys(s.progress.lessons).length;
+  const firstName = (p.name || "estudante").split(" ")[0];
   // Próxima lição de redação na ordem de desbloqueio — o mesmo "continuar de
   // onde parou" da trilha, trazido para a home.
   const nextLesson = allLessonsInOrder().find(({ lesson }) => !s.progress.lessons[lesson.id]);
-  const goal = p.dailyLessons;
-  const pct = Math.min(100, Math.round((doneToday / Math.max(1, goal)) * 100));
-  const acc = s.progress.answered
-    ? Math.round((s.progress.correct / s.progress.answered) * 100)
-    : 0;
-  const firstName = (p.name || "estudante").split(" ")[0];
-
   // O assunto da próxima aula é a lacuna nº1 do diagnóstico — não uma escolha de tempo.
   const nextTopic = s.quiz.gaps[0]?.topic ?? "Funções do 2º grau";
   const nextSubject = s.quiz.gaps[0]?.subjectName ?? "Matemática";
 
+  // A Foca do dia: acolhedora tem prioridade sobre tudo (o retorno é o
+  // momento mais frágil, docs/15 §3.2); meta fechada é o segundo pico; o
+  // resto do tempo ela só dá bom-dia.
+  const foca =
+    dias >= 2
+      ? { slot: "retorno" as const, expression: "acolhedora" as const }
+      : metaFechada
+        ? { slot: "meta" as const, expression: "orgulhosa" as const }
+        : { slot: "bomdia" as const, expression: "neutra" as const };
+
+  // Celebra a meta uma vez por dia — não a cada visita ao dashboard.
+  useEffect(() => {
+    if (metaFechada && !hoje.celebrouMeta) {
+      tocarSom("streak");
+      vibrar("fim");
+      marcarMetaCelebrada();
+    }
+  }, [metaFechada, hoje.celebrouMeta]);
+
   return (
     <AppShell>
-      <div className="bg-navy px-5 pt-8 pb-5 text-white">
-        <div className="flex items-start justify-between">
+      <div className="surface-pauta bg-neve px-5 pt-8 pb-5">
+        <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-semibold text-navy-mist">Bom dia,</p>
-            <h1 className="font-display text-2xl font-bold">{firstName}</h1>
+            <p className="text-xs font-semibold text-nevoa">Bom dia,</p>
+            <h1 className="font-display text-2xl font-bold text-abismo">{firstName}</h1>
           </div>
-          <div className="flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-2">
-            <Bolt size={16} />
-            <span className="font-display text-base font-bold">{s.progress.streak}</span>
-          </div>
+          <GoalRing value={doneToday} max={goal} />
         </div>
 
-        <div className="mt-5">
-          <div className="h-2 w-full overflow-hidden rounded-full bg-white/15">
-            <div
-              className="h-full rounded-full transition-all"
-              style={{ width: `${pct}%`, background: "#FEB803" }}
+        <FocaSays slot={foca.slot} expression={foca.expression} compact className="mt-4" />
+
+        <div className="mt-4 flex items-center gap-4">
+          <span className="shrink-0 font-mono text-sm font-bold text-abismo">
+            {s.progress.streak} {s.progress.streak === 1 ? "dia" : "dias"}
+          </span>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center justify-between text-[11px] font-bold text-nevoa">
+              <span>Nível {nivel.nivel}</span>
+              <span>
+                {nivel.atual}/{nivel.proximo || nivel.atual}
+              </span>
+            </div>
+            <ProgressBar
+              value={nivel.atual}
+              max={nivel.proximo || 1}
+              tone="caneta"
+              size="sm"
+              label="Progresso de nível"
+              className="mt-1"
             />
           </div>
-          <p className="mt-1.5 text-[11px] font-semibold text-navy-mist">
-            {doneToday}/{goal} aulas de hoje · {pct}% da meta diária
-          </p>
         </div>
 
         {/* CTA único: a próxima aula de 60s. Sem seletor de minutos (SDD 12, D1). */}
-        <div className="relative mt-5 overflow-hidden rounded-2xl bg-royal p-5">
-          <div className="absolute right-4 top-4 opacity-90">
-            <Bolt size={22} />
-          </div>
-          <div className="ds-label" style={{ color: "#FEB803" }}>
-            Aula de hoje · 60s
-          </div>
-          <h2 className="mt-2 font-display text-[22px] font-bold leading-tight">{nextTopic}</h2>
-          <p className="mt-1 text-xs font-semibold text-navy-mist">{nextSubject} · 2 questões</p>
+        <div className="card-soft mt-5 p-5" style={{ borderColor: "var(--color-mar)" }}>
+          <div className="ds-label">Aula de hoje · 60s</div>
+          <h2 className="mt-2 font-display text-[22px] font-bold leading-tight text-abismo">
+            {nextTopic}
+          </h2>
+          <p className="mt-1 text-xs font-semibold text-nevoa">{nextSubject} · 2 questões</p>
           <Link to="/study" className="btn-primary mt-4 w-full">
-            Começar
+            Começar · 60s
           </Link>
         </div>
       </div>
 
-      <div className="bg-cloud px-5 pt-5 pb-5 space-y-4">
+      <div className="bg-neve px-5 pt-5 pb-5 space-y-4">
         <div className="card-soft p-4">
-          <p className="ds-label" style={{ color: "#8B91A8" }}>
-            Missões de hoje
-          </p>
+          <p className="ds-label">Missões de hoje</p>
           <ul className="mt-3 space-y-2.5">
-            <Mission done={doneToday >= 1} label={`${goal} aulas de 60s`} />
-            <Mission done={s.progress.savedFlashcards.length > 0} label="Revisar 1 flashcard" />
-            <Mission done={licoesFeitas > 0} label="Treino de redação" />
+            <Mission done={doneToday >= 1} label={`${goal} aula${goal > 1 ? "s" : ""} de 60s`} />
+            <Mission done={hoje.flashcards > 0} label="Revisar 1 flashcard" />
+            <Mission done={hoje.redacao > 0} label="Treino de redação" />
           </ul>
         </div>
 
@@ -83,103 +118,67 @@ function Dashboard() {
         {nextLesson && (
           <Link
             to="/redacao"
-            className="card-soft flex items-center gap-4 p-4"
+            className="card-press flex items-center gap-4 p-4"
             aria-label="Ir para o treino de redação"
           >
-            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy text-yellow">
+            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gelo text-abismo">
               <PenLine size={20} />
             </div>
             <div className="min-w-0 flex-1">
               <p className="ds-label">Treino de redação</p>
-              <p className="mt-1 truncate font-display text-sm font-bold text-navy">
+              <p className="mt-1 truncate font-display text-sm font-bold text-abismo">
                 {nextLesson.lesson.titulo}
               </p>
-              <p className="mt-0.5 text-[11px] font-semibold text-navy-2">
-                {licoesFeitas}/{TOTAL_LICOES} lições concluídas
-              </p>
+              <div className="mt-1.5">
+                <ProgressBar
+                  value={licoesFeitas}
+                  max={TOTAL_LICOES}
+                  tone="caneta"
+                  size="sm"
+                  label="Progresso da trilha de redação"
+                />
+              </div>
             </div>
-            <span className="text-navy-2">→</span>
+            <ChevronRight size={18} className="shrink-0 text-nevoa" />
           </Link>
         )}
 
-        <Link to="/ranking" className="card-soft flex items-center justify-between p-4">
-          <div className="flex items-center gap-3">
-            <Trophy size={20} className="text-gold-dark" />
-            <div>
-              <p className="ds-label" style={{ color: "#8B91A8" }}>
-                Sua turma
-              </p>
-              <p className="mt-1 font-display font-bold text-navy">Ranking da semana</p>
-            </div>
-          </div>
-          <span className="text-navy-2">→</span>
-        </Link>
-
-        <Link to="/flashcards" className="card-soft flex items-center justify-between p-4">
-          <div className="flex items-center gap-3">
-            <Layers size={20} className="text-navy" />
-            <div>
-              <p className="ds-label" style={{ color: "#8B91A8" }}>
-                Revisão
-              </p>
-              <p className="mt-1 font-display font-bold text-navy">
-                {s.progress.savedFlashcards.length} flashcards salvos
-              </p>
-            </div>
-          </div>
-          <span className="text-navy-2">→</span>
-        </Link>
-
         <div className="grid grid-cols-2 gap-3">
-          <Stat icon={<Flame size={20} />} label="Sequência" value={`${s.progress.streak}d`} />
-          <Stat icon={<Target size={20} />} label="Acertos" value={`${acc}%`} />
-          <Stat
-            icon={<TrendingUp size={20} />}
-            label="Aulas feitas"
-            value={`${s.progress.lessonsCompleted}`}
-          />
-          <Stat
-            icon={<Layers size={20} />}
-            label="Flashcards"
-            value={`${s.progress.savedFlashcards.length}`}
-          />
+          <Link to="/ranking" className="card-press flex flex-col items-start gap-2 p-3.5">
+            <Trophy size={18} className="text-mar-fundo" />
+            <span className="text-xs font-bold text-abismo">Ranking da semana</span>
+          </Link>
+          <Link to="/flashcards" className="card-press flex flex-col items-start gap-2 p-3.5">
+            <Layers size={18} className="text-abismo" />
+            <span className="text-xs font-bold text-abismo">
+              {s.progress.savedFlashcards.length} flashcards
+            </span>
+          </Link>
         </div>
 
-        <Link to="/topics" className="card-soft flex items-center justify-between p-4">
+        <Link to="/plan" className="card-press flex items-center justify-between p-4">
           <div>
-            <p className="ds-label" style={{ color: "#8B91A8" }}>
-              Assuntos por matéria
-            </p>
-            <p className="mt-1 font-display font-bold text-navy">Escolher assuntos específicos</p>
-          </div>
-          <span className="text-navy-2">→</span>
-        </Link>
-
-        <Link to="/plan" className="card-soft flex items-center justify-between p-4">
-          <div>
-            <p className="ds-label" style={{ color: "#8B91A8" }}>
-              Meu plano
-            </p>
-            <p className="mt-1 font-display font-bold text-navy">
+            <p className="ds-label">Meu plano</p>
+            <p className="mt-1 font-display font-bold text-abismo">
               {goal} aulas por dia, {p.daysPerWeek} dias
             </p>
           </div>
-          <span className="text-navy-2">→</span>
+          <ChevronRight size={18} className="text-nevoa" />
         </Link>
 
-        <Link
-          to="/premium"
-          className="flex items-center justify-between rounded-2xl p-4 text-navy"
-          style={{ background: "linear-gradient(135deg,#FEB803,#FFD466)" }}
+        <div
+          className="card-soft p-4"
+          style={{
+            background: "color-mix(in srgb, var(--color-recompensa) 20%, var(--color-cards))",
+            borderColor: "var(--color-recompensa)",
+          }}
         >
-          <div>
-            <p className="ds-label" style={{ color: "#02104E" }}>
-              Teste premium
-            </p>
-            <p className="mt-1 font-display font-bold">1 dia grátis com IA sem limite</p>
-          </div>
-          <span>→</span>
-        </Link>
+          <p className="ds-label">Teste premium</p>
+          <p className="mt-1 font-display font-bold text-abismo">1 dia grátis com IA sem limite</p>
+          <Link to="/premium" className="btn-outline mt-3 inline-flex">
+            Conhecer
+          </Link>
+        </div>
       </div>
     </AppShell>
   );
@@ -189,23 +188,13 @@ function Mission({ done, label }: { done: boolean; label: string }) {
   return (
     <li className="flex items-center gap-3">
       <div
-        className={`grid h-6 w-6 place-items-center rounded-md ${done ? "bg-yellow" : "border-2 border-[#D8D6E0]"}`}
+        className={`grid h-6 w-6 shrink-0 place-items-center rounded-full ${done ? "bg-mar" : "border-2 border-dashed border-gelo"}`}
       >
-        {done && <Check size={14} strokeWidth={3} className="text-navy" />}
+        {done && <Check size={14} strokeWidth={3} className="text-white" />}
       </div>
-      <span className={`text-sm font-semibold ${done ? "text-navy" : "text-navy-2"}`}>{label}</span>
+      <span className={`text-sm font-semibold ${done ? "text-abismo" : "text-nevoa"}`}>
+        {label}
+      </span>
     </li>
-  );
-}
-
-function Stat({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
-  return (
-    <div className="card-soft flex items-center gap-3 p-3">
-      <div className="grid h-10 w-10 place-items-center rounded-lg bg-mist text-navy">{icon}</div>
-      <div className="min-w-0">
-        <p className="text-[11px] font-bold uppercase tracking-wide text-navy-2">{label}</p>
-        <p className="font-display text-lg font-bold text-navy">{value}</p>
-      </div>
-    </div>
   );
 }

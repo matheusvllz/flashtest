@@ -9,7 +9,7 @@ export function MultipleChoiceView({
 }: ExerciseViewProps<MultipleChoiceExercise>) {
   return (
     <div className="space-y-4">
-      <p className="font-display text-lg font-bold leading-snug text-navy">{exercise.pergunta}</p>
+      <p className="font-display text-lg font-bold leading-snug text-abismo">{exercise.pergunta}</p>
       <div className="space-y-2.5" role="radiogroup" aria-label="Opções de resposta">
         {exercise.opcoes.map((opcao, i) => (
           <button

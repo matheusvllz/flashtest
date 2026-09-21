@@ -22,12 +22,12 @@ export function TrueFalseView({
         onClick={() => onAnswer(selected ? null : value)}
         className={cn(
           "flex flex-1 flex-col items-center gap-2 rounded-2xl border-2 px-4 py-6 font-display text-base font-bold transition-all duration-150",
-          !checked && "active:scale-[0.97] hover:border-navy/40",
-          !checked && selected && "border-navy bg-navy/[0.06] text-navy",
-          !checked && !selected && "border-mist bg-white text-slate",
-          checked && value === correctAnswer && "border-success bg-success/10 text-navy",
-          checked && selected && value !== correctAnswer && "border-error bg-error/10 text-navy",
-          checked && !selected && value !== correctAnswer && "border-mist bg-white opacity-45",
+          !checked && "active:scale-[0.97] hover:border-mar/40",
+          !checked && selected && "border-mar bg-mar/8 text-abismo",
+          !checked && !selected && "border-gelo bg-cards text-abismo",
+          checked && value === correctAnswer && "border-success bg-success/10 text-abismo",
+          checked && selected && value !== correctAnswer && "border-error bg-error/10 text-abismo",
+          checked && !selected && value !== correctAnswer && "border-gelo bg-cards opacity-45",
           checked && "cursor-default",
         )}
       >
@@ -39,8 +39,10 @@ export function TrueFalseView({
 
   return (
     <div className="space-y-4">
-      <p className="font-display text-lg font-bold leading-snug text-navy">Verdadeiro ou falso?</p>
-      <p className="rounded-xl border border-mist bg-white px-4 py-4 text-[17px] leading-relaxed text-slate">
+      <p className="font-display text-lg font-bold leading-snug text-abismo">
+        Verdadeiro ou falso?
+      </p>
+      <p className="rounded-xl border-2 border-gelo bg-cards px-4 py-4 text-[17px] leading-relaxed text-abismo">
         {exercise.afirmacao}
       </p>
       <div className="flex gap-3" role="radiogroup" aria-label="Verdadeiro ou falso">

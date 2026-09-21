@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+import { AlertCircle, LogIn } from "lucide-react";
 import { BrandMark, PhoneFrame } from "@/components/AppShell";
 import { login, getState } from "@/lib/store";
 
@@ -24,39 +25,43 @@ function Login() {
 
   return (
     <PhoneFrame>
-      <div className="min-h-screen bg-white px-6 pt-10 pb-8 flex flex-col">
-        <Link to="/welcome" className="text-sm font-semibold text-navy-2">
+      <div className="flex min-h-screen flex-col bg-neve px-6 pt-10 pb-8">
+        <Link to="/welcome" className="min-h-11 text-sm font-semibold text-nevoa">
           ← Voltar
         </Link>
         <div className="mt-6 flex items-center gap-3">
           <BrandMark size={40} />
-          <h1 className="font-display text-2xl font-bold text-navy">Entrar</h1>
+          <h1 className="font-display text-2xl font-bold text-abismo">Entrar</h1>
         </div>
-        <p className="mt-2 text-sm text-navy-2">Bem-vindo de volta. Continue sua jornada.</p>
+        <p className="mt-2 text-sm text-nevoa">Bem-vindo de volta. Continue sua jornada.</p>
 
         <form onSubmit={submit} className="mt-8 flex flex-col gap-4">
-          <label className="text-xs font-semibold text-navy">
+          <label className="text-xs font-semibold text-abismo">
             E-mail
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="voce@email.com"
-              className="mt-1.5 w-full rounded-2xl border border-mist bg-white px-4 py-3.5 text-base outline-none focus:border-navy"
+              className="input-ds mt-1.5"
             />
           </label>
-          <label className="text-xs font-semibold text-navy">
+          <label className="text-xs font-semibold text-abismo">
             Senha
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="••••••••"
-              className="mt-1.5 w-full rounded-2xl border border-mist bg-white px-4 py-3.5 text-base outline-none focus:border-navy"
+              className="input-ds mt-1.5"
             />
           </label>
-          {error && <p className="text-xs text-red-500">{error}</p>}
-          <Link to="/forgot" className="self-end text-xs font-semibold text-navy-2">
+          {error && (
+            <p className="flex items-center gap-1.5 text-xs font-semibold text-error">
+              <AlertCircle size={14} /> {error}
+            </p>
+          )}
+          <Link to="/forgot" className="self-end text-xs font-semibold text-mar-fundo underline">
             Esqueci minha senha
           </Link>
           <button type="submit" className="btn-primary mt-2 w-full">
@@ -64,21 +69,21 @@ function Login() {
           </button>
         </form>
 
-        <div className="my-6 flex items-center gap-3 text-xs text-navy-2">
-          <div className="h-px flex-1 bg-mist" /> ou <div className="h-px flex-1 bg-mist" />
+        <div className="my-6 flex items-center gap-3 text-xs text-nevoa">
+          <div className="h-px flex-1 bg-gelo" /> ou <div className="h-px flex-1 bg-gelo" />
         </div>
         <button
           type="button"
           className="btn-outline w-full"
           onClick={() => alert("Login com Google em breve")}
         >
-          <span className="inline-block h-4 w-4 rounded-full bg-gradient-to-br from-red-500 via-yellow-400 to-blue-500" />
+          <LogIn size={16} />
           Continuar com Google
         </button>
 
-        <p className="mt-auto pt-8 text-center text-sm text-navy-2">
+        <p className="mt-auto pt-8 text-center text-sm text-nevoa">
           Ainda não tem conta?{" "}
-          <Link to="/quiz" className="font-bold text-navy">
+          <Link to="/quiz" className="font-bold text-mar-fundo underline">
             Começar em 60s
           </Link>
         </p>

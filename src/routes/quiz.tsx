@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { Bolt, PhoneFrame } from "@/components/AppShell";
+import { PhoneFrame } from "@/components/AppShell";
+import { FocaMark } from "@/components/brand/FocaMark";
 import { completeQuiz, setState, useAppState, type Prefs } from "@/lib/store";
 import { computeGaps } from "@/lib/gaps";
 import { ChevronDown } from "lucide-react";
@@ -49,29 +50,29 @@ function Quiz() {
 
   return (
     <PhoneFrame>
-      <div className="flex min-h-screen flex-col bg-navy text-white">
+      <div className="flex min-h-screen flex-col bg-neve">
         {/* Barra de progresso estilo Stories */}
         <header className="px-5 pt-6">
           <div className="flex gap-1.5">
             {STEPS.map((_, i) => (
-              <div key={i} className="h-1 flex-1 overflow-hidden rounded-full bg-white/15">
+              <div key={i} className="h-1 flex-1 overflow-hidden rounded-full bg-gelo">
                 <div
-                  className="h-full rounded-full bg-yellow transition-all duration-300"
+                  className="h-full rounded-full bg-mar transition-all duration-300"
                   style={{ width: i < idx ? "100%" : i === idx ? "45%" : "0%" }}
                 />
               </div>
             ))}
           </div>
-          <div className="mt-4 flex items-center justify-between">
+          <div className="mt-3 flex items-center justify-between">
             <button
               onClick={() => (idx === 0 ? nav({ to: "/welcome" }) : setIdx(idx - 1))}
-              className="text-sm font-semibold text-navy-mist"
+              className="min-h-11 text-sm font-bold text-nevoa"
             >
               ← Voltar
             </button>
             <div className="flex items-center gap-1.5">
-              <Bolt size={14} />
-              <span className="font-display text-sm font-bold">Flash Test</span>
+              <FocaMark size={18} decorative />
+              <span className="font-display text-sm font-bold text-abismo">Foca</span>
             </div>
           </div>
         </header>
@@ -80,7 +81,7 @@ function Quiz() {
           <StepView step={step} onNext={next} />
         </div>
 
-        <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 bg-navy px-6 pt-3 pb-6">
+        <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
           <button
             onClick={next}
             disabled={!canAdvance(step, s)}
@@ -133,7 +134,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
             if (e.key === "Enter" && p.name.trim()) onNext();
           }}
           placeholder="Seu primeiro nome"
-          className="w-full rounded-[10px] border-2 border-white/20 bg-white/10 px-4 py-4 font-display text-xl font-bold text-white outline-none placeholder:font-sans placeholder:text-base placeholder:font-normal placeholder:text-navy-mist focus:border-yellow"
+          className="input-ds font-display text-lg font-bold"
         />
       </Wrap>
     );
@@ -176,20 +177,18 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
                 if (st && !pp.interestStates.includes(st)) pp.interestStates.push(st);
               });
             }}
-            className="w-full appearance-none rounded-[10px] border-2 border-white/20 bg-white/10 px-4 py-4 pr-11 font-display text-lg font-bold text-white outline-none focus:border-yellow"
+            className="input-ds appearance-none pr-11 font-display font-bold"
           >
-            <option value="" style={{ color: "#8B91A8" }}>
-              Selecione seu estado
-            </option>
+            <option value="">Selecione seu estado</option>
             {BR_STATES.map((st) => (
-              <option key={st} value={st} style={{ color: "#02104E" }}>
+              <option key={st} value={st}>
                 {BR_STATE_NAMES[st]} ({st})
               </option>
             ))}
           </select>
           <ChevronDown
             size={20}
-            className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-navy-mist"
+            className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-nevoa"
           />
         </div>
       </Wrap>
@@ -215,9 +214,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
                       : [...pp.difficultSubjects, sub.name];
                   })
                 }
-                className={`rounded-full px-4 py-2.5 text-sm font-semibold transition ${
-                  on ? "bg-yellow text-navy" : "bg-white/10 text-white"
-                }`}
+                className={`chip ${on ? "chip-on" : ""}`}
               >
                 {sub.name}
               </button>
@@ -251,7 +248,7 @@ function CourseStep({ onNext }: { onNext: () => void }) {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="Buscar curso..."
-        className="mb-3 w-full rounded-[10px] border-2 border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-navy-mist focus:border-yellow"
+        className="input-ds mb-3"
       />
       <div className="flex flex-col gap-2">
         {list.map((c) => (
@@ -264,21 +261,21 @@ function CourseStep({ onNext }: { onNext: () => void }) {
               });
               onNext();
             }}
-            className={`flex items-center justify-between gap-3 rounded-xl border-2 px-4 py-3 text-left transition ${
-              p.targetCourse === c ? "border-yellow bg-yellow/15" : "border-white/15 bg-white/5"
+            className={`card-press flex items-center justify-between gap-3 px-4 py-3 text-left ${
+              p.targetCourse === c ? "border-mar bg-mar/8" : ""
             }`}
           >
-            <span className="min-w-0 text-sm font-semibold text-white">{c}</span>
-            <span className="shrink-0 text-[11px] font-semibold text-navy-mist">{AREA_OF[c]}</span>
+            <span className="min-w-0 text-sm font-semibold text-abismo">{c}</span>
+            <span className="shrink-0 text-[11px] font-semibold text-nevoa">{AREA_OF[c]}</span>
           </button>
         ))}
         {list.length === 0 && (
-          <p className="py-4 text-center text-sm text-navy-mist">Nenhum curso encontrado.</p>
+          <p className="py-4 text-center text-sm text-nevoa">Nenhum curso encontrado.</p>
         )}
       </div>
 
       {filtered.length > list.length && (
-        <p className="mt-3 text-center text-xs text-navy-mist">
+        <p className="mt-3 text-center text-xs text-nevoa">
           +{filtered.length - list.length} outros — refine a busca
         </p>
       )}
@@ -291,7 +288,7 @@ function CourseStep({ onNext }: { onNext: () => void }) {
           });
           onNext();
         }}
-        className="mt-3 w-full rounded-[10px] border border-dashed border-white/30 py-3 text-sm font-semibold text-navy-mist"
+        className="mt-3 w-full rounded-lg border-2 border-dashed border-gelo py-3 text-sm font-semibold text-nevoa"
       >
         Ainda não decidi
       </button>
@@ -340,9 +337,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
               setScope(key);
               setQ("");
             }}
-            className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-              scope === key ? "bg-yellow text-navy" : "bg-white/10 text-white"
-            }`}
+            className={`chip ${scope === key ? "chip-on" : ""}`}
           >
             {label}
           </button>
@@ -355,7 +350,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
         placeholder={
           scope === "br" ? "Buscar faculdade no Brasil..." : "Buscar faculdade no exterior..."
         }
-        className="mb-3 w-full rounded-[10px] border-2 border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-navy-mist focus:border-yellow"
+        className="input-ds mb-3"
       />
 
       <div className="flex flex-col gap-2">
@@ -370,23 +365,21 @@ function TargetStep({ onNext }: { onNext: () => void }) {
               });
               onNext();
             }}
-            className={`flex items-center justify-between gap-3 rounded-xl border-2 px-4 py-3 text-left transition ${
-              p.targetInstitution === u
-                ? "border-yellow bg-yellow/15"
-                : "border-white/15 bg-white/5"
+            className={`card-press flex items-center justify-between gap-3 px-4 py-3 text-left ${
+              p.targetInstitution === u ? "border-mar bg-mar/8" : ""
             }`}
           >
-            <span className="min-w-0 text-sm font-semibold text-white">{u}</span>
-            <span className="shrink-0 text-[11px] font-semibold text-navy-mist">{legend(u)}</span>
+            <span className="min-w-0 text-sm font-semibold text-abismo">{u}</span>
+            <span className="shrink-0 text-[11px] font-semibold text-nevoa">{legend(u)}</span>
           </button>
         ))}
         {list.length === 0 && (
-          <p className="py-4 text-center text-sm text-navy-mist">Nenhuma faculdade encontrada.</p>
+          <p className="py-4 text-center text-sm text-nevoa">Nenhuma faculdade encontrada.</p>
         )}
       </div>
 
       {filtered.length > list.length && (
-        <p className="mt-3 text-center text-xs text-navy-mist">
+        <p className="mt-3 text-center text-xs text-nevoa">
           +{filtered.length - list.length} outras — refine a busca
         </p>
       )}
@@ -399,7 +392,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
           });
           onNext();
         }}
-        className="mt-3 w-full rounded-[10px] border border-dashed border-white/30 py-3 text-sm font-semibold text-navy-mist"
+        className="mt-3 w-full rounded-lg border-2 border-dashed border-gelo py-3 text-sm font-semibold text-nevoa"
       >
         Ainda não decidi
       </button>
@@ -420,13 +413,11 @@ function Wrap({
 }) {
   return (
     <div>
-      <div className="ds-label" style={{ color: "#FEB803" }}>
-        {kicker}
-      </div>
-      <h2 className="mt-2.5 font-display text-[28px] font-bold leading-tight text-white">
+      <div className="ds-label">{kicker}</div>
+      <h2 className="mt-2.5 font-display text-[28px] font-bold leading-tight text-abismo">
         {title}
       </h2>
-      {hint && <p className="mt-2 text-sm leading-relaxed text-navy-mist">{hint}</p>}
+      {hint && <p className="mt-2 text-sm leading-relaxed text-nevoa">{hint}</p>}
       <div className="mt-6">{children}</div>
     </div>
   );
@@ -436,8 +427,8 @@ function Choice({ label, on, onClick }: { label: string; on: boolean; onClick: (
   return (
     <button
       onClick={onClick}
-      className={`rounded-xl border-2 px-4 py-3.5 text-left text-sm font-semibold transition ${
-        on ? "border-yellow bg-yellow/15 text-white" : "border-white/15 bg-white/5 text-white"
+      className={`card-press px-4 py-3.5 text-left text-sm font-semibold text-abismo ${
+        on ? "border-mar bg-mar/8" : ""
       }`}
     >
       {label}

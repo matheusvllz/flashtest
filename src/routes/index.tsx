@@ -1,7 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { getState } from "@/lib/store";
-import { BrandMark, PhoneFrame } from "@/components/AppShell";
+import { PhoneFrame } from "@/components/AppShell";
+import { FocaMark } from "@/components/brand/FocaMark";
 
 export const Route = createFileRoute("/")({
   component: Splash,
@@ -22,15 +23,11 @@ function Splash() {
 
   return (
     <PhoneFrame>
-      <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-navy text-white">
-        <div className="animate-pulse">
-          <BrandMark size={144} />
-        </div>
+      <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-neve">
+        <FocaMark size={144} decorative motion="float" />
         <div className="text-center">
-          <h1 className="font-display text-3xl font-bold tracking-tight">Flash Test</h1>
-          <p className="ds-label mt-2 block" style={{ color: "#FEB803" }}>
-            Constância que aprova
-          </p>
+          <h1 className="font-display text-3xl font-bold tracking-tight text-abismo">Foca</h1>
+          <p className="ds-label mt-2 block">Foca 60 segundos.</p>
         </div>
       </div>
     </PhoneFrame>

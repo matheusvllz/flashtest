@@ -32,7 +32,7 @@ export function ReorderView({
 
   return (
     <div className="space-y-4">
-      <p className="font-display text-lg font-bold leading-snug text-navy">
+      <p className="font-display text-lg font-bold leading-snug text-abismo">
         {exercise.instrucao ?? "Toque nos blocos para montar a frase na ordem certa"}
       </p>
 
@@ -41,13 +41,13 @@ export function ReorderView({
         aria-label="Sua frase"
         className={cn(
           "flex min-h-[88px] flex-wrap content-start items-start gap-2 rounded-xl border-2 border-dashed px-3 py-3 transition-colors",
-          !checked && "border-[#D8D6E0] bg-cloud",
+          !checked && "border-gelo bg-neve",
           checked && acertou && "border-success bg-success/[0.07]",
           checked && !acertou && "border-error bg-error/[0.07]",
         )}
       >
         {sequence.length === 0 && (
-          <span className="px-1 py-2 text-sm text-navy-2">A frase montada aparece aqui.</span>
+          <span className="px-1 py-2 text-sm text-nevoa">A frase montada aparece aqui.</span>
         )}
         {sequence.map((shownIdx, pos) => (
           <button
@@ -55,7 +55,7 @@ export function ReorderView({
             disabled={checked}
             onClick={() => removeAt(pos)}
             className={cn(
-              "rounded-lg border border-mist bg-white px-3 py-2 text-left text-[15px] text-slate shadow-sm transition-all duration-150",
+              "rounded-lg border-2 border-gelo bg-cards px-3 py-2 text-left text-[15px] text-abismo shadow-[0_2px_0_var(--color-gelo)] transition-all duration-150",
               !checked && "active:scale-95 hover:border-error/50",
               checked && "cursor-default",
             )}
@@ -77,8 +77,8 @@ export function ReorderView({
               className={cn(
                 "rounded-lg border-2 px-3 py-2 text-left text-[15px] transition-all duration-150",
                 used
-                  ? "select-none border-transparent bg-mist text-transparent"
-                  : "border-mist bg-white text-slate shadow-sm active:scale-95 hover:border-navy/40",
+                  ? "select-none border-transparent bg-gelo text-transparent"
+                  : "border-gelo bg-cards text-abismo shadow-[0_2px_0_var(--color-gelo)] active:scale-95 hover:border-mar/40",
                 checked && "cursor-default",
               )}
               aria-hidden={used}

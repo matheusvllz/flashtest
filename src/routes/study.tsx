@@ -1,16 +1,28 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { AppShell, Bolt } from "@/components/AppShell";
+import { AppShell } from "@/components/AppShell";
+import { CelebracaoAula } from "@/components/lessons/CelebracaoAula";
+import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
+import { ProgressBar } from "@/components/ds/ProgressBar";
+import { marcadorClasses, choiceClasses } from "@/components/lessons/exercises/shared";
 import { QUESTIONS, type Question } from "@/data/questions";
 import {
   askTutorAutomatically,
+  atividadeHoje,
+  getState,
+  nivelDeXp,
   openTutor,
+  registrarAulaConcluida,
+  registrarResposta,
+  setPrefs,
   setState,
   setTutorFocus,
   useAppState,
   type Gap,
 } from "@/lib/store";
-import { Sparkles, Lightbulb, PlayCircle, Layers, ArrowRight, X } from "lucide-react";
+import { play as tocarSom } from "@/lib/sfx";
+import { vibrar } from "@/lib/haptics";
+import { Sparkles, Lightbulb, PlayCircle, Layers, X, Timer, Volume2, VolumeX } from "lucide-react";
 
 export const Route = createFileRoute("/study")({ component: Study, ssr: false });
 
@@ -43,6 +55,12 @@ function Study() {
   const [selected, setSelected] = useState<string | null>(null);
   const [phase, setPhase] = useState<"answer" | "result" | "done">("answer");
   const [showHint, setShowHint] = useState(false);
+  const [acertosAula, setAcertosAula] = useState(0);
+  const [xpInicio] = useState(() => s.progress.xp);
+  const [antesFechamento, setAntesFechamento] = useState<{
+    streak: number;
+    nivel: number;
+  } | null>(null);
   const q = questions[idx];
   const elapsed = useLessonClock(phase === "done");
 
@@ -72,24 +90,10 @@ function Study() {
     if (!selected) return;
     const correct = selected === q.correct;
     setShowHint(false);
-    setState((st) => {
-      st.progress.answered += 1;
-      if (!st.progress.completedQuestions.includes(q.id)) st.progress.completedQuestions.push(q.id);
-      if (correct) st.progress.correct += 1;
-      st.progress.bySubject[q.subject] ??= { answered: 0, correct: 0 };
-      st.progress.bySubject[q.subject].answered += 1;
-      if (correct) st.progress.bySubject[q.subject].correct += 1;
-      st.progress.byTopic[q.topic] ??= { answered: 0, correct: 0 };
-      st.progress.byTopic[q.topic].answered += 1;
-      if (correct) st.progress.byTopic[q.topic].correct += 1;
-      st.progress.xp += correct ? 15 : 5;
-      const today = new Date().toDateString();
-      if (st.progress.lastStudyDate !== today) {
-        st.progress.streak += 1;
-        st.progress.lastStudyDate = today;
-      }
-      return st;
-    });
+    registrarResposta(q, correct);
+    if (correct) setAcertosAula((n) => n + 1);
+    tocarSom(correct ? "acerto" : "erro");
+    vibrar(correct ? "acerto" : "erro");
     setPhase("result");
 
     // Errou? O tutor entra sozinho explicando o erro DELE — não espera ser
@@ -119,63 +123,73 @@ function Study() {
       setIdx(idx + 1);
       setPhase("answer");
     } else {
-      setState((st) => {
-        st.progress.lessonsCompleted += 1;
-        return st;
+      const antes = getState();
+      setAntesFechamento({
+        streak: antes.progress.streak,
+        nivel: nivelDeXp(antes.progress.xp).nivel,
       });
+      registrarAulaConcluida();
       setPhase("done");
     }
   }
 
   return (
     <AppShell>
-      <div className="min-h-screen bg-white pb-24">
-        <header className="sticky top-0 z-10 bg-white px-5 pt-4 pb-3 border-b border-mist">
-          <div className="flex items-center justify-between text-xs font-semibold text-navy-2">
-            <span className="inline-flex items-center gap-1.5">
-              <Bolt size={13} /> Aula de 60s · {idx + 1}/{questions.length}
-            </span>
-            <div className="flex items-center gap-3">
-              <span className="chip uppercase">
-                {q.subjectName} · {formatClock(elapsed)}
-              </span>
-              <button
-                onClick={() => nav({ to: "/dashboard" })}
-                className="text-sm font-bold text-error"
-              >
-                Sair
-              </button>
+      <div className="min-h-screen bg-neve pb-24">
+        <header className="sticky top-0 z-10 border-b-2 border-gelo bg-neve/95 px-3 pt-3 pb-3 backdrop-blur">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => nav({ to: "/dashboard" })}
+              aria-label="Sair da aula"
+              className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"
+            >
+              <X size={20} />
+            </button>
+            <div className="min-w-0 flex-1">
+              <ProgressBar
+                value={idx + (phase === "answer" ? 0 : 1)}
+                max={questions.length}
+                tone="caneta"
+                label="Progresso da aula"
+              />
             </div>
-          </div>
-          <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-mist">
-            <div
-              className="h-full rounded-full transition-all"
-              style={{
-                width: `${((idx + (phase === "answer" ? 0 : 1)) / questions.length) * 100}%`,
-                background: "#FEB803",
-              }}
-            />
+            <span className="shrink-0 font-mono text-xs font-bold text-nevoa">
+              {formatClock(elapsed)}
+            </span>
+            <button
+              onClick={() => setPrefs({ sound: !s.prefs.sound })}
+              aria-label={s.prefs.sound ? "Desligar som" : "Ligar som"}
+              className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"
+            >
+              {s.prefs.sound ? <Volume2 size={18} /> : <VolumeX size={18} />}
+            </button>
           </div>
         </header>
 
-        {phase === "done" ? (
-          <LessonDone
+        {phase === "done" && antesFechamento ? (
+          <CelebracaoAula
+            acertos={acertosAula}
             total={questions.length}
-            seconds={elapsed}
-            onFinish={() => nav({ to: "/dashboard" })}
+            segundos={elapsed}
+            xpGanho={s.progress.xp - xpInicio}
+            streakAtual={s.progress.streak}
+            streakMudou={s.progress.streak !== antesFechamento.streak}
+            metaFechada={atividadeHoje(s).lessons >= s.prefs.dailyLessons}
+            nivelSubiu={nivelDeXp(s.progress.xp).nivel > antesFechamento.nivel}
+            nivelAtual={nivelDeXp(s.progress.xp).nivel}
+            primario={{ label: "Fechar por hoje", to: "/dashboard" }}
+            secundario={{ label: "Ver meu progresso", to: "/progress" }}
           />
         ) : (
           <div className="px-5 pt-5">
-            <div className="mb-3 flex flex-wrap gap-2 text-[11px]">
-              <span className="chip">{q.topic}</span>
-              <span className="chip">Nível {q.difficulty}</span>
-              <span className="chip">~{q.estimatedSeconds}s</span>
-            </div>
-            <p className="font-display text-lg font-semibold leading-snug text-navy">
+            <p className="text-xs font-semibold text-nevoa">
+              {q.topic} · Nível {q.difficulty} · ~{q.estimatedSeconds}s
+            </p>
+            <p className="mt-2 text-[17px] font-medium leading-relaxed text-abismo">
               {q.statement}
             </p>
 
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="mt-5 flex flex-col gap-3">
               {q.alternatives.map((a) => {
                 const isSel = selected === a.key;
                 const isCorrect = phase === "result" && a.key === q.correct;
@@ -185,15 +199,24 @@ function Study() {
                     key={a.key}
                     disabled={phase === "result"}
                     onClick={() => setSelected(a.key)}
-                    className={`flex items-start gap-3 rounded-xl border-[1.5px] px-4 py-3.5 text-left text-sm font-medium transition
-                      ${isCorrect ? "border-success bg-success/10" : isWrong ? "border-error bg-error/10" : isSel ? "border-yellow bg-[#FFFAF0] border-2" : "border-[#E6E5EE] bg-white"}`}
+                    className={`flex items-start gap-3 ${choiceClasses({
+                      selected: isSel,
+                      checked: phase === "result",
+                      isCorrect,
+                      isWrongPick: isWrong,
+                    })} ${isWrong ? "anim-shake" : ""}`}
                   >
                     <span
-                      className={`grid h-7 w-7 shrink-0 place-items-center rounded-md font-display text-xs font-bold ${isSel || isCorrect ? "bg-navy text-white" : "bg-mist text-slate"}`}
+                      className={marcadorClasses({
+                        selected: isSel,
+                        checked: phase === "result",
+                        isCorrect,
+                        isWrongPick: isWrong,
+                      })}
                     >
                       {a.key}
                     </span>
-                    <span className="text-navy">{a.text}</span>
+                    <span className="text-abismo">{a.text}</span>
                   </button>
                 );
               })}
@@ -202,11 +225,10 @@ function Study() {
             {phase === "answer" ? (
               <div className="mt-5 flex flex-col gap-2">
                 {showHint && (
-                  <div className="relative rounded-xl border border-[#FFD466] bg-[#FFFAF0] p-4 text-sm text-navy">
-                    <div className="absolute -top-2 left-6 h-4 w-4 rotate-45 border-l border-t border-[#FFD466] bg-[#FFFAF0]" />
+                  <div className="relative rounded-lg border-2 border-gelo bg-cards p-4 text-sm text-abismo">
                     <div className="flex items-start gap-2">
-                      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-[#FFD466]">
-                        <Lightbulb size={16} className="text-navy" />
+                      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-mar/12">
+                        <Lightbulb size={16} className="text-mar-fundo" />
                       </div>
                       <div className="flex-1">
                         <p className="ds-label">Dica</p>
@@ -215,7 +237,7 @@ function Study() {
                       <button
                         onClick={() => setShowHint(false)}
                         aria-label="Fechar dica"
-                        className="text-navy-2"
+                        className="text-nevoa"
                       >
                         <X size={14} />
                       </button>
@@ -234,24 +256,40 @@ function Study() {
                     <Lightbulb size={16} /> Pedir dica
                   </button>
                   <button onClick={() => openTutor()} className="btn-outline">
-                    <Sparkles size={16} /> Perguntar à IA
+                    <Sparkles size={16} /> Perguntar à Foca
                   </button>
                 </div>
               </div>
             ) : (
-              <ResultBlock
-                q={q}
+              <FeedbackSheet
                 correct={selected === q.correct}
-                onSaveFlash={() =>
-                  setState((st) => {
-                    if (!st.progress.savedFlashcards.includes(q.id))
-                      st.progress.savedFlashcards.push(q.id);
-                    return st;
-                  })
-                }
-                onAI={() => openTutor()}
-                onNext={nextQ}
-              />
+                explanation={q.explanation}
+                isLast={idx + 1 >= questions.length}
+                xp={selected === q.correct ? 15 : 5}
+                onContinue={nextQ}
+                onAskTutor={selected !== q.correct ? () => openTutor() : undefined}
+              >
+                <div className="card-soft space-y-3 p-4">
+                  <div>
+                    <p className="ds-label">Resolução passo a passo</p>
+                    <ol className="mt-1.5 list-decimal space-y-1 pl-4 text-sm text-abismo">
+                      {q.stepByStep.map((step, i) => (
+                        <li key={i}>{step}</li>
+                      ))}
+                    </ol>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <SalvarFlashcard questionId={q.id} />
+                    <Link
+                      to="/video/$id"
+                      params={{ id: q.videoSuggestion.id }}
+                      className="btn-outline"
+                    >
+                      <PlayCircle size={16} /> Videoaula
+                    </Link>
+                  </div>
+                </div>
+              </FeedbackSheet>
             )}
           </div>
         )}
@@ -260,54 +298,22 @@ function Study() {
   );
 }
 
-function ResultBlock({ q, correct, onSaveFlash, onAI, onNext }: any) {
+function SalvarFlashcard({ questionId }: { questionId: string }) {
   const [saved, setSaved] = useState(false);
   return (
-    <div className="mt-6 space-y-4">
-      <div
-        className="rounded-xl p-4"
-        style={
-          correct
-            ? { background: "#EEF6F0", color: "#0AA35A" }
-            : { background: "#FBECEA", color: "#C0392B" }
-        }
-      >
-        <p className="font-display font-bold">{correct ? "Acertou!" : "Resposta incorreta"}</p>
-        <p className="mt-1 text-sm text-slate">
-          Alternativa correta: <strong>{q.correct}</strong>
-        </p>
-      </div>
-      <div className="card-soft p-4">
-        <p className="ds-label">Explicação</p>
-        <p className="mt-1.5 text-sm leading-relaxed text-slate">{q.explanation}</p>
-        <p className="ds-label mt-4 block">Resolução passo a passo</p>
-        <ol className="mt-1.5 list-decimal space-y-1 pl-4 text-sm text-slate">
-          {q.stepByStep.map((s: string, i: number) => (
-            <li key={i}>{s}</li>
-          ))}
-        </ol>
-      </div>
-      <div className="grid grid-cols-2 gap-2">
-        <button
-          onClick={() => {
-            onSaveFlash();
-            setSaved(true);
-          }}
-          className="btn-outline"
-        >
-          <Layers size={16} /> {saved ? "Salvo!" : "Salvar como flashcard"}
-        </button>
-        <Link to="/video/$id" params={{ id: q.videoSuggestion.id }} className="btn-outline">
-          <PlayCircle size={16} /> Videoaula
-        </Link>
-      </div>
-      <button onClick={onAI} className="btn-outline w-full">
-        <Sparkles size={16} /> Perguntar à IA
-      </button>
-      <button onClick={onNext} className="btn-primary w-full">
-        Continuar <ArrowRight size={16} />
-      </button>
-    </div>
+    <button
+      onClick={() => {
+        setState((st) => {
+          if (!st.progress.savedFlashcards.includes(questionId))
+            st.progress.savedFlashcards.push(questionId);
+          return st;
+        });
+        setSaved(true);
+      }}
+      className="btn-outline"
+    >
+      <Layers size={16} /> {saved ? "Salvo!" : "Salvar flashcard"}
+    </button>
   );
 }
 
@@ -324,53 +330,4 @@ function useLessonClock(stopped: boolean) {
 
 function formatClock(total: number) {
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
-}
-
-function LessonDone({
-  total,
-  seconds,
-  onFinish,
-}: {
-  total: number;
-  seconds: number;
-  onFinish: () => void;
-}) {
-  const s = useAppState();
-  const acc = s.progress.answered
-    ? Math.round((s.progress.correct / s.progress.answered) * 100)
-    : 0;
-  return (
-    <div className="px-6 pt-10 text-center">
-      <div
-        className="mx-auto grid h-24 w-24 place-items-center rounded-full"
-        style={{ background: "#FEB803" }}
-      >
-        <Bolt size={48} color="#02104E" />
-      </div>
-      <h2 className="mt-5 font-display text-[28px] font-bold text-navy">Aula concluída!</h2>
-      <p className="mt-1.5 text-sm text-navy-2">
-        {total} questões em {formatClock(seconds)}. Sequência viva — volta amanhã.
-      </p>
-      <div className="mt-6 grid grid-cols-3 gap-2.5">
-        <Tile label="Acertos" value={`${acc}%`} />
-        <Tile label="Sequência" value={`${s.progress.streak}d`} />
-        <Tile label="Aulas" value={`${s.progress.lessonsCompleted}`} />
-      </div>
-      <Link to="/progress" className="btn-navy mt-6 w-full">
-        Ver meu progresso
-      </Link>
-      <button onClick={onFinish} className="btn-ghost mt-2 w-full">
-        Voltar ao início
-      </button>
-    </div>
-  );
-}
-
-function Tile({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="card-soft px-2 py-3">
-      <p className="text-[11px] font-semibold text-navy-2">{label}</p>
-      <p className="font-display text-xl font-bold text-navy">{value}</p>
-    </div>
-  );
 }

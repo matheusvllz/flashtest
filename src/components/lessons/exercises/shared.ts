@@ -18,9 +18,13 @@ export interface ExerciseViewProps<E extends Exercise = Exercise> {
 }
 
 /**
- * Estilo compartilhado das opções "tocáveis". Navy para seleção, e as cores de
- * feedback SÓ aparecem depois de verificar — verde/vermelho são reservados a
- * certo/errado, nunca decorativos (design system Flash Test).
+ * Estilo compartilhado das opções "tocáveis" (docs/18 §7.10). Caneta (mar) para
+ * seleção — nunca abismo, que é reservado a texto/contorno — e as cores de
+ * feedback SÓ aparecem depois de verificar: verde/vermelho são reservados a
+ * certo/errado, nunca decorativos (docs/09-branding.md §3, docs/18 §5).
+ *
+ * Usado tanto pelos exercícios de redação quanto por `/study` (aula de 60s) —
+ * uma linguagem só nos dois pilares do produto.
  */
 export function choiceClasses(state: {
   selected: boolean;
@@ -29,12 +33,40 @@ export function choiceClasses(state: {
   isWrongPick: boolean;
 }): string {
   return cn(
-    "w-full rounded-xl border-2 px-4 py-3 text-left text-[15px] leading-snug transition-all duration-150",
-    !state.checked && "border-mist bg-white text-slate active:scale-[0.99] hover:border-navy/40",
-    !state.checked && state.selected && "border-navy bg-navy/[0.06] font-semibold text-navy",
-    state.checked && state.isCorrect && "border-success bg-success/10 font-semibold text-navy",
-    state.checked && state.isWrongPick && "border-error bg-error/10 text-navy",
-    state.checked && !state.isCorrect && !state.isWrongPick && "border-mist bg-white opacity-45",
+    "w-full rounded-lg border-2 px-4 py-3.5 text-left text-[15px] leading-relaxed transition-all duration-100",
+    !state.checked &&
+      "border-gelo bg-cards text-abismo shadow-[0_3px_0_var(--color-gelo)] active:translate-y-[3px] active:shadow-none hover:border-mar/40",
+    !state.checked &&
+      state.selected &&
+      "border-mar bg-mar/8 font-semibold text-abismo shadow-[0_3px_0_color-mix(in_srgb,var(--color-mar)_40%,transparent)]",
+    state.checked &&
+      state.isCorrect &&
+      "border-success bg-success/10 font-semibold text-abismo shadow-none",
+    state.checked && state.isWrongPick && "border-error bg-error/10 text-abismo shadow-none",
+    state.checked &&
+      !state.isCorrect &&
+      !state.isWrongPick &&
+      "border-gelo bg-cards opacity-45 shadow-none",
     state.checked && "cursor-default",
+  );
+}
+
+/**
+ * Marcador circular A–E das alternativas de múltipla escolha (docs/18 §7.10).
+ * 28px, mesma hierarquia de cor do `choiceClasses` acima.
+ */
+export function marcadorClasses(state: {
+  selected: boolean;
+  checked: boolean;
+  isCorrect: boolean;
+  isWrongPick: boolean;
+}): string {
+  return cn(
+    "grid h-7 w-7 shrink-0 place-items-center rounded-full font-display text-xs font-bold",
+    !state.checked && !state.selected && "bg-gelo text-abismo",
+    !state.checked && state.selected && "bg-mar text-white",
+    state.checked && state.isCorrect && "bg-success text-white",
+    state.checked && state.isWrongPick && "bg-error text-white",
+    state.checked && !state.isCorrect && !state.isWrongPick && "bg-gelo text-abismo",
   );
 }
