@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo } from "react";
-import { Target, TrendingUp, PenLine, ArrowRight, Layers } from "lucide-react";
+import { Target, TrendingUp, PenLine, ArrowRight, Layers, Trophy } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { EmptyState } from "@/components/ds/EmptyState";
 import { ProgressBar } from "@/components/ds/ProgressBar";
@@ -13,8 +13,17 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/progress")({ component: Progress, ssr: false });
 
-/** Faixa de domínio por rótulo — a cor só reforça na faixa "Dominado" (feedback de resultado legítimo). */
-function faixaDe(pct: number): { label: string; dominado: boolean } {
+/**
+ * Faixa de domínio por rótulo (docs/20 §2.5/§13, Fase 11): "Dominado" exige
+ * uma amostra mínima — 1 acerto em 1 tentativa não é evidência de domínio
+ * (mesmo princípio do critério A10, aplicado aqui à métrica legada de
+ * matéria, que ainda não passa pela evidência por habilidade da Fase 7).
+ * Abaixo da amostra mínima, mostra "Pouca evidência" mesmo com 100%.
+ */
+const AMOSTRA_MINIMA_DOMINIO = 5;
+
+function faixaDe(pct: number, answered: number): { label: string; dominado: boolean } {
+  if (answered < AMOSTRA_MINIMA_DOMINIO) return { label: "Pouca evidência", dominado: false };
   if (pct >= 80) return { label: "Dominado", dominado: true };
   if (pct >= 60) return { label: "Quase lá", dominado: false };
   if (pct >= 40) return { label: "Em construção", dominado: false };
@@ -80,6 +89,21 @@ function Progress() {
           <StatTile icon={<TrendingUp size={16} />} label="Aulas" value={`${p.lessonsCompleted}`} />
           <StatTile icon={<Layers size={16} />} label="Nível" value={`${nivel.nivel}`} />
         </div>
+
+        {/* Atalhos absorvidos do dashboard (docs/25 §12.6/§18 T-21) — ranking e
+            flashcards deixam de ter linha própria na home v2. */}
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <Link to="/ranking" className="card-press flex flex-col items-start gap-2 p-3.5">
+            <Trophy size={18} className="text-mar-fundo" />
+            <span className="text-xs font-bold text-abismo">Ranking da semana</span>
+          </Link>
+          <Link to="/flashcards" className="card-press flex flex-col items-start gap-2 p-3.5">
+            <Layers size={18} className="text-abismo" />
+            <span className="text-xs font-bold text-abismo">
+              {s.progress.savedFlashcards.length} flashcards
+            </span>
+          </Link>
+        </div>
       </div>
 
       <div className="space-y-4 bg-neve px-5 py-5">
@@ -116,7 +140,7 @@ function Progress() {
           </p>
           <ul className="mt-4 space-y-3">
             {mapa.map((m) => {
-              const faixa = faixaDe(m.pct);
+              const faixa = faixaDe(m.pct, m.answered);
               return (
                 <li key={m.id}>
                   <div className="flex items-center justify-between gap-2 text-sm">

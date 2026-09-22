@@ -1,14 +1,16 @@
 import { getState } from "@/lib/store";
 
 /**
- * Sistema de som (docs/16-gamificacao-e-dopamina.md §3, docs/18-plano-
+ * Sistema de som ORIGINAL (docs/16-gamificacao-e-dopamina.md §3, docs/18-plano-
  * reestilizacao-rabisco.md §10.2, decisão D3). Sintetizado via WebAudio puro
- * — sem arquivo, sem biblioteca. O alvo do build é worker; cada dependência
- * de áudio pesaria por nada (mesma lógica do `CLAUDE.md` pro cliente de IA).
+ * — sem arquivo, sem biblioteca.
  *
- * Todos os eventos na mesma escala (dó maior), curtos, timbre suave — a
- * "mesma tonalidade" é o que faz soar como sistema, não como efeitos soltos.
- * Nunca dois sons ao mesmo tempo: cada `play()` agenda depois do anterior.
+ * **Fase 4 do docs/20 (§6.4) substituiu este módulo por `src/lib/audio/
+ * engine.ts` + `identity.ts`** — unlock por gesto, cancelamento real,
+ * expiração de eventos atrasados e a nova partitura "rabisco que encaixa".
+ * Todo consumidor já migrou (nenhum import ativo deste arquivo em `src/`
+ * fora deste próprio arquivo); mantido só como fachada de compatibilidade
+ * histórica, sem uso — não adicionar chamada nova aqui.
  */
 export type Evento =
   | "acerto"

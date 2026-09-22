@@ -3,6 +3,7 @@ import { useState } from "react";
 import { AlertCircle, LogIn } from "lucide-react";
 import { BrandMark, PhoneFrame } from "@/components/AppShell";
 import { login, getState } from "@/lib/store";
+import { HOME_ROUTE } from "@/lib/features";
 
 export const Route = createFileRoute("/login")({ component: Login, ssr: false });
 
@@ -19,8 +20,8 @@ function Login() {
       return;
     }
     login(email, getState().prefs.name || email.split("@")[0]);
-    // Sem diagnóstico feito não existe dashboard útil — manda para o quiz.
-    navigate({ to: getState().onboarded ? "/dashboard" : "/quiz" });
+    // Sem diagnóstico feito não existe home útil — manda para o quiz.
+    navigate({ to: getState().onboarded ? HOME_ROUTE : "/quiz" });
   }
 
   return (

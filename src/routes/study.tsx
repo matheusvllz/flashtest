@@ -6,12 +6,16 @@ import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { marcadorClasses, choiceClasses } from "@/components/lessons/exercises/shared";
 import { QUESTIONS, type Question } from "@/data/questions";
+import { useExerciseSession } from "@/hooks/useExerciseSession";
+import { unlockAudioFromGesture, setAudioEnabled } from "@/lib/audio/engine";
+import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
+import type { SoundEvent } from "@/lib/feedback/dispatch-feedback";
 import {
-  askTutorAutomatically,
   atividadeHoje,
   getState,
+  isStreakMilestone,
   nivelDeXp,
-  openTutor,
+  openTutorWithContext,
   registrarAulaConcluida,
   registrarResposta,
   setPrefs,
@@ -20,9 +24,9 @@ import {
   useAppState,
   type Gap,
 } from "@/lib/store";
-import { play as tocarSom } from "@/lib/sfx";
-import { vibrar } from "@/lib/haptics";
+import type { TutorFocus } from "@/lib/tutor-prompt";
 import { Sparkles, Lightbulb, PlayCircle, Layers, X, Timer, Volume2, VolumeX } from "lucide-react";
+import { HOME_ROUTE } from "@/lib/features";
 
 export const Route = createFileRoute("/study")({ component: Study, ssr: false });
 
@@ -53,8 +57,11 @@ function Study() {
   );
   const [idx, setIdx] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
-  const [phase, setPhase] = useState<"answer" | "result" | "done">("answer");
+  const [lessonDone, setLessonDone] = useState(false);
   const [showHint, setShowHint] = useState(false);
+  // Máquina de resposta compartilhada com o player de redação (docs/20 §5,
+  // Fase 2) — guardas de envio/avanço e snapshot de feedback moram aqui.
+  const session = useExerciseSession();
   const [acertosAula, setAcertosAula] = useState(0);
   const [xpInicio] = useState(() => s.progress.xp);
   const [antesFechamento, setAntesFechamento] = useState<{
@@ -62,75 +69,89 @@ function Study() {
     nivel: number;
   } | null>(null);
   const q = questions[idx];
-  const elapsed = useLessonClock(phase === "done");
+  const answered = session.phase !== "answering";
+  const elapsed = useLessonClock(lessonDone);
 
-  // Mantém o balão global apontado para a questão da vez: é isso que faz a IA
-  // explicar O erro DELE em vez do erro médio. Sair da aula desfoca.
-  useEffect(() => {
-    if (!q || phase === "done") {
-      setTutorFocus(null);
-      return;
-    }
-    setTutorFocus({
+  /** Snapshot do foco atual, em texto — usado tanto pelo efeito reativo quanto pelos dois CTAs do tutor. */
+  function focusFromCurrent(): TutorFocus {
+    return {
       questionId: q.id,
       subjectName: q.subjectName,
       topic: q.topic,
       statement: q.statement,
       alternatives: q.alternatives,
       correct: q.correct,
-      chosen: phase === "result" ? selected : null,
+      chosen: answered ? selected : null,
+      answered,
+      wasCorrect: session.feedback?.correct ?? false,
       explanation: q.explanation,
       hint: q.hint,
-    });
-  }, [q, phase, selected]);
+    };
+  }
+
+  // Mantém o balão global apontado para a questão da vez: é isso que faz a IA
+  // explicar O erro DELE em vez do erro médio. Sair da aula desfoca.
+  useEffect(() => {
+    if (!q || lessonDone) {
+      setTutorFocus(null);
+      return;
+    }
+    setTutorFocus(focusFromCurrent());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [q, session.phase, selected, lessonDone]);
 
   useEffect(() => () => setTutorFocus(null), []);
 
   function submit() {
     if (!selected) return;
-    const correct = selected === q.correct;
-    setShowHint(false);
-    registrarResposta(q, correct);
-    if (correct) setAcertosAula((n) => n + 1);
-    tocarSom(correct ? "acerto" : "erro");
-    vibrar(correct ? "acerto" : "erro");
-    setPhase("result");
-
-    // Errou? O tutor entra sozinho explicando o erro DELE — não espera ser
-    // chamado. É o momento de IA que a demo destaca (SDD 12, D2).
-    if (!correct) {
-      askTutorAutomatically(
-        {
-          questionId: q.id,
-          subjectName: q.subjectName,
-          topic: q.topic,
-          statement: q.statement,
-          alternatives: q.alternatives,
-          correct: q.correct,
-          chosen: selected,
-          explanation: q.explanation,
-          hint: q.hint,
-        },
-        `Marquei ${selected} e errei. Onde meu raciocínio desandou?`,
-      );
-    }
+    session.submit(() => {
+      const correct = selected === q.correct;
+      // XP real pós-teto (docs/20 §12, Fase 11) — não mais um 15/5 fixo
+      // assumido aqui: `registrarResposta` devolve o que foi de fato pago.
+      const xpAwarded = registrarResposta(q, correct);
+      if (correct) setAcertosAula((n) => n + 1);
+      setShowHint(false);
+      return { exerciseId: q.id, correct, explanation: q.explanation, xpAwarded };
+      // O tutor NÃO abre sozinho ao errar (docs/20 §3 B2, §4.2): só o CTA
+      // explícito "Explicar melhor" abre o balão, e só o envio abre a API.
+    });
   }
 
   function nextQ() {
-    setSelected(null);
-    setShowHint(false);
-    if (idx + 1 < questions.length) {
-      setIdx(idx + 1);
-      setPhase("answer");
-    } else {
-      const antes = getState();
-      setAntesFechamento({
-        streak: antes.progress.streak,
-        nivel: nivelDeXp(antes.progress.xp).nivel,
-      });
-      registrarAulaConcluida();
-      setPhase("done");
-    }
+    session.advance(() => {
+      setSelected(null);
+      setShowHint(false);
+      if (idx + 1 < questions.length) {
+        setIdx(idx + 1);
+        session.reset();
+      } else {
+        const antes = getState();
+        registrarAulaConcluida();
+        const depois = getState();
+        setAntesFechamento({
+          streak: antes.progress.streak,
+          nivel: nivelDeXp(antes.progress.xp).nivel,
+        });
+        // Som de fechamento despachado UMA vez, aqui — no evento de domínio
+        // real, não num efeito de montagem da tela de celebração (docs/20 §5,
+        // Fase 2, item 6), que tocaria de novo numa remontagem.
+        const nivelSubiu = nivelDeXp(depois.progress.xp).nivel > nivelDeXp(antes.progress.xp).nivel;
+        const streakMudou = depois.progress.streak !== antes.progress.streak;
+        const metaFechada =
+          atividadeHoje(antes).lessons < depois.prefs.dailyLessons &&
+          atividadeHoje(depois).lessons >= depois.prefs.dailyLessons;
+        // Empilha todo evento que aconteceu; a prioridade entre eles é
+        // resolvida uma única vez dentro do motor (`selectHighestPrioritySound`),
+        // não duplicada aqui.
+        const eventos: SoundEvent[] = [];
+        if (nivelSubiu) eventos.push("level-up");
+        if (streakMudou && isStreakMilestone(depois.progress.streak)) eventos.push("marco-streak");
+        if (metaFechada) eventos.push("meta-diaria");
+        if (streakMudou) eventos.push("streak-diario");
+        dispatchClosingFeedback(eventos);
+        setLessonDone(true);
+      }
+    });
   }
 
   return (
@@ -139,7 +160,7 @@ function Study() {
         <header className="sticky top-0 z-10 border-b-2 border-gelo bg-neve/95 px-3 pt-3 pb-3 backdrop-blur">
           <div className="flex items-center gap-3">
             <button
-              onClick={() => nav({ to: "/dashboard" })}
+              onClick={() => nav({ to: HOME_ROUTE })}
               aria-label="Sair da aula"
               className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"
             >
@@ -147,7 +168,7 @@ function Study() {
             </button>
             <div className="min-w-0 flex-1">
               <ProgressBar
-                value={idx + (phase === "answer" ? 0 : 1)}
+                value={idx + (answered ? 1 : 0)}
                 max={questions.length}
                 tone="caneta"
                 label="Progresso da aula"
@@ -157,7 +178,15 @@ function Study() {
               {formatClock(elapsed)}
             </span>
             <button
-              onClick={() => setPrefs({ sound: !s.prefs.sound })}
+              onClick={() => {
+                const ligar = !s.prefs.sound;
+                setPrefs({ sound: ligar });
+                // Gesto real do usuário: desbloqueia o contexto se for ligar,
+                // e cessa qualquer som em andamento em até 50ms se for desligar
+                // (docs/20 §6.4, critério A6) — não espera o próximo render.
+                setAudioEnabled(ligar);
+                if (ligar) unlockAudioFromGesture();
+              }}
               aria-label={s.prefs.sound ? "Desligar som" : "Ligar som"}
               className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"
             >
@@ -166,7 +195,7 @@ function Study() {
           </div>
         </header>
 
-        {phase === "done" && antesFechamento ? (
+        {lessonDone && antesFechamento ? (
           <CelebracaoAula
             acertos={acertosAula}
             total={questions.length}
@@ -177,7 +206,7 @@ function Study() {
             metaFechada={atividadeHoje(s).lessons >= s.prefs.dailyLessons}
             nivelSubiu={nivelDeXp(s.progress.xp).nivel > antesFechamento.nivel}
             nivelAtual={nivelDeXp(s.progress.xp).nivel}
-            primario={{ label: "Fechar por hoje", to: "/dashboard" }}
+            primario={{ label: "Fechar por hoje", to: HOME_ROUTE }}
             secundario={{ label: "Ver meu progresso", to: "/progress" }}
           />
         ) : (
@@ -192,16 +221,16 @@ function Study() {
             <div className="mt-5 flex flex-col gap-3">
               {q.alternatives.map((a) => {
                 const isSel = selected === a.key;
-                const isCorrect = phase === "result" && a.key === q.correct;
-                const isWrong = phase === "result" && isSel && a.key !== q.correct;
+                const isCorrect = answered && a.key === q.correct;
+                const isWrong = answered && isSel && a.key !== q.correct;
                 return (
                   <button
                     key={a.key}
-                    disabled={phase === "result"}
+                    disabled={answered}
                     onClick={() => setSelected(a.key)}
                     className={`flex items-start gap-3 ${choiceClasses({
                       selected: isSel,
-                      checked: phase === "result",
+                      checked: answered,
                       isCorrect,
                       isWrongPick: isWrong,
                     })} ${isWrong ? "anim-shake" : ""}`}
@@ -209,7 +238,7 @@ function Study() {
                     <span
                       className={marcadorClasses({
                         selected: isSel,
-                        checked: phase === "result",
+                        checked: answered,
                         isCorrect,
                         isWrongPick: isWrong,
                       })}
@@ -222,7 +251,7 @@ function Study() {
               })}
             </div>
 
-            {phase === "answer" ? (
+            {!answered ? (
               <div className="mt-5 flex flex-col gap-2">
                 {showHint && (
                   <div className="relative rounded-lg border-2 border-gelo bg-cards p-4 text-sm text-abismo">
@@ -255,19 +284,24 @@ function Study() {
                   <button onClick={() => setShowHint(true)} className="btn-outline">
                     <Lightbulb size={16} /> Pedir dica
                   </button>
-                  <button onClick={() => openTutor()} className="btn-outline">
+                  <button
+                    onClick={() => openTutorWithContext(focusFromCurrent())}
+                    className="btn-outline"
+                  >
                     <Sparkles size={16} /> Perguntar à Foca
                   </button>
                 </div>
               </div>
-            ) : (
+            ) : session.feedback ? (
               <FeedbackSheet
-                correct={selected === q.correct}
-                explanation={q.explanation}
+                feedback={session.feedback}
                 isLast={idx + 1 >= questions.length}
-                xp={selected === q.correct ? 15 : 5}
                 onContinue={nextQ}
-                onAskTutor={selected !== q.correct ? () => openTutor() : undefined}
+                onAskTutor={
+                  !session.feedback.correct
+                    ? () => openTutorWithContext(focusFromCurrent())
+                    : undefined
+                }
               >
                 <div className="card-soft space-y-3 p-4">
                   <div>
@@ -290,7 +324,7 @@ function Study() {
                   </div>
                 </div>
               </FeedbackSheet>
-            )}
+            ) : null}
           </div>
         )}
       </div>

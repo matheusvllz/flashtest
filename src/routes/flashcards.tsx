@@ -1,8 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { EmptyState } from "@/components/ds/EmptyState";
-import { useAppState, setState, registrarRevisaoFlashcard } from "@/lib/store";
+import {
+  useAppState,
+  setState,
+  registrarLoteFlashcardsConcluido,
+  registrarRevisaoFlashcard,
+} from "@/lib/store";
 import { QUESTIONS } from "@/data/questions";
 import { RotateCw, Check, CheckCheck, Minus, X, Bookmark, BookmarkCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,39 +16,62 @@ export const Route = createFileRoute("/flashcards")({ component: Flashcards, ssr
 
 function Flashcards() {
   const s = useAppState();
-  const savedKey = (s.progress.savedFlashcards ?? []).join(",");
-  const reviewsKey = Object.keys(s.progress.flashcardReviews ?? {}).join(",");
   const now = Date.now();
+  // Dependência por REFERÊNCIA do objeto/array, não por uma string de chaves
+  // (docs/20 §2.5/§14, Fase 7 item 5) — `setState` sempre troca a referência
+  // via `structuredClone`, então isto recalcula em toda resposta, mesmo
+  // quando ela só muda o VALOR de uma entrada já existente (reavaliar um
+  // cartão já visto não muda o conjunto de chaves, mas muda `nextReview`).
   const cards = useMemo(
     () =>
       QUESTIONS.map((q) => {
-        const rev = s.progress.flashcardReviews?.[q.id];
+        const rev = s.progress.flashcardReviews[q.id];
         return {
           id: q.id,
           subject: q.subjectName,
           topic: q.topic,
           front: q.flashcardSuggestion.front,
           back: q.flashcardSuggestion.back,
-          saved: (s.progress.savedFlashcards ?? []).includes(q.id),
+          saved: s.progress.savedFlashcards.includes(q.id),
           due: !rev || new Date(rev.nextReview).getTime() <= now,
         };
       }),
-    [savedKey, reviewsKey],
+    [s.progress.flashcardReviews, s.progress.savedFlashcards],
   );
+  const cardsPorId = useMemo(() => new Map(cards.map((c) => [c.id, c])), [cards]);
 
   const [filter, setFilter] = useState<"all" | "saved">("all");
   const [subject, setSubject] = useState<string>("Todas");
   const subjects = ["Todas", ...Array.from(new Set(cards.map((c) => c.subject)))];
-  const filtered = cards.filter(
-    (c) => (filter === "saved" ? c.saved : c.due) && (subject === "Todas" || c.subject === subject),
-  );
 
-  const [i, setI] = useState(0);
+  function loteAtual(): string[] {
+    return cards
+      .filter((c) => (filter === "saved" ? c.saved : c.due) && (subject === "Todas" || c.subject === subject))
+      .map((c) => c.id);
+  }
+
+  // Fila capturada por ID no início da sessão/seleção — não é o array
+  // reativo `filtered` recalculado a cada render (docs/20 §2.5/§14, Fase 7
+  // item 4: "capturar lote da sessão, remover consumido sem incrementar
+  // índice de lista já filtrada"). Trocar filtro/matéria reinicia a fila e a
+  // posição (item 4: "reiniciar ao trocar filtro").
+  const [fila, setFila] = useState<string[]>(() => loteAtual());
+  const [posicao, setPosicao] = useState(0);
   const [flip, setFlip] = useState(false);
-  const card = filtered[i];
+
+  useEffect(() => {
+    setFila(loteAtual());
+    setPosicao(0);
+    setFlip(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter, subject]);
+
+  const cardId = fila.length > 0 ? fila[posicao % fila.length] : undefined;
+  const card = cardId ? cardsPorId.get(cardId) : undefined;
 
   function grade(g: "again" | "hard" | "good" | "easy") {
-    if (!card) return;
+    // Nunca avalia antes de virar o cartão (docs/20 §14, Fase 7 item 5).
+    if (!flip || !card) return;
     setState((st) => {
       st.progress.flashcardReviews[card.id] = {
         ease: g === "again" ? 1 : g === "hard" ? 2 : g === "good" ? 3 : 4,
@@ -57,7 +85,16 @@ function Flashcards() {
     // flashcard nunca deu XP nesse app e não é o caso de começar agora.
     registrarRevisaoFlashcard();
     setFlip(false);
-    setI((v) => (v + 1) % Math.max(1, filtered.length));
+    // Remove o item consumido da fila SEM incrementar a posição — o próximo
+    // item já ocupa a posição atual depois da remoção; incrementar aqui é o
+    // que pulava o item seguinte (docs/20 §2.5).
+    setFila((f) => {
+      const restante = f.filter((id) => id !== card.id);
+      // A fila esvaziou de verdade: fecha o LOTE como 1 bloco (docs/20 §12,
+      // Fase 11) — nunca por sessão vazia, nunca um bloco por carta.
+      if (restante.length === 0) registrarLoteFlashcardsConcluido();
+      return restante;
+    });
   }
 
   return (
@@ -93,7 +130,7 @@ function Flashcards() {
           <>
             <div className="flex items-center justify-between">
               <div className="text-xs font-semibold text-nevoa">
-                Cartão {i + 1} de {filtered.length}
+                Cartão {(posicao % fila.length) + 1} de {fila.length}
               </div>
               <button
                 onClick={() =>
@@ -158,22 +195,30 @@ function Flashcards() {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-2">
-              <button onClick={() => grade("hard")} className="btn-outline">
-                <Minus size={14} /> Difícil
-              </button>
-              <button onClick={() => grade("easy")} className="btn-outline">
-                <CheckCheck size={14} /> Fácil
-              </button>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <button onClick={() => grade("again")} className="btn-outline">
-                <X size={14} /> Não lembrei
-              </button>
-              <button onClick={() => grade("good")} className="btn-outline">
-                <Check size={14} /> Lembrei
-              </button>
-            </div>
+            {!flip ? (
+              <p className="text-center text-xs font-semibold text-nevoa">
+                Toque no cartão para virar antes de avaliar.
+              </p>
+            ) : (
+              <>
+                <div className="grid grid-cols-2 gap-2">
+                  <button onClick={() => grade("hard")} className="btn-outline">
+                    <Minus size={14} /> Difícil
+                  </button>
+                  <button onClick={() => grade("easy")} className="btn-outline">
+                    <CheckCheck size={14} /> Fácil
+                  </button>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <button onClick={() => grade("again")} className="btn-outline">
+                    <X size={14} /> Não lembrei
+                  </button>
+                  <button onClick={() => grade("good")} className="btn-outline">
+                    <Check size={14} /> Lembrei
+                  </button>
+                </div>
+              </>
+            )}
           </>
         )}
       </div>

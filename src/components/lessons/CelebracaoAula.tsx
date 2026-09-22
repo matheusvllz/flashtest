@@ -1,14 +1,20 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Flame, Star, Target, Timer } from "lucide-react";
 import { FocaMark, type FocaExpression } from "@/components/brand/FocaMark";
 import { StatTile } from "@/components/ds/StatTile";
 import { XpChip } from "@/components/ds/XpChip";
+import { COPY } from "@/lib/copy";
+import { isStreakMilestone } from "@/lib/store";
 import { fala } from "@/lib/voz";
-import { playRecompensa, type Evento } from "@/lib/sfx";
-import { vibrar } from "@/lib/haptics";
 
-export type CelebracaoAcao = { label: string; to?: string; onClick?: () => void };
+export type CelebracaoAcao = {
+  label: string;
+  to?: string;
+  /** Só usado quando `to` está presente — query string do destino (docs/25 §12.3/§18 T-12, ex.: `?concluida=<id>`). */
+  search?: Record<string, string>;
+  onClick?: () => void;
+};
 
 function formatClock(total: number) {
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
@@ -35,6 +41,7 @@ export function CelebracaoAula({
   nivelSubiu,
   nivelAtual,
   notas,
+  aprendizado,
   primario,
   secundario,
 }: {
@@ -52,30 +59,29 @@ export function CelebracaoAula({
   nivelAtual?: number;
   /** "Anota pra melhorar" — o que o aluno errou (só a lição de redação usa). */
   notas?: string[];
+  /** Objetivo da lição (docs/25 §12.3/§18 T-12) — presente só na lição de trilha nova. */
+  aprendizado?: string;
   primario: CelebracaoAcao;
   secundario?: CelebracaoAcao;
 }) {
   const pct = total > 0 ? Math.round((acertos / total) * 100) : 0;
-  const marco = streakAtual > 0 && [7, 30, 100].includes(streakAtual);
+  const marco = isStreakMilestone(streakAtual);
   const bom = pct >= 70;
   const expression: FocaExpression =
     pct === 100 || marco ? "empolgada" : bom ? "orgulhosa" : "neutra";
-  const titulo = fala(bom ? "fimbom" : "fimruim");
+  // Escolhida uma vez na montagem desta tela de fechamento, não a cada render
+  // (docs/20 §3 B1, §4.1) — `bom` não muda depois que a tela abre.
+  const [titulo] = useState(() => fala(bom ? "fimbom" : "fimruim"));
 
-  // Um só som por resposta/fechamento, o mais alto da hierarquia (16 §3, regra 5).
-  useEffect(() => {
-    const eventos: Evento[] = ["fim"];
-    if (nivelSubiu || marco) eventos.push("marco");
-    else if (streakMudou || metaFechada) eventos.push("streak");
-    playRecompensa(eventos);
-    vibrar(nivelSubiu || marco ? "marco" : "fim");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // O som de fechamento NÃO toca aqui (docs/20 §5, Fase 2, item 6): um efeito
+  // de montagem tocaria de novo numa remontagem (Strict Mode, fast refresh).
+  // Quem dispara é o chamador, uma única vez, no exato momento da conclusão —
+  // ver `dispatchClosingFeedback` em `study.tsx`/`LessonPlayer.tsx`.
 
-  function Acao({ label, to, onClick, className }: CelebracaoAcao & { className: string }) {
+  function Acao({ label, to, search, onClick, className }: CelebracaoAcao & { className: string }) {
     if (to) {
       return (
-        <Link to={to} className={className}>
+        <Link to={to} search={search} className={className}>
           {label}
         </Link>
       );
@@ -113,6 +119,13 @@ export function CelebracaoAula({
           {segundos !== undefined ? ` em ${formatClock(segundos)}` : ""}.
         </p>
       </div>
+
+      {aprendizado && (
+        <div className="card-soft w-full p-4 text-left">
+          <p className="ds-label">{COPY.licao.voceAprendeu}</p>
+          <p className="mt-1 text-[14px] text-abismo">{aprendizado}</p>
+        </div>
+      )}
 
       {estrelas === undefined && (
         <div className="grid w-full grid-cols-3 gap-2.5">

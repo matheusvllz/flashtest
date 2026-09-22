@@ -2,7 +2,17 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
 import { ProgressBar } from "@/components/ds/ProgressBar";
-import { useAppState, logout, reset, setPrefs, nivelDeXp } from "@/lib/store";
+import { setAudioEnabled, unlockAudioFromGesture } from "@/lib/audio/engine";
+import { EXAM_MAP, EXAMS } from "@/data/exams";
+import {
+  useAppState,
+  logout,
+  reset,
+  setExamTarget,
+  setPrefs,
+  setShowExamTips,
+  nivelDeXp,
+} from "@/lib/store";
 import { ChevronRight, LogOut, RotateCcw, Download, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -60,7 +70,14 @@ function Profile() {
           <p className="ds-label">Som e vibração</p>
           <div className="mt-2.5 grid grid-cols-2 gap-2">
             <button
-              onClick={() => setPrefs({ sound: !p.sound })}
+              onClick={() => {
+                const ligar = !p.sound;
+                setPrefs({ sound: ligar });
+                // Gesto real: desbloqueia se ligou, cessa som em andamento se
+                // desligou (docs/20 §6.4, critério A6).
+                setAudioEnabled(ligar);
+                if (ligar) unlockAudioFromGesture();
+              }}
               aria-pressed={p.sound}
               className={cn("chip justify-center", p.sound && "chip-on")}
             >
@@ -100,6 +117,52 @@ function Profile() {
               </button>
             ))}
           </div>
+        </div>
+
+        <div className="card-soft p-4">
+          <p className="ds-label">Vestibular</p>
+          <p className="mt-1 text-xs text-nevoa">
+            Escolha sua prova pra receber dicas contextuais no fim das lições.
+          </p>
+          <div className="mt-2.5 grid grid-cols-2 gap-2">
+            {EXAMS.map((exam) => {
+              const alvoAtual = p.examTargets[0];
+              const selecionado = alvoAtual?.examId === exam.id;
+              return (
+                <button
+                  key={exam.id}
+                  onClick={() =>
+                    setExamTarget(selecionado ? null : { examId: exam.id, stage: exam.stages?.[0] })
+                  }
+                  aria-pressed={selecionado}
+                  className={cn("chip justify-center", selecionado && "chip-on")}
+                >
+                  {exam.name}
+                </button>
+              );
+            })}
+          </div>
+          {p.examTargets[0] && EXAM_MAP[p.examTargets[0].examId]?.hasStages && (
+            <div className="mt-2.5 flex flex-wrap gap-2">
+              {EXAM_MAP[p.examTargets[0].examId]?.stages?.map((stage) => (
+                <button
+                  key={stage}
+                  onClick={() => setExamTarget({ examId: p.examTargets[0].examId, stage })}
+                  aria-pressed={p.examTargets[0].stage === stage}
+                  className={cn("chip", p.examTargets[0].stage === stage && "chip-on")}
+                >
+                  Etapa {stage}
+                </button>
+              ))}
+            </div>
+          )}
+          <button
+            onClick={() => setShowExamTips(!p.showExamTips)}
+            aria-pressed={p.showExamTips}
+            className={cn("chip mt-2.5 w-full justify-center", p.showExamTips && "chip-on")}
+          >
+            Dicas de prova {p.showExamTips ? "ativadas" : "desativadas"}
+          </button>
         </div>
 
         <div

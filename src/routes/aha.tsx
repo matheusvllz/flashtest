@@ -8,6 +8,7 @@ import { ProgressBar } from "@/components/ds/ProgressBar";
 import { StatTile } from "@/components/ds/StatTile";
 import { XpChip } from "@/components/ds/XpChip";
 import { useAppState } from "@/lib/store";
+import { HOME_ROUTE } from "@/lib/features";
 
 export const Route = createFileRoute("/aha")({ component: Aha, ssr: false });
 
@@ -127,7 +128,7 @@ function Aha() {
         </div>
 
         <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
-          <Link to="/dashboard" className="btn-primary w-full">
+          <Link to={HOME_ROUTE} className="btn-primary w-full">
             Entrar no meu plano
           </Link>
         </footer>

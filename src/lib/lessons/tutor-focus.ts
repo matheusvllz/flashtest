@@ -67,9 +67,25 @@ function optionsOf(ex: Exercise): {
   }
 }
 
-/** O que o aluno escolheu, em texto — `null` quando não é uma escolha única. */
-function chosenOf(ex: Exercise, answer: ExerciseAnswer | null): string | null {
-  if (answer === null || Array.isArray(answer)) return null;
+/**
+ * O que o aluno escolheu, em texto — inclusive respostas compostas (ordenar
+ * monta a frase na ordem escolhida; parear lista os pares formados). `null`
+ * só quando a resposta é mesmo `null` (nada escolhido ainda); nunca usar essa
+ * checagem para decidir "respondeu ou não" — isso é `answered`, à parte.
+ */
+function chosenOf(
+  ex: Exercise,
+  answer: ExerciseAnswer | null,
+  shownBlocks: string[] | undefined,
+): string | null {
+  if (answer === null) return null;
+  if (Array.isArray(answer)) {
+    if (!shownBlocks) return null;
+    if (ex.type === "ordenar") return answer.map((i) => shownBlocks[i]).join(" → ");
+    if (ex.type === "parear")
+      return ex.pares.map((p, i) => `${p.a}=${shownBlocks[answer[i]] ?? "?"}`).join("; ");
+    return null;
+  }
   const letter = String.fromCharCode(65 + answer);
   switch (ex.type) {
     case "multipla-escolha":
@@ -87,19 +103,26 @@ function chosenOf(ex: Exercise, answer: ExerciseAnswer | null): string | null {
 export function focusFromExercise(
   ex: Exercise,
   answer: ExerciseAnswer | null,
+  lessonId: string,
   lessonTitle: string,
   trilhaName: string,
   index: number,
+  shownBlocks: string[] | undefined,
+  wasCorrect: boolean,
 ): TutorFocus {
   const { alternatives, correct } = optionsOf(ex);
   return {
-    questionId: `redacao:${lessonTitle}:${index}`,
+    // ID pelo `lessonId` (estável), nunca pelo título editorial (docs/20 §4.2.9).
+    // Identidade definitiva por exercício vem na Fase 5 (`exercise-ids.ts`).
+    questionId: `redacao:${lessonId}:${index}`,
     subjectName: "Redação",
     topic: `${trilhaName} · ${lessonTitle}`,
     statement: statementOf(ex),
     alternatives,
     correct,
-    chosen: chosenOf(ex, answer),
+    chosen: chosenOf(ex, answer, shownBlocks),
+    answered: answer !== null,
+    wasCorrect,
     explanation: ex.explicacao,
     hint: ex.explicacao,
   };

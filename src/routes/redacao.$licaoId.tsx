@@ -17,7 +17,7 @@ function Licao() {
         <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-8">
           <EmptyState
             text="Esse link não aponta para nenhuma lição da trilha de redação."
-            cta={{ label: "Voltar à trilha", to: "/redacao" }}
+            cta={{ label: "Voltar à trilha", to: "/trilha" }}
           />
         </div>
       </PhoneFrame>

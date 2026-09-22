@@ -1,0 +1,674 @@
+[
+  {
+    "event": "resposta-correta",
+    "file": "wav/resposta-correta.wav",
+    "duration": 0.36,
+    "rms": -19,
+    "emotion": "Acerto, pequena recompensa e conclusão positiva.",
+    "form": "Três ataques ascendentes; terça menor + quarta justa; final mais cheio.",
+    "notes": [
+      [
+        0,
+        "F#5",
+        0.16,
+        "mallet",
+        0.65
+      ],
+      [
+        0.067,
+        "A5",
+        0.16,
+        "mallet",
+        0.75
+      ],
+      [
+        0.142,
+        "D6",
+        0.218,
+        "bell",
+        0.82
+      ],
+      [
+        0.145,
+        "D5",
+        0.19,
+        "felt",
+        0.18
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 17280,
+    "duration_s": 0.36,
+    "peak_dbfs": -6.3,
+    "rms_dbfs": -19.0,
+    "dc": 2.472488968460648e-08,
+    "frequencies": {
+      "F#5": 739.99,
+      "A5": 880.0,
+      "D6": 1174.66,
+      "D5": 587.33
+    },
+    "sha256": "6231524e377dbc5bbb0fa68dc68da1ad6e498b6756a2015f0d0ec11959071328"
+  },
+  {
+    "event": "resposta-incorreta",
+    "file": "wav/resposta-incorreta.wav",
+    "duration": 0.23,
+    "rms": -25,
+    "emotion": "Não foi dessa vez; pode continuar.",
+    "form": "Dois toques foscos descendentes, sem acorde ou brilho.",
+    "notes": [
+      [
+        0,
+        "E4",
+        0.125,
+        "felt",
+        0.65
+      ],
+      [
+        0.088,
+        "D4",
+        0.142,
+        "felt",
+        0.48
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 11040,
+    "duration_s": 0.23,
+    "peak_dbfs": -13.68,
+    "rms_dbfs": -25.0,
+    "dc": 8.292820142663043e-08,
+    "frequencies": {
+      "E4": 329.63,
+      "D4": 293.66
+    },
+    "sha256": "22c9c26ce6d713a16959d2636c5b23f2a4aae618fcc31d30cbb1c7cdfd9ba23f"
+  },
+  {
+    "event": "acerto-consecutivo",
+    "file": "wav/acerto-consecutivo.wav",
+    "duration": 0.4,
+    "rms": -19,
+    "emotion": "Você encontrou o ritmo.",
+    "form": "Pluck sincopado, nota repetida e díade final; não repete o acerto.",
+    "notes": [
+      [
+        0,
+        "A4",
+        0.16,
+        "pluck",
+        0.65
+      ],
+      [
+        0.06,
+        "A4",
+        0.14,
+        "ceramic",
+        0.34
+      ],
+      [
+        0.17,
+        "D5",
+        0.23,
+        "pluck",
+        0.75
+      ],
+      [
+        0.17,
+        "F#5",
+        0.23,
+        "bell",
+        0.27
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 19200,
+    "duration_s": 0.4,
+    "peak_dbfs": -4.0,
+    "rms_dbfs": -22.13,
+    "dc": -1.2715657552083334e-08,
+    "frequencies": {
+      "A4": 440.0,
+      "D5": 587.33,
+      "F#5": 739.99
+    },
+    "sha256": "b9013a43878bf05e19782a4e14531f0336861f1e2e78bd2d58bca67cd27abf43"
+  },
+  {
+    "event": "conclusao-licao",
+    "file": "wav/conclusao-licao.wav",
+    "duration": 0.62,
+    "rms": -21,
+    "emotion": "Uma etapa terminada, sensação de repouso.",
+    "form": "Díade aberta inicial; acorde de Ré maior como chegada, sem corrida de notas.",
+    "notes": [
+      [
+        0,
+        "A4",
+        0.25,
+        "mallet",
+        0.44
+      ],
+      [
+        0,
+        "E5",
+        0.25,
+        "mallet",
+        0.24
+      ],
+      [
+        0.18,
+        "D4",
+        0.44,
+        "pad",
+        0.36
+      ],
+      [
+        0.18,
+        "F#4",
+        0.44,
+        "pad",
+        0.26
+      ],
+      [
+        0.18,
+        "A4",
+        0.4,
+        "pluck",
+        0.44
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 29760,
+    "duration_s": 0.62,
+    "peak_dbfs": -9.4,
+    "rms_dbfs": -21.0,
+    "dc": -4.204370642221102e-08,
+    "frequencies": {
+      "A4": 440.0,
+      "E5": 659.26,
+      "D4": 293.66,
+      "F#4": 369.99
+    },
+    "sha256": "0b08cdeb2338b778a56ee103a57a927fab63c85eb5ab10a496321bc451ad2f5a"
+  },
+  {
+    "event": "level-up",
+    "file": "wav/level-up.wav",
+    "duration": 0.78,
+    "rms": -19,
+    "emotion": "Subir para um novo patamar.",
+    "form": "Escada rítmica de quatro plucks, seguida de acorde alto curto.",
+    "notes": [
+      [
+        0,
+        "D4",
+        0.2,
+        "pluck",
+        0.52
+      ],
+      [
+        0.1,
+        "E4",
+        0.2,
+        "pluck",
+        0.54
+      ],
+      [
+        0.22,
+        "A4",
+        0.23,
+        "pluck",
+        0.62
+      ],
+      [
+        0.36,
+        "D5",
+        0.42,
+        "bell",
+        0.63
+      ],
+      [
+        0.36,
+        "F#5",
+        0.37,
+        "pad",
+        0.22
+      ]
+    ],
+    "air": [
+      [
+        0.29,
+        0.12,
+        0.1
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 37440,
+    "duration_s": 0.78,
+    "peak_dbfs": -4.26,
+    "rms_dbfs": -19.0,
+    "dc": 3.4234462640224356e-08,
+    "frequencies": {
+      "D4": 293.66,
+      "E4": 329.63,
+      "A4": 440.0,
+      "D5": 587.33,
+      "F#5": 739.99
+    },
+    "sha256": "4140080d158dfea74f2840a8aa8c0cc239811207f0a9673514b6302b4f8006ea"
+  },
+  {
+    "event": "conquista",
+    "file": "wav/conquista.wav",
+    "duration": 0.88,
+    "rms": -20,
+    "emotion": "Reconhecimento raro, acolhedor.",
+    "form": "Medalhão: um ataque de cerâmica abre uma tríade sustentada; sem arpejo.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.26,
+        "ceramic",
+        0.56
+      ],
+      [
+        0.085,
+        "D4",
+        0.7,
+        "pad",
+        0.31
+      ],
+      [
+        0.085,
+        "F#4",
+        0.7,
+        "pad",
+        0.23
+      ],
+      [
+        0.085,
+        "A4",
+        0.7,
+        "pad",
+        0.2
+      ],
+      [
+        0.24,
+        "A5",
+        0.55,
+        "bell",
+        0.23
+      ]
+    ],
+    "air": [
+      [
+        0.08,
+        0.28,
+        0.08
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 42240,
+    "duration_s": 0.88,
+    "peak_dbfs": -6.88,
+    "rms_dbfs": -20.0,
+    "dc": 3.4245577725497157e-07,
+    "frequencies": {
+      "D5": 587.33,
+      "D4": 293.66,
+      "F#4": 369.99,
+      "A4": 440.0,
+      "A5": 880.0
+    },
+    "sha256": "7e5e503003267b56d3a97f2199e0417f7eda30174c75c1ce949bddd9ba776884"
+  },
+  {
+    "event": "streak-diario",
+    "file": "wav/streak-diario.wav",
+    "duration": 0.28,
+    "rms": -22,
+    "emotion": "Presença de hoje reconhecida.",
+    "form": "Dois toques secos na mesma nota com pequeno corpo de quinta no segundo.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.115,
+        "ceramic",
+        0.6
+      ],
+      [
+        0.105,
+        "D5",
+        0.175,
+        "ceramic",
+        0.46
+      ],
+      [
+        0.107,
+        "A4",
+        0.17,
+        "felt",
+        0.15
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 13440,
+    "duration_s": 0.28,
+    "peak_dbfs": -8.52,
+    "rms_dbfs": -22.0,
+    "dc": 1.2715657552083333e-07,
+    "frequencies": {
+      "D5": 587.33,
+      "A4": 440.0
+    },
+    "sha256": "df8191b5fd0fdf830550f32a1a60edd7c823abc5dd0f0f0f67aacc2fd3a3ba6e"
+  },
+  {
+    "event": "marco-streak",
+    "file": "wav/marco-streak.wav",
+    "duration": 0.7,
+    "rms": -20,
+    "emotion": "Constância acumulada merece um marco.",
+    "form": "Três passos de madeira em quinta aberta; acorde final separado.",
+    "notes": [
+      [
+        0,
+        "D4",
+        0.13,
+        "mallet",
+        0.5
+      ],
+      [
+        0.085,
+        "A4",
+        0.13,
+        "mallet",
+        0.42
+      ],
+      [
+        0.205,
+        "D4",
+        0.14,
+        "mallet",
+        0.55
+      ],
+      [
+        0.34,
+        "F#4",
+        0.36,
+        "bell",
+        0.43
+      ],
+      [
+        0.34,
+        "A4",
+        0.36,
+        "bell",
+        0.25
+      ],
+      [
+        0.34,
+        "D5",
+        0.36,
+        "bell",
+        0.23
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 33600,
+    "duration_s": 0.7,
+    "peak_dbfs": -4.0,
+    "rms_dbfs": -20.98,
+    "dc": 1.2988135928199405e-07,
+    "frequencies": {
+      "D4": 293.66,
+      "A4": 440.0,
+      "F#4": 369.99,
+      "D5": 587.33
+    },
+    "sha256": "e376b6dcdd6fe27cf6243f6b621a204d06ebeb7fdc7fd3ded42f80e6b3a90c1f"
+  },
+  {
+    "event": "capitulo-desbloqueado",
+    "file": "wav/capitulo-desbloqueado.wav",
+    "duration": 0.44,
+    "rms": -22,
+    "emotion": "Um caminho se abre.",
+    "form": "Encaixe seco, sopro de página e quinta que ganha corpo; sem melodia de recompensa.",
+    "notes": [
+      [
+        0,
+        "A4",
+        0.09,
+        "ceramic",
+        0.35
+      ],
+      [
+        0.09,
+        "D5",
+        0.35,
+        "pad",
+        0.4
+      ],
+      [
+        0.09,
+        "A5",
+        0.35,
+        "pad",
+        0.18
+      ]
+    ],
+    "air": [
+      [
+        0.035,
+        0.16,
+        0.24
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 21120,
+    "duration_s": 0.44,
+    "peak_dbfs": -9.38,
+    "rms_dbfs": -22.0,
+    "dc": 2.4564338452888257e-08,
+    "frequencies": {
+      "A4": 440.0,
+      "D5": 587.33,
+      "A5": 880.0
+    },
+    "sha256": "2e8f4e87b7d7016764990e71392ef4c185e600da86b2aef75825464548815a49"
+  },
+  {
+    "event": "meta-diaria",
+    "file": "wav/meta-diaria.wav",
+    "duration": 0.49,
+    "rms": -21,
+    "emotion": "Por hoje, tarefa cumprida.",
+    "form": "Carimbo harmônico: acorde simultâneo e um toque tônico de confirmação.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.29,
+        "mallet",
+        0.5
+      ],
+      [
+        0,
+        "F#5",
+        0.29,
+        "mallet",
+        0.3
+      ],
+      [
+        0,
+        "A5",
+        0.29,
+        "mallet",
+        0.16
+      ],
+      [
+        0.225,
+        "D5",
+        0.265,
+        "ceramic",
+        0.3
+      ]
+    ],
+    "air": [],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 23520,
+    "duration_s": 0.49,
+    "peak_dbfs": -4.0,
+    "rms_dbfs": -21.45,
+    "dc": -3.892548230229592e-09,
+    "frequencies": {
+      "D5": 587.33,
+      "F#5": 739.99,
+      "A5": 880.0
+    },
+    "sha256": "c0a6cfd11bc3de0aa8a89ac28c8c6c2a856fe11051fbebacdf4df8e9a533da0b"
+  },
+  {
+    "event": "abertura-importante",
+    "file": "wav/abertura-importante.wav",
+    "duration": 0.17,
+    "rms": -27,
+    "emotion": "Entrada leve, sem prometer recompensa.",
+    "form": "Sopro curto com um ponto de cerâmica; sem sequência musical.",
+    "notes": [
+      [
+        0.018,
+        "A4",
+        0.135,
+        "ceramic",
+        0.28
+      ]
+    ],
+    "air": [
+      [
+        0,
+        0.11,
+        0.3
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 8160,
+    "duration_s": 0.17,
+    "peak_dbfs": -12.41,
+    "rms_dbfs": -27.0,
+    "dc": 4.861869064031863e-08,
+    "frequencies": {
+      "A4": 440.0
+    },
+    "sha256": "ee084027baf086ee6e5accb236cc32766a9ede64a7bc32785b88af3f70a3cbe7"
+  },
+  {
+    "event": "recompensa-especial",
+    "file": "wav/recompensa-especial.wav",
+    "duration": 0.98,
+    "rms": -19.5,
+    "emotion": "Surpresa valiosa, sem fanfarra excessiva.",
+    "form": "Florescimento: acorde macio abre, duas gotas espaçadas respondem e repousam.",
+    "notes": [
+      [
+        0,
+        "D4",
+        0.46,
+        "pad",
+        0.29
+      ],
+      [
+        0,
+        "A4",
+        0.46,
+        "pad",
+        0.19
+      ],
+      [
+        0.16,
+        "F#5",
+        0.34,
+        "bell",
+        0.48
+      ],
+      [
+        0.36,
+        "E6",
+        0.27,
+        "bell",
+        0.25
+      ],
+      [
+        0.54,
+        "D6",
+        0.44,
+        "bell",
+        0.4
+      ],
+      [
+        0.54,
+        "F#4",
+        0.42,
+        "pad",
+        0.16
+      ]
+    ],
+    "air": [
+      [
+        0.015,
+        0.29,
+        0.12
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 47040,
+    "duration_s": 0.98,
+    "peak_dbfs": -4.6,
+    "rms_dbfs": -19.5,
+    "dc": -5.8388223453443876e-08,
+    "frequencies": {
+      "D4": 293.66,
+      "A4": 440.0,
+      "F#5": 739.99,
+      "E6": 1318.51,
+      "D6": 1174.66,
+      "F#4": 369.99
+    },
+    "sha256": "a0db286762034e1a656f2a6df38d8e7ccf08cbb0c8fbb5aee250a338dce2d478"
+  }
+]

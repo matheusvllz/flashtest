@@ -8,15 +8,21 @@ import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { CelebracaoAula } from "./CelebracaoAula";
 import { FeedbackSheet } from "./FeedbackSheet";
+import { useExerciseSession } from "@/hooks/useExerciseSession";
+import { chapterById } from "@/content/curriculum-tree";
+import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
+import { isChapterCompleted } from "@/lib/learning/trail";
 import { checkAnswer, shuffled } from "@/lib/lessons/define";
 import { exerciseViewFor } from "@/lib/lessons/registry";
 import { focusFromExercise } from "@/lib/lessons/tutor-focus";
 import type { ExerciseAnswer, Lesson, Trilha } from "@/lib/lessons/types";
+import type { SoundEvent } from "@/lib/feedback/dispatch-feedback";
 import {
-  askTutorAutomatically,
   completeLesson,
   getState,
+  isStreakMilestone,
   nivelDeXp,
+  openTutorWithContext,
   useAppState,
   type CompleteLessonResult,
 } from "@/lib/store";
@@ -37,8 +43,9 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
   const total = lesson.exercicios.length;
   const [idx, setIdx] = useState(0);
   const [answer, setAnswer] = useState<ExerciseAnswer | null>(null);
-  const [checked, setChecked] = useState(false);
-  const [wasCorrect, setWasCorrect] = useState(false);
+  // Máquina de resposta compartilhada com a aula de 60s (docs/20 §5, Fase 2).
+  const session = useExerciseSession();
+  const checked = session.phase !== "answering";
   const [correctCount, setCorrectCount] = useState(0);
   // O que o aluno errou: vira o "anota pra melhorar" da tela final.
   const [wrongNotes, setWrongNotes] = useState<string[]>([]);
@@ -49,6 +56,9 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
   } | null>(null);
   const [replayKey, setReplayKey] = useState(0);
   const [confirmExit, setConfirmExit] = useState(false);
+  // Se ESTA conclusão fechou o capítulo — decide se "Voltar à trilha" abre a
+  // folha de celebração (docs/25 §12.3/§18 T-19).
+  const [capituloFechou, setCapituloFechou] = useState(false);
 
   // Embaralha 'ordenar' (blocos) e 'parear' (coluna B) UMA vez por sessão da
   // lição. Reembaralha até 3x se por sorte sair já na ordem correta.
@@ -76,49 +86,81 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
 
   function verify() {
     if (answer === null) return;
-    const correct = checkAnswer(exercise, answer, shownBlocksByIdx[idx]);
-    setChecked(true);
-    setWasCorrect(correct);
-    if (correct) {
-      setCorrectCount((c) => c + 1);
-    } else {
-      setWrongNotes((w) => (w.includes(exercise.explicacao) ? w : [...w, exercise.explicacao]));
-    }
+    session.submit(() => {
+      const correct = checkAnswer(exercise, answer, shownBlocksByIdx[idx]);
+      if (correct) {
+        setCorrectCount((c) => c + 1);
+      } else {
+        setWrongNotes((w) => (w.includes(exercise.explicacao) ? w : [...w, exercise.explicacao]));
+      }
+      return { exerciseId: `${lesson.id}:${idx}`, correct, explanation: exercise.explicacao };
+    });
   }
 
-  /** Erro + "Explicar melhor" = o mesmo tutor de IA que explica a aula de 60s. */
+  /**
+   * "Explicar melhor" só ABRE o balão com o contexto fixado — nunca envia
+   * mensagem sozinho (docs/20 §4.2): o aluno decide se e o que perguntar.
+   */
   function askTutor() {
-    askTutorAutomatically(
-      focusFromExercise(exercise, answer, lesson.titulo, trilha.nome, idx),
-      "Errei esse exercício de redação. Me explica onde eu me perdi, em 2 frases, e me dá uma dica pra não repetir.",
+    openTutorWithContext(
+      focusFromExercise(
+        exercise,
+        answer,
+        lesson.id,
+        lesson.titulo,
+        trilha.nome,
+        idx,
+        shownBlocksByIdx[idx],
+        session.feedback?.correct ?? false,
+      ),
     );
   }
 
   function next() {
-    if (idx + 1 >= total) {
-      const antes = getState();
-      setAntesFechamento({
-        streak: antes.progress.streak,
-        nivel: nivelDeXp(antes.progress.xp).nivel,
-      });
-      setResult(completeLesson(lesson.id, correctCount, total));
-      return;
-    }
-    setIdx(idx + 1);
-    setAnswer(null);
-    setChecked(false);
-    setWasCorrect(false);
+    session.advance(() => {
+      if (idx + 1 >= total) {
+        const antes = getState();
+        const lessonResult = completeLesson(lesson.id, correctCount, total);
+        const depois = getState();
+        setAntesFechamento({
+          streak: antes.progress.streak,
+          nivel: nivelDeXp(antes.progress.xp).nivel,
+        });
+        // Mesmo princípio do estudo geral: som de fechamento despachado uma
+        // vez, no evento de domínio, não no mount da tela (docs/20 §5, Fase 2).
+        const nivelSubiu = nivelDeXp(depois.progress.xp).nivel > nivelDeXp(antes.progress.xp).nivel;
+        const streakMudou = depois.progress.streak !== antes.progress.streak;
+        // Capítulo (legado) fechado por ESTA conclusão — leva a folha de
+        // celebração da trilha a abrir sozinha ao voltar (docs/25 §12.3/§18 T-19).
+        const chapter = chapterById(trilha.id);
+        const capituloFechou = Boolean(
+          chapter && !isChapterCompleted(chapter, antes) && isChapterCompleted(chapter, depois),
+        );
+        const eventos: SoundEvent[] = [];
+        if (nivelSubiu) eventos.push("level-up");
+        if (streakMudou && isStreakMilestone(depois.progress.streak)) eventos.push("marco-streak");
+        if (streakMudou) eventos.push("streak-diario");
+        if (capituloFechou) eventos.push("capitulo-desbloqueado");
+        dispatchClosingFeedback(eventos);
+        setResult(lessonResult);
+        setCapituloFechou(capituloFechou);
+        return;
+      }
+      setIdx(idx + 1);
+      setAnswer(null);
+      session.reset();
+    });
   }
 
   function replay() {
+    session.reset();
     setIdx(0);
     setAnswer(null);
-    setChecked(false);
-    setWasCorrect(false);
     setCorrectCount(0);
     setWrongNotes([]);
     setResult(null);
     setAntesFechamento(null);
+    setCapituloFechou(false);
     setReplayKey((k) => k + 1);
   }
 
@@ -137,7 +179,11 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
           nivelSubiu={nivelAtual > antesFechamento.nivel}
           nivelAtual={nivelAtual}
           notas={wrongNotes}
-          primario={{ label: "Voltar à trilha", to: "/redacao" }}
+          primario={{
+            label: "Voltar à trilha",
+            to: "/trilha",
+            search: { concluida: lesson.id, ...(capituloFechou ? { capitulo: trilha.id } : {}) },
+          }}
           secundario={{ label: "Refazer lição", onClick: replay }}
         />
       </PhoneFrame>
@@ -174,7 +220,10 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         {/* Exercício atual */}
         <div
           key={`${replayKey}-${idx}`}
-          className={cn("flex-1 py-6", checked && !wasCorrect ? "anim-shake" : "anim-slide-up")}
+          className={cn(
+            "flex-1 py-6",
+            checked && !session.feedback?.correct ? "anim-shake" : "anim-slide-up",
+          )}
         >
           {exercise.imagem && (
             <figure className="mb-5">
@@ -201,10 +250,9 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         </div>
 
         {/* Rodapé: verificar ou feedback */}
-        {checked ? (
+        {checked && session.feedback ? (
           <FeedbackSheet
-            correct={wasCorrect}
-            explanation={exercise.explicacao}
+            feedback={session.feedback}
             isLast={idx + 1 >= total}
             onContinue={next}
             onAskTutor={askTutor}
@@ -238,7 +286,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
           <button onClick={() => setConfirmExit(false)} className="btn-primary w-full">
             Continuar estudando
           </button>
-          <button onClick={() => navigate({ to: "/redacao" })} className="btn-ghost w-full">
+          <button onClick={() => navigate({ to: "/trilha" })} className="btn-ghost w-full">
             Sair mesmo assim
           </button>
         </div>

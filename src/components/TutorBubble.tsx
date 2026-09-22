@@ -1,20 +1,24 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ImagePlus, Image as ImageIcon, Send, X } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
-import {
-  closeTutor,
-  consumeTutorAutoPrompt,
-  openTutor,
-  performanceFacts,
-  pushTutorMessage,
-  useAppState,
-} from "@/lib/store";
+import { COPY } from "@/lib/copy";
+import { closeTutor, openTutor, performanceFacts, pushTutorMessage, useAppState } from "@/lib/store";
 import { askTutor, type TutorImage } from "@/lib/tutor";
 import type { TutorContext } from "@/lib/tutor-prompt";
 
 /** Ritmo da revelação. Palavra a palavra, com respiro depois de pontuação forte. */
 const MS_POR_PALAVRA = 22;
 const MS_APOS_PONTUACAO = 150;
+
+/**
+ * Mesmo limite do servidor (`tutor-core.ts#validateTutorRequest`, docs/20
+ * §14.2) — checado aqui ANTES de ler o arquivo, pra não gastar FileReader
+ * nem rodada de rede com algo que o servidor rejeitaria de qualquer jeito.
+ * Duplicado, não importado de `tutor-core.ts`: aquele módulo é server-only
+ * por design (CLAUDE.md) e não deve ser puxado pro bundle do cliente.
+ */
+const TIPOS_IMAGEM_PERMITIDOS = new Set(["image/png", "image/jpeg", "image/webp"]);
+const IMAGEM_MAX_BYTES = 5 * 1024 * 1024;
 
 /**
  * Quebra o texto em "palavra + espaço que a segue", e não em tokens soltos:
@@ -97,6 +101,7 @@ export function TutorBubble() {
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
   const [image, setImage] = useState<{ preview: string; payload: TutorImage } | null>(null);
+  const [imageError, setImageError] = useState<string | null>(null);
   /**
    * Índice da mensagem que está sendo revelada agora. Só a resposta recém-chegada
    * anima: ao reabrir o balão, o histórico aparece pronto (ninguém quer ver a
@@ -123,20 +128,11 @@ export function TutorBubble() {
     if (!open) setRevelando(null);
   }, [open]);
 
-  // Pergunta disparada pelo próprio app (o aluno errou uma questão).
-  useEffect(() => {
-    if (!s.tutor.autoPrompt || pending) return;
-    const prompt = s.tutor.autoPrompt;
-    consumeTutorAutoPrompt();
-    void send(prompt);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [s.tutor.autoPrompt]);
-
   async function send(text: string) {
     if (pending) return;
     const attached = image;
     // Só a foto, sem texto, já é um pedido válido — é o "1 toque de wow" do SDD.
-    const prompt = text.trim() || (attached ? "Me ajuda com essa questão da foto." : "");
+    const prompt = text.trim() || (attached ? COPY.tutor.fotoSemTexto : "");
     if (!prompt) return;
 
     setDraft("");
@@ -169,7 +165,7 @@ export function TutorBubble() {
     } catch {
       pushTutorMessage({
         role: "assistant",
-        content: "Não consegui pensar agora. Tenta de novo daqui a pouco.",
+        content: COPY.tutor.falhaResposta,
       });
     } finally {
       setPending(false);
@@ -178,6 +174,18 @@ export function TutorBubble() {
   }
 
   function attach(file: File) {
+    setImageError(null);
+    // Checa ANTES de ler o arquivo — mesmos limites do servidor (docs/20
+    // §14.2, Fase 7 item 8), pra não gastar FileReader com algo que a
+    // validação de runtime do servidor rejeitaria de qualquer forma.
+    if (!TIPOS_IMAGEM_PERMITIDOS.has(file.type)) {
+      setImageError("Formato não suportado. Envie PNG, JPEG ou WebP.");
+      return;
+    }
+    if (file.size > IMAGEM_MAX_BYTES) {
+      setImageError("Imagem maior que 5 MiB. Tente uma foto menor.");
+      return;
+    }
     const reader = new FileReader();
     reader.onload = () => {
       const url = String(reader.result);
@@ -188,26 +196,23 @@ export function TutorBubble() {
     reader.readAsDataURL(file);
   }
 
-  // Sugestões mudam conforme o aluno está numa questão ou não.
+  // Sugestões mudam conforme o aluno está numa questão ou não. `answered`/
+  // `wasCorrect` são a fonte da verdade — não `chosen`, que pode ser um texto
+  // preenchido mesmo em resposta composta ainda não avaliada (docs/20 §4.2.8).
   const suggestions = focus
-    ? focus.chosen && focus.chosen !== focus.correct
-      ? [
-          "Por que minha resposta está errada?",
-          "Explica de forma mais simples",
-          "Me dá outra parecida",
-        ]
-      : ["Me dá uma dica", "O que devo observar no enunciado?", "Explica de forma mais simples"]
-    : ["Quais são minhas lacunas?", "Como estou indo?", "O que eu estudo agora?"];
+    ? focus.answered && !focus.wasCorrect
+      ? COPY.tutor.sugestoesErro
+      : COPY.tutor.sugestoesAjuda
+    : COPY.tutor.sugestoesGeral;
 
   if (!open) {
     return (
       <button
         onClick={() => openTutor()}
-        aria-label="Abrir tutor de IA"
+        aria-label={COPY.tutor.abrirAriaLabel}
         className="fixed bottom-24 right-[max(1rem,calc(50%-13.75rem+1rem))] z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-gelo bg-cards shadow-[0_3px_0_var(--color-gelo)] transition active:translate-y-[3px] active:shadow-none"
       >
-        {/* "Respira" quando o app tem uma pergunta pendente pro aluno (errou uma questão) — sinaliza sem interromper. */}
-        <FocaMark size={40} decorative motion={s.tutor.autoPrompt ? "breathe" : "none"} />
+        <FocaMark size={40} decorative motion="none" />
       </button>
     );
   }
@@ -217,11 +222,11 @@ export function TutorBubble() {
       <header className="flex items-center justify-between px-5 pt-4 pb-3">
         <div className="flex items-center gap-2">
           <FocaMark size={28} decorative />
-          <span className="font-display text-base font-bold text-abismo">Foca</span>
+          <span className="font-display text-base font-bold text-abismo">{COPY.tutor.nome}</span>
         </div>
         <button
           onClick={closeTutor}
-          aria-label="Fechar tutor"
+          aria-label={COPY.tutor.fecharAriaLabel}
           className="grid h-11 w-11 place-items-center text-nevoa"
         >
           <X size={20} />
@@ -230,16 +235,14 @@ export function TutorBubble() {
 
       {focus && (
         <p className="chip mx-5 mb-2 self-start">
-          Falando sobre: {focus.topic} · {focus.subjectName}
+          {COPY.tutor.falandoSobre(focus.topic, focus.subjectName)}
         </p>
       )}
 
       <div ref={scrollRef} className="surface-pauta flex-1 space-y-3 overflow-y-auto px-5 pb-3">
         {messages.length === 0 && (
           <div className="rounded-lg rounded-bl-md border-2 border-gelo bg-neve px-4 py-3 text-sm leading-relaxed text-abismo">
-            {focus
-              ? `Sobre essa questão de ${focus.topic} — o que travou?`
-              : "Me pergunta o que quiser sobre seus estudos. Também leio foto de questão."}
+            {focus ? COPY.tutor.saudacaoComFoco(focus.topic) : COPY.tutor.saudacaoSemFoco}
           </div>
         )}
 
@@ -299,11 +302,21 @@ export function TutorBubble() {
           </div>
         )}
 
+        {imageError && (
+          <p role="alert" className="mb-2.5 text-xs font-semibold text-error">
+            {imageError}
+          </p>
+        )}
+
         {image && (
           <div className="mb-2.5 flex items-center gap-2 rounded-lg border-2 border-gelo bg-neve p-2">
             <img src={image.preview} alt="" className="h-12 w-12 rounded object-cover" />
-            <span className="flex-1 text-xs font-semibold text-nevoa">Foto anexada</span>
-            <button onClick={() => setImage(null)} aria-label="Remover foto" className="text-nevoa">
+            <span className="flex-1 text-xs font-semibold text-nevoa">{COPY.tutor.fotoAnexada}</span>
+            <button
+              onClick={() => setImage(null)}
+              aria-label={COPY.tutor.removerFotoAriaLabel}
+              className="text-nevoa"
+            >
               <X size={16} />
             </button>
           </div>
@@ -323,7 +336,7 @@ export function TutorBubble() {
           />
           <button
             onClick={() => fileRef.current?.click()}
-            aria-label="Anexar foto de questão"
+            aria-label={COPY.tutor.anexarAriaLabel}
             className="btn-outline h-11 w-11 shrink-0 p-0"
           >
             <ImagePlus size={18} />
@@ -334,13 +347,13 @@ export function TutorBubble() {
             onKeyDown={(e) => {
               if (e.key === "Enter") send(draft);
             }}
-            placeholder="Pergunta qualquer coisa..."
+            placeholder={COPY.tutor.placeholder}
             className="input-ds min-w-0 flex-1 text-base"
           />
           <button
             onClick={() => send(draft)}
             disabled={pending || (!draft.trim() && !image)}
-            aria-label="Enviar"
+            aria-label={COPY.tutor.enviarAriaLabel}
             className="btn-primary h-11 w-11 shrink-0 rounded-full p-0"
           >
             <Send size={18} />

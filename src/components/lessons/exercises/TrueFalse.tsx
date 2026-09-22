@@ -27,7 +27,7 @@ export function TrueFalseView({
           !checked && !selected && "border-gelo bg-cards text-abismo",
           checked && value === correctAnswer && "border-success bg-success/10 text-abismo",
           checked && selected && value !== correctAnswer && "border-error bg-error/10 text-abismo",
-          checked && !selected && value !== correctAnswer && "border-gelo bg-cards opacity-45",
+          checked && !selected && value !== correctAnswer && "border-gelo bg-cards text-abismo",
           checked && "cursor-default",
         )}
       >

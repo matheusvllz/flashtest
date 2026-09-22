@@ -1,0 +1,478 @@
+{
+  "existing_files_unchanged": false,
+  "preserved_files": 346,
+  "checks": [
+    {
+      "event": "resposta-correta",
+      "estimated_intersample_peak_dbfs": -6.29,
+      "last_10ms_rms_dbfs": -92.74,
+      "endpoints_zero": true
+    },
+    {
+      "event": "resposta-incorreta",
+      "estimated_intersample_peak_dbfs": -13.68,
+      "last_10ms_rms_dbfs": -83.86,
+      "endpoints_zero": true
+    },
+    {
+      "event": "acerto-consecutivo",
+      "estimated_intersample_peak_dbfs": -4.0,
+      "last_10ms_rms_dbfs": -76.22,
+      "endpoints_zero": true
+    },
+    {
+      "event": "conclusao-licao",
+      "estimated_intersample_peak_dbfs": -9.4,
+      "last_10ms_rms_dbfs": -86.26,
+      "endpoints_zero": true
+    },
+    {
+      "event": "level-up",
+      "estimated_intersample_peak_dbfs": -4.26,
+      "last_10ms_rms_dbfs": -91.37,
+      "endpoints_zero": true
+    },
+    {
+      "event": "conquista",
+      "estimated_intersample_peak_dbfs": -6.88,
+      "last_10ms_rms_dbfs": -240.0,
+      "endpoints_zero": true
+    },
+    {
+      "event": "streak-diario",
+      "estimated_intersample_peak_dbfs": -8.52,
+      "last_10ms_rms_dbfs": -94.54,
+      "endpoints_zero": true
+    },
+    {
+      "event": "marco-streak",
+      "estimated_intersample_peak_dbfs": -4.0,
+      "last_10ms_rms_dbfs": -97.83,
+      "endpoints_zero": true
+    },
+    {
+      "event": "capitulo-desbloqueado",
+      "estimated_intersample_peak_dbfs": -9.37,
+      "last_10ms_rms_dbfs": -89.89,
+      "endpoints_zero": true
+    },
+    {
+      "event": "meta-diaria",
+      "estimated_intersample_peak_dbfs": -3.99,
+      "last_10ms_rms_dbfs": -99.13,
+      "endpoints_zero": true
+    },
+    {
+      "event": "abertura-importante",
+      "estimated_intersample_peak_dbfs": -12.41,
+      "last_10ms_rms_dbfs": -240.0,
+      "endpoints_zero": true
+    },
+    {
+      "event": "recompensa-especial",
+      "estimated_intersample_peak_dbfs": -4.58,
+      "last_10ms_rms_dbfs": -95.0,
+      "endpoints_zero": true
+    }
+  ],
+  "pairs": [
+    {
+      "a": "resposta-correta",
+      "b": "resposta-incorreta",
+      "prefix_cosine": -0.00127,
+      "time_normalized_envelope_cosine": 0.8461
+    },
+    {
+      "a": "resposta-correta",
+      "b": "acerto-consecutivo",
+      "prefix_cosine": -0.02442,
+      "time_normalized_envelope_cosine": 0.8101
+    },
+    {
+      "a": "resposta-correta",
+      "b": "conclusao-licao",
+      "prefix_cosine": -0.01442,
+      "time_normalized_envelope_cosine": 0.6854
+    },
+    {
+      "a": "resposta-correta",
+      "b": "level-up",
+      "prefix_cosine": -0.00193,
+      "time_normalized_envelope_cosine": 0.6575
+    },
+    {
+      "a": "resposta-correta",
+      "b": "conquista",
+      "prefix_cosine": 0.00614,
+      "time_normalized_envelope_cosine": 0.8091
+    },
+    {
+      "a": "resposta-correta",
+      "b": "streak-diario",
+      "prefix_cosine": -0.02829,
+      "time_normalized_envelope_cosine": 0.8283
+    },
+    {
+      "a": "resposta-correta",
+      "b": "marco-streak",
+      "prefix_cosine": 0.01168,
+      "time_normalized_envelope_cosine": 0.5766
+    },
+    {
+      "a": "resposta-correta",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.02089,
+      "time_normalized_envelope_cosine": 0.7381
+    },
+    {
+      "a": "resposta-correta",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.26746,
+      "time_normalized_envelope_cosine": 0.7061
+    },
+    {
+      "a": "resposta-correta",
+      "b": "abertura-importante",
+      "prefix_cosine": -0.00166,
+      "time_normalized_envelope_cosine": 0.6138
+    },
+    {
+      "a": "resposta-correta",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.03075,
+      "time_normalized_envelope_cosine": 0.7018
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "acerto-consecutivo",
+      "prefix_cosine": -0.00106,
+      "time_normalized_envelope_cosine": 0.857
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "conclusao-licao",
+      "prefix_cosine": 0.0283,
+      "time_normalized_envelope_cosine": 0.7063
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "level-up",
+      "prefix_cosine": 0.02461,
+      "time_normalized_envelope_cosine": 0.7069
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "conquista",
+      "prefix_cosine": 0.22357,
+      "time_normalized_envelope_cosine": 0.7885
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "streak-diario",
+      "prefix_cosine": 0.00841,
+      "time_normalized_envelope_cosine": 0.8547
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "marco-streak",
+      "prefix_cosine": -0.09968,
+      "time_normalized_envelope_cosine": 0.6249
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.01117,
+      "time_normalized_envelope_cosine": 0.627
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "meta-diaria",
+      "prefix_cosine": -0.00455,
+      "time_normalized_envelope_cosine": 0.8508
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "abertura-importante",
+      "prefix_cosine": -0.04375,
+      "time_normalized_envelope_cosine": 0.5644
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.16291,
+      "time_normalized_envelope_cosine": 0.729
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "conclusao-licao",
+      "prefix_cosine": -0.16769,
+      "time_normalized_envelope_cosine": 0.64
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "level-up",
+      "prefix_cosine": 0.04782,
+      "time_normalized_envelope_cosine": 0.7526
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "conquista",
+      "prefix_cosine": 0.03647,
+      "time_normalized_envelope_cosine": 0.7803
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "streak-diario",
+      "prefix_cosine": 0.01639,
+      "time_normalized_envelope_cosine": 0.735
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "marco-streak",
+      "prefix_cosine": 0.13518,
+      "time_normalized_envelope_cosine": 0.618
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": -0.01395,
+      "time_normalized_envelope_cosine": 0.6306
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.03307,
+      "time_normalized_envelope_cosine": 0.765
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "abertura-importante",
+      "prefix_cosine": -0.23237,
+      "time_normalized_envelope_cosine": 0.6319
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "recompensa-especial",
+      "prefix_cosine": -0.2763,
+      "time_normalized_envelope_cosine": 0.707
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "level-up",
+      "prefix_cosine": 0.02079,
+      "time_normalized_envelope_cosine": 0.7498
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "conquista",
+      "prefix_cosine": -0.03727,
+      "time_normalized_envelope_cosine": 0.8469
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "streak-diario",
+      "prefix_cosine": -0.03209,
+      "time_normalized_envelope_cosine": 0.72
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "marco-streak",
+      "prefix_cosine": -0.07538,
+      "time_normalized_envelope_cosine": 0.7363
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.1983,
+      "time_normalized_envelope_cosine": 0.8444
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "meta-diaria",
+      "prefix_cosine": -0.01233,
+      "time_normalized_envelope_cosine": 0.632
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "abertura-importante",
+      "prefix_cosine": 0.44942,
+      "time_normalized_envelope_cosine": 0.3921
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.23125,
+      "time_normalized_envelope_cosine": 0.6821
+    },
+    {
+      "a": "level-up",
+      "b": "conquista",
+      "prefix_cosine": 0.04713,
+      "time_normalized_envelope_cosine": 0.7715
+    },
+    {
+      "a": "level-up",
+      "b": "streak-diario",
+      "prefix_cosine": 0.04457,
+      "time_normalized_envelope_cosine": 0.5998
+    },
+    {
+      "a": "level-up",
+      "b": "marco-streak",
+      "prefix_cosine": 0.19782,
+      "time_normalized_envelope_cosine": 0.7982
+    },
+    {
+      "a": "level-up",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": -0.08862,
+      "time_normalized_envelope_cosine": 0.7626
+    },
+    {
+      "a": "level-up",
+      "b": "meta-diaria",
+      "prefix_cosine": -0.00619,
+      "time_normalized_envelope_cosine": 0.6662
+    },
+    {
+      "a": "level-up",
+      "b": "abertura-importante",
+      "prefix_cosine": 0.00552,
+      "time_normalized_envelope_cosine": 0.4338
+    },
+    {
+      "a": "level-up",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.16304,
+      "time_normalized_envelope_cosine": 0.5867
+    },
+    {
+      "a": "conquista",
+      "b": "streak-diario",
+      "prefix_cosine": 0.3896,
+      "time_normalized_envelope_cosine": 0.7308
+    },
+    {
+      "a": "conquista",
+      "b": "marco-streak",
+      "prefix_cosine": 0.15657,
+      "time_normalized_envelope_cosine": 0.774
+    },
+    {
+      "a": "conquista",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.08371,
+      "time_normalized_envelope_cosine": 0.8804
+    },
+    {
+      "a": "conquista",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.57221,
+      "time_normalized_envelope_cosine": 0.7294
+    },
+    {
+      "a": "conquista",
+      "b": "abertura-importante",
+      "prefix_cosine": 0.00833,
+      "time_normalized_envelope_cosine": 0.7221
+    },
+    {
+      "a": "conquista",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.20369,
+      "time_normalized_envelope_cosine": 0.8526
+    },
+    {
+      "a": "streak-diario",
+      "b": "marco-streak",
+      "prefix_cosine": 0.04786,
+      "time_normalized_envelope_cosine": 0.5887
+    },
+    {
+      "a": "streak-diario",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.18377,
+      "time_normalized_envelope_cosine": 0.5965
+    },
+    {
+      "a": "streak-diario",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.45034,
+      "time_normalized_envelope_cosine": 0.8118
+    },
+    {
+      "a": "streak-diario",
+      "b": "abertura-importante",
+      "prefix_cosine": 0.02303,
+      "time_normalized_envelope_cosine": 0.3895
+    },
+    {
+      "a": "streak-diario",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.04123,
+      "time_normalized_envelope_cosine": 0.5808
+    },
+    {
+      "a": "marco-streak",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": -0.01134,
+      "time_normalized_envelope_cosine": 0.6994
+    },
+    {
+      "a": "marco-streak",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.05032,
+      "time_normalized_envelope_cosine": 0.6792
+    },
+    {
+      "a": "marco-streak",
+      "b": "abertura-importante",
+      "prefix_cosine": -0.03948,
+      "time_normalized_envelope_cosine": 0.4659
+    },
+    {
+      "a": "marco-streak",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.16022,
+      "time_normalized_envelope_cosine": 0.5936
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.0842,
+      "time_normalized_envelope_cosine": 0.5067
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "abertura-importante",
+      "prefix_cosine": 0.08659,
+      "time_normalized_envelope_cosine": 0.5208
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.06813,
+      "time_normalized_envelope_cosine": 0.7204
+    },
+    {
+      "a": "meta-diaria",
+      "b": "abertura-importante",
+      "prefix_cosine": 0.02406,
+      "time_normalized_envelope_cosine": 0.4536
+    },
+    {
+      "a": "meta-diaria",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.06797,
+      "time_normalized_envelope_cosine": 0.6707
+    },
+    {
+      "a": "abertura-importante",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.25516,
+      "time_normalized_envelope_cosine": 0.7425
+    }
+  ],
+  "limits": "Signal measurements and score review, not human listening, LUFS certification or mobile-speaker validation. Envelope similarity alone is not duplication.",
+  "production_matches_approved": true
+}

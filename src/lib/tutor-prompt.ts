@@ -7,6 +7,12 @@
  * Regra de honestidade (SDD 08, Seção 6): os NÚMEROS deste contexto são
  * calculados pelo app; só a frase é gerada pela IA. Por isso o desempenho entra
  * aqui como fato pronto, e o prompt proíbe a IA de inventar estatística.
+ *
+ * Persona revisada na Fase 3 do docs/20-plano-evolucao-aprendizagem.md (§7,
+ * precedência): a personalidade "seca, sarcástica" que cobrava disciplina do
+ * aluno foi substituída por companhia direta e respeitosa — humor, quando
+ * aparece, é sobre a mascote/situação, nunca sobre a capacidade do aluno, e
+ * cobrança (por erro OU por ausência) saiu do prompt inteiramente.
  */
 
 /** Questão que o aluno está olhando agora, quando houver. */
@@ -17,7 +23,11 @@ export type TutorFocus = {
   statement: string;
   alternatives: { key: string; text: string }[];
   correct: string;
+  /** Representação legível da resposta dada, inclusive respostas compostas (ordenar/parear). `null` só quando NADA foi respondido ainda. */
   chosen: string | null;
+  /** Se o aluno já respondeu esta questão — fonte da verdade, não inferir de `chosen` (que pode ser `null` mesmo respondido, em tipos compostos). */
+  answered: boolean;
+  wasCorrect: boolean;
   explanation: string;
   hint: string;
 };
@@ -51,14 +61,14 @@ export function buildSystemPrompt(ctx: TutorContext): string {
   // PERSONAGEM
   const persona = `Você é a Foca — o mascote do app Foca, de preparação para o ENEM em aulas de 60 segundos.
 
-PERSONALIDADE: seca, sarcástica, cômica. Você é uma foca, ou seja, um animal que passa o dia deitado numa pedra, e mesmo assim cobra disciplina do aluno sem nenhuma autoconsciência disso. Essa contradição é a fonte do seu humor.
+PERSONALIDADE: colega de estudo atento e direto, que entende a dificuldade sem dramatizar — não é professor dando sermão, nem coach, nem adolescente performático. Você é uma foca que passa o dia deitada numa pedra; se um humor aparecer, é sobre ESSA contradição (uma foca folgada tentando ajudar alguém a estudar), no máximo uma vez na conversa, e nunca sobre a capacidade ou o esforço do aluno.
 
 REGRAS DE VOZ (inegociáveis):
 - Máximo 2 frases de moldura (1 antes da explicação, 1 depois). A explicação em si fica no meio e é 100% clara, direta e sem ironia.
 - Nunca ataque o aluno ("você é ruim", "do jeito que vai não passa"). Comente o comportamento ou a questão, nunca a pessoa.
-- Errar nunca é motivo de cobrança — errar é o app funcionando. Você só implica com ausência, nunca com erro.
-- Sem emoji. Sem "rs". Sem exclamação dupla. O humor é no timing, não na pontuação.
-- Se o aluno estiver claramente frustrado ou disser que vai desistir, o sarcasmo some por completo. Você vira direta e acolhedora.`;
+- Errar nunca é motivo de cobrança — errar é o app funcionando. Ausência também não gera cobrança: se o aluno sumiu e voltou, receba sem puxar o assunto.
+- Sem emoji. Sem "rs". Sem exclamação dupla ou sequência de exclamações.
+- Se o aluno estiver frustrado, cansado ou disser que vai desistir, o humor some por completo. Você vira direta e acolhedora.`;
 
   // CONTEXTO
   const lines: string[] = [`O aluno se chama ${ctx.firstName}.`];
@@ -80,11 +90,11 @@ REGRAS DE VOZ (inegociáveis):
       `Enunciado: ${f.statement}`,
       `Alternativas: ${f.alternatives.map((a) => `${a.key}) ${a.text}`).join(" | ")}`,
       `Gabarito: ${f.correct}.`,
-      f.chosen
-        ? f.chosen === f.correct
-          ? `Ele JÁ RESPONDEU e ACERTOU (marcou ${f.chosen}).`
-          : `Ele JÁ RESPONDEU e ERROU: marcou ${f.chosen}, o certo é ${f.correct}. Explique especificamente por que ${f.chosen} é tentador e onde o raciocínio dele desandou.`
-        : `Ele AINDA NÃO RESPONDEU. Não entregue o gabarito — guie até ele.`,
+      !f.answered
+        ? `Ele AINDA NÃO RESPONDEU. Não entregue o gabarito — guie até ele.`
+        : f.wasCorrect
+          ? `Ele JÁ RESPONDEU e ACERTOU${f.chosen ? ` (marcou ${f.chosen})` : ""}.`
+          : `Ele JÁ RESPONDEU e ERROU${f.chosen ? `: marcou ${f.chosen}` : ""}, o certo é ${f.correct}. Explique especificamente onde o raciocínio dele desandou.`,
       `Explicação de referência: ${f.explanation}`,
     );
   }
@@ -124,8 +134,8 @@ export function localFallback(prompt: string, focus: TutorFocus | null): string 
     return "Estou aqui pra te ajudar a fechar suas lacunas. Abre uma aula de 60s e me pergunta o que travar.";
   }
 
-  if (focus.chosen && focus.chosen !== focus.correct)
-    return `Você marcou ${focus.chosen}, mas o certo é ${focus.correct}. ${focus.explanation}`;
+  if (focus.answered && !focus.wasCorrect)
+    return `Você marcou ${focus.chosen ?? "outra alternativa"}, mas o certo é ${focus.correct}. ${focus.explanation}`;
   if (p.includes("dica")) return `Repara nisso: ${focus.hint}`;
   if (p.includes("resposta") || p.includes("resolva"))
     return `A resposta é ${focus.correct}. ${focus.explanation}`;

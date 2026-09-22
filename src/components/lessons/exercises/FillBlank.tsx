@@ -50,7 +50,7 @@ export function FillBlankView({
                   selected &&
                   i !== exercise.correta &&
                   "border-error bg-error/10 text-abismo",
-                checked && !selected && i !== exercise.correta && "border-gelo bg-cards opacity-45",
+                checked && !selected && i !== exercise.correta && "border-gelo bg-cards text-abismo",
                 checked && "cursor-default",
               )}
             >

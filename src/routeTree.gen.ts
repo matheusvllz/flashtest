@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WelcomeRouteImport } from './routes/welcome'
+import { Route as TrilhaRouteImport } from './routes/trilha'
 import { Route as TopicsRouteImport } from './routes/topics'
 import { Route as StudyRouteImport } from './routes/study'
 import { Route as SignupRouteImport } from './routes/signup'
@@ -30,10 +31,16 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
+import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
 
 const WelcomeRoute = WelcomeRouteImport.update({
   id: '/welcome',
   path: '/welcome',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrilhaRoute = TrilhaRouteImport.update({
+  id: '/trilha',
+  path: '/trilha',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TopicsRoute = TopicsRouteImport.update({
@@ -136,6 +143,11 @@ const RedacaoLicaoIdRoute = RedacaoLicaoIdRouteImport.update({
   path: '/redacao/$licaoId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LearnLessonIdRoute = LearnLessonIdRouteImport.update({
+  id: '/learn/$lessonId',
+  path: '/learn/$lessonId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -155,7 +167,9 @@ export interface FileRoutesByFullPath {
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
   '/topics': typeof TopicsRoute
+  '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
@@ -178,7 +192,9 @@ export interface FileRoutesByTo {
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
   '/topics': typeof TopicsRoute
+  '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
@@ -202,7 +218,9 @@ export interface FileRoutesById {
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
   '/topics': typeof TopicsRoute
+  '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
@@ -227,7 +245,9 @@ export interface FileRouteTypes {
     | '/signup'
     | '/study'
     | '/topics'
+    | '/trilha'
     | '/welcome'
+    | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao/'
@@ -250,7 +270,9 @@ export interface FileRouteTypes {
     | '/signup'
     | '/study'
     | '/topics'
+    | '/trilha'
     | '/welcome'
+    | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao'
@@ -273,7 +295,9 @@ export interface FileRouteTypes {
     | '/signup'
     | '/study'
     | '/topics'
+    | '/trilha'
     | '/welcome'
+    | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao/'
@@ -297,7 +321,9 @@ export interface RootRouteChildren {
   SignupRoute: typeof SignupRoute
   StudyRoute: typeof StudyRoute
   TopicsRoute: typeof TopicsRoute
+  TrilhaRoute: typeof TrilhaRoute
   WelcomeRoute: typeof WelcomeRoute
+  LearnLessonIdRoute: typeof LearnLessonIdRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
@@ -310,6 +336,13 @@ declare module '@tanstack/react-router' {
       path: '/welcome'
       fullPath: '/welcome'
       preLoaderRoute: typeof WelcomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trilha': {
+      id: '/trilha'
+      path: '/trilha'
+      fullPath: '/trilha'
+      preLoaderRoute: typeof TrilhaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/topics': {
@@ -452,6 +485,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RedacaoLicaoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/learn/$lessonId': {
+      id: '/learn/$lessonId'
+      path: '/learn/$lessonId'
+      fullPath: '/learn/$lessonId'
+      preLoaderRoute: typeof LearnLessonIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -473,7 +513,9 @@ const rootRouteChildren: RootRouteChildren = {
   SignupRoute: SignupRoute,
   StudyRoute: StudyRoute,
   TopicsRoute: TopicsRoute,
+  TrilhaRoute: TrilhaRoute,
   WelcomeRoute: WelcomeRoute,
+  LearnLessonIdRoute: LearnLessonIdRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,

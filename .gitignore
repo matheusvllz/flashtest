@@ -23,6 +23,11 @@ dist-ssr
 # Netlify (build output + CLI local state)
 .netlify/
 
+# Playwright (Fase 0, docs/20 §19) — relatório e artefatos de execução local.
+test-results/
+playwright-report/
+blob-report/
+
 # Segredos do servidor — a chave da OpenAI mora aqui e NUNCA vai pro repo.
 # O padrão é abrangente de propósito (`.env*` pega .env.production, .env.staging
 # etc.) e o exemplo sem segredo é reintroduzido logo abaixo.
@@ -44,3 +49,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+__pycache__/

@@ -1,10 +1,15 @@
 /**
  * Biblioteca de falas da Foca (docs/15-mascote-e-voz.md §7, docs/18-plano-
- * reestilizacao-rabisco.md Apêndice B). Toda frase daqui passou pelo teste da
- * `15` §8 antes de entrar — não adicionar frase nova sem passar por ele.
+ * reestilizacao-rabisco.md Apêndice B; docs/20-plano-evolucao-aprendizagem.md
+ * §7 prevalece em conflito de tom). Toda frase daqui passou pelo teste da `15`
+ * §8 antes de entrar — não adicionar frase nova sem passar por ele.
  *
  * `retorno` é o slot mais frágil do produto (`15` §3.2): as três variações são
  * acolhedoras por construção, nenhuma delas cobra. Não misturar tons aqui.
+ *
+ * `errou` teve uma linha de cobrança sobre resultado removida na Fase 3 do
+ * `20` (§7, precedência): errar nunca é motivo de cobrança, só ausência —
+ * regra que já estava em `15` §3.3, mas essa linha específica a violava.
  */
 export type VozSlot =
   | "bomdia"
@@ -46,7 +51,7 @@ export const VOZ: Record<VozSlot, string[]> = {
     "Errou. Respira, é pra isso que eu tô aqui.",
     "Essa aí pega muita gente. Inclusive você, agora.",
     "Errar é o app funcionando. Sério.",
-    "Anotado. Vou te cobrar essa de novo semana que vem.",
+    "Marquei aqui. Bora ver onde travou.",
   ],
   fimbom: [
     "60 segundos. Foi isso que você achava que não tinha.",

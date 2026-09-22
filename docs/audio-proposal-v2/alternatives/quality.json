@@ -1,0 +1,528 @@
+{
+  "original_wavs_unchanged": true,
+  "pairs": [
+    {
+      "a": "abertura-importante",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.0137,
+      "envelope_cosine": 0.5683
+    },
+    {
+      "a": "abertura-importante",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": -0.0011,
+      "envelope_cosine": 0.3424
+    },
+    {
+      "a": "abertura-importante",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": 0.1528,
+      "envelope_cosine": 0.592
+    },
+    {
+      "a": "abertura-importante",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.0188,
+      "envelope_cosine": 0.4009
+    },
+    {
+      "a": "abertura-importante",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.0203,
+      "envelope_cosine": 0.4568
+    },
+    {
+      "a": "abertura-importante",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.0168,
+      "envelope_cosine": 0.4369
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.0279,
+      "envelope_cosine": 0.618
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.0479,
+      "envelope_cosine": 0.786
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.1052,
+      "envelope_cosine": 0.8123
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": -0.0038,
+      "envelope_cosine": 0.8718
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": -0.0257,
+      "envelope_cosine": 0.7529
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.0815,
+      "envelope_cosine": 0.7108
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": -0.0541,
+      "envelope_cosine": 0.724
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.1564,
+      "envelope_cosine": 0.6786
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": 0.0489,
+      "envelope_cosine": 0.7206
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.1099,
+      "envelope_cosine": 0.6313
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.0306,
+      "envelope_cosine": 0.8704
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0039,
+      "envelope_cosine": 0.5522
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": -0.0265,
+      "envelope_cosine": 0.7867
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": -0.0062,
+      "envelope_cosine": 0.6539
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": 0.2809,
+      "envelope_cosine": 0.6784
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": -0.0456,
+      "envelope_cosine": 0.655
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": -0.0244,
+      "envelope_cosine": 0.7967
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0066,
+      "envelope_cosine": 0.6149
+    },
+    {
+      "a": "conquista",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.4402,
+      "envelope_cosine": 0.7928
+    },
+    {
+      "a": "conquista",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": -0.0592,
+      "envelope_cosine": 0.6396
+    },
+    {
+      "a": "conquista",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.0794,
+      "envelope_cosine": 0.7832
+    },
+    {
+      "a": "conquista",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.4452,
+      "envelope_cosine": 0.7079
+    },
+    {
+      "a": "conquista",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.492,
+      "envelope_cosine": 0.8474
+    },
+    {
+      "a": "conquista",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.001,
+      "envelope_cosine": 0.6863
+    },
+    {
+      "a": "level-up",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.0318,
+      "envelope_cosine": 0.5705
+    },
+    {
+      "a": "level-up",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.0251,
+      "envelope_cosine": 0.7727
+    },
+    {
+      "a": "level-up",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.0115,
+      "envelope_cosine": 0.6605
+    },
+    {
+      "a": "level-up",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": -0.0016,
+      "envelope_cosine": 0.8705
+    },
+    {
+      "a": "level-up",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": -0.0063,
+      "envelope_cosine": 0.7807
+    },
+    {
+      "a": "level-up",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.0442,
+      "envelope_cosine": 0.7992
+    },
+    {
+      "a": "marco-streak",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.0609,
+      "envelope_cosine": 0.7225
+    },
+    {
+      "a": "marco-streak",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": -0.0014,
+      "envelope_cosine": 0.5448
+    },
+    {
+      "a": "marco-streak",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.0126,
+      "envelope_cosine": 0.5529
+    },
+    {
+      "a": "marco-streak",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.0417,
+      "envelope_cosine": 0.671
+    },
+    {
+      "a": "marco-streak",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.0479,
+      "envelope_cosine": 0.7063
+    },
+    {
+      "a": "marco-streak",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.0078,
+      "envelope_cosine": 0.7686
+    },
+    {
+      "a": "meta-diaria",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.5474,
+      "envelope_cosine": 0.7067
+    },
+    {
+      "a": "meta-diaria",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": -0.0046,
+      "envelope_cosine": 0.486
+    },
+    {
+      "a": "meta-diaria",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.1026,
+      "envelope_cosine": 0.6471
+    },
+    {
+      "a": "meta-diaria",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.5447,
+      "envelope_cosine": 0.7339
+    },
+    {
+      "a": "meta-diaria",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.6198,
+      "envelope_cosine": 0.7143
+    },
+    {
+      "a": "meta-diaria",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.2811,
+      "envelope_cosine": 0.7884
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": -0.0397,
+      "envelope_cosine": 0.6996
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.0098,
+      "envelope_cosine": 0.4221
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": 0.1883,
+      "envelope_cosine": 0.6762
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.052,
+      "envelope_cosine": 0.5718
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": -0.0002,
+      "envelope_cosine": 0.7447
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.0175,
+      "envelope_cosine": 0.6325
+    },
+    {
+      "a": "resposta-correta",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.0721,
+      "envelope_cosine": 0.7283
+    },
+    {
+      "a": "resposta-correta",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.0237,
+      "envelope_cosine": 0.7639
+    },
+    {
+      "a": "resposta-correta",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.0155,
+      "envelope_cosine": 0.9672
+    },
+    {
+      "a": "resposta-correta",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": -0.0124,
+      "envelope_cosine": 0.716
+    },
+    {
+      "a": "resposta-correta",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.0111,
+      "envelope_cosine": 0.7412
+    },
+    {
+      "a": "resposta-correta",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.3001,
+      "envelope_cosine": 0.6112
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": -0.0034,
+      "envelope_cosine": 0.7367
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.0013,
+      "envelope_cosine": 0.728
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.0038,
+      "envelope_cosine": 0.8177
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": -0.0024,
+      "envelope_cosine": 0.7432
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": -0.0035,
+      "envelope_cosine": 0.7632
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0031,
+      "envelope_cosine": 0.8223
+    },
+    {
+      "a": "streak-diario",
+      "b": "correta-a-encaixe",
+      "prefix_cosine": 0.3806,
+      "envelope_cosine": 0.7442
+    },
+    {
+      "a": "streak-diario",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": 0.0023,
+      "envelope_cosine": 0.6723
+    },
+    {
+      "a": "streak-diario",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.0634,
+      "envelope_cosine": 0.8303
+    },
+    {
+      "a": "streak-diario",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.4082,
+      "envelope_cosine": 0.6861
+    },
+    {
+      "a": "streak-diario",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.4374,
+      "envelope_cosine": 0.7002
+    },
+    {
+      "a": "streak-diario",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0145,
+      "envelope_cosine": 0.6324
+    },
+    {
+      "a": "correta-a-encaixe",
+      "b": "correta-b-sorriso",
+      "prefix_cosine": -0.057,
+      "envelope_cosine": 0.4971
+    },
+    {
+      "a": "correta-a-encaixe",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.2197,
+      "envelope_cosine": 0.6859
+    },
+    {
+      "a": "correta-a-encaixe",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.3624,
+      "envelope_cosine": 0.5244
+    },
+    {
+      "a": "correta-a-encaixe",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.4914,
+      "envelope_cosine": 0.7152
+    },
+    {
+      "a": "correta-a-encaixe",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": 0.1482,
+      "envelope_cosine": 0.5601
+    },
+    {
+      "a": "correta-b-sorriso",
+      "b": "correta-c-gotinha",
+      "prefix_cosine": -0.023,
+      "envelope_cosine": 0.7818
+    },
+    {
+      "a": "correta-b-sorriso",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": 0.0992,
+      "envelope_cosine": 0.795
+    },
+    {
+      "a": "correta-b-sorriso",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.0039,
+      "envelope_cosine": 0.7039
+    },
+    {
+      "a": "correta-b-sorriso",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0058,
+      "envelope_cosine": 0.5869
+    },
+    {
+      "a": "correta-c-gotinha",
+      "b": "consecutivo-a-impulso",
+      "prefix_cosine": -0.1122,
+      "envelope_cosine": 0.7296
+    },
+    {
+      "a": "correta-c-gotinha",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": -0.3793,
+      "envelope_cosine": 0.7086
+    },
+    {
+      "a": "correta-c-gotinha",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0357,
+      "envelope_cosine": 0.5812
+    },
+    {
+      "a": "consecutivo-a-impulso",
+      "b": "consecutivo-b-fluidez",
+      "prefix_cosine": 0.4557,
+      "envelope_cosine": 0.7742
+    },
+    {
+      "a": "consecutivo-a-impulso",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0122,
+      "envelope_cosine": 0.7354
+    },
+    {
+      "a": "consecutivo-b-fluidez",
+      "b": "consecutivo-c-brilho",
+      "prefix_cosine": -0.0043,
+      "envelope_cosine": 0.6807
+    }
+  ],
+  "limits": "Revisão de composição e sinal; não substitui escuta humana."
+}

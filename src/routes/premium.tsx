@@ -2,6 +2,7 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { AppShell } from "@/components/AppShell";
 import { useAppState, setState } from "@/lib/store";
 import { Check, Sparkles, Clock } from "lucide-react";
+import { HOME_ROUTE } from "@/lib/features";
 
 export const Route = createFileRoute("/premium")({ component: Premium, ssr: false });
 
@@ -99,7 +100,7 @@ function Premium() {
                     ss.premiumTrial = { active: false, startedAt: null };
                     return ss;
                   });
-                  nav({ to: "/dashboard" });
+                  nav({ to: HOME_ROUTE });
                 }}
                 className="btn-outline"
               >
@@ -113,7 +114,7 @@ function Premium() {
         <p className="text-center text-[11px] text-nevoa">
           Não solicitamos cartão. Sem cobrança automática.
         </p>
-        <Link to="/dashboard" className="btn-outline w-full">
+        <Link to={HOME_ROUTE} className="btn-outline w-full">
           Voltar ao início
         </Link>
       </div>

@@ -157,7 +157,7 @@ export function MatchPairsView({
                     correct &&
                     "border-success bg-success/10 text-abismo",
                   checked && pairedWith >= 0 && !correct && "border-error bg-error/10 text-abismo",
-                  checked && pairedWith < 0 && "border-gelo bg-cards opacity-45",
+                  checked && pairedWith < 0 && "border-gelo bg-cards text-abismo",
                   checked && "cursor-default",
                 )}
               >

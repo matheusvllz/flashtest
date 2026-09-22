@@ -43,10 +43,12 @@ export function choiceClasses(state: {
       state.isCorrect &&
       "border-success bg-success/10 font-semibold text-abismo shadow-none",
     state.checked && state.isWrongPick && "border-error bg-error/10 text-abismo shadow-none",
+    // Neutra após validar: opacidade 1, só a cor muda — nunca esmaecer texto
+    // já respondido (docs/20 §3 B4, §4.4, critério A5).
     state.checked &&
       !state.isCorrect &&
       !state.isWrongPick &&
-      "border-gelo bg-cards opacity-45 shadow-none",
+      "border-gelo bg-cards text-abismo shadow-none",
     state.checked && "cursor-default",
   );
 }

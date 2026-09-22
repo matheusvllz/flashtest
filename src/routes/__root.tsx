@@ -7,7 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -15,15 +15,23 @@ import { BRAND, PALETTE } from "../lib/brand";
 import { PhoneFrame } from "../components/AppShell";
 import { FocaMark } from "../components/brand/FocaMark";
 import { fala } from "../lib/voz";
+import { getState } from "../lib/store";
+import {
+  setAudioEnabled,
+  stopAllFeedbackSounds,
+  unlockAudioFromGesture,
+} from "../lib/audio/engine";
 
 function NotFoundComponent() {
+  // Uma vez por montagem, não a cada render (docs/20 §3 B1, §4.1).
+  const [texto] = useState(() => fala("404"));
   return (
     <PhoneFrame>
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-6 text-center">
         <FocaMark expression="entediada" size={96} decorative />
         <div>
           <h1 className="font-display text-xl font-bold text-abismo">Essa página não existe.</h1>
-          <p className="mt-2 text-sm text-nevoa">{fala("404")}</p>
+          <p className="mt-2 text-sm text-nevoa">{texto}</p>
         </div>
         <Link to="/" className="btn-primary mt-2">
           Voltar ao início
@@ -142,6 +150,24 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    const unlock = () => {
+      const enabled = getState().prefs.sound;
+      setAudioEnabled(enabled);
+      if (enabled) unlockAudioFromGesture();
+    };
+    document.addEventListener("pointerdown", unlock, true);
+    document.addEventListener("keydown", unlock, true);
+    const unsubscribe = router.subscribe("onBeforeNavigate", stopAllFeedbackSounds);
+    return () => {
+      document.removeEventListener("pointerdown", unlock, true);
+      document.removeEventListener("keydown", unlock, true);
+      unsubscribe();
+      stopAllFeedbackSounds();
+    };
+  }, [router]);
 
   return (
     <QueryClientProvider client={queryClient}>

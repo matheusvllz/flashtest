@@ -1,22 +1,25 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { ChevronRight, Layers, PenLine, Trophy, Check } from "lucide-react";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { ChevronRight, Layers, PenLine, Sparkles, Trophy, Check } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { FocaSays } from "@/components/brand/FocaSays";
 import { GoalRing } from "@/components/ds/GoalRing";
 import { ProgressBar } from "@/components/ds/ProgressBar";
-import {
-  atividadeHoje,
-  diasSemAtividade,
-  marcarMetaCelebrada,
-  nivelDeXp,
-  useAppState,
-} from "@/lib/store";
+import { atividadeHoje, diasSemAtividade, hojeISO, nivelDeXp, useAppState } from "@/lib/store";
 import { allLessonsInOrder, TOTAL_LICOES } from "@/content/trilhas";
-import { play as tocarSom } from "@/lib/sfx";
-import { vibrar } from "@/lib/haptics";
+import { MICROLICOES } from "@/content/microlicoes";
+import { recommendNext } from "@/lib/learning/recommend";
+import { FEATURES } from "@/lib/features";
 
-export const Route = createFileRoute("/dashboard")({ component: Dashboard, ssr: false });
+export const Route = createFileRoute("/dashboard")({
+  component: Dashboard,
+  ssr: false,
+  // `/trilha` como home (docs/25 §18 T-20): com a flag ligada, `/dashboard`
+  // deixa de ser a home real e redireciona — o componente abaixo segue
+  // intacto para quando a flag estiver desligada ou for revertida.
+  beforeLoad: () => {
+    if (FEATURES.trilhaComoHome) throw redirect({ to: "/trilha" });
+  },
+});
 
 function Dashboard() {
   const s = useAppState();
@@ -24,7 +27,10 @@ function Dashboard() {
   // Honesto: reflete o dia de hoje, não o total da vida (docs/18 §1.2 — bug corrigido).
   const hoje = atividadeHoje(s);
   const goal = p.dailyLessons;
-  const doneToday = hoje.lessons;
+  // Unidade diária unificada (docs/20 §12, Fase 11): "blocos concluídos" —
+  // aula geral, redação, microlição ou lote de revisão contam igual, não só
+  // aulas gerais (`hoje.lessons` sozinho, como era antes).
+  const doneToday = hoje.completedBlockIds.length;
   const metaFechada = doneToday >= goal;
   const dias = diasSemAtividade(s);
   const nivel = nivelDeXp(s.progress.xp);
@@ -36,6 +42,25 @@ function Dashboard() {
   // O assunto da próxima aula é a lacuna nº1 do diagnóstico — não uma escolha de tempo.
   const nextTopic = s.quiz.gaps[0]?.topic ?? "Funções do 2º grau";
   const nextSubject = s.quiz.gaps[0]?.subjectName ?? "Matemática";
+  // Recomendação determinística (docs/20 §13, Fase 10) — o MESMO resultado
+  // que o início de uma sessão usaria (item 3): sessão ativa > remediação >
+  // revisão devida > próxima lição. Sob flag: entrada só aparece quando o
+  // piloto está ligado (docs/20 §17, "desativar esconde a entrada").
+  const recomendacao = FEATURES.microlicoes
+    ? recommendNext({
+        activeSession: s.learning.activeSession,
+        lessons: MICROLICOES,
+        recentAttempts: s.learning.recentAttempts,
+        reviewSchedule: s.learning.reviewSchedule,
+        s,
+        hojeISO: hojeISO(),
+        remediationAlreadyOfferedThisSession: false,
+      })
+    : null;
+  const proximaMicrolicao =
+    recomendacao?.lessonId !== undefined
+      ? MICROLICOES.find((l) => l.id === recomendacao.lessonId)
+      : undefined;
 
   // A Foca do dia: acolhedora tem prioridade sobre tudo (o retorno é o
   // momento mais frágil, docs/15 §3.2); meta fechada é o segundo pico; o
@@ -47,14 +72,9 @@ function Dashboard() {
         ? { slot: "meta" as const, expression: "orgulhosa" as const }
         : { slot: "bomdia" as const, expression: "neutra" as const };
 
-  // Celebra a meta uma vez por dia — não a cada visita ao dashboard.
-  useEffect(() => {
-    if (metaFechada && !hoje.celebrouMeta) {
-      tocarSom("streak");
-      vibrar("fim");
-      marcarMetaCelebrada();
-    }
-  }, [metaFechada, hoje.celebrouMeta]);
+  // A celebração da meta diária morou aqui e migrou pra `/trilha` (docs/25
+  // §12.1/§18 T-18/T-19) — não repetir o efeito nas duas telas evita disparar
+  // o som duas vezes numa mesma sessão se o aluno visitar as duas.
 
   return (
     <AppShell>
@@ -108,7 +128,9 @@ function Dashboard() {
         <div className="card-soft p-4">
           <p className="ds-label">Missões de hoje</p>
           <ul className="mt-3 space-y-2.5">
-            <Mission done={doneToday >= 1} label={`${goal} aula${goal > 1 ? "s" : ""} de 60s`} />
+            {/* Específico da aula geral, não o bloco unificado (docs/20 §12) —
+                esta missão é sobre ESTE pilar, não sobre a meta do dia como um todo. */}
+            <Mission done={hoje.lessons >= 1} label={`${goal} aula${goal > 1 ? "s" : ""} de 60s`} />
             <Mission done={hoje.flashcards > 0} label="Revisar 1 flashcard" />
             <Mission done={hoje.redacao > 0} label="Treino de redação" />
           </ul>
@@ -138,6 +160,29 @@ function Dashboard() {
                   label="Progresso da trilha de redação"
                 />
               </div>
+            </div>
+            <ChevronRight size={18} className="shrink-0 text-nevoa" />
+          </Link>
+        )}
+
+        {proximaMicrolicao && (
+          <Link
+            to="/trilha"
+            className="card-press flex items-center gap-4 p-4"
+            aria-label="Ir para a trilha de aprendizado"
+          >
+            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gelo text-abismo">
+              <Sparkles size={20} />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="ds-label">Trilha de aprendizado</p>
+              <p className="mt-1 truncate font-display text-sm font-bold text-abismo">
+                {proximaMicrolicao.title}
+              </p>
+              {/* "Por que esta lição?" — explicação simples da regra, nunca "a IA descobriu" (docs/20 §13, item 7). */}
+              {recomendacao?.explanation && (
+                <p className="mt-0.5 truncate text-xs text-nevoa">{recomendacao.explanation}</p>
+              )}
             </div>
             <ChevronRight size={18} className="shrink-0 text-nevoa" />
           </Link>

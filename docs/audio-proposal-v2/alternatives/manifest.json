@@ -1,0 +1,312 @@
+[
+  {
+    "file": "correta-a-encaixe.wav",
+    "group": "Resposta correta",
+    "label": "A · Encaixe",
+    "duration": 0.3,
+    "description": "Duas chegadas: Ré5 abre e Fá♯5/Lá5 fecham juntos. Mallet com acorde luminoso, compacto e afirmativo.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.16,
+        "mallet",
+        0.62
+      ],
+      [
+        0.085,
+        "F#5",
+        0.215,
+        "tine",
+        0.63
+      ],
+      [
+        0.085,
+        "A5",
+        0.215,
+        "bell",
+        0.28
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 14400,
+    "duration_s": 0.3,
+    "peak_dbfs": -4.83,
+    "rms_dbfs": -19.5,
+    "dc": -6.357828776041667e-08,
+    "frequencies": {
+      "D5": 587.33,
+      "F#5": 739.99,
+      "A5": 880.0
+    },
+    "sha256": "239b6b40e5af18e7f554345c5bae9b40a002d6f601760fad04ba67ee5b988999"
+  },
+  {
+    "file": "correta-b-sorriso.wav",
+    "group": "Resposta correta",
+    "label": "B · Sorriso",
+    "duration": 0.34,
+    "description": "Mi5–Fá♯5–Lá5, subindo por graus próximos. Corda pinçada com chegada de lâmina quente: leve e orgânico.",
+    "notes": [
+      [
+        0,
+        "E5",
+        0.16,
+        "pluck",
+        0.38
+      ],
+      [
+        0.065,
+        "F#5",
+        0.16,
+        "pluck",
+        0.45
+      ],
+      [
+        0.14,
+        "A5",
+        0.2,
+        "tine",
+        0.7
+      ],
+      [
+        0.142,
+        "D5",
+        0.19,
+        "felt",
+        0.17
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 16320,
+    "duration_s": 0.34,
+    "peak_dbfs": -4.38,
+    "rms_dbfs": -19.5,
+    "dc": -2.243939568014706e-08,
+    "frequencies": {
+      "E5": 659.26,
+      "F#5": 739.99,
+      "A5": 880.0,
+      "D5": 587.33
+    },
+    "sha256": "eb37e128b8ade46e99ac235ffc2e7d713297a3405f9649c7a1836ab31a38630f"
+  },
+  {
+    "file": "correta-c-gotinha.wav",
+    "group": "Resposta correta",
+    "label": "C · Gotinha",
+    "duration": 0.32,
+    "description": "Lá4–Ré5–Fá♯5: salto seguido de terça maior. Cerâmica arredondada abre espaço para uma gota brilhante.",
+    "notes": [
+      [
+        0,
+        "A4",
+        0.13,
+        "ceramic",
+        0.45
+      ],
+      [
+        0.055,
+        "D5",
+        0.14,
+        "ceramic",
+        0.55
+      ],
+      [
+        0.125,
+        "F#5",
+        0.195,
+        "bell",
+        0.72
+      ],
+      [
+        0.13,
+        "A5",
+        0.17,
+        "felt",
+        0.14
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 15360,
+    "duration_s": 0.32,
+    "peak_dbfs": -6.59,
+    "rms_dbfs": -19.5,
+    "dc": 8.344650268554687e-08,
+    "frequencies": {
+      "A4": 440.0,
+      "D5": 587.33,
+      "F#5": 739.99,
+      "A5": 880.0
+    },
+    "sha256": "c6ac2d657dfeabd44cddede37efff62e1dc2eba81c03926d634061f8cfa7a064"
+  },
+  {
+    "file": "consecutivo-a-impulso.wav",
+    "group": "Acerto consecutivo",
+    "label": "A · Impulso",
+    "duration": 0.43,
+    "description": "Duas batidas curtas em Ré5 e uma chegada em Lá5/Ré6. Madeira e lâmina: impulso rítmico seguido de recompensa aberta.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.105,
+        "mallet",
+        0.49
+      ],
+      [
+        0.068,
+        "D5",
+        0.105,
+        "mallet",
+        0.4
+      ],
+      [
+        0.19,
+        "A5",
+        0.24,
+        "tine",
+        0.59
+      ],
+      [
+        0.19,
+        "D6",
+        0.24,
+        "bell",
+        0.22
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 20640,
+    "duration_s": 0.43,
+    "peak_dbfs": -4.0,
+    "rms_dbfs": -19.72,
+    "dc": -2.809273180111434e-08,
+    "frequencies": {
+      "D5": 587.33,
+      "A5": 880.0,
+      "D6": 1174.66
+    },
+    "sha256": "c49d3139bd577beb3d52ed41a1e21087f2b4be0375ce8d57b550c1c5d9092c75"
+  },
+  {
+    "file": "consecutivo-b-fluidez.wav",
+    "group": "Acerto consecutivo",
+    "label": "B · Fluidez",
+    "duration": 0.46,
+    "description": "Ré5–Fá♯5–Lá5–Ré6, com os intervalos entre ataques diminuindo. Mallet e lâmina alternados; gesto contínuo de progresso.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.2,
+        "mallet",
+        0.5
+      ],
+      [
+        0.115,
+        "F#5",
+        0.19,
+        "tine",
+        0.5
+      ],
+      [
+        0.2,
+        "A5",
+        0.18,
+        "mallet",
+        0.57
+      ],
+      [
+        0.26,
+        "D6",
+        0.2,
+        "tine",
+        0.6
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 22080,
+    "duration_s": 0.46,
+    "peak_dbfs": -6.44,
+    "rms_dbfs": -19.0,
+    "dc": 1.3821366904438406e-08,
+    "frequencies": {
+      "D5": 587.33,
+      "F#5": 739.99,
+      "A5": 880.0,
+      "D6": 1174.66
+    },
+    "sha256": "e0b39e27655e6e6a84a625ddc6c7b31af1daa891716094006f3fa9cb99f91cd2"
+  },
+  {
+    "file": "consecutivo-c-brilho.wav",
+    "group": "Acerto consecutivo",
+    "label": "C · Brilho",
+    "duration": 0.44,
+    "description": "Ré5/Fá♯5/Lá5 em acorde levemente aberto, pausa e resposta Lá5/Ré6. Corda e bell: recompensa em duas massas, sem escada melódica.",
+    "notes": [
+      [
+        0,
+        "D5",
+        0.22,
+        "pluck",
+        0.22
+      ],
+      [
+        0.012,
+        "F#5",
+        0.21,
+        "tine",
+        0.38
+      ],
+      [
+        0.026,
+        "A5",
+        0.2,
+        "tine",
+        0.3
+      ],
+      [
+        0.21,
+        "A5",
+        0.23,
+        "bell",
+        0.5
+      ],
+      [
+        0.21,
+        "D6",
+        0.23,
+        "bell",
+        0.22
+      ]
+    ],
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "frames": 21120,
+    "duration_s": 0.44,
+    "peak_dbfs": -4.0,
+    "rms_dbfs": -19.66,
+    "dc": 5.346356016216856e-08,
+    "frequencies": {
+      "D5": 587.33,
+      "F#5": 739.99,
+      "A5": 880.0,
+      "D6": 1174.66
+    },
+    "sha256": "a2e5c823d4b572729480c72ea08420f44d17b61114e7c332f58872045567481e"
+  }
+]

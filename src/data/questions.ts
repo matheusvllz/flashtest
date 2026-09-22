@@ -63,7 +63,7 @@ export const QUESTIONS: Question[] = [
       { key: "B", text: "1/26" },
       { key: "C", text: "1/4" },
       { key: "D", text: "1/2" },
-      { key: "E", text: "13/52 simplificado como 3/12" },
+      { key: "E", text: "3/13" },
     ],
     correct: "C",
     difficulty: "Fácil",

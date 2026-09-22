@@ -1,16 +1,20 @@
 # Foca — Specs (Spec Driven Development)
 
+**Plano vigente — Jornada de Aprendizado V2 (21/09/2026, IMPLEMENTADO em 22/09/2026):** [25 — Jornada de Aprendizado V2: plano de implementação](25-plano-jornada-aprendizado-v2.md). Reestrutura a experiência principal: `/trilha` é a home, hierarquia matéria → seção → capítulo → lição, lição como sequência de passos intercalados (4–8 questões com dificuldade progressiva), revisão de capítulo, nav com 4 itens, schema v5. As 28 tarefas (T-01…T-28) foram executadas — **ver [26 — Registro de execução](26-registro-execucao-jornada-v2.md) primeiro** pro registro real (comandos e números de `bunx tsc --noEmit`/`bun test tests/unit`/`bunx playwright test`/`bun run build`, a tabela de critérios G1–G13, as decisões editoriais tomadas ao longo da execução e as limitações explícitas — sem dispositivo físico, sem revisão pedagógica externa do conteúdo novo, sem observação de participante real). Não é "tudo pronto para sempre": o `26` §8 lista o que continua futuro. Ler antes de mexer em trilha, microlições, home ou navegação — não assumir que um trecho do `25` ainda está "não implementado" sem checar o `26`.
+
+**Identidade sonora aprovada e integrada (21/09/2026):** [24 — Integração dos WAVs v2](24-integracao-identidade-sonora.md). Atualiza o estado das propostas sonoras 20/23; os 12 arquivos aprovados estão em `public/sfx/v2/`.
+
 Esta pasta é a **fonte de verdade de produto, negócio e pitch** do Foca. O código do protótipo vive na raiz deste mesmo repo; as convenções técnicas ficam no `CLAUDE.md` da raiz. Regra: **toda decisão relevante é escrita aqui, com data — não fica só no chat.**
 
-## Plano vigente de evolução (21/09/2026)
+## Plano vigente de evolução (21/09/2026) — Fases 0–12 implementadas
 
-**Leia primeiro: [20 — Plano de evolução do aprendizado](20-plano-evolucao-aprendizagem.md).** Especificação completa em 23 seções, com diagnóstico do código, correção dos quatro bugs, contratos de feedback/tutor, identidade sonora, Brand Voice, microlições, questões, dicas, trilha, adaptação, dados, fases executáveis, dependências, testes, critérios de aceite e checklist para a próxima IA.
+**Leia primeiro: [20 — Plano de evolução do aprendizado](20-plano-evolucao-aprendizagem.md).** Especificação completa em 23 seções, com diagnóstico do código, correção dos quatro bugs, contratos de feedback/tutor, identidade sonora, Brand Voice, microlições, questões, dicas, trilha, adaptação, dados, fases executáveis, dependências, testes, critérios de aceite e checklist.
 
-**Status: planejado, não implementado.** Nesta etapa, o usuário autorizou somente registrar o plano no SDD. A execução do código depende de autorização posterior. Arquivos indicados como **NOVO ARQUIVO** no plano ainda são propostas de implementação, não entregas existentes.
+**Status: implementado e testado em 21/09/2026 — ver [22 — Validação do piloto](22-validacao-piloto-aprendizagem.md) pro registro de execução, evidência de teste (136 unitários + 20 E2E reais) e as limitações explícitas (sem dispositivo físico, sem escuta humana da identidade sonora, sem observação de participante real, sem revisão pedagógica externa do conteúdo).** Isto NÃO é "roadmap inteiro pronto" — o `22` §6 lista o que continua futuro (diagnóstico real, revisão espaçada com UI própria, simulado, backend). Arquivos que o `20` marcava **NOVO ARQUIVO** agora existem no código; confirmar no `22` antes de assumir que algo específico foi feito.
 
 Nos assuntos cobertos, o `20` prevalece sobre orientações incompatíveis dos documentos anteriores e sobre descrições históricas no `CLAUDE.md`. Em especial: erro não deve abrir/enviar chat automaticamente; texto não é sorteado no render; voz não constrange o aluno; explicação curta precede prática; conclusão, evidência e revisão são separadas. A identidade visual continua Rabisco na Margem.
 
-Para executar: ler o `20` inteiro, seguir a ordem da fase autorizada e comprovar seus critérios antes de marcá-la como pronta. A auditoria estática de 20/09 está na seção 2; não confundir com testes de navegador/áudio já realizados. Os registros abaixo preservam a trajetória do projeto e não substituem esse diagnóstico mais recente.
+Pra alterar o que já foi implementado: ler o `20` (a norma) e o `22` (o que foi feito e como foi testado) antes de mexer. A auditoria estática de 20/09 na seção 2 do `20` é o diagnóstico PRÉ-implementação — não confundir com o estado atual do código.
 
 ## Estado atual (20/09/2026)
 
@@ -60,6 +64,11 @@ App mobile-first de preparação para o ENEM em **aulas de 60 segundos** (1–2 
 | `17-plano-migracao-visual-foca.md` | Implement (plano) | 🆕 Plano executável da migração visual para a Foca — tokens, logos, fases e auditoria |
 | `18-plano-reestilizacao-rabisco.md` | Implement (plano) | 🆕 **Executado (ver `19`).** Plano da reestilização "Rabisco na Margem" (paleta em `brand/foca-rabisco-*`): diagnóstico, design system, componentes, mascote, gamificação, tela a tela e 13 fases |
 | `19-registro-execucao-rabisco.md` | Implement (registro) | 🆕 O que de fato aconteceu ao rodar o `18` — decisões tomadas, e dois bugs reais de dark mode encontrados e corrigidos na Fase 12 |
+| `21-brand-voice-e-inventario-copy.md` | Implement (registro) | 🆕 Inventário de copy da Fase 3 do `20` — o que foi revisado com evidência vs. o que só foi catalogado |
+| `22-validacao-piloto-aprendizagem.md` | Implement (registro) | 🆕 **Ler antes de mexer no código do `20`.** O que foi implementado, testes reais executados, limitações explícitas, status dos critérios A1–A15 |
+| [25-plano-jornada-aprendizado-v2.md](25-plano-jornada-aprendizado-v2.md) | **Specify + Plan + Tasks — vigente, implementado (ver `26`)** | 🆕 Como a trilha vira o coração do app: contexto, problemas, arquitetura (passos, árvore de currículo, revisão de capítulo, trilha por matéria, home/nav), modelo de dados, compatibilidade com legado, 28 tarefas com critérios de aceite, testes, edge cases e riscos |
+| [26-registro-execucao-jornada-v2.md](26-registro-execucao-jornada-v2.md) | Implement (registro) | 🆕 **Ler antes de mexer no código do `25`.** O que existe por fase (T-02…T-27), decisões editoriais (o desvio do desafio de `porcentagem-valor`, a correção de conteúdo em `crase-quando-usar:revisao-1`, o gap de wiring do `reviewTarget`), números reais de teste (257 unitários + 33 E2E), a tabela de critérios G1–G13 e as limitações explícitas |
+| [23-identidade-sonora-linguagem-musical.md](23-identidade-sonora-linguagem-musical.md) | Proposal (não implementado) | 🆕 Estende `20` §6.3/§6.4: por que o som atual soa genérico, a linguagem musical proposta (motivo = tríade de Ré maior + camada de textura de grafite/lápis), e um prompt de geração por IA pra cada um dos 12 eventos sonoros — aguardando escuta e decisão registrada antes de virar implementação |
 | `brand/` | Assets | `Flash Test - design System.html` (marca anterior) + a LP do link da bio |
 | `_arquivo-abroad/` | 🗄️ Arquivo morto | Toda a fase Abroad, preservada. Ver o `LEIA-ME.md` de lá |
 
@@ -69,7 +78,8 @@ App mobile-first de preparação para o ENEM em **aulas de 60 segundos** (1–2 
 
 ## Por onde começar
 
-- **Vai executar correções ou a evolução para aprendizado?** → [20](20-plano-evolucao-aprendizagem.md), inteiro, antes dos planos históricos. A seção 16 define cada fase; a 20 define aceite; a 23 define o checklist. Não implementar sem autorização.
+- **Vai mexer no que o `25` já entregou (trilha como home, lições por passos, seções/capítulos)?** → [26](26-registro-execucao-jornada-v2.md) primeiro (o que existe e como foi testado), depois [25](25-plano-jornada-aprendizado-v2.md) (a norma) antes de alterar comportamento. Ele prevalece sobre o `20` nos assuntos que cobre (ver `25` §6.7).
+- **Vai mexer no que o `20` já entregou (aprendizado/microlições/trilha)?** → [22](22-validacao-piloto-aprendizagem.md) primeiro (o que existe e como foi testado), depois [20](20-plano-evolucao-aprendizagem.md) (a norma) antes de alterar comportamento.
 - **Vai decidir *o quê* construir?** → `08` (produto) + `14` (persona). Leia o **Aviso de sócio** do `08` §0 antes de propor qualquer feature que compita em "mais conteúdo".
 - **Vai mexer no código?** → `11` (o que existe vs. o que foi pedido) + `12` (decisões técnicas) + o `CLAUDE.md` da raiz.
 - **Vai fazer uma tela nova?** → `09` (marca) + `16` (recompensa). Tokens não se tiram da memória.

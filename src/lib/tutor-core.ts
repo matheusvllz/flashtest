@@ -55,6 +55,72 @@ export type TutorReply = {
 type ChatContent = string | Array<Record<string, unknown>>;
 
 /**
+ * Validação de runtime do payload (docs/20 §14.2, Fase 7 item 8): o
+ * `.inputValidator` da server function era um cast, não validação de
+ * verdade — nada impedia mensagem vazia, conversa enorme ou imagem fora do
+ * limite. "Proposta inicial 5 MiB por arquivo, PNG/JPEG/WebP, verificação
+ * real de tipo e tamanho" (docs/20 §14.2).
+ */
+export const TUTOR_IMAGE_TYPES_PERMITIDOS = new Set(["image/png", "image/jpeg", "image/webp"]);
+export const TUTOR_IMAGEM_MAX_BYTES = 5 * 1024 * 1024; // 5 MiB
+export const TUTOR_MAX_MENSAGENS = 40;
+export const TUTOR_MAX_TAMANHO_MENSAGEM = 4000;
+
+/** Tamanho em bytes de uma string base64 (sem decodificar) — conta os `=` de padding fora. */
+function tamanhoBase64EmBytes(base64: string): number {
+  const semPadding = base64.replace(/=+$/, "");
+  return Math.floor((semPadding.length * 3) / 4);
+}
+
+export class TutorRequestInvalido extends Error {}
+
+/**
+ * Lança `TutorRequestInvalido` se o payload não for seguro de processar.
+ * Nunca confia no cast TS do RPC — mesma filosofia de `state-migrations.ts`.
+ */
+export function validateTutorRequest(data: unknown): TutorRequest {
+  if (typeof data !== "object" || data === null) {
+    throw new TutorRequestInvalido("payload ausente ou não é um objeto");
+  }
+  const d = data as Partial<TutorRequest>;
+
+  if (!Array.isArray(d.messages) || d.messages.length === 0) {
+    throw new TutorRequestInvalido("mensagens ausentes");
+  }
+  if (d.messages.length > TUTOR_MAX_MENSAGENS) {
+    throw new TutorRequestInvalido(`conversa longa demais (máx. ${TUTOR_MAX_MENSAGENS} mensagens)`);
+  }
+  for (const m of d.messages) {
+    if (
+      typeof m?.content !== "string" ||
+      m.content.length === 0 ||
+      m.content.length > TUTOR_MAX_TAMANHO_MENSAGEM ||
+      (m.role !== "user" && m.role !== "assistant")
+    ) {
+      throw new TutorRequestInvalido("mensagem com formato inválido");
+    }
+  }
+
+  if (d.image) {
+    if (!TUTOR_IMAGE_TYPES_PERMITIDOS.has(d.image.mediaType)) {
+      throw new TutorRequestInvalido(`tipo de imagem não suportado: "${d.image.mediaType}"`);
+    }
+    if (typeof d.image.data !== "string" || d.image.data.length === 0) {
+      throw new TutorRequestInvalido("imagem sem dados");
+    }
+    if (tamanhoBase64EmBytes(d.image.data) > TUTOR_IMAGEM_MAX_BYTES) {
+      throw new TutorRequestInvalido("imagem maior que 5 MiB");
+    }
+  }
+
+  if (typeof d.context !== "object" || d.context === null) {
+    throw new TutorRequestInvalido("contexto ausente");
+  }
+
+  return data as TutorRequest;
+}
+
+/**
  * Toda a lógica do tutor, separada da server function para poder ser exercitada
  * fora do transporte (o RPC do TanStack serializa com seroval, o que torna a
  * server function impossível de chamar direto num teste).

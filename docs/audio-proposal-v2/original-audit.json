@@ -1,0 +1,547 @@
+{
+  "files": [
+    {
+      "file": "docs\\audio-candidates\\abertura-importante.wav",
+      "sha256": "696b75eb8b5feffd0504c03f9e8b63f2b681c7426f95e66f2f422f38121a5245",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 7717,
+      "duration_s": 0.175,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -11.72,
+      "dc": -5.259605922800311e-07
+    },
+    {
+      "file": "docs\\audio-candidates\\acerto-consecutivo.wav",
+      "sha256": "520b0975dc9d54429a6e051fab5c37cea486aefc3cd8fe0ae264447ac5024909",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 17110,
+      "duration_s": 0.388,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.4,
+      "dc": 6.4120802664742844e-06
+    },
+    {
+      "file": "docs\\audio-candidates\\capitulo-desbloqueado.wav",
+      "sha256": "53fcb7e72d09a7dc5a781e00290806a6072fc6bf39341e52c71948b1797f7084",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 21521,
+      "duration_s": 0.488,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.19,
+      "dc": -5.52325481143418e-06
+    },
+    {
+      "file": "docs\\audio-candidates\\conclusao-licao.wav",
+      "sha256": "40ed7c9121314ce9f928dd6b1b6adbb220fed22116db21e3511aef83eb5667d1",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 28135,
+      "duration_s": 0.638,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -13.03,
+      "dc": 3.51958192642616e-05
+    },
+    {
+      "file": "docs\\audio-candidates\\conquista.wav",
+      "sha256": "69ad5d51ab7fa04b17cf47b977a36c9885aa2d70be68735aaee10eaeb300d827",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 41806,
+      "duration_s": 0.948,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.31,
+      "dc": -2.1517644605813162e-05
+    },
+    {
+      "file": "docs\\audio-candidates\\level-up.wav",
+      "sha256": "31830422008a797f5e11fe655c7acea5688d891ed9387b0a62c56f9ba99208ef",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 37396,
+      "duration_s": 0.848,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.9,
+      "dc": 1.7308745107264145e-06
+    },
+    {
+      "file": "docs\\audio-candidates\\marco-streak.wav",
+      "sha256": "bb7be3d01d3e01a333699472b121ce21ddd5da09a6c0ace7918a52d74881350c",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 32545,
+      "duration_s": 0.738,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -13.15,
+      "dc": 1.0931753749615916e-05
+    },
+    {
+      "file": "docs\\audio-candidates\\meta-diaria.wav",
+      "sha256": "027a7ab0aeac635004396941b38db9ba28fd894b3cd879a3d410fc868ec4b5aa",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 20638,
+      "duration_s": 0.468,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.47,
+      "dc": 1.9974389248594825e-05
+    },
+    {
+      "file": "docs\\audio-candidates\\recompensa-especial.wav",
+      "sha256": "9ff43d0d971fe8a2d478f5cc7d7cc5c239b7601d5446b4e9fa380174ba026488",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 43218,
+      "duration_s": 0.98,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.0,
+      "dc": -1.807201575623872e-05
+    },
+    {
+      "file": "docs\\audio-candidates\\resposta-correta.wav",
+      "sha256": "3850adfb42e5204809dafc8a2c360b3b6f42155f9ffa1e78d8ea9366dc86f2d7",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 12920,
+      "duration_s": 0.293,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -12.03,
+      "dc": 6.172014832865712e-06
+    },
+    {
+      "file": "docs\\audio-candidates\\resposta-incorreta.wav",
+      "sha256": "9c378143211132bba3a2ad1eb895982cdc1028b10110f0734b69fa1b1051c9c5",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 8821,
+      "duration_s": 0.2,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -10.28,
+      "dc": 0.0001243467626084061
+    },
+    {
+      "file": "docs\\audio-candidates\\streak-diario.wav",
+      "sha256": "438a2f129ca2f166b9f4e22c3f50b90917ca7adac6b1837c0a68c858fc022677",
+      "sample_rate": 44100,
+      "channels": 1,
+      "bits": 16,
+      "frames": 11907,
+      "duration_s": 0.27,
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -11.58,
+      "dc": -6.95366097345574e-05
+    }
+  ],
+  "exact_duplicates": [],
+  "prefix_comparisons": [
+    {
+      "a": "acerto-consecutivo",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.99977,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.99976,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "conclusao-licao",
+      "prefix_cosine": 0.99976,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.99975,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "conclusao-licao",
+      "prefix_cosine": 0.99974,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.99973,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.99965,
+      "window_ms": 200.0
+    },
+    {
+      "a": "meta-diaria",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.99959,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.99955,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.99948,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "acerto-consecutivo",
+      "prefix_cosine": 0.75383,
+      "window_ms": 175.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "capitulo-desbloqueado",
+      "prefix_cosine": 0.75377,
+      "window_ms": 175.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.75377,
+      "window_ms": 175.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "conclusao-licao",
+      "prefix_cosine": 0.75375,
+      "window_ms": 175.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.75372,
+      "window_ms": 175.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "streak-diario",
+      "prefix_cosine": 0.68208,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "streak-diario",
+      "prefix_cosine": 0.68203,
+      "window_ms": 200.0
+    },
+    {
+      "a": "meta-diaria",
+      "b": "streak-diario",
+      "prefix_cosine": 0.68203,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "streak-diario",
+      "prefix_cosine": 0.68202,
+      "window_ms": 200.0
+    },
+    {
+      "a": "resposta-correta",
+      "b": "streak-diario",
+      "prefix_cosine": 0.68199,
+      "window_ms": 200.0
+    },
+    {
+      "a": "marco-streak",
+      "b": "streak-diario",
+      "prefix_cosine": 0.58563,
+      "window_ms": 200.0
+    },
+    {
+      "a": "level-up",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.56472,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "marco-streak",
+      "prefix_cosine": 0.54615,
+      "window_ms": 175.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "marco-streak",
+      "prefix_cosine": 0.52894,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "marco-streak",
+      "prefix_cosine": 0.52885,
+      "window_ms": 200.0
+    },
+    {
+      "a": "marco-streak",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.52882,
+      "window_ms": 200.0
+    },
+    {
+      "a": "marco-streak",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.52881,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "marco-streak",
+      "prefix_cosine": 0.52868,
+      "window_ms": 200.0
+    },
+    {
+      "a": "level-up",
+      "b": "marco-streak",
+      "prefix_cosine": 0.50571,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conquista",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.49308,
+      "window_ms": 200.0
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "streak-diario",
+      "prefix_cosine": 0.48359,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "conquista",
+      "prefix_cosine": 0.47061,
+      "window_ms": 175.0
+    },
+    {
+      "a": "level-up",
+      "b": "streak-diario",
+      "prefix_cosine": 0.46617,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "streak-diario",
+      "prefix_cosine": 0.46362,
+      "window_ms": 175.0
+    },
+    {
+      "a": "conquista",
+      "b": "level-up",
+      "prefix_cosine": 0.453,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conquista",
+      "b": "marco-streak",
+      "prefix_cosine": 0.31504,
+      "window_ms": 200.0
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.27988,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.27979,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.27976,
+      "window_ms": 200.0
+    },
+    {
+      "a": "meta-diaria",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.27976,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.27972,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.2582,
+      "window_ms": 175.0
+    },
+    {
+      "a": "marco-streak",
+      "b": "recompensa-especial",
+      "prefix_cosine": 0.19657,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "level-up",
+      "prefix_cosine": 0.19243,
+      "window_ms": 175.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "level-up",
+      "prefix_cosine": 0.19,
+      "window_ms": 200.0
+    },
+    {
+      "a": "level-up",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.18999,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "level-up",
+      "prefix_cosine": 0.18997,
+      "window_ms": 200.0
+    },
+    {
+      "a": "level-up",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.18997,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "level-up",
+      "prefix_cosine": 0.18993,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conquista",
+      "b": "streak-diario",
+      "prefix_cosine": 0.13538,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conquista",
+      "b": "resposta-correta",
+      "prefix_cosine": 0.08904,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "conquista",
+      "prefix_cosine": 0.08894,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conquista",
+      "b": "meta-diaria",
+      "prefix_cosine": 0.08889,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "conquista",
+      "prefix_cosine": 0.08886,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "conquista",
+      "prefix_cosine": 0.08884,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conquista",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.03626,
+      "window_ms": 200.0
+    },
+    {
+      "a": "recompensa-especial",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.03542,
+      "window_ms": 200.0
+    },
+    {
+      "a": "resposta-incorreta",
+      "b": "streak-diario",
+      "prefix_cosine": 0.03481,
+      "window_ms": 200.0
+    },
+    {
+      "a": "abertura-importante",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.03236,
+      "window_ms": 175.0
+    },
+    {
+      "a": "level-up",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.03229,
+      "window_ms": 200.0
+    },
+    {
+      "a": "marco-streak",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.02913,
+      "window_ms": 200.0
+    },
+    {
+      "a": "acerto-consecutivo",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.02676,
+      "window_ms": 200.0
+    },
+    {
+      "a": "capitulo-desbloqueado",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.02676,
+      "window_ms": 200.0
+    },
+    {
+      "a": "meta-diaria",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.02676,
+      "window_ms": 200.0
+    },
+    {
+      "a": "conclusao-licao",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.02675,
+      "window_ms": 200.0
+    },
+    {
+      "a": "resposta-correta",
+      "b": "resposta-incorreta",
+      "prefix_cosine": 0.02675,
+      "window_ms": 200.0
+    }
+  ]
+}

@@ -44,9 +44,16 @@ function Redacao() {
   return (
     <AppShell>
       <div className="bg-neve px-5 pt-8 pb-6">
-        <div className="flex items-center gap-2">
-          <PenLine size={18} className="text-mar-fundo" />
-          <p className="ds-label">Micro-treino de redação</p>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <PenLine size={18} className="text-mar-fundo" />
+            <p className="ds-label">Micro-treino de redação</p>
+          </div>
+          {/* Este mapa é o legado (docs/25 §11) — a trilha unificada (T-15/T-18)
+              é o novo lugar-padrão; este link é a saída pra lá sem remover o mapa. */}
+          <Link to="/trilha" className="btn-ghost shrink-0">
+            Ver na trilha
+          </Link>
         </div>
         <h1 className="mt-2 font-display text-2xl font-bold leading-tight text-abismo">
           A nota 1000 sai de mil <br /> exercícios de 1 minuto

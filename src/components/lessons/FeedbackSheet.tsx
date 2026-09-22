@@ -2,15 +2,20 @@ import { useState, type ReactNode } from "react";
 import { CheckCircle2, ChevronDown, Sparkles, XCircle } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { XpChip } from "@/components/ds/XpChip";
-import { fala } from "@/lib/voz";
+import { COPY } from "@/lib/copy";
+import type { AnswerFeedback } from "@/lib/feedback/types";
 import { cn } from "@/lib/utils";
 
 /**
  * Folha de feedback pós-resposta (docs/18-plano-reestilizacao-rabisco.md §7.9,
- * §13.6). Usada pelos dois pilares — aula de 60s e lição de redação — pra
- * falar a mesma língua. Verde/vermelho aqui são legítimos: é exatamente o
- * feedback de resposta certa/errada que o design system reserva para eles.
- * Nenhum azul de marca dentro da folha, exceto o próprio CTA de avançar.
+ * §13.6; docs/20 §5, Fase 2). Usada pelos dois pilares — aula de 60s e lição
+ * de redação — pra falar a mesma língua. Verde/vermelho aqui são legítimos: é
+ * exatamente o feedback de resposta certa/errada que o design system reserva
+ * para eles. Nenhum azul de marca dentro da folha, exceto o próprio CTA.
+ *
+ * Puramente apresentacional: só renderiza o snapshot que `useExerciseSession`
+ * já criou. Não sorteia frase, não decide concessão de XP, não guarda estado
+ * de avanço — isso é responsabilidade do hook (camada de coordenação).
  *
  * A explicação principal é estática (vem da questão/lição, custo zero); o
  * `children`, se vier, é a resolução detalhada — nasce colapsada, então a
@@ -18,44 +23,34 @@ import { cn } from "@/lib/utils";
  * aparece no erro, que é quando ela vale.
  */
 export function FeedbackSheet({
-  correct,
-  explanation,
+  feedback,
   children,
   isLast,
   onContinue,
   onAskTutor,
-  xp,
 }: {
-  correct: boolean;
-  explanation: string;
+  feedback: AnswerFeedback;
   /** Resolução detalhada, colapsável — passo a passo, salvar flashcard, videoaula. */
   children?: ReactNode;
   isLast: boolean;
+  /** Chamado ao clicar "Continuar" — o guard contra clique duplo mora em `useExerciseSession().advance`, não aqui. */
   onContinue: () => void;
   onAskTutor?: () => void;
-  /** XP concedido por esta resposta. Aparece só DEPOIS de continuar (docs/18 princípio 3). */
-  xp?: number;
 }) {
   const [aberto, setAberto] = useState(false);
-  const [mostrarXp, setMostrarXp] = useState(false);
-  const titulo = fala(correct ? "acertou" : "errou");
-
-  function continuar() {
-    if (xp && !mostrarXp) {
-      setMostrarXp(true);
-      window.setTimeout(onContinue, 700);
-      return;
-    }
-    onContinue();
-  }
+  const { correct, messageText, explanation, xpAwarded } = feedback;
 
   return (
     <div
       role="status"
-      className={cn(
-        "sheet anim-slide-up sticky bottom-0 -mx-5 px-5 pb-5 pt-4",
-        correct ? "bg-success/10" : "bg-error/10",
-      )}
+      className="sheet anim-slide-up sticky bottom-0 -mx-5 px-5 pb-5 pt-4"
+      // Fundo composto opaco, calculado a partir de `--color-cards`: evitar
+      // duas classes de background (`sheet` + `bg-success/10`) competindo na
+      // mesma camada de utilitários, o que deixava o resultado dependente da
+      // ordem de geração do CSS (docs/20 §4.4).
+      style={{
+        backgroundColor: `color-mix(in srgb, var(--color-${correct ? "success" : "error"}) 10%, var(--color-cards))`,
+      }}
     >
       <div className="flex items-start gap-3">
         <FocaMark size={40} decorative expression={correct ? "orgulhosa" : "neutra"} motion="pop" />
@@ -66,7 +61,7 @@ export function FeedbackSheet({
             ) : (
               <XCircle size={18} className="shrink-0 text-error" aria-hidden />
             )}
-            {titulo}
+            {messageText}
           </p>
           <p className="mt-0.5 text-[13px] leading-relaxed text-abismo">{explanation}</p>
         </div>
@@ -78,27 +73,27 @@ export function FeedbackSheet({
             onClick={() => setAberto((v) => !v)}
             className="flex items-center gap-1 text-xs font-bold text-nevoa"
           >
-            {aberto ? "Ocultar resolução" : "Ver resolução"}
+            {aberto ? COPY.feedback.ocultarResolucao : COPY.feedback.verResolucao}
             <ChevronDown size={14} className={cn("transition-transform", aberto && "rotate-180")} />
           </button>
           {aberto && <div className="mt-2.5">{children}</div>}
         </div>
       )}
 
-      {mostrarXp && xp !== undefined && (
+      {xpAwarded !== undefined && xpAwarded > 0 && (
         <div className="mt-3 flex justify-center">
-          <XpChip amount={xp} animate />
+          <XpChip amount={xpAwarded} animate />
         </div>
       )}
 
       <div className="mt-3 flex gap-2">
         {!correct && onAskTutor && (
           <button onClick={onAskTutor} className="btn-outline shrink-0 px-3 text-[13px]">
-            <Sparkles size={15} /> Explicar melhor
+            <Sparkles size={15} /> {COPY.feedback.explicarMelhor}
           </button>
         )}
-        <button onClick={continuar} className="btn-primary flex-1">
-          {isLast ? "Ver resultado" : "Continuar"}
+        <button onClick={onContinue} className="btn-primary flex-1">
+          {isLast ? COPY.feedback.verResultado : COPY.feedback.continuar}
         </button>
       </div>
     </div>

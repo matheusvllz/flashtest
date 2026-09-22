@@ -2,11 +2,15 @@
 
 Contexto operacional para trabalhar neste repo. As decisões de produto/negócio moram fora daqui — leia-as antes de qualquer mudança de escopo (não só de código).
 
-## Plano vigente — ler antes de executar (21/09/2026)
+## Plano vigente — Jornada de Aprendizado V2 (21/09/2026, IMPLEMENTADO em 22/09/2026)
 
-[docs/20-plano-evolucao-aprendizagem.md](docs/20-plano-evolucao-aprendizagem.md) contém a especificação executável completa de correção dos bugs e evolução para microaprendizado. **Status: planejado, não implementado; a autorização desta etapa foi somente documental.** Ler o documento inteiro e confirmar a fase autorizada antes de alterar código.
+[docs/25-plano-jornada-aprendizado-v2.md](docs/25-plano-jornada-aprendizado-v2.md) é a especificação normativa da reestruturação atual: `/trilha` é a home, hierarquia matéria → seção → capítulo → lição (`CURRICULUM_TREE`), lição como sequência de passos (`LessonStep`: intro/teach/tip/question/recap, 4–8 questões com dificuldade progressiva), revisão sintética de capítulo, as 134 lições de redação entram na trilha como capítulos legados, nav com 4 itens, schema local v5. **Status: as 28 tarefas (T-01…T-28) foram implementadas e testadas em 22/09/2026 — ler [docs/26-registro-execucao-jornada-v2.md](docs/26-registro-execucao-jornada-v2.md) primeiro** pro registro real: o que existe por fase, números de teste (257 unitários + 33 E2E, todos passando, incluindo o projeto Playwright `narrow` 320×700), a tabela de critérios G1–G13 e as decisões editoriais tomadas ao longo da execução (entre elas: o desafio de `porcentagem-valor` não reusou a questão `q21` sugerida pelo plano — tópico incompatível, juros compostos vs. percentual direto —, e uma correção de overclaim encontrada em `crase-quando-usar:revisao-1`). Não é "tudo pronto para sempre": o `26` §8 lista o que continua futuro (revisão pedagógica externa do conteúdo novo, teste em dispositivo físico, observação de participante real). Nos assuntos que cobre, o `25` prevalece sobre o `20` (ver `25` §6.7); todo o resto do `20` (feedback imutável, tutor manual, som por evento, ledger, evidência, migração) continua valendo. Antes de alterar comportamento já entregue por este plano, ler o `25` (a norma) e o `26` (o que foi feito) — não assumir que um trecho do `25` ainda está "não implementado" sem checar o `26`.
 
-O `20` prevalece nos assuntos cobertos sobre descrições históricas abaixo e specs antigas incompatíveis, inclusive o gatilho automático do tutor, sorteio de falas no render, tom de cobrança, diagnóstico inicial e promessas de domínio. Consulte sua seção 2 para o diagnóstico estático mais recente; não interprete “fechado” nos registros de julho como validação atual. Convenções técnicas, preservação do store e regras de Git/Lovable continuam válidas, salvo mudança explícita na especificação vigente.
+## Plano anterior — implementado (21/09/2026)
+
+[docs/20-plano-evolucao-aprendizagem.md](docs/20-plano-evolucao-aprendizagem.md) é a especificação normativa da correção dos bugs e evolução para microaprendizado. **Status: Fases 0–12 implementadas e testadas em 21/09/2026 — ler [docs/22-validacao-piloto-aprendizagem.md](docs/22-validacao-piloto-aprendizagem.md) primeiro** pro registro do que existe, os comandos de teste reais (136 unitários + 20 E2E, todos passando) e as limitações explícitas (sem dispositivo físico, sem escuta humana da identidade sonora, sem observação de participante real). Não é "tudo pronto para sempre": o `22` §6 lista o que continua futuro. Antes de alterar comportamento já entregue, ler o `20` (a norma) e o `22` (o que foi feito) — não assumir que um trecho do `20` ainda está "não implementado" sem checar o `22`.
+
+O `20` prevalece nos assuntos cobertos sobre descrições históricas abaixo e specs antigas incompatíveis, inclusive o gatilho automático do tutor, sorteio de falas no render, tom de cobrança, diagnóstico inicial e promessas de domínio — essas incompatibilidades já foram corrigidas no código, não são mais um risco a evitar, são um comportamento antigo que não existe mais. Consulte a seção 2 do `20` só como diagnóstico histórico PRÉ-implementação, não como estado atual. Convenções técnicas, preservação do store e regras de Git/Lovable continuam válidas, salvo mudança explícita na especificação vigente.
 
 ## Onde está a fonte de verdade
 
@@ -68,7 +72,9 @@ O código diverge do que `08`/`10` pediram em vários pontos estruturais (audito
 - **Ranking/turma** mockado em `/ranking` (`src/data/ranking.ts`). O XP do aluno é real; a turma é fictícia, e a tela diz isso.
 - **Progresso virou mapa de lacunas** (`/progress`): domínio por matéria com faixas, "ataque primeiro" e o pilar de redação no mesmo painel.
 - **Banco de questões: 20 → 59**, cobrindo as 11 matérias, com gabarito distribuído entre A–E.
-- **Nav:** os dois pilares (`/study` e `/redacao`) estão na bottom nav; plano, flashcards e ranking são alcançados pelo dashboard.
+- **Nav (histórico — substituída pela Jornada V2, ver abaixo):** os dois pilares (`/study` e `/redacao`) estavam na bottom nav; plano, flashcards e ranking eram alcançados pelo dashboard.
+
+**Nav e home atuais (Jornada de Aprendizado V2, docs/25/26, 22/09/2026):** a home é `/trilha` (`FEATURES.trilhaComoHome = true` em `src/lib/features.ts`), e a bottom nav (`src/components/AppShell.tsx`, `NAV_ITEMS_V2`) tem 4 itens: Aprender (`/trilha`), Praticar (`/study`), Progresso (`/progress`), Perfil (`/profile`). `dashboard.tsx` continua no código, intacto, só como caminho de rollback: com a flag desligada ele volta a ser a home real e a nav volta a `NAV_ITEMS_V1` (5 itens, incluindo `/redacao` e `Início`) — desligar a flag não apaga dado nenhum (schema v5 é aditivo). Fora do fluxo de nav, `/redacao` continua existindo e sendo alcançável (as 134 lições de redação entraram na trilha como capítulos legados, `docs/26` §2).
 
 **Ainda aberto:**
 
