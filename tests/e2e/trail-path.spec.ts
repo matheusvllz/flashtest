@@ -72,11 +72,36 @@ const PORTUGUES_FUNDO = JSON.stringify({
   },
 });
 
-/** Biologia inteira concluída → fim de matéria; foco global fica em Matemática. */
+/** Biologia inteira concluída → fim de matéria; foco global fica em Matemática. `lastStudyDate` hoje: caminho "orgulhosa" (não-retorno). */
 const BIOLOGIA_FIM = JSON.stringify({
   ...BASE,
   prefs: { ...BASE.prefs, trailSubjectId: "bio" },
-  progress: { xp: 200, streak: 1 },
+  progress: { xp: 200, streak: 1, lastStudyDate: new Date().toDateString() },
+  learning: {
+    completedLessons: {
+      "citologia-membrana": microFeito,
+      "citologia-organelas": microFeito,
+      "revisao--bio-citologia": microFeito,
+    },
+  },
+});
+
+function diasAtras(n: number): string {
+  const d = new Date();
+  d.setDate(d.getDate() - n);
+  return d.toDateString();
+}
+
+/**
+ * Mesma matéria toda concluída, mas o aluno sumiu 3 dias — "acolhedora tem
+ * prioridade sobre tudo" (docs/15 §3.2) precisa vencer mesmo quando a matéria
+ * selecionada não tem mais nada pendente (achado real da revisão de T-28:
+ * SubjectPathEnd mostrava sempre "orgulhosa", ignorando o retorno).
+ */
+const BIOLOGIA_FIM_RETORNO = JSON.stringify({
+  ...BASE,
+  prefs: { ...BASE.prefs, trailSubjectId: "bio" },
+  progress: { xp: 200, streak: 0, lastStudyDate: diasAtras(3) },
   learning: {
     completedLessons: {
       "citologia-membrana": microFeito,
@@ -223,4 +248,13 @@ test("RF-12/RF-6 — fim de matéria mostra Foca orgulhosa, dica de outra matér
 
   await page.getByText("Citologia", { exact: true }).click();
   await expect(page.getByRole("img", { name: /Capítulo concluído/ })).toBeVisible({ timeout: 5000 });
+});
+
+test("acolhedora vence mesmo com a matéria selecionada toda concluída (docs/15 §3.2)", async ({ page }) => {
+  await seed(page, BIOLOGIA_FIM_RETORNO);
+  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.getByRole("button", { name: /^Biologia/ }).waitFor({ timeout: 15000 });
+  await expect(page.getByText("Você fechou tudo o que está publicado em Biologia.")).toBeVisible();
+  await expect(page.locator('main img[src*="acolhedora"]')).toHaveCount(1);
+  await expect(page.locator('main img[src*="orgulhosa"]')).toHaveCount(0);
 });

@@ -86,7 +86,7 @@ export function SubjectPath({
           ))}
         </Fragment>
       ))}
-      {focus ? null : <SubjectPathEnd subjectName={subject.name} />}
+      {focus ? null : <SubjectPathEnd subjectName={subject.name} greeting={greeting} />}
       {focus && focusOffscreen ? <JumpToFocusButton above={focusAbove} onJump={jump} /> : null}
     </div>
   );
