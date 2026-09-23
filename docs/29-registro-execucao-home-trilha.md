@@ -1,6 +1,6 @@
 # 29 — Registro de execução: home como trilha visual + deploy
 
-**Status:** implementado em 23/09/2026 — Checkpoints A–F completos (código, testes, 5 rodadas de revisão), a partir de `docs/28-plano-execucao-home-trilha.md`. **T-27 (push/PR/merge/configuração do Vercel) não executado** — pendente de autorização explícita do usuário e de passos manuais no painel do Vercel; todo o resto do plano foi executado e verificado. Trabalho na branch `feat/home-trilha-visual` (6 commits sobre `88813f3`), ainda não publicada.
+**Status:** implementado e publicado em 23/09/2026 — Checkpoints A–F completos (código, testes, 5 rodadas de revisão), a partir de `docs/28-plano-execucao-home-trilha.md`. [PR #1](https://github.com/matheusvllz/flashtest/pull/1) mergeado em `main` (commit `cab594c`) com autorização explícita do usuário; deploy de produção no Vercel disparado e confirmado corrigido por fora (§7). **Só a configuração manual do painel do Vercel e o teste em celular físico continuam pendentes do usuário** — ver §7.
 **Norma:** [27](27-plano-home-trilha-visual.md). **Plano:** [28](28-plano-execucao-home-trilha.md).
 
 ## 1. Baseline (T-01)
@@ -203,14 +203,21 @@ Nenhuma violação encontrada contra `CLAUDE.md` (dark mode/tokens, geometria, `
 
 ## 7. Teste no celular (T-27)
 
-Push e PR feitos com autorização do usuário: branch `feat/home-trilha-visual` publicada, [PR #1](https://github.com/matheusvllz/flashtest/pull/1) aberto contra `main`, CI verde ([run 35838521481](https://github.com/matheusvllz/flashtest/actions/runs/35838521481)).
+Push, PR e merge feitos com autorização explícita do usuário, em duas etapas:
 
-**Ainda pendente do usuário:** (1) revisar e mergear o PR (o merge dispara o deploy de produção no Vercel); (2) no painel do Vercel (time `foca3`, projeto `foca`): desligar/restringir a Deployment Protection (Settings → Deployment Protection → "Vercel Authentication" para "Only Preview Deployments") e cadastrar `OPENAI_API_KEY` em Settings → Environment Variables (Production e Preview); (3) abrir a URL de produção em Chrome Android e Safari iPhone e percorrer o checklist do `28` T-27 (quiz, `/trilha` sem rolar, tocar num nó, voltar destaca o nó, refresh de rota em `/trilha` e `/learn/porcentagem-valor`, trilha longa de Português, botão "voltar pra atual", bottom nav/safe area, som após o primeiro toque, tutor). Nenhum desses três passos pôde ser executado nesta sessão — o agente não tem credenciais do Vercel nem autorização de push automática.
+1. Branch `feat/home-trilha-visual` publicada, [PR #1](https://github.com/matheusvllz/flashtest/pull/1) aberto contra `main`, CI verde ([run 35838521481](https://github.com/matheusvllz/flashtest/actions/runs/35838521481)).
+2. PR mergeado em `main` (commit `cab594c`, `gh pr merge 1 --merge`). O merge disparou o deploy de produção no Vercel automaticamente: [deployment 6609937399](https://github.com/matheusvllz/flashtest/deployments), estado `success`, URL `https://foca-r4fc8sb6m-foca3.vercel.app`.
+
+**Confirmado por fora (sem login no Vercel, só `curl`):** a causa raiz do §14 do `27` está corrigida — `curl -sI https://foca-r4fc8sb6m-foca3.vercel.app/` devolve `302` para `vercel.com/sso-api` (a tela de login do Vercel), **não** mais o 404 de antes. Isso confirma que o build agora gera a saída certa (função SSR servindo as rotas) — o único bloqueio restante é a Deployment Protection, que só se desliga pelo painel.
+
+**Achado novo nesta etapa (fora do escopo do `27`, registrado aqui):** o PR também disparou um deploy de **preview** num site Netlify diferente do que o `27` §14 tinha mapeado — `papaya-muffin-3d5c6f.netlify.app` (não `flashtest-enem.netlify.app`), aparentemente uma integração de app do GitHub do Netlify anexada à conta/organização, que faz preview automático de PRs. Esse preview **falhou** (`Deploy Preview failed`, ~14s) — provável causa: o `netlify.toml` ainda manda `npm run build` e o `package-lock.json` foi removido nesta entrega (T-24, D-13), então o ambiente de build do Netlify pode não instalar as dependências do jeito esperado sem lockfile compatível com `npm`. Não bloqueou o merge (o repositório não tem proteção de branch — `gh api .../branches/main/protection` devolve 404) e não é o caminho de produção real (Vercel, que já passou). Registrado como algo a investigar/desligar depois, não corrigido nesta sessão.
+
+**Ainda pendente do usuário:** (1) no painel do Vercel (time `foca3`, projeto `foca`): desligar/restringir a Deployment Protection (Settings → Deployment Protection → "Vercel Authentication" para "Only Preview Deployments") e cadastrar `OPENAI_API_KEY` em Settings → Environment Variables (Production e Preview); (2) abrir a URL de produção em Chrome Android e Safari iPhone e percorrer o checklist do `28` T-27 (quiz, `/trilha` sem rolar, tocar num nó, voltar destaca o nó, refresh de rota em `/trilha` e `/learn/porcentagem-valor`, trilha longa de Português, botão "voltar pra atual", bottom nav/safe area, som após o primeiro toque, tutor); (3) opcionalmente, decidir o que fazer com o app de preview do Netlify (`papaya-muffin-3d5c6f`) que apareceu nesta etapa — desligar a integração se não for necessária, ou investigar por que falha se for.
 
 ## 8. Limitações explícitas
 
-- **T-27 não executado** (push, PR, merge, configuração do Vercel, teste em celular físico) — ver §7. É a única tarefa do `28` não concluída.
-- **DG2/DG3/DG4 pendentes** pelo mesmo motivo (§5).
+- **T-27 parcialmente executado:** push, PR, merge e a checagem `curl` pós-deploy (confirmando a correção do 404) foram feitos nesta sessão, com autorização explícita do usuário em duas etapas. **Configuração do painel do Vercel e teste em celular físico continuam pendentes do usuário** — ver §7.
+- **DG2 cumprido** (CI verde, §5). **DG3/DG4 pendentes** — dependem dos passos manuais de §7 (desligar Deployment Protection, testar no aparelho).
 - Performance (T-21, item 4): sem medição de long tasks com throttling de CPU dedicado via DevTools Protocol interativo — a evidência ficou indireta (delta=0 de re-render, único observer). Verificação manual do usuário fica na mesma lista do `27` §16/§19.
 - Arte final das 8 expressões da Foca continua pendente (achado pré-existente do `18` D5, não desta entrega) — todas as expressões (inclusive `acolhedora`, usada pela correção de T-28) caem no fallback neutro até a arte chegar.
 - Lint da base (`bunx eslint src`/`.`) continua quebrado por CRLF + drift de formatação (débito registrado em `27` §16) — fora do escopo desta entrega; os arquivos tocados foram formatados manualmente no padrão do projeto, mas não passaram por `eslint --fix`.
