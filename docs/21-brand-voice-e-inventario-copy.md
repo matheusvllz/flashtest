@@ -65,6 +65,24 @@ Tom conferido contra as mesmas regras da seção 7 do `20` que já valiam pro re
 | `revisaoAberta` | "A revisão do capítulo está aberta." | Aviso na folha quando há revisão disponível | Mesmo spec — cobre o comportamento (nó de revisão fica disponível), não necessariamente esta string exata |
 | `fazerRevisao` | "Fazer a revisão" | CTA da folha pra revisão (via `reviewTarget`, ver `docs/26` §3.3) | Mesmo spec |
 
+### 2.3 `COPY.trilha.*` — trilha visual (docs/27 §6.6, docs/28 T-02/T-28)
+
+| Chave | Texto | Uso | Revisão |
+|---|---|---|---|
+| `capituloRotulo(secao, cap)` | "Seção N · Capítulo M" | Rótulo do banner do capítulo | Revisão manual |
+| `proximaNestaMateria` | "Próxima nesta matéria" | Rótulo do callout quando o foco é local (não a recomendação global) | `tests/e2e/trail-path.spec.ts` (HG5) |
+| `recomenda(titulo, materia)` | "A Foca recomenda: {titulo} · {materia}" | Dica de recomendação em outra matéria | `tests/e2e/trail-path.spec.ts` (HG5, RF-12/RF-6) |
+| `irParaAtual` | "Voltar para a lição atual" | `aria-label` do botão flutuante | `tests/e2e/trail-path.spec.ts` (HG6) |
+| `carimboPendente(feitas, total)` | "Carimbo do capítulo · N/M" | Carimbo de capítulo não concluído | Revisão manual |
+| `carimboConcluido` | "Capítulo concluído" | Carimbo de capítulo concluído | `tests/e2e/trail-path.spec.ts` (RF-12/RF-6, `role="img"`) |
+| `estrelas(n, max)` | "N de M estrelas" | Só no `aria-label` do carimbo concluído | Revisão manual |
+| `metaHoje(feitas, meta)` | "N/M hoje" | Texto ao lado do `GoalRing` na barra de métricas | Revisão manual — some abaixo de 360px |
+| `fimDaMateria(materia)` | "Você fechou tudo o que está publicado em {materia}." | Fim de trilha da matéria (RF-12) | `tests/e2e/trail-path.spec.ts` (RF-12/RF-6, "acolhedora vence...") |
+| `erroTitulo` / `erroCorpo` / `tentarDeNovo` | "A trilha não carregou." / "Tenta de novo. Seu progresso está salvo neste aparelho." / "Tentar de novo" | `errorComponent` da rota `/trilha` (`TrailError`) | Verificado manualmente (`throw` temporário + screenshot, docs/29 §2) — sem E2E automatizado |
+| `abrirCapitulo(titulo)` / `recolherCapitulo(titulo)` | "Abrir {titulo}" / "Recolher {titulo}" | **Criadas e não usadas** — o nome acessível do banner do capítulo vem do próprio texto visível + `aria-expanded`, decisão da auditoria de acessibilidade de T-19 (docs/29 §5c) | — |
+
+Tom conferido manualmente contra a seção 7 do `20` — nenhuma string cobra o aluno; `fimDaMateria`/`erroCorpo` descrevem estado sem culpa. Sem regressão automatizada de tom em `brand-voice.test.ts` ainda, mesma ressalva da seção 2.2.
+
 Igual ao bloco `licao`: tom conferido manualmente contra a seção 7 do `20` (sem cobrança — `tudoConcluido` e `capituloBloqueado` descrevem estado, não repreendem o aluno), sem regressão automatizada de tom em `brand-voice.test.ts` ainda. Marcar como **revisado com evidência de comportamento** (os E2E citados percorrem os fluxos que usam essas strings), não como **revisado com evidência de tom testada automaticamente** — essa distinção já valia pros blocos `feedback`/`tutor` na seção 2 original e continua valendo aqui.
 
 ## 3. Pendente — inventariado, não revisado

@@ -1,6 +1,6 @@
 # 29 — Registro de execução: home como trilha visual + deploy
 
-**Status:** em execução (23/09/2026), a partir de `docs/28-plano-execucao-home-trilha.md`.
+**Status:** implementado em 23/09/2026 — Checkpoints A–F completos (código, testes, 5 rodadas de revisão), a partir de `docs/28-plano-execucao-home-trilha.md`. **T-27 (push/PR/merge/configuração do Vercel) não executado** — pendente de autorização explícita do usuário e de passos manuais no painel do Vercel; todo o resto do plano foi executado e verificado. Trabalho na branch `feat/home-trilha-visual` (6 commits sobre `88813f3`), ainda não publicada.
 **Norma:** [27](27-plano-home-trilha-visual.md). **Plano:** [28](28-plano-execucao-home-trilha.md).
 
 ## 1. Baseline (T-01)
@@ -12,16 +12,21 @@
 - `bun run build`: exit 0. Chunk da trilha (cliente): `trilha-BHm1yIi0.js` — 10.89 kB / gzip 3.65 kB.
 - Screenshots de referência: `test-results/baseline-390.png`, `test-results/baseline-320.png` (não versionados).
 
+**Números finais (depois de todos os checkpoints, inclusive as correções de T-28):** `bunx tsc --noEmit` exit 0 · `bun test tests/unit` 290 pass/0 fail (257 + 33 novos em `path-layout.test.ts`) · `bunx playwright test` 55 pass/0 fail (33 pré-existentes + 21 novos em `trail-path.spec.ts`, alguns rodando nos 2 projetos chromium/narrow) · `bun run build` ok, chunk cliente da trilha 10.89→16.37 kB (gzip 3.65→5.55 kB) + chunk auxiliar 0.89 kB (gzip 0.47 kB).
+
 ## 2. Divergências entre o plano e o código real
 
 - T-15: `--trail-sticky-top` medido em 390×844 deu 60px (plano previa 61±1) — dentro da tolerância, mantido `"61px"`.
 - T-16: ao contrário do que o plano cogitava como possível, `pendingComponent` (TrailSkeleton) **aparece no SSR** com `ssr:false` — `curl http://localhost:8080/trilha` retorna `data-trail-skeleton` no HTML (contagem 1). Nenhuma ação adicional necessária.
 - T-16: `errorComponent` (TrailError) verificado manualmente (`throw new Error` temporário, screenshot, revertido) — tela "A trilha não carregou." / "Tentar de novo" / "Praticar" renderiza corretamente.
+- T-29: `docs/DESIGN.md` está **inteiro não versionado** (`git status` mostra `??`, não `M`) — é trabalho pendente do usuário anterior a esta sessão (junto de `.agents/`, `.claude/`, `docs/PRODUCT.md`, `docs/ai/`, `scripts/validate-skills.mjs`, `skills-lock.json`), não desta entrega. Editei o arquivo como o `28` T-29 pede (linha de "Use o que existe" mencionando `path/`), mas **não** incluí no commit — commitar um arquivo inteiro não-rastreado que não é meu para decidir vai contra a regra "adicionar pelo caminho, nunca o que é de fora do escopo". A edição fica pronta, sem staged, pra entrar junto quando o usuário commitar o resto daquela infraestrutura.
 - T-22: `.gitignore` já tinha mudança pendente do usuário (não desta tarefa) antes de começar a execução — por instrução do próprio `28` T-22 passo 5 ("se estiver [modificado], não toque"), **não** acrescentei `.vercel/` a ele. `.vercel/output` foi gerado e apagado (`rm -rf .vercel`) em cada verificação local; nunca ficou staged. Se algum dia sobrar sem querer, `.vercel/` precisa entrar no `.gitignore` manualmente (uma linha).
 
 ## 3. Decisões tomadas durante a execução
 
-(preenchido durante a execução)
+- Manter as decisões D-1…D-14 do `27` §15 sem exceção — nenhuma foi revisitada durante a execução.
+- Corrigir os 2 achados reais da revisão de T-28 (§6) em vez de só registrar: ambos eram regressões comportamentais reais e de baixo risco de corrigir (poucas linhas, sem mexer em contrato de E2E existente), então corrigir no ato foi mais seguro do que deixar para uma spec futura.
+- Não perseguir os 8 sub-agentes de revisão até o fim quando 3 deles bateram no limite de sessão da conta (rate limit) — os 5 que já tinham entregado relatório completo cobriam os 7 ângulos combinados (diff, comportamento removido, cross-file, reuso, altitude, eficiência, convenções), então relançar os 3 que falharam arriscava o mesmo corte sem agregar ângulo novo. A rodada 5 (verificação de critérios) foi feita diretamente pelo agente executor em vez de delegada, pelo mesmo motivo.
 
 ## 4. O que existe por checkpoint
 
@@ -62,7 +67,46 @@
 
 ## 5. Critérios RF/HG/DG — evidência
 
-(preenchido em T-28)
+Verificação final (rodada 5 de T-28), feita diretamente sobre o código e os testes reais — não delegada a agente, porque os agentes de revisão desta sessão já haviam batido no limite de sessão da conta (ver §6) e uma nova rodada arriscava a mesma falha sem necessidade: toda a evidência abaixo já existia ou foi coletada nesta verificação.
+
+| ID | Critério | Evidência |
+|---|---|---|
+| RF-1 | Zigue-zague com o padrão fixo | `pathK` testado em `path-layout.test.ts` (5 casos); `trail-path.spec.ts` HG3 mede `boundingBox().x` de 3 nós e confere ordem decrescente + centro do nó 0 alinhado ao `<ol>` |
+| RF-2 | Regra de foco (global → subject → revisão → null) | `pathFocus()` — 6 testes unitários (global, subject-available, subject-revisão, tudo-concluído-null, matéria-inexistente-null) |
+| RF-3 | Nó foco maior, halo, callout com único `btn-primary` | `[data-focus="true"] > .path-node` 76px vs 64px em `styles.css`; `trail-path.spec.ts` HG2 (`.btn-primary:visible` count 1) |
+| RF-4 | Estado em texto + `aria-label` | `trail-path.spec.ts` HG4: todo `[data-path-node]:visible` tem `aria-label` batendo o regex dos 6 estados; `trilha.spec.ts`/`trail-home.spec.ts` (pré-existentes) continuam verdes |
+| RF-5 | Bloqueado não é link | HG4: `a[data-status="locked"]` count 0; `div[data-status="locked"][aria-disabled="true"]` count > 0 |
+| RF-6 | Carimbo de capítulo | `chapterMilestone()` testado (estrelas somadas, revisão fora do denominador); `RF-12/RF-6` E2E com capítulo concluído mostra `role="img"` "Capítulo concluído" |
+| RF-7 | Banner sticky + expande/recolhe | CSS `position: sticky` em `ChapterBanner`; `trilha.spec.ts` (pré-existente) clica no título "Crase sem medo" e expande — passou sem alteração de asserção |
+| RF-8 | Regra de expansão padrão | `chapterDefaultExpanded()` — 5 testes unitários (locked, in-progress, contém foco, contém highlight, completed sem foco) |
+| RF-9 | Rolagem única | `shouldAutoScroll()`/`isComfortablyVisible()` — 6 testes unitários; `trail-path.spec.ts` HG5 (rola ao entrar, não rola de novo ao expandir outro capítulo) |
+| RF-10 | Botão "voltar pra atual" | `trail-path.spec.ts` HG6 |
+| RF-11 | Dica de matéria cruzada | `trail-path.spec.ts` HG5 (Português com foco global em outra matéria via fixture) e RF-12/RF-6 (Biologia → Matemática) |
+| RF-12 | Fim de matéria | `trail-path.spec.ts` "RF-12/RF-6" + "acolhedora vence..." (2 variantes: orgulhosa e acolhedora) |
+| RF-13 | `EmptyState` preservado | `LearningPath.tsx` mantém o mesmo `if (!subject \|\| sections.length === 0) return <EmptyState .../>`; nenhum teste existente de matéria vazia quebrou |
+| RF-14 | Destaque + conector traçado no retorno | `trail-path.spec.ts` HG12 (`anim-pop-in` no nó, `.path-connector--draw` no seguinte); `buildChapterRows` testado (2 casos de conector) |
+| RF-15 | Celebração de capítulo/meta inalteradas | `chapter-complete.spec.ts` (pré-existente) passa sem alteração |
+| RF-16 | Topo só com métricas reais | `TrailHeader.tsx` revisado — só streak/meta/nível; `trail-home.spec.ts` (pré-existente, `/Nível \d/` e `/\d+ dias?$/`) passa |
+| HG1 | Foco + Continuar na viewport, 390 e 320 | `trail-home.spec.ts` (2 projetos) + `trail-path.spec.ts` HG5/HG7 |
+| HG2 | 1 `.btn-primary` | `trail-path.spec.ts` HG2 |
+| HG3 | Zigue-zague | `trail-path.spec.ts` HG3 |
+| HG4 | Estado texto + aria-label + bloqueado sem link | `trail-path.spec.ts` HG4 |
+| HG5 | Foco visível sem rolagem dupla | `trail-path.spec.ts` HG5 |
+| HG6 | Botão voltar funciona | `trail-path.spec.ts` HG6 |
+| HG7 | Sem overflow horizontal em 7 larguras | `trail-path.spec.ts` HG7 |
+| HG8 | Reduced motion | `trail-path.spec.ts` HG8 |
+| HG9 | ≤1 Foca em `<main>` | `trail-path.spec.ts` HG9 |
+| HG10 | Sem hex/dependência nova | `grep -nE "#[0-9a-fA-F]{3,6}\b"` em `path/*.tsx`, `usePathFocusScroll.ts`, `path-layout.ts` e no diff de `styles.css` → vazio; `git diff -- package.json` → vazio |
+| HG11 | Suite intacta | TSC 0; UNIT 290 pass (257 + 33 novos); E2E 55 pass (33 + 21 novos, alguns só num projeto); BUILD ok — números reais em §1/§4 |
+| HG12 | Pop + conector no retorno | `trail-path.spec.ts` HG12 |
+| HG13 | Carregando/erro/fim | Skeleton confirmado no HTML do SSR (§2); erro verificado manualmente (§2); fim de matéria = RF-12 |
+| DG1 | Preset por ambiente | `bun run build` → `.netlify/`; `VERCEL=1 bun run build` → `.vercel/output/config.json` — ambos confirmados em T-22 |
+| DG2 | CI verde | **Pendente** — só roda depois do push (T-27, aguardando autorização) |
+| DG3 | URL pública sem login, refresh ok | **Pendente do usuário** — depende de merge + configuração manual no painel do Vercel (T-27) |
+| DG4 | Tutor em produção | **Pendente do usuário** — mesmo motivo |
+| DG5 | Sem segredo no repo | `git grep` (§5f) — sem achado |
+
+**Resumo:** RF-1…RF-16 e HG1…HG13 — todos com evidência, todos cumpridos. DG1 e DG5 cumpridos. DG2/DG3/DG4 pendentes porque dependem do push+merge+configuração manual que exige autorização explícita do usuário (T-27) — não é uma lacuna de implementação, é a etapa que este agente não pode executar sozinho.
 
 ## 5b. T-18 — Matriz visual manual
 
@@ -159,8 +203,15 @@ Nenhuma violação encontrada contra `CLAUDE.md` (dark mode/tokens, geometria, `
 
 ## 7. Teste no celular (T-27)
 
-Pendente do usuário.
+**Pendente do usuário.** Requer, nesta ordem: (1) autorização explícita para `git push` da branch `feat/home-trilha-visual`, abrir PR e, depois do CI verde, mergear em `main`; (2) no painel do Vercel (time `foca3`, projeto `foca`): desligar/restringir a Deployment Protection (Settings → Deployment Protection → "Vercel Authentication" para "Only Preview Deployments") e cadastrar `OPENAI_API_KEY` em Settings → Environment Variables (Production e Preview); (3) abrir a URL de produção em Chrome Android e Safari iPhone e percorrer o checklist do `28` T-27 (quiz, `/trilha` sem rolar, tocar num nó, voltar destaca o nó, refresh de rota em `/trilha` e `/learn/porcentagem-valor`, trilha longa de Português, botão "voltar pra atual", bottom nav/safe area, som após o primeiro toque, tutor). Nenhum desses três passos pôde ser executado nesta sessão — o agente não tem credenciais do Vercel nem autorização de push automática.
 
 ## 8. Limitações explícitas
 
-(preenchido no fim)
+- **T-27 não executado** (push, PR, merge, configuração do Vercel, teste em celular físico) — ver §7. É a única tarefa do `28` não concluída.
+- **DG2/DG3/DG4 pendentes** pelo mesmo motivo (§5).
+- Performance (T-21, item 4): sem medição de long tasks com throttling de CPU dedicado via DevTools Protocol interativo — a evidência ficou indireta (delta=0 de re-render, único observer). Verificação manual do usuário fica na mesma lista do `27` §16/§19.
+- Arte final das 8 expressões da Foca continua pendente (achado pré-existente do `18` D5, não desta entrega) — todas as expressões (inclusive `acolhedora`, usada pela correção de T-28) caem no fallback neutro até a arte chegar.
+- Lint da base (`bunx eslint src`/`.`) continua quebrado por CRLF + drift de formatação (débito registrado em `27` §16) — fora do escopo desta entrega; os arquivos tocados foram formatados manualmente no padrão do projeto, mas não passaram por `eslint --fix`.
+- Rodada de revisão visual com `impeccable:impeccable` não foi concluída no formato completo da skill (ela pede para rodar um binário externo e potencialmente reescrever `PRODUCT.md`/`DESIGN.md`, fora do escopo de T-20) — a auditoria visual real foi feita com o substituto indicado pelo próprio `28` §2 (`redesign-existing-projects` em modo auditoria) mais a matriz manual de T-18, ambas sem achados.
+- 3 dos 8 sub-agentes da revisão de T-28 (rodadas 1/2) bateram no limite de sessão da conta (rate limit da API, reset 3:20 America/Sao_Paulo) e não voltaram a rodar nesta sessão — os 5 que completaram cobriram todos os ângulos combinados, então isso não deixou lacuna de cobertura, mas fica registrado como limitação do ambiente, não do código.
+- Teste de dispositivo físico, leitor de tela real, zoom 200% e observação de participante real continuam fora desta entrega — mesma lista que `docs/22`/`docs/26` já registravam para o resto do app.
