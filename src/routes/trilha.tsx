@@ -1,14 +1,17 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { ChapterCompleteSheet } from "@/components/learning/ChapterCompleteSheet";
-import { ContinueCard } from "@/components/learning/ContinueCard";
 import { LearningPath } from "@/components/learning/LearningPath";
+import { RecommendationHint } from "@/components/learning/path/RecommendationHint";
+import { TrailError } from "@/components/learning/path/TrailError";
+import { TrailSkeleton } from "@/components/learning/path/TrailSkeleton";
 import { SubjectChips } from "@/components/learning/SubjectChips";
-import { TrailHeader } from "@/components/learning/TrailHeader";
+import { TrailHeader, trailGreeting } from "@/components/learning/TrailHeader";
 import { sectionOfChapter } from "@/content/curriculum-tree";
 import { phaseById } from "@/content/microlicoes";
 import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
+import { pathFocus, resolveFocusTarget } from "@/lib/learning/path-layout";
 import { buildTrail, isSectionCompleted, type TrailChapter, type TrailModel } from "@/lib/learning/trail";
 import {
   atividadeHoje,
@@ -23,6 +26,8 @@ import {
 export const Route = createFileRoute("/trilha")({
   component: TrilhaRoute,
   ssr: false,
+  pendingComponent: TrailSkeleton,
+  errorComponent: TrailError,
   validateSearch: (raw: Record<string, unknown>): { concluida?: string; capitulo?: string } => ({
     concluida: typeof raw.concluida === "string" ? raw.concluida : undefined,
     capitulo: typeof raw.capitulo === "string" ? raw.capitulo : undefined,
@@ -116,23 +121,44 @@ function TrilhaRoute() {
   const sectionCompleted = secaoDoSheet ? isSectionCompleted(secaoDoSheet.section, s) : false;
   // Se o capítulo tem revisão sintética e ela já está disponível (capítulo
   // acabou de fechar), a folha oferece o atalho direto (docs/25 §12.4).
-  const revisaoDoSheet = chapterDoSheet?.nodes.find(
-    (n) => n.kind === "revisao" && n.status !== "locked",
+  const revisaoDoSheet = chapterDoSheet?.nodes.find((n) => n.kind === "revisao" && n.status !== "locked");
+
+  // Trilha visual (docs/27 §6.2, §11.3; docs/28 T-15): foco da matéria
+  // selecionada, o alvo que o callout mostra, e a dica secundária quando o
+  // foco GLOBAL (`continueTarget`) está em outra matéria.
+  const focus = useMemo(() => pathFocus(model, selectedSubjectId), [model, selectedSubjectId]);
+  const subject = model.subjects.find((x) => x.id === selectedSubjectId);
+  const focusTarget = useMemo(
+    () => (subject ? resolveFocusTarget(model, subject, focus) : null),
+    [model, subject, focus],
+  );
+  const greeting = trailGreeting(s);
+  const target = model.continueTarget;
+  const hintSubjectName = target ? model.subjects.find((x) => x.id === target.subjectId)?.name : undefined;
+  const showHint = Boolean(
+    target && hintSubjectName && target.subjectId !== selectedSubjectId && focus?.scope !== "global",
   );
 
   return (
     <AppShell>
-      <div className="surface-pauta bg-neve px-5 pt-8 pb-5">
+      <div className="bg-neve px-5 pb-3 pt-6">
         <TrailHeader s={s} />
-        <div className="mt-5">
-          <ContinueCard target={model.continueTarget} />
-        </div>
       </div>
 
       <SubjectChips subjects={model.subjects} selectedId={selectedSubjectId} onSelect={setTrailSubject} />
 
-      <div className="bg-neve px-5 py-5">
-        <LearningPath model={model} selectedSubjectId={selectedSubjectId} highlightId={search.concluida} />
+      <div className="bg-neve px-5 pb-6" style={{ "--trail-sticky-top": "61px" } as CSSProperties}>
+        {showHint && target && hintSubjectName ? (
+          <RecommendationHint target={target} subjectName={hintSubjectName} />
+        ) : null}
+        <LearningPath
+          model={model}
+          selectedSubjectId={selectedSubjectId}
+          highlightId={search.concluida}
+          focus={focus}
+          focusTarget={focusTarget}
+          greeting={greeting}
+        />
       </div>
 
       {chapterDoSheet && (
