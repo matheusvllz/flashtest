@@ -27,7 +27,7 @@ export default defineConfig({
     {
       name: "narrow",
       use: { ...devices["Desktop Chrome"], viewport: { width: 320, height: 700 } },
-      testMatch: ["**/trail-home.spec.ts", "**/lesson-v2.spec.ts"],
+      testMatch: ["**/trail-home.spec.ts", "**/lesson-v2.spec.ts", "**/trail-path.spec.ts"],
     },
   ],
   webServer: {
