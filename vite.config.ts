@@ -12,8 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // Hospedagem é Netlify (não Cloudflare, o default do template): o balão do
-  // tutor depende de uma server function rodando de verdade em produção para
-  // chamar a OpenAI, então o preset precisa casar com onde o app é hospedado.
-  nitro: { preset: "netlify" },
+  // Hospedagem (docs/27 §14): o Vercel define VERCEL=1 no build → Build Output
+  // API (.vercel/output) com a função SSR que também serve o tutor. Fora do
+  // Vercel continua gerando para Netlify. Sem isso o Vercel publicava `dist/`,
+  // que não tem index.html num app SSR → 404 em todas as rotas.
+  nitro: { preset: process.env.VERCEL ? "vercel" : "netlify" },
 });

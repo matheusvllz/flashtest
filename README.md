@@ -25,19 +25,39 @@ Mapa de lacunas por matéria, ranking semanal de turma, streak, XP e flashcards 
 
 ## Rodando localmente
 
-Requer Node.js.
+Requer [bun](https://bun.sh) (gerenciador de pacotes do projeto — não usar npm/yarn/pnpm, que geram um lockfile paralelo).
 
 ```sh
 git clone https://github.com/matheusvllz/flashtest.git
 cd flashtest
-npm install
+bun install
 cp .env.example .env   # preencha OPENAI_API_KEY (opcional)
-npm run dev
+bun run dev
 ```
 
-Abre em `http://localhost:5173`. Use `npm run dev -- --host` para acessar do celular na mesma rede.
+Abre em `http://localhost:8080`.
 
 O app é **mobile-first** e a interface é enquadrada num frame de 440px — no desktop, use o modo dispositivo do navegador (Ctrl+Shift+M) para ver como foi desenhado.
+
+### Verificar
+
+```sh
+bunx tsc --noEmit      # checagem de tipos
+bun test tests/unit    # testes unitários
+bunx playwright install chromium   # só na primeira vez
+bunx playwright test   # testes end-to-end
+bun run build           # build de produção
+```
+
+## Deploy
+
+Hospedagem: **Vercel**, conectado a este repositório no GitHub — cada push em `main` gera um deploy de produção automaticamente (ver `docs/27-plano-home-trilha-visual.md` §14 para o diagnóstico completo do que já foi tentado e por quê).
+
+- O app é SSR (TanStack Start/Nitro) porque o balão do tutor de IA precisa de uma função de servidor real para chamar a OpenAI — não é publicável como site estático (GitHub Pages fica de fora por isso).
+- `vite.config.ts` escolhe o preset do Nitro pelo ambiente: `vercel` quando a variável `VERCEL` está definida (o próprio Vercel define), `netlify` fora dele — o mesmo código builda para as duas plataformas sem alterações.
+- `vercel.json` fixa o gerenciador de pacotes (`bun install --frozen-lockfile`) e o comando de build.
+- Variável de ambiente a configurar no painel do Vercel (**Settings → Environment Variables**): `OPENAI_API_KEY` (Production e Preview). Sem ela o tutor cai no fallback local em vez de quebrar.
+- **Proteção de deploy:** por padrão o Vercel protege a URL de produção atrás de login (SSO) — para abrir num celular sem estar logado no Vercel, desligue ou restrinja a "Vercel Authentication" a Preview Deployments em **Settings → Deployment Protection**.
 
 ### Chave de IA
 

@@ -17,6 +17,7 @@
 - T-15: `--trail-sticky-top` medido em 390×844 deu 60px (plano previa 61±1) — dentro da tolerância, mantido `"61px"`.
 - T-16: ao contrário do que o plano cogitava como possível, `pendingComponent` (TrailSkeleton) **aparece no SSR** com `ssr:false` — `curl http://localhost:8080/trilha` retorna `data-trail-skeleton` no HTML (contagem 1). Nenhuma ação adicional necessária.
 - T-16: `errorComponent` (TrailError) verificado manualmente (`throw new Error` temporário, screenshot, revertido) — tela "A trilha não carregou." / "Tentar de novo" / "Praticar" renderiza corretamente.
+- T-22: `.gitignore` já tinha mudança pendente do usuário (não desta tarefa) antes de começar a execução — por instrução do próprio `28` T-22 passo 5 ("se estiver [modificado], não toque"), **não** acrescentei `.vercel/` a ele. `.vercel/output` foi gerado e apagado (`rm -rf .vercel`) em cada verificação local; nunca ficou staged. Se algum dia sobrar sem querer, `.vercel/` precisa entrar no `.gitignore` manualmente (uma linha).
 
 ## 3. Decisões tomadas durante a execução
 
@@ -36,6 +37,21 @@
 - `TrailHeader.tsx` virou barra de métricas (streak/meta/nível); `trailGreeting()` exportado.
 - `ContinueCard.tsx` ganhou `variant="callout"` (compatível — sem props novas, markup do `card` idêntico).
 - `src/components/learning/path/FocusCallout.tsx`.
+
+### Checkpoint D (testes, responsivo, performance)
+- `tests/e2e/trail-path.spec.ts` (10 testes) + `playwright.config.ts` (`narrow` passa a rodar `trail-path.spec.ts`).
+- Auditorias T-19/T-20/T-21 registradas em §5c/§5d/§5e — sem correção de código necessária.
+
+### Checkpoint E (deploy)
+- `vite.config.ts`: preset do Nitro por `process.env.VERCEL` (Vercel↔Netlify sem tocar código).
+- `vercel.json` novo: `installCommand`/`buildCommand` fixando bun.
+- `package-lock.json` removido (D-13 — desatualizado, bun é o gerenciador real).
+- `README.md`: seção "Rodando localmente" atualizada pra bun/porta 8080, sub-seção "Verificar", seção "Deploy" nova (resumo do `27` §14).
+- `.env.example`: linha indicando onde cadastrar `OPENAI_API_KEY` em produção.
+- `.github/workflows/ci.yml` novo: install+tsc+unit+build no push/PR de `main`.
+- Verificação local: `bun run build` (Netlify, `.netlify/functions-internal/`) e `VERCEL=1 bun run build` (`.vercel/output/`) — ambos ok; smoke test da função gerada (`node -e` importando `.vercel/output/functions/__server.func/index.mjs`) devolveu `200` para `/`, `/trilha` e `/learn/porcentagem-valor`.
+- Revisão de segurança L2 (§5f): sem segredo no repo, sem `VITE_OPENAI`, `.env*` seguindo gitignorado, workflow sem `pull_request_target`.
+- T-27 (push, PR, merge, configuração do Vercel no navegador) **não executado** — exige autorização explícita do usuário, pedida ao fim desta mensagem.
 
 ### Checkpoint C (caminho funcional)
 - `path/{ChapterBanner,ChapterSegment,SubjectPath,SubjectPathEnd,RecommendationHint,JumpToFocusButton,TrailSkeleton,TrailError}.tsx`.
@@ -91,6 +107,17 @@ Contra o checklist anti-"AI slop" da skill, aplicado só onde é relevante para 
 - **Skeleton e erro implementados** (T-16), não "tela vazia".
 - **Nenhum `#hex` literal** nos arquivos novos (checado no diff).
 - Nenhuma mudança aplicada nesta rodada — a implementação já nasceu dentro dos limites do design system; qualquer sugestão da skill fora desses limites (fontes variáveis, ruído/grain, parallax, troca de ícones) foi descartada por estar fora do escopo do `28` T-20.
+
+## 5f. T-26 — Revisão de segurança L2
+
+- `git grep -nE "sk-[A-Za-z0-9]{10,}"` → vazio.
+- `git grep -n "OPENAI_API_KEY=.\+"` → só `.env.example:10` (vazio, `OPENAI_API_KEY=`) e o exemplo de formato em `README.md` (`sk-...`, placeholder, não uma chave real). Nenhum valor real commitado.
+- `git grep -n "VITE_OPENAI\|VITE_.*API_KEY"` → nenhuma ocorrência em código (só a menção da própria regra em `docs/28`).
+- `.gitignore` mantém `.env*` com exceção de `.env.example`.
+- `vercel.json` não define `headers` (nada que desligue a Deployment Protection por config).
+- `.github/workflows/ci.yml` não usa `pull_request_target`, não expõe segredo, não faz deploy.
+
+Sem achados.
 
 ## 5e. T-21 — Verificação de performance
 
