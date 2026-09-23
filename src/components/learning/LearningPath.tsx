@@ -1,13 +1,14 @@
-import { ChapterCard } from "./ChapterCard";
-import { SectionHeader } from "./SectionHeader";
+import { SubjectPath } from "./path/SubjectPath";
 import { EmptyState } from "@/components/ds/EmptyState";
-import type { TrailModel } from "@/lib/learning/trail";
+import type { FocaExpression } from "@/components/brand/FocaMark";
+import type { PathFocus } from "@/lib/learning/path-layout";
+import type { ContinueTarget, TrailModel } from "@/lib/learning/trail";
+import type { VozSlot } from "@/lib/voz";
 
 /**
- * Corpo da trilha pra UMA matéria (docs/25 §12.1, §18 T-18) — o "mapa" que
- * `/trilha` monta pra matéria selecionada nos chips. `defaultOpen` de cada
- * capítulo segue §18 T-18: aberto se contém o nó atual, se já está em
- * andamento, ou se contém o nó recém-destacado (`?concluida=`).
+ * Corpo da trilha pra UMA matéria (docs/25 §12.1; docs/27/28 T-14 troca o
+ * "mapa" de acordeões pelo caminho visual em `SubjectPath`, mas preserva o
+ * `EmptyState` de matéria vazia).
  *
  * Catálogo vazio (docs/25 §22, T-25 g): matéria sem seção com capítulos —
  * seja porque `selectedSubjectId` não bate com nenhuma matéria do modelo
@@ -21,10 +22,16 @@ export function LearningPath({
   model,
   selectedSubjectId,
   highlightId,
+  focus,
+  focusTarget,
+  greeting,
 }: {
   model: TrailModel;
   selectedSubjectId: string;
   highlightId?: string;
+  focus: PathFocus | null;
+  focusTarget: ContinueTarget | null;
+  greeting: { slot: VozSlot; expression: FocaExpression };
 }) {
   const subject = model.subjects.find((s) => s.id === selectedSubjectId);
   const sectionsComConteudo = subject?.sections.filter((section) => section.chapters.length > 0) ?? [];
@@ -34,24 +41,13 @@ export function LearningPath({
   }
 
   return (
-    <div className="space-y-4">
-      {sectionsComConteudo.map((section) => (
-        <div key={section.id} className="space-y-3">
-          <SectionHeader section={section} />
-          {section.chapters.map((chapter) => (
-            <ChapterCard
-              key={chapter.id}
-              chapter={chapter}
-              defaultOpen={
-                chapter.containsCurrent ||
-                chapter.status === "in-progress" ||
-                chapter.nodes.some((n) => n.id === highlightId)
-              }
-              highlightId={highlightId}
-            />
-          ))}
-        </div>
-      ))}
-    </div>
+    <SubjectPath
+      key={subject.id}
+      subject={{ ...subject, sections: sectionsComConteudo }}
+      focus={focus}
+      focusTarget={focusTarget}
+      greeting={greeting}
+      highlightId={highlightId}
+    />
   );
 }

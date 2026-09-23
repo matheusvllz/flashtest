@@ -14,7 +14,9 @@
 
 ## 2. Divergências entre o plano e o código real
 
-(preenchido durante a execução)
+- T-15: `--trail-sticky-top` medido em 390×844 deu 60px (plano previa 61±1) — dentro da tolerância, mantido `"61px"`.
+- T-16: ao contrário do que o plano cogitava como possível, `pendingComponent` (TrailSkeleton) **aparece no SSR** com `ssr:false` — `curl http://localhost:8080/trilha` retorna `data-trail-skeleton` no HTML (contagem 1). Nenhuma ação adicional necessária.
+- T-16: `errorComponent` (TrailError) verificado manualmente (`throw new Error` temporário, screenshot, revertido) — tela "A trilha não carregou." / "Tentar de novo" / "Praticar" renderiza corretamente.
 
 ## 3. Decisões tomadas durante a execução
 
@@ -22,7 +24,25 @@
 
 ## 4. O que existe por checkpoint
 
-(preenchido durante a execução)
+### Checkpoint A (lógica pura)
+- `src/lib/learning/path-layout.ts` — geometria/foco/marco/destaque/rolagem, tudo puro.
+- `src/hooks/usePathFocusScroll.ts` — rolagem única + visibilidade do foco, 1 IntersectionObserver.
+- `COPY.trilha.*` — 14 chaves novas em `src/lib/copy.ts`.
+- `tests/unit/path-layout.test.ts` — 33 testes novos.
+
+### Checkpoint B (primitivas visuais)
+- CSS: `anim-halo`, `@keyframes ft-halo/ft-draw`, bloco `.path-*` inteiro em `src/styles.css`.
+- `src/components/learning/path/{PathConnector,PathNode,ChapterMilestone,MarginDoodle}.tsx`.
+- `TrailHeader.tsx` virou barra de métricas (streak/meta/nível); `trailGreeting()` exportado.
+- `ContinueCard.tsx` ganhou `variant="callout"` (compatível — sem props novas, markup do `card` idêntico).
+- `src/components/learning/path/FocusCallout.tsx`.
+
+### Checkpoint C (caminho funcional)
+- `path/{ChapterBanner,ChapterSegment,SubjectPath,SubjectPathEnd,RecommendationHint,JumpToFocusButton,TrailSkeleton,TrailError}.tsx`.
+- `LearningPath.tsx` delega para `SubjectPath` (mantém `EmptyState`).
+- `src/routes/trilha.tsx` reescrito: header vira barra de métricas, foco calculado por `pathFocus`/`resolveFocusTarget`, dica de recomendação cruzada, skeleton/erro ligados na rota.
+- Build: chunk cliente `trilha-*.js` 10.89→16.37 kB (gzip 3.65→5.55 kB) + chunk auxiliar 0.89 kB (gzip 0.47 kB) = **+2.37 kB gzip** no total, dentro do orçamento de +8 kB (HG do `27`).
+- TSC/UNIT/E2E confirmados verdes após a ligação (ver §1 e checagens abaixo).
 
 ## 5. Critérios RF/HG/DG — evidência
 
