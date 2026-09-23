@@ -101,7 +101,7 @@ Verificação final (rodada 5 de T-28), feita diretamente sobre o código e os t
 | HG12 | Pop + conector no retorno | `trail-path.spec.ts` HG12 |
 | HG13 | Carregando/erro/fim | Skeleton confirmado no HTML do SSR (§2); erro verificado manualmente (§2); fim de matéria = RF-12 |
 | DG1 | Preset por ambiente | `bun run build` → `.netlify/`; `VERCEL=1 bun run build` → `.vercel/output/config.json` — ambos confirmados em T-22 |
-| DG2 | CI verde | **Pendente** — só roda depois do push (T-27, aguardando autorização) |
+| DG2 | CI verde | **Cumprido** — PR [#1](https://github.com/matheusvllz/flashtest/pull/1), run [35838521481](https://github.com/matheusvllz/flashtest/actions/runs/35838521481): `check` verde em 24s (install, `tsc`, `bun test`, `bun run build` todos ok) |
 | DG3 | URL pública sem login, refresh ok | **Pendente do usuário** — depende de merge + configuração manual no painel do Vercel (T-27) |
 | DG4 | Tutor em produção | **Pendente do usuário** — mesmo motivo |
 | DG5 | Sem segredo no repo | `git grep` (§5f) — sem achado |
@@ -203,7 +203,9 @@ Nenhuma violação encontrada contra `CLAUDE.md` (dark mode/tokens, geometria, `
 
 ## 7. Teste no celular (T-27)
 
-**Pendente do usuário.** Requer, nesta ordem: (1) autorização explícita para `git push` da branch `feat/home-trilha-visual`, abrir PR e, depois do CI verde, mergear em `main`; (2) no painel do Vercel (time `foca3`, projeto `foca`): desligar/restringir a Deployment Protection (Settings → Deployment Protection → "Vercel Authentication" para "Only Preview Deployments") e cadastrar `OPENAI_API_KEY` em Settings → Environment Variables (Production e Preview); (3) abrir a URL de produção em Chrome Android e Safari iPhone e percorrer o checklist do `28` T-27 (quiz, `/trilha` sem rolar, tocar num nó, voltar destaca o nó, refresh de rota em `/trilha` e `/learn/porcentagem-valor`, trilha longa de Português, botão "voltar pra atual", bottom nav/safe area, som após o primeiro toque, tutor). Nenhum desses três passos pôde ser executado nesta sessão — o agente não tem credenciais do Vercel nem autorização de push automática.
+Push e PR feitos com autorização do usuário: branch `feat/home-trilha-visual` publicada, [PR #1](https://github.com/matheusvllz/flashtest/pull/1) aberto contra `main`, CI verde ([run 35838521481](https://github.com/matheusvllz/flashtest/actions/runs/35838521481)).
+
+**Ainda pendente do usuário:** (1) revisar e mergear o PR (o merge dispara o deploy de produção no Vercel); (2) no painel do Vercel (time `foca3`, projeto `foca`): desligar/restringir a Deployment Protection (Settings → Deployment Protection → "Vercel Authentication" para "Only Preview Deployments") e cadastrar `OPENAI_API_KEY` em Settings → Environment Variables (Production e Preview); (3) abrir a URL de produção em Chrome Android e Safari iPhone e percorrer o checklist do `28` T-27 (quiz, `/trilha` sem rolar, tocar num nó, voltar destaca o nó, refresh de rota em `/trilha` e `/learn/porcentagem-valor`, trilha longa de Português, botão "voltar pra atual", bottom nav/safe area, som após o primeiro toque, tutor). Nenhum desses três passos pôde ser executado nesta sessão — o agente não tem credenciais do Vercel nem autorização de push automática.
 
 ## 8. Limitações explícitas
 
