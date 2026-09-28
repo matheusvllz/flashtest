@@ -1,17 +1,19 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { chapterById, sectionOfChapter } from "@/content/curriculum-tree";
 import { stableExerciseId } from "@/content/exercise-ids";
 import { resolveExercise } from "@/content/microlicoes";
+import { itemMetaOf } from "@/content/items";
 import { createFeedback } from "@/lib/feedback/create-feedback";
 import { dispatchAnswerFeedback, dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
 import type { SoundEvent } from "@/lib/feedback/dispatch-feedback";
 import type { AnswerFeedback } from "@/lib/feedback/types";
 import { checkAnswer } from "@/lib/lessons/define";
 import type { ExerciseAnswer } from "@/lib/lessons/types";
+import { buildAttempt } from "@/lib/learning/attempt-builder";
 import { isAnswerComplete, nextStepIndex, presentedOrderFor, scoreOf } from "@/lib/learning/session-logic";
 import { questionSteps, scoredQuestionSteps, stageOfStep, stepsOf } from "@/lib/learning/steps";
 import { isChapterCompleted, isSectionCompleted } from "@/lib/learning/trail";
-import type { AttemptRole, LessonStep, MicroLesson } from "@/lib/learning/types";
+import type { LessonStep, MicroLesson, QuestionStep } from "@/lib/learning/types";
 import {
   atividadeHoje,
   completeMicroLesson,
@@ -37,6 +39,25 @@ export interface LearningCompletion {
   sectionCompleted: boolean;
 }
 
+export interface CompleteStrategyResult {
+  xpAwarded: number;
+  stars: 1 | 2 | 3 | null;
+}
+
+export interface UseLearningSessionOptions {
+  /**
+   * Estratégia de conclusão alternativa (docs/30 §14.4, Fase 12) — quando
+   * ausente, o padrão de sempre (`completeMicroLesson`, grava em
+   * `completedLessons`). Uma atividade da jornada (prática/revisão/desafio
+   * sintéticos) passa `completeJourneyActivity` aqui: paga XP pelo ledger
+   * `atividade:<id>`, NUNCA grava em `completedLessons` — é sessão, não
+   * lição de conteúdo.
+   */
+  onComplete?: (correct: number, total: number) => CompleteStrategyResult;
+  /** Repassado pra quem renderiza (docs/30 §14.4) — não muda a lógica desta hook. */
+  mode?: "licao" | "atividade" | "checkpoint";
+}
+
 /**
  * Motor único da lição, orientado a PASSOS (docs/20 §8.1 + docs/25 §9/§18
  * T-08 — substitui a máquina antiga `teaching -> checkpoint -> practice ->
@@ -46,9 +67,10 @@ export interface LearningCompletion {
  * (`presentedOrders`) e retoma sem duplicar (critério A8).
  *
  * checkpoint/prática não concedem XP por resposta (docs/20 §8.1); só
- * `complete()` paga, uma vez, via `completeMicroLesson`.
+ * `complete()` paga, uma vez, via `completeMicroLesson` — ou via
+ * `opts.onComplete`, quando informado (Fase 12).
  */
-export function useLearningSession(lesson: MicroLesson) {
+export function useLearningSession(lesson: MicroLesson, opts: UseLearningSessionOptions = {}) {
   const steps = useMemo(() => stepsOf(lesson), [lesson]);
   const perguntas = useMemo(() => questionSteps(steps), [steps]);
   const perguntasPontuadas = useMemo(() => scoredQuestionSteps(steps), [steps]);
@@ -96,10 +118,19 @@ export function useLearningSession(lesson: MicroLesson) {
   const submittingRef = useRef(false);
   const advancingRef = useRef(false);
   const completingRef = useRef(false);
+  // Quando o passo-questão atual APARECEU — só pra calcular `durationMs`
+  // (docs/30 §21.1, Fase 6). Não é tempo crítico: um efeito depois do
+  // render já basta, ninguém decide nada com isso além da telemetria.
+  const questionShownAtRef = useRef(Date.now());
 
   const step: LessonStep = steps[stepIndex];
   const feedback = step.kind === "question" ? (answers[String(stepIndex)] ?? null) : null;
   const presentedOrder = step.kind === "question" ? presentedOrders[String(stepIndex)] : undefined;
+
+  useEffect(() => {
+    if (step.kind === "question") questionShownAtRef.current = Date.now();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stepIndex]);
 
   const questionTotal = perguntas.length;
   const questionNumber =
@@ -171,6 +202,45 @@ export function useLearningSession(lesson: MicroLesson) {
     advancingRef.current = false;
   }
 
+  /**
+   * Monta e grava a tentativa (docs/30 §21.1, Fase 6) — compartilhado por
+   * `submit`/`dontKnow`. Habilidade por ITEM quando `itemMetaOf` já tem uma
+   * classificação própria (Fase 3, corrige P3); cai pra habilidade da lição
+   * inteira só se o item ainda não foi classificado. O metadado (`irt`/
+   * `difficulty`) é passado pra `store.ts` explicitamente — não é
+   * `store.ts` quem resolve (comentário completo em `aplicarModeloAdaptativo`,
+   * `src/lib/store.ts`, achado de bundle da Fase 5).
+   */
+  function registrarTentativa(
+    questionStep: QuestionStep,
+    resposta: ExerciseAnswer | null,
+    response: "answered" | "dont-know",
+    correct: boolean,
+    ordem: string[] | undefined,
+  ) {
+    const meta = itemMetaOf(questionStep.exerciseId);
+    const attempt = buildAttempt({
+      id: novaTentativaId(),
+      sessionId,
+      exerciseId: questionStep.exerciseId,
+      exerciseVersion: stableExerciseId(questionStep.exerciseId)?.version ?? 1,
+      subjectId: lesson.subjectId,
+      topicId: lesson.topicId,
+      skillIds: meta.skillIds.length > 0 ? meta.skillIds : lesson.skillIds,
+      role: questionStep.role,
+      answer: resposta,
+      presentedOrder: ordem,
+      correct,
+      response,
+      firstSubmission: true,
+      startedAtMs: questionShownAtRef.current,
+      localDate: hojeISO(),
+      itemDifficulty: meta.difficulty,
+      source: "microlicao",
+    });
+    recordLearningAttempt(attempt, { irt: meta.irt, difficulty: meta.difficulty });
+  }
+
   function submit(a: ExerciseAnswer) {
     if (submittingRef.current) return;
     if (step.kind !== "question" || feedback !== null) return;
@@ -182,32 +252,34 @@ export function useLearningSession(lesson: MicroLesson) {
     const fb = createFeedback({ exerciseId: step.exerciseId, correct, explanation: exercise.explicacao });
     dispatchAnswerFeedback(fb);
 
-    // Registra a tentativa com papel/ordem/versão (docs/20 §14.1 + docs/25
-    // §18 T-08) — só roda em resposta NOVA: retomada nunca reexecuta `submit`.
-    const role: AttemptRole = step.role;
-    recordLearningAttempt({
-      id: novaTentativaId(),
-      sessionId,
-      exerciseId: step.exerciseId,
-      exerciseVersion: stableExerciseId(step.exerciseId)?.version ?? 1,
-      subjectId: lesson.subjectId,
-      topicId: lesson.topicId,
-      skillIds: lesson.skillIds,
-      role,
-      answer: a,
-      presentedOrder: ordem,
-      correct,
-      hintUsed: false,
-      tutorUsed: false,
-      firstSubmission: true,
-      submittedAt: new Date().toISOString(),
-      localDate: hojeISO(),
-      durationMs: 0,
-    });
+    // Só roda em resposta NOVA: retomada nunca reexecuta `submit` (docs/20 §14.1 + docs/25 §18 T-08).
+    registrarTentativa(step, a, "answered", correct, ordem);
 
     const novasRespostas = { ...answers, [String(stepIndex)]: fb };
     setAnswers(novasRespostas);
     setAnswer(a);
+    salvar({ stepIndex, answers: novasRespostas, presentedOrders });
+  }
+
+  /** Botão "Não sei" (docs/30 §16.1, Fase 6) — nem acerto nem erro; `answer` fica `null`, feedback neutro. */
+  function dontKnow() {
+    if (submittingRef.current) return;
+    if (step.kind !== "question" || feedback !== null) return;
+    submittingRef.current = true;
+
+    const exercise = resolveExercise(step.exerciseId);
+    const fb = createFeedback({
+      exerciseId: step.exerciseId,
+      correct: false,
+      explanation: exercise.explicacao,
+      dontKnow: true,
+    });
+    dispatchAnswerFeedback(fb); // no-op pra "dont-know" — sem som/vibração (docs/30 §16.1).
+
+    registrarTentativa(step, null, "dont-know", false, presentedOrders[String(stepIndex)]);
+
+    const novasRespostas = { ...answers, [String(stepIndex)]: fb };
+    setAnswers(novasRespostas);
     salvar({ stepIndex, answers: novasRespostas, presentedOrders });
   }
 
@@ -242,7 +314,7 @@ export function useLearningSession(lesson: MicroLesson) {
 
     const antes = getState();
     const { correct, total } = scoreOf(steps, answers);
-    const result = completeMicroLesson(lesson.id, lesson.version, correct, total);
+    const result = opts.onComplete ? opts.onComplete(correct, total) : completeMicroLesson(lesson.id, lesson.version, correct, total);
     const depois = getState();
 
     const nivelSubiu = nivelDeXp(depois.progress.xp).nivel > nivelDeXp(antes.progress.xp).nivel;
@@ -295,6 +367,7 @@ export function useLearningSession(lesson: MicroLesson) {
     canVerify,
     next,
     submit,
+    dontKnow,
     advance,
     complete,
     xpAwarded,

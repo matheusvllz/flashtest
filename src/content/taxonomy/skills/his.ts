@@ -1,0 +1,53 @@
+import type { SkillDef } from "../types";
+
+/** História (docs/30 §8, Fase 2). Foco em Brasil República, que domina a prova de Humanas. */
+export const SKILLS_HIS: SkillDef[] = [
+  {
+    id: "his:brasil-colonia-economia-sociedade",
+    subjectId: "his",
+    topicId: "bcol",
+    area: "CH",
+    name: "Explicar a organização econômica e social do Brasil Colônia",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "base",
+    status: "ativo",
+  },
+  {
+    id: "his:era-vargas-politica-economia",
+    subjectId: "his",
+    topicId: "var",
+    area: "CH",
+    name: "Relacionar as fases da Era Vargas às suas políticas",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "intermediario",
+    status: "ativo",
+  },
+  {
+    id: "his:ditadura-militar-contexto",
+    subjectId: "his",
+    topicId: "dit",
+    area: "CH",
+    name: "Contextualizar causas e consequências da ditadura militar brasileira",
+    prerequisites: [],
+    core: true,
+    incidence: 3,
+    level: "intermediario",
+    status: "ativo",
+  },
+  {
+    id: "his:guerra-fria-bipolaridade",
+    subjectId: "his",
+    topicId: "gf",
+    area: "CH",
+    name: "Explicar a lógica bipolar da Guerra Fria num evento histórico",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "intermediario",
+    status: "ativo",
+  },
+];

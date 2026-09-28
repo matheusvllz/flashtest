@@ -1,0 +1,573 @@
+{
+  "subjectId": "lit",
+  "items": [
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:9dbc745f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o trecho: 'Naquela tarde monótona, enquanto observava os detalhes sem importância da rua, percebi como a vida burguesa era fundamentalmente vazia de sentido, como rotina e convenção sufocavam qualquer autenticidade.' A qual escola pertence essa perspectiva?",
+        "opcoes": [
+          "Realismo, pela análise crítica da sociedade burguesa e rejeição de ilusões idealistas.",
+          "Arcadismo, pela harmonia com a natureza.",
+          "Romantismo, pela emotividade intensa.",
+          "Barroco, pela angústia e conflito."
+        ],
+        "correta": 0,
+        "explicacao": "O trecho exemplifica Realismo (séc. XIX, segunda metade): olhar crítico sobre a burguesia, denúncia de vazio existencial na rotina social, recusa do idealismo romântico, análise psicológica e social minuciosa. Machado de Assis e Eça de Queiroz praticam esse distanciamento crítico e ironia. Realismo contrasta com Romantismo justamente por essa sobriedade analítica."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:9dbc745f",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:3960ba72",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia este trecho: 'O homem moderno, preso em sua própria rede de contradições, busca significado numa sociedade que o nega a cada passo, enquanto máquinas e mercadorias substituem sua humanidade.' A qual século e movimento literário pertence melhor?",
+        "opcoes": [
+          "Século XX, Modernismo ou períodos posteriores que criticam desumanização.",
+          "Século XVII, Barroco.",
+          "Século XVIII, Arcadismo.",
+          "Século XIX, Romantismo."
+        ],
+        "correta": 0,
+        "explicacao": "O trecho reflete crítica moderna à alienação humana, máquinas, perda de sentido, temas recorrentes em literatura do séc. XX. Modernismo português e literatura de vanguarda frequentemente expressam angústia com modernidade, mecanização, perda de identidade. Não reflete Barroco (foco religioso), Arcadismo (harmonia racional) ou Romantismo (idealismo emocional) de forma central."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:3960ba72",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:a6ef313d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia: 'Quando a madrugada chegava, o rouxinol cantava entre as flores, despertando esperança nos corações tristes'. Que características românticas aparecem neste trecho?",
+        "opcoes": [
+          "Amor pela natureza, introspecção e sentimentalismo",
+          "Crítica social e denúncia de injustiças",
+          "Busca pelo perfeito equilíbrio formal e clareza",
+          "Nacionalismo e valorização da história colonial"
+        ],
+        "correta": 0,
+        "explicacao": "O Romantismo valoriza a natureza (madrugada, flores, rouxinol), sentimentos intensos (esperança, tristeza) e a introspecção (o trecho cria uma atmosfera lírica e emocional). A conexão entre elementos naturais e estados emocionais é típica dessa escola. As demais alternativas referem-se a outras escolas: nacionalismo é característico do Romantismo tardio mas não é o foco aqui; crítica social é marca do Realismo; a busca pelo equilíbrio formal é do Classicismo."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:a6ef313d",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:2fa5e406",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual característica do Barroco está presente no fragmento: 'O ser humano, criatura dividida, presa entre a carne pecaminosa e o anseio divino, vacila eterno em seus passos'?",
+        "opcoes": [
+          "Elogio da razão e da lógica",
+          "Dualismo, religiosidade e conflito interior",
+          "Pureza estilística e fidelidade à forma clássica",
+          "Denúncia das contradições sociais"
+        ],
+        "correta": 1,
+        "explicacao": "O Barroco é marcado pelo dualismo (carne × divino), pela religiosidade profunda e pela representação de conflitos interiores. O fragmento exemplifica essas três características ao opor a tentação terrena ao desejo espiritual e descrever a vacilação humana. Essa tensão é essencial da estética barroca. As demais alternativas caracterizam outras escolas ou períodos literários."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:2fa5e406",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:fe30da17",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O trecho 'Natureza fresca, abençoada, que inspiras poesia nos peitos juvenis' pertence a qual escola literária?",
+        "opcoes": [
+          "Parnasianismo",
+          "Realismo",
+          "Arcadismo",
+          "Modernismo"
+        ],
+        "correta": 2,
+        "explicacao": "O fragmento mostra características do Arcadismo: a valorização idílica da natureza (Natureza fresca, abençoada), o apelo lírico-emocional (inspiras poesia) e o tom de gentileza pastoril. O Arcadismo, corrente do século XVIII, retoma o tema bucólico da Antiguidade, idealizando a natureza como fonte de inspiração e harmonia. O Realismo rejeita idealizações; o Modernismo é experimental; o Parnasianismo prioriza a forma perfeita."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:fe30da17",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:7820341c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual período do Modernismo brasileiro caracteriza-se pela experimentação formal radical, ruptura com a sintaxe tradicional e busca de uma linguagem revolucionária que espelhasse a modernidade industrial?",
+        "opcoes": [
+          "Segunda fase (1930-1945): Romance de 30 com foco em questões sociais e regionais",
+          "Terceira fase (1945-1960): Geração de 45 com retorno à poesia mais elaborada e musical",
+          "Quarta fase (1960-1980): Concretismo e experimentalismo radical na linguagem",
+          "Primeira fase (1922-1930): Semana de Arte Moderna e consolidação vanguardista"
+        ],
+        "correta": 3,
+        "explicacao": "A Primeira Fase do Modernismo (1922-1930) é marcada pela experimentação radical, ruptura sintática e desejo de reinventar a linguagem em consonância com a modernidade. A Semana de Arte Moderna (1922) é o evento fundador dessa revolução. A Segunda Fase se volta para questões sociais; a Terceira retoma musicalidade; a Quarta (posterior) é outra experiência. A Primeira Fase é de fato o período de experimentação mais agressiva."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:7820341c",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:2625b28e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual característica distingue a poesia de Manuel Bandeira (primeira fase) do movimento modernista de Oswald de Andrade no mesmo período?",
+        "opcoes": [
+          "Bandeira busca harmonia lírica; Oswald utiliza provocação e paródia como método estético",
+          "Bandeira rejeita a modernidade; Oswald a celebra exclusivamente",
+          "Bandeira escreve para o público culto; Oswald para o popular",
+          "Bandeira usa verso livre; Oswald mantém forma tradicional"
+        ],
+        "correta": 0,
+        "explicacao": "Embora ambos façam parte do Modernismo, suas poéticas diferem: Bandeira cultiva um lirismo melancólico e sensível, preservando certa harmonia; Oswald de Andrade utiliza provocação, paródia e desconstrução como ferramentas revolucionárias. Essa dualidade interna do Modernismo (coexistência de tendências lírico-reflexivas e radicalmente destrutivas) é foco do ensino em nível 4 de dificuldade."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:2625b28e",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:1f8b45bb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A obra 'Macunaíma', de Mário de Andrade, é frequentemente interpretada como uma alegoria do Brasil. Qual aspecto da narrativa melhor sustenta essa leitura?",
+        "opcoes": [
+          "A jornada do herói reflete o desenvolvimento linear da nação",
+          "As características contraditórias de Macunaíma (inteligência e ingenuidade) espelham contradições culturais brasileiras",
+          "O final trágico do herói prediz inevitável declínio do país",
+          "A presença de personagens indígenas garante autenticidade documental"
+        ],
+        "correta": 1,
+        "explicacao": "Macunaíma é uma figura paradoxal que encarna contradições da identidade brasileira: comporta-se simultaneamente como herói e malandro, é inteligente mas ingênuo, sagaz mas imoral. Essa ambiguidade reflete a complexidade cultural do Brasil, que mistura tradições indígenas, heranças coloniais e modernidade. A leitura alegórica se sustenta nessas contradições, não na linearidade ou em determinismo. A dificuldade 4 requer análise interpretativa profunda."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:1f8b45bb",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:2821d052",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um trecho narrativo começa: 'Quando os primeiros raios solares tocaram a floresta, uma multidão de sons despertou no silêncio matinal'. Qual tipo de ambientação preponderante está sendo criado?",
+        "opcoes": [
+          "Ambientação natural que cria atmosfera lírica de despertar",
+          "Ambientação histórica que situa a ação em época específica",
+          "Ambientação social que revela estrutura de classes",
+          "Ambientação psicológica que projeta estados emocionais"
+        ],
+        "correta": 0,
+        "explicacao": "O fragmento se concentra em elementos naturais (raios solares, floresta, sons, silêncio matinal) que criam uma atmosfera poética de renovação e despertar. Essa ambientação privilegia a natureza para evocar sentimentos e estados líricos. Não há indicação histórica explícita, estrutura social ou projeção psicológica do personagem. A ambientação natural é predominante nesse nível 3."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:2821d052",
+        "version": 1,
+        "skillIds": [
+          "lit:caracteristicas-escolas-literarias"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:lit:caracteristicas-escolas-literarias:b768dedd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual é o nome da figura de linguagem que consiste em atribuir qualidades humanas a seres inanimados, conforme visto em 'A cidade respira' ou 'O rio canta'?",
+        "opcoes": [
+          "Sinestesia",
+          "Hipérbole",
+          "Metonímia",
+          "Personificação"
+        ],
+        "correta": 3,
+        "explicacao": "Personificação atribui características humanas a objetos ou conceitos. 'A cidade respira' e 'O rio canta' aplicam ações humanas a realidades inanimadas. Metonímia substitui nomes, sinestesia mistura sensações, hipérbole exagera. Cada uma é uma coisa diferente."
+      },
+      "meta": {
+        "id": "gen:lit:caracteristicas-escolas-literarias:b768dedd",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-lit-caracteristicas-escolas-literarias",
+      "version": 1,
+      "format": 2,
+      "subjectId": "lit",
+      "topicId": "esc",
+      "chapterId": "gen-lit-caracteristicas-escolas-literarias",
+      "title": "Escolas literárias",
+      "objective": "Reconhecer características de uma escola literária num trecho.",
+      "skillIds": [
+        "lit:caracteristicas-escolas-literarias"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:lit:caracteristicas-escolas-literarias:fe30da17",
+        "gen:lit:caracteristicas-escolas-literarias:9dbc745f"
+      ],
+      "recap": "Cada escola literária tem tema e tom próprios; leia o trecho antes de decidir a qual escola ele pertence.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Escolas literárias",
+          "body": "Você vai aprender a reconhecer, num trecho, as marcas de estilo que indicam a escola literária a que ele pertence."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Como reconhecer uma escola",
+            "body": "Cada escola literária tem temas próprios. O Barroco mistura fé e prazer terreno, com conflito entre corpo e alma. O Romantismo valoriza sentimento, natureza e o eu individual. O Realismo denuncia problemas sociais com olhar crítico. Procure esses temas e o tom geral do trecho pra identificar a escola."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:lit:caracteristicas-escolas-literarias:2fa5e406",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:lit:caracteristicas-escolas-literarias:a6ef313d",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Lendo um trecho",
+            "problem": "'A paixão consome seu peito, dividido entre o dever e o desejo': de que escola é esse trecho?",
+            "steps": [
+              "Note o tema: conflito interior entre dois lados opostos.",
+              "Note o tom: intenso, sem crítica social explícita.",
+              "O conflito liga-se à paixão pessoal, não à religião: aponta pro Romantismo."
+            ],
+            "result": "O trecho pertence ao Romantismo."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:lit:caracteristicas-escolas-literarias:b768dedd",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:lit:caracteristicas-escolas-literarias:1f8b45bb",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não classifique pelo autor de cor: confirme se o tema e o estilo do trecho batem com a escola, porque um mesmo autor pode escrever em fases diferentes."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "As fases do Modernismo",
+            "body": "O Modernismo brasileiro tem fases com focos diferentes. A primeira fase (1922 a 1930) rompe com a forma tradicional e experimenta a linguagem. A segunda fase (1930 a 1945) volta o olhar pra questões sociais e regionais. As fases seguintes retomam elaboração formal e depois voltam a experimentar."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:lit:caracteristicas-escolas-literarias:7820341c",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Cada escola literária tem tema e tom próprios; leia o trecho antes de decidir a qual escola ele pertence."
+        }
+      ]
+    }
+  ]
+}

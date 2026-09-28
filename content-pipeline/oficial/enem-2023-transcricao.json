@@ -1,0 +1,362 @@
+[
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 6",
+    "area": "LC",
+    "skillId": "por:interpretacao-ideia-principal",
+    "difficulty": 2,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "A sessão do Comitê Olímpico Internacional (COI) aprovou uma mudança histórica e inédita no lema olímpico, criado em 1894 pelo Barão Pierre de Coubertin para expressar os valores e a excelência do esporte. Mais de 120 anos depois, o lema tem sua primeira alteração para ressaltar a solidariedade e incluir a palavra \"juntos\": mais rápido, mais alto, mais forte — juntos. A mudança foi aprovada por unanimidade pelos membros do COI e celebrada pelo presidente da entidade.\n\n(Disponível em: https://ge.globo.com. Acesso em: 10 nov. 2021, adaptado.)\n\nDe acordo com o texto, a alteração do lema olímpico teve como objetivo a",
+      "opcoes": [
+        "unificação do lema anterior ao atual.",
+        "aproximação entre o lema olímpico e o COI.",
+        "junção do lema olímpico com os princípios esportivos.",
+        "associação entre o lema olímpico e a cooperatividade.",
+        "vinculação entre o lema olímpico e os eventos atléticos."
+      ],
+      "correta": 3,
+      "explicacao": "O texto diz que a palavra \"juntos\" foi acrescentada para \"ressaltar a solidariedade\" — ou seja, o objetivo foi ligar o lema a um valor de cooperação entre pessoas, não mudar regras esportivas, aproximar o lema do COI enquanto instituição ou vinculá-lo a eventos específicos."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 39",
+    "area": "LC",
+    "skillId": "por:interpretacao-ideia-principal",
+    "difficulty": 2,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de \"casamento\" no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como \"união legítima entre homem e mulher\" e \"união legal entre homem e mulher, para constituir família\".\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a \"pessoas\".\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a \"eficiência da mobilização\". \"Em dois dias, mudou-se uma definição que permanecia a mesma há décadas\", afirma. E conclui: \"A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.\".\n\n(SENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.)\n\nA notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
+      "opcoes": [
+        "inclusão de informações no verbete.",
+        "relevância social da instituição casamento.",
+        "utilização pública da petição pelos cidadãos.",
+        "rapidez na disseminação digital do verbete.",
+        "divulgação de plataformas para a criação de petição."
+      ],
+      "correta": 2,
+      "explicacao": "O próprio texto atribui a mudança à \"eficiência da mobilização\" gerada pela petição assinada pelos cidadãos — é o uso público da petição, não a velocidade de disseminação do verbete em si ou a divulgação da plataforma, que a notícia aponta como causa."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 13",
+    "area": "LC",
+    "skillId": "por:sentido-figuras-linguagem",
+    "difficulty": 4,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Girassol da madrugada\n\nTeu dedo curioso me segue lento no rosto\nOs sulcos, as sombras machucadas por onde a vida passou.\nQue silêncio, prenda minha... Que desvio triunfal da verdade,\nQue círculos vagarosos na lagoa em que uma asa gratuita roçou...\n\nTive quatro amores eternos...\nO primeiro era moça donzela,\nO segundo... eclipse, boi que fala, cataclisma,\nO terceiro era a rica senhora,\nO quarto és tu... E eu afinal me repousei dos meus cuidados\n\n(ANDRADE, M. Poesias completas. Rio de Janeiro: Nova Fronteira, 2013, fragmento.)\n\nPerante o outro, o eu lírico revela, na força das memórias evocadas, a",
+      "opcoes": [
+        "vergonha das marcas provocadas pela passagem do tempo.",
+        "indecisão em face das possibilidades afetivas do presente.",
+        "serenidade sedimentada pela entrega pacífica ao desejo.",
+        "frustração causada pela vontade de retorno ao passado.",
+        "disponibilidade para a exploração do prazer efêmero."
+      ],
+      "correta": 2,
+      "explicacao": "A imagem final — \"e eu afinal me repousei dos meus cuidados\" — depois de percorrer os amores passados, mostra o eu lírico em paz, entregue ao afeto presente, e não em disputa, frustração ou busca por algo efêmero."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 19",
+    "area": "LC",
+    "skillId": "por:interpretacao-ideia-principal",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "\"São tantas formas de matar um preto\nQue para alguns sua morte é justificada\nDevia tá fazendo coisa errada\nSe não era bandido, um dia ia ser\nPor ser PRETO sua morte é defendida\nO PRETO sempre merece morrer\".\n\nA estrofe acima é do poeta e educador social Baticum Proletário, que atua na periferia de Fortaleza, no Ceará, preparando jovens — em quase sua totalidade negros — para enfrentar as dificuldades impostas pelo racismo estrutural no país.\n\nÉ a partir da arte que Baticum consegue envolver a juventude em um projeto de fortalecimento dessa população ao promover batalhas de rimas, slams e saraus com temáticas que discutem os problemas sociais. Não por acaso, o tema mais explorado nas rimas, versos e prosas é a violência. De acordo com o mais recente Atlas da violência, em 2019, os negros representaram 77% das vítimas de homicídios, quase 30 assassinatos por 100 mil habitantes, a maioria deles jovens.\n\nO Atlas revela ainda que um negro tem quase 2,7 vezes mais chance de ser morto do que um branco, o que justifica o movimento de resistência crescente no Brasil.\n\n(MENDONÇA, F. Disponível em: www.cartacapital.com.br. Acesso em: 22 nov. 2021, adaptado.)\n\nO uso de citação e de dados estatísticos nesse texto tem o objetivo de",
+      "opcoes": [
+        "ressaltar a importância da poesia para denunciar a morte de negros, que cresce a cada dia.",
+        "destacar o crescimento exponencial da temática do preconceito na produção literária no Brasil.",
+        "demonstrar o incremento no quantitativo de expressões artísticas na discussão de problemas sociais.",
+        "evidenciar argumentos que reforçam a ideia de que os negros são vítimas em potencial da violência.",
+        "salientar o aumento da participação de jovens nos movimentos de resistência na área da cultura."
+      ],
+      "correta": 3,
+      "explicacao": "O poema e os dados do Atlas da violência (77% das vítimas, 2,7 vezes mais chance de morte) se somam para sustentar o mesmo argumento: a vulnerabilidade da população negra à violência letal — a citação e a estatística reforçam esse mesmo ponto, não descrevem crescimento da produção literária ou dos movimentos em si."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 80",
+    "area": "CH",
+    "skillId": "his:ditadura-militar-contexto",
+    "difficulty": 4,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "O Golpe Militar de 1964 foi implacável no combate ao que restava das Ligas Camponesas, generalizadas na década anterior. No entanto, em relação aos sindicatos, sua atitude foi ambígua. Por meio de acordos com os Estados Unidos, foram concebidos centros sindicais e cursos de liderança com base em princípios conservadores e ministrados por membros da Igreja Católica.\n\n(DEL PRIORE, M.; VENÂNCIO, R. Uma história da vida rural no Brasil. Rio de Janeiro: Ediouro, 2006, adaptado.)\n\nOs sindicatos rurais foram tratados da forma descrita no texto porque o governo pretendia utilizá-los para",
+      "opcoes": [
+        "controlar as tensões políticas.",
+        "limitar a legislação trabalhista.",
+        "divulgar o programa populista.",
+        "regularizar a propriedade da terra.",
+        "estimular a oferta de mão de obra."
+      ],
+      "correta": 0,
+      "explicacao": "Ao reprimir as Ligas Camponesas mas cooptar os sindicatos com cursos de liderança conservadora, o regime buscava esvaziar o potencial de mobilização rural e manter as tensões políticas no campo sob controle, não regularizar terras ou legislação trabalhista diretamente."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 71",
+    "area": "CH",
+    "skillId": "geo:meio-ambiente-impactos",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Alternativas logísticas estão servindo de instrumentos que ativam os mercados especuladores de terras nas diferentes regiões da Amazônia e constituem em indicadores utilizados por diferentes atores para defender ou denunciar o avanço da cultura da soja na região e, com ela, a retomada do desmatamento. É evidente que o crescimento do desmatamento tem a ver também com a expansão da soja, porém atribuir a ela o fator principal parece não totalmente correto. Parto da compreensão central de que a lógica que gera o desmatamento está articulada pelo tripé grileiros, madeireiros e pecuaristas.\n\n(OLIVEIRA, A. U. A Amazônia e a nova geografia da produção da soja. Terra Livre, n. 26, jan.-jun. 2006, adaptado.)\n\nNa visão do autor, o problema central da situação descrita é desencadeado pela",
+      "opcoes": [
+        "apropriação de áreas devolutas.",
+        "sonegação de impostos federais.",
+        "incorporação de exportação ilegal.",
+        "desoneração de setores produtivos.",
+        "flexibilização de legislação ambiental."
+      ],
+      "correta": 0,
+      "explicacao": "O \"tripé grileiros, madeireiros e pecuaristas\" citado pelo autor remete diretamente à grilagem — a apropriação ilegal de terras públicas (devolutas) — como motor central do desmatamento, e não à soja, a impostos ou à legislação ambiental em si."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 85",
+    "area": "CH",
+    "skillId": "geo:geopolitica-globalizacao",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Produtores rurais europeus são antigos opositores de um grande acordo com o Mercosul. Na visão deles, existe um nítido risco de concorrência desleal, pois, na Europa, é preciso seguir regras mais rígidas de produção, o que encarece o processo. Assim, eles não conseguiriam competir com os preços, por exemplo, da carne brasileira e teriam seus negócios ameaçados. Por outro lado, o setor industrial europeu se mobiliza a favor do acordo, uma vez que as reduções de tarifas no comércio internacional dariam maior acesso ao mercado sul-americano. Um exemplo é o setor automotivo europeu, que prevê maior participação e concorrência nos países do Mercosul caso o acordo siga em frente.\n\n(ROUBICEK, M. Como o risco ambiental afeta o acordo entre Mercosul e União Europeia. Disponível em: www.nexojornal.com.br. Acesso em: 25 out. 2021.)\n\nNo contexto do acordo citado, os dois grupos econômicos europeus defendem, respectivamente, a",
+      "opcoes": [
+        "restrição dos fluxos migratórios e a maior atuação de sindicatos.",
+        "ampliação das leis trabalhistas e a plena importação de manufaturados.",
+        "proteção das florestas nacionais e a ampla transferência de tecnologias.",
+        "manutenção das barreiras fitossanitárias e a livre circulação de mercadorias.",
+        "remoção dos entraves alfandegários e a melhor remuneração de empregados."
+      ],
+      "correta": 3,
+      "explicacao": "Os produtores rurais querem manter as regras/barreiras que protegem seu mercado da concorrência externa (fitossanitárias), enquanto a indústria automotiva quer que as mercadorias circulem livremente entre os blocos, para vender mais nos países do Mercosul."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 75",
+    "area": "CH",
+    "skillId": "soc:desigualdade-social-estrutura",
+    "difficulty": 2,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "A torcida do Fluminense inicia um movimento para mudar a letra de uma das músicas mais populares das arquibancadas tricolores. Grupos pedem a remoção do termo \"mulambo imundo\", em uma provocação direta ao Flamengo. Mulambo é um termo que surgiu em Angola, na época da escravatura, e eles eram chamados de mulambos pelos senhores de engenho, os patrões das fazendas.\n\n(Disponível em: https://oglobo.globo.com. Acesso em: 23 nov. 2021.)\n\nQual mudança no comportamento social a proposta reportada no texto reflete?",
+      "opcoes": [
+        "Rejeição de costumes elitistas.",
+        "Repulsão de condutas misóginas.",
+        "Condenação do preconceito racial.",
+        "Criminalização de práticas homofóbicas.",
+        "Contestação do comportamento machista."
+      ],
+      "correta": 2,
+      "explicacao": "O termo tem origem numa palavra usada para desumanizar pessoas escravizadas na época da escravidão; pedir sua remoção da torcida é rejeitar um resquício de linguagem racista, não uma questão de gênero, machismo ou elitismo."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 99",
+    "area": "CN",
+    "skillId": "bio:genetica-leis-mendel",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Pais com síndrome de Down\n\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.\n\n(MORENO, T. Três anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia. Disponível em: www.band.uol.com.br. Acesso em: 31 out. 2013, adaptado.)\n\nSabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\n\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
+      "opcoes": [
+        "todos normais.",
+        "todos tetrassômicos.",
+        "apenas normais ou tetrassômicos.",
+        "apenas trissômicos ou tetrassômicos.",
+        "normais, trissômicos ou tetrassômicos."
+      ],
+      "correta": 4,
+      "explicacao": "Cada progenitor com síndrome de Down pode produzir gametas com 1 ou 2 cromossomos 21 (por causa da trissomia). Combinando 1+1 (normal, dissômico), 1+2 ou 2+1 (trissômico) e 2+2 (tetrassômico), os zigotos possíveis cobrem as três condições."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 121",
+    "area": "CN",
+    "skillId": "bio:fisiologia-humana-sistemas",
+    "difficulty": 2,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Muitas mulheres sofrem com desconfortos nos dias que antecedem a menstruação, a chamada tensão pré-menstrual. Entre outros sintomas, podem ocorrer alterações de humor. Atualmente, acredita-se que os sintomas são resultado da queda na concentração do neurotransmissor serotonina, que, por sua vez, está relacionado com a diminuição na produção dos hormônios ovarianos estrógeno e progesterona, observada nessa fase do ciclo feminino.\n\n(DIMMOCK, P. W. et al. Efficacy of Selective Serotonin-Reuptake Inhibitors in Premenstrual Syndrome: a Systematic Review. The Lancet, n. 9236, 2000, adaptado.)\n\nA redução da produção desses hormônios nessa fase está relacionada com o(a)",
+      "opcoes": [
+        "regressão do corpo lúteo ovariano.",
+        "diminuição na produção de ocitocina.",
+        "liberação do gameta feminino na ovulação.",
+        "aumento nos níveis dos hormônios LH e FSH.",
+        "elevação nos níveis sorológicos de adrenalina."
+      ],
+      "correta": 0,
+      "explicacao": "Nos dias que antecedem a menstruação, o corpo lúteo (que produz estrógeno e progesterona após a ovulação) regride, se não houver fecundação — é essa regressão que derruba a produção dos dois hormônios, disparando os sintomas da TPM."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 100",
+    "area": "CN",
+    "skillId": "qui:quimica-organica-funcoes",
+    "difficulty": 4,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Para que uma molécula dê origem a um medicamento de administração oral, além de apresentar atividade farmacológica, deve ser capaz de atingir o local de ação. Para tanto, essa molécula não deve se degradar no estômago (onde o meio é fortemente ácido e há várias enzimas que reagem mediante catálise ácida), deve ser capaz de atravessar as membranas celulares e ser solúvel no plasma sanguíneo (sistema aquoso). Para os fármacos cujas estruturas são formadas por cadeias carbônicas longas contendo pelo menos um grupamento amino, um recurso tecnológico empregado é sua conversão no cloridrato correspondente. Essa conversão é representada, de forma genérica, pela equação química:\n\nR3N + HCl → (R3NH)+Cl−\n\nO aumento da eficiência de circulação do fármaco no sangue, promovido por essa conversão, deve-se ao incremento de seu(sua)",
+      "opcoes": [
+        "basicidade.",
+        "lipofilicidade.",
+        "caráter iônico.",
+        "cadeia carbônica.",
+        "estado de oxidação."
+      ],
+      "correta": 2,
+      "explicacao": "A reação transforma a amina (R3N) num sal (cloridrato, (R3NH)+Cl−), uma espécie iônica — e é justamente esse caráter iônico que aumenta a solubilidade em água (o plasma sanguíneo), facilitando a circulação do fármaco no sangue."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 110",
+    "area": "CN",
+    "skillId": "bio:ecologia-relacoes-ecossistema",
+    "difficulty": 2,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal.\n\nDentro do corpo do vegetal, esses contaminantes serão",
+      "opcoes": [
+        "digeridos por enzimas.",
+        "acumulados nos tecidos.",
+        "eliminados pelos estômatos.",
+        "metabolizados por glândulas.",
+        "utilizados como fonte energética."
+      ],
+      "correta": 1,
+      "explicacao": "Metais tóxicos, ao contrário de moléculas orgânicas, não são quebrados por enzimas nem usados como fonte de energia — plantas usadas em fitorremediação de metais funcionam retendo (acumulando) esses elementos em seus tecidos, tirando-os do ambiente."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 137",
+    "area": "MT",
+    "skillId": "mat:equacao-primeiro-grau",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+      "opcoes": [
+        "4,68",
+        "6,30",
+        "9,30",
+        "10,50",
+        "10,65"
+      ],
+      "correta": 1,
+      "explicacao": "Sejam a e v os preços unitários. 18a + 9v = 32,40 e a − v = v + 0,05, ou seja, a = 2v + 0,05. Substituindo: 18(2v+0,05) + 9v = 32,40 → 36v + 0,90 + 9v = 32,40 → 45v = 31,50 → v = 0,70. A cartela de vermelhos (9 tíquetes) custa 9 × 0,70 = R$ 6,30."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 151",
+    "area": "MT",
+    "skillId": "mat:media-mediana-moda",
+    "difficulty": 2,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\nSetor Produção: 75 funcionários, salário R$ 2 000,00.\nSetor Administração: 25 funcionários, salário R$ 7 000,00.\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+      "opcoes": [
+        "2 000,00.",
+        "2 500,00.",
+        "3 250,00.",
+        "4 500,00.",
+        "9 000,00."
+      ],
+      "correta": 2,
+      "explicacao": "Média ponderada: (75 × 2000 + 25 × 7000) / 100 = (150000 + 175000) / 100 = 325000/100 = R$ 3 250,00."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 144",
+    "area": "MT",
+    "skillId": "mat:porcentagem-fator-multiplicativo",
+    "difficulty": 4,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\n\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R$ 1 500,00.\n\nUtilize 5,29 como aproximação para √28.\n\nA taxa mensal de juros compostos praticada nesse financiamento é de",
+      "opcoes": [
+        "6,7%",
+        "10%",
+        "20%",
+        "21,5%",
+        "23,3%"
+      ],
+      "correta": 3,
+      "explicacao": "O valor financiado é 1500 × 1,2 = 1800, dividido em 3 parcelas de 600, sendo a 1ª à vista (sem juros), a 2ª em 30 dias e a 3ª em 60 dias. O valor presente das parcelas deve igualar 1500: 600 + 600/(1+i) + 600/(1+i)² = 1500 → 600(1+i)² + 600(1+i) − 900(1+i)² = 0, que se resolve com a taxa i ≈ 21,5% usando a aproximação de √28 fornecida."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 165",
+    "area": "MT",
+    "skillId": "mat:probabilidade-evento-simples",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
+      "opcoes": [
+        "1/2",
+        "1/3",
+        "1/8",
+        "2/9",
+        "3/8"
+      ],
+      "correta": 4,
+      "explicacao": "Total de cartões: 200×1 + 150×2 + 100×3 = 200 + 300 + 300 = 800. Cartões de terceiro ano: 300. Probabilidade: 300/800 = 3/8."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 174",
+    "area": "MT",
+    "skillId": "mat:porcentagem-valor",
+    "difficulty": 3,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos.\n\nA diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+      "opcoes": [
+        "(5,0 ; 5,5).",
+        "(8,0 ; 8,5).",
+        "(11,5 ; 12,5).",
+        "(19,5 ; 20,5).",
+        "(3,5 ; 4,0)."
+      ],
+      "correta": 0,
+      "explicacao": "Proporção de folhas: 6000/1200 = 5 folhas por aluno; para 1150 alunos, são 5750 folhas = 57,5 embalagens de 100, arredondando para 58 embalagens. Preço cheio: 58 × R$4,00 = R$232,00. Desconto necessário para caber em R$220,00: (232−220)/232 ≈ 5,17%, dentro do intervalo (5,0 ; 5,5)."
+    }
+  },
+  {
+    "ano": 2023,
+    "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 167",
+    "area": "MT",
+    "skillId": "mat:porcentagem-fator-multiplicativo",
+    "difficulty": 5,
+    "exercise": {
+      "type": "multipla-escolha",
+      "pergunta": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+      "opcoes": [
+        "10.",
+        "11.",
+        "13.",
+        "30.",
+        "33."
+      ],
+      "correta": 1,
+      "explicacao": "Lista de espera deste ano: 400 × 1,1 = 440. Meta do próximo ano: 440 × 0,75 = 330. Sem novas salas, a lista do próximo ano seria igual à deste ano (440, dado do enunciado), então é preciso reduzir em 440 − 330 = 110 nomes, o que exige atender 110 crianças a mais — ou seja, 11 novas salas de 10 vagas cada."
+    }
+  }
+]

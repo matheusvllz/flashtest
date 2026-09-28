@@ -1,0 +1,57 @@
+{
+  "$id": "candidate.json",
+  "title": "Candidate",
+  "type": "object",
+  "required": [
+    "candidateId",
+    "skillId",
+    "difficulty",
+    "role",
+    "kind",
+    "meta",
+    "stages"
+  ],
+  "properties": {
+    "candidateId": {
+      "type": "string"
+    },
+    "skillId": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "pratica",
+        "revisao",
+        "desafio",
+        "diagnostico"
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "item",
+        "aula"
+      ]
+    },
+    "exercise": {
+      "$ref": "exercise-multipla-escolha.json"
+    },
+    "meta": {
+      "$ref": "item-meta.json"
+    },
+    "stages": {
+      "type": "object"
+    }
+  }
+}

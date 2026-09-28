@@ -1,0 +1,533 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:media-mediana-moda:391d93a8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "João registrou suas notas em cinco provas: 6, 7, 8, 9 e 5. Qual é sua nota média?",
+        "opcoes": [
+          "7",
+          "6",
+          "8",
+          "7,5"
+        ],
+        "correta": 0,
+        "explicacao": "Média = (6 + 7 + 8 + 9 + 5) / 5 = 35 / 5 = 7. Você soma tudo e divide pela quantidade. É o jeito mais direto de achar o 'meio' dos dados."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:391d93a8",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:949973da",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja registra diariamente o número de clientes: segunda 12, terça 15, quarta 12, quinta 18, sexta 12, sábado 20. Qual é o número de clientes mais frequente (moda)?",
+        "opcoes": [
+          "20",
+          "12",
+          "15",
+          "18"
+        ],
+        "correta": 1,
+        "explicacao": "A moda é o valor que aparece mais vezes. Contando: 12 aparece 3 vezes (segunda, quarta, sexta), 15 uma vez, 18 uma vez, 20 uma vez. Logo 12 é a moda, o valor mais repetido."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:949973da",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:09b78f9a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os tempos de espera de cinco clientes foram: 5 minutos, 8 minutos, 3 minutos, 12 minutos e 7 minutos. Qual é o tempo mediano?",
+        "opcoes": [
+          "8 minutos",
+          "6 minutos",
+          "7 minutos",
+          "5 minutos"
+        ],
+        "correta": 2,
+        "explicacao": "Ordena: 3, 5, 7, 8, 12. Com 5 valores (número ímpar), a mediana é o valor do meio, que é 7. Ela divide os dados em duas metades. Quantidade ímpar, é sempre o do centro depois de ordenar."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:09b78f9a",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:7e67f83f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As temperaturas registradas em uma semana foram: -3°C, -1°C, 2°C, 4°C, 3°C, 1°C, 0°C. Qual é a temperatura média?",
+        "opcoes": [
+          "0,86°C",
+          "1°C",
+          "1,5°C",
+          "2°C"
+        ],
+        "correta": 0,
+        "explicacao": "Soma: -3 + (-1) + 2 + 4 + 3 + 1 + 0 = 6. Média: 6 / 7 ≈ 0,857 ≈ 0,86°C. Cuidado ao somar quando tem número negativo. Os negativos reduzem o total. Erro bem comum: errar no sinal na soma."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:7e67f83f",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:b12defc3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um aluno tem quatro notas com pesos: nota 8 com peso 2, nota 7 com peso 2, nota 9 com peso 3, nota 6 com peso 3. Qual é sua nota média ponderada?",
+        "opcoes": [
+          "8",
+          "7,5",
+          "7",
+          "7,3"
+        ],
+        "correta": 1,
+        "explicacao": "Média ponderada = (8×2 + 7×2 + 9×3 + 6×3) / (2+2+3+3) = (16 + 14 + 27 + 18) / 10 = 75 / 10 = 7,5. Multiplique cada nota pelo seu peso e divida pela soma dos pesos, não pelo número de notas."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:b12defc3",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:ba769842",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma fábrica registra falhas de produção por turno: turno A 15 falhas, turno B 20 falhas, turno C 10 falhas. Se forem removidas 5 falhas do total (registradas por engano), qual será a nova média aproximada de falhas por turno?",
+        "opcoes": [
+          "14",
+          "12",
+          "13",
+          "15"
+        ],
+        "correta": 2,
+        "explicacao": "Total inicial: 15 + 20 + 10 = 45 falhas. Depois de remover 5: 45 - 5 = 40 falhas. Média: 40 / 3 ≈ 13,3 ≈ 13. A média original era 45 / 3 = 15; tirar valores do total muda a média, mesmo que o número de turnos continue 3."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:ba769842",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:f2003ef4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As alturas de sete atletas, em centímetros, são: 170, 175, 172, 180, 168, 176, 174. Qual é a altura mediana?",
+        "opcoes": [
+          "172",
+          "175",
+          "176",
+          "174"
+        ],
+        "correta": 3,
+        "explicacao": "Ordena: 168, 170, 172, 174, 175, 176, 180. Com 7 valores (ímpar), a mediana é o 4° valor, que é 174. Ela é sempre o valor central quando os dados tão ordenados. Ideal pra descrever o 'meio' sem sofrer com valores extremos."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:f2003ef4",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:98c820b2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma academia registra frequência diária: 20, 22, 21, 20, 23, 20, 19. Qual é a frequência mais comum?",
+        "opcoes": [
+          "22",
+          "23",
+          "20",
+          "21"
+        ],
+        "correta": 2,
+        "explicacao": "Contando quantas vezes cada número aparece: 20 aparece 3 vezes, 22 aparece 1 vez, 21 aparece 1 vez, 23 aparece 1 vez, 19 aparece 1 vez. A moda é 20, o número de frequentadores mais típico."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:98c820b2",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:6a744df4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma nutricionista acompanha o peso semanal de uma paciente: 72 kg, 71,5 kg, 72,2 kg, 71,8 kg, 72,1 kg. Qual é o peso médio?",
+        "opcoes": [
+          "71,92 kg",
+          "72 kg",
+          "71,8 kg",
+          "72,1 kg"
+        ],
+        "correta": 0,
+        "explicacao": "Soma: 72 + 71,5 + 72,2 + 71,8 + 72,1 = 359,6. Média: 359,6 / 5 = 71,92. Você soma tudo antes de dividir. Arredondar no meio do caminho leva a erros."
+      },
+      "meta": {
+        "id": "gen:mat:media-mediana-moda:6a744df4",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-media-mediana-moda",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "estat",
+      "chapterId": "gen-mat-media-mediana-moda",
+      "title": "Média, mediana e moda",
+      "objective": "Calcular média, mediana e moda de um conjunto de dados.",
+      "skillIds": [
+        "mat:media-mediana-moda"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:media-mediana-moda:949973da",
+        "gen:mat:media-mediana-moda:b12defc3"
+      ],
+      "recap": "Média soma e divide; mediana é o valor central depois de ordenar; moda é o que mais se repete.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Medidas centrais",
+          "body": "Você vai aprender a calcular a média, a mediana e a moda de um conjunto de dados, e a perceber quando cada uma muda."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Três jeitos de achar o meio",
+            "body": "Média é a soma de todos os valores dividida pela quantidade deles. Mediana é o valor do meio depois de ordenar os dados: com quantidade ímpar, é o valor central; com quantidade par, é a média dos dois centrais. Moda é o valor que mais se repete."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:media-mediana-moda:09b78f9a",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:media-mediana-moda:391d93a8",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Mediana com quantidade par",
+            "problem": "As idades de seis amigos são: 14, 17, 15, 20, 16, 19. Qual é a idade mediana?",
+            "steps": [
+              "Ordene: 14, 15, 16, 17, 19, 20.",
+              "Com 6 valores (par), a mediana é a média dos dois centrais: 16 e 17.",
+              "Mediana = (16 + 17) / 2 = 16,5."
+            ],
+            "result": "16,5 anos."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:media-mediana-moda:f2003ef4",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:media-mediana-moda:7e67f83f",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não esqueça de reordenar a quantidade de dados depois de remover ou adicionar um valor: a mediana e o total usado na média mudam junto."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Média muda, mediana resiste",
+            "left": {
+              "label": "Média",
+              "body": "Usa todos os valores na conta; se um valor mudar ou for removido, a média quase sempre muda também."
+            },
+            "right": {
+              "label": "Mediana",
+              "body": "Depende só da posição central; remover ou mudar um valor bem distante do meio pode não alterar a mediana."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:media-mediana-moda:ba769842",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Média soma e divide; mediana é o valor central depois de ordenar; moda é o que mais se repete."
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,8 @@ export function useExerciseSession() {
     correct: boolean;
     explanation: string;
     xpAwarded?: number;
+    /** Botão "Não sei" (docs/30 §16.1, Fase 6) — repassado direto pra `createFeedback`. */
+    dontKnow?: boolean;
   }) {
     if (answeringRef.current || phase !== "answering") return;
     answeringRef.current = true;

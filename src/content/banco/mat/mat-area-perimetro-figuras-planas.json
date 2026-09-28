@@ -1,0 +1,535 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:d708b400",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma figura é composta por um retângulo de 10cm × 6cm com um triângulo no topo de 10cm de base e 4cm de altura. Qual é a área total?",
+        "opcoes": [
+          "100 cm²",
+          "60 cm²",
+          "70 cm²",
+          "80 cm²"
+        ],
+        "correta": 3,
+        "explicacao": "Área retângulo = 10 × 6 = 60 cm²; Área triângulo = (10 × 4) / 2 = 20 cm²; Total = 80 cm². Erros comuns: contar só o retângulo (60), só o triângulo (20), ou somar sem dividir o triângulo."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:d708b400",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:28bdacd9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um trapézio tem bases de 8cm e 12cm, com altura de 5cm. Qual é sua área?",
+        "opcoes": [
+          "40 cm²",
+          "50 cm²",
+          "60 cm²",
+          "100 cm²"
+        ],
+        "correta": 1,
+        "explicacao": "Área de trapézio = ((base1 + base2) × altura) / 2 = ((8 + 12) × 5) / 2 = (20 × 5) / 2 = 50 cm². Esquecer de dividir por 2 vai dar 100 cm²; usar só uma base dá valores menores."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:28bdacd9",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:9f55bae4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma figura em forma de L é feita de dois retângulos: um de 12cm × 4cm e outro de 5cm × 8cm, unidos em L. Qual é a área total?",
+        "opcoes": [
+          "104 cm²",
+          "60 cm²",
+          "78 cm²",
+          "88 cm²"
+        ],
+        "correta": 3,
+        "explicacao": "Retângulo 1: 12 × 4 = 48 cm²; Retângulo 2: 5 × 8 = 40 cm²; Total = 88 cm². Erro comum: achar que tem sobreposição entre os retângulos ou contar um segmento duas vezes na junção do L."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:9f55bae4",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:bc37a4c2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual é a área da região entre dois círculos concêntricos com raios 8cm e 5cm? (Use π ≈ 3,14)",
+        "opcoes": [
+          "122,46 cm²",
+          "200,96 cm²",
+          "47,1 cm²",
+          "78,5 cm²"
+        ],
+        "correta": 0,
+        "explicacao": "Área anel: π × (R² - r²) = 3,14 × (64 - 25) = 3,14 × 39 = 122,46 cm². Separando: grande (3,14 × 64 = 200,96), pequeno (3,14 × 25 = 78,5), diferença = 122,46. Esquecer de subtrair o círculo interno é um erro bem típico."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:bc37a4c2",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:bbcb8fa3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um hexágono regular tem lado de 6cm. Qual é sua área? (Use √3 ≈ 1,73)",
+        "opcoes": [
+          "75 cm²",
+          "93,42 cm²",
+          "108 cm²",
+          "54 cm²"
+        ],
+        "correta": 1,
+        "explicacao": "Área hexágono regular = (3√3 / 2) × l² = (3 × 1,73 / 2) × 36 = 2,595 × 36 = 93,42 cm². Pensa em 6 triângulos equiláteros com lado l. Perímetro vs. área é confusão bem comum (perímetro = 36 cm)."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:bbcb8fa3",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:ff0da066",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um quadrado de lado 10cm contém um círculo inscrito. Qual é a área entre o quadrado e o círculo? (Use π ≈ 3,14)",
+        "opcoes": [
+          "7,85 cm²",
+          "15 cm²",
+          "21,5 cm²",
+          "28,5 cm²"
+        ],
+        "correta": 2,
+        "explicacao": "Quadrado: 10² = 100 cm²; Círculo inscrito (diâmetro = 10, raio = 5): π × 25 = 78,5 cm²; Diferença = 100 - 78,5 = 21,5 cm². Vale lembrar: círculo inscrito tem diâmetro igual ao lado do quadrado."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:ff0da066",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:9ce919a9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma figura em L simples é formada por dois retângulos: um de 10cm × 5cm e outro menor de 3cm × 3cm. Qual é a área total?",
+        "opcoes": [
+          "80 cm²",
+          "50 cm²",
+          "59 cm²",
+          "65 cm²"
+        ],
+        "correta": 2,
+        "explicacao": "Retângulo grande: 10 × 5 = 50 cm²; Retângulo pequeno: 3 × 3 = 9 cm²; Total = 59 cm². Erros de contagem: pegar só o grande (50) ou só o pequeno (9)."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:9ce919a9",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:889b7454",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um trapézio retângulo tem bases de 7cm e 11cm, com altura 9cm. Qual é sua área?",
+        "opcoes": [
+          "162 cm²",
+          "63 cm²",
+          "81 cm²",
+          "99 cm²"
+        ],
+        "correta": 2,
+        "explicacao": "Área de trapézio = ((base1 + base2) × altura) / 2 = ((7 + 11) × 9) / 2 = (18 × 9) / 2 = 162 / 2 = 81 cm². Ser retângulo (ter ângulos de 90°) não muda a fórmula. Esquecer de dividir por 2 dá 162 cm²."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:889b7454",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:733f794d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma parede retangular tem 6 metros de comprimento e 3 metros de altura. Quantas latas de tinta são necessárias para pintar a parede, se cada lata cobre 9 metros quadrados?",
+        "opcoes": [
+          "4 latas",
+          "1 lata",
+          "2 latas",
+          "3 latas"
+        ],
+        "correta": 2,
+        "explicacao": "A área da parede é 6 × 3 = 18 metros quadrados. Cada lata cobre 9 metros quadrados, então o número de latas necessárias é 18 / 9 = 2 latas. Não há resto, logo 2 latas cobrem a parede toda perfeitamente. A fórmula é: área total dividida pela área coberta por unidade."
+      },
+      "meta": {
+        "id": "gen:mat:area-perimetro-figuras-planas:733f794d",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-area-perimetro-figuras-planas",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "geoplana",
+      "chapterId": "gen-mat-area-perimetro-figuras-planas",
+      "title": "Área de figuras compostas",
+      "objective": "Calcular a área de figuras planas compostas decompondo-as em formas simples.",
+      "skillIds": [
+        "mat:area-perimetro-figuras-planas"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:area-perimetro-figuras-planas:d708b400",
+        "gen:mat:area-perimetro-figuras-planas:bc37a4c2"
+      ],
+      "recap": "Divida a figura composta em formas simples, calcule cada área e some. Área e perímetro medem coisas diferentes.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Figuras compostas",
+          "body": "Você vai aprender a calcular a área de figuras compostas, dividindo-as em formas simples como retângulos, triângulos e círculos."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Dividir pra somar",
+            "body": "Uma figura composta é feita de formas simples juntas. Pra achar a área total, divida a figura em retângulos, triângulos ou trapézios, calcule a área de cada parte separadamente e some tudo. A área de um trapézio é (base maior + base menor) × altura, dividido por 2."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:area-perimetro-figuras-planas:9ce919a9",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:area-perimetro-figuras-planas:28bdacd9",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Área de uma casinha",
+            "problem": "Uma figura em forma de casa tem um retângulo de 8cm × 5cm com um triângulo de base 8cm e altura 3cm em cima. Qual é a área total?",
+            "steps": [
+              "Área do retângulo: 8 × 5 = 40 cm².",
+              "Área do triângulo: (8 × 3) / 2 = 12 cm².",
+              "Total: 40 + 12 = 52 cm²."
+            ],
+            "result": "52 cm²."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:area-perimetro-figuras-planas:9f55bae4",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:area-perimetro-figuras-planas:bbcb8fa3",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não esqueça de subtrair, não somar, quando a pergunta pede o espaço que sobra entre uma figura maior e outra encaixada dentro dela."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Área não é perímetro",
+            "left": {
+              "label": "Perímetro",
+              "body": "É a soma de todos os lados, o contorno da figura, medida em cm ou m: uma só dimensão."
+            },
+            "right": {
+              "label": "Área",
+              "body": "É o espaço dentro da figura, medido em cm² ou m². Duas figuras podem ter o mesmo perímetro e áreas bem diferentes."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:area-perimetro-figuras-planas:ff0da066",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Divida a figura composta em formas simples, calcule cada área e some. Área e perímetro medem coisas diferentes."
+        }
+      ]
+    }
+  ]
+}

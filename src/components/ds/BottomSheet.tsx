@@ -37,7 +37,12 @@ export function BottomSheet({
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center">
-      <button aria-label="Fechar" onClick={onClose} className="absolute inset-0 bg-abismo/40" />
+      {/* Preto literal, não `bg-abismo/40`: Abismo é token de TEXTO (inverte pra
+          quase-branco no dark mode pra manter contraste), então usá-lo como
+          scrim deixava o fundo esbranquiçado atrás da folha no modo escuro
+          (achado de teste em dispositivo físico, docs/32 F15.3). Mesmo padrão
+          dos overlays do shadcn (`dialog`/`sheet`/`drawer`), que já são `bg-black`. */}
+      <button aria-label="Fechar" onClick={onClose} className="absolute inset-0 bg-black/40" />
       <div
         role="dialog"
         aria-modal="true"

@@ -1,0 +1,940 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "gen:fil:politica-poder-estado:71f78a40",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um regime absolutista acredita que toda autoridade deve ser concentrada numa única pessoa ou entidade, e essa concentração de poder é justificada como necessária para manter ordem e estabilidade. Qual pensador oferece a justificativa mais direta para essa forma de governo?",
+        "opcoes": [
+          "John Locke, que defendeu direitos naturais inalienáveis do povo",
+          "Karl Marx, que previu o fim do Estado com a revolução proletária",
+          "Jean-Jacques Rousseau, que propôs o contrato social baseado na vontade geral",
+          "Thomas Hobbes, que argumentou que o poder soberano concentrado é necessário para evitar o estado de guerra de todos contra todos"
+        ],
+        "correta": 3,
+        "explicacao": "Hobbes, em seu livro Leviatã, argumentou que uma autoridade absoluta é necessária para manter a paz e a ordem. Diferente de defesa de direito divino, Hobbes fundamenta o absolutismo em razão contratual: sem um soberano com poder irrevogável, a condição natural humana é 'guerra de todos contra todos'. Rousseau criticava o absolutismo; Locke propunha limitação do poder pelo consentimento; Marx enxergava o Estado como instrumento de classe temporário."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:71f78a40",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:20996b71",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um Estado democrático realiza eleições periódicas e permite que o povo escolha seus representantes. Essa ideia de que o poder vem do consentimento do povo está mais próxima do pensamento de qual filósofo?",
+        "opcoes": [
+          "John Locke, que defendia que o governo existe por consentimento dos governados",
+          "Thomas Hobbes, que acreditava no poder absoluto irrevogável",
+          "Platão, que propunha governo de filósofos sábios, não do povo",
+          "Nicolau Maquiavel, que estudava como o príncipe mantém seu poder por qualquer meio"
+        ],
+        "correta": 0,
+        "explicacao": "Locke desenvolveu a teoria do contrato social com base no consentimento: os indivíduos concordam em formar um governo para proteger seus direitos naturais, e esse governo pode ser revogado se violar esses direitos. Essa visão fundamenta as democracias modernas. Hobbes, Maquiavel e Platão propunham outros modelos que não centralizavam no consentimento popular."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:20996b71",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:82427030",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma constituição estabelece que o poder é dividido entre Executivo, Legislativo e Judiciário, cada um com funções diferentes. Qual princípio político está sendo aplicado aqui?",
+        "opcoes": [
+          "Federalismo, que divide poder entre governo central e governos regionais",
+          "Separação de poderes, que distribui autoridade para evitar concentração excessiva",
+          "Monarquia constitucional, em que o rei governa com o consentimento do povo",
+          "Sistema multipartidário, que busca representar todas as classes sociais igualmente"
+        ],
+        "correta": 1,
+        "explicacao": "A separação de poderes, proposta por Montesquieu, divide a autoridade do Estado em três ramos para evitar que um só ramo concentre todo o poder. Cada ramo tem funções e limites, criando um sistema de 'freios e contrapesos'. As outras opções referem-se a outros arranjos políticos, não ao princípio fundamental de divisão de funções."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:82427030",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:7ad87e54",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quando um cidadão desaprova uma lei, pode participar de marchas e petições, ou votar para eleger representantes que a mudem. Isso demonstra que o Estado reconhece qual tipo de poder?",
+        "opcoes": [
+          "Poder totalitário, que controla todos os aspectos da vida",
+          "Poder autoritário, que não tolera qualquer dissidência",
+          "Poder democrático, que reconhece a participação política dos cidadãos",
+          "Poder teocrático, baseado em autoridade religiosa"
+        ],
+        "correta": 2,
+        "explicacao": "A possibilidade de questionar leis, participar de mobilizações e votar é característica de um Estado democrático, que reconhece a soberania do povo e o direito de participação política. Sistemas autoritários, teocráticos ou totalitários não permitem essa liberdade de expressão e ação coletiva contra o governo."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:7ad87e54",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:65fbb645",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo contemporâneo discute como a vigilância em massa dos cidadãos por meio de câmeras e dados digitais pode aumentar o controle estatal sem limite claro. Essa preocupação retoma qual conceito político histórico?",
+        "opcoes": [
+          "O contrato social de Rousseau, que garante igualdade perpétua entre cidadãos",
+          "A divisão de poderes de Montesquieu, que protege liberdade mediante separação",
+          "O estado natural de Hobbes, anterior a qualquer governo ou tecnologia",
+          "O panóptico de Jeremy Bentham, metáfora em que observação constante altera comportamento e disciplina"
+        ],
+        "correta": 3,
+        "explicacao": "O panóptico é o projeto de uma prisão circular em que um observador central vê todos os presos sem ser visto. Bentham o concebeu como modelo arquitetônico: sabendo que podem ser vigiadas a qualquer momento, as pessoas passam a se autocontrolar. Michel Foucault transformou essa ideia em metáfora da sociedade disciplinar, para criticar como as sociedades modernas usam a vigilância para controlar comportamentos. As outras opções não se relacionam ao problema da vigilância disciplinar."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:65fbb645",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:7df3468b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um regime político acaba com instituições democráticas e centraliza todo poder numa única pessoa ou partido, eliminando eleições e liberdade de expressão. Qual descrição melhor caracteriza essa forma de governo?",
+        "opcoes": [
+          "Autoritarismo ou totalitarismo, concentração de poder sem accountability",
+          "Anarquismo, rejeição de qualquer forma de governo ou Estado",
+          "Pluralismo político, convivência de múltiplas ideologias no poder",
+          "Democracia participativa, em que cidadãos votam diretamente sobre cada questão"
+        ],
+        "correta": 0,
+        "explicacao": "Autoritarismo (ou totalitarismo em sua forma extrema) caracteriza-se pela concentração de poder numa pessoa ou grupo, sem mecanismos de controle democrático nem responsabilidade. Democracia participativa é o oposto; anarquismo rejeita Estado; pluralismo celebra diversidade. A supressão de eleições e liberdade define o regime autoritário/totalitário."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:7df3468b",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:71973212",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um teórico político argumenta que o Estado surge para proteger propriedade privada e que toda lei favorece quem detém riqueza. Qual corrente de pensamento sustenta essa crítica?",
+        "opcoes": [
+          "Liberalismo clássico, que celebra propriedade como direito natural",
+          "Marxismo, que vê o Estado como instrumento de classe para manter desigualdade econômica",
+          "Conservadorismo, que preserva instituições tradicionais sem questionar poder econômico",
+          "Fascismo, que une Estado e economia sob liderança única"
+        ],
+        "correta": 1,
+        "explicacao": "Marx argumentou que o Estado não é neutro, mas serve aos interesses da classe dominante (proprietários dos meios de produção). A lei e as instituições legitimariam a exploração econômica. Liberalismo defende propriedade como direito; conservadorismo é tradicional sem necessariamente criticar classes; fascismo une Estado e poder econômico de forma diferente do marxismo."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:71973212",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:6b756cce",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um Estado implementa políticas que redistribuem renda dos ricos para pobres por meio de impostos e programas sociais. Qual justificativa política alinha-se melhor a essa postura?",
+        "opcoes": [
+          "Anarquismo, que rejeita todo aparato de governo e tributação",
+          "Monarquismo, que concentra poder na figura de um rei e sua corte",
+          "Liberalismo, que prioriza liberdade individual e pouca intervenção estatal",
+          "Socialismo, que busca reduzir desigualdade e garantir acesso a bens básicos"
+        ],
+        "correta": 3,
+        "explicacao": "Socialismo historicamente propõe redistribuição de riqueza para reduzir desigualdade de classe e garantir acesso igualitário a recursos. A tributação progressiva e programas de bem-estar social refletem essa visão. Liberalismo tradicionalmente resiste à redistribuição; anarquismo rejeita Estado; monarquismo concentra poder numa pessoa sem visar igualdade econômica."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:6b756cce",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:0e52a560",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma sociedade passa por transição: escravidão (não existe conceito de direitos), feudalismo (direitos vinculados a status social), capitalismo (direitos formalmente universais mas materialmente desiguais). Qual filósofo político oferece ferramentas para criticar que direitos 'formalmente universais' podem mascarar exploração real?",
+        "opcoes": [
+          "Karl Marx, que analisava alienação e fetichismo de mercadorias para expor contradições do capital",
+          "John Rawls, que desenvolveu teoria de justiça baseada em princípios contratuais",
+          "Robert Nozick, que defendia direitos de propriedade irrevogáveis",
+          "Adam Smith, que celebrava a eficiência dos mercados livres"
+        ],
+        "correta": 0,
+        "explicacao": "Marx utilizou conceitos como alienação (o trabalhador não possui o produto de seu trabalho) e fetichismo de mercadorias (relações sociais aparecem como relações entre coisas) para revelar como o capitalismo, apesar de formalmente liberto da escravidão e servidão, mantém exploração via apropriação de mais-valia. Smith idealizava mercados; Rawls propõe justiça procedimental; Nozick defende propriedade absoluta; nenhum oferece a mesma ferramenta crítica."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:0e52a560",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:16688901",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um país enfrenta crise de refugiados: pessoas fogem de guerra e perseguição. A teoria dos direitos naturais de Locke sustentaria qual princípio para o Estado responder?",
+        "opcoes": [
+          "Fechar fronteiras, pois direitos naturais valem apenas para cidadãos nascidos no território",
+          "Reconhecer direitos básicos à vida e segurança como anteriores e superiores à cidadania",
+          "Permitir entrada apenas de refugiados ricos que possam contribuir economicamente",
+          "Devolver todos os refugiados para enfrentar as consequências de sua nacionalidade"
+        ],
+        "correta": 1,
+        "explicacao": "Locke argumentava que direitos à vida, liberdade e propriedade são naturais, não concedidos pelo Estado, mas anteriores a ele. Esses direitos não dependem de cidadania, mas de humanidade. A perseguição que ameaça a vida viola direito natural, justificando proteção. As outras respostas negam direitos naturais ou os restringem à cidadania, contradizendo Locke."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:16688901",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:3b49d519",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um regime teme revoluções e, portanto, proíbe educação para pobres, censura imprensa e criminaliza associações. Sob qual diagnóstico filosófico essa repressão se justificaria? E qual pensador ofereceria crítica mais contundente?",
+        "opcoes": [
+          "Direitos naturais existem mas devem ser suspensos em emergências indefinidas",
+          "A justiça exige manter as classes pobres na ignorância; Platão apoiaria essa medida",
+          "A educação liberta e ameaça o poder; Freire argumentaria que a conscientização é necessária para libertação",
+          "O mercado livre resolve tudo sem necessidade de educação estatal"
+        ],
+        "correta": 2,
+        "explicacao": "Paulo Freire desenvolveu uma pedagogia crítica argumentando que a educação constrói consciência e liberdade. Exatamente por isso, regimes opressivos a temem. A repressão à educação visa manter a 'cultura do silêncio', e Freire oferece a ferramenta teórica para criticá-la como obstáculo à humanização. Platão defendia uma educação seletiva, não a ignorância dos pobres; a alternativa do mercado livre ignora a educação como direito; e a suspensão indefinida de direitos é incoerente com a própria ideia de emergência."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:3b49d519",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:9193018a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma democracia experimenta crescimento de votação em partidos extremistas que prometem eliminar direitos de minorias. Qual dilema teórico emerge dessa situação?",
+        "opcoes": [
+          "Não existe dilema se o Estado intervir militarmente na política",
+          "Minorias sempre devem aceitar o voto da maioria sem exceção",
+          "Nenhum, pois maioria democrática tem direito absoluto de decidir qualquer coisa",
+          "O paradoxo da tolerância: tolerar intolerância pode levar à morte da democracia"
+        ],
+        "correta": 3,
+        "explicacao": "Karl Popper formulou o paradoxo da tolerância: uma sociedade tolerante que tolera a intolerância de forma ilimitada pode ser destruída pelos intolerantes. Muitas democracias respondem a isso vedando partidos que negam direitos fundamentais ou princípios democráticos. A alternativa A sugere golpe; B nega proteção a direitos básicos; C ignora a tensão real. Para Popper, a tolerância tem limite quando ela própria é ameaçada."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:9193018a",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:f4b5e36b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo político do século XVII defendia que antes do Estado existir, humanos viviam em estado de natureza onde cada um tinha direito a tudo quanto pudesse obter. Para sair dessa luta de todos contra todos, criavam o Estado por contrato. Qual pensador propôs isso?",
+        "opcoes": [
+          "Thomas Hobbes, que via o contrato social como saída da guerra natural",
+          "Jean-Jacques Rousseau, que romantizava o estado natural como harmônico",
+          "Montesquieu, que focava na separação de poderes dentro do Estado",
+          "Voltaire, que criticava poder religioso sem detalhar o contrato social"
+        ],
+        "correta": 0,
+        "explicacao": "Hobbes, em Leviatã (1651), descreve o estado de natureza como 'guerra de todos contra todos', onde não há lei, propriedade nem justiça: a vida é 'solitária, pobre, sórdida, brutal e curta'. As pessoas firmam um contrato para criar um soberano que as proteja. Rousseau via o estado de natureza de forma positiva; Montesquieu analisava a estrutura do Estado; Voltaire criticava o poder do clero. Só Hobbes combina a guerra natural com o contrato como saída."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:f4b5e36b",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:365d996c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um teórico político argumenta que o contrato social se baseia não em consentimento dos fracos ao forte, mas na vontade geral do povo, que é sempre certa e inalienável. Qual filósofo defendeu esse conceito de 'vontade geral'?",
+        "opcoes": [
+          "John Locke, que centrava em direitos individuais inalienáveis",
+          "Jean-Jacques Rousseau, que propunha soberania popular irrevogável via vontade geral",
+          "Immanuel Kant, que fundamentava ética em razão pura universal",
+          "Thomas Hobbes, que via contrato como submissão a um soberano"
+        ],
+        "correta": 1,
+        "explicacao": "Rousseau, em O Contrato Social, afirmava que a vontade geral (consenso racional do povo sobre bem comum) é a base legítima do poder. Diferente de Hobbes (submissão ao soberano), Rousseau via o povo como soberano permanente. A vontade geral não pode ser alienada: o povo sempre retém poder último. Locke focava direitos; Kant em ética racional universal."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:365d996c",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:7229d8b6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Comparando Locke e Hobbes: Locke acredita que direitos naturais (vida, liberdade, propriedade) pré-existem o Estado e o limitam; Hobbes acredita que, sem Estado, não há justiça, propriedade nem direito garantido. Qual consequência política resulta dessa divergência?",
+        "opcoes": [
+          "Os dois defendem poder divino do monarca como razão do Estado",
+          "Ambos concordam que o poder absoluto é sempre bom para o povo",
+          "Locke fundamenta revoluções contra governo injusto; Hobbes sustenta obediência ao soberano",
+          "Hobbes apoia constituições que protegem direitos; Locke aceita qualquer regime"
+        ],
+        "correta": 2,
+        "explicacao": "Se direitos preexistem ao Estado e o limitam (Locke), um governo que os viola perde legitimidade, e o povo pode resistir a ele. Se sem Estado não há justiça nem segurança (Hobbes), obedecer ao soberano é racional para evitar o retorno à guerra de todos contra todos. Por isso Locke forneceu base teórica para revoluções liberais (como a Gloriosa e a americana), enquanto Hobbes legitimou uma autoridade forte, fundamentada no contrato, não no direito divino."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:7229d8b6",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:d83817e7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um Estado propõe criar uma nova constituição e submete-a a voto. Qual conceito político está sendo aplicado ao buscar consentimento popular para as leis fundamentais?",
+        "opcoes": [
+          "Absolutismo, concentração de poder numa pessoa que não precisa consentimento",
+          "Anarquia, rejeição de todo governo e criação de leis",
+          "Imperialismo, expansão do poder sobre povos externos",
+          "Contrato social, ideia de que legitimidade vem do consentimento dos governados"
+        ],
+        "correta": 3,
+        "explicacao": "Submeter uma constituição a voto popular reflete a ideia contratualista de que o governo legítimo repousa no consentimento dos governados. O absolutismo dispensaria esse consentimento; a anarquia rejeita o próprio Estado; o imperialismo trata de expansão externa. Entre os contratualistas, Locke e Rousseau são as bases mais diretas das constituições democráticas modernas (Hobbes usou o contrato para justificar um soberano absoluto)."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:d83817e7",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:89b9db3b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um acadêmico contemporâneo estuda como Estados usam tecnologia, segurança nacional e emergência para expandir poderes executivos sem aprovação legislativa. Qual conceito histórico ajuda a diagnosticar esse fenômeno?",
+        "opcoes": [
+          "Estado de exceção: suspensão de direitos e leis normais sob pretexto de urgência",
+          "Federalismo, que distribui poder entre níveis de governo",
+          "Pluralismo, existência de múltiplos atores políticos influenciando poder",
+          "Soberania popular de Rousseau, que garante vontade geral indivisível"
+        ],
+        "correta": 0,
+        "explicacao": "Giorgio Agamben, desenvolvendo conceitos de Carl Schmitt, analisa como executivos declaram 'estado de exceção' para suspender direitos constitucionais supostamente temporariamente, mas essa exceção pode se tornar regra permanente. A prática de expandir emergência para perpetuar poder executivo usa essa lógica. Rousseau, federalismo e pluralismo descrevem outros aspectos, não esse diagnóstico específico."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:89b9db3b",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:8ae9efb5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo defende que igualdade formal (todos têm direito de voto) sem igualdade substancial (acesso a educação, renda, saúde) é insuficiente e que o Estado deve garantir as duas. Qual tradição política sustenta melhor essa posição?",
+        "opcoes": [
+          "Conservadorismo, que preserva hierarquias naturais da sociedade",
+          "Fascismo, que rejeita igualdade e celebra liderança única",
+          "Liberalismo clássico, focado em igualdade formal de direitos",
+          "Socialismo democrático, que busca tanto direitos civis quanto justiça econômica"
+        ],
+        "correta": 3,
+        "explicacao": "Socialismo democrático (diferente de comunismo autoritário) busca combinar democracia política com redistribuição econômica: direito de voto + acesso a bens materiais. Liberalismo clássico frequentemente se contenta com igualdade formal; conservadorismo defende hierarquias naturais; fascismo rejeita igualdade. Socialismo democrático é mais coerente com exigência de igualdade substantiva e formal."
+      },
+      "meta": {
+        "id": "gen:fil:politica-poder-estado:8ae9efb5",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-fil-politica-poder-estado",
+      "version": 1,
+      "format": 2,
+      "subjectId": "fil",
+      "topicId": "pol",
+      "chapterId": "gen-fil-politica-poder-estado",
+      "title": "De onde vem o poder",
+      "objective": "Relacionar um conceito de poder e Estado a um pensador da política",
+      "skillIds": [
+        "fil:politica-poder-estado"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:fil:politica-poder-estado:71f78a40",
+        "gen:fil:politica-poder-estado:82427030"
+      ],
+      "recap": "O contrato social liga o poder do Estado ao consentimento dos governados; Marx vê o Estado como instrumento de classe; Freire liga educação a libertação política.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "De onde vem o poder",
+          "body": "Você vai ligar uma explicação sobre a origem do poder do Estado ao pensador que a defendeu."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Consentimento e contrato",
+            "body": "O contrato social diz que o governo nasce do consentimento dos indivíduos, para proteger seus direitos. Locke sustentava que esse consentimento pode ser retirado se o governo violar direitos naturais, base da democracia. Hobbes usou o mesmo contrato para justificar um soberano quase absoluto."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:politica-poder-estado:20996b71",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:politica-poder-estado:7ad87e54",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "O Estado não é neutro",
+            "body": "Marx via o Estado como instrumento da classe que controla os meios de produção: leis e instituições protegeriam essa riqueza, mesmo parecendo neutras. Para o contrato social, o consentimento é de todos; para Marx, é aparente, porque a economia já favorece um grupo antes da lei existir."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:politica-poder-estado:d83817e7",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:politica-poder-estado:71973212",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda poder vem do povo, base de Locke, com poder vem da economia, diagnóstico de Marx: são explicações diferentes para a mesma pergunta."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Educação e consciência",
+            "problem": "Adultos que nunca aprenderam a ler discutem, em grupo, as causas da própria pobreza durante aulas de alfabetização.",
+            "steps": [
+              "Paulo Freire chama isso de conscientização: entender a própria situação como resultado de estruturas de poder.",
+              "Para Freire, educação dá ferramentas para questionar a realidade, por isso regimes autoritários a restringem."
+            ],
+            "result": "Educação de qualidade é pauta política, não só pedagógica."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:politica-poder-estado:3b49d519",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "O contrato social liga o poder do Estado ao consentimento dos governados; Marx vê o Estado como instrumento de classe; Freire liga educação a libertação política."
+        }
+      ]
+    }
+  ]
+}

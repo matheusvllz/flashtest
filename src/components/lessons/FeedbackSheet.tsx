@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { CheckCircle2, ChevronDown, Sparkles, XCircle } from "lucide-react";
+import { CheckCircle2, ChevronDown, HelpCircle, Sparkles, XCircle } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { XpChip } from "@/components/ds/XpChip";
 import { COPY } from "@/lib/copy";
@@ -20,7 +20,12 @@ import { cn } from "@/lib/utils";
  * A explicação principal é estática (vem da questão/lição, custo zero); o
  * `children`, se vier, é a resolução detalhada — nasce colapsada, então a
  * folha começa curta. "Explicar melhor" é a porta para o tutor de IA: só
- * aparece no erro, que é quando ela vale.
+ * aparece no erro (e no "não sei", que também não conta como acerto), que é
+ * quando ela vale.
+ *
+ * "Não sei" (docs/30 §16.1, Fase 6) é uma TERCEIRA variante — `feedback.kind
+ * === "dont-know"` — neutra: sem verde nem vermelho, sem ícone de certo/
+ * errado, sem julgamento no tom (`voz.ts`, slot `naosei`).
  */
 export function FeedbackSheet({
   feedback,
@@ -38,7 +43,8 @@ export function FeedbackSheet({
   onAskTutor?: () => void;
 }) {
   const [aberto, setAberto] = useState(false);
-  const { correct, messageText, explanation, xpAwarded } = feedback;
+  const { correct, kind, messageText, explanation, xpAwarded } = feedback;
+  const dontKnow = kind === "dont-know";
 
   return (
     <div
@@ -47,16 +53,36 @@ export function FeedbackSheet({
       // Fundo composto opaco, calculado a partir de `--color-cards`: evitar
       // duas classes de background (`sheet` + `bg-success/10`) competindo na
       // mesma camada de utilitários, o que deixava o resultado dependente da
-      // ordem de geração do CSS (docs/20 §4.4).
-      style={{
-        backgroundColor: `color-mix(in srgb, var(--color-${correct ? "success" : "error"}) 10%, var(--color-cards))`,
-      }}
+      // ordem de geração do CSS (docs/20 §4.4). "Não sei" fica neutro — sem
+      // mistura de cor nenhuma, só o cinza de cards (docs/30 §16.1).
+      style={
+        dontKnow
+          ? undefined
+          : {
+              // `--color-success`/`--color-error` (o alias `@theme inline`) não
+              // sobrevivem ao tree-shaking de custom properties da Lightning CSS
+              // quando só são consumidos via classe utilitária gerada (`text-success`
+              // etc.) — nenhuma referência `var()` escrita à mão os mantém no CSS
+              // compilado, então `color-mix()` fica inválido em tempo de valor
+              // computado e o fundo vira transparente (achado de teste em
+              // dispositivo físico, docs/32 F15.3). Os tokens BASE (`--success`,
+              // `--error`, `--cards`) são `:root`/`.dark` de verdade — sempre presentes.
+              backgroundColor: `color-mix(in srgb, var(--${correct ? "success" : "error"}) 10%, var(--cards))`,
+            }
+      }
     >
       <div className="flex items-start gap-3">
-        <FocaMark size={40} decorative expression={correct ? "orgulhosa" : "neutra"} motion="pop" />
+        <FocaMark
+          size={40}
+          decorative
+          expression={correct ? "orgulhosa" : "neutra"}
+          motion="pop"
+        />
         <div className="min-w-0 flex-1">
           <p className="flex items-center gap-1.5 font-display text-base font-bold text-abismo">
-            {correct ? (
+            {dontKnow ? (
+              <HelpCircle size={18} className="shrink-0 text-nevoa" aria-hidden />
+            ) : correct ? (
               <CheckCircle2 size={18} className="shrink-0 text-success" aria-hidden />
             ) : (
               <XCircle size={18} className="shrink-0 text-error" aria-hidden />

@@ -2,7 +2,14 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ImagePlus, Image as ImageIcon, Send, X } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { COPY } from "@/lib/copy";
-import { closeTutor, openTutor, performanceFacts, pushTutorMessage, useAppState } from "@/lib/store";
+import {
+  clearTutorAutoSend,
+  closeTutor,
+  openTutor,
+  performanceFacts,
+  pushTutorMessage,
+  useAppState,
+} from "@/lib/store";
 import { askTutor, type TutorImage } from "@/lib/tutor";
 import type { TutorContext } from "@/lib/tutor-prompt";
 
@@ -97,7 +104,7 @@ function TextoRevelado({
  */
 export function TutorBubble() {
   const s = useAppState();
-  const { open, messages, focus } = s.tutor;
+  const { open, messages, focus, pedagogy, autoSend } = s.tutor;
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
   const [image, setImage] = useState<{ preview: string; payload: TutorImage } | null>(null);
@@ -128,6 +135,23 @@ export function TutorBubble() {
     if (!open) setRevelando(null);
   }, [open]);
 
+  /**
+   * Nível 3 da explicação em camadas (docs/30 §17.2, Fase 7 F7.6): quando o
+   * aluno pede "Me ensina do começo", `openTutorWithContext` já deixa
+   * `s.tutor.autoSend` com a mensagem pronta — aqui só disparamos o envio
+   * assim que o balão está aberto e consumimos o campo (`clearTutorAutoSend`)
+   * pra não reenviar num re-render. `autoSendRef` é reforço contra o
+   * StrictMode rodar o efeito 2x antes do `clearTutorAutoSend` propagar.
+   */
+  const autoSendRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!open || !autoSend || autoSendRef.current === autoSend) return;
+    autoSendRef.current = autoSend;
+    clearTutorAutoSend();
+    void send(autoSend);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, autoSend]);
+
   async function send(text: string) {
     if (pending) return;
     const attached = image;
@@ -148,6 +172,7 @@ export function TutorBubble() {
       gaps: s.quiz.gaps.map((g) => ({ subjectName: g.subjectName, topic: g.topic })),
       performance: performanceFacts(s),
       focus,
+      pedagogy,
     };
 
     // A resposta entra logo depois da pergunta que acabamos de empilhar.

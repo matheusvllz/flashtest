@@ -2,8 +2,11 @@ import { QUESTIONS } from "@/data/questions";
 import { questionToExercise, trilhaExerciseById } from "@/lib/learning/adapters";
 import { buildChapterReview } from "@/lib/learning/chapter-review";
 import { assertContentValid, validateCurriculumTree, validateMicroLessons } from "@/lib/learning/validate";
+import { FEATURES } from "@/lib/features";
+import { packagedExercise, packagedLesson } from "@/lib/content/repository";
+import { SKILLS } from "@/content/taxonomy";
 import { CURRICULUM } from "@/content/curriculum";
-import { CURRICULUM_TREE, TRAIL_ORDER } from "@/content/curriculum-tree";
+import { CURRICULUM_TREE, IDS_AULAS_GERADAS, TRAIL_ORDER } from "@/content/curriculum-tree";
 import { EXERCISE_IDS } from "@/content/exercise-ids";
 import { TRILHAS } from "@/content/trilhas";
 import type { Exercise } from "@/lib/lessons/types";
@@ -30,10 +33,13 @@ const EXERCICIOS_LOCAIS: Record<string, Exercise> = {
 
 /**
  * Resolve um ID de exercício — local (autoral da microlição), do banco geral
- * (`src/data/questions.ts`, via adapter) ou de uma trilha legada de redação
- * (`${lessonId}:${index}`, docs/25 §7.1/§10 item 2). Lança se não existir em
- * nenhum dos três: referência quebrada não pode chegar silenciosa na tela
- * do aluno (mesma filosofia de `define.ts`).
+ * (`src/data/questions.ts`, via adapter), de uma trilha legada de redação
+ * (`${lessonId}:${index}`, docs/25 §7.1/§10 item 2) ou, com
+ * `FEATURES.pacotesConteudo` ligada, de um pacote de conteúdo já carregado
+ * em memória (docs/30 §21.3, Fase 3 T-3.7 — SÍNCRONO: quem abre a tela já
+ * chamou `ensureSubjects` antes e esperou; esta função nunca faz `fetch`).
+ * Lança se não existir em nenhuma fonte: referência quebrada não pode
+ * chegar silenciosa na tela do aluno (mesma filosofia de `define.ts`).
  */
 export function resolveExercise(exerciseId: string): Exercise {
   const local = EXERCICIOS_LOCAIS[exerciseId];
@@ -42,8 +48,14 @@ export function resolveExercise(exerciseId: string): Exercise {
   if (questao) return questionToExercise(questao);
   const daTrilha = trilhaExerciseById(exerciseId);
   if (daTrilha) return daTrilha;
+  if (FEATURES.pacotesConteudo) {
+    const doPacote = packagedExercise(exerciseId);
+    if (doPacote) return doPacote;
+  }
   throw new Error(
-    `[microlicoes] exercício "${exerciseId}" não existe (nem local, nem no banco geral, nem em trilha legada).`,
+    `[microlicoes] exercício "${exerciseId}" não existe (nem local, nem no banco geral, nem em trilha legada${
+      FEATURES.pacotesConteudo ? ", nem em pacote carregado" : ""
+    }).`,
   );
 }
 
@@ -85,8 +97,12 @@ export const CHAPTER_REVIEWS: MicroLessonV2[] = CAPITULOS_MICRO.map((c) =>
  */
 export const ALL_PHASES: MicroLesson[] = [...MICROLICOES, ...CHAPTER_REVIEWS];
 
+/** Embarcado primeiro; com `FEATURES.pacotesConteudo`, cai pro pacote já carregado em memória (docs/30 §21.3). */
 export function phaseById(id: string): MicroLesson | undefined {
-  return ALL_PHASES.find((l) => l.id === id);
+  const embarcado = ALL_PHASES.find((l) => l.id === id);
+  if (embarcado) return embarcado;
+  if (FEATURES.pacotesConteudo) return packagedLesson(id);
+  return undefined;
 }
 
 /** Alias histórico (docs/20 Fase 6) — chamadores existentes continuam compilando sem mudar de nome. */
@@ -106,8 +122,10 @@ const CHAPTER_IDS = new Set(
 
 const issuesArvore = validateCurriculumTree(
   CURRICULUM_TREE,
-  new Set(TODAS_AS_LICOES.map((l) => l.id)),
+  // Aulas geradas: "declaradas, carregadas sob demanda" (docs/30 §21.3) — existem no pacote, não aqui.
+  new Set([...TODAS_AS_LICOES.map((l) => l.id), ...IDS_AULAS_GERADAS]),
   new Set(TRILHAS.map((t) => t.id)),
+  new Set(SKILLS.map((s) => s.id)),
 );
 if (issuesArvore.length > 0) {
   const detalhe = issuesArvore.map((i) => `[${i.code}] ${i.message}`).join("; ");

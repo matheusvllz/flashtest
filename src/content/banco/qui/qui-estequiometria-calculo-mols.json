@@ -1,0 +1,760 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:82e4747f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A reação de combustão do metano é: CH4 + 2O2 → CO2 + 2H2O. Quantos mols de CO2 são produzidos quando 3 mols de CH4 reagem completamente?",
+        "opcoes": [
+          "3 mols",
+          "6 mols",
+          "9 mols",
+          "1,5 mols"
+        ],
+        "correta": 0,
+        "explicacao": "A proporção molar entre CH4 e CO2 é 1:1 (um mol de metano produz um mol de dióxido de carbono). Se 3 mols de CH4 reagem: CO2 produzido = 3 mols × (1 mol CO2 / 1 mol CH4) = 3 mols. Use a proporção dos coeficientes na equação balanceada para converter quantidade de reagente em produto."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:82e4747f",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:cd0db30a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na reação 2Na + Cl2 → 2NaCl, qual é a proporção molar entre Cloro (Cl2) e Cloreto de Sódio (NaCl)?",
+        "opcoes": [
+          "2:2",
+          "1:2",
+          "1:1",
+          "2:1"
+        ],
+        "correta": 1,
+        "explicacao": "Analisando a equação: 2Na + Cl2 → 2NaCl. A proporção entre Cl2 e NaCl é 1:2 (um mol de Cl2 produz dois mols de NaCl). Observe os coeficientes: 1 Cl2 está associado a 2 NaCl. Essa proporção é fundamental para cálculos estequiométricos."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:cd0db30a",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:451b0694",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma quantidade de ácido clorídrico reage com base para neutralização: HCl + NaOH → NaCl + H2O. Se 2 mols de HCl reagem, quantos mols de H2O são produzidos?",
+        "opcoes": [
+          "4 mols",
+          "1 mol",
+          "2 mols",
+          "3 mols"
+        ],
+        "correta": 2,
+        "explicacao": "A proporção molar entre HCl e H2O é 1:1. Se 2 mols de HCl reagem completamente: H2O produzido = 2 mols × (1 mol H2O / 1 mol HCl) = 2 mols. Use os coeficientes da equação balanceada para encontrar a relação entre quantidade de reagente e produto."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:451b0694",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:e3c455f1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na reação de combustão: C3H8 + 5O2 → 3CO2 + 4H2O. Quantos mols de O2 são necessários para queimar 2 mols de C3H8 completamente?",
+        "opcoes": [
+          "7,5 mols",
+          "2,5 mols",
+          "5 mols",
+          "10 mols"
+        ],
+        "correta": 3,
+        "explicacao": "A proporção molar entre C3H8 e O2 é 1:5 (um mol de propano requer cinco mols de oxigênio). Se 2 mols de C3H8 reagem: O2 necessário = 2 mols × (5 mols O2 / 1 mol C3H8) = 10 mols. Multiplique a quantidade de reagente pela proporção obtida dos coeficientes."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:e3c455f1",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:132bf55e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na reação de síntese da amônia: N2 + 3H2 → 2NH3. Se 0,5 mol de N2 reage completamente, quantos mols de H2 são necessários?",
+        "opcoes": [
+          "1 mol",
+          "1,5 mols",
+          "3 mols",
+          "0,5 mols"
+        ],
+        "correta": 1,
+        "explicacao": "A proporção entre N2 e H2 é 1:3 (um mol de nitrogênio requer três mols de hidrogênio). Se 0,5 mol de N2 reage: H2 necessário = 0,5 mol × (3 mols H2 / 1 mol N2) = 1,5 mol. Multiplique a quantidade de reagente pela proporção molar dos coeficientes."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:132bf55e",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:e5a8fa24",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na reação de decomposição: 2KMnO4 → K2MnO4 + MnO2 + O2. Quantos mols de O2 são produzidos quando 4 mols de KMnO4 se decompõem?",
+        "opcoes": [
+          "4 mols",
+          "8 mols",
+          "1 mol",
+          "2 mols"
+        ],
+        "correta": 3,
+        "explicacao": "A proporção entre KMnO4 e O2 é 2:1 (dois mols de permanganato de potássio produzem um mol de oxigênio). Se 4 mols de KMnO4 se decompõem: O2 produzido = 4 mols × (1 mol O2 / 2 mols KMnO4) = 2 mols. Divida a quantidade de reagente pela proporção (considerando que 2 mols produzem 1 mol)."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:e5a8fa24",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:104b2ce0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma reação complexa de síntese: 2A + 3B + 4C → 2D + 3E. Se 1 mol de A reagir com quantidades estequiometricamente corretas de B e C, qual é a razão molar de produto D:E produzido?",
+        "opcoes": [
+          "1:1",
+          "2:3",
+          "3:2",
+          "1:2"
+        ],
+        "correta": 1,
+        "explicacao": "A proporção de produtos é determinada pelos coeficientes: 2D:3E. Quando 1 mol de A reage (metade de 2 mols), os produtos são proporcionais: D produzido = 1 mol, E produzido = 1,5 mols. Razão D:E = 1:1,5 = 2:3. Use os coeficientes estequiométricos para manter a proporção entre produtos."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:104b2ce0",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:3b2d0a8f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A combustão do metano (CH4) é representada pela reação balanceada: CH4 + 2O2 → CO2 + 2H2O. Se uma indústria de processamento de alimentos queima 80 gramas de metano em um forno industrial, qual é a quantidade de matéria (em mols) de dióxido de carbono produzida? (Massa molar do CH4 = 16 g/mol)",
+        "opcoes": [
+          "4 mols",
+          "5 mols",
+          "8 mols",
+          "2 mols"
+        ],
+        "correta": 1,
+        "explicacao": "Primeiro, calcula-se o número de mols de metano: 80 g ÷ 16 g/mol = 5 mols de CH4. Pela reação balanceada, 1 mol de CH4 produz 1 mol de CO2, portanto, 5 mols de CH4 produzem 5 mols de CO2. Um erro comum é confundir o coeficiente de O2 (que é 2) com a proporção de CO2 produzido."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:3b2d0a8f",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:5db0ec51",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A reação de neutralização ácido-base é: HCl + NaOH → NaCl + H2O. Se 4 mols de HCl reagem completamente com NaOH, quantos mols de água serão formados?",
+        "opcoes": [
+          "4 mols",
+          "8 mols",
+          "1 mol",
+          "2 mols"
+        ],
+        "correta": 0,
+        "explicacao": "A reação mostra proporção 1:1 entre HCl e H2O. Se reagem 4 mols de HCl, saem 4 mols de água. Basta assim: 1 mol HCl → 1 mol H2O. O fato de a água ter dois átomos de hidrogênio não muda essa conta. Não confunda."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:5db0ec51",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:ca9a5b4e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A combustão completa do propano ocorre segundo: C3H8 + 5O2 → 3CO2 + 4H2O. Quantos mols de oxigênio são necessários para reagir completamente com 2 mols de propano?",
+        "opcoes": [
+          "5 mols",
+          "10 mols",
+          "15 mols",
+          "20 mols"
+        ],
+        "correta": 1,
+        "explicacao": "A proporção é 1 mol C3H8 : 5 mols O2. Para 2 mols de propano, faz a conta: 2 × 5 = 10 mols de O2. O erro é esquecer de multiplicar pelo coeficiente (5) ou confundi-lo com outro número da equação."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:ca9a5b4e",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:4c26e372",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na síntese do ácido sulfúrico, ocorre: 2SO2 + O2 → 2SO3. Um reator recebe 5 mols de dióxido de enxofre. Qual é a quantidade de mols de trióxido de enxofre formada, considerando oxigênio em excesso?",
+        "opcoes": [
+          "10 mols",
+          "1,67 mols",
+          "5 mols",
+          "2,5 mols"
+        ],
+        "correta": 2,
+        "explicacao": "A proporção entre SO2 e SO3 é 2:2, ou 1:1. Então 5 mols de SO2 viram 5 mols de SO3. O coeficiente do O2 (que é 1) não mexe nessa proporção SO2-SO3, só indica quanto oxigênio é consumido."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:4c26e372",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:4ab6159a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na reação 2H2O2 → 2H2O + O2, que ocorre na presença de um catalisador, 34 gramas de peróxido de hidrogênio se decompõem. Qual será a quantidade de mols de oxigênio produzido? (Massa molar de H2O2 = 34 g/mol)",
+        "opcoes": [
+          "0,5 mols",
+          "1 mol",
+          "2 mols",
+          "0,25 mols"
+        ],
+        "correta": 0,
+        "explicacao": "Mols de H2O2 = 34 g ÷ 34 g/mol = 1 mol. A proporção estequiométrica é 2 H2O2 : 1 O2. Logo, 1 mol de H2O2 produz 0,5 mols de O2 (1 ÷ 2 = 0,5). Dividir pelo coeficiente do peróxido (2) é fundamental para não superestimar o oxigênio gerado."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:4ab6159a",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:ce23be64",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma reação de precipitação, Pb(NO3)2 + 2KI → PbI2 (precipitado) + 2KNO3. Se 0,5 mols de nitrato de chumbo reagem com iodeto de potássio em excesso, quantos mols de PbI2 são formados?",
+        "opcoes": [
+          "0,25 mols",
+          "0,5 mols",
+          "1 mol",
+          "2 mols"
+        ],
+        "correta": 1,
+        "explicacao": "A proporção entre Pb(NO3)2 e PbI2 é 1:1 (ambos têm coeficiente 1). Se 0,5 mols de Pb(NO3)2 reagem, formam-se 0,5 mols de PbI2. O coeficiente 2 de KI não interfere nessa proporção, pois o KI está em excesso e a limitação vem do chumbo."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:ce23be64",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:4fc40e66",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na síntese da amônia industrial, a reação é: N2 + 3H2 → 2NH3. Um laboratório reagiu 14 gramas de nitrogênio molecular com hidrogênio em excesso. Calcule quantos mols de amônia podem ser produzidos, teoricamente. (Massa molar do N2 = 28 g/mol)",
+        "opcoes": [
+          "0,25 mols",
+          "0,5 mols",
+          "1 mol",
+          "2 mols"
+        ],
+        "correta": 2,
+        "explicacao": "Mols de N2 = 14 g ÷ 28 g/mol = 0,5 mols. Pela proporção 1:2 (N2:NH3), 0,5 mols de N2 produzem 1 mol de NH3. Muita gente erra aqui porque esquece que o coeficiente de NH3 é 2, não 1."
+      },
+      "meta": {
+        "id": "gen:qui:estequiometria-calculo-mols:4fc40e66",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-qui-estequiometria-calculo-mols",
+      "version": 1,
+      "format": 2,
+      "subjectId": "qui",
+      "topicId": "est",
+      "chapterId": "gen-qui-estequiometria-calculo-mols",
+      "title": "Mols numa reação balanceada",
+      "objective": "Calcular a quantidade de matéria de reagentes e produtos numa reação balanceada",
+      "skillIds": [
+        "qui:estequiometria-calculo-mols"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:qui:estequiometria-calculo-mols:82e4747f",
+        "gen:qui:estequiometria-calculo-mols:e3c455f1"
+      ],
+      "recap": "Coeficientes da equação balanceada são proporção em mols. Quando o dado vem em gramas, primeiro divida pela massa molar pra achar mols.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Estequiometria em mols",
+          "body": "Você vai calcular quantos mols de um produto ou reagente aparecem numa reação balanceada, usando os coeficientes da equação."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Coeficientes viram proporção",
+            "body": "Numa equação balanceada, o coeficiente de cada substância é a proporção em mols entre elas. Em 1 A + 2 B -> 1 C, 1 mol de A reage com 2 mols de B e forma 1 mol de C. Pra achar mols de uma substância a partir de outra, multiplique pela razão entre os coeficientes das duas."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estequiometria-calculo-mols:451b0694",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estequiometria-calculo-mols:cd0db30a",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Usando a proporção certa",
+            "problem": "Na reação 2H2 + O2 -> 2H2O, 3 mols de O2 reagem totalmente. Quantos mols de H2O se formam?",
+            "steps": [
+              "A proporção entre O2 e H2O é 1:2.",
+              "Multiplique: 3 mol vezes (2 mol de H2O sobre 1 mol de O2)."
+            ],
+            "result": "6 mols de H2O."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estequiometria-calculo-mols:5db0ec51",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estequiometria-calculo-mols:132bf55e",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não troque os coeficientes: monte sempre a razão coeficiente do que você quer sobre coeficiente do que você tem."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "De gramas pra mols",
+            "problem": "Quantos mols há em 20 gramas de N2, com massa molar 28 g/mol?",
+            "steps": [
+              "Divida a massa pela massa molar: 20 dividido por 28.",
+              "O resultado já está em mols."
+            ],
+            "result": "Aproximadamente 0,71 mol."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estequiometria-calculo-mols:3b2d0a8f",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Coeficientes da equação balanceada são proporção em mols. Quando o dado vem em gramas, primeiro divida pela massa molar pra achar mols."
+        }
+      ]
+    }
+  ]
+}

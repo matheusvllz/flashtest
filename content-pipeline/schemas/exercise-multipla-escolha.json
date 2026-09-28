@@ -1,0 +1,36 @@
+{
+  "$id": "exercise-multipla-escolha.json",
+  "title": "MultipleChoiceExercise",
+  "type": "object",
+  "required": [
+    "type",
+    "pergunta",
+    "opcoes",
+    "correta",
+    "explicacao"
+  ],
+  "properties": {
+    "type": {
+      "const": "multipla-escolha"
+    },
+    "pergunta": {
+      "type": "string",
+      "minLength": 1
+    },
+    "opcoes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "correta": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "explicacao": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,625 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:formacao-palavras-processos:9926def0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Antes de sair de casa, ele pegou o guarda-chuva porque o céu estava carregado de nuvens escuras', a palavra 'guarda-chuva' foi formada por:",
+        "opcoes": [
+          "composição por aglutinação",
+          "composição por justaposição",
+          "derivação sufixal",
+          "derivação prefixal"
+        ],
+        "correta": 1,
+        "explicacao": "Guarda-chuva junta guarda e chuva, que mantêm sua forma e som originais. Vão unidas por hífen. Isso é composição por justaposição. Aglutinação é quando elementos se fundem e perdem som, como em planalto ou embora."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:9926def0",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:9e03770d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'A cidade fica situada em um planalto, a mais de mil metros de altitude em relação ao nível do mar', a palavra 'planalto' foi formada por:",
+        "opcoes": [
+          "derivação prefixal",
+          "composição por justaposição",
+          "composição por aglutinação",
+          "derivação regressiva"
+        ],
+        "correta": 2,
+        "explicacao": "Planalto vem de plano e alto, que se fundiram foneticamente numa só palavra, sem hífen. Perdem som nesse processo. Isso é composição por aglutinação. Justaposição é quando os radicais mantêm sua forma toda, como em passatempo ou girassol."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:9e03770d",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:929dbcc6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Ele teve que desfazer as malas assim que percebeu que a viagem havia sido cancelada pela empresa aérea', a palavra 'desfazer' foi formada por:",
+        "opcoes": [
+          "derivação regressiva",
+          "derivação sufixal",
+          "composição por justaposição",
+          "derivação prefixal"
+        ],
+        "correta": 3,
+        "explicacao": "A palavra 'desfazer' é formada pelo acréscimo do prefixo 'des-' ao verbo 'fazer', sem alterar sua classe gramatical nem seu radical. Esse processo é a derivação prefixal, diferente da derivação sufixal, que acrescenta elementos ao final da palavra, como em 'felizmente', formado a partir de 'feliz' mais o sufixo '-mente'."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:929dbcc6",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:539bf45e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Felizmente, a chuva parou antes do início da festa e todos puderam aproveitar a área externa da casa', a palavra 'felizmente' foi formada por:",
+        "opcoes": [
+          "derivação sufixal",
+          "composição por aglutinação",
+          "derivação regressiva",
+          "derivação prefixal"
+        ],
+        "correta": 0,
+        "explicacao": "Felizmente acrescenta o sufixo -mente ao adjetivo feliz, transformando-o em advérbio de modo. Isso é derivação sufixal. Derivação prefixal é quando o elemento vem antes do radical, como em infeliz que vem de feliz com o prefixo in-."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:539bf45e",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:b1e2900b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O ataque da seleção brasileira surpreendeu os adversários logo nos primeiros minutos da partida decisiva', a palavra 'ataque', substantivo formado a partir do verbo 'atacar', surgiu por:",
+        "opcoes": [
+          "derivação sufixal, com acréscimo de sufixo",
+          "derivação regressiva, com redução do radical verbal",
+          "composição por aglutinação",
+          "derivação prefixal"
+        ],
+        "correta": 1,
+        "explicacao": "O substantivo 'ataque' vem do verbo 'atacar' com redução da terminação verbal, sem acréscimo de nenhum sufixo. Esse processo é a derivação regressiva, típico de substantivos que nomeiam a própria ação do verbo, como 'choro' (de 'chorar') e 'busca' (de 'buscar'), diferente da derivação sufixal, que sempre acrescenta um afixo ao radical."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:b1e2900b",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:37c9f847",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Depois do jantar, a família se reuniu na sala para assistir a um filme antes de dormir', a palavra 'jantar', funcionando como substantivo, foi formada por:",
+        "opcoes": [
+          "derivação sufixal, pois recebeu um sufixo nominal",
+          "derivação regressiva, pois perdeu parte do radical",
+          "derivação imprópria, pois o verbo mudou de classe gramatical sem alterar sua forma",
+          "composição por justaposição de dois radicais"
+        ],
+        "correta": 2,
+        "explicacao": "A palavra 'jantar' passa de verbo a substantivo apenas pela presença do artigo 'o', sem nenhum acréscimo ou redução de afixo: a forma da palavra permanece idêntica. Esse processo, em que uma palavra muda de classe gramatical sem alteração morfológica, chama-se derivação imprópria, diferente da derivação sufixal ou prefixal, que sempre modificam a estrutura da palavra."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:37c9f847",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:cb48da3d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Ele ficou infeliz com o resultado da prova, mesmo tendo estudado bastante durante toda a semana', a palavra 'infeliz' foi formada por:",
+        "opcoes": [
+          "derivação prefixal, com acréscimo do prefixo 'in-' ao adjetivo 'feliz'",
+          "derivação regressiva do substantivo 'felicidade'",
+          "composição por aglutinação",
+          "composição por justaposição de dois radicais independentes"
+        ],
+        "correta": 0,
+        "explicacao": "Infeliz acrescenta o prefixo in- ao adjetivo feliz, mudando o significado sem alterar a classe gramatical. Isso é derivação prefixal. Composição é quando dois radicais independentes se unem, como girassol ou guarda-chuva."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:cb48da3d",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:16bc47e7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O jardineiro cuidava das flores do parque público todas as manhãs antes da abertura para visitantes', a palavra 'jardineiro' foi formada por:",
+        "opcoes": [
+          "derivação regressiva",
+          "derivação prefixal",
+          "composição por justaposição",
+          "derivação sufixal"
+        ],
+        "correta": 3,
+        "explicacao": "Jardineiro acrescenta o sufixo -eiro ao radical jardim, indicando a profissão de quem cuida de jardins. Isso é derivação sufixal. Derivação prefixal é quando o elemento vem antes do radical, como desfazer que vem de fazer com o prefixo des-."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:16bc47e7",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:0cd9507b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'A professora pediu para os alunos relerem o capítulo antes da prova de literatura na sexta-feira', a palavra 'relerem', formada a partir do verbo 'ler', surgiu por:",
+        "opcoes": [
+          "derivação prefixal",
+          "composição por aglutinação",
+          "derivação regressiva",
+          "derivação sufixal"
+        ],
+        "correta": 0,
+        "explicacao": "Relerem acrescenta o prefixo re- ao verbo ler, indicando repetição da ação. Isso é derivação prefixal. Derivação sufixal é quando o elemento vem depois do radical, como jardineiro que vem de jardim com o sufixo -eiro."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:0cd9507b",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:ce695006",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'No jardim da vovó havia um imenso girassol que acompanhava o movimento do sol durante todo o dia', a palavra 'girassol' foi formada por:",
+        "opcoes": [
+          "derivação prefixal, com acréscimo do prefixo 'gira-'",
+          "derivação regressiva do verbo 'girar'",
+          "composição por aglutinação, pois houve fusão fonética entre os elementos",
+          "composição por justaposição, pois os radicais 'gira' e 'sol' mantêm sua forma e som originais"
+        ],
+        "correta": 3,
+        "explicacao": "Girassol é escrita sem hífen, mas mantém intacto o som e a forma de gira e sol. Não há fusão fonética. Isso é composição por justaposição, não aglutinação. O critério que diferencia os dois é a preservação do som, não o hífen."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:ce695006",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:formacao-palavras-processos:dc8f4d25",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Colecionar selos antigos era o passatempo favorito do avô nas tardes tranquilas de domingo', a palavra 'passatempo' foi formada por:",
+        "opcoes": [
+          "derivação sufixal",
+          "composição por justaposição",
+          "derivação regressiva",
+          "composição por aglutinação"
+        ],
+        "correta": 1,
+        "explicacao": "Passatempo junta passa e tempo, elementos que mantêm forma e som originais dentro da nova palavra. Isso é composição por justaposição. Aglutinação é quando elementos se fundem e perdem som, como em planalto e aguardente."
+      },
+      "meta": {
+        "id": "gen:por:formacao-palavras-processos:dc8f4d25",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-por-formacao-palavras-processos",
+      "version": 1,
+      "format": 2,
+      "subjectId": "por",
+      "topicId": "classes",
+      "chapterId": "gen-por-formacao-palavras-processos",
+      "title": "Formação de palavras",
+      "objective": "Reconhecer processos de formação de palavras como derivação e composição.",
+      "skillIds": [
+        "por:formacao-palavras-processos"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:por:formacao-palavras-processos:9926def0",
+        "gen:por:formacao-palavras-processos:37c9f847"
+      ],
+      "recap": "Derivação parte de uma palavra e muda algo nela; composição junta duas palavras, mantendo ou não o som de cada uma.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Formação de palavras",
+          "body": "Você vai aprender a identificar como uma palavra foi formada: se ganhou prefixo, sufixo, perdeu terminação ou se juntou com outra palavra."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Derivação",
+            "body": "Derivação parte de uma palavra já existente e acrescenta ou tira algo dela. Derivação prefixal acrescenta um elemento antes do radical, sem mudar a classe gramatical: 'refazer' vem de 'fazer' mais 're-'. Derivação sufixal acrescenta um elemento depois do radical: 'lentamente' vem de 'lento' mais '-mente'. Derivação regressiva reduz a terminação verbal pra formar um substantivo: 'venda' vem de 'vender'."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:formacao-palavras-processos:539bf45e",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:formacao-palavras-processos:929dbcc6",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Composição",
+            "problem": "Como a palavra 'passatempo' foi formada?",
+            "steps": [
+              "Identifique as duas palavras que a compõem: 'passa' e 'tempo'.",
+              "Verifique se elas mantêm o som e a forma originais.",
+              "Como não houve perda de som na junção, é composição por justaposição."
+            ],
+            "result": "'Passatempo' é composição por justaposição."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:formacao-palavras-processos:9e03770d",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:formacao-palavras-processos:b1e2900b",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não decida composição só pelo hífen: o que separa justaposição de aglutinação é se houve perda de som na junção, não a grafia."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Justaposição x aglutinação",
+            "left": {
+              "label": "Justaposição",
+              "body": "Os radicais mantêm forma e som originais, com ou sem hífen: 'guarda-chuva', 'passatempo'."
+            },
+            "right": {
+              "label": "Aglutinação",
+              "body": "Os radicais se fundem e perdem parte do som: 'vinagre' (vinho + agre), 'aguardente' (água + ardente)."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:formacao-palavras-processos:ce695006",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "recap",
+          "body": "Derivação parte de uma palavra e muda algo nela; composição junta duas palavras, mantendo ou não o som de cada uma."
+        }
+      ]
+    }
+  ]
+}

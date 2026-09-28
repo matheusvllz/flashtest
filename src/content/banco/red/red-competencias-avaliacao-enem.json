@@ -1,0 +1,572 @@
+{
+  "subjectId": "red",
+  "items": [
+    {
+      "id": "gen:red:competencias-avaliacao-enem:24cab1d6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual das seguintes situações melhor exemplifica o que a Competência 1 do ENEM avalia: domínio da escrita formal da língua portuguesa?",
+        "opcoes": [
+          "Um texto que segue estrutura de introdução-desenvolvimento-conclusão, independentemente do nível de formalidade linguística",
+          "Uma redação que organiza ideias em parágrafos coerentes, mas usa 'tipo assim' e 'né' como marcadores conversacionais frequentes",
+          "Um texto com vírgulas bem colocadas, sintaxe clara, ortografia correta, pontuação apropriada ao registro formal, e que respeita as normas da língua padrão",
+          "Uma redação que contém muitas palavras elegantes e raras, mesmo que nem sempre aplicadas corretamente"
+        ],
+        "correta": 2,
+        "explicacao": "A Competência 1 do ENEM avalia o domínio da modalidade escrita formal: ortografia, acentuação, pontuação, concordância, regência, estrutura sintática e adequação ao registro formal. A opção C descreve exatamente isso. Linguagem informal ('né', 'tipo assim') e palavras raras usadas errado ferem essa competência, e uma boa divisão em introdução-desenvolvimento-conclusão, sozinha, não garante domínio da norma padrão."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:24cab1d6",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:bc1bd8a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma redação apresenta a tese 'A tecnologia transforma a educação' e oferece dois argumentos: (1) histórico (como o impresso mudou o ensino), e (2) social (como vídeo-aulas ampliam acesso). Qual competência do ENEM está sendo avaliada nessa construção argumentativa?",
+        "opcoes": [
+          "Competência 4, que avalia estrutura de parágrafos e conectores de texto",
+          "Competência 5, que avalia propostas de solução para problema social",
+          "Competência 1, porque os argumentos são apresentados em ordem clara",
+          "Competência 3, que avalia seleção, organização e interpretação de informações para defender uma tese com argumentos pertinentes"
+        ],
+        "correta": 3,
+        "explicacao": "A Competência 3 do ENEM avalia exatamente a capacidade de selecionar informações pertinentes e organizá-las em argumentos que sustentem sua tese: aqui, o aluno escolheu argumento histórico e social pra defender 'tecnologia transforma educação'. Isso é seleção + organização + relevância. Competência 1 é domínio linguístico; Competência 4 é estrutura textual/coesão; Competência 5 é proposta de intervenção. O que está sendo ilustrado é argumentação fundamentada (C3)."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:bc1bd8a2",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:4ced543f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um redator escreve sobre violência doméstica: 'É um crime grave. Afeta famílias inteiras. As consequências são sérias para vítimas e filhos. Logo, deve haver punição mais rigorosa para agressores.' Qual seria uma reformulação que melhoraria o nível de Competência 5?",
+        "opcoes": [
+          "'Por isso, é necessário que leis sejam mais severas com agressores domésticos, aumentando penas e fiscalização'",
+          "'Por isso, é necessário políticas de abrigo para vítimas, formação de profissionais de saúde para atendimento especializado, campanhas de denúncia, e criação de grupos de suporte psicológico em UBS. Também, tipificação mais clara de violência psicológica em lei e formação de policiais para atendimento humanizado.'",
+          "'Por isso, juízes devem julgar agressores domésticos de forma mais rigorosa, porque o crime é grave'",
+          "'Por isso, famílias que sofrem violência doméstica devem procurar ajuda de órgãos competentes, como delegacias e ONGs'"
+        ],
+        "correta": 1,
+        "explicacao": "A reformulação ideal (B) é MULTIFATORIAL: combina proteção da vítima (abrigos), cuidado (suporte psicológico), prevenção (campanhas, educação de policiais) e ajuste legal (tipificação clara). Não apenas aumenta penas: reconhece que violência doméstica exige resposta integrada. C5 forte não é 'castigo maior', mas intervenção que realmente reduz o problema. As demais opções focam só punição ou encaminhamento individual, deixando a questão sistêmica não resolvida."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:4ced543f",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:1fedf343",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual das seguintes situações NÃO exemplifica adequadamente a Competência 1 (domínio da modalidade escrita formal) do ENEM?",
+        "opcoes": [
+          "Registro formal e vocabulário pertinente ao tema",
+          "Uso de pontuação adequada e concordância verbal/nominal corrigida",
+          "Ortografia padrão em toda a extensão do texto",
+          "Linguagem coloquial e gírias ao longo de todo o texto dissertativo"
+        ],
+        "correta": 3,
+        "explicacao": "Competência 1 avalia domínio da escrita formal normativa, que inclui pontuação correta, concordância, ortografia e registro formal. Linguagem coloquial e gírias frequentes são inadequadas em dissertação-argumentativa de nível ENEM, embora pequeno uso estratégico possa funcionar em contextos específicos. A opção 3 representa exatamente o que C1 penaliza: desvio sistemático da formalidade."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:1fedf343",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:a5d3abda",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um texto apresenta: 'A educação, pilar fundamental da sociedade, permitindo o desenvolvimento integral do cidadão, possibilita transformações duradouras'. Que competência está sendo primariamente avaliada?",
+        "opcoes": [
+          "C4 - Pela seleção de conectivos e mecanismos de coesão que relacionam conceitos",
+          "C2 - Pelo reconhecimento da educação como tema importante",
+          "C5 - Pela proposição implícita de transformação social",
+          "C1 - Apenas pela pontuação com vírgulas"
+        ],
+        "correta": 0,
+        "explicacao": "Esse fragmento demonstra C4: vírgulas isolam aposto, construção paralela ('permitindo...possibilita') cria fluxo coesivo, e termos ('pilar fundamental', 'transformações duradouras') argumentam semanticamente. Esses mecanismos linguísticos conectam e significam. C4 vai além de pontuação."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:a5d3abda",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:97bc6e11",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual proposta de intervenção respeita os direitos humanos conforme demanda a Competência 5 do ENEM?",
+        "opcoes": [
+          "'Eliminar o acesso à internet para adolescentes com problemas de saúde mental'",
+          "'Implementar programas de suporte psicológico em escolas, garantindo confidencialidade e acolhimento sem discriminação'",
+          "'Proibir adolescentes deprimidos de frequentar escolas'",
+          "'Negligenciar o tema porque a intervenção é responsabilidade exclusiva das famílias'"
+        ],
+        "correta": 1,
+        "explicacao": "C5 exige proposta concreta, viável e que respeite direitos humanos (dignidade, igualdade, liberdade, não-discriminação). A alternativa correta propõe ação institucional que protege saúde mental e dignidade simultaneamente. As outras violam direitos: eliminar acesso ou banir são discriminação."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:97bc6e11",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:88ab874e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um texto dissertativo conclui com: 'Portanto, a redução de desigualdades passa por políticas educacionais e transferência de renda, cabendo ao Estado implementar essas ações de forma progressiva e inclusiva'. Qual competência está sendo melhor exemplificada?",
+        "opcoes": [
+          "C3 - Organização de ideias em torno de tese",
+          "C4 - Mecanismos de coesão e argumentação clara",
+          "C5 - Proposta de intervenção detalhada e viável",
+          "C2 - Repertório sociocultural"
+        ],
+        "correta": 2,
+        "explicacao": "Essa frase demonstra C5 porque propõe intervenção específica (políticas educacionais, transferência de renda), identifica responsável (Estado) e descreve modo de ação (progressiva e inclusiva). Não é só diagnóstico, é solução com detalhamento. C5 é frequentemente a menos desenvolvida."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:88ab874e",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:35d30795",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um aluno escreve: 'C1 cuida de gramática, C2 de tema, C3 de argumentação, C4 de vírgulas e C5 de solução'. O que está INCORRETO nessa afirmação?",
+        "opcoes": [
+          "C5 é apenas listar ideias ao final",
+          "A descrição de C1 está correta",
+          "C2 é apenas sobre escolher um tema qualquer",
+          "C4 não se limita a vírgulas — inclui conectivos, referência, progresso temático e argumentação semântica"
+        ],
+        "correta": 3,
+        "explicacao": "C4 é frequentemente reduzida a 'vírgulas', mas sua amplitude é maior: envolve conectivos (portanto, contudo), referência pronominal correta, progressão temática clara, paralelismo sintático e relação semântica entre orações. Não é apenas pontuação. C1 é gramática; C2 é compreensão + desenvolvimento; C3 é organização de ideias; C5 é proposta viável. Compreender a amplitude de cada competência é crucial."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:35d30795",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:2fde1c7b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual estrutura de parágrafo de desenvolvimento melhor atende as competências 2, 3 e 4 simultaneamente?",
+        "opcoes": [
+          "Tópico frasal pertinente + repertório verificável + conexão lógica explícita + consideração de contrapontos",
+          "Apenas enumeração de fatos sem conexão argumentativa",
+          "Citação direta extensa sem análise própria",
+          "Afirmação genérica seguida de exemplo pessoal"
+        ],
+        "correta": 0,
+        "explicacao": "A estrutura atende C2 (repertório pertinente), C3 (organização clara em torno do tópico) e C4 (conexões lógicas explícitas). Um parágrafo bem construído não lista, argumenta e conecta sustentando a tese com material verificável. Esse é o padrão de excelência em dissertação ENEM."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:2fde1c7b",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:red:competencias-avaliacao-enem:b194184b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudante conclui sua redação com: 'Em conclusão, considera-se fundamental que a sociedade, conjuntamente com o Estado, implemente políticas de inclusão social que respeitem a dignidade humana em todas as circunstâncias'. Este encerramento atende melhor qual competência?",
+        "opcoes": [
+          "C3 - Apenas por estar no final do texto",
+          "C2 - Porque menciona o Estado e a sociedade",
+          "C1 - Apenas por usar 'considera-se' e vírgulas",
+          "C5 - Por propor intervenção coletiva detalhada que respeita direitos humanos"
+        ],
+        "correta": 3,
+        "explicacao": "O desfecho atende C5 robustamente: identifica agentes (sociedade, Estado), propõe ação concreta (políticas de inclusão social), estabelece princípio normativo (respeito à dignidade), e indica abrangência (todas as circunstâncias). Não é apenas fechamento gramatical: é síntese que cumpre exigência de intervenção viável. C1 está presente mas não é o foco principal."
+      },
+      "meta": {
+        "id": "gen:red:competencias-avaliacao-enem:b194184b",
+        "version": 1,
+        "skillIds": [
+          "red:competencias-avaliacao-enem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.597Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-red-competencias-avaliacao-enem",
+      "version": 1,
+      "format": 2,
+      "subjectId": "red",
+      "topicId": "comp",
+      "chapterId": "gen-red-competencias-avaliacao-enem",
+      "title": "Competências da redação",
+      "objective": "Reconhecer o que cada competência do ENEM avalia numa redação.",
+      "skillIds": [
+        "red:competencias-avaliacao-enem"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:red:competencias-avaliacao-enem:a5d3abda",
+        "gen:red:competencias-avaliacao-enem:35d30795"
+      ],
+      "recap": "As cinco competências avaliam, em ordem: norma culta, adequação ao tema, argumentação, coesão e proposta de intervenção.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Competências do ENEM",
+          "body": "Você vai aprender o que cada uma das cinco competências da redação avalia, pra saber onde procurar erro ou acerto num texto."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "As cinco competências",
+            "body": "Competência 1 avalia a escrita formal: ortografia, pontuação e concordância. Competência 2 avalia se o texto atende ao tema na estrutura dissertativo-argumentativa. Competência 3 avalia se os argumentos são pertinentes e bem organizados. Competência 4 avalia a coesão entre frases e parágrafos. Competência 5 avalia a proposta de intervenção: se é detalhada, viável e respeita os direitos humanos."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:red:competencias-avaliacao-enem:1fedf343",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:red:competencias-avaliacao-enem:24cab1d6",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Separando as competências",
+            "problem": "Um trecho tem ortografia correta, mas junta dois argumentos sem nenhuma palavra de ligação. Que competência está falhando?",
+            "steps": [
+              "Ortografia correta indica que a Competência 1 está bem atendida.",
+              "O problema é a falta de conexão entre partes do texto.",
+              "Conexão entre frases é o que a Competência 4 avalia."
+            ],
+            "result": "A falha está na Competência 4."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:red:competencias-avaliacao-enem:bc1bd8a2",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:red:competencias-avaliacao-enem:4ced543f",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda Competência 3 com Competência 4: argumento pertinente é o conteúdo, e a conexão entre frases é a forma que liga esse conteúdo."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "O que faz uma boa proposta",
+            "body": "Uma proposta forte responde quem faz, o que faz, como faz e qual efeito ela busca. Ela combina mais de uma frente, como prevenção, atendimento e mudança na lei, em vez de pedir só punição, e nunca pode ferir a dignidade ou os direitos de alguém."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:red:competencias-avaliacao-enem:97bc6e11",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "recap",
+          "body": "As cinco competências avaliam, em ordem: norma culta, adequação ao tema, argumentação, coesão e proposta de intervenção."
+        }
+      ]
+    }
+  ]
+}

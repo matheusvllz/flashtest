@@ -1,0 +1,625 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:7b7d6744",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na tabela periódica, quando você se move de cima para baixo em um grupo (coluna), o que acontece com o raio atômico dos elementos?",
+        "opcoes": [
+          "Diminui",
+          "Aumenta",
+          "Permanece constante",
+          "Varia aleatoriamente"
+        ],
+        "correta": 1,
+        "explicacao": "Ao descer em uma família ou grupo da tabela, novos níveis de energia aparecem, aumentando raio atômico. Por exemplo, Li < Na < K < Rb: raio aumenta descendo no grupo. Mais camadas eletrônicas significam mais distância do núcleo."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:7b7d6744",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:a0b70bed",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quando você se move da esquerda para direita em um período (linha) da tabela periódica, qual é a tendência de eletronegatividade?",
+        "opcoes": [
+          "Não há tendência clara",
+          "Diminui",
+          "Aumenta",
+          "Permanece constante"
+        ],
+        "correta": 2,
+        "explicacao": "Da esquerda para a direita em um período, a eletronegatividade aumenta. Na, Mg, Al, Si, P, S e Cl mostram esse aumento progressivo. A carga nuclear efetiva cresce e o raio atômico diminui, então o núcleo atrai com mais força os elétrons de uma ligação."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:a0b70bed",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:10a440e1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um elemento X está no período 4 e no grupo 16 (calcogênios). Qual é o seu número atômico?",
+        "opcoes": [
+          "16",
+          "34",
+          "52",
+          "8"
+        ],
+        "correta": 1,
+        "explicacao": "Período 4 significa 4 camadas eletrônicas. Grupo 16 significa 6 elétrons na camada de valência. O elemento no período 4, grupo 16 é o selênio (Se), com Z = 34. No período 3, grupo 16, estaria o enxofre (Z = 16); no período 5, o telúrio (Z = 52)."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:10a440e1",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:7ae487a1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Magnésio (Mg) está no período 3 e no grupo 2. O Cálcio (Ca) está no período 4 e no grupo 2. Qual deles tem raio atômico maior?",
+        "opcoes": [
+          "Cálcio (Ca)",
+          "São iguais",
+          "Não pode ser determinado",
+          "Magnésio (Mg)"
+        ],
+        "correta": 0,
+        "explicacao": "Cálcio tem raio maior porque está um período abaixo de Magnésio. Ambos estão no grupo 2, mas Ca tem 4 camadas eletrônicas e Mg tem 3. Uma camada eletrônica inteira aumenta raio significativamente."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:7ae487a1",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:f268c830",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um elemento A está no período 5, grupo 13. Um elemento B está no período 3, grupo 17. Qual tem eletronegatividade maior, levando em conta posição e tendência periódica?",
+        "opcoes": [
+          "Elemento A (período 5, grupo 13)",
+          "Elemento B (período 3, grupo 17)",
+          "São iguais em eletronegatividade",
+          "A eletronegatividade não segue tendência periódica clara"
+        ],
+        "correta": 1,
+        "explicacao": "A eletronegatividade aumenta da esquerda para a direita e de baixo para cima na tabela. O elemento B (período 3, grupo 17) é o cloro, um halogênio, mais à direita e mais acima. O elemento A (período 5, grupo 13) é o índio, um metal, mais à esquerda e mais abaixo, com eletronegatividade bem menor. As duas tendências favorecem B."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:f268c830",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:43c6ac3e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um elemento forma uma ligação covalente com Oxigênio. Se o elemento tem eletronegatividade 2,1 e Oxigênio tem 3,44, qual tipo de ligação é formada?",
+        "opcoes": [
+          "Ligação metálica",
+          "Ligação iônica",
+          "Ligação covalente apolar",
+          "Ligação covalente polar"
+        ],
+        "correta": 3,
+        "explicacao": "A diferença de eletronegatividade é 3,44 − 2,1 = 1,34. Em geral, diferenças entre 0,4 e 1,7 indicam ligação covalente polar (os elétrons são compartilhados de forma desigual, mais puxados para o oxigênio). Diferenças maiores que 1,7 costumam indicar ligação iônica. Como a diferença é 1,34, a ligação é covalente polar."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:43c6ac3e",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:b36cc2ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois elementos estão no mesmo grupo (coluna) da tabela periódica. O primeiro tem raio de 1,86 ângström e o segundo tem raio de 2,23 ângström. Qual conclusão é válida?",
+        "opcoes": [
+          "O segundo elemento está acima do primeiro no grupo",
+          "O segundo elemento está abaixo do primeiro no grupo",
+          "Ambos estão no mesmo período",
+          "Não há informação suficiente"
+        ],
+        "correta": 1,
+        "explicacao": "Raio atômico aumenta de cima para baixo em um grupo. O elemento com raio maior (2,23 ângström) está abaixo do com raio menor (1,86 ângström). Em um grupo, ordem crescente de raio corresponde descida na tabela."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:b36cc2ef",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:3e923c00",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na tabela periódica, qual grupo de elementos tende a ter a MAIOR afinidade eletrônica (facilidade de ganhar elétrons)?",
+        "opcoes": [
+          "Gases nobres",
+          "Metais alcalino-terrosos",
+          "Metais alcalinos",
+          "Halogênios"
+        ],
+        "correta": 3,
+        "explicacao": "Os halogênios (grupo 17) têm afinidade eletrônica muito alta: falta um elétron para completar o octeto, e ganhar esse elétron os estabiliza. Cloro e flúor estão entre os elementos de maior afinidade eletrônica. Metais alcalinos tendem a perder elétrons, e gases nobres já têm o octeto completo."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:3e923c00",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:fdfde98c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudante quer comparar o raio atômico de Potássio (K) e Enxofre (S). Qual elemento tem raio maior?",
+        "opcoes": [
+          "Potássio (K)",
+          "Enxofre (S)",
+          "São iguais",
+          "Não pode ser determinado pela tabela periódica"
+        ],
+        "correta": 0,
+        "explicacao": "O potássio (período 4, grupo 1) tem raio maior que o enxofre (período 3, grupo 16). As duas tendências apontam no mesmo sentido: K está um período abaixo (uma camada eletrônica a mais) e na extrema esquerda da tabela (menor carga nuclear efetiva). Por isso K é bem maior: cerca de 227 pm contra cerca de 104 pm do S."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:fdfde98c",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:f74d9f41",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual das seguintes combinações de dois átomos forma a ligação mais polar (maior diferença de eletronegatividade)?",
+        "opcoes": [
+          "Nitrogênio e Oxigênio (N-O)",
+          "Carbono e Oxigênio (C-O)",
+          "Hidrogênio e Flúor (H-F)",
+          "Carbono e Hidrogênio (C-H)"
+        ],
+        "correta": 2,
+        "explicacao": "Hidrogênio (2,20) e flúor (3,98) diferem em 1,78, a maior diferença entre as opções. C-O: 3,44 − 2,55 = 0,89; N-O: 3,44 − 3,04 = 0,40; C-H: 2,55 − 2,20 = 0,35. H-F é a mais polar porque o flúor é o elemento mais eletronegativo da tabela."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:f74d9f41",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:8344c458",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um elemento tem configuração eletrônica terminada em 4s². Em que período e grupo está esse elemento?",
+        "opcoes": [
+          "Período 2, grupo 4",
+          "Período 4, grupo 4",
+          "Período 3, grupo 2",
+          "Período 4, grupo 2"
+        ],
+        "correta": 3,
+        "explicacao": "A configuração terminada em 4s² indica que a camada mais externa é a 4ª, então o elemento está no período 4. Os 2 elétrons no subnível s de valência o colocam no grupo 2 (metais alcalino-terrosos). É o cálcio (Ca), período 4, grupo 2."
+      },
+      "meta": {
+        "id": "gen:qui:tabela-periodica-propriedades:8344c458",
+        "version": 1,
+        "skillIds": [
+          "qui:tabela-periodica-propriedades"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-qui-tabela-periodica-propriedades",
+      "version": 1,
+      "format": 2,
+      "subjectId": "qui",
+      "topicId": "tab",
+      "chapterId": "gen-qui-tabela-periodica-propriedades",
+      "title": "Raio e eletronegatividade na tabela",
+      "objective": "Prever como raio atômico e eletronegatividade mudam com a posição na tabela periódica",
+      "skillIds": [
+        "qui:tabela-periodica-propriedades"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:qui:tabela-periodica-propriedades:3e923c00",
+        "gen:qui:tabela-periodica-propriedades:10a440e1"
+      ],
+      "recap": "Descendo um grupo, o raio aumenta. Da esquerda pra direita num período, a eletronegatividade aumenta. Quanto mais perto do canto superior direito, maior a eletronegatividade.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Tabela periódica",
+          "body": "Você vai prever se o raio atômico e a eletronegatividade aumentam ou diminuem comparando a posição de dois elementos na tabela."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Períodos e grupos",
+            "body": "A tabela tem linhas (períodos) e colunas (grupos). Descendo um grupo, o átomo ganha mais camadas eletrônicas e o raio atômico aumenta. Andando da esquerda pra direita num período, o núcleo puxa os elétrons com mais força e a eletronegatividade aumenta."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:tabela-periodica-propriedades:7b7d6744",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:tabela-periodica-propriedades:a0b70bed",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Comparando raio em períodos distantes",
+            "problem": "O berílio (Be) fica no período 2, e o estrôncio (Sr) fica no período 5, no mesmo grupo 2. Qual tem raio atômico maior?",
+            "steps": [
+              "Os dois estão no mesmo grupo, então a comparação é vertical.",
+              "Sr está bem mais abaixo que Be, logo tem muito mais camadas eletrônicas.",
+              "Mais camadas significam mais distância do núcleo até o elétron mais externo."
+            ],
+            "result": "O estrôncio tem raio atômico muito maior."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:tabela-periodica-propriedades:b36cc2ef",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:tabela-periodica-propriedades:7ae487a1",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não dá pra comparar dois elementos de período e grupo diferentes usando só uma tendência: é preciso somar as duas direções."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Onde a eletronegatividade é maior",
+            "left": {
+              "label": "Canto superior direito",
+              "body": "Átomos pequenos com núcleo que puxa forte os elétrons: eletronegatividade alta, exceto nos gases nobres."
+            },
+            "right": {
+              "label": "Canto inferior esquerdo",
+              "body": "Átomos grandes com elétrons mais distantes do núcleo: eletronegatividade baixa."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:tabela-periodica-propriedades:f268c830",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Descendo um grupo, o raio aumenta. Da esquerda pra direita num período, a eletronegatividade aumenta. Quanto mais perto do canto superior direito, maior a eletronegatividade."
+        }
+      ]
+    }
+  ]
+}

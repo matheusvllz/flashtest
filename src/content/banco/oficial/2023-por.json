@@ -1,0 +1,213 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "oficial:2023:93c2ba3f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A sessão do Comitê Olímpico Internacional (COI) aprovou uma mudança histórica e inédita no lema olímpico, criado em 1894 pelo Barão Pierre de Coubertin para expressar os valores e a excelência do esporte. Mais de 120 anos depois, o lema tem sua primeira alteração para ressaltar a solidariedade e incluir a palavra \"juntos\": mais rápido, mais alto, mais forte — juntos. A mudança foi aprovada por unanimidade pelos membros do COI e celebrada pelo presidente da entidade.\n\n(Disponível em: https://ge.globo.com. Acesso em: 10 nov. 2021, adaptado.)\n\nDe acordo com o texto, a alteração do lema olímpico teve como objetivo a",
+        "opcoes": [
+          "unificação do lema anterior ao atual.",
+          "aproximação entre o lema olímpico e o COI.",
+          "junção do lema olímpico com os princípios esportivos.",
+          "associação entre o lema olímpico e a cooperatividade.",
+          "vinculação entre o lema olímpico e os eventos atléticos."
+        ],
+        "correta": 3,
+        "explicacao": "O texto diz que a palavra \"juntos\" foi acrescentada para \"ressaltar a solidariedade\" — ou seja, o objetivo foi ligar o lema a um valor de cooperação entre pessoas, não mudar regras esportivas, aproximar o lema do COI enquanto instituição ou vinculá-lo a eventos específicos.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:93c2ba3f",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 6"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:2c2ba620",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de \"casamento\" no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como \"união legítima entre homem e mulher\" e \"união legal entre homem e mulher, para constituir família\".\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a \"pessoas\".\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a \"eficiência da mobilização\". \"Em dois dias, mudou-se uma definição que permanecia a mesma há décadas\", afirma. E conclui: \"A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.\".\n\n(SENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.)\n\nA notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
+        "opcoes": [
+          "inclusão de informações no verbete.",
+          "relevância social da instituição casamento.",
+          "utilização pública da petição pelos cidadãos.",
+          "rapidez na disseminação digital do verbete.",
+          "divulgação de plataformas para a criação de petição."
+        ],
+        "correta": 2,
+        "explicacao": "O próprio texto atribui a mudança à \"eficiência da mobilização\" gerada pela petição assinada pelos cidadãos — é o uso público da petição, não a velocidade de disseminação do verbete em si ou a divulgação da plataforma, que a notícia aponta como causa.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:2c2ba620",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 39"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:8e0f4f5f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Girassol da madrugada\n\nTeu dedo curioso me segue lento no rosto\nOs sulcos, as sombras machucadas por onde a vida passou.\nQue silêncio, prenda minha... Que desvio triunfal da verdade,\nQue círculos vagarosos na lagoa em que uma asa gratuita roçou...\n\nTive quatro amores eternos...\nO primeiro era moça donzela,\nO segundo... eclipse, boi que fala, cataclisma,\nO terceiro era a rica senhora,\nO quarto és tu... E eu afinal me repousei dos meus cuidados\n\n(ANDRADE, M. Poesias completas. Rio de Janeiro: Nova Fronteira, 2013, fragmento.)\n\nPerante o outro, o eu lírico revela, na força das memórias evocadas, a",
+        "opcoes": [
+          "vergonha das marcas provocadas pela passagem do tempo.",
+          "indecisão em face das possibilidades afetivas do presente.",
+          "serenidade sedimentada pela entrega pacífica ao desejo.",
+          "frustração causada pela vontade de retorno ao passado.",
+          "disponibilidade para a exploração do prazer efêmero."
+        ],
+        "correta": 2,
+        "explicacao": "A imagem final — \"e eu afinal me repousei dos meus cuidados\" — depois de percorrer os amores passados, mostra o eu lírico em paz, entregue ao afeto presente, e não em disputa, frustração ou busca por algo efêmero.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8e0f4f5f",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 13"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:4d1a63bc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "\"São tantas formas de matar um preto\nQue para alguns sua morte é justificada\nDevia tá fazendo coisa errada\nSe não era bandido, um dia ia ser\nPor ser PRETO sua morte é defendida\nO PRETO sempre merece morrer\".\n\nA estrofe acima é do poeta e educador social Baticum Proletário, que atua na periferia de Fortaleza, no Ceará, preparando jovens — em quase sua totalidade negros — para enfrentar as dificuldades impostas pelo racismo estrutural no país.\n\nÉ a partir da arte que Baticum consegue envolver a juventude em um projeto de fortalecimento dessa população ao promover batalhas de rimas, slams e saraus com temáticas que discutem os problemas sociais. Não por acaso, o tema mais explorado nas rimas, versos e prosas é a violência. De acordo com o mais recente Atlas da violência, em 2019, os negros representaram 77% das vítimas de homicídios, quase 30 assassinatos por 100 mil habitantes, a maioria deles jovens.\n\nO Atlas revela ainda que um negro tem quase 2,7 vezes mais chance de ser morto do que um branco, o que justifica o movimento de resistência crescente no Brasil.\n\n(MENDONÇA, F. Disponível em: www.cartacapital.com.br. Acesso em: 22 nov. 2021, adaptado.)\n\nO uso de citação e de dados estatísticos nesse texto tem o objetivo de",
+        "opcoes": [
+          "ressaltar a importância da poesia para denunciar a morte de negros, que cresce a cada dia.",
+          "destacar o crescimento exponencial da temática do preconceito na produção literária no Brasil.",
+          "demonstrar o incremento no quantitativo de expressões artísticas na discussão de problemas sociais.",
+          "evidenciar argumentos que reforçam a ideia de que os negros são vítimas em potencial da violência.",
+          "salientar o aumento da participação de jovens nos movimentos de resistência na área da cultura."
+        ],
+        "correta": 3,
+        "explicacao": "O poema e os dados do Atlas da violência (77% das vítimas, 2,7 vezes mais chance de morte) se somam para sustentar o mesmo argumento: a vulnerabilidade da população negra à violência letal — a citação e a estatística reforçam esse mesmo ponto, não descrevem crescimento da produção literária ou dos movimentos em si.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:4d1a63bc",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 19"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

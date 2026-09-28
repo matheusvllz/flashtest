@@ -1,0 +1,665 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:57662da2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um engenheiro civil enfrenta uma situação ética: a obra está atrasada e oferecer suborno ao funcionário público responsável aceleraria a aprovação das licenças. Uma abordagem deontológica diria que essa ação é errada porque viola um dever fundamental de respeitar a lei, independentemente das consequências. Que alternativa melhor caracteriza essa posição?",
+        "opcoes": [
+          "A ética está baseada na maximização da felicidade da maioria",
+          "O suborno é errado porque a lei o proíbe e devemos cumprir normas por princípio",
+          "O suborno pode ser justificado se as consequências forem benéficas para a obra",
+          "A moralidade depende unicamente dos resultados práticos alcançados"
+        ],
+        "correta": 1,
+        "explicacao": "Deontologia avalia ações com base em deveres e regras, não em resultados. O deontólogo segue princípios morais (como 'não corromper') porque considera que certas ações são certas ou erradas em si mesmas, independentemente do resultado. As alternativas A, C e D refletem consequencialismo ou utilitarismo, que julgam a ação pela consequência final."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:57662da2",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:23054b2f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudante encontra uma carteira e pode devolvê-la ao dono ou ficar com o dinheiro que está dentro. A moral deontológica diria que ele deve devolver porque:",
+        "opcoes": [
+          "A honestidade é só uma opinião cultural sem valor moral absoluto",
+          "Devolver maximiza sua felicidade pessoal no longo-prazo",
+          "Existe regra universal (não roubar) que obriga devolução independentemente de consequências",
+          "Ficar com o dinheiro traria mais bem-estar total à sociedade"
+        ],
+        "correta": 2,
+        "explicacao": "A deontologia de Kant afirma que há deveres morais baseados em regras universalizáveis: 'não roubar' obriga mesmo que ficar com o dinheiro deixasse a pessoa feliz. O ato é errado em si. Isso contrasta com o consequencialismo, que pergunta qual ato traz mais bem-estar. Na deontologia, o resultado não decide; o dever decide."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:23054b2f",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:75e6bb03",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa pode economizar milhões cortando segurança do trabalho, vendo o lucro aumentar 5% e os dividendos dos acionistas crescerem. Do ponto de vista consequencialista, qual seria a análise ética?",
+        "opcoes": [
+          "Consequencialismo não tem ferramentas para avaliar impacto em segurança do trabalho",
+          "Segurança do trabalho não afeta bem-estar total de ninguém",
+          "Corte é eticamente obrigatório porque toda empresa deve maximizar lucro",
+          "Consequencialista pergunta: o bem total (lucros) compensa o mal total (ferimentos de trabalhadores)? Se resultados líquidos forem negativos, corte é imoral"
+        ],
+        "correta": 3,
+        "explicacao": "O consequencialismo avalia um ato pelo resultado total: de um lado, o ganho (lucro 5% maior); do outro, o custo (acidentes, lesões, mortes, sofrimento das famílias, despesas médicas). Se o saldo for negativo, a ação é imoral. Difere da deontologia, que diria que a empresa tem o dever de garantir segurança independentemente do cálculo; aqui o que importa é a consequência líquida."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:75e6bb03",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:bb9578b8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um médico pode mentir para um paciente terminal sobre seu diagnóstico, dizendo que vai se recuperar, o que deixaria o paciente tranquilo até morrer. Um deontólogo e um consequencialista avaliariam isto diferentemente. Qual alternativa melhor captura essa diferença?",
+        "opcoes": [
+          "Deontólogo proíbe mentira (regra universal) mesmo se trouxesse paz; consequencialista aprova se paz superar verdade como bem líquido",
+          "Consequencialismo sempre proíbe mentira; deontologia sempre permite",
+          "Ambos os sistemas morais produzem mesma conclusão em todos os casos",
+          "Ambos concordam que mentir é sempre certo"
+        ],
+        "correta": 0,
+        "explicacao": "A deontologia de Kant nega que uma mentira se justifique pelas consequências: o dever de não mentir vale sempre (Kant o mantém até diante de um assassino que procura a vítima). O consequencialismo pesa: a mentira traz paz ao paciente (bem), mas viola sua autonomia e o direito à verdade (mal); se o bem superar o mal, a mentira seria moral. O deontólogo diz 'nunca'; o consequencialista diz 'depende do balanço'."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:bb9578b8",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:d7013d7e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um país rico poderia financiar vacinação de crianças pobres em país pobre, salvando vidas. O custo é mínimo para o rico mas impacto é máximo para o pobre. Um utilitarista (tipo de consequencialismo) diria que é eticamente:",
+        "opcoes": [
+          "Moralmente neutro, sem razão para agir",
+          "Obrigatório fazer isto, pois o bem gerado (vidas salvas) é imenso para o custo pequeno",
+          "Opcional, pois país rico pode gastar com outras coisas",
+          "Proibido, pois violaria soberania do país pobre"
+        ],
+        "correta": 1,
+        "explicacao": "O utilitarismo busca maximizar o bem-estar total. Salvar a vida de crianças gera uma enorme redução de sofrimento por um custo pequeno para o país rico. Logo, para o utilitarista, agir é obrigatório, não opcional. Tratar a ação como neutra ou opcional ignora que, nessa corrente, deixar de produzir um grande bem a baixo custo é moralmente errado."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:d7013d7e",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:23e4d067",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa descobre que produto causa câncer em consumidor, mas revelar isto destruiria a empresa e seus 10 mil empregos. Um gestor consequencialista versus um deontólogo responderiam diferentemente. Qual é a diferença?",
+        "opcoes": [
+          "Não existe diferença ética entre estes dois sistemas",
+          "Ambos concordam em ocultar a informação",
+          "Consequencialista pesa: vidas perdidas pelo câncer vs. empregos perdidos na falência e conclui qual lado sofre mais; deontólogo obriga revelação porque é dever de honestidade ao consumidor, independente de consequência",
+          "Deontologia sempre esconde informações prejudiciais; consequencialismo sempre as revela"
+        ],
+        "correta": 2,
+        "explicacao": "Deontólogo diz: consumidor tem direito à verdade; empresa tem dever de revelar; colapso empresarial não justifica enganar. Consequencialista calcula: morte por câncer (tremenda) vs. desemprego (grave, mas recuperável). Provavelmente conclui que revelar é moralmente correto (menos sofrimento total). Ambos tendem ao mesmo resultado aqui, mas por lógica diferente: dever vs. cálculo de bem-estar. Mostra que mesmo discordando de lógica, ambos podem exigir ação ética semelhante."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:23e4d067",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:95fa84a9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um servidor público recebe oferta de suborno para acelerar a licença ambiental de uma construtora. Ele pensa: se aceitar, ganha dinheiro e a construtora cria 500 empregos. Se recusar, o ambiente é protegido. Qual dilema ético isto ilustra?",
+        "opcoes": [
+          "Suborno nunca traz nenhuma consequência ética",
+          "Ambiental sempre vence economia em todo cenário",
+          "Não existe dilema real, todos devem aceitar suborno",
+          "Dilema entre lucro pessoal imediato e dever público; entre bem econômico (empregos) e bem ambiental (ecossistema protegido)"
+        ],
+        "correta": 3,
+        "explicacao": "O servidor sente a pressão de dois lados: o ganho pessoal e o argumento dos empregos puxam para aceitar; o dever público e a proteção ambiental puxam para recusar. Um deontólogo diria que o dever do cargo proíbe o suborno, independentemente dos empregos. Um consequencialista pesaria os efeitos, incluindo o dano ambiental e o dano da corrupção às instituições. Aceitar suborno é crime; o dilema mostra como o argumento econômico pode ser usado para racionalizar o desvio do dever."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:95fa84a9",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:3bae9fa9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma mãe pode furtar remédio caro para salvar vida de filho doente, mas não tem dinheiro. Um deontólogo (Kant) versus um consequencialista avaliaria o furto diferentemente. Qual resposta melhor captura a tensão?",
+        "opcoes": [
+          "Deontólogo proíbe furto (regra 'não roubar' é absoluta), mesmo salvando vida; consequencialista aprova se vida salva superar prejuízo de furto",
+          "Consequencialismo proíbe furto; deontologia permite",
+          "Ambos sistemas morais coincidem sempre",
+          "Ambos permitem furto em qualquer circunstância"
+        ],
+        "correta": 0,
+        "explicacao": "A deontologia de Kant não admite exceções por consequência: a regra 'não roubar' obriga mesmo em emergência. O consequencialismo avalia o resultado: salvar uma vida vale mais que o prejuízo da farmácia, então o furto seria moralmente justificável. É um caso clássico que questiona o absolutismo deontológico (pode ser dever nunca roubar, nem para salvar um filho?) e mostra o limite de cada corrente."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:3bae9fa9",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:98ffad25",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um engenheiro sabe que um prédio tem falha estrutural que pode fazê-lo desabar em 10 anos, matando pessoas. Ele pode denunciar (e perder o emprego, levando a construtora a prejuízo) ou ficar quieto. Qual alternativa melhor descreve seu dilema?",
+        "opcoes": [
+          "Silêncio sempre traz melhor resultado para engenheiro",
+          "Dilema entre lucro pessoal versus dever de segurança pública",
+          "Não existe dilema, pois não há valor ético em guardar segredo",
+          "Engenheiro não tem responsabilidade moral por consequências futuras"
+        ],
+        "correta": 1,
+        "explicacao": "O engenheiro enfrenta um conflito entre o interesse pessoal (manter o emprego) e o dever público (alertar sobre o risco de mortes). Um deontólogo diria que ele tem obrigação de denunciar, por dever profissional e de proteção à vida. Um consequencialista chegaria à mesma conclusão: o sofrimento causado por um desabamento supera qualquer benefício do silêncio. As duas correntes exigem a denúncia, mas o dilema existe porque as consequências pessoais são graves."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:98ffad25",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:5f8239cb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa de tecnologia coleta dados de usuários sem consentimento explícito. Legalmente é permitido (lei fraca), gera lucro (bom para acionistas) mas viola privacidade. Um deontólogo diria que é:",
+        "opcoes": [
+          "Moralmente certo pois lucro é maximizado",
+          "Moralmente indiferente, não há valor em privacidade",
+          "Moralmente errado — viola direito à privacidade do usuário, mesmo com lucro; direito é absoluto",
+          "Decisão que depende da opinião cultural sobre privacidade"
+        ],
+        "correta": 2,
+        "explicacao": "Deontologia afirma que pessoas têm direitos inalienáveis (incluindo privacidade) que não podem ser violados por lucro corporativo: regra 'respeitar privacidade' é absoluta. Diferencia-se de consequencialismo (que perguntaria: lucro supera dano psicológico de vigilância?) e de relativismo (que negaria valor moral objetivo em privacidade). Para deontólogo, empresa comete injustiça mesmo sendo legal: lei fraca não muda dever moral."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:5f8239cb",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:9a32185a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um país oferece refúgio a dissidente político fugindo de ditadura, mas isto prejudica relações diplomáticas com ditador. Qual dilema ético isto ilustra?",
+        "opcoes": [
+          "Interesse nacional sempre vence direitos humanos",
+          "Direitos humanos nunca têm valor em política internacional",
+          "Nenhum dilema, pois refúgio é sempre correto",
+          "Dilema entre dever humanitário (proteger perseguido) e interesse nacional (manter relações)"
+        ],
+        "correta": 3,
+        "explicacao": "Os dois valores são reais e entram em conflito: proteger quem é perseguido e manter boas relações diplomáticas. Um deontólogo diria que o dever de proteger o perseguido prevalece, apesar do custo diplomático. Um consequencialista compararia o sofrimento evitado ao acolher o dissidente com os prejuízos da crise diplomática. É um dilema genuíno porque os dois lados têm peso moral."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:9a32185a",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:8629af6e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um médico em um hospital encontra-se com cinco pacientes em risco de morte pela falta de um órgão disponível e um sexto paciente saudável cujos órgãos poderiam salvá-los. O dilema: matar uma pessoa saudável para salvar cinco? A deontologia responderia que:",
+        "opcoes": [
+          "Matar é sempre errado, independentemente das consequências, porque viola um dever moral fundamental",
+          "A decisão depende do status social dos pacientes",
+          "Não há resposta moral, é uma questão puramente técnica",
+          "Matar é aceitável se resultar em mais vidas salvas"
+        ],
+        "correta": 0,
+        "explicacao": "Deontologia enfatiza deveres absolutos, não consequências. 'Não matarás' é um dever que vale sempre, incondicionalmente. Uma deontologia rejeitaria matar um inocente, mesmo que salvasse cinco, porque violar o dever é errado por si só. Consequencialismo diria o contrário: maximize vidas. São duas éticas que se opõem."
+      },
+      "meta": {
+        "id": "gen:fil:etica-correntes-filosoficas:8629af6e",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:46:12.262Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-fil-etica-correntes-filosoficas",
+      "version": 1,
+      "format": 2,
+      "subjectId": "fil",
+      "topicId": "eti",
+      "chapterId": "gen-fil-etica-correntes-filosoficas",
+      "title": "Regra ou resultado",
+      "objective": "Distinguir correntes éticas num dilema moral",
+      "skillIds": [
+        "fil:etica-correntes-filosoficas"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:fil:etica-correntes-filosoficas:75e6bb03",
+        "gen:fil:etica-correntes-filosoficas:9a32185a"
+      ],
+      "recap": "Deontologia julga o ato pela regra moral que segue, independente do resultado. Consequencialismo julga o ato pelo saldo de bem-estar que ele produz.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Regra ou resultado",
+          "body": "Você vai reconhecer se um argumento moral julga o ato pela regra que segue ou pelo resultado que gera."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Duas bússolas morais",
+            "body": "A deontologia, de Kant, diz que regras morais universais, como não mentir, valem mesmo que o resultado pareça ruim. O consequencialismo julga o ato pelo resultado: se as consequências trazem mais bem-estar que sofrimento, o ato é certo. O utilitarismo é o consequencialismo mais conhecido."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:etica-correntes-filosoficas:23054b2f",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:etica-correntes-filosoficas:bb9578b8",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Quando dever e cálculo divergem",
+            "body": "O deontólogo pergunta só se a regra foi respeitada, mesmo com resultado ruim. O consequencialista pesa o total de bem e mal de cada opção e escolhe o melhor saldo. Para o utilitarista, deixar de fazer um grande bem a baixo custo também é erro moral."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:etica-correntes-filosoficas:23e4d067",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:etica-correntes-filosoficas:d7013d7e",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Desconfie de alternativas que dizem que uma corrente sempre faz algo. Cada uma aplica seu critério, regra ou saldo de consequências, ao caso específico."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Duas leituras do mesmo caso",
+            "problem": "Um jornal pode publicar mensagens privadas de um político, revelando informação de interesse público mas violando sua privacidade.",
+            "steps": [
+              "O deontólogo vê a privacidade como direito que não se cancela pelo resultado.",
+              "O consequencialista pesa o benefício de informar contra o dano causado à pessoa exposta."
+            ],
+            "result": "As duas correntes podem discordar dos fatos porque partem de perguntas diferentes: dever ou saldo final."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:etica-correntes-filosoficas:5f8239cb",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Deontologia julga o ato pela regra moral que segue, independente do resultado. Consequencialismo julga o ato pelo saldo de bem-estar que ele produz."
+        }
+      ]
+    }
+  ]
+}

@@ -18,18 +18,25 @@ export function TrailSkeleton() {
           ))}
         </div>
         <span className="skeleton mt-6 block h-16 w-full" />
-        <ol className="path-list" aria-hidden="true">
-          {[0, 1, 2, 3, 4, 5].map((i) => (
-            <li key={i} className="path-row" style={rowStyle(pathK(i), false)}>
-              <div className="path-row-node">
-                <span className="path-node-anchor">
-                  <span className="skeleton block h-16 w-16 rounded-full" />
-                </span>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <TrailPathSkeleton />
       </div>
     </PhoneFrame>
+  );
+}
+
+/** Só o caminho de nós — usado dentro do mapa enquanto o pacote da matéria carrega (docs/30 §21.3: nó "carregando", nunca some). */
+export function TrailPathSkeleton() {
+  return (
+    <ol className="path-list" aria-hidden="true" data-path-skeleton>
+      {[0, 1, 2, 3, 4, 5].map((i) => (
+        <li key={i} className="path-row" style={rowStyle(pathK(i), false)}>
+          <div className="path-row-node">
+            <span className="path-node-anchor">
+              <span className="skeleton block h-16 w-16 rounded-full" />
+            </span>
+          </div>
+        </li>
+      ))}
+    </ol>
   );
 }

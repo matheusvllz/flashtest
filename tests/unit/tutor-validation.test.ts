@@ -93,3 +93,116 @@ describe("validateTutorRequest", () => {
     );
   });
 });
+
+/** Fase 7 F7.5 (docs/30 §17.3): `pedagogy` é payload de cliente como qualquer outro — validar de verdade, não confiar no cast TS. */
+describe("validateTutorRequest — pedagogy", () => {
+  function pedagogiaValida() {
+    return {
+      skillId: "mat:porcentagem-valor",
+      skillName: "Calcular porcentagem de um valor",
+      subjectName: "Matemática",
+      topicName: "Porcentagem",
+      mastery: 42,
+      confidenceLabel: "evidência razoável",
+      recentErrors: [],
+      dontKnowRecent: 0,
+      explanationSeen: "nenhuma",
+      weakPrerequisites: [],
+      examName: null,
+      mode: "duvida",
+    };
+  }
+
+  test("ausente (undefined ou null) passa — nem toda tela manda pedagogy", () => {
+    expect(() =>
+      validateTutorRequest({ messages: [{ role: "user", content: "x" }], context: contextoValido() }),
+    ).not.toThrow();
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: null },
+      }),
+    ).not.toThrow();
+  });
+
+  test("pedagogy válido passa", () => {
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: pedagogiaValida() },
+      }),
+    ).not.toThrow();
+  });
+
+  test("rejeita confidenceLabel fora do vocabulário fechado", () => {
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: { ...pedagogiaValida(), confidenceLabel: "<script>" } },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+
+  test("rejeita mastery fora de 0–100", () => {
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: { ...pedagogiaValida(), mastery: 150 } },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+
+  test("rejeita mode fora do vocabulário fechado", () => {
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: { ...pedagogiaValida(), mode: "hackear-sistema" } },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+
+  test("rejeita recentErrors maior que o teto", () => {
+    const muitos = Array.from({ length: 20 }, () => ({ statement: "x", chosen: "A", correct: "B" }));
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: { ...pedagogiaValida(), recentErrors: muitos } },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+
+  test("rejeita string longa demais em qualquer campo de texto", () => {
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: { ...pedagogiaValida(), skillName: "x".repeat(5000) } },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+
+  test("rejeita pedagogy cujo total serializado passa de 2000 caracteres, mesmo com cada campo dentro do próprio teto", () => {
+    const grande = {
+      ...pedagogiaValida(),
+      recentErrors: Array.from({ length: 5 }, () => ({
+        statement: "x".repeat(490),
+        chosen: "y".repeat(490),
+        correct: "z".repeat(490),
+      })),
+    };
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: grande },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+
+  test("rejeita weakPrerequisites que não é array de string", () => {
+    expect(() =>
+      validateTutorRequest({
+        messages: [{ role: "user", content: "x" }],
+        context: { ...contextoValido(), pedagogy: { ...pedagogiaValida(), weakPrerequisites: [123] } },
+      }),
+    ).toThrow(TutorRequestInvalido);
+  });
+});

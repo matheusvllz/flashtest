@@ -1,0 +1,373 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:ortografia-acentuacao:59debbbf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Ao entrar no quarto escuro, ele tateou a parede em busca do interruptor da lâmpada que ficava perto da porta', a palavra 'lâmpada' é acentuada por ser:",
+        "opcoes": [
+          "proparoxítona",
+          "monossílaba tônica terminada em a",
+          "oxítona terminada em a",
+          "paroxítona terminada em ditongo"
+        ],
+        "correta": 0,
+        "explicacao": "Lâmpada se divide em lâm-pa-da. A tônica 'lâm' está na antepenúltima, logo é proparoxítona. Toda proparoxítona é acentuada, sem exceção. Termina em 'a', é verdade, mas isso não muda nada: proparoxítona sempre leva acento."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:59debbbf",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:64c06660",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'A nadadora fez uma saída rápida da piscina assim que o juiz apitou o fim da prova', a palavra 'saída' recebe acento porque:",
+        "opcoes": [
+          "é oxítona terminada em a",
+          "tem hiato tônico, com o 'i' sozinho na sílaba após vogal",
+          "é proparoxítona",
+          "é monossílabo tônico"
+        ],
+        "correta": 1,
+        "explicacao": "Saída se divide em sa-í-da. O 'i' tônico fica sozinho em sua sílaba, o que chamamos de hiato. O acento marca exatamente isso: o hiato. Se as vogais estivessem juntas, seria só paroxítona terminada em 'a' e não teria acento."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:64c06660",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:430a2317",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Nós vamos visitar os avós no fim de semana, mas o pai ainda não confirmou o passeio', a palavra 'nós' é acentuada porque é:",
+        "opcoes": [
+          "oxítona terminada em consoante",
+          "paroxítona terminada em ditongo",
+          "monossílabo tônico terminado em o (com s)",
+          "proparoxítona"
+        ],
+        "correta": 2,
+        "explicacao": "Nós é monossílabo tônico terminado em 'os', e essa terminação sempre leva acento. O acento ainda diferencia nós (pronome reto, sujeito) de nos (pronome átono). Os sons são diferentes, e a função na frase também muda."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:430a2317",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:468e9412",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na placa da lanchonete estava escrito 'Aqui você encontra o melhor café da cidade, sempre fresquinho e quentinho', a palavra 'café' é acentuada por ser:",
+        "opcoes": [
+          "proparoxítona",
+          "monossílabo átono",
+          "paroxítona terminada em ditongo",
+          "oxítona terminada em e"
+        ],
+        "correta": 3,
+        "explicacao": "A palavra 'café' é oxítona, com a sílaba tônica na última posição ('fé'), e termina em 'e'. Toda oxítona terminada em 'a', 'e' ou 'o' (seguida ou não de 's') recebe acento gráfico, por isso 'café' precisa do acento. Sem ele, a leitura sugeriria erroneamente a sílaba tônica em 'ca'."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:468e9412",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:13b59ab8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No comunicado da escola, dizia-se que a prova de matemática não seria fácil, pois cobraria conteúdos de todo o semestre letivo, e a palavra 'fácil' é acentuada porque é:",
+        "opcoes": [
+          "paroxítona terminada em l",
+          "proparoxítona terminada em l",
+          "monossílaba tônica",
+          "oxítona terminada em l"
+        ],
+        "correta": 0,
+        "explicacao": "A palavra 'fácil' se divide em fá-cil, com a sílaba tônica 'fá' na penúltima posição, o que a classifica como paroxítona. Paroxítonas terminadas em 'l' sempre recebem acento gráfico, assim como as terminadas em 'r', 'n', 'x' e 'ão', regra que distingue essas palavras das paroxítonas terminadas em 'a', 'e' ou 'o', geralmente sem acento."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:13b59ab8",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:5399f2d9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante a reunião de pais, a diretora afirmou que vocês, responsáveis, são fundamentais para o sucesso escolar das crianças, e a palavra 'vocês' recebe acento porque é:",
+        "opcoes": [
+          "paroxítona terminada em ditongo",
+          "oxítona terminada em es",
+          "proparoxítona",
+          "monossílabo átono"
+        ],
+        "correta": 1,
+        "explicacao": "Vocês é oxítona, tônica na última posição. Termina em 'es', e toda oxítona terminada em 'e', 'es', 'a', 'as', 'o' ou 'os' leva acento. É a mesma regra que explica o acento em você, português e atrás."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:5399f2d9",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:e0372ef8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No hospital, o médico explicou com calma ao paciente todos os detalhes do tratamento antes de liberar a alta, e a palavra 'médico' é acentuada porque toda palavra:",
+        "opcoes": [
+          "oxítona é sempre acentuada",
+          "paroxítona terminada em o é sempre acentuada",
+          "proparoxítona é sempre acentuada",
+          "monossílaba tônica é sempre acentuada"
+        ],
+        "correta": 2,
+        "explicacao": "Médico se divide em mé-di-co. A tônica 'mé' está na antepenúltima, logo é proparoxítona. Diferente de oxítona e paroxítona, toda proparoxítona leva acento, sem exceção. Não importa em que letra termina: a regra é sempre a mesma."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:e0372ef8",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:ortografia-acentuacao:a4466233",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O professor explicou que o texto tinha um vocabulário muito técnico para os alunos do primeiro ano', a palavra 'vocabulário' recebe acento gráfico porque é classificada como:",
+        "opcoes": [
+          "proparoxítona",
+          "monossílaba tônica",
+          "oxítona terminada em o",
+          "paroxítona terminada em ditongo"
+        ],
+        "correta": 3,
+        "explicacao": "Vocabulário se divide em vo-ca-bu-lá-rio. A tônica 'lá' cai na penúltima, logo é paroxítona. Termina em ditongo crescente io e recebe acento. Paroxítonas terminadas em ditongo sempre têm acento, diferente das terminadas em 'a', 'e' ou 'o', que normalmente não levam."
+      },
+      "meta": {
+        "id": "gen:por:ortografia-acentuacao:a4466233",
+        "version": 1,
+        "skillIds": [
+          "por:ortografia-acentuacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

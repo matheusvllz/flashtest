@@ -1,0 +1,465 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:porcentagem-conceito:9745073f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se 50% de uma turma são meninas e há 20 meninas, quantos alunos há no total?",
+        "opcoes": [
+          "50",
+          "45",
+          "40",
+          "35"
+        ],
+        "correta": 2,
+        "explicacao": "50% significa metade. Se metade = 20, então o total = 20 × 2 = 40 alunos. Quando é 50%, o total é o dobro da quantidade que você tem."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:9745073f",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:3053dddf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja oferece um desconto de 25% em um produto que custa 400 reais. Qual é o preço final?",
+        "opcoes": [
+          "250",
+          "350",
+          "320",
+          "300"
+        ],
+        "correta": 3,
+        "explicacao": "Desconto de 25%: 25% de 400 = 0,25 × 400 = 100 reais. Preço final = 400 - 100 = 300 reais. Acha o valor da porcentagem, aí subtrai do preço original."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:3053dddf",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:ac84e970",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se um produto sofre um aumento de 20% em seu preço original de 150 reais, qual será o novo preço?",
+        "opcoes": [
+          "190",
+          "175",
+          "180",
+          "170"
+        ],
+        "correta": 2,
+        "explicacao": "Aumento de 20%: 20% de 150 = 0,2 × 150 = 30 reais. Novo preço = 150 + 30 = 180 reais. Acha o valor da porcentagem, aí soma ao preço original."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:ac84e970",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:89636467",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa teve lucro de 2.000 reais em janeiro. Em fevereiro, o lucro aumentou 30%. Em março, o lucro de fevereiro diminuiu 20%. Qual foi o lucro em março?",
+        "opcoes": [
+          "2000",
+          "2200",
+          "2100",
+          "2080"
+        ],
+        "correta": 3,
+        "explicacao": "Janeiro: 2.000. Fevereiro: 2.000 × 1,30 = 2.600. Março: 2.600 × 0,80 = 2.080. Lembre: cada mudança se aplica ao valor anterior, não ao inicial."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:89636467",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:03f6cc02",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um investimento inicial de 10.000 reais cresce 15% no primeiro mês e depois decresce 10%. Qual é o valor após os dois meses?",
+        "opcoes": [
+          "10350",
+          "10000",
+          "10500",
+          "10250"
+        ],
+        "correta": 0,
+        "explicacao": "Mês 1: 10.000 × 1,15 = 11.500. Mês 2: 11.500 × 0,90 = 10.350. O segundo percentual aplica no novo valor (11.500), não no original. Mudanças seguidas multiplicam."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:03f6cc02",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:c34a9ffa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma escola tinha 800 alunos. 25% saíram e, depois, entraram novos alunos em número igual a 10% dos que ficaram. Quantos alunos há agora?",
+        "opcoes": [
+          "680",
+          "660",
+          "650",
+          "670"
+        ],
+        "correta": 1,
+        "explicacao": "Após 25% saírem: 800 × 0,75 = 600. 10% de 600 = 60 novos. Total agora: 600 + 60 = 660. Cada mudança mexe no valor que tem no momento, não no inicial."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:c34a9ffa",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:2ec77e06",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um produto custa 500 reais. Há um desconto de 10%, seguido de outro desconto de 5% sobre o preço já reduzido. Qual é o preço final?",
+        "opcoes": [
+          "430",
+          "432,50",
+          "427,50",
+          "425"
+        ],
+        "correta": 2,
+        "explicacao": "Após 10% de desconto: 500 × 0,90 = 450. Após mais 5% de desconto: 450 × 0,95 = 427,50. Descontos seguidos multiplicam. Não soma as porcentagens; aplica uma depois da outra."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:2ec77e06",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:fccf556c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um salário de 2.000 reais sofre um aumento de 15%. Qual será o novo salário?",
+        "opcoes": [
+          "2300",
+          "2150",
+          "2200",
+          "2250"
+        ],
+        "correta": 0,
+        "explicacao": "Aumento de 15%: 15% de 2.000 = 0,15 × 2.000 = 300 reais. Novo salário = 2.000 + 300 = 2.300 reais. Ou vai direto: 2.000 × 1,15 = 2.300."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:fccf556c",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:caefccf6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma loja de roupas, há 200 peças no estoque. Se 35% delas são camisetas, quantas camisetas existem no total?",
+        "opcoes": [
+          "50",
+          "70",
+          "85",
+          "120"
+        ],
+        "correta": 1,
+        "explicacao": "Porcentagem é uma fração com denominador 100. Logo, 35% significa 35 de cada 100 peças. Para encontrar 35% de 200: 200 × 0,35 = 70 camisetas. Note que a porcentagem 35% é equivalente à fração 35/100, simplificada a 7/20."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:caefccf6",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.628Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-conceito:e74e83b0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um produto custa 120 reais. Após uma promoção, o preço caiu para 84 reais. Qual é o percentual de redução em relação ao preço original?",
+        "opcoes": [
+          "50%",
+          "20%",
+          "30%",
+          "40%"
+        ],
+        "correta": 2,
+        "explicacao": "A redução foi 120 - 84 = 36 reais. Pra saber a porcentagem: (36 / 120) × 100 = 30%. Porcentagem é sempre uma parte dividida pelo todo vezes 100. Então 30 significa 30 partes de 100."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-conceito:e74e83b0",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-conceito"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.628Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

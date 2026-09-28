@@ -1,0 +1,466 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:1c24e247",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"A cantora famosa envolveu o público com sua voz melodiosa\", qual é a classe gramatical de \"famosa\"?",
+        "opcoes": [
+          "Substantivo",
+          "Advérbio",
+          "Verbo",
+          "Adjetivo"
+        ],
+        "correta": 3,
+        "explicacao": "\"Famosa\" modifica \"cantora\" (nome), dá qualidade. Adjetivos modificam nomes e concordam em gênero/número. \"Voz melodiosa\" também tem adjetivo (\"melodiosa\"). Erro comum: confundir com advérbio. Advérbio modifica verbo (ex.: \"canta melodiosamente\")."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:1c24e247",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.997Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:4eb819ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"Sua dedicação é admirável; ela trabalha com afinco\", qual é a classe gramatical de \"afinco\"?",
+        "opcoes": [
+          "Advérbio",
+          "Substantivo",
+          "Verbo",
+          "Adjetivo"
+        ],
+        "correta": 1,
+        "explicacao": "\"Afinco\" é substantivo (nomeia a qualidade de quem se empenha). A expressão \"com afinco\" inteira funciona como locução adverbial de modo, mas a palavra \"afinco\" sozinha é substantivo regido pela preposição \"com\". \"Dedicação\" também é substantivo e \"admirável\" é adjetivo. Erro comum: classificar a palavra pelo papel da locução inteira e marcar advérbio."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:4eb819ef",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.998Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:aa799286",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"A proposta de aumento salarial foi amplamente discutida, mas rejeitada\", qual é a classe gramatical de \"amplamente\"?",
+        "opcoes": [
+          "Preposição",
+          "Verbo",
+          "Adjetivo derivado de \"amplo\"",
+          "Advérbio derivado de \"amplo\""
+        ],
+        "correta": 3,
+        "explicacao": "\"Amplamente\" é advérbio. Vem de \"amplo\" (adjetivo) + -mente. Modifica \"discutida\" (particípio) e não varia. Adjetivos concordam (amplo, ampla); advérbios não variam (amplamente, sempre assim). Erro comum: tratar -mente como adjetivo, mas -mente marca advérbio."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:aa799286",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.998Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:e4bd117b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"Embora cansado, ele continuou seu trajeto com determinação inabalável\", qual é a classe gramatical de \"embora\"?",
+        "opcoes": [
+          "Conjunção",
+          "Interjeição",
+          "Preposição",
+          "Advérbio"
+        ],
+        "correta": 0,
+        "explicacao": "\"Embora\" é conjunção concessiva. Introduz oração que contrasta com a principal (\"embora cansado\" = apesar de cansado). Conjunções conectam orações. \"Determinação\" é substantivo; \"inabalável\" é adjetivo. Erro comum: confundir com o advérbio de 'ir embora', que é outra palavra."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:e4bd117b",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.998Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:a71267e5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"Os alunos, cuidadosos e atentos, resolveram todas as questões do exame\", qual é a classe gramatical de \"cuidadosos\"?",
+        "opcoes": [
+          "Verbo",
+          "Advérbio",
+          "Adjetivo",
+          "Substantivo"
+        ],
+        "correta": 2,
+        "explicacao": "\"Cuidadosos\" é adjetivo. Modifica \"alunos\" (masculino plural) e concorda. Adjetivos modificam nomes e variam. \"Atentos\" também é adjetivo. Erro comum: confundir adjetivo com advérbio. \"Cuidadosamente\" (advérbio) modifica ação; \"cuidadosos\" qualifica nome. Concordância marca adjetivo."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:a71267e5",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.998Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:7aac65a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"A professora ensinou a lição com paciência\", qual é a classe gramatical de \"paciência\"?",
+        "opcoes": [
+          "Advérbio",
+          "Substantivo",
+          "Verbo",
+          "Adjetivo"
+        ],
+        "correta": 1,
+        "explicacao": "\"Paciência\" é substantivo. É o termo regido pela preposição \"com\" (\"com paciência\"). Substantivos nomeiam seres, objetos, conceitos e qualidades. \"Professora\" e \"lição\" também são substantivos. \"Com\" é preposição. Erro comum: confundir \"paciência\" (substantivo abstrato) com adjetivo. \"Paciente\" é adjetivo, \"pacientemente\" é advérbio."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:7aac65a2",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.998Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:79ee0af2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em: \"Nós sempre assistimos juntos aos filmes de ficção científica\", qual é a classe gramatical de \"juntos\"?",
+        "opcoes": [
+          "Substantivo",
+          "Preposição",
+          "Adjetivo",
+          "Advérbio"
+        ],
+        "correta": 2,
+        "explicacao": "'Juntos' concorda com 'nós' (plural), e isso mostra que é adjetivo, funcionando como predicativo do sujeito. Advérbio não varia; 'juntos' varia: 'eles saíram juntos', 'elas saíram juntas'. Já 'sempre' nunca se flexiona: ele é o advérbio da frase."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:79ee0af2",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.998Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:classes-gramaticais-identificacao:2750c039",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O aluno se saiu mal na prova porque não estudou os conteúdos cobrados pelo professor', a palavra 'mal' exerce a função de:",
+        "opcoes": [
+          "conjunção",
+          "substantivo",
+          "adjetivo",
+          "advérbio"
+        ],
+        "correta": 3,
+        "explicacao": "Na frase, 'mal' modifica o verbo 'saiu-se', indicando o modo como a ação ocorreu ('de forma ruim'), o que o classifica como advérbio. Não confunda com 'mau', adjetivo que significa 'contrário de bom' e sempre acompanha um substantivo, como em 'um aluno mau', nunca junto de um verbo."
+      },
+      "meta": {
+        "id": "gen:por:classes-gramaticais-identificacao:2750c039",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-por-classes-gramaticais-identificacao",
+      "version": 1,
+      "format": 2,
+      "subjectId": "por",
+      "topicId": "classes",
+      "chapterId": "gen-por-classes-gramaticais-identificacao",
+      "title": "Classes gramaticais",
+      "objective": "Identificar a classe gramatical de uma palavra observando sua função na frase.",
+      "skillIds": [
+        "por:classes-gramaticais-identificacao"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 180,
+      "reviewExerciseIds": [
+        "gen:por:classes-gramaticais-identificacao:79ee0af2",
+        "gen:por:classes-gramaticais-identificacao:aa799286"
+      ],
+      "recap": "A classe gramatical depende da função na frase: o que a palavra modifica ou conecta, não sua aparência.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Classes gramaticais",
+          "body": "Você vai aprender a identificar se uma palavra é substantivo, adjetivo, advérbio ou conjunção observando o papel dela na frase, não só a terminação."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "O papel na frase decide",
+            "body": "Substantivo nomeia um ser, objeto ou ideia. Adjetivo modifica o substantivo e concorda em gênero e número com ele. Advérbio modifica um verbo, um adjetivo ou outro advérbio, e não varia. Uma palavra que parece 'de ação' pode ser substantivo se vier depois de preposição, como em 'com cuidado': 'cuidado' é substantivo, mesmo que a expressão toda funcione como advérbio de modo."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:classes-gramaticais-identificacao:1c24e247",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:classes-gramaticais-identificacao:4eb819ef",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Identificando pela frase",
+            "problem": "Em 'Conquanto educado, o menino falou alto durante a reunião silenciosa', qual é a classe de 'silenciosa' e de 'conquanto'?",
+            "steps": [
+              "'Silenciosa' modifica 'reunião' (substantivo) e concorda em gênero e número com ela: é adjetivo.",
+              "'Conquanto' introduz uma ideia de contraste com o restante da frase: é conjunção concessiva.",
+              "'Alto', aqui, modifica o verbo 'falou' e não varia: é advérbio."
+            ],
+            "result": "'Silenciosa' é adjetivo, 'conquanto' é conjunção."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:classes-gramaticais-identificacao:a71267e5",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:classes-gramaticais-identificacao:e4bd117b",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não classifique a palavra pela terminação ou pelo 'sentido' que parece ter: olhe o que ela faz na frase, se modifica um nome, um verbo ou conecta orações."
+        },
+        {
+          "kind": "recap",
+          "body": "A classe gramatical depende da função na frase: o que a palavra modifica ou conecta, não sua aparência."
+        }
+      ]
+    }
+  ]
+}

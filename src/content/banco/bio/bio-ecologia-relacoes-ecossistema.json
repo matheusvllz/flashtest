@@ -1,0 +1,797 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:3c388487",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Num ecossistema de floresta, as árvores (produtoras) capturam energia solar. Herbívoros comem árvores; predadores comem herbívoros. Qual organismo tem MAIOR quantidade total de energia disponível?",
+        "opcoes": [
+          "Árvores (produtoras), pois capturam energia solar diretamente",
+          "Herbívoros, porque comem de tudo",
+          "Todos têm quantidade igual",
+          "Predadores, porque estão no topo"
+        ],
+        "correta": 0,
+        "explicacao": "Produtores capturam luz solar via fotossíntese: entrada inicial de energia. Herbívoros comem plantas, mas apenas 10 por cento da energia é transferida (90 por cento é gasto em metabolismo, movimento). Predadores comem herbívoros, perdem novamente 90 por cento. Pirâmide de energia: produtores > herbívoros > predadores. Árvores têm MAIS energia total porque são a fonte: cada nível seguinte tem 10 por cento do anterior."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:3c388487",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:ea303b98",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um decompositor (bactéria) quebra material morto de uma árvore. Qual função o decompositor cumpre no ecossistema?",
+        "opcoes": [
+          "Captar energia solar como produtor",
+          "Reciclar nutrientes do material morto para o solo, tornando-os disponíveis para plantas novamente",
+          "Consumir herbívoros como predador",
+          "Bloquear fluxo de energia"
+        ],
+        "correta": 1,
+        "explicacao": "Decompositores quebram moléculas complexas de plantas e animais mortos em nutrientes simples: nitrogênio, fósforo, potássio. Esses nutrientes retornam ao solo → raízes absorvem → plantas crescem. Sem decompositores, nutrientes ficariam presos em cadáveres: ciclos de nutrientes parariam. Decomposição é essencial pra reciclagem, diferente de produção (captar energia) ou consumo (aproveitar energia de vivos)."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:ea303b98",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:292b2ac4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma cadeia alimentar tem: alga → pequeno peixe → peixe médio → peixe grande. Se aumentar número de algas, qual nível tende a aumentar PRIMEIRO?",
+        "opcoes": [
+          "Ninguém, porque peixe grande controla tudo",
+          "Peixe grande imediatamente",
+          "Pequeno peixe, pois come alga diretamente",
+          "Peixe médio, porque é intermediário"
+        ],
+        "correta": 2,
+        "explicacao": "O pequeno peixe come alga: alga mais abundante significa mais comida, e o pequeno peixe, bem nutrido, se reproduz mais. Por isso ele responde primeiro. Só depois o pequeno peixe mais numeroso oferece mais comida ao peixe médio, que cresce em seguida, e assim por diante. Esse efeito sobe de baixo para cima na cadeia: aumento do produtor → aumento do consumidor primário → depois os carnívoros. O nível mais próximo da fonte de energia (a alga) responde primeiro."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:292b2ac4",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:3646a34e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Duas espécies diferentes de pássaro comem sementes da mesma árvore. Ambas prosperam no local. Como evitam competição mortal?",
+        "opcoes": [
+          "Semente é infinita",
+          "Não prosperam ambas — uma desaparece",
+          "Compartilham semente igualmente sempre",
+          "Uma come sementes de diferentes tamanhos ou em hora diferente — dividiram o recurso (nicho ecológico)"
+        ],
+        "correta": 3,
+        "explicacao": "A coexistência exige diferenciação de nicho: uma espécie come sementes pequenas, outra sementes grandes. Ou uma come de manhã, outra à tarde. Ou uma come na copa, outra nos ramos baixos. Cada espécie explora uma parte diferente do recurso, o que reduz a sobreposição e a competição. Se as duas usassem o recurso exatamente do mesmo jeito, competiriam até a extinção local de uma delas (princípio da exclusão competitiva)."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:3646a34e",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:de1f28cf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma população de coelhos alimenta-se de grama. Predadores (linces) comem coelhos. Se lince aumenta de população, o que esperamos ver alguns meses depois?",
+        "opcoes": [
+          "Coelhos aumentam, grama diminui",
+          "Coelhos diminuem primeiro (mais linces comendo), depois linces diminuem (menos comida)",
+          "Ambos aumentam infinitamente",
+          "Grama desaparece imediatamente"
+        ],
+        "correta": 1,
+        "explicacao": "Aumento de linces exerce predação forte em coelhos: população de coelhos cai. Com menos coelhos, linces enfrentam fome nos meses seguintes: população de linces cai também. Isso cria ciclo: coelhos crescem (com linces reduzidos) → linces crescem (comendo coelhos abundantes) → coelhos caem novamente. Esse padrão de predador-presa oscilante é bem documentado biologicamente: populações fluem em defasagem temporal, não equilibram instantaneamente."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:de1f28cf",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:1b398a65",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Duas espécies diferentes de árvore habitam a mesma floresta e coexistem há séculos. Isto sugere qual situação?",
+        "opcoes": [
+          "Que uma competição as eliminou",
+          "Que uma é mais forte e a outra sobrevive por pena",
+          "Que exploram recursos diferentes (nichos) — raízes em profundidades diferentes, luz em tempos diferentes, ou solos distintos",
+          "Que são mutualistas — ajudam uma à outra"
+        ],
+        "correta": 2,
+        "explicacao": "A coexistência estável de espécies parecidas (ambas árvores) exige que usem os recursos de forma diferente, reduzindo a sobreposição. Uma pode ter raízes profundas que alcançam a água do lençol freático; outra, raízes rasas que aproveitam a chuva. Uma pode tolerar sombra, a outra precisar de luz plena. Ou preferem solos diferentes (um mais ácido, outro mais alcalino). Essa diferenciação de nicho permite coexistir sem competição mortal. Coexistir não implica mutualismo: nada indica que uma ajude a outra."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:1b398a65",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:b9bc002a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Após um incêndio destruir uma floresta, plantas iniciais (pioneiras) rapidamente colonizam o solo nu. Anos depois, árvores maiores sombreiam as pioneiras, que desaparecem. Qual nome recebe essa sequência?",
+        "opcoes": [
+          "Extinção maciça",
+          "Estagnação ecológica",
+          "Sucessão primária",
+          "Sucessão secundária ou ecológica — mudança previsível de comunidades ao longo do tempo"
+        ],
+        "correta": 3,
+        "explicacao": "Sucessão ecológica é a sequência previsível de mudanças nas comunidades após um distúrbio. É secundária porque o incêndio destruiu a vegetação, mas o solo (com nutrientes e sementes) continuou ali. Sucessão primária é a que começa em rocha nua, sem solo. As pioneiras crescem rápido com luz abundante e modificam o ambiente; depois, árvores maiores crescem e sombreiam as pioneiras, que não toleram sombra e somem. Cada estágio altera o ambiente e favorece o seguinte."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:b9bc002a",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:982399ed",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "DDT foi pulverizado em um lago para controlar mosquitos. Mosquitos contaminados foram comidos por peixes pequenos, e peixes grandes comeram os peixes pequenos. Em qual nível a concentração de DDT nos tecidos tende a ser MAIOR?",
+        "opcoes": [
+          "Peixes pequenos igualmente",
+          "Peixes grandes — acumulação progressiva subindo cadeia alimentar (biomagnificação)",
+          "DDT desapareceu igualmente",
+          "Mosquitos, onde foi pulverizado"
+        ],
+        "correta": 1,
+        "explicacao": "Biomagnificação: o DDT é lipossolúvel, pouco metabolizado e pouco excretado, então fica guardado na gordura dos organismos. Um peixe pequeno come muitos mosquitos e acumula o DDT de todos eles; um peixe grande come muitos peixes pequenos e acumula o DDT de todos esses. A cada nível trófico, a concentração nos tecidos aumenta, e os predadores de topo ficam com a maior concentração. Esse é um risco real da contaminação ambiental."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:982399ed",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:c65afc20",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um ecossistema com biodiversidade alta (muitas espécies) resiste melhor a perturbações (seca, praga) que um com baixa biodiversidade. Qual razão ecológica explica isso?",
+        "opcoes": [
+          "Biodiversidade não importa para estabilidade",
+          "Espécies raras controlam tudo",
+          "Espécies diversas são todas iguais",
+          "Espécies diversas ocupam nichos sobrepostos — redundância funcional; se uma falha, outras compensam"
+        ],
+        "correta": 3,
+        "explicacao": "Múltiplas espécies fazendo função similar (ex. vários herbívoros diferentes) criam redundância. Se seca mata um herbívoro, outros mantêm fluxo de energia. Cadeia alimentar simples (1 produtor → 1 herbívoro → 1 predador) quebra se um falhar. Cadeia complexa (muitos produtores, herbívoros, predadores) permanece funcional. Biodiversidade é 'seguro' ecológico: quanto mais espécies compartilham funções, mais resiliente é o sistema. Ecossistemas simples são frágeis."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:c65afc20",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:a74260f8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nitrogênio atmosférico (N2) não pode ser usado por plantas diretamente. Como entra na cadeia alimentar?",
+        "opcoes": [
+          "Bactérias fixadoras de N2 do solo convertem N2 em nitrato disponível para raízes",
+          "Chuva dissolve nitrogênio diretamente",
+          "Animais trazem nitrogênio do ar",
+          "Não entra — plantas usam apenas carbono"
+        ],
+        "correta": 0,
+        "explicacao": "O N2 tem uma ligação tripla muito forte, que plantas não conseguem quebrar. Bactérias fixadoras (como Rhizobium, nos nódulos das raízes de leguminosas, e Azotobacter, livres no solo) têm a enzima nitrogenase, que converte N2 em amônia (NH3). No solo, bactérias nitrificantes transformam a amônia em nitrato (NO3-), que as raízes absorvem para fazer proteínas e ácidos nucleicos. Sem as bactérias fixadoras, quase não haveria entrada de nitrogênio nos seres vivos."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:a74260f8",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:d7e944a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um abutre se alimenta de carcaça de leão morto. Qual papel ecológico o abutre cumpre nesta relação?",
+        "opcoes": [
+          "Predador ativo (caçou o leão)",
+          "Parasita (retira nutrientes do leão vivo)",
+          "Consumidor detritívoro ou necrófago — degrada matéria morta, reciclando nutrientes",
+          "Competidor de carnívoros"
+        ],
+        "correta": 2,
+        "explicacao": "O abutre não matou o leão, apenas usa o cadáver. Diferente do predador (que caça animais vivos), o abutre é necrófago: consome matéria orgânica morta. Junto com bactérias e fungos decompositores, ele acelera a reciclagem da carcaça e a volta dos nutrientes ao ambiente. Também não é parasita, porque parasita vive dentro ou sobre um hospedeiro vivo, tirando recursos dele."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:d7e944a2",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:de61fd79",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Peixes-palhaço vivem entre os tentáculos de anêmonas-do-mar. O peixe afasta peixes que comem a anêmona; a anêmona protege o peixe com tentáculos venenosos e oferece comida (restos). Qual tipo de relação é essa?",
+        "opcoes": [
+          "Competição",
+          "Parasitismo (um prejudicado)",
+          "Predação (um come o outro)",
+          "Mutualismo — ambos beneficiados (simbiose positiva)"
+        ],
+        "correta": 3,
+        "explicacao": "O peixe-palhaço ganha abrigo contra predadores e restos de comida; a anêmona ganha proteção contra peixes que se alimentam dela e, segundo estudos, até nutrientes das excretas do peixe. Os dois saem ganhando: isso é mutualismo. Não é parasitismo (ninguém é prejudicado), nem predação, nem competição. É uma das parcerias mais conhecidas da natureza e mostra que nem toda relação entre espécies é de conflito."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:de61fd79",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:6e93ee63",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pulga-de-cão vive no hospedeiro (cão) consumindo seu sangue regularmente, causando coceira e anemia. Qual relação ecológica é esta?",
+        "opcoes": [
+          "Parasitismo — parasita (pulga) prejudica hospedeiro (cão) sem matá-lo rapidamente",
+          "Predação — pulga caça cão",
+          "Competição por água",
+          "Mutualismo — ambos ganham"
+        ],
+        "correta": 0,
+        "explicacao": "O parasita vive em ou sobre o hospedeiro, extrai recursos (sangue) e causa dano (coceira, anemia), mas não o mata rapidamente: precisa do hospedeiro vivo para continuar se alimentando. A pulga se beneficia; o cão é prejudicado. Isso difere da predação (o predador mata a presa) e do mutualismo (ambos ganham). Pulgas, piolhos e vermes intestinais são exemplos clássicos, e muitos hospedeiros evoluíram defesas contra eles."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:6e93ee63",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:e7666060",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Espaço disponível para plantas num solo é limitado. Duas árvores jovens brotam lado a lado e crescem para altura similar, competindo por luz. A que melhor se adapta à sombra sobrevive. Qual conceito ecológico descreve o 'espaço ecológico' que cada uma ocupa?",
+        "opcoes": [
+          "Habitat — local geográfico (ambas mesmo habitat)",
+          "Nicho — papel único (como exploram recursos, tolerância a sombra)",
+          "Bioma — região climática",
+          "Comunidade — grupos de espécies"
+        ],
+        "correta": 1,
+        "explicacao": "Habitat é 'onde' o organismo vive (aqui, o mesmo trecho de solo). Nicho é 'como' ele vive e usa os recursos: por exemplo, uma árvore tolera sombra profunda e outra precisa de luz plena. A competição favorece essa diferenciação: a árvore tolerante à sombra cresce embaixo; a que exige luz depende de clareiras. Segundo o princípio da exclusão competitiva, duas espécies com nichos idênticos não coexistem por muito tempo."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:e7666060",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:7cfdb954",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um ecossistema de floresta tropical possui árvores gigantes que capturam energia solar, herbívoros que se alimentam das plantas, e onças que caçam os herbívoros. Se você contar toda a biomassa em cada nível, qual será aproximadamente a proporção de energia disponível?",
+        "opcoes": [
+          "Árvores 100%, herbívoros 100%, onças 100% (energia se renova)",
+          "Árvores 100%, herbívoros 50%, onças 25%",
+          "Árvores 10.000 kg, herbívoros 1.000 kg, onças 100 kg",
+          "Árvores 50%, herbívoros 30%, onças 20%"
+        ],
+        "correta": 2,
+        "explicacao": "A regra dos 10% é sobre energia. Cada nível trófico retém aproximadamente 10% da energia do nível anterior. O resto se perde em calor e metabolismo. Se árvores capturam 10.000 kg de energia solar, herbívoros aproveitam cerca de 1.000 kg e onças apenas 100 kg. Por isso predadores de topo são sempre raros em biomassa."
+      },
+      "meta": {
+        "id": "gen:bio:ecologia-relacoes-ecossistema:7cfdb954",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.099Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-bio-ecologia-relacoes-ecossistema",
+      "version": 1,
+      "format": 2,
+      "subjectId": "bio",
+      "topicId": "eco",
+      "chapterId": "gen-bio-ecologia-relacoes-ecossistema",
+      "title": "Energia e relações no ecossistema",
+      "objective": "Identificar relações ecológicas e o fluxo de energia num ecossistema",
+      "skillIds": [
+        "bio:ecologia-relacoes-ecossistema"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:bio:ecologia-relacoes-ecossistema:3646a34e",
+        "gen:bio:ecologia-relacoes-ecossistema:ea303b98"
+      ],
+      "recap": "Energia diminui a cada nível da cadeia alimentar. Decompositores reciclam matéria morta e bactérias fixadoras liberam nitrogênio pras plantas.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Fluxo de energia",
+          "body": "Você vai explicar como energia e nutrientes passam entre os seres vivos de um ecossistema e reconhecer o papel ecológico de cada organismo."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Cadeia alimentar e energia",
+            "body": "Numa cadeia alimentar, energia entra pelos produtores (fotossíntese) e passa aos consumidores que os comem. Em cada passagem, cerca de 90% se perde como calor e movimento, sobrando só 10% pro próximo nível. Por isso produtores têm mais energia que herbívoros, que têm mais que carnívoros. Uma mudança na base da cadeia afeta primeiro quem se alimenta direto dela."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:ecologia-relacoes-ecossistema:292b2ac4",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:ecologia-relacoes-ecossistema:3c388487",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Papéis ecológicos e sucessão",
+            "body": "Predador caça presa viva; parasita vive à custa de um hospedeiro vivo; necrófago se alimenta de matéria morta e devolve nutrientes ao ambiente. Após um incêndio, espécies pioneiras ocupam o espaço primeiro e depois dão lugar a outras maiores: essa troca previsível de comunidades é a sucessão ecológica."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:ecologia-relacoes-ecossistema:d7e944a2",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:ecologia-relacoes-ecossistema:b9bc002a",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda necrófago com predador: quem come carcaça já morta não caçou o animal, o papel ecológico é diferente mesmo que ambos sejam carnívoros."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Nitrogênio disponível pras plantas",
+            "body": "O nitrogênio do ar (N2) tem uma ligação forte demais pra planta usar direto. Bactérias fixadoras no solo quebram essa ligação e transformam o gás numa forma que a raiz consegue absorver, entrando assim na cadeia alimentar."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:ecologia-relacoes-ecossistema:a74260f8",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Energia diminui a cada nível da cadeia alimentar. Decompositores reciclam matéria morta e bactérias fixadoras liberam nitrogênio pras plantas."
+        }
+      ]
+    }
+  ]
+}

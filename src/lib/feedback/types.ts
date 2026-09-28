@@ -17,6 +17,13 @@ export interface AnswerFeedback {
   interactionId: string;
   exerciseId: string;
   correct: boolean;
+  /**
+   * "dont-know" é o botão "Não sei" (docs/30 §16.1, Fase 6) — nem acerto nem
+   * erro; `correct` continua `false` (mesma semântica de pontuação de
+   * sempre), `kind` é só pra estilo visual (`FeedbackSheet` não pinta de
+   * vermelho quando o aluno optou por não chutar).
+   */
+  kind: "correct" | "incorrect" | "dont-know";
   /** Slot usado em `fala()` — guardado pra depuração/teste, não pra re-sortear depois. */
   messageId: string;
   messageText: string;

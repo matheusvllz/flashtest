@@ -1,0 +1,658 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:5b09d655",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual grupo social formava a principal força de trabalho nas plantações de açúcar do Brasil colonial?",
+        "opcoes": [
+          "Jesuítas e padres",
+          "Escravizados africanos e indígenas",
+          "Comerciantes portugueses",
+          "Indígenas livres"
+        ],
+        "correta": 1,
+        "explicacao": "Nos engenhos de açúcar, o trabalho pesado era feito sobretudo por pessoas escravizadas: no início, muitos indígenas; depois, principalmente africanos trazidos pelo tráfico atlântico, sob um regime brutal. Indígenas livres não eram a base da produção, os jesuítas atuavam na catequese e na educação, e os comerciantes portugueses controlavam o comércio, não o trabalho na lavoura."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:5b09d655",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:97eb9db3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual era a função política da Câmara Municipal durante o período colonial português no Brasil?",
+        "opcoes": [
+          "Governar localmente com relativa autonomia, arrecadar impostos e administrar justiça local",
+          "Executar todas as ordens diretas do rei português",
+          "Controlar apenas questões militares e defesa do litoral",
+          "Supervisionar a produção de açúcar e cobrar dízimos da Igreja"
+        ],
+        "correta": 0,
+        "explicacao": "A Câmara Municipal tinha autonomia relativa pra governar questões locais, arrecadar impostos municipais e administrar justiça menor, apesar da supervisão portuguesa. O rei exercia controle geral mas não direto em cada decisão local, os militares tinham estrutura separada, e a Igreja tinha seus próprios dízimos, mas a Câmara era a instituição de governo local mais importante."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:97eb9db3",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:d278b67d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Compare a Lei das Sesmarias com o sistema de concessões de mineração do século 18. Qual era o objetivo central de cada um?",
+        "opcoes": [
+          "Lei das Sesmarias: distribuir terras a fidalgos para garantir produção agrícola; concessões de mineração: manter monopólio régio da riqueza mineral",
+          "Lei das Sesmarias: dar liberdade total de propriedade; concessões: proibir completamente a exploração privada",
+          "Lei das Sesmarias: taxar agricultura intensamente; concessões: isentar mineiros de impostos",
+          "Lei das Sesmarias: permitir propriedade hereditária; concessões: abolir escravidão nas minas"
+        ],
+        "correta": 0,
+        "explicacao": "As sesmarias eram terras concedidas pela Coroa a pessoas de posses e de confiança (muitas delas fidalgos), com a obrigação de cultivá-las, para garantir a ocupação e a produção agrícola. Na mineração, as jazidas pertenciam à Coroa, que concedia lotes (datas) aos mineradores e cobrava o quinto (20% do ouro extraído), fiscalizado pelas casas de fundição. Em ambos os casos, a Coroa distribuía o acesso, mas mantinha o controle e a arrecadação."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:d278b67d",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:93c41c42",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante o período colonial, como as mudanças tributárias refletiam os conflitos entre os interesses da metrópole portuguesa, das elites coloniais e das populações escravizadas?",
+        "opcoes": [
+          "A Coroa priorizava lucro sobre escravidão; mineiros e senhores apoiavam; escravizados pagavam impostos diretos",
+          "Impostos altos financiavam a Coroa; elites locais resistiam fiscalização; escravizados fugiam para quilombos",
+          "Impostos foram abolidos; todas as classes apoiavam a Coroa",
+          "A Coroa taxava igualmente todos os grupos; ninguém resistia"
+        ],
+        "correta": 1,
+        "explicacao": "Os tributos coloniais, como o quinto do ouro, sustentavam a Coroa portuguesa. As elites coloniais resistiam à fiscalização com sonegação, contrabando de ouro e até revoltas, como a Revolta de Vila Rica (1720) e a Inconfidência Mineira (1789), motivada pela ameaça da derrama. Os escravizados não pagavam impostos, mas sustentavam toda essa riqueza com seu trabalho, e resistiam por fugas, formação de quilombos e rebeliões. Os três grupos tinham interesses em conflito."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:93c41c42",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:5c31940d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual era a principal função das Capitanias Hereditárias distribuídas pela Coroa Portuguesa no século XVI?",
+        "opcoes": [
+          "Explorar unicamente ouro e pedras preciosas",
+          "Administrar justiça eclesiástica das dioceses",
+          "Realizar expedições militares contra potências estrangeiras",
+          "Ocupar e colonizar o território, estabelecer cidades e defender a costa de invasões"
+        ],
+        "correta": 3,
+        "explicacao": "As Capitanias Hereditárias eram grandes extensões de terra concedidas a fidalgos pra ocupar, colonizar, estabelecer cidades e defender a costa contra piratas e invasores. Não focavam unicamente em ouro, não eram funções eclesiásticas, e não eram expedições militares coordenadas: eram concessões de governo pra colonização."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:5c31940d",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:8faedf30",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual era o principal objetivo da Coroa Portuguesa ao enviar o Governo-Geral para o Brasil em 1549?",
+        "opcoes": [
+          "Centralizar o controle administrativo sobre as Capitanias Hereditárias e contra-atacar ataques de piratas franceses",
+          "Abolir o trabalho escravo e liberar os indígenas",
+          "Transferir permanentemente a capital de Lisboa para o Brasil",
+          "Permitir completa autonomia das Câmaras Municipais"
+        ],
+        "correta": 0,
+        "explicacao": "O Governo-Geral foi criado pra centralizar o controle real sobre o Brasil, coordenar as Capitanias Hereditárias que funcionavam de forma autônoma, e defender a costa contra piratas e invasores, especialmente franceses. Não visava abolir escravidão, não transferiu a capital, e não aumentava autonomia local: aumentava o controle da Coroa."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:8faedf30",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:dd440c57",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Câmara Municipal do Brasil colonial era composta principalmente por homens bons, e seu poder era limitado pela presença do Ouvidor e do Capitão-Mor. Como essa estrutura refletia a tensão entre centralismo português e autonomia local?",
+        "opcoes": [
+          "O Ouvidor e Capitão-Mor não tinham autoridade alguma",
+          "Não havia tensão; todos os grupos apoiavam a Coroa completamente",
+          "A Câmara tinha autonomia real mas era fiscalizada pelos representantes da Coroa, criando conflito latente entre poder local e poder central",
+          "A Câmara era completamente subordinada sem qualquer poder"
+        ],
+        "correta": 2,
+        "explicacao": "A Câmara tinha autonomia relativa (governava impostos locais, justiça menor, obras) mas era vigiada pelo Ouvidor e Capitão-Mor representantes da Coroa. Essa dualidade criava conflitos permanentes: as elites locais queriam mais autonomia; a Coroa queria mais controle. Não era completa submissão nem completa liberdade: era um equilíbrio tenso."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:dd440c57",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:5f65e97c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A concessão de sesmarias no Brasil colonial seguia princípios específicos sobre quem recebia e sob quais condições. Como essas regras refletiam os objetivos da Coroa e os interesses das elites locais?",
+        "opcoes": [
+          "Fidalgos leais recebiam grandes extensões; deveriam cultivar ou perderiam; mantinha vassalagem e fornecia produtos para a Coroa",
+          "Qualquer pessoa recebia terras sem condições; a Coroa tinha pouco controle",
+          "Apenas portugueses nascidos em Portugal recebiam; nenhuma elite local era privilegiada",
+          "Propriedade hereditária total sem obrigações; elites locais tinham liberdade absoluta"
+        ],
+        "correta": 0,
+        "explicacao": "A Lei das Sesmarias concebia terras como concessão, não propriedade absoluta: o beneficiário devia cultivar (aproveitamento) ou perdia. Favorecia fidalgos leais, recompensando-os com poder e terra enquanto mantinha controle da Coroa. Não era propriedade hereditária total. Era mecanismo de vassalagem: a Coroa assegurava lealdade política através de recompensas fundiárias."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:5f65e97c",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:410971c5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Igreja Católica desempenhou um papel tanto religioso quanto político na colônia. Qual era sua principal estratégia de controle social e evangelização sobre os indígenas?",
+        "opcoes": [
+          "Impor impostos específicos aos indígenas que se recusassem a se converter",
+          "Permitir que indígenas mantivessem suas religiões originais ao lado do cristianismo",
+          "Aldeias missionárias onde concentrava indígenas sob tutela jesuíta, ensinando catecismo e português",
+          "Deixar indígenas livres para escolher conversão sem coerção"
+        ],
+        "correta": 2,
+        "explicacao": "Os jesuítas criaram aldeamentos (aldeias missionárias), onde reuniam indígenas de diferentes grupos sob sua tutela, ensinando catecismo, a língua (português e a 'língua geral') e uma rotina de trabalho disciplinado. O objetivo era converter e controlar, combatendo as religiões e costumes indígenas, ainda que, na prática, houvesse mistura cultural. Não havia liberdade de escolha nem imposto específico para não convertidos: o aldeamento era o principal instrumento de catequese e controle."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:410971c5",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:8b4a1c3a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No Brasil colonial, a economia se organizava em grandes propriedades dedicadas ao cultivo de cana-de-açúcar para exportação. A sociedade colonial comportava senhores de terra, escravizados de origem africana, e pessoas livres pobres (incluindo mamelucos e mulatos) com pouco acesso a terra. Qual característica econômica e social essa estrutura refletia?",
+        "opcoes": [
+          "Um latifúndio agroexportador movido por escravidão, concentrando poder político e econômico na elite proprietária",
+          "Uma economia baseada em manufaturas urbanas e comércio de bens importados",
+          "Uma divisão equitativa de terras entre colonos europeus e povos indígenas",
+          "Uma sociedade de pequenos proprietários independentes com igualdade de direitos"
+        ],
+        "correta": 0,
+        "explicacao": "A economia colonial brasileira se baseava em latifúndios (grandes propriedades), monocultura exportadora (açúcar) e trabalho escravo. Isso concentrou riqueza em poucos senhores de terra, criou uma elite política-econômica hereditária e marginalizou pessoas livres pobres e escravizados. A desigualdade que vemos hoje vem dessa estrutura."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:8b4a1c3a",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.099Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:3806cbbf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Documentos do século 16 e 17 mostram que a Coroa portuguesa recrutava fidalgos endividados e homens de segunda categoria para colonizar o Brasil, oferecendo-lhes sesmarias (concessões de terra). Esses senhores utilizavam trabalho indígena escravizado inicialmente e depois trabalho escravo africano. Qual era o objetivo político e econômico dessa política colonizadora?",
+        "opcoes": [
+          "Eliminar completamente os povos indígenas da América do Sul",
+          "Consolidar o controle territorial português, gerar riqueza exportável (açúcar, algodão) e manter uma elite dependente da Coroa",
+          "Estabelecer igualdade social entre colonos europeus e povos indígenas",
+          "Democratizar a propriedade de terra e criar uma classe média colonial próspera"
+        ],
+        "correta": 1,
+        "explicacao": "A política de sesmarias buscava controle territorial (consolidar domínio português contra rivais europeus), geração de riqueza (exportação de produtos tropicais lucrativos) e dependência política (elite local dependia de privilégios concedidos pela Coroa). Trabalho escravo era fundamental porque maximizava lucro. Essa estrutura refletia mercantilismo português e colonialismo europeu, não igualitarismo."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:3806cbbf",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.099Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:brasil-colonia-economia-sociedade:6778686b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A sociedade colonial brasileira dos séculos 16 a 18 tinha as seguintes características: grandes propriedades rurais, escravidão africana, pequena população de mulatos e mamelucos sem propriedades, e uma elite de origem portuguesa. Qual dessas características era fundamental para a organização econômica naquele período?",
+        "opcoes": [
+          "Todos os grupos sociais terem acesso igual a terra e recursos",
+          "A população de origem portuguesa ser maioria absoluta",
+          "As propriedades rurais serem pequenas e familiares",
+          "A escravidão ser a base do trabalho na produção de bens exportáveis"
+        ],
+        "correta": 3,
+        "explicacao": "A escravidão era essencial na economia colonial. Sem força de trabalho escravizada, a produção de açúcar, algodão e tabaco em larga escala não era economicamente viável. A elite colonial dependia de escravizados para acumular riqueza e poder. A população portuguesa era minoria; mulatos e mamelucos eram maioria, mas sem propriedades."
+      },
+      "meta": {
+        "id": "gen:his:brasil-colonia-economia-sociedade:6778686b",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.099Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-his-brasil-colonia-economia-sociedade",
+      "version": 1,
+      "format": 2,
+      "subjectId": "his",
+      "topicId": "bcol",
+      "chapterId": "gen-his-brasil-colonia-economia-sociedade",
+      "title": "Economia e sociedade coloniais",
+      "objective": "Explicar como a Coroa organizou trabalho, terra e governo no Brasil colonial",
+      "skillIds": [
+        "his:brasil-colonia-economia-sociedade"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:his:brasil-colonia-economia-sociedade:8faedf30",
+        "gen:his:brasil-colonia-economia-sociedade:93c41c42"
+      ],
+      "recap": "A Coroa organizava terra, trabalho e minério distribuindo o acesso a terceiros, mas sempre mantendo controle e arrecadação pra si.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Brasil Colônia",
+          "body": "Você vai explicar como a Coroa portuguesa organizou o trabalho, a terra e o governo do Brasil colonial."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Trabalho e ocupação do território",
+            "body": "A economia colonial girava em torno da plantation açucareira, sustentada pelo trabalho de escravizados, primeiro indígenas, depois majoritariamente africanos trazidos à força. Pra ocupar e defender o território, a Coroa distribuiu Capitanias Hereditárias: terras entregues a fidalgos com a obrigação de colonizar, fundar cidades e proteger a costa de invasores."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:brasil-colonia-economia-sociedade:5b09d655",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:brasil-colonia-economia-sociedade:5c31940d",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Igreja e governo local",
+            "body": "A Igreja, pelos jesuítas, reunia indígenas em aldeamentos pra catequizar, ensinar português e impor uma rotina de trabalho, combatendo os costumes originais desses povos. O governo do dia a dia de cada vila ficava com a Câmara Municipal, com autonomia pra arrecadar impostos locais e cuidar da justiça menor, sob supervisão distante de Portugal."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:brasil-colonia-economia-sociedade:410971c5",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:brasil-colonia-economia-sociedade:97eb9db3",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda autonomia da Câmara com independência: ela decidia questões locais, mas seguia subordinada à Coroa."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Terra e minério sob controle da Coroa",
+            "body": "Pela Lei das Sesmarias, a Coroa concedia terras a pessoas de confiança, com a obrigação de cultivá-las e manter a ocupação e a produção agrícola. Na mineração, o subsolo era da Coroa, que distribuía lotes aos mineradores mas cobrava o quinto, 20% do ouro extraído. Nos dois casos, a Coroa abria o acesso e guardava pra si o controle e a arrecadação."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:brasil-colonia-economia-sociedade:d278b67d",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "A Coroa organizava terra, trabalho e minério distribuindo o acesso a terceiros, mas sempre mantendo controle e arrecadação pra si."
+        }
+      ]
+    }
+  ]
+}

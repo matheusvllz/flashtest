@@ -1,0 +1,888 @@
+{
+  "subjectId": "geo",
+  "items": [
+    {
+      "id": "gen:geo:urbanizacao-processos:8644d3c5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A urbanização concentra populações em cidades, alterando o ambiente local. Qual é um impacto ambiental direto dessa concentração populacional?",
+        "opcoes": [
+          "Diminuição da poluição do ar",
+          "Restauração automática de ecossistemas naturais",
+          "Redução da quantidade de resíduos produzidos",
+          "Aumento do desmatamento e redução de áreas verdes"
+        ],
+        "correta": 3,
+        "explicacao": "Ao se expandir, as cidades removem floresta, vegetação e habitats. Edifícios, ruas e infraestrutura substituem ecossistemas naturais. Essa substituição reduz áreas verdes, diminui a biodiversidade local e altera ciclos hidrológicos. As outras alternativas descrevem o oposto do que a concentração urbana costuma causar."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:8644d3c5",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:3ec2cb14",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Muitas favelas urbanas carecem de saneamento básico adequado. Qual é a consequência social associada a essa deficiência?",
+        "opcoes": [
+          "Aumento de doenças transmitidas por contaminação de água",
+          "Redução de crimes nas comunidades",
+          "Maior acesso a educação de qualidade",
+          "Melhoria automática da saúde pública"
+        ],
+        "correta": 0,
+        "explicacao": "Falta de saneamento permite que patógenos contaminem fontes de água. Comunidades sem esgoto adequado ficam mais expostas a doenças como cólera, disenteria e diarreia. Crianças são particularmente afetadas, impactando desenvolvimento e saúde pública. Essa conexão entre urbanização inadequada e saúde está bem documentada."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:3ec2cb14",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:0703ad6a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O processo de conurbação une áreas urbanas antes separadas em uma única zona metropolitana. Qual é um desafio administrativo resultante?",
+        "opcoes": [
+          "Impossibilidade de atrair novos investimentos privados para a região",
+          "Dificuldade de coordenação de serviços e políticas públicas entre diferentes administrações",
+          "Redução automática de tráfego e congestionamento",
+          "Simplificação automática de todos os serviços públicos em uma única administração"
+        ],
+        "correta": 1,
+        "explicacao": "Quando cidades se unem, cada município mantém sua administração independente. Coordenar transporte, água, esgoto e políticas entre múltiplas prefeituras fica complexo. A falta de integração causa ineficiência na prestação de serviços e facilita problemas como congestionamento e poluição."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:0703ad6a",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:80e171a1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nas favelas, a autoconstrução é a forma predominante de edificação. Qual é uma consequência urbano-ambiental dessa prática?",
+        "opcoes": [
+          "Melhoria da qualidade do ar urbano",
+          "Cumprimento automático de regulamentações de construção",
+          "Estruturas vulneráveis a desastres e falta de planejamento urbano adequado",
+          "Garantia de espaços públicos bem definidos"
+        ],
+        "correta": 2,
+        "explicacao": "Autoconstrução sem planejamento e sem apoio técnico resulta muitas vezes em moradias instáveis, sem fundações adequadas, frequentemente em áreas de risco como encostas e áreas de inundação. Durante chuvas e deslizamentos, essas estruturas podem falhar, causando tragédias. Além disso, a falta de ruas ordenadas piora a circulação e aumenta riscos de incêndio."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:80e171a1",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:74a70185",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Cidades brasileiras expandem-se verticalmente com edifícios residenciais em bairros periféricos. Qual é o impacto ambiental dessa expansão vertical quando acompanhada de falta de infraestrutura?",
+        "opcoes": [
+          "Reflorestamento automático da região",
+          "Redução de emissões de gases estufa",
+          "Redução de deslocamentos necessários",
+          "Maior consumo de água e geração de resíduos sem tratamento adequado"
+        ],
+        "correta": 3,
+        "explicacao": "Expansão vertical sem saneamento aumenta consumo de água, gera efluentes sem tratamento e produz resíduos em volume crescente. Sistemas de coleta e tratamento inadequados causam poluição de rios e lençol freático. Urbanização desarticulada de infraestrutura multiplica pressões ambientais."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:74a70185",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:28387c17",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A segregação espacial em cidades coloca populações pobres em bairros periféricos distantes, com acesso limitado a empregos e serviços. Qual é a consequência socioespacial dessa organização urbana?",
+        "opcoes": [
+          "Reforço de desigualdades e acesso desigual a bens e serviços",
+          "Aumento de mobilidade social",
+          "Igualdade automática de oportunidades",
+          "Redução de diferenças sociais"
+        ],
+        "correta": 0,
+        "explicacao": "Periferias distantes de centros econômicos aumentam o tempo de deslocamento e reduzem o acesso a empregos formais e serviços. Comunidades pobres se concentram nessas áreas, criando bolsões de pobreza. Esse arranjo espacial perpetua desigualdades e reduz oportunidades educacionais e profissionais pra residentes de áreas periféricas."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:28387c17",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:4fc0ad73",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Gentrificação ocorre quando investimentos urbanos valorizam bairros populares, atraindo residentes de maior renda. Qual é o impacto social sobre a população original?",
+        "opcoes": [
+          "Aumento de oportunidades de emprego para todos os residentes",
+          "Deslocamento involuntário de moradores pobres por aumento de preços de aluguel",
+          "Melhoria universal da qualidade de vida",
+          "Redução de violência em todas as comunidades"
+        ],
+        "correta": 1,
+        "explicacao": "Gentrificação valoriza propriedades, aluguéis e impostos sobem. Moradores pobres não conseguem acompanhar esse aumento e são forçados a se mudar pra periferias ainda mais distantes. Esse processo cria expulsão social de comunidades históricas, destrói redes sociais e aumenta vulnerabilidade."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:4fc0ad73",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:fe33de24",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pesquisador estuda favelas sobre as quais foram construídas vias expressas elevadas. Qual é a conexão entre infraestrutura viária segregadora e produção de espaço urbano injusto?",
+        "opcoes": [
+          "Elimina congestionamento de forma equitativa",
+          "Garante acesso igual a todos os serviços",
+          "A infraestrutura conecta todos os grupos sociais igualmente",
+          "Hierarquiza espacialmente grupos, separando fisicamente ricos de pobres, reforçando divisão social"
+        ],
+        "correta": 3,
+        "explicacao": "Vias expressas elevadas sobre favelas simbolizam e perpetuam a segregação: a população pobre vive embaixo de fluxos de tráfego que atravessam o bairro sem servi-lo, enquanto a obra corta e isola a comunidade. Essa 'infraestrutura segregadora' produz uma hierarquia do espaço. Revela como decisões de planejamento urbano reproduzem e espacializam desigualdades sociais."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:fe33de24",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:caf140af",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Cidades latino-americanas combinam crescimento demográfico, industrialização recente e urbanização informal. Como essas dinâmicas interagem para produzir vulnerabilidade climática?",
+        "opcoes": [
+          "Urbanização planejada reduz sempre vulnerabilidade climática",
+          "Ocupações informais em encostas e áreas inundáveis amplificam riscos de desastres",
+          "Industrialização não afeta vulnerabilidade aos riscos climáticos",
+          "Crescimento demográfico distribui-se igualmente por todas as áreas"
+        ],
+        "correta": 1,
+        "explicacao": "Urbanização informal ocorre em áreas de risco como encostas e várzeas porque são 'livres' ou baratas. Clima extremo com chuvas intensas e secas afeta desproporcionalmente esses assentamentos. Mudanças climáticas aumentarão frequência desses eventos, tornando periferias informais extremamente vulneráveis. Industrialização piora pela poluição local."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:caf140af",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:936f37ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A \"cidade compacta\" é proposta urbana que busca reduzir dispersão, estimulando densidade. Qual é o mecanismo ambiental que torna essa abordagem mais sustentável que a expansão horizontal?",
+        "opcoes": [
+          "Cria maior demanda por água potável",
+          "Estimula construção de novas autopistas",
+          "Reduz consumo de terra agrícola e energias de transporte por concentrar população",
+          "Aumenta consumo de recursos naturais automaticamente"
+        ],
+        "correta": 2,
+        "explicacao": "Cidades compactas exigem menos deslocamento, reduz emissões de transporte, preserva terras agrícolas e naturais, consolida infraestrutura. Dispersão horizontal consome mais terra, mais combustível em deslocamentos longos, demanda mais energia e água. Densidade bem planejada é ambientalmente mais eficiente que sprawl, expansão descontrolada."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:936f37ef",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:88cc7bc1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em cidades industriais, bairros operários crescem próximos a fábricas. Qual era a origem histórica dessa proximidade?",
+        "opcoes": [
+          "Preferência estética dos industriais",
+          "Isolamento voluntário de comunidades",
+          "Planejamento estatal que priorizava equidade espacial",
+          "Redução de custos de deslocamento para operários e de transporte de mercadorias"
+        ],
+        "correta": 3,
+        "explicacao": "A proximidade entre operários e fábricas reduzia o tempo e o custo de deslocamento dos trabalhadores e os custos logísticos. Industriais tinham incentivo em ter mão de obra perto das plantas fabris. Essa lógica econômica produziu bairros operários característicos de cidades industrializadas dos séculos XIX e XX."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:88cc7bc1",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:84f07294",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quando a lei de uso do solo de uma cidade separa rigidamente zonas residenciais de zonas comerciais, qual é uma consequência desse zoneamento rígido?",
+        "opcoes": [
+          "Aumento de deslocamentos longos entre zonas, intensificando tráfego",
+          "Criação automática de comunidades coesas",
+          "Redução de poluição urbana",
+          "Redução de deslocamentos desnecessários"
+        ],
+        "correta": 0,
+        "explicacao": "Zoneamento separado obriga as pessoas a se deslocar entre zonas pra trabalho, compras e lazer. Ao contrário de modelos mistos, que promovem vizinhanças com uso múltiplo, o zoneamento rígido gera dependência de transporte. Resultado: congestionamento, emissões e tempo perdido, problemas urbanos clássicos."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:84f07294",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:34307c19",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Programas de habitação social constroem moradias em periferias distantes. Qual é a desvantagem socioespacial frequentemente associada?",
+        "opcoes": [
+          "Acesso fácil a empregos e serviços",
+          "Isolamento geográfico, distância de centros econômicos e de oportunidades",
+          "Proximidade de escolas de qualidade",
+          "Amplo acesso a transporte público"
+        ],
+        "correta": 1,
+        "explicacao": "Periferias distantes oferecem terreno barato, mas isolam moradores de centros onde se concentram empregos, escolas e serviços. Habitantes enfrentam deslocamentos longos, custos de transporte elevados e tempo perdido. Habitação em periferias frequentemente reproduz pobreza em vez de integrá-la espacialmente à cidade."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:34307c19",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:19a7a93f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma cidade cresce rapidamente em torno de uma universidade federal. Qual seria o impacto socioespacial dessa dinâmica no bairro original?",
+        "opcoes": [
+          "Redução de comércio local",
+          "Redução de população e esvaziamento",
+          "Aumento de pressão de demanda por moradia, valorização de imóveis e deslocamento de residentes pobres",
+          "Isolamento completo do resto da cidade"
+        ],
+        "correta": 2,
+        "explicacao": "Presença de instituição educacional atrai investimento privado, estudantes de classe média, comércio associado. Propriedades se valorizam rapidamente. Moradores antigos de menor renda não conseguem acompanhar aumento de aluguel e são deslocados. Gentrificação induzida por universidades é fenômeno documentado em várias cidades."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:19a7a93f",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:5be436f6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Cidades portuárias históricas como Rio de Janeiro têm frentes de água que ficaram degradadas industrialmente. Qual é o novo modelo de ocupação dessas áreas?",
+        "opcoes": [
+          "Abandono permanente das frentes de água",
+          "Expansão agrícola nas margens",
+          "Manutenção da indústria pesada original",
+          "Conversão para usos culturais, habitacionais e comerciais de alta renda"
+        ],
+        "correta": 3,
+        "explicacao": "O Porto Maravilha, no Rio, e projetos em Barcelona e Buenos Aires (Puerto Madero) converteram frentes industriais em áreas com museus, apartamentos caros e restaurantes. Essa transformação revitaliza visualmente a cidade, mas desloca atividades portuárias e empregos, valoriza terrenos e pressiona a saída de moradores pobres antigos. Exemplifica gentrificação em grande escala."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:5be436f6",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:4a43841d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um município expande sua malha urbana sobre áreas de recarga de aquífero. Qual é a vulnerabilidade hídrica resultante a médio e longo prazo?",
+        "opcoes": [
+          "Redução de infiltração, diminuindo recarga de aquíferos e criando escassez hídrica",
+          "Melhoria da qualidade da água subterrânea",
+          "Aumento de precipitação local",
+          "Aumento automático da disponibilidade de água"
+        ],
+        "correta": 0,
+        "explicacao": "A impermeabilização do solo com asfalto e concreto bloqueia a infiltração da chuva em áreas de recarga. Sem reabastecimento dos aquíferos, as reservas subterrâneas diminuem, o que pode levar a crise hídrica. É uma vulnerabilidade induzida por planejamento urbano inadequado."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:4a43841d",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.308Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:urbanizacao-processos:74f6685a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante as décadas de 1980-2000, a região metropolitana de São Paulo cresceu demograficamente a 2% ao ano, enquanto a periferia cresceu a 5% ao ano. O crescimento rápido da periferia ocorreu em áreas de encosta e próximo a córregos, com pouca infraestrutura de saneamento. Qual é a relação mais direta entre este padrão de urbanização e um problema ambiental?",
+        "opcoes": [
+          "Degradação ambiental (erosão, poluição hídrica) e risco de deslizamentos",
+          "Aquecimento global local",
+          "Aumento de emissões veiculares",
+          "Desmatamento de áreas urbanas consolidadas"
+        ],
+        "correta": 0,
+        "explicacao": "Urbanização desordenada em encostas causa dois problemas simultâneos: erosão do solo e ocupação em áreas de risco geológico. Sem saneamento, córregos ficam poluídos. Sem contenção de encostas, chuvas intensas desencadeiam deslizamentos. Essa urbanização descontrolada gera degradação ambiental irreversível em pouco tempo."
+      },
+      "meta": {
+        "id": "gen:geo:urbanizacao-processos:74f6685a",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:46:12.258Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-geo-urbanizacao-processos",
+      "version": 1,
+      "format": 2,
+      "subjectId": "geo",
+      "topicId": "urb",
+      "chapterId": "gen-geo-urbanizacao-processos",
+      "title": "Urbanização e seus problemas",
+      "objective": "Relacionar um processo de urbanização a um problema social ou ambiental",
+      "skillIds": [
+        "geo:urbanizacao-processos"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:geo:urbanizacao-processos:3ec2cb14",
+        "gen:geo:urbanizacao-processos:8644d3c5"
+      ],
+      "recap": "Cada processo de urbanização, da conurbação à gentrificação, tende a criar um problema específico de coordenação, moradia ou desigualdade.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Urbanização",
+          "body": "Você vai relacionar um processo de urbanização, como conurbação, autoconstrução, zoneamento ou gentrificação, a um problema social ou ambiental concreto."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Cidades que se juntam e crescem sem plano",
+            "body": "Quando cidades vizinhas crescem e se unem numa mesma mancha urbana, ocorre a conurbação, mas cada município mantém sua própria administração, o que dificulta coordenar transporte, água e esgoto entre elas. Nas periferias, a autoconstrução sem apoio técnico costuma ocupar áreas de risco, como encostas e margens de rio, resultando em moradias instáveis e vulneráveis a desastres."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:urbanizacao-processos:0703ad6a",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:urbanizacao-processos:80e171a1",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Zoneamento rígido e valorização",
+            "body": "Separar rigidamente zonas residenciais e comerciais obriga as pessoas a percorrer distâncias maiores pro trabalho e pro consumo, intensificando o trânsito. A valorização de um bairro popular por novos investimentos atrai moradores de renda mais alta e eleva aluguéis e impostos, processo chamado gentrificação, empurrando os moradores originais pra áreas mais distantes e baratas."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:urbanizacao-processos:84f07294",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:urbanizacao-processos:4fc0ad73",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não trate gentrificação como melhoria geral: ela valoriza o bairro, mas desloca justamente quem morava lá antes."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Urbanização informal e clima",
+            "body": "Assentamentos informais costumam ocupar terrenos baratos ou desocupados justamente por serem de risco, como encostas e áreas alagáveis. Com eventos climáticos mais intensos, essas áreas concentram boa parte dos danos de enchentes e deslizamentos, tornando quem vive ali desproporcionalmente mais vulnerável."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:urbanizacao-processos:caf140af",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Cada processo de urbanização, da conurbação à gentrificação, tende a criar um problema específico de coordenação, moradia ou desigualdade."
+        }
+      ]
+    }
+  ]
+}

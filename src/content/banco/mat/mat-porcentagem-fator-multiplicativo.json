@@ -1,0 +1,741 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:5a4b5ef8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja aplica dois descontos sucessivos: primeiro 15% e depois 10% sobre o novo valor. Se um produto custa 200 reais, qual é o preço final?",
+        "opcoes": [
+          "153 reais",
+          "160 reais",
+          "170 reais",
+          "180 reais"
+        ],
+        "correta": 0,
+        "explicacao": "Aplicar dois descontos sucessivos significa multiplicar pelos fatores em sequência. Fator total = 0,85 × 0,90 = 0,765. Preço final = 200 × 0,765 = 153 reais. (Não é somar os descontos!)"
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:5a4b5ef8",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:c62342f8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma ação na bolsa sofre uma queda de 8%, seguida de uma recuperação de 12%. Se partiu de 100 reais, qual é o valor final?",
+        "opcoes": [
+          "103,04 reais",
+          "104 reais",
+          "104,96 reais",
+          "112 reais"
+        ],
+        "correta": 0,
+        "explicacao": "Fator total = 0,92 (queda de 8%) × 1,12 (recuperação de 12%) = 1,0304. Valor final = 100 × 1,0304 = 103,04 reais. Variações percentuais sucessivas multiplicam, não somam."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:c62342f8",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:5a470c25",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um supermercado oferece cupom que dá 7% de desconto, e depois a operadora do cartão oferece mais 3% de cashback. Qual é o percentual final de economia em uma compra de 500 reais?",
+        "opcoes": [
+          "10%",
+          "9,79%",
+          "10,21%",
+          "6,21%"
+        ],
+        "correta": 1,
+        "explicacao": "Fator total = 0,93 (desconto de 7%) × 0,97 (cashback de 3%) = 0,9021. Valor final = 500 × 0,9021 = 451,05 reais. Economia = 500 − 451,05 = 48,95 reais ≈ 9,79% de 500."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:5a470c25",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:0c31e79b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um investimento rende 20% ao ano. Se reinveste-se o ganho (juros compostos), qual será o montante após 2 anos, começando com 1000 reais?",
+        "opcoes": [
+          "1200 reais",
+          "1400 reais",
+          "1440 reais",
+          "1464 reais"
+        ],
+        "correta": 2,
+        "explicacao": "Em juros compostos, multiplique pelo fator 1,20 a cada ano. Ano 1: 1000 × 1,20 = 1200. Ano 2: 1200 × 1,20 = 1440 reais. Mais rápido: 1000 × (1,20)² = 1000 × 1,44 = 1440."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:0c31e79b",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:7c7f3b59",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja reduz o preço em 30%, depois aumenta em 40% (sobre o preço reduzido). Uma blusa que custava 100 reais quanto custa agora?",
+        "opcoes": [
+          "70 reais",
+          "82 reais",
+          "98 reais",
+          "110 reais"
+        ],
+        "correta": 2,
+        "explicacao": "Após redução de 30%: 100 × 0,70 = 70 reais. Após aumento de 40%: 70 × 1,40 = 98 reais. Fator total: 0,70 × 1,40 = 0,98. Logo, preço final = 100 × 0,98 = 98 reais."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:7c7f3b59",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:24672a3c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma camiseta custa R$ 60. Se há um desconto de 20%, qual é o novo preço?",
+        "opcoes": [
+          "R$ 40",
+          "R$ 44",
+          "R$ 48",
+          "R$ 52"
+        ],
+        "correta": 2,
+        "explicacao": "Desconto de 20% é pagar 80% do preço original. Faça a conta: 60 × 0,80 = 48 reais. De onde sai o 0,80? Subtraia o desconto de 1 (100%): 1 - 0,20 = 0,80."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:24672a3c",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.119Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:863645fc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja oferece dois descontos sucessivos: primeiro 10%, depois mais 15% sobre o preço já reduzido. Se uma TV custa inicialmente R$ 2.000, qual é o preço final?",
+        "opcoes": [
+          "R$ 1.300",
+          "R$ 1.500",
+          "R$ 1.530",
+          "R$ 1.700"
+        ],
+        "correta": 2,
+        "explicacao": "Primeiro desconto de 10%: preço fica 90% do original, 2.000 × 0,90 = 1.800. Segundo desconto de 15%: 1.800 × 0,85 = 1.530. A sacada: descontos sucessivos se multiplicam (0,90 × 0,85 = 0,765), não se somam. Muita gente erra aqui e faz 2.000 × 0,75 = 1.500."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:863645fc",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.119Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:1e625c54",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O salário de um funcionário era R$ 2.500. Ele recebeu um aumento de 8%. Qual é o novo salário?",
+        "opcoes": [
+          "R$ 2.600",
+          "R$ 2.700",
+          "R$ 2.800",
+          "R$ 2.900"
+        ],
+        "correta": 1,
+        "explicacao": "Aumento de 8% quer dizer que o salário é 108% do original. Faça a conta: 2.500 × 1,08 = 2.700 reais. De onde vem o 1,08? Some o aumento aos 100%: 1 + 0,08 = 1,08. Não é multiplicar só por 0,08."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:1e625c54",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.119Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:8c43a8e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa de tecnologia aumentou seus lucros em 25% no primeiro trimestre e depois em 20% no segundo trimestre. Se os lucros iniciais eram R$ 100.000, qual foi o lucro após os dois aumentos?",
+        "opcoes": [
+          "R$ 145.000",
+          "R$ 150.000",
+          "R$ 155.000",
+          "R$ 160.000"
+        ],
+        "correta": 1,
+        "explicacao": "Primeiro trimestre, aumento de 25%: 100.000 × 1,25 = 125.000. Segundo trimestre, aumento de 20%: 125.000 × 1,20 = 150.000. É fácil errar aqui: muita gente soma os percentuais (25% + 20% = 45%) e chega a 145.000, o que está errado. O certo é multiplicar os fatores: 1,25 × 1,20 = 1,50, e 100.000 × 1,50 = 150.000."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:8c43a8e4",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.119Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:0d948e78",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um produto que custava R$ 100 sofreu um aumento de 20%. Qual é o novo preço usando o fator multiplicativo 1,2?",
+        "opcoes": [
+          "120",
+          "100",
+          "110",
+          "125"
+        ],
+        "correta": 0,
+        "explicacao": "Fator multiplicativo = 1 + 0,20 = 1,20. Novo preço = 100 × 1,20 = 120 reais. Fator de aumento é maior que 1: é o preço de base mais o acréscimo."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:0d948e78",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:f21f5db7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um eletrônico que custa R$ 500 está com um desconto de 30%. Qual será o novo preço?",
+        "opcoes": [
+          "370",
+          "350",
+          "400",
+          "320"
+        ],
+        "correta": 1,
+        "explicacao": "Fator multiplicativo para desconto = 1 - 0,30 = 0,70. Novo preço = 500 × 0,70 = 350 reais. Fator de desconto é menor que 1: você paga menos do que o valor original."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:f21f5db7",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:55d17647",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um funcionário ganhava R$ 2.000 e recebeu um aumento de 15%. Qual será seu novo salário?",
+        "opcoes": [
+          "2150",
+          "2400",
+          "2300",
+          "2200"
+        ],
+        "correta": 2,
+        "explicacao": "Fator multiplicativo = 1 + 0,15 = 1,15. Novo salário = 2.000 × 1,15 = 2.300 reais. Usa o fator direto - é mais rápido e menos erro."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:55d17647",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:8180ae98",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja oferece primeiro desconto de 10%, depois mais 20% sobre o preço já reduzido. Se um produto custa R$ 1.000, qual será o preço final?",
+        "opcoes": [
+          "700",
+          "730",
+          "750",
+          "720"
+        ],
+        "correta": 3,
+        "explicacao": "Fator 1 = 1 - 0,10 = 0,90. Fator 2 = 1 - 0,20 = 0,80. Fator total = 0,90 × 0,80 = 0,72. Preço final = 1.000 × 0,72 = 720 reais. Em descontos em cascata, multiplica os fatores - não soma."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:8180ae98",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:d9dbb4df",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um investimento que valia R$ 10.000 cresceu 25% no primeiro mês e depois 20% no segundo mês. Qual será o valor após os dois meses?",
+        "opcoes": [
+          "15000",
+          "14500",
+          "14000",
+          "13000"
+        ],
+        "correta": 0,
+        "explicacao": "Após mês 1: 10.000 × 1,25 = 12.500 reais. Após mês 2: 12.500 × 1,20 = 15.000 reais. Ou diretamente: 10.000 × 1,25 × 1,20 = 10.000 × 1,50 = 15.000. Aumentos em sequência: multiplica os fatores."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:d9dbb4df",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:351b1a5b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A inflação em um país foi de 12% no primeiro semestre e 8% no segundo semestre. Se um produto custava R$ 500 no início do ano e acompanhou a inflação, qual será, aproximadamente, seu preço no final do ano?",
+        "opcoes": [
+          "595",
+          "605",
+          "600",
+          "610"
+        ],
+        "correta": 1,
+        "explicacao": "Fator 1 = 1 + 0,12 = 1,12. Fator 2 = 1 + 0,08 = 1,08. Fator total = 1,12 × 1,08 = 1,2096. Preço final = 500 × 1,2096 = 604,80 ≈ 605 reais. Inflações em sequência: multiplica os fatores, não soma as taxas (somar daria 20% e 600 reais)."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:351b1a5b",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:bb7b56d2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um vendedor aplica um fator multiplicativo de 1,08 ao preço de R$ 250 de um produto. Qual é o novo preço?",
+        "opcoes": [
+          "280",
+          "260",
+          "270",
+          "250"
+        ],
+        "correta": 2,
+        "explicacao": "Novo preço = 250 × 1,08 = 270 reais. Fator 1,08 representa um aumento de 8%. Multiplicar direto pelo fator é mais rápido que fazer em duas contas."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-fator-multiplicativo:bb7b56d2",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,901 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "gen:fis:dinamica-leis-newton:db97e8a1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um caminhão de entrega com massa de 2000 kg precisa frear e reduzir sua velocidade de 20 m/s para 5 m/s em exatamente 3 segundos para evitar uma criança na rua. Usando a segunda lei de Newton (F = m × a), qual é a intensidade da força de frenagem necessária?",
+        "opcoes": [
+          "30 000 N",
+          "5 000 N",
+          "20 000 N",
+          "10 000 N"
+        ],
+        "correta": 3,
+        "explicacao": "A aceleração é a = (5 - 20) / 3 = -5 m/s². A força é F = 2000 × (-5) = -10 000 N em sentido contrário ao movimento. O módulo (intensidade) é 10 000 N. Note que o sinal negativo indica apenas a direção, não que a força diminui: a frenagem é a aplicação contínua dessa força durante os 3 segundos."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:db97e8a1",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:997f33df",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um livro de 0,5 kg repousa sobre uma mesa horizontal. Se você aplicar uma força horizontal de 2 N sobre o livro e ele se move com aceleração constante, qual é a aceleração adquirida (desconsidere o atrito)?",
+        "opcoes": [
+          "4 m/s²",
+          "10 m/s²",
+          "1 m/s²",
+          "2,5 m/s²"
+        ],
+        "correta": 0,
+        "explicacao": "Pela segunda lei de Newton, F = m × a, então a = F / m = 2 / 0,5 = 4 m/s². Essa é a aceleração que o livro ganha quando você aplica 2 N sem atrito."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:997f33df",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:6c677987",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma astronauta está flutuando em uma nave espacial longe de qualquer gravidade. Ela empurra uma caixa de 10 kg com uma força de 50 N. Qual será a aceleração da caixa?",
+        "opcoes": [
+          "50 m/s²",
+          "5 m/s²",
+          "500 m/s²",
+          "0,5 m/s²"
+        ],
+        "correta": 1,
+        "explicacao": "No espaço, sem gravidade, a única força é a que a astronauta aplica. Usando F = m × a, temos 50 = 10 × a, então a = 5 m/s². Em ambiente de microgravidade, a fórmula de Newton funciona da mesma forma, apenas sem a complicação da força gravitacional."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:6c677987",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:bb0919ba",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um patinador de 60 kg desliza sobre gelo liso empurrando contra uma parede com força de 180 N. Qual é sua aceleração no afastamento da parede?",
+        "opcoes": [
+          "1 m/s²",
+          "2 m/s²",
+          "3 m/s²",
+          "6 m/s²"
+        ],
+        "correta": 2,
+        "explicacao": "O patinador aplica 180 N na parede. Pela terceira lei de Newton, a parede aplica 180 N de volta. A aceleração: a = F / m = 180 / 60 = 3 m/s². É a aceleração inicial ao se afastar."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:bb0919ba",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:7ec412ea",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma corda que suporta uma caixa pendurada exerce uma força de tensão de 50 N para cima. A caixa tem massa de 4 kg. Qual é a aceleração vertical da caixa? (Considere g = 10 m/s²)",
+        "opcoes": [
+          "2,5 m/s² para baixo",
+          "5 m/s² para cima",
+          "12,5 m/s² para baixo",
+          "2,5 m/s² para cima"
+        ],
+        "correta": 3,
+        "explicacao": "O peso é P = m × g = 4 × 10 = 40 N para baixo. A tensão é 50 N para cima. A resultante é 50 - 40 = 10 N para cima. Logo a = 10 / 4 = 2,5 m/s² para cima. A caixa acelera para cima porque a tensão supera o peso."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:7ec412ea",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:46fdbff7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um objeto de 3 kg sobre uma superfície horizontal sofre a ação de duas forças: uma de 20 N para a direita e outra de 8 N para a esquerda (ambas horizontais, sem atrito). Qual é o módulo da aceleração resultante?",
+        "opcoes": [
+          "4 m/s²",
+          "8 m/s²",
+          "28 m/s²",
+          "2 m/s²"
+        ],
+        "correta": 0,
+        "explicacao": "A força resultante é 20 - 8 = 12 N para a direita. Aceleração: a = 12 / 3 = 4 m/s². Lembre: quando as forças estão em direções opostas, subtrai os módulos para achar a resultante."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:46fdbff7",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:ccf701eb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bola de 0,2 kg é lançada contra uma parede e impacta com força de 100 N durante 0,1 segundo. Qual é a aceleração média da bola durante o impacto?",
+        "opcoes": [
+          "200 m/s²",
+          "500 m/s²",
+          "20 m/s²",
+          "50 m/s²"
+        ],
+        "correta": 1,
+        "explicacao": "Pela segunda lei de Newton, a = F / m = 100 / 0,2 = 500 m/s². O tempo de contato (0,1 s) serve para calcular o impulso (F × t), mas não entra no cálculo da aceleração média: com a força média e a massa, a aceleração já sai direto."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:ccf701eb",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:687a6885",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bicicleta de 80 kg (incluindo o ciclista) sobe uma ladeira e enfrenta uma força resistiva total de 240 N (atrito + componente da gravidade). Qual força o ciclista deve aplicar para manter aceleração de 0,5 m/s² ladeira acima?",
+        "opcoes": [
+          "40 N",
+          "80 N",
+          "280 N",
+          "320 N"
+        ],
+        "correta": 2,
+        "explicacao": "Quer aceleração a = 0,5 m/s². A força resultante deve ser F_líquida = m × a = 80 × 0,5 = 40 N. Como há resistência de 240 N, o ciclista aplica: F_aplicada - 240 = 40, logo F_aplicada = 280 N."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:687a6885",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:bdf728af",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa repousa sobre uma mesa horizontal sem sofrer nenhuma ação de força além de seu peso e da normal. Qual é a força resultante sobre a caixa, conforme a Primeira Lei de Newton?",
+        "opcoes": [
+          "Zero",
+          "Igual ao peso mais a força normal",
+          "Igual ao peso da caixa",
+          "Igual à força normal"
+        ],
+        "correta": 0,
+        "explicacao": "A Primeira Lei de Newton afirma que um objeto em repouso permanece em repouso se a força resultante sobre ele for nula. A caixa repousa, então está em equilíbrio: a força normal (para cima) iguala o peso (para baixo). Resultante = N - P = 0. Logo, a força resultante é zero, e a caixa permanece em repouso. Não confunda componentes com resultante: peso e normal estão ambas presentes, mas se cancelam mutuamente."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:bdf728af",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:8a118eb5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um livro é empurrado sobre uma mesa com uma força de 12 Newtons paralela à superfície. Observa-se que o livro desliza com velocidade constante. O que a Segunda Lei de Newton prediz sobre a força de atrito presente nessa situação?",
+        "opcoes": [
+          "A força de atrito é nula",
+          "A força de atrito é igual a 12 Newtons",
+          "A força de atrito é maior que 12 Newtons",
+          "A força de atrito é menor que 12 Newtons"
+        ],
+        "correta": 1,
+        "explicacao": "A Segunda Lei de Newton (F = ma) relaciona força resultante a aceleração. Se o livro desliza com velocidade constante, sua aceleração é zero, portanto a força resultante é zero. Isso significa: F aplicada - F atrito = 0. Logo, F atrito = F aplicada = 12 Newtons. O atrito se opõe ao movimento e iguala a força aplicada, não permitindo aceleração. Não confunda: velocidade constante não significa sem força: significa sem aceleração, o que exige forças equilibradas."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:8a118eb5",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:a589aa7a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um skate de 4 quilogramas é empurrado sobre uma pista horizontal lisa (sem atrito) com uma força de 8 Newtons. Qual é a aceleração adquirida pelo skate conforme a Segunda Lei de Newton?",
+        "opcoes": [
+          "32 m/s²",
+          "0,5 m/s²",
+          "2 m/s²",
+          "4 m/s²"
+        ],
+        "correta": 2,
+        "explicacao": "F = ma, então a = F / m. Dados: F = 8 N, m = 4 kg. a = 8 / 4 = 2 m/s². O skate acelera a 2 metros por segundo ao quadrado. Não confunda: a força resultante é 8 N (sem atrito), e essa resulta em aceleração, não em velocidade constante. A unidade da aceleração é sempre m/s², não m/s."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:a589aa7a",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:fddfc7ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um bloco de madeira com massa 5 quilogramas é puxado horizontalmente com uma força de 30 Newtons. Se o bloco acelera a 4 metros por segundo ao quadrado, qual é a magnitude da força de atrito agindo sobre o bloco durante esse movimento?",
+        "opcoes": [
+          "20 Newtons",
+          "30 Newtons",
+          "2 Newtons",
+          "10 Newtons"
+        ],
+        "correta": 3,
+        "explicacao": "Aplicamos F resultante = ma. Sabemos que F puxada - F atrito = ma. Dados: F puxada = 30 N, m = 5 kg, a = 4 m/s². Calculamos: 30 - F atrito = 5 × 4 = 20. Logo, F atrito = 30 - 20 = 10 Newtons. O atrito é de 10 Newtons."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:fddfc7ab",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:38c766fe",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa de 60 quilogramas desce em um elevador que desacelera a uma taxa de 2 metros por segundo ao quadrado (diminuindo a velocidade de descida). Qual é a força normal exercida pelo piso do elevador sobre essa pessoa durante essa desaceleração? Use g = 10 m/s².",
+        "opcoes": [
+          "612 Newtons",
+          "720 Newtons",
+          "588 Newtons",
+          "600 Newtons"
+        ],
+        "correta": 1,
+        "explicacao": "Usamos F resultante = ma. O peso é P = mg = 60 × 10 = 600 N. Quando o elevador desacelera enquanto desce, a aceleração é para cima (sentido oposto ao movimento). Aplicando a Segunda Lei: N - P = ma, então N - 600 = 60 × 2 = 120, logo N = 600 + 120 = 720 Newtons. A força normal aumenta quando o elevador desacelera, porque deve contrariar o peso e também fornecer aceleração ascendente."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:38c766fe",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:a3782692",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois skates estão lado a lado em repouso sobre um piso liso. Um deles tem massa 2 quilogramas e o outro 5 quilogramas. Se a mesma força de 7 Newtons for aplicada a cada um deles, qual skate terá maior aceleração?",
+        "opcoes": [
+          "O de 5 quilogramas (a = 1,4 m/s²)",
+          "Ambos terão a mesma aceleração",
+          "Não é possível determinar sem saber o tempo de aplicação da força",
+          "O de 2 quilogramas (a = 3,5 m/s²)"
+        ],
+        "correta": 3,
+        "explicacao": "F = ma, então a = F / m. Para o skate de 2 kg: a = 7 / 2 = 3,5 m/s². Para o de 5 kg: a = 7 / 5 = 1,4 m/s². O skate de menor massa acelera mais. Isso ilustra a Segunda Lei: com força constante, aceleração é inversamente proporcional à massa. Quanto menor a massa, maior a aceleração produzida pela mesma força."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:a3782692",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:89afc677",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um carro de 1.200 quilogramas move-se inicialmente a 20 metros por segundo. O motorista pisa no freio, aplicando uma força de frenagem de 3.000 Newtons. Quanto tempo levará para o carro parar completamente, aplicando a Segunda Lei de Newton?",
+        "opcoes": [
+          "10 segundos",
+          "4 segundos",
+          "6 segundos",
+          "8 segundos"
+        ],
+        "correta": 3,
+        "explicacao": "Usamos F = ma pra achar a desaceleração: a = F / m = 3.000 / 1.200 = 2,5 m/s². Para parar, usamos v = v₀ - at (a negativa em frenagem): 0 = 20 - 2,5t, então t = 20 / 2,5 = 8 segundos. O carro levará 8 segundos para parar completamente. Não confunda: 2,5 m/s² é a taxa de desaceleração, e durante esses 8 segundos a velocidade cai continuamente de 20 m/s a zero."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:89afc677",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:46e975dc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um carro de 1.000 quilogramas freia e desacelera a uma taxa de 5 metros por segundo ao quadrado sobre uma estrada horizontal. Qual é a força de frenagem (força resultante) necessária para produzir essa desaceleração?",
+        "opcoes": [
+          "50.000 Newtons",
+          "2.500 Newtons",
+          "5.000 Newtons",
+          "10.000 Newtons"
+        ],
+        "correta": 2,
+        "explicacao": "F = ma. Dados: m = 1.000 kg, a = -5 m/s² (negativa porque é desaceleração). F = 1.000 × 5 = 5.000 Newtons (tomamos o valor absoluto). A força de frenagem necessária é 5.000 Newtons. Não confunda com o peso: o peso é 1.000 × 10 = 10.000 N, mas a força de frenagem (horizontal) é diferente: depende só da desaceleração desejada."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:46e975dc",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.040Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:141a00e8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um bloco de 10 kg está sobre uma superfície horizontal. Uma força horizontal de 30 newtons é aplicada ao bloco. Desprezando o atrito, qual a aceleração resultante?",
+        "opcoes": [
+          "5 metros por segundo ao quadrado",
+          "2 metros por segundo ao quadrado",
+          "3 metros por segundo ao quadrado",
+          "4 metros por segundo ao quadrado"
+        ],
+        "correta": 2,
+        "explicacao": "Pela segunda lei de Newton, F = ma, então a = F/m = 30 N / 10 kg = 3 m/s². A aceleração é proporcional à força e inversamente proporcional à massa. Unidades: N/kg = (kg·m/s²)/kg = m/s². Erro típico: trocar divisão por multiplicação daria 300 m/s², impossível nessa situação."
+      },
+      "meta": {
+        "id": "gen:fis:dinamica-leis-newton:141a00e8",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.598Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-fis-dinamica-leis-newton",
+      "version": 1,
+      "format": 2,
+      "subjectId": "fis",
+      "topicId": "din",
+      "chapterId": "gen-fis-dinamica-leis-newton",
+      "title": "Leis de Newton na prática",
+      "objective": "Aplicar as leis de Newton para calcular força ou aceleração",
+      "skillIds": [
+        "fis:dinamica-leis-newton"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:fis:dinamica-leis-newton:a589aa7a",
+        "gen:fis:dinamica-leis-newton:fddfc7ab"
+      ],
+      "recap": "F = m.a resolve força ou aceleração; velocidade constante sempre significa força resultante zero.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Leis de Newton",
+          "body": "Você vai aprender a usar as leis de Newton para achar força, aceleração ou a força normal numa situação concreta."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Força resultante e aceleração",
+            "body": "A Segunda Lei de Newton diz que a força resultante sobre um corpo é igual à massa vezes a aceleração: F = m.a. Se a velocidade é constante, a aceleração é zero e as forças se cancelam. Se há aceleração, alguma força vence as outras nessa direção. A Primeira Lei trata do caso de resultante zero: o corpo mantém seu estado de repouso ou movimento."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:dinamica-leis-newton:8a118eb5",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:dinamica-leis-newton:bdf728af",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "Uma caixa de 8 kg é puxada por uma corda com força de 40 N, e o atrito vale 24 N, no sentido oposto. Qual é a aceleração da caixa?",
+            "steps": [
+              "Some as forças: 40 N puxando menos 24 N de atrito.",
+              "A força resultante é 40 - 24 = 16 N.",
+              "Aplique F = m.a: 16 = 8.a, logo a = 2 m/s²."
+            ],
+            "result": "A caixa acelera a 2 m/s² no sentido em que é puxada."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:dinamica-leis-newton:7ec412ea",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:dinamica-leis-newton:38c766fe",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não assuma que a normal é sempre igual ao peso. Num elevador acelerando, esse valor muda."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Peso e normal nem sempre são iguais",
+            "left": {
+              "label": "Sem aceleração vertical",
+              "body": "normal igual ao peso."
+            },
+            "right": {
+              "label": "Com aceleração vertical",
+              "body": "normal maior ou menor que o peso, conforme o sentido."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:dinamica-leis-newton:89afc677",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "F = m.a resolve força ou aceleração; velocidade constante sempre significa força resultante zero."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:ae258ee2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um automóvel parte de uma cidade localizada no quilômetro 50 de uma rodovia, viajando em movimento uniforme a uma velocidade constante de 80 quilômetros por hora em direção a uma cidade distante. Após quanto tempo esse automóvel chegará ao quilômetro 210 dessa rodovia, seguindo a função horária da posição?",
+        "opcoes": [
+          "1 hora",
+          "1,5 horas",
+          "2 horas",
+          "2,5 horas"
+        ],
+        "correta": 2,
+        "explicacao": "A função horária do movimento uniforme é S = S₀ + vt, onde S é posição final, S₀ é posição inicial, v é velocidade e t é tempo. Dados: S₀ = 50 km, S = 210 km, v = 80 km/h. Substituindo: 210 = 50 + 80t, logo 160 = 80t, então t = 2 horas. O automóvel levará 2 horas para chegar ao quilômetro 210."
+      },
+      "meta": {
+        "id": "gen:fis:cinematica-movimento-uniforme:ae258ee2",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:58e5514b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um ciclista trafega por uma avenida em movimento retilíneo uniforme. No instante 2 segundos, ele está na posição 10 metros. No instante 8 segundos, está na posição 70 metros, mantendo velocidade constante. Qual é a posição do ciclista no instante zero segundos, conforme a função horária?",
+        "opcoes": [
+          "10 metros",
+          "0 metros",
+          "2 metros",
+          "-10 metros"
+        ],
+        "correta": 3,
+        "explicacao": "Usando S = S₀ + vt, a gente primeiro encontra a velocidade. De t=2s (S=10m) a t=8s (S=70m): v = (70 - 10) / (8 - 2) = 60 / 6 = 10 m/s. Agora: 10 = S₀ + 10(2), logo S₀ = 10 - 20 = -10 metros. Portanto, no instante t=0, o ciclista estava em posição -10 metros (10 metros antes do ponto de referência). Verificação: S(8) = -10 + 10(8) = 70. Correto."
+      },
+      "meta": {
+        "id": "gen:fis:cinematica-movimento-uniforme:58e5514b",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:5e750ddb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um trem de transporte de mercadorias move-se em velocidade constante de 60 quilômetros por hora ao longo de uma ferrovia. Um controlador de tráfego registra que no primeiro instante observado (t=0), o trem estava na posição 120 quilômetros. Deseja-se prever em qual quilômetro o trem estará após 3 horas e meia de movimento uniforme contínuo. Qual seria a posição?",
+        "opcoes": [
+          "330 quilômetros",
+          "350 quilômetros",
+          "400 quilômetros",
+          "450 quilômetros"
+        ],
+        "correta": 0,
+        "explicacao": "Usamos S = S₀ + vt. Dados: S₀ = 120 km, v = 60 km/h, t = 3,5 horas. S = 120 + 60(3,5) = 120 + 210 = 330 km. O trem estará no quilômetro 330. Cuidado com a conversão de tempo: 3 horas e meia é 3,5 horas, não 3 horas. Multiplicar 60 por 3 dá apenas 180 km: falta o deslocamento na meia hora restante (30 km), totalizando 210 km de deslocamento novo."
+      },
+      "meta": {
+        "id": "gen:fis:cinematica-movimento-uniforme:5e750ddb",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:244907a4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um brinquedo movido a bateria percorre uma mesa em movimento retilíneo uniforme, partindo de um ponto de origem. Registra-se que após 3 segundos, o brinquedo percorreu 60 centímetros. Se o brinquedo continuar nesse ritmo constante, quantos centímetros terá percorrido após 8 segundos de movimento?",
+        "opcoes": [
+          "160 centímetros",
+          "180 centímetros",
+          "120 centímetros",
+          "140 centímetros"
+        ],
+        "correta": 0,
+        "explicacao": "Em movimento uniforme, v = Δs / Δt. Primeiro, encontramos a velocidade: v = 60 / 3 = 20 cm/s. Agora, para t = 8 s: Δs = vt = 20 × 8 = 160 centímetros. O brinquedo percorrerá 160 centímetros em 8 segundos. Não confunda: em 3 segundos foram 60 cm, em 8 segundos será mais que o dobro (120 cm seria apenas 6 segundos equivalentes). O deslocamento é proporcional ao tempo em movimento uniforme."
+      },
+      "meta": {
+        "id": "gen:fis:cinematica-movimento-uniforme:244907a4",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.039Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:a70d832f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um objeto se move em linha reta com velocidade constante de 20 metros por segundo durante 15 segundos. Qual a distância percorrida?",
+        "opcoes": [
+          "300 metros",
+          "250 metros",
+          "400 metros",
+          "150 metros"
+        ],
+        "correta": 0,
+        "explicacao": "Para movimento uniforme, usa-se a função horária s = s0 + vt. Considerando s0 = 0 (origem), v = 20 m/s, e t = 15 s, temos: s = 0 + 20 × 15 = 300 metros. A distância é diretamente proporcional ao tempo quando a velocidade é constante. Erro comum: confundir velocidade com distância ou dividir em vez de multiplicar: sempre revise as unidades (m/s × s = m)."
+      },
+      "meta": {
+        "id": "gen:fis:cinematica-movimento-uniforme:a70d832f",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.598Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

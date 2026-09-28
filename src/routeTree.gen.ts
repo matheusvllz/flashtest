@@ -22,9 +22,11 @@ import { Route as PremiumRouteImport } from './routes/premium'
 import { Route as PlanRouteImport } from './routes/plan'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as OfflineRouteImport } from './routes/offline'
+import { Route as NivelamentoRouteImport } from './routes/nivelamento'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ForgotRouteImport } from './routes/forgot'
 import { Route as FlashcardsRouteImport } from './routes/flashcards'
+import { Route as DebugRouteImport } from './routes/debug'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as AhaRouteImport } from './routes/aha'
 import { Route as IndexRouteImport } from './routes/index'
@@ -32,6 +34,7 @@ import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
+import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
 
 const WelcomeRoute = WelcomeRouteImport.update({
   id: '/welcome',
@@ -98,6 +101,11 @@ const OfflineRoute = OfflineRouteImport.update({
   path: '/offline',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NivelamentoRoute = NivelamentoRouteImport.update({
+  id: '/nivelamento',
+  path: '/nivelamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
@@ -111,6 +119,11 @@ const ForgotRoute = ForgotRouteImport.update({
 const FlashcardsRoute = FlashcardsRouteImport.update({
   id: '/flashcards',
   path: '/flashcards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DebugRoute = DebugRouteImport.update({
+  id: '/debug',
+  path: '/debug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -148,14 +161,21 @@ const LearnLessonIdRoute = LearnLessonIdRouteImport.update({
   path: '/learn/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AtividadeActivityIdRoute = AtividadeActivityIdRouteImport.update({
+  id: '/atividade/$activityId',
+  path: '/atividade/$activityId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
   '/dashboard': typeof DashboardRoute
+  '/debug': typeof DebugRoute
   '/flashcards': typeof FlashcardsRoute
   '/forgot': typeof ForgotRoute
   '/login': typeof LoginRoute
+  '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
@@ -169,6 +189,7 @@ export interface FileRoutesByFullPath {
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
@@ -178,9 +199,11 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
   '/dashboard': typeof DashboardRoute
+  '/debug': typeof DebugRoute
   '/flashcards': typeof FlashcardsRoute
   '/forgot': typeof ForgotRoute
   '/login': typeof LoginRoute
+  '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
@@ -194,6 +217,7 @@ export interface FileRoutesByTo {
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
@@ -204,9 +228,11 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
   '/dashboard': typeof DashboardRoute
+  '/debug': typeof DebugRoute
   '/flashcards': typeof FlashcardsRoute
   '/forgot': typeof ForgotRoute
   '/login': typeof LoginRoute
+  '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
@@ -220,6 +246,7 @@ export interface FileRoutesById {
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
@@ -231,9 +258,11 @@ export interface FileRouteTypes {
     | '/'
     | '/aha'
     | '/dashboard'
+    | '/debug'
     | '/flashcards'
     | '/forgot'
     | '/login'
+    | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
@@ -247,6 +276,7 @@ export interface FileRouteTypes {
     | '/topics'
     | '/trilha'
     | '/welcome'
+    | '/atividade/$activityId'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
@@ -256,9 +286,11 @@ export interface FileRouteTypes {
     | '/'
     | '/aha'
     | '/dashboard'
+    | '/debug'
     | '/flashcards'
     | '/forgot'
     | '/login'
+    | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
@@ -272,6 +304,7 @@ export interface FileRouteTypes {
     | '/topics'
     | '/trilha'
     | '/welcome'
+    | '/atividade/$activityId'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
@@ -281,9 +314,11 @@ export interface FileRouteTypes {
     | '/'
     | '/aha'
     | '/dashboard'
+    | '/debug'
     | '/flashcards'
     | '/forgot'
     | '/login'
+    | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
@@ -297,6 +332,7 @@ export interface FileRouteTypes {
     | '/topics'
     | '/trilha'
     | '/welcome'
+    | '/atividade/$activityId'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
@@ -307,9 +343,11 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AhaRoute: typeof AhaRoute
   DashboardRoute: typeof DashboardRoute
+  DebugRoute: typeof DebugRoute
   FlashcardsRoute: typeof FlashcardsRoute
   ForgotRoute: typeof ForgotRoute
   LoginRoute: typeof LoginRoute
+  NivelamentoRoute: typeof NivelamentoRoute
   OfflineRoute: typeof OfflineRoute
   OnboardingRoute: typeof OnboardingRoute
   PlanRoute: typeof PlanRoute
@@ -323,6 +361,7 @@ export interface RootRouteChildren {
   TopicsRoute: typeof TopicsRoute
   TrilhaRoute: typeof TrilhaRoute
   WelcomeRoute: typeof WelcomeRoute
+  AtividadeActivityIdRoute: typeof AtividadeActivityIdRoute
   LearnLessonIdRoute: typeof LearnLessonIdRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   VideoIdRoute: typeof VideoIdRoute
@@ -422,6 +461,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OfflineRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nivelamento': {
+      id: '/nivelamento'
+      path: '/nivelamento'
+      fullPath: '/nivelamento'
+      preLoaderRoute: typeof NivelamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/login': {
       id: '/login'
       path: '/login'
@@ -441,6 +487,13 @@ declare module '@tanstack/react-router' {
       path: '/flashcards'
       fullPath: '/flashcards'
       preLoaderRoute: typeof FlashcardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/debug': {
+      id: '/debug'
+      path: '/debug'
+      fullPath: '/debug'
+      preLoaderRoute: typeof DebugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {
@@ -492,6 +545,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearnLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/atividade/$activityId': {
+      id: '/atividade/$activityId'
+      path: '/atividade/$activityId'
+      fullPath: '/atividade/$activityId'
+      preLoaderRoute: typeof AtividadeActivityIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -499,9 +559,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AhaRoute: AhaRoute,
   DashboardRoute: DashboardRoute,
+  DebugRoute: DebugRoute,
   FlashcardsRoute: FlashcardsRoute,
   ForgotRoute: ForgotRoute,
   LoginRoute: LoginRoute,
+  NivelamentoRoute: NivelamentoRoute,
   OfflineRoute: OfflineRoute,
   OnboardingRoute: OnboardingRoute,
   PlanRoute: PlanRoute,
@@ -515,6 +577,7 @@ const rootRouteChildren: RootRouteChildren = {
   TopicsRoute: TopicsRoute,
   TrilhaRoute: TrilhaRoute,
   WelcomeRoute: WelcomeRoute,
+  AtividadeActivityIdRoute: AtividadeActivityIdRoute,
   LearnLessonIdRoute: LearnLessonIdRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   VideoIdRoute: VideoIdRoute,

@@ -1,0 +1,161 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "oficial:2023:015ab1af",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pais com síndrome de Down\n\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.\n\n(MORENO, T. Três anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia. Disponível em: www.band.uol.com.br. Acesso em: 31 out. 2013, adaptado.)\n\nSabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\n\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
+        "opcoes": [
+          "todos normais.",
+          "todos tetrassômicos.",
+          "apenas normais ou tetrassômicos.",
+          "apenas trissômicos ou tetrassômicos.",
+          "normais, trissômicos ou tetrassômicos."
+        ],
+        "correta": 4,
+        "explicacao": "Cada progenitor com síndrome de Down pode produzir gametas com 1 ou 2 cromossomos 21 (por causa da trissomia). Combinando 1+1 (normal, dissômico), 1+2 ou 2+1 (trissômico) e 2+2 (tetrassômico), os zigotos possíveis cobrem as três condições.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:015ab1af",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 99"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:4c8f312e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Muitas mulheres sofrem com desconfortos nos dias que antecedem a menstruação, a chamada tensão pré-menstrual. Entre outros sintomas, podem ocorrer alterações de humor. Atualmente, acredita-se que os sintomas são resultado da queda na concentração do neurotransmissor serotonina, que, por sua vez, está relacionado com a diminuição na produção dos hormônios ovarianos estrógeno e progesterona, observada nessa fase do ciclo feminino.\n\n(DIMMOCK, P. W. et al. Efficacy of Selective Serotonin-Reuptake Inhibitors in Premenstrual Syndrome: a Systematic Review. The Lancet, n. 9236, 2000, adaptado.)\n\nA redução da produção desses hormônios nessa fase está relacionada com o(a)",
+        "opcoes": [
+          "regressão do corpo lúteo ovariano.",
+          "diminuição na produção de ocitocina.",
+          "liberação do gameta feminino na ovulação.",
+          "aumento nos níveis dos hormônios LH e FSH.",
+          "elevação nos níveis sorológicos de adrenalina."
+        ],
+        "correta": 0,
+        "explicacao": "Nos dias que antecedem a menstruação, o corpo lúteo (que produz estrógeno e progesterona após a ovulação) regride, se não houver fecundação — é essa regressão que derruba a produção dos dois hormônios, disparando os sintomas da TPM.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:4c8f312e",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 121"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:406ba302",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal.\n\nDentro do corpo do vegetal, esses contaminantes serão",
+        "opcoes": [
+          "digeridos por enzimas.",
+          "acumulados nos tecidos.",
+          "eliminados pelos estômatos.",
+          "metabolizados por glândulas.",
+          "utilizados como fonte energética."
+        ],
+        "correta": 1,
+        "explicacao": "Metais tóxicos, ao contrário de moléculas orgânicas, não são quebrados por enzimas nem usados como fonte de energia — plantas usadas em fitorremediação de metais funcionam retendo (acumulando) esses elementos em seus tecidos, tirando-os do ambiente.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:406ba302",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 110"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

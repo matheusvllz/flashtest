@@ -66,6 +66,87 @@ export const TUTOR_IMAGEM_MAX_BYTES = 5 * 1024 * 1024; // 5 MiB
 export const TUTOR_MAX_MENSAGENS = 40;
 export const TUTOR_MAX_TAMANHO_MENSAGEM = 4000;
 
+/**
+ * Limites do `pedagogy` (docs/30 §17.3, Fase 7 F7.5) — construído no client
+ * (`tutor-context.ts`) e enviado por RPC, então é payload de cliente como
+ * qualquer outro: nunca confiar no cast TS, validar tamanho/forma de verdade
+ * antes de embutir no prompt. Tetos generosos (folga sobre os limites que o
+ * PRÓPRIO `buildPedagogicalContext` já aplica — 2 erros, 3 pré-requisitos),
+ * só pra travar um payload malformado ou hostil, não o uso normal.
+ */
+const TUTOR_PEDAGOGY_MAX_STRING = 500;
+const TUTOR_PEDAGOGY_MAX_RECENT_ERRORS = 5;
+const TUTOR_PEDAGOGY_MAX_WEAK_PREREQUISITES = 10;
+/** Teto do payload serializado (docs/30 §17.3) — checado ANTES de validar campo a campo, defesa em profundidade sobre os tetos por campo acima. */
+const TUTOR_PEDAGOGY_MAX_SERIALIZED = 2000;
+const CONFIDENCE_LABELS = new Set(["ainda medindo", "pouca evidência", "evidência razoável", "boa evidência"]);
+const EXPLANATION_SEEN_VALUES = new Set(["nenhuma", "curta", "detalhada"]);
+const PEDAGOGY_MODES = new Set(["ensinar-do-zero", "duvida"]);
+
+function stringValida(v: unknown, max: number): v is string {
+  return typeof v === "string" && v.length <= max;
+}
+
+function validatePedagogy(pedagogy: unknown): void {
+  if (pedagogy === null || pedagogy === undefined) return;
+  if (typeof pedagogy !== "object") throw new TutorRequestInvalido("pedagogy com formato inválido");
+  // JSON.stringify antes de validar campo a campo: barato e recusa um payload
+  // hostil (ex.: muitos campos extras não declarados no tipo) antes de gastar
+  // tempo nas checagens finas abaixo.
+  let serializado: string;
+  try {
+    serializado = JSON.stringify(pedagogy);
+  } catch {
+    throw new TutorRequestInvalido("pedagogy não serializável");
+  }
+  if (serializado.length > TUTOR_PEDAGOGY_MAX_SERIALIZED) {
+    throw new TutorRequestInvalido(`pedagogy maior que o limite de ${TUTOR_PEDAGOGY_MAX_SERIALIZED} caracteres`);
+  }
+  const p = pedagogy as Record<string, unknown>;
+
+  if (!stringValida(p.skillId, TUTOR_PEDAGOGY_MAX_STRING)) throw new TutorRequestInvalido("pedagogy.skillId inválido");
+  if (!stringValida(p.skillName, TUTOR_PEDAGOGY_MAX_STRING)) throw new TutorRequestInvalido("pedagogy.skillName inválido");
+  if (!stringValida(p.subjectName, TUTOR_PEDAGOGY_MAX_STRING)) throw new TutorRequestInvalido("pedagogy.subjectName inválido");
+  if (!stringValida(p.topicName, TUTOR_PEDAGOGY_MAX_STRING)) throw new TutorRequestInvalido("pedagogy.topicName inválido");
+  if (p.mastery !== null && (typeof p.mastery !== "number" || p.mastery < 0 || p.mastery > 100)) {
+    throw new TutorRequestInvalido("pedagogy.mastery inválido");
+  }
+  if (typeof p.confidenceLabel !== "string" || !CONFIDENCE_LABELS.has(p.confidenceLabel)) {
+    throw new TutorRequestInvalido("pedagogy.confidenceLabel inválido");
+  }
+  if (!Array.isArray(p.recentErrors) || p.recentErrors.length > TUTOR_PEDAGOGY_MAX_RECENT_ERRORS) {
+    throw new TutorRequestInvalido("pedagogy.recentErrors inválido");
+  }
+  for (const erro of p.recentErrors) {
+    if (typeof erro !== "object" || erro === null) throw new TutorRequestInvalido("pedagogy.recentErrors com item inválido");
+    const e = erro as Record<string, unknown>;
+    if (!stringValida(e.statement, TUTOR_PEDAGOGY_MAX_STRING)) throw new TutorRequestInvalido("pedagogy.recentErrors[].statement inválido");
+    if (e.chosen !== null && !stringValida(e.chosen, TUTOR_PEDAGOGY_MAX_STRING)) {
+      throw new TutorRequestInvalido("pedagogy.recentErrors[].chosen inválido");
+    }
+    if (!stringValida(e.correct, TUTOR_PEDAGOGY_MAX_STRING)) throw new TutorRequestInvalido("pedagogy.recentErrors[].correct inválido");
+  }
+  if (typeof p.dontKnowRecent !== "number" || p.dontKnowRecent < 0) {
+    throw new TutorRequestInvalido("pedagogy.dontKnowRecent inválido");
+  }
+  if (typeof p.explanationSeen !== "string" || !EXPLANATION_SEEN_VALUES.has(p.explanationSeen)) {
+    throw new TutorRequestInvalido("pedagogy.explanationSeen inválido");
+  }
+  if (
+    !Array.isArray(p.weakPrerequisites) ||
+    p.weakPrerequisites.length > TUTOR_PEDAGOGY_MAX_WEAK_PREREQUISITES ||
+    !p.weakPrerequisites.every((w) => stringValida(w, TUTOR_PEDAGOGY_MAX_STRING))
+  ) {
+    throw new TutorRequestInvalido("pedagogy.weakPrerequisites inválido");
+  }
+  if (p.examName !== null && !stringValida(p.examName, TUTOR_PEDAGOGY_MAX_STRING)) {
+    throw new TutorRequestInvalido("pedagogy.examName inválido");
+  }
+  if (typeof p.mode !== "string" || !PEDAGOGY_MODES.has(p.mode)) {
+    throw new TutorRequestInvalido("pedagogy.mode inválido");
+  }
+}
+
 /** Tamanho em bytes de uma string base64 (sem decodificar) — conta os `=` de padding fora. */
 function tamanhoBase64EmBytes(base64: string): number {
   const semPadding = base64.replace(/=+$/, "");
@@ -116,6 +197,7 @@ export function validateTutorRequest(data: unknown): TutorRequest {
   if (typeof d.context !== "object" || d.context === null) {
     throw new TutorRequestInvalido("contexto ausente");
   }
+  validatePedagogy((d.context as { pedagogy?: unknown }).pedagogy);
 
   return data as TutorRequest;
 }

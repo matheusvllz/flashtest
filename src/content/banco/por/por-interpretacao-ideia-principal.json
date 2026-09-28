@@ -1,0 +1,579 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:interpretacao-ideia-principal:e193de94",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia este trecho: 'A educação é a ferramenta mais poderosa que podemos usar para mudar o mundo. Através da educação, as crianças desenvolvem pensamento crítico, entendem diferentes perspectivas e aprendem a resolver problemas complexos. Um mundo educado é um mundo mais justo e igualitário.' Qual é a ideia principal do texto?",
+        "opcoes": [
+          "O mundo precisa de mais escolas construídas.",
+          "Pensar criticamente é mais importante que a igualdade social.",
+          "As crianças não aprendem de forma natural.",
+          "A educação é fundamental para o desenvolvimento pessoal e transformação social, preparando indivíduos críticos para construir uma sociedade mais equitativa."
+        ],
+        "correta": 3,
+        "explicacao": "A ideia principal permeia todo o texto: educação como ferramenta transformadora que desenvolve pessoas críticas e constrói sociedade igualitária. As orações seguintes exemplificam (pensamento crítico, compreensão de perspectivas, resolução de problemas) e justificam (mundo educado = mundo justo). As outras opções não capturam a totalidade argumentativa do texto."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:e193de94",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:099fe97b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Texto: 'Os adolescentes de hoje nascem numa era digital. Praticamente desde o nascimento, estão expostos a telas, redes sociais e tecnologias. Isso molda sua forma de pensar, comunicar e interagir. A geração atual não conhece um mundo sem internet, diferentemente de seus pais.' Qual a intenção principal do autor?",
+        "opcoes": [
+          "Caracterizar a geração atual como nativa digital, destacando que sua vivência e formação são fundamentalmente moldadas pela tecnologia desde cedo.",
+          "Provar que a internet é prejudicial.",
+          "Condenar o uso de tecnologia por adolescentes.",
+          "Demonstrar que adolescentes são mais inteligentes que adultos."
+        ],
+        "correta": 0,
+        "explicacao": "O autor descreve como a tecnologia forma o jovem, mostrando a diferença geracional entre adolescentes atuais (nativos digitais) e pais (imigrantes digitais). O tom é informativo e caracterizador, não crítico nem alarmista. Os outros tópicos (inteligência, prejuízo) não aparecem; só a moldagem digital é abordada."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:099fe97b",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:22cf92cd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Passagem: 'A sustentabilidade ambiental não é mais uma opção, mas uma necessidade urgente. Empresas, governos e cidadãos precisam colaborar para reduzir emissões, preservar recursos naturais e proteger ecossistemas. O futuro do planeta depende das ações tomadas hoje.' Identifique a intenção principal.",
+        "opcoes": [
+          "Propor que apenas governos podem resolver problemas ambientais.",
+          "Criar urgência sobre sustentabilidade, destacando responsabilidade coletiva e conexão entre ações presentes e futuro planetário.",
+          "Afirmar que a sustentabilidade nunca foi uma opção válida.",
+          "Criticar severamente as empresas atuais."
+        ],
+        "correta": 1,
+        "explicacao": "O autor enfatiza urgência ('necessidade urgente'), responsabilidade de todos (empresas, governos, cidadãos) e causalidade temporal (ações hoje = futuro amanhã). O tom é persuasivo e mobilizador, não só informativo. Reconhece ação coletiva como imperativo, não culpa um setor só. Essa estrutura argumentativa define a escolha."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:22cf92cd",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:ca550a5e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Texto: 'O sono inadequado prejudica concentração, memória e saúde geral. Adolescentes que dormem menos de oito horas têm desempenho escolar inferior e maior risco de depressão. Especialistas recomendam regularidade nos horários de sono e ambiente escuro para melhorar qualidade do repouso.' Qual é a ideia central?",
+        "opcoes": [
+          "Adolescentes são preguiçosos.",
+          "Dormir é um luxo dispensável.",
+          "O sono adequado é essencial para saúde cognitiva e emocional, especialmente em adolescentes; negligenciar essa necessidade causa consequências mensuráveis.",
+          "Escolas devem fechar para que alunos durmam."
+        ],
+        "correta": 2,
+        "explicacao": "A ideia central articula efeitos específicos (concentração, memória, saúde), dados sobre adolescentes (oito horas, desempenho escolar), riscos (depressão) e recomendações (rotina, ambiente). O texto argumenta a favor do sono como pilar da saúde integral, não apenas como conforto. As outras alternativas distorcem ou minimizam isso."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:ca550a5e",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:085f4890",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia: 'A inteligência emocional determina o sucesso nas relações pessoais e profissionais mais que o QI tradicional. Pessoas com inteligência emocional reconhecem suas próprias emoções, entendem emoções alheias, gerenciam conflitos construtivamente e constroem relacionamentos resilientes. Organizações que desenvolvem essa competência em funcionários observam redução de conflitos e aumento de produtividade.' Qual a intenção principal?",
+        "opcoes": [
+          "Demonstrar que inteligência emocional é mais impactante que inteligência cognitiva em contextos relacionais e organizacionais, e que seu desenvolvimento traz benefícios mensuráveis.",
+          "Argumentar que emoções são mais importantes que razão.",
+          "Sugerir que pessoas não podem melhorar suas habilidades emocionais.",
+          "Afirmar que QI é completamente inútil."
+        ],
+        "correta": 0,
+        "explicacao": "O tom é argumentativo: estabelece superioridade relativa da IE em domínios específicos (pessoal/profissional), descreve componentes (reconhecer, entender, gerenciar, construir) e aponta resultados (menos conflitos, mais produtividade). Não nega QI; relativiza a prioridade. Essa proposição cuidadosa define tudo."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:085f4890",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:ce8fb679",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Passagem: 'O desperdício de alimentos é um problema global que nega recursos a quem necessita enquanto compromete o ambiente. Cada ano, milhões de toneladas de comida são descartadas desnecessariamente em países desenvolvidos, enquanto populações em outras regiões sofrem fome. Reduzir desperdício através de planejamento de compras, armazenamento adequado e aproveitamento integral de ingredientes beneficia economia e ecossistema.' Identifique a intenção.",
+        "opcoes": [
+          "Criticar apenas países em desenvolvimento.",
+          "Argumentar que desperdício alimentar é problema ético e ambiental com soluções práticas que beneficiam coletivamente, revelando paradoxo moral entre abundância e escassez global.",
+          "Proibir que pessoas comprem alimentos.",
+          "Afirmar que a fome em regiões pobres não tem solução."
+        ],
+        "correta": 1,
+        "explicacao": "O autor expõe o desperdício como paradoxo moral (abundância em uns lugares, fome em outros), como problema duplo (ambiental e social) e oferece soluções práticas (planejamento, armazenamento, aproveitamento). Quer conscientizar sobre a responsabilidade coletiva no consumo. Não culpa ninguém exclusivamente nem prega proibição."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:ce8fb679",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:f0414c1a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Texto: 'Desde que começou a trabalhar com voluntariado ambiental, Marina percebeu mudanças em sua perspectiva. Iniciativas locais de reflorestamento a colocaram em contato com comunidades, histórias e necessidades reais. Hoje, Marina compreende que mudança social exige engajamento pessoal além de consciência, e que pequenas ações coletivas geram impacto duradouro.' Qual é a ideia central?",
+        "opcoes": [
+          "Marina é ativista profissional.",
+          "Reflorestamento é a única solução ambiental.",
+          "Voluntariado promove transformação pessoal e compreensão de que mudança social requer engajamento direto e ação coletiva para ser significativa.",
+          "Consciência ambiental é suficiente sem ação."
+        ],
+        "correta": 2,
+        "explicacao": "A ideia central documenta a trajetória de Marina: voluntariado → contato com comunidades → percepção de que mudança precisa de engajamento pessoal + ação coletiva. O texto mostra como a prática transforma a perspectiva, conectando individual e coletivo, consciência e ação. Não sugere reflorestamento como única solução nem que consciência basta."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:f0414c1a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:5c83c19e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia: 'A cultura de acumulação material promove insatisfação crônica. Pessoas constantemente buscam mais posses, crédito ao consumidor e produtos novos, porém raramente sentem satisfação duradoura. Pesquisas mostram que experiências (viagens, aprendizado, relacionamentos) geram bem-estar mais prolongado que aquisições. Redefinir sucesso como qualidade de vida em vez de quantidade de bens oferece caminho para felicidade autêntica.' Qual a intenção principal?",
+        "opcoes": [
+          "Afirmar que dinheiro é totalmente inútil.",
+          "Provar que viagens são sempre melhores que bens materiais.",
+          "Condenar categoricamente pessoas que compram coisas.",
+          "Problematizar a cultura de acumulação material como fonte de insatisfação, contrapor experiências como geradores mais potentes de bem-estar duradouro, e propor redefinição de sucesso para autenticidade."
+        ],
+        "correta": 3,
+        "explicacao": "O autor constrói argumento em três movimentos: critica a acumulação (insatisfação), analisa comparação (experiências > bens em bem-estar), propõe redefinir sucesso. Não condena moralmente quem consome; questiona a ideologia por trás. Essa nuance argumentativa e fundação em pesquisa definem a escolha."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:5c83c19e",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:fda39617",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Trecho: 'O acesso à educação de qualidade permanece desigual globalmente. Meninas em regiões rurais enfrentam barreiras como casamento precoce, trabalho infantil e infraestrutura inadequada. Organizações internacionais investem em programas de bolsas, educação digital remota e acompanhamento familiar para remover obstáculos e garantir educação como direito fundamental.' Qual é a ideia principal?",
+        "opcoes": [
+          "Desigualdade educacional afeta principalmente meninas rurais; sua resolução requer intervenção multifatorial abordando barreiras estruturais e familiares através de programas coordenados.",
+          "Educação remota é a solução perfeita.",
+          "Educar meninas é impossível.",
+          "Apenas governos podem resolver desigualdade educacional."
+        ],
+        "correta": 0,
+        "explicacao": "A ideia central identifica o problema (meninas rurais), causas estruturais (casamento precoce, trabalho infantil, infraestrutura), reconhece direito fundamental (educação), e descreve abordagem multifatorial (bolsas, digital, acompanhamento). Não afirma impossibilidade nem reduz tudo a um instrumento; apresenta complexidade e respostas integradas."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:fda39617",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:interpretacao-ideia-principal:9a4b5587",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Texto: 'Exercício físico regular beneficia não só o corpo, mas também a mente. Atividade aeróbica aumenta produção de endorfinas, reduz estresse e melhora qualidade do sono. Pessoas que praticam atividade física mostram menor incidência de depressão, ansiedade e declínio cognitivo em idosos. Implementar movimento no cotidiano é investimento em saúde holística.' Qual a intenção?",
+        "opcoes": [
+          "Propor que exercício elimina completamente depressão.",
+          "Demonstrar que exercício físico beneficia corpo e mente simultaneamente através de mecanismos bioquímicos específicos, reduzindo riscos multifatoriais de saúde.",
+          "Afirmar que exercício é suficiente sem alimentação saudável.",
+          "Sugerir que idosos não devem exercitar."
+        ],
+        "correta": 1,
+        "explicacao": "O autor integra benefícios fisiológicos (endorfinas, sono), psicológicos (menos estresse, depressão e ansiedade) e cognitivos (menor declínio em idosos) para argumentar a favor de uma abordagem holística da saúde por meio do movimento. O texto não diz que o exercício elimina a depressão nem que dispensa alimentação saudável: ele é essencial, não solução única."
+      },
+      "meta": {
+        "id": "gen:por:interpretacao-ideia-principal:9a4b5587",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.483Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-por-interpretacao-ideia-principal",
+      "version": 1,
+      "format": 2,
+      "subjectId": "por",
+      "topicId": "interp",
+      "chapterId": "gen-por-interpretacao-ideia-principal",
+      "title": "Ideia central e intenção",
+      "objective": "Identificar a ideia central e a intenção de um texto curto",
+      "skillIds": [
+        "por:interpretacao-ideia-principal"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:por:interpretacao-ideia-principal:ca550a5e",
+        "gen:por:interpretacao-ideia-principal:085f4890"
+      ],
+      "recap": "A ideia principal é o que o restante do texto sustenta; a intenção é o efeito que o autor busca.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Ideia central",
+          "body": "Você vai aprender a separar o que o texto realmente defende dos detalhes que só ilustram."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "O centro sustenta o resto",
+            "body": "O texto costuma ter uma ideia que as outras frases sustentam. Pra achar, pergunte o que essas frases explicam. Exemplos e dados no meio do texto normalmente são apoio, não o centro. A intenção é o efeito buscado: informar, alertar ou defender algo. Palavras como 'precisamos' ou 'é urgente' sinalizam intenção de convencer."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:interpretacao-ideia-principal:099fe97b",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:interpretacao-ideia-principal:22cf92cd",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "Texto: 'O consumo de água cresce todo ano. Represas operam perto do limite. Reduzir o desperdício já não é opcional.' Qual a intenção do autor?",
+            "steps": [
+              "Separe fato de pedido: consumo em alta e represas no limite são fatos.",
+              "Note a última frase: ela cobra uma mudança de comportamento.",
+              "Junte as partes: os fatos sustentam um pedido de ação."
+            ],
+            "result": "A intenção é alertar sobre a escassez e defender a redução do desperdício."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:interpretacao-ideia-principal:e193de94",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:interpretacao-ideia-principal:5c83c19e",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não marque a opção que só repete uma palavra do texto. A resposta certa resume o argumento inteiro."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Tema e ideia principal são diferentes",
+            "left": {
+              "label": "Tema",
+              "body": "o assunto, em poucas palavras: educação, água, tecnologia."
+            },
+            "right": {
+              "label": "Ideia principal",
+              "body": "o que o texto afirma sobre esse assunto."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:interpretacao-ideia-principal:f0414c1a",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "recap",
+          "body": "A ideia principal é o que o restante do texto sustenta; a intenção é o efeito que o autor busca."
+        }
+      ]
+    }
+  ]
+}

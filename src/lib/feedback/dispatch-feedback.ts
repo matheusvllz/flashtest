@@ -18,8 +18,13 @@ function somHabilitado(): boolean {
  * chamador decide QUANDO isto roda — sempre em reação a um evento de domínio
  * (`submit`/`verify` já validado), nunca dentro de um efeito de montagem, que
  * repetiria o som numa remontagem (Strict Mode, fast refresh).
+ *
+ * "Não sei" (docs/30 §16.1, Fase 6) não tem som nem vibração de resposta —
+ * nem o de acerto (não seria honesto) nem o de erro (não é punição): silêncio
+ * de propósito, o feedback visual neutro já basta.
  */
 export function dispatchAnswerFeedback(feedback: AnswerFeedback): void {
+  if (feedback.kind === "dont-know") return;
   if (somHabilitado()) {
     void playFeedbackSound(feedback.correct ? "resposta-correta" : "resposta-incorreta");
   }

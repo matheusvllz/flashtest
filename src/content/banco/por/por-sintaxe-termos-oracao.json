@@ -1,0 +1,618 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:sintaxe-termos-oracao:c6beb080",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na oração 'Os estudiosos apresentaram seus projetos aos professores', identifique o sujeito, o predicado e o complemento do verbo.",
+        "opcoes": [
+          "Sujeito: 'Os estudiosos'; Predicado: 'apresentaram seus projetos aos professores'; Complemento: 'seus projetos aos professores'",
+          "Sujeito: 'Os estudiosos'; Predicado: 'apresentaram'; Complemento: 'seus projetos'",
+          "Sujeito: 'Os professores'; Predicado: 'apresentaram seus projetos'; Complemento: 'aos professores'",
+          "Sujeito: 'Os colegas'; Predicado: 'apresentaram seus trabalhos'; Complemento: 'aos professores'"
+        ],
+        "correta": 0,
+        "explicacao": "O sujeito é quem faz a ação (Os estudiosos). O predicado é o verbo e tudo ligado a ele: 'apresentaram seus projetos aos professores'. Aí estão o objeto direto ('seus projetos') e o indireto ('aos professores'). Essas são as três partes principais da oração."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:c6beb080",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.596Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:6e7431b8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Observe: 'A professora entregou ao aluno uma carta importante'. Qual termo exerce a função de adjunto adnominal nesta sentença?",
+        "opcoes": [
+          "'carta'",
+          "'importante'",
+          "'para que fosse lido'",
+          "'ao aluno'"
+        ],
+        "correta": 1,
+        "explicacao": "O adjunto adnominal é aquele termo que modifica um nome/substantivo, atribuindo uma qualidade ou circunstância. Na sentença, 'importante' é um adjetivo que qualifica diretamente o substantivo 'carta', exercendo função de adjunto adnominal. Os outros termos desempenham funções diferentes: 'ao aluno' é objeto indireto, 'carta' é núcleo do complemento, e o sintagma final seria completivo nominal."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:6e7431b8",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.596Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:11f608a6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Os estudantes do terceiro ano apresentaram o projeto de ciências para toda a escola na sexta-feira', o sujeito da oração é:",
+        "opcoes": [
+          "toda a escola",
+          "os estudantes do terceiro ano",
+          "na sexta-feira",
+          "o projeto de ciências"
+        ],
+        "correta": 1,
+        "explicacao": "Apresentaram concorda com os estudantes do terceiro ano, que praticam a ação. Esse é o sujeito. O projeto de ciências é objeto direto, e toda a escola e na sexta-feira são complementos que não concordam com o verbo."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:11f608a6",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:051e03fc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'A bibliotecária organizou os livros novos na estante principal antes da chegada dos alunos', o termo 'os livros novos' exerce a função de:",
+        "opcoes": [
+          "predicativo do sujeito",
+          "sujeito",
+          "objeto direto",
+          "objeto indireto"
+        ],
+        "correta": 2,
+        "explicacao": "Os livros novos completa o sentido de organizou sem preposição, respondendo a organizou o quê?. Isso é objeto direto. Objeto indireto sempre tem uma preposição obrigatória exigida pelo verbo."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:051e03fc",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:2a174754",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O treinador entregou o troféu aos jogadores mais dedicados do time durante a cerimônia de encerramento', o termo 'aos jogadores mais dedicados' exerce a função de:",
+        "opcoes": [
+          "complemento nominal",
+          "sujeito",
+          "objeto direto",
+          "objeto indireto"
+        ],
+        "correta": 3,
+        "explicacao": "Aos jogadores mais dedicados completa o sentido de entregou por meio da preposição a, respondendo a entregou a quem?. Isso é objeto indireto. Objeto direto se liga ao verbo sem preposição obrigatória, como o troféu."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:2a174754",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:f4b95beb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Depois de anos de treino, a ginasta tornou-se campeã olímpica na modalidade de solo nos jogos deste ano', o termo 'campeã olímpica' exerce a função de:",
+        "opcoes": [
+          "predicativo do sujeito",
+          "complemento nominal",
+          "objeto direto",
+          "objeto indireto"
+        ],
+        "correta": 0,
+        "explicacao": "Tornou-se é verbo de ligação, não indica ação. Liga o sujeito a ginasta à qualidade campeã olímpica. Isso é predicativo do sujeito. Objeto direto ou indireto completa verbo de ação, não verbo de ligação."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:f4b95beb",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:a3108ca0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O diretor e os coordenadores pedagógicos avaliaram juntos o desempenho da escola no último bimestre letivo', o sujeito da oração é classificado como:",
+        "opcoes": [
+          "sujeito simples, formado por um só núcleo",
+          "sujeito composto, formado por dois núcleos",
+          "sujeito indeterminado",
+          "oração sem sujeito"
+        ],
+        "correta": 1,
+        "explicacao": "O sujeito tem dois núcleos coordenados: o diretor e os coordenadores pedagógicos, ambos praticando a ação de avaliar. Concordam com o verbo no plural avaliaram. Isso é sujeito composto. Sujeito simples tem apenas um núcleo."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:a3108ca0",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:6bccf852",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Estudamos a matéria inteira na véspera da prova e, mesmo assim, sentimos insegurança na hora de responder', o sujeito da oração é:",
+        "opcoes": [
+          "composto, com dois núcleos distintos",
+          "indeterminado, pois não há termo expresso",
+          "oculto (elíptico), identificado pela desinência verbal como 'nós'",
+          "inexistente, tratando-se de oração sem sujeito"
+        ],
+        "correta": 2,
+        "explicacao": "Estudamos e sentimos estão na 1ª pessoa do plural, desinência que indica nós, mesmo sem o pronome escrito. O sujeito é oculto (elíptico ou desinencial). Sujeito indeterminado é quando não há pista nenhuma, nem no verbo."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:6bccf852",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:2d070f9b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Havia muitos problemas estruturais naquele prédio antigo, segundo o relatório da vistoria feita pelos engenheiros', a oração é classificada como:",
+        "opcoes": [
+          "sujeito composto",
+          "sujeito simples",
+          "sujeito indeterminado",
+          "oração sem sujeito, pois o verbo 'haver' no sentido de existir é impessoal"
+        ],
+        "correta": 3,
+        "explicacao": "Haver com o sentido de existir é impessoal e não tem sujeito. Muitos problemas estruturais é objeto direto, não sujeito. A oração é sem sujeito. Sujeito indeterminado ocorre quando há sujeito não identificado, mas o verbo continua tendo um."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:2d070f9b",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:f6ac2e83",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'Roubaram a bicicleta que estava estacionada em frente ao mercado durante a tarde de ontem', o sujeito da oração é:",
+        "opcoes": [
+          "sujeito indeterminado, pois o verbo está na 3ª pessoa do plural sem referente definido no texto",
+          "oração sem sujeito",
+          "sujeito composto",
+          "sujeito simples, 'a bicicleta'"
+        ],
+        "correta": 0,
+        "explicacao": "O verbo 'roubaram' está na 3ª pessoa do plural, mas nada na frase indica quem são essas pessoas: 'a bicicleta' é o objeto direto, não o sujeito. Por isso, o sujeito é classificado como indeterminado, diferente da oração sem sujeito, em que o verbo é impessoal e simplesmente não admite nenhum sujeito, nem mesmo desconhecido."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:f6ac2e83",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-termos-oracao:6d1fcdcc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na frase 'O time visitante venceu o jogo decisivo do campeonato nos últimos minutos da partida', o predicado da oração é:",
+        "opcoes": [
+          "nos últimos minutos da partida",
+          "o time visitante",
+          "venceu o jogo decisivo do campeonato nos últimos minutos da partida",
+          "o jogo decisivo do campeonato"
+        ],
+        "correta": 2,
+        "explicacao": "Predicado é tudo que se declara sobre o sujeito, ou seja, toda a oração menos o sujeito. O núcleo é o verbo venceu, então é predicado verbal. Inclui também o objeto direto e o complemento de tempo que vêm depois do verbo."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-termos-oracao:6d1fcdcc",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-termos-oracao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.983Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-por-sintaxe-termos-oracao",
+      "version": 1,
+      "format": 2,
+      "subjectId": "por",
+      "topicId": "gram",
+      "chapterId": "gen-por-sintaxe-termos-oracao",
+      "title": "Termos da oração",
+      "objective": "Identificar sujeito, predicado e complementos de uma oração.",
+      "skillIds": [
+        "por:sintaxe-termos-oracao"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:por:sintaxe-termos-oracao:2a174754",
+        "gen:por:sintaxe-termos-oracao:2d070f9b"
+      ],
+      "recap": "Sujeito concorda com o verbo; objeto direto completa sem preposição; predicativo do sujeito liga uma qualidade ao sujeito por um verbo de ligação.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Sujeito e complementos",
+          "body": "Você vai aprender a encontrar o sujeito de uma frase e a distinguir objeto direto de objeto indireto."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Sujeito e objeto direto",
+            "body": "O sujeito é o termo que concorda com o verbo e pratica ou sofre a ação. Pra achar, pergunte quem pratica a ação e confira se a palavra concorda em número com o verbo. Quando ele não aparece escrito mas dá pra identificar pela terminação do verbo, é sujeito oculto. Objeto direto completa o verbo sem preposição: pergunte 'o quê?'."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:sintaxe-termos-oracao:051e03fc",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:sintaxe-termos-oracao:11f608a6",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Predicativo do sujeito",
+            "problem": "Na frase 'O time ficou favorito', que função exerce 'favorito'?",
+            "steps": [
+              "O verbo 'ficou' é de ligação, não indica ação.",
+              "Verbo de ligação junta uma característica ao sujeito.",
+              "'Favorito' descreve uma qualidade do sujeito, não uma ação dele."
+            ],
+            "result": "'Favorito' é predicativo do sujeito."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:sintaxe-termos-oracao:f4b95beb",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:sintaxe-termos-oracao:6bccf852",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda predicativo do sujeito com objeto: verbo de ligação, como ser ou ficar, liga uma qualidade ao sujeito, sem indicar ação sobre um complemento."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Sujeito indeterminado",
+            "body": "Quando o verbo está na terceira pessoa do plural e nada na frase indica quem pratica a ação, o sujeito é indeterminado, mesmo existindo uma ação real: 'Bateram à porta'. É diferente de oração sem sujeito, em que o verbo é impessoal e não admite sujeito nenhum, como em 'Choveu ontem'."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:sintaxe-termos-oracao:f6ac2e83",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "recap",
+          "body": "Sujeito concorda com o verbo; objeto direto completa sem preposição; predicativo do sujeito liga uma qualidade ao sujeito por um verbo de ligação."
+        }
+      ]
+    }
+  ]
+}

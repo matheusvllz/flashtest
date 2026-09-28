@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { X } from "lucide-react";
 import { PhoneFrame } from "@/components/AppShell";
@@ -6,23 +6,33 @@ import { FocaMark } from "@/components/brand/FocaMark";
 import { TutorBubble } from "@/components/TutorBubble";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
+import { DontKnowButton } from "@/components/learning/DontKnowButton";
+import { ExplanationLayers, hasExplanationLayers } from "@/components/learning/ExplanationLayers";
 import { CelebracaoAula } from "./CelebracaoAula";
 import { FeedbackSheet } from "./FeedbackSheet";
 import { useExerciseSession } from "@/hooks/useExerciseSession";
 import { chapterById } from "@/content/curriculum-tree";
+import { trilhaExerciseId } from "@/content/exercise-ids";
+import { itemMetaOf } from "@/content/items";
 import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
+import { buildAttempt } from "@/lib/learning/attempt-builder";
 import { isChapterCompleted } from "@/lib/learning/trail";
 import { checkAnswer, shuffled } from "@/lib/lessons/define";
 import { exerciseViewFor } from "@/lib/lessons/registry";
 import { focusFromExercise } from "@/lib/lessons/tutor-focus";
+import { buildPedagogicalContext } from "@/lib/tutor-context";
+import { COPY } from "@/lib/copy";
 import type { ExerciseAnswer, Lesson, Trilha } from "@/lib/lessons/types";
 import type { SoundEvent } from "@/lib/feedback/dispatch-feedback";
+import { FEATURES } from "@/lib/features";
 import {
   completeLesson,
   getState,
+  hojeISO,
   isStreakMilestone,
   nivelDeXp,
   openTutorWithContext,
+  recordLearningAttempt,
   useAppState,
   type CompleteLessonResult,
 } from "@/lib/store";
@@ -83,6 +93,40 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
 
   const exercise = lesson.exercicios[idx];
   const View = exerciseViewFor(exercise.type);
+  /** Nível 2 da explicação em camadas (docs/30 §17.1, Fase 7 F7.2). */
+  const explanationLayers = itemMetaOf(trilhaExerciseId(lesson.id, idx)).explanationLayers;
+
+  // Sinais ampliados (docs/30 §7.3/§21.1, Fase 6) — mesma ideia de `/study`:
+  // duração da questão atual; sem hint/tutor pré-resposta aqui (a lição
+  // legada só tem "Explicar melhor" DEPOIS de responder), então `assisted`
+  // fica sempre falso nesta superfície.
+  const questionShownAtRef = useRef(Date.now());
+  useEffect(() => {
+    questionShownAtRef.current = Date.now();
+  }, [idx, replayKey]);
+
+  function registrarSinal(response: "answered" | "dont-know", correct: boolean, resposta: ExerciseAnswer | null) {
+    if (!FEATURES.sinaisAmpliados) return;
+    const exerciseId = trilhaExerciseId(lesson.id, idx);
+    const meta = itemMetaOf(exerciseId);
+    const attempt = buildAttempt({
+      id: `at-${Date.now()}-${Math.floor(Math.random() * 1e6)}`,
+      sessionId: null,
+      exerciseId,
+      exerciseVersion: 1,
+      skillIds: meta.skillIds,
+      role: "pratica",
+      answer: resposta,
+      correct,
+      response,
+      firstSubmission: true,
+      startedAtMs: questionShownAtRef.current,
+      localDate: hojeISO(),
+      itemDifficulty: meta.difficulty,
+      source: "legado",
+    });
+    recordLearningAttempt(attempt, { irt: meta.irt, difficulty: meta.difficulty });
+  }
 
   function verify() {
     if (answer === null) return;
@@ -93,7 +137,16 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
       } else {
         setWrongNotes((w) => (w.includes(exercise.explicacao) ? w : [...w, exercise.explicacao]));
       }
+      registrarSinal("answered", correct, answer);
       return { exerciseId: `${lesson.id}:${idx}`, correct, explanation: exercise.explicacao };
+    });
+  }
+
+  /** Botão "Não sei" (docs/30 §16.1, Fase 6) — conta como não acerto no resultado da lição, sem entrar em `wrongNotes` (não é um erro de conteúdo, é ausência de resposta). */
+  function dontKnowClick() {
+    session.submit(() => {
+      registrarSinal("dont-know", false, null);
+      return { exerciseId: `${lesson.id}:${idx}`, correct: false, explanation: exercise.explicacao, dontKnow: true };
     });
   }
 
@@ -101,7 +154,14 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
    * "Explicar melhor" só ABRE o balão com o contexto fixado — nunca envia
    * mensagem sozinho (docs/20 §4.2): o aluno decide se e o que perguntar.
    */
-  function askTutor() {
+  /** `ensinarDoZero` (docs/30 §17.2, Fase 7): nível 3 pós-feedback — ver o mesmo padrão em `MicroLessonPlayer.tsx`. */
+  function askTutor(ensinarDoZero = false) {
+    const exerciseId = trilhaExerciseId(lesson.id, idx);
+    const nivel3 = ensinarDoZero && FEATURES.explicacaoEmCamadas;
+    const mode = nivel3 ? "ensinar-do-zero" : "duvida";
+    const pedagogy = FEATURES.contextoPedagogicoIA
+      ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, exerciseId, mode, hojeISO())
+      : null;
     openTutorWithContext(
       focusFromExercise(
         exercise,
@@ -113,6 +173,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         shownBlocksByIdx[idx],
         session.feedback?.correct ?? false,
       ),
+      { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null },
     );
   }
 
@@ -255,16 +316,23 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
             feedback={session.feedback}
             isLast={idx + 1 >= total}
             onContinue={next}
-            onAskTutor={askTutor}
-          />
-        ) : (
-          <button
-            className={cn("btn-primary w-full", answer === null && "opacity-40")}
-            disabled={answer === null}
-            onClick={verify}
+            onAskTutor={() => askTutor(true)}
           >
-            Verificar
-          </button>
+            {hasExplanationLayers(explanationLayers) ? <ExplanationLayers layers={explanationLayers} /> : undefined}
+          </FeedbackSheet>
+        ) : (
+          <div className="space-y-2">
+            <button
+              className={cn("btn-primary w-full", answer === null && "opacity-40")}
+              disabled={answer === null}
+              onClick={verify}
+            >
+              Verificar
+            </button>
+            {FEATURES.botaoNaoSei && itemMetaOf(trilhaExerciseId(lesson.id, idx)).dontKnowAllowed !== false && (
+              <DontKnowButton onClick={dontKnowClick} />
+            )}
+          </div>
         )}
       </div>
 

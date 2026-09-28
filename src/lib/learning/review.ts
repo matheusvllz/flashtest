@@ -1,21 +1,29 @@
-import type { Attempt, AttemptRole, ReviewScheduleEntry, SkillEvidenceEntry } from "./types";
+import {
+  LIMITE_DATAS_DISTINTAS_EVIDENCIA,
+  LIMITE_ITENS_DISTINTOS_EVIDENCIA,
+  type Attempt,
+  type AttemptRole,
+  type ReviewScheduleEntry,
+  type SkillEvidenceEntry,
+} from "./types";
 
 /**
- * Agenda de revisão e evidência de consistência (docs/20 §13, Fase 7).
- * Funções puras — quem persiste é o chamador (`useLearningSession`/futura
+ * Agenda de revisão e evidência de consistência (docs/20 §13, Fase 7; escada
+ * estendida a 30/60 dias na Fase 5 do docs/31, docs/30 §9.3/§9.4). Funções
+ * puras — quem persiste é o chamador (`useLearningSession`/futura
  * integração), isto aqui não toca `store.ts`. Agenda de flashcards legada
  * (`progress.flashcardReviews`) tem fórmula própria e não é tocada por este
  * módulo (docs/20 §13: "não sobrescrever silenciosamente os registros de
  * flashcards legados").
  */
 
-const INTERVALOS_DIAS = [1, 3, 7, 14] as const;
+const INTERVALOS_DIAS = [1, 3, 7, 14, 30, 60] as const;
 export type IntervaloDias = (typeof INTERVALOS_DIAS)[number];
 
-/** Erro reinicia pro intervalo de 1 dia; acerto avança pro próximo intervalo da escada (docs/20 §13). */
-export function proximoIntervalo(atual: IntervaloDias | undefined, acertou: boolean): IntervaloDias {
+/** Erro reinicia pro intervalo de 1 dia; acerto avança pro próximo intervalo da escada (docs/20 §13, estendida no docs/30 §9.3). */
+export function proximoIntervalo(atual: ReviewScheduleEntry["intervalDays"] | undefined, acertou: boolean): IntervaloDias {
   if (!acertou) return 1;
-  const idx = atual ? INTERVALOS_DIAS.indexOf(atual) : -1;
+  const idx = atual !== undefined ? INTERVALOS_DIAS.indexOf(atual) : -1;
   const proximoIdx = Math.min(idx + 1, INTERVALOS_DIAS.length - 1);
   return INTERVALOS_DIAS[proximoIdx];
 }
@@ -97,12 +105,16 @@ export function updateSkillEvidence(
   if (tentativa.role === "checkpoint" || tentativa.assisted) return entryAtual;
 
   const base = entryAtual ?? EVIDENCIA_VAZIA(skillId);
+  // Limite 50/20 (docs/30 §9.3, schema v6, Fase 4) — poda os mais ANTIGOS
+  // quando excede; os critérios de "consistente" (skillEvidenceState) só
+  // olham a CONTAGEM (>=5 itens, >=2 datas) e os últimos 5 resultados, então
+  // podar não muda o selo de ninguém, só limita o tamanho do registro.
   const distinctExerciseIds = base.distinctExerciseIds.includes(tentativa.exerciseId)
     ? base.distinctExerciseIds
-    : [...base.distinctExerciseIds, tentativa.exerciseId];
+    : [...base.distinctExerciseIds, tentativa.exerciseId].slice(-LIMITE_ITENS_DISTINTOS_EVIDENCIA);
   const distinctLocalDates = base.distinctLocalDates.includes(tentativa.localDate)
     ? base.distinctLocalDates
-    : [...base.distinctLocalDates, tentativa.localDate];
+    : [...base.distinctLocalDates, tentativa.localDate].slice(-LIMITE_DATAS_DISTINTAS_EVIDENCIA);
   const lastFiveCorrect = [...base.lastFiveCorrect, tentativa.correct].slice(-5);
   const hasReviewCorrectAfter24h = base.hasReviewCorrectAfter24h || tentativa.isReviewRecovery;
 
@@ -160,10 +172,24 @@ export function recordAttemptForSkill(params: {
     isReviewRecovery,
   });
 
-  const schedule =
-    params.attempt.role === "revisao"
-      ? scheduleReview(params.scheduleAtual, params.skillId, params.attempt.correct, params.hojeISO)
-      : params.scheduleAtual;
+  // Fase 5 (docs/30 §9.4/§11.2): além de "revisao" avançar a escada como já
+  // fazia, prática/desafio/diagnóstico agora também mexem na agenda —
+  // primeiro acerto independente CRIA uma agenda (pra a habilidade virar
+  // "DEVIDA" mais tarde, docs/30 §11.2); qualquer erro (fora a checagem de
+  // aula) que já tenha agenda REINICIA pra 1 dia, mesmo fora do papel "revisao".
+  let schedule = params.scheduleAtual;
+  if (params.attempt.role === "revisao") {
+    schedule = scheduleReview(schedule, params.skillId, params.attempt.correct, params.hojeISO);
+  } else if (
+    (params.attempt.role === "pratica" || params.attempt.role === "desafio" || params.attempt.role === "diagnostico") &&
+    params.attempt.correct &&
+    !assisted &&
+    !schedule
+  ) {
+    schedule = scheduleReview(undefined, params.skillId, true, params.hojeISO);
+  } else if (!params.attempt.correct && params.attempt.role !== "checkpoint" && schedule) {
+    schedule = scheduleReview(schedule, params.skillId, false, params.hojeISO);
+  }
 
   return { evidence, schedule };
 }

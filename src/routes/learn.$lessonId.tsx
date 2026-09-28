@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
 import { EmptyState } from "@/components/ds/EmptyState";
 import { MicroLessonPlayer } from "@/components/learning/MicroLessonPlayer";
+import { TrailSkeleton } from "@/components/learning/path/TrailSkeleton";
 import { phaseById } from "@/content/microlicoes";
+import { subjectOfAulaGerada } from "@/content/curriculum-tree";
+import { ensureSubjects, isSubjectLoaded } from "@/lib/content/repository";
 import { isTrailLessonLocked } from "@/lib/learning/trail";
 import { useAppState } from "@/lib/store";
 
@@ -11,6 +15,22 @@ export const Route = createFileRoute("/learn/$lessonId")({ component: Learn, ssr
 function Learn() {
   const { lessonId } = Route.useParams();
   const s = useAppState();
+  // Aula gerada pelo pipeline mora no pacote da matéria (docs/30 §21.3):
+  // carrega antes de resolver, com o esqueleto da trilha enquanto isso.
+  const materiaDaAulaGerada = subjectOfAulaGerada(lessonId);
+  const [pacotePronto, setPacotePronto] = useState(() => !materiaDaAulaGerada || isSubjectLoaded(materiaDaAulaGerada));
+  useEffect(() => {
+    if (pacotePronto || !materiaDaAulaGerada) return;
+    let vivo = true;
+    void ensureSubjects([materiaDaAulaGerada]).finally(() => {
+      if (vivo) setPacotePronto(true);
+    });
+    return () => {
+      vivo = false;
+    };
+  }, [pacotePronto, materiaDaAulaGerada]);
+  if (!pacotePronto) return <TrailSkeleton />;
+
   // `phaseById` é o lookup canônico (docs/25 §18 T-05) — inclui as revisões
   // sintéticas de capítulo além das microlições autorais. A checagem de
   // bloqueio usa `isTrailLessonLocked` (T-15) — a mesma que `trail.ts` usa

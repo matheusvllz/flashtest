@@ -1,0 +1,327 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "gen:bio:organelas-funcao:d9b36bbe",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pesquisador observa uma célula com um grande número de lisossomos muito ativos. Qual tipo de função celular está sendo intensamente realizada?",
+        "opcoes": [
+          "Digestão intracelular de resíduos",
+          "Transporte de eletrólitos",
+          "Síntese de lipídios",
+          "Fotossíntese e captura de luz"
+        ],
+        "correta": 0,
+        "explicacao": "Lisossomos contêm enzimas hidrolíticas que degradam moléculas. Quando muitos estão ativos, a célula está reciclando resíduos, material antigo ou patógenos englobados. Não sintetizam lipídios (retículo liso faz) nem realizam fotossíntese (cloroplastos fazem). Alta atividade lisossomal indica reciclagem e digestão intensas, comum em células de defesa."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:d9b36bbe",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:b1ef80bc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O retículo endoplasmático rugoso sintetiza proteínas destinadas à secreção. Depois de sintetizadas, qual é o próximo passo delas?",
+        "opcoes": [
+          "Entram em lisossomos para degradação",
+          "Passam pelo complexo de Golgi para modificação e empacotamento",
+          "Ficam no retículo para sempre",
+          "Vão direto para a membrana plasmática"
+        ],
+        "correta": 1,
+        "explicacao": "Proteínas sintetizadas no retículo rugoso entram no lúmen e são transportadas em vesículas até o Golgi, onde sofrem modificações pós-traducionais (glicosilação, fosforilação), classificação e empacotamento em vesículas secretórias. Depois essas vesículas fundem-se à membrana para liberar a proteína. Lisossomos degradam, não processam secretórias."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:b1ef80bc",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:8a56e9ec",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um tratamento com drogas que desestabiliza microtúbulos causa paralisia de cílios e flagelos. Que estrutura citoplasmática é fundamental para esses organoides?",
+        "opcoes": [
+          "Centríolo (organiza microtúbulos)",
+          "Retículo endoplasmático",
+          "Complexo de Golgi",
+          "Ribossomos"
+        ],
+        "correta": 0,
+        "explicacao": "Cílios e flagelos são compostos de microtúbulos em arranjo 9+2 (9 pares periféricos, 2 centrais). Centríolos (e corpúsculos basais) organizam e nucleiam esses microtúbulos. Desorganizar microtúbulos impede o deslizamento coordenado que causa o batimento. Ribossomos sintetizam; Golgi e retículo processam; nenhum é estrutural para cílios."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:8a56e9ec",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:45381c8e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Comparando uma célula vegetal e uma animal, qual organela está presente em plantas mas ausente em animais típicos?",
+        "opcoes": [
+          "Complexo de Golgi",
+          "Cloroplasto",
+          "Ribossomos",
+          "Mitocôndria"
+        ],
+        "correta": 1,
+        "explicacao": "Cloroplastos são organelas fotossintéticas exclusivas de células vegetais (e algumas algas). Mitocôndria, Golgi e ribossomos existem em ambas. Além de cloroplastos, plantas têm parede celular e vacúolo central maior, mas o cloroplasto faz a maior diferença funcional: é responsável pela autotrofia. Animais dependem de nutrição heterotrófica."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:45381c8e",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:ed4dd112",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um vírus consegue se integrar ao cromossomo de uma célula hospedeira. Qual organela contém o DNA cromossômico onde ocorre essa integração?",
+        "opcoes": [
+          "Ribossomo",
+          "Lisossomo",
+          "Mitocôndria",
+          "Núcleo"
+        ],
+        "correta": 3,
+        "explicacao": "O DNA cromossômico (genoma nuclear) localiza-se no núcleo, organizado em cromatina. Retrovírus usam a transcriptase reversa para produzir DNA a partir do seu RNA e integrá-lo ao cromossomo hospedeiro. A mitocôndria tem seu próprio DNA (circular, pequeno); ribossomos não guardam DNA; lisossomos só degradam. A integração acontece no núcleo, alterando o genoma."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:ed4dd112",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:a655cd73",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma célula que precisa secretar grande quantidade de muco viscoso provavelmente tem quantidades muito elevadas de qual organela?",
+        "opcoes": [
+          "Cloroplastos",
+          "Ribossomos, retículo rugoso e complexo de Golgi",
+          "Lisossomos",
+          "Centríolos"
+        ],
+        "correta": 1,
+        "explicacao": "Muco é principalmente proteína e carboidratos complexos. Células produtoras de muco têm ribossomos abundantes (síntese), retículo rugoso desenvolvido (processamento inicial) e Golgi bem amplo (glicosilação e empacotamento). Essa tríade (ribossomos → retículo rugoso → Golgi) é marca de células secretoras. Cloroplastos fotossintetizam; lisossomos degradam; centríolos organizam."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:a655cd73",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:d14a0153",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O peroxissomo é uma organela responsável por degradar peróxido de hidrogênio (H2O2), uma substância tóxica produzida no metabolismo. Qual é o valor adaptativo dessa função?",
+        "opcoes": [
+          "Facilitar a absorção de nutrientes",
+          "Aumentar a produção de ATP",
+          "Proteger a célula de danos causados por radicais livres",
+          "Reciclar lipídios antigos"
+        ],
+        "correta": 2,
+        "explicacao": "H2O2 é um oxidante potente que pode gerar radicais livres e danificar membranas, proteínas e DNA. Peroxissomos contêm a enzima catalase, que decompõe H2O2 em água e oxigênio, neutralizando a ameaça. Isso protege a célula do estresse oxidativo. Degradar H2O2 não produz ATP, não recicla lipídios e não tem relação com a absorção de nutrientes."
+      },
+      "meta": {
+        "id": "gen:bio:organelas-funcao:d14a0153",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

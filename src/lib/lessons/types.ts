@@ -28,6 +28,13 @@ interface ExerciseBase {
   explicacao: string;
   /** Imagem de apoio opcional, renderizada pelo player acima do enunciado. */
   imagem?: ExerciseImage;
+  /**
+   * Atribuição exibida abaixo do enunciado (docs/30 §12.4/§18.4, Fase 10
+   * F10.5) — item oficial do ENEM sempre grava `"ENEM <ano>"` aqui, nunca
+   * opcional pra esse caso (requisito não-negociável, `docs/34`). Também
+   * serve pra fonte de um texto de apoio (uso original, `InterpretExercise`).
+   */
+  fonte?: string;
 }
 
 export interface MultipleChoiceExercise extends ExerciseBase {
@@ -68,7 +75,6 @@ export interface InterpretExercise extends ExerciseBase {
   type: "interpretacao";
   /** Texto de apoio curto (nível ENEM). */
   texto: string;
-  fonte?: string;
   pergunta: string;
   opcoes: string[];
   correta: number;

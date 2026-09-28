@@ -5,6 +5,7 @@ import {
   ensureBackup,
   parseStoredState,
 } from "@/lib/state-migrations";
+import { learningStateVazio } from "@/lib/learning/types";
 
 describe("parseStoredState — parse protegido (docs/20 §15.3, item 2)", () => {
   test("JSON inválido não lança — vira parsed=null com aviso", () => {
@@ -70,7 +71,7 @@ describe("ensureBackup — nunca sobrescreve (docs/20 §15.3, item 4)", () => {
 
 describe("computeAdditiveFields — schema v4 (docs/20 §15.2)", () => {
   test("estado nunca visto (parsed=null) recebe tudo vazio/default, schemaVersion atual", () => {
-    const campos = computeAdditiveFields(null);
+    const campos = computeAdditiveFields(null, "2026-09-21");
     expect(campos.schemaVersion).toBe(CURRENT_SCHEMA_VERSION);
     expect(campos.futureVersion).toBe(false);
     expect(campos.learning.activeSession).toBeNull();
@@ -83,19 +84,13 @@ describe("computeAdditiveFields — schema v4 (docs/20 §15.2)", () => {
 
   test("estado v3 (sem schemaVersion nem `learning`) migra pra v4 sem perder nada — campos novos vazios", () => {
     const v3 = { prefs: { sound: true }, progress: { xp: 250, streak: 7 } };
-    const campos = computeAdditiveFields(v3);
+    const campos = computeAdditiveFields(v3, "2026-09-21");
     expect(campos.schemaVersion).toBe(CURRENT_SCHEMA_VERSION);
-    expect(campos.learning).toEqual({
-      activeSession: null,
-      completedLessons: {},
-      skillEvidence: {},
-      reviewSchedule: {},
-      recentAttempts: [],
-      rewardLedger: {},
-      tipHistory: [],
-      // docs/25 §7.1/§7.6, T-02: campo aditivo novo, vazio até T-07 popular de verdade.
-      celebratedChapterIds: [],
-    });
+    // docs/25 §7.1/§7.6 + docs/30 §21.1 (schema v6, Fase 4 do docs/31):
+    // `learningStateVazio()` é a mesma fonte que `computeAdditiveFields` usa
+    // — comparar contra ela em vez de repetir a forma à mão evita este teste
+    // ficar desatualizado a cada campo aditivo novo.
+    expect(campos.learning).toEqual(learningStateVazio());
   });
 
   test("preserva `activeSession` válida (com `stepIndex`, schema v5) através de um reload comum (docs/20 §8.1, A8)", () => {
@@ -119,7 +114,7 @@ describe("computeAdditiveFields — schema v4 (docs/20 §15.2)", () => {
         },
       },
     };
-    const campos = computeAdditiveFields(comSessao);
+    const campos = computeAdditiveFields(comSessao, "2026-09-21");
     expect(campos.learning.activeSession).toEqual(comSessao.learning.activeSession as never);
   });
 
@@ -143,13 +138,13 @@ describe("computeAdditiveFields — schema v4 (docs/20 §15.2)", () => {
         },
       },
     };
-    const campos = computeAdditiveFields(comSessaoAntiga);
+    const campos = computeAdditiveFields(comSessaoAntiga, "2026-09-21");
     expect(campos.learning.activeSession).toBeNull();
   });
 
   test("descarta `activeSession` com forma inválida em vez de lançar", () => {
     const corrompida = { learning: { activeSession: { id: 123, algoQuebrado: true } } };
-    const campos = computeAdditiveFields(corrompida);
+    const campos = computeAdditiveFields(corrompida, "2026-09-21");
     expect(campos.learning.activeSession).toBeNull();
   });
 
@@ -161,7 +156,7 @@ describe("computeAdditiveFields — schema v4 (docs/20 §15.2)", () => {
         rewardLedger: { "onboarding-bonus": { key: "onboarding-bonus", awardedAt: "x", xp: 50 } },
       },
     };
-    const campos = computeAdditiveFields(jaMigrado);
+    const campos = computeAdditiveFields(jaMigrado, "2026-09-21");
     expect(campos.learning.completedLessons).toEqual({
       "licao-1": { version: 1, completedAt: "2026-01-01" },
     });
@@ -172,23 +167,23 @@ describe("computeAdditiveFields — schema v4 (docs/20 §15.2)", () => {
 
   test("versão futura desconhecida NÃO é rebaixada pra a versão atual (docs/20 §15.3, item 10)", () => {
     const futuro = { schemaVersion: 99, progress: { xp: 5000 } };
-    const campos = computeAdditiveFields(futuro);
+    const campos = computeAdditiveFields(futuro, "2026-09-21");
     expect(campos.schemaVersion).toBe(99);
     expect(campos.futureVersion).toBe(true);
   });
 
   test("migração roda duas vezes seguidas e dá resultado idêntico (idempotência, item 10)", () => {
     const bruto = { prefs: { sound: false }, progress: { xp: 10 } };
-    const primeira = computeAdditiveFields(bruto);
+    const primeira = computeAdditiveFields(bruto, "2026-09-21");
     // Simula persistir e reler: agora o objeto TEM os campos que a primeira migração calculou.
     const comCamposNovos = { ...bruto, schemaVersion: primeira.schemaVersion, learning: primeira.learning };
-    const segunda = computeAdditiveFields(comCamposNovos);
+    const segunda = computeAdditiveFields(comCamposNovos, "2026-09-21");
     expect(segunda).toEqual(primeira);
   });
 
   test("campos com tipo errado no storage (ex.: examTargets não é array) caem pro default, não lançam", () => {
     const corrompido = { prefs: { examTargets: "não é array", showExamTips: "não é boolean" } };
-    const campos = computeAdditiveFields(corrompido);
+    const campos = computeAdditiveFields(corrompido, "2026-09-21");
     expect(campos.examTargets).toEqual([]);
     expect(campos.showExamTips).toBe(true);
   });
@@ -219,7 +214,7 @@ describe("computeAdditiveFields — schema v5 (docs/25 §7.6, T-07)", () => {
         rewardLedger: { "onboarding:bonus": { key: "onboarding:bonus", awardedAt: "x", xp: 50 } },
       },
     };
-    const campos = computeAdditiveFields(v4SemStepIndex);
+    const campos = computeAdditiveFields(v4SemStepIndex, "2026-09-21");
     expect(campos.learning.activeSession).toBeNull();
     expect(campos.learning.completedLessons).toEqual({
       "licao-1": { version: 1, completedAt: "2026-01-01", stars: 3, bestPct: 100 },
@@ -251,7 +246,7 @@ describe("computeAdditiveFields — schema v5 (docs/25 §7.6, T-07)", () => {
         },
       },
     };
-    const campos = computeAdditiveFields(v5ComStepIndex);
+    const campos = computeAdditiveFields(v5ComStepIndex, "2026-09-21");
     expect(campos.learning.activeSession).toEqual(v5ComStepIndex.learning.activeSession as never);
   });
 
@@ -261,7 +256,7 @@ describe("computeAdditiveFields — schema v5 (docs/25 §7.6, T-07)", () => {
       learning: { celebratedChapterIds: ["bio-citologia", "mat-porcentagem"] },
       prefs: { trailSubjectId: "biologia" },
     };
-    const campos = computeAdditiveFields(comCampos);
+    const campos = computeAdditiveFields(comCampos, "2026-09-21");
     expect(campos.learning.celebratedChapterIds).toEqual(["bio-citologia", "mat-porcentagem"]);
     expect(campos.trailSubjectId).toBe("biologia");
 
@@ -271,18 +266,132 @@ describe("computeAdditiveFields — schema v5 (docs/25 §7.6, T-07)", () => {
       learning: { ...comCampos.learning, ...campos.learning },
       prefs: { ...comCampos.prefs, trailSubjectId: campos.trailSubjectId },
     };
-    const segunda = computeAdditiveFields(relido);
+    const segunda = computeAdditiveFields(relido, "2026-09-21");
     expect(segunda.learning.celebratedChapterIds).toEqual(["bio-citologia", "mat-porcentagem"]);
     expect(segunda.trailSubjectId).toBe("biologia");
   });
 
   test("sem `prefs.trailSubjectId` no storage, o campo vem `null` (default)", () => {
-    const campos = computeAdditiveFields({ prefs: { name: "Ana" } });
+    const campos = computeAdditiveFields({ prefs: { name: "Ana" } }, "2026-09-21");
     expect(campos.trailSubjectId).toBeNull();
   });
 
   test("`prefs.trailSubjectId` com tipo errado cai pro default `null`, não lança", () => {
-    const campos = computeAdditiveFields({ prefs: { trailSubjectId: 123 } });
+    const campos = computeAdditiveFields({ prefs: { trailSubjectId: 123 } }, "2026-09-21");
     expect(campos.trailSubjectId).toBeNull();
+  });
+});
+
+describe("computeAdditiveFields — schema v6 (docs/30 §21.1, Fase 4 do docs/31)", () => {
+  test("prefs novos sem storage prévio: foco vazio, minutos derivados de dailyLessons, easySubjects vazio", () => {
+    const campos = computeAdditiveFields({ prefs: { dailyLessons: 3 } }, "2026-09-21");
+    expect(campos.studyFocus).toEqual({ mode: "todas", subjectIds: [], areas: [] });
+    expect(campos.easySubjects).toEqual([]);
+    expect(campos.dailyMinutes).toBe(10); // dailyLessons 3 -> 10 min (docs/30 §21.1)
+  });
+
+  test("dailyMinutes já válido no storage é preservado tal qual", () => {
+    const campos = computeAdditiveFields({ prefs: { dailyMinutes: 30 } }, "2026-09-21");
+    expect(campos.dailyMinutes).toBe(30);
+  });
+
+  test("dailyMinutes fora da lista fechada (ex.: 12) cai pro derivado de dailyLessons, não passa o valor inválido adiante", () => {
+    const campos = computeAdditiveFields({ prefs: { dailyMinutes: 12, dailyLessons: 1 } }, "2026-09-21");
+    expect(campos.dailyMinutes).toBe(5);
+  });
+
+  test("studyFocus com forma válida é preservado", () => {
+    const campos = computeAdditiveFields(
+      { prefs: { studyFocus: { mode: "areas", subjectIds: [], areas: ["MT", "CN"] } } },
+      "2026-09-21",
+    );
+    expect(campos.studyFocus).toEqual({ mode: "areas", subjectIds: [], areas: ["MT", "CN"] });
+  });
+
+  test("studyFocus com mode inválido cai pro default, não lança", () => {
+    const campos = computeAdditiveFields({ prefs: { studyFocus: { mode: "qualquer-coisa" } } }, "2026-09-21");
+    expect(campos.studyFocus.mode).toBe("todas");
+  });
+
+  test("onboardingVersion: quem já tinha `onboarded: true` sem o campo vira versão 1 (fluxo antigo)", () => {
+    const campos = computeAdditiveFields({ onboarded: true, prefs: {} }, "2026-09-21");
+    expect(campos.onboardingVersion).toBe(1);
+  });
+
+  test("onboardingVersion: sem `onboarded` (usuário realmente novo) vira versão 2 (fluxo novo)", () => {
+    const campos = computeAdditiveFields({ prefs: {} }, "2026-09-21");
+    expect(campos.onboardingVersion).toBe(2);
+  });
+
+  test("onboardingVersion já gravado no storage é preservado", () => {
+    const campos = computeAdditiveFields({ onboarded: true, prefs: { onboardingVersion: 1 } }, "2026-09-21");
+    expect(campos.onboardingVersion).toBe(1);
+  });
+
+  test("learning.journey com forma inválida cai pra vazia (nunca trava o boot)", () => {
+    const campos = computeAdditiveFields({ learning: { journey: { committed: "não é array" } } }, "2026-09-21");
+    expect(campos.learning.journey).toEqual({
+      committed: [],
+      upcoming: [],
+      history: [],
+      activeActivity: null,
+      sinceCheckpoint: 0,
+      lastCheckpointDate: null,
+      planVersion: 0,
+    });
+  });
+
+  test("learning.journey com forma válida é preservada", () => {
+    const journeyValida = {
+      committed: [{ id: "atv-1", kind: "pratica", subjectId: "mat", skillIds: ["mat:porcentagem-valor"] }],
+      upcoming: [],
+      history: [],
+      activeActivity: null,
+      sinceCheckpoint: 4,
+      lastCheckpointDate: "2026-09-20",
+      planVersion: 1,
+    };
+    const campos = computeAdditiveFields({ learning: { journey: journeyValida } }, "2026-09-21");
+    expect(campos.learning.journey).toEqual(journeyValida);
+  });
+
+  test("learning.placement com forma inválida vira null (regra diferente da jornada — docs/30 §21.1)", () => {
+    const campos = computeAdditiveFields({ learning: { placement: { status: "estado-que-nao-existe" } } }, "2026-09-21");
+    expect(campos.learning.placement).toBeNull();
+  });
+
+  test("learning.placement com forma válida é preservado", () => {
+    const placementValido = {
+      status: "concluido",
+      startedAt: "2026-09-20T10:00:00.000Z",
+      finishedAt: "2026-09-20T10:10:00.000Z",
+      areas: {},
+      seed: "abc123",
+    };
+    const campos = computeAdditiveFields({ learning: { placement: placementValido } }, "2026-09-21");
+    expect(campos.learning.placement).toEqual(placementValido);
+  });
+
+  test("learning.focusSession EXPIRADA (expiresOn < hoje) some na carga", () => {
+    const focusOntem = { subjectIds: ["mat"], startedAt: "2026-09-20T10:00:00.000Z", expiresOn: "2026-09-20" };
+    const campos = computeAdditiveFields({ learning: { focusSession: focusOntem } }, "2026-09-21");
+    expect(campos.learning.focusSession).toBeNull();
+  });
+
+  test("learning.focusSession ainda válida hoje é preservada", () => {
+    const focusHoje = { subjectIds: ["mat"], startedAt: "2026-09-21T10:00:00.000Z", expiresOn: "2026-09-21" };
+    const campos = computeAdditiveFields({ learning: { focusSession: focusHoje } }, "2026-09-21");
+    expect(campos.learning.focusSession).toEqual(focusHoje);
+  });
+
+  test("learning.events: mantém só os últimos 300 mesmo se o storage tiver mais (defesa dupla com o limite do store)", () => {
+    const muitosEventos = Array.from({ length: 305 }, (_, i) => ({
+      type: "plan-fallback",
+      at: "2026-09-21T10:00:00.000Z",
+      localDate: "2026-09-21",
+      meta: { i },
+    }));
+    const campos = computeAdditiveFields({ learning: { events: muitosEventos } }, "2026-09-21");
+    expect(campos.learning.events).toHaveLength(300);
   });
 });

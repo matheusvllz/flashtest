@@ -1,0 +1,534 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:probabilidade-evento-simples:211bbeaf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual é a probabilidade de obter um número par ao lançar um dado comum de 6 faces?",
+        "opcoes": [
+          "1/6 ou 17%",
+          "1/2 ou 50%",
+          "1/3 ou 33%",
+          "2/3 ou 67%"
+        ],
+        "correta": 1,
+        "explicacao": "Números pares no dado: 2, 4, 6 (3 resultados favoráveis). Total de resultados: 6. Probabilidade = 3/6 = 1/2 = 50%. Espaço amostral uniforme: cada face tem igual chance. Você conta favoráveis e divide pelo total."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:211bbeaf",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:b7bf4b50",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma urna contém 5 bolas vermelhas e 3 bolas azuis. Qual é a probabilidade de retirar uma bola vermelha?",
+        "opcoes": [
+          "5/3 ou 167%",
+          "3/8 ou 37,5%",
+          "1/2 ou 50%",
+          "5/8 ou 62,5%"
+        ],
+        "correta": 3,
+        "explicacao": "Bolas vermelhas: 5. Total: 5 + 3 = 8 bolas. Probabilidade = 5/8 = 0,625 = 62,5%. Probabilidades sempre variam de 0 a 1 (ou 0% a 100%). Resultados acima de 100% ou menores que 0 são impossíveis e sinalizam erro."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:b7bf4b50",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:8c11067f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma moeda é lançada 3 vezes. Qual é a probabilidade de obter pelo menos uma cara?",
+        "opcoes": [
+          "1/8 ou 12,5%",
+          "7/8 ou 87,5%",
+          "1/2 ou 50%",
+          "3/8 ou 37,5%"
+        ],
+        "correta": 1,
+        "explicacao": "É mais fácil usar o complementar: P(pelo menos uma cara) = 1 - P(todas coroas). P(coroa em cada lançamento) = 1/2; P(3 coroas) = (1/2)³ = 1/8. Logo P(pelo menos uma cara) = 1 - 1/8 = 7/8 = 87,5%. Complementar ajuda quando você vê 'pelo menos um'."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:8c11067f",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:b272362b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa tem 2 bolas brancas, 3 bolas pretas e 5 bolas vermelhas. Qual é a probabilidade de retirar uma bola preta ou vermelha?",
+        "opcoes": [
+          "3/10 ou 30%",
+          "2/10 ou 20%",
+          "8/10 ou 80%",
+          "5/10 ou 50%"
+        ],
+        "correta": 2,
+        "explicacao": "Bolas pretas: 3. Bolas vermelhas: 5. Bolas pretas ou vermelhas: 3 + 5 = 8. Total: 2 + 3 + 5 = 10. Probabilidade = 8/10 = 80%. Quando dois eventos são mutuamente exclusivos (não acontecem ao mesmo tempo), dá pra somar as probabilidades."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:b272362b",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:0ff20b34",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Duas moedas são lançadas. Qual é a probabilidade de obter cara na primeira E cara na segunda?",
+        "opcoes": [
+          "1/4 ou 25%",
+          "1/2 ou 50%",
+          "2/4 ou 50%",
+          "3/4 ou 75%"
+        ],
+        "correta": 0,
+        "explicacao": "P(cara na 1ª) = 1/2. P(cara na 2ª) = 1/2. P(ambas caras) = 1/2 × 1/2 = 1/4 = 25%. Para eventos independentes, você multiplica as probabilidades. Erro bem comum: somar em vez de multiplicar."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:0ff20b34",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:c7196515",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De um baralho de 52 cartas, qual é a probabilidade de retirar um ás e depois (sem reposição) retirar uma dama?",
+        "opcoes": [
+          "(8/52) ≈ 15%",
+          "(4/52) × (4/51) ≈ 0,6%",
+          "(4/52) × (4/52) ≈ 0,6%",
+          "(4/52) + (4/52) ≈ 15%"
+        ],
+        "correta": 1,
+        "explicacao": "P(ás 1ª vez) = 4/52. Após remover um ás, sobram 51 cartas e ainda 4 damas. P(dama 2ª vez | ás saiu) = 4/51. P(ás E depois dama) = (4/52) × (4/51) ≈ 0,006 = 0,6%. Sem reposição, o denominador diminui após a 1ª retirada. Cuidado para não esquecer de ajustá-lo."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:c7196515",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:9c653674",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um processo de seleção tem duas etapas com probabilidades: 60% chance de passar na 1ª etapa e 80% de passar na 2ª etapa (se passar na 1ª). Qual é a chance de ser aprovado no processo completo?",
+        "opcoes": [
+          "60%",
+          "80%",
+          "70%",
+          "48%"
+        ],
+        "correta": 3,
+        "explicacao": "P(passar tudo) = P(1ª) × P(2ª | passou na 1ª) = 0,60 × 0,80 = 0,48 = 48%. Eventos em série (um depende do outro) exigem multiplicação de probabilidades condicionadas, não soma."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:9c653674",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:16817e9d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um sorteio distribui 10 prêmios entre 50 participantes (sem reposição). Qual é a probabilidade de uma pessoa vencer pelo menos um prêmio?",
+        "opcoes": [
+          "10/49 ≈ 20%",
+          "40/50 = 80%",
+          "1/50 = 2%",
+          "10/50 = 1/5 = 20%"
+        ],
+        "correta": 3,
+        "explicacao": "Se cada prêmio é único e vai pra uma pessoa diferente, a probabilidade de um participante vencer é 10/50 (número de prêmios / número de participantes) = 1/5 = 20%. Sem reposição não muda esse cálculo básico pra visão de um participante."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:16817e9d",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.932Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:2edbdca4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma urna contém 20 bolas: 8 vermelhas, 7 azuis e 5 verdes. Se tirarmos uma bola ao acaso, qual é a probabilidade de tirar uma bola que NÃO seja vermelha?",
+        "opcoes": [
+          "8/20",
+          "7/20",
+          "5/20",
+          "12/20"
+        ],
+        "correta": 3,
+        "explicacao": "Bolas que não são vermelhas: 7 azuis + 5 verdes = 12 bolas. Total: 20 bolas. Probabilidade = 12 / 20 = 3 / 5 (simplificada). Ou, P(não vermelho) = 1 - P(vermelho) = 1 - 8/20 = 12/20. A probabilidade do evento complementar é calculada subtraindo de 1 ou contando direto os casos favoráveis."
+      },
+      "meta": {
+        "id": "gen:mat:probabilidade-evento-simples:2edbdca4",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-probabilidade-evento-simples",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "prob",
+      "chapterId": "gen-mat-probabilidade-evento-simples",
+      "title": "Probabilidade simples",
+      "objective": "Calcular a probabilidade de eventos simples, incluindo eventos independentes e sem reposição.",
+      "skillIds": [
+        "mat:probabilidade-evento-simples"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:probabilidade-evento-simples:16817e9d",
+        "gen:mat:probabilidade-evento-simples:b272362b"
+      ],
+      "recap": "Probabilidade é favoráveis sobre possíveis. Eventos que acontecem juntos multiplicam; sem reposição, o total diminui depois.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Probabilidade",
+          "body": "Você vai aprender a calcular a chance de um evento acontecer, e a combinar chances de eventos separados."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Favoráveis sobre possíveis",
+            "body": "A probabilidade de um evento é o número de resultados favoráveis dividido pelo número total de resultados possíveis, e sempre fica entre 0 e 1 (ou entre 0% e 100%). Se um resultado seu passar de 100% ou ficar negativo, tem erro na conta."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:probabilidade-evento-simples:211bbeaf",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:probabilidade-evento-simples:b7bf4b50",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Pelo menos um seis",
+            "problem": "Um dado é lançado duas vezes. Qual é a probabilidade de sair pelo menos um 6?",
+            "steps": [
+              "Complementar: P(pelo menos um 6) = 1 - P(nenhum 6).",
+              "P(não sair 6 em um lançamento) = 5/6.",
+              "P(nenhum 6 nos dois lançamentos) = 5/6 × 5/6 = 25/36.",
+              "P(pelo menos um 6) = 1 - 25/36 = 11/36."
+            ],
+            "result": "11/36, aproximadamente 30,6%."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:probabilidade-evento-simples:8c11067f",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:probabilidade-evento-simples:0ff20b34",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não some as probabilidades de dois eventos que acontecem juntos (E): multiplique. Somar é pra 'ou', quando só um dos dois precisa acontecer."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Com ou sem reposição",
+            "left": {
+              "label": "Eventos independentes",
+              "body": "Um resultado não muda a chance do próximo, como jogar uma moeda duas vezes. Multiplique as probabilidades direto."
+            },
+            "right": {
+              "label": "Sem reposição",
+              "body": "Depois de tirar um item e não devolver, o total de opções diminui, e a segunda probabilidade muda em função da primeira."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:probabilidade-evento-simples:c7196515",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Probabilidade é favoráveis sobre possíveis. Eventos que acontecem juntos multiplicam; sem reposição, o total diminui depois."
+        }
+      ]
+    }
+  ]
+}

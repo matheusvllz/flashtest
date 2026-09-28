@@ -1,0 +1,847 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:32581b63",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma pesquisa etnográfica, descobre-se que uma comunidade indígena considera que homens devem cozinhar e mulheres devem caçar, enquanto em outra comunidade próxima ocorre o inverso. Ambas veem suas práticas como 'naturais'. O que essa variação cultural demonstra?",
+        "opcoes": [
+          "Que cultura não influencia expressão de gênero",
+          "Que a natureza biológica determina papéis de gênero de forma fixa",
+          "Que papéis de gênero são construções sociais variáveis, não imposições biológicas",
+          "Que existe apenas uma forma correta de distribuir trabalho"
+        ],
+        "correta": 2,
+        "explicacao": "Essa variação mostra que papéis de gênero são socialmente construídos: cada comunidade aprendeu a dividir trabalho de forma diferente, e cada uma naturaliza sua própria versão. Se fosse biologicamente determinado, todas as comunidades fariam igual. A variação cultural prova que é construção social. As pessoas nas duas comunidades nascem com mesma biologia, mas a sociedade as ensina a fazer coisas diferentes e acreditam que é 'natural'."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:32581b63",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.725Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:a7452ba9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Observa-se que em uma cidade, moradores de um bairro rico usam certos sotaques, palavras, modos de andar e de se vestir que marcam sua posição social, enquanto moradores de bairro pobre usam outros marcadores. Essas diferenças entre grupos sociais são frequentemente vistas como 'naturais' ou 'características de pessoas de lá'. Qual conceito mostra que essas diferenças são socialmente construídas?",
+        "opcoes": [
+          "Determinismo genético inevitável",
+          "Ausência de diferenças entre grupos",
+          "Hierarquia biológica entre grupos",
+          "Habitus de classe: disposições e comportamentos interiorizados que marcam posição social, não são naturais"
+        ],
+        "correta": 3,
+        "explicacao": "Habitus de classe são os modos de falar, andar, se vestir e se comportar que as pessoas aprendem conforme sua posição social. Não são inatos; são interiorizados pela socialização. Se uma criança pobre for adotada por uma família rica desde bebê, aprenderá o sotaque e os modos da classe rica. Essas diferenças parecem 'naturais' porque são aprendidas cedo e profundamente, mas são socialmente construídas."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:a7452ba9",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.725Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:01d9f005",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pesquisas mostram que em alguns países, beleza feminina 'tradicional' é associada a mulheres magras com pele clara, enquanto em outros é associada a mulheres corpulentas com pele escura. Qual conceito sociológico explica essa diferença?",
+        "opcoes": [
+          "Padrões de beleza são construções culturais que variam entre sociedades",
+          "A biologia determina o que cada sociedade acha bonito",
+          "Não há diferenças culturais em padrões estéticos",
+          "Existe um padrão biológico universal de beleza"
+        ],
+        "correta": 0,
+        "explicacao": "Padrões de beleza são construções culturais que variam historicamente e geograficamente. O que uma época considerava bonito, mulheres mais corpulentas no século XIX europeu, como símbolo de riqueza, mudou. Diferentes culturas têm padrões diversos. Esses padrões não refletem natureza, refletem valores e contextos históricos: riqueza, saúde, fertilidade conforme a época valorizava."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:01d9f005",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.725Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:dc946c67",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudante observa que em diferentes épocas da história e regiões do mundo, os padrões de beleza corporal mudam drasticamente. Enquanto na Europa medieval a pele pálida era desejável, em outras culturas a pele bronzeada é valorizada. Qual é a conclusão que melhor expressa a análise sociológica desse fenômeno?",
+        "opcoes": [
+          "A beleza é determinada biologicamente e apenas é expressa de formas diferentes em cada região.",
+          "Só os padrões de beleza ocidentais são válidos e os outros refletem falta de educação estética.",
+          "A beleza é uma ilusão criada pelas indústrias de cosméticos para vender produtos.",
+          "A beleza é uma construção social moldada pelos valores e normas de cada cultura, não um padrão fixo determinado pela natureza."
+        ],
+        "correta": 3,
+        "explicacao": "A análise sociológica reconhece que padrões de beleza variam historicamente e culturalmente, refletindo os valores, a economia e as influências de cada sociedade. Pele pálida na Europa medieval indicava status, não trabalho ao ar livre, enquanto pele bronzeada em outras culturas pode significar saúde e atividade ao ar livre. Isso demonstra que beleza não é natural, mas construída socialmente e muda conforme o contexto."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:dc946c67",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.989Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:dd843021",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A gíria é um conjunto de palavras que surge e se modifica dentro de grupos sociais específicos. Por exemplo, a gíria de jovens dos anos 80, dos anos 2000 e dos anos 2020 é bem diferente, e muitas vezes uma geração não entende a gíria da outra. O que essa observação exemplifica em relação ao conceito de construção social?",
+        "opcoes": [
+          "A linguagem e seus usos (gíria, sotaque, palavrões) são construções culturais definidas pelo grupo social, não pela biologia.",
+          "A gíria é um erro que deve ser eliminado da sociedade.",
+          "Toda gíria é universal e transcende as gerações.",
+          "A linguagem é geneticamente programada no ser humano."
+        ],
+        "correta": 0,
+        "explicacao": "A capacidade de aprender uma língua é humana, mas quais palavras, gírias e sotaques cada grupo usa é algo construído socialmente. Cada geração cria sua própria gíria, refletindo sua realidade, tecnologia e valores. O fato de uma geração nem sempre entender a gíria de outra mostra que esses usos são aprendidos e compartilhados no grupo, não herdados biologicamente."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:dd843021",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:554d82fa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma socióloga estuda papéis de gênero em diferentes sociedades. Em algumas culturas, homens dominam profissões como a culinária profissional e a moda, enquanto mulheres ficam com o trabalho doméstico. Em outras, o padrão é diferente. Qual interpretação MELHOR explica essa variabilidade, do ponto de vista de que gênero é construção social?",
+        "opcoes": [
+          "As diferenças de gênero surgem apenas da biologia e não podem mudar.",
+          "Papéis de gênero são atribuições socialmente definidas, moldadas pela história, economia e valores culturais de cada sociedade, podendo variar e mudar.",
+          "A feminilidade é um conceito imutável que existe desde o princípio da humanidade.",
+          "Homens são biologicamente mais aptos para cozinhar profissionalmente em todas as culturas."
+        ],
+        "correta": 1,
+        "explicacao": "Quando papéis de gênero variam bastante entre culturas, isso indica que não são determinados pela biologia, mas construídos socialmente. A biologia não explica por que em uma sociedade homens dominam a alta culinária e em outra não. Isso reflete história, poder econômico e normas culturais específicas. Essa variabilidade mostra que os papéis podem mudar quando a sociedade muda seus valores, o que não aconteceria se fossem puramente naturais."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:554d82fa",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:73f1d9b5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A moda e o vestuário que consideramos 'normais' variam enormemente entre épocas e culturas. No Brasil urbano contemporâneo, é visto como normal que mulheres usem shorts; em outras culturas, cobrir o corpo é uma norma cultural e religiosa. Uma aluna conclui: 'Essas diferenças mostram que o que é apropriado vestir não é natural, mas definido socialmente.' Essa conclusão está correta? Por quê?",
+        "opcoes": [
+          "Não, porque apenas o Brasil urbano define o vestuário correto.",
+          "Sim, mas apenas para mulheres, pois homens se vestem igual em todas as culturas.",
+          "Sim, porque normas de vestuário refletem valores, religião, clima e poder social definidos por cada grupo, não por uma lei natural.",
+          "Não, porque a biologia determina como todos devem se vestir."
+        ],
+        "correta": 2,
+        "explicacao": "A conclusão está certa. Normas de vestuário mostram que o que consideramos 'apropriado' é uma construção social. Elas variam com a religião, o clima, a economia, o contexto histórico e o poder de grupos sociais. Culturas diferentes estabelecem regras diferentes não porque exista uma verdade biológica sobre vestuário, mas porque cada sociedade negocia seus próprios valores. As normas são aprendidas e compartilhadas, não inatas."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:73f1d9b5",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:bc242bf9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma pesquisa de antropologia, observa-se que o comportamento de estar confortável em público (ex. comer na rua, beijar em público, usar roupa mais reveladora) varia drasticamente entre culturas. Isso não reflete capacidades biológicas diferentes, mas sim aprendizado de normas. Qual é a implicação mais direta para o conceito de construção social?",
+        "opcoes": [
+          "Alguns seres humanos nascem naturalmente mais recatados.",
+          "Comportamentos públicos são universais e qualquer diferença é erro.",
+          "A biologia explica completamente por que as culturas variam.",
+          "O comportamento humano em contextos sociais é aprendido através de interação com a cultura, não inscrito geneticamente."
+        ],
+        "correta": 3,
+        "explicacao": "A variação de comportamento em contextos públicos demonstra que o que consideramos 'apropriado' ou 'constrangedor' é culturalmente aprendido, não biologicamente determinado. Crianças nascem sem 'conhecimento' dessas normas; aprendem através da socialização em sua comunidade. A diversidade cultural nesse aspecto prova que os comportamentos são construtos sociais, moldados por valores, religião e história de cada grupo. Isso reforça que cultura é aprendida e não hereditária."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:bc242bf9",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:b9933523",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa nascida em Tóquio mas criada em São Paulo desde os 3 meses de idade fala português como língua materna, segue normas sociais brasileiras e se identifica culturalmente como brasileira, apesar de sua ascendência genética ser 100% japonesa. Este caso ilustra qual conceito fundamental sobre identidade cultural?",
+        "opcoes": [
+          "Identidade cultural é construída socialmente através da experiência vivida e socialização no grupo, não herdada geneticamente.",
+          "Pessoas de origem genética japonesa nunca podem ser verdadeiramente brasileiras.",
+          "A cultura é imutável e transmitida através do DNA.",
+          "Identidade é determinada exclusivamente pela genética e ascendência."
+        ],
+        "correta": 0,
+        "explicacao": "Esse caso mostra que a identidade cultural é construída por socialização, vivência e aprendizado, não pela genética. A pessoa adotou a cultura brasileira não porque seu DNA a determinou, mas porque foi socializada nela desde bebê. Ascendência genética e identidade cultural são coisas distintas. Isso refuta a ideia de que cultura está 'no sangue': ela é adquirida na interação social e no ambiente em que a pessoa cresce."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:b9933523",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:61ae5bc7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em aulas de Sociologia, aprende-se que a cultura é uma 'construção social'. O que essa definição quer dizer exatamente?",
+        "opcoes": [
+          "Que a cultura é determinada pela biologia e não pode mudar.",
+          "Que a cultura é criada, aprendida e compartilhada por grupos humanos através da interação social, não sendo inata ou natural.",
+          "Que apenas cientistas podem construir a cultura de um povo.",
+          "Que a cultura é um fenômeno exclusivamente biológico e não pode ser modificada."
+        ],
+        "correta": 1,
+        "explicacao": "Quando dizemos que cultura é construção social, significa que ela não é inerente aos genes ou à natureza humana, mas criada e mantida pelos grupos através da comunicação, tradição e aprendizado. Cada geração aprende a cultura da geração anterior e a adapta. Isso contrasta com características biológicas inatas, como cor dos olhos ou altura. A cultura existe porque as pessoas a constroem juntas, compartilham significados e normas."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:61ae5bc7",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:ce351db8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pedro é um menino brasileiro criado em uma família onde aprendeu que homens não choram e que competição é um valor importante. Já Yuki, uma menina criada no Japão, aprendeu que harmonia e discrição emocional são virtudes. Essas diferenças de comportamento e valores ilustram qual princípio sociológico?",
+        "opcoes": [
+          "Que não há diferença alguma entre culturas.",
+          "Que personalidade é completamente aleatória e não depende de nada.",
+          "Que comportamentos e valores são aprendidos culturalmente, não determinados biologicamente.",
+          "Que homens e mulheres têm capacidades diferentes impostas pela genética."
+        ],
+        "correta": 2,
+        "explicacao": "As diferentes formas de expressar emoções e valores entre Pedro e Yuki refletem aprendizado cultural, não diferenças biológicas inatas. Cada um foi socializado com normas específicas sobre masculinidade, emoção e convivência, inclusive na família. Traços muitas vezes atribuídos à 'natureza' são, em grande parte, resultado dessa socialização. Se fossem puramente biológicos, não variariam de uma cultura para outra."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:ce351db8",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:5e7040cd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um estudo de turismo cultural, observa-se que diferentes sociedades têm regras completamente distintas sobre saudação: apertos de mão, beijos, reverências, toques específicos. Como um sociólogo explicaria esse fenômeno?",
+        "opcoes": [
+          "Existe uma forma correta de saudar que é universal.",
+          "As formas de saudação são geneticamente programadas em cada grupo.",
+          "As formas de saudação não têm significado sociológico algum.",
+          "As formas de saudação variam entre culturas porque as normas sociais são construídas e aprendidas, não impostas pela biologia."
+        ],
+        "correta": 3,
+        "explicacao": "As diferentes formas de saudação demonstram que normas sociais são construções culturais. Se fossem biológicas, todas as culturas saudariam de forma idêntica, mas não fazem. Cada sociedade estabelece suas próprias formas de contato, muitas vezes baseadas em religião, história e valores de respeito. As pessoas aprendem essas normas desde crianças e as seguem automaticamente em sua cultura. Isso ilustra como construções sociais guiam comportamentos que parecem naturais mas são aprendidos."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:5e7040cd",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:9de94b61",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma criança brasileira e uma criança norueguesa nascem no mesmo instante com características biológicas similares. Aos 10 anos, elas valorizam coisas completamente diferentes, falam línguas diferentes e seguem normas sociais distintas. Qual conclusão é correta sobre essa transformação?",
+        "opcoes": [
+          "A biologia determina completamente os valores e comportamentos de uma pessoa.",
+          "Os valores e comportamentos humanos são moldados primariamente pela cultura em que a pessoa é criada, não pela genética.",
+          "Pessoas nascem já 'programadas' com seus valores finais.",
+          "A língua é geneticamente transmitida de geração em geração."
+        ],
+        "correta": 1,
+        "explicacao": "Esse exemplo mostra que, apesar de similaridade biológica, crianças de culturas diferentes desenvolvem-se de forma radicalmente diferente devido à socialização. Língua, valores, normas e identidade são aprendidos através da interação com a comunidade, não herdados geneticamente. A transformação ocorre porque a criança absorve a cultura de seu ambiente. Isso prova que traços culturais são construções sociais: são criados, aprendidos e compartilhados por grupos, não predeterminados biologicamente."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:9de94b61",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:a9425bbd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um antropólogo estuda as práticas alimentares de diferentes culturas. Em algumas, insetos são considerados alimento nutritivo e valorizado; em outras, comer insetos é tabu. O pesquisador afirma: 'O que um povo considera comida não é definido só pelas propriedades químicas do alimento, mas também por significados culturais.' Essa afirmação ilustra qual conceito?",
+        "opcoes": [
+          "Que a química dos alimentos é ilusória.",
+          "Que insetos são sempre culturalmente aceitáveis em qualquer lugar.",
+          "Que padrões de alimentação são construções sociais baseadas em valores culturais, aprendizagem e tabu, não em propriedades inerentes ao alimento.",
+          "Que alimentos biologicamente nutritivos são sempre rejeitados culturalmente."
+        ],
+        "correta": 2,
+        "explicacao": "Um mesmo inseto tem os mesmos nutrientes em qualquer lugar, mas uma cultura o trata como comida e outra como tabu. Essa diferença não vem da química do alimento, e sim dos significados que cada sociedade constrói: religião, história e tradição definem o que é 'adequado' comer. Uma lagarta pode ser iguaria em um lugar e tabu em outro. Isso mostra que preferências alimentares são construções sociais, aprendidas desde a infância."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:a9425bbd",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:5c3d5f4d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma jovem, criada em uma família que valoriza a educação e a independência profissional, escolhe uma carreira em Engenharia. Sua mãe é formada em Direito. Seu avô questiona: 'Mulheres naturalmente preferem profissões menos técnicas.' A jovem responde com um argumento sociológico sobre construção social. Qual é o argumento mais apropriado?",
+        "opcoes": [
+          "A Engenharia é uma profissão biologicamente incompatível com mulheres.",
+          "Não existe diferença de interesses entre homens e mulheres.",
+          "Mulheres sempre tiveram acesso igual a todas as profissões historicamente.",
+          "Preferências profissionais são moldadas culturalmente; a família da jovem construiu socialmente seu interesse em tecnologia, demonstrando que gênero não determina escolhas profissionais."
+        ],
+        "correta": 3,
+        "explicacao": "O argumento sociológico reconhece que preferências profissionais não são inatas, mas construídas socialmente. A jovem foi socializada em uma família que valoriza educação e independência, o que ajudou a formar seu interesse. Gerações anteriores de mulheres eram desestimuladas de seguir profissões técnicas por uma construção social de gênero, não por incapacidade biológica. Quando a sociedade muda seus valores e oportunidades, mais mulheres escolhem essas carreiras, o que indica que as barreiras eram sociais, não naturais."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:5c3d5f4d",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:40e142b6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pesquisa em Sociologia documenta que a idade em que se considera alguém 'adulto' varia enormemente entre culturas: em alguns lugares aos 13 anos com rituais de passagem, em outros aos 18 ou 21. A mesma variação ocorre com conceitos de 'velho' e 'juventude'. Qual é a interpretação sociológica correta?",
+        "opcoes": [
+          "Essas categorias etárias são construtos sociais; cada sociedade define socialmente quando alguém entra em cada fase da vida baseado em seus valores, rituais e necessidades econômicas.",
+          "A biologia determina exatamente a mesma idade para adultez em todas as culturas.",
+          "Não existem diferenças reais entre como culturas definem estágios da vida.",
+          "Rituais de passagem são apenas celebrações e não têm significado sociológico."
+        ],
+        "correta": 0,
+        "explicacao": "A variação dramática em definições de adultez entre culturas prova que essas categorias são socialmente construídas. A biologia não muda entre culturas, desenvolvimento pubertário é similar, mas as sociedades definem socialmente quando alguém cruza o limiar para adultez. Isso reflete valores culturais: necessidade de trabalho, casamento, capacidade legal, rituais religiosos. Diferentes culturas definem diferentes marcos porque adultez não é uma verdade biológica fixa, mas uma construção social que varia com a história e economia de cada povo."
+      },
+      "meta": {
+        "id": "gen:soc:cultura-identidade-sociedade:40e142b6",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.990Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-soc-cultura-identidade-sociedade",
+      "version": 1,
+      "format": 2,
+      "subjectId": "soc",
+      "topicId": "cul",
+      "chapterId": "gen-soc-cultura-identidade-sociedade",
+      "title": "O que a cultura constrói",
+      "objective": "Analisar um traço cultural como construção social, não natural",
+      "skillIds": [
+        "soc:cultura-identidade-sociedade"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:soc:cultura-identidade-sociedade:32581b63",
+        "gen:soc:cultura-identidade-sociedade:5e7040cd"
+      ],
+      "recap": "Traços como beleza, sotaque, língua e identidade variam entre grupos porque são aprendidos na socialização, não determinados pela biologia.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "O que a cultura constrói",
+          "body": "Você vai reconhecer quando um traço, como beleza ou sotaque, é aprendido no grupo e não determinado pela biologia."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Traço aprendido, não nato",
+            "body": "Um traço é construção social quando muda conforme a época ou o grupo, mesmo com a biologia igual. Padrões de beleza mudam entre culturas, refletindo valores como riqueza. Sotaque e forma de vestir são disposições aprendidas na convivência, chamadas de habitus."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:cultura-identidade-sociedade:01d9f005",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:cultura-identidade-sociedade:a7452ba9",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Socialização molda quem somos",
+            "body": "Socialização é o processo pelo qual uma pessoa aprende língua, valores e normas do grupo desde a infância. Crianças com biologia parecida desenvolvem valores diferentes conforme a cultura em que crescem. A gíria segue a mesma lógica: cada geração cria suas palavras a partir da realidade que vive."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:cultura-identidade-sociedade:9de94b61",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:cultura-identidade-sociedade:dd843021",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda ascendência genética com identidade cultural: identidade se constrói na convivência, não no DNA."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Gêmeas separadas por continentes",
+            "problem": "Gêmeas idênticas são separadas ao nascer: uma cresce na Nigéria, outra na Noruega, sem contato até a vida adulta.",
+            "steps": [
+              "Mesmo com DNA idêntico, cada uma aprende a língua e os costumes do país onde foi criada.",
+              "Se a cultura fosse genética, as duas seriam iguais, mas não são."
+            ],
+            "result": "A cultura de cada uma vem da socialização no ambiente onde cresceu, não da herança genética."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:cultura-identidade-sociedade:b9933523",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Traços como beleza, sotaque, língua e identidade variam entre grupos porque são aprendidos na socialização, não determinados pela biologia."
+        }
+      ]
+    }
+  ]
+}

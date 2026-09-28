@@ -1,0 +1,901 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "gen:ing:vocabulario-contexto:21294fa4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The chef was meticulous in her work, carefully arranging each ingredient on the plate with precision and care.'\n\nNeste contexto, qual é o significado mais próximo de 'meticulous'?",
+        "opcoes": [
+          "Apressado e distraído",
+          "Atencioso aos detalhes e rigoroso",
+          "Criativo e inovador",
+          "Caro e exclusivo"
+        ],
+        "correta": 1,
+        "explicacao": "O contexto descreve ações cuidadosas: 'carefully arranging each ingredient with precision and care'. 'Meticulous' encaixa com precisão e atenção ao detalhe. Não é apressado (A), criatividade isolada não é garantida (C), valor de custo não é implicado (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:21294fa4",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:188f2e40",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The old town was abandoned decades ago, leaving behind dilapidated buildings and empty streets.'\n\nQual é o significado de 'dilapidated' nesta frase?",
+        "opcoes": [
+          "Protegido como patrimônio histórico",
+          "Preparado para receber turistas",
+          "Recém-construído e moderno",
+          "Em ruína e mau estado de conservação"
+        ],
+        "correta": 3,
+        "explicacao": "O contexto mostra abandono e deterioração: a cidade foi 'abandoned decades ago' e restaram 'empty streets'. 'Dilapidated' descreve prédios deteriorados, em ruína. O texto não fala em proteção (A) nem em preparo para turistas (B), e prédios abandonados há décadas não são recém-construídos (C)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:188f2e40",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:a5625fd9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The witness's account was vague and contradictory, making it difficult for the court to ascertain the truth about what happened at the scene.'\n\nQual é o significado de 'ascertain' neste contexto?",
+        "opcoes": [
+          "Determinar ou descobrir com certeza",
+          "Discordar publicamente",
+          "Registrar formalmente em documento",
+          "Ignorar completamente"
+        ],
+        "correta": 0,
+        "explicacao": "O contexto fala da dificuldade de 'ascertain the truth' diante de um depoimento vago e contraditório. 'Ascertain' significa determinar ou descobrir com certeza. Discordar não é estabelecer a verdade (B), registro formal é um procedimento, não o sentido da palavra (C), e ignorar é o oposto do que o tribunal tenta fazer (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:a5625fd9",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:42104024",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The politician's speech was filled with platitudes that satisfied no one, as voters wanted concrete solutions instead of empty promises.'\n\nQual é o significado de 'platitudes' neste contexto?",
+        "opcoes": [
+          "Ideias complexas demais para o público entender",
+          "Frases vazias, clichês sem conteúdo real",
+          "Críticas ferinas aos adversários",
+          "Afirmações originais e inovadoras"
+        ],
+        "correta": 1,
+        "explicacao": "O contexto mostra insatisfação porque faltam 'concrete solutions' e sobram 'empty promises'. 'Platitudes' são frases feitas, clichês vazios. O problema não é complexidade (A), o texto não fala em ataques a adversários (C) e clichês são o oposto de originalidade (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:42104024",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:e94edde9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The negotiations between the two companies began cordially, but as disputes over financial terms emerged, the atmosphere became fraught with tension and suspicion.'\n\nQual é o significado de 'fraught' neste contexto?",
+        "opcoes": [
+          "Dominado por argumentos legais",
+          "Cheio de esperança e otimismo",
+          "Carregado de emoção negativa ou perigoso",
+          "Saturado de informações técnicas"
+        ],
+        "correta": 2,
+        "explicacao": "O contexto mostra uma mudança negativa: de 'cordially' para 'tension and suspicion'. 'Fraught with tension' significa carregado de tensão, de algo negativo. O texto não fala em argumentos legais (A), esperança é o oposto do clima descrito (B) e não há menção a dados técnicos (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:e94edde9",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:554b3d1f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The artist's work was deliberately obscure, filled with abstract imagery and cryptic symbols that challenged viewers to interpret meaning for themselves.'\n\nQual é o significado de 'obscure' neste contexto?",
+        "opcoes": [
+          "Intencionalmente escondido para não ser encontrado",
+          "Relacionado a um lugar remoto e isolado",
+          "Famoso e amplamente reconhecido",
+          "Pouco claro; difícil de entender ou interpretar"
+        ],
+        "correta": 3,
+        "explicacao": "O contexto junta 'deliberately obscure' a 'abstract imagery and cryptic symbols' que 'challenged viewers to interpret'. Aqui, 'obscure' significa pouco claro, difícil de interpretar. A obra está exposta ao público, não escondida (A); isolamento geográfico não tem relação com o trecho (B); e fama não é o sentido da palavra (C)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:554b3d1f",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:ecefed03",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The athlete's performance was lackluster compared to previous competitions, prompting coaches to question whether she was fully committed to training.'\n\nQual é o significado de 'lackluster' neste contexto?",
+        "opcoes": [
+          "Sem brilho; insatisfatório e decepcionante",
+          "Altamente técnico e complexo",
+          "Corajoso e audacioso",
+          "Extremamente brilhante e impressionante"
+        ],
+        "correta": 0,
+        "explicacao": "O contexto faz uma comparação desfavorável com 'previous competitions', a ponto de os técnicos questionarem o comprometimento da atleta. 'Lackluster' significa sem brilho, decepcionante. O trecho não fala de complexidade técnica (B) nem de coragem (C), e 'brilhante' é o oposto do sentido (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:ecefed03",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:7a7a3720",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'Despite her initial skepticism about online learning, the student found the experience to be quite efficacious, with flexible schedules and personalized feedback improving her grades dramatically.'\n\nQual é o significado de 'efficacious' neste contexto?",
+        "opcoes": [
+          "Economicamente viável",
+          "Eficaz e produtivo em alcançar resultados desejados",
+          "Facilmente acessível a todos",
+          "Tecnicamente sofisticado"
+        ],
+        "correta": 1,
+        "explicacao": "O contexto mostra resultado positivo: 'improving her grades dramatically'. 'Efficacious' descreve algo que funciona efetivamente. Não é viabilidade econômica (A), acessibilidade (C), ou sofisticação técnica (D). Significa capacidade comprovada de produzir efeito desejado."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:7a7a3720",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:6a1ebcde",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The documentary's unflinching portrayal of poverty in developing nations was at once harrowing and essential viewing, forcing audiences to confront uncomfortable truths about global inequality.'\n\nQual é o significado de 'harrowing' neste contexto?",
+        "opcoes": [
+          "Comercialmente bem-sucedido",
+          "Extremamente abrasivo e ofensivo",
+          "Profundamente perturbador e angustiante",
+          "Didático e informativo acima de tudo"
+        ],
+        "correta": 2,
+        "explicacao": "O contexto descreve um impacto emocional forte: 'unflinching portrayal', 'uncomfortable truths'. 'Harrowing' significa angustiante, perturbador. Sucesso comercial não é mencionado (A), o documentário não é descrito como ofensivo (B) e o foco da palavra é o efeito emocional, não o caráter didático (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:6a1ebcde",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:724c1634",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The company's financial practices were found to be egregious by the auditors, with millions of dollars unaccounted for and clear evidence of embezzlement in the records.'\n\nQual é o significado de 'egregious' neste contexto?",
+        "opcoes": [
+          "Tecnicamente correto mas eticamente questionável",
+          "Comum em empresas do mesmo setor",
+          "Levemente problemático, exigindo pequena correção",
+          "Extraordinariamente culpável; extremo e indefensável"
+        ],
+        "correta": 3,
+        "explicacao": "O contexto apresenta uma violação grave: 'millions of dollars unaccounted for' e 'embezzlement' (desvio de dinheiro). 'Egregious' descreve algo flagrante, extremamente culpável. Desvio de dinheiro não é 'tecnicamente correto' (A), o texto não diz que a prática é comum (B) e o problema está longe de ser leve (C)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:724c1634",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:b0b87e35",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The historical revisionism in the textbook was pernicious, subtly distorting events and omitting perspectives to promote a particular ideological narrative.'\n\nQual é o significado de 'pernicious' neste contexto?",
+        "opcoes": [
+          "Financeiramente custoso",
+          "Óbvio e facilmente identificado",
+          "Prejudicial de modo insidioso e difícil de perceber",
+          "Relacionado a educação formal"
+        ],
+        "correta": 2,
+        "explicacao": "O contexto destaca um dano discreto: 'subtly distorting', 'omitting perspectives'. 'Pernicious' descreve algo prejudicial de modo sorrateiro. Custo financeiro não é mencionado (A), 'subtly' contradiz a ideia de óbvio (B) e o livro didático é o cenário, não o sentido da palavra (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:b0b87e35",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:9c167aaf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The team's strategy was predicated on the assumption that their opponents would play defensively, but the opposing coach's aggressive tactics completely undermined their game plan.'\n\nQual é o significado de 'predicated' neste contexto?",
+        "opcoes": [
+          "Cronometrado com precisão",
+          "Criticado publicamente",
+          "Oficialmente anunciado",
+          "Fundamentado ou baseado em"
+        ],
+        "correta": 3,
+        "explicacao": "A estratégia foi 'predicated on the assumption', ou seja, baseada naquela suposição. 'Predicated on' significa fundamentado em. O trecho não fala de tempo (A), de crítica (B) nem de anúncio oficial (C)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:9c167aaf",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:aa127f0c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The novelist's use of arcane vocabulary alienated many readers, despite the book's compelling narrative and vivid descriptions.'\n\nQual é o significado de 'arcane' neste contexto?",
+        "opcoes": [
+          "Conhecido apenas por poucos; obscuro e misterioso",
+          "Relacionado a maldições ou magia negra",
+          "Facilmente entendido por qualquer pessoa",
+          "Inovador e moderno"
+        ],
+        "correta": 0,
+        "explicacao": "O contexto mostra que o vocabulário 'alienated many readers', afastou leitores. 'Arcane' descreve palavras obscuras, conhecidas por poucos. O trecho fala de vocabulário, não de sobrenatural (B); se fosse fácil de entender, não afastaria leitores (C); e nada indica inovação (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:aa127f0c",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:80805303",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The philanthropist's largesse was instrumental in funding the new hospital wing, demonstrating that individual generosity could complement government initiatives in healthcare.'\n\nQual é o significado de 'largesse' neste contexto?",
+        "opcoes": [
+          "Deficiência de recursos públicos",
+          "Infraestrutura hospitalar",
+          "Generosidade magnânima; distribuição generosa de recursos",
+          "Competição entre instituições"
+        ],
+        "correta": 2,
+        "explicacao": "'Largesse' é generosidade: o filantropo financiou a nova ala do hospital, e o próprio trecho retoma a ideia com 'individual generosity'. Não se refere à falta de recursos públicos (A), nem à ala do hospital em si (B), nem a competição (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:80805303",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:9033184a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The athlete's comportment during the post-game interview was professional and gracious, earning praise from both fans and critics for his humility despite victory.'\n\nQual é o significado de 'comportment' neste contexto?",
+        "opcoes": [
+          "Capacidade de resistir à fadiga",
+          "Velocidade de reação",
+          "Habilidade técnica no esporte",
+          "Maneira de se comportar; conduta e porte"
+        ],
+        "correta": 3,
+        "explicacao": "O contexto descreve como o atleta agiu na entrevista: 'professional and gracious', com 'humility'. 'Comportment' significa maneira de se comportar, conduta. Não se trata de resistência (A), velocidade (B) nem habilidade técnica (C), já que a cena é uma entrevista, não a partida."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:9033184a",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:5412066c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The evidence presented by the defense attorney was tendentious, cherry-picking facts to support a predetermined conclusion while ignoring contradictory data.'\n\nQual é o significado de 'tendentious' neste contexto?",
+        "opcoes": [
+          "Apresentado com tendência de apoiar visão predeterminada",
+          "Relacionado ao sistema legal",
+          "Emocionalmente impactante",
+          "Baseado em fatos científicos estabelecidos"
+        ],
+        "correta": 0,
+        "explicacao": "O contexto mostra viés intencional: 'cherry-picking facts', 'predetermined conclusion', 'ignoring contradictory data'. 'Tendentious' significa enviesado, parcial. O tribunal é o cenário, não o sentido da palavra (B); emoção não é o ponto (C); e escolher só os fatos convenientes é o oposto de se basear em fatos estabelecidos (D)."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:5412066c",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:vocabulario-contexto:51a48922",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o contexto:\n\n'The artist's technique was inimitable, creating effects through brushwork that no contemporary painter could reproduce, cementing her reputation as a master.'\n\nQual é o significado de 'inimitable' neste contexto?",
+        "opcoes": [
+          "Desagradável e ofensivo",
+          "Impossível de imitar; único e inigualável",
+          "Relacionado a técnicas antigas",
+          "Rapidamente executado"
+        ],
+        "correta": 1,
+        "explicacao": "O contexto estabelece unicidade: 'no contemporary painter could reproduce'. 'Inimitable' significa que não pode ser copiado. Não é desagradável (A), não é sobre antiguidade (C), nem rapidez (D). Refere-se à impossibilidade de reproduzir."
+      },
+      "meta": {
+        "id": "gen:ing:vocabulario-contexto:51a48922",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-ing-vocabulario-contexto",
+      "version": 1,
+      "format": 2,
+      "subjectId": "ing",
+      "topicId": "voc",
+      "chapterId": "gen-ing-vocabulario-contexto",
+      "title": "Vocabulário pelo contexto",
+      "objective": "Deduzir o sentido de uma palavra desconhecida em inglês pelas pistas do texto",
+      "skillIds": [
+        "ing:vocabulario-contexto"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:ing:vocabulario-contexto:21294fa4",
+        "gen:ing:vocabulario-contexto:a5625fd9"
+      ],
+      "recap": "Contraste, causa e efeito, e explicações próximas são as pistas que revelam o sentido de uma palavra desconhecida.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Vocabulário pelo contexto",
+          "body": "Você vai aprender a descobrir o sentido de uma palavra em inglês sem precisar conhecê-la de cor."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "As pistas estão ao redor da palavra",
+            "body": "Quando uma palavra é desconhecida, olhe a frase inteira, não só o termo isolado. Contraste é uma pista forte: se o texto opõe duas ideias com 'but' ou 'instead of', a palavra desconhecida costuma ficar do lado oposto ao que já se entende. Causa e efeito também ajudam: se algo ruim é descrito perto da palavra, ela provavelmente carrega sentido negativo. Um sinônimo próximo revela o significado direto."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:vocabulario-contexto:188f2e40",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:vocabulario-contexto:42104024",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "'The old bridge was deemed precarious after the inspection revealed cracks in its supports.' O que significa 'precarious' aqui?",
+            "steps": [
+              "Note o que vem depois: 'cracks' indica um problema grave na ponte.",
+              "Perceba a causa: as rachaduras explicam por que a ponte foi avaliada assim.",
+              "Conclua que a palavra descreve algo instável ou em risco de falhar."
+            ],
+            "result": "'Precarious' significa instável, não apenas antiga."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:vocabulario-contexto:9c167aaf",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:vocabulario-contexto:e94edde9",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não escolha o sentido mais parecido com o português por semelhança sonora. Confirme sempre com a pista do texto."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Tradução decorada e leitura por contexto",
+            "left": {
+              "label": "Tradução decorada",
+              "body": "assumir um sentido só pela semelhança sonora com o português."
+            },
+            "right": {
+              "label": "Leitura por contexto",
+              "body": "confirmar o sentido pelas pistas da frase."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:vocabulario-contexto:724c1634",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Contraste, causa e efeito, e explicações próximas são as pistas que revelam o sentido de uma palavra desconhecida."
+        }
+      ]
+    }
+  ]
+}

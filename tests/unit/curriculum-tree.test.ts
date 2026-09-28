@@ -1,10 +1,12 @@
 import { describe, expect, test } from "bun:test";
 import {
+  ARVORE_AUTORAL,
   CURRICULUM_TREE,
   TRAIL_ORDER,
   chapterById,
   chapterOfLesson,
   sectionOfChapter,
+  trailOrderOf,
 } from "@/content/curriculum-tree";
 import { MICROLICOES } from "@/content/microlicoes";
 import { TRILHAS } from "@/content/trilhas";
@@ -17,8 +19,11 @@ import { TRILHAS } from "@/content/trilhas";
  */
 
 describe("TRAIL_ORDER (docs/25 §18 T-05, critério de aceite)", () => {
+  // Sobre a árvore AUTORAL, não `TRAIL_ORDER` bruto: desde a Fase 11 (docs/30/31, F11.3),
+  // `TRAIL_ORDER` roda sobre a árvore EM TEMPO DE EXECUÇÃO e ganha os ids das aulas geradas
+  // (achado real: quebrou ao publicar as primeiras aulas) — a lista declarada continua exata.
   test("é exatamente a lista de lições micro na ordem matéria -> seção -> capítulo -> lição", () => {
-    expect(TRAIL_ORDER).toEqual([
+    expect(trailOrderOf(ARVORE_AUTORAL)).toEqual([
       "porcentagem-valor",
       "porcentagem-aumento-desconto",
       "crase-quando-usar",
@@ -27,11 +32,19 @@ describe("TRAIL_ORDER (docs/25 §18 T-05, critério de aceite)", () => {
       "citologia-organelas",
     ]);
   });
+
+  test("TRAIL_ORDER em tempo de execução preserva a ordem relativa da árvore autoral", () => {
+    const autorais = new Set(trailOrderOf(ARVORE_AUTORAL));
+    expect(TRAIL_ORDER.filter((id) => autorais.has(id))).toEqual(trailOrderOf(ARVORE_AUTORAL));
+  });
 });
 
 describe("MICROLICOES segue a ordem de TRAIL_ORDER", () => {
-  test("MICROLICOES.map(id) é igual a TRAIL_ORDER", () => {
-    expect(MICROLICOES.map((l) => l.id)).toEqual(TRAIL_ORDER);
+  test("MICROLICOES.map(id) é igual à posição relativa em TRAIL_ORDER", () => {
+    // MICROLICOES só tem lição estática (nunca aula gerada, que vive nos pacotes) — TRAIL_ORDER
+    // filtrado a esses ids preserva a ordem declarada mesmo com aulas geradas misturadas.
+    const idsEstaticos = new Set(MICROLICOES.map((l) => l.id));
+    expect(MICROLICOES.map((l) => l.id)).toEqual(TRAIL_ORDER.filter((id) => idsEstaticos.has(id)));
   });
 });
 
@@ -87,12 +100,16 @@ describe("capítulos legados cobrem todas as 15 trilhas, cada uma exatamente uma
 });
 
 describe("estrutura declarada (docs/25 §7.2)", () => {
+  // Testado sobre ARVORE_AUTORAL, não CURRICULUM_TREE: desde a Fase 11 (docs/30/31, F11.3),
+  // `pacotesConteudo` liga de verdade e `comAulasGeradas` acrescenta matérias/seções "Mais
+  // aulas" — a estrutura DECLARADA continua as 4 matérias originais, a árvore em TEMPO DE
+  // EXECUÇÃO é maior (achado real: este teste quebrou ao publicar as primeiras aulas geradas).
   test("4 matérias na ordem mat, por, red, bio", () => {
-    expect(CURRICULUM_TREE.subjects.map((s) => s.id)).toEqual(["mat", "por", "red", "bio"]);
+    expect(ARVORE_AUTORAL.subjects.map((s) => s.id)).toEqual(["mat", "por", "red", "bio"]);
   });
 
   test("por tem as 4 seções esperadas", () => {
-    const por = CURRICULUM_TREE.subjects.find((s) => s.id === "por");
+    const por = ARVORE_AUTORAL.subjects.find((s) => s.id === "por");
     expect(por?.sections.map((s) => s.id)).toEqual([
       "por-gramatica",
       "por-palavras",
@@ -102,9 +119,20 @@ describe("estrutura declarada (docs/25 §7.2)", () => {
   });
 
   test("todos os prerequisiteChapterIds estão vazios nesta entrega", () => {
-    const todosCapitulos = CURRICULUM_TREE.subjects.flatMap((s) => s.sections.flatMap((sec) => sec.chapters));
+    const todosCapitulos = ARVORE_AUTORAL.subjects.flatMap((s) => s.sections.flatMap((sec) => sec.chapters));
     for (const c of todosCapitulos) {
       expect(c.prerequisiteChapterIds).toEqual([]);
     }
+  });
+});
+
+describe("CURRICULUM_TREE com aulas geradas (docs/30 §21.3, F11.3)", () => {
+  test("com pacotesConteudo ligada e aulas publicadas, ganha matérias/seções extras sem perder a árvore autoral", () => {
+    const idsAutorais = new Set(ARVORE_AUTORAL.subjects.map((s) => s.id));
+    const idsAtuais = CURRICULUM_TREE.subjects.map((s) => s.id);
+    expect(idsAutorais.size).toBeGreaterThan(0);
+    for (const id of idsAutorais) expect(idsAtuais).toContain(id);
+    // pelo menos uma matéria nova (fis/qui/geo/his/fil/soc/ing) apareceu com as aulas da Onda 1.
+    expect(idsAtuais.length).toBeGreaterThan(idsAutorais.size);
   });
 });

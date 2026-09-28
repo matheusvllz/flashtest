@@ -89,6 +89,10 @@ test("concluir as 2 lições de Citologia mostra a folha do capítulo uma vez, n
   await page.waitForTimeout(500);
   await expect(page.getByRole("dialog")).toHaveCount(0);
 
+  // `vista=mapa`: o nó "Revisão · Citologia" é do MAPA por capítulo (docs/32
+  // F15.1) — com `jornadaAdaptativa` ligada, a URL de celebração por si só
+  // (sem o parâmetro) aterrissa na jornada única, que não lista esse nó.
+  await page.goto(`${celebrationUrl}&vista=mapa`, { waitUntil: "domcontentloaded" });
   // O nó de revisão do capítulo agora está acessível: só é um `<Link>` (e
   // não um `<div aria-disabled>`) quando destravado.
   await expect(page.getByRole("link", { name: /Revisão · Citologia/ })).toBeVisible({

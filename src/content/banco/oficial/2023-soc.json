@@ -1,0 +1,57 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "oficial:2023:fe606f85",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A torcida do Fluminense inicia um movimento para mudar a letra de uma das músicas mais populares das arquibancadas tricolores. Grupos pedem a remoção do termo \"mulambo imundo\", em uma provocação direta ao Flamengo. Mulambo é um termo que surgiu em Angola, na época da escravatura, e eles eram chamados de mulambos pelos senhores de engenho, os patrões das fazendas.\n\n(Disponível em: https://oglobo.globo.com. Acesso em: 23 nov. 2021.)\n\nQual mudança no comportamento social a proposta reportada no texto reflete?",
+        "opcoes": [
+          "Rejeição de costumes elitistas.",
+          "Repulsão de condutas misóginas.",
+          "Condenação do preconceito racial.",
+          "Criminalização de práticas homofóbicas.",
+          "Contestação do comportamento machista."
+        ],
+        "correta": 2,
+        "explicacao": "O termo tem origem numa palavra usada para desumanizar pessoas escravizadas na época da escravidão; pedir sua remoção da torcida é rejeitar um resquício de linguagem racista, não uma questão de gênero, machismo ou elitismo.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:fe606f85",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 75"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

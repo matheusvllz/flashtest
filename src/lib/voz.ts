@@ -18,6 +18,7 @@ export type VozSlot =
   | "aha"
   | "acertou"
   | "errou"
+  | "naosei"
   | "fimbom"
   | "fimruim"
   | "marco"
@@ -53,6 +54,12 @@ export const VOZ: Record<VozSlot, string[]> = {
     "Errar é o app funcionando. Sério.",
     "Marquei aqui. Bora ver onde travou.",
   ],
+  /**
+   * Botão "Não sei" (docs/30 §16.1, Fase 6) — nem acerto nem erro: o aluno
+   * optou por não chutar. Mesma regra de tom do `errou`: sem cobrança, sem
+   * "tudo bem" performático — só segue pro caminho.
+   */
+  naosei: ["Tudo bem. Veja como resolve:", "Sem problema. Olha o caminho:", "Beleza. Vamos por partes:"],
   fimbom: [
     "60 segundos. Foi isso que você achava que não tinha.",
     "Aula fechada. Pode voltar pro feed, eu fico aqui.",

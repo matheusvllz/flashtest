@@ -6,3 +6,12 @@ pnpm-lock.yaml
 package-lock.json
 bun.lock
 routeTree.gen.ts
+# Skills de terceiros: cópias verbatim do upstream (docs/ai/SKILLS.md).
+# Reformatar quebraria a paridade com o commit auditado e o hash do skills-lock.json.
+.claude/skills/design-taste-frontend
+.claude/skills/redesign-existing-projects
+.claude/skills/motion-design
+.claude/skills/web-design-guidelines
+.claude/skills/vercel-react-best-practices
+.claude/skills/repo-security-review
+skills-lock.json

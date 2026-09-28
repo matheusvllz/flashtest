@@ -1,0 +1,855 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:volume-solidos-geometricos:50b5f9a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um bloco retangular (paralelepípedo) tem dimensões 5cm × 4cm × 3cm. Qual é seu volume?",
+        "opcoes": [
+          "120 cm³",
+          "12 cm³",
+          "35 cm³",
+          "60 cm³"
+        ],
+        "correta": 3,
+        "explicacao": "Volume = comprimento × largura × altura = 5 × 4 × 3 = 60 cm³. Somar as dimensões (12) ou dobrar o resultado (120) são erros de conceito: volume é o produto das três medidas."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:50b5f9a2",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:79ea047a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cilindro tem raio 3cm e altura 10cm. Qual é seu volume? (Use π ≈ 3,14)",
+        "opcoes": [
+          "188,4 cm³",
+          "282,6 cm³",
+          "565,2 cm³",
+          "94,2 cm³"
+        ],
+        "correta": 1,
+        "explicacao": "Volume de cilindro = π × r² × h = 3,14 × 9 × 10 = 3,14 × 90 = 282,6 cm³. Erros comuns: usar 2πrh, que é a área lateral (188,4), ou esquecer de elevar o raio ao quadrado (π × 3 × 10 = 94,2)."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:79ea047a",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:196b5d32",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um prisma triangular tem base triangular de 6cm² e altura do prisma de 8cm. Qual é seu volume?",
+        "opcoes": [
+          "14 cm³",
+          "32 cm³",
+          "48 cm³",
+          "96 cm³"
+        ],
+        "correta": 2,
+        "explicacao": "Volume de prisma = área da base × altura = 6 × 8 = 48 cm³. A área da base já foi dada, então não se divide nada por 2. Erros comuns: somar os números (14) ou dobrar o resultado (96)."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:196b5d32",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:7a5cef55",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um sólido é composto por um cilindro de raio 2cm e altura 10cm com um cone no topo de altura 5cm. Qual é o volume total? (Use π ≈ 3,14)",
+        "opcoes": [
+          "188,4 cm³",
+          "62,8 cm³",
+          "125,6 cm³",
+          "146,5 cm³"
+        ],
+        "correta": 3,
+        "explicacao": "Cilindro: π × 2² × 10 = 3,14 × 4 × 10 = 125,6 cm³. Cone: (1/3) × π × 2² × 5 = (1/3) × 62,8 ≈ 20,9 cm³. Total ≈ 146,5 cm³. Esquecer o cone (125,6) ou somar sem calcular volumes separados leva a erro."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:7a5cef55",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:749d57b7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pirâmide com base quadrada de lado 6cm tem altura 9cm. Qual é seu volume?",
+        "opcoes": [
+          "54 cm³",
+          "108 cm³",
+          "162 cm³",
+          "324 cm³"
+        ],
+        "correta": 1,
+        "explicacao": "Volume de pirâmide = (1/3) × área da base × altura = (1/3) × 36 × 9 = (1/3) × 324 = 108 cm³. Esquecer o fator 1/3 dá 324 cm³, que é o volume do prisma de mesma base e mesma altura."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:749d57b7",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.673Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:15c21722",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa de presente tem forma de prisma reto com base quadrada. A base tem lado de 10 cm e a altura é 15 cm. Qual é o volume dessa caixa?",
+        "opcoes": [
+          "750 cm³",
+          "1500 cm³",
+          "1000 cm³",
+          "2250 cm³"
+        ],
+        "correta": 1,
+        "explicacao": "Para um prisma, o volume é calculado multiplicando a área da base pela altura. A base quadrada tem área 10 × 10 = 100 cm², então V = 100 × 15 = 1500 cm³. O erro comum é esquecer de elevar a aresta ao quadrado ao calcular a área da base."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:15c21722",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:5ea93c49",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cilindro tem raio de 4 cm e altura de 10 cm. Qual é seu volume? (Use π = 3,14)",
+        "opcoes": [
+          "251,2 cm³",
+          "1256 cm³",
+          "502,4 cm³",
+          "640 cm³"
+        ],
+        "correta": 2,
+        "explicacao": "Volume do cilindro: V = π × r² × h = 3,14 × 4² × 10 = 3,14 × 16 × 10 = 502,4 cm³. Usar o raio sem elevar ao quadrado ou calcular só metade do valor (251,2) são armadilhas comuns."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:5ea93c49",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:6a0dd917",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cubo tem aresta de 5 cm. Outro prisma retangular tem dimensões 5 cm × 5 cm × 10 cm. Qual é a razão entre o volume do cubo e o volume do prisma?",
+        "opcoes": [
+          "1",
+          "2",
+          "1/4",
+          "1/2"
+        ],
+        "correta": 3,
+        "explicacao": "Cubo: 5³ = 125 cm³. Prisma: 5 × 5 × 10 = 250 cm³. Razão: 125/250 = 1/2. Aqui você tá vendo proporcionalidade entre sólidos, não só fazer contas de volume."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:6a0dd917",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:9e407e8d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um tanque cilíndrico tem raio interno de 3 m e altura de 8 m. Qual é a quantidade máxima de água, em litros, que ele pode armazenar? (Use π ≈ 3,14 e 1 m³ = 1000 L)",
+        "opcoes": [
+          "226.080 L",
+          "72.000 L",
+          "113.040 L",
+          "452.160 L"
+        ],
+        "correta": 0,
+        "explicacao": "Volume em m³: V = π × r² × h = 3,14 × 3² × 8 = 3,14 × 9 × 8 = 226,08 m³. Aí passa pra litros: 226,08 × 1000 = 226.080 L. É fácil deixar essa conversão pra trás."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:9e407e8d",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:8e713ef1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pirâmide de base quadrada tem base com lado 12 cm e altura 20 cm. Qual é seu volume? (Fórmula: V = (base × altura) / 3)",
+        "opcoes": [
+          "480 cm³",
+          "960 cm³",
+          "2880 cm³",
+          "1440 cm³"
+        ],
+        "correta": 1,
+        "explicacao": "Base quadrada: 12 × 12 = 144 cm². Aí o volume: V = 144 × 20 / 3 = 2880 / 3 = 960 cm³. Muita gente deixa de dividir por 3 e fica com 2880 cm³."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:8e713ef1",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:93377f55",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cone tem raio da base de 6 cm e altura de 8 cm. Qual é seu volume? (Use π ≈ 3,14 e V = (π × r² × h) / 3)",
+        "opcoes": [
+          "150,72 cm³",
+          "452,16 cm³",
+          "301,44 cm³",
+          "904,32 cm³"
+        ],
+        "correta": 2,
+        "explicacao": "Volume do cone: V = (π × r² × h) / 3 = (3,14 × 6² × 8) / 3 = (3,14 × 36 × 8) / 3 = 904,32 / 3 = 301,44 cm³. Fácil esquecer a divisão por 3 ou acabar calculando só a área lateral."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:93377f55",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:769a812e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa tem formato de paralelepípedo com comprimento 6 cm, largura 4 cm e altura 5 cm. Qual é seu volume?",
+        "opcoes": [
+          "100 cm³",
+          "150 cm³",
+          "90 cm³",
+          "120 cm³"
+        ],
+        "correta": 3,
+        "explicacao": "Volume do paralelepípedo: V = comprimento × largura × altura = 6 × 4 × 5 = 120 cm³. Aqui você tá relembrando volume básico pra sólidos retos."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:769a812e",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:843b9f70",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cilindro tem raio de 2 m e altura de 5 m. Qual é seu volume? (Use π ≈ 3,14)",
+        "opcoes": [
+          "62,8 m³",
+          "31,4 m³",
+          "125,6 m³",
+          "43,96 m³"
+        ],
+        "correta": 0,
+        "explicacao": "Volume: V = π × r² × h = 3,14 × 2² × 5 = 3,14 × 4 × 5 = 62,8 m³. Calcular r² corretamente (não confundir com 2r) é essencial para evitar erros como 31,4 m³ ou 125,6 m³."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:843b9f70",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:cabc9be7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa de sapato tem dimensões 30 cm × 20 cm × 12 cm. Qual é seu volume?",
+        "opcoes": [
+          "6000 cm³",
+          "8000 cm³",
+          "3600 cm³",
+          "7200 cm³"
+        ],
+        "correta": 3,
+        "explicacao": "Volume: V = 30 × 20 × 12 = 7200 cm³. Três dimensões é simples, mas fácil deixar uma pra trás ou misturar com fórmula de área (que só usa duas)."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:cabc9be7",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:645f32a3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um prisma reto tem base triangular. A base é um triângulo com base 8 cm e altura 6 cm. O prisma tem altura 10 cm. Qual é o volume deste prisma?",
+        "opcoes": [
+          "240 cm³",
+          "480 cm³",
+          "120 cm³",
+          "360 cm³"
+        ],
+        "correta": 0,
+        "explicacao": "Área do triângulo: (8 × 6) / 2 = 24 cm². Volume do prisma: V = 24 × 10 = 240 cm³. O erro comum é esquecer de dividir por 2 ao calcular a área do triângulo, levando a 480 cm³."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:645f32a3",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:volume-solidos-geometricos:f033e353",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cilindro tem diâmetro de 10 cm e altura de 8 cm. Qual é seu volume? (Use π ≈ 3,14)",
+        "opcoes": [
+          "400 cm³",
+          "628 cm³",
+          "314 cm³",
+          "1256 cm³"
+        ],
+        "correta": 1,
+        "explicacao": "Raio = diâmetro/2 = 5 cm. Volume: V = π × r² × h = 3,14 × 5² × 8 = 3,14 × 25 × 8 = 628 cm³. Confundir diâmetro com raio é uma cilada comum que quebra tudo."
+      },
+      "meta": {
+        "id": "gen:mat:volume-solidos-geometricos:f033e353",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-volume-solidos-geometricos",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "geoesp",
+      "chapterId": "gen-mat-volume-solidos-geometricos",
+      "title": "Volume de sólidos",
+      "objective": "Calcular o volume de prismas, cilindros, cones e sólidos compostos.",
+      "skillIds": [
+        "mat:volume-solidos-geometricos"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:volume-solidos-geometricos:50b5f9a2",
+        "gen:mat:volume-solidos-geometricos:769a812e"
+      ],
+      "recap": "Volume de prisma ou cilindro é área da base vezes altura. Pirâmide e cone dividem esse resultado por 3.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Volume",
+          "body": "Você vai aprender a calcular o volume de prismas, cilindros, cones e sólidos formados pela junção de dois deles."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Área da base vezes altura",
+            "body": "O volume de um prisma (inclusive o cilindro) é a área da base multiplicada pela altura: V = área da base × h. Pro cilindro, a base é um círculo, então V = π × r² × h. A base já dada não precisa ser recalculada, só multiplique pela altura."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:volume-solidos-geometricos:196b5d32",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:volume-solidos-geometricos:79ea047a",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Caixa com tampa piramidal",
+            "problem": "Uma caixa retangular de 4cm × 4cm × 6cm tem uma tampa em forma de pirâmide de altura 3cm sobre a mesma base. Qual é o volume total?",
+            "steps": [
+              "Volume da caixa: 4 × 4 × 6 = 96 cm³.",
+              "Volume da pirâmide: (área da base × altura) / 3 = (16 × 3) / 3 = 16 cm³.",
+              "Total: 96 + 16 = 112 cm³."
+            ],
+            "result": "112 cm³."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:volume-solidos-geometricos:cabc9be7",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:volume-solidos-geometricos:7a5cef55",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não esqueça de dividir por 3 no volume de pirâmides e cones: esquecer isso triplica o resultado sem você perceber."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Divide por 3 ou não",
+            "left": {
+              "label": "Prisma e cilindro",
+              "body": "Lados retos, topo igual à base: volume é área da base vezes altura, sem dividir nada."
+            },
+            "right": {
+              "label": "Pirâmide e cone",
+              "body": "Terminam numa ponta: o volume é a área da base vezes altura, dividido por 3."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:volume-solidos-geometricos:93377f55",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Volume de prisma ou cilindro é área da base vezes altura. Pirâmide e cone dividem esse resultado por 3."
+        }
+      ]
+    }
+  ]
+}

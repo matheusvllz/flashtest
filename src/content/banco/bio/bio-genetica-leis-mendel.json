@@ -1,0 +1,708 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "gen:bio:genetica-leis-mendel:78a8425d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um casal de pombas, ambos de penas cinzentas, produz filhotes com penas tanto cinzentas quanto brancas. Como as leis de Mendel explicam isso?",
+        "opcoes": [
+          "O traço cinzento é recessivo",
+          "Herança ligada ao sexo determina a cor",
+          "O traço cinzento é dominante e ambos os pais são homozigotos",
+          "O traço cinzento é dominante e ambos são heterozigotos"
+        ],
+        "correta": 3,
+        "explicacao": "Se ambos os pais são cinzentos mas produzem filhotes brancos, o branco deve ser recessivo (aparece em filhotes). Os pais cinzentos devem ser heterozigotos (Cc), onde C = cinzento (dominante) e c = branco (recessivo). Cruzamento Cc × Cc gera: 1 CC, 2 Cc (cinzentos), 1 cc (branco), razão 3:1 observada."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:78a8425d",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:4b18f7c9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma planta de flores vermelhas (VV) é cruzada com uma planta de flores brancas (vv). Qual será o fenótipo dos filhos da primeira geração (F1)?",
+        "opcoes": [
+          "Todas vermelhas",
+          "Metade vermelha, metade branca",
+          "Todas rosa (intermediária)",
+          "Todas brancas"
+        ],
+        "correta": 0,
+        "explicacao": "Cruzando VV (vermelho, homozigoto dominante) × vv (branco, homozigoto recessivo), toda a F1 será Vv. Como V (vermelho) é dominante, todos os filhos serão vermelhos fenotipicamente. Dominância completa causa aparência uniforme na F1, mesmo sendo todos heterozigotos. A segregação aparece na F2."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:4b18f7c9",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:9c5b233f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma certa planta, sementes amarelas (A_) são dominantes sobre sementes verdes (aa). Cruzando uma planta Aa com uma planta aa, qual proporção fenotípica espera-se na F1?",
+        "opcoes": [
+          "100% amarelas",
+          "75% amarelas, 25% verdes",
+          "50% amarelas, 50% verdes",
+          "25% amarelas, 75% verdes"
+        ],
+        "correta": 2,
+        "explicacao": "Cruzando Aa (amarela heterozigota) × aa (verde homozigota recessiva), os filhos são: 50% Aa (amarelas, dominante) e 50% aa (verdes, recessivas). A proporção fenotípica é 1:1 (50% amarelas : 50% verdes). Esse tipo de cruzamento chama-se retrocruzamento ou teste de cruzamento."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:9c5b233f",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:d88d55fe",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma mulher portadora de hemofilia (X^H X^h) tem filhos com um homem normal (X^H Y). Qual é a chance de um filho (menino) herdar hemofilia?",
+        "opcoes": [
+          "75%",
+          "100%",
+          "25%",
+          "50%"
+        ],
+        "correta": 3,
+        "explicacao": "Mãe X^H X^h produz gametas X^H e X^h. Pai normal X^H Y produz X^H e Y. Filhos meninos recebem Y do pai e X da mãe: 50% X^H Y (normais) e 50% X^h Y (hemofílicos). A chance de um menino ter hemofilia é 50%. Filhas têm chance 0% (receberiam X^H do pai, protegendo)."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:d88d55fe",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:800555fe",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Duas plantas de ervilha com fenótipo alto (Aa) são cruzadas. Qual proporção de plantas baixas (aa) espera-se na descendência?",
+        "opcoes": [
+          "1/4",
+          "1/2",
+          "3/4",
+          "1/8"
+        ],
+        "correta": 0,
+        "explicacao": "Cruzando Aa × Aa, os descendentes são: 1/4 AA, 1/2 Aa, 1/4 aa. Como alto (A) é dominante, o fenótipo segrega em 3/4 alto : 1/4 baixo. Portanto, 25% ou 1/4 dos descendentes serão baixos (aa). Esse é o resultado clássico de cruzamento entre heterozigotos."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:800555fe",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:aca01211",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um casal ambos portadores de fibrose cística (Ff) deseja ter filhos. Qual é a probabilidade de uma criança herdar a doença (ff)?",
+        "opcoes": [
+          "1/3",
+          "1/4",
+          "2/3",
+          "1/2"
+        ],
+        "correta": 1,
+        "explicacao": "Fibrose cística é causada pelo genótipo ff (homozigoto recessivo). Pais Ff × Ff produzem: 1/4 FF, 1/2 Ff, 1/4 ff. A chance de um filho ter fibrose cística (ff) é 1/4 ou 25%. Esse é o resultado da segregação mendeliana em traço autossômico recessivo."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:aca01211",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:18e384e9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma mulher de tipo de sangue A (genótipo I^A i) tem um filho de tipo O (ii). Quais genótipos o pai biológico pode ter?",
+        "opcoes": [
+          "I^A i, I^B i, ou ii",
+          "ii obrigatoriamente",
+          "I^A I^A ou I^A i",
+          "I^B I^B ou I^B i"
+        ],
+        "correta": 0,
+        "explicacao": "Filho tipo O (ii) recebeu um alelo i de cada progenitor. A mãe I^A i fornece i, e o pai também precisa fornecer i. Então o pai pode ser I^A i (tipo A), I^B i (tipo B) ou ii (tipo O): qualquer genótipo com alelo i é possível. O pai não pode ser I^A I^A, I^B I^B ou I^A I^B."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:18e384e9",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:32d614e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um homem com distrofia muscular ligada ao X (genótipo X^d Y) tem uma filha com uma mulher normal (X^D X^D). Qual o fenótipo esperado da filha?",
+        "opcoes": [
+          "Afetada, mas menos severa",
+          "Afetada (distrofia)",
+          "Normal mas portadora",
+          "Normal sem carregar alelo"
+        ],
+        "correta": 2,
+        "explicacao": "O pai X^d Y fornece X^d. A mãe X^D X^D fornece X^D. A filha recebe X^D X^d. Como tem um alelo dominante X^D, é fenotipicamente normal, mas carrega X^d: é portadora e pode transmitir o alelo aos filhos. Como essa distrofia tem herança recessiva ligada ao X, mulheres heterozigotas em geral não manifestam a doença."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:32d614e4",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:7354cf80",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma mulher não-afetada, mas filha de um homem com hemofilia (X^h Y), tem um filho (menino) com um homem normal. Qual é a chance de esse menino ter hemofilia?",
+        "opcoes": [
+          "50%",
+          "100%",
+          "0%",
+          "25%"
+        ],
+        "correta": 0,
+        "explicacao": "O pai da mulher é X^h Y (afetado) e sempre passa seu X para as filhas, então ela recebeu X^h dele. Como não é afetada, o outro X, vindo da mãe, é X^H. Logo, a mulher é X^H X^h (portadora). Com um homem normal (X^H Y), os meninos recebem o Y do pai e um X da mãe: 50% X^H Y (normais) e 50% X^h Y (hemofílicos). Chance: 50%."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:7354cf80",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:af333155",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um casal quer saber a probabilidade de um filho herdar dois alelos recessivos (aa). Ambos os pais têm genótipo Aa. Qual é essa probabilidade?",
+        "opcoes": [
+          "1/8",
+          "1/4",
+          "1/2",
+          "1/16"
+        ],
+        "correta": 1,
+        "explicacao": "Aa × Aa produz filhos: 1/4 AA, 1/2 Aa, 1/4 aa. Probabilidade de receber dois alelos recessivos (aa) é 1/4 ou 25%. Cada progenitor deve contribuir um alelo a: P(a do pai) × P(a da mãe) = 1/2 × 1/2 = 1/4. Esse é o resultado clássico de Mendel."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:af333155",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:641ab33a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma planta F1 resultante de cruzamento entre linhas puras é plantada e produz descendentes (F2) que segregam em 9:3:3:1. Esse padrão sugere qual situação?",
+        "opcoes": [
+          "Herança ligada ao sexo",
+          "Mutação somática durante o crescimento",
+          "Herança monogênica com dominância completa",
+          "Herança digênica com dois genes independentes"
+        ],
+        "correta": 3,
+        "explicacao": "A proporção 9:3:3:1 é a marca clássica de Mendel para dois genes independentes (em loci diferentes, que segregam de forma independente). A F1 di-heterozigota (AaBb) cruzada com AaBb gera 16 combinações de gametas: 9 A_B_ (fenótipo 1), 3 A_bb (fenótipo 2), 3 aaB_ (fenótipo 3), 1 aabb (fenótipo 4). Esse é o segundo princípio de Mendel, a segregação independente de dois genes."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:641ab33a",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:ff5f7daf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma população de insetos em equilíbrio de Hardy-Weinberg tem frequência de alelo A = 0,7 e alelo a = 0,3. Qual será a frequência esperada de heterozigotos (Aa)?",
+        "opcoes": [
+          "0,21",
+          "0,42",
+          "0,49",
+          "0,09"
+        ],
+        "correta": 1,
+        "explicacao": "Em Hardy-Weinberg, frequência de heterozigotos = 2pq, onde p = freq(A) = 0,7 e q = freq(a) = 0,3. Logo, freq(Aa) = 2 × 0,7 × 0,3 = 0,42 ou 42%. Frequência de AA = p² = 0,49; aa = q² = 0,09. Soma: 0,49 + 0,42 + 0,09 = 1,0. Equilíbrio Hardy-Weinberg assume cruzamento aleatório e sem seleção."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:ff5f7daf",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:5511b43e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pesquisador observa uma população onde o alelo recessivo tem frequência que diminui a cada geração. Qual fator evolucionário melhor explica essa mudança?",
+        "opcoes": [
+          "Deriva genética aleatória",
+          "Fluxo gênico (migração)",
+          "Mutação recorrente do alelo dominante",
+          "Seleção natural contra o fenótipo recessivo"
+        ],
+        "correta": 3,
+        "explicacao": "Diminuição consistente de alelo recessivo ao longo de gerações sugere que o fenótipo recessivo está sendo selecionado contra (menor aptidão reprodutiva). Seleção natural direciona mudança alélica de forma previsível. Deriva é aleatória (não direcional); fluxo gênico precisa de fonte externa; mutação recorrente seria rara. A persistência dessa tendência em várias gerações aponta para seleção."
+      },
+      "meta": {
+        "id": "gen:bio:genetica-leis-mendel:5511b43e",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-bio-genetica-leis-mendel",
+      "version": 1,
+      "format": 2,
+      "subjectId": "bio",
+      "topicId": "gen",
+      "chapterId": "gen-bio-genetica-leis-mendel",
+      "title": "Cruzamentos genéticos de Mendel",
+      "objective": "Calcular a proporção de filhos com cada característica num cruzamento genético",
+      "skillIds": [
+        "bio:genetica-leis-mendel"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:bio:genetica-leis-mendel:78a8425d",
+        "gen:bio:genetica-leis-mendel:641ab33a"
+      ],
+      "recap": "Dominante aparece com um alelo só; recessivo precisa dos dois. Em genes do X, homens mostram o recessivo com um alelo só.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Leis de Mendel",
+          "body": "Você vai prever a proporção de filhos com cada característica cruzando os genótipos dos pais, incluindo genes ligados ao sexo e grupos sanguíneos."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Alelos dominantes e recessivos",
+            "body": "Cada característica tem dois alelos, um de cada pai. O dominante aparece no fenótipo mesmo com um alelo só; o recessivo só aparece em dobro. Homozigoto dominante cruzado com homozigoto recessivo gera filhos todos heterozigotos, com fenótipo dominante. Heterozigoto cruzado com homozigoto recessivo dá metade dos filhos com o alelo dominante, metade sem."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:genetica-leis-mendel:4b18f7c9",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:genetica-leis-mendel:9c5b233f",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Genes no X e cruzamento duplo heterozigoto",
+            "body": "Alguns genes ficam só no X. Homens têm um X só, então um alelo recessivo ali já aparece no fenótipo; mulheres com um X alterado e outro normal são portadoras sem sintomas, mas passam o alterado pra metade dos filhos homens. Dois heterozigotos do mesmo gene geram 1/4 homozigoto dominante, 2/4 heterozigoto, 1/4 homozigoto recessivo."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:genetica-leis-mendel:7354cf80",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:genetica-leis-mendel:aca01211",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda portador com afetado: um alelo recessivo só não mostra a doença, mas pode passar adiante."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Prevendo o tipo sanguíneo do filho",
+            "problem": "Duas pessoas, tipo AB e tipo O, têm um filho. Que tipos sanguíneos ele pode ter?",
+            "steps": [
+              "A pessoa AB passa IA ou IB; a pessoa O só passa i, então o filho fica IAi ou IBi."
+            ],
+            "result": "O filho pode ser tipo A ou tipo B, nunca AB nem O."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:genetica-leis-mendel:18e384e9",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Dominante aparece com um alelo só; recessivo precisa dos dois. Em genes do X, homens mostram o recessivo com um alelo só."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:crase-casos-proibidos:f2e9d408",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um jornalista redigiu em uma matéria: 'O repórter foi a Bruno e perguntou sobre os acontecimentos recentes na região.' Há erro de crase nessa frase?",
+        "opcoes": [
+          "Deveria ser 'ao Bruno', usando a contração de 'a + o'",
+          "Falta crase: deveria ser 'à Bruno'",
+          "O erro está em outra palavra, não em 'a Bruno'",
+          "Não há erro; 'a Bruno' está correto porque 'Bruno' é masculino e não recebe crase"
+        ],
+        "correta": 3,
+        "explicacao": "Nomes próprios masculinos nunca recebem crase, apenas a preposição 'a' simples. 'Fui a Bruno' está correto porque Bruno é masculino (assim como 'fui a Paulo', 'dirigi-me a Carlos'). A contração 'ao' ocorre quando há 'a' (preposição) + 'o' (artigo definido), mas Bruno, como nome próprio masculino, dispensa o artigo. O aluno pode ter confundido com nomes próprios femininos, que recebem crase em certos contextos."
+      },
+      "meta": {
+        "id": "gen:por:crase-casos-proibidos:f2e9d408",
+        "version": 1,
+        "skillIds": [
+          "por:crase-casos-proibidos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:crase-casos-proibidos:f747605a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma redação sobre perseverança, está escrito: 'Não me sinto à vontade para discordar do professor em sala de aula porque tenho medo de suas represálias.' Qual alternativa descreve corretamente o uso de crase nessa frase?",
+        "opcoes": [
+          "A crase em 'à vontade' é obrigatória, pois é uma locução adverbial feminina que funciona como adjunto adverbial de modo",
+          "Deveria ser 'a vontade' (sem crase), porque 'vontade' é um nome comum e não aceita artigo",
+          "A crase está incorreta; deveria haver hífen: 'a-vontade'",
+          "A expressão está errada; o correto é 'sem vontade' (sem crase)"
+        ],
+        "correta": 0,
+        "explicacao": "Locução adverbial feminina ('à vontade', 'à noite', 'às pressas', 'à direita') exige crase obrigatória. A crase em 'à vontade' marca que se trata de uma expressão que funciona como advérbio de modo. A estrutura é preposição 'a' + artigo definido feminino 'a' (a vontade = à vontade). O aluno pode tentar evitar crase por insegurança, mas locução adverbial feminina é regra fixa sem exceção."
+      },
+      "meta": {
+        "id": "gen:por:crase-casos-proibidos:f747605a",
+        "version": 1,
+        "skillIds": [
+          "por:crase-casos-proibidos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:crase-casos-proibidos:12fb3940",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um aluno escreveu em seu trabalho de História: 'Os escravizados eram forçados à trabalhar sem descanso nas fazendas de cana-de-açúcar.' O trecho contém erro de crase?",
+        "opcoes": [
+          "Não; a crase é obrigatória antes de infinitivo quando há preposição",
+          "Sim; deveria ser 'a trabalhar' (sem crase), porque verbo no infinitivo não recebe artigo definido, apenas a preposição 'a' simples",
+          "Não; 'à trabalhar' está correto porque 'trabalhar' é um verbo feminino neste contexto",
+          "Sim; deveria haver acento diferente, como 'à trabalhar' com dois tons"
+        ],
+        "correta": 1,
+        "explicacao": "Verbo no infinitivo nunca recebe crase. Quando tem preposição 'a' seguida de infinitivo, escreve-se só 'a' simples: 'forçados a trabalhar', 'começou a chover', 'voltou a estudar'. Crase é a fusão de preposição 'a' com artigo definido feminino 'a', e verbo não tem gênero nem recebe artigo. Você confundiu a regra de crase com a presença da preposição 'a'."
+      },
+      "meta": {
+        "id": "gen:por:crase-casos-proibidos:12fb3940",
+        "version": 1,
+        "skillIds": [
+          "por:crase-casos-proibidos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:crase-casos-proibidos:199d4671",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um escritor inseriu na sua novela: 'Após o jantar, a personagem dirigiu-se a ela com desconfiança.' Há erro de crase nessa construção?",
+        "opcoes": [
+          "Sim; o correto seria 'à ela' para marcar a preposição de forma clara",
+          "Não há erro, mas seria melhor usar 'perante ela' em lugar de 'a ela'",
+          "Não há erro; 'a ela' é correto porque pronome pessoal oblíquo não recebe artigo definido, apenas a preposição 'a' simples",
+          "Sim; deveria ser 'àquela' para dar coesão narrativa"
+        ],
+        "correta": 2,
+        "explicacao": "Pronome pessoal oblíquo nunca recebe artigo definido, logo nunca tem crase. Escreve-se 'dirigiu-se a mim', 'falou a você', 'entregou a ele', 'contou a ela'. Não ocorre crase porque não há fusão de 'a' com artigo: o pronome dispensa o artigo. A confusão acontece quando o aluno pensa que toda preposição 'a' pode virar crase, ignorando que crase é 'a' + 'a' (preposição + artigo), não preposição + pronome."
+      },
+      "meta": {
+        "id": "gen:por:crase-casos-proibidos:199d4671",
+        "version": 1,
+        "skillIds": [
+          "por:crase-casos-proibidos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:crase-casos-proibidos:b27731e9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um texto sobre rotina familiar, lê-se: 'Minha filha voltou a casa assim que a aula terminou, cansada mas feliz.' A palavra 'casa' nesse contexto exige crase?",
+        "opcoes": [
+          "Sim; deveria ser 'à casa' porque 'casa' é palavra feminina",
+          "Sim; 'voltou à casa' marcaria um sentido mais formal e literário",
+          "Não há consenso gramatical; ambas as formas ('a casa' e 'à casa') são aceitáveis",
+          "Não; 'a casa' está correto porque 'casa' sem especificador (sem artigo ou adjetivo antes) não recebe crase, apenas a preposição 'a' simples"
+        ],
+        "correta": 3,
+        "explicacao": "Palavras 'casa' e 'terra' sem especificador (sem adjetivo ou artigo antes) não levam crase. Escreve-se 'voltei a casa', 'retornou a terra', 'chegou a casa'. Crase aparece se houver especificador: 'voltei à casa dele', 'retornou à terra natal', 'chegou à casa grande'. Sem o modificador, 'casa' é genérica, quase um advérbio de lugar, e não recebe artigo; logo, sem artigo, sem crase. Você forçou crase em 'casa' porque é palavra feminina, ignorando essa regra específica."
+      },
+      "meta": {
+        "id": "gen:por:crase-casos-proibidos:b27731e9",
+        "version": 1,
+        "skillIds": [
+          "por:crase-casos-proibidos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:crase-casos-proibidos:7ddf6596",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um aluno de uma escola pública escreveu: 'O professor recomendou aos alunos a dedicação às tarefas de matemática todos os dias.' Este trecho cumpre as regras de crase?",
+        "opcoes": [
+          "Sim; 'a dedicação às tarefas' está correto porque há preposição 'a' + artigo feminino plural 'as', formando crase 'às'",
+          "Não; 'às tarefas' é considerado uso opcional em português normativo",
+          "Sim, mas seria mais correto usar 'a tarefas' para respeitar a regência de 'dedicação'",
+          "Não; 'às tarefas' está incorreto porque deveria ser 'a tarefas' (sem artigo plural, sem crase)"
+        ],
+        "correta": 0,
+        "explicacao": "Quando há substantivo feminino plural precedido de preposição 'a', ocorre crase obrigatória: 'às tarefas', 'às matérias', 'às regras'. Forma-se 'à' + 's' = 'às', fusão de preposição 'a' com artigo definido feminino plural 'as'. A estrutura é: verbo transitivo indireto ('dedicar-se a algo') + nome feminino plural + artigo: resultado automático é crase. O aluno pode errar pensando que plural nunca tem crase ou que crase é opcional neste contexto; na verdade, é obrigatória."
+      },
+      "meta": {
+        "id": "gen:por:crase-casos-proibidos:7ddf6596",
+        "version": 1,
+        "skillIds": [
+          "por:crase-casos-proibidos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

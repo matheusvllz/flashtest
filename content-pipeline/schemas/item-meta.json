@@ -1,0 +1,134 @@
+{
+  "$id": "item-meta.json",
+  "title": "ItemMeta",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "skillIds",
+    "difficulty",
+    "irt",
+    "roles",
+    "estimatedSeconds",
+    "dontKnowAllowed",
+    "source",
+    "validation",
+    "examProfiles"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "skillIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "difficulty": {
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "irt": {
+      "type": "object",
+      "required": [
+        "a",
+        "b",
+        "c",
+        "source"
+      ],
+      "properties": {
+        "a": {
+          "type": "number"
+        },
+        "b": {
+          "type": "number"
+        },
+        "c": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "estimado",
+            "inep",
+            "calibrado-foca"
+          ]
+        }
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "pratica",
+          "revisao",
+          "desafio",
+          "diagnostico"
+        ]
+      }
+    },
+    "estimatedSeconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "dontKnowAllowed": {
+      "type": "boolean"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "autoral",
+            "ia-validada",
+            "oficial",
+            "adaptada-de-oficial"
+          ]
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "gerada",
+            "verificada-ia",
+            "revisada-humano",
+            "oficial-conferida"
+          ]
+        }
+      }
+    },
+    "examProfiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

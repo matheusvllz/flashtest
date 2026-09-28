@@ -1,0 +1,763 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:leitura-grafico-tabela:aac59381",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma tabela mostra as vendas mensais de uma loja: Janeiro 100, Fevereiro 120, Março 110, Abril 130. Qual mês teve a maior venda?",
+        "opcoes": [
+          "Abril",
+          "Março",
+          "Fevereiro",
+          "Janeiro"
+        ],
+        "correta": 0,
+        "explicacao": "Comparando: 100 < 110 < 120 < 130. Abril foi o campeão em vendas (130). Ler tabela certinho é base pra análise de dados no ENEM."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:aac59381",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:db2725ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma tabela apresenta as temperaturas em graus Celsius: Segunda 22°C, Terça 25°C, Quarta 24°C, Quinta 26°C. Qual é a temperatura máxima registrada?",
+        "opcoes": [
+          "24°C",
+          "22°C",
+          "26°C",
+          "25°C"
+        ],
+        "correta": 2,
+        "explicacao": "Comparando: 22 < 24 < 25 < 26. O pico é 26°C (quinta-feira). Achar máximo e mínimo na tabela é básico pra análise de dados."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:db2725ef",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:5dedcff1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um gráfico apresenta o número de visitantes em um museu por dia: Segunda 80, Terça 100, Quarta 90, Quinta 110. Qual é a diferença entre o dia com mais e menos visitantes?",
+        "opcoes": [
+          "20",
+          "40",
+          "10",
+          "30"
+        ],
+        "correta": 3,
+        "explicacao": "Máximo: 110 visitantes (quinta), mínimo: 80 visitantes (segunda). Diferença: 110 - 80 = 30. Aqui você tá lendo gráfico e fazendo conta básica ao mesmo tempo."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:5dedcff1",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:a5bf2bb5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma tabela mostra a quantidade de produtos vendidos por semana: Semana 1 (500), Semana 2 (600), Semana 3 (550), Semana 4 (700). Qual é a média de vendas por semana?",
+        "opcoes": [
+          "587,5",
+          "600",
+          "625",
+          "575"
+        ],
+        "correta": 0,
+        "explicacao": "Média = (500 + 600 + 550 + 700) / 4 = 2350 / 4 = 587,5. Média de dados tabulados é comum no ENEM."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:a5bf2bb5",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:ac337126",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um gráfico mostra o número de clientes que visitaram uma loja em 5 dias: Segunda 120, Terça 150, Quarta 140, Quinta 160, Sexta 130. Qual é o percentual aproximado de clientes na quinta-feira em relação ao total?",
+        "opcoes": [
+          "18%",
+          "23%",
+          "20%",
+          "25%"
+        ],
+        "correta": 1,
+        "explicacao": "Total: 120 + 150 + 140 + 160 + 130 = 700. Percentual na quinta: (160/700) × 100 ≈ 22,86% ≈ 23%. Percentual de dados tabulados é algo que cai bastante."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:ac337126",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:27204e3e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma tabela apresenta a altura de 4 alunos: Ana 1,60 m, Bruno 1,75 m, Carlos 1,70 m, Diana 1,65 m. Qual é a altura média dos 4 alunos?",
+        "opcoes": [
+          "1,65 m",
+          "1,75 m",
+          "1,68 m",
+          "1,70 m"
+        ],
+        "correta": 2,
+        "explicacao": "Média = (1,60 + 1,75 + 1,70 + 1,65) / 4 = 6,70 / 4 = 1,675 m ≈ 1,68 m. Média com decimal aparece em questões de medida."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:27204e3e",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:8ccc9a61",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um gráfico de linha mostra o crescimento populacional de uma cidade: Ano 2015 (10.000), Ano 2017 (12.000), Ano 2019 (14.000), Ano 2021 (16.000). Qual é o crescimento populacional anual médio?",
+        "opcoes": [
+          "1.000",
+          "1.500",
+          "2.000",
+          "500"
+        ],
+        "correta": 0,
+        "explicacao": "Crescimento total: 16.000 - 10.000 = 6.000 pessoas em 6 anos (2015 a 2021). Por ano: 6.000 / 6 = 1.000 pessoas. Período de tempo e taxa de crescimento aparecem em série temporal."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:8ccc9a61",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:3e0f31c3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um analista compara vendas de dois produtos em três trimestres. No gráfico, o produto A cresceu de 100 para 180 unidades, enquanto o produto B caiu de 200 para 140 unidades. Qual foi a diferença percentual de variação entre os produtos neste período?",
+        "opcoes": [
+          "Produto A cresceu 80% e B caiu 40%; diferença de 120 pontos percentuais",
+          "Produto A cresceu 100% e B caiu 30%; diferença de 130 pontos percentuais",
+          "Produto A cresceu 80% e B caiu 30%; diferença de 110 pontos percentuais",
+          "Produto A cresceu 60% e B caiu 30%; diferença de 50 pontos percentuais"
+        ],
+        "correta": 2,
+        "explicacao": "Produto A: (180-100)/100 = 80/100 = 80% de crescimento. Produto B: (140-200)/200 = -60/200 = -30% (queda). Diferença: 80% - (-30%) = 110 pontos percentuais. Erro comum: confundir a variação em percentual com a diferença dos valores absolutos. O que importa é quanto cada um cresceu ou caiu em relação ao ponto de partida."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:3e0f31c3",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:c036a492",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um gráfico de série temporal, o número de acessos a um site cresceu mensalmente: janeiro 1.000, fevereiro 1.500, março 2.250. Se essa taxa de crescimento se mantiver constante, quantos acessos são esperados em junho?",
+        "opcoes": [
+          "6.500",
+          "5.063",
+          "4.500",
+          "7.594"
+        ],
+        "correta": 3,
+        "explicacao": "A taxa de crescimento é 50% mês a mês (1.500/1.000 = 1,5). Continuando: abril = 2.250 × 1,5 = 3.375; maio = 3.375 × 1,5 = 5.062,5; junho = 5.062,5 × 1,5 ≈ 7.594. O padrão é exponencial (multiplicativo), não linear. Multiplicar sucessivamente por 1,5 é mais rápido que somar valores fixos."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:c036a492",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:81d0b966",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um gráfico de linhas mostra a temperatura diária de uma cidade ao longo de uma semana: segunda 18°C, terça 22°C, quarta 25°C, quinta 20°C, sexta 23°C, sábado 21°C, domingo 19°C. Qual foi o dia mais quente?",
+        "opcoes": [
+          "Sexta-feira com 23°C",
+          "Sábado com 21°C",
+          "Quarta-feira com 25°C",
+          "Terça-feira com 22°C"
+        ],
+        "correta": 2,
+        "explicacao": "Olha o gráfico: 25°C (quarta) é o ponto mais alto da semana. Pra achar o máximo é só identificar visualmente qual é a coluna/linha mais elevada. Esse é o conceito."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:81d0b966",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:b0ad322d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um gráfico de colunas mostra o número de livros lidos por alunos de uma turma: 7 alunos leram 2 livros, 15 alunos leram 4 livros, 3 alunos leram 1 livro. Qual foi a quantidade total de livros lidos?",
+        "opcoes": [
+          "77",
+          "72",
+          "65",
+          "82"
+        ],
+        "correta": 0,
+        "explicacao": "Total = (7 × 2) + (15 × 4) + (3 × 1) = 14 + 60 + 3 = 77. Cada valor multiplica pela sua frequência antes de você somar. Erro comum: somar só o número de alunos ou só o número de livros, sem multiplicar um pelo outro."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:b0ad322d",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:837475c7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma tabela compara renda familiar de dois bairros. Bairro A: 50 famílias com renda até 2 salários mínimos. Bairro B: 30 famílias com renda até 2 salários mínimos. Qual bairro tem maior concentração relativa nessa faixa?",
+        "opcoes": [
+          "Bairro A, porque tem mais famílias",
+          "Não é possível determinar sem conhecer o total de famílias de cada bairro",
+          "Bairro B, porque 30 é 60% de 50",
+          "Bairro B, com menos famílias de baixa renda"
+        ],
+        "correta": 1,
+        "explicacao": "Sem saber quantas famílias tem em cada bairro no total, a gente não consegue calcular o percentual. 50 e 30 são números absolutos. Você precisa dividir cada um pelo total do seu bairro pra achar a proporção real. Erro bem comum: misturar frequência absoluta com frequência relativa."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:837475c7",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:b41b57ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um gráfico de pizza mostra a distribuição de um orçamento: 30% habitação, 25% alimentação, 20% transporte, 15% saúde e 10% lazer. Se o orçamento total é R$ 1.000, quanto foi destinado à alimentação?",
+        "opcoes": [
+          "R$ 200",
+          "R$ 150",
+          "R$ 250",
+          "R$ 300"
+        ],
+        "correta": 2,
+        "explicacao": "Alimentação recebe 25% do orçamento. 25% de 1.000 = 0,25 × 1.000 = 250. Você pega o percentual em forma decimal e multiplica pelo total."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:b41b57ef",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:d028af55",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma tabela lista temperaturas mínimas semanais: segunda -2°C, terça 0°C, quarta 3°C, quinta 1°C, sexta -1°C, sábado 2°C, domingo 0°C. Qual dia registrou a menor temperatura?",
+        "opcoes": [
+          "Terça-feira com 0°C",
+          "Quarta-feira com 3°C",
+          "Sexta-feira com -1°C",
+          "Segunda-feira com -2°C"
+        ],
+        "correta": 3,
+        "explicacao": "Comparando números negativos e positivos, -2°C é o menor (mais negativo). A menor temperatura tá sempre no ponto mais baixo ou no número mais negativo: aqui é segunda-feira."
+      },
+      "meta": {
+        "id": "gen:mat:leitura-grafico-tabela:d028af55",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.931Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-leitura-grafico-tabela",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "estat",
+      "chapterId": "gen-mat-leitura-grafico-tabela",
+      "title": "Leitura de gráficos",
+      "objective": "Ler, comparar e calcular a partir de dados apresentados em gráficos e tabelas.",
+      "skillIds": [
+        "mat:leitura-grafico-tabela"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:leitura-grafico-tabela:aac59381",
+        "gen:mat:leitura-grafico-tabela:81d0b966"
+      ],
+      "recap": "Leia com cuidado antes de calcular. Diferença absoluta subtrai valores; variação percentual compara em relação ao início.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Gráficos e tabelas",
+          "body": "Você vai aprender a extrair informações de gráficos e tabelas e fazer contas como diferença, total ponderado e variação percentual."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Ler antes de calcular",
+            "body": "Antes de fazer qualquer conta, identifique com cuidado os valores que o gráfico ou a tabela mostram: qual categoria, qual quantidade, qual unidade. Pra achar o maior ou o menor valor, compare todos. Pra achar a diferença entre dois valores, subtraia o menor do maior."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:leitura-grafico-tabela:5dedcff1",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:leitura-grafico-tabela:db2725ef",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Total com pesos diferentes",
+            "problem": "Uma loja vendeu: 4 clientes compraram 3 produtos cada, 10 clientes compraram 1 produto cada. Quantos produtos foram vendidos no total?",
+            "steps": [
+              "Multiplique cada grupo pela sua quantidade: 4 × 3 = 12.",
+              "10 × 1 = 10.",
+              "Some os grupos: 12 + 10 = 22."
+            ],
+            "result": "22 produtos."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:leitura-grafico-tabela:b0ad322d",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:leitura-grafico-tabela:8ccc9a61",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não confunda pontos percentuais com porcentagem simples: a diferença entre 45% e -15% é 60 pontos percentuais, não 60%."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Diferença ou variação",
+            "left": {
+              "label": "Diferença absoluta",
+              "body": "É subtrair um valor do outro direto, no mesmo tanto que ambos usam (reais, pessoas, unidades)."
+            },
+            "right": {
+              "label": "Variação percentual",
+              "body": "É (valor final - valor inicial) dividido pelo valor inicial, vezes 100. Compara o quanto mudou em relação a onde cada um começou."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:leitura-grafico-tabela:3e0f31c3",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Leia com cuidado antes de calcular. Diferença absoluta subtrai valores; variação percentual compara em relação ao início."
+        }
+      ]
+    }
+  ]
+}

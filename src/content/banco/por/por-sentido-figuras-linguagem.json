@@ -1,0 +1,235 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:sentido-figuras-linguagem:a3e2ca3e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o trecho: 'A vida é uma longa jornada.' Que figura de linguagem está presente nesta frase? Qual é seu efeito no sentido do texto?",
+        "opcoes": [
+          "Metáfora, que compara a vida com uma jornada, sugerindo movimento, transformação e experiências diversas ao longo do tempo.",
+          "Metonímia, que substitui a palavra 'vida' por um sinônimo mais poético.",
+          "Hipérbole, que exagera a duração da vida de forma cômica.",
+          "Personificação, atribuindo características humanas ao conceito abstrato de vida."
+        ],
+        "correta": 0,
+        "explicacao": "Aqui tem metáfora: 'vida' e 'jornada' estão comparadas, mas sem 'como' ou 'parece'. O sentido que fica é profundo: a vida vira uma viagem com etapas, desafios, destino. Passa a ideia de movimento, aprendizado e transformação pessoal."
+      },
+      "meta": {
+        "id": "gen:por:sentido-figuras-linguagem:a3e2ca3e",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sentido-figuras-linguagem:8d9ac6b8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No verso 'O coração é um pássaro selvagem que voa para longe', identifique a figura de linguagem predominante e seu propósito expressivo.",
+        "opcoes": [
+          "Metonímia, que substitui 'sentimento' por 'coração' de forma poética.",
+          "Metáfora, que compara o coração (sede das emoções) a um pássaro selvagem, sugerindo liberdade e incontrolabilidade dos sentimentos.",
+          "Hipérbole, que exagera a capacidade do coração de voar.",
+          "Aliteração, que repete sons para criar musicalidade."
+        ],
+        "correta": 1,
+        "explicacao": "A metáfora compara o coração (não o órgão, mas o lugar das emoções) a um pássaro selvagem que voa. O efeito é mostrar que os sentimentos são livres, selvagens e fogem do controle. A imagem do pássaro reforça a incontrolabilidade muito mais que uma descrição literal."
+      },
+      "meta": {
+        "id": "gen:por:sentido-figuras-linguagem:8d9ac6b8",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sentido-figuras-linguagem:5e544870",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No poema, encontra-se: 'A música sussurrou doce melodia nos ouvidos atentos do músico.' Qual figura de linguagem predomina? Explique seu efeito.",
+        "opcoes": [
+          "Aliteração, pela repetição do som 's' em 'sussurrou'.",
+          "Hipérbole, exagerando a delicadeza da melodia.",
+          "Metonímia, pois 'música' substitui 'compositor'.",
+          "Personificação, atribuindo à música (abstrato) a ação de sussurrar, criando uma atmosfera íntima e sensorial delicada."
+        ],
+        "correta": 3,
+        "explicacao": "A personificação atribui à música (entidade abstrata) a ação humana de 'sussurrar', criando efeito sensorial vívido e íntimo. O verbo 'sussurrar' transfere qualidades humanas (o tom de voz baixo, confidencial) para a música, intensificando a percepção sensorial e emocional da experiência de ouvir, não apenas descrevendo, mas dramatizando-a poeticamente."
+      },
+      "meta": {
+        "id": "gen:por:sentido-figuras-linguagem:5e544870",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sentido-figuras-linguagem:62962bf5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No texto: 'A noite cobriu a cidade com seu manto negro.' Identifique qual figura de linguagem está presente. Qual é seu papel narrativo?",
+        "opcoes": [
+          "Hipérbole, exagerando a escuridão da noite.",
+          "Metonímia, pois 'manto' substitui 'escuridão'.",
+          "Personificação, atribuindo a 'noite' capacidade de cobrir com um manto, criando atmosfera visual poética e sensação de envolvimento.",
+          "Aliteração, pela repetição de 'n' em 'noite' e 'negro'."
+        ],
+        "correta": 2,
+        "explicacao": "A personificação atribui à noite (fenômeno natural) a ação de 'cobrir com um manto' (ação humana). O efeito narrativo é criar uma atmosfera envolvente e misteriosa, como se a noite abraçasse a cidade suavemente. Deixa o tom mais poético e melancólico que uma descrição literal."
+      },
+      "meta": {
+        "id": "gen:por:sentido-figuras-linguagem:62962bf5",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sentido-figuras-linguagem:a04475d4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia: 'O silêncio gritava nos corredores vazios da escola abandonada.' Qual figura de linguagem está presente e qual seu efeito?",
+        "opcoes": [
+          "Metonímia, substituindo 'vazio' por 'silêncio'.",
+          "Oxímoro ou paradoxo, pois silêncio não pode gritar, criando contraste que intensifica a atmosfera desconfortável e perturbadora.",
+          "Hipérbole, exagerando a intensidade do silêncio.",
+          "Antítese, opondo silêncio e som de forma equilibrada."
+        ],
+        "correta": 1,
+        "explicacao": "A figura é oxímoro: combina 'silêncio' (ausência de som) com 'gritava' (som forte). O efeito é desconcertante e perturbador, sugerindo que o silêncio é tão profundo e presente na ausência que fica quase audível e opressivo, intensificando a sensação de abandono e inquietação."
+      },
+      "meta": {
+        "id": "gen:por:sentido-figuras-linguagem:a04475d4",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

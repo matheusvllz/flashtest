@@ -37,7 +37,7 @@ Não é uma declaração de que todo o app já fala a nova voz. Onde este docume
 | `sairMesmo` | "Sair mesmo assim" | Botão que confirma a saída | Mesma ressalva |
 | `voceAprendeu` | "Você aprendeu" | Título da tela de conclusão (resume o que a lição ensinou, G8/`25` §20) | `tests/e2e/chapter-complete.spec.ts` percorre a tela de conclusão; não asserta esse texto literal — **verificação parcial** |
 | `refazer` | "Refazer lição" | Botão pós-conclusão | Revisão manual |
-| `roles.checkpoint`/`.pratica`/`.desafio`/`.revisao` | "Checkpoint"/"Prática"/"Desafio"/"Revisão" | Rótulo do tipo de questão dentro do passo `question` | Revisão manual + `tests/unit/validate-v2.test.ts` (valida os `role` em si, não o rótulo em português) |
+| `roles.checkpoint`/`.pratica`/`.desafio`/`.revisao` | "Checagem rápida"/"Prática"/"Desafio"/"Revisão" | Rótulo do tipo de questão dentro do passo `question` — `checkpoint` renomeado na Fase 7 (docs/30 §17, docs/32): "Checkpoint" era jargão de produto | Revisão manual + `tests/unit/validate-v2.test.ts` (valida os `role` em si, não o rótulo em português) |
 
 Tom conferido contra as mesmas regras da seção 7 do `20` que já valiam pro resto de `copy.ts`: sem emoji, sem exclamação dupla, sem cobrança ("Seu progresso... fica salvo" é factual, não ameaça perder nada). Nenhuma string aqui foi testada por `brand-voice.test.ts` especificamente — esse teste cobre `voz.ts`/`tutor-prompt.ts`, não `copy.ts` ainda (mesma lacuna que já existia pro bloco `feedback`/`tutor` antes desta atualização).
 
@@ -84,6 +84,42 @@ Tom conferido contra as mesmas regras da seção 7 do `20` que já valiam pro re
 Tom conferido manualmente contra a seção 7 do `20` — nenhuma string cobra o aluno; `fimDaMateria`/`erroCorpo` descrevem estado sem culpa. Sem regressão automatizada de tom em `brand-voice.test.ts` ainda, mesma ressalva da seção 2.2.
 
 Igual ao bloco `licao`: tom conferido manualmente contra a seção 7 do `20` (sem cobrança — `tudoConcluido` e `capituloBloqueado` descrevem estado, não repreendem o aluno), sem regressão automatizada de tom em `brand-voice.test.ts` ainda. Marcar como **revisado com evidência de comportamento** (os E2E citados percorrem os fluxos que usam essas strings), não como **revisado com evidência de tom testada automaticamente** — essa distinção já valia pros blocos `feedback`/`tutor` na seção 2 original e continua valendo aqui.
+
+### 2.4 `COPY.questao.*` e `VOZ.naosei` — botão "Não sei" (docs/30 §16.1, Fase 6 do docs/31)
+
+| Chave | Texto | Uso | Revisão |
+|---|---|---|---|
+| `COPY.questao.naoSei` | "Não sei" | Rótulo do botão, nas 3 superfícies (microlição, `/study`, lição de redação) | `tests/e2e/dont-know.spec.ts` |
+| `COPY.questao.naoSeiAria` | "Não sei a resposta desta questão" | `aria-label` do botão (`DontKnowButton.tsx`) | Corrigido depois de um achado real: a versão original ("Não sei **responder** esta questão") continha a substring "responder", que colidia com `getByRole("button", { name: "Responder" })` nos testes existentes (Playwright casa por substring, case-insensitive, por padrão) — quebrava `tutor.spec.ts`/`feedback.spec.ts` ao ligar a flag. `tests/e2e/dont-know.spec.ts` + regressão completa |
+| `VOZ.naosei[0..2]` | "Tudo bem. Veja como resolve:" / "Sem problema. Olha o caminho:" / "Beleza. Vamos por partes:" | Título da `FeedbackSheet` quando `feedback.kind === "dont-know"` (sorteado por `fala("naosei")`) | `tests/unit/brand-voice.test.ts` (nenhuma fala cobra/julga: sem "cobrar", "errou", "errado") + `tests/e2e/dont-know.spec.ts` (feedback visível, sem cor de acerto/erro) |
+
+Regra de tom aplicada (docs/20 §7.1): sem cobrança, sem "tudo bem" performático isolado (as 3 variações sempre emendam com "veja/olha/vamos" — a frase inteira encaminha pra frente, não fica só consolando). Nenhuma das 3 falas usa "errou"/"errado": "não sei" é um sinal próprio, não um erro (`30` §16.1).
+
+### 2.5 `COPY.jornada.*` e `COPY.foco.*` — jornada única e modo foco (docs/30 §14/§15, Fase 12 do docs/31 F12.9)
+
+| Chave | Texto/forma | Uso | Revisão |
+|---|---|---|---|
+| `COPY.jornada.motivos.*` | 14 frases, uma por `ReasonCode` (`30` §14.2) | Card "Sessão de hoje" (`SessionCard.tsx`) e lição sintética de atividade (`activity-lesson.ts`) | Autorrevisão direta contra `20` §7.1 (mesmo padrão que a Fase 7 registrou em F7.5 — não o pipeline completo do Humanizer): 9 das 14 são cópia verbatim do `30` §14.2 (já aprovadas); as 5 novas (`revisao-atrasada`, `reforco-ajuda`, `prioridade-aluno`, `checkpoint`, `confirmar-fundamento`) seguem o mesmo tom. `tests/unit/brand-voice.test.ts` cobre as 14: sem "domina", sem "cobrar"/"você precisa"/"você deveria", sem "!!" |
+| `COPY.jornada.kinds.*` | Aula/Prática/Revisão/Desafio/Checkpoint/Reforço | Título de nó (`PathNode`/`JourneyPath`) e de atividade sem lição própria | Rótulos neutros de tipo, sem avaliação — baixo risco, não testado à parte |
+| `COPY.jornada.atual`/`aSeguir` | "Atual" / "A seguir" | Estado do nó no caminho da jornada, leitor de tela (docs/31 F12.4, critério de acessibilidade) | Texto funcional puro |
+| `COPY.jornada.semNada` | "Você passou por tudo que está disponível agora. Revisões voltam conforme as datas." | Card quando a jornada "infinita" esgota o conteúdo (`30` §14.5, citação verbatim do plano) | Copiado do próprio `30`, já aprovado |
+| `COPY.foco.*` | Rótulos de folha de foco ("Só hoje", "Daqui pra frente", "Voltar a todas"…) | `FocusSheet.tsx`/`FocusLine.tsx`, seção "Foco e ritmo" do Perfil | Texto funcional, sem tom de cobrança (nenhuma variação de "você precisa focar") |
+
+### 2.6 `COPY.onboarding.*`, `COPY.nivelamento.*` e `COPY.checkpoint.*` — nivelamento e checkpoints (docs/30 §12/§13, Fase 13/14 do docs/31 F13.8/F14.5)
+
+| Chave | Texto/forma | Uso | Revisão |
+|---|---|---|---|
+| `COPY.onboarding.ofertaTitulo`/`ofertaCorpo`/`ofertaCtaPrimario`/`ofertaCtaSecundario`/`ofertaRodape` | "Quer começar no seu nível?" / "São umas 20 questões..." / "Fazer o nivelamento" / "Começar sem nivelamento" / "Dá pra fazer depois, pelo Perfil." | `PlacementOffer.tsx`, último passo do `/quiz` | Cópia verbatim do `30` §12.2 (já registrada como "passou pelo Humanizer" no próprio plano) |
+| `COPY.onboarding.blocoVoce`/`blocoSuaProva`/`blocoSeuRitmo` | "Você" / "Sua prova" / "Seu ritmo" | Kicker dos passos novos do quiz (`ExamStep`/`TimeStep`/`FocusStep`) | Rótulo de agrupamento neutro, do próprio `30` §12.2 |
+| `COPY.onboarding.dataProva`/`euSeiAData`/`aindaNaoSeiData` | "Data da prova" / "Eu sei a data" / "Ainda não sei" | `ExamStep.tsx` | Texto funcional, opção "ainda não sei" nunca obrigatória (`30` §12.2) |
+| `COPY.nivelamento.duranteHint` | "Sem dica nesta parte. Se não souber, toque em Não sei. Isso também ajuda a ajustar a trilha." | Cabeçalho da rota `/nivelamento` durante o CAT | Cópia verbatim do `30` §12.2 |
+| `COPY.nivelamento.resultadoTitulo`/`resultadoCorpo` | "Pronto." / "Isso é um ponto de partida, e ele fica mais preciso conforme você estuda." | Tela de resultado do nivelamento | Cópia verbatim do `30` §12.5 — sem nota, sem "Nível N" (`brand-voice.test.ts` cobre) |
+| `COPY.nivelamento.faixaBaseConstrucao`/`faixaNoCaminho`/`faixaBaseFirme` | "Base em construção" / "No caminho" / "Base firme" | Uma linha por área na tela de resultado | Cópia verbatim do `30` §12.5 |
+| `COPY.nivelamento.areaNaoMedida(area)` | "Ainda não temos questões suficientes de {área} para medir." | Área sem pool suficiente (caso de borda `30` §12.3 — hoje TODA área, Fase 11 pendente) | Cópia verbatim do `30` §12.3 |
+| `COPY.checkpoint.introTitulo`/`introCorpo`/`comecar`/`agoraNao` | "Checkpoint" / "Questões misturadas, sem dica..." / "Começar" / "Agora não" | `CheckpointIntro.tsx` | Adaptado do `30` §13.3 (corpo simplificado — não cita "8 questões" porque a contagem real varia 6-8, `composeCheckpoint`) |
+| `COPY.licao.respostaRegistrada` | "Resposta registrada." | Modo `silent` do `QuestionStepView` (nivelamento e checkpoint — sem cor de certo/errado) | Texto neutro, nenhuma avaliação de desempenho |
+
+Revisão feita por autorrevisão direta contra `20` §7.1 (mesmo padrão do item 2.5, não o pipeline completo do Humanizer) — `tests/unit/brand-voice.test.ts` cobre `COPY.onboarding.*`/`COPY.nivelamento.*` com um teste genérico (sem "você precisa/deveria" + verbo, sem "!!", sem "nota"/"nível N").
 
 ## 3. Pendente — inventariado, não revisado
 

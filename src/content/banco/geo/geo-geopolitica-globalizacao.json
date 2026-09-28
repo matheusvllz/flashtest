@@ -1,0 +1,756 @@
+{
+  "subjectId": "geo",
+  "items": [
+    {
+      "id": "gen:geo:geopolitica-globalizacao:ddb9894d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois países vizinhos estabelecem um tratado comercial que reduz impostos sobre importação de alimentos. De que tipo de acordo este tratado mais se aproxima?",
+        "opcoes": [
+          "Uma aliança militar como a OTAN",
+          "Um acordo bilateral de livre comércio",
+          "Uma federação política internacional",
+          "Um pacto de não-agressão entre nações"
+        ],
+        "correta": 1,
+        "explicacao": "Acordos bilaterais reduzem barreiras comerciais entre duas nações específicas, facilitando trocas de bens e serviços. Diferem de blocos maiores (como Mercosul ou UE) porque envolvem só dois países, e de alianças militares, que têm objetivo defensivo. Neste caso a meta é econômica e bilateral."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:ddb9894d",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.443Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:3b3f208f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A União Europeia permite que um cidadão alemão trabalhe na França sem precisar de visto especial, e uma empresa italiana possa vender produtos na Espanha sem pagar tarifas adicionais. Qual é o nível de integração econômica que a UE representa?",
+        "opcoes": [
+          "Apenas um acordo de comércio preferencial",
+          "Uma zona de livre comércio com algumas restrições",
+          "Um mercado comum com livre circulação de pessoas, bens e serviços",
+          "Uma federação política que eliminou todas as fronteiras nacionais"
+        ],
+        "correta": 2,
+        "explicacao": "A UE tem as características de um mercado comum: livre circulação de pessoas, bens, serviços e capitais entre os membros. Vai além de uma zona de livre comércio, que só elimina tarifas sobre bens. Parte dos membros foi ainda mais longe e adota moeda única, o euro (união econômica e monetária). Mas não é uma federação: não há um governo único, e os Estados mantêm governos e fronteiras próprios."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:3b3f208f",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.443Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:d1d6bfb8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O BRICS, formado originalmente por Brasil, Rússia, Índia e China (a África do Sul entrou em 2011, e o grupo foi ampliado a partir de 2024), costuma ser visto como um contrapeso aos países ocidentais desenvolvidos. Qual aspecto geopolítico melhor explica sua formação?",
+        "opcoes": [
+          "Formar uma aliança militar para enfrentar a OTAN",
+          "Garantir acesso exclusivo a recursos naturais do sul global",
+          "Criar uma moeda única para competir com o dólar americano",
+          "Representar a ascensão econômica de potências emergentes e questionar a hegemonia ocidental"
+        ],
+        "correta": 3,
+        "explicacao": "O BRICS surgiu porque Brasil, Rússia, Índia e China cresceram economicamente e passaram a buscar mais influência nas decisões globais, questionando a dominância histórica de EUA e Europa. Não é aliança militar como a OTAN, nem tem moeda única. É um fórum de coordenação econômica e política que reflete mudanças de poder no século XXI, com foco em reformar instituições internacionais."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:d1d6bfb8",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.443Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:4246308f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Entre 2018 e 2020, os EUA aumentaram tarifas sobre produtos chineses (até 25% em alguns itens) e a China retaliou com tarifas sobre bens americanos. Qual conceito geopolítico melhor descreve este conflito?",
+        "opcoes": [
+          "Guerra comercial entre potências econômicas rivais",
+          "Cooperação multilateral via OMC",
+          "Integração econômica bilateral",
+          "Bloqueio econômico unilateral"
+        ],
+        "correta": 0,
+        "explicacao": "Guerra comercial é a disputa em que países usam tarifas e restrições como arma, aqui entre EUA e China, na competição por mercados e liderança tecnológica. Difere de integração, que aproxima as economias, e de bloqueio unilateral, que seria imposto por um só lado. As retaliações dos dois lados indicam uma disputa estratégica por poder econômico."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:4246308f",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:e8ff448f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um país pequeno quer integrar-se a um bloco econômico maior para crescer economicamente, mas teme perder soberania nas decisões locais. Qual é o dilema geopolítico central nesta situação?",
+        "opcoes": [
+          "Decisão entre língua oficial única ou múltiplas línguas",
+          "Opção entre democracia ou autocracia no governo",
+          "Crescimento econômico via integração versus preservação de autonomia política",
+          "Escolha entre aliança militar ou isolamento total"
+        ],
+        "correta": 2,
+        "explicacao": "Integração econômica requer ceder poder decisório a órgãos supranacionais (como Comissão Europeia), reduzindo autonomia, mas em troca ganha acesso a mercados maiores e investimento. É trade-off real: soberania política versus ganhos econômicos coletivos. Não envolve necessariamente regime político ou aliança militar: foca na tensão entre integração regional e independência nacional."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:e8ff448f",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:0e45d983",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Índia, apesar de ser membro do BRICS, participa também do Quad, um diálogo estratégico com EUA, Japão e Austrália. Este posicionamento é melhor descrito como:",
+        "opcoes": [
+          "Estratégia de não-alinhamento e equilíbrio entre potências rivais",
+          "Isolacionismo total em relação a toda política internacional",
+          "Inconsistência política que enfraquece sua posição global",
+          "Alinhamento claro com uma única potência hegemônica"
+        ],
+        "correta": 0,
+        "explicacao": "A Índia não escolhe um lado único: participa do BRICS, visto como contrapeso ao Ocidente, e do Quad, fórum com países que buscam equilibrar a influência chinesa no Indo-Pacífico. Essa estratégia de equilíbrio reflete seu peso geopolítico: potências rivais buscam sua parceria. Difere de isolacionismo, porque ela se engaja, e de alinhamento a uma única potência, porque diversifica parcerias para manter liberdade de ação."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:0e45d983",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:8412d261",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A transição de uma ordem internacional 'unipolar' (dominada pelos EUA pós-1991) para 'multipolar' (com ascensão de China, Índia e outros) altera como países médios negociam. Qual é a implicação estratégica desta mudança?",
+        "opcoes": [
+          "Países médios ganham mais margem de negociação ao jogar potências rivais uma contra outra",
+          "A ordem multipolar elimina conflitos internacionais automaticamente",
+          "Só países ricos tecnologicamente conseguem influência nessa nova ordem",
+          "Países médios perdem completamente toda influência nas negociações globais"
+        ],
+        "correta": 0,
+        "explicacao": "Numa ordem multipolar, um país médio (como Brasil, México ou Vietnã) pode aproveitar a rivalidade entre potências como EUA e China para obter condições melhores, já que cada potência quer sua parceria. Na unipolaridade, os EUA impunham a agenda praticamente sozinhos. A multipolaridade não elimina conflitos, mas amplia a margem de manobra de quem está no meio."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:8412d261",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:3008789e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois blocos econômicos rivais impõem sanções sobre um terceiro país (congelam suas contas bancárias, proíbem suas exportações, cortam acesso a tecnologia). O objetivo geopolítico desta estratégia é:",
+        "opcoes": [
+          "Punição moral ou justiça internacional",
+          "Forçar mudanças políticas ou militares sem guerra direta",
+          "Transferência total de recursos para os países sancionadores",
+          "Estabelecer democracia obrigatória em todas as nações"
+        ],
+        "correta": 1,
+        "explicacao": "Sanções econômicas são uma ferramenta de coerção: tornam o custo de uma política tão alto que o alvo seja pressionado a mudá-la, sem guerra direta. Exemplos: as sanções ocidentais à Rússia após 2022 e as sanções dos EUA ao Irã a partir de 2018. Não transferem recursos ao sancionador (costumam prejudicar os dois lados) nem impõem um regime político; funcionam cortando o acesso do alvo a mercados e tecnologia."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:3008789e",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:0e05c39c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um país exporta principalmente carvão e petróleo, produtos cujo preço internacional caiu. Para diversificar sua economia, qual bloco econômico regional seria mais estratégico para aderir?",
+        "opcoes": [
+          "Um bloco que impõe moeda única obrigatória a todos",
+          "Um bloco fechado que proíbe comércio com países externos",
+          "Um bloco aberto que permite acesso a mercados maiores e incentiva indústrias novas",
+          "Um bloco que enfatiza apenas comércio de combustíveis fósseis"
+        ],
+        "correta": 2,
+        "explicacao": "Um bloco que dá acesso a mercados maiores permite exportar produtos novos e atrai investimento em outras indústrias, o que ajuda a diversificar a economia. Um bloco fechado isola o país e não ajuda a diversificar, e focar só em combustíveis mantém a dependência. Acesso a um mercado regional amplo é a alavanca para mudar a estrutura produtiva."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:0e05c39c",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:d5d3c07f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na negociação de um novo acordo comercial, um país grande oferece benefícios econômicos a um país pequeno em troca de apoio político em votações internacionais. Qual conceito descreve melhor esta dinâmica?",
+        "opcoes": [
+          "Cooperação voluntária sem interesses estratégicos",
+          "Integração cultural entre povos",
+          "Parcerias igualitárias entre nações",
+          "Uso de poder econômico para ganhar influência política"
+        ],
+        "correta": 3,
+        "explicacao": "Poder econômico (acesso a mercados, investimento, crédito) converte-se em influência política quando potências maiores condicionam acordos a alinhamentos de voto ou política externa: é realismo geopolítico. Difere de 'parcerias igualitárias' (que fingem igualdade) e de 'cooperação voluntária' (aqui há pressão implícita). O país pequeno 'escolhe' benefício econômico em troca de concessão política."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:d5d3c07f",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:86ac4200",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um bloco econômico como a UE requer que membros sigam regras comuns sobre meio ambiente, direitos humanos e democracia. Qual é a vantagem estratégica desta exigência para o bloco?",
+        "opcoes": [
+          "Garantir que membros compartilhem valores, estabilidade política e previsibilidade",
+          "Forçar países membros a perder toda sua soberania cultural",
+          "Impedir comércio entre membros e o resto do mundo",
+          "Diminuir o poder econômico total do bloco ao impor restrições"
+        ],
+        "correta": 0,
+        "explicacao": "Regras comuns (estado de direito, eleições livres, proteção ambiental) reduzem risco de conflitos internos e precariedade que afetaria economia coletiva. Um membro com corrupção ou ditadura ameaça investimentos e confiança, então UE exige 'critérios de Copenhague' (democracia, direitos). Não elimina diversidade, cada país mantém cultura, mas assegura piso mínimo de estabilidade que torna integração benéfica para todos."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:86ac4200",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:e9114f52",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois países membros de um bloco econômico entram em conflito territorial, mas ambos dependem economicamente do comércio regional. Qual é a dinâmica geopolítica esperada?",
+        "opcoes": [
+          "Isolamento total de ambos do bloco",
+          "Pressão interna do bloco para resolver conflito via negociação, pois guerra prejudicaria todos",
+          "Expansão do conflito para englobar todos os membros do bloco",
+          "Conflito armado imediato sem negociação"
+        ],
+        "correta": 1,
+        "explicacao": "Interdependência econômica cria desincentivo para a guerra: se dois membros entram em conflito, o comércio regional cai, prejudicando os dois e também os vizinhos. Por isso os outros membros pressionam por negociação. Esse é o argumento de teóricos liberais: trocas comerciais densas reduzem conflitos. Isolar os dois países não é algo que o bloco faça automaticamente, e conflitos não se expandem necessariamente para todos."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:e9114f52",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:bd757b00",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A transição energética global (redução de combustíveis fósseis, avanço de energia solar/eólica) está redistribuindo poder geopolítico. Qual região ganha mais influência neste cenário?",
+        "opcoes": [
+          "Nenhuma mudança geopolítica ocorre com transição energética",
+          "Regiões com reservas petrolíferas (Oriente Médio, Rússia) ganham ainda mais poder",
+          "Regiões com minérios raros e tecnologia solar/eólica (China, África) ganham influência crescente",
+          "Regiões árticas perdem completamente relevância estratégica"
+        ],
+        "correta": 2,
+        "explicacao": "A transição para fontes renováveis tende a dar peso a quem domina a tecnologia e os minerais necessários. A China lidera a produção de painéis solares e baterias, e países com lítio, cobre e cobalto (como Chile, Bolívia, Austrália e República Democrática do Congo) ganham importância. Com menor demanda futura por petróleo, os grandes exportadores de combustíveis fósseis tendem a perder peso relativo. É uma mudança estrutural na geopolítica dos recursos."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:bd757b00",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.446Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:geo:geopolitica-globalizacao:a95171ec",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A globalização econômica interconecta mercados e empresas em escala mundial. Qual é um impacto direto dessa interconexão?",
+        "opcoes": [
+          "Eliminação de conflitos comerciais",
+          "Redução de interdependência entre países",
+          "Crise em um país afeta economias de outros países conectados",
+          "Desaparecimento completo das moedas nacionais"
+        ],
+        "correta": 2,
+        "explicacao": "Globalização cria cadeias de suprimento internacionais e fluxos financeiros transnacionais. Quando uma economia enfrenta crise, como os EUA em 2008, o impacto se propaga globalmente através de bancos, comércio e investimentos. Esse é o lado sombrio da interconexão: a vulnerabilidade sistêmica aumenta."
+      },
+      "meta": {
+        "id": "gen:geo:geopolitica-globalizacao:a95171ec",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:31:19.309Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-geo-geopolitica-globalizacao",
+      "version": 1,
+      "format": 2,
+      "subjectId": "geo",
+      "topicId": "geopol",
+      "chapterId": "gen-geo-geopolitica-globalizacao",
+      "title": "Blocos econômicos e poder",
+      "objective": "Analisar um conflito ou bloco econômico usando conceitos de geopolítica",
+      "skillIds": [
+        "geo:geopolitica-globalizacao"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:geo:geopolitica-globalizacao:a95171ec",
+        "gen:geo:geopolitica-globalizacao:0e05c39c"
+      ],
+      "recap": "Blocos econômicos vão de acordos bilaterais a uniões com moeda comum. Poder econômico, como comércio, crédito e sanções, funciona como ferramenta de influência política.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Blocos econômicos e poder",
+          "body": "Você vai identificar o nível de integração de um bloco econômico e como poder econômico gera influência política."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Níveis de integração",
+            "body": "Acordo bilateral reduz tarifas entre dois países. Zona de livre comércio elimina tarifas entre vários membros, mas cada um mantém regras externas próprias. Mercado comum, como a União Europeia, garante livre circulação de pessoas, bens, serviços e capital, sem virar federação: os países mantêm governos e fronteiras próprios."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:geopolitica-globalizacao:3b3f208f",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:geopolitica-globalizacao:ddb9894d",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Economia vira política",
+            "body": "Um país com mais mercado, crédito ou investimento pode condicionar acordos a apoio político de outro país. O BRICS (Brasil, Rússia, Índia, China e novos membros) existe porque essas economias cresceram e passaram a questionar a hegemonia de Estados Unidos e Europa."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:geopolitica-globalizacao:d5d3c07f",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:geopolitica-globalizacao:d1d6bfb8",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Questões de geopolítica costumam citar um motivo moral para um conflito. Verifique se por trás não há interesse econômico ou disputa de poder, porque geralmente há."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Pressão sem guerra",
+            "problem": "Em 1973, países árabes produtores de petróleo cortaram exportações para nações que apoiavam Israel na Guerra do Yom Kippur.",
+            "steps": [
+              "O alvo não era a guerra, e sim usar um recurso essencial para forçar mudança política.",
+              "A alta de preços gerada pressionou os países-alvo a reconsiderar sua posição."
+            ],
+            "result": "É o mesmo mecanismo das sanções econômicas atuais: usar dependência como arma política."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:geo:geopolitica-globalizacao:3008789e",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Blocos econômicos vão de acordos bilaterais a uniões com moeda comum. Poder econômico, como comércio, crédito e sanções, funciona como ferramenta de influência política."
+        }
+      ]
+    }
+  ]
+}

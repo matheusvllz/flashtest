@@ -1,20 +1,46 @@
 import { useSyncExternalStore } from "react";
 import type { TutorFocus, TutorMessage } from "@/lib/tutor-prompt";
+import type { PedagogicalContext } from "@/lib/tutor-context";
 import type { LessonProgress } from "@/lib/lessons/types";
-import type { Attempt, ExamTarget, LearningState, TipHistoryEntry } from "@/lib/learning/types";
+import type {
+  Attempt,
+  ExamTarget,
+  FocusSession,
+  LearningEvent,
+  LearningEventType,
+  LearningState,
+  PlacementState,
+  SkillModelEntry,
+  StudyFocus,
+  TipHistoryEntry,
+} from "@/lib/learning/types";
 import {
   learningStateVazio,
+  LIMITE_EVENTOS,
   LIMITE_HISTORICO_DICAS,
+  LIMITE_HISTORICO_JORNADA,
   LIMITE_TENTATIVAS_RECENTES,
 } from "@/lib/learning/types";
+import type { PlannedActivity } from "@/lib/adaptive/types";
 import { recordAttemptForSkill } from "@/lib/learning/review";
 import {
+  BACKUP_KEY_V6,
   computeAdditiveFields,
   CURRENT_SCHEMA_VERSION,
   ensureBackup,
   parseStoredState,
 } from "@/lib/state-migrations";
 import { SUBJECT_MAP } from "@/data/subjects";
+import { FEATURES } from "@/lib/features";
+import { probabilityCorrect, updateSkill, type ItemIrtLike } from "@/lib/adaptive/model";
+import { ALGO_VERSION, PESO_HABILIDADE_SECUNDARIA, PESO_REPETICAO_MESMO_DIA, PLACEMENT_PRIOR_MEAN, PLACEMENT_PRIOR_SD, THETA_PRIOR } from "@/lib/adaptive/constants";
+import {
+  advancePlacement,
+  placementConcluido,
+  startPlacement,
+  type PlacementPoolItem,
+  type PlacementScope,
+} from "@/lib/adaptive/placement";
 
 export type Prefs = {
   name: string;
@@ -42,6 +68,14 @@ export type Prefs = {
   showExamTips: boolean;
   /** Schema v5 (docs/25 §7.6) — matéria selecionada nos chips da trilha; `null` = nenhuma ainda. */
   trailSubjectId: string | null;
+  /** Schema v6 (docs/30 §15) — foco PERMANENTE (não confundir com `learning.focusSession`, temporário). */
+  studyFocus: StudyFocus;
+  /** Schema v6 (docs/30 §12.2) — matérias que o aluno declarou "vou bem" no onboarding. */
+  easySubjects: string[];
+  /** Schema v6 (docs/30 §12.2/§21.1) — minutos de estudo por dia declarados; um de 5/10/15/20/30. */
+  dailyMinutes: 5 | 10 | 15 | 20 | 30;
+  /** Schema v6 (docs/30 §13.6) — 1 = onboarding antigo (ganha oferta de nivelamento na home), 2 = fluxo novo (já oferecido no próprio onboarding). */
+  onboardingVersion: number;
 };
 
 /** Resposta de calibração dada durante o quiz de entrada. */
@@ -132,6 +166,10 @@ export type AppState = {
     open: boolean;
     messages: TutorMessage[];
     focus: TutorFocus | null;
+    /** Docs/30 §17, Fase 7 — o que o motor adaptativo sabe sobre a habilidade em foco. Sempre estado de UI, nunca persiste (ver `load()`). */
+    pedagogy: PedagogicalContext | null;
+    /** Mensagem a enviar automaticamente assim que o balão abrir com este foco (nível 3, "Me ensina do começo") — consumida uma vez por `TutorBubble` e limpa em seguida. */
+    autoSend: string | null;
   };
   premiumTrial: { active: boolean; startedAt: string | null };
   offline: { downloaded: boolean };
@@ -208,6 +246,13 @@ const defaultState: AppState = {
     examTargets: [],
     showExamTips: true,
     trailSubjectId: null,
+    studyFocus: { mode: "todas", subjectIds: [], areas: [] },
+    easySubjects: [],
+    dailyMinutes: 10,
+    // Quem cria conta agora já nasce no fluxo novo (oferta de nivelamento
+    // dentro do próprio onboarding, docs/30 §12/§13.6) — só quem já existia
+    // antes vira "1" na migração (`computeAdditiveFields`).
+    onboardingVersion: 2,
   },
   learning: learningStateVazio(),
   progress: {
@@ -231,13 +276,48 @@ const defaultState: AppState = {
     today: todayBucketVazio(hojeISO()),
   },
   quiz: { answers: [], gaps: [], completedAt: null },
-  tutor: { open: false, messages: [], focus: null },
+  tutor: { open: false, messages: [], focus: null, pedagogy: null, autoSend: null },
   premiumTrial: { active: false, startedAt: null },
   offline: { downloaded: false },
 };
 
 let state: AppState = defaultState;
 const listeners = new Set<() => void>();
+
+let bootstrapAgendado = false;
+
+/**
+ * Dispara o bootstrap/replay do modelo adaptativo em segundo plano (docs/30
+ * §9.6, Fase 5) — `import()` dinâmico de propósito, ver o comentário em
+ * `load()`. `setState` já persiste e notifica os observadores quando
+ * termina; se `load()` for chamada de novo antes disso (não deveria — só
+ * roda 1x por sessão via `hydrate()`), a segunda chamada não dispara outra
+ * vez. Falha (rede/parse) nunca quebra a sessão: o modelo só fica vazio até
+ * a próxima carga da página tentar de novo.
+ */
+function agendarBootstrapAdaptativo(iso: string): void {
+  if (bootstrapAgendado) return;
+  bootstrapAgendado = true;
+  void (async () => {
+    try {
+      const { bootstrapModel } = await import("@/lib/adaptive/bootstrap");
+      setState((s) => {
+        // Reconfere a condição: a sessão pode ter mudado a flag ou já
+        // recebido um bootstrap por outro caminho entre o agendamento e a
+        // resolução do import (raro, mas o `setState` não pode assumir que
+        // nada mudou).
+        if (FEATURES.masteryModel === "off" || s.learning.modelMeta.algoVersion >= ALGO_VERSION) return s;
+        s.learning.skillModel = bootstrapModel(s, iso);
+        s.learning.modelMeta = { algoVersion: ALGO_VERSION, bootstrappedAt: iso };
+        return s;
+      });
+    } catch {
+      // Sem bootstrap nesta sessão — nada quebra; a próxima carga tenta de novo.
+    } finally {
+      bootstrapAgendado = false;
+    }
+  })();
+}
 
 /**
  * Lê e migra o estado salvo (docs/20 §15.3, Fase 5). A fusão dos campos que
@@ -263,14 +343,22 @@ function load() {
     if (warning) console.warn(`[store] ${warning}`);
     if (!parsed) return; // storage ilegível: segue com defaultState, nada é sobrescrito às cegas.
 
+    const iso = hojeISO();
     ensureBackup(
       raw,
       (k) => localStorage.getItem(k),
       (k, v) => localStorage.setItem(k, v),
     );
-    const aditivos = computeAdditiveFields(parsed);
+    // Backup dedicado da migração v6 (docs/30 §21.1/§24.1) — mesma regra:
+    // uma vez, nunca sobrescrito (`ensureBackup` já no-opa se a chave existir).
+    ensureBackup(
+      raw,
+      (k) => localStorage.getItem(k),
+      (k, v) => localStorage.setItem(k, v),
+      BACKUP_KEY_V6,
+    );
+    const aditivos = computeAdditiveFields(parsed, iso);
 
-    const iso = hojeISO();
     const parsedProgress = (parsed.progress ?? {}) as Partial<Progress>;
     const parsedToday = parsedProgress.today;
     state = {
@@ -283,6 +371,10 @@ function load() {
         examTargets: aditivos.examTargets,
         showExamTips: aditivos.showExamTips,
         trailSubjectId: aditivos.trailSubjectId,
+        studyFocus: aditivos.studyFocus,
+        easySubjects: aditivos.easySubjects,
+        dailyMinutes: aditivos.dailyMinutes,
+        onboardingVersion: aditivos.onboardingVersion,
       },
       learning: aditivos.learning,
       progress: {
@@ -309,6 +401,31 @@ function load() {
       premiumTrial: { ...defaultState.premiumTrial, ...(parsed.premiumTrial || {}) },
       offline: { ...defaultState.offline, ...(parsed.offline || {}) },
     };
+
+    // Bootstrap/replay do modelo adaptativo (docs/30 §9.6, Fase 5) — só
+    // quando o algoritmo mudou de versão desde a última gravação (inclusive
+    // nunca ter rodado, algoVersion 0), a versão do storage não é futura
+    // (mesma regra do resto da migração) E a flag não está "off" — desligada
+    // quer dizer inerte de verdade, zero computação, não só escondida da UI.
+    //
+    // ADIADO por `import()` dinâmico (`agendarBootstrapAdaptativo` abaixo),
+    // de propósito: `src/lib/adaptive/bootstrap.ts` importa `@/content/items`
+    // e `@/content/taxonomy`, que arrastam TODO o catálogo de conteúdo (15
+    // trilhas, ~580 KB minificados). `store.ts` é importado por praticamente
+    // toda tela (via `AppShell`) — um `import` estático aqui juntava esse
+    // catálogo inteiro no chunk de toda rota, não só de `/trilha`/`/redacao`
+    // (achado real desta sessão: comparar `dist/assets/AppShell-*.js` antes
+    // e depois — 835 KB vs. a soma anterior de AppShell + chunk `trilhas-*`
+    // separado). `load()` continua 100% síncrono; o bootstrap roda em
+    // segundo plano, sem bloquear a primeira renderização.
+    if (
+      !aditivos.futureVersion &&
+      FEATURES.masteryModel !== "off" &&
+      state.learning.modelMeta.algoVersion < ALGO_VERSION
+    ) {
+      agendarBootstrapAdaptativo(iso);
+    }
+
     // Grava a migração de volta — sem isso, o schema v4 (schemaVersion,
     // `learning`, campos aditivos) só existiria em memória até a próxima
     // mutação, e uma nova aba/sessão re-migraria do zero a cada vez em vez
@@ -789,7 +906,71 @@ function horasEntre(isoA: string, isoB: string): number {
  * Fase 7 item 1/3). Poda o histórico de tentativas recentes sem nunca tocar
  * XP/ledger (a poda não pode liberar recompensa de novo).
  */
-export function recordLearningAttempt(attempt: Attempt): void {
+/**
+ * Fase 5 (docs/30 §9.4/§21.1, modo sombra) — atualiza `learning.skillModel`
+ * NA MESMA transação da tentativa, só quando `FEATURES.masteryModel !==
+ * "off"`. A habilidade principal (`attempt.skillIds[0]`) recebe peso cheio;
+ * as demais (item multi-habilidade) recebem `PESO_HABILIDADE_SECUNDARIA`.
+ * Repetir o MESMO item no MESMO dia local pesa `PESO_REPETICAO_MESMO_DIA`
+ * (combinado por multiplicação com o peso de secundária, se os dois
+ * acontecerem juntos). `predictedP` é gravado na tentativa ANTES da
+ * atualização (probabilidade prevista pelo modelo, só diagnóstico —
+ * docs/30 §27), usando a habilidade principal.
+ */
+/**
+ * `meta` é passado pelo CHAMADOR (docs/30 §21.1) — `store.ts` de propósito
+ * não importa `@/content/items` aqui: esse módulo arrasta `@/content/
+ * microlicoes`/`@/content/trilhas` (o catálogo inteiro, ~580 KB), e
+ * `store.ts` é importado por quase toda tela via `AppShell`. Quem já sabe o
+ * item (o player, que já resolveu o exercício pra renderizar) passa a
+ * dificuldade/IRT prontos; sem `meta`, o modelo simplesmente não atualiza
+ * pra esta tentativa (seguro — a flag `masteryModel` também tem que estar
+ * ligada, e hoje só `useLearningSession` passa `meta`).
+ */
+function aplicarModeloAdaptativo(
+  s: AppState,
+  attempt: Attempt,
+  repetidoHoje: boolean,
+  meta: { irt: ItemIrtLike; difficulty?: 1 | 2 | 3 | 4 | 5 } | undefined,
+): Attempt {
+  if (FEATURES.masteryModel === "off" || attempt.skillIds.length === 0 || !meta) return attempt;
+
+  const assisted = attempt.assisted ?? (attempt.hintUsed || attempt.tutorUsed);
+  const entradaPrimaria = s.learning.skillModel[attempt.skillIds[0]];
+  const predictedP =
+    attempt.response === "dont-know"
+      ? undefined
+      : probabilityCorrect(entradaPrimaria?.theta ?? THETA_PRIOR, meta.irt);
+
+  attempt.skillIds.forEach((skillId, indice) => {
+    const secundaria = indice > 0;
+    const multiplicador =
+      (secundaria ? PESO_HABILIDADE_SECUNDARIA : 1) * (repetidoHoje ? PESO_REPETICAO_MESMO_DIA : 1);
+    s.learning.skillModel[skillId] = updateSkill(
+      s.learning.skillModel[skillId],
+      skillId,
+      { role: attempt.role, correct: attempt.correct, response: attempt.response, assisted },
+      meta.irt,
+      attempt.localDate,
+      { difficulty: meta.difficulty, weightMultiplier: multiplicador },
+    );
+  });
+
+  return predictedP !== undefined ? { ...attempt, predictedP } : attempt;
+}
+
+/**
+ * `itemMeta` é opcional e vem do CHAMADOR (docs/30 §21.1 — ver o comentário
+ * em `aplicarModeloAdaptativo`): quem já resolveu o exercício pra
+ * renderizar (ex. `useLearningSession`, via `itemMetaOf` de `@/content/
+ * items`) passa a dificuldade/IRT prontos. Sem isso, a tentativa é gravada
+ * normalmente (evidência/agenda/XP — nada disso depende de `itemMeta`), só
+ * o modelo de Mastery/Confidence não atualiza pra ela.
+ */
+export function recordLearningAttempt(
+  attempt: Attempt,
+  itemMeta?: { irt: ItemIrtLike; difficulty?: 1 | 2 | 3 | 4 | 5 },
+): void {
   setState((s) => {
     // Horas desde a última tentativa que toca QUALQUER habilidade em comum,
     // calculado ANTES de empilhar a nova (docs/20 §13: recuperação de
@@ -801,8 +982,13 @@ export function recordLearningAttempt(attempt: Attempt): void {
     const horasDesdeUltimaExposicao = ultima
       ? horasEntre(ultima.submittedAt, attempt.submittedAt)
       : Infinity;
+    const repetidoHoje = anteriores.some(
+      (a) => a.exerciseId === attempt.exerciseId && a.localDate === attempt.localDate,
+    );
 
-    s.learning.recentAttempts.push(attempt);
+    const attemptFinal = aplicarModeloAdaptativo(s, attempt, repetidoHoje, itemMeta);
+
+    s.learning.recentAttempts.push(attemptFinal);
     if (s.learning.recentAttempts.length > LIMITE_TENTATIVAS_RECENTES) {
       s.learning.recentAttempts.shift();
     }
@@ -848,6 +1034,195 @@ export function setShowExamTips(enabled: boolean) {
 export function setTrailSubject(subjectId: string | null) {
   setState((s) => {
     s.prefs.trailSubjectId = subjectId;
+    return s;
+  });
+}
+
+/* ------------------------------------------------------ aprendizagem adaptativa (docs/30, Fase 4 do docs/31) --- */
+
+/** Foco PERMANENTE (docs/30 §15) — distinto de `startFocusSession` (temporária, "só hoje"). */
+export function setStudyFocus(focus: StudyFocus) {
+  setState((s) => {
+    s.prefs.studyFocus = focus;
+    const agora = new Date();
+    const evento: LearningEvent = {
+      type: "focus-changed",
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      meta: { escopo: "permanente", subjectIds: focus.subjectIds.join(",") },
+    };
+    s.learning.events.push(evento);
+    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    return s;
+  });
+}
+
+export function setEasySubjects(subjectNames: string[]) {
+  setState((s) => {
+    s.prefs.easySubjects = subjectNames;
+    return s;
+  });
+}
+
+export function setDailyMinutes(minutes: 5 | 10 | 15 | 20 | 30) {
+  setState((s) => {
+    s.prefs.dailyMinutes = minutes;
+    return s;
+  });
+}
+
+/** Sessão de foco "só hoje" (docs/30 §15) — expira sozinha no fim do dia local (lida por `parseFocusSession` na migração). */
+export function startFocusSession(subjectIds: string[]) {
+  setState((s) => {
+    const agora = new Date();
+    s.learning.focusSession = { subjectIds, startedAt: agora.toISOString(), expiresOn: hojeISO(agora) };
+    const evento: LearningEvent = {
+      type: "focus-changed",
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      meta: { escopo: "sessao", subjectIds: subjectIds.join(",") },
+    };
+    s.learning.events.push(evento);
+    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    return s;
+  });
+}
+
+export function clearFocusSession() {
+  setState((s) => {
+    s.learning.focusSession = null;
+    return s;
+  });
+}
+
+/* --------------------------------------------------------- nivelamento (docs/30 §12.3, Fase 13 do docs/31) --- */
+
+/**
+ * `scope`/`item`/pool vêm do CHAMADOR (a rota `/nivelamento`, que já paga o
+ * custo de `@/content/taxonomy`/`@/content/items`) — `store.ts` só chama
+ * `@/lib/adaptive/placement` (motor puro, sem import de conteúdo), nunca
+ * `placement-pool.ts` (mesma regra de fronteira de bundle de
+ * `aplicarModeloAdaptativo` acima).
+ */
+
+/** Começa um nivelamento novo, OU retoma o que já está em andamento/abandonado sem apagar respostas (docs/30 §12.3, caso de borda). */
+export function beginPlacement(seed: string) {
+  setState((s) => {
+    if (s.learning.placement && s.learning.placement.status !== "concluido") return s;
+    s.learning.placement = startPlacement(seed, new Date().toISOString());
+    return s;
+  });
+}
+
+/**
+ * Grava o `PlacementState` calculado pelo CHAMADOR (a rota `/nivelamento`,
+ * via `pickPlacementItem`/`placementConcluido` de `@/lib/adaptive/
+ * placement`, que às vezes fecha uma área sozinho quando o pool acaba antes
+ * de bater SE/limite — docs/32 Fase 13). Setter genérico, sem regra própria.
+ */
+export function setPlacementState(state: PlacementState) {
+  setState((s) => {
+    s.learning.placement = state;
+    return s;
+  });
+}
+
+/** Marca o nivelamento em andamento como abandonado — respostas já dadas continuam contando; "Continuar" retoma dali (docs/30 §12.3). */
+export function abandonPlacement() {
+  setState((s) => {
+    if (s.learning.placement?.status === "em-andamento") {
+      s.learning.placement = { ...s.learning.placement, status: "abandonado" };
+    }
+    return s;
+  });
+}
+
+/**
+ * Registra UMA resposta do nivelamento: recalcula o θ̂/SE da área
+ * (`learning.placement`) e, na mesma transação, atualiza Mastery/Confidence
+ * de VERDADE da habilidade do item via `updateSkill` (papel "diagnostico",
+ * peso 1,2 — docs/30 §12.3) — a habilidade medida diretamente vira
+ * `source: "evidencia"` na hora, não fica presa esperando o fim do
+ * nivelamento. `itemsById` precisa conter TODO item já respondido nesta
+ * área (o motor recalcula o EAP inteiro a cada resposta) — a rota mantém
+ * esse mapa conforme os itens vão sendo mostrados.
+ */
+export function submitPlacementResponse(
+  scope: PlacementScope,
+  itemsById: Map<string, PlacementPoolItem>,
+  item: PlacementPoolItem,
+  correct: boolean,
+  dontKnow: boolean,
+) {
+  setState((s) => {
+    const antes = s.learning.placement;
+    if (!antes) return s;
+    const areaAntes = antes.areas[item.area];
+    const thetaColdStart = areaAntes?.theta ?? PLACEMENT_PRIOR_MEAN;
+    const seColdStart = areaAntes?.se ?? PLACEMENT_PRIOR_SD;
+
+    let depois = advancePlacement(antes, scope, item, correct, dontKnow, itemsById);
+
+    const entradaAtual = s.learning.skillModel[item.skillId];
+    s.learning.skillModel[item.skillId] = updateSkill(
+      entradaAtual,
+      item.skillId,
+      { role: "diagnostico", correct, response: dontKnow ? "dont-know" : "answered" },
+      item.irt,
+      hojeISO(),
+      entradaAtual ? {} : { prior: { theta: thetaColdStart, sigma: seColdStart, source: "prior-nivelamento" } },
+    );
+
+    if (placementConcluido(depois, scope)) {
+      const agora = new Date();
+      depois = { ...depois, status: "concluido", finishedAt: agora.toISOString() };
+      const evento: LearningEvent = {
+        type: "placement-completed",
+        at: agora.toISOString(),
+        localDate: hojeISO(agora),
+      };
+      s.learning.events.push(evento);
+      if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    }
+    s.learning.placement = depois;
+    return s;
+  });
+}
+
+/**
+ * Fecha o nivelamento: substitui `learning.skillModel` pelo resultado de
+ * `applyPlacement` (Fase 13 F13.5) — já calculado pelo CHAMADOR (a tela de
+ * resultado, que importa `placement-pool.ts`). Habilidades medidas
+ * diretamente já chegaram como `"evidencia"` via `submitPlacementResponse`;
+ * esta troca só acrescenta os priors das habilidades não medidas.
+ */
+export function finishPlacement(skillModelComPriors: Record<string, SkillModelEntry>) {
+  setState((s) => {
+    s.learning.skillModel = skillModelComPriors;
+    return s;
+  });
+}
+
+/**
+ * Anel de eventos locais (docs/30 §21.4) — nunca enviado, só pro painel de
+ * debug (Fase 8) e pra diagnosticar o motor adaptativo. `recordEvent` é a
+ * ÚNICA função que grava em `learning.events` — chamadores não empurram
+ * direto no array.
+ */
+export function recordEvent(
+  type: LearningEventType,
+  extra?: { skillId?: string; activityId?: string; meta?: Record<string, string | number | boolean> },
+): void {
+  setState((s) => {
+    const agora = new Date();
+    const evento: LearningEvent = {
+      type,
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      ...extra,
+    };
+    s.learning.events.push(evento);
+    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
     return s;
   });
 }
@@ -898,23 +1273,234 @@ export function closeTutor() {
   });
 }
 
-/** Aponta a IA para a questão da vez. `null` desfoca (fora da aula). */
+/**
+ * Aponta a IA para a questão da vez. `null` desfoca (fora da aula). Sempre
+ * zera `pedagogy`: esta função não recebe contexto pedagógico novo, e
+ * mantê-lo do foco anterior deixaria a IA falando da habilidade ERRADA
+ * quando a questão muda sem passar por `openTutorWithContext` (ex.:
+ * `study.tsx` atualizando o foco a cada nova questão da aula).
+ */
 export function setTutorFocus(focus: TutorFocus | null) {
   setState((s) => {
     s.tutor.focus = focus;
+    s.tutor.pedagogy = null;
     return s;
   });
 }
 
 /**
  * Abre o balão e fixa o contexto da questão da vez — ação explícita dos CTAs
- * "Perguntar à Foca" / "Explicar melhor" (docs/20 §4.2). Nunca chama a API:
- * só quando o aluno digitar ou tocar numa sugestão é que uma mensagem sai.
+ * "Perguntar à Foca" / "Explicar melhor" (docs/20 §4.2). Nunca chama a API
+ * sozinho: só quando o aluno digitar, tocar numa sugestão OU pedir
+ * explicitamente o nível 3 ("Me ensina do começo", via `opts.autoSend`) é
+ * que uma mensagem sai — nesse último caso a intenção já É a mensagem
+ * automática, não uma chamada escondida.
+ *
+ * `opts.pedagogy` (docs/30 §17, Fase 7): montado por quem já paga o custo
+ * do import de conteúdo (`tutor-context.ts#buildPedagogicalContext`,
+ * chamado pela TELA, nunca por aqui — ver o aviso de bundle no topo do
+ * próprio `tutor-context.ts`).
  */
-export function openTutorWithContext(focus: TutorFocus) {
+export function openTutorWithContext(
+  focus: TutorFocus,
+  opts?: { pedagogy?: PedagogicalContext | null; autoSend?: string | null },
+) {
   setState((s) => {
     s.tutor.open = true;
     s.tutor.focus = focus;
+    s.tutor.pedagogy = opts?.pedagogy ?? null;
+    s.tutor.autoSend = opts?.autoSend ?? null;
+    // Observabilidade (docs/30 §21.4, Fase 8): só quando abre COM contexto
+    // pedagógico — o botão flutuante genérico (`openTutor`) não conta como
+    // "pediu ajuda pra habilidade X", não tem habilidade nenhuma em jogo.
+    if (opts?.pedagogy) {
+      const agora = new Date();
+      const evento: LearningEvent = {
+        type: "ai-help-opened",
+        at: agora.toISOString(),
+        localDate: hojeISO(agora),
+        skillId: opts.pedagogy.skillId,
+        meta: { mode: opts.pedagogy.mode },
+      };
+      s.learning.events.push(evento);
+      if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    }
+    return s;
+  });
+}
+
+/** Consumida por `TutorBubble` depois de disparar o auto-envio do nível 3 — evita reenvio em re-render. */
+export function clearTutorAutoSend() {
+  setState((s) => {
+    s.tutor.autoSend = null;
+    return s;
+  });
+}
+
+/* ------------------------------------------------------------- jornada (docs/30 §14, Fase 12) --- */
+
+/**
+ * Ações "burras" da jornada — só gravam dados já decididos. A DECISÃO (o
+ * plano em si, via `planWithFallback`) é sempre de quem chama
+ * (`src/lib/adaptive/journey.ts#ensurePlan` + a tela/hook), nunca daqui —
+ * `store.ts` não pode importar `@/lib/adaptive/journey` nem `/index`
+ * (puxam taxonomia/itens; guardado por `store-bundle-boundary.test.ts`).
+ */
+export function commitPlan(committed: PlannedActivity[], upcoming: PlannedActivity[]) {
+  setState((s) => {
+    s.learning.journey.committed = committed;
+    s.learning.journey.upcoming = upcoming;
+    s.learning.journey.planVersion = ALGO_VERSION;
+    return s;
+  });
+}
+
+/**
+ * Esvazia `committed`/`upcoming` sem decidir nada (ação "burra", mesmo
+ * contrato de `commitPlan`) — força `ensurePlan` a replanejar da próxima vez
+ * que `/trilha` montar, mesmo que essa montagem seja a PRIMEIRA depois de uma
+ * navegação entre rotas (o guard de `ensurePlan` é só `committed.length <
+ * COMMITTED_SIZE`, então não depende de comparar com um valor anterior "ainda
+ * vivo" em memória, ao contrário do guard de `forceReplan` por mudança de
+ * foco). Usado quando algo muda os PRIORS de fora da própria tela da jornada
+ * — hoje só o nivelamento (docs/30 §12, achado de teste em dispositivo
+ * físico docs/32 F15.3): sem isto, a trilha voltava do nivelamento com o
+ * mesmo plano de antes, porque `committed` já estava cheio e `planVersion`
+ * em dia.
+ */
+export function invalidateJourneyPlan() {
+  setState((s) => {
+    s.learning.journey.committed = [];
+    s.learning.journey.upcoming = [];
+    return s;
+  });
+}
+
+export function setActiveActivity(activity: PlannedActivity) {
+  setState((s) => {
+    s.learning.journey.activeActivity = activity;
+    const agora = new Date();
+    const evento: LearningEvent = {
+      type: "activity-started",
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      activityId: activity.id,
+      skillId: activity.skillIds[0],
+    };
+    s.learning.events.push(evento);
+    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    return s;
+  });
+}
+
+/** XP por faixa de acerto (docs/30 §14.4): prática/desafio/reforço 10/20/30 (`starsForPct`); revisão 5 fixo; checkpoint 20 fixo. */
+function xpAlvoDaAtividade(kind: PlannedActivity["kind"], correct: number, total: number): number {
+  if (kind === "revisao") return 5;
+  if (kind === "checkpoint") return 20;
+  const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+  return XP_BY_STARS[starsForPct(pct)];
+}
+
+/**
+ * Fecha uma atividade da jornada (docs/30 §14.4) — XP idempotente via
+ * `rewardLedger["atividade:<id>"]` (mesmo padrão de `registrarResposta`),
+ * conta como bloco do dia, empilha histórico (podado em
+ * `LIMITE_HISTORICO_JORNADA`), tira do topo de `committed` SÓ se for
+ * mesmo a atividade ativa (nunca uma comprometida que não começou), e
+ * zera/avança `sinceCheckpoint`. NÃO replaneja sozinho — `committed`
+ * fica com < 3 depois disto de propósito, e é isso que faz `ensurePlan`
+ * (chamado pela tela, no próximo render) perceber que precisa repor.
+ */
+export function completeJourneyActivity(
+  activity: PlannedActivity,
+  correct: number,
+  total: number,
+): { xpAwarded: number; stars: 1 | 2 | 3 | null } {
+  const ledgerKey = `atividade:${activity.id}`;
+  const jaPago = getState().learning.rewardLedger[ledgerKey]?.xp ?? 0;
+  const alvo = xpAlvoDaAtividade(activity.kind, correct, total);
+  const xpAwarded = Math.max(0, alvo - jaPago);
+  const stars = total > 0 ? starsForPct(Math.round((correct / total) * 100)) : null;
+
+  setState((s) => {
+    if (xpAwarded > 0) {
+      s.progress.xp += xpAwarded;
+      s.learning.rewardLedger[ledgerKey] = { key: ledgerKey, awardedAt: new Date().toISOString(), xp: jaPago + xpAwarded };
+    }
+    registrarAtividade(s, "lesson", true);
+
+    const agora = new Date();
+    const pct = total > 0 ? Math.round((correct / total) * 100) : null;
+    s.learning.journey.history.push({
+      activityId: activity.id,
+      kind: activity.kind,
+      skillIds: activity.skillIds,
+      subjectId: activity.subjectId,
+      completedAt: agora.toISOString(),
+      scorePct: pct,
+    });
+    if (s.learning.journey.history.length > LIMITE_HISTORICO_JORNADA) s.learning.journey.history.shift();
+
+    if (activity.kind === "checkpoint") {
+      s.learning.journey.sinceCheckpoint = 0;
+      s.learning.journey.lastCheckpointDate = hojeISO(agora);
+    } else {
+      s.learning.journey.sinceCheckpoint += 1;
+    }
+
+    if (s.learning.journey.committed[0]?.id === activity.id) {
+      s.learning.journey.committed = s.learning.journey.committed.slice(1);
+    }
+    if (s.learning.journey.activeActivity?.id === activity.id) {
+      s.learning.journey.activeActivity = null;
+    }
+
+    const evento: LearningEvent = {
+      type: "activity-completed",
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      activityId: activity.id,
+      skillId: activity.skillIds[0],
+      meta: pct !== null ? { scorePct: pct } : undefined,
+    };
+    s.learning.events.push(evento);
+    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+
+    return s;
+  });
+
+  return { xpAwarded, stars };
+}
+
+/**
+ * Aula/legado iniciados pela jornada terminam pela rota existente
+ * (`completeMicroLesson`/`completeLesson`, que já pagam XP) — esta função
+ * só DETECTA que a `activeActivity` foi concluída por fora e move pro
+ * histórico, sem pagar XP de novo (docs/30 §14.4). Chamar ao voltar pra
+ * home, nunca dentro do próprio player.
+ */
+export function syncJourneyWithCompletions() {
+  setState((s) => {
+    const ativa = s.learning.journey.activeActivity;
+    if (!ativa || !ativa.lessonId) return s;
+    const concluida =
+      ativa.kind === "legado" ? Boolean(s.progress.lessons[ativa.lessonId]) : Boolean(s.learning.completedLessons[ativa.lessonId]);
+    if (!concluida) return s;
+
+    const agora = new Date();
+    s.learning.journey.history.push({
+      activityId: ativa.id,
+      kind: ativa.kind,
+      skillIds: ativa.skillIds,
+      subjectId: ativa.subjectId,
+      completedAt: agora.toISOString(),
+      scorePct: null,
+    });
+    if (s.learning.journey.history.length > LIMITE_HISTORICO_JORNADA) s.learning.journey.history.shift();
+    if (s.learning.journey.committed[0]?.id === ativa.id) {
+      s.learning.journey.committed = s.learning.journey.committed.slice(1);
+    }
+    s.learning.journey.activeActivity = null;
     return s;
   });
 }

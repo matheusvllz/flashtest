@@ -1,0 +1,236 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:pontuacao-virgula-regras:d702199c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um texto dissertativo contém: 'Atualmente muitas famílias brasileiras dependem de renda extra para complementar o orçamento, contudo a oferta de trabalho formal diminuiu.' Qual análise está CORRETA?",
+        "opcoes": [
+          "Há vício de pontuação; não deve haver vírgula antes de 'contudo' em enumeração.",
+          "A estrutura violaria regra de pontuação se tivesse vírgula depois de 'orçamento'.",
+          "Falta vírgula antes de 'contudo'.",
+          "A vírgula antes de 'contudo' marca a junção de duas orações coordenadas independentes."
+        ],
+        "correta": 3,
+        "explicacao": "'Contudo' é conjunção adversativa que conecta orações coordenadas. A vírgula antes dela é obrigatória porque marca a junção de duas orações independentes. A estrutura está correta: 'oração 1, vírgula + contudo + oração 2'. Omitir a vírgula deixaria a leitura ambígua."
+      },
+      "meta": {
+        "id": "gen:por:pontuacao-virgula-regras:d702199c",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:05:02.997Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:pontuacao-virgula-regras:1a7516c9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um texto jornalístico, está escrito: 'A empresa, situada no centro comercial, oferece descontos especiais para clientes antigos.' Onde a vírgula está correta?",
+        "opcoes": [
+          "A vírgula está corretamente posicionada; o termo 'situada no centro comercial' é uma oração subordinada adjetiva explicativa e exige vírgulas",
+          "Deveria haver vírgula também após 'antigos': 'A empresa, situada no centro comercial, oferece descontos especiais para clientes antigos,'",
+          "Não deveria haver vírgula nenhuma; 'situada' é essencial para identificar qual empresa",
+          "A vírgula após 'oferece' seria mais lógica gramaticalmente"
+        ],
+        "correta": 0,
+        "explicacao": "Oração adjetiva EXPLICATIVA ('situada no centro comercial') fica entre vírgulas porque oferece informação extra, não essencial. A empresa já foi identificada; o local é um detalhe. Se fosse RESTRITIVA, sem vírgula: 'A empresa que está situada no centro comercial...' (aqui o local identifica qual empresa). Diferença: explicativa = informação extra; restritiva = informação essencial. Você confundiu ou omitiu vírgulas em orações adjetivas explicativas."
+      },
+      "meta": {
+        "id": "gen:por:pontuacao-virgula-regras:1a7516c9",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.765Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:pontuacao-virgula-regras:be6a1ebd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma frase de um texto literário é: 'Correndo pela floresta, o personagem fugiu de seus perseguidores e conseguiu se esconder atrás das árvores.' O uso da vírgula está correto?",
+        "opcoes": [
+          "Não; a vírgula deveria estar após 'perseguidores', não após 'floresta'",
+          "Sim; a vírgula após 'floresta' é obrigatória porque 'Correndo pela floresta' é um adjunto adverbial de lugar (ou gerúndio introdutório) que deve ser separado da oração principal",
+          "Não; não deveria haver vírgula neste contexto porque 'correndo' é parte integrante do verbo",
+          "Sim, mas seria mais adequado usar ponto-e-vírgula em lugar de vírgula"
+        ],
+        "correta": 1,
+        "explicacao": "Adjunto adverbial inicial (gerúndio ou oração adverbial) se separa da oração principal por vírgula quando é longo ou quando causa ambiguidade sem ela. 'Correndo pela floresta' é uma oração adverbial de modo que inicia a frase; a vírgula marca a transição. Regra: adjunto adverbial inicial longo exige vírgula. Se fosse curto ('Correndo, o personagem fugiu'), seria opcional. Aqui, 'pela floresta' torna o adjunto longo, justificando a vírgula."
+      },
+      "meta": {
+        "id": "gen:por:pontuacao-virgula-regras:be6a1ebd",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.765Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:pontuacao-virgula-regras:199c1dc3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma redação sobre política, lê-se: 'O presidente vetou a proposta porque considerava desfavorável à economia, portanto, o congresso debateria a decisão em sessão extraordinária.' O uso de vírgula está correto?",
+        "opcoes": [
+          "Sim; 'portanto' é um advérbio de transição e a vírgula marca sua posição",
+          "Não; deveria haver ponto em lugar de vírgula antes de 'portanto'",
+          "Não; a vírgula antes de 'portanto' não deveria estar presente porque a oração é coordenada aditiva, não conclusiva; ou o período deveria ter ponto-e-vírgula antes de 'portanto' para separar orações independentes",
+          "Sim; a vírgula está correta porque 'portanto' é um conectivo que exige vírgula"
+        ],
+        "correta": 2,
+        "explicacao": "Conectivo 'portanto' em contexto de oração coordenada exige pontuação mais forte: ponto-e-vírgula ou ponto. Tem duas orações independentes ligadas logicamente por conclusão: exige ponto-e-vírgula ou ponto, não só vírgula. Forma corrigida: 'O presidente vetou a proposta porque considerava desfavorável à economia; portanto, o congresso debateria...' ou usar ponto. Vírgula sozinha cria erro quando liga orações coordenadas muito distantes."
+      },
+      "meta": {
+        "id": "gen:por:pontuacao-virgula-regras:199c1dc3",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.765Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:pontuacao-virgula-regras:11103178",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um trecho de redação profissional, lê-se: 'Os critérios de seleção foram: competência técnica, experiência prévia em projetos similares, comunicação clara e capacidade de liderança.' O uso de dois-pontos e vírgulas está correto?",
+        "opcoes": [
+          "Sim; os dois-pontos introduzem uma enumeração, e as vírgulas separam os itens corretamente",
+          "Não; deveria haver vírgula antes de 'e capacidade' (vírgula de série/Oxford), transformando em: 'competência técnica, experiência prévia, comunicação clara, e capacidade'",
+          "Não; o correto seria usar ponto-e-vírgula após cada item: 'competência técnica; experiência prévia; comunicação clara; e capacidade'",
+          "Sim; a frase está corretamente pontuada e não há debate sobre vírgula antes de 'e' em listas"
+        ],
+        "correta": 0,
+        "explicacao": "Em enumerações, a vírgula antes da conjunção 'e' (vírgula de série ou Oxford) é opcional em português, diferentemente do inglês. Ambas as formas são aceitas: 'competência, experiência, comunicação e liderança' (sem vírgula antes de 'e') ou 'competência, experiência, comunicação, e liderança' (com vírgula antes de 'e'). Usar ponto-e-vírgula é apropriado se os itens são muito longos ou contêm vírgulas internas. Aqui, vírgulas simples bastam. O aluno pode se confundir entre normas de enumeração; ambas estão corretas."
+      },
+      "meta": {
+        "id": "gen:por:pontuacao-virgula-regras:11103178",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.765Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

@@ -13,7 +13,18 @@
  * aluno foi substituída por companhia direta e respeitosa — humor, quando
  * aparece, é sobre a mascote/situação, nunca sobre a capacidade do aluno, e
  * cobrança (por erro OU por ausência) saiu do prompt inteiramente.
+ *
+ * Contexto pedagógico (docs/30 §17, Fase 7 do docs/31, F7.4): além da
+ * questão em foco, a Foca IA agora recebe o que o MOTOR ADAPTATIVO sabe
+ * sobre a habilidade em jogo — Mastery/Confidence, erros recentes na mesma
+ * habilidade, pré-requisitos fracos. `import type` só (nunca valor): este
+ * arquivo é importado pelo client (`TutorBubble.tsx`) e o `pedagogy` de tipo
+ * `PedagogicalContext` é montado por quem já paga o custo do import de
+ * conteúdo (`tutor-context.ts#buildPedagogicalContext`, chamado pelas
+ * telas), nunca aqui — repetir esse import runtime aqui reintroduziria o
+ * bug de bundle da Fase 5 (`store-bundle-boundary.test.ts`).
  */
+import type { PedagogicalContext } from "./tutor-context";
 
 /** Questão que o aluno está olhando agora, quando houver. */
 export type TutorFocus = {
@@ -41,6 +52,8 @@ export type TutorContext = {
   /** Frases de desempenho já calculadas pelo store — a IA só as repete. */
   performance: string[];
   focus: TutorFocus | null;
+  /** Docs/30 §17 — presente quando o item em foco resolve pra uma habilidade da taxonomia. */
+  pedagogy?: PedagogicalContext | null;
 };
 
 export type TutorMessage = {
@@ -98,15 +111,46 @@ REGRAS DE VOZ (inegociáveis):
       `Explicação de referência: ${f.explanation}`,
     );
   }
+  if (ctx.pedagogy) {
+    const g = ctx.pedagogy;
+    lines.push(
+      `\nO QUE O MOTOR ADAPTATIVO SABE sobre a habilidade "${g.skillName}" (${g.topicName}, ${g.subjectName}):`,
+      g.mastery !== null
+        ? `Domínio estimado: ${g.mastery}/100 (confiança: ${g.confidenceLabel}).`
+        : `Domínio ainda não medido com confiança suficiente (${g.confidenceLabel}).`,
+    );
+    if (g.recentErrors.length) {
+      lines.push(
+        `Erros recentes NESTA MESMA habilidade: ${g.recentErrors
+          .map((e) => `"${e.statement}" (marcou ${e.chosen ?? "nada"}, certo era ${e.correct})`)
+          .join("; ")}.`,
+      );
+    }
+    if (g.weakPrerequisites.length) {
+      lines.push(`Pré-requisitos ainda frágeis: ${g.weakPrerequisites.join(", ")}. Se o erro atual vier de lá, diga isso.`);
+    }
+    if (g.dontKnowRecent > 0) {
+      lines.push(`Ele já marcou "não sei" ${g.dontKnowRecent}x recentemente nesta habilidade — pode precisar do básico, não só do atalho.`);
+    }
+    if (g.explanationSeen !== "nenhuma") {
+      lines.push(`Ele JÁ VIU uma explicação ${g.explanationSeen} desta questão antes de perguntar — não repita do zero, avance.`);
+    }
+    if (g.examName) lines.push(`Foco de prova declarado: ${g.examName}.`);
+  }
 
   // AÇÃO + EXPECTATIVA
+  const acao =
+    ctx.pedagogy?.mode === "ensinar-do-zero"
+      ? `Ajude este aluno específico a fechar a lacuna dele. Ele pediu explicitamente para você ENSINAR DO COMEÇO — não guie com perguntinhas nem economize a explicação; explique o conceito da habilidade do zero, como se ele nunca tivesse visto, e só depois conecte com a questão específica.`
+      : `Ajude este aluno específico a fechar a lacuna dele. Explique o erro dele, não o erro médio. Quando ele ainda não respondeu, conduza com uma pergunta ou uma pista — nunca entregue a resposta de graça. Quando ele já errou, mostre onde o raciocínio desandou antes de mostrar o caminho certo.`;
+
   return `${persona}
 
 CONTEXTO DO ALUNO
 ${lines.join("\n")}
 
 SUA AÇÃO
-Ajude este aluno específico a fechar a lacuna dele. Explique o erro dele, não o erro médio. Quando ele ainda não respondeu, conduza com uma pergunta ou uma pista — nunca entregue a resposta de graça. Quando ele já errou, mostre onde o raciocínio desandou antes de mostrar o caminho certo.
+${acao}
 
 FORMATO ESPERADO
 - No máximo 4 frases curtas. É um balão de chat no celular, não uma apostila.

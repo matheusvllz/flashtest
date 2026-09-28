@@ -1,0 +1,664 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "gen:fil:epistemologia-conhecimento:c12ddbda",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma menina toca uma chama e aprende que fogo queima. Ela adquiriu esse conhecimento através de experiência direta. Qual tradição epistemológica melhor explica esse aprendizado?",
+        "opcoes": [
+          "Solipsismo, que nega que outras coisas além da própria mente existem",
+          "Racionalismo puro, que nega importância da experiência sensória",
+          "Empirismo, que sustenta conhecimento surge da experiência sensória e observação",
+          "Idealismo, que nega existência de mundo material externo"
+        ],
+        "correta": 2,
+        "explicacao": "Empirismo (Locke, Hume) argumenta que todo conhecimento tem origem na experiência sensória: nada na mente que não tenha vindo dos sentidos. Tocar fogo e sentir calor e dor é experiência sensória direta que gera conhecimento. Racionalismo minimizaria papel da experiência; idealismo negaria mundo material; solipsismo negaria outras coisas. Apenas empirismo centra-se em experiência como fonte do conhecimento."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:c12ddbda",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:106b8cff",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo afirma que conhecimento deve vir de fatos observáveis e verificáveis, e ideias não observáveis carecem de sentido. Qual corrente epistemológica sustenta essa posição?",
+        "opcoes": [
+          "Idealismo absoluto, que toma consciência como base de realidade",
+          "Fenomenologia, que estuda estruturas da experiência subjetiva",
+          "Racionalismo transcendental de Kant, baseado em estruturas mentais a priori",
+          "Positivismo lógico, que valoriza apenas proposições empiricamente verificáveis"
+        ],
+        "correta": 3,
+        "explicacao": "Positivismo lógico (Círculo de Viena) defendia que enunciados significativos são aqueles empiricamente testáveis ou analiticamente verdadeiros; metafísica e conceitos não observáveis seriam 'sem sentido'. Essa visão radicaliza empirismo ao descartar conhecimento que não passe por verificação. Kant propõe síntese de razão e experiência; idealismo prima consciência; fenomenologia estuda subjetividade. Apenas positivismo exclui o não-observável."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:106b8cff",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:528a85d9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo propõe que seres humanos possuem faculdades inatas, como capacidade de reconhecer moralidade, beleza ou estruturas lógicas, sem nunca ter aprendido de forma explícita. Como essa visão se relaciona com debates epistemológicos?",
+        "opcoes": [
+          "Ceticismo, que duvida de toda forma de conhecimento",
+          "Racionalismo, que sustenta que certas ideias e estruturas são inatas à mente",
+          "Empirismo radical, que reduz tudo a sensações e nega inatos mentais",
+          "Pragmatismo, que foca utilidade prática da crença"
+        ],
+        "correta": 1,
+        "explicacao": "Racionalismo (Descartes, Leibniz, Chomsky) sustenta que a mente tem estruturas inatas, ideias, categorias ou competências linguísticas, que não vêm apenas da experiência. Essas faculdades pré-existem e orientam como compreendemos mundo. Empirismo radical nega inatos; pragmatismo foca aplicação; ceticismo recusa conhecimento. Apenas racionalismo explica faculdades inatas como fonte de conhecimento."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:528a85d9",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:de36e59c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois filósofos discutem origem do conhecimento matemático: um diz que aprendemos geometria observando objetos físicos; outro diz que triângulos perfeitos nunca existem na natureza, então conhecimento matemático vem da razão pura. Qual tradição melhor corresponde a cada um?",
+        "opcoes": [
+          "Ambos empirismo, com diferenças em metodologia",
+          "Primeiro: racionalismo. Segundo: empirismo",
+          "Primeiro: empirismo. Segundo: racionalismo",
+          "Ambos racionalismo, com diferenças em grau"
+        ],
+        "correta": 2,
+        "explicacao": "O primeiro é empirista: observa triângulos físicos (imperfeitos) e extrai conceitos por indução. O segundo é racionalista: o triângulo perfeito é um conceito da razão, que nenhuma observação de objetos físicos produziria. Kant depois tentou resolver essa tensão propondo que razão e experiência colaboram, mas que a matemática tem fundamento a priori. Por isso a opção C ordena corretamente: empirismo primeiro, racionalismo segundo."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:de36e59c",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:df77b7f5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um empirista sustenta 'aquilo que não pode ser testado sensorialmente não pode ser conhecido'. Um racionalista questiona: 'você conhece essa própria afirmação empirista? Como?'. Qual é o melhor passo lógico da crítica racionalista?",
+        "opcoes": [
+          "A crítica é ilógica porque testamos afirmações mediante debate",
+          "Ambas posições são equivalentes e não há diferença real",
+          "O empirismo é autocorrosivo: sua própria tese não passa pelo critério empírico que propõe",
+          "Racionalismo sempre tem razão e empirismo sempre erra"
+        ],
+        "correta": 2,
+        "explicacao": "Esse é o argumento clássico contra o verificacionismo (positivismo lógico): se só é conhecível o que pode ser testado pelos sentidos, então o próprio critério não pode ser conhecido, pois não é testável sensorialmente: a tese se autorrefuta. O racionalista aponta essa tensão: o empirista precisa justificar sua tese por outra via que não a experiência. A opção C captura essa crítica reflexiva; B e D são dogmatismos; A foge do ponto."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:df77b7f5",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:b22e26dc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No fim do século XIX, uma corrente filosófica emergiu buscando superar a oposição entre racionalismo e empirismo, propondo que conhecimento resulta de interação dinâmica entre sujeito e mundo, mediada por prática. Qual tradição epistemológica é essa?",
+        "opcoes": [
+          "Intuicionismo, que privilegia insight imediato sobre razão e experiência",
+          "Neopositivismo, que radicaliza verificacionismo empírico",
+          "Idealismo absoluto, que reduz mundo a construção da mente",
+          "Pragmatismo, que avalia verdade pela aplicação prática da crença"
+        ],
+        "correta": 3,
+        "explicacao": "O pragmatismo (Peirce e James no fim do século XIX, Dewey no início do XX) propõe que a verdade de uma crença se mede pelas consequências práticas dela: pelo que 'funciona' na experiência. O conhecimento resulta da interação contínua entre organismo e ambiente: nem razão pura, nem recepção passiva de sensações, mas ação inteligente sobre o mundo. Idealismo absoluto, intuicionismo e neopositivismo não correspondem a essa descrição."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:b22e26dc",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:adc93b2a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um neurocientista descobre que conceitos abstratos (justiça, número) ativam áreas cerebrais específicas. Como um empirista e um racionalista reagiriam diferentemente a essa descoberta?",
+        "opcoes": [
+          "Empirista veria confirmação de que mesmo conceitos abstratos vêm de experiência sensória do mundo; racionalista poderia argumentar que cérebro implementa estruturas racionais a priori",
+          "Racionalista negaria que cérebro tem papel; empirista aceitaria qualquer explicação neural",
+          "Ambos concordariam que mente é imaterial e transcende cérebro",
+          "Ambos aceitariam que conceitos abstratos são apenas ativações neurais sem conteúdo real"
+        ],
+        "correta": 0,
+        "explicacao": "O empirista pode interpretar que estímulos sensoriais produziram, ao longo da vida, ativações neurais que hoje disparam diante de conceitos abstratos (experiência sedimentada). O racionalista pode responder que estruturas a priori são implementadas no cérebro: a ativação mostra que o cérebro realiza operações racionais, não que a razão se reduz à sensação. Ambos aceitam o cérebro como substrato, mas divergem sobre a fonte do conhecimento abstrato. As opções B, C e D forçam posições implausíveis."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:adc93b2a",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:99f8d7e3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo medieval argumenta que só posso conhecer Deus através de razão pura porque divindade transcende os sentidos. Qual tradição epistemológica ele está invocando?",
+        "opcoes": [
+          "Empirismo, que afirma todo conhecimento vem dos sentidos",
+          "Racionalismo, que sustenta razão acessa verdades além da experiência sensória",
+          "Nihilismo, que nega possibilidade de qualquer conhecimento",
+          "Materialismo, que reduz tudo a processos físicos"
+        ],
+        "correta": 1,
+        "explicacao": "A ideia de que a razão, sozinha, alcança verdades que ultrapassam os sentidos é a marca do racionalismo. Um exemplo medieval é Santo Anselmo, cujo argumento ontológico tenta provar a existência de Deus apenas a partir do conceito de Deus, sem recorrer à experiência. O empirismo exigiria que todo conhecimento partisse dos sentidos; o niilismo nega a possibilidade de conhecer; o materialismo reduz tudo a processos físicos."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:99f8d7e3",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:e9ae0d53",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um cientista testa uma droga: em 10 pessoas melhora sintomas, em 5 não há efeito, em 2 piora. Como ele constrói conhecimento sobre eficácia da droga?",
+        "opcoes": [
+          "Empirismo: observa casos particulares e constrói conhecimento indutivo sobre eficácia",
+          "Racionalismo: deduz logicamente que droga deve funcionar sempre",
+          "Nietzschianismo: nega possibilidade de conhecimento objetivo sobre eficácia",
+          "Dogmatismo: assume verdade sem qualquer teste"
+        ],
+        "correta": 0,
+        "explicacao": "O método científico exemplifica o empirismo: observar casos reais, coletar dados e generalizar indutivamente (a droga tem certa taxa de eficácia, com certos efeitos colaterais). O racionalismo puro deduziria sem observar; o nietzschianismo duvidaria da objetividade; o dogmatismo dispensaria testes. O empirismo é a base do método científico experimental: conhecimento por observação e indução de padrões."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:e9ae0d53",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:ad89ad66",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um filósofo contemporâneo afirma que toda percepção é sempre interpretação: nunca vemos 'dados puros', sempre vemos através de conceitos, expectativas e histórico. Essa crítica aponta problema genuíno para qual posição epistemológica?",
+        "opcoes": [
+          "Para racionalismo, que nunca afirmou que experiência é pura",
+          "Para empirismo ingênuo que supõe experiência sensória direta e não mediada por conceito",
+          "Para pragmatismo, que valida conhecimento pela prática",
+          "Para idealismo absoluto, que nega realidade externa"
+        ],
+        "correta": 1,
+        "explicacao": "Empirismo clássico (Locke, Hume) supunha que sentidos entregam 'impressões' relativamente puras que depois são organizadas em ideias. Crítica moderna (Kant, pós-kantianos, fenomenólogos) mostra que percepção sempre já é conceitual: esquema mental pré-estrutura dados. Isso não destrói empirismo (experiência continua importante), mas mostra que 'experiência pura' é mito. Racionalismo nunca negou papel de conceitos; pragmatismo valida práxis; idealismo nunca afirmou sensação pura."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:ad89ad66",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:f1789440",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um debate filosófico: se dois cientistas veem a mesma experiência mas a interpretam diferente (uma vê confirmação, outra refutação), qual é o problema epistemológico revelado?",
+        "opcoes": [
+          "Não há problema — ambas interpretações são igualmente válidas",
+          "Empirismo é falso porque fatos são sempre objetivos",
+          "Realismo ingênuo falha: observação é carregada de teoria, não neutro-independente",
+          "Existe uma verdade absoluta que um cientista conhece e outro não"
+        ],
+        "correta": 2,
+        "explicacao": "Filósofos da ciência como N. R. Hanson e Thomas Kuhn argumentaram que a observação é 'carregada de teoria': cientistas com pressupostos ou paradigmas diferentes veem coisas diferentes no mesmo fenômeno, e o mesmo resultado pode confirmar uma hipótese para um e refutá-la para outro. Isso desafia o realismo ingênuo de que 'os fatos falam por si'. A experiência continua importando, mas nunca chega pura, sem conceitos. Por isso a opção C é a que melhor capta o problema."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:f1789440",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:cb459baa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um epistemólogo pergunta: qual é a relação entre verdade e verificabilidade? Dizer que algo é verdadeiro é o mesmo que dizer que pode ser verificado?",
+        "opcoes": [
+          "Não, realismo sustenta que verdade pode existir mesmo sem capacidade prática de verificação",
+          "Sim, pragmatismo define verdade por utilidade, não verificação",
+          "Não, porque nada é realmente verdadeiro (relativismo radical)",
+          "Sim, verdade é definida por verificabilidade (positivismo lógico)"
+        ],
+        "correta": 0,
+        "explicacao": "O realismo sustenta que a verdade é correspondência com a realidade: algo pode ser verdadeiro (por exemplo, um fato sobre o universo há bilhões de anos) mesmo que não possa ser verificado agora. O positivismo lógico tentou aproximar sentido e verificabilidade, mas enfrentou a objeção de que seu próprio critério não é verificável. O pragmatismo foca a utilidade, e o relativismo radical nega a verdade objetiva. A opção A reflete o realismo: a verdade não se reduz à verificabilidade."
+      },
+      "meta": {
+        "id": "gen:fil:epistemologia-conhecimento:cb459baa",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:30.350Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-fil-epistemologia-conhecimento",
+      "version": 1,
+      "format": 2,
+      "subjectId": "fil",
+      "topicId": "epis",
+      "chapterId": "gen-fil-epistemologia-conhecimento",
+      "title": "Razão ou experiência",
+      "objective": "Diferenciar racionalismo e empirismo na origem do conhecimento",
+      "skillIds": [
+        "fil:epistemologia-conhecimento"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:fil:epistemologia-conhecimento:c12ddbda",
+        "gen:fil:epistemologia-conhecimento:e9ae0d53"
+      ],
+      "recap": "Empirismo funda o conhecimento na experiência sensorial; racionalismo sustenta que a razão acessa verdades, algumas inatas, independentes da experiência.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Razão ou experiência",
+          "body": "Você vai identificar se um argumento sobre conhecimento parte da experiência sensorial ou da razão."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Duas fontes de conhecimento",
+            "body": "O empirismo diz que todo conhecimento vem da experiência: só sabemos o que observamos ou testamos. O racionalismo diz que a razão sozinha alcança verdades, algumas inatas, presentes na mente desde o início. O positivismo lógico radicalizou o empirismo: só é significativo o que pode ser verificado empiricamente."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:epistemologia-conhecimento:106b8cff",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:epistemologia-conhecimento:99f8d7e3",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Ideias inatas e cérebro",
+            "body": "Racionalistas como Descartes sustentam que estruturas mentais, lógicas ou morais, já nascem com a pessoa, e a experiência só as ativa. O empirista rejeita isso: mesmo conceitos abstratos viriam de experiências acumuladas. Quando um conceito ativa uma área do cérebro, cada corrente lê o dado a seu favor."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:epistemologia-conhecimento:528a85d9",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:epistemologia-conhecimento:adc93b2a",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não trate uma corrente como sempre certa. A maioria dos filósofos modernos, incluindo Kant, combina razão e experiência."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Uma tese que se contradiz",
+            "problem": "Alguém afirma que toda verdade é relativa à cultura de quem fala, sem verdade universal.",
+            "steps": [
+              "Essa própria afirmação é relativa ou universal?",
+              "Se for relativa, perde força como regra geral; se for universal, contradiz o que defende."
+            ],
+            "result": "Uma tese se autorrefuta quando não sobrevive ao próprio critério que estabelece."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fil:epistemologia-conhecimento:df77b7f5",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Empirismo funda o conhecimento na experiência sensorial; racionalismo sustenta que a razão acessa verdades, algumas inatas, independentes da experiência."
+        }
+      ]
+    }
+  ]
+}

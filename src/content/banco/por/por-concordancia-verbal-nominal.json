@@ -1,0 +1,189 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:concordancia-verbal-nominal:65bb4bab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma prova de redação, está escrito: 'O porteiro e a zeladora, ambos dedicados ao trabalho, continua exercendo suas funções com excelência.' Há erro de concordância?",
+        "opcoes": [
+          "Sim, mas o erro está em 'ambos', que deveria ser 'ambo'",
+          "Sim; como o sujeito é composto e está acompanhado do termo 'ambos', o verbo deve estar no plural: 'continuam', não 'continua'",
+          "Não; o advérbio 'ambos' marca que a ação é singular, então o verbo no singular está correto",
+          "Não; a expressão 'ambos dedicados' justifica a concordância singular"
+        ],
+        "correta": 1,
+        "explicacao": "Sujeito composto 'porteiro e zeladora' exige verbo plural, independentemente de termos apositivos como 'ambos dedicados'. 'Ambos' reforça que tem dois agentes, não um, portanto, 'continuam exercendo' (plural). O apositivo 'ambos dedicados' não altera a concordância; serve só para ênfase. Você pode ter pensado que 'ambos' permite verbo singular; na verdade, 'ambos' confirma pluralidade. Verbo plural é obrigatório."
+      },
+      "meta": {
+        "id": "gen:por:concordancia-verbal-nominal:65bb4bab",
+        "version": 1,
+        "skillIds": [
+          "por:concordancia-verbal-nominal"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:concordancia-verbal-nominal:c97ae91c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma redação contém: 'A série de livros sobre economia comportamental era fascinante e muito educativa para os estudantes.' A concordância está correta?",
+        "opcoes": [
+          "Não; 'série' é feminino, então o verbo deveria ser 'seria', não 'era'",
+          "Sim; a construção 'série de + plural' sempre exige verbo singular por atração do núcleo 'série'",
+          "Sim; o verbo 'era' no singular concorda com o núcleo 'série' do sujeito, o qual é o comando da concordância",
+          "Não; como o complemento 'livros' é plural, o verbo deveria estar no plural: 'eram'"
+        ],
+        "correta": 2,
+        "explicacao": "Expressão 'série de + plural' tem concordância com o núcleo 'série' (singular), não com o complemento. 'A série de livros era fascinante' porque o verbo concorda com 'série'. Outros exemplos: 'Um grupo de alunos estava atrasado', 'A multidão de pessoas corria'. Você pode ter feito concordância com o complemento plural, achando que plural atrai plural, mas a regra é com o primeiro núcleo. 'Série de', 'grupo de', 'multidão de' sempre concordam com o primeiro núcleo."
+      },
+      "meta": {
+        "id": "gen:por:concordancia-verbal-nominal:c97ae91c",
+        "version": 1,
+        "skillIds": [
+          "por:concordancia-verbal-nominal"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:concordancia-verbal-nominal:05966e98",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma redação apresenta: 'As professoras e o professor estavam alegres com a aprovação de todos os alunos.' O adjetivo 'alegres' está em concordância correta?",
+        "opcoes": [
+          "Não; o adjetivo deveria flexionar para ambos os gêneros: 'alegres e alegres' ou 'alegres/os'",
+          "Sim, mas seria mais comum usar 'alegres' (feminino plural) para concordar com 'professoras'",
+          "Sim; 'alegres' (plural) concorda com os dois sujeitos compostos (professoras + professor)",
+          "Não; como 'professor' é masculino singular, o adjetivo deveria ser 'alegre' (singular)"
+        ],
+        "correta": 2,
+        "explicacao": "Adjetivo concorda com sujeito composto no plural. 'Professoras e professor...alegres' porque temos múltiplos sujeitos. Quando misturados os gêneros no sujeito composto, o adjetivo segue a regra: plural masculino quando há mistura de gêneros (masculino + feminino). 'Alegres' é a forma normativa. Erro comum é tentar flexionar o adjetivo separadamente ('alegras e alegros') ou usar singular; ambos violam a regra de concordância. Sujeito composto = adjetivo plural em forma de concordância estabelecida."
+      },
+      "meta": {
+        "id": "gen:por:concordancia-verbal-nominal:05966e98",
+        "version": 1,
+        "skillIds": [
+          "por:concordancia-verbal-nominal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:concordancia-verbal-nominal:d95d3030",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudante escreveu: 'O tempo e o dinheiro era recursos escassos na vida de muitos brasileiros.' Há erro de concordância?",
+        "opcoes": [
+          "Não; o verbo 'era' concorda com o núcleo mais próximo, que é 'dinheiro' (singular)",
+          "Não há erro; 'recursos' é o complemento nominal que comanda o verbo singular",
+          "Sim, mas o erro está em 'recursos' (plural), que deveria concordar com singular",
+          "Sim; o verbo deveria estar no plural 'eram' porque o sujeito é composto (tempo + dinheiro)"
+        ],
+        "correta": 3,
+        "explicacao": "Sujeito composto exige verbo plural, independentemente da proximidade dos núcleos. 'O tempo e o dinheiro eram recursos escassos' porque temos dois sujeitos (tempo + dinheiro). A regra é clara: sujeito múltiplo = verbo plural. O aluno frequentemente erra pensando que o verbo concorda com o núcleo mais próximo; isso é falso em português. Proximidade não anula composição. A boa estratégia é sempre pluralizar quando houver 'e' conectando dois núcleos no sujeito."
+      },
+      "meta": {
+        "id": "gen:por:concordancia-verbal-nominal:d95d3030",
+        "version": 1,
+        "skillIds": [
+          "por:concordancia-verbal-nominal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:58:25.764Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

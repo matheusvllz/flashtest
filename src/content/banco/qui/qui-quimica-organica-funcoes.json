@@ -1,0 +1,482 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "gen:qui:quimica-organica-funcoes:dc4969b9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual das moléculas abaixo contém um grupo carbonila (C=O) ligado apenas a dois átomos de carbono?",
+        "opcoes": [
+          "CH3-CHO",
+          "CH3-CO-CH3",
+          "HCOOH",
+          "CH3-CH2-OH"
+        ],
+        "correta": 1,
+        "explicacao": "Na acetona (CH3-CO-CH3), o carbono da carbonila está ligado a dois grupos metila. Isso é cetona. No aldeído (CHO), o carbono tá ligado a um hidrogênio e a um carbono. No ácido carboxílico, tá ligado a um grupo hidróxi, não a dois carbonos."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:dc4969b9",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:fa95dca7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma molécula orgânica possui simultaneamente os grupos -OH (hidróxi) e C=O (carbonila). Se a carbonila está ligada a um carbono e a um hidrogênio, e o -OH está ligado a um carbono diferente (não o da carbonila), quais são as duas funções orgânicas identificadas?",
+        "opcoes": [
+          "Álcool e aldeído",
+          "Álcool e cetona",
+          "Ácido carboxílico e éter",
+          "Aldeído e éter"
+        ],
+        "correta": 0,
+        "explicacao": "Se a carbonila (C=O) está ligada a um carbono e a um hidrogênio (H-C=O), é aldeído. O -OH ligado a outro carbono marca um álcool. Junto na mesma molécula, vira álcool-aldeído. Cuidado: se a carbonila estivesse ligada a dois carbonos, seria cetona, não aldeído."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:fa95dca7",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:70e23a43",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Analise a estrutura de uma molécula que contém os grupos -COOH e -NH2. Quais funções orgânicas estão presentes?",
+        "opcoes": [
+          "Aldeído e amina",
+          "Ácido carboxílico e amina",
+          "Ácido carboxílico e álcool",
+          "Éter e amina"
+        ],
+        "correta": 1,
+        "explicacao": "O -COOH é o marcador dos ácidos carboxílicos (carbonila com -OH). O -NH2 marca as aminas primárias. Moléculas com ambos são aminoácidos, fundamentais em biologia. Não confunda: amina (-NH2) é diferente de amida (-CONH-), que tem carbonila ligada ao nitrogênio."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:70e23a43",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:e21dfdfd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma molécula contém três grupos funcionais: -COOH (ácido carboxílico), -OH (álcool) e C=C (dupla ligação carbono-carbono). Essa molécula pode ser classificada como um ácido insaturado hidroxilado. Qual das alternativas abaixo melhor descreve a ordem de prioridade funcional em nomenclatura IUPAC?",
+        "opcoes": [
+          "Álcool > ácido carboxílico > insaturação",
+          "Insaturação > álcool > ácido carboxílico",
+          "Ácido carboxílico > álcool > insaturação",
+          "Insaturação > ácido carboxílico > álcool"
+        ],
+        "correta": 2,
+        "explicacao": "Na nomenclatura IUPAC, o ácido carboxílico tem prioridade: ele define a terminação do nome (-oico). O -OH, por ter prioridade menor, entra como prefixo 'hidróxi', e a dupla ligação aparece no infixo '-en-'. A insaturação nunca define a função principal. Uma parte da hierarquia usual: ácido carboxílico > aldeído > cetona > álcool > amina. Trocar essa ordem leva a um nome errado."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:e21dfdfd",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:12615325",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Observe uma molécula que contém: uma dupla ligação carbono-carbono (C=C), um grupo -OH ligado a um carbono sp2 (carbono da dupla) e um grupo -CHO. Quais são as funções presentes nessa molécula?",
+        "opcoes": [
+          "Insaturação, éter e cetona",
+          "Insaturação, álcool e éter",
+          "Insaturação, ácido carboxílico e amina",
+          "Insaturação, aldeído e enol (álcool vinílico)"
+        ],
+        "correta": 3,
+        "explicacao": "A estrutura tem uma dupla C=C, um grupo -CHO (aldeído) e um -OH ligado diretamente ao carbono da dupla. Um -OH em carbono sp2 de dupla C=C caracteriza um enol (álcool vinílico). Enóis costumam ser instáveis e se convertem, por tautomeria, na forma carbonílica correspondente (aldeído ou cetona). Mesmo assim, na estrutura descrita as funções presentes são insaturação, aldeído e enol."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:12615325",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:ca7b27d1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma molécula apresenta a seguinte estrutura: um anel benzênico com três substituintes: -OH (no carbono 1), -CHO (no carbono 3) e -NO2 (no carbono 5). Quais funções orgânicas estão presentes nessa molécula aromática complexa?",
+        "opcoes": [
+          "Fenol, aldeído e nitro",
+          "Álcool, cetona e amina",
+          "Ácido carboxílico, éter e amida",
+          "Fenol, éter e nitrilo"
+        ],
+        "correta": 0,
+        "explicacao": "O -OH direto no anel benzênico marca fenol, não álcool alifático. O -CHO no anel é aldeído aromático. O -NO2 é nitroderivado. Essa combinação em sistema aromático é comum em síntese. Lembra: fenol é diferente de álcool, o -OH no benzeno é bem mais ácido (pKa ~10) que álcoois comuns."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:ca7b27d1",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:e8723d10",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma molécula de poliéster biodegradável contém unidades repetidas de -CO-O- (éster), grupos -OH (álcool) livres e uma dupla ligação C=C conjugada. Qual é a função principal e como a presença de -OH livres afeta a estrutura?",
+        "opcoes": [
+          "Éster é a função principal; -OH livres atuam como grupos terminais e permitem ligações de hidrogênio intermoleculares",
+          "Álcool é a função principal; -OH não afeta a estrutura",
+          "Éter é a função principal; -OH são ignorados em polímeros",
+          "Cetona é a função principal; -OH são substituintes menores"
+        ],
+        "correta": 0,
+        "explicacao": "Em poliésteres, a ligação -CO-O- (éster) é a que se repete e forma a cadeia, então o éster é a função principal. Os -OH livres costumam ficar nas extremidades da cadeia (grupos terminais) e podem fazer ligações de hidrogênio entre moléculas, o que influencia propriedades como o ponto de fusão. A biodegradabilidade vem principalmente da ligação éster, que pode ser quebrada por hidrólise."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:e8723d10",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:4cd6558d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma molécula apresenta a estrutura: HO-CH₂-CH₂-OH. Qual é o nome correto e quantas funções alcóol ela contém?",
+        "opcoes": [
+          "Acetileno, com 3 álcoois",
+          "Etanol, com 1 álcool",
+          "Etileno glicol, com 2 álcoois",
+          "Dietil éter, com 1 álcool"
+        ],
+        "correta": 2,
+        "explicacao": "A molécula HO-CH₂-CH₂-OH (etileno glicol ou 1,2-etanodiol) contém DOIS grupos hidroxila (-OH), um em cada extremidade. É um diol usado em anticongelantes. Etanol tem apenas um -OH; dietil éter não contém -OH; acetileno (HC≡CH) não contém nenhuma função álcool. Contar grupos funcionais é habilidade crítica no nível 2."
+      },
+      "meta": {
+        "id": "gen:qui:quimica-organica-funcoes:4cd6558d",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.598Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-qui-quimica-organica-funcoes",
+      "version": 1,
+      "format": 2,
+      "subjectId": "qui",
+      "topicId": "org",
+      "chapterId": "gen-qui-quimica-organica-funcoes",
+      "title": "Funções orgânicas na molécula",
+      "objective": "Reconhecer as principais funções orgânicas pelo jeito como os átomos se ligam",
+      "skillIds": [
+        "qui:quimica-organica-funcoes"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:qui:quimica-organica-funcoes:70e23a43",
+        "gen:qui:quimica-organica-funcoes:ca7b27d1"
+      ],
+      "recap": "A função depende de como o grupo está ligado, não só de quais átomos aparecem. Com mais de um grupo, o de maior prioridade nomeia o composto.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Funções orgânicas",
+          "body": "Você vai reconhecer os grupos funcionais (álcool, aldeído, cetona, ácido carboxílico, éster, insaturação) numa molécula pelo jeito como os átomos estão ligados."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "O grupo que define a função",
+            "body": "Cada função orgânica tem um grupo característico. -OH ligado a um carbono simples é álcool; ligado ao carbono de uma dupla ligação, é enol. A carbonila (C=O) vira aldeído quando ligada a um hidrogênio, cetona quando ligada a dois carbonos, e ácido carboxílico quando o carbono da carbonila também carrega um -OH. Uma dupla ligação carbono-carbono (C=C) é uma insaturação."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:quimica-organica-funcoes:dc4969b9",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:quimica-organica-funcoes:12615325",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Aldeído ou cetona",
+            "left": {
+              "label": "Aldeído",
+              "body": "Carbonila na ponta da cadeia, ligada a um carbono e um hidrogênio."
+            },
+            "right": {
+              "label": "Cetona",
+              "body": "Carbonila no meio da cadeia, ligada a dois carbonos."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:quimica-organica-funcoes:e21dfdfd",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:quimica-organica-funcoes:fa95dca7",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não decida a função só pelos átomos que aparecem: veja a quantos carbonos ou hidrogênios o grupo está ligado. Carbonila ligada a dois carbonos nunca é aldeído."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Reconhecendo o éster",
+            "body": "O éster tem o grupo -CO-O-, um carbono de carbonila ligado a um oxigênio que por sua vez liga a outro carbono. Ele se forma da reação entre um ácido carboxílico e um álcool. Quando a molécula tem vários grupos, o de maior prioridade nomeia o composto: ácido carboxílico primeiro, depois álcool, e a insaturação nunca decide sozinha; em poliésteres, o éster se repete e nomeia o composto."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:quimica-organica-funcoes:e8723d10",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "A função depende de como o grupo está ligado, não só de quais átomos aparecem. Com mais de um grupo, o de maior prioridade nomeia o composto."
+        }
+      ]
+    }
+  ]
+}

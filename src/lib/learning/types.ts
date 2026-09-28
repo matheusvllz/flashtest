@@ -7,7 +7,15 @@
  * de schema quando as Fases 7/8/11 (que os consomem de verdade) chegarem —
  * mas nenhuma lógica de agendamento/ledger/dica roda ainda; são apenas
  * contêineres vazios até lá.
+ *
+ * Schema v6 (docs/30 §21.1, Fase 4 do docs/31): aditivo de novo sobre o
+ * mesmo `foca.state.v3` — `SkillModelEntry`, `JourneyState`,
+ * `PlacementState`, `FocusSession`, `StudyFocus`, `LearningEvent` no fim
+ * deste arquivo. Mesma regra: contêiner de FORMATO definido agora, lógica
+ * de verdade só a partir da Fase 5 (Mastery/Confidence) e Fase 12 (jornada).
  */
+import type { EnemArea } from "@/content/taxonomy/types";
+import type { ActivityKind, PlannedActivity } from "@/lib/adaptive/types";
 
 /** Perfil de vestibular (Fase 8) — schema aditivo desde já, sem UI própria ainda. */
 export interface ExamTarget {
@@ -45,9 +53,31 @@ export interface Attempt {
   submittedAt: string; // ISO
   localDate: string; // YYYY-MM-DD local, nunca UTC
   durationMs: number;
+  /**
+   * Schema v6 (docs/30 §16.1/§21.1, Fase 6) — `"dont-know"` é o botão "Não
+   * sei"; ausente (tentativa antiga) é lido como `"answered"`.
+   */
+  response?: "answered" | "dont-know";
+  /** Camada de explicação alcançada DEPOIS de responder (0–3, docs/30 §16.2) — só sobe. */
+  helpLevel?: 0 | 1 | 2 | 3;
+  /** `hintUsed || tutorUsed`, mas com dica/tutor pedidos ANTES de responder (docs/30 §9.4: pesa 0,3 no modelo). */
+  assisted?: boolean;
+  /** Dificuldade do item no momento da tentativa (`ItemMeta.difficulty`), congelada — não reinterpretar com meta futuro. */
+  itemDifficulty?: 1 | 2 | 3 | 4 | 5;
+  /** Probabilidade prevista pelo modelo ANTES da resposta — só para diagnóstico de calibração (docs/30 §27). */
+  predictedP?: number;
+  /** De onde veio a tentativa (docs/30 §21.1) — ausente (tentativa antiga) é equivalente a `"microlicao"`. */
+  source?: "microlicao" | "estudo" | "legado" | "atividade" | "nivelamento" | "checkpoint";
 }
 
-export type LearningSessionKind = "aula-geral" | "licao-redacao" | "microlicao" | "revisao";
+export type LearningSessionKind =
+  | "aula-geral"
+  | "licao-redacao"
+  | "microlicao"
+  | "revisao"
+  | "atividade"
+  | "nivelamento"
+  | "checkpoint-trilha";
 
 export interface LearningSession {
   id: string;
@@ -86,7 +116,8 @@ export interface SkillEvidenceEntry {
 /** Agenda de revisão 1/3/7/14 dias (docs/20 §13) — vazio até a Fase 7 popular. */
 export interface ReviewScheduleEntry {
   skillId: string;
-  intervalDays: 1 | 3 | 7 | 14;
+  /** Schema v6 (docs/30 §9.3): escada estendida com 30/60 — valor antigo (1/3/7/14) continua válido, nunca reescrito pra trás. */
+  intervalDays: 1 | 3 | 7 | 14 | 30 | 60;
   dueDate: string; // YYYY-MM-DD
   lastResult: "correct" | "incorrect" | null;
 }
@@ -130,10 +161,24 @@ export interface LearningState {
   tipHistory: TipHistoryEntry[];
   /** Capítulos cuja folha de celebração já foi mostrada — uma vez cada (docs/25 §6.6/§7.6, Fase 1). */
   celebratedChapterIds: string[];
+  /** Schema v6 (docs/30 §9.3/§21.1, Fase 4) — vazio até a Fase 5 popular. */
+  skillModel: Record<string, SkillModelEntry>;
+  /** Schema v6 (docs/30 §14.3/§21.1) — vazio até a Fase 12 popular. */
+  journey: JourneyState;
+  /** Schema v6 (docs/30 §12.3/§21.1) — `null` até a Fase 13 popular (sem nivelamento em andamento/feito). */
+  placement: PlacementState | null;
+  /** Schema v6 (docs/30 §15/§21.1) — `null` = sem sessão de foco temporária ativa. */
+  focusSession: FocusSession | null;
+  /** Schema v6 (docs/30 §21.4) — limitado a 300, local, sem envio. */
+  events: LearningEvent[];
+  modelMeta: { algoVersion: number; bootstrappedAt: string | null };
 }
 
 export const LIMITE_TENTATIVAS_RECENTES = 500;
 export const LIMITE_HISTORICO_DICAS = 100;
+export const LIMITE_EVENTOS = 300;
+export const LIMITE_ITENS_DISTINTOS_EVIDENCIA = 50;
+export const LIMITE_DATAS_DISTINTAS_EVIDENCIA = 20;
 
 /* ------------------------------------------------------------ microlições (Fase 6) */
 
@@ -188,7 +233,7 @@ export type LessonStatus = "draft" | "reviewed" | "published";
 
 export type StepDifficulty = 1 | 2 | 3;
 
-export type QuestionStepRole = "checkpoint" | "pratica" | "desafio" | "revisao";
+export type QuestionStepRole = "checkpoint" | "pratica" | "desafio" | "revisao" | "diagnostico";
 
 export interface IntroStep {
   kind: "intro";
@@ -283,7 +328,160 @@ export function learningStateVazio(): LearningState {
     rewardLedger: {},
     tipHistory: [],
     celebratedChapterIds: [],
+    skillModel: {},
+    journey: journeyVazia(),
+    placement: null,
+    focusSession: null,
+    events: [],
+    modelMeta: { algoVersion: 0, bootstrappedAt: null },
   };
+}
+
+/* ------------------------------------------------------------ aprendizagem adaptativa (docs/30, Fase 4 do docs/31) */
+
+/**
+ * Estado do modelo de UMA habilidade — Mastery/Confidence (docs/30 §9.3).
+ * `theta`/`sigma` calculados por `src/lib/adaptive/model.ts` (Fase 5);
+ * Confidence é sempre DERIVADA (não gravada — docs/30 §10.1), calculada na
+ * leitura a partir deste registro + `skillEvidence`/`reviewSchedule`.
+ */
+export interface SkillModelEntry {
+  skillId: string;
+  /** Habilidade latente, escala logit, limitado a [-4, 4]. */
+  theta: number;
+  /** Incerteza (desvio-padrão), [SIGMA_MIN, SIGMA0] — ver `src/lib/adaptive/constants.ts` (Fase 5). */
+  sigma: number;
+  /** Soma dos pesos de evidência já aplicados (não é contagem de tentativas — cada papel/assistência pesa diferente). */
+  nEff: number;
+  /** Dificuldades 1–5 já respondidas de forma independente (sem dica/tutor) — usado por Confidence (diversidade). */
+  difficultiesSeen: number[];
+  /** Últimos 8 resultados: 1 certo, 0 errado, 2 "não sei". */
+  recent: Array<0 | 1 | 2>;
+  /** Média móvel exponencial (α = 0,2) da fração de tentativas SEM ajuda. */
+  independentShare: number;
+  /** `YYYY-MM-DD` local da última evidência — `null` = nunca. Usado pro drift de `sigma` e pela recência de Confidence. */
+  lastEvidenceDate: string | null;
+  /** Vezes que errou em revisão/checkpoint com Mastery alta antes (docs/30 §9.4) — dispara reforço. */
+  lapses: number;
+  /** Contador de "não sei" recente, decai 1 por dia sem novo — alimenta REFORCO (docs/30 §11.2). */
+  dontKnowRecent: number;
+  /** Aberturas da camada 3 de explicação nos últimos 7 dias — idem. */
+  helpHeavyRecent: number;
+  /** De onde veio o valor atual — nunca confundir prior com evidência de verdade. */
+  source: "evidencia" | "prior-nivelamento" | "prior-materia";
+  /** Versão do algoritmo que calculou este registro — replay se desatualizado (docs/30 §9.6). */
+  algoVersion: number;
+  updatedAt: string;
+}
+
+/** Um item do histórico de atividades já concluídas da jornada (docs/30 §14.3). */
+export interface JourneyHistoryEntry {
+  activityId: string;
+  kind: ActivityKind;
+  skillIds: string[];
+  subjectId: string;
+  completedAt: string;
+  scorePct: number | null;
+}
+
+/**
+ * Estado da jornada única (docs/30 §14.3, Fase 12) — `committed` (até 3,
+ * estáveis na tela até ficarem inválidas) e `upcoming` (até 5, provisórias,
+ * replanejadas a cada conclusão) vêm do `planWithFallback` (Fase 8).
+ */
+export interface JourneyState {
+  committed: PlannedActivity[];
+  upcoming: PlannedActivity[];
+  /** Limitado a 200 (docs/30 §21.1). */
+  history: JourneyHistoryEntry[];
+  /** Atividade em andamento, com `itemIds` já escolhidos (docs/30 §11.7 — só na hora de começar, não no plano). */
+  activeActivity: PlannedActivity | null;
+  sinceCheckpoint: number;
+  lastCheckpointDate: string | null;
+  planVersion: number;
+}
+
+export function journeyVazia(): JourneyState {
+  return {
+    committed: [],
+    upcoming: [],
+    history: [],
+    activeActivity: null,
+    sinceCheckpoint: 0,
+    lastCheckpointDate: null,
+    planVersion: 0,
+  };
+}
+
+export const LIMITE_HISTORICO_JORNADA = 200;
+
+/** Uma resposta dada durante o nivelamento (docs/30 §12.3, Fase 13). */
+export interface PlacementResponse {
+  itemId: string;
+  correct: boolean;
+  dontKnow: boolean;
+}
+
+/** Estado (por área ENEM) de uma sessão de nivelamento — EAP em andamento (docs/30 §12.3). */
+export interface PlacementAreaState {
+  itemIds: string[];
+  responses: PlacementResponse[];
+  /** Estimativa atual da habilidade latente da área — `null` até a 1ª resposta. */
+  theta: number | null;
+  /** Erro-padrão da estimativa — `null` até a 1ª resposta; guia a parada (docs/30 §12.3). */
+  se: number | null;
+  done: boolean;
+}
+
+/** Nivelamento adaptativo — opcional, pausável (docs/30 §12, Fase 13). */
+export interface PlacementState {
+  status: "em-andamento" | "concluido" | "abandonado";
+  startedAt: string;
+  finishedAt: string | null;
+  areas: Record<string, PlacementAreaState>;
+  /** Semente do plano — mesma entrada e semente reproduzem a mesma sequência de itens (docs/30 §11.1). */
+  seed: string;
+}
+
+/** Sessão de foco TEMPORÁRIA ("só hoje") — distinta de `prefs.studyFocus` (permanente, docs/30 §15). */
+export interface FocusSession {
+  subjectIds: string[];
+  startedAt: string;
+  /** `YYYY-MM-DD` local — expira no fim do dia (docs/30 §15). */
+  expiresOn: string;
+}
+
+/** Preferência PERMANENTE de foco (docs/30 §15) — vive em `prefs`, não em `learning`. */
+export interface StudyFocus {
+  mode: "todas" | "materias" | "areas";
+  subjectIds: string[];
+  areas: EnemArea[];
+}
+
+export function studyFocusVazio(): StudyFocus {
+  return { mode: "todas", subjectIds: [], areas: [] };
+}
+
+/** Tipos de evento local (docs/30 §21.4, §30 tabela de observabilidade) — nunca enviados, só locais. */
+export type LearningEventType =
+  | "activity-started"
+  | "activity-completed"
+  | "explanation-expanded"
+  | "ai-help-opened"
+  | "checkpoint-completed"
+  | "placement-completed"
+  | "placement-card-dismissed"
+  | "focus-changed"
+  | "plan-fallback";
+
+export interface LearningEvent {
+  type: LearningEventType;
+  at: string;
+  /** `YYYY-MM-DD` local — evita reparsear `at` em toda checagem (mesmo padrão de `TipHistoryEntry.localDate`). */
+  localDate: string;
+  skillId?: string;
+  activityId?: string;
+  meta?: Record<string, string | number | boolean>;
 }
 
 /* ------------------------------------------------------------ dicas de vestibular (Fase 8) */

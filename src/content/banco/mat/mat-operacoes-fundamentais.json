@@ -1,0 +1,327 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:operacoes-fundamentais:8661883f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um comerciante vendeu produtos em três dias. No primeiro dia, vendeu 2 caixas com 15 produtos cada. No segundo dia, vendeu 3 caixas com 12 produtos cada e depois recebeu 8 produtos devolvidos. No terceiro dia, vendeu o dobro do segundo dia. Qual foi o total de produtos vendidos nos três dias?",
+        "opcoes": [
+          "110",
+          "114",
+          "120",
+          "118"
+        ],
+        "correta": 1,
+        "explicacao": "Dia 1: 2 × 15 = 30 produtos. Dia 2: 3 × 12 - 8 = 28 produtos. Dia 3: 2 × 28 = 56 produtos. Total: 30 + 28 + 56 = 114. Não esqueça de descontar as devoluções no dia 2."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:8661883f",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:operacoes-fundamentais:c687f272",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Calcule o resultado da expressão: 2³ + 3² × 4 - 5 × 2 + 10 ÷ 2",
+        "opcoes": [
+          "37",
+          "38",
+          "39",
+          "40"
+        ],
+        "correta": 2,
+        "explicacao": "2³ = 8; 3² = 9, então 9 × 4 = 36; 5 × 2 = 10; 10 ÷ 2 = 5. Logo: 8 + 36 - 10 + 5 = 39. Ordem: potências primeiro, depois multiplicação e divisão, e por último soma e subtração."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:c687f272",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:operacoes-fundamentais:be121ed6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A expressão 5 × (3 + 2²) - 4 × 3 ÷ 2 + 1³ resulta em qual valor?",
+        "opcoes": [
+          "32",
+          "28",
+          "31",
+          "30"
+        ],
+        "correta": 3,
+        "explicacao": "2² = 4; 3 + 4 = 7; 5 × 7 = 35; 4 × 3 = 12; 12 ÷ 2 = 6; 1³ = 1. Resultado: 35 - 6 + 1 = 30. Parênteses saem primeiro, depois potências, depois multiplicação e divisão, tudo da esquerda pra direita."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:be121ed6",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:operacoes-fundamentais:050e8226",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se você calcular 6 + 2⁴ ÷ 4 × 3 - 5 + 8 ÷ 2, qual será o resultado?",
+        "opcoes": [
+          "17",
+          "16",
+          "18",
+          "20"
+        ],
+        "correta": 0,
+        "explicacao": "2⁴ = 16; 16 ÷ 4 = 4; 4 × 3 = 12; 8 ÷ 2 = 4. Logo: 6 + 12 - 5 + 4 = 17. Mantém a ordem: potências, depois multiplicação e divisão da esquerda pra direita, aí sim soma e subtração."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:050e8226",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:operacoes-fundamentais:566eeda2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma sala de aula tem 6 filas com 8 carteiras cada. O professor precisa remover 2 filas para fazer espaço. Quantas carteiras permanecerão na sala?",
+        "opcoes": [
+          "36",
+          "28",
+          "32",
+          "30"
+        ],
+        "correta": 2,
+        "explicacao": "Total inicial: 6 × 8 = 48 carteiras. Removidas: 2 × 8 = 16 carteiras. Permanecem: 48 - 16 = 32. Cuidado: muita gente calcula só as que saem e esquece de subtrair do total."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:566eeda2",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:operacoes-fundamentais:9fda7e09",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um padeiro faz 5 receitas de bolo por dia. Cada receita usa 2 ovos para a massa e 3 ovos para a cobertura. Em 4 dias, quantos ovos o padeiro usa no total?",
+        "opcoes": [
+          "95",
+          "105",
+          "110",
+          "100"
+        ],
+        "correta": 3,
+        "explicacao": "Ovos por receita: 2 + 3 = 5. Ovos por dia: 5 receitas × 5 ovos = 25. Em 4 dias: 25 × 4 = 100 ovos. Não esqueça de somar os ovos da massa com os da cobertura antes de multiplicar."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:9fda7e09",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:operacoes-fundamentais:c97f9c78",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma livraria recebeu 3 caixas com 20 livros cada. Metade dos livros será doada a escolas. Quantos livros ficarão na livraria?",
+        "opcoes": [
+          "30",
+          "35",
+          "25",
+          "40"
+        ],
+        "correta": 0,
+        "explicacao": "Total recebido: 3 × 20 = 60 livros. Doados: 60 ÷ 2 = 30 livros. Ficarão: 60 - 30 = 30. Primeiro acha o total, depois aplica a proporção."
+      },
+      "meta": {
+        "id": "gen:mat:operacoes-fundamentais:c97f9c78",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

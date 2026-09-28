@@ -1,0 +1,796 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:5755907d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O coração bombeia sangue para os pulmões e para o resto do corpo. A qual sistema corporal o coração pertence?",
+        "opcoes": [
+          "Sistema circulatório — coração e vasos sanguíneos transportam nutrientes e oxigênio pelo corpo",
+          "Sistema esquelético (ossos)",
+          "Sistema respiratório (pulmões respiram, coração não)",
+          "Sistema digestivo (processa alimento)"
+        ],
+        "correta": 0,
+        "explicacao": "O coração é o órgão central do sistema circulatório. Ele recebe dos pulmões o sangue rico em oxigênio e o bombeia pelas artérias para os órgãos; recebe dos órgãos, pelas veias, o sangue pobre em oxigênio e o bombeia para os pulmões. Assim, o sistema circulatório leva oxigênio e nutrientes às células e retira o gás carbônico. A troca gasosa em si acontece nos pulmões (sistema respiratório); o coração faz o transporte."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:5755907d",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.618Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:2ee0b56e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual órgão do sistema circulatório é responsável por bombear o sangue para todo o corpo?",
+        "opcoes": [
+          "Coração",
+          "Pulmão",
+          "Veia",
+          "Capilar"
+        ],
+        "correta": 0,
+        "explicacao": "O coração é o principal órgão do sistema circulatório, funcionando como uma bomba muscular que impulsiona o sangue através de todo o organismo. Os pulmões trocam gases, as veias transportam sangue, e os capilares realizam trocas de nutrientes, mas apenas o coração tem a função de bombear."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:2ee0b56e",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:d1f0040b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante a prática de exercícios intensos, o sistema nervoso central aumenta a frequência cardíaca. Qual estrutura é especificamente responsável por transmitir esses sinais ao coração?",
+        "opcoes": [
+          "Medula espinal",
+          "Cérebro",
+          "Nervos",
+          "Gânglios"
+        ],
+        "correta": 2,
+        "explicacao": "Os nervos, no caso, fibras do sistema nervoso simpático, levam os impulsos do sistema nervoso central até o coração, aumentando a frequência cardíaca durante o esforço. O encéfalo (em especial o bulbo) comanda o ajuste, a medula espinal conduz os sinais dentro do sistema nervoso central e os gânglios são pontos de conexão entre neurônios no caminho, mas quem chega ao coração e entrega o sinal são os nervos."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:d1f0040b",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:c3bae440",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um paciente apresenta dificuldade em absorver nutrientes no intestino. Qual estrutura celular do epitélio intestinal está diretamente envolvida na absorção de nutrientes?",
+        "opcoes": [
+          "Mitocôndria",
+          "Núcleo",
+          "Ribossomo",
+          "Microvilosidade"
+        ],
+        "correta": 3,
+        "explicacao": "As microvilosidades são projeções da membrana do epitélio intestinal que aumentam enormemente a área de absorção de nutrientes. As mitocôndrias geram energia, o núcleo controla a célula e os ribossomos sintetizam proteínas, mas as microvilosidades realizam a absorção propriamente dita."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:c3bae440",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:8abcd53d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um reflexo medular, ao tocar uma superfície quente, você retira a mão automaticamente antes de o cérebro perceber a dor. Qual estrutura coordena essa resposta rápida?",
+        "opcoes": [
+          "Medula espinal",
+          "Tálamo",
+          "Córtex cerebral",
+          "Cerebelo"
+        ],
+        "correta": 0,
+        "explicacao": "A medula espinal coordena o arco reflexo sem precisar do comando do encéfalo, o que permite uma resposta muito rápida ao perigo. A percepção da dor acontece depois, quando o sinal chega ao córtex cerebral. O tálamo retransmite sinais sensoriais para o córtex e o cerebelo coordena movimentos, mas quem executa o reflexo de retirada é a medula espinal."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:8abcd53d",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:9ab72535",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um atleta respira com mais dificuldade em altitude elevada. Qual estrutura do sistema respiratório sofre mais impacto pela redução de oxigênio disponível?",
+        "opcoes": [
+          "Traqueia",
+          "Alvéolo",
+          "Brônquio",
+          "Laringe"
+        ],
+        "correta": 1,
+        "explicacao": "Os alvéolos são pequenos sacos onde ocorre a troca gasosa: o oxigênio passa do ar para o sangue e o gás carbônico faz o caminho inverso. Em altitude, o ar tem menor pressão de oxigênio, então menos oxigênio passa dos alvéolos para o sangue. A traqueia e os brônquios apenas conduzem o ar e a laringe protege as vias aéreas e produz a voz: a troca gasosa acontece nos alvéolos."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:9ab72535",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:d82c92d7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um paciente diagnosticado com insuficiência pancreática apresenta problemas na absorção de gorduras e na regulação de glicose. Quais são as duas funções pancreáticas afetadas e qual estrutura é responsável pela produção de insulina?",
+        "opcoes": [
+          "Produção de enzimas no fígado e síntese de proteínas nas ilhotas pancreáticas",
+          "Síntese de bile no pâncreas e produção de glucagon nas células alfa",
+          "Produção de enzimas digestivas pelo pâncreas exócrino e insulina pelas ilhotas de Langerhans",
+          "Armazenamento de glicose e produção de glucagon exclusivamente"
+        ],
+        "correta": 2,
+        "explicacao": "O pâncreas tem duas funções: a exócrina, que produz enzimas digestivas (como a lipase, que digere gorduras, e a amilase, que digere amido), e a endócrina, feita pelas ilhotas de Langerhans, cujas células beta produzem insulina para regular a glicose. A insuficiência afeta as duas. A bile é produzida pelo fígado, não pelo pâncreas, e o glucagon (células alfa) não responde à pergunta sobre insulina."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:d82c92d7",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:622432d5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um indivíduo sofre lesão no cerebelo afetando seu equilíbrio e coordenação motora. Qual é a função neural específica comprometida e qual estrutura do ouvido interno contribui para manter o equilíbrio?",
+        "opcoes": [
+          "Integração motora e coordenação pelo cerebelo; aparelho vestibular do ouvido interno",
+          "Processamento sensorial pelo tálamo; cóclea do ouvido interno",
+          "Memória motora pelo córtex; trompa de Eustáquio",
+          "Controle autonômico pelo hipotálamo; canais semicirculares do sistema auditivo"
+        ],
+        "correta": 0,
+        "explicacao": "O cerebelo integra informações motoras e mantém a coordenação; o aparelho vestibular do ouvido interno fornece sinais de equilíbrio e posição. Juntos garantem estabilidade corporal. O tálamo processa sensações, a cóclea capta sons, e o hipotálamo controla funções autonômicas, mas não estão diretamente envolvidos na coordenação motora como o cerebelo."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:622432d5",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:a2f24d07",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma situação de estresse agudo, a glândula adrenal libera adrenalina, causando aumento da frequência cardíaca e da pressão arterial. Qual caminho neural ativa a medula adrenal e qual hormônio amplifica essa resposta de forma prolongada?",
+        "opcoes": [
+          "Nervo simpático estimula a medula adrenal; adrenalina amplifica a resposta inicialmente e cortisol sustenta a resposta",
+          "Nervo vago estimula a medula adrenal; insulina amplifica a resposta",
+          "Nervo acessório estimula a medula adrenal; glucagon amplifica a resposta",
+          "Nervo parassimpático estimula a medula adrenal; cortisol amplifica a resposta"
+        ],
+        "correta": 0,
+        "explicacao": "O sistema simpático via nervo esplâncnico ativa a medula adrenal a liberar adrenalina (efeito rápido). O córtex adrenal libera cortisol, que sustenta a resposta de estresse a longo prazo. O parassimpático reduz a frequência, a insulina diminui glicemia, e o glucagon aumenta glicemia mas não amplifica o estresse de forma geral."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:a2f24d07",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:bc30575e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual estrutura do sistema digestivo é responsável pela absorção de água e formação das fezes?",
+        "opcoes": [
+          "Intestino delgado",
+          "Pâncreas",
+          "Intestino grosso",
+          "Estômago"
+        ],
+        "correta": 2,
+        "explicacao": "O intestino grosso absorve água e sais minerais do material que chega do intestino delgado, formando as fezes. O estômago faz digestão mecânica e química (ácida), o intestino delgado absorve a maior parte dos nutrientes e o pâncreas produz enzimas e hormônios como a insulina, mas é o intestino grosso que executa essa etapa final."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:bc30575e",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:6f0c336f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante a digestão, qual órgão produz a bile que emulsiona as gorduras para facilitar sua absorção?",
+        "opcoes": [
+          "Fígado",
+          "Pâncreas",
+          "Esôfago",
+          "Estômago"
+        ],
+        "correta": 0,
+        "explicacao": "O fígado produz a bile, armazenada na vesícula biliar e liberada no intestino delgado pra emulsionar gorduras. O estômago secreta suco gástrico, o pâncreas produz enzimas, e o esôfago apenas conduz alimentos, mas o fígado é a única estrutura que produz bile."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:6f0c336f",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:c357f051",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma lesão no córtex motor primário de um hemisfério cerebral causa paralisia do lado oposto do corpo. Por qual processo neurológico isso ocorre?",
+        "opcoes": [
+          "A lesão cerebral afeta diretamente os neurônios motores da medula espinal",
+          "Decussação das fibras piramidais: 90% das fibras nervosas motoras cruzam no bulbo raquídeo",
+          "O tálamo redireciona todos os sinais motores para o lado oposto",
+          "As fibras nervosas do cérebro não cruzam para o lado oposto"
+        ],
+        "correta": 1,
+        "explicacao": "As fibras do trato corticoespinal (fibras piramidais) sofrem decussação (cruzamento), principalmente no bulbo raquídeo, e por isso cada hemisfério controla os movimentos do lado oposto do corpo. Uma lesão no córtex motor esquerdo afeta o lado direito. A lesão é no córtex, não na medula, e o tálamo retransmite sinais sensoriais, não redireciona os comandos motores."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:c357f051",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:5afa29f5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um paciente com doença renal crônica apresenta acúmulo de ureia no sangue. Qual é a sequência de estruturas que a urina segue após ser filtrada pelos néfrons até ser eliminada?",
+        "opcoes": [
+          "Néfron → Veia renal → Bexiga → Uretra",
+          "Néfron → Ureter → Cálice renal → Uretra",
+          "Néfron → Cálice renal → Ureter → Bexiga → Uretra",
+          "Néfron → Artéria renal → Bexiga → Uretra"
+        ],
+        "correta": 2,
+        "explicacao": "A urina formada nos néfrons passa pelos cálices renais, que se reúnem na pelve renal e seguem para o ureter. O ureter leva a urina até a bexiga, onde ela é armazenada, e a uretra a elimina. Artérias e veias renais transportam sangue, não urina, por isso as alternativas com vasos sanguíneos estão erradas."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:5afa29f5",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:0a79e08a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante o exercício físico, o sistema respiratório aumenta a frequência de trocas gasosas. Qual estrutura realiza a última divisão do tubo respiratório antes dos alvéolos, funcionando como transição entre brônquios e alvéolos?",
+        "opcoes": [
+          "Diafragma",
+          "Pleura",
+          "Costelas",
+          "Bronquíolos"
+        ],
+        "correta": 3,
+        "explicacao": "Os bronquíolos são as últimas ramificações dos brônquios antes dos alvéolos, funcionando como estrutura de transição. O diafragma cria a pressão negativa pra inspiração, a pleura envolve os pulmões, e as costelas protegem, mas apenas os bronquíolos conectam as vias condutoras aos alvéolos."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:0a79e08a",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:32:30.875Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:63ab8545",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um paciente chega ao hospital reclamando de fraqueza muscular progressiva e dificuldade de respiração. Exames mostram que o coração está funcionando normalmente, mas o diafragma (principal músculo da respiração) e os músculos das pernas estão enfraquecidos. Uma biópsia revela dano mitocondrial. Qual sistema do corpo está diretamente afetado, e por quê?",
+        "opcoes": [
+          "Sistema nervoso, porque neurônios não conseguem enviar sinais aos músculos",
+          "Sistema endócrino, porque as glândulas não secretam hormônios suficientes",
+          "Sistema circulatório, porque o coração não consegue bombear sangue suficiente",
+          "Sistema respiratório e sistema muscular, porque as mitocôndrias produzem ATP (energia) que músculos precisam para contração"
+        ],
+        "correta": 3,
+        "explicacao": "Mitocôndrias geram ATP através da respiração celular. Músculos e diafragma consomem muita energia para contrações repetidas. Dano mitocondrial reduz ATP disponível e causa fraqueza muscular e falha respiratória. O coração é músculo, mas tem perfusão sanguínea melhor e suporta dano mitocondrial moderado por mais tempo."
+      },
+      "meta": {
+        "id": "gen:bio:fisiologia-humana-sistemas:63ab8545",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.099Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-bio-fisiologia-humana-sistemas",
+      "version": 1,
+      "format": 2,
+      "subjectId": "bio",
+      "topicId": "fis",
+      "chapterId": "gen-bio-fisiologia-humana-sistemas",
+      "title": "Órgãos e funções do corpo",
+      "objective": "Relacionar cada órgão à função que ele cumpre num sistema do corpo humano",
+      "skillIds": [
+        "bio:fisiologia-humana-sistemas"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:bio:fisiologia-humana-sistemas:5755907d",
+        "gen:bio:fisiologia-humana-sistemas:bc30575e"
+      ],
+      "recap": "Cada órgão tem uma função principal dentro do sistema. Reflexos usam só a medula; respostas de estresse combinam nervo rápido e hormônio mais lento.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Órgãos e funções",
+          "body": "Você vai relacionar cada órgão à função que ele cumpre num sistema do corpo, do circulatório ao nervoso e hormonal."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Cada órgão, uma função principal",
+            "body": "Cada sistema reparte tarefas entre órgãos. No circulatório, o coração bombeia o sangue; os vasos só o conduzem. No digestório, o fígado produz bile pra digerir gordura, o estômago produz suco gástrico, e o pâncreas libera enzimas. Reconhecer qual órgão faz qual tarefa evita confundir funções parecidas."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:fisiologia-humana-sistemas:2ee0b56e",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:fisiologia-humana-sistemas:6f0c336f",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Sistema nervoso central e periférico",
+            "body": "O sistema nervoso central, encéfalo e medula espinal, processa a informação e decide a resposta. O periférico, os nervos, leva esse sinal até órgãos e músculos. Num reflexo, como afastar a mão de algo quente, a própria medula espinal já dispara a resposta, sem esperar o encéfalo processar a dor, por isso é bem mais rápida."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:fisiologia-humana-sistemas:8abcd53d",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:fisiologia-humana-sistemas:d1f0040b",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não troque quem comanda por quem executa: o encéfalo decide, mas os nervos levam o sinal até o órgão."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Sinal nervoso ou sinal hormonal",
+            "body": "Um sinal nervoso viaja como impulso elétrico pelos nervos: chega rápido, mas passa logo. Um sinal hormonal viaja pela corrente sanguínea: demora mais pra agir, mas dura bem mais tempo. Por isso uma resposta do corpo a um alerta pode ter uma parte rápida e outra mais prolongada."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:bio:fisiologia-humana-sistemas:a2f24d07",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Cada órgão tem uma função principal dentro do sistema. Reflexos usam só a medula; respostas de estresse combinam nervo rápido e hormônio mais lento."
+        }
+      ]
+    }
+  ]
+}

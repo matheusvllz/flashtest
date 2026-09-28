@@ -1,0 +1,512 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "gen:ing:interpretacao-texto-curto:b8ee8a00",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "PROMOTION COMING! Are you interested in getting a FREE gift card to your favorite store? 'Yes, I'm interested!' or 'No thanks'? This email was sent because you visited our website. What does this brief message intend to accomplish?",
+        "opcoes": [
+          "Informar sobre um produto novo da loja",
+          "Pedir feedback sobre a experiência do cliente",
+          "Incentivar cliques através de promessa de benefício gratuito, capturando interesse ou dados",
+          "Convidar para uma reunião formal sobre assuntos comerciais"
+        ],
+        "correta": 2,
+        "explicacao": "A mensagem usa técnica comum de marketing: promessa de recompensa gratuita ('gift card') para atrair cliques e engajamento. O email busca impulsionar ação imediata, capturar dados de interesse e potencial conversão de venda. Não informa produto específico. Não pede feedback formal. Não convida para reunião: é tática de atração de tráfego."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:b8ee8a00",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:54.474Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:8f1b4f69",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Read: 'The team decided to move the meeting from Monday to Tuesday because several members were unavailable on Monday.' Qual informação o texto comunica de forma principal?",
+        "opcoes": [
+          "Que as reuniões devem sempre ser em terça-feira",
+          "Que alguns membros não são confiáveis",
+          "Que segunda-feira é um dia pior para reuniões que terça",
+          "A razão de uma mudança de agendamento: indisponibilidade de participantes"
+        ],
+        "correta": 3,
+        "explicacao": "O texto explica causa-efeito: alguns membros indisponíveis (causa) levaram à mudança de data (efeito). Não faz julgamento sobre qual dia é melhor universalmente. Não estabelece regra sobre terça-feira. Não critica confiabilidade. Apenas comunica decisão lógica baseada em disponibilidade."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:8f1b4f69",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:54.474Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:1f5078cb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Short text: 'Our company takes pride in delivering quality products on time. Customer satisfaction is our top priority. We listen to feedback and continuously improve.' What tone does this text convey?",
+        "opcoes": [
+          "Crítica dura aos clientes infelizes",
+          "Profissionalismo, compromisso com qualidade e abertura ao diálogo com clientes",
+          "Arrogância sobre superioridade dos produtos",
+          "Desinteresse pelas opiniões externas"
+        ],
+        "correta": 1,
+        "explicacao": "O texto usa linguagem de compromisso (quality, on time, satisfaction), reconhecimento de feedback e melhoria contínua. Isso comunica seriedade profissional e humildade. Não há crítica. Não é arrogante (valoriza feedback). Não é desinteressado (menciona ouvir explicitamente). Tom é positivo, inclusivo e orientado ao cliente."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:1f5078cb",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:22:54.474Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:f4342bfd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia o anúncio a seguir:\n\n'Join our fitness club and transform your life in 90 days. We offer personal training, nutrition coaching, and access to state-of-the-art equipment. Special offer: 50% discount for the first three months.'\n\nQual é o objetivo principal deste anúncio?",
+        "opcoes": [
+          "Criticar academias de ginástica tradicionais",
+          "Convencer pessoas a se inscreverem no clube oferecendo benefícios e desconto",
+          "Explicar como funciona treinamento pessoal",
+          "Comparar diferentes tipos de equipamento de academia"
+        ],
+        "correta": 1,
+        "explicacao": "O anúncio convida explicitamente ('Join our fitness club'), lista benefícios (treinamento pessoal, nutrição, equipamento), promete transformação ('transform your life in 90 days') e oferece desconto (50% off). O objetivo comercial é persuadir a inscrição. As outras opções desviam do propósito: não critica concorrentes (A), não explica procedimento técnico (C) e não compara equipamentos (D)."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:f4342bfd",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:e1c6de58",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Considere esta notícia simplificada:\n\n'A renowned scientist discovered that urban birds adapt their songs to mask traffic noise. The study, conducted over five years in twelve cities, shows birds increase vocal frequency to be heard above the roar of cars and buses.'\n\nO que a pesquisa revelou sobre o comportamento dos pássaros urbanos?",
+        "opcoes": [
+          "Pássaros urbanos deixam de cantar quando ouvem barulho de trânsito",
+          "O barulho do trânsito causa migração permanente de pássaros para áreas rurais",
+          "Pássaros urbanos modificam a frequência de seus cantos para se adaptar ao ruído urbano",
+          "Pássaros urbanos e rurais cantam com a mesma frequência, mas em horários diferentes"
+        ],
+        "correta": 2,
+        "explicacao": "O texto diz que os pássaros 'increase vocal frequency to be heard above the roar'. Ou seja, elevam a frequência para se comunicar apesar do ruído. É uma adaptação comportamental. A opção (A) falha porque eles se adaptam, não param; (B) inventa migração permanente que não está lá; (D) nega a diferença que o estudo encontrou."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:e1c6de58",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:8160103f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia este comunicado de uma ONG ambiental:\n\n'Illegal logging in the Amazon rainforest increased by 60% last year, destroying critical wildlife habitats and accelerating climate change. Our organization calls on governments to strengthen enforcement and communities to report suspicious activity.'\n\nQue ação a ONG está tentando estimular?",
+        "opcoes": [
+          "Criar indústria de extração responsável de madeira",
+          "Mobilizar fiscalização e participação comunitária contra exploração ilegal",
+          "Relocar espécies ameaçadas para áreas urbanas protegidas",
+          "Proibir viagens turísticas para a Amazônia"
+        ],
+        "correta": 1,
+        "explicacao": "A ONG 'calls on governments to strengthen enforcement and communities to report': pede tanto ação governamental (fiscalização) quanto engajamento comunitário (denúncias). Essa combinação visa combater a exploração ilegal. O texto não propõe extração responsável como solução (A), não menciona relocação de espécies (C) e não pede proibição do turismo (D)."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:8160103f",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:3fdb7321",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Considere este cartaz de conscientização em uma clínica:\n\n'Don't wait for symptoms. Regular health screenings can detect diseases early, when treatment is most effective and costs are lowest. Schedule your annual check-up today.'\n\nQual é a estratégia persuasiva usada neste cartaz?",
+        "opcoes": [
+          "Criar medo ao descrever doenças graves",
+          "Oferecer tratamentos gratuitos para todos",
+          "Apresentar benefícios práticos (efetividade e custo) para motivar ação preventiva",
+          "Afirmar que a maioria das pessoas têm doenças não detectadas"
+        ],
+        "correta": 2,
+        "explicacao": "O cartaz apela a benefícios racionais: 'detect diseases early' (efetividade do tratamento), 'costs are lowest' (economia). Isso motiva sem alarmar. Não usa medo irracional (A), não promete gratuidade irreal (B), e não faz generalização sem base (D). É persuasão baseada em lógica e interesse pessoal."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:3fdb7321",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:df2c7560",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia este trecho de uma página de política de privacidade:\n\n'We collect data about your browsing habits to improve your experience. You can opt out at any time, but this may limit the personalization of our services. Your data is encrypted and never sold to third parties.'\n\nO que o texto sugere como compensação pela coleta de dados?",
+        "opcoes": [
+          "Acesso exclusivo a conteúdo premium",
+          "Ausência de custos para usar a plataforma",
+          "Proteção legal contra fraude online",
+          "Personalização melhorada dos serviços oferecidos"
+        ],
+        "correta": 3,
+        "explicacao": "O texto conecta a coleta de dados a 'improve your experience' e avisa que o opt-out 'may limit the personalization'. A compensação prometida é uma experiência personalizada. O texto não menciona conteúdo premium (A), custos (B) nem proteção legal específica (C). Criptografia e não venda dos dados ('encrypted, never sold') são garantias de segurança, não a compensação oferecida."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:df2c7560",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:ing:interpretacao-texto-curto:2fd8b9ad",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Considere este editorial de um jornal:\n\n'The city's decision to cut public transportation budget by 25% will disproportionately affect low-income residents who depend on buses and trains. While cost reduction is important, the city should explore alternative funding sources rather than burdening the most vulnerable citizens.'\n\nQual é a posição do editorial?",
+        "opcoes": [
+          "O corte é inadequado sem explorar alternativas que protejam os mais vulneráveis",
+          "Cidades não deveriam investir em transporte público",
+          "Cortes de orçamento são sempre injustos e devem ser eliminados",
+          "Pessoas de baixa renda não usam transporte público"
+        ],
+        "correta": 0,
+        "explicacao": "O editorial reconhece a importância de 'cost reduction', mas critica que o corte recaia sobre os 'most vulnerable citizens' sem explorar 'alternative funding sources'. Ele não nega o valor do transporte público (B), não é categórico contra todo corte (C) e afirma o contrário de (D): os moradores de baixa renda 'depend on buses and trains'. É uma crítica à forma do corte, não ao princípio de reduzir custos."
+      },
+      "meta": {
+        "id": "gen:ing:interpretacao-texto-curto:2fd8b9ad",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:52.356Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-ing-interpretacao-texto-curto",
+      "version": 1,
+      "format": 2,
+      "subjectId": "ing",
+      "topicId": "interp",
+      "chapterId": "gen-ing-interpretacao-texto-curto",
+      "title": "Textos curtos em inglês",
+      "objective": "Interpretar a informação principal e o objetivo de um texto curto em inglês",
+      "skillIds": [
+        "ing:interpretacao-texto-curto"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 180,
+      "reviewExerciseIds": [
+        "gen:ing:interpretacao-texto-curto:1f5078cb",
+        "gen:ing:interpretacao-texto-curto:8160103f"
+      ],
+      "recap": "Para achar o objetivo de um texto curto, identifique o tipo de texto, a causa citada e o que ele pede ou informa ao leitor.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Texto curto em inglês",
+          "body": "Você vai identificar o que um anúncio, notícia ou aviso em inglês realmente comunica e por quê."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Objetivo do texto, não tradução literal",
+            "body": "Não é preciso traduzir cada palavra: identifique primeiro o tipo de texto, anúncio, aviso ou notícia, e o que ele quer do leitor. Um anúncio geralmente busca convencer, com verbos de ação como 'join' ou 'get' e promessa de benefício. Uma notícia relata um fato, sem pedir ação. Um aviso informa uma mudança e sua causa, que costuma aparecer perto de 'because' ou 'so'."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:interpretacao-texto-curto:8f1b4f69",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:interpretacao-texto-curto:b8ee8a00",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "Aviso: 'Due to scheduled maintenance, the library will be closed this Saturday and will reopen Monday at 9 a.m.' Qual é a função principal deste aviso?",
+            "steps": [
+              "Identifique o tipo de texto: um aviso institucional, não uma opinião.",
+              "Ache a causa: 'due to scheduled maintenance' explica o motivo do fechamento.",
+              "Note a informação prática que resta: quando a biblioteca reabre."
+            ],
+            "result": "A função é informar uma interrupção temporária de serviço e seu motivo, sem pedir nenhuma ação do leitor."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:interpretacao-texto-curto:f4342bfd",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:ing:interpretacao-texto-curto:e1c6de58",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não marque a opção que generaliza uma regra permanente quando o texto descreve uma situação pontual, como uma promoção ou um fechamento temporário."
+        },
+        {
+          "kind": "recap",
+          "body": "Para achar o objetivo de um texto curto, identifique o tipo de texto, a causa citada e o que ele pede ou informa ao leitor."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "gen:bio:membrana-estrutura:e07270a4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A membrana plasmática é descrita pelo modelo de mosaico fluido. Qual é a característica principal que explica por que as moléculas lipídicas conseguem se mover dentro da bicamada, mesmo mantendo sua integridade estrutural?",
+        "opcoes": [
+          "Os lipídios estão ligados covalentemente uns aos outros e podem girar no lugar",
+          "Os lipídios têm natureza anfipática e se movem lateralmente, mantendo as caudas hidrofóbicas no interior protegido",
+          "A membrana é composta por apenas uma camada de proteína que permite movimento livre",
+          "Os lipídios estão completamente congelados em posição fixa devido às ligações de hidrogênio"
+        ],
+        "correta": 1,
+        "explicacao": "No modelo de mosaico fluido, os fosfolipídios têm cabeça hidrofílica e caudas hidrofóbicas (são anfipáticos). Isso permite movimento lateral na bicamada: as moléculas deslizam mantendo as caudas para dentro (protegidas de água) e cabeças para fora. Esse movimento é essencial para fluidez e permeabilidade seletiva. Não são fixas nem completamente livres: é um equilíbrio fluido."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:e07270a4",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:e587542a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os componentes principais da membrana plasmática são fosfolipídios, proteínas e colesterol. Qual é o papel específico do colesterol na estrutura e função da membrana?",
+        "opcoes": [
+          "Atuar como o principal receptor de sinais nas células",
+          "Aumentar a fluidez em todas as temperaturas",
+          "Reduzir a fluidez em temperaturas altas e manter a fluidez em temperaturas baixas, estabilizando a membrana",
+          "Impedir a passagem de qualquer molécula através da membrana"
+        ],
+        "correta": 2,
+        "explicacao": "O colesterol se encaixa entre os fosfolipídios e funciona como um 'amortecedor' da fluidez: no calor, reduz o excesso de fluidez; no frio, impede que a membrana fique rígida. Essa é a sua função moderadora. Quem atua como receptor de sinais são as proteínas, não o colesterol."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:e587542a",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:e39ba25c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A bicamada lipídica se forma espontaneamente em solução aquosa porque as moléculas de fosfolipídio são anfipáticas. Explique o fenômeno molecular que direciona essa organização.",
+        "opcoes": [
+          "Os fosfolipídios formam ligações covalentes entre si",
+          "As proteínas organizam os lipídios em uma estrutura rígida",
+          "As cabeças hidrofílicas se orientam para dentro para evitar contato com água",
+          "As caudas hidrofóbicas se protegem do contato com água, enquanto as cabeças hidrofílicas interagem com o solvente aquoso"
+        ],
+        "correta": 3,
+        "explicacao": "A causa é o caráter hidrofóbico das caudas. Expostas à água, as caudas apolares formariam um arranjo desfavorável; por isso se voltam para o interior da bicamada. As cabeças hidrofílicas, polares, interagem com a água e ficam voltadas para fora. Esse arranjo diminui a energia livre do sistema (a água ganha entropia ao não precisar se organizar em torno das caudas). Não há ligações covalentes entre os fosfolipídios, só interações não covalentes."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:e39ba25c",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.886Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:56c9c3a0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As proteínas transmembrana, um tipo de proteína integral, atravessam a membrana plasmática de lado a lado. Qual característica estrutural permite que essas proteínas permaneçam estáveis dentro do ambiente hidrofóbico da bicamada?",
+        "opcoes": [
+          "Possuem regiões com aminoácidos hidrofóbicos que interagem com as caudas lipídicas, alternando com regiões hidrofílicas nos extremos",
+          "São totalmente hidrofílicas e repelem os lipídios",
+          "Não têm estrutura secundária e fluem livremente",
+          "Possuem regiões com aminoácidos hidrofílicos em contato com a água"
+        ],
+        "correta": 0,
+        "explicacao": "Proteínas transmembrana têm domínios com aminoácidos hidrofóbicos (leucina, isoleucina, valina, fenilalanina) que interagem com as caudas lipídicas no interior da bicamada. Nas partes que ficam em contato com a água, dentro e fora da célula, há aminoácidos hidrofílicos (serina, aspartato, lisina). É a combinação das duas regiões que ancora a proteína; ter só regiões hidrofílicas não explicaria a estabilidade no meio hidrofóbico."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:56c9c3a0",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:aedcdaf2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A membrana plasmática deve ser semipermeável, permitindo entrada de nutrientes essenciais mas bloqueando moléculas prejudiciais. Como a estrutura de mosaico fluido explica essa permeabilidade seletiva?",
+        "opcoes": [
+          "A bicamada lipídica bloqueia todas as moléculas; as proteínas permitem passagem de todas",
+          "Proteínas e fosfolipídios trabalham juntos: lipídios permitem passagem de moléculas apolares; proteínas formam canais seletivos para moléculas polares e íons",
+          "Apenas água passa através da membrana; nada mais consegue",
+          "O colesterol bloqueia completamente a passagem de qualquer coisa"
+        ],
+        "correta": 1,
+        "explicacao": "A bicamada (apolar) deixa passar moléculas apolares pequenas (oxigênio, CO2) e moléculas pequenas polares (água, glicerol). Moléculas polares grandes e íons não conseguem atravessar o interior hidrofóbico, precisam de proteínas transportadoras. Essa seletividade conjunta de lipídios e proteínas cria a permeabilidade seletiva. O mosaico reflete essa multifuncionalidade: componentes com papéis específicos mantendo flexibilidade."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:aedcdaf2",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:ae3dd6fb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O fluxo de lipídios e proteínas dentro da membrana é constante. Como o modelo de mosaico fluido descreve esse movimento sem perder a integridade da célula?",
+        "opcoes": [
+          "A membrana se desfaz e reconstrói a cada minuto",
+          "Não há movimento; tudo está fixo",
+          "Lipídios se difundem lateralmente rapidamente; proteínas se movem mais lentamente mas ainda se deslocam, e as ligações não-covalentes mantêm a estrutura coesa",
+          "Apenas os lipídios se movem; proteínas ficarão presas permanentemente"
+        ],
+        "correta": 2,
+        "explicacao": "O movimento é de difusão lateral: as moléculas deslizam dentro da própria camada, sem atravessá-la. Os lipídios trocam de lugar com os vizinhos muito rapidamente; as proteínas, maiores, se deslocam mais devagar. Interações hidrofóbicas e ligações de hidrogênio mantêm a coesão sem a rigidez de ligações covalentes. Isso dá à membrana flexibilidade e fluidez sem perder a integridade."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:ae3dd6fb",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:5ae4f57c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Por que as células precisam regular a composição lipídica de suas membranas em diferentes temperaturas, e como isso se relaciona ao modelo de mosaico fluido?",
+        "opcoes": [
+          "Apenas o colesterol controla a fluidez",
+          "Todas as membranas têm exatamente a mesma composição",
+          "A temperatura não afeta a membrana",
+          "Temperaturas altas aumentam agitação térmica, aumentando fluidez; temperaturas baixas a reduzem. As células ajustam proporção de ácidos graxos insaturados (mais fluidos) e saturados (mais rígidos) para manter fluidez ótima"
+        ],
+        "correta": 3,
+        "explicacao": "Fluidez membranar é crítica: rígida demais, proteínas não se mexem; fluida demais, perde integridade. Temperatura altera agitação térmica. Bactérias e células ajustam ácidos graxos insaturados (com duplas, formam curvas, ocupam mais espaço, reduzem compactação) vs. saturados (retos, compactos). Em frio, aumentam insaturados; em calor, saturados. Esse é um exemplo de homeostase molecular do modelo de mosaico fluido."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:5ae4f57c",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:322a8d29",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O movimento browniano e as flutuações térmicas afetam constantemente a membrana plasmática. Como o modelo de mosaico fluido reconcilia esse movimento molecular aleatório com a manutenção de função celular?",
+        "opcoes": [
+          "Propõe que a estrutura de bicamada com interações fracas permite movimento local constante, mas a organização geral e funções vitais (transporte, sinalização) emergem de milhões de moléculas interagindo estatisticamente",
+          "Afirma que a membrana é um sólido completamente imóvel",
+          "Diz que cada molécula se comporta de forma determinística",
+          "Ignora o movimento browniano completamente"
+        ],
+        "correta": 0,
+        "explicacao": "O mosaico fluido é dinâmico: admite movimento constante em escala molecular, mas a estrutura e a função vêm do comportamento coletivo. Cada molécula se move ao acaso, e o conjunto mantém a bicamada organizada. Esse movimento é útil: aumenta a chance de encontros entre receptores e seus ligantes, o que favorece a transmissão de sinais."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:322a8d29",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:6553a1bf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Lipídios de membrana com caudas muito longas e saturadas versus curtas e insaturadas têm diferentes impactos na fluidez. Como essas diferenças estruturais se explicam dentro do modelo de mosaico fluido?",
+        "opcoes": [
+          "Não há diferença funcional",
+          "Caudas longas e retas (saturadas) empacotam densamente, reduzindo fluidez; caudas curtas e curvadas (insaturadas) ocupam mais espaço, aumentando fluidez e permitindo maior movimento lateral das moléculas",
+          "Apenas o comprimento importa, não a saturação",
+          "Insaturação reduz fluidez"
+        ],
+        "correta": 1,
+        "explicacao": "A geometria das caudas define o empacotamento. Ácidos graxos saturados são lineares e se empacotam de forma apertada, como palitos retos numa caixa, o que reduz a fluidez. Os insaturados têm 'dobras' nas duplas ligações, ocupam mais espaço e deixam lacunas, o que aumenta a fluidez. Caudas mais curtas também interagem menos entre si. Por isso membranas ricas em insaturados são mais fluidas, o que é importante em organismos de ambientes frios."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-estrutura:6553a1bf",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

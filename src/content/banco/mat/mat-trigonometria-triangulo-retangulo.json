@@ -1,0 +1,763 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:45406295",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um triângulo retângulo tem hipotenusa de 13 cm e um cateto de 5 cm. Qual é a medida do outro cateto?",
+        "opcoes": [
+          "9 cm",
+          "10 cm",
+          "12 cm",
+          "8 cm"
+        ],
+        "correta": 2,
+        "explicacao": "Usando o Teorema de Pitágoras: 5² + b² = 13². Logo, 25 + b² = 169, b² = 144, b = 12 cm. Este é o famoso triângulo 5-12-13, muito comum em problemas de ENEM."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:45406295",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:03851a35",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um prédio tem altura de 20 m. Uma pessoa está a 15 m de distância da base do prédio. Qual é o ângulo de elevação do ponto de vista da pessoa até o topo do prédio? (tan 53° ≈ 1,33, tan 45° = 1, tan 37° ≈ 0,75)",
+        "opcoes": [
+          "45°",
+          "37°",
+          "60°",
+          "53°"
+        ],
+        "correta": 3,
+        "explicacao": "Tangente do ângulo de elevação: altura/distância = 20/15 = 1,33, que bate com 53°. Reconhecer os triângulos especiais (3-4-5, 5-12-13 e variações) te faz resolver rápido."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:03851a35",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:bdd9dee8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um triângulo retângulo, o cateto oposto mede 7 cm e a hipotenusa 25 cm. Qual é o cateto adjacente?",
+        "opcoes": [
+          "24 cm",
+          "18 cm",
+          "20 cm",
+          "26 cm"
+        ],
+        "correta": 0,
+        "explicacao": "Teorema de Pitágoras: a² + 7² = 25². Logo, a² = 625 - 49 = 576, a = 24 cm. Este é o triângulo 7-24-25, outra terna pitagórica importante para reconhecer."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:bdd9dee8",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:bbbde8bd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma escada está inclinada contra uma parede. A escada tem 10 m de comprimento e forma um ângulo de 60° com o solo. Qual é a altura que a escada alcança na parede? (sen 60° ≈ 0,87)",
+        "opcoes": [
+          "6,2 m",
+          "9,4 m",
+          "8,7 m",
+          "5 m"
+        ],
+        "correta": 2,
+        "explicacao": "A altura é o cateto oposto: altura = comprimento × sen(60°) = 10 × 0,87 = 8,7 m. Usar cosseno em vez de seno é um erro frequente que resulta da falta de clareza sobre qual razão usar."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:bbbde8bd",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:d9d3ecd6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um triângulo retângulo, sen(θ) = 0,6. Qual é o cos(θ)? (Use a identidade sen²(θ) + cos²(θ) = 1)",
+        "opcoes": [
+          "0,6",
+          "0,75",
+          "0,5",
+          "0,8"
+        ],
+        "correta": 3,
+        "explicacao": "Usa a identidade: 0,6² + cos²(θ) = 1, então 0,36 + cos²(θ) = 1, cos²(θ) = 0,64, cos(θ) = 0,8. Essa identidade é a chave quando os valores não tão tabelados."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:d9d3ecd6",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:db3e60e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um avião decola de um aeroporto e sobe em linha reta fazendo um ângulo de 30° com o solo. Após percorrer 2 km em linha reta, qual é a altura aproximada do avião? (sen 30° = 0,5)",
+        "opcoes": [
+          "1 km",
+          "1,7 km",
+          "0,5 km",
+          "2 km"
+        ],
+        "correta": 0,
+        "explicacao": "Altura é o cateto oposto: altura = distância × sen(30°) = 2000 m × 0,5 = 1000 m = 1 km. Misturar ângulo com altura ou trocar seno por cosseno é cilada comum."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:db3e60e4",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:817137a4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um observador está no topo de um farol com 40 m de altura. Ele vê um barco no horizonte em um ângulo de depressão de 45°. Qual é a distância aproximada do barco até a base do farol? (tan 45° = 1)",
+        "opcoes": [
+          "20 m",
+          "60 m",
+          "40 m",
+          "80 m"
+        ],
+        "correta": 2,
+        "explicacao": "Ângulo de depressão: tan(45°) = altura/distância. Logo, 1 = 40/distância, distância = 40 m. O ângulo de depressão é igual ao de elevação (ângulos alternos internos). Muita gente confunde isso."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:817137a4",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:52dfb70b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois triângulos retângulos têm o mesmo ângulo agudo de 35°. O primeiro tem hipotenusa 10 m, o segundo tem hipotenusa 20 m. Qual é a razão entre o cateto oposto do primeiro e o cateto oposto do segundo?",
+        "opcoes": [
+          "1",
+          "2",
+          "1/4",
+          "1/2"
+        ],
+        "correta": 3,
+        "explicacao": "Mesmo ângulo, mesmas razões trigonométricas. Cateto oposto1 = 10 × sen(35°), Cateto oposto2 = 20 × sen(35°). Razão: (10 × sen(35°))/(20 × sen(35°)) = 10/20 = 1/2. Proporcionalidade se mantém."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:52dfb70b",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:4bc6ee30",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um triângulo retângulo, a hipotenusa mede 10 cm e um cateto mede 6 cm. Qual é o outro cateto?",
+        "opcoes": [
+          "8 cm",
+          "7 cm",
+          "9 cm",
+          "5 cm"
+        ],
+        "correta": 0,
+        "explicacao": "Teorema de Pitágoras: 6² + b² = 10². Logo, 36 + b² = 100, b² = 64, b = 8 cm. Este é o triângulo 6-8-10, múltiplo do triângulo 3-4-5, muito comum em problemas."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:4bc6ee30",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:122f07bf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual é o seno de um ângulo cujo cateto oposto é 5 m e a hipotenusa é 13 m?",
+        "opcoes": [
+          "1/2",
+          "5/13",
+          "12/13",
+          "5/12"
+        ],
+        "correta": 1,
+        "explicacao": "Seno: cateto oposto/hipotenusa = 5/13 ≈ 0,385. É o triângulo 5-12-13, e saber que falta o 12 te ajuda a conferir com a identidade sen²+cos²=1."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:122f07bf",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:b68ce375",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um triângulo retângulo tem catetos de 3 m e 4 m. Qual é o comprimento da hipotenusa?",
+        "opcoes": [
+          "6 m",
+          "8 m",
+          "5 m",
+          "7 m"
+        ],
+        "correta": 2,
+        "explicacao": "Teorema de Pitágoras: c² = 3² + 4² = 9 + 16 = 25, c = 5 m. É o triângulo 3-4-5, o mais básico."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:b68ce375",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:47b46c24",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um triângulo retângulo, o cos(θ) = 0,6. O cateto adjacente mede 12 cm. Qual é a hipotenusa?",
+        "opcoes": [
+          "12 cm",
+          "18 cm",
+          "24 cm",
+          "20 cm"
+        ],
+        "correta": 3,
+        "explicacao": "Cosseno = cateto adjacente/hipotenusa, logo 0,6 = 12/hipotenusa. Resolvendo: hipotenusa = 12/0,6 = 20 cm. É o inverso: você tem o cosseno e um cateto, acha a hipotenusa."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:47b46c24",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:30a3aaab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa está em um ponto A e vê o topo de uma árvore em um ângulo de elevação de 60°. A árvore está a 10 m de distância da pessoa. Qual é aproximadamente a altura da árvore? (tan 60° ≈ 1,73)",
+        "opcoes": [
+          "5,8 m",
+          "17,3 m",
+          "10 m",
+          "20 m"
+        ],
+        "correta": 1,
+        "explicacao": "Tangente do ângulo de elevação: tan(60°) = altura/distância. Logo, altura = 10 × tan(60°) = 10 × 1,73 = 17,3 m. O ângulo de elevação é fundamental em problemas de altura inacessível."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:30a3aaab",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:trigonometria-triangulo-retangulo:dde7c31f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um triângulo retângulo, sen(θ) = 12/13. Qual é cos(θ)? (Use a identidade sen²(θ) + cos²(θ) = 1)",
+        "opcoes": [
+          "7/13",
+          "8/13",
+          "5/13",
+          "12/13"
+        ],
+        "correta": 2,
+        "explicacao": "Aplicando: (12/13)² + cos²(θ) = 1, logo 144/169 + cos²(θ) = 1. Então cos²(θ) = 25/169, cos(θ) = 5/13. É o triângulo 5-12-13. Você consegue confirmar que o cateto que falta é 5."
+      },
+      "meta": {
+        "id": "gen:mat:trigonometria-triangulo-retangulo:dde7c31f",
+        "version": 1,
+        "skillIds": [
+          "mat:trigonometria-triangulo-retangulo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.808Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-trigonometria-triangulo-retangulo",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "trig",
+      "chapterId": "gen-mat-trigonometria-triangulo-retangulo",
+      "title": "Trigonometria do triângulo",
+      "objective": "Usar seno, cosseno, tangente e o teorema de Pitágoras para achar lados e ângulos.",
+      "skillIds": [
+        "mat:trigonometria-triangulo-retangulo"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:trigonometria-triangulo-retangulo:122f07bf",
+        "gen:mat:trigonometria-triangulo-retangulo:4bc6ee30"
+      ],
+      "recap": "Pitágoras relaciona os três lados; seno, cosseno e tangente relacionam ângulo e lados. Ângulo de elevação e depressão têm o mesmo valor.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Triângulo retângulo",
+          "body": "Você vai aprender a usar o teorema de Pitágoras e as razões seno, cosseno e tangente pra achar lados e ângulos desconhecidos."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Pitágoras e as razões",
+            "body": "Num triângulo retângulo, o teorema de Pitágoras diz que hipotenusa² = cateto1² + cateto2². Já as razões trigonométricas relacionam ângulo e lados: seno = oposto/hipotenusa, cosseno = adjacente/hipotenusa, tangente = oposto/adjacente. Escolha a razão que já tem duas das três informações."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:trigonometria-triangulo-retangulo:45406295",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:trigonometria-triangulo-retangulo:47b46c24",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "A sombra da árvore",
+            "problem": "Uma árvore projeta uma sombra de 12 m quando o sol forma um ângulo de elevação de 30°. Sabendo que tan 30° ≈ 0,58, qual é a altura da árvore?",
+            "steps": [
+              "Tangente do ângulo = cateto oposto (altura) / cateto adjacente (sombra).",
+              "0,58 = altura / 12.",
+              "Altura = 0,58 × 12 ≈ 6,96 m."
+            ],
+            "result": "Aproximadamente 6,96 m."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:trigonometria-triangulo-retangulo:03851a35",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:trigonometria-triangulo-retangulo:bdd9dee8",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não troque cateto oposto por adjacente: o oposto é o lado que não toca o ângulo escolhido, o adjacente é o que toca."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Elevação e depressão",
+            "left": {
+              "label": "Ângulo de elevação",
+              "body": "Medido de baixo pra cima, entre a linha horizontal do observador e a linha até um ponto mais alto."
+            },
+            "right": {
+              "label": "Ângulo de depressão",
+              "body": "Medido de cima pra baixo, entre a horizontal e a linha até um ponto mais baixo. Tem o mesmo valor do ângulo de elevação visto do outro ponto."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:trigonometria-triangulo-retangulo:817137a4",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Pitágoras relaciona os três lados; seno, cosseno e tangente relacionam ângulo e lados. Ângulo de elevação e depressão têm o mesmo valor."
+        }
+      ]
+    }
+  ]
+}

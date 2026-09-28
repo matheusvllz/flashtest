@@ -668,6 +668,12 @@
     color: var(--color-nevoa);
     box-shadow: none;
   }
+  /* "A seguir" (docs/30 §14.1, Fase 12) — comprometida além da primeira, ou provisória: não é bloqueada (ícone do tipo continua), só o traço fica mais leve. */
+  [data-planned="true"] > .path-node {
+    border-style: dashed;
+    border-color: var(--color-pelo);
+    box-shadow: none;
+  }
   [data-focus="true"] > .path-node {
     width: 76px;
     height: 76px;

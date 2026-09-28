@@ -1,0 +1,528 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:equacao-primeiro-grau:656e826a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "João tem o triplo da idade de Maria. Se a soma de suas idades é 40 anos, qual é a idade de João?",
+        "opcoes": [
+          "25",
+          "10",
+          "30",
+          "20"
+        ],
+        "correta": 2,
+        "explicacao": "Seja Maria = x. João = 3x. Equação: x + 3x = 40, então 4x = 40, x = 10. Maria tem 10 e João tem 30. Traduza o problema pra linguagem de álgebra antes de resolver."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:656e826a",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:8e5bd15c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pedro tem o dobro do dinheiro de Ana. Se a diferença entre os valores dos dois é R$ 50, quanto Pedro tem?",
+        "opcoes": [
+          "50",
+          "75",
+          "150",
+          "100"
+        ],
+        "correta": 3,
+        "explicacao": "Seja Ana = x. Pedro = 2x. Diferença: 2x - x = 50, então x = 50. Pedro = 2 × 50 = 100 reais. Diferença entre quantidades é subtrair uma da outra."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:8e5bd15c",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:80248e1b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um encanador cobra uma taxa fixa de 50 reais pela visita, mais 30 reais por hora de trabalho. Um cliente pagou 170 reais no total. Quantas horas o encanador trabalhou nessa visita?",
+        "opcoes": [
+          "5 horas",
+          "2 horas",
+          "3 horas",
+          "4 horas"
+        ],
+        "correta": 3,
+        "explicacao": "A equação é 50 + 30x = 170, onde x é o número de horas. Resolvendo: 30x = 170 - 50 = 120, logo x = 120 / 30 = 4 horas. A taxa fixa é 50 reais, e cada hora custa 30 reais. Então 4 horas gera 4 × 30 = 120 em trabalho, mais 50 de taxa."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:80248e1b",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.628Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:60a40af6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma piscina tem 1000 litros de água. A cada hora, uma bomba retira 80 litros. Após quantas horas a piscina terá 360 litros?",
+        "opcoes": [
+          "8 horas",
+          "9 horas",
+          "6 horas",
+          "7 horas"
+        ],
+        "correta": 0,
+        "explicacao": "A equação é 1000 - 80x = 360, onde x é o número de horas. Resolvendo: -80x = 360 - 1000 = -640, logo x = -640 / -80 = 8 horas. Confira: 1000 - (80 × 8) = 1000 - 640 = 360 litros. A redução é linear, 80 litros por hora, durante 8 horas reduz 640 litros."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:60a40af6",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:0cd20f16",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um comerciante comprou camisetas por 20 reais cada e as vende por 35 reais cada. Se vender 60 camisetas, qual será o lucro total?",
+        "opcoes": [
+          "750 reais",
+          "900 reais",
+          "1050 reais",
+          "600 reais"
+        ],
+        "correta": 1,
+        "explicacao": "O lucro por camiseta é 35 - 20 = 15 reais. Pra 60 camisetas: 60 × 15 = 900 reais de lucro total. Ou seja, a receita é 60 × 35 = 2100 reais, o custo é 60 × 20 = 1200 reais, então lucro = 2100 - 1200 = 900 reais."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:0cd20f16",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:34e28219",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A idade de João é o triplo da idade de sua filha. Juntos, eles têm 48 anos. Qual é a idade de João?",
+        "opcoes": [
+          "24 anos",
+          "30 anos",
+          "36 anos",
+          "40 anos"
+        ],
+        "correta": 2,
+        "explicacao": "Seja x a idade da filha. João tem 3x. A equação é 3x + x = 48, ou 4x = 48, logo x = 12 anos (filha) e 3 × 12 = 36 anos (João). Confira: 36 + 12 = 48 anos. O triplo de 12 é 36, não confunda com o dobro ou outras razões."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:34e28219",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:9cdbd5b1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um carro percorreu uma distância em 4 horas a uma velocidade média de 80 quilômetros por hora. Se a velocidade média tivesse sido 100 quilômetros por hora, quanto tempo o carro demoraria para percorrer a mesma distância?",
+        "opcoes": [
+          "2,8 horas",
+          "3,2 horas",
+          "3,6 horas",
+          "2,4 horas"
+        ],
+        "correta": 1,
+        "explicacao": "Distância = velocidade × tempo. Com 80 km/h em 4 horas: distância = 80 × 4 = 320 km. Pra percorrer 320 km a 100 km/h: tempo = 320 / 100 = 3,2 horas. Mesma distância, velocidade maior, tempo menor. A relação é inversamente proporcional: 4 / t = 100 / 80, logo t = 4 × 80 / 100 = 3,2 horas."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:9cdbd5b1",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:fa7ed58e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois irmãos foram a uma loja e gastaram 240 reais juntos. O irmão mais velho gastou 60 reais a mais que o irmão mais novo. Quanto o irmão mais velho gastou?",
+        "opcoes": [
+          "180 reais",
+          "90 reais",
+          "120 reais",
+          "150 reais"
+        ],
+        "correta": 3,
+        "explicacao": "Seja x o que o irmão mais novo gastou. O irmão mais velho gastou x + 60. Total: x + (x + 60) = 240, ou 2x + 60 = 240, logo 2x = 180, x = 90. O irmão mais velho gastou 90 + 60 = 150 reais. Confira: 90 + 150 = 240. A diferença entre eles é sempre 60 reais."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:fa7ed58e",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:86c19d4d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma mesa e uma cadeira custam juntas 500 reais. A mesa custa 180 reais a mais que a cadeira. Qual é o preço da mesa?",
+        "opcoes": [
+          "340 reais",
+          "260 reais",
+          "290 reais",
+          "320 reais"
+        ],
+        "correta": 0,
+        "explicacao": "Seja x o preço da cadeira. A mesa custa x + 180. Total: x + (x + 180) = 500, ou 2x + 180 = 500, logo 2x = 320, x = 160 reais (cadeira). A mesa custa 160 + 180 = 340 reais. Confira: 160 + 340 = 500 reais. A diferença de preço é 180 reais."
+      },
+      "meta": {
+        "id": "gen:mat:equacao-primeiro-grau:86c19d4d",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-equacao-primeiro-grau",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "eq",
+      "chapterId": "gen-mat-equacao-primeiro-grau",
+      "title": "Equação do primeiro grau",
+      "objective": "Resolver problemas usando equação do primeiro grau com uma incógnita.",
+      "skillIds": [
+        "mat:equacao-primeiro-grau"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:equacao-primeiro-grau:60a40af6",
+        "gen:mat:equacao-primeiro-grau:86c19d4d"
+      ],
+      "recap": "Pra resolver um problema com equação: chame o desconhecido de x, traduza o texto em operações e isole x por último.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Equação do primeiro grau",
+          "body": "Você vai aprender a transformar um problema em palavras numa equação e a isolar a incógnita pra achar o valor procurado."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Frase vira equação",
+            "body": "Pra montar uma equação, leia o problema e chame de x o valor que você não conhece. Depois, traduza cada informação do texto em uma operação matemática, ligando os dois lados com o sinal de igual."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:equacao-primeiro-grau:0cd20f16",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:equacao-primeiro-grau:34e28219",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Passo a passo",
+            "problem": "Uma van cobra 15 reais fixos mais 4 reais por quilômetro rodado. Uma corrida custou 47 reais. Quantos quilômetros foram rodados?",
+            "steps": [
+              "Chame de x o número de quilômetros.",
+              "Monte a equação: 15 + 4x = 47.",
+              "Isole x: 4x = 47 - 15 = 32.",
+              "Divida os dois lados por 4: x = 8."
+            ],
+            "result": "Foram rodados 8 quilômetros."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:equacao-primeiro-grau:80248e1b",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:equacao-primeiro-grau:656e826a",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não isole x antes de resolver as somas e subtrações dos dois lados da equação: primeiro simplifique cada lado, só depois divida pra achar o valor final."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Termos que indicam operação",
+            "body": "Algumas palavras do problema já dizem qual operação usar. 'Triplo' vira multiplicar por 3, 'juntos' ou 'soma' vira somar, e 'a mais que' ou 'a menos que' vira somar ou subtrair a diferença."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:equacao-primeiro-grau:fa7ed58e",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Pra resolver um problema com equação: chame o desconhecido de x, traduza o texto em operações e isole x por último."
+        }
+      ]
+    }
+  ]
+}

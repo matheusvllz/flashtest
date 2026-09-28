@@ -23,6 +23,15 @@ dist-ssr
 # Netlify (build output + CLI local state)
 .netlify/
 
+# Vercel (saída local do preset `vercel` do Nitro, docs/27 §14 — VERCEL=1 bun run build)
+.vercel/
+
+# Aprendizagem adaptativa (docs/30/31) — lotes brutos do pipeline de conteúdo (dados
+# intermediários, não versionados; só o publicado em src/content/banco/ é versionado)
+# e pacotes gerados de conteúdo (dados, regenerados por scripts/content/build-packs.ts).
+content-pipeline/lotes/
+public/content/
+
 # Playwright (Fase 0, docs/20 §19) — relatório e artefatos de execução local.
 test-results/
 playwright-report/
@@ -38,6 +47,17 @@ blob-report/
 *.pem
 *.key
 *.p12
+
+# Claude Code — config pessoal e artefatos de skills (docs/ai/SKILLS.md).
+# settings.local.json guarda plugins ligados só pra você (ex.: marketing sob demanda).
+.claude/settings.local.json
+# Repo Security Review: relatórios podem conter achados sensíveis.
+.security-review/
+system-security-review/
+# Impeccable: caches do hook e config local.
+.impeccable/hook.cache.json
+.impeccable/hook.pending.json
+.impeccable/config.local.json
 
 # Editor directories and files
 .vscode/*

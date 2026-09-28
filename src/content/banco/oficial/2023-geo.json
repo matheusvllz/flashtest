@@ -1,0 +1,109 @@
+{
+  "subjectId": "geo",
+  "items": [
+    {
+      "id": "oficial:2023:16a24cc9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Alternativas logísticas estão servindo de instrumentos que ativam os mercados especuladores de terras nas diferentes regiões da Amazônia e constituem em indicadores utilizados por diferentes atores para defender ou denunciar o avanço da cultura da soja na região e, com ela, a retomada do desmatamento. É evidente que o crescimento do desmatamento tem a ver também com a expansão da soja, porém atribuir a ela o fator principal parece não totalmente correto. Parto da compreensão central de que a lógica que gera o desmatamento está articulada pelo tripé grileiros, madeireiros e pecuaristas.\n\n(OLIVEIRA, A. U. A Amazônia e a nova geografia da produção da soja. Terra Livre, n. 26, jan.-jun. 2006, adaptado.)\n\nNa visão do autor, o problema central da situação descrita é desencadeado pela",
+        "opcoes": [
+          "apropriação de áreas devolutas.",
+          "sonegação de impostos federais.",
+          "incorporação de exportação ilegal.",
+          "desoneração de setores produtivos.",
+          "flexibilização de legislação ambiental."
+        ],
+        "correta": 0,
+        "explicacao": "O \"tripé grileiros, madeireiros e pecuaristas\" citado pelo autor remete diretamente à grilagem — a apropriação ilegal de terras públicas (devolutas) — como motor central do desmatamento, e não à soja, a impostos ou à legislação ambiental em si.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:16a24cc9",
+        "version": 1,
+        "skillIds": [
+          "geo:meio-ambiente-impactos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 71"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:843adf61",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Produtores rurais europeus são antigos opositores de um grande acordo com o Mercosul. Na visão deles, existe um nítido risco de concorrência desleal, pois, na Europa, é preciso seguir regras mais rígidas de produção, o que encarece o processo. Assim, eles não conseguiriam competir com os preços, por exemplo, da carne brasileira e teriam seus negócios ameaçados. Por outro lado, o setor industrial europeu se mobiliza a favor do acordo, uma vez que as reduções de tarifas no comércio internacional dariam maior acesso ao mercado sul-americano. Um exemplo é o setor automotivo europeu, que prevê maior participação e concorrência nos países do Mercosul caso o acordo siga em frente.\n\n(ROUBICEK, M. Como o risco ambiental afeta o acordo entre Mercosul e União Europeia. Disponível em: www.nexojornal.com.br. Acesso em: 25 out. 2021.)\n\nNo contexto do acordo citado, os dois grupos econômicos europeus defendem, respectivamente, a",
+        "opcoes": [
+          "restrição dos fluxos migratórios e a maior atuação de sindicatos.",
+          "ampliação das leis trabalhistas e a plena importação de manufaturados.",
+          "proteção das florestas nacionais e a ampla transferência de tecnologias.",
+          "manutenção das barreiras fitossanitárias e a livre circulação de mercadorias.",
+          "remoção dos entraves alfandegários e a melhor remuneração de empregados."
+        ],
+        "correta": 3,
+        "explicacao": "Os produtores rurais querem manter as regras/barreiras que protegem seu mercado da concorrência externa (fitossanitárias), enquanto a indústria automotiva quer que as mercadorias circulem livremente entre os blocos, para vender mais nos países do Mercosul.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:843adf61",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 85"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

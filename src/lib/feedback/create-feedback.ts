@@ -12,6 +12,10 @@ function proximoInteractionId(): string {
  * Cria o snapshot de uma resposta — correção pura (seção 5 item 1) já
  * calculada pelo chamador, aqui só a mensagem é escolhida, UMA vez. `pickMessage`
  * é injetável pra teste determinístico (docs/20 §5, "seletor de mensagem injetável").
+ *
+ * `dontKnow` (docs/30 §16.1, Fase 6): quando `true`, força `correct: false`
+ * e `kind: "dont-know"` independente do que veio em `params.correct` — o
+ * botão "Não sei" nunca é lido como chute certo por acidente.
  */
 export function createFeedback(
   params: {
@@ -19,14 +23,17 @@ export function createFeedback(
     correct: boolean;
     explanation: string;
     xpAwarded?: number;
+    dontKnow?: boolean;
   },
   pickMessage: (slot: VozSlot) => string = fala,
 ): AnswerFeedback {
-  const messageId: VozSlot = params.correct ? "acertou" : "errou";
+  const kind: AnswerFeedback["kind"] = params.dontKnow ? "dont-know" : params.correct ? "correct" : "incorrect";
+  const messageId: VozSlot = kind === "dont-know" ? "naosei" : kind === "correct" ? "acertou" : "errou";
   return {
     interactionId: proximoInteractionId(),
     exerciseId: params.exerciseId,
-    correct: params.correct,
+    correct: kind === "dont-know" ? false : params.correct,
+    kind,
     messageId,
     messageText: pickMessage(messageId),
     explanation: params.explanation,

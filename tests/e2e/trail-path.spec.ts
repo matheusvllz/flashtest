@@ -3,13 +3,24 @@ import { expect, test } from "@playwright/test";
 /**
  * `/trilha` como caminho visual (docs/27, docs/28 T-17) — HG1…HG9, HG12, RF-12/RF-6.
  * Fixtures semeadas via `page.addInitScript`, como `trail-home.spec.ts`.
+ *
+ * `?vista=mapa` em toda navegação (docs/32 F15.1, 27/09/2026): com `jornadaAdaptativa`
+ * ligada por padrão, `/trilha` sem esse parâmetro mostra a jornada única (SessionCard +
+ * JourneyPath), não o mapa por matéria — este arquivo testa especificamente a mecânica
+ * do MAPA (zigue-zague, expandir capítulo, fim de matéria), que continua existindo como
+ * vista secundária (`trilha.tsx`, botão "Ver mapa das matérias").
  */
 
 const BASE = {
   authed: true,
   onboarded: true,
   schemaVersion: 5,
-  prefs: { name: "Ana", sound: false, haptics: false, theme: "light", dailyLessons: 3 },
+  // `onboardingVersion: 2` (não o padrão `1` de usuário legado, F13.7): sem
+  // isso, o card "Quer ajustar a trilha ao seu nível?" (nivelamento, docs/32
+  // F15.1) aparece em cima de QUALQUER vista (não respeita `?vista=mapa`),
+  // empurra o layout e quebra a matemática de rolagem que este arquivo testa
+  // — achado real, ligar `nivelamento` globalmente derrubou HG5 (narrow).
+  prefs: { name: "Ana", sound: false, haptics: false, theme: "light", dailyLessons: 3, onboardingVersion: 2 },
   quiz: { answers: [], gaps: [], completedAt: "2026-01-01T00:00:00.000Z" },
   tutor: { open: false, messages: [], focus: null },
   premiumTrial: { active: false, startedAt: null },
@@ -52,7 +63,13 @@ const PONTUACAO_FEITAS_IDS = [
   "pontuacao-03-vocativo",
 ];
 
-/** Português avançado: crase/concordância/regência legados concluídos, pontuação 3/12. Foco local = pontuacao-04. */
+/**
+ * Português avançado: crase/concordância/regência legados concluídos, pontuação 3/12. Foco
+ * local = pontuacao-04. As 2 aulas geradas de "por" (docs/30 §21.3, F11.3) também entram
+ * completas: sem isso, `recommendNext` (docs/20 §13, item 4) acha uma delas como "próxima
+ * microlição disponível" de "por" ANTES do fallback legado, e a recomendação global sequestra
+ * o foco pra "Mais aulas" em vez de pontuacao-04 (achado real: quebrou ao publicar a Onda 1).
+ */
 const PORTUGUES_FUNDO = JSON.stringify({
   ...BASE,
   prefs: { ...BASE.prefs, trailSubjectId: "por" },
@@ -68,11 +85,29 @@ const PORTUGUES_FUNDO = JSON.stringify({
       "crase-quando-usar": microFeito,
       "crase-proibida": microFeito,
       "revisao--por-crase": microFeito,
+      "aula-por-classes-gramaticais-identificacao": microFeito,
+      "aula-por-interpretacao-ideia-principal": microFeito,
+      // Rodada 2 da F11.3 (docs/32) acrescentou mais 4 aulas em "por" — mesmo motivo da nota acima.
+      "aula-por-regencia-verbal-nominal": microFeito,
+      "aula-por-tempos-verbais-emprego": microFeito,
+      "aula-por-formacao-palavras-processos": microFeito,
+      "aula-por-sintaxe-termos-oracao": microFeito,
     },
   },
 });
 
 /** Biologia inteira concluída → fim de matéria; foco global fica em Matemática. `lastStudyDate` hoje: caminho "orgulhosa" (não-retorno). */
+// As 4 aulas geradas (docs/30 §21.3, F11.3) entram em Biologia como uma seção "Mais aulas"
+// própria quando `pacotesConteudo` está ligada — sem completá-las aqui, sempre sobra um nó
+// pendente ali e `focus` nunca fica null, então SubjectPathEnd nunca aparece (achado real:
+// a Onda 1 publicou aula-bio-* de verdade e este fixture parou de fechar a matéria).
+const BIO_AULAS_GERADAS_FEITAS = {
+  "aula-bio-ecologia-relacoes-ecossistema": microFeito,
+  "aula-bio-evolucao-selecao-natural": microFeito,
+  "aula-bio-fisiologia-humana-sistemas": microFeito,
+  "aula-bio-genetica-leis-mendel": microFeito,
+};
+
 const BIOLOGIA_FIM = JSON.stringify({
   ...BASE,
   prefs: { ...BASE.prefs, trailSubjectId: "bio" },
@@ -82,6 +117,7 @@ const BIOLOGIA_FIM = JSON.stringify({
       "citologia-membrana": microFeito,
       "citologia-organelas": microFeito,
       "revisao--bio-citologia": microFeito,
+      ...BIO_AULAS_GERADAS_FEITAS,
     },
   },
 });
@@ -107,6 +143,7 @@ const BIOLOGIA_FIM_RETORNO = JSON.stringify({
       "citologia-membrana": microFeito,
       "citologia-organelas": microFeito,
       "revisao--bio-citologia": microFeito,
+      ...BIO_AULAS_GERADAS_FEITAS,
     },
   },
 });
@@ -116,13 +153,13 @@ async function seed(page: import("@playwright/test").Page, v3: string) {
 }
 
 test("HG2 — exatamente 1 btn-primary visível em /trilha (estado limpo)", async ({ page }) => {
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.locator("[data-path-node]").first().waitFor({ timeout: 15000 });
   await expect(page.locator(".btn-primary:visible")).toHaveCount(1);
 });
 
 test("HG3 — zigue-zague segue o padrão fixo de posições", async ({ page }) => {
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   const nodes = page.locator("[data-path-node]");
   await nodes.first().waitFor({ timeout: 15000 });
   const count = await nodes.count();
@@ -145,7 +182,7 @@ test("HG3 — zigue-zague segue o padrão fixo de posições", async ({ page }) 
 
 test("HG4 — todo nó tem estado em texto e aria-label; bloqueado não é link", async ({ page }) => {
   await seed(page, PORTUGUES_FUNDO);
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.getByRole("button", { name: /^Português/ }).waitFor({ timeout: 15000 });
   await page.getByText("Crase sem medo", { exact: true }).click();
 
@@ -163,7 +200,7 @@ test("HG4 — todo nó tem estado em texto e aria-label; bloqueado não é link"
 
 test("HG5 — abre com o foco local visível e não rola de novo ao expandir outro capítulo", async ({ page }) => {
   await seed(page, PORTUGUES_FUNDO);
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await expect(page.locator('[data-path-row="pontuacao-04-termos-deslocados"]')).toBeInViewport({ timeout: 15000 });
   const scrollY1 = await page.evaluate(() => window.scrollY);
   expect(scrollY1).toBeGreaterThan(0);
@@ -181,7 +218,7 @@ const COPY_PROXIMA = "Próxima nesta matéria";
 
 test("HG6 — botão voltar para a atual reaparece e leva de volta ao foco", async ({ page }) => {
   await seed(page, PORTUGUES_FUNDO);
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.locator('[data-path-row="pontuacao-04-termos-deslocados"]').waitFor({ timeout: 15000 });
   await page.evaluate(() => window.scrollTo(0, 0));
   const botao = page.getByRole("button", { name: "Voltar para a lição atual" });
@@ -195,7 +232,7 @@ test("HG7 — sem rolagem horizontal em nenhuma largura da matriz", async ({ pag
   for (const largura of larguras) {
     await page.setViewportSize({ width: largura, height: 900 });
     await seed(page, PORTUGUES_FUNDO);
-    await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+    await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
     await page.locator("[data-path-node]").first().waitFor({ timeout: 15000 });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth);
     expect(overflow, `largura ${largura}`).toBe(true);
@@ -204,7 +241,7 @@ test("HG7 — sem rolagem horizontal em nenhuma largura da matriz", async ({ pag
 
 test("HG8 — reduced motion: halo estático e rolagem sem smooth", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.locator(".path-halo").first().waitFor({ timeout: 15000 });
   const iterations = await page.evaluate(() => {
     const el = document.querySelector(".path-halo");
@@ -214,7 +251,7 @@ test("HG8 — reduced motion: halo estático e rolagem sem smooth", async ({ pag
 });
 
 test("HG9 — no máximo 1 imagem da Foca dentro de main", async ({ page }) => {
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.locator("[data-path-node]").first().waitFor({ timeout: 15000 });
   const count = await page.locator('main img[src*="/branding/foca/"]').count();
   expect(count).toBeLessThanOrEqual(1);
@@ -229,7 +266,7 @@ test("HG12 — retorno de lição: nó concluído com pop e conector traçado no
     } };
     localStorage.setItem("foca.state.v3", JSON.stringify(s));
   }, BASE_JSON);
-  await page.goto("/trilha?concluida=porcentagem-valor", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?concluida=porcentagem-valor&vista=mapa", { waitUntil: "domcontentloaded" });
   const nodeMarker = page.locator('[data-path-row="porcentagem-valor"] .path-node');
   await expect(nodeMarker).toHaveClass(/anim-pop-in/, { timeout: 15000 });
   const connector = page.locator('[data-path-row="porcentagem-aumento-desconto"] .path-connector--draw');
@@ -241,7 +278,7 @@ test("RF-12/RF-6 — fim de matéria mostra Foca orgulhosa, dica de outra matér
   page,
 }) => {
   await seed(page, BIOLOGIA_FIM);
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.getByRole("button", { name: /^Biologia/ }).waitFor({ timeout: 15000 });
   await expect(page.getByText("Você fechou tudo o que está publicado em Biologia.")).toBeVisible();
   await expect(page.getByText(/^A Foca recomenda:/)).toBeVisible();
@@ -252,7 +289,7 @@ test("RF-12/RF-6 — fim de matéria mostra Foca orgulhosa, dica de outra matér
 
 test("acolhedora vence mesmo com a matéria selecionada toda concluída (docs/15 §3.2)", async ({ page }) => {
   await seed(page, BIOLOGIA_FIM_RETORNO);
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.getByRole("button", { name: /^Biologia/ }).waitFor({ timeout: 15000 });
   await expect(page.getByText("Você fechou tudo o que está publicado em Biologia.")).toBeVisible();
   await expect(page.locator('main img[src*="acolhedora"]')).toHaveCount(1);

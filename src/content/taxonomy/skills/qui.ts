@@ -1,0 +1,53 @@
+import type { SkillDef } from "../types";
+
+/** Química (docs/30 §8, Fase 2). */
+export const SKILLS_QUI: SkillDef[] = [
+  {
+    id: "qui:estrutura-atomica-modelos",
+    subjectId: "qui",
+    topicId: "atom",
+    area: "CN",
+    name: "Identificar prótons, nêutrons e elétrons a partir do número atômico e de massa",
+    prerequisites: [],
+    core: true,
+    incidence: 2,
+    level: "base",
+    status: "ativo",
+  },
+  {
+    id: "qui:tabela-periodica-propriedades",
+    subjectId: "qui",
+    topicId: "tab",
+    area: "CN",
+    name: "Prever propriedades periódicas (raio, eletronegatividade) pela posição na tabela",
+    prerequisites: ["qui:estrutura-atomica-modelos"],
+    core: false,
+    incidence: 2,
+    level: "intermediario",
+    status: "ativo",
+  },
+  {
+    id: "qui:estequiometria-calculo-mols",
+    subjectId: "qui",
+    topicId: "est",
+    area: "CN",
+    name: "Calcular quantidade de matéria numa reação balanceada",
+    prerequisites: ["qui:estrutura-atomica-modelos"],
+    core: true,
+    incidence: 3,
+    level: "intermediario",
+    status: "ativo",
+  },
+  {
+    id: "qui:quimica-organica-funcoes",
+    subjectId: "qui",
+    topicId: "org",
+    area: "CN",
+    name: "Reconhecer as principais funções orgânicas numa molécula",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "intermediario",
+    status: "ativo",
+  },
+];

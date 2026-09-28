@@ -4,8 +4,9 @@ import { expect, test } from "@playwright/test";
  * Player de lição v2 (docs/25 §9/§12.2, §18 T-11/T-27) — percorre
  * `porcentagem-valor` inteira contando as 5 questões (G4: 4-8 questões
  * intercaladas com ensino), confere o breadcrumb "capítulo › lição" e prova
- * G6: errar não abre o tutor sozinho, só o CTA "Explicar melhor" abre, e
- * nenhuma chamada de rede acontece até um envio explícito.
+ * G6: errar não abre o tutor sozinho, só o CTA "Explicar melhor" abre — e
+ * esse CTA é o nível 3 da explicação em camadas (docs/30 §17.2, Fase 7): o
+ * clique já É o envio explícito, então dispara uma chamada de rede.
  */
 test("percorre porcentagem-valor: 5 questões, breadcrumb e tutor só abre pelo CTA", async ({ page }) => {
   const chamadasApi: string[] = [];
@@ -36,10 +37,12 @@ test("percorre porcentagem-valor: 5 questões, breadcrumb e tutor só abre pelo 
   await page.waitForTimeout(3000);
   await expect(page.locator('[aria-label="Fechar tutor"]')).toHaveCount(0);
 
-  // Só o CTA explícito abre — e sem nenhuma chamada de rede até enviar.
+  // Só o CTA explícito abre — e "Explicar melhor" é o nível 3 da explicação
+  // em camadas (docs/30 §17.2, Fase 7): o próprio clique já é a ação
+  // explícita, então ele dispara UM envio automático ("me ensina do começo").
   await page.getByRole("button", { name: "Explicar melhor" }).click();
   await expect(page.locator('[aria-label="Fechar tutor"]')).toBeVisible();
-  expect(chamadasApi).toHaveLength(0);
+  await expect.poll(() => chamadasApi.length).toBe(1);
   await page.locator('[aria-label="Fechar tutor"]').click(); // fecha pra seguir a lição
 
   await page.getByRole("button", { name: "Continuar" }).click(); // segue do checkpoint
@@ -83,7 +86,8 @@ test("percorre porcentagem-valor: 5 questões, breadcrumb e tutor só abre pelo 
   expect(statusCount).toBe(5);
   await expect(page.getByRole("button", { name: "Concluir lição" })).toBeVisible();
 
-  // Nenhuma chamada de rede aconteceu em NENHUM momento da lição — o tutor
-  // só chama a API num envio explícito, que este teste nunca fez.
-  expect(chamadasApi).toHaveLength(0);
+  // Só UMA chamada de rede em toda a lição — a do clique em "Explicar
+  // melhor" (nível 3) lá na questão 1. As outras 4 questões não geraram
+  // nenhuma: o tutor só chama a API num envio explícito.
+  expect(chamadasApi).toHaveLength(1);
 });

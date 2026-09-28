@@ -1,0 +1,189 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:sintaxe-periodo-composto:7544d6a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leia: 'Se você não pedir desculpas, nossos amigos nunca mais confiarão em nós, pois perderão a confiança que depositaram em você.' Identifique a classificação correta das orações coordenadas e subordinadas presentes neste período composto.",
+        "opcoes": [
+          "A oração 'Se você não pedir desculpas' é subordinada adverbial condicional; 'pois perderão a confiança' é coordenada sindética explicativa.",
+          "Há uma subordinada adverbial temporal, uma causal e uma coordenada conclusiva.",
+          "Todas as orações após a principal são subordinadas adverbiais de propósito.",
+          "Há duas subordinadas adverbiais condicionais e uma causal, todas conectadas ao verbo principal."
+        ],
+        "correta": 0,
+        "explicacao": "A oração iniciada por 'Se' é subordinada adverbial condicional: estabelece a condição para o fato principal. A oração iniciada por 'pois' é coordenada sindética explicativa: justifica a afirmação anterior ('nossos amigos nunca mais confiarão em nós'). As outras alternativas inventam relações que o período não tem (tempo, finalidade, duas condicionais)."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-periodo-composto:7544d6a2",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-periodo-composto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-periodo-composto:d1db6ac3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No trecho 'Chegou cedo ao escritório, mas não encontrou ninguém porque todos saíram para a reunião', quantas orações há e como se classificam?",
+        "opcoes": [
+          "Duas orações: uma principal e uma subordinada adverbial.",
+          "Três orações: uma principal, uma coordenada e uma subordinada adverbial causal.",
+          "Quatro orações: todas coordenadas entre si.",
+          "Três orações: todas subordinadas ao mesmo verbo principal."
+        ],
+        "correta": 1,
+        "explicacao": "São três verbos, logo três orações. 'Chegou cedo ao escritório' abre o período. 'Mas não encontrou ninguém' é coordenada adversativa: o 'mas' contrasta os dois fatos. E 'porque todos saíram para a reunião' é subordinada adverbial causal: explica por que não havia ninguém, e se liga a 'não encontrou ninguém', que funciona como sua principal. É um período misto, com coordenação e subordinação."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-periodo-composto:d1db6ac3",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-periodo-composto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-periodo-composto:2ae6fec3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual alternativa identifica corretamente as funções das orações em: 'Os alunos entraram na sala depois que o professor chamou a atenção deles para a apresentação'?",
+        "opcoes": [
+          "Ambas são orações coordenadas sindeticamente.",
+          "A primeira oração é subordinada; a segunda é principal.",
+          "Há apenas uma oração complexa com função única.",
+          "A primeira oração é principal; a segunda é subordinada adverbial temporal."
+        ],
+        "correta": 3,
+        "explicacao": "'Os alunos entraram na sala' é a principal. 'Depois que o professor chamou a atenção deles para a apresentação' é adverbial temporal: marca quando a ação principal aconteceu. O 'depois que' mostra essa relação de tempo."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-periodo-composto:2ae6fec3",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-periodo-composto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:21:53.482Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:sintaxe-periodo-composto:e7fd2a93",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Analisando o texto: 'Embora chovesse torrencialmente, o agricultor saiu de casa porque precisava verificar a plantação que havia secado durante a estiagem', quantas orações subordinadas há nele?",
+        "opcoes": [
+          "Quatro orações subordinadas",
+          "Uma oração subordinada",
+          "Duas orações subordinadas",
+          "Três orações subordinadas"
+        ],
+        "correta": 3,
+        "explicacao": "Identificam-se três orações subordinadas: (1) 'Embora chovesse torrencialmente' = subordinada adverbial concessiva; (2) 'porque precisava verificar a plantação' = subordinada adverbial causal; (3) 'que havia secado durante a estiagem' = subordinada adjetiva restritiva, relativa ao substantivo 'plantação'. A oração principal é 'o agricultor saiu de casa'. Reconhecer múltiplas subordinadas encadeadas é habilidade essencial no nível 4 de dificuldade."
+      },
+      "meta": {
+        "id": "gen:por:sintaxe-periodo-composto:e7fd2a93",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-periodo-composto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:26.596Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

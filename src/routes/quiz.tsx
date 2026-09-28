@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
-import { completeQuiz, setState, useAppState, type Prefs } from "@/lib/store";
+import { completeQuiz, setEasySubjects, setState, useAppState, type Prefs } from "@/lib/store";
 import { computeGaps } from "@/lib/gaps";
 import { ChevronDown } from "lucide-react";
 import { AREA_OF, COURSES } from "@/data/courses";
@@ -14,6 +14,11 @@ import {
   FOREIGN_UNIVERSITIES,
   UNIVERSITIES,
 } from "@/data/universities";
+import { ExamStep, canAdvanceExamStep } from "@/components/onboarding/ExamStep";
+import { TimeStep } from "@/components/onboarding/TimeStep";
+import { FocusStep, canAdvanceFocusStep } from "@/components/onboarding/FocusStep";
+import { PlacementOffer } from "@/components/onboarding/PlacementOffer";
+import { FEATURES } from "@/lib/features";
 
 export const Route = createFileRoute("/quiz")({ component: Quiz, ssr: false });
 
@@ -29,23 +34,56 @@ const LEVELS = [
  * Quiz unificado de entrada — substitui /signup + /onboarding (SDD 12, Development 1).
  * É "criar conta" disfarçado de quiz: nenhum e-mail ou senha, só perguntas que geram
  * valor imediato. Curto de propósito — o aluno chega ao diagnóstico em menos de um minuto.
+ *
+ * `exam`/`time`/`focus` são novos (docs/30 §12.2, Fase 13 do docs/31 F13.1) —
+ * 9 passos ao todo, agrupados em 3 blocos (kicker de cada `Wrap`): "Você"
+ * (name/level), "Sua prova" (exam/state/target/course), "Seu ritmo"
+ * (subjects/time/focus).
  */
-const STEPS = ["name", "level", "state", "target", "course", "subjects"] as const;
+const STEPS = ["name", "level", "exam", "state", "target", "course", "subjects", "time", "focus"] as const;
 
 function Quiz() {
   const nav = useNavigate();
   const s = useAppState();
   const [idx, setIdx] = useState(0);
+  const [oferta, setOferta] = useState(false);
   const step = STEPS[idx];
   const isLast = idx === STEPS.length - 1;
 
+  function fecharQuiz() {
+    completeQuiz([], computeGaps([], s.prefs.difficultSubjects));
+  }
+
   function next() {
     if (isLast) {
-      completeQuiz([], computeGaps([], s.prefs.difficultSubjects));
+      if (FEATURES.nivelamento) {
+        setOferta(true);
+        return;
+      }
+      fecharQuiz();
       nav({ to: "/aha" });
       return;
     }
     setIdx(idx + 1);
+  }
+
+  if (oferta) {
+    return (
+      <PhoneFrame>
+        <div className="flex min-h-screen flex-col justify-center bg-neve px-6">
+          <PlacementOffer
+            onFazer={() => {
+              fecharQuiz();
+              nav({ to: "/nivelamento" });
+            }}
+            onPular={() => {
+              fecharQuiz();
+              nav({ to: "/aha" });
+            }}
+          />
+        </div>
+      </PhoneFrame>
+    );
   }
 
   return (
@@ -99,10 +137,13 @@ function canAdvance(step: string, s: ReturnType<typeof useAppState>) {
   const p = s.prefs;
   if (step === "name") return p.name.trim().length > 0;
   if (step === "level") return !!p.level;
+  if (step === "exam") return canAdvanceExamStep(p.examTargets);
   if (step === "state") return !!p.residenceState;
   if (step === "target") return !!p.targetInstitution;
   if (step === "course") return !!p.targetCourse;
   if (step === "subjects") return p.difficultSubjects.length > 0;
+  if (step === "time") return !!p.dailyMinutes;
+  if (step === "focus") return canAdvanceFocusStep(p.studyFocus);
   return true;
 }
 
@@ -141,7 +182,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
 
   if (step === "level")
     return (
-      <Wrap kicker="Etapa 2" title="Em que ponto você está?">
+      <Wrap kicker="Você" title="Em que ponto você está?">
         <div className="flex flex-col gap-2.5">
           {LEVELS.map((v) => (
             <Choice
@@ -163,7 +204,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
   if (step === "state")
     return (
       <Wrap
-        kicker="Etapa 3"
+        kicker="Sua prova"
         title="Onde você mora?"
         hint="Usamos para sugerir as faculdades certas."
       >
@@ -194,13 +235,15 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
       </Wrap>
     );
 
+  if (step === "exam") return <ExamStep />;
+
   if (step === "target") return <TargetStep onNext={onNext} />;
 
   if (step === "course") return <CourseStep onNext={onNext} />;
 
   if (step === "subjects")
     return (
-      <Wrap kicker="Última etapa" title="O que mais te trava hoje?" hint="Escolha uma ou mais.">
+      <Wrap kicker="Seu ritmo" title="O que mais te trava hoje?" hint="Escolha uma ou mais.">
         <div className="flex flex-wrap gap-2">
           {SUBJECTS.map((sub) => {
             const on = p.difficultSubjects.includes(sub.name);
@@ -221,10 +264,55 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
             );
           })}
         </div>
+        <EasySubjectsDisclosure />
       </Wrap>
     );
 
+  if (step === "time") return <TimeStep />;
+
+  if (step === "focus") return <FocusStep />;
+
   return null;
+}
+
+/** Seção recolhida "Alguma você já manda bem?" (docs/30 §12.2, Fase 13 F13.1) — opcional, dentro da tela de matérias difíceis. */
+function EasySubjectsDisclosure() {
+  const s = useAppState();
+  const [aberta, setAberta] = useState(false);
+  const p = s.prefs;
+
+  if (!aberta) {
+    return (
+      <button
+        onClick={() => setAberta(true)}
+        className="mt-4 text-sm font-semibold text-mar underline underline-offset-2"
+      >
+        Alguma você já manda bem?
+      </button>
+    );
+  }
+
+  return (
+    <div className="mt-4">
+      <p className="ds-label">Alguma você já manda bem?</p>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {SUBJECTS.map((sub) => {
+          const on = p.easySubjects.includes(sub.name);
+          return (
+            <button
+              key={sub.id}
+              onClick={() =>
+                setEasySubjects(on ? p.easySubjects.filter((x) => x !== sub.name) : [...p.easySubjects, sub.name])
+              }
+              className={`chip ${on ? "chip-on" : ""}`}
+            >
+              {sub.name}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 function CourseStep({ onNext }: { onNext: () => void }) {
@@ -236,7 +324,7 @@ function CourseStep({ onNext }: { onNext: () => void }) {
 
   return (
     <Wrap
-      kicker="Etapa 5"
+      kicker="Sua prova"
       title="Qual curso você quer?"
       hint={
         p.targetInstitution && p.targetInstitution !== "Ainda não decidi"
@@ -320,7 +408,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
 
   return (
     <Wrap
-      kicker="Etapa 4"
+      kicker="Sua prova"
       title="Qual é o seu alvo?"
       hint="A faculdade que você quer. É por ela que vamos montar seu plano."
     >

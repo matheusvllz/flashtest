@@ -1,0 +1,52 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:crase-regra-basica:8cf0568c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual sentença viola a norma culta de crase? (A) 'Todos os candidatos foram à prova munidos de documentos.' (B) 'O tribunal chegou à decisão após longas deliberações.' (C) 'Estamos dedicados à aumentar a produtividade.' (D) 'A empresa se comprometeu à cumprir os prazos estabelecidos.'",
+        "opcoes": [
+          "Somente C",
+          "Somente A",
+          "Apenas B",
+          "C e D"
+        ],
+        "correta": 3,
+        "explicacao": "Analisando: (A) 'foram à prova': preposição 'a' + artigo feminino 'a'. Correto. (B) 'chegou à decisão': preposição 'a' + artigo feminino 'a'. Correto. (C) 'dedicados à aumentar': preposição 'a' + infinitivo 'aumentar'. Crase não vem antes de infinitivo; o certo seria 'a aumentar'. Incorreto. (D) 'comprometeu à cumprir': o certo seria 'a cumprir'. Incorreto. C e D violam a norma, pois a crase antes de infinitivo é proibida."
+      },
+      "meta": {
+        "id": "gen:por:crase-regra-basica:8cf0568c",
+        "version": 1,
+        "skillIds": [
+          "por:crase-regra-basica"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:55:45.629Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

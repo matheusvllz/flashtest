@@ -14,11 +14,21 @@ import { LessonHeader } from "@/components/learning/LessonHeader";
 import { SUBJECT_MAP } from "@/data/subjects";
 import { chapterById } from "@/content/curriculum-tree";
 import { resolveExercise } from "@/content/microlicoes";
+import { itemMetaOf } from "@/content/items";
 import { focusFromExercise } from "@/lib/lessons/tutor-focus";
+import { buildPedagogicalContext } from "@/lib/tutor-context";
 import { useLearningSession } from "@/hooks/useLearningSession";
+import type { CompleteStrategyResult, UseLearningSessionOptions } from "@/hooks/useLearningSession";
 import { COPY } from "@/lib/copy";
+import { FEATURES } from "@/lib/features";
 import type { MicroLesson } from "@/lib/learning/types";
-import { getState, nivelDeXp, openTutorWithContext, setActiveLearningSession } from "@/lib/store";
+import {
+  getState,
+  hojeISO,
+  nivelDeXp,
+  openTutorWithContext,
+  setActiveLearningSession,
+} from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 /**
@@ -36,12 +46,23 @@ import { cn } from "@/lib/utils";
  * correta de zerar sessionId/stepIndex/answers/refs juntos, sem duplicar a
  * lógica de inicialização do hook aqui.
  */
-export function MicroLessonPlayer({ lesson }: { lesson: MicroLesson }) {
+export function MicroLessonPlayer({
+  lesson,
+  mode,
+  onComplete,
+}: {
+  lesson: MicroLesson;
+  /** Repassado a `useLearningSession` (docs/30 §14.4, Fase 12) — ausente = lição de conteúdo, comportamento de sempre. */
+  mode?: UseLearningSessionOptions["mode"];
+  onComplete?: (correct: number, total: number) => CompleteStrategyResult;
+}) {
   const [playKey, setPlayKey] = useState(0);
   return (
     <MicroLessonPlayerInner
       key={playKey}
       lesson={lesson}
+      mode={mode}
+      onComplete={onComplete}
       onReplay={() => setPlayKey((k) => k + 1)}
     />
   );
@@ -49,13 +70,17 @@ export function MicroLessonPlayer({ lesson }: { lesson: MicroLesson }) {
 
 function MicroLessonPlayerInner({
   lesson,
+  mode,
+  onComplete,
   onReplay,
 }: {
   lesson: MicroLesson;
+  mode?: UseLearningSessionOptions["mode"];
+  onComplete?: (correct: number, total: number) => CompleteStrategyResult;
   onReplay: () => void;
 }) {
   const navigate = useNavigate();
-  const session = useLearningSession(lesson);
+  const session = useLearningSession(lesson, { mode, onComplete });
   const [confirmExit, setConfirmExit] = useState(false);
   // Streak/nível ANTES do fechamento — capturados no player bem antes de
   // chamar `session.complete()`, a mesma tática que `LessonPlayer.tsx` usa
@@ -82,7 +107,13 @@ function MicroLessonPlayerInner({
     onReplay();
   }
 
-  function askTutor() {
+  /**
+   * `ensinarDoZero` (docs/30 §17.2, Fase 7): true quando vem do CTA de nível
+   * 3 pós-feedback ("Explicar melhor" depois de errar) — a IA ensina o
+   * conceito do zero e a mensagem já sai enviada. `false` (padrão, "Pedir
+   * dica"/dúvida livre): o aluno digita, sem auto-envio.
+   */
+  function askTutor(ensinarDoZero = false) {
     if (session.step.kind !== "question") return;
     const exercise = resolveExercise(session.step.exerciseId);
     const chapterTitle = chapter?.title ?? lesson.title;
@@ -96,20 +127,32 @@ function MicroLessonPlayerInner({
       session.presentedOrder,
       session.feedback?.correct ?? false,
     );
-    openTutorWithContext({
-      ...focus,
-      subjectName: SUBJECT_MAP[lesson.subjectId].name,
-      topic: chapter ? `${chapter.title} · ${lesson.title}` : lesson.title,
-      questionId: session.step.exerciseId,
-    });
+    const nivel3 = ensinarDoZero && FEATURES.explicacaoEmCamadas;
+    const mode = nivel3 ? "ensinar-do-zero" : "duvida";
+    const pedagogy = FEATURES.contextoPedagogicoIA
+      ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, session.step.exerciseId, mode, hojeISO())
+      : null;
+    openTutorWithContext(
+      {
+        ...focus,
+        subjectName: SUBJECT_MAP[lesson.subjectId].name,
+        topic: chapter ? `${chapter.title} · ${lesson.title}` : lesson.title,
+        questionId: session.step.exerciseId,
+      },
+      { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null },
+    );
   }
 
   if (session.completion) {
     const depois = getState();
     const nivelAtual = nivelDeXp(depois.progress.xp).nivel;
     const streakAtual = depois.progress.streak;
-    const search: Record<string, string> = { concluida: lesson.id };
-    if (session.completion.chapterCompleted) search.capitulo = lesson.chapterId;
+    // Atividade/checkpoint da jornada (docs/30 §14.4) são sessão, não nó da
+    // trilha por matéria — `?concluida=`/`?capitulo=` não fazem sentido pra
+    // uma lição sintética (`lesson.id` começa com "atividade--"), então o
+    // CTA volta pra `/trilha` sem parâmetro nenhum.
+    const search: Record<string, string> = mode === "atividade" || mode === "checkpoint" ? {} : { concluida: lesson.id };
+    if (session.completion.chapterCompleted && search.concluida) search.capitulo = lesson.chapterId;
 
     return (
       <PhoneFrame>
@@ -164,10 +207,17 @@ function MicroLessonPlayerInner({
               canVerify={session.canVerify}
               onVerify={() => session.answer !== null && session.submit(session.answer)}
               onContinue={session.advance}
-              onAskTutor={askTutor}
+              onAskTutor={() => askTutor(true)}
+              onDontKnow={
+                FEATURES.botaoNaoSei && itemMetaOf(step.exerciseId).dontKnowAllowed !== false
+                  ? session.dontKnow
+                  : undefined
+              }
               isLast={session.isLastScoredQuestion}
               questionNumber={session.questionNumber}
               questionTotal={session.questionTotal}
+              explanationLayers={itemMetaOf(step.exerciseId).explanationLayers}
+              silent={mode === "checkpoint"}
             />
           )}
           {step.kind === "recap" && <RecapStepView lesson={lesson} onComplete={completar} />}
@@ -177,8 +227,9 @@ function MicroLessonPlayerInner({
       {/* PhoneFrame não inclui o balão do tutor (só o AppShell, montado nas
           telas pós-quiz que usam bottom nav) — a lição roda em modo foco, sem
           AppShell, então precisa montar o balão aqui (mesmo padrão de
-          `LessonPlayer.tsx`). */}
-      <TutorBubble />
+          `LessonPlayer.tsx`). Checkpoint é sem tutor de propósito (docs/30
+          §13.3) — nem o botão flutuante fica disponível durante ele. */}
+      {mode !== "checkpoint" && <TutorBubble />}
 
       <BottomSheet
         open={confirmExit}

@@ -1,9 +1,12 @@
 import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
+import { DontKnowButton } from "@/components/learning/DontKnowButton";
+import { ExplanationLayers, hasExplanationLayers } from "@/components/learning/ExplanationLayers";
 import { COPY } from "@/lib/copy";
 import type { AnswerFeedback } from "@/lib/feedback/types";
 import { exerciseViewFor } from "@/lib/lessons/registry";
 import type { Exercise, ExerciseAnswer } from "@/lib/lessons/types";
 import type { QuestionStep } from "@/lib/learning/types";
+import type { ItemExplanationLayers } from "@/content/items/types";
 
 /**
  * Passo `question` (docs/25 §12.2/§18 T-10) — nunca mostra a Foca (docs/15
@@ -21,9 +24,15 @@ export function QuestionStepView({
   onVerify,
   onContinue,
   onAskTutor,
+  /** `undefined` = não mostra o botão (flag desligada ou item incompatível — docs/30 §16.1). Decisão de quem chama, não deste componente. */
+  onDontKnow,
   isLast,
   questionNumber,
   questionTotal,
+  /** Nível 2 da explicação em camadas (docs/30 §17.1, Fase 7 F7.2) — `ItemMeta.explanationLayers`, quando o item tiver. `undefined` = sem "Ver resolução" (item ainda sem conteúdo de nível 2). */
+  explanationLayers,
+  /** Nivelamento (Fase 13) e checkpoint (Fase 14, docs/30 §12.3/§13.3): sem feedback certo/errado, sem explicação, sem tutor — só confirma e segue. */
+  silent = false,
 }: {
   step: QuestionStep;
   exercise: Exercise;
@@ -35,9 +44,12 @@ export function QuestionStepView({
   onVerify: () => void;
   onContinue: () => void;
   onAskTutor: () => void;
+  onDontKnow?: () => void;
   isLast: boolean;
   questionNumber: number;
   questionTotal: number;
+  explanationLayers?: ItemExplanationLayers;
+  silent?: boolean;
 }) {
   const View = exerciseViewFor(exercise.type);
   const checked = feedback !== null;
@@ -70,12 +82,24 @@ export function QuestionStepView({
         shownBlocks={presentedOrder}
       />
 
+      {exercise.fonte && <p className="text-[11px] text-nevoa">{exercise.fonte}</p>}
+
       {!checked ? (
-        // O `:disabled` da utility já cuida da opacidade — nada de
-        // `opacity-40` manual por cima (docs/25 §18 T-10).
-        <button className="btn-primary w-full" disabled={!canVerify} onClick={onVerify}>
-          {COPY.licao.verificar}
-        </button>
+        <div className="space-y-2">
+          {/* O `:disabled` da utility já cuida da opacidade — nada de
+              `opacity-40` manual por cima (docs/25 §18 T-10). */}
+          <button className="btn-primary w-full" disabled={!canVerify} onClick={onVerify}>
+            {COPY.licao.verificar}
+          </button>
+          {onDontKnow && <DontKnowButton onClick={onDontKnow} />}
+        </div>
+      ) : silent ? (
+        <div className="space-y-3" role="status">
+          <p className="text-sm font-semibold text-nevoa">{COPY.licao.respostaRegistrada}</p>
+          <button className="btn-primary w-full" onClick={onContinue}>
+            {isLast ? COPY.feedback.verResultado : COPY.feedback.continuar}
+          </button>
+        </div>
       ) : (
         feedback && (
           <FeedbackSheet
@@ -83,7 +107,9 @@ export function QuestionStepView({
             isLast={isLast}
             onContinue={onContinue}
             onAskTutor={onAskTutor}
-          />
+          >
+            {hasExplanationLayers(explanationLayers) ? <ExplanationLayers layers={explanationLayers} /> : undefined}
+          </FeedbackSheet>
         )
       )}
     </div>

@@ -1,0 +1,580 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:5d5d4fd0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bola é solta de uma altura de 5 metros sem movimento inicial. Desprezando a resistência do ar, qual será sua energia cinética no momento antes de tocar o solo? (Considere m = 1 kg, g = 10 m/s²)",
+        "opcoes": [
+          "75 J",
+          "100 J",
+          "25 J",
+          "50 J"
+        ],
+        "correta": 3,
+        "explicacao": "Pela conservação da energia, a potencial vira cinética. E_p = m × g × h = 1 × 10 × 5 = 50 J. Antes de tocar o solo, toda essa energia é cinética (E_c = 50 J). A altura decide, não o tempo."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:5d5d4fd0",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:86114062",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um bloco de 5 kg é empurrado sobre uma mesa horizontal, começando com velocidade de 6 m/s. Sem haver atrito, o bloco desliza até colidir com uma mola. Toda sua energia cinética é convertida em energia potencial elástica na mola. Qual foi a energia armazenada na mola no ponto de máxima compressão?",
+        "opcoes": [
+          "120 J",
+          "180 J",
+          "60 J",
+          "90 J"
+        ],
+        "correta": 3,
+        "explicacao": "A energia cinética inicial é E_c = (1/2) × 5 × 6² = (1/2) × 5 × 36 = 90 J. Como não há atrito e a energia se conserva, toda essa energia cinética é convertida em energia potencial elástica na mola: E_mola = 90 J. Isso ocorre no ponto de máxima compressão, onde a velocidade é zero."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:86114062",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:1a9eb50f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bola de 0,5 kg está a 8 metros de altura e possui uma velocidade de 4 m/s para baixo. Qual é a energia mecânica total da bola nesse instante? (g = 10 m/s²)",
+        "opcoes": [
+          "44 J",
+          "64 J",
+          "40 J",
+          "50 J"
+        ],
+        "correta": 0,
+        "explicacao": "A energia mecânica é potencial mais cinética. E_p = m × g × h = 0,5 × 10 × 8 = 40 J. E_c = (1/2) × 0,5 × 4² = (1/2) × 0,5 × 16 = 4 J. Logo E_mecânica = 40 + 4 = 44 J. A direção da velocidade não muda o cálculo, só importa o módulo."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:1a9eb50f",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:c231f0a6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um skatista de 70 kg parte do repouso no topo de uma rampa semicircular de 5 metros de raio (altura máxima 5 m). Desprezando perdas por atrito, qual será sua velocidade no ponto mais baixo da rampa? (g = 10 m/s²)",
+        "opcoes": [
+          "5 m/s",
+          "10 m/s",
+          "15 m/s",
+          "20 m/s"
+        ],
+        "correta": 1,
+        "explicacao": "A energia potencial no topo é E_p = 70 × 10 × 5 = 3500 J. No ponto mais baixo (altura 0), toda ela é cinética: 3500 = (1/2) × 70 × v², logo v² = 100, v = 10 m/s. A massa não interfere na velocidade final quando convertida apenas por conservação de energia: ela cancela na divisão."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:c231f0a6",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:15a9f100",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um objeto de 2 kg é arremessado verticalmente para cima com velocidade inicial de 20 m/s. Qual será sua energia cinética no ponto de altura máxima? (Desconsidere a resistência do ar)",
+        "opcoes": [
+          "400 J",
+          "800 J",
+          "0 J",
+          "200 J"
+        ],
+        "correta": 2,
+        "explicacao": "Na altura máxima, a velocidade é zero, então E_c = (1/2) × m × v² = 0 J. Toda a cinética inicial virou potencial. Nesse ponto crítico, o objeto para por um instante (v = 0)."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:15a9f100",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:2a6ce674",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um carro de 1000 kg se move a 20 m/s numa estrada horizontal. O motorista aciona os freios, aplicando uma força de frenagem de 5000 N durante 4 segundos. Qual será a energia cinética dissipada pelo freio? (Ignore a resistência do ar e do solo)",
+        "opcoes": [
+          "50 000 J",
+          "200 000 J",
+          "150 000 J",
+          "100 000 J"
+        ],
+        "correta": 1,
+        "explicacao": "Energia cinética inicial: E_c = (1/2) × 1000 × 20² = 200 000 J. A desaceleração é a = F / m = 5000 / 1000 = 5 m/s². Após 4 segundos: v = 20 - 5 × 4 = 0 m/s (para). Toda a energia inicial é dissipada: 200 000 J."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:2a6ce674",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:8b5ddd57",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um projeto de engenharia prevê que uma bola de 0,4 kg seja disparada verticalmente e atinja uma altura máxima de 20 metros. Qual deve ser sua velocidade inicial? (Desconsidere resistência do ar, g = 10 m/s²)",
+        "opcoes": [
+          "10 m/s",
+          "15 m/s",
+          "20 m/s",
+          "25 m/s"
+        ],
+        "correta": 2,
+        "explicacao": "No topo (altura máxima), a cinética é zero e tudo é potencial. E_p = 0,4 × 10 × 20 = 80 J. Essa energia veio da cinética inicial: E_c = (1/2) × 0,4 × v² = 80, logo v² = 400, v = 20 m/s. Conservação de energia permite calcular a velocidade inicial sem usar fórmula de tempo."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:8b5ddd57",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:34d44ba9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um bloco de madeira de 3 kg é solto no topo de uma rampa de 45 graus, descendo uma distância de 4 metros ao longo da rampa. Qual será sua energia potencial gravitacional perdida? (g = 10 m/s²)",
+        "opcoes": [
+          "60 J",
+          "84,8 J",
+          "120 J",
+          "150 J"
+        ],
+        "correta": 1,
+        "explicacao": "Altura vertical descida: h = 4 × sen(45°) = 4 × 0,707 ≈ 2,83 m. Perda de energia potencial: E_p = m × g × h = 3 × 10 × 2,83 ≈ 84,8 J (o valor exato é 60√2 ≈ 84,85 J). Em rampas, use sempre a altura vertical, não a distância percorrida na rampa, para calcular a variação de energia potencial."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:34d44ba9",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.328Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:3c4e81cf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um trapezista de 75 kg oscila em um balanço de circo. No ponto mais baixo (altura 0 m), ele possui uma velocidade de 8 m/s. Qual será sua energia mecânica total nesse ponto? (g = 10 m/s²)",
+        "opcoes": [
+          "300 J",
+          "1200 J",
+          "2400 J",
+          "3000 J"
+        ],
+        "correta": 2,
+        "explicacao": "No ponto mais baixo, altura é 0, então E_p = 0 J. Energia cinética: E_c = (1/2) × 75 × 8² = (1/2) × 75 × 64 = 2400 J. Energia mecânica total: E_total = 0 + 2400 = 2400 J. Na altura mínima, tudo é cinético."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:3c4e81cf",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:a29fb360",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um peixe de 1 kg nada a 2 m/s e enfrenta uma força resistiva de 5 N por causa do atrito com a água. Se o peixe não aplicar nova força muscular, quanto tempo levará para parar completamente?",
+        "opcoes": [
+          "0,4 segundos",
+          "2 segundos",
+          "5 segundos",
+          "0,2 segundos"
+        ],
+        "correta": 0,
+        "explicacao": "A força resistiva causa desaceleração a = F / m = 5 / 1 = 5 m/s² (contrária ao movimento). Usando v = v0 - a × t: 0 = 2 - 5 × t, logo t = 2/5 = 0,4 s. O peixe para em 0,4 segundos."
+      },
+      "meta": {
+        "id": "gen:fis:energia-trabalho-conservacao:a29fb360",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-fis-energia-trabalho-conservacao",
+      "version": 1,
+      "format": 2,
+      "subjectId": "fis",
+      "topicId": "trab",
+      "chapterId": "gen-fis-energia-trabalho-conservacao",
+      "title": "Conservação de energia mecânica",
+      "objective": "Aplicar a conservação de energia mecânica para achar velocidade, altura ou energia num sistema sem atrito",
+      "skillIds": [
+        "fis:energia-trabalho-conservacao"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:fis:energia-trabalho-conservacao:34d44ba9",
+        "gen:fis:energia-trabalho-conservacao:15a9f100"
+      ],
+      "recap": "Sem atrito, a energia mecânica total se conserva: o que o corpo perde de potencial, ganha de cinética, e vice-versa.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Conservação de energia",
+          "body": "Você vai aprender a usar a conservação de energia mecânica para achar velocidade, altura ou energia num sistema sem atrito."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Potencial e cinética trocam de lugar",
+            "body": "Energia potencial gravitacional é Ep = m.g.h, e energia cinética é Ec = (1/2).m.v². Sem atrito, a energia mecânica total, soma das duas, não muda. Quando o corpo desce, a potencial vira cinética; quando sobe, o processo se inverte. No ponto mais alto, a velocidade costuma ser zero e toda a energia é potencial; no ponto mais baixo, toda ela é cinética."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:energia-trabalho-conservacao:5d5d4fd0",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:energia-trabalho-conservacao:3c4e81cf",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "Um carrinho de 2 kg parte do repouso no alto de uma rampa sem atrito, a 4 metros de altura. Qual é sua velocidade na base? (g = 10 m/s²)",
+            "steps": [
+              "Calcule Ep no topo: Ep = 2 x 10 x 4 = 80 J.",
+              "Na base, toda essa energia virou cinética: Ec = 80 J.",
+              "Isole v: 80 = (1/2)(2)v², logo v² = 80, v é aproximadamente 8,9 m/s."
+            ],
+            "result": "O carrinho chega à base a aproximadamente 8,9 metros por segundo."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:energia-trabalho-conservacao:1a9eb50f",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:energia-trabalho-conservacao:c231f0a6",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não esqueça a cinética quando o corpo já tem velocidade na altura considerada; a energia mecânica é sempre a soma das duas."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Energia cinética e mecânica total",
+            "left": {
+              "label": "Cinética",
+              "body": "só a parcela ligada à velocidade."
+            },
+            "right": {
+              "label": "Mecânica total",
+              "body": "cinética mais potencial; soma que se conserva sem atrito."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:energia-trabalho-conservacao:8b5ddd57",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Sem atrito, a energia mecânica total se conserva: o que o corpo perde de potencial, ganha de cinética, e vice-versa."
+        }
+      ]
+    }
+  ]
+}

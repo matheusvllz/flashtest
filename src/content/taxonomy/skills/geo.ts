@@ -1,0 +1,53 @@
+import type { SkillDef } from "../types";
+
+/** Geografia (docs/30 §8, Fase 2). */
+export const SKILLS_GEO: SkillDef[] = [
+  {
+    id: "geo:climatologia-fenomenos",
+    subjectId: "geo",
+    topicId: "cli",
+    area: "CH",
+    name: "Explicar um fenômeno climático (El Niño, efeito estufa, chuva ácida)",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "base",
+    status: "ativo",
+  },
+  {
+    id: "geo:urbanizacao-processos",
+    subjectId: "geo",
+    topicId: "urb",
+    area: "CH",
+    name: "Relacionar processo de urbanização a um problema social ou ambiental",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "intermediario",
+    status: "ativo",
+  },
+  {
+    id: "geo:geopolitica-globalizacao",
+    subjectId: "geo",
+    topicId: "geopol",
+    area: "CH",
+    name: "Analisar um conflito ou bloco econômico à luz da geopolítica atual",
+    prerequisites: [],
+    core: false,
+    incidence: 2,
+    level: "intermediario",
+    status: "ativo",
+  },
+  {
+    id: "geo:meio-ambiente-impactos",
+    subjectId: "geo",
+    topicId: "amb",
+    area: "CH",
+    name: "Avaliar impacto ambiental de uma atividade humana",
+    prerequisites: [],
+    core: true,
+    incidence: 3,
+    level: "base",
+    status: "ativo",
+  },
+];

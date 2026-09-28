@@ -18,7 +18,11 @@ test("Fase 12/T-22 — /dashboard redireciona pra /trilha e mostra o conteúdo d
 }) => {
   await page.goto("/dashboard", { waitUntil: "domcontentloaded" });
   await page.waitForURL("**/trilha", { timeout: 15000 });
-  await expect(page.getByText("Continuar").first()).toBeVisible({ timeout: 15000 });
+  // Com `jornadaAdaptativa` ligada (docs/32 F15.1), a home é o card "Sessão de
+  // hoje" — um aluno recém-chegado, sem nada em andamento, vê "Começar por
+  // aqui", não "Continuar" (que só aparece com algo já iniciado). O que este
+  // teste verifica é o redirect + conteúdo real, não o texto exato do CTA.
+  await expect(page.locator(".btn-primary").first()).toBeVisible({ timeout: 15000 });
 });
 
 /**
@@ -36,7 +40,9 @@ test("Fase 12/T-22 — /dashboard redireciona pra /trilha e mostra o conteúdo d
  * colapsado — não contém o nó atual, então não abre sozinho).
  */
 test("trilha mostra nós com rótulo textual de estado (disponível e bloqueada)", async ({ page }) => {
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  // `?vista=mapa`: este teste é sobre o MAPA por matéria (docs/32 F15.1) — com
+  // `jornadaAdaptativa` ligada, `/trilha` sem o parâmetro mostra a jornada única.
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   await page.getByRole("button", { name: /^Português/ }).waitFor({ timeout: 15000 });
 
   await page.getByRole("button", { name: /^Português/ }).click();
@@ -74,7 +80,8 @@ test("concluir a 1ª lição desbloqueia a 2ª — na trilha E por URL direta", 
   // `recommendNext` recomenda esta como a próxima, então ela vira o nó
   // ATUAL ("Continuar daqui"), não um "Disponível" qualquer solto na lista
   // (`recommend.ts` passo 4 — próxima microlição disponível na ordem).
-  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  // `?vista=mapa`: o nó/aria-label que este teste mira só existe no mapa (docs/32 F15.1).
+  await page.goto("/trilha?vista=mapa", { waitUntil: "domcontentloaded" });
   // Agora que é a recomendação, o título "Aumento e desconto percentual"
   // aparece em 3 lugares (título do card, texto de explicação, nó da
   // trilha) — o `aria-label` do `<Link>` do nó é o único jeito inequívoco de

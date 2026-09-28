@@ -1,0 +1,579 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:5487059d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um átomo possui número atômico 8 e número de massa 16. Quantos nêutrons possui este átomo?",
+        "opcoes": [
+          "8 nêutrons",
+          "16 nêutrons",
+          "24 nêutrons",
+          "2 nêutrons"
+        ],
+        "correta": 0,
+        "explicacao": "Nêutrons = número de massa − número atômico = 16 − 8 = 8. O número atômico é 8, então há 8 prótons. O número de massa é 16, então há 8 nêutrons: prótons e nêutrons somados dão o número de massa."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:5487059d",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:f79ac125",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um elemento químico possui 6 prótons e número de massa 12. Qual é o número de elétrons deste átomo no estado neutro?",
+        "opcoes": [
+          "2 elétrons",
+          "6 elétrons",
+          "12 elétrons",
+          "18 elétrons"
+        ],
+        "correta": 1,
+        "explicacao": "No estado neutro, o número de elétrons é igual ao número de prótons. Como há 6 prótons, há 6 elétrons. O número de massa (12) não é necessário para esta informação. Apenas saiba que prótons = elétrons em átomo neutro."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:f79ac125",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:e32507dd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um íon de cloro tem 17 prótons e carga -1. Quantos elétrons possui este íon?",
+        "opcoes": [
+          "15 elétrons",
+          "16 elétrons",
+          "18 elétrons",
+          "17 elétrons"
+        ],
+        "correta": 2,
+        "explicacao": "O número de prótons é 17. Um íon com carga −1 tem 1 elétron a mais que prótons. Logo: elétrons = prótons − carga = 17 − (−1) = 18 elétrons. Em íons negativos, há mais elétrons que prótons."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:e32507dd",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:f2f2c956",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois isótopos de um mesmo elemento possuem o mesmo número atômico mas números de massa diferentes. Qual propriedade é definitivamente igual em ambos?",
+        "opcoes": [
+          "Massa atômica total",
+          "Número de nêutrons",
+          "Número de massa",
+          "Número de elétrons no estado neutro"
+        ],
+        "correta": 3,
+        "explicacao": "Isótopos são átomos do mesmo elemento, então têm o mesmo número atômico (mesma quantidade de prótons). Diferem no número de nêutrons e, por isso, na massa. Como no átomo neutro o número de elétrons é igual ao de prótons, os dois têm o mesmo número de elétrons no estado neutro."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:f2f2c956",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:30dfebb4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um átomo possui 20 prótons, 20 elétrons e 20 nêutrons. Qual é seu número de massa?",
+        "opcoes": [
+          "40",
+          "60",
+          "10",
+          "20"
+        ],
+        "correta": 0,
+        "explicacao": "Número de massa é prótons mais nêutrons: número de massa = prótons + nêutrons = 20 + 20 = 40. Elétrons não entram (massa é desprezível). O resultado é 40."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:30dfebb4",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:a9308d80",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um íon de sódio (Na+) possui número atômico 11. Qual é o número de elétrons deste íon?",
+        "opcoes": [
+          "10 elétrons",
+          "11 elétrons",
+          "12 elétrons",
+          "9 elétrons"
+        ],
+        "correta": 0,
+        "explicacao": "Sódio tem número atômico 11, logo 11 prótons. O íon Na+ indica que perdeu 1 elétron (carga +1). Então: elétrons = 11 - 1 = 10 elétrons. Em íons positivos, há menos elétrons que prótons."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:a9308d80",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:cb0cbcba",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O elemento fósforo tem número atômico 15. Um íon de fósforo (P3-) tem quantos elétrons?",
+        "opcoes": [
+          "15 elétrons",
+          "18 elétrons",
+          "3 elétrons",
+          "12 elétrons"
+        ],
+        "correta": 1,
+        "explicacao": "Fósforo tem Z = 15. Um íon P3- ganhou 3 elétrons. Então: elétrons = 15 + 3 = 18 elétrons. Ânions (carga negativa) têm mais elétrons que prótons, e cada carga negativa adiciona um elétron."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:cb0cbcba",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:66de6f9d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um isótopo desconhecido tem número atômico 26 e número de massa 56. Qual é o número de nêutrons?",
+        "opcoes": [
+          "56 nêutrons",
+          "26 nêutrons",
+          "30 nêutrons",
+          "82 nêutrons"
+        ],
+        "correta": 2,
+        "explicacao": "Nêutrons = número de massa - número atômico = 56 - 26 = 30 nêutrons. O número de prótons é sempre o número atômico (26 aqui). Subtrai número atômico da massa e acha nêutrons."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:66de6f9d",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:37e9d3c2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um elemento tem número atômico 47 e forma um cátion com carga +1. Quantos elétrons possui este cátion?",
+        "opcoes": [
+          "47 elétrons",
+          "48 elétrons",
+          "45 elétrons",
+          "46 elétrons"
+        ],
+        "correta": 3,
+        "explicacao": "O elemento tem 47 prótons (Z = 47). Um cátion +1 perdeu 1 elétron, então: elétrons = 47 - 1 = 46 elétrons. Cátions (positivos) têm menos elétrons que prótons, diminuindo por cada carga positiva."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:37e9d3c2",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:4b3fc967",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois átomos A e B têm o mesmo número de massa (40) mas números atômicos diferentes (A tem 18 e B tem 19). Qual é a diferença entre seus nêutrons?",
+        "opcoes": [
+          "1 nêutron",
+          "2 nêutrons",
+          "3 nêutrons",
+          "0 nêutrons"
+        ],
+        "correta": 0,
+        "explicacao": "Para A: nêutrons = 40 - 18 = 22. Para B: nêutrons = 40 - 19 = 21. Diferença = 22 - 21 = 1 nêutron. Mesmo número de massa, Z diferentes, então nêutrons diferem em 1 quando Z diferencia em 1."
+      },
+      "meta": {
+        "id": "gen:qui:estrutura-atomica-modelos:4b3fc967",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-qui-estrutura-atomica-modelos",
+      "version": 1,
+      "format": 2,
+      "subjectId": "qui",
+      "topicId": "atom",
+      "chapterId": "gen-qui-estrutura-atomica-modelos",
+      "title": "Prótons, nêutrons e elétrons",
+      "objective": "Identificar o número de prótons, nêutrons e elétrons de um átomo ou íon",
+      "skillIds": [
+        "qui:estrutura-atomica-modelos"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:qui:estrutura-atomica-modelos:f79ac125",
+        "gen:qui:estrutura-atomica-modelos:cb0cbcba"
+      ],
+      "recap": "Nêutrons é igual ao número de massa menos o número atômico; a carga do íon só muda o número de elétrons, nunca prótons ou nêutrons.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Estrutura do átomo",
+          "body": "Você vai aprender a contar prótons, nêutrons e elétrons de um átomo ou íon a partir do número atômico e de massa."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Número atômico, massa e carga",
+            "body": "O número atômico, Z, é a quantidade de prótons, e define o elemento. O número de massa, A, é a soma de prótons e nêutrons, então os nêutrons são A menos Z. Num átomo neutro, o número de elétrons é igual ao de prótons. Num íon, a carga muda essa contagem: um íon positivo perdeu elétrons (elétrons = prótons - carga), e um íon negativo ganhou elétrons (elétrons = prótons + carga, sem o sinal)."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estrutura-atomica-modelos:5487059d",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estrutura-atomica-modelos:e32507dd",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "Um átomo tem número atômico 12 e número de massa 24. Quantos nêutrons ele possui?",
+            "steps": [
+              "Identifique Z = 12 (prótons) e A = 24 (massa).",
+              "Aplique nêutrons = A - Z: 24 - 12.",
+              "O resultado é 12 nêutrons."
+            ],
+            "result": "O átomo possui 12 nêutrons."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estrutura-atomica-modelos:30dfebb4",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estrutura-atomica-modelos:a9308d80",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não use a carga do íon para mudar o número de prótons ou de nêutrons. A carga só altera a quantidade de elétrons."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Íon positivo e íon negativo",
+            "left": {
+              "label": "Íon positivo (cátion)",
+              "body": "perdeu elétrons; elétrons em número menor que prótons."
+            },
+            "right": {
+              "label": "Íon negativo (ânion)",
+              "body": "ganhou elétrons; elétrons em número maior que prótons."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:qui:estrutura-atomica-modelos:f2f2c956",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Nêutrons é igual ao número de massa menos o número atômico; a carga do íon só muda o número de elétrons, nunca prótons ou nêutrons."
+        }
+      ]
+    }
+  ]
+}

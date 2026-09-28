@@ -41,6 +41,8 @@ export const COPY = {
     ],
     sugestoesAjuda: ["Me dá uma dica", "O que devo observar no enunciado?", "Explica de forma mais simples"],
     sugestoesGeral: ["Quais são minhas lacunas?", "Como estou indo?", "O que eu estudo agora?"],
+    /** Nível 3 da explicação em camadas (docs/30 §17, Fase 7) — mensagem auto-enviada quando o aluno pede pra IA ensinar do zero em vez de só apontar o erro. */
+    ensinarDoZero: "Me ensina isso do começo.",
   },
   /** Player de lição passo a passo (docs/25 §12.2/§18 T-10). */
   licao: {
@@ -57,12 +59,28 @@ export const COPY = {
     sairMesmo: "Sair mesmo assim",
     voceAprendeu: "Você aprendeu",
     refazer: "Refazer lição",
+    /** Modo silencioso — nivelamento (Fase 13) e checkpoint (Fase 14): sem cor de certo/errado, sem explicação, só confirma que a resposta contou. */
+    respostaRegistrada: "Resposta registrada.",
     roles: {
-      checkpoint: "Checkpoint",
+      /** Fase 7 F7.7 (docs/30 §17): "Checkpoint" era jargão de produto sem sentido pro aluno — trocado por um rótulo em português comum. */
+      checkpoint: "Checagem rápida",
       pratica: "Prática",
       desafio: "Desafio",
       revisao: "Revisão",
+      diagnostico: "Nivelamento",
     },
+  },
+  /**
+   * Questão — botão "Não sei" (docs/30 §16.1, Fase 6). `naoSeiAria` evita a
+   * palavra "responder" de propósito: `getByRole` do Playwright casa nome
+   * acessível por SUBSTRING (case-insensitive) por padrão, e um `aria-label`
+   * contendo "responder" colide com `getByRole("button", { name:
+   * "Responder" })` — achado real, quebrava `tutor.spec.ts`/`feedback.spec.ts`
+   * quando a flag `botaoNaoSei` ligou (docs/32).
+   */
+  questao: {
+    naoSei: "Não sei",
+    naoSeiAria: "Não sei a resposta desta questão",
   },
   /** Trilha/home e nó/capítulo/seção (docs/25 §12.1/§18 T-16 — copy centralizada aqui desde T-10). */
   trilha: {
@@ -106,5 +124,119 @@ export const COPY = {
     tentarDeNovo: "Tentar de novo",
     abrirCapitulo: (titulo: string) => `Abrir ${titulo}`,
     recolherCapitulo: (titulo: string) => `Recolher ${titulo}`,
+  },
+  /**
+   * Jornada única (docs/30 §14, Fase 12 F12.9) — home com plano misturado
+   * atrás de `FEATURES.jornadaAdaptativa`. `motivos` é o mapa `ReasonCode →
+   * texto` do card "Sessão de hoje" (docs/30 §14.2): número no texto só
+   * quando vem do estado (nunca inventado aqui, são só as frases fixas em
+   * volta), sem "você domina", sem cobrança (docs/20 §7.1). Revisão de tom
+   * feita à mão nesta rodada (mesmo critério que a Fase 7 já registrou em
+   * F7.5 — autorrevisão direta contra `20` §7.1, não o pipeline completo do
+   * Humanizer) — os 9 exemplos do `30` §14.2 foram copiados verbatim; os 5
+   * códigos que a tabela não cobre (`revisao-atrasada`, `reforco-ajuda`,
+   * `prioridade-aluno`, `checkpoint`, `confirmar-fundamento`) são novos,
+   * seguindo o mesmo tom.
+   */
+  jornada: {
+    motivos: {
+      "revisao-devida": "Porcentagem foi bem semana passada. Hoje é um bom dia pra conferir se ficou.",
+      "revisao-atrasada": "Já faz um tempo que você não revisa isso. Vamos recuperar antes que esfrie.",
+      consolidar: "Você foi bem nesse assunto. Antes de avançar, mais umas questões pra firmar.",
+      "nova-habilidade": "Assunto novo. Começa com uma aula curta.",
+      "reforco-erros": "Essa travou duas vezes. Vamos por partes, com calma.",
+      "reforco-nao-sei": "Você marcou 'não sei' aqui. Uma aula rápida resolve isso.",
+      "reforco-ajuda": "Você pediu ajuda aqui outras vezes. Uma prática guiada ajuda a firmar.",
+      desafio: "Isso está firme. Topa uma mais difícil?",
+      "equilibrio-area": "Faz uns dias sem essa área. Uma questão pra variar.",
+      retomar: "Vamos de onde você parou?",
+      "prioridade-aluno": "Você marcou isso como prioridade.",
+      checkpoint: "Hora de conferir como estão as últimas habilidades.",
+      "confirmar-fundamento": "Rápido: só pra confirmar que esse fundamento está firme.",
+      fallback: "Próxima lição da sua trilha.",
+    },
+    /** Rótulo de tipo por `ActivityKind` (distinto de `COPY.licao.roles`, que é o papel da questão DENTRO de uma aula). */
+    kinds: {
+      aula: "Aula",
+      pratica: "Prática",
+      revisao: "Revisão",
+      desafio: "Desafio",
+      checkpoint: "Checkpoint",
+      legado: "Prática",
+      reforco: "Reforço",
+    },
+    /** Estado do nó no caminho da jornada — texto explícito, não só ícone (docs/31 F12.4, critério de acessibilidade). */
+    atual: "Atual",
+    aSeguir: "A seguir",
+    minutos: (n: number) => `~${n} min`,
+    comecar: "Começar",
+    continuar: "Continuar",
+    verMapa: "Ver mapa das matérias",
+    voltarJornada: "Voltar pra jornada",
+    semNada: "Você passou por tudo que está disponível agora. Revisões voltam conforme as datas.",
+    checkpointConcluido: "Checkpoint concluído",
+    checkpointPendente: "Checkpoint",
+    recap: "Por agora é isso — seu progresso já está salvo.",
+  },
+  /** Modo foco (docs/30 §15, Fase 12 F12.9/F12.5). */
+  foco: {
+    titulo: "Foco de estudo",
+    linhaTodas: "Todas as matérias",
+    linhaFoco: (materias: string) => `Foco: ${materias}`,
+    mudar: "Mudar",
+    todasAsMaterias: "Todas as matérias",
+    soHoje: "Só hoje",
+    daquiPraFrente: "Daqui pra frente",
+    voltarATodas: "Voltar a todas",
+    emBreve: "Em breve",
+    ritmoTitulo: "Foco e ritmo",
+    minutosPorDia: "Minutos por dia",
+  },
+  /** Passos novos do onboarding + oferta de nivelamento (docs/30 §12.1/§12.2, Fase 13 F13.1/F13.2/F13.8). */
+  onboarding: {
+    blocoVoce: "Você",
+    blocoSuaProva: "Sua prova",
+    blocoSeuRitmo: "Seu ritmo",
+    examTitulo: "Qual prova você está estudando pra fazer?",
+    outroVestibular: "Outro vestibular",
+    dataProva: "Data da prova",
+    euSeiAData: "Eu sei a data",
+    aindaNaoSeiData: "Ainda não sei",
+    tempoTitulo: "Quanto tempo por dia você consegue estudar?",
+    tempoHint: "Dá pra mudar isso depois, no Perfil.",
+    focoTitulo: "Quer focar em alguma matéria?",
+    escolherMaterias: "Escolher matérias",
+    ofertaTitulo: "Quer começar no seu nível?",
+    ofertaCorpo: "São umas 20 questões, cerca de 10 minutos. Com isso a trilha já começa mais perto do que você precisa.",
+    ofertaCtaPrimario: "Fazer o nivelamento",
+    ofertaCtaSecundario: "Começar sem nivelamento",
+    ofertaRodape: "Dá pra fazer depois, pelo Perfil.",
+  },
+  /** Nivelamento adaptativo — CAT (docs/30 §12.3/§12.5, Fase 13 F13.4/F13.6/F13.8). */
+  nivelamento: {
+    tituloRota: "Nivelamento",
+    duranteHint: "Sem dica nesta parte. Se não souber, toque em Não sei. Isso também ajuda a ajustar a trilha.",
+    naoSei: "Não sei",
+    pausarEContinuar: "Pausar e continuar depois",
+    resultadoTitulo: "Pronto.",
+    resultadoCorpo: "Isso é um ponto de partida, e ele fica mais preciso conforme você estuda.",
+    faixaBaseConstrucao: "Base em construção",
+    faixaNoCaminho: "No caminho",
+    faixaBaseFirme: "Base firme",
+    areaNaoMedida: (area: string) => `Ainda não temos questões suficientes de ${area} para medir.`,
+    ctaIrParaTrilha: "Ir para a trilha",
+    fazerNivelamento: "Fazer nivelamento",
+    refazerNivelamento: "Refazer nivelamento",
+    continuarNivelamento: "Continuar nivelamento",
+    cardTrilhaTitulo: "Quer ajustar a trilha ao seu nível?",
+    cardTrilhaDispensar: "Agora não",
+  },
+  /** Checkpoint periódico da trilha (docs/30 §13, Fase 14 F14.4/F14.5). */
+  checkpoint: {
+    tituloRota: "Checkpoint",
+    introTitulo: "Checkpoint",
+    introCorpo: "Questões misturadas, sem dica. Serve pra ajustar o que vem a seguir na sua trilha.",
+    comecar: "Começar",
+    agoraNao: "Agora não",
   },
 } as const;

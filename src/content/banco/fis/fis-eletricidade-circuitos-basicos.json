@@ -1,0 +1,855 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:b1e6ac88",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um fio de cobre em um circuito tem resistência de 4 ohms e uma tensão de 12 volts é aplicada entre suas extremidades. Qual será a corrente elétrica que passa pelo fio?",
+        "opcoes": [
+          "6 A",
+          "2 A",
+          "3 A",
+          "4 A"
+        ],
+        "correta": 2,
+        "explicacao": "Lei de Ohm: I = V / R = 12 / 4 = 3 A. A corrente é a tensão dividida pela resistência: com 12 volts e 4 ohms, passam 3 amperes."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:b1e6ac88",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:877f14f0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bateria de 6 volts alimenta um resistor de 2 ohms. Qual é a potência elétrica dissipada pelo resistor?",
+        "opcoes": [
+          "36 W",
+          "3 W",
+          "12 W",
+          "18 W"
+        ],
+        "correta": 3,
+        "explicacao": "Corrente: I = V / R = 6 / 2 = 3 A. Potência: P = V × I = 6 × 3 = 18 W. Ou também: P = V² / R = 36 / 2 = 18 W. A potência dissipada mede quanta energia o resistor transforma em calor a cada segundo (18 J por segundo)."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:877f14f0",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:98eaad80",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma resistência de 10 ohms é submetida a uma corrente de 0,5 ampere. Qual será a tensão (diferença de potencial) nas extremidades dessa resistência?",
+        "opcoes": [
+          "3 V",
+          "5 V",
+          "20 V",
+          "2 V"
+        ],
+        "correta": 1,
+        "explicacao": "Lei de Ohm: V = I × R = 0,5 × 10 = 5 V. A tensão é o produto de corrente e resistência. Com 0,5 A e 10 ohms, sai 5 volts."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:98eaad80",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:d341510e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um chuveiro elétrico funciona com 220 volts e absorve uma corrente de 15 amperes quando está na posição 'morno'. Qual é a resistência do seu elemento aquecedor?",
+        "opcoes": [
+          "3300 ohms",
+          "3,3 ohms",
+          "7,3 ohms",
+          "14,7 ohms"
+        ],
+        "correta": 3,
+        "explicacao": "Pela lei de Ohm, R = V / I = 220 / 15 ≈ 14,67 ohms ≈ 14,7 ohms. A resistência é uma característica do elemento aquecedor; a razão entre tensão e corrente é só a forma de calculá-la a partir das medidas."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:d341510e",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:80ddaaf1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um motor elétrico está alimentado por 48 volts e consome 4 amperes de corrente quando funciona com carga máxima. Qual é a potência elétrica sendo fornecida ao motor?",
+        "opcoes": [
+          "192 W",
+          "240 W",
+          "12 W",
+          "96 W"
+        ],
+        "correta": 0,
+        "explicacao": "Potência: P = V × I = 48 × 4 = 192 W. É a potência total fornecida ao motor em carga máxima. Nem toda vira trabalho mecânico: parte sai como calor e perdas internas."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:80ddaaf1",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:907b4ddb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Três resistores de 5 ohms cada estão associados em série. Qual é a resistência total do circuito?",
+        "opcoes": [
+          "5 ohms",
+          "15 ohms",
+          "25 ohms",
+          "1,67 ohms"
+        ],
+        "correta": 1,
+        "explicacao": "Em série, as resistências se somam: R_total = 5 + 5 + 5 = 15 ohms. Quanto mais resistências em série, maior a resistência total. Isso reduz a corrente do circuito."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:907b4ddb",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:40002730",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois resistores, um de 12 ohms e outro de 6 ohms, estão conectados em paralelo. Qual é a resistência equivalente do circuito?",
+        "opcoes": [
+          "2 ohms",
+          "3 ohms",
+          "4 ohms",
+          "9 ohms"
+        ],
+        "correta": 2,
+        "explicacao": "Em paralelo: 1/R_total = 1/12 + 1/6 = 1/12 + 2/12 = 3/12 = 1/4, logo R_total = 4 ohms. A resistência equivalente em paralelo é sempre menor que a menor resistência: há múltiplos caminhos."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:40002730",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:c0dcac4c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Duas lâmpadas idênticas de 20 ohms cada estão em paralelo, alimentadas por uma bateria de 40 volts. Qual é a corrente total que sai da bateria?",
+        "opcoes": [
+          "4 A",
+          "1 A",
+          "2 A",
+          "3 A"
+        ],
+        "correta": 0,
+        "explicacao": "Dois resistores de 20 ohms em paralelo: 1/R = 1/20 + 1/20 = 2/20, logo R = 10 ohms. Corrente total: I = V / R = 40 / 10 = 4 A. É o dobro da corrente de uma lâmpada só, porque o circuito oferece dois caminhos paralelos."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:c0dcac4c",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:d1ec4ea3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um resistor de 8 ohms está conectado em série com um de 4 ohms, e o conjunto recebe 24 volts. Qual é a tensão (queda de tensão) apenas no resistor de 4 ohms?",
+        "opcoes": [
+          "4 V",
+          "8 V",
+          "12 V",
+          "16 V"
+        ],
+        "correta": 1,
+        "explicacao": "Resistência total: 8 + 4 = 12 ohms. Corrente: I = 24 / 12 = 2 A. A queda no resistor de 4 ohms: V = I × R = 2 × 4 = 8 V. Em série, a tensão total se divide proporcionalmente às resistências."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:d1ec4ea3",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:421a1148",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um forno elétrico de resistência 22 ohms está conectado a uma rede de 220 volts. Qual é a potência consumida pelo forno?",
+        "opcoes": [
+          "990 W",
+          "1800 W",
+          "2200 W",
+          "2420 W"
+        ],
+        "correta": 2,
+        "explicacao": "Corrente: I = V / R = 220 / 22 = 10 A. Potência: P = V × I = 220 × 10 = 2200 W. Ou: P = V² / R = (220)² / 22 = 48400 / 22 = 2200 W."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:421a1148",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:f27cc481",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um voltímetro mede 15 volts em uma lâmpada, e um amperímetro mede 0,5 ampere atravessando-a. Qual é a resistência da lâmpada?",
+        "opcoes": [
+          "60 ohms",
+          "7,5 ohms",
+          "15 ohms",
+          "30 ohms"
+        ],
+        "correta": 3,
+        "explicacao": "Lei de Ohm: R = V / I = 15 / 0,5 = 30 ohms. A resistência é propriedade do componente e pode ser medida com instrumentos precisos."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:f27cc481",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:479b8a9c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma tomada residencial de 110 volts, uma secadora elétrica consome uma corrente de 10 amperes. Qual é a resistência da secadora?",
+        "opcoes": [
+          "11 ohms",
+          "100 ohms",
+          "110 ohms",
+          "1100 ohms"
+        ],
+        "correta": 0,
+        "explicacao": "Lei de Ohm: R = V / I = 110 / 10 = 11 ohms. Resistência típica para eletrodomésticos de alta potência, como secadoras. Com resistência baixa, corrente é alta, permitindo transferência rápida de energia térmica."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:479b8a9c",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:565310bd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um circuito contém uma bateria de 9 volts conectada em série com um resistor desconhecido. Se a corrente medida é 1,5 amperes, qual é o valor do resistor?",
+        "opcoes": [
+          "13,5 ohms",
+          "3 ohms",
+          "6 ohms",
+          "9 ohms"
+        ],
+        "correta": 2,
+        "explicacao": "Lei de Ohm: R = V / I = 9 / 1,5 = 6 ohms. Esse cálculo é fundamental para dimensionar resistores e garantir que corrente não ultrapasse limites seguros dos componentes."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:565310bd",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.329Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:0c4ff9c0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma lâmpada de 60 W de potência é conectada a uma fonte de 120 V. Qual é a corrente que passa pela lâmpada?",
+        "opcoes": [
+          "0,5 A",
+          "2 A",
+          "60 A",
+          "7200 A"
+        ],
+        "correta": 0,
+        "explicacao": "P = V × I, então 60 = 120 × I, logo I = 60 / 120 = 0,5 A. Não confunda potência (watts) com corrente (ampères): a corrente é a quantidade de carga que flui pelo circuito por segundo."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:0c4ff9c0",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:c5c8630b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um circuito série possui uma bateria de 12 V, um resistor de 4 ohms e um resistor de 2 ohms ligados em série. Qual é a corrente total do circuito?",
+        "opcoes": [
+          "0,5 A",
+          "2 A",
+          "6 A",
+          "3 A"
+        ],
+        "correta": 1,
+        "explicacao": "Resistência total em série: R_total = 4 + 2 = 6 ohms. Usando V = I × R: 12 = I × 6, logo I = 2 A. Em série as resistências se somam, e corrente depende só da resistência total equivalente."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:c5c8630b",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:710f425d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um resistor de 10 ohms está ligado a uma bateria. A corrente medida é 1,5 A. Qual é a tensão da bateria?",
+        "opcoes": [
+          "11,5 V",
+          "8,5 V",
+          "6,7 V",
+          "15 V"
+        ],
+        "correta": 3,
+        "explicacao": "Usando V = I × R, temos V = 1,5 × 10 = 15 V. Esta é a tensão da bateria. Não divida: neste caso, o cálculo envolve multiplicação direta entre corrente e resistência para encontrar a tensão."
+      },
+      "meta": {
+        "id": "gen:fis:eletricidade-circuitos-basicos:710f425d",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:23:27.525Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-fis-eletricidade-circuitos-basicos",
+      "version": 1,
+      "format": 2,
+      "subjectId": "fis",
+      "topicId": "elet",
+      "chapterId": "gen-fis-eletricidade-circuitos-basicos",
+      "title": "Corrente, tensão e resistência",
+      "objective": "Calcular corrente, tensão, resistência ou potência num circuito elétrico simples",
+      "skillIds": [
+        "fis:eletricidade-circuitos-basicos"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:fis:eletricidade-circuitos-basicos:98eaad80",
+        "gen:fis:eletricidade-circuitos-basicos:0c4ff9c0"
+      ],
+      "recap": "A lei de Ohm, V = R.I, e as regras de série e paralelo resolvem qualquer circuito simples.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Circuitos simples",
+          "body": "Você vai aprender a calcular corrente, resistência e potência num circuito elétrico usando a lei de Ohm."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Lei de Ohm e potência",
+            "body": "A lei de Ohm relaciona tensão, corrente e resistência: V = R.I. Dela saem I = V/R e R = V/I, conforme o que falta calcular. A potência dissipada é P = V.I, também escrita como P = R.I² ou P = V²/R. Em série, a resistência total é a soma de cada uma; em paralelo, o inverso da resistência total é a soma dos inversos."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:eletricidade-circuitos-basicos:877f14f0",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:eletricidade-circuitos-basicos:b1e6ac88",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Exemplo resolvido",
+            "problem": "Uma bateria de 15 volts alimenta um resistor de 5 ohms. Qual é a potência dissipada?",
+            "steps": [
+              "Calcule a corrente: I = V/R = 15/5 = 3 A.",
+              "Aplique P = V.I = 15 x 3 = 45 W.",
+              "Confirme: P = V²/R = 225/5 = 45 W."
+            ],
+            "result": "O resistor dissipa 45 watts."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:eletricidade-circuitos-basicos:565310bd",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:eletricidade-circuitos-basicos:907b4ddb",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não some resistores em paralelo como se fossem em série. O cálculo usa o inverso da soma dos inversos, e o resultado é sempre menor que a menor resistência."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Série e paralelo",
+            "left": {
+              "label": "Série",
+              "body": "resistências se somam direto; a corrente é a mesma em todas."
+            },
+            "right": {
+              "label": "Paralelo",
+              "body": "os inversos das resistências se somam; a tensão é a mesma em cada ramo."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:fis:eletricidade-circuitos-basicos:c0dcac4c",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "A lei de Ohm, V = R.I, e as regras de série e paralelo resolvem qualquer circuito simples."
+        }
+      ]
+    }
+  ]
+}

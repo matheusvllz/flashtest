@@ -4,7 +4,9 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "predev": "bun scripts/content/build-packs.ts",
     "dev": "vite dev",
+    "prebuild": "bun scripts/content/build-packs.ts",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",

@@ -1,0 +1,620 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "gen:his:ditadura-militar-contexto:c9aef39e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Golpe de 1964 destituiu o presidente João Goulart (Jango). Qual foi a principal justificativa alegada pelos militares e aliados civis para a tomada de poder?",
+        "opcoes": [
+          "Expandir a democracia e aumentar direitos civis para todos os brasileiros",
+          "Promover a liberalização econômica imediata do mercado",
+          "Preparar eleições livres para o próximo ano",
+          "Impedir um suposto golpe comunista em preparação e proteger a democracia e a ordem"
+        ],
+        "correta": 3,
+        "explicacao": "Os militares alegavam que Jango e aliados esquerdistas preparavam golpe comunista e que a ordem desaparecia. Essa narrativa, apesar de controversa, justificava a intervenção como golpe preventivo. Muita gente da elite, Igreja e classe média apoiava, com medo de reformas radicais. Os militares não intervieram pra salvar democracia, mas pra impor ditadura de 21 anos."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:c9aef39e",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:34:48.433Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:09665dcf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A guerrilha rural (1965-1974) e a guerrilha urbana (1968-1974) foram tentativas de oposição armada à ditadura militar. Como o regime respondeu a essas atividades?",
+        "opcoes": [
+          "Reprimiu com força bruta: operações militares, execuções extrajudiciais, tortura e desaparecimentos",
+          "Permitiu que guerrilhas operassem livremente como forma de manter a democracia",
+          "Ignorou completamente as guerrilhas sem tomar nenhuma medida",
+          "Negociou com guerrilheiros e concedeu anistia imediata"
+        ],
+        "correta": 0,
+        "explicacao": "O regime respondeu com violência sistemática: órgãos de repressão como o DOI-CODI caçavam militantes, a tortura era prática corrente e muitos desaparecidos nunca foram encontrados: a Comissão Nacional da Verdade (2014) reconheceu 434 mortos e desaparecidos políticos. Líderes como Carlos Marighella (1969) e Carlos Lamarca (1971) foram mortos em operações. A guerrilha era pequena, mas o regime usou a existência dela pra intensificar a repressão contra toda a oposição: estudantes, religiosos, jornalistas. As outras alternativas são falsas."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:09665dcf",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:34:48.433Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:3c6c0bf3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A ditadura militar brasileira (1964-1985) foi instalada após um golpe militar que destituiu o presidente João Goulart. Qual era o contexto político que os militares usaram para justificar o golpe?",
+        "opcoes": [
+          "João Goulart havia vencido eleições de forma fraudulenta no ano anterior",
+          "Alegadas ameaças de golpe comunista, instabilidade econômica, e polarização política durante o governo Goulart",
+          "Uma invasão militar estrangeira iminente ao território brasileiro",
+          "Violações maciças de direitos humanos cometidas por Goulart contra a população"
+        ],
+        "correta": 1,
+        "explicacao": "Os militares alegavam que o governo Goulart tinha tendências comunistas, que havia infiltração de agentes soviéticos e que o país estava à beira da anarquia. Essas alegações eram exageradas ou falsas, mas serviram de pretexto. Na verdade, setores conservadores (empresários, militares, Igreja) temiam reformas como reforma agrária e perder influência política."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:3c6c0bf3",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:1b0db310",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual foi um dos primeiros atos institucionais do regime militar pós-1964 para consolidar seu poder?",
+        "opcoes": [
+          "Restauração completa da democracia e das liberdades civis",
+          "Eleições presidenciais livres e diretas para escolher novo presidente",
+          "Edição de Atos Institucionais (AIs) que suspenderam direitos constitucionais, permitiram cassação de mandatos políticos, e deram poder discricionário aos militares",
+          "Entrega imediata do poder a um presidente civil eleito"
+        ],
+        "correta": 2,
+        "explicacao": "Os Atos Institucionais, especialmente o AI-5 (1968), foram mecanismos legais de exceção que permitiram censura, prisões arbitrárias, cassação de direitos políticos e fechamento do Congresso. Foram usados para consolidar o poder militar entre 1960-1970, criando um ordenamento jurídico paralelo que legitimava autoritarismo."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:1b0db310",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:0b8e77fe",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante a ditadura militar (1964-1985), qual foi uma das políticas econômicas principais que o regime implementou, especialmente nos primeiros anos?",
+        "opcoes": [
+          "Eliminação completa da propriedade privada de terra",
+          "Redistribuição de renda para eliminar desigualdade social",
+          "Nacionalização de todas as indústrias brasileiras",
+          "Abertura irrestrita da economia ao capital estrangeiro e políticas monetárias restritivas para combater inflação (no início do regime)"
+        ],
+        "correta": 3,
+        "explicacao": "Os militares implementaram políticas econômicas liberais: abertura ao capital estrangeiro, arrocho salarial para combater inflação, e incentivos a investimentos externos. Isso gerou crescimento econômico (o 'Milagre Econômico' 1968-1973), mas também aumentou endividamento externo e desigualdade. Salários reais de trabalhadores caíram apesar do crescimento do PIB."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:0b8e77fe",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:9212fac1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A ditadura militar brasileira intensificou práticas de repressão política a partir de 1968, particularmente após a edição do AI-5. Qual setor da sociedade foi mais afetado pela repressão e vigilância sistemática naquele período?",
+        "opcoes": [
+          "Estudantes universitários, intelectuais, jornalistas, padres progressistas, e militantes de partidos de esquerda",
+          "Exclusivamente membros de organizações religiosas tradicionais",
+          "Apenas trabalhadores rurais em regiões agrícolas específicas",
+          "Apenas os proprietários de indústrias e fazendas"
+        ],
+        "correta": 0,
+        "explicacao": "Intelectuais, estudantes, jornalistas e políticos de esquerda foram os principais alvos da repressão militar. A polícia política (DOPS), o Serviço Nacional de Informações (SNI) e grupos paramilitares torturavam, faziam desaparecer presos políticos e censuravam a imprensa. A repressão buscava suprimir qualquer crítica organizada ao regime, particularmente de setores urbanos e educados."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:9212fac1",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:d548d765",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante os anos 1970 e início dos 1980, a ditadura militar começou a perder legitimidade social. Qual combinação de fatores contribuiu para isso?",
+        "opcoes": [
+          "Vitória militar em uma guerra externa e aumento de salários para todos os trabalhadores",
+          "Crise econômica, inflação crescente, descentralização do poder, e organização de movimentos sociais (sindicatos, igrejas, sociedade civil)",
+          "Suporte unânime do povo brasileiro ao regime militar",
+          "Invasão estrangeira que enfraqueceu as Forças Armadas brasileiras"
+        ],
+        "correta": 1,
+        "explicacao": "O Milagre Econômico terminou nos anos 1970 e inflação, desemprego e dívida externa cresceram. Ao mesmo tempo, movimentos sociais ressurgiram: greves de metalúrgicos, organização da Igreja Católica em Comunidades Eclesiais de Base e jornais alternativos. Com isso, cresceu demanda por redemocratização. O regime, enfraquecido, começou a abrir politicamente (abertura lenta e gradual)."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:d548d765",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:b2b9ab1c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Como a ditadura militar brasileira terminou em 1985, e qual foi a importância desse processo?",
+        "opcoes": [
+          "Um golpe militar repentino derrubou o regime sem negociação",
+          "Eleições presidenciais diretas e incondicionais foram imediatamente convocadas",
+          "Abertura política gradual ('lenta, segura e gradual'), negociação com setores oposicionistas, transição para presidência civil (Tancredo/Sarney), e elaboração de nova Constituição em 1988",
+          "Invasão militar estrangeira que forçou os militares a abrir mão do poder"
+        ],
+        "correta": 2,
+        "explicacao": "A saída da ditadura não foi ruptura brusca, mas transição negociada. O regime abriu gradualmente (1974-1985), com eleições indiretas para presidente. Uma eleição direta foi agendada mas o eleito (Tancredo) morreu. Seu vice, Sarney, assumiu. Em 1988, a Constituição Cidadã foi promulgada. Isso manteve continuidade de elites, mas abriu espaço democrático."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:b2b9ab1c",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:5052f39e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um dos legados mais contraditórios da ditadura militar brasileira foi a ausência de condenação em larga escala de militares acusados de crimes contra os direitos humanos. Qual foi a principal razão institucional para isso?",
+        "opcoes": [
+          "Todos os militares foram julgados e condenados imediatamente após 1985",
+          "O Brasil não tinha sistema judiciário capaz de processar crimes de direitos humanos",
+          "Crimes de tortura e desaparecimento forçado nunca ocorreram durante a ditadura",
+          "A Lei da Anistia (1979), negociada entre regime e oposição, anistiou crimes políticos dos militares em troca de anistia para políticos perseguidos, impedindo julgamentos posteriores"
+        ],
+        "correta": 3,
+        "explicacao": "A Lei da Anistia, promulgada em 1979 durante o governo militar final, anistiou tanto crimes da ditadura quanto atos de resistência. Foi uma das negociações da abertura política que permitiu transição pacífica, mas impediu Justiça de Transição rigorosa. Até hoje essa lei é controversa; movimentos de direitos humanos buscam sua revisão."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:5052f39e",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:514adf19",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Qual foi uma transformação social importante que ocorreu DURANTE a ditadura militar (não após), que ajudou a minerar legitimidade do regime?",
+        "opcoes": [
+          "Eliminação completa de sindicatos e organizações operárias no país",
+          "Processo de urbanização acelerada, formação de classe trabalhadora urbana militante, e ressurreição de sindicatos (especialmente metalúrgicos de São Paulo) nos anos 1970-1980",
+          "Aumento de salários reais de todos os trabalhadores de forma consistente",
+          "Expansão de educação superior apenas para filhos de militares"
+        ],
+        "correta": 1,
+        "explicacao": "A urbanização acelerada criou uma classe trabalhadora crescente nas cidades. Nos anos 1970, sindicatos ressurgiram organizando greves, como a dos metalúrgicos em 1978 em São Paulo, liderados por Lula. Essa mobilização operária foi importante para questionar o regime. Ironicamente, o desenvolvimento econômico que os militares buscavam criou as forças sociais que os derrubaram."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:514adf19",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:his:ditadura-militar-contexto:f6a639fd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Comparando a ditadura de Getúlio Vargas (1937-1945, Estado Novo) com a ditadura militar (1964-1985), qual característica estava presente na primeira mas foi muito menos central na segunda?",
+        "opcoes": [
+          "Repressão política através de polícia política e vigilância",
+          "Censura de imprensa e controle de informação",
+          "Incorporação corporativista de trabalhadores através de sindicatos controlados e concessão de direitos trabalhistas para cooptar apoio",
+          "Uso de Forças Armadas para consolidar poder"
+        ],
+        "correta": 2,
+        "explicacao": "Vargas buscava cooptar trabalhadores oferecendo direitos trabalhistas e sindicatos corporativistas que criavam lealdade pessoal. Isso era central em sua legitimação. Os militares (1964-1985), ao contrário, atacaram sindicatos e aplicaram arrocho salarial. Sua legitimação vinha de promessas de ordem, desenvolvimento econômico e anticomunismo, não de direitos trabalhistas."
+      },
+      "meta": {
+        "id": "gen:his:ditadura-militar-contexto:f6a639fd",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:49:56.100Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-his-ditadura-militar-contexto",
+      "version": 1,
+      "format": 2,
+      "subjectId": "his",
+      "topicId": "dit",
+      "chapterId": "gen-his-ditadura-militar-contexto",
+      "title": "Contexto da ditadura militar",
+      "objective": "Contextualizar causas e consequências da ditadura militar brasileira",
+      "skillIds": [
+        "his:ditadura-militar-contexto"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:his:ditadura-militar-contexto:1b0db310",
+        "gen:his:ditadura-militar-contexto:c9aef39e"
+      ],
+      "recap": "O golpe de 1964 trouxe economia liberal e crescimento com repressão crescente após o AI-5, em 1968; a Lei da Anistia de 1979 encerrou o regime sem julgar os crimes cometidos.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Ditadura militar",
+          "body": "Você vai entender por que os militares tomaram o poder em 1964 e o que esse período deixou de herança."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Golpe de 64 e Milagre Econômico",
+            "body": "Em 1964 um golpe militar derrubou o presidente João Goulart, sob alegação de risco comunista. Os militares adotaram economia liberal: abriram o país ao capital estrangeiro e usaram política monetária restritiva contra a inflação, gerando o Milagre Econômico (1968-1973), com PIB alto e salário real em queda."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:ditadura-militar-contexto:0b8e77fe",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:ditadura-militar-contexto:3c6c0bf3",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Depois de 1968: repressão e organização",
+            "body": "A partir de 1968, com o AI-5, a repressão piorou: o regime perseguiu e torturou estudantes, intelectuais, jornalistas, padres progressistas e militantes de esquerda, usando o DOPS e o SNI. Ao mesmo tempo, a industrialização levou multidões às cidades, e nos anos 1970 essa classe trabalhadora se organizou em sindicatos, com destaque para os metalúrgicos do ABC paulista, em greve desde 1978."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:ditadura-militar-contexto:514adf19",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:ditadura-militar-contexto:9212fac1",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Sindicatos fortes e greves como as do ABC já existiam durante o regime, nos anos 1970, não só depois dele."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Dois caminhos depois da ditadura",
+            "left": {
+              "label": "Anistia ampla (1979)",
+              "body": "Perdoou opositores presos e agentes do regime acusados de tortura, para permitir a abertura política."
+            },
+            "right": {
+              "label": "Justiça de transição",
+              "body": "Investiga e julga crimes de tortura; no Brasil não avançou por causa da Lei da Anistia, tema ainda debatido."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:his:ditadura-militar-contexto:5052f39e",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "O golpe de 1964 trouxe economia liberal e crescimento com repressão crescente após o AI-5, em 1968; a Lei da Anistia de 1979 encerrou o regime sem julgar os crimes cometidos."
+        }
+      ]
+    }
+  ]
+}

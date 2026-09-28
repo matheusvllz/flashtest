@@ -1,0 +1,317 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "oficial:2023:03b666ec",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+        "opcoes": [
+          "4,68",
+          "6,30",
+          "9,30",
+          "10,50",
+          "10,65"
+        ],
+        "correta": 1,
+        "explicacao": "Sejam a e v os preços unitários. 18a + 9v = 32,40 e a − v = v + 0,05, ou seja, a = 2v + 0,05. Substituindo: 18(2v+0,05) + 9v = 32,40 → 36v + 0,90 + 9v = 32,40 → 45v = 31,50 → v = 0,70. A cartela de vermelhos (9 tíquetes) custa 9 × 0,70 = R$ 6,30.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:03b666ec",
+        "version": 1,
+        "skillIds": [
+          "mat:equacao-primeiro-grau"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 137"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:3bb5b31f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\nSetor Produção: 75 funcionários, salário R$ 2 000,00.\nSetor Administração: 25 funcionários, salário R$ 7 000,00.\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+        "opcoes": [
+          "2 000,00.",
+          "2 500,00.",
+          "3 250,00.",
+          "4 500,00.",
+          "9 000,00."
+        ],
+        "correta": 2,
+        "explicacao": "Média ponderada: (75 × 2000 + 25 × 7000) / 100 = (150000 + 175000) / 100 = 325000/100 = R$ 3 250,00.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:3bb5b31f",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 151"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:273a7d48",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\n\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R$ 1 500,00.\n\nUtilize 5,29 como aproximação para √28.\n\nA taxa mensal de juros compostos praticada nesse financiamento é de",
+        "opcoes": [
+          "6,7%",
+          "10%",
+          "20%",
+          "21,5%",
+          "23,3%"
+        ],
+        "correta": 3,
+        "explicacao": "O valor financiado é 1500 × 1,2 = 1800, dividido em 3 parcelas de 600, sendo a 1ª à vista (sem juros), a 2ª em 30 dias e a 3ª em 60 dias. O valor presente das parcelas deve igualar 1500: 600 + 600/(1+i) + 600/(1+i)² = 1500 → 600(1+i)² + 600(1+i) − 900(1+i)² = 0, que se resolve com a taxa i ≈ 21,5% usando a aproximação de √28 fornecida.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:273a7d48",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 144"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:8862844c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
+        "opcoes": [
+          "1/2",
+          "1/3",
+          "1/8",
+          "2/9",
+          "3/8"
+        ],
+        "correta": 4,
+        "explicacao": "Total de cartões: 200×1 + 150×2 + 100×3 = 200 + 300 + 300 = 800. Cartões de terceiro ano: 300. Probabilidade: 300/800 = 3/8.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8862844c",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 165"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:686fb94a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos.\n\nA diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+        "opcoes": [
+          "(5,0 ; 5,5).",
+          "(8,0 ; 8,5).",
+          "(11,5 ; 12,5).",
+          "(19,5 ; 20,5).",
+          "(3,5 ; 4,0)."
+        ],
+        "correta": 0,
+        "explicacao": "Proporção de folhas: 6000/1200 = 5 folhas por aluno; para 1150 alunos, são 5750 folhas = 57,5 embalagens de 100, arredondando para 58 embalagens. Preço cheio: 58 × R$4,00 = R$232,00. Desconto necessário para caber em R$220,00: (232−220)/232 ≈ 5,17%, dentro do intervalo (5,0 ; 5,5).",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:686fb94a",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 174"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:b6169899",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+        "opcoes": [
+          "10.",
+          "11.",
+          "13.",
+          "30.",
+          "33."
+        ],
+        "correta": 1,
+        "explicacao": "Lista de espera deste ano: 400 × 1,1 = 440. Meta do próximo ano: 440 × 0,75 = 330. Sem novas salas, a lista do próximo ano seria igual à deste ano (440, dado do enunciado), então é preciso reduzir em 440 − 330 = 110 nomes, o que exige atender 110 crianças a mais — ou seja, 11 novas salas de 10 vagas cada.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b6169899",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 5,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 167"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,879 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:porcentagem-valor:bf45e5b4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma blusa custa 80 reais. Qual é o valor de 25% do preço da blusa?",
+        "opcoes": [
+          "15 reais",
+          "20 reais",
+          "30 reais",
+          "40 reais"
+        ],
+        "correta": 1,
+        "explicacao": "Para calcular 25% de 80, você multiplica: 80 × 0,25 = 20. Outra forma: 25% é um quarto do valor total, então 80 ÷ 4 = 20 reais."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:bf45e5b4",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:534957eb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma cidade tinha 250 mil habitantes em 2020. A população cresceu 12% desde então. Qual é o aumento populacional em habitantes?",
+        "opcoes": [
+          "25 mil",
+          "30 mil",
+          "40 mil",
+          "50 mil"
+        ],
+        "correta": 1,
+        "explicacao": "12% de 250 mil = 250.000 × 0,12 = 30.000 habitantes. O aumento é 12% do valor inicial; ele não é o novo total (que seria 280 mil)."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:534957eb",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:779f7935",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma prova tinha 60 questões. Um aluno acertou 85% das questões. Quantas questões ele acertou?",
+        "opcoes": [
+          "42 questões",
+          "48 questões",
+          "51 questões",
+          "54 questões"
+        ],
+        "correta": 2,
+        "explicacao": "85% de 60 = 60 × 0,85 = 51 questões. Calcular a porcentagem de um valor inteiro sempre usa a fórmula: valor × (porcentagem ÷ 100)."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:779f7935",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:a38ed374",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um investimento inicial é de 5000 reais. O rendimento foi de 6% ao mês. Qual é o ganho no primeiro mês?",
+        "opcoes": [
+          "150 reais",
+          "200 reais",
+          "250 reais",
+          "300 reais"
+        ],
+        "correta": 3,
+        "explicacao": "6% de 5000 = 5000 × 0,06 = 300 reais. Este é apenas o rendimento (ganho), não o valor total do investimento após um mês (que seria 5300)."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:a38ed374",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:7a9fed4d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma fábrica produz 12 mil peças por mês. No mês passado, 3,5% da produção apresentou defeito. Dessas peças defeituosas, 40% foram recuperadas. Quantas peças defeituosas não foram recuperadas?",
+        "opcoes": [
+          "168 peças",
+          "252 peças",
+          "420 peças",
+          "504 peças"
+        ],
+        "correta": 1,
+        "explicacao": "Começa pelas peças defeituosas: 3,5% de 12 mil = 12.000 × 0,035 = 420 peças. Depois o que não foi recuperado: 60% de 420 (porque 40% foi recuperado) = 420 × 0,60 = 252 peças."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:7a9fed4d",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:16caa81d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um restaurante arrecada 8000 reais por semana. 35% é gasto com ingredientes, 25% com folha de pagamento e 12% com aluguel. Qual é o lucro aproximado da semana?",
+        "opcoes": [
+          "1760 reais",
+          "2240 reais",
+          "2800 reais",
+          "3200 reais"
+        ],
+        "correta": 1,
+        "explicacao": "Gastos totais = 35% + 25% + 12% = 72% de 8000 = 5760 reais. Lucro = 8000 − 5760 = 2240 reais. (Alternativa mais rápida: lucro% = 100% − 72% = 28%, e 28% de 8000 = 2240.)"
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:16caa81d",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:87d7f841",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma cidade destinava 15% do orçamento para educação. Este ano, aumentou esse percentual em 3 pontos percentuais. Se o orçamento é 1.200.000 reais, qual é o aumento absoluto no investimento em educação?",
+        "opcoes": [
+          "36 mil reais",
+          "54 mil reais",
+          "180 mil reais",
+          "360 mil reais"
+        ],
+        "correta": 0,
+        "explicacao": "Aumento em pontos percentuais: de 15% para 18% são 3 pontos mesmo (não 3% de 15%). A diferença é 18% − 15% = 3% de 1.200.000 = 1.200.000 × 0,03 = 36.000 reais."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:87d7f841",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-25T19:57:27.575Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:b6c700dd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bolsa custa R$ 80. Se há um desconto de 25%, qual é o valor do desconto em reais?",
+        "opcoes": [
+          "R$ 16",
+          "R$ 20",
+          "R$ 24",
+          "R$ 30"
+        ],
+        "correta": 1,
+        "explicacao": "25% de 80 = 80 × 0,25 = 20 reais. Como 25% é um quarto (1/4), você também pode calcular dividindo 80 por 4, obtendo 20."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:b6c700dd",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.102Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:58c4dfb9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um celular custa R$ 1.200. O imposto sobre eletrônicos é 18%. Qual é o valor do imposto?",
+        "opcoes": [
+          "R$ 150",
+          "R$ 180",
+          "R$ 216",
+          "R$ 240"
+        ],
+        "correta": 2,
+        "explicacao": "18% de 1.200 = 1.200 × 0,18 = 216 reais. Outra forma: 10% de 1.200 = 120 e 8% de 1.200 = 96; somando, 120 + 96 = 216 reais."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:58c4dfb9",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.108Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:627f6ca6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um restaurante fatura R$ 50.000 por mês. Desse valor, 32% vai para custos operacionais e 28% para folha de salários. Qual é o valor destinado à folha de salários?",
+        "opcoes": [
+          "R$ 12.000",
+          "R$ 13.500",
+          "R$ 14.000",
+          "R$ 15.600"
+        ],
+        "correta": 2,
+        "explicacao": "28% de 50.000 = 50.000 × 0,28 = 14.000 reais. Um erro comum é confundir com os 32% de custos operacionais (16.000 reais). É importante identificar corretamente qual percentual está sendo pedido antes de calcular."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:627f6ca6",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:12:04.108Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:e821c185",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja de eletrônicos está com uma promoção de 25% de desconto em notebooks. Se um modelo custa R$ 2.400, quanto o cliente vai pagar após o desconto?",
+        "opcoes": [
+          "2100",
+          "1600",
+          "1800",
+          "1900"
+        ],
+        "correta": 2,
+        "explicacao": "Desconto = 25% de 2.400 = 0,25 × 2.400 = 600 reais. Preço final = 2.400 − 600 = 1.800 reais. Atalho: pagar com 25% de desconto é pagar 75% do preço, e 2.400 × 0,75 = 1.800."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:e821c185",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:746c09aa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O aluguel de um apartamento era R$ 1.200 por mês. O proprietário aplicou um aumento de 15% no valor. Qual será o novo aluguel?",
+        "opcoes": [
+          "1320",
+          "1500",
+          "1440",
+          "1380"
+        ],
+        "correta": 3,
+        "explicacao": "Aumento = 15% de 1.200 = 0,15 × 1.200 = 180 reais. Novo aluguel = 1.200 + 180 = 1.380. Em aumento, soma a porcentagem ao valor de base."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:746c09aa",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:cb91a881",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma fábrica produz 10.000 peças por dia. Normalmente, 5% dessas peças saem com defeito. Do restante, 8% são embaladas para exportação. Quantas peças são embaladas para exportação diariamente?",
+        "opcoes": [
+          "500",
+          "760",
+          "800",
+          "950"
+        ],
+        "correta": 1,
+        "explicacao": "Defeituosas = 5% de 10.000 = 500 peças. Peças boas = 10.000 - 500 = 9.500. Exportação = 8% de 9.500 = 0,08 × 9.500 = 760 peças. Em porcentagens que se sucedem, aplica uma após a outra na ordem certa."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:cb91a881",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:cd2a1593",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa teve lucro de R$ 50.000 em um mês. Esse lucro representa 25% do faturamento total do mês. Qual foi o faturamento?",
+        "opcoes": [
+          "150000",
+          "175000",
+          "125000",
+          "200000"
+        ],
+        "correta": 3,
+        "explicacao": "Se 50.000 = 25% do faturamento, use a equação: 50.000 = 0,25 × faturamento. Logo, faturamento = 50.000 ÷ 0,25 = 200.000. Esse tipo de problema inverte a operação: você divide, não multiplica."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:cd2a1593",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:1173e724",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma loja oferece um desconto de 20% em todos os produtos. Um cliente tem um cupom adicional de 10% de desconto sobre o preço já reduzido. Se um produto custa R$ 100 originalmente, qual será o preço final?",
+        "opcoes": [
+          "72",
+          "70",
+          "75",
+          "80"
+        ],
+        "correta": 0,
+        "explicacao": "Após primeiro desconto: 100 - 20% de 100 = 100 - 20 = 80 reais. Após segundo desconto: 80 - 10% de 80 = 80 - 8 = 72 reais. Em descontos sucessivos, aplica ao valor que sobrou, não ao original."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:1173e724",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:6d925fdf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um produto custa R$ 50. Em uma promoção, ele está com 10% de desconto. Qual é o novo preço?",
+        "opcoes": [
+          "50",
+          "45",
+          "40",
+          "55"
+        ],
+        "correta": 1,
+        "explicacao": "Desconto = 10% de 50 = 0,10 × 50 = 5 reais. Novo preço = 50 - 5 = 45 reais. Esse é direto: tira a porcentagem do valor de base."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:6d925fdf",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:af3665f0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma escola precisa comprar 200 uniformes. O fornecedor oferece R$ 80 por uniforme. Se houver um desconto de 15% para compras em quantidade, qual será o custo total?",
+        "opcoes": [
+          "16000",
+          "12400",
+          "13600",
+          "14000"
+        ],
+        "correta": 2,
+        "explicacao": "Desconto por uniforme = 15% de 80 = 0,15 × 80 = 12 reais. Preço com desconto = 80 - 12 = 68 reais. Custo total = 200 × 68 = 13.600 reais. Calcula o preço com desconto de uma peça primeiro, aí multiplica pela quantidade."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:af3665f0",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:584518c7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um produto tem preço de R$ 300. Na nota fiscal, é adicionado 7% de impostos. Qual é o preço final a ser pago?",
+        "opcoes": [
+          "328",
+          "314",
+          "321",
+          "307"
+        ],
+        "correta": 2,
+        "explicacao": "Impostos = 7% de 300 = 0,07 × 300 = 21 reais. Preço final = 300 + 21 = 321 reais. Com taxa, soma a porcentagem ao valor base."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:584518c7",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:000234a0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa ganha R$ 3.000 por mês. Ela decide economizar 20% de seu salário. Quanto ela vai poupar em 6 meses?",
+        "opcoes": [
+          "3000",
+          "4200",
+          "2400",
+          "3600"
+        ],
+        "correta": 3,
+        "explicacao": "Economia mensal = 20% de 3.000 = 0,20 × 3.000 = 600 reais. Em 6 meses: 600 × 6 = 3.600 reais. Vê quanto é por mês, aí multiplica pelos meses."
+      },
+      "meta": {
+        "id": "gen:mat:porcentagem-valor:000234a0",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.416Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

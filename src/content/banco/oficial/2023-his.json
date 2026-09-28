@@ -1,0 +1,57 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "oficial:2023:28e93b86",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Golpe Militar de 1964 foi implacável no combate ao que restava das Ligas Camponesas, generalizadas na década anterior. No entanto, em relação aos sindicatos, sua atitude foi ambígua. Por meio de acordos com os Estados Unidos, foram concebidos centros sindicais e cursos de liderança com base em princípios conservadores e ministrados por membros da Igreja Católica.\n\n(DEL PRIORE, M.; VENÂNCIO, R. Uma história da vida rural no Brasil. Rio de Janeiro: Ediouro, 2006, adaptado.)\n\nOs sindicatos rurais foram tratados da forma descrita no texto porque o governo pretendia utilizá-los para",
+        "opcoes": [
+          "controlar as tensões políticas.",
+          "limitar a legislação trabalhista.",
+          "divulgar o programa populista.",
+          "regularizar a propriedade da terra.",
+          "estimular a oferta de mão de obra."
+        ],
+        "correta": 0,
+        "explicacao": "Ao reprimir as Ligas Camponesas mas cooptar os sindicatos com cursos de liderança conservadora, o regime buscava esvaziar o potencial de mobilização rural e manter as tensões políticas no campo sob controle, não regularizar terras ou legislação trabalhista diretamente.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:28e93b86",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 80"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

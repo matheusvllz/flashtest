@@ -1,0 +1,618 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "gen:por:tempos-verbais-emprego:ff9b2f4a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase mantendo a coerência temporal com o restante do texto: 'Amanhã, se não chover, nós ______ à praia com os amigos da faculdade.'",
+        "opcoes": [
+          "fomos",
+          "iremos",
+          "íamos",
+          "fôramos"
+        ],
+        "correta": 1,
+        "explicacao": "A oração principal precisa do futuro do presente porque a condição 'se não chover' (presente do subjuntivo) e o advérbio 'amanhã' indicam uma ação que ainda vai acontecer. Por isso, 'iremos' é a forma correta; 'fomos' e 'fôramos' remetem ao passado, e 'íamos' sugere hábito, incompatíveis com o contexto futuro."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:ff9b2f4a",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:384c9817",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com o contexto apresentado: 'Quando eu era criança, todos os domingos minha avó ______ bolo de fubá para a família toda.'",
+        "opcoes": [
+          "fará",
+          "fez",
+          "fazia",
+          "faça"
+        ],
+        "correta": 2,
+        "explicacao": "A expressão 'quando eu era criança' e o marcador 'todos os domingos' indicam uma ação habitual e repetida no passado, tempo verbal que exige o pretérito imperfeito. Por isso, 'fazia' é a forma correta; 'fez' indicaria uma ação pontual única, e 'fará' e 'faça' remeteriam ao futuro, incompatíveis com o contexto de lembrança da infância."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:384c9817",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:594c0a26",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase mantendo a coerência temporal com o restante do texto: 'Ontem à noite, o time ______ a partida decisiva do campeonato por dois gols a um.'",
+        "opcoes": [
+          "vencerá",
+          "vence",
+          "vencia",
+          "venceu"
+        ],
+        "correta": 3,
+        "explicacao": "O marcador temporal 'ontem à noite' indica uma ação pontual e concluída no passado, o que exige o pretérito perfeito do indicativo. Por isso, 'venceu' é a forma correta; 'vence' e 'vencerá' remeteriam ao presente ou futuro, e 'vencia' sugeriria uma ação habitual ou em andamento, sentido incompatível com um resultado único e definitivo."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:594c0a26",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:98cd78ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com a condição apresentada: 'Se ela tivesse mais tempo livre, ______ todos os dias na academia perto de casa.'",
+        "opcoes": [
+          "treinaria",
+          "treine",
+          "treina",
+          "treinou"
+        ],
+        "correta": 0,
+        "explicacao": "A condição 'se ela tivesse mais tempo livre' é pretérito imperfeito do subjuntivo. A principal precisa de futuro do pretérito, formando o período hipotético clássico. Treinaria funciona. Treina e treinou remetem a fatos reais, e treine não completa essa correlação."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:98cd78ab",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:926402c3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase respeitando a ordem cronológica dos fatos narrados: 'Quando cheguei ao cinema, o filme já ______ e tive que assistir ao final perdendo boa parte da história.'",
+        "opcoes": [
+          "começou",
+          "tinha começado",
+          "começaria",
+          "começa"
+        ],
+        "correta": 1,
+        "explicacao": "Duas ações no passado, mas uma antes da outra. O filme começou antes de chegar ao cinema. O pretérito mais-que-perfeito marca essa anterioridade. Tinha começado funciona. Começa e começaria fogem ao passado, começou não deixa claro o antes e depois."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:926402c3",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:b8a17e11",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com a norma culta da língua: 'Quando você ______ o relatório, envie uma cópia para toda a equipe do projeto.'",
+        "opcoes": [
+          "termine",
+          "termina",
+          "terminar",
+          "terminaria"
+        ],
+        "correta": 2,
+        "explicacao": "Quando introduz uma ação futura incerta, e o imperativo 'envie' está na principal. Precisa de futuro do subjuntivo. Terminar funciona. Termina não combina com essa temporal futura, terminaria fica estranho, termine indica presente."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:b8a17e11",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:52732509",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de forma coerente com o pedido educado que está sendo feito: 'Eu ______ muito grata se vocês pudessem confirmar a presença até sexta-feira.'",
+        "opcoes": [
+          "serei",
+          "sou",
+          "fui",
+          "seria"
+        ],
+        "correta": 3,
+        "explicacao": "Pudessem é pretérito imperfeito do subjuntivo e marca um pedido cortês. A principal precisa de futuro do pretérito, que expressa gentileza ou hipótese. Seria funciona. Sou e serei soariam diretos demais, e fui remete ao passado."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:52732509",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:c92c5563",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com a condição hipotética apresentada: 'Se o governo ______ mais recursos à educação, os índices de aprendizagem melhorariam significativamente.'",
+        "opcoes": [
+          "destinasse",
+          "destine",
+          "destina",
+          "destinou"
+        ],
+        "correta": 0,
+        "explicacao": "A principal está em futuro do pretérito (melhorariam), então a condicional precisa de pretérito imperfeito do subjuntivo. É o período hipotético padrão do português. Destinasse funciona. Destina e destinou remetem a fatos reais, destine não se encaixa."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:c92c5563",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:9d994498",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com o fato apresentado como verdade geral e científica: 'A água ______ a cem graus Celsius ao nível do mar, formando vapor.'",
+        "opcoes": [
+          "fervia",
+          "ferve",
+          "ferverá",
+          "ferveu"
+        ],
+        "correta": 1,
+        "explicacao": "A frase apresenta um fato científico permanente e atemporal, contexto que exige o presente do indicativo. Por isso, 'ferve' é a forma correta; 'ferveu' e 'fervia' remetem ao passado, e 'ferverá' sugere um evento único no futuro, sentidos incompatíveis com uma verdade sempre válida, independente do momento em que a frase é dita."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:9d994498",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:4c788da7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com o tempo indicado no início da frase: 'Na semana passada, os alunos ______ uma visita ao museu de ciências da cidade.'",
+        "opcoes": [
+          "farão",
+          "fazem",
+          "fizeram",
+          "faziam"
+        ],
+        "correta": 2,
+        "explicacao": "Na semana passada marca uma ação pontual e concluída. O tempo certo é pretérito perfeito. Fizeram funciona. Fazem está no presente, farão no futuro, e faziam sugere hábito. Uma visita única precisa de pretérito perfeito."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:4c788da7",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:por:tempos-verbais-emprego:3049eab0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Complete a frase de acordo com o tempo indicado no início da frase: 'No próximo mês, a prefeitura ______ um novo parque público no bairro central da cidade.'",
+        "opcoes": [
+          "inaugurará",
+          "inaugurava",
+          "inaugurou",
+          "inaugurara"
+        ],
+        "correta": 0,
+        "explicacao": "No próximo mês marca uma ação planejada para o futuro. O tempo certo é futuro do presente. Inaugurará funciona. Inaugurava, inaugurou e inaugurara remetem ao passado, incompatível com o futuro pedido pela expressão de tempo."
+      },
+      "meta": {
+        "id": "gen:por:tempos-verbais-emprego:3049eab0",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T23:55:13.982Z",
+          "reviewer": "amostra"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-por-tempos-verbais-emprego",
+      "version": 1,
+      "format": 2,
+      "subjectId": "por",
+      "topicId": "gram",
+      "chapterId": "gen-por-tempos-verbais-emprego",
+      "title": "Tempo verbal no contexto",
+      "objective": "Empregar o tempo e o modo verbal adequados ao contexto.",
+      "skillIds": [
+        "por:tempos-verbais-emprego"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:por:tempos-verbais-emprego:98cd78ab",
+        "gen:por:tempos-verbais-emprego:52732509"
+      ],
+      "recap": "O tempo verbal segue as pistas de tempo da frase; ações passadas em sequência pedem o mais-que-perfeito pra marcar qual veio antes.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T01:10:23.009Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Tempos verbais",
+          "body": "Você vai aprender a escolher o tempo verbal certo observando as pistas de tempo presentes na frase."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Pistas de tempo",
+            "body": "Expressões como 'ontem', 'sempre', 'todos os dias' e 'amanhã' indicam qual tempo verbal a frase pede. Ação pontual e concluída no passado pede pretérito perfeito ('chegou'). Ação repetida no passado pede pretérito imperfeito ('brincava'). Ação futura pede futuro do presente ('estudará')."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:tempos-verbais-emprego:384c9817",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:tempos-verbais-emprego:594c0a26",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Duas ações, uma antes da outra",
+            "problem": "Complete: 'Quando o ônibus partiu, os passageiros já ______ (comprar) as passagens.'",
+            "steps": [
+              "Há duas ações no passado: partir e comprar.",
+              "Comprar aconteceu antes de partir, então é a ação mais antiga das duas.",
+              "Pra marcar essa anterioridade, usa-se o pretérito mais-que-perfeito composto: 'tinham comprado'."
+            ],
+            "result": "'Quando o ônibus partiu, os passageiros já tinham comprado as passagens.'"
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:tempos-verbais-emprego:ff9b2f4a",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:tempos-verbais-emprego:926402c3",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não use o presente do subjuntivo depois de um 'se' hipotético: essa condição pede o pretérito imperfeito do subjuntivo, não o presente."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Condição hipotética",
+            "body": "Frases com 'se' que descrevem uma hipótese, não um fato, pedem o pretérito imperfeito do subjuntivo na oração com 'se', combinado com futuro do pretérito na oração principal: 'Se eu tivesse tempo, viajaria.'"
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:por:tempos-verbais-emprego:c92c5563",
+          "role": "desafio",
+          "difficulty": 2
+        },
+        {
+          "kind": "recap",
+          "body": "O tempo verbal segue as pistas de tempo da frase; ações passadas em sequência pedem o mais-que-perfeito pra marcar qual veio antes."
+        }
+      ]
+    }
+  ]
+}

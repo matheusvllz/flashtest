@@ -1,0 +1,946 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "gen:mat:razao-proporcao:96eb7bcd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma receita, a razão entre farinha e açúcar é 2:1. Se você usar 4 xícaras de farinha, quantas xícaras de açúcar você deve usar?",
+        "opcoes": [
+          "4",
+          "2",
+          "1",
+          "3"
+        ],
+        "correta": 1,
+        "explicacao": "Razão 2:1 quer dizer: pra cada 2 partes de farinha, tem 1 de açúcar. Se 2 partes = 4 xícaras, então 1 parte = 2 xícaras. Logo, açúcar = 2 xícaras. A razão só conecta as proporções."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:96eb7bcd",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:9280e429",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma escola tem meninos e meninas na razão 3:2. Se há 15 meninos, quantas meninas há?",
+        "opcoes": [
+          "12",
+          "15",
+          "8",
+          "10"
+        ],
+        "correta": 3,
+        "explicacao": "Razão 3:2 significa meninos:meninas. Se 3 partes = 15 meninos, então 1 parte = 5. Logo, meninas = 2 × 5 = 10. Divide o número que você tem pela sua parte da razão e acha o valor de uma unidade."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:9280e429",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:4f005c58",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se 4 litros de suco custam 12 reais, quanto custam 10 litros do mesmo suco?",
+        "opcoes": [
+          "30",
+          "25",
+          "35",
+          "40"
+        ],
+        "correta": 0,
+        "explicacao": "4 litros custam 12 reais, então 1 litro custa 3 reais. 10 litros custam 10 × 3 = 30 reais. Estratégia: acha o preço de um, depois multiplica pela quantidade que você precisa."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:4f005c58",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:1bea8c69",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma máquina produz 50 peças a cada 2 horas. Quantas peças ela produz em 8 horas?",
+        "opcoes": [
+          "150",
+          "200",
+          "180",
+          "220"
+        ],
+        "correta": 1,
+        "explicacao": "A máquina produz 50 peças em 2 horas. 8 horas = 4 × 2 horas, então a produção é 4 × 50 = 200 peças. Vê quantas vezes aquele período cabe no tempo total e multiplica a produção."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:1bea8c69",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:1a31e2ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pintor consegue pintar 60 metros quadrados em 3 dias. Se ele precisar pintar uma parede de 240 metros quadrados, quantos dias levará?",
+        "opcoes": [
+          "15",
+          "8",
+          "12",
+          "10"
+        ],
+        "correta": 2,
+        "explicacao": "Em 3 dias pinta 60 m², então em 1 dia pinta 20 m². Para 240 m²: 240 ÷ 20 = 12 dias. Calcula a taxa (por dia, por hora, por pessoa) e depois usa ela pra descobrir o que falta."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:1a31e2ab",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:9bcef406",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma receita de bolo serve 8 pessoas e usa 200g de farinha. Se você quiser fazer um bolo para 20 pessoas, quanto de farinha será necessário?",
+        "opcoes": [
+          "400",
+          "600",
+          "450",
+          "500"
+        ],
+        "correta": 3,
+        "explicacao": "Para 8 pessoas: 200g. Para 1 pessoa: 25g. Para 20 pessoas: 20 × 25 = 500g. Ou usa regra de três: 8/200 = 20/x, logo x = 500. Tudo muda junto na mesma proporção."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:9bcef406",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:84ad700b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma pista de corrida, a razão entre atletas iniciantes e experientes é 4:3. Se há 28 atletas iniciantes, qual é o total de atletas na pista?",
+        "opcoes": [
+          "49",
+          "45",
+          "52",
+          "56"
+        ],
+        "correta": 0,
+        "explicacao": "Razão 4:3 com 28 iniciantes. Se 4 partes = 28, então 1 parte = 7. Experientes = 3 × 7 = 21. Total = 28 + 21 = 49. Se pedir o total, soma todos depois de achar o valor de uma unidade."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:84ad700b",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:d9f7dc35",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um carro consome 8 litros de combustível a cada 100 quilômetros. Quantos litros consumirá em uma viagem de 350 quilômetros?",
+        "opcoes": [
+          "32",
+          "28",
+          "25",
+          "30"
+        ],
+        "correta": 1,
+        "explicacao": "Consumo em 100 km = 8 litros. Consumo em 350 km = (350/100) × 8 = 3,5 × 8 = 28 litros. Quanto mais distância, mais combustível. Tudo proporcional."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:d9f7dc35",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:f5c13ff9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se 8 homens constroem uma casa em 30 dias, quantos dias levarão 12 homens para construir 3 casas iguais?",
+        "opcoes": [
+          "75",
+          "90",
+          "60",
+          "50"
+        ],
+        "correta": 2,
+        "explicacao": "8 homens fazem 1 casa em 30 dias = 240 dias-homem por casa. 3 casas = 720 dias-homem. 12 homens fazem 720 ÷ 12 = 60 dias. Converta para dias-homem (produto de homens × dias) para lidar com múltiplas variáveis."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:f5c13ff9",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:ea2b96c3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma impressora imprime 180 páginas em 6 minutos. Quantas páginas ela imprimirá em 25 minutos?",
+        "opcoes": [
+          "700",
+          "800",
+          "720",
+          "750"
+        ],
+        "correta": 3,
+        "explicacao": "Taxa de impressão: 180 ÷ 6 = 30 páginas por minuto. Em 25 minutos: 30 × 25 = 750 páginas. Acha a taxa (por minuto, por hora), depois multiplica pelo tempo que você quer."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:ea2b96c3",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:24964185",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A razão entre o número de maçãs e laranjas em um pomar é 5:3. Se o pomar tem 96 frutas no total, quantas maçãs há?",
+        "opcoes": [
+          "60",
+          "45",
+          "50",
+          "75"
+        ],
+        "correta": 0,
+        "explicacao": "Razão 5:3 = 8 partes no total. 8 partes = 96 frutas, logo 1 parte = 12. Maçãs = 5 × 12 = 60. Soma as partes da razão pra saber por qual número divide o total."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:24964185",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:8104d44b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um empresário divide seu investimento entre duas ações na razão 3:2. Se ele investiu 5.000 reais no total, quanto investiu na ação que recebeu a maior parte?",
+        "opcoes": [
+          "2500",
+          "3500",
+          "3000",
+          "2000"
+        ],
+        "correta": 2,
+        "explicacao": "Razão 3:2 = 5 partes no total. 5 partes = 5.000 reais, logo 1 parte = 1.000. Maior investimento = 3 × 1.000 = 3.000 reais. O número maior da razão é quem fica com o valor maior."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:8104d44b",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:2056c5f0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma receita de suco concentrado precisa ser diluída na razão 1:4 (concentrado:água). Se você tem 250ml de concentrado, qual será o volume total do suco pronto?",
+        "opcoes": [
+          "1000",
+          "1500",
+          "1200",
+          "1250"
+        ],
+        "correta": 3,
+        "explicacao": "Razão 1:4 significa 1 parte de concentrado para 4 partes de água. Com 250 ml de concentrado, água = 250 × 4 = 1.000 ml. Total = 250 + 1.000 = 1.250 ml. Como a razão é 1:4, a água é 4 vezes o concentrado; e o total são 5 partes."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:2056c5f0",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:01260fe8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma escola tem a razão de 2 professores para cada 35 alunos. Se a escola tem 280 alunos, quantos professores há?",
+        "opcoes": [
+          "16",
+          "14",
+          "18",
+          "20"
+        ],
+        "correta": 0,
+        "explicacao": "Razão 2 professores : 35 alunos. Com 280 alunos: (280 ÷ 35) × 2 = 8 × 2 = 16 professores. Divide o total pelo número que aparece na razão, aí multiplica pelo outro."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:01260fe8",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:17bf3614",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um mapa tem escala 1:1.000.000. Se a distância entre duas cidades no mapa é 5 cm, qual é a distância real, em quilômetros?",
+        "opcoes": [
+          "55",
+          "50",
+          "40",
+          "60"
+        ],
+        "correta": 1,
+        "explicacao": "Escala 1:1.000.000 significa 1cm no mapa = 1.000.000cm na realidade. 5cm no mapa = 5 × 1.000.000cm = 5.000.000cm = 50km. Multiplica a medida do mapa pela escala pra achar o tamanho real."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:17bf3614",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:ee341ae9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A proporção entre vidro reciclado e vidro novo em um lote é 7:3. Se o lote tem 500 toneladas, quantas toneladas são de vidro novo?",
+        "opcoes": [
+          "100",
+          "175",
+          "200",
+          "150"
+        ],
+        "correta": 3,
+        "explicacao": "Razão 7:3 = 10 partes no total. 10 partes = 500 toneladas, logo 1 parte = 50. Vidro novo = 3 × 50 = 150 toneladas. Vê qual número da razão combina com o que tá sendo pedido."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:ee341ae9",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:dd5f4051",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se 6 metros de tecido custam 180 reais, qual será o custo de 15 metros do mesmo tecido?",
+        "opcoes": [
+          "450",
+          "400",
+          "500",
+          "420"
+        ],
+        "correta": 0,
+        "explicacao": "Preço por metro: 180 ÷ 6 = 30 reais. Para 15 metros: 15 × 30 = 450 reais. Ou usa regra de três: 6/180 = 15/x, logo x = 450. Direto ao ponto: achando o unitário."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:dd5f4051",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:mat:razao-proporcao:1f3737ce",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma mistura de concreto usa areia e cimento na razão 4:1. Se a mistura tem 500kg, quanto de cimento há?",
+        "opcoes": [
+          "150",
+          "100",
+          "125",
+          "80"
+        ],
+        "correta": 1,
+        "explicacao": "Razão 4:1 = 5 partes no total. 5 partes = 500kg, logo 1 parte = 100kg. Cimento = 1 × 100 = 100kg. O segundo número da razão é a quantidade de partes do segundo item."
+      },
+      "meta": {
+        "id": "gen:mat:razao-proporcao:1f3737ce",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T18:40:36.298Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-mat-razao-proporcao",
+      "version": 1,
+      "format": 2,
+      "subjectId": "mat",
+      "topicId": "razao",
+      "chapterId": "gen-mat-razao-proporcao",
+      "title": "Razão e proporção",
+      "objective": "Resolver problemas de razão, proporção e regra de três simples usando proporcionalidade direta.",
+      "skillIds": [
+        "mat:razao-proporcao"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:mat:razao-proporcao:4f005c58",
+        "gen:mat:razao-proporcao:96eb7bcd"
+      ],
+      "recap": "Proporção é sobre grandezas que mudam juntas. Ache o valor de uma parte, depois multiplique pelo total que você precisa.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Proporção",
+          "body": "Você vai aprender a comparar grandezas que mudam juntas e resolver problemas de razão e regra de três."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Grandezas proporcionais",
+            "body": "Duas grandezas são proporcionais quando uma cresce e a outra cresce na mesma taxa. Ache o valor de uma unidade e multiplique pelo total que precisa. Numa razão 3:2, o total tem 5 partes iguais; cada parte vale o total dividido por 5."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:razao-proporcao:1bea8c69",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:razao-proporcao:9280e429",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Misturando tinta",
+            "problem": "Uma tinta mistura azul e amarelo na razão 2:3. Com 400 ml de azul, quanto de amarelo entra?",
+            "steps": [
+              "2 partes de azul para 3 de amarelo; 400 ml equivalem a 2 partes, então 1 parte = 200 ml.",
+              "Amarelo = 3 × 200 = 600 ml."
+            ],
+            "result": "600 ml de amarelo."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:razao-proporcao:2056c5f0",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:razao-proporcao:9bcef406",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não troque a ordem das grandezas na razão: o que vem primeiro de um lado tem que vir primeiro do outro também."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "comparison",
+            "title": "Direta ou inversa",
+            "left": {
+              "label": "Direta",
+              "body": "As duas grandezas crescem juntas (ou diminuem juntas). Mais horas, mais peças produzidas: você multiplica."
+            },
+            "right": {
+              "label": "Inversa",
+              "body": "Uma cresce e a outra diminui, como mais pessoas trabalhando terminando uma tarefa mais rápido; aqui a conta é diferente."
+            }
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:mat:razao-proporcao:ea2b96c3",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Proporção é sobre grandezas que mudam juntas. Ache o valor de uma parte, depois multiplique pelo total que você precisa."
+        }
+      ]
+    }
+  ]
+}

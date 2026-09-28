@@ -436,6 +436,8 @@ export interface CurriculumTreeChapterLike {
   lessonIds: string[];
   trilhaId?: string;
   prerequisiteChapterIds: string[];
+  /** Habilidades que o capítulo ensina (docs/30 §8.1/§8.3, Fase 2 T-2.6) — opcional nesta entrega. */
+  skillIds?: string[];
 }
 export interface CurriculumTreeSectionLike {
   id: string;
@@ -453,6 +455,8 @@ export function validateCurriculumTree(
   tree: CurriculumTreeLike,
   lessonIds: Set<string>,
   trilhaIds: Set<string>,
+  /** Ids válidos de `SkillDef` (docs/30 §8, Fase 2 T-2.6) — `undefined` pula a checagem (compatibilidade com chamadores antigos). */
+  skillIds?: Set<string>,
 ): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   const todosCapitulos = tree.subjects.flatMap((s) => s.sections.flatMap((sec) => sec.chapters));
@@ -516,6 +520,17 @@ export function validateCurriculumTree(
           code: "arvore-prerequisito-quebrado",
           message: `Capítulo "${chapter.id}" depende de "${preReqId}", que não existe na árvore`,
         });
+      }
+    }
+
+    if (skillIds) {
+      for (const skillId of chapter.skillIds ?? []) {
+        if (!skillIds.has(skillId)) {
+          issues.push({
+            code: "arvore-skill-inexistente",
+            message: `Capítulo "${chapter.id}" referencia a habilidade "${skillId}", que não existe na taxonomia`,
+          });
+        }
       }
     }
   }

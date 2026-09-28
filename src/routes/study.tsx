@@ -1,8 +1,9 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { CelebracaoAula } from "@/components/lessons/CelebracaoAula";
 import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
+import { DontKnowButton } from "@/components/learning/DontKnowButton";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { marcadorClasses, choiceClasses } from "@/components/lessons/exercises/shared";
 import { QUESTIONS, type Question } from "@/data/questions";
@@ -10,23 +11,32 @@ import { useExerciseSession } from "@/hooks/useExerciseSession";
 import { unlockAudioFromGesture, setAudioEnabled } from "@/lib/audio/engine";
 import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
 import type { SoundEvent } from "@/lib/feedback/dispatch-feedback";
+import { itemMetaOf } from "@/content/items";
+import { stableExerciseId } from "@/content/exercise-ids";
+import { planWithFallback, selectItemsForActivity } from "@/lib/adaptive";
+import { buildAttempt } from "@/lib/learning/attempt-builder";
 import {
   atividadeHoje,
   getState,
+  hojeISO,
   isStreakMilestone,
   nivelDeXp,
   openTutorWithContext,
+  recordLearningAttempt,
   registrarAulaConcluida,
   registrarResposta,
   setPrefs,
   setState,
   setTutorFocus,
   useAppState,
+  type AppState,
   type Gap,
 } from "@/lib/store";
 import type { TutorFocus } from "@/lib/tutor-prompt";
+import { buildPedagogicalContext } from "@/lib/tutor-context";
+import { COPY } from "@/lib/copy";
 import { Sparkles, Lightbulb, PlayCircle, Layers, X, Timer, Volume2, VolumeX } from "lucide-react";
-import { HOME_ROUTE } from "@/lib/features";
+import { FEATURES, HOME_ROUTE } from "@/lib/features";
 
 export const Route = createFileRoute("/study")({ component: Study, ssr: false });
 
@@ -49,12 +59,44 @@ function pickQuestions(gaps: Gap[], difficultSubjects: string[], completed: stri
   return [...pool].sort((a, b) => rank(a) - rank(b)).slice(0, LESSON_SIZE);
 }
 
+/**
+ * Variante adaptativa (docs/30 §11.10, Fase 12 F12.7) — reaproveita
+ * `planWithFallback`/`selectItemsForActivity` (os únicos contratos que o
+ * resto do app deveria chamar no motor — comentário de `adaptive/index.ts`)
+ * em vez de reimplementar `classifySkill`/`scoreCandidate` aqui: o
+ * planejador já só cria atividade "pratica" pra habilidade EM_APRENDIZADO e
+ * "revisao" pra DEVIDA, já ordenadas por score (docs/30 §11.2-§11.4) — pegar
+ * a primeira com itens que existem no banco geral (`QUESTIONS`, o único
+ * catálogo que `/study` sabe renderizar) é equivalente ao pseudocódigo do
+ * `31` sem duplicar a lógica de pontuação. `null` = nenhuma candidata (sem
+ * modelo ainda, ou nenhum item do banco geral na seleção) — quem chama cai
+ * no `pickQuestions` de sempre.
+ */
+export function pickQuestionsAdaptive(s: Pick<AppState, "prefs" | "learning" | "progress">): Question[] | null {
+  const hoje = hojeISO();
+  try {
+    const plano = planWithFallback(s, hoje, hoje, { n: 8 });
+    for (const atividade of plano.activities) {
+      if (atividade.kind !== "pratica" && atividade.kind !== "revisao") continue;
+      const itemIds = selectItemsForActivity(atividade, s, hoje, atividade.id);
+      const perguntas = itemIds
+        .map((id) => QUESTIONS.find((question) => question.id === id))
+        .filter((question): question is Question => Boolean(question));
+      if (perguntas.length >= LESSON_SIZE) return perguntas.slice(0, LESSON_SIZE);
+    }
+  } catch {
+    return null;
+  }
+  return null;
+}
+
 function Study() {
   const nav = useNavigate();
   const s = useAppState();
-  const [questions] = useState<Question[]>(() =>
-    pickQuestions(s.quiz.gaps, s.prefs.difficultSubjects, s.progress.completedQuestions),
-  );
+  const [questions] = useState<Question[]>(() => {
+    const adaptativa = FEATURES.jornadaAdaptativa ? pickQuestionsAdaptive(s) : null;
+    return adaptativa ?? pickQuestions(s.quiz.gaps, s.prefs.difficultSubjects, s.progress.completedQuestions);
+  });
   const [idx, setIdx] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [lessonDone, setLessonDone] = useState(false);
@@ -72,6 +114,46 @@ function Study() {
   const answered = session.phase !== "answering";
   const elapsed = useLessonClock(lessonDone);
 
+  // Sinais ampliados (docs/30 §7.3/§21.1, Fase 6): dica/tutor pedidos ANTES
+  // de responder marcam a tentativa como assistida; `questionShownAtRef`
+  // alimenta `durationMs`. Refs (não estado) porque não precisam re-render —
+  // só são lidos na hora de gravar a tentativa.
+  const hintUsedRef = useRef(false);
+  const tutorUsedRef = useRef(false);
+  const questionShownAtRef = useRef(Date.now());
+  useEffect(() => {
+    hintUsedRef.current = false;
+    tutorUsedRef.current = false;
+    questionShownAtRef.current = Date.now();
+  }, [idx]);
+
+  /** Grava a tentativa com sinais completos (docs/30 §7.3/§21.1) — atrás da flag `sinaisAmpliados`; sem ela, `/study` funciona exatamente como antes. */
+  function registrarSinal(response: "answered" | "dont-know", correct: boolean) {
+    if (!FEATURES.sinaisAmpliados) return;
+    const meta = itemMetaOf(q.id);
+    const attempt = buildAttempt({
+      id: `at-${Date.now()}-${Math.floor(Math.random() * 1e6)}`,
+      sessionId: null,
+      exerciseId: q.id,
+      exerciseVersion: stableExerciseId(q.id)?.version ?? 1,
+      subjectId: q.subject,
+      topicId: q.topic,
+      skillIds: meta.skillIds,
+      role: "pratica",
+      answer: response === "dont-know" ? null : selected,
+      correct,
+      response,
+      hintUsed: hintUsedRef.current,
+      tutorUsed: tutorUsedRef.current,
+      firstSubmission: true,
+      startedAtMs: questionShownAtRef.current,
+      localDate: hojeISO(),
+      itemDifficulty: meta.difficulty,
+      source: "estudo",
+    });
+    recordLearningAttempt(attempt, { irt: meta.irt, difficulty: meta.difficulty });
+  }
+
   /** Snapshot do foco atual, em texto — usado tanto pelo efeito reativo quanto pelos dois CTAs do tutor. */
   function focusFromCurrent(): TutorFocus {
     return {
@@ -87,6 +169,16 @@ function Study() {
       explanation: q.explanation,
       hint: q.hint,
     };
+  }
+
+  /** `ensinarDoZero` (docs/30 §17.2, Fase 7): nível 3 pós-feedback — mesmo padrão de `MicroLessonPlayer.tsx`/`LessonPlayer.tsx`. */
+  function askTutorFromCurrent(ensinarDoZero = false) {
+    const nivel3 = ensinarDoZero && FEATURES.explicacaoEmCamadas;
+    const mode = nivel3 ? "ensinar-do-zero" : "duvida";
+    const pedagogy = FEATURES.contextoPedagogicoIA
+      ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, q.id, mode, hojeISO())
+      : null;
+    openTutorWithContext(focusFromCurrent(), { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null });
   }
 
   // Mantém o balão global apontado para a questão da vez: é isso que faz a IA
@@ -109,11 +201,22 @@ function Study() {
       // XP real pós-teto (docs/20 §12, Fase 11) — não mais um 15/5 fixo
       // assumido aqui: `registrarResposta` devolve o que foi de fato pago.
       const xpAwarded = registrarResposta(q, correct);
+      registrarSinal("answered", correct);
       if (correct) setAcertosAula((n) => n + 1);
       setShowHint(false);
       return { exerciseId: q.id, correct, explanation: q.explanation, xpAwarded };
       // O tutor NÃO abre sozinho ao errar (docs/20 §3 B2, §4.2): só o CTA
       // explícito "Explicar melhor" abre o balão, e só o envio abre a API.
+    });
+  }
+
+  /** Botão "Não sei" (docs/30 §16.1, Fase 6) — XP como errada, mas é um sinal próprio (`response: "dont-know"`), não um chute. */
+  function dontKnow() {
+    session.submit(() => {
+      const xpAwarded = registrarResposta(q, false);
+      registrarSinal("dont-know", false);
+      setShowHint(false);
+      return { exerciseId: q.id, correct: false, explanation: q.explanation, xpAwarded, dontKnow: true };
     });
   }
 
@@ -280,12 +383,24 @@ function Study() {
                 >
                   Responder
                 </button>
+                {FEATURES.botaoNaoSei && itemMetaOf(q.id).dontKnowAllowed !== false && (
+                  <DontKnowButton onClick={dontKnow} />
+                )}
                 <div className="grid grid-cols-2 gap-2">
-                  <button onClick={() => setShowHint(true)} className="btn-outline">
+                  <button
+                    onClick={() => {
+                      hintUsedRef.current = true;
+                      setShowHint(true);
+                    }}
+                    className="btn-outline"
+                  >
                     <Lightbulb size={16} /> Pedir dica
                   </button>
                   <button
-                    onClick={() => openTutorWithContext(focusFromCurrent())}
+                    onClick={() => {
+                      tutorUsedRef.current = true;
+                      askTutorFromCurrent();
+                    }}
                     className="btn-outline"
                   >
                     <Sparkles size={16} /> Perguntar à Foca
@@ -297,11 +412,7 @@ function Study() {
                 feedback={session.feedback}
                 isLast={idx + 1 >= questions.length}
                 onContinue={nextQ}
-                onAskTutor={
-                  !session.feedback.correct
-                    ? () => openTutorWithContext(focusFromCurrent())
-                    : undefined
-                }
+                onAskTutor={!session.feedback.correct ? () => askTutorFromCurrent(true) : undefined}
               >
                 <div className="card-soft space-y-3 p-4">
                   <div>

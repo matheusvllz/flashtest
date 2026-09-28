@@ -1,0 +1,420 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "gen:bio:membrana-funcao:c0fab581",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Como as proteínas transportadoras atravessam a membrana e permitem o transporte de moléculas que não conseguem cruzar a bicamada lipídica sozinhas?",
+        "opcoes": [
+          "Puxam as moléculas através da água do citoplasma",
+          "Não atravessam; ficam fora da membrana",
+          "Atravessam a membrana com suas regiões hidrofóbicas ancoradas nos lipídios; formam canais e sítios de ligação específicos que reconhecem e movem moléculas seletivamente de um lado para o outro",
+          "Transformam moléculas em apolares para que atravessem"
+        ],
+        "correta": 2,
+        "explicacao": "Proteínas de transporte são integrais: têm domínios que atravessam a bicamada e ficam ancorados nela. Algumas formam canais, poros seletivos por tamanho e carga. Outras, as transportadoras, ligam a molécula de um lado, mudam de forma e a liberam do outro. Sem essas proteínas, moléculas polares como glicose, íons e aminoácidos praticamente não atravessariam a barreira apolar. Isso é o transporte mediado."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:c0fab581",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:24.887Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:533f1126",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma célula absorve glicose através da membrana plasmática usando uma proteína transportadora, mesmo contra o gradiente de concentração. Qual tipo de transporte está ocorrendo?",
+        "opcoes": [
+          "Endocitose",
+          "Difusão simples",
+          "Transporte ativo",
+          "Osmose"
+        ],
+        "correta": 2,
+        "explicacao": "Quando uma substância é transportada contra o gradiente (de menor para maior concentração), a célula gasta energia (ATP). Isso é transporte ativo. Difusão simples é o oposto: vai a favor do gradiente, sem gastar nada. Osmose é só água se movendo, e endocitose é a membrana englobando partículas."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:533f1126",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:c09d444d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma hemácia (célula vermelha) é colocada em solução hipotônica. A água entra na célula, causando inchação e rompimento. Em que estrutura ocorre esse dano crítico?",
+        "opcoes": [
+          "Membrana plasmática",
+          "Mitocôndria",
+          "Núcleo celular",
+          "Retículo endoplasmático"
+        ],
+        "correta": 0,
+        "explicacao": "A membrana plasmática é uma bicamada lipídica semipermeável que mantém a forma e integridade celular. Em solução hipotônica, água entra por osmose, aumentando a pressão osmótica interna até o rompimento. Hemácias carecem de parede celular para resistir, diferente de vegetais. O dano ocorre exatamente na membrana plasmática."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:c09d444d",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:b65e234d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um patógeno precisa atravessar a membrana plasmática de uma célula-alvo. Se não conseguir se dissolver em lipídios nem usar proteínas transportadoras específicas, qual seria o mecanismo alternativo mais provável?",
+        "opcoes": [
+          "Esperar que canais iônicos abram",
+          "Induzir endocitose para entrar embalado",
+          "Esperar morte celular para atravessar",
+          "Usar transporte ativo com a energia da célula"
+        ],
+        "correta": 1,
+        "explicacao": "Endocitose é um transporte em massa: a membrana envolve partículas externas e as traz para dentro em vesículas. Patógenos como vírus usam muito esse mecanismo, ligando-se a receptores da célula-alvo para disparar a endocitose. Canais iônicos e transporte ativo dependem de proteínas transportadoras que o patógeno não consegue usar, então a saída mais provável é induzir a endocitose."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:b65e234d",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:430a430f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma bactéria marinha que vive em ambiente com alta concentração de sal consegue manter seu interior com salinidade muito menor. Qual mecanismo principal permite essa adaptação?",
+        "opcoes": [
+          "Difusão facilitada seletiva",
+          "Parede celular impermeável a sais",
+          "Bomba de expulsão ativa de sódio e cloreto",
+          "Parede celular porosa que reduz entrada"
+        ],
+        "correta": 2,
+        "explicacao": "Bactérias em ambientes muito salinos (hipertônicos em relação ao citoplasma) usam bombas iônicas ativas para gastar energia e expelir íons contra o gradiente. A parede celular bacteriana oferece proteção mecânica, mas não filtra sais por si só. Só transporte ativo consegue manter gradientes químicos tão drásticos por um longo tempo."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:430a430f",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:30d14b26",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um medicamento bloqueia a bomba de sódio-potássio em neurônios de um animal. Qual seria a consequência mais direta nos gradientes iônicos?",
+        "opcoes": [
+          "Osmorregulação melhora",
+          "Canais iônicos abrem mais",
+          "Aumento de potássio dentro, sódio fora",
+          "Aumento de sódio dentro, potássio fora"
+        ],
+        "correta": 3,
+        "explicacao": "A bomba de sódio-potássio expele 3 sódios e traz 2 potássios, mantendo baixa concentração de Na+ dentro e alta de K+ dentro. Bloqueada, não ocorre essa troca: sódio acumula no interior e potássio diminui, porque ambos continuam vazando pelos canais. O gradiente se desfaz progressivamente. Isso desestabiliza o potencial de repouso e impede a geração de potencial de ação."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:30d14b26",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:2451bb52",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma molécula pequena, não-polar e lipossolúvel consegue atravessar a membrana plasmática sem proteína transportadora. Qual tipo de transporte está envolvido?",
+        "opcoes": [
+          "Difusão simples",
+          "Difusão facilitada",
+          "Exocitose",
+          "Transporte ativo primário"
+        ],
+        "correta": 0,
+        "explicacao": "Difusão simples acontece quando moléculas pequenas e apolares (como O2 e CO2) dissolvem-se na bicamada lipídica e atravessam sem mediadoras. Não precisa de proteína nem de ATP, só do movimento aleatório e do gradiente de concentração. Difusão facilitada e transporte ativo precisam de proteínas; exocitose é a saída de vesículas."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:2451bb52",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:de3ae2f1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Células epiteliais intestinais absorvem frutose através de uma proteína específica, a favor do gradiente. Que tipo de transporte é este?",
+        "opcoes": [
+          "Endocitose",
+          "Difusão facilitada",
+          "Transporte ativo",
+          "Osmose"
+        ],
+        "correta": 1,
+        "explicacao": "Difusão facilitada usa uma proteína transportadora que permite passagem a favor do gradiente (maior para menor concentração), sem gasto direto de ATP. Frutose, sendo um açúcar, não atravessa sozinha; a proteína GLUT5 faz isso. Transporte ativo seria contra o gradiente; endocitose envolve vesículas."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:de3ae2f1",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:bio:membrana-funcao:16cd90e6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma célula cultivada em laboratório é tratada com inibidor de ATP. O que ocorre primeiro com os íons intracelulares?",
+        "opcoes": [
+          "Ambos entram na célula",
+          "Sódio reduz, potássio aumenta",
+          "Sódio aumenta, potássio reduz",
+          "Ambos saem da célula"
+        ],
+        "correta": 2,
+        "explicacao": "Sem ATP, a bomba de sódio-potássio (e outras bombas ativas) param. O sódio, normalmente mantido baixo pelo gasto ativo, começa a entrar por difusão através de canais; o potássio, mantido alto ativamente, começa a sair. O gradiente se desfaz lentamente até o equilíbrio. Isso compromete o funcionamento da célula e pode levar à morte."
+      },
+      "meta": {
+        "id": "gen:bio:membrana-funcao:16cd90e6",
+        "version": 1,
+        "skillIds": [
+          "bio:membrana-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.154Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ]
+}

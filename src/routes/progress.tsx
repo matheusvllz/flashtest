@@ -5,11 +5,41 @@ import { AppShell } from "@/components/AppShell";
 import { EmptyState } from "@/components/ds/EmptyState";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { StatTile } from "@/components/ds/StatTile";
-import { nivelDeXp, useAppState } from "@/lib/store";
-import { SUBJECT_MAP } from "@/data/subjects";
+import { SkillRow } from "@/components/progress/SkillRow";
+import { skillsOfSubject } from "@/content/taxonomy";
+import { skillDisplay } from "@/lib/adaptive/display";
+import { FEATURES } from "@/lib/features";
+import { hojeISO, nivelDeXp, useAppState, type AppState } from "@/lib/store";
+import { SUBJECT_MAP, SUBJECTS } from "@/data/subjects";
 import { QUESTIONS } from "@/data/questions";
 import { TOTAL_LICOES } from "@/content/trilhas";
 import { cn } from "@/lib/utils";
+
+/**
+ * Agregado de Mastery por matéria (docs/30 §9, Fase 12 F12.8) — média
+ * ponderada por incidência×confiança entre as habilidades ATIVAS da matéria
+ * que já têm evidência suficiente pra mostrar Mastery (`skillDisplay`
+ * decide isso, nunca um número sem sustentação). `null` = nenhuma habilidade
+ * medida ainda ("não medido", mesmo padrão visual do mapa por matéria legado).
+ */
+function subjectMasteryAggregate(subjectId: string, s: Pick<AppState, "learning">, today: string): number | null {
+  let numerador = 0;
+  let denominador = 0;
+  for (const skill of skillsOfSubject(subjectId)) {
+    if (skill.status !== "ativo") continue;
+    const display = skillDisplay(
+      s.learning.skillModel[skill.id],
+      s.learning.skillEvidence[skill.id],
+      s.learning.reviewSchedule[skill.id],
+      today,
+    );
+    if (!display.showMastery || display.mastery === null) continue;
+    const peso = skill.incidence * (display.confidenceValue / 100);
+    numerador += display.mastery * peso;
+    denominador += peso;
+  }
+  return denominador > 0 ? Math.round(numerador / denominador) : null;
+}
 
 export const Route = createFileRoute("/progress")({ component: Progress, ssr: false });
 
@@ -37,6 +67,7 @@ function Progress() {
   const licoesFeitas = Object.keys(p.lessons).length;
   const alvo = s.prefs.targetInstitution;
   const nivel = nivelDeXp(p.xp);
+  const hoje = hojeISO();
 
   /**
    * O mapa de lacunas: toda matéria com questão no banco aparece, medida ou
@@ -132,42 +163,86 @@ function Progress() {
           </div>
         )}
 
-        {/* O mapa em si */}
-        <div className="card-soft p-4">
-          <h3 className="font-display font-bold text-abismo">Domínio por matéria</h3>
-          <p className="mt-0.5 text-[11px] text-nevoa">
-            Tracejado = ainda não medimos você nessa matéria.
-          </p>
-          <ul className="mt-4 space-y-3">
-            {mapa.map((m) => {
-              const faixa = faixaDe(m.pct, m.answered);
-              return (
-                <li key={m.id}>
-                  <div className="flex items-center justify-between gap-2 text-sm">
-                    <span className={cn("font-semibold", m.medido ? "text-abismo" : "text-nevoa")}>
-                      {m.nome}
-                    </span>
-                    <span className="shrink-0 text-[11px] font-bold text-nevoa">
-                      {m.medido ? `${m.correct}/${m.answered} · ${faixa.label}` : "não medido"}
-                    </span>
+        {/* O mapa em si — por HABILIDADE quando o modelo adaptativo está
+            visível (docs/30 §9, Fase 12 F12.8); por matéria (legado) quando
+            a flag está `shadow`/`off`, tela idêntica a antes da Fase 12. */}
+        {FEATURES.masteryModel === "on" ? (
+          <div className="card-soft p-4">
+            <h3 className="font-display font-bold text-abismo">Domínio por habilidade</h3>
+            <p className="mt-0.5 text-[11px] text-nevoa">Tracejado = ainda medindo essa habilidade.</p>
+            <div className="mt-4 space-y-5">
+              {SUBJECTS.filter((subj) => skillsOfSubject(subj.id).some((sk) => sk.status === "ativo")).map((subj) => {
+                const skills = skillsOfSubject(subj.id).filter((sk) => sk.status === "ativo");
+                const agregado = subjectMasteryAggregate(subj.id, s, hoje);
+                return (
+                  <div key={subj.id}>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-display text-sm font-bold text-abismo">{subj.name}</span>
+                      <span className="shrink-0 text-[11px] font-bold text-nevoa">
+                        {agregado === null ? "não medido" : `${agregado}%`}
+                      </span>
+                    </div>
+                    <div className="mt-1">
+                      {agregado === null ? (
+                        <div className="h-2 w-full rounded-full border-2 border-dashed border-gelo" />
+                      ) : (
+                        <ProgressBar value={agregado} tone="caneta" size="sm" label={`Domínio geral em ${subj.name}`} />
+                      )}
+                    </div>
+                    <ul className="mt-3 space-y-3">
+                      {skills.map((sk) => (
+                        <SkillRow
+                          key={sk.id}
+                          skill={sk}
+                          entry={s.learning.skillModel[sk.id]}
+                          evidence={s.learning.skillEvidence[sk.id]}
+                          schedule={s.learning.reviewSchedule[sk.id]}
+                          today={hoje}
+                        />
+                      ))}
+                    </ul>
                   </div>
-                  <div className="mt-1">
-                    {m.medido ? (
-                      <ProgressBar
-                        value={m.pct}
-                        tone={faixa.dominado ? "success" : "caneta"}
-                        size="sm"
-                        label={`Domínio em ${m.nome}`}
-                      />
-                    ) : (
-                      <div className="h-2 w-full rounded-full border-2 border-dashed border-gelo" />
-                    )}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <div className="card-soft p-4">
+            <h3 className="font-display font-bold text-abismo">Domínio por matéria</h3>
+            <p className="mt-0.5 text-[11px] text-nevoa">
+              Tracejado = ainda não medimos você nessa matéria.
+            </p>
+            <ul className="mt-4 space-y-3">
+              {mapa.map((m) => {
+                const faixa = faixaDe(m.pct, m.answered);
+                return (
+                  <li key={m.id}>
+                    <div className="flex items-center justify-between gap-2 text-sm">
+                      <span className={cn("font-semibold", m.medido ? "text-abismo" : "text-nevoa")}>
+                        {m.nome}
+                      </span>
+                      <span className="shrink-0 text-[11px] font-bold text-nevoa">
+                        {m.medido ? `${m.correct}/${m.answered} · ${faixa.label}` : "não medido"}
+                      </span>
+                    </div>
+                    <div className="mt-1">
+                      {m.medido ? (
+                        <ProgressBar
+                          value={m.pct}
+                          tone={faixa.dominado ? "success" : "caneta"}
+                          size="sm"
+                          label={`Domínio em ${m.nome}`}
+                        />
+                      ) : (
+                        <div className="h-2 w-full rounded-full border-2 border-dashed border-gelo" />
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
 
         {/* O 2º pilar entra no mesmo painel: progresso é um só. */}
         <div className="card-soft p-4">

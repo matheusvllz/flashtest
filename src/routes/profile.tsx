@@ -1,27 +1,40 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
 import { ProgressBar } from "@/components/ds/ProgressBar";
+import { FocusSheet } from "@/components/learning/journey/FocusSheet";
+import { activeFocusNames } from "@/components/learning/journey/FocusLine";
 import { setAudioEnabled, unlockAudioFromGesture } from "@/lib/audio/engine";
+import { COPY } from "@/lib/copy";
 import { EXAM_MAP, EXAMS } from "@/data/exams";
+import { FEATURES } from "@/lib/features";
 import {
   useAppState,
+  beginPlacement,
   logout,
   reset,
+  setDailyMinutes,
   setExamTarget,
   setPrefs,
   setShowExamTips,
+  setStudyFocus,
+  startFocusSession,
+  clearFocusSession,
   nivelDeXp,
 } from "@/lib/store";
+import { studyFocusVazio } from "@/lib/learning/types";
 import { ChevronRight, LogOut, RotateCcw, Download, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/profile")({ component: Profile, ssr: false });
 
+const MINUTOS_OPCOES = [5, 10, 15, 20, 30] as const;
+
 function Profile() {
   const s = useAppState();
   const nav = useNavigate();
   const p = s.prefs;
+  const [focusSheetOpen, setFocusSheetOpen] = useState(false);
   const nivel = nivelDeXp(s.progress.xp);
   const initials = (p.name || "F T")
     .split(" ")
@@ -164,6 +177,70 @@ function Profile() {
             Dicas de prova {p.showExamTips ? "ativadas" : "desativadas"}
           </button>
         </div>
+
+        {FEATURES.jornadaAdaptativa && (
+          <div className="card-soft p-4">
+            <p className="ds-label">{COPY.foco.ritmoTitulo}</p>
+            <p className="mt-1 text-xs text-nevoa">{COPY.foco.minutosPorDia}</p>
+            <div className="mt-2.5 grid grid-cols-5 gap-2">
+              {MINUTOS_OPCOES.map((min) => (
+                <button
+                  key={min}
+                  onClick={() => setDailyMinutes(min)}
+                  aria-pressed={p.dailyMinutes === min}
+                  className={cn("chip justify-center", p.dailyMinutes === min && "chip-on")}
+                >
+                  {min}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setFocusSheetOpen(true)}
+              className="chip mt-2.5 w-full justify-center"
+            >
+              {activeFocusNames(p.studyFocus, s.learning.focusSession)?.join(", ") ?? COPY.foco.todasAsMaterias}
+            </button>
+            <FocusSheet
+              open={focusSheetOpen}
+              onClose={() => setFocusSheetOpen(false)}
+              studyFocus={p.studyFocus}
+              onApply={(subjectIds, scope) => {
+                if (scope === "session") startFocusSession(subjectIds);
+                else setStudyFocus({ mode: "materias", subjectIds, areas: [] });
+                setFocusSheetOpen(false);
+              }}
+              onClear={() => {
+                clearFocusSession();
+                setStudyFocus(studyFocusVazio());
+                setFocusSheetOpen(false);
+              }}
+            />
+          </div>
+        )}
+
+        {FEATURES.nivelamento && (
+          <div className="card-soft p-4">
+            <p className="ds-label">{COPY.nivelamento.tituloRota}</p>
+            <p className="mt-1 text-xs text-nevoa">{COPY.onboarding.ofertaCorpo}</p>
+            <button
+              onClick={() => {
+                // "Refazer" precisa começar um placement NOVO antes de navegar — a
+                // rota `/nivelamento` só chama `beginPlacement` sozinha quando não
+                // existe nenhum ainda, senão o resultado recém-concluído nunca
+                // apareceria pro aluno que acabou de terminar (docs/32 Fase 13).
+                if (s.learning.placement?.status === "concluido") beginPlacement(`plc-${Date.now()}`);
+                nav({ to: "/nivelamento" });
+              }}
+              className="btn-outline mt-2.5 w-full"
+            >
+              {s.learning.placement?.status === "concluido"
+                ? COPY.nivelamento.refazerNivelamento
+                : s.learning.placement
+                  ? COPY.nivelamento.continuarNivelamento
+                  : COPY.nivelamento.fazerNivelamento}
+            </button>
+          </div>
+        )}
 
         <div
           className="card-soft p-4"

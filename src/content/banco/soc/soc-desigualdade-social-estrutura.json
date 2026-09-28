@@ -1,0 +1,709 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:d6a39176",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma escola pública, alunos de famílias com renda menor frequentam salas com professores menos experientes, enquanto alunos de famílias com renda maior estão em turmas com professores especializados. Esse processo, que reproduz diferenças sociais dentro da instituição escolar, denomina-se segregação educacional. Qual conceito sociológico melhor explica esse fenômeno?",
+        "opcoes": [
+          "Equalização de recursos",
+          "Mobilidade social ascendente",
+          "Reprodução da desigualdade social",
+          "Inclusão democrática"
+        ],
+        "correta": 2,
+        "explicacao": "A segregação educacional perpetua desigualdade: mantém estruturas de vantagem e desvantagem entre grupos porque distribui oportunidades de forma desigual. Enquanto alguns conseguem subir na vida por educação, esse padrão segura as hierarquias de classe no lugar."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:d6a39176",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:798e759c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um grupo de indígenas é historicamente impedido de acessar terras férteis, educação de qualidade e cargos bem remunerados, enquanto grupos historicamente dominantes usufruem desses recursos. Esse padrão sistemático de vantagens e desvantagens é chamado de desigualdade social. Qual fator estrutural melhor explica a persistência dessa desigualdade ao longo do tempo?",
+        "opcoes": [
+          "Diferenças naturais de capacidade entre etnias",
+          "Preferências culturais espontâneas por segregação",
+          "Falta de esforço individual dos indígenas",
+          "Instituições que favorecem sistematicamente um grupo sobre o outro"
+        ],
+        "correta": 3,
+        "explicacao": "Desigualdades sociais persistem porque as instituições, lei, educação, mercado de trabalho, estão estruturadas para beneficiar sistematicamente alguns grupos e desfavorecer outros. Não é sobre diferenças naturais ou escolhas individuais, é sobre barreiras institucionalizadas que se repetem."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:798e759c",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:662c2883",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Mulheres negras conquistaram acesso à universidade, mas se concentram em cursos com salários mais baixos, enquanto homens brancos dominam engenharia e medicina. Essa diferença nas trajetórias educacionais e profissionais, moldada por desigualdades históricas de gênero e raça, exemplifica qual conceito sociológico?",
+        "opcoes": [
+          "Desigualdade interseccional",
+          "Igualdade de oportunidades conquistada",
+          "Ausência de estruturas sociais",
+          "Meritocracia pura e simples"
+        ],
+        "correta": 0,
+        "explicacao": "A desigualdade interseccional funciona assim: gênero e raça se combinam e se reforçam mutuamente, criando desvantagens muito específicas. Mulheres negras não enfrentam sexismo mais racismo separados, mas a intersecção desses sistemas, que molda suas escolhas educacionais de forma bem diferente de homens negros ou mulheres brancas."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:662c2883",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:2df20251",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um país mantém diferenças salariais grandes entre empresários ricos e trabalhadores pobres, acesso desigual à saúde e educação, e oportunidades diferentes de herança de riqueza entre grupos. Essas diferenças, que estruturam a sociedade em patamares hierárquicos, constituem qual tipo de desigualdade social?",
+        "opcoes": [
+          "Homogeneidade social",
+          "Estratificação social de classe",
+          "Mobilidade econômica garantida",
+          "Diversidade cultural neutra"
+        ],
+        "correta": 1,
+        "explicacao": "A estratificação social de classe é a divisão hierárquica da sociedade em grupos com acesso diferente a riqueza, poder e prestígio. O exemplo mostra exatamente isso: diferenças de renda, acesso a bens e herança que separam grupos em estratos desiguais como estrutura, não como escolha pessoal."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:2df20251",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 1,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:be7592d8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um sociólogo estuda como membros de uma mesma classe social (empresários) conseguem expandir suas riquezas através de redes familiares, contatos empresariais e acesso a crédito fácil, enquanto membros de outra classe (trabalhadores informais) enfrentam barreiras para acumular patrimônio. Qual conceito explica como essas estruturas desiguais são perpetuadas através de gerações?",
+        "opcoes": [
+          "Ausência de capital social",
+          "Meritocracia individual",
+          "Reprodução social da desigualdade",
+          "Igualdade de pontos de partida"
+        ],
+        "correta": 2,
+        "explicacao": "A reprodução social funciona assim: vantagens e desvantagens se transmitem entre gerações. Empresários herdam não só dinheiro, mas também redes, educação e poder que amplificam oportunidades. Trabalhadores informais enfrentam obstáculos estruturais que se repetem. Não é sobre mérito, é sobre herança institucional de privilégios e barreiras."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:be7592d8",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:ae517864",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma sociedade, a lei proíbe discriminação racial no acesso a emprego, moradia e educação. Porém, dados mostram que candidatos negros com o mesmo currículo que candidatos brancos recebem menos ofertas de trabalho. Isso ilustra qual conceito sociológico de desigualdade?",
+        "opcoes": [
+          "Preferência pessoal sem consequência estrutural",
+          "Racismo estrutural e discriminação institucional implícita",
+          "Inexistência de preconceito quando a lei proíbe",
+          "Igualdade plena conquistada pela legislação"
+        ],
+        "correta": 1,
+        "explicacao": "Racismo estrutural funciona sem lei explícita de discriminação: as instituições, empresas, agências imobiliárias, reproduzem desvantagens raciais através de critérios que parecem neutros mas afetam grupos de forma desigual. A lei formal não elimina essas práticas institucionalizadas; elas persistem como preconceito incorporado nas rotinas organizacionais."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:ae517864",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:84ed9cc8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um antropólogo observa que em uma comunidade rural, mulheres não podem herdar terras, participar de conselhos de decisão ou falar em assembleias públicas. Esses impedimentos existem não como lei escrita, mas como costume amplamente aceito. Que conceito sociológico melhor descreve essa forma de desigualdade baseada em normas não escritas?",
+        "opcoes": [
+          "Igualdade garantida pela tradição",
+          "Desigualdade legal explícita",
+          "Desigualdade legitimada por normas e costumes sociais",
+          "Ausência de desigualdade quando sem lei formal"
+        ],
+        "correta": 2,
+        "explicacao": "Desigualdades legitimadas por normas e costumes sociais funcionam sem lei escrita: a comunidade aceita e reproduz regras que favorecem certos grupos. Elas costumam ser difíceis de mudar justamente porque não aparecem como imposição formal, mas como 'é assim que funciona', integradas à cultura e às expectativas compartilhadas."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:84ed9cc8",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:9e6aa89e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pesquisador mapeia as redes profissionais de executivos em multinacionais e descobre que a maioria dos homens em cargos de liderança conhece uns aos outros através de escolas privadas, clubes e conexões familiares, enquanto mulheres qualificadas estão fora dessas redes. Qual conceito explica como essa exclusão de redes de poder perpetua desigualdade de gênero?",
+        "opcoes": [
+          "Ausência de mulheres interessadas em carreiras executivas",
+          "Competência técnica individual",
+          "Capital social e redes de poder excludentes",
+          "Preferência natural por homens em liderança"
+        ],
+        "correta": 2,
+        "explicacao": "Capital social são relacionamentos, redes e conexões que abrem portas profissionais. Quando essas redes são construídas em espaços historicamente exclusivos, clubes privados, escolas de elite, mulheres ficam sistematicamente excluídas, não por falta de competência, mas por falta de acesso aos laços que geram oportunidades. Desigualdade não é sobre capacidade, é sobre quem pertence aos círculos de poder."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:9e6aa89e",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 4,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "desafio"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:5bb7c818",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um professor observa que alunos de famílias com pais universitários têm mais confiança em falar em aula, participam mais de discussões e consideram natural estudar para profissões de prestígio. Alunos cujos pais tiveram apenas ensino fundamental participam menos e geralmente visam trabalhos técnicos ou operacionais. Qual mecanismo sociológico explica essa diferença nas aspirações e comportamentos?",
+        "opcoes": [
+          "Falta de esforço dos alunos de famílias menos educadas",
+          "Inexistência de fatores culturais na educação",
+          "Diferenças cognitivas inatas entre grupos",
+          "Disposições incorporadas através de socialização familiar e escolar (habitus)"
+        ],
+        "correta": 3,
+        "explicacao": "Habitus são disposições e práticas interiorizadas através da socialização: famílias com capital cultural mais alto transmitem aos filhos comportamentos, linguagem e aspirações alinhadas ao sucesso acadêmico. Não é inato, é aprendido cedo. Alunos de outras origens não têm 'menos capacidade', incorporaram diferentes expectativas sobre si mesmos e suas possibilidades."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:5bb7c818",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:bb889361",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma análise de carreira mostra que mulheres que se tornam executivas frequentemente são descritas como 'agressivas' ou 'sem feminilidade', enquanto homens com comportamento similar são vistos como 'líderes assertivos'. Que conceito descreve como expectativas sociais de gênero são usadas para deslegitimar mulheres em posições de poder?",
+        "opcoes": [
+          "Duplo padrão de gênero e desvantagem simbólica",
+          "Liberdade total de expressão sem pressões",
+          "Ausência de hierarquias de gênero",
+          "Meritocracia neutra e objetiva"
+        ],
+        "correta": 0,
+        "explicacao": "O duplo padrão de gênero funciona assim: o mesmo comportamento é avaliado diferentemente para homens e mulheres. Assertividade em homens é liderança; em mulheres, é agressividade. Isso gera desvantagem simbólica: mulheres são punidas por desviar de expectativas de feminilidade, enquanto homens são recompensados por atributos de poder. É desigualdade não só material, mas também de percepção e legitimidade."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:bb889361",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "revisao"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:a60a28ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudo comparativo entre dois países mostra que no País A a mobilidade social é alta: muitos filhos de operários viram profissionais. No País B a mobilidade é baixa: filhos de operários tendem a permanecer operários. Mantendo constante a qualidade formal da educação, qual diferença estrutural melhor explica essa variação?",
+        "opcoes": [
+          "Países A e B têm qualidades de esforço individual diferentes",
+          "Estrutura de mercado de trabalho e acesso desigual a redes profissionais em B limitam mobilidade",
+          "Mobilidade social depende só de aptidão natural",
+          "Educação formal garante mobilidade independentemente da estrutura"
+        ],
+        "correta": 1,
+        "explicacao": "Mobilidade social não depende só de educação ou mérito: depende de como o mercado de trabalho está estruturado. Se em B o acesso a empregos bem pagos é mediado por redes que operários não têm, mesmo educados eles permanecem excluídos. Em A talvez haja instituições que abrem canais de acesso: recrutamento público, sindicatos fortes. A estrutura institucional determina oportunidades."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:a60a28ef",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:b7234f3d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pesquisas mostram que pessoas idosas enfrentam discriminação no mercado de trabalho: recebem menos ofertas de emprego mesmo com qualificação equivalente aos mais jovens, e frequentemente são preteridas em promoções. Qual conceito descreve essa forma de desigualdade baseada na idade?",
+        "opcoes": [
+          "Ausência de capacidade técnica em idosos",
+          "Falta de interesse de idosos em trabalhar",
+          "Discriminação etária (idadismo) como desigualdade institucional",
+          "Preferência natural pela juventude"
+        ],
+        "correta": 2,
+        "explicacao": "Discriminação etária, ou idadismo, são preconceitos e práticas que desfavorecem pessoas por idade. Quando instituições, empresas, agências de recrutamento, sistematicamente rejeitam candidatos mais velhos mesmo qualificados, há desigualdade institucionalizada. Não reflete capacidade real, é estereótipo sobre produtividade e adaptabilidade que afeta acesso material a oportunidades."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:b7234f3d",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:7ae09e91",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um economista estuda a desvantagem econômica de pessoas com deficiência física: elas frequentemente ganham menos que pessoas sem deficiência em profissões similares e enfrentam barreiras de acessibilidade em edifícios, transportes e tecnologias. Que conceito sociológico melhor explica como essas desvantagens são estruturadas na sociedade?",
+        "opcoes": [
+          "Ausência de deficiência determina capacidade absoluta",
+          "Desigualdade biológica inevitável",
+          "Diferenças naturais que não podem ser alteradas",
+          "Desigualdade de deficiência: discriminação institucionalizada e ambiente construído excludente"
+        ],
+        "correta": 3,
+        "explicacao": "Essa desigualdade não é só sobre limitação individual: é sobre como a sociedade está estruturada de forma excludente. Edifícios sem rampas, tecnologias não adaptadas e práticas discriminatórias criam a desvantagem. A mesma pessoa seria plenamente capaz em um ambiente acessível. A desigualdade é socialmente construída e, portanto, pode ser alterada por mudanças institucionais; não é determinada biologicamente."
+      },
+      "meta": {
+        "id": "gen:soc:desigualdade-social-estrutura:7ae09e91",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "diagnostico"
+        ],
+        "estimatedSeconds": 60,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "ia-validada",
+          "generatedBy": "haiku"
+        },
+        "validation": {
+          "status": "revisada-humano",
+          "reviewedAt": "2026-09-27T22:25:25.722Z",
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aula-soc-desigualdade-social-estrutura",
+      "version": 1,
+      "format": 2,
+      "subjectId": "soc",
+      "topicId": "des",
+      "chapterId": "gen-soc-desigualdade-social-estrutura",
+      "title": "Desigualdade não é acaso",
+      "objective": "Explicar uma forma de desigualdade social com conceito sociológico",
+      "skillIds": [
+        "soc:desigualdade-social-estrutura"
+      ],
+      "prerequisiteLessonIds": [],
+      "examProfileIds": [
+        "enem"
+      ],
+      "status": "reviewed",
+      "estimatedTeachingSeconds": 90,
+      "estimatedPracticeSeconds": 225,
+      "reviewExerciseIds": [
+        "gen:soc:desigualdade-social-estrutura:662c2883",
+        "gen:soc:desigualdade-social-estrutura:d6a39176"
+      ],
+      "recap": "Desigualdade social vem de estrutura institucional, habitus transmitido pela família e redes de capital social, não de mérito ou natureza individual.",
+      "sources": [
+        "pipeline de conteúdo Foca (docs/31 F11.3): ensino gerado e revisado; questões = itens publicados e revisados"
+      ],
+      "reviewedAt": "2026-09-28T00:04:06.387Z",
+      "steps": [
+        {
+          "kind": "intro",
+          "title": "Desigualdade não é acaso",
+          "body": "Você vai explicar uma desigualdade social pela estrutura ou instituição que a mantém, não pelo esforço individual."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "Estrutura, não escolha",
+            "body": "Estratificação social divide a sociedade em grupos com acesso diferente a renda, poder e prestígio. Essa divisão vem de instituições, como lei, escola e mercado de trabalho, que favorecem um grupo e dificultam outro ao longo do tempo, não de mérito individual."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:desigualdade-social-estrutura:2df20251",
+          "role": "checkpoint",
+          "difficulty": 1
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:desigualdade-social-estrutura:798e759c",
+          "role": "pratica",
+          "difficulty": 1
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "concept",
+            "title": "O que se herda além de dinheiro",
+            "body": "Bourdieu chamou de habitus as disposições e formas de falar que uma pessoa aprende na família e na escola, sem escolha consciente. Famílias com mais capital cultural passam aos filhos confiança que facilita o sucesso escolar. Essa herança de redes e patrimônio entre gerações é a reprodução social."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:desigualdade-social-estrutura:5bb7c818",
+          "role": "pratica",
+          "difficulty": 2
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:desigualdade-social-estrutura:be7592d8",
+          "role": "pratica",
+          "difficulty": 3
+        },
+        {
+          "kind": "tip",
+          "title": "Pegadinha",
+          "body": "Não explique desigualdade por falta de esforço ou capacidade natural. A resposta certa aponta para instituição, herança ou rede social."
+        },
+        {
+          "kind": "teach",
+          "block": {
+            "type": "worked-example",
+            "title": "Rede de contatos como vantagem",
+            "problem": "Duas pessoas com a mesma formação buscam emprego: uma tem parentes na área que indicam seu nome; a outra não conhece ninguém no setor.",
+            "steps": [
+              "A pessoa com contatos consegue entrevistas mais rápido, porque redes de relacionamento abrem oportunidades.",
+              "A outra compete só com o currículo, sem essa vantagem inicial."
+            ],
+            "result": "A diferença vem do acesso desigual a redes, não da competência técnica."
+          }
+        },
+        {
+          "kind": "question",
+          "exerciseId": "gen:soc:desigualdade-social-estrutura:9e6aa89e",
+          "role": "desafio",
+          "difficulty": 3
+        },
+        {
+          "kind": "recap",
+          "body": "Desigualdade social vem de estrutura institucional, habitus transmitido pela família e redes de capital social, não de mérito ou natureza individual."
+        }
+      ]
+    }
+  ]
+}
