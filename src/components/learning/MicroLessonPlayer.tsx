@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAtalhosDeQuestao } from "@/hooks/useAtalhosDeQuestao";
 import { useNavigate } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
@@ -80,6 +81,8 @@ function MicroLessonPlayerInner({
   onComplete?: (correct: number, total: number) => CompleteStrategyResult;
   onReplay: () => void;
 }) {
+  // Desktop: 1–5 / A–E escolhem, Enter confirma (docs/44 §5).
+  useAtalhosDeQuestao();
   const navigate = useNavigate();
   const session = useLearningSession(lesson, { mode, onComplete });
   const [confirmExit, setConfirmExit] = useState(false);
@@ -239,7 +242,7 @@ function MicroLessonPlayerInner({
         open={confirmExit}
         onClose={() => setConfirmExit(false)}
         title={COPY.licao.sairTitulo}
-        icon={<FocaMark expression="desapontada" size={56} decorative />}
+        icon={<FocaMark expression="neutra" size={56} decorative />} /* sair não é falha: sem cara de decepção (docs/44 I-5) */
       >
         <p className="mt-1.5 text-sm text-abismo">
           {textoSePersistiu(persist, COPY.licao.sairCorpo, COPY.licao.sairCorpoSemSalvo)}

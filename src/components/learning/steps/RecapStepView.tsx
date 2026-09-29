@@ -59,7 +59,7 @@ export function RecapStepView({ lesson, onComplete }: { lesson: MicroLesson; onC
           }}
         />
       )}
-      <button type="button" onClick={onComplete} className="btn-primary w-full">
+      <button type="button" onClick={onComplete} className="btn-primary w-full" data-acao-principal>
         {COPY.licao.concluir}
       </button>
     </div>

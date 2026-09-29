@@ -8,8 +8,10 @@ import { alvosPequenos, formatarAlvos, ALVO_MIN } from "./helpers/alvos";
  * Contrato dos tokens de `styles.css` (não muda com o tema):
  *   < 768 px  → --app-col 440 · --reading-col 440 · --nav-rail 0
  *   768–1023  → --app-col 560 · --reading-col 560 · --nav-rail 0
- *   ≥ 1024    → --app-col 600 · --reading-col 640 · --nav-rail 96
- * (`--path-col` fica em 440 em todas as larguras.)
+ *   1024–1279 → --app-col 600 · --reading-col 640 · --wide-col 880 · --nav-rail 96
+ *   ≥ 1280    → --app-col 680 · --reading-col 720 · --wide-col 1000 (1120 em ≥ 1600) · --nav-rail 232
+ * (`--path-col` fica em 440 em todas as larguras.) Desktop de primeira classe (docs/44 §5): a trilha usa a coluna
+ * larga (`--wide-col`, com painel de contexto), mas folhas e diálogos ficam na largura de `--app-col` (`--sheet-col`).
  *
  * Roda em três projetos (`playwright.config.ts`):
  *  - `chromium` 390×844 — o teste "da largura do projeto" + a matriz de larguras via `setViewportSize`;
@@ -18,9 +20,10 @@ import { alvosPequenos, formatarAlvos, ALVO_MIN } from "./helpers/alvos";
  * A matriz só roda no `chromium` (senão cada largura rodaria 3×).
  */
 
-const APP_COL = (w: number) => (w >= 1024 ? 600 : w >= 768 ? 560 : 440);
-const READING_COL = (w: number) => (w >= 1024 ? 640 : w >= 768 ? 560 : 440);
-const NAV_RAIL = (w: number) => (w >= 1024 ? 96 : 0);
+const APP_COL = (w: number) => (w >= 1280 ? 680 : w >= 1024 ? 600 : w >= 768 ? 560 : 440);
+const READING_COL = (w: number) => (w >= 1280 ? 720 : w >= 1024 ? 640 : w >= 768 ? 560 : 440);
+const WIDE_COL = (w: number) => (w >= 1600 ? 1120 : w >= 1280 ? 1000 : w >= 1024 ? 880 : APP_COL(w));
+const NAV_RAIL = (w: number) => (w >= 1280 ? 232 : w >= 1024 ? 96 : 0);
 const LARGURAS = [320, 360, 440, 640, 768, 1024, 1440];
 const TOL = 1.5; // px — arredondamento de subpixel
 
@@ -94,7 +97,7 @@ async function verificarLayoutDaTrilha(page: Page, w: number, vh: number) {
 
   await semRolagemHorizontal(page);
   await conferirNav(page, w, vh);
-  const coluna = await conferirColuna(page, w, APP_COL(w));
+  const coluna = await conferirColuna(page, w, WIDE_COL(w));
 
   // Caminho da trilha (zigue-zague calibrado para 440): nunca mais largo que --path-col.
   const caminho = page.locator(".path-list").first();
@@ -189,7 +192,21 @@ test.describe("layout responsivo (docs/36 §F.6)", () => {
       await conferirColuna(page, w, READING_COL(w), false);
 
       // Rodapés fixos de /aha e /quiz: largura da coluna de leitura, centrados na tela (sem trilho: não usam AppShell).
+      // Exceção (docs/44 §5): /quiz em ≥ 1024 tem o painel da marca à esquerda; o rodapé vive dentro da coluna do formulário.
       for (const rota of ["/aha", "/quiz"]) {
+        if (rota === "/quiz" && w >= 1024) {
+          await page.goto(rota, { waitUntil: "domcontentloaded" });
+          const rodape = page.locator("footer");
+          await expect(rodape).toBeVisible({ timeout: 20_000 });
+          await semRolagemHorizontal(page);
+          const r = await caixa(rodape);
+          const col = await caixa(page.locator(".frame-border").first());
+          expect(Math.abs(r.x - col.x), "/quiz: rodapé dentro da coluna do formulário (a borda de 1 px da coluna fica de fora)").toBeLessThanOrEqual(TOL);
+          expect(Math.abs(r.width - col.width), "/quiz: rodapé com a largura da coluna").toBeLessThanOrEqual(2 * TOL);
+          expect(r.x, "/quiz: coluna à direita do painel da marca").toBeGreaterThan(w * 0.4);
+          expect(r.y + r.height, "/quiz: rodapé colado embaixo").toBeCloseTo(vh, 0);
+          continue;
+        }
         await page.goto(rota, { waitUntil: "domcontentloaded" });
         const rodape = page.locator("footer.fixed");
         await expect(rodape).toBeVisible({ timeout: 20_000 });

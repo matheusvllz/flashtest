@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useAtalhosDeQuestao } from "@/hooks/useAtalhosDeQuestao";
 import { useNavigate } from "@tanstack/react-router";
 import { X } from "lucide-react";
 import { PhoneFrame } from "@/components/AppShell";
@@ -49,6 +50,8 @@ import { cn } from "@/lib/utils";
  * princípio da aula de 60s. Sair exige confirmação.
  */
 export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesson }) {
+  // Desktop: 1–5 / A–E escolhem, Enter confirma (docs/44 §5).
+  useAtalhosDeQuestao();
   const navigate = useNavigate();
   const s = useAppState();
   const persist = usePersistStatus();
@@ -335,6 +338,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
               className={cn("btn-primary w-full", answer === null && "opacity-40")}
               disabled={answer === null}
               onClick={verify}
+              data-acao-principal
             >
               Verificar
             </button>
@@ -354,7 +358,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         open={confirmExit}
         onClose={() => setConfirmExit(false)}
         title="Sair da lição?"
-        icon={<FocaMark expression="desapontada" size={56} decorative />}
+        icon={<FocaMark expression="neutra" size={56} decorative />} /* sair não é falha: sem cara de decepção (docs/44 I-5) */
       >
         <p className="mt-1.5 text-sm text-abismo">
           {textoSePersistiu(persist, COPY.licao.sairCorpoLegado, COPY.licao.sairCorpoLegadoSemSalvo)}

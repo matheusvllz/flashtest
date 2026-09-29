@@ -1,43 +1,20 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { getState, hydrate } from "@/lib/store";
-import { PhoneFrame } from "@/components/AppShell";
-import { FocaMark } from "@/components/brand/FocaMark";
-import { HOME_ROUTE } from "@/lib/features";
+import { createFileRoute } from "@tanstack/react-router";
+import { Landing } from "@/marketing/Landing";
+import { landingJsonLd, landingLinks, landingMeta } from "@/marketing/content/seo";
+import { LP_MOTION_SCRIPT } from "@/marketing/motion/boot";
+import marketingCss from "@/marketing/styles/marketing.css?url";
 
+/**
+ * `/` = a landing do Foca (docs/44 §3). Renderizada no servidor (HTML completo para busca e primeira pintura) e
+ * indexável; o resto do produto é `noindex` (head da raiz). O CSS de marketing entra só por esta rota, e o GSAP
+ * chega em import dinâmico depois do `load` (src/marketing/motion/boot.ts): quem abre o produto não baixa nada disso.
+ * A entrada do produto é `/app` (src/routes/app.tsx).
+ */
 export const Route = createFileRoute("/")({
-  component: Splash,
-  ssr: false,
+  head: () => ({
+    meta: landingMeta(),
+    links: [{ rel: "stylesheet", href: marketingCss }, ...landingLinks()],
+    scripts: [{ children: LP_MOTION_SCRIPT }, { type: "application/ld+json", children: landingJsonLd() }],
+  }),
+  component: Landing,
 });
-
-function Splash() {
-  const navigate = useNavigate();
-  // Hidrata AGORA, síncrono na montagem — não dentro do timeout abaixo.
-  // `getState()` sozinho não carrega o storage; sem isso, um usuário
-  // retornando com progresso salvo caía em `/welcome` porque a decisão de
-  // redirect lia o estado padrão vazio (docs/20 §2.5, §15.3 — "inicialização
-  // explícita deve anteceder decisões de redirecionamento").
-  hydrate();
-
-  useEffect(() => {
-    const t = setTimeout(() => {
-      const s = getState();
-      // O quiz unificado é a única porta de entrada: ele autentica e onboarda de uma vez.
-      if (!s.authed || !s.onboarded) navigate({ to: "/welcome" });
-      else navigate({ to: HOME_ROUTE });
-    }, 1100);
-    return () => clearTimeout(t);
-  }, [navigate]);
-
-  return (
-    <PhoneFrame>
-      <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-neve">
-        <FocaMark size={144} decorative motion="float" />
-        <div className="text-center">
-          <h1 className="font-display text-3xl font-bold tracking-tight text-abismo">Foca</h1>
-          <p className="ds-label mt-2 block">Foca 60 segundos.</p>
-        </div>
-      </div>
-    </PhoneFrame>
-  );
-}

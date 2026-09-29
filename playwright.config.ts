@@ -24,7 +24,27 @@ export default defineConfig({
     // ANULADO pelo spread de `devices["Desktop Chrome"]` (que traz 1280×720),
     // então o projeto "chromium" sempre rodou em 1280×720. Aqui o viewport
     // vem DEPOIS do spread, de propósito.
-    { name: "chromium", use: { ...devices["Desktop Chrome"], viewport: { width: 390, height: 844 } } },
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"], viewport: { width: 390, height: 844 } },
+      // A landing tem os próprios projetos, com as cinco larguras dela (docs/44 §9).
+      testIgnore: ["**/marketing/**"],
+    },
+    // Landing integrada (rota `/`, docs/44): as mesmas cinco larguras da landing isolada (docs/40 §26).
+    ...(
+      [
+        ["lp-narrow", 320, 700],
+        ["lp-mobile", 390, 844],
+        ["lp-tablet", 768, 1024],
+        ["lp-desktop", 1280, 800],
+        ["lp-wide", 1440, 900],
+      ] as const
+    ).map(([name, width, height]) => ({
+      name,
+      // `LP_BASE_URL` roda a landing contra o build de produção (NITRO_PRESET=node-server, docs/44 §9).
+      use: { ...devices["Desktop Chrome"], viewport: { width, height }, baseURL: process.env.LP_BASE_URL ?? "http://localhost:8080" },
+      testMatch: ["**/marketing/*.spec.ts"],
+    })),
     // Layout em tela larga (docs/36 §F.6, RU-30) — só os specs marcados como
     // "desktop" no §L.2 do plano (layout.spec.ts, criado na T-08.1/T-08.2).
     {

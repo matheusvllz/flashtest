@@ -96,18 +96,24 @@ Regra de ouro: **a Foca aparece em transições emocionais, não como decoraçã
 
 Oito estados. **A proporção da cabeça nunca muda** (`09` §2) — mudam olhos, boca e vibrissas.
 
-| Expressão | Quando | Construção |
-|---|---|---|
-| **Neutra** | Padrão, header, ícone | Olhos redondos, boca reta |
-| **Cobrando** | Streak em risco, ausência | Olhos semicerrados (pálpebra cobrindo o topo), boca reta e fina |
-| **Orgulhosa** | Acerto, fim de aula bom | Olhos em arco pra cima, boca aberta pequena |
-| **Empolgada** | Streak novo, level up | Olhos grandes brilhando, boca aberta grande, vibrissas pra cima |
-| **Desapontada** | Aula abandonada no meio | Olhos pra baixo, boca reta, vibrissas caídas |
-| **Surpresa** | Aha moment, acerto difícil | Olhos arregalados, boca em "o" |
-| **Entediada** | Estados vazios, sem conteúdo | Olhos semicerrados, boca torta, apoiada em algo |
-| **Acolhedora** | Retorno depois de sumir (§3.2) | Olhos em arco suave, boca em sorriso fechado, **sem** semicerrar |
+**Arte oficial entregue em 29/09/2026** (sistema completo no [`44`](44-plano-integracao-produto-web.md) §6, registro no [`45`](45-registro-execucao-integracao.md) §5). Os nomes abaixo são os oficiais e são a chave do registro `src/lib/brand/foca-expressions.ts`; originais em `src/assets/branding/foca/expressoes/<nome>.png`, derivados WebP + PNG (96 e 320 px) em `public/branding/foca/expressoes/`, gerados por `scripts/gerar-marca.ts`. **Padrão e fallback: `neutra`** (valor desconhecido nunca quebra a tela). Sem `expression`, o `FocaMark` mostra a **logo oficial**, que não é uma expressão.
 
-> A **acolhedora** é a única expressão proibida de carregar qualquer traço de cobrança. Se o designer entregar ela com olho semicerrado, voltou pro arquétipo errado no pior momento possível.
+| Expressão | Asset | Significado | Usar (contextos reais) | Evitar | Tom de voz | Movimento |
+|---|---|---|---|---|---|---|
+| **neutra** | `expressoes/neutra` | Presença calma, atenta | Padrão; `/app`; tutor (botão e cabeçalho); "Não sei"; introdução de lição; confirmar saída da lição; telas do app na landing | Picos emocionais onde outra diz mais | Direto, calmo | Entrada `pop`/`float`; é o "de" das trocas |
+| **acolhedora** | `expressoes/acolhedora` | Tá tudo bem, vamos junto | **Erro de questão** (folha de feedback); fim de lição com desempenho baixo; retorno depois de dias parado; painel da marca no onboarding e no login; convite final da landing | Qualquer frase de cobrança | Próximo, calmo, sem humor | "Piscar" de `neutra` para ela |
+| **orgulhosa** | `expressoes/orgulhosa` | Satisfação com o que o aluno fez | Acerto; fim de lição bom; sessão de hoje concluída; recap; faixa que subiu (landing) | Antes de o aluno fazer algo | Curto, com o fato real | `pop` na folha de acerto; "piscar" na faixa |
+| **empolgada** | `expressoes/empolgada` | Energia de marco | 100 % na lição; marco de sequência; capítulo concluído | Acerto comum (vira ruído); dificuldade | Mais energia, sem exclamação em série | `pop`/`float` na celebração |
+| **surpresa** | `expressoes/surpresa` | Descoberta boa | Aha do onboarding; acerto difícil | Depois de erro (soa "nossa, errou isso?") | Leve | `pop` |
+| **entediada** | `expressoes/entediada` | Humor leve de tela vazia | Estados vazios; 404 | Explicação, dificuldade, suporte, erro do aluno | Humor permitido (§3, `copy/04` §3.3) | Parada |
+| **desapontada** | `expressoes/desapontada` | Algo deu errado **do nosso lado** | O app ou o conteúdo não carregou (erro da raiz, trilha com falha) | Erro de questão, "Não sei", sair da lição, ausência, desempenho | Assume a falha, sem culpar o aluno | Parada |
+| **cobrando** | `expressoes/cobrando` | Olhar semicerrado de personagem | **Nenhum fluxo do aluno hoje.** Só humor explícito, combinado com o guia de copy (ex.: peça de marketing brincando com a própria Foca) | Ausência, sequência, resultado, erro, lembretes (§3.1–§3.3) | — | — |
+
+> **Erro não é punição (regra dura, 29/09/2026).** Depois de errar, a Foca nunca aparece decepcionada, brava ou cobrando: a expressão é `acolhedora` (erro) ou `neutra` ("Não sei"). `desapontada` só aparece quando a falha é do app.
+>
+> A **acolhedora** é a única expressão proibida de carregar qualquer traço de cobrança. A arte entregue respeita isso (olho aberto, sorriso fechado).
+>
+> **Troca de expressão com a Foca na tela:** "piscar" (a cabeça achata ~10 % no eixo Y, a arte troca no fundo do movimento, volta com `--ease-bounce`). Nunca crossfade entre duas cabeças, nunca rotação. Com movimento reduzido, a troca é direta.
 
 ---
 

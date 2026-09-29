@@ -172,6 +172,15 @@ Os nomes dos 82 cursos e os sinônimos ficam em `src/data/courses.ts` (dado, nã
 
 Os blocos `COPY.cursos.*` e `BRAND.*` (RU-40, RU-20) estão nas §2.8 e §2.7. Revisão por autorrevisão contra `20` §7.1 (sem emoji, sem exclamação, sem cobrança); todas as strings acima são literais do plano, sem passar por skill de escrita.
 
+### 2.10 Produto web integrado — entrada, painel da trilha e login (docs/44 §5/§7, 29/09/2026)
+
+| Chave | Texto | Uso | Revisão |
+|---|---|---|---|
+| `COPY.entrada.painelTitulo` / `painelCorpo` | "O próximo passo já vem escolhido." / "Você conta qual é a sua prova e o Foca monta o ponto de partida. Depois, é abrir e seguir." | Painel da marca à esquerda do `EntryShell` (onboarding, login, recuperação) em ≥ 1024 px; abaixo disso não aparece | Promessa da linha "próximo passo já vem escolhido" de `docs/copy/01` §4. Sem duração, sem nota. Autorrevisão contra `20` §7.1 |
+| `COPY.trilha.painelContexto` | "Seu dia" | `aria-label` do painel de contexto da trilha no desktop (`desk-aside`) | Rótulo funcional; sem skill |
+| `login.tsx` (texto no componente, como antes) | "Bem-vindo de volta. Seu próximo passo está guardado." · CTA secundário "Começar grátis" | Substituem "Continue sua jornada" e "Começar em 60s" | Tira a duração em segundos (`06` §4); "Começar grátis" segue a decisão U-3 do `42`. O arquivo continua na lista da §3 (strings no componente) |
+| `NAV.ctaComConta` (`src/marketing/content/copy.ts`) | "Continuar estudando" | CTA da landing quando o aparelho já tem conta e onboarding (`useContaNoAparelho`) | Não afirma progresso salvo; só leva a `/app` |
+
 **Fechada em 28/09/2026 (D-34 do `37`, achado A1): frases estáticas de "salvo".** As quatro frases que afirmam persistência (`COPY.jornada.recap`, `COPY.licao.sairCorpo`, `COPY.licao.sairCorpoLegado`, `COPY.trilha.erroCorpo`) ganharam uma variante neutra, sem promessa, e o componente escolhe por `textoSePersistiu(usePersistStatus(), salvo, neutro)` (`src/lib/copy.ts`): só `persist === "ok"` mantém o texto original. Continuam com a palavra "salvo" só os avisos da faixa RU-4/RU-5/RU-6 (que descrevem a falha) e, fora do RF-14, os rótulos de favorito "Salvo!"/"Salvo" de flashcards (`study.tsx`, `flashcards.tsx`), que dizem que o flashcard está marcado, não que o progresso foi gravado.
 
 ## 3. Pendente — inventariado, não revisado

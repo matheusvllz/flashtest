@@ -105,7 +105,14 @@ export const COPY = {
     naoSeiAria: "Não sei a resposta desta questão",
   },
   /** Trilha/home e nó/capítulo/seção (docs/25 §12.1/§18 T-16 — copy centralizada aqui desde T-10). */
+  /** Painel da marca nas telas de entrada no desktop (docs/44 §5, `EntryShell`). Mesma promessa da landing (F-1). */
+  entrada: {
+    painelTitulo: "O próximo passo já vem escolhido.",
+    painelCorpo: "Você conta qual é a sua prova e o Foca monta o ponto de partida. Depois, é abrir e seguir.",
+  },
   trilha: {
+    /** aria-label do painel de contexto da trilha no desktop (docs/44 §5). */
+    painelContexto: "Seu dia",
     continuar: "Continuar",
     comecarAqui: "Começar por aqui",
     secao: (n: number) => `Seção ${n}`,

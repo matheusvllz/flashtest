@@ -101,8 +101,8 @@ function Progress() {
   const piores = medidas.filter((m) => m.pct < 60).slice(0, 3);
 
   return (
-    <AppShell>
-      <div className="bg-neve px-5 pt-8 pb-6">
+    <AppShell layout="wide">
+      <div className="bg-neve px-5 pt-8 pb-6 lg:px-8 lg:pt-10">
         <p className="ds-label">Seu mapa de lacunas</p>
         <h1 className="mt-2 font-display text-2xl font-bold leading-tight text-abismo">
           {medidas.length === 0
@@ -115,7 +115,7 @@ function Progress() {
           <p className="mt-1 text-sm text-nevoa">Rumo a {alvo}.</p>
         )}
 
-        <div className="mt-5 grid grid-cols-3 gap-2">
+        <div className="mt-5 grid grid-cols-3 gap-2 lg:mt-6 lg:gap-4">
           <StatTile icon={<Target size={16} />} label="Acertos" value={`${acc}%`} />
           <StatTile icon={<TrendingUp size={16} />} label="Aulas" value={`${p.lessonsCompleted}`} />
           <StatTile icon={<Layers size={16} />} label="Nível" value={`${nivel.nivel}`} />
@@ -123,7 +123,7 @@ function Progress() {
 
         {/* Atalhos absorvidos do dashboard (docs/25 §12.6/§18 T-21) — ranking e
             flashcards deixam de ter linha própria na home v2. */}
-        <div className="mt-4 grid grid-cols-2 gap-3">
+        <div className="mt-4 grid grid-cols-2 gap-3 lg:gap-4">
           <Link to="/ranking" className="card-press flex flex-col items-start gap-2 p-3.5">
             <Trophy size={18} className="text-mar-fundo" />
             <span className="text-xs font-bold text-abismo">Ranking da semana</span>
@@ -137,7 +137,7 @@ function Progress() {
         </div>
       </div>
 
-      <div className="space-y-4 bg-neve px-5 py-5">
+      <div className="desk-colunas space-y-4 bg-neve px-5 py-5 lg:px-8">
         {/* Prioridade: o que estudar primeiro, sem o aluno ter que interpretar gráfico. */}
         {piores.length > 0 && (
           <div className="card-soft p-4">

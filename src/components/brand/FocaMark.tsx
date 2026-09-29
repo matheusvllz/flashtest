@@ -1,75 +1,33 @@
 /**
- * A cabeça da Foca — logo e mascote da marca (docs/09-branding.md §2, docs/17 §3,
- * docs/18-plano-reestilizacao-rabisco.md §8.2). Único ponto do app que renderiza
- * a logo. Sempre quadrada, nunca esticada, nunca rotacionada.
+ * A cabeça da Foca: logo e mascote da marca (docs/09 §2, docs/17 §3, docs/18 §8.2; sistema oficial em docs/44 §6).
+ * Único ponto do app que renderiza a Foca. Sempre quadrada, nunca esticada, nunca rotacionada.
  *
- * - `color`      → arte colorida, funciona sobre claro e escuro. Padrão.
- * - `line-light` → contorno branco, só para marca d'água sobre fundo escuro (≥ 120px).
- * - `line-dark`  → contorno preto, só para marca d'água sobre fundo claro (≥ 120px).
+ * - sem `expression` → a LOGO OFICIAL (Foca de frente colorida): marca, cabeçalho, entrada.
+ * - com `expression` → uma das 8 expressões oficiais (`src/lib/brand/foca-expressions.ts`), escolhida pelo
+ *   significado do momento. Valor desconhecido cai em `neutra` (nunca quebra).
+ * - `line-light` / `line-dark` → contorno para marca d'água (≥ 120 px), um por tema (docs/36 §G.8).
  *
- * `expression` só se aplica à variante `color` — as 8 expressões de
- * docs/15-mascote-e-voz.md §5. Enquanto a arte final não chega, todas caem no
- * fallback interino (arte neutra) gerado por `scripts/gerar-logos-foca.ps1`
- * (docs/18 D5) — ver `src/assets/branding/foca/README.md`.
+ * Arte servida em WebP com PNG de reserva (`<picture>`). Se a imagem falhar, a `<img>` fica `visibility: hidden`
+ * e mantém a caixa: o layout não pula e não aparece ícone quebrado (docs/36 T-08.6).
  *
- * Se a imagem não carregar (rede, arquivo ausente), a `<img>` fica `visibility:
- * hidden`: mantém a caixa `size × size`, então o layout não pula e o navegador não
- * mostra o ícone quebrado nem o texto alternativo (docs/36 T-08.6, §G.8).
- *
- * Variante por tema (docs/36 §G.8): a marca d'água de linha muda com o tema —
- * `line-dark` no claro, `line-light` no escuro. Quem precisa das duas monta o par
- * dentro de wrappers `dark:hidden` / `hidden dark:block` (ver `/aha`): o `display`
- * da `<img>` é fixo (`block`), então quem esconde a marca é o wrapper, nunca uma classe
- * passada por `className`.
+ * Troca de expressão com a Foca na tela: "piscar" (achata no eixo Y, troca a arte no fundo do piscar, volta com
+ * `--ease-bounce`). Sem movimento reduzido; com ele, a troca é direta. Nunca crossfade entre duas cabeças.
  */
 import { useEffect, useRef, useState } from "react";
+import {
+  focaExpression,
+  focaExpressionSrc,
+  focaLogoSrc,
+  type FocaExpression,
+} from "@/lib/brand/foca-expressions";
 
+export type { FocaExpression } from "@/lib/brand/foca-expressions";
 export type FocaVariant = "color" | "line-light" | "line-dark";
-export type FocaExpression =
-  | "neutra"
-  | "cobrando"
-  | "orgulhosa"
-  | "empolgada"
-  | "desapontada"
-  | "surpresa"
-  | "entediada"
-  | "acolhedora";
 
-const SRC: Record<FocaVariant, { small: string; large: string }> = {
-  color: {
-    small: "/branding/foca/foca-color-96.png",
-    large: "/branding/foca/foca-color-320.png",
-  },
-  "line-light": {
-    small: "/branding/foca/foca-line-light-720.png",
-    large: "/branding/foca/foca-line-light-720.png",
-  },
-  "line-dark": {
-    small: "/branding/foca/foca-line-dark-720.png",
-    large: "/branding/foca/foca-line-dark-720.png",
-  },
+const LINHA: Record<"line-light" | "line-dark", string> = {
+  "line-light": "/branding/foca/foca-line-light-720.png",
+  "line-dark": "/branding/foca/foca-line-dark-720.png",
 };
-
-const EXPRESSAO_SRC: Record<FocaExpression, { small: string; large: string }> = Object.fromEntries(
-  (
-    [
-      "neutra",
-      "cobrando",
-      "orgulhosa",
-      "empolgada",
-      "desapontada",
-      "surpresa",
-      "entediada",
-      "acolhedora",
-    ] as const
-  ).map((expr) => [
-    expr,
-    {
-      small: `/branding/foca/expressoes/${expr}-96.png`,
-      large: `/branding/foca/expressoes/${expr}-320.png`,
-    },
-  ]),
-) as Record<FocaExpression, { small: string; large: string }>;
 
 /** Movimento de entrada — nunca rotação (docs/09 §2). "none" é o default fora de transições. */
 export type FocaMotion = "pop" | "float" | "breathe" | "none";
@@ -81,6 +39,36 @@ const MOTION_CLASS: Record<FocaMotion, string> = {
   none: "",
 };
 
+/** Metade do piscar (ms): a arte troca no fundo do movimento. */
+const MEIO_PISCAR = 90;
+
+function querMenosMovimento() {
+  return typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+}
+
+/** Guarda a expressão exibida e anima a troca ("piscar") quando a pedida muda com o componente montado. */
+function useExpressaoComPiscar(pedida: FocaExpression | undefined) {
+  const [exibida, setExibida] = useState(pedida);
+  const [piscando, setPiscando] = useState(false);
+  useEffect(() => {
+    if (pedida === exibida) return;
+    if (querMenosMovimento()) {
+      setExibida(pedida);
+      return;
+    }
+    setPiscando(true);
+    const t1 = setTimeout(() => setExibida(pedida), MEIO_PISCAR);
+    const t2 = setTimeout(() => setPiscando(false), MEIO_PISCAR * 2 + 40);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+    // `exibida` fora das dependências de propósito: o efeito reage só à expressão PEDIDA.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pedida]);
+  return { exibida, piscando };
+}
+
 export function FocaMark({
   size = 32,
   variant = "color",
@@ -91,15 +79,21 @@ export function FocaMark({
 }: {
   size?: number;
   variant?: FocaVariant;
-  /** Só tem efeito com `variant="color"`. Default "neutra". */
+  /** Só tem efeito com `variant="color"`. Sem ela, a logo oficial. */
   expression?: FocaExpression;
   motion?: FocaMotion;
-  /** true = puramente visual (marca d'água, ícone ao lado de texto): sai da árvore de acessibilidade. */
+  /** true = puramente visual (ao lado de texto que já diz o que ela diz): sai da árvore de acessibilidade. */
   decorative?: boolean;
   className?: string;
 }) {
-  const table = variant === "color" ? EXPRESSAO_SRC[expression ?? "neutra"] : SRC[variant];
-  const src = size <= 48 ? table.small : table.large;
+  const { exibida, piscando } = useExpressaoComPiscar(expression === undefined ? undefined : focaExpression(expression));
+  const fonte =
+    variant === "color"
+      ? exibida === undefined
+        ? focaLogoSrc(size)
+        : focaExpressionSrc(exibida, size)
+      : { webp: null, png: LINHA[variant] };
+  const src = fonte.png;
   const motionClass = MOTION_CLASS[motion];
   // Guarda QUAL src falhou (não um booleano): se a variante/expressão muda, tenta de novo.
   const [srcQueFalhou, setSrcQueFalhou] = useState<string | null>(null);
@@ -110,7 +104,8 @@ export function FocaMark({
     const el = imgRef.current;
     if (el && el.complete && el.naturalWidth === 0) setSrcQueFalhou(src);
   }, [src]);
-  return (
+
+  const img = (
     <img
       src={src}
       ref={imgRef}
@@ -120,7 +115,8 @@ export function FocaMark({
       width={size}
       height={size}
       draggable={false}
-      className={[className, motionClass].filter(Boolean).join(" ") || undefined}
+      decoding="async"
+      className={[className, motionClass, piscando ? "foca-piscar" : ""].filter(Boolean).join(" ") || undefined}
       style={{
         width: size,
         height: size,
@@ -130,5 +126,12 @@ export function FocaMark({
         visibility: falhou ? "hidden" : undefined,
       }}
     />
+  );
+  if (!fonte.webp) return img;
+  return (
+    <picture style={{ display: "contents" }}>
+      <source srcSet={fonte.webp} type="image/webp" />
+      {img}
+    </picture>
   );
 }

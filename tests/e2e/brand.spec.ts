@@ -53,9 +53,10 @@ test.describe("marca por tema em /aha (docs/36 T-08.6)", () => {
 
 test.describe("FocaMark sem imagem (docs/36 T-08.6)", () => {
   test("imagem que falha some sem quebrar o layout (caixa mantida, sem rolagem horizontal)", async ({ page }) => {
+    // Desde docs/44 §6 a arte sai em WebP (com PNG de reserva no <picture>): os dois formatos falham aqui.
     await page.route("**/branding/foca/foca-line-*.png", (r) => r.abort());
-    await page.route("**/branding/foca/foca-color-*.png", (r) => r.abort());
-    await page.route("**/branding/foca/expressoes/*.png", (r) => r.abort());
+    await page.route(/\/branding\/foca\/foca-color-\d+\.(png|webp)$/, (r) => r.abort());
+    await page.route(/\/branding\/foca\/expressoes\/[a-z]+-\d+\.(png|webp)$/, (r) => r.abort());
     await abrirAha(page, "light");
     const img = page.locator("[data-aha-marca] img").first();
     // O `error` dispara depois da montagem: espera a marca ficar oculta.
@@ -85,7 +86,8 @@ test.describe("FocaMark sem imagem (docs/36 T-08.6)", () => {
 
 test.describe("assets do <head> respondem (docs/36 §G.8)", () => {
   test("favicon, ícone 192, apple-touch e og:image existem e são imagens", async ({ page, request }) => {
-    await page.goto("/", { waitUntil: "domcontentloaded" });
+    // Numa rota do produto (a landing, `/`, tem og:image própria; docs/44 §7).
+    await page.goto("/login", { waitUntil: "domcontentloaded" });
     const urls = await page.evaluate(() => {
       const links = [...document.querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="apple-touch-icon"]')].map((l) => l.getAttribute("href")!);
       const og = document.querySelector<HTMLMetaElement>('meta[property="og:image"]')?.content;
@@ -108,7 +110,8 @@ test.describe("assets do <head> respondem (docs/36 §G.8)", () => {
   });
 
   test("título e descrição usam a copy de marca (RU-20)", async ({ page }) => {
-    await page.goto("/", { waitUntil: "domcontentloaded" });
+    // O produto usa a copy de marca; a landing (`/`) tem título e descrição de marketing (docs/44 §7).
+    await page.goto("/login", { waitUntil: "domcontentloaded" });
     await expect(page).toHaveTitle("Foca — Estudo curto, todo dia.");
     await expect(page.locator('meta[name="description"]')).toHaveAttribute(
       "content",

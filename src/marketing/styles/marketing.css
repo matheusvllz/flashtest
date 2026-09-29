@@ -1,0 +1,1593 @@
+/* CSS da landing (rota `/`, docs/44 §3, §4). Carregado SÓ por esta rota (link no head de src/routes/index.tsx):
+   quem abre o produto não baixa nada disto. Tokens de cor, raio, easing e fontes vêm de src/styles.css (um só
+   design system); aqui ficam a escala tipográfica de marketing, o container, o movimento e as peças da página.
+   Este arquivo NÃO passa pelo Tailwind da rota: o que era `@utility` na landing isolada virou classe simples,
+   dentro de `@layer utilities` (mesma precedência de antes: utilitário do Tailwind na mesma camada, componentes
+   da página fora de camada). */
+
+/* Anotação à mão: só a landing usa Caveat. Entra depois do load (html.lp-fonts-late, motion/boot.ts). */
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/caveat-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* A página nunca ganha rolagem lateral (bilhetes inclinados perto da borda). `clip` não cria contêiner de rolagem:
+   o sticky da história continua funcionando. */
+.lp-root {
+  overflow-x: clip;
+}
+
+/* Fontes decorativas (Space Mono e Caveat) só entram DEPOIS do load (boot.ts põe html.lp-fonts-late). */
+:root {
+  --font-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --lp-font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --lp-font-hand: "Segoe Print", "Bradley Hand", cursive;
+
+  --lp-display-xl: min(clamp(2.25rem, 1.45rem + 3.1vw, 4rem), 11.5vw);
+  --lp-display-l: min(clamp(1.875rem, 1.4rem + 2vw, 3.25rem), 9vw);
+  --lp-title: clamp(1.1875rem, 1.1rem + 0.4vw, 1.5rem);
+  --lp-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --lp-body: 1rem;
+  --lp-small: 0.875rem;
+  --lp-label: 0.75rem;
+  --lp-hand: clamp(1.25rem, 1.1rem + 0.5vw, 1.625rem);
+
+  --lp-container: 1200px;
+  --lp-gutter: 20px;
+  --lp-section-y: clamp(72px, 9vw, 144px);
+  --lp-section-gap: clamp(24px, 3vw, 40px);
+  --lp-nav-h: 56px;
+
+  /* Escala de z-index da página (espelha src/marketing/lib/z.ts). */
+  --lp-z-nav: 30;
+  --lp-z-sticky: 40;
+  --lp-z-skip: 50;
+}
+html.lp-fonts-late {
+  --lp-font-mono: var(--font-mono);
+  --lp-font-hand: var(--font-hand);
+}
+@media (min-width: 768px) {
+  :root {
+    --lp-gutter: 32px;
+    --lp-nav-h: 72px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --lp-gutter: 40px;
+  }
+}
+
+@layer utilities {
+  /* Pauta: linhas de caderno bem claras. */
+  .lp-pauta {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0 27px,
+      color-mix(in srgb, var(--gelo) 60%, transparent) 27px 28px
+    );
+  }
+  .lp-display-xl {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--lp-display-xl);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  .lp-display-l {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--lp-display-l);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  .lp-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--lp-title);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  .lp-lead {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: var(--lp-lead);
+    line-height: 1.55;
+    text-wrap: pretty;
+  }
+  .lp-body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: var(--lp-body);
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+  .lp-small {
+    text-wrap: pretty;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: var(--lp-small);
+    line-height: 1.45;
+  }
+  .lp-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--lp-label);
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mar-fundo);
+  }
+  .lp-data {
+    font-family: var(--lp-font-mono);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .lp-hand {
+    font-family: var(--lp-font-hand);
+    font-weight: 600;
+    font-size: var(--lp-hand);
+    line-height: 1.15;
+    color: var(--abismo);
+  }
+  .lp-container {
+    width: 100%;
+    max-width: calc(var(--lp-container) + var(--lp-gutter) * 2);
+    margin-inline: auto;
+    padding-inline: var(--lp-gutter);
+  }
+  .lp-measure {
+    max-width: 60ch;
+  }
+}
+
+
+/* Tokens e regras de movimento da landing (docs/40 §13).
+   Regra de ouro: estados iniciais "escondidos" só existem sob html.lp-motion (classe posta pelo script inline
+   do index.html, e só sem prefers-reduced-motion). Sem JS ou com movimento reduzido, tudo aparece pronto. */
+
+:root {
+  --lp-ease: var(--ease-out);
+  --lp-ease-bounce: var(--ease-bounce);
+  --lp-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --lp-dur-quick: 180ms;
+  --lp-dur-std: 320ms;
+  --lp-dur-slow: 560ms;
+  --lp-draw: 420ms;
+  --lp-rise: 16px;
+  --lp-stagger: 80ms;
+}
+
+/* Rolagem nativa suave só para âncoras e só sem preferência de movimento reduzido. */
+html {
+  scroll-padding-top: calc(var(--lp-nav-h) + 16px);
+  scroll-padding-bottom: 96px; /* a barra fixa do mobile (CTA) não pode cobrir o elemento focado */
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Entrada de bloco (M-12): sobe 16px + opacidade. O estado inicial só vale com lp-motion. */
+@keyframes lp-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--lp-rise));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desenho de traço (marca-texto, seta, check, risco): dashoffset controlado por --lp-len. */
+@keyframes lp-draw {
+  from {
+    stroke-dashoffset: var(--lp-len, 1);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Marca-texto: revela da esquerda para a direita. */
+@keyframes lp-highlight {
+  from {
+    transform: rotate(-1.5deg) scaleX(0);
+  }
+  to {
+    transform: rotate(-1.5deg) scaleX(1);
+  }
+}
+
+/* Reveal genérico acionado por JS/IO: o elemento carrega [data-reveal]; a classe .is-in o liberta. */
+html.lp-motion [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--lp-rise));
+  transition:
+    opacity var(--lp-dur-std) var(--lp-ease),
+    transform var(--lp-dur-std) var(--lp-ease);
+}
+html.lp-motion [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Estilos dos componentes da landing (docs/40 §12, §13; v2: docs/42). Tokens vêm de tokens.css; nada de cor nova.
+   Movimento inicial só sob html.lp-motion (docs/40 §13.1 item 5). O "modo história" (html.lp-story-on) só existe
+   quando o GSAP carregou antes de o leitor chegar à história (motion/scroll.ts). */
+
+/* ---------- Navbar ---------- */
+.lp-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--lp-z-nav);
+  min-height: var(--lp-nav-h);
+  border-bottom: 2px solid transparent;
+  transition:
+    background-color var(--lp-dur-quick) var(--lp-ease),
+    border-color var(--lp-dur-quick) var(--lp-ease);
+}
+.lp-nav[data-scrolled="true"] {
+  background: var(--neve); /* opaco: com 92% o título de baixo vazava pela barra (crítica R8) */
+  border-bottom-color: var(--gelo);
+}
+
+/* ---------- Marca-texto ---------- */
+.lp-hl {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+.lp-hl__bg {
+  position: absolute;
+  inset: 0.1em -0.14em -0.02em -0.14em;
+  z-index: -1;
+  background: var(--alert);
+  border-radius: 4px;
+  transform: rotate(-1.5deg);
+  transform-origin: left center;
+}
+/* Texto sobre o marca-texto: tinta escura nos dois temas (no escuro o abismo é claro e reprovaria). */
+.lp-hl__txt {
+  color: var(--on-alert);
+}
+html.lp-motion .lp-hl__bg {
+  animation: lp-highlight var(--lp-draw) var(--lp-ease) var(--lp-hl-delay, 0.62s) both;
+}
+/* Marca-texto do fechamento: varre quando a folha aparece, não no load. */
+html.lp-motion .lp-hl--reveal .lp-hl__bg {
+  animation: none;
+  transform: rotate(-1.5deg) scaleX(0);
+  transition: transform var(--lp-draw) var(--lp-ease) 0.3s;
+}
+html.lp-motion .is-in .lp-hl--reveal .lp-hl__bg {
+  transform: rotate(-1.5deg) scaleX(1);
+}
+
+/* ---------- Traços de lápis (doodles) ---------- */
+.lp-stroke {
+  fill: none;
+  stroke: var(--abismo);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+/* Caneta azul: só o caminho do próximo passo (progresso), nunca decoração. */
+.lp-stroke--mar {
+  stroke: var(--mar);
+  stroke-width: 3;
+}
+html.lp-motion .lp-stroke[data-draw="load"] {
+  stroke-dashoffset: 1;
+  animation: lp-draw var(--lp-draw) var(--lp-ease) var(--lp-draw-delay, 0.7s) forwards;
+}
+html.lp-motion .lp-stroke[data-draw="scroll"] {
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset var(--lp-draw) var(--lp-ease) var(--lp-draw-delay, 0s);
+}
+html.lp-motion .is-in .lp-stroke[data-draw="scroll"],
+html.lp-motion .lp-stroke[data-draw="scroll"].is-in {
+  stroke-dashoffset: 0;
+}
+
+/* ---------- Abertura (HM-1): CSS puro, funciona antes da hidratação ---------- */
+@keyframes lp-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes lp-bubble {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Papel pousando na mesa: cai um pouco de cima, 4 % de passagem, assenta. */
+@keyframes lp-pousa {
+  from {
+    opacity: 0;
+    transform: translateY(-18px) rotate(var(--r, 0deg)) scale(1.05);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(2px) rotate(var(--r, 0deg)) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(var(--r, 0deg));
+  }
+}
+html.lp-motion .lp-enter {
+  animation: lp-rise-in var(--lp-dur-slow) var(--lp-ease) calc(var(--i, 0) * var(--lp-stagger)) both;
+}
+/* O H1 sobe SEM esconder: só transform. O texto existe desde o primeiro quadro (o LCP mede a pintura do H1). */
+@keyframes lp-rise-only {
+  from {
+    transform: translateY(var(--lp-rise));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+html.lp-motion .lp-enter-h1 {
+  animation: lp-rise-only var(--lp-dur-slow) var(--lp-ease) calc(var(--i, 0) * var(--lp-stagger)) both;
+}
+html.lp-motion .lp-enter-phone {
+  animation: lp-rise-in var(--lp-dur-slow) var(--lp-ease) 0.12s both;
+  --lp-rise: 24px;
+}
+html.lp-motion .lp-enter-pop {
+  animation: lp-pop var(--lp-dur-std) var(--lp-ease-bounce) 0.6s both;
+}
+html.lp-motion .lp-enter-fade {
+  animation: lp-fade var(--lp-dur-std) var(--lp-ease) 1s both;
+}
+@keyframes lp-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+html.lp-motion .lp-hero-bilhete {
+  animation: lp-pousa var(--lp-dur-slow) var(--lp-ease) calc(0.2s + var(--i, 0) * 90ms) both;
+}
+/* Dentro da tela: a Foca aparece, o motivo abre, o título e o botão chegam. */
+html.lp-motion .lp-hero-phone .app-motivo__foca {
+  animation: lp-pop var(--lp-dur-std) var(--lp-ease-bounce) 0.7s both;
+}
+html.lp-motion .lp-hero-phone .app-motivo__txt {
+  transform-origin: left center;
+  animation: lp-bubble var(--lp-dur-std) var(--lp-ease-bounce) 0.82s both;
+}
+html.lp-motion .lp-hero-phone .app-atv__title {
+  animation: lp-rise-in var(--lp-dur-std) var(--lp-ease) 0.98s both;
+}
+html.lp-motion .lp-hero-phone .app-atv__btn {
+  animation: lp-rise-in var(--lp-dur-std) var(--lp-ease) 1.08s both;
+}
+
+/* ---------- Moldura de celular (só borda de grafite, sem sombra difusa) ---------- */
+.lp-phone {
+  position: relative;
+  background: var(--neve);
+  border: 3px solid var(--abismo);
+  border-radius: var(--radius-3xl);
+  overflow: hidden;
+  box-shadow: 0 4px 0 var(--abismo);
+}
+/* Celular "subindo" do rodapé da folha: sem borda nem sombra embaixo. */
+.lp-phone[data-cut="bottom"] {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+
+/* ---------- Mesa (folha com pauta onde o celular e os bilhetes ficam) ---------- */
+/* O celular sai da borda de baixo da folha (cortado por ela), como no retrato de um app sobre a mesa. */
+.lp-desk {
+  background-color: var(--cards);
+  border: 2px solid var(--gelo);
+  box-shadow: 0 4px 0 var(--gelo);
+}
+.lp-hero-phone {
+  height: 390px;
+}
+.lp-errou-phone {
+  height: 520px;
+}
+@media (min-width: 640px) {
+  .lp-hero-phone {
+    height: 460px;
+  }
+  .lp-errou-phone {
+    height: 600px;
+  }
+}
+.lp-hero-nota {
+  left: 1.25rem;
+  top: 0.25rem;
+}
+.lp-errou-nota {
+  right: 0.5rem;
+  top: 26%;
+  max-width: 6.5rem;
+  text-align: right;
+}
+.lp-errou-nota__seta {
+  transform: scaleX(-1);
+  margin-left: auto;
+}
+
+/* ---------- Bilhete (material que o João já tem) ---------- */
+.lp-bilhete {
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  transform: rotate(var(--r, 0deg)); /* em transform (não na propriedade rotate) para o GSAP compor a partir daqui */
+  padding: 0.55rem 0.8rem 0.6rem;
+  border-radius: 6px;
+  background: var(--cards);
+  border: 2px solid var(--gelo);
+  box-shadow: 0 3px 0 var(--gelo);
+  font-family: var(--lp-font-hand);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  color: var(--abismo);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ---------- S-2 A semana ---------- */
+.lp-week {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .lp-week {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .lp-week {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.lp-day {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--cards);
+  border: 2px solid var(--gelo);
+  border-radius: var(--radius-card);
+}
+@media (min-width: 768px) {
+  .lp-day {
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 0.6rem;
+    padding: 1.1rem 1.1rem 1.25rem;
+    min-height: 9.5rem;
+  }
+}
+.lp-day[data-estado="vazio"] {
+  background: transparent;
+  border-style: dashed;
+}
+.lp-day[data-estado="feed"] {
+  background: transparent;
+}
+.lp-day__dia {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--nevoa);
+}
+.lp-day__glifo {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.lp-day__nota {
+  color: var(--foreground);
+}
+.lp-day[data-estado="feed"] .lp-day__nota {
+  color: var(--nevoa);
+}
+.lp-day__nota--mao {
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+/* ---------- S-3 A história: base empilhada (sem JS, reduzido, ou GSAP ausente) ---------- */
+.lp-story {
+  --lp-mesa: color-mix(in srgb, var(--gelo) 55%, var(--neve));
+  --lp-cena-len: 70svh;
+  position: relative;
+  background: var(--lp-mesa);
+  border-radius: var(--radius-3xl) var(--radius-3xl) 0 0;
+  padding-block: var(--lp-section-y);
+}
+.lp-story__dots,
+.lp-story__stage {
+  display: none;
+}
+.lp-scene {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 3.5rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .lp-scene {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+    margin-top: 4.5rem;
+  }
+}
+.lp-scene__n {
+  font-size: 0.875rem;
+  color: var(--mar-fundo);
+}
+.lp-scene__titulo {
+  margin-top: 0.4rem;
+  max-width: 24ch;
+}
+.lp-scene__corpo {
+  margin-top: 0.6rem;
+  max-width: 42ch;
+  color: var(--foreground);
+}
+.lp-scene__phone {
+  width: 100%;
+  max-width: 290px;
+  aspect-ratio: 390 / 640; /* empilhado: a tela aparece até onde tem conteúdo */
+  margin-inline: auto;
+}
+.lp-scene__rev {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+.lp-pile {
+  position: relative;
+  height: 15rem;
+  overflow: clip; /* texto a 200 %: os bilhetes crescem, a página não ganha rolagem lateral */
+}
+.lp-pile__nota--extra {
+  display: none;
+}
+@media (min-width: 640px) {
+  .lp-pile__nota--extra {
+    display: block;
+  }
+}
+.lp-pile__pilha {
+  position: absolute;
+  left: 2%;
+  bottom: 22%;
+  width: 1px;
+  height: 1px;
+}
+.lp-faixa-card {
+  width: min(100%, 18rem);
+  font-size: 0.95rem;
+}
+/* Sem movimento o cartão mostra só o estado final ("No caminho"); a faixa anterior existe só no modo história. */
+.lp-faixa-card__de {
+  display: none;
+}
+html.lp-motion.lp-story-on .lp-faixa-card__de {
+  display: block;
+}
+.lp-story__nota {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------- S-3 A história: modo história (html.lp-story-on) ---------- */
+html.lp-story-on .lp-story {
+  height: calc(100svh + var(--cenas) * var(--lp-cena-len));
+  padding-block: 0;
+}
+html.lp-story-on .lp-story__pin {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+html.lp-story-on .lp-story__grid {
+  /* O celular é maior que o palco e "sobe" da borda de baixo da tela (como no hero): só a parte com conteúdo aparece. */
+  --ph-w: min(380px, 29vw, calc((100svh - var(--lp-nav-h)) * 0.46));
+  --ph-h: calc(var(--ph-w) * 2.05);
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  column-gap: 3rem;
+  padding-top: calc(var(--lp-nav-h) + 5vh);
+  padding-bottom: 5vh;
+}
+html.lp-story-on .lp-story__head {
+  grid-area: 1 / 1 / 2 / 2;
+}
+html.lp-story-on .lp-story__head h2 {
+  font-size: clamp(1.75rem, 1.2rem + 1.2vw, 2.5rem);
+}
+html.lp-story-on .lp-story__dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.lp-story__dot {
+  width: 2.25rem;
+  height: 0.375rem;
+  border-radius: 999px;
+  background: var(--pelo);
+  transition: background-color var(--lp-dur-std) var(--lp-ease);
+}
+.lp-story__dot[data-state="on"],
+.lp-story__dot[data-state="done"] {
+  background: var(--mar);
+}
+html.lp-story-on .lp-scene {
+  display: contents;
+}
+html.lp-story-on .lp-scene__cap {
+  grid-area: 2 / 1 / 3 / 2;
+  align-self: center;
+}
+html.lp-story-on .lp-scene__titulo {
+  font-size: clamp(1.5rem, 1.1rem + 1vw, 2.125rem);
+  max-width: 20ch;
+}
+html.lp-story-on .lp-scene__corpo {
+  font-size: var(--lp-lead);
+  margin-top: 0.9rem;
+}
+html.lp-story-on .lp-scene__vis,
+html.lp-story-on .lp-story__stage {
+  display: block;
+  grid-area: 1 / 2 / 3 / 3;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+html.lp-story-on .lp-story__phone,
+html.lp-story-on .lp-scene__phone {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: var(--ph-w);
+  height: var(--ph-h);
+  max-width: none;
+  aspect-ratio: auto;
+  translate: -50% 0;
+}
+/* As telas das cenas ficam dentro da moldura do palco: sem borda própria. */
+html.lp-story-on .lp-scene__phone {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+html.lp-story-on .lp-scene__rev {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+html.lp-story-on .lp-faixa-card {
+  position: absolute;
+  left: calc(50% - var(--ph-w) / 2 - 12.5rem);
+  bottom: 14%;
+  width: 16.5rem;
+  z-index: 1;
+}
+html.lp-story-on .lp-pile {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  overflow: visible;
+}
+html.lp-story-on .lp-story__pen {
+  position: absolute;
+  left: 6%;
+  bottom: 10%;
+  width: calc(44% - var(--ph-w) / 2);
+  height: 30%;
+  overflow: visible;
+}
+html.lp-story-on .lp-story__nota--motivo {
+  left: calc(50% + var(--ph-w) / 2 + 0.5rem);
+  top: 4%;
+}
+html.lp-story-on .lp-story__nota--motivo svg {
+  transform: scaleX(-1);
+}
+html.lp-story-on .lp-story__nota--faixa {
+  left: calc(50% - var(--ph-w) / 2 - 12rem);
+  bottom: calc(14% + 8.5rem);
+}
+/* Estado inicial do modo história: só a cena 1 aparece. GSAP cuida do resto. */
+html.lp-motion.lp-story-on .lp-scene:not([data-cena="0"]) :is(.lp-scene__cap, .lp-scene__vis),
+html.lp-motion.lp-story-on .lp-story__nota {
+  opacity: 0;
+}
+
+/* Celular e tablet no modo história: celular em cima, legenda como folha por cima da parte de baixo dele. */
+@media (max-width: 1023px) {
+  html.lp-story-on .lp-story {
+    --lp-cena-len: 60svh;
+  }
+  html.lp-story-on .lp-story__grid {
+    --ph-w: min(78vw, 340px);
+    --ph-h: calc(var(--ph-w) * 2);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    padding-top: calc(var(--lp-nav-h) + 1rem);
+    padding-bottom: 0;
+  }
+  html.lp-story-on .lp-story__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  html.lp-story-on .lp-story__head h2 {
+    font-size: var(--lp-title);
+  }
+  html.lp-story-on .lp-story__dots {
+    margin-top: 0;
+    gap: 0.3rem;
+  }
+  html.lp-story-on .lp-story__dot {
+    width: 1.1rem;
+  }
+  html.lp-story-on .lp-scene__vis,
+  html.lp-story-on .lp-story__stage {
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 1rem;
+  }
+  html.lp-story-on .lp-story__phone,
+  html.lp-story-on .lp-scene__phone {
+    top: 0;
+    translate: -50% 0;
+  }
+  html.lp-story-on .lp-scene__cap {
+    grid-area: 2 / 1 / 3 / 2;
+    align-self: end;
+    z-index: 1;
+    margin-bottom: max(1rem, env(safe-area-inset-bottom));
+    padding: 1rem 1.1rem 1.1rem;
+    background: var(--cards);
+    border: 2px solid var(--gelo);
+    border-radius: var(--radius-card);
+    box-shadow: 0 4px 0 var(--gelo);
+  }
+  html.lp-story-on .lp-scene__n {
+    display: none;
+  }
+  html.lp-story-on .lp-scene__titulo {
+    font-size: var(--lp-title);
+    margin-top: 0;
+  }
+  html.lp-story-on .lp-scene__corpo {
+    font-size: var(--lp-body);
+    margin-top: 0.4rem;
+  }
+  html.lp-story-on .lp-story__pen,
+  html.lp-story-on .lp-story__nota--motivo {
+    display: none;
+  }
+  html.lp-story-on .lp-faixa-card {
+    left: auto;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    width: min(15rem, 62vw);
+    font-size: 0.85rem;
+  }
+  html.lp-story-on .lp-story__nota--faixa {
+    display: none;
+  }
+  html.lp-story-on .lp-pile__nota--extra {
+    display: none;
+  }
+  html.lp-story-on .lp-bilhete {
+    font-size: 1.05rem;
+  }
+}
+/* Celular deitado ou tela muito baixa: sem cena presa (não caberia). scroll.ts nem liga o modo história. */
+
+/* ---------- S-6 Recomeço: calendário ---------- */
+.lp-cal-day {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  border: 2px solid var(--gelo);
+  background: var(--cards);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.lp-cal-day[data-estado="futuro"] {
+  border-style: dashed;
+  background: transparent;
+}
+/* Congelamento em grafite: azul é ação, seleção e progresso, não decoração (crítica R8). */
+.lp-cal-day[data-estado="congelado"] {
+  border-color: var(--abismo);
+}
+.lp-cal-day__cobre {
+  position: absolute;
+  inset: 0;
+  background: var(--gelo);
+}
+
+/* ---------- S-4 Demo ---------- */
+.lp-choice {
+  width: 100%;
+  text-align: left;
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--gelo);
+  background: var(--cards);
+  box-shadow: 0 3px 0 var(--gelo);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--abismo);
+  transition:
+    transform 80ms ease,
+    box-shadow 80ms ease,
+    border-color var(--lp-dur-quick) var(--lp-ease),
+    background-color var(--lp-dur-quick) var(--lp-ease);
+}
+.lp-choice:not(:disabled):not([aria-checked="true"]):hover {
+  border-color: var(--pelo-sombra);
+}
+.lp-choice:not(:disabled):active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--gelo);
+}
+.lp-choice[aria-checked="true"] {
+  border-color: var(--mar);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--mar) 8%, var(--cards));
+}
+.lp-choice[data-resultado="certa"] {
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 10%, var(--cards));
+  font-weight: 600;
+}
+.lp-choice[data-resultado="errada"] {
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 10%, var(--cards));
+}
+.lp-choice:disabled {
+  cursor: default;
+}
+
+/* ---------- Dúvidas ---------- */
+.lp-faq summary {
+  list-style: none;
+  cursor: pointer;
+}
+.lp-faq summary::-webkit-details-marker {
+  display: none;
+}
+.lp-faq[open] .lp-faq__chev {
+  transform: rotate(180deg);
+}
+.lp-faq__chev {
+  transition: transform var(--lp-dur-quick) var(--lp-ease);
+}
+
+/* ---------- Fechamento ---------- */
+html.lp-motion .lp-fechamento .lp-fechamento__foca,
+html.lp-motion .lp-fechamento .lp-fechamento__fala {
+  opacity: 0;
+}
+html.lp-motion .lp-fechamento.is-in .lp-fechamento__foca {
+  animation: lp-pop var(--lp-dur-std) var(--lp-ease-bounce) 0.55s both;
+}
+html.lp-motion .lp-fechamento.is-in .lp-fechamento__fala {
+  transform-origin: left bottom;
+  animation: lp-bubble var(--lp-dur-std) var(--lp-ease-bounce) 0.75s both;
+}
+
+/* ---------- CTA fixo no celular ---------- */
+.lp-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--lp-z-sticky);
+  padding: 0.625rem var(--lp-gutter) calc(0.625rem + env(safe-area-inset-bottom));
+  background: var(--cards);
+  border-top: 2px solid var(--gelo);
+  transform: translateY(110%);
+  transition: transform var(--lp-dur-std) var(--lp-ease);
+}
+.lp-sticky[data-visible="true"] {
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .lp-sticky {
+    display: none;
+  }
+}
+@media (max-height: 479px) {
+  .lp-sticky {
+    display: none;
+  }
+}
+
+/* ---------- Skip link ---------- */
+.lp-skip {
+  position: absolute;
+  left: 8px;
+  top: -64px;
+  z-index: var(--lp-z-skip);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--cards);
+  border: 2px solid var(--mar);
+  font-weight: 700;
+}
+.lp-skip:focus {
+  top: 8px;
+}
+
+/* Telas do app refeitas em HTML (docs/42 §7). Medidas em em; o em vem da largura da moldura (container query):
+   numa moldura de 390 px, 1em = 16 px, o 1rem do app. Cores e raios só por token (docs/18, tokens.css).
+   Verde e vermelho só no feedback de resposta (docs/40 §12.4). */
+
+.lp-phone {
+  container-type: inline-size;
+}
+
+.app-scr {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  font-size: calc(100cqw / 24.4);
+  font-family: var(--font-sans);
+  color: var(--abismo);
+  background: var(--neve);
+  text-align: left;
+  line-height: 1.45;
+  user-select: none;
+}
+.app-scr svg {
+  width: 1.4em;
+  height: 1.4em;
+  flex: none;
+}
+
+/* ---- barra de cima ---- */
+.app-top {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1.35em 1.25em 0.9em;
+}
+.app-top__x {
+  color: var(--nevoa);
+}
+.app-bar {
+  position: relative;
+  flex: 1;
+  height: 0.7em;
+  border-radius: 999px;
+  background: var(--gelo);
+  overflow: hidden;
+}
+.app-bar__fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--mar);
+  transform-origin: left;
+  transform: scaleX(var(--p, 0));
+}
+.app-top__count {
+  font-family: var(--lp-font-mono);
+  font-weight: 700;
+  font-size: 0.85em;
+  color: var(--nevoa);
+}
+
+.app-crumb {
+  display: flex;
+  gap: 0.45em;
+  padding: 0.35em 1.25em 0.95em;
+  border-bottom: 2px solid var(--gelo);
+  font-family: var(--lp-font-mono);
+  font-weight: 700;
+  font-size: 0.72em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mar-fundo);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.app-crumb__rest {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- corpo ---- */
+.app-body {
+  padding: 1.6em 1.25em 1.25em;
+}
+.app-body--top {
+  padding-top: 2em;
+}
+.app-body--q {
+  padding-top: 1.35em;
+}
+.app-kicker {
+  font-family: var(--lp-font-mono);
+  font-weight: 700;
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mar-fundo);
+}
+.app-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45em;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  color: var(--abismo);
+  text-wrap: pretty;
+}
+.app-title--xl {
+  font-size: 1.75em;
+  line-height: 1.18;
+  margin-top: 0.35em;
+}
+.app-kicker + .app-title {
+  margin-top: 0.6em;
+}
+.app-sub {
+  margin-top: 0.55em;
+  font-size: 1em;
+  color: var(--nevoa);
+  line-height: 1.5;
+}
+.app-sub--sm {
+  font-size: 0.85em;
+  margin-top: 0.3em;
+}
+
+.app-foca {
+  display: block;
+  width: 3.4em;
+  height: 3.4em;
+  object-fit: contain;
+  flex: none;
+}
+
+/* balão */
+.app-bubble {
+  position: relative;
+  background: var(--cards);
+  border: 2px solid var(--gelo);
+  border-radius: 1.25em;
+  padding: 0.75em 0.95em;
+  font-size: 1.02em;
+  line-height: 1.45;
+  color: var(--abismo);
+}
+.app-motivo {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+}
+.app-motivo__txt::before {
+  content: "";
+  position: absolute;
+  left: -0.5em;
+  top: 50%;
+  width: 0.8em;
+  height: 0.8em;
+  margin-top: -0.4em;
+  background: var(--cards);
+  border-left: 2px solid var(--gelo);
+  border-bottom: 2px solid var(--gelo);
+  transform: rotate(45deg);
+}
+.app-atv__title {
+  margin-top: 1.4em;
+}
+
+/* botões: aresta como no app */
+.app-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 3.4em;
+  margin-top: 1.5em;
+  padding: 0 1em;
+  border-radius: 1em;
+  background: var(--mar);
+  color: var(--on-mar);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05em;
+  box-shadow: 0 0.25em 0 var(--mar-fundo);
+}
+.app-btn--ghost {
+  background: var(--cards);
+  color: var(--abismo);
+  border: 2px solid var(--gelo);
+  box-shadow: 0 0.2em 0 var(--gelo);
+}
+
+/* opções */
+.app-opts {
+  display: grid;
+  gap: 0.7em;
+  margin-top: 1.3em;
+}
+.app-opt {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 3.5em;
+  padding: 0 1.2em;
+  border-radius: 1em;
+  background: var(--cards);
+  border: 2px solid var(--gelo);
+  box-shadow: 0 0.2em 0 var(--gelo);
+  font-size: 1.05em;
+}
+.app-opt__txt {
+  position: relative;
+}
+.app-opt__sel {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 2px solid var(--mar);
+  background: color-mix(in srgb, var(--mar) 11%, var(--cards));
+}
+.app-opt[data-res="certa"] {
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 12%, var(--cards));
+  font-weight: 600;
+}
+.app-opt[data-res="errada"] {
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 12%, var(--cards));
+}
+
+/* passos do onboarding */
+.app-steps {
+  display: flex;
+  gap: 0.45em;
+  padding: 1.5em 1.25em 0;
+}
+.app-steps__seg {
+  position: relative;
+  flex: 1;
+  height: 0.38em;
+  border-radius: 999px;
+  background: var(--gelo);
+  overflow: hidden;
+}
+.app-steps__seg[data-on="true"] {
+  background: var(--mar);
+}
+.app-steps__seg[data-on="half"] {
+  background: linear-gradient(to bottom, var(--mar), var(--mar)) left / 40% 100% no-repeat, var(--gelo);
+}
+.app-prova__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 1.25em 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.app-prova__voltar {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  color: var(--nevoa);
+  font-size: 1.15em;
+}
+.app-prova__voltar svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+.app-prova__marca {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.app-prova__foca {
+  width: 1.7em;
+  height: 1.7em;
+}
+
+/* nivelamento */
+.app-areas {
+  display: grid;
+  gap: 0.8em;
+  margin-top: 1.3em;
+}
+.app-area {
+  position: relative;
+  padding: 0.9em 1em;
+  border-radius: 1.25em;
+  background: var(--cards);
+  border: 2px solid var(--gelo);
+}
+.app-area__nome {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98em;
+  line-height: 1.3;
+}
+.app-area__linha {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-top: 0.55em;
+}
+.app-area__faixa {
+  position: relative;
+  display: grid;
+  font-size: 0.9em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.app-area__faixa > * {
+  grid-area: 1 / 1;
+}
+.app-area__prec {
+  margin-top: 0.35em;
+  font-size: 0.85em;
+  color: var(--nevoa);
+}
+.app-faixa {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.45em;
+  height: 0.6em;
+}
+.app-faixa__seg {
+  border-radius: 999px;
+  background: var(--gelo);
+}
+.app-faixa__on {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc((100% - 0.9em) / 3);
+  border-radius: 999px;
+  background: var(--mar);
+  transform: translateX(calc(var(--f, 0) * (100% + 0.45em)));
+}
+.app-nv__primeira {
+  margin-top: 1.4em;
+}
+.app-nv__atv {
+  margin-top: 0.4em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02em;
+  line-height: 1.35;
+}
+
+/* folha de feedback */
+.app-sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25em 1.25em 1.4em;
+  border-radius: 1.75em 1.75em 0 0;
+}
+.app-sheet--erro {
+  background: color-mix(in srgb, var(--error) 11%, var(--neve));
+}
+.app-sheet__head {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 0.6em;
+}
+.app-sheet__foca {
+  width: 2.8em;
+  height: 2.8em;
+}
+.app-sheet__ico {
+  color: var(--error);
+}
+.app-sheet__titulo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1.3;
+}
+.app-sheet__txt {
+  margin-top: 0.6em;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+.app-sheet__acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7em;
+}
+.app-sheet__acoes .app-btn {
+  margin-top: 1em;
+  min-height: 3em;
+  font-size: 0.98em;
+}
+.app-q__pergunta {
+  font-size: 1.3em;
+}
+.app-body--q .app-opts {
+  margin-top: 1em;
+  gap: 0.6em;
+}
+.app-body--q .app-opt {
+  min-height: 3em;
+}
+
+/* balão da Foca (tutor) */
+.app-tutor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 44%;
+  display: flex;
+  flex-direction: column;
+  background: var(--cards);
+  border-radius: 1.75em 1.75em 0 0;
+  border-top: 2px solid var(--gelo);
+}
+.app-tutor__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 1em 1.25em 0.5em;
+}
+.app-tutor__foca {
+  width: 2.2em;
+  height: 2.2em;
+}
+.app-tutor__nome {
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15em;
+}
+.app-tutor__x {
+  color: var(--abismo);
+}
+.app-tutor__msgs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  padding: 0.3em 1.25em;
+  overflow: hidden;
+  font-size: 0.92em;
+}
+.app-tutor__ctx {
+  padding: 0.5em 0.9em;
+  border-radius: 1.2em;
+  background: var(--gelo);
+  font-size: 0.9em;
+  line-height: 1.35;
+}
+.app-tutor__eu {
+  align-self: flex-end;
+  max-width: 85%;
+  padding: 0.55em 0.95em;
+  border-radius: 1.1em;
+  background: var(--mar);
+  color: var(--on-mar);
+}
+.app-tutor__foca-msg {
+  max-width: 92%;
+  padding: 0.65em 0.95em;
+  border-radius: 1.1em;
+  background: var(--neve);
+  border: 2px solid var(--gelo);
+  line-height: 1.45;
+}
+.app-tutor__digitando {
+  display: none;
+  gap: 0.3em;
+  align-self: flex-start;
+  padding: 0.7em 0.9em;
+  border-radius: 1.1em;
+  background: var(--neve);
+  border: 2px solid var(--gelo);
+}
+.app-tutor__digitando span {
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: 999px;
+  background: var(--nevoa);
+}
+.app-tutor__sug {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 1.25em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.app-chip {
+  padding: 0.5em 0.9em;
+  border-radius: 999px;
+  background: var(--gelo);
+  font-size: 0.85em;
+}
+.app-tutor__input {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1.25em 1em;
+}
+.app-tutor__foto,
+.app-tutor__enviar {
+  display: grid;
+  place-items: center;
+  width: 2.8em;
+  height: 2.8em;
+  flex: none;
+  border-radius: 0.9em;
+  border: 2px solid var(--gelo);
+  color: var(--abismo);
+}
+.app-tutor__enviar {
+  border-radius: 999px;
+  border: 0;
+  background: var(--coral-claro);
+  color: var(--on-mar);
+}
+.app-tutor__campo {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7em 0.9em;
+  border-radius: 1em;
+  border: 2px solid var(--gelo);
+  color: var(--nevoa);
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* tela de espera (começo da história) */
+.app-scr--espera {
+  display: grid;
+  place-items: center;
+  background: repeating-linear-gradient(to bottom, transparent 0 1.7em, color-mix(in srgb, var(--gelo) 70%, transparent) 1.7em calc(1.7em + 1px)), var(--neve);
+}
+.app-espera__foca {
+  width: 5em;
+  height: 5em;
+}
+
+/* ---------- Foca que troca de expressão (FocaTroca, docs/44 §6) ---------- */
+.lp-troca {
+  position: relative;
+  display: inline-block;
+  width: var(--s);
+  height: var(--s);
+  flex: none;
+  transform-origin: 50% 70%;
+}
+.lp-troca > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Sem movimento: só a expressão final. */
+.lp-troca__de {
+  display: none;
+}
+html.lp-motion .lp-troca__de {
+  display: block;
+}
+html.lp-motion .lp-troca__para {
+  visibility: hidden;
+}
+@keyframes lp-piscar {
+  0% {
+    transform: scale(1, 1);
+  }
+  45% {
+    transform: scale(1.03, 0.9);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes lp-troca-some {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes lp-troca-aparece {
+  to {
+    visibility: visible;
+  }
+}
+/* Disparo por CSS: quando o bloco é revelado, pisca e troca no fundo do piscar. */
+html.lp-motion .is-in .lp-troca--revelar {
+  animation: lp-piscar 220ms var(--lp-ease-bounce) 1s both;
+}
+html.lp-motion .is-in .lp-troca--revelar .lp-troca__de {
+  animation: lp-troca-some 1ms linear 1.1s forwards;
+}
+html.lp-motion .is-in .lp-troca--revelar .lp-troca__para {
+  animation: lp-troca-aparece 1ms linear 1.1s forwards;
+}
+.lp-fechamento__foca {
+  display: inline-block;
+}
+.lp-faixa-card {
+  position: relative;
+}
+.lp-faixa-card__foca {
+  position: absolute;
+  top: -1.1rem;
+  right: -0.6rem;
+}
+
+/* Links da navbar: sublinhado só no hover de ponteiro e no foco (docs/44 §5). */
+@media (hover: hover) {
+  .lp-nav__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

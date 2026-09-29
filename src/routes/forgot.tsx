@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { EntryShell } from "@/components/EntryShell";
 import { useState } from "react";
 import { BrandMark, PhoneFrame } from "@/components/AppShell";
 
@@ -8,7 +9,7 @@ function Forgot() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   return (
-    <PhoneFrame>
+    <EntryShell><PhoneFrame>
       <div className="flex min-h-screen flex-col bg-neve px-6 pt-10 pb-10">
         <Link to="/login" className="min-h-11 text-sm font-semibold text-nevoa">
           ← Voltar
@@ -46,6 +47,6 @@ function Forgot() {
           </form>
         )}
       </div>
-    </PhoneFrame>
+    </PhoneFrame></EntryShell>
   );
 }

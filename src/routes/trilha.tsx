@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, lazyRouteComponent, useNavigate } from "@tanstack/react-router";
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { ChapterCompleteSheet } from "@/components/learning/ChapterCompleteSheet";
@@ -8,8 +8,6 @@ import { FocusSheet } from "@/components/learning/journey/FocusSheet";
 import { JourneyPath } from "@/components/learning/journey/JourneyPath";
 import { SessionCard } from "@/components/learning/journey/SessionCard";
 import { RecommendationHint } from "@/components/learning/path/RecommendationHint";
-import { TrailError } from "@/components/learning/path/TrailError";
-import { TrailSkeleton } from "@/components/learning/path/TrailSkeleton";
 import { SubjectChips } from "@/components/learning/SubjectChips";
 import { TrailHeader, trailGreeting } from "@/components/learning/TrailHeader";
 import { IDS_AULAS_GERADAS, MATERIAS_COM_AULA_GERADA, sectionOfChapter } from "@/content/curriculum-tree";
@@ -45,8 +43,10 @@ import {
 export const Route = createFileRoute("/trilha")({
   component: TrilhaRoute,
   ssr: false,
-  pendingComponent: TrailSkeleton,
-  errorComponent: TrailError,
+  // Sob demanda (docs/44 §3): estes dois ficam fora do chunk da rota e importam o AppShell; estáticos, eles
+  // arrastavam o store e o conteúdo do produto para o JS inicial de TODA página, inclusive a landing.
+  pendingComponent: lazyRouteComponent(() => import("@/components/learning/path/TrailSkeleton"), "TrailSkeleton"),
+  errorComponent: lazyRouteComponent(() => import("@/components/learning/path/TrailError"), "TrailError"),
   validateSearch: (
     raw: Record<string, unknown>,
   ): { concluida?: string; capitulo?: string; vista?: "mapa"; pulada?: "1" } => ({
@@ -295,15 +295,19 @@ function TrilhaRoute() {
     !dispensadoNosUltimos30Dias(s.learning.events, hojeISO());
 
   return (
-    <AppShell>
-      <div className="bg-neve px-5 pb-3 pt-6">
+    <AppShell layout="wide">
+      {/* Desktop (docs/44 §5): o caminho no centro e o contexto do dia num painel à direita, preso ao rolar.
+          Um DOM só: no celular o painel vem primeiro, como sempre (cabeçalho, convite ao nivelamento, sessão). */}
+      <div className="desk-split lg:px-8 lg:pt-8">
+      <aside aria-label={COPY.trilha.painelContexto} className="desk-aside lg:space-y-4">
+      <div className="bg-neve px-5 pb-3 pt-6 lg:card-soft lg:p-5">
         <TrailHeader s={s} />
       </div>
 
       {mostrarCardNivelamento && (
-        <div className="mx-5 mb-3 card-soft p-4">
+        <div className="mx-5 mb-3 card-soft p-4 lg:mx-0 lg:mb-0">
           <p className="text-sm font-bold text-abismo">{COPY.nivelamento.cardTrilhaTitulo}</p>
-          <div className="mt-2.5 flex gap-2">
+          <div className="mt-2.5 flex gap-2 lg:flex-col">
             <button type="button" onClick={() => navigate({ to: "/nivelamento" })} className="btn-primary flex-1">
               {COPY.nivelamento.fazerNivelamento}
             </button>
@@ -317,9 +321,11 @@ function TrilhaRoute() {
           </div>
         </div>
       )}
+      </aside>
 
+      <div className="desk-main">
       {mostrarJornada ? (
-        <div className="bg-neve px-5 pb-6">
+        <div className="bg-neve px-5 pb-6 lg:px-0">
           {avisoPulada && (
             <div className="card-soft mb-3 flex items-start gap-2 p-3" role="status">
               <p className="flex-1 text-sm text-abismo">{COPY.jornada.puladaSemItens}</p>
@@ -391,7 +397,7 @@ function TrilhaRoute() {
           )}
           <SubjectChips subjects={model.subjects} selectedId={selectedSubjectId} onSelect={setTrailSubject} />
 
-          <div className="bg-neve px-5 pb-6" style={{ "--trail-sticky-top": "61px" } as CSSProperties}>
+          <div className="bg-neve px-5 pb-6 lg:px-0" style={{ "--trail-sticky-top": "61px" } as CSSProperties}>
             {showHint && target && hintSubjectName ? (
               <RecommendationHint target={target} subjectName={hintSubjectName} />
             ) : null}
@@ -410,6 +416,8 @@ function TrilhaRoute() {
           </div>
         </>
       )}
+      </div>
+      </div>
 
       {chapterDoSheet && (
         <ChapterCompleteSheet

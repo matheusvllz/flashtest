@@ -23,7 +23,7 @@ const V3_LEGADO = JSON.stringify({
   offline: { downloaded: false },
 });
 
-test("usuário com progresso salvo (estado v3 legado) é hidratado e vai pra home (/trilha), não pro /welcome", async ({
+test("usuário com progresso salvo (estado v3 legado) é hidratado e vai pra home (/trilha), não pro onboarding", async ({
   page,
 }) => {
   // Semeia o localStorage ANTES de qualquer script da página rodar.
@@ -31,7 +31,7 @@ test("usuário com progresso salvo (estado v3 legado) é hidratado e vai pra hom
     localStorage.setItem("foca.state.v3", v3);
   }, V3_LEGADO);
 
-  await page.goto("/", { waitUntil: "domcontentloaded" });
+  await page.goto("/app", { waitUntil: "domcontentloaded" });
   await page.waitForURL("**/trilha", { timeout: 5000 });
 
   // Confirma que o XP/streak salvos sobreviveram à migração (nada foi perdido).
@@ -78,9 +78,9 @@ test("migração cria backup v4 uma única vez e adiciona schemaVersion sem apag
   expect(atualParsed.learning).toBeDefined();
 });
 
-test("usuário novo (sem storage nenhum) ainda vai pro /welcome normalmente", async ({ page }) => {
-  await page.goto("/", { waitUntil: "domcontentloaded" });
-  await page.waitForURL("**/welcome", { timeout: 5000 });
+test("usuário novo (sem storage nenhum) vai pro onboarding (/quiz) pela porta /app", async ({ page }) => {
+  await page.goto("/app", { waitUntil: "domcontentloaded" });
+  await page.waitForURL("**/quiz", { timeout: 5000 });
 });
 
 const V5_COM_PROGRESSO = JSON.stringify({
@@ -338,8 +338,8 @@ test.describe("RF-16 — JSON corrompido guarda cópia e avisa uma vez (docs/36 
     await page.addInitScript(() => {
       if (!localStorage.getItem("foca.state.v3")) localStorage.setItem("foca.state.v3", "{quebrado");
     });
-    await page.goto("/", { waitUntil: "domcontentloaded" });
-    await page.waitForURL("**/welcome", { timeout: 15_000 });
+    await page.goto("/app", { waitUntil: "domcontentloaded" });
+    await page.waitForURL("**/quiz", { timeout: 15_000 });
 
     const faixa = page.getByRole("status").filter({ hasText: "Não consegui ler seu progresso salvo." });
     await expect(faixa).toBeVisible();

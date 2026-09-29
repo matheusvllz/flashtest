@@ -2,7 +2,7 @@
 
 > Para quem é: quem escreve texto público do Foca (tela de boas-vindas, título e descrição do site, landing, loja de apps, redes, campanha). Entrada: [../COPY.md](../COPY.md). O que se pode prometer: [01-estrategia.md](01-estrategia.md) §4 e §6. Voz de base: [02-voz-e-tom.md](02-voz-e-tom.md).
 >
-> Estado conferido em 28/09/2026 (atualização de 29/09/2026: a landing pública agora existe em `landing/`, **isolada, não publicada e não integrada ao app**, ver `docs/40` e `docs/41`). **Não existe página de loja de apps, perfil de rede social nem campanha ativa** no repositório (o que há em `docs/brand/` é da marca anterior, Flash Test). O `36` T-08.7 (RU-20) troca a tagline e a descrição de `brand.ts`. **DEPENDÊNCIA DO PLANO PRINCIPAL.**
+> Estado conferido em 28/09/2026 (atualização de 29/09/2026: a landing pública é a rota `/` do app, **integrada** por pedido do proprietário, ver `docs/44` e `docs/45`; a história dela está em `docs/40`–`43`). **Não existe página de loja de apps, perfil de rede social nem campanha ativa** no repositório (o que há em `docs/brand/` é da marca anterior, Flash Test). O `36` T-08.7 (RU-20) troca a tagline e a descrição de `brand.ts`. **DEPENDÊNCIA DO PLANO PRINCIPAL.**
 
 ## 1. Marketing pode ser mais energético que a interface. Não pode prometer mais que o produto.
 
@@ -16,15 +16,15 @@ A interface é calma e direta. Marketing pode ter mais verbo, mais benefício e 
 
 | Superfície | Onde está | Estado | Dono do texto |
 |---|---|---|---|
-| Tela de boas-vindas (a "landing" real hoje) | `src/routes/welcome.tsx` | Ativa; contém promessas que o produto não sustenta (seção 5) | Este guia; migração depois do `36` |
-| Splash | `src/routes/index.tsx` | Ativa; "Foca 60 segundos." | Idem |
+| Tela de boas-vindas | `src/routes/welcome.tsx` | **Aposentada** (29/09/2026): redireciona para a landing em `/` (`44` §3) | — |
+| Splash | `src/routes/app.tsx` (`/app`) | Só a Foca, sem texto (a porta do produto; `/` virou a landing) | — |
 | Título e descrição do site, texto de compartilhamento | `src/lib/brand.ts`, `src/routes/__root.tsx` | Ativa; `BRAND.tagline`, `BRAND.description`, título `Foca — {tagline}` | **`36` T-08.7 (RU-20)** |
-| Landing pública (isolada) | `landing/` (`landing/src/content/copy.ts`) | Implementada, **não publicada e não integrada ao app**; afirmações permitidas em `docs/40` §9.4 | `docs/40` e este guia |
+| Landing pública | rota `/`, `src/marketing/content/copy.ts` | v2 **integrada ao app** (29/09/2026, `44`/`45`); afirmações permitidas em `docs/40` §9.4 com as mudanças do `docs/42` §5 (CTA "Começar grátis" por decisão do usuário; sem "sem conta"; sem lista do que o Foca não faz) | `docs/42`, `docs/43` e este guia |
 | Página `/premium` | `src/routes/premium.tsx` | Demonstrativa, sem plano real (regra de escopo do `CLAUDE.md`) | Não tratar como oferta |
 | LP do link da bio | `docs/brand/Flash Test - LP Link da Bio v3.html` | **Histórico**, marca anterior | Só referência de estrutura |
 | Copy da landing do Instagram | `docs/13` | **Histórico** (Flash Test), voz do João da época | Só referência |
 | Loja de apps (App Store, Google Play) | — | Não existe | A criar; ver seção 6 |
-| Redes sociais, campanha | — | Não existem | A criar |
+| Campanha, outras redes | — | Não existem | A criar |
 
 ## 3. Promessas permitidas
 
@@ -47,7 +47,7 @@ Ver a lista completa em [01](01-estrategia.md) §6. Resumo para conferir antes d
 - Aprovação, vaga, nota prevista, "você vai passar".
 - Ganho de desempenho ou velocidade em número ("estude X% mais rápido").
 - Número de alunos, depoimento, "aprovado" (nada disso existe, e não pode ser inventado).
-- Preço, plano pago, "grátis para sempre" (o modelo de negócio nunca foi fechado, `08` §11).
+- Preço, plano pago, "grátis para sempre" (o modelo de negócio nunca foi fechado, `08` §11). **"Começar grátis" / "Comece grátis" é permitido** (decisão do usuário em 29/09/2026, `42` U-3): diz que começar não custa, sem prometer o que é gratuito para sempre.
 - Duração em segundos ou minutos.
 - "IA que aprende as suas lacunas" no sentido de descoberta por medição, enquanto o `/aha` for heurística.
 - "O nivelamento muda a sua trilha", até o `36` T-03.
@@ -56,7 +56,7 @@ Ver a lista completa em [01](01-estrategia.md) §6. Resumo para conferir antes d
 
 ## 5. Achados na copy pública de hoje (só registrados, para a auditoria e a migração)
 
-Nada abaixo foi alterado. `welcome.tsx` e `index.tsx` não são arquivos do `36`, mas a migração espera o `36` Fase 10 para não colidir com a tagline (RU-20).
+**Resolvido em 29/09/2026 (`44` §3):** as linhas de `welcome.tsx` e do splash de `index.tsx` saíram do ar junto com as telas (`/welcome` redireciona para a landing; o splash virou `/app`, sem texto). A tabela fica como registro histórico. Continua pendente o que é de `brand.ts` (RU-20, `36`).
 
 | Onde | Texto | Problema |
 |---|---|---|

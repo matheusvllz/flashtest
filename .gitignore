@@ -70,3 +70,6 @@ system-security-review/
 *.sln
 *.sw?
 __pycache__/
+
+# Referências visuais de trabalho da landing (retratos do app, revisões): regeneráveis, fora do repo (docs/44).
+assets-src/

@@ -235,6 +235,15 @@ export function TutorBubble() {
     reader.readAsDataURL(file);
   }
 
+  // Desktop (docs/44 §5): com o painel aberto, a coluna abre espaço à direita (CSS em styles.css, `html[data-tutor]`).
+  useEffect(() => {
+    if (!open) return;
+    document.documentElement.dataset.tutor = "aberto";
+    return () => {
+      delete document.documentElement.dataset.tutor;
+    };
+  }, [open]);
+
   // Sugestões mudam conforme o aluno está numa questão ou não. `answered`/
   // `wasCorrect` são a fonte da verdade — não `chosen`, que pode ser um texto
   // preenchido mesmo em resposta composta ainda não avaliada (docs/20 §4.2.8).
@@ -253,7 +262,7 @@ export function TutorBubble() {
         data-tutor-fab
         className="anchor-col-right fixed bottom-24 z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-gelo bg-cards shadow-[0_3px_0_var(--gelo)] transition active:translate-y-[3px] active:shadow-none lg:bottom-8"
       >
-        <FocaMark size={40} decorative motion="none" />
+        <FocaMark size={40} expression="neutra" decorative motion="none" />
       </button>
     );
   }
@@ -265,11 +274,12 @@ export function TutorBubble() {
       aria-modal="true"
       aria-labelledby={tituloId}
       tabIndex={-1}
-      className="sheet anchor-col-center col-max-w fixed bottom-0 z-50 flex max-h-[80vh] flex-col overscroll-contain outline-none"
+      data-tutor-painel
+      className="sheet anchor-col-center col-max-w fixed bottom-0 z-50 flex max-h-[80vh] flex-col overscroll-contain outline-none lg:inset-y-0 lg:left-auto lg:right-0 lg:mx-0 lg:w-[var(--tutor-painel)] lg:max-w-none lg:max-h-none lg:rounded-none lg:rounded-l-[var(--radius-3xl)] lg:border-l-2 lg:border-gelo lg:shadow-none"
     >
       <header className="flex items-center justify-between px-5 pt-4 pb-3">
         <div className="flex items-center gap-2">
-          <FocaMark size={28} decorative />
+          <FocaMark size={28} expression="neutra" decorative />
           <span
             id={tituloId}
             ref={tituloRef}

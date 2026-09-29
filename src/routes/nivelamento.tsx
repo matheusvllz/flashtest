@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useAtalhosDeQuestao } from "@/hooks/useAtalhosDeQuestao";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
 import { PlacementResult } from "@/components/learning/PlacementResult";
@@ -82,6 +83,8 @@ function scopeFromPrefs(prefs: {
  * o motor puro (`placement.ts`) e `QuestionStepView` em modo `silent`.
  */
 function Nivelamento() {
+  // Desktop: 1–5 / A–E escolhem, Enter confirma (docs/44 §5).
+  useAtalhosDeQuestao();
   const nav = useNavigate();
   const s = useAppState();
   const scope = useMemo(

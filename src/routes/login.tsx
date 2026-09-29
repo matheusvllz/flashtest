@@ -1,4 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { EntryShell } from "@/components/EntryShell";
 import { useState } from "react";
 import { AlertCircle, LogIn } from "lucide-react";
 import { BrandMark, PhoneFrame } from "@/components/AppShell";
@@ -25,16 +26,16 @@ function Login() {
   }
 
   return (
-    <PhoneFrame>
+    <EntryShell><PhoneFrame>
       <div className="flex min-h-screen flex-col bg-neve px-6 pt-10 pb-8">
-        <Link to="/welcome" className="min-h-11 text-sm font-semibold text-nevoa">
+        <Link to="/" className="min-h-11 text-sm font-semibold text-nevoa">
           ← Voltar
         </Link>
         <div className="mt-6 flex items-center gap-3">
           <BrandMark size={40} />
           <h1 className="font-display text-2xl font-bold text-abismo">Entrar</h1>
         </div>
-        <p className="mt-2 text-sm text-nevoa">Bem-vindo de volta. Continue sua jornada.</p>
+        <p className="mt-2 text-sm text-nevoa">Bem-vindo de volta. Seu próximo passo está guardado.</p>
 
         <form onSubmit={submit} className="mt-8 flex flex-col gap-4">
           <label className="text-xs font-semibold text-abismo">
@@ -85,10 +86,10 @@ function Login() {
         <p className="mt-auto pt-8 text-center text-sm text-nevoa">
           Ainda não tem conta?{" "}
           <Link to="/quiz" className="tap-area font-bold text-mar-fundo underline">
-            Começar em 60s
+            Começar grátis
           </Link>
         </p>
       </div>
-    </PhoneFrame>
+    </PhoneFrame></EntryShell>
   );
 }

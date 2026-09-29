@@ -33,13 +33,13 @@ test("splash leva usuário autenticado/onboardado pra /trilha (T-22)", async ({ 
     localStorage.setItem("foca.state.v3", v3);
   }, USUARIO_AUTENTICADO);
 
-  await page.goto("/", { waitUntil: "domcontentloaded" });
+  await page.goto("/app", { waitUntil: "domcontentloaded" });
   // 15s, não 5s: em dev, a 1ª visita a `/trilha` no processo compila a rota sob
   // demanda (mais pesada agora, com a jornada/F11) — achado real, o redirect em
   // si dispara em 1,1s (setTimeout do Splash), mas a navegação só termina
   // quando o chunk chega.
   await page.waitForURL("**/trilha", { timeout: 15000 });
-  await expect(page).not.toHaveURL(/welcome/);
+  await expect(page).not.toHaveURL(/quiz/);
 });
 
 test("header com meta, card de continuar e persistência da matéria selecionada", async ({ page }) => {

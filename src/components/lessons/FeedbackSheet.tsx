@@ -93,7 +93,7 @@ export function FeedbackSheet({
         <FocaMark
           size={40}
           decorative
-          expression={correct ? "orgulhosa" : "neutra"}
+          expression={correct ? "orgulhosa" : dontKnow ? "neutra" : "acolhedora"} /* errar nunca é decepção (docs/44 I-5) */
           motion="pop"
         />
         <div className="min-w-0 flex-1">
@@ -138,7 +138,7 @@ export function FeedbackSheet({
             <Sparkles size={15} /> {COPY.feedback.explicarMelhor}
           </button>
         )}
-        <button type="button" onClick={onContinue} className="btn-primary flex-1">
+        <button type="button" onClick={onContinue} className="btn-primary flex-1" data-acao-principal>
           {isLast ? COPY.feedback.verResultado : COPY.feedback.continuar}
         </button>
       </div>

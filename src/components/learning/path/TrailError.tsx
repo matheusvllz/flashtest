@@ -23,7 +23,7 @@ export function TrailError({ error, reset }: ErrorComponentProps) {
   return (
     <PhoneFrame>
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-6 text-center">
-        <FocaMark expression="entediada" size={96} decorative />
+        <FocaMark expression="desapontada" size={96} decorative /> {/* falha do app, não do aluno (docs/44 §6) */}
         <div>
           <h1 className="font-display text-xl font-bold text-abismo">{COPY.trilha.erroTitulo}</h1>
           <p className="mt-2 text-sm text-nevoa">{textoSePersistiu(persist, COPY.trilha.erroCorpo, COPY.trilha.erroCorpoSemSalvo)}</p>

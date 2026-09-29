@@ -16,5 +16,7 @@ export default defineConfig({
   // API (.vercel/output) com a função SSR que também serve o tutor. Fora do
   // Vercel continua gerando para Netlify. Sem isso o Vercel publicava `dist/`,
   // que não tem index.html num app SSR → 404 em todas as rotas.
-  nitro: { preset: process.env.VERCEL ? "vercel" : "netlify" },
+  // `NITRO_PRESET=node-server` gera um servidor local do build de produção (`node .output/server/index.mjs`), usado
+  // para testar a landing integrada e medir o Lighthouse sem o servidor de desenvolvimento (docs/44 §9).
+  nitro: { preset: process.env.NITRO_PRESET ?? (process.env.VERCEL ? "vercel" : "netlify") },
 });

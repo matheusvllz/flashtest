@@ -28,6 +28,7 @@ import { Route as ForgotRouteImport } from './routes/forgot'
 import { Route as FlashcardsRouteImport } from './routes/flashcards'
 import { Route as DebugRouteImport } from './routes/debug'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as AhaRouteImport } from './routes/aha'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
@@ -131,6 +132,11 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AhaRoute = AhaRouteImport.update({
   id: '/aha',
   path: '/aha',
@@ -170,6 +176,7 @@ const AtividadeActivityIdRoute = AtividadeActivityIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
+  '/app': typeof AppRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/flashcards': typeof FlashcardsRoute
@@ -198,6 +205,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
+  '/app': typeof AppRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/flashcards': typeof FlashcardsRoute
@@ -227,6 +235,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
+  '/app': typeof AppRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/flashcards': typeof FlashcardsRoute
@@ -257,6 +266,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aha'
+    | '/app'
     | '/dashboard'
     | '/debug'
     | '/flashcards'
@@ -285,6 +295,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aha'
+    | '/app'
     | '/dashboard'
     | '/debug'
     | '/flashcards'
@@ -313,6 +324,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aha'
+    | '/app'
     | '/dashboard'
     | '/debug'
     | '/flashcards'
@@ -342,6 +354,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AhaRoute: typeof AhaRoute
+  AppRoute: typeof AppRoute
   DashboardRoute: typeof DashboardRoute
   DebugRoute: typeof DebugRoute
   FlashcardsRoute: typeof FlashcardsRoute
@@ -503,6 +516,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aha': {
       id: '/aha'
       path: '/aha'
@@ -558,6 +578,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AhaRoute: AhaRoute,
+  AppRoute: AppRoute,
   DashboardRoute: DashboardRoute,
   DebugRoute: DebugRoute,
   FlashcardsRoute: FlashcardsRoute,

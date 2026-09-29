@@ -68,7 +68,7 @@ export function CelebracaoAula({
   const marco = isStreakMilestone(streakAtual);
   const bom = pct >= 70;
   const expression: FocaExpression =
-    pct === 100 || marco ? "empolgada" : bom ? "orgulhosa" : "neutra";
+    pct === 100 || marco ? "empolgada" : bom ? "orgulhosa" : "acolhedora"; // lição difícil: acolhe, não julga (docs/44 I-5)
   // Escolhida uma vez na montagem desta tela de fechamento, não a cada render
   // (docs/20 §3 B1, §4.1) — `bom` não muda depois que a tela abre.
   const [titulo] = useState(() => fala(bom ? "fimbom" : "fimruim"));

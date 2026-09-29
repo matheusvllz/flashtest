@@ -22,7 +22,7 @@ export function BottomSheet({
   onClose: () => void;
   title: string;
   children: ReactNode;
-  /** Ex.: `<FocaMark expression="desapontada" size={56} decorative />` — a Foca em transição emocional (docs/18 §7.15). */
+  /** Ex.: `<FocaMark expression="neutra" size={56} decorative />` — a Foca em transição emocional (docs/18 §7.15). */
   icon?: ReactNode;
 }) {
   const titleId = useId();

@@ -1,7 +1,7 @@
 # 40 — Landing page de marketing do Foca: plano de implementação (isolada do app)
 
 **Status:** **APROVADO pelo usuário em 28/09/2026 e EXECUTADO por Sonnet 5.5 em 28 e 29/09/2026 (F0 a F17): ver [41](41-registro-execucao-landing-page.md).** Escrito em 28/09/2026 por Opus 5.5. A pasta `landing/` existe, isolada e não publicada; a integração com o app continua bloqueada.
-**Estado da feature:** `LANDING PAGE: IMPLEMENTED / ISOLATED / NOT PUBLISHED` · `INTEGRAÇÃO COM O APP: BLOCKED UNTIL EXPLICIT USER REQUEST`
+**Estado da feature:** `LANDING PAGE: INTEGRATED` (29/09/2026, [`44`](44-plano-integracao-produto-web.md)/[`45`](45-registro-execucao-integracao.md): a landing é a rota `/` do app e a regra de isolamento da §22 foi revogada pelo proprietário). Antes: `V2 IMPLEMENTED / ISOLATED / NOT PUBLISHED` (29/09/2026: a segunda direção criativa do [`42`](42-plano-landing-v2-direcao-criativa.md) prevalece sobre este plano na arquitetura de seções §11, no mapa de movimento §13.3, no "sem pin" §13.1, no CTA, nos retratos §14 e nas afirmações F-4/F-15; registro em [`43`](43-registro-execucao-landing-v2.md)) · `INTEGRAÇÃO COM O APP: BLOCKED UNTIL EXPLICIT USER REQUEST`
 **Prevalece sobre:** nada no app. Nos assuntos de **landing pública**, detalha (sem contradizer) `docs/copy/06-marketing.md` e `docs/copy/01-estrategia.md`. Onde este plano e o `copy/01` §4/§6 divergirem sobre o que pode ser prometido, **o `copy/01` vence** até ser atualizado.
 **Registro de execução:** `docs/41-registro-execucao-landing-page.md` (criado pelo executor na Fase 0; ainda não existe).
 

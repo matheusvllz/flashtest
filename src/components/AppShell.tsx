@@ -28,7 +28,8 @@ export function PhoneFrame({
   variant = "app",
 }: {
   children: ReactNode;
-  variant?: "app" | "reading";
+  /** "wide" (docs/44 §5): telas com painel de contexto ou grade no desktop; abaixo de 1024 px é a coluna de sempre. */
+  variant?: "app" | "reading" | "wide";
 }) {
   return (
     <div
@@ -36,7 +37,9 @@ export function PhoneFrame({
         "frame-border mx-auto min-h-screen w-full bg-neve",
         variant === "reading"
           ? "max-w-[var(--reading-col)] [--frame-col:var(--reading-col)]"
-          : "max-w-[var(--app-col)] [--frame-col:var(--app-col)]",
+          : variant === "wide"
+            ? "max-w-[var(--wide-col)] [--frame-col:var(--wide-col)] [--sheet-col:var(--app-col)] lg:border-x-0"
+            : "max-w-[var(--app-col)] [--frame-col:var(--app-col)]",
       )}
     >
       {children}
@@ -80,7 +83,16 @@ function isNavActive(pathname: string, to: string) {
  * "presença constante mata o impacto") — no lugar entra um botão de voltar
  * quando a tela não é um destino direto do bottom nav.
  */
-export function AppShell({ children, title }: { children: ReactNode; title?: string }) {
+export function AppShell({
+  children,
+  title,
+  layout = "app",
+}: {
+  children: ReactNode;
+  title?: string;
+  /** "wide" = composição de desktop com painel de contexto ou grade (docs/44 §5). */
+  layout?: "app" | "wide";
+}) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const router = useRouter();
   const navigate = useNavigate();
@@ -96,9 +108,9 @@ export function AppShell({ children, title }: { children: ReactNode; title?: str
     // esquerda (`--nav-rail` é 0px abaixo disso) e repassa o valor aos elementos
     // fixos ancorados à coluna (`--frame-rail`, lido por `anchor-col-*`).
     <div className="[--frame-rail:var(--nav-rail)] lg:pl-[var(--nav-rail)]">
-    <PhoneFrame>
+    <PhoneFrame variant={layout}>
       {title && (
-        <header className="sticky top-0 z-20 flex items-center gap-2 bg-neve/90 px-3 py-3 backdrop-blur">
+        <header className="sticky top-0 z-20 flex items-center gap-2 bg-neve/90 px-3 py-3 backdrop-blur lg:px-6 lg:pt-6">
           {!isNavRoute && (
             <button
               type="button"
@@ -109,7 +121,7 @@ export function AppShell({ children, title }: { children: ReactNode; title?: str
               <ChevronLeft size={22} />
             </button>
           )}
-          <h1 className="font-display text-xl font-bold text-abismo">{title}</h1>
+          <h1 className="font-display text-xl font-bold text-abismo lg:text-2xl">{title}</h1>
         </header>
       )}
       <main className="pb-32 lg:pb-12">{children}</main>

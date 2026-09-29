@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { pickQuestionsAdaptive } from "@/routes/study";
+import { pickQuestionsAdaptive } from "@/lib/study/escolher-questoes";
 import { learningStateVazio } from "@/lib/learning/types";
 import type { AppState } from "@/lib/store";
 

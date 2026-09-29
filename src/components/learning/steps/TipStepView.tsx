@@ -11,7 +11,7 @@ export function TipStepView({ step, onNext }: { step: TipStep; onNext: () => voi
     <div className="space-y-4">
       <p className="ds-label">{step.title ?? COPY.licao.dica}</p>
       <FocaSays text={step.body} size={40} compact />
-      <button type="button" onClick={onNext} className="btn-primary w-full">
+      <button type="button" onClick={onNext} className="btn-primary w-full" data-acao-principal>
         {COPY.licao.continuar}
       </button>
     </div>

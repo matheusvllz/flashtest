@@ -48,8 +48,8 @@ function Profile() {
     .toUpperCase();
 
   return (
-    <AppShell title="Perfil">
-      <div className="px-5 pt-4 space-y-4">
+    <AppShell title="Perfil" layout="wide">
+      <div className="desk-colunas px-5 pt-4 space-y-4 lg:px-8">
         <div className="card-soft p-4">
           <div className="flex items-center gap-4">
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gelo font-display text-lg font-bold text-abismo">
@@ -306,7 +306,7 @@ function Profile() {
             type="button"
             onClick={() => {
               reset();
-              nav({ to: "/welcome" });
+              nav({ to: "/" });
             }}
             className="btn-ghost w-full text-sm"
           >
@@ -316,7 +316,7 @@ function Profile() {
             type="button"
             onClick={() => {
               logout();
-              nav({ to: "/welcome" });
+              nav({ to: "/" });
             }}
             className="btn-ghost w-full text-sm"
           >

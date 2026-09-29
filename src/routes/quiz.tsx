@@ -1,4 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { EntryShell } from "@/components/EntryShell";
 import { useState } from "react";
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
@@ -69,7 +70,7 @@ function Quiz() {
 
   if (oferta) {
     return (
-      <PhoneFrame variant="reading">
+      <EntryShell><PhoneFrame variant="reading">
         <div className="flex min-h-screen flex-col justify-center bg-neve px-6">
           <PlacementOffer
             onFazer={() => {
@@ -82,12 +83,12 @@ function Quiz() {
             }}
           />
         </div>
-      </PhoneFrame>
+      </PhoneFrame></EntryShell>
     );
   }
 
   return (
-    <PhoneFrame variant="reading">
+    <EntryShell><PhoneFrame variant="reading">
       <div className="flex min-h-screen flex-col bg-neve">
         {/* Barra de progresso estilo Stories */}
         <header className="px-5 pt-6">
@@ -104,7 +105,7 @@ function Quiz() {
           <div className="mt-3 flex items-center justify-between">
             <button
               type="button"
-              onClick={() => (idx === 0 ? nav({ to: "/welcome" }) : setIdx(idx - 1))}
+              onClick={() => (idx === 0 ? nav({ to: "/" }) : setIdx(idx - 1))}
               className="min-h-11 text-sm font-bold text-nevoa"
             >
               ← Voltar
@@ -120,7 +121,7 @@ function Quiz() {
           <StepView step={step} onNext={next} />
         </div>
 
-        <footer className="fixed bottom-0 left-1/2 col-max-w -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
+        <footer className="fixed bottom-0 left-1/2 col-max-w -translate-x-1/2 lg:sticky lg:left-auto lg:w-full lg:max-w-none lg:translate-x-0 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
           <button
             type="button"
             onClick={next}
@@ -131,7 +132,7 @@ function Quiz() {
           </button>
         </footer>
       </div>
-    </PhoneFrame>
+    </PhoneFrame></EntryShell>
   );
 }
 

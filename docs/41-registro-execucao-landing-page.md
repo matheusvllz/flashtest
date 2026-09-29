@@ -1,5 +1,9 @@
 # 41 — Registro de execução da landing page de marketing
 
+> **Integração (29/09/2026):** a landing saiu de `landing/` e virou a rota `/` do app (`src/marketing/`); o isolamento descrito aqui foi revogado pelo proprietário. Estado atual: [`45`](45-registro-execucao-integracao.md).
+>
+> **Atualização 29/09/2026:** a página passou pela segunda direção criativa ([42](42-plano-landing-v2-direcao-criativa.md), registro [43](43-registro-execucao-landing-v2.md)). Seções, copy, movimento e números do topo deste registro descrevem a **v1**; o estado atual está no 43. A base técnica (isolamento, pré-render, CSP, eventos locais, deploy) continua a daqui.
+
 **Spec:** [40-plano-landing-page-marketing.md](40-plano-landing-page-marketing.md) (aprovado pelo usuário em 28/09/2026). **Executor:** Sonnet 5.5. **Status da feature:** `LANDING PAGE: IMPLEMENTED / ISOLATED / NOT PUBLISHED` (F0 a F17 concluídas em 28 e 29/09/2026) · `INTEGRAÇÃO COM O APP: BLOCKED UNTIL EXPLICIT USER REQUEST`.
 
 Este registro diz o que de fato aconteceu por fase. Regra de leitura: código e testes vencem este texto.

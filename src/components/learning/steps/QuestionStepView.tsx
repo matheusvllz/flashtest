@@ -91,7 +91,7 @@ export function QuestionStepView({
         <div className="space-y-2">
           {/* O `:disabled` da utility já cuida da opacidade — nada de
               `opacity-40` manual por cima (docs/25 §18 T-10). */}
-          <button type="button" className="btn-primary w-full" disabled={!canVerify} onClick={onVerify}>
+          <button type="button" className="btn-primary w-full" disabled={!canVerify} onClick={onVerify} data-acao-principal>
             {COPY.licao.verificar}
           </button>
           {onDontKnow && <DontKnowButton onClick={onDontKnow} />}
@@ -99,7 +99,7 @@ export function QuestionStepView({
       ) : silent ? (
         <div className="space-y-3" role="status">
           <p className="text-sm font-semibold text-nevoa">{COPY.licao.respostaRegistrada}</p>
-          <button type="button" className="btn-primary w-full" onClick={onContinue}>
+          <button type="button" className="btn-primary w-full" onClick={onContinue} data-acao-principal>
             {isLast ? COPY.feedback.verResultado : COPY.feedback.continuar}
           </button>
         </div>
