@@ -1,0 +1,71 @@
+/* Tokens e regras de movimento da landing (docs/40 §13).
+   Regra de ouro: estados iniciais "escondidos" só existem sob html.lp-motion (classe posta pelo script inline
+   do index.html, e só sem prefers-reduced-motion). Sem JS ou com movimento reduzido, tudo aparece pronto. */
+
+:root {
+  --lp-ease: var(--ease-out);
+  --lp-ease-bounce: var(--ease-bounce);
+  --lp-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --lp-dur-quick: 180ms;
+  --lp-dur-std: 320ms;
+  --lp-dur-slow: 560ms;
+  --lp-draw: 420ms;
+  --lp-rise: 16px;
+  --lp-stagger: 80ms;
+}
+
+/* Rolagem nativa suave só para âncoras e só sem preferência de movimento reduzido. */
+html {
+  scroll-padding-top: calc(var(--lp-nav-h) + 16px);
+  scroll-padding-bottom: 96px; /* a barra fixa do mobile (CTA) não pode cobrir o elemento focado */
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Entrada de bloco (M-12): sobe 16px + opacidade. O estado inicial só vale com lp-motion. */
+@keyframes lp-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--lp-rise));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desenho de traço (marca-texto, seta, check, risco): dashoffset controlado por --lp-len. */
+@keyframes lp-draw {
+  from {
+    stroke-dashoffset: var(--lp-len, 1);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Marca-texto: revela da esquerda para a direita. */
+@keyframes lp-highlight {
+  from {
+    transform: rotate(-1.5deg) scaleX(0);
+  }
+  to {
+    transform: rotate(-1.5deg) scaleX(1);
+  }
+}
+
+/* Reveal genérico acionado por JS/IO: o elemento carrega [data-reveal]; a classe .is-in o liberta. */
+html.lp-motion [data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--lp-rise));
+  transition:
+    opacity var(--lp-dur-std) var(--lp-ease),
+    transform var(--lp-dur-std) var(--lp-ease);
+}
+html.lp-motion [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}

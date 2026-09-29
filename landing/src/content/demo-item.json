@@ -1,0 +1,13 @@
+{
+  "id": "gen:mat:equacao-primeiro-grau:0cd20f16",
+  "tipo": "multipla-escolha",
+  "pergunta": "Um comerciante comprou camisetas por 20 reais cada e as vende por 35 reais cada. Se vender 60 camisetas, qual será o lucro total?",
+  "opcoes": [
+    "750 reais",
+    "900 reais",
+    "1050 reais",
+    "600 reais"
+  ],
+  "correta": 1,
+  "explicacao": "O lucro por camiseta é 35 - 20 = 15 reais. Pra 60 camisetas: 60 × 15 = 900 reais de lucro total. Ou seja, a receita é 60 × 35 = 2100 reais, o custo é 60 × 20 = 1200 reais, então lucro = 2100 - 1200 = 900 reais."
+}

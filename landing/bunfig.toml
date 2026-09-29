@@ -1,0 +1,5 @@
+[install]
+saveTextLockfile = true
+# 24h supply-chain guard: skip package versions published less than a day ago.
+# (Cópia do bunfig.toml da raiz, sem as exceções do Lovable: a landing não usa @lovable.dev/*.)
+minimumReleaseAge = 86400

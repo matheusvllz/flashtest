@@ -1,0 +1,387 @@
+/* Estilos dos componentes da landing (docs/40 §12, §13). Tokens vêm de tokens.css; nada de cor nova.
+   Movimento inicial só sob html.lp-motion (docs/40 §13.1 item 5). */
+
+/* ---------- Navbar ---------- */
+.lp-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--lp-z-nav);
+  min-height: var(--lp-nav-h);
+  border-bottom: 2px solid transparent;
+  transition:
+    background-color var(--lp-dur-quick) var(--lp-ease),
+    border-color var(--lp-dur-quick) var(--lp-ease);
+}
+.lp-nav[data-scrolled="true"] {
+  background: var(--color-neve); /* opaco: com 92% o título de baixo vazava pela barra (crítica R8) */
+  border-bottom-color: var(--color-gelo);
+}
+
+/* ---------- Marca-texto (M-3) ---------- */
+.lp-hl {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+.lp-hl__bg {
+  position: absolute;
+  inset: 0.1em -0.14em -0.02em -0.14em;
+  z-index: -1;
+  background: var(--color-recompensa);
+  border-radius: 4px;
+  transform: rotate(-1.5deg);
+  transform-origin: left center;
+}
+/* Texto sobre o marca-texto: tinta escura nos dois temas (no escuro o abismo é claro e reprovaria). */
+.lp-hl__txt {
+  color: var(--on-alert);
+}
+html.lp-motion .lp-hl__bg {
+  animation: lp-highlight var(--lp-draw) var(--lp-ease) var(--lp-hl-delay, 0.52s) both;
+}
+
+/* ---------- Traços de lápis (doodles) ---------- */
+.lp-stroke {
+  fill: none;
+  stroke: var(--color-abismo);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+html.lp-motion .lp-stroke[data-draw="load"] {
+  stroke-dashoffset: 1;
+  animation: lp-draw var(--lp-draw) var(--lp-ease) var(--lp-draw-delay, 0.7s) forwards;
+}
+/* Desenho ligado ao scroll: começa escondido, .is-in (JS) solta. */
+html.lp-motion .lp-stroke[data-draw="scroll"] {
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset var(--lp-draw) var(--lp-ease) var(--lp-draw-delay, 0s);
+}
+html.lp-motion .is-in .lp-stroke[data-draw="scroll"],
+html.lp-motion .lp-stroke[data-draw="scroll"].is-in {
+  stroke-dashoffset: 0;
+}
+
+/* ---------- Entrada do hero (M-1, M-2, M-5): CSS puro, funciona antes da hidratação ---------- */
+@keyframes lp-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+html.lp-motion .lp-enter {
+  animation: lp-rise-in var(--lp-dur-slow) var(--lp-ease) calc(var(--i, 0) * var(--lp-stagger)) both;
+}
+/* O H1 sobe SEM esconder: só transform. O texto existe desde o primeiro quadro (o LCP mede a pintura do H1, não o fim de um fade)
+   e a hierarquia continua chegando na ordem certa (M-1). */
+@keyframes lp-rise-only {
+  from {
+    transform: translateY(var(--lp-rise));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+html.lp-motion .lp-enter-h1 {
+  animation: lp-rise-only var(--lp-dur-slow) var(--lp-ease) calc(var(--i, 0) * var(--lp-stagger)) both;
+}
+html.lp-motion .lp-enter-phone {
+  animation: lp-rise-in var(--lp-dur-slow) var(--lp-ease) 0.12s both;
+  --lp-rise: 24px;
+}
+html.lp-motion .lp-enter-pop {
+  animation: lp-pop var(--lp-dur-std) var(--lp-ease-bounce) 0.6s both;
+}
+html.lp-motion .lp-enter-fade {
+  animation: lp-fade var(--lp-dur-std) var(--lp-ease) 0.9s both;
+}
+@keyframes lp-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Moldura de celular (só borda de grafite, sem sombra difusa) ---------- */
+.lp-phone {
+  position: relative;
+  background: var(--color-neve);
+  border: 3px solid var(--color-abismo);
+  border-radius: var(--radius-3xl);
+  overflow: hidden;
+  box-shadow: 0 4px 0 var(--color-abismo);
+}
+/* Celular "subindo" do rodapé da folha: sem borda nem sombra embaixo. */
+.lp-phone[data-cut="bottom"] {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+
+/* ---------- S-3: passos, nós e margem ---------- */
+.lp-node {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 2px dashed var(--color-pelo-sombra);
+  background: var(--color-neve);
+  display: grid;
+  place-items: center;
+  flex: none;
+  transition:
+    background-color var(--lp-dur-quick) var(--lp-ease),
+    border-color var(--lp-dur-quick) var(--lp-ease);
+}
+.lp-node[data-state="on"],
+.lp-node[data-state="done"] {
+  border-style: solid;
+  border-color: var(--color-mar);
+  background: var(--color-mar);
+  color: var(--on-mar);
+}
+.lp-margin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 9px;
+  width: 2px;
+  background: var(--color-gelo);
+}
+.lp-margin__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-mar);
+  transform-origin: top;
+  transform: scaleY(var(--lp-progress, 0));
+}
+
+/* Retratos empilhados no celular fixo (desktop com movimento): só o ativo aparece. */
+.lp-shot-layer {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 420ms var(--lp-ease);
+}
+.lp-shot-layer[data-active="true"] {
+  clip-path: inset(0 0 0 0);
+  z-index: 1;
+}
+/* Camada anterior fica por baixo até a nova cobrir. */
+.lp-shot-layer[data-prev="true"] {
+  clip-path: inset(0 0 0 0);
+  z-index: 0;
+}
+
+/* Layout do S-3: base = empilhado (funciona sem JS e com movimento reduzido). */
+.lp-scrolly-phone {
+  display: none;
+}
+@media (min-width: 1024px) {
+  html.lp-motion .lp-scrolly-phone {
+    display: block;
+  }
+  html.lp-motion .lp-step-inline-shot {
+    display: none;
+  }
+}
+
+/* ---------- S-2: semana ---------- */
+.lp-day {
+  background: var(--color-cards);
+  border: 2px solid var(--color-gelo);
+  border-radius: var(--radius-card);
+}
+.lp-day[data-estado="vazio"] {
+  background: transparent;
+  border-style: dashed;
+}
+
+/* ---------- S-5: calendário ---------- */
+.lp-cal-day {
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-gelo);
+  background: var(--color-cards);
+  display: grid;
+  place-items: center;
+}
+.lp-cal-day[data-estado="futuro"] {
+  border-style: dashed;
+  background: transparent;
+}
+/* Congelamento em grafite: azul é ação, seleção e progresso, não decoração (crítica R8). */
+.lp-cal-day[data-estado="congelado"] {
+  border-color: var(--color-abismo);
+  background: var(--color-gelo);
+}
+
+/* ---------- S-4: demo ---------- */
+.lp-choice {
+  width: 100%;
+  text-align: left;
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-gelo);
+  background: var(--color-cards);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-abismo);
+  transition:
+    transform 80ms ease,
+    border-color var(--lp-dur-quick) var(--lp-ease),
+    background-color var(--lp-dur-quick) var(--lp-ease);
+}
+.lp-choice:not(:disabled):not([aria-checked="true"]):hover {
+  border-color: var(--color-pelo-sombra);
+}
+.lp-choice:not(:disabled):active {
+  transform: translateY(1px);
+}
+.lp-choice[aria-checked="true"] {
+  border-color: var(--color-mar);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--color-mar) 8%, var(--color-cards));
+}
+.lp-choice[data-resultado="certa"] {
+  border-color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 10%, var(--color-cards));
+  font-weight: 600;
+}
+.lp-choice[data-resultado="errada"] {
+  border-color: var(--color-error);
+  background: color-mix(in srgb, var(--color-error) 10%, var(--color-cards));
+}
+.lp-choice:disabled {
+  cursor: default;
+}
+
+/* ---------- S-8: FAQ ---------- */
+.lp-faq summary {
+  list-style: none;
+  cursor: pointer;
+}
+.lp-faq summary::-webkit-details-marker {
+  display: none;
+}
+.lp-faq[open] .lp-faq__chev {
+  transform: rotate(180deg);
+}
+.lp-faq__chev {
+  transition: transform var(--lp-dur-quick) var(--lp-ease);
+}
+
+/* ---------- CTA fixo no mobile ---------- */
+.lp-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--lp-z-sticky);
+  padding: 0.625rem var(--lp-gutter) calc(0.625rem + env(safe-area-inset-bottom));
+  background: var(--color-cards);
+  border-top: 2px solid var(--color-gelo);
+  transform: translateY(110%);
+  transition: transform var(--lp-dur-std) var(--lp-ease);
+}
+.lp-sticky[data-visible="true"] {
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .lp-sticky {
+    display: none;
+  }
+}
+@media (max-height: 479px) {
+  .lp-sticky {
+    display: none;
+  }
+}
+
+/* ---------- Skip link ---------- */
+.lp-skip {
+  position: absolute;
+  left: 8px;
+  top: -64px;
+  z-index: var(--lp-z-skip);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--color-cards);
+  border: 2px solid var(--color-mar);
+  font-weight: 700;
+}
+.lp-skip:focus {
+  top: 8px;
+}
+
+/* ---------- S-3: layout dos passos. Base = empilhado; duas colunas só com movimento ligado em >= 1024 px ---------- */
+.lp-step {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .lp-step {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  html.lp-motion .lp-scrolly-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    column-gap: 4rem;
+  }
+  html.lp-motion .lp-step {
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    gap: 0;
+  }
+  /* O texto do passo inativo esmaece; o nó e o retrato não. */
+  html.lp-motion .lp-step-body :is(h3, p) {
+    opacity: 0.7; /* >= 4,5:1 sobre o papel, nos dois temas (axe) */
+    transition: opacity var(--lp-dur-std) var(--lp-ease);
+  }
+  html.lp-motion .lp-step[data-active="true"] .lp-step-body :is(h3, p) {
+    opacity: 1;
+  }
+}
+
+/* S-5: o floco e o chip entram quando o calendário é revelado (M-10). */
+html.lp-motion .lp-cal-pop,
+html.lp-motion .lp-cal-bump {
+  opacity: 0;
+}
+html.lp-motion .is-in .lp-cal-pop {
+  animation: ft-pop-in 0.32s var(--lp-ease-bounce) 0.3s both;
+}
+html.lp-motion .is-in .lp-cal-bump {
+  opacity: 1;
+  animation: ft-bump 0.22s var(--lp-ease) 0.6s both;
+}
+
+.lp-steps > li + li {
+  margin-top: 3.5rem;
+}
+@media (min-width: 768px) {
+  .lp-steps > li + li {
+    margin-top: 4.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  html.lp-motion .lp-steps > li + li {
+    margin-top: 0;
+  }
+}
+

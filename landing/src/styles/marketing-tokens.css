@@ -1,0 +1,139 @@
+/* Marketing Design Tokens (docs/40 §12.3, §12.6, §12.8).
+   Extensões válidas SÓ dentro de landing/. Nenhuma cor nova: cores vêm de tokens.css (cópia do app). */
+
+@theme inline {
+  --font-hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+}
+
+/* Fontes decorativas (Space Mono e Caveat, ~68 kB) só entram DEPOIS do load (boot.ts põe html.lp-fonts-late):
+   não competem com o hero pela banda e não atrasam o primeiro pixel. Antes disso, cai numa fonte do sistema. */
+:root {
+  --lp-font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --lp-font-hand: "Segoe Print", "Bradley Hand", cursive;
+}
+html.lp-fonts-late {
+  --lp-font-mono: var(--font-mono);
+  --lp-font-hand: var(--font-hand);
+}
+
+:root {
+  --lp-display-xl: min(clamp(2.25rem, 1.45rem + 3.1vw, 4rem), 11.5vw);
+  --lp-display-l: min(clamp(1.875rem, 1.4rem + 2vw, 3.25rem), 9vw);
+  --lp-title: clamp(1.1875rem, 1.1rem + 0.4vw, 1.5rem);
+  --lp-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --lp-body: 1rem;
+  --lp-small: 0.875rem;
+  --lp-label: 0.75rem;
+  --lp-hand: clamp(1.25rem, 1.1rem + 0.5vw, 1.625rem);
+
+  --lp-container: 1200px;
+  --lp-gutter: 20px;
+  --lp-section-y: clamp(72px, 9vw, 144px);
+  --lp-section-gap: clamp(24px, 3vw, 40px);
+  --lp-nav-h: 56px;
+
+  /* Escala de z-index (espelha src/lib/z.ts). */
+  --lp-z-nav: 30;
+  --lp-z-sticky: 40;
+  --lp-z-skip: 50;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --lp-gutter: 32px;
+    --lp-nav-h: 72px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --lp-gutter: 40px;
+  }
+}
+
+/* Pauta: linhas de caderno bem claras. Só atrás do celular do hero, do cartão da demo e da folha final. */
+@utility lp-pauta {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 27px,
+    color-mix(in srgb, var(--color-gelo) 60%, transparent) 27px 28px
+  );
+}
+
+/* Escala tipográfica de marketing. */
+@utility lp-display-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--lp-display-xl);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+@utility lp-display-l {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--lp-display-l);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+@utility lp-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--lp-title);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+@utility lp-lead {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--lp-lead);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+@utility lp-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--lp-body);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+@utility lp-small {
+  text-wrap: pretty;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--lp-small);
+  line-height: 1.45;
+}
+@utility lp-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--lp-label);
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-mar-fundo);
+}
+@utility lp-data {
+  font-family: var(--lp-font-mono);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+@utility lp-hand {
+  font-family: var(--lp-font-hand);
+  font-weight: 600;
+  font-size: var(--lp-hand);
+  line-height: 1.15;
+  color: var(--color-abismo);
+}
+
+/* Container e medida. */
+@utility lp-container {
+  width: 100%;
+  max-width: calc(var(--lp-container) + var(--lp-gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--lp-gutter);
+}
+@utility lp-measure {
+  max-width: 60ch;
+}

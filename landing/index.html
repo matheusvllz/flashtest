@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--app-head-start-->
+    <title>Foca (dev)</title>
+    <!--app-head-end-->
+    <script>
+      /* Movimento é aprimoramento progressivo (docs/40 §13.1 item 5): estados iniciais escondidos
+         só existem com a classe lp-motion, e só se o usuário não pediu menos movimento. */
+      (function () {
+        try {
+          if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            document.documentElement.classList.add("lp-motion");
+          }
+        } catch (e) {}
+        /* Rede de segurança: se o JS de movimento não assumir em 8 s, tudo aparece sem efeito. */
+        setTimeout(function () {
+          if (!window.__lpMotionReady) document.documentElement.classList.remove("lp-motion");
+        }, 8000);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
