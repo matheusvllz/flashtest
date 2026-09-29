@@ -115,6 +115,12 @@ describe("T-05.6 — medição de setState / buildTrail / ensurePlan no estado m
     const { _resetRepositoryForTests, ensureSubjects } = await import("@/lib/content/repository");
     _resetRepositoryForTests();
     const raiz = `${import.meta.dir}/../../public`;
+    // `public/content/` é gerado e ignorado pelo Git: no CI o `bun test` roda antes do build.
+    // Gera os pacotes com o mesmo script do build (idempotente) quando ainda não existem.
+    if (!(await Bun.file(`${raiz}/content/v1/manifest.json`).exists())) {
+      const r = Bun.spawnSync(["bun", "scripts/content/build-packs.ts"], { cwd: `${import.meta.dir}/../..` });
+      if (r.exitCode !== 0) throw new Error(`build-packs falhou: ${r.stderr.toString()}`);
+    }
     globalThis.fetch = (async (url: string | URL) => {
       const arquivo = Bun.file(`${raiz}${String(url)}`);
       if (!(await arquivo.exists())) return new Response("nope", { status: 404 });
