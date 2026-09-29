@@ -9,7 +9,7 @@ export function JumpToFocusButton({ above, onJump }: { above: boolean; onJump: (
       type="button"
       onClick={onJump}
       aria-label={COPY.trilha.irParaAtual}
-      className="anim-pop-in fixed bottom-24 left-[max(1rem,calc(50%-13.75rem+1rem))] z-30 grid h-12 w-12 place-items-center rounded-full border-2 border-gelo bg-cards text-mar-fundo shadow-[0_3px_0_var(--color-gelo)] active:translate-y-[3px] active:shadow-none"
+      className="anim-pop-in anchor-col-left fixed bottom-24 z-30 grid h-12 w-12 place-items-center rounded-full border-2 border-gelo bg-cards text-mar-fundo shadow-[0_3px_0_var(--gelo)] active:translate-y-[3px] active:shadow-none lg:bottom-8"
     >
       <Icon size={20} aria-hidden="true" />
     </button>

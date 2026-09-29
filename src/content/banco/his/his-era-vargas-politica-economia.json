@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual foi o principal evento político que marcou o início da Era Vargas em 1930?",
         "opcoes": [
-          "Insurreição comunista no Rio de Janeiro",
-          "Revolução de 1930 que derrubou a República Velha",
-          "Eleição democrática que levou Vargas ao poder",
-          "Golpe militar apoiado pelo presidente Washington Luís"
+          "Insurreição comunista no Rio de Janeiro, sufocada pelo governo, que levou Vargas ao poder",
+          "Revolução de 1930, movimento armado que derrubou a República Velha e o presidente",
+          "Eleição democrática, vencida por Vargas nas urnas, que o levou à Presidência",
+          "Golpe militar apoiado pelo presidente Washington Luís, que manteve o governo"
         ],
         "correta": 1,
         "explicacao": "Em 1930, Getúlio Vargas perdeu a eleição presidencial para Júlio Prestes. Um movimento armado liderado por Minas Gerais, Rio Grande do Sul e Paraíba, com apoio de militares, depôs o presidente Washington Luís e levou Vargas ao poder: foi a Revolução de 1930, que encerrou a República Velha. Vargas não chegou ao poder por eleição, Washington Luís foi o deposto (não apoiou o movimento) e a insurreição comunista só ocorreria em 1935."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:79de5699",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-07"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +55,17 @@
         "type": "multipla-escolha",
         "pergunta": "Durante o Estado Novo, Vargas implementou políticas corporativistas que visavam controlar os sindicatos de trabalhadores. Qual era o objetivo político dessa estratégia?",
         "opcoes": [
-          "Delegar governo sindical aos próprios trabalhadores",
-          "Conceder liberdade total aos sindicatos; 1930-1937 era repressão pura",
-          "Incorporar sindicatos ao aparelho estatal como instrumentos de controle; transformava-os de organismos independentes em órgãos de propaganda e submissão",
-          "Abolir sindicatos completamente; antes existiam sem limitação"
+          "Entregar a gestão dos sindicatos aos trabalhadores, para dar autonomia à classe operária",
+          "Ampliar a liberdade de greve, para que os trabalhadores negociassem diretamente com as empresas",
+          "Integrar os sindicatos ao aparelho do Estado, para controlar os trabalhadores e divulgar o regime",
+          "Extinguir os sindicatos, para que os direitos trabalhistas dependessem de acordos com os patrões"
         ],
         "correta": 2,
         "explicacao": "Desde a Lei de Sindicalização de 1931, os sindicatos precisavam ser reconhecidos pelo Ministério do Trabalho. No Estado Novo, esse controle se aprofundou: um só sindicato por categoria, imposto sindical obrigatório e dirigentes alinhados ao governo (os 'pelegos'). O corporativismo trazia os sindicatos para dentro do Estado, que os usava para controlar os trabalhadores e divulgar o regime, suprimindo a autonomia sindical. Não houve liberdade total nem abolição dos sindicatos."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:a24b649f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +103,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual foi o principal instrumento legal através do qual Vargas centralizou o poder político durante os primeiros anos de seu governo?",
         "opcoes": [
-          "Decretos legislativos que concentravam poder no Executivo",
-          "Delegação total de poder ao Congresso Nacional",
-          "Constituição Federal de 1934 que descentralizava poder",
-          "Revogação imediata de todas as leis anteriores"
+          "Decretos com força de lei, que concentravam o poder de legislar nas mãos do Executivo federal provisório",
+          "Delegação de poderes ao Congresso Nacional, que passou a governar em nome do presidente",
+          "Constituição de 1934, que ampliou a autonomia dos estados e reduziu o poder do Executivo federal",
+          "Revogação das leis da República Velha por um ato único, com nova ordem jurídica imediata"
         ],
         "correta": 0,
-        "explicacao": "No Governo Provisório (1930-1934), Vargas fechou o Congresso, as assembleias estaduais e as câmaras municipais e passou a legislar por decretos com força de lei (o Decreto 19.398, de 1930, deu-lhe esses poderes). Também nomeou interventores para governar os estados, concentrando o poder no Executivo federal. Atenção: 'decreto-lei' é o nome do instrumento usado depois, no Estado Novo (1937-1945). A Constituição de 1934 veio justamente para reconstitucionalizar o país, e não houve revogação de todas as leis anteriores."
+        "explicacao": "No Governo Provisório (1930-1934), Vargas fechou o Congresso, as assembleias estaduais e as câmaras municipais e passou a legislar por decretos com força de lei, amparado no Decreto 19.398, de 1930. Também nomeou interventores para governar os estados, concentrando o poder no Executivo federal. O decreto-lei é o nome do instrumento usado depois, no Estado Novo. A Constituição de 1934 veio para reconstitucionalizar o país."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:ffba4a00",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -145,25 +151,25 @@
         "type": "multipla-escolha",
         "pergunta": "Durante a Era Vargas, o Brasil passou por três períodos distintos: o Governo Provisório, o Governo Constitucional e o Estado Novo. Qual fase foi marcada pelo autoritarismo explícito, supressão do Congresso Nacional e aumento do corporativismo estatal, sendo justificada pelo risco comunista?",
         "opcoes": [
-          "O Governo Constitucional (1934–1937), que restaurou a soberania do Congresso Nacional",
-          "O Governo de Transição (1945–1951), que buscou a redemocratização gradual",
-          "O Estado Novo (1937–1945), com o golpe que suspendeu o Congresso e centralizou poderes na Presidência",
-          "O Governo Provisório (1930–1934), que marcou a volta à democracia liberal anterior"
+          "O Governo Constitucional, de 1934 a 1937, que restaurou o poder do Congresso Nacional e a autonomia dos estados",
+          "O governo Dutra, de 1946 a 1951, que buscou a redemocratização gradual do país",
+          "O Estado Novo, de 1937 a 1945, iniciado com o golpe que fechou o Congresso e centralizou o poder",
+          "O Governo Provisório, de 1930 a 1934, que restabeleceu a democracia liberal da República Velha"
         ],
         "correta": 2,
-        "explicacao": "O Estado Novo (1937-1945) foi a fase mais autoritária da Era Vargas, marcada pelo golpe de 1937, supressão do Congresso, censura à imprensa e organização corporativista do Estado. Vargas justificou essas medidas como defesa contra a ameaça comunista, mas consolidou uma ditadura que durou oito anos. As outras alternativas descrevem períodos diferentes: o Provisório foi de transição, o Constitucional tentou democratizar com a Constituição de 1934, e 1945-1951 marca o fim do Estado Novo e início da redemocratização."
+        "explicacao": "O Estado Novo (1937-1945) foi a fase mais autoritária da Era Vargas: golpe de 1937, fechamento do Congresso, censura à imprensa e organização corporativista do Estado. Vargas justificou as medidas pela ameaça comunista. O Governo Provisório foi uma fase de exceção antes da Constituição de 1934, o Constitucional tentou democratizar o país com ela, e o período de 1945 a 1951 já é o da redemocratização."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:6f80c43a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:34:48.432Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -191,25 +199,25 @@
         "type": "multipla-escolha",
         "pergunta": "A Era Vargas (1930-1945) trouxe grandes mudanças na política econômica brasileira. Qual das políticas abaixo foi um resultado direto da Grande Depressão de 1929 e da necessidade de proteger a economia nacional?",
         "opcoes": [
-          "A abolição de todas as tarifas alfandegárias entre o Brasil e o exterior",
-          "A criação de uma moeda única com os países sul-americanos para facilitar comércio",
-          "A abertura total do mercado interno para importações de café e açúcar",
-          "A política de valorização do café, incluindo a compra e destruição de excedentes para manter os preços"
+          "Redução das tarifas alfandegárias, para facilitar a entrada de produtos estrangeiros durante a crise",
+          "Criação de uma moeda comum com os países sul-americanos, para facilitar o comércio na região",
+          "Fim da intervenção do Estado na economia, deixando o mercado ajustar sozinho os preços do café",
+          "Política de valorização do café, com compra e destruição de excedentes para sustentar os preços"
         ],
         "correta": 3,
-        "explicacao": "Vargas manteve a política de valorização do café, que envolvia compra estatal de excedentes e controle de preços, evitando o colapso agrário. Essa medida tinha raízes na Primeira República, mas foi intensificada durante a crise de 1929. O objetivo era proteger a principal fonte de divisas do Brasil e evitar o desastre econômico. As outras alternativas descrevem o contrário: abertura de mercado, abolição de tarifas e moeda comum não foram políticas de Vargas, que era protecionista."
+        "explicacao": "Vargas manteve a política de valorização do café, que envolvia a compra estatal de excedentes e o controle de preços, evitando o colapso agrário. Ela vinha da Primeira República, mas foi intensificada com a crise de 1929. O objetivo era proteger a principal fonte de divisas do Brasil. As outras opções descrevem abertura de mercado, queda de tarifas e moeda comum, que não foram políticas de Vargas, protecionista."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:b718ba87",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:34:48.433Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -237,25 +247,25 @@
         "type": "multipla-escolha",
         "pergunta": "Getúlio Vargas governou o Brasil em fases distintas: a primeira fase (1930-1934) marca a chegada ao poder e o início das reformas; a segunda fase (1934-1937) é o governo constitucional; e a terceira fase (1937-1945) é o Estado Novo, com poder centralizado e repressão política. Qual característica marca a diferença entre o período constitucional e o Estado Novo?",
         "opcoes": [
-          "No período constitucional havia eleições; no Estado Novo havia autocracia e fechamento do Congresso",
-          "O Estado Novo beneficiou mais a classe trabalhadora do que o período constitucional",
-          "No período constitucional não havia políticas de industrialização",
-          "O Estado Novo eliminou completamente a influência das Forças Armadas"
+          "No período constitucional havia eleições; no Estado Novo, autocracia e fechamento do Congresso",
+          "O Estado Novo beneficiou mais a classe trabalhadora, com sindicatos independentes e direito de greve",
+          "Não houve políticas de industrialização no período constitucional, que só surgiram no Estado Novo",
+          "O Estado Novo reduziu a influência das Forças Armadas, que passaram a obedecer ao Congresso"
         ],
         "correta": 0,
         "explicacao": "O período constitucional (1934-1937) tinha um congresso eleito e mecanismos formais de democracia, ainda que limitados. O Estado Novo (1937-1945) fechou o Congresso, eliminou eleições, concentrou poder em Getúlio e usou repressão policial-militar contra opositores. Vargas justificava tudo como proteção contra comunismo e anarquia."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:5534039d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-07"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +295,25 @@
         "type": "multipla-escolha",
         "pergunta": "Durante o primeiro governo Vargas (1930-1934), o presidente implementou políticas de proteção ao trabalho urbano: regulamentou jornada de trabalho, criou sindicatos corporativistas subordinados ao Estado, e estabeleceu direitos trabalhistas. Que objetivo político Vargas buscava com essas políticas?",
         "opcoes": [
-          "Eliminar completamente a classe capitalista do Brasil",
-          "Cooptar a classe trabalhadora urbana, garantindo direitos mas mantendo controle estatal sobre sindicatos e movimentos",
-          "Preparar o Brasil para uma revolução socialista inevitável",
-          "Redistribuir igualmente toda a riqueza da nação"
+          "Eliminar o poder da classe empresarial e transferir o controle das fábricas e das terras aos próprios trabalhadores",
+          "Ganhar o apoio dos trabalhadores urbanos, dando direitos, mas mantendo os sindicatos sob controle do Estado",
+          "Preparar o país para uma revolução socialista, com base na organização independente da classe operária",
+          "Reduzir as desigualdades sociais dividindo a riqueza do país entre patrões e empregados"
         ],
         "correta": 1,
         "explicacao": "As políticas trabalhistas de Vargas tinham dois objetivos: conceder benefícios reais aos trabalhadores urbanos (criando lealdade política) e subordinar sindicatos ao Estado corporativista (eliminando autonomia e potencial revolucionário). Era paternalismo autoritário: proteção com controle. Não era comunismo nem socialismo, era capitalismo de Estado com manipulação política."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:82a6c68e",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +343,17 @@
         "type": "multipla-escolha",
         "pergunta": "A Era Vargas (1930-1954) teve diferentes fases, incluindo o Estado Novo (1937-1945). Qual evento internacional teve impacto direto nas políticas de Getúlio Vargas durante o Estado Novo, influenciando sua orientação inicial em relação a potências internacionais?",
         "opcoes": [
-          "A Guerra da Coreia iniciada em 1950",
-          "A vitória da Revolução Chinesa de 1949",
-          "A ascensão do nazifascismo europeu nos anos 1930-1940 e a Segunda Guerra Mundial",
-          "A criação das Nações Unidas em 1945"
+          "A Guerra da Coreia, iniciada em 1950, que dividiu o mundo em blocos",
+          "A Revolução Chinesa de 1949, que ampliou a influência soviética na Ásia",
+          "A ascensão do nazifascismo na Europa e a eclosão da Segunda Guerra Mundial",
+          "A criação da ONU em 1945, que passou a arbitrar os conflitos entre nações"
         ],
         "correta": 2,
         "explicacao": "O Estado Novo (1937-1945) coincidiu com o regime nazista alemão e o fascismo italiano. Vargas admirava aspectos do autoritarismo europeu e inicialmente flertou com o Eixo (Alemanha/Itália), mas no final se alinhava com os Aliados em 1942 após pressão dos EUA e da opinião pública. Esse contexto internacional influenciou as políticas de centralização e repressão internas."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:684c502c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
@@ -347,7 +361,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -375,17 +391,17 @@
         "type": "multipla-escolha",
         "pergunta": "Durante as diferentes fases da Era Vargas, qual continuidade política e econômica se manteve constante, independentemente de ser período constitucional ou Estado Novo?",
         "opcoes": [
-          "Retorno completo do poder político para elites oligárquicas estaduais",
-          "Abertura total da economia a investimentos estrangeiros",
-          "Eliminação de toda regulação sobre a economia e trabalho",
-          "Poder presidencial centralizado e industrialização incentivada pelo Estado"
+          "Retorno do poder político às elites oligárquicas estaduais, com a autonomia que tinham na República Velha",
+          "Abertura da economia aos investimentos estrangeiros, sem restrições e sem participação do Estado",
+          "Fim da regulação da economia e do trabalho, deixando as relações entre patrões e empregados ao mercado",
+          "Poder presidencial centralizado e industrialização incentivada pelo Estado, com empresas estatais"
         ],
         "correta": 3,
-        "explicacao": "Independentemente da fase, Vargas manteve forte centralização do poder na figura presidencial e promoveu industrialização como projeto de Estado, criando empresas estatais (Vale, Petrobras preparava-se). Essa foi sua marca: usar poder centralizado para transformar a economia. Elites locais perderam autonomia em favor do poder central."
+        "explicacao": "Independentemente da fase, Vargas manteve forte centralização do poder na figura presidencial e promoveu a industrialização como projeto de Estado, criando empresas estatais como a CSN (1941) e a Vale (1942). Essa foi sua marca: usar o poder centralizado para transformar a economia. As elites locais perderam autonomia em favor do poder central."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:e2ff8855",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
@@ -393,7 +409,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -421,25 +439,25 @@
         "type": "multipla-escolha",
         "pergunta": "O Estado Novo (1937-1945) usou uma propaganda de Estado muito eficiente para consolidar poder, controlava a imprensa, e criava uma narrativa de 'Brasil uno e indivisível'. Qual era o objetivo político dessa propaganda intensiva?",
         "opcoes": [
-          "Construir consenso em torno da figura presidencial, legitimar o regime autoritário, e suprimir críticas disseminando uma ideologia nacionalista",
-          "Preparar o Brasil apenas para defender seu território contra invasões externas",
-          "Educar a população para reconhecer e combater o autoritarismo estatal",
-          "Informar a população sobre políticas públicas de forma transparente"
+          "Construir consenso em torno do presidente, legitimar o regime e abafar as críticas com um discurso nacionalista",
+          "Preparar o país para defender o território contra invasões externas durante a Segunda Guerra Mundial",
+          "Educar a população para reconhecer e combater o autoritarismo do Estado, formando cidadãos críticos",
+          "Informar a população sobre as políticas públicas de forma transparente e aberta ao debate político"
         ],
         "correta": 0,
-        "explicacao": "A propaganda varguista criava o mito de Getúlio como pai dos pobres e protetor da nação. Criava identidade nacional única sob comando central, marginalizava dissentes como inimigos da pátria e usava símbolos e rituais para naturalizar o poder presidencial. Em regimes totalitários, propaganda serve ao controle político, não à transparência."
+        "explicacao": "A propaganda varguista criava o mito de Getúlio como pai dos pobres e protetor da nação. Criava identidade nacional única sob comando central, marginalizava dissentes como inimigos da pátria e usava símbolos e rituais para naturalizar o poder presidencial. Em regimes autoritários, a propaganda serve ao controle político, não à transparência."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:a4302d79",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +472,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -465,27 +485,27 @@
       "id": "gen:his:era-vargas-politica-economia:2e836843",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Historicamente, o fim da Era Vargas em 1954 foi marcado pela sua morte em suicídio, ocorrida durante uma crise política. Qual combinação de fatores contribuiu para essa crise final?",
+        "pergunta": "O fim da Era Vargas, em 1954, foi marcado pelo suicídio do presidente durante uma crise política. Qual combinação de fatores contribuiu para essa crise final?",
         "opcoes": [
-          "Sucesso econômico total e apoio unânime das Forças Armadas",
-          "Oposição crescente de setores conservadores e militares, pressão pela renuncia, e posição política cada vez mais isolada",
-          "Falta de interesse de Getúlio em continuar no poder",
-          "Uma invasão militar estrangeira que o forçou a deixar o cargo"
+          "Crescimento econômico acelerado e apoio das Forças Armadas, o que levou Vargas a deixar o governo",
+          "Oposição crescente de conservadores e militares, pressão pela renúncia e isolamento político cada vez maior",
+          "Perda de interesse de Vargas em continuar no poder, o que o levou a deixar o governo por vontade própria",
+          "Conflito com os Estados Unidos, que apoiaram uma intervenção armada para depô-lo e o obrigaram a sair"
         ],
         "correta": 1,
         "explicacao": "Nos últimos anos de Vargas (1951-1954), a inflação, o desemprego, e conflitos econômicos isolaram politicamente Getúlio. Setores conservadores, militares, e imprensa começaram a se voltar contra ele. Sob pressão intensa para renunciar, Vargas preferiu o suicídio, deixando uma carta que o pintava como vítima de conspiradores. Seu fim refletia a fragilidade política do regime."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:2e836843",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +520,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -513,25 +535,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual foi uma das principais diferenças entre as políticas trabalhistas dos períodos constitucional (1934-1937) e Estado Novo (1937-1945) da Era Vargas?",
         "opcoes": [
-          "Nos dois períodos as políticas trabalhistas eram idênticas",
-          "No período constitucional havia ausência total de direitos trabalhistas",
-          "No período constitucional havia maior liberdade de organização sindical, enquanto no Estado Novo os sindicatos eram completamente corporativistas e controlados pelo Estado",
-          "O Estado Novo oferecia mais benefícios aos trabalhadores do que o período constitucional"
+          "Nos dois períodos as políticas trabalhistas eram iguais, com sindicatos atrelados ao Estado e sem liberdade de organização",
+          "No período constitucional não havia direitos trabalhistas, que só surgiram com a ditadura do Estado Novo",
+          "No período constitucional havia mais liberdade sindical; no Estado Novo os sindicatos passaram ao controle estatal",
+          "O Estado Novo ofereceu mais benefícios aos trabalhadores e ampliou a autonomia dos sindicatos"
         ],
         "correta": 2,
         "explicacao": "No período constitucional havia pluralidade e lutas por direitos trabalhistas com sindicatos mais independentes. O Estado Novo intensificou o corporativismo: sindicatos viravam pelegos (liderados por homens de confiança do regime), controlados pelo Ministério do Trabalho e usados para cooptar em vez de representar trabalhadores."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:4f6eedc9",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +568,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -559,25 +583,25 @@
         "type": "multipla-escolha",
         "pergunta": "Durante os anos 1930-1945, Getúlio Vargas implementou reformas que se tornaram populares entre trabalhadores urbanos, mas mantinha rigoroso controle político-repressivo. Como historiadores caracterizam essa combinação de políticas?",
         "opcoes": [
-          "Capitalismo liberal sem interferência estatal",
-          "Democracia plena e igualdade social garantida",
-          "Totalitarismo com distribuição equitativa de riqueza",
-          "Autoritarismo corporativista: concessão de direitos sociais combinada com supressão de liberdades políticas e controle estatal"
+          "Liberalismo econômico e político, com pouca intervenção do Estado na economia e nos sindicatos e liberdade de imprensa",
+          "Democracia representativa, com direitos sociais garantidos e ampla liberdade de oposição",
+          "Socialismo de Estado, com propriedade coletiva dos meios de produção e igualdade de renda",
+          "Autoritarismo corporativista, que combinava direitos sociais com restrição das liberdades políticas"
         ],
         "correta": 3,
         "explicacao": "O regime varguista oferecia proteção trabalhista, benefícios e inclusão (aparente) de trabalhadores, mas reprimia oposição política, controlava sindicatos, fechava o congresso e usava polícia política. Era paternalismo autoritário: trabalhadores ganhavam direitos mas perdiam autonomia política. Essa fórmula conquistava apoio das classes populares enquanto consolidava poder autocrático."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:d94def43",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +616,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -606,24 +632,24 @@
         "pergunta": "Um dos legados políticos mais importantes de Getúlio Vargas foi a consolidação de um Estado centralizador. Qual instituição exemplificava melhor essa centralização nos anos 1930-1940?",
         "opcoes": [
           "O Ministério do Trabalho e os sindicatos corporativistas, ambos subordinados ao poder central",
-          "As assembleias estaduais com poder de decisão independente",
-          "O Congresso Nacional com poder legislativo autônomo",
-          "As oligarquias estaduais mantendo poder local tradicional sem interferência federal"
+          "As assembleias estaduais, que mantinham o poder de decidir sobre os assuntos de cada estado do país",
+          "O Congresso Nacional, que legislava de forma autônoma e fiscalizava os atos do presidente",
+          "As oligarquias estaduais, que mantinham o poder local sem interferência do governo federal"
         ],
         "correta": 0,
-        "explicacao": "O Ministério do Trabalho (criado por Getúlio) e os sindicatos corporativistas sob seu comando exemplificavam a centralização varguista. Estados perderam autonomia; sindicatos perderam independência. O poder fluxava de cima para baixo: Palácio do Planalto → Ministério → sindicatos → trabalhadores. Isso era inédito na República Brasileira pré-1930."
+        "explicacao": "O Ministério do Trabalho (criado por Getúlio) e os sindicatos corporativistas sob seu comando exemplificavam a centralização varguista. Estados perderam autonomia; sindicatos perderam independência. O poder fluía de cima para baixo: Palácio do Catete, Ministério, sindicatos, trabalhadores. Isso era inédito na República brasileira anterior a 1930."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:cd9762a0",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +664,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -651,17 +679,17 @@
         "type": "multipla-escolha",
         "pergunta": "Qual evento político marca o início da Era Vargas em 1930 e contextualizou a posição de Getúlio Vargas como figura central do Estado?",
         "opcoes": [
-          "Uma invasão estrangeira que colocou Getúlio como mediador",
-          "Uma eleição presidencial plenamente democrática com vitória apertada",
-          "Um golpe militar liderado por Getúlio, apoiado por setores do Exército e oligarquias regionais dissidentes, que derrubou a República Oligárquica",
-          "Uma revolução popular espontânea que pediu Getúlio para governo"
+          "A Revolta Paulista de 1932, que levou Vargas ao governo federal depois de vencer os paulistas",
+          "Uma eleição direta e sem fraude, em que Vargas venceu Júlio Prestes por pequena margem",
+          "Um movimento armado da Aliança Liberal, apoiado por militares e oligarquias dissidentes, que levou Vargas ao poder",
+          "Uma revolução popular espontânea, sem participação de militares, que pediu a Vargas que assumisse o governo do país inteiro"
         ],
         "correta": 2,
-        "explicacao": "Getúlio chegou ao poder via golpe militar em 1930, não por eleição. O golpe teve apoio de militares inconformistas (Tenentismo), oligarquias estaduais rivais da hegemonia paulista e setores urbanos. O golpe derrubou a República Velha (1889-1930) e iniciou um novo regime mais centralista, ainda que instável até o Estado Novo de 1937."
+        "explicacao": "A Revolução de 1930 foi um movimento armado da Aliança Liberal, que contestou a vitória de Júlio Prestes na eleição de março. Teve o apoio de tenentes, de outros militares e de oligarquias estaduais rivais da hegemonia paulista. Depôs Washington Luís, entregou o poder a Vargas e encerrou a República Velha, iniciando um regime mais centralizado, consolidado no Estado Novo de 1937."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:da44d210",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
@@ -669,7 +697,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +712,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -697,17 +727,17 @@
         "type": "multipla-escolha",
         "pergunta": "Comparando a Era Vargas (1930-1954) com a República Velha (1889-1930) que a precedeu, qual transformação institucional foi mais significativa?",
         "opcoes": [
-          "A abolição de todas as instituições governamentais federais",
-          "O aumento de democracia e participação política universal",
-          "A substituição de poder centralizado por descentralização completa nos estados",
-          "A transição de oligarquia regional descentralizada (coronelismo, política dos governadores) para um Estado centralizado com poder presidencial forte"
+          "A extinção das instituições governamentais federais, com transferência do poder aos estados",
+          "A ampliação da democracia, com participação política livre e universal desde 1930",
+          "A substituição do poder central por maior autonomia política, administrativa e financeira dos estados",
+          "A passagem de um poder oligárquico regional para um Estado centralizado, com presidente forte"
         ],
         "correta": 3,
-        "explicacao": "A República Velha era descentralizada: oligarquias estaduais (coronelismo) dominavam localmente e o poder federal era dividido em política dos governadores. Vargas centralizou o Estado, diminuindo autonomia estadual e subordinando sindicatos e sociedade civil ao poder presidencial. Essa mudança foi estrutural e transformou o Estado brasileiro moderno."
+        "explicacao": "Na República Velha, as oligarquias estaduais dominavam a política pelo coronelismo e pela política dos governadores, com pouco controle federal sobre os estados. Vargas centralizou o Estado: nomeou interventores, reduziu a autonomia estadual e subordinou sindicatos e sociedade civil ao poder presidencial. Foi uma mudança estrutural."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:d5cee279",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
@@ -715,7 +745,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -730,7 +760,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -743,17 +775,17 @@
         "type": "multipla-escolha",
         "pergunta": "Qual foi uma das continuidades entre a República Velha (1889-1930) e a Era Vargas (1930-1954), apesar das mudanças institucionais?",
         "opcoes": [
-          "A manutenção de economia agroexportadora predominante, embora a industrialização começasse a ser incentivada sob Vargas",
-          "A eliminação completa de influência militar nas decisões políticas",
-          "A abertura irrestrita do Brasil para investimentos estrangeiros",
-          "O fortalecimento imediato de instituições democráticas e direitos civis para toda a população"
+          "A manutenção da economia agroexportadora como base, mesmo com o incentivo à industrialização",
+          "A ausência de influência das Forças Armadas nas decisões políticas do país",
+          "A abertura irrestrita do Brasil aos investimentos estrangeiros em qualquer setor",
+          "O fortalecimento imediato das instituições democráticas e dos direitos civis da população urbana e rural"
         ],
         "correta": 0,
         "explicacao": "Apesar de Vargas promover industrialização e modernização, o Brasil continuava dependente de exportação agrícola (café, algodão, açúcar) e matérias-primas nos anos 1930-1945. A industrialização era seletiva e estatal, não substituição completa. A estrutura econômica agrária-exportadora continuava dominante, com nova dinâmica política (centralismo)."
       },
       "meta": {
         "id": "gen:his:era-vargas-politica-economia:191a466b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:era-vargas-politica-economia"
         ],
@@ -761,7 +793,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -776,7 +808,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"

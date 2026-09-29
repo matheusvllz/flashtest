@@ -27,7 +27,7 @@ export function TrailSkeleton() {
 /** Só o caminho de nós — usado dentro do mapa enquanto o pacote da matéria carrega (docs/30 §21.3: nó "carregando", nunca some). */
 export function TrailPathSkeleton() {
   return (
-    <ol className="path-list" aria-hidden="true" data-path-skeleton>
+    <ol className="path-list mx-auto max-w-[calc(var(--path-col)-2.5rem)]" aria-hidden="true" data-path-skeleton>
       {[0, 1, 2, 3, 4, 5].map((i) => (
         <li key={i} className="path-row" style={rowStyle(pathK(i), false)}>
           <div className="path-row-node">

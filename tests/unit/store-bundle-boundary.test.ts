@@ -30,6 +30,32 @@ test("src/lib/store.ts não importa módulos de conteúdo pesado (docs/30 §21.3
   }
 });
 
+/**
+ * docs/36 T-01.3 (E3): os comentários de `store.ts` prometem que o motor
+ * adaptativo de plano/nivelamento (que puxa o catálogo de conteúdo) nunca é
+ * importado pelo store — só os módulos PUROS (`model`, `constants`,
+ * `placement`, `types`), e o `bootstrap` por `import()` dinâmico. A regra
+ * agora é checada, não só comentada. Só `from` estático é proibido: o
+ * `import("@/lib/adaptive/bootstrap")` dinâmico é intencional e não casa.
+ */
+const PROIBIDOS_ADAPTIVE_E_CATALOGO = [
+  /from\s+["']@\/lib\/adaptive\/journey["']/,
+  /from\s+["']@\/lib\/adaptive\/index["']/,
+  /from\s+["']@\/lib\/adaptive["']/, // barrel
+  /from\s+["']@\/lib\/adaptive\/placement-pool["']/,
+  /from\s+["']@\/lib\/adaptive\/candidates["']/,
+  /from\s+["']@\/lib\/adaptive\/planner["']/,
+  /from\s+["']@\/content\/curriculum-tree["']/,
+  /from\s+["']@\/content\/banco(\/[^"']*)?["']/,
+];
+
+test("src/lib/store.ts não importa journey/index/barrel/placement-pool/candidates/planner nem curriculum-tree/banco (docs/36 T-01.3)", () => {
+  const fonte = readFileSync("src/lib/store.ts", "utf-8");
+  for (const padrao of PROIBIDOS_ADAPTIVE_E_CATALOGO) {
+    expect(padrao.test(fonte), `store.ts não pode importar de ${padrao}`).toBe(false);
+  }
+});
+
 describe("mesma regra pros outros arquivos importados por AppShell", () => {
   test("AppShell.tsx não importa @/content/trilhas nem @/content/microlicoes diretamente", () => {
     const fonte = readFileSync("src/components/AppShell.tsx", "utf-8");

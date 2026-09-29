@@ -27,7 +27,7 @@ export function GoalRing({ value, max, size = 72 }: { value: number; max: number
           cy={size / 2}
           r={r}
           fill="none"
-          stroke="var(--color-gelo)"
+          stroke="var(--gelo)"
           strokeWidth={stroke}
         />
         <circle
@@ -35,7 +35,7 @@ export function GoalRing({ value, max, size = 72 }: { value: number; max: number
           cy={size / 2}
           r={r}
           fill="none"
-          stroke={done ? "var(--color-recompensa)" : "var(--color-mar)"}
+          stroke={done ? "var(--alert)" : "var(--mar)"}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeDasharray={circumference}

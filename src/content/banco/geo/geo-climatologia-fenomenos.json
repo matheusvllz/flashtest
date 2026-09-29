@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "O efeito estufa é um fenômeno natural essencial para a vida na Terra. Qual é sua principal característica?",
         "opcoes": [
-          "Diminui a radiação solar que chega ao planeta",
-          "Reduz a temperatura média do planeta",
+          "Diminui a radiação solar que chega ao planeta, como um filtro",
+          "Reduz a temperatura média do planeta, ao refletir a luz do Sol",
           "Gases atmosféricos retêm o calor irradiado pela superfície terrestre",
-          "Aumenta a quantidade de ozônio na atmosfera"
+          "Aumenta a quantidade de ozônio na atmosfera e protege a Terra do calor solar"
         ],
         "correta": 2,
         "explicacao": "O efeito estufa funciona assim: gases como vapor d'água e dióxido de carbono absorvem a radiação infravermelha emitida pela superfície aquecida e devolvem parte dela, impedindo que todo esse calor escape pro espaço. Sem esse fenômeno natural, a Terra seria muito mais fria e inabitável."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:b651838c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -55,7 +57,7 @@
         "opcoes": [
           "Mar Mediterrâneo",
           "Oceano Índico",
-          "Oceano Atlântico Norte",
+          "Oceano Atlântico Norte, no Caribe",
           "Oceano Pacífico Equatorial"
         ],
         "correta": 3,
@@ -63,15 +65,15 @@
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:a096e28b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +103,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual dos seguintes é um impacto direto do aumento do efeito estufa amplificado pela ação humana?",
         "opcoes": [
-          "Redução das temperaturas médias globais",
-          "Elevação do nível do mar devido ao derretimento de gelo polar",
-          "Diminuição da radiação ultravioleta que atinge a Terra",
-          "Aumento da camada de ozônio na estratosfera"
+          "Redução das temperaturas médias globais, porque os gases refletem a luz solar",
+          "Elevação do nível do mar devido ao derretimento do gelo polar e das geleiras",
+          "Diminuição da radiação ultravioleta que atinge a Terra, por causa dos gases estufa",
+          "Aumento da camada de ozônio na estratosfera, com maior proteção contra o calor"
         ],
         "correta": 1,
         "explicacao": "O aquecimento global causado pela intensificação do efeito estufa derrete grandes massas de gelo nas calotas polares e glaciares. A água do derretimento flui pros oceanos, elevando o nível do mar e ameaçando cidades costeiras no mundo todo."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:1d539c60",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -145,9 +151,9 @@
         "type": "multipla-escolha",
         "pergunta": "A chuva ácida deposita ácidos em lagos e solos, causando acidificação. Qual é a consequência ecológica mais grave desse processo em ambientes aquáticos?",
         "opcoes": [
-          "Aumento da eutrofização marinha",
-          "Elevação do nível de oxigênio dissolvido",
-          "Maior reprodução de peixes de água doce",
+          "Aumento da eutrofização marinha, que sufoca os peixes por falta de luz",
+          "Elevação do oxigênio dissolvido, que favorece a proliferação de algas",
+          "Maior reprodução de peixes de água doce, que se adaptam melhor à acidez",
           "Morte de espécies sensíveis e redução da biodiversidade aquática"
         ],
         "correta": 3,
@@ -155,7 +161,7 @@
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:c8c225bc",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
@@ -163,7 +169,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +199,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um país desenvolve indústrias pesadas sem controle de emissões, lançando quantidades crescentes de óxido de nitrogênio na atmosfera. Qual é a escala geográfica do impacto causado pela poluição resultante?",
         "opcoes": [
-          "Somente o país emissor de poluentes",
-          "Transfronteiriça, alcançando regiões distantes através das correntes atmosféricas",
-          "Apenas a camada de ozônio estratosférica",
-          "Apenas o bairro industrial onde as fábricas estão localizadas"
+          "Local, restrita ao país emissor, porque os poluentes se depositam onde são lançados",
+          "Transfronteiriça, pois os poluentes viajam pelas correntes atmosféricas e atingem regiões distantes",
+          "Global e uniforme, com o mesmo efeito em qualquer região, sem depender do local de emissão",
+          "Restrita à área industrial do entorno, porque os gases pesados permanecem perto das fábricas"
         ],
         "correta": 1,
         "explicacao": "Os óxidos de nitrogênio são transportados pelas correntes atmosféricas, os ventos, pra regiões bem distantes do ponto de emissão. Ao reagirem na atmosfera, formam chuva ácida que cai em países vizinhos ou continentes inteiros. Mostra como a poluição atmosférica não respeita limites políticos."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:c5481be2",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -237,25 +247,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um modelo climático projeta que a intensificação do efeito estufa alterará a Célula de Hadley, responsável pela circulação atmosférica tropical. Qual seria o impacto na distribuição de chuvas nas regiões subtropicais?",
         "opcoes": [
-          "Expansão dos desertos subtropicais para latitudes mais altas, com redução de chuvas",
-          "Desaparecimento total dos padrões de chuva subtropical",
-          "Intensificação dos furacões em regiões equatoriais apenas",
-          "Aumento uniforme e equilibrado em toda a zona subtropical"
+          "Deslocamento dos cinturões secos para latitudes mais altas, com menos chuva em regiões subtropicais",
+          "Aumento das chuvas nos desertos subtropicais, porque o ar mais quente carrega mais umidade até essas regiões",
+          "Deslocamento dos cinturões secos para o Equador, o que reduziria as chuvas na faixa tropical",
+          "Manutenção do padrão atual, porque a Célula de Hadley não responde ao aquecimento da atmosfera"
         ],
         "correta": 0,
         "explicacao": "A expansão da Célula de Hadley aquecida desloca os cinturões de pressão (as altas pressões subtropicais) pra latitudes maiores. Regiões que hoje recebem chuva moderada podem virar áridas. Esse deslocamento já está sendo documentado em dados observacionais recentes, confirmando projeções de modelos climáticos."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:06335b6a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +295,25 @@
         "type": "multipla-escolha",
         "pergunta": "Análises de núcleos de gelo antigo mostram que durante as últimas glaciações, a concentração de dióxido de carbono era de cerca de 180 ppm. Atualmente, ela ultrapassa 420 ppm. Qual é a implicação dessa mudança para o balanço de energia do planeta?",
         "opcoes": [
-          "O planeta absorve menos radiação infravermelha do que durante as glaciações",
-          "A retenção de calor na atmosfera é significativamente maior, acelerando o aquecimento",
-          "A capacidade de escape de calor para o espaço aumentou proporcionalmente",
-          "O ciclo do carbono inverteu-se completamente"
+          "O planeta absorve menos radiação infravermelha do que durante as glaciações, e esfria",
+          "A retenção de calor na atmosfera é bem maior, o que acelera o aquecimento do planeta",
+          "A capacidade de escape de calor para o espaço aumentou na mesma proporção do CO2",
+          "O ciclo do carbono se inverteu, e os oceanos passaram a liberar todo o CO2 que absorviam"
         ],
         "correta": 1,
         "explicacao": "Cada molécula de CO2 absorve radiação infravermelha em comprimentos de onda específicos. Com concentração cerca de 2,3 vezes maior que no passado glacial, a atmosfera retém muito mais calor. Esse aumento, combinado com outros gases estufa, intensifica o desequilíbrio radiativo do planeta."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:77710338",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -327,27 +341,27 @@
       "id": "gen:geo:climatologia-fenomenos:051d07c8",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Estudos indicam que a chuva ácida favorece a lixiviação de alumínio tóxico do solo, que é absorvido por raízes de árvores. Qual cadeia de consequências geológico-ecológicas segue?",
+        "pergunta": "Estudos indicam que a chuva ácida favorece a lixiviação de alumínio tóxico do solo, que é absorvido pelas raízes das árvores. Qual cadeia de consequências ecológicas se segue?",
         "opcoes": [
-          "Mudança da composição geológica das rochas metamórficas",
-          "Aumento da produtividade florestal e melhor crescimento das árvores",
-          "Redução da disponibilidade de nutrientes essenciais e dano celular radicular, fragilizando as árvores",
-          "Aumento exclusivo de fungos benéficos nas raízes"
+          "Mudança na composição das rochas metamórficas do subsolo, que passam a reter nutrientes",
+          "Aumento da produtividade florestal, pois o alumínio funciona como adubo para as árvores",
+          "Redução dos nutrientes disponíveis e dano às células das raízes, o que fragiliza as árvores",
+          "Proliferação de fungos benéficos nas raízes, que neutralizam o alumínio e protegem a mata"
         ],
         "correta": 2,
         "explicacao": "O alumínio tóxico interfere na absorção de nutrientes e danifica as membranas celulares das raízes. Árvores submetidas a essa toxicidade apresentam crescimento reduzido, menor resistência a seca e vulnerabilidade a pragas. Esse dano em escala florestal inteira compromete a resiliência de ecossistemas florestais."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:051d07c8",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +391,25 @@
         "type": "multipla-escolha",
         "pergunta": "A Oscilação do Atlântico Norte (NAO) é um índice que descreve a variabilidade de pressão atmosférica no oceano Atlântico. Como essa oscilação afeta o clima europeu?",
         "opcoes": [
-          "Controla exclusivamente as erupções vulcânicas na região",
-          "Determina o número de dias com chuva exatamente",
-          "Reduz o tamanho da camada de gelo ártico",
-          "Modifica a intensidade do fluxo de ar frio e quente entre o Atlântico e a Europa"
+          "Controla as erupções vulcânicas da Islândia, que esfriam ou aquecem o clima europeu",
+          "Determina o número exato de dias de chuva em cada país europeu, ano após ano",
+          "Reduz o tamanho da camada de gelo do Ártico, o que altera as chuvas europeias",
+          "Modifica a intensidade do fluxo de ar quente e frio do Atlântico para a Europa"
         ],
         "correta": 3,
         "explicacao": "Quando a NAO está em fase positiva, aumentam as diferenças de pressão e intensifica-se o transporte de ar quente e úmido pra Europa, causando invernos mais suaves. Em fase negativa, o ar frio domina. Essa oscilação é um dos principais fatores de variabilidade climática multianual europeia."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:43421d9a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -421,25 +439,25 @@
         "type": "multipla-escolha",
         "pergunta": "A convecção profunda nas regiões polares é essencial para a circulação oceânica global. Por qual motivo o aumento de água doce (degelo) compromete esse processo?",
         "opcoes": [
-          "A água doce reduz a salinidade, diminuindo a densidade e o afundamento",
-          "A temperatura não sofre alteração com água doce",
-          "O aumento de água doce intensifica o congelamento",
-          "A água doce é mais densa e afunda rapidamente"
+          "A água doce reduz a salinidade da superfície, diminuindo a densidade e o afundamento",
+          "A água doce aumenta a salinidade da superfície, o que acelera o afundamento",
+          "O aumento de água doce intensifica o congelamento e bloqueia as correntes marinhas com gelo",
+          "A água doce é mais densa que a salgada e afunda rápido, esvaziando a superfície"
         ],
         "correta": 0,
         "explicacao": "Água salgada é mais densa que água doce. Quando volumes crescentes de gelo derretem, adicionam água doce aos oceanos polares, reduzindo a salinidade regional. Com menor densidade, essa água não afunda pra formar a água profunda que alimenta a circulação termohalina global."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:5034015f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +472,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -467,25 +487,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma comunidade costeira enfrenta problemas de inundação causados pela elevação do nível do mar. Qual é a principal causa dessa elevação no contexto da mudança climática atual?",
         "opcoes": [
-          "Aumento de precipitação concentrada nos continentes",
-          "Expansão térmica da água do oceano e derretimento de capas de gelo",
-          "Redução da salinidade dos oceanos",
-          "Diminuição da evaporação oceânica"
+          "Aumento das chuvas concentradas nos continentes, que enchem os rios e transbordam para o mar",
+          "Expansão térmica da água do oceano e derretimento das capas de gelo sobre os continentes",
+          "Redução da salinidade dos oceanos, que deixa a água menos densa e faz com que ocupe mais espaço",
+          "Diminuição da evaporação oceânica, que mantém mais água no mar e eleva o nível ao longo do tempo"
         ],
         "correta": 1,
         "explicacao": "A água aquecida expande (expansão térmica), ocupando mais volume. Além disso, o derretimento de calotas polares e glaciares de montanha transfere água terrestre pros oceanos. Os dois processos contribuem pra elevar o nível do mar em escala global."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:788f575c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +520,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -513,17 +535,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um estudante compara dados de temperatura global dos últimos 150 anos e nota uma aceleração do aquecimento, especialmente nas últimas cinco décadas. Qual fator contribui mais para essa aceleração?",
         "opcoes": [
-          "Aumento exponencial de emissões de gases estufa pela industrialização",
-          "Ciclos naturais do clima que diminuem naturalmente",
-          "Redução da atividade solar em longo prazo",
-          "Aumento da refração da luz solar pela atmosfera"
+          "Aumento das emissões de gases estufa pela queima de combustíveis fósseis e pelo desmatamento",
+          "Ciclos naturais de variação do clima, que explicariam sozinhos a alta recente",
+          "Aumento da atividade solar nas últimas décadas, que aquece a superfície da Terra",
+          "Buraco na camada de ozônio, que deixa entrar mais calor do Sol na atmosfera"
         ],
         "correta": 0,
-        "explicacao": "Desde o início da industrialização, emissões de CO2 aumentam exponencialmente, especialmente nos últimos 50 anos com expansão industrial global. Esse aumento de gases estufa amplifica o efeito estufa natural. Ciclos solares e vulcanismo não explicam a magnitude nem a tendência de aquecimento observados."
+        "explicacao": "As emissões de gases estufa, sobretudo de CO2 pela queima de combustíveis fósseis e pelo desmatamento, cresceram desde a industrialização e ainda mais nas últimas décadas. Esse excesso amplifica o efeito estufa natural. A atividade solar não aumentou no período, e o buraco na camada de ozônio é outro problema, que não explica o aquecimento observado."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:95e37021",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
@@ -531,7 +553,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +568,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -559,17 +583,17 @@
         "type": "multipla-escolha",
         "pergunta": "Pesquisadores estudam como a acidificação oceânica (redução de pH causada pela absorção de CO2) afeta organismos de concha. Por que esses organismos são particularmente vulneráveis?",
         "opcoes": [
-          "Suas conchas nunca se dissolvem em água do mar",
+          "A água ácida ataca o corpo mole dos animais, mas não interfere na formação das conchas",
           "A redução de pH diminui a disponibilidade de íons carbonato, dificultando a formação de conchas",
-          "A acidez favorece o crescimento acelerado de conchas",
-          "Apenas organismos tropicais são afetados"
+          "A acidez reduz o oxigênio dissolvido e sufoca os animais, sem relação com o carbonato",
+          "O CO2 absorvido forma uma película na superfície que bloqueia a luz e trava o crescimento da concha"
         ],
         "correta": 1,
         "explicacao": "Conchas são compostas de carbonato de cálcio. Em água menos alcalina (mais ácida), há menos íons carbonato disponíveis para os organismos construírem ou reporem conchas. Larvas de ostra, pterópodes e corais são especialmente vulneráveis à acidificação, prejudicando cadeias alimentares inteiras."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:62877568",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
@@ -577,7 +601,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +616,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -605,17 +631,17 @@
         "type": "multipla-escolha",
         "pergunta": "A Zona de Convergência Intertropical (ZCIT) é uma faixa de baixa pressão que contorna o Equador, responsável por chuvas abundantes. Como mudanças climáticas globais podem deslocar essa zona?",
         "opcoes": [
-          "Apenas vulcões conseguem deslocar a ZCIT",
-          "O deslocamento é aleatório e não segue padrão previsível",
-          "O aquecimento diferencial dos hemisférios altera o balanço de energia, deslocando a ZCIT",
-          "A ZCIT permanece fixa e nunca se move"
+          "Erupções vulcânicas frequentes empurram a ZCIT para os polos e esfriam os trópicos",
+          "A ZCIT fica presa ao Equador, e o aquecimento global só muda a intensidade das chuvas",
+          "O aquecimento diferente entre os hemisférios altera o balanço de energia e desloca a ZCIT",
+          "A rotação mais rápida da Terra, causada pelo degelo, arrasta a ZCIT para latitudes altas"
         ],
         "correta": 2,
         "explicacao": "A ZCIT tende a se deslocar para o hemisfério mais quente, por isso ela já migra ao longo do ano, acompanhando as estações. Se um hemisfério aquece mais que o outro, a zona tende a migrar na mesma direção, o que pode alterar padrões de chuva em regiões tropicais e afetar agricultura e disponibilidade de água."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:5d260344",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
@@ -623,7 +649,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +664,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -651,25 +679,25 @@
         "type": "multipla-escolha",
         "pergunta": "O fenômeno El Niño ocorre quando águas quentes do Pacífico tropical se deslocam para o leste. Historicamente, em anos de El Niño forte (como 1982-83 e 1997-98), o Brasil observou redução significativa de chuva no Norte e Nordeste, enquanto a região Sul registrou excesso de precipitação. Um produtor agrícola no Nordeste, analisando esses dados históricos, deveria esperar qual padrão climático?",
         "opcoes": [
-          "Temperatura mais baixa nas regiões costeiras",
-          "Aumento uniforme de chuva em todo o país",
-          "Estiagem, redução drástica de chuva, e eventual seca prolongada",
-          "Aumento de nebulosidade sem mudança significativa em precipitação"
+          "Temperaturas mais baixas nas regiões costeiras, por causa do mar mais frio",
+          "Aumento da chuva em todo o Nordeste, seguindo o padrão observado na região Sul",
+          "Estiagem, com redução drástica da chuva e risco de seca prolongada nas lavouras",
+          "Aumento da nebulosidade sem mudança significativa na precipitação da região semiárida"
         ],
         "correta": 2,
         "explicacao": "El Niño desloca o padrão de chuvas da América do Sul: enfraquece a Zona de Convergência Intertropical no Norte e Nordeste, causando estiagem, e intensifica chuvas no Sul. Um agricultor do Nordeste em ano El Niño precisa se preparar para seca. Confundir El Niño com aumento geral de chuva é erro comum."
       },
       "meta": {
         "id": "gen:geo:climatologia-fenomenos:334ac333",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:climatologia-fenomenos"
         ],
-        "difficulty": 4,
+        "difficulty": 3,
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +712,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.258Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"

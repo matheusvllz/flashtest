@@ -41,10 +41,17 @@ function Aha() {
   }, [revealed, gaps.length]);
 
   return (
-    <PhoneFrame>
+    <PhoneFrame variant="reading">
       <div className="relative min-h-screen overflow-hidden bg-neve px-6 pt-14 pb-32">
-        <div className="pointer-events-none absolute -right-16 -top-16 opacity-[0.06]">
-          <FocaMark variant="line-dark" size={280} decorative />
+        {/* Marca d'água por tema (docs/36 T-08.6, §G.8): contorno escuro no claro, contorno claro no escuro
+            (o escuro sobre fundo escuro sumia). O wrapper esconde; o <img> não leva display por classe. */}
+        <div className="pointer-events-none absolute -right-16 -top-16 opacity-[0.06]" data-aha-marca>
+          <div className="dark:hidden" data-marca-tema="claro">
+            <FocaMark variant="line-dark" size={280} decorative />
+          </div>
+          <div className="hidden dark:block" data-marca-tema="escuro">
+            <FocaMark variant="line-light" size={280} decorative />
+          </div>
         </div>
 
         <div className="relative">
@@ -127,7 +134,7 @@ function Aha() {
           </div>
         </div>
 
-        <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
+        <footer className="fixed bottom-0 left-1/2 col-max-w -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
           <Link to={HOME_ROUTE} className="btn-primary w-full">
             Entrar no meu plano
           </Link>

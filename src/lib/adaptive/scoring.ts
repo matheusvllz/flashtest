@@ -9,7 +9,9 @@ import { mastery } from "./model";
 import { confidence } from "./confidence";
 import { PESOS_SCORE, PESO_MATERIA } from "./constants";
 import type { SkillClassification } from "./classify";
-import type { LearningState } from "@/lib/learning/types";
+import type { LearningState, SkillModelEntry } from "@/lib/learning/types";
+
+type SkillModelSource = SkillModelEntry["source"];
 
 export type MateriaPeso = "prioritaria" | "normal" | "vaiBem";
 
@@ -49,8 +51,32 @@ function clamp01(x: number): number {
   return Math.max(0, Math.min(1, x));
 }
 
-function necessidade(state: SkillClassification, m: number, c: number): number {
-  if (state === "NOVA") return 0.8;
+function clamp(x: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, x));
+}
+
+/**
+ * Necessidade do candidato (docs/30 §11.4; docs/36 §G.4, T-04.2).
+ *
+ * NOVA sem prior de nivelamento: 0,8 fixo (como sempre). NOVA COM prior de
+ * nivelamento (`source === "prior-nivelamento"`, `nEff 0`): a necessidade
+ * acompanha o Mastery do prior, `clamp(0,55 + 0,5·(1 − m/100), 0,55, 0,95)` —
+ * área fraca sobe (m ≈ 18 → 0,95), m = 50 → 0,80 (igual ao fixo), área forte
+ * desce mas nunca abaixo de 0,55 (continua aparecendo). Só reordena dentro
+ * das habilidades novas: a classificação (NOVA) e a escolha de aula não mudam,
+ * então prior nenhum pula aula. Fórmulas do MODELO (Mastery/Confidence)
+ * intactas — isto é regra de PLANO (`PLANNER_VERSION`).
+ */
+export function necessidade(
+  state: SkillClassification,
+  m: number,
+  c: number,
+  source?: SkillModelSource,
+): number {
+  if (state === "NOVA") {
+    if (source === "prior-nivelamento") return clamp(0.55 + 0.5 * (1 - m / 100), 0.55, 0.95);
+    return 0.8;
+  }
   return (1 - m / 100) * (c < 60 ? 1 : 0.7);
 }
 
@@ -91,7 +117,7 @@ export function scoreCandidate(input: ScoreInput): ScoreResult {
   const c = confidence(input.entry, input.evidence, input.today).value;
   const area = SUBJECT_AREA[input.skill.subjectId];
 
-  const fNecessidade = necessidade(input.state, m, c);
+  const fNecessidade = necessidade(input.state, m, c, input.entry?.source);
   const fObjetivo = objetivo(input.pesoMateria, input.skill.incidence);
   const fUrgencia = urgenciaRevisao(input.state, input.diasAtraso);
   const fOrdem = ordemCurricular(input.state, input.skill, input.allSkillsOfSubject);

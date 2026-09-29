@@ -35,7 +35,7 @@ export function SkillRow({
         <span className={cn("font-semibold", display.showMastery ? "text-abismo" : "text-nevoa")}>
           {skill.name}
           {display.dominated && (
-            <span className="ml-1.5 rounded-full bg-recompensa px-1.5 py-0.5 text-[10px] font-bold text-abismo">
+            <span className="ml-1.5 rounded-full bg-recompensa px-1.5 py-0.5 text-[10px] font-bold text-on-alert">
               Consistente
             </span>
           )}

@@ -1,5 +1,7 @@
 # 13 — Prompt para a Landing Page do Instagram
 
+> **Histórico (Flash Test).** Copy da marca anterior, com promessas que o Foca de hoje não sustenta. Para escrever texto público, ver [COPY.md](COPY.md) e [copy/06-marketing.md](copy/06-marketing.md).
+
 Status: 🟢 **copy fechada (22/07)** — essa página é diferente da LP do pitch (`04`). Aqui o público é duplo: avaliador do Link cotando familiaridade antes de sexta, e aluno do Pre College que a gente quer transformar em dado de pesquisa. Objetivo dela não é "ver demonstração", é deixar claro que o time tá levando isso a sério e coletar respostas reais pra pesquisa (gap ainda aberto em `02`/`08`, seção Pesquisa & Validação).
 
 Como usar: cole o bloco do prompt abaixo no Claude, anexando junto o `Flash Test - design System.html`. A copy já está pronta, não deixe o Claude reescrever o texto, só montar o layout em cima dela.

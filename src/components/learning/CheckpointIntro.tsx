@@ -22,10 +22,11 @@ export function CheckpointIntro({
       </h1>
       <p className="mt-2 text-sm leading-relaxed text-nevoa">{COPY.checkpoint.introCorpo}</p>
       <div className="mt-8 flex flex-col gap-2.5">
-        <button onClick={onComecar} className="btn-primary w-full">
+        <button type="button" onClick={onComecar} className="btn-primary w-full">
           {COPY.checkpoint.comecar}
         </button>
         <button
+          type="button"
           onClick={onAgoraNao}
           className="text-center text-sm font-semibold text-nevoa underline"
         >

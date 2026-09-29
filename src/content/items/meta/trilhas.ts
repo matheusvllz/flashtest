@@ -60,7 +60,7 @@ export function trilhaItemMeta(id: string): ItemMeta | undefined {
     // Conteúdo revisado na autoria da trilha (docs/22/26) — "revisada-humano"
     // é sobre SEGURANÇA do conteúdo mostrado, não sobre a precisão da
     // classificação de habilidade/dificuldade (ver nota de divergência acima).
-    validation: { status: "revisada-humano", reviewer: "autoria-legada-nivel-capitulo" },
+    validation: { status: "revisada-humano", reviewer: "autoria-legada-nivel-capitulo", reviewKind: "autoria-legada" },
     examProfiles: ["enem"],
   };
 }

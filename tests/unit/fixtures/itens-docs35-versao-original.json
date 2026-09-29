@@ -1,0 +1,65 @@
+{
+  "nota": "Os 4 exemplos de docs/35 §7.1 como estavam no commit 76a7b70, ANTES da revisão editorial da Fase 7 (docs/36 T-07.3). Congelados: o banco real foi corrigido e não acusa mais esses defeitos.",
+  "items": [
+    {
+      "id": "gen:bio:membrana-estrutura:6553a1bf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Lipídios de membrana com caudas muito longas e saturadas versus curtas e insaturadas têm diferentes impactos na fluidez. Como essas diferenças estruturais se explicam dentro do modelo de mosaico fluido?",
+        "opcoes": [
+          "Não há diferença funcional",
+          "Caudas longas e retas (saturadas) empacotam densamente, reduzindo fluidez; caudas curtas e curvadas (insaturadas) ocupam mais espaço, aumentando fluidez e permitindo maior movimento lateral das moléculas",
+          "Apenas o comprimento importa, não a saturação",
+          "Insaturação reduz fluidez"
+        ],
+        "correta": 1,
+        "explicacao": "A geometria das caudas define o empacotamento. Ácidos graxos saturados são lineares e se empacotam de forma apertada, como palitos retos numa caixa, o que reduz a fluidez. Os insaturados têm 'dobras' nas duplas ligações, ocupam mais espaço e deixam lacunas, o que aumenta a fluidez. Caudas mais curtas também interagem menos entre si. Por isso membranas ricas em insaturados são mais fluidas, o que é importante em organismos de ambientes frios."
+      }
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:5ae4f57c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Por que as células precisam regular a composição lipídica de suas membranas em diferentes temperaturas, e como isso se relaciona ao modelo de mosaico fluido?",
+        "opcoes": [
+          "Apenas o colesterol controla a fluidez",
+          "Todas as membranas têm exatamente a mesma composição",
+          "A temperatura não afeta a membrana",
+          "Temperaturas altas aumentam agitação térmica, aumentando fluidez; temperaturas baixas a reduzem. As células ajustam proporção de ácidos graxos insaturados (mais fluidos) e saturados (mais rígidos) para manter fluidez ótima"
+        ],
+        "correta": 3,
+        "explicacao": "Fluidez membranar é crítica: rígida demais, proteínas não se mexem; fluida demais, perde integridade. Temperatura altera agitação térmica. Bactérias e células ajustam ácidos graxos insaturados (com duplas, formam curvas, ocupam mais espaço, reduzem compactação) vs. saturados (retos, compactos). Em frio, aumentam insaturados; em calor, saturados. Esse é um exemplo de homeostase molecular do modelo de mosaico fluido."
+      }
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:b9bc002a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Após um incêndio destruir uma floresta, plantas iniciais (pioneiras) rapidamente colonizam o solo nu. Anos depois, árvores maiores sombreiam as pioneiras, que desaparecem. Qual nome recebe essa sequência?",
+        "opcoes": [
+          "Extinção maciça",
+          "Estagnação ecológica",
+          "Sucessão primária",
+          "Sucessão secundária ou ecológica — mudança previsível de comunidades ao longo do tempo"
+        ],
+        "correta": 3,
+        "explicacao": "Sucessão ecológica é a sequência previsível de mudanças nas comunidades após um distúrbio. É secundária porque o incêndio destruiu a vegetação, mas o solo (com nutrientes e sementes) continuou ali. Sucessão primária é a que começa em rocha nua, sem solo. As pioneiras crescem rápido com luz abundante e modificam o ambiente; depois, árvores maiores crescem e sombreiam as pioneiras, que não toleram sombra e somem. Cada estágio altera o ambiente e favorece o seguinte."
+      }
+    },
+    {
+      "id": "gen:bio:organelas-funcao:a655cd73",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma célula que precisa secretar grande quantidade de muco viscoso provavelmente tem quantidades muito elevadas de qual organela?",
+        "opcoes": [
+          "Cloroplastos",
+          "Ribossomos, retículo rugoso e complexo de Golgi",
+          "Lisossomos",
+          "Centríolos"
+        ],
+        "correta": 1,
+        "explicacao": "Muco é principalmente proteína e carboidratos complexos. Células produtoras de muco têm ribossomos abundantes (síntese), retículo rugoso desenvolvido (processamento inicial) e Golgi bem amplo (glicosilação e empacotamento). Essa tríade (ribossomos → retículo rugoso → Golgi) é marca de células secretoras. Cloroplastos fotossintetizam; lisossomos degradam; centríolos organizam."
+      }
+    }
+  ]
+}

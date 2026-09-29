@@ -36,6 +36,13 @@
   --color-alert: var(--alert); /* atenção / severidade baixa */
   --color-recompensa: var(--alert); /* D1 (docs/18 §14): marca-texto de XP/streak/marco — fundo, texto abismo */
   --color-error: var(--error);
+  /* Texto SOBRE preenchimento de cor (docs/36 T-08.9, RA-4): branco no claro, tinta escura no escuro —
+     o preenchimento fica mais claro no escuro (mar #5c8cff, success #45b876, alert #e8b23d) e branco
+     sobre ele reprovaria (3,2:1). Mesma lógica de --accent-foreground. */
+  --color-on-mar: var(--on-mar);
+  --color-on-success: var(--on-success);
+  --color-on-error: var(--on-error);
+  --color-on-alert: var(--on-alert);
 
   --radius-sm: 10px;
   --radius-md: 6px;
@@ -64,10 +71,27 @@
 }
 
 :root {
+  color-scheme: light; /* controles nativos (barra de rolagem, <select>, date) seguem o tema */
   --radius: 1rem; /* 16px — raio de botão do design system (docs/18 §6.3) */
   --radius-card: 1.25rem; /* 20px — raio de card do design system */
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout (docs/36 §F.6, RU-30). Não dependem de tema. < 768 px = os valores de
+     sempre (440); as media queries logo abaixo só valem acima disso. Toda largura
+     de coluna e todo deslocamento de elemento fixo vêm DAQUI — nunca um
+     440px/13.75rem solto em componente (teste de grep, T-08.10). */
+  --app-col: 440px; /* telas com AppShell e PhoneFrame "app" */
+  --reading-col: 440px; /* players imersivos: aula, legado, atividade, nivelamento, quiz */
+  --path-col: 440px; /* caminho zigue-zague (a geometria de path-layout.ts é calibrada para 440) */
+  --nav-rail: 0px; /* largura do NavRail (só ≥ 1024) */
+  --bottom-nav-h: 4.125rem; /* altura da BottomNav (< 1024): min-h-16 (4rem) + borda de 2px — sem a área segura */
+
+  /* Fundo que escurece a tela atrás de uma folha/diálogo (docs/36 T-08.4). PRETO
+     com alfa — nunca o token Abismo: Abismo é cor de TEXTO e vira quase-branco no
+     dark mode (era o "véu esbranquiçado", B4). Claro 0,4; o escuro sobe pra 0,55
+     para a folha (#262523) se separar do fundo (#1c1b18). */
+  --scrim: rgb(0 0 0 / 0.4);
 
   /* Variáveis base da paleta Rabisco — claro. Referenciadas por --color-* acima. */
   --abismo: #3a3a3c;
@@ -78,12 +102,18 @@
   --coral-claro: #8fb0ff;
   --pelo: #d6d6d4;
   --pelo-sombra: #737075;
-  --nevoa: #737075;
+  /* Nota docs/36 T-08.9 / docs/18 §6.1: era #737075, que dá 4,47:1 sobre o papel (#f6f5f1) — 0,03 abaixo do
+     mínimo de texto. Escurecido dentro da mesma família (cinza-violeta): 4,81:1 sobre o papel. */
+  --nevoa: #6e6b71;
   --cards: #ffffff;
   --success: #2e9e5b;
   --success-texto: #1f7a45;
   --alert: #d9a017;
   --error: #c23b3b;
+  --on-mar: #ffffff;
+  --on-success: #ffffff; /* sobre --success-texto (o verde de texto), não sobre --success (3,4:1) */
+  --on-error: #ffffff;
+  --on-alert: #3a3a3c; /* = --abismo do claro */
 
   --background: #f6f5f1;
   --foreground: #26262a;
@@ -94,7 +124,7 @@
   --secondary: #e1dfda;
   --secondary-foreground: #26262a;
   --muted: #e1dfda;
-  --muted-foreground: #737075;
+  --muted-foreground: #6e6b71;
   --accent: #2e6bff;
   --accent-foreground: #ffffff;
   --destructive: #c23b3b;
@@ -104,10 +134,26 @@
   --ring: #2e6bff;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --app-col: 560px;
+    --reading-col: 560px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --app-col: 600px;
+    --reading-col: 640px;
+    --nav-rail: 96px;
+  }
+}
+
 /* Modo escuro. Ativa com a classe `.dark` no <html>, aplicada por um script
    inline em __root.tsx a partir de prefs.theme (ou do sistema, default "auto"). */
 .dark {
+  color-scheme: dark;
   /* Mesmas variáveis base, valores escuros — é isso que a indireção acima faz propagar. */
+  --scrim: rgb(0 0 0 / 0.55);
   --abismo: #f3f1ec;
   --mar: #5c8cff;
   --mar-fundo: #9fc0ff;
@@ -121,7 +167,13 @@
   --success: #45b876;
   --success-texto: #45b876;
   --alert: #e8b23d;
-  --error: #d65b5b;
+  /* Nota docs/36 T-08.9: era #d65b5b (4,02:1 sobre card). #df6b6b: 4,71:1 sobre card, 5,29:1 sobre a página. */
+  --error: #df6b6b;
+  /* Tinta escura sobre os preenchimentos claros do escuro (o Abismo do escuro é claro, não serve). */
+  --on-mar: #1c1b18;
+  --on-success: #1c1b18;
+  --on-error: #1c1b18;
+  --on-alert: #1c1b18;
 
   --background: #1c1b18;
   --foreground: #f3f1ec;
@@ -135,7 +187,7 @@
   --muted-foreground: #a6a29a;
   --accent: #5c8cff;
   --accent-foreground: #1c1b18;
-  --destructive: #d65b5b;
+  --destructive: #df6b6b;
   --destructive-foreground: #1c1b18;
   --border: #38352f;
   --input: #55534e;
@@ -160,6 +212,16 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
+  /* Sem atraso/zoom de toque duplo em controles (web-design-guidelines, docs/36 T-08.9). */
+  a,
+  button,
+  [role="button"],
+  [role="radio"],
+  input,
+  select,
+  summary {
+    touch-action: manipulation;
+  }
   :focus-visible {
     outline: 3px solid var(--color-ring);
     outline-offset: 2px;
@@ -182,7 +244,7 @@
   padding: 0 1.25rem;
   border-radius: var(--radius);
   background: var(--color-mar);
-  color: #fff;
+  color: var(--on-mar);
   font-weight: 700;
   font-family: var(--font-display);
   font-size: 1rem;
@@ -318,6 +380,7 @@
 }
 
 @utility chip {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -329,6 +392,16 @@
   font-size: 0.8125rem;
   font-weight: 600;
   border: 2px solid transparent;
+  /* Visual de 36 px, área de toque de 44 (RA-2): mesmo `::after` de `tap-area`. */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: max(100%, 44px);
+    height: max(100%, 44px);
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Estado selecionado do chip (docs/18 §7.5, §8 princípio: seleção com borda,
@@ -338,6 +411,23 @@
   border-color: var(--color-mar);
   color: var(--color-mar-fundo);
   font-weight: 700;
+}
+
+/* Área de toque ≥ 44 px (docs/36 RA-2, T-08.8) sem mexer no visual nem no fluxo do layout:
+   um `::after` invisível, centrado no controle, com no mínimo 44×44 (só cresce o eixo que
+   está abaixo disso). O `chip` de 36 px já vem com ela. Em controle que já é `absolute`/`fixed`
+   por classe, não usar `tap-area` (o `position: relative` daqui disputaria a mesma propriedade). */
+@utility tap-area {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: max(100%, 44px);
+    height: max(100%, 44px);
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Label do design system: Space Grotesk 12/700, tracking largo. Mar Fundo sobre claro;
@@ -577,6 +667,48 @@
   box-decoration-break: clone;
 }
 
+/* Borda lateral da coluna do app em telas largas (docs/36 T-08.1, F.6). Media
+   query aqui, não `md:border-x` em classe: mantém o markup idêntico entre servidor
+   e cliente e centraliza o breakpoint. */
+@utility frame-border {
+  @media (min-width: 768px) {
+    border-inline: 1px solid var(--gelo);
+  }
+}
+
+/* Elementos FIXOS ancorados à coluna (docs/36 T-08.2, F.6). `--frame-col` e
+   `--frame-rail` são herdados do PhoneFrame/AppShell em que o elemento mora
+   (o fallback cobre quem estiver fora de um frame). Abaixo de 1024 px o trilho é
+   0px e `--frame-col` = 440px, então o resultado é o mesmo de sempre. */
+@utility anchor-col-left {
+  left: max(
+    1rem,
+    calc(50% - var(--frame-col, var(--app-col)) / 2 + var(--frame-rail, 0px) / 2 + 1rem)
+  );
+}
+@utility anchor-col-right {
+  right: max(
+    1rem,
+    calc(50% - var(--frame-col, var(--app-col)) / 2 - var(--frame-rail, 0px) / 2 + 1rem)
+  );
+}
+/* Centro da coluna, sem transform (painéis que ocupam a largura toda dela):
+   esquerda = trilho, direita = 0 e margens automáticas centralizam a caixa no
+   espaço que sobra — a mesma caixa de `inset-x-0 mx-auto` quando o trilho é 0. */
+@utility anchor-col-center {
+  left: var(--frame-rail, 0px);
+  right: 0;
+  margin-inline: auto;
+}
+/* Fundo escurecido atrás de folhas e diálogos (docs/36 T-08.4) — sempre pelo token. */
+@utility scrim {
+  background: var(--scrim);
+}
+@utility col-max-w {
+  width: 100%;
+  max-width: var(--frame-col, var(--app-col));
+}
+
 /* Folha que sobe do rodapé — feedback de resposta, balão do tutor, modais
    (docs/18 §6.5, elevação nível 3: a única sombra de verdade do sistema). */
 @utility sheet {
@@ -655,7 +787,7 @@
   [data-status="completed"] > .path-node {
     background: var(--color-mar);
     border-color: var(--color-mar);
-    color: white;
+    color: var(--on-mar);
     box-shadow: 0 4px 0 var(--color-mar-fundo);
   }
   [data-status="in-progress"] > .path-node {

@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "PROMOTION COMING! Are you interested in getting a FREE gift card to your favorite store? 'Yes, I'm interested!' or 'No thanks'? This email was sent because you visited our website. What does this brief message intend to accomplish?",
         "opcoes": [
-          "Informar sobre um produto novo da loja",
-          "Pedir feedback sobre a experiência do cliente",
-          "Incentivar cliques através de promessa de benefício gratuito, capturando interesse ou dados",
-          "Convidar para uma reunião formal sobre assuntos comerciais"
+          "Informar os clientes sobre o lançamento de um produto novo que acabou de chegar à loja",
+          "Pedir feedback sobre a experiência do cliente com os produtos e o atendimento da loja",
+          "Incentivar cliques com a promessa de um benefício gratuito, capturando interesse ou dados",
+          "Convidar o cliente para uma reunião formal sobre assuntos comerciais e contratos da empresa"
         ],
         "correta": 2,
         "explicacao": "A mensagem usa técnica comum de marketing: promessa de recompensa gratuita ('gift card') para atrair cliques e engajamento. O email busca impulsionar ação imediata, capturar dados de interesse e potencial conversão de venda. Não informa produto específico. Não pede feedback formal. Não convida para reunião: é tática de atração de tráfego."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:b8ee8a00",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +55,25 @@
         "type": "multipla-escolha",
         "pergunta": "Read: 'The team decided to move the meeting from Monday to Tuesday because several members were unavailable on Monday.' Qual informação o texto comunica de forma principal?",
         "opcoes": [
-          "Que as reuniões devem sempre ser em terça-feira",
-          "Que alguns membros não são confiáveis",
-          "Que segunda-feira é um dia pior para reuniões que terça",
-          "A razão de uma mudança de agendamento: indisponibilidade de participantes"
+          "Que as reuniões da equipe passam a ser fixas nas terças-feiras a partir de agora",
+          "Que alguns membros da equipe não são confiáveis e por isso faltam às reuniões marcadas",
+          "Que a segunda-feira é um dia pior para reuniões do que a terça-feira, segundo a equipe",
+          "O motivo da mudança de dia da reunião: alguns membros não podiam participar na segunda"
         ],
         "correta": 3,
         "explicacao": "O texto explica causa-efeito: alguns membros indisponíveis (causa) levaram à mudança de data (efeito). Não faz julgamento sobre qual dia é melhor universalmente. Não estabelece regra sobre terça-feira. Não critica confiabilidade. Apenas comunica decisão lógica baseada em disponibilidade."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:8f1b4f69",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -99,17 +103,17 @@
         "type": "multipla-escolha",
         "pergunta": "Short text: 'Our company takes pride in delivering quality products on time. Customer satisfaction is our top priority. We listen to feedback and continuously improve.' What tone does this text convey?",
         "opcoes": [
-          "Crítica dura aos clientes infelizes",
+          "Uma crítica dura aos clientes que ficam infelizes com os produtos e reclamam",
           "Profissionalismo, compromisso com qualidade e abertura ao diálogo com clientes",
-          "Arrogância sobre superioridade dos produtos",
-          "Desinteresse pelas opiniões externas"
+          "Arrogância, pois a empresa se diz superior às concorrentes em tudo o que faz",
+          "Desinteresse pelas opiniões dos clientes e pelas sugestões de melhoria do serviço"
         ],
         "correta": 1,
         "explicacao": "O texto usa linguagem de compromisso (quality, on time, satisfaction), reconhecimento de feedback e melhoria contínua. Isso comunica seriedade profissional e humildade. Não há crítica. Não é arrogante (valoriza feedback). Não é desinteressado (menciona ouvir explicitamente). Tom é positivo, inclusivo e orientado ao cliente."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:1f5078cb",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
@@ -117,7 +121,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -145,17 +151,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o anúncio a seguir:\n\n'Join our fitness club and transform your life in 90 days. We offer personal training, nutrition coaching, and access to state-of-the-art equipment. Special offer: 50% discount for the first three months.'\n\nQual é o objetivo principal deste anúncio?",
         "opcoes": [
-          "Criticar academias de ginástica tradicionais",
-          "Convencer pessoas a se inscreverem no clube oferecendo benefícios e desconto",
-          "Explicar como funciona treinamento pessoal",
-          "Comparar diferentes tipos de equipamento de academia"
+          "Criticar as academias de ginástica tradicionais e seus métodos antigos",
+          "Convencer pessoas a se inscreverem no clube com benefícios e desconto",
+          "Explicar em detalhes como funciona o treinamento pessoal na academia",
+          "Comparar os diferentes tipos de equipamento disponíveis nas academias"
         ],
         "correta": 1,
         "explicacao": "O anúncio convida explicitamente ('Join our fitness club'), lista benefícios (treinamento pessoal, nutrição, equipamento), promete transformação ('transform your life in 90 days') e oferece desconto (50% off). O objetivo comercial é persuadir a inscrição. As outras opções desviam do propósito: não critica concorrentes (A), não explica procedimento técnico (C) e não compara equipamentos (D)."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:f4342bfd",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
@@ -163,7 +169,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -191,25 +199,25 @@
         "type": "multipla-escolha",
         "pergunta": "Considere esta notícia simplificada:\n\n'A renowned scientist discovered that urban birds adapt their songs to mask traffic noise. The study, conducted over five years in twelve cities, shows birds increase vocal frequency to be heard above the roar of cars and buses.'\n\nO que a pesquisa revelou sobre o comportamento dos pássaros urbanos?",
         "opcoes": [
-          "Pássaros urbanos deixam de cantar quando ouvem barulho de trânsito",
+          "Pássaros urbanos deixam de cantar quando ouvem o barulho constante do trânsito",
           "O barulho do trânsito causa migração permanente de pássaros para áreas rurais",
-          "Pássaros urbanos modificam a frequência de seus cantos para se adaptar ao ruído urbano",
+          "Pássaros urbanos mudam a frequência dos cantos para se adaptar ao ruído da cidade",
           "Pássaros urbanos e rurais cantam com a mesma frequência, mas em horários diferentes"
         ],
         "correta": 2,
-        "explicacao": "O texto diz que os pássaros 'increase vocal frequency to be heard above the roar'. Ou seja, elevam a frequência para se comunicar apesar do ruído. É uma adaptação comportamental. A opção (A) falha porque eles se adaptam, não param; (B) inventa migração permanente que não está lá; (D) nega a diferença que o estudo encontrou."
+        "explicacao": "O texto diz que os pássaros 'increase vocal frequency to be heard above the roar'. Ou seja, elevam a frequência do canto para se comunicar apesar do ruído. É uma adaptação comportamental. Pensar que eles deixam de cantar falha, porque eles se adaptam e não param; a ideia de migração permanente inventa algo que o texto não traz; e dizer que cantam com a mesma frequência nega a diferença que o estudo encontrou."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:e1c6de58",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -237,25 +247,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia este comunicado de uma ONG ambiental:\n\n'Illegal logging in the Amazon rainforest increased by 60% last year, destroying critical wildlife habitats and accelerating climate change. Our organization calls on governments to strengthen enforcement and communities to report suspicious activity.'\n\nQue ação a ONG está tentando estimular?",
         "opcoes": [
-          "Criar indústria de extração responsável de madeira",
-          "Mobilizar fiscalização e participação comunitária contra exploração ilegal",
-          "Relocar espécies ameaçadas para áreas urbanas protegidas",
-          "Proibir viagens turísticas para a Amazônia"
+          "Criar uma indústria de extração responsável de madeira na região amazônica",
+          "Mobilizar fiscalização e participação comunitária contra a exploração ilegal",
+          "Relocar espécies ameaçadas para áreas urbanas protegidas, longe do desmatamento",
+          "Proibir as viagens turísticas para a Amazônia, para reduzir a presença humana"
         ],
         "correta": 1,
         "explicacao": "A ONG 'calls on governments to strengthen enforcement and communities to report': pede tanto ação governamental (fiscalização) quanto engajamento comunitário (denúncias). Essa combinação visa combater a exploração ilegal. O texto não propõe extração responsável como solução (A), não menciona relocação de espécies (C) e não pede proibição do turismo (D)."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:8160103f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -283,17 +295,17 @@
         "type": "multipla-escolha",
         "pergunta": "Considere este cartaz de conscientização em uma clínica:\n\n'Don't wait for symptoms. Regular health screenings can detect diseases early, when treatment is most effective and costs are lowest. Schedule your annual check-up today.'\n\nQual é a estratégia persuasiva usada neste cartaz?",
         "opcoes": [
-          "Criar medo ao descrever doenças graves",
-          "Oferecer tratamentos gratuitos para todos",
+          "Provocar medo no leitor ao descrever doenças graves e suas consequências para a família",
+          "Prometer tratamentos gratuitos aos pacientes que agendarem a consulta anual na clínica",
           "Apresentar benefícios práticos (efetividade e custo) para motivar ação preventiva",
-          "Afirmar que a maioria das pessoas têm doenças não detectadas"
+          "Afirmar que a maioria das pessoas já tem doenças não detectadas e precisa de tratamento"
         ],
         "correta": 2,
         "explicacao": "O cartaz apela a benefícios racionais: 'detect diseases early' (efetividade do tratamento), 'costs are lowest' (economia). Isso motiva sem alarmar. Não usa medo irracional (A), não promete gratuidade irreal (B), e não faz generalização sem base (D). É persuasão baseada em lógica e interesse pessoal."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:3fdb7321",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
@@ -301,7 +313,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +343,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia este trecho de uma página de política de privacidade:\n\n'We collect data about your browsing habits to improve your experience. You can opt out at any time, but this may limit the personalization of our services. Your data is encrypted and never sold to third parties.'\n\nO que o texto sugere como compensação pela coleta de dados?",
         "opcoes": [
-          "Acesso exclusivo a conteúdo premium",
-          "Ausência de custos para usar a plataforma",
-          "Proteção legal contra fraude online",
-          "Personalização melhorada dos serviços oferecidos"
+          "Acesso a conteúdo premium sem custo extra para o usuário",
+          "Uso da plataforma sem pagar mensalidade nem taxas",
+          "Proteção legal contra fraudes e golpes na internet",
+          "Serviços mais personalizados para o gosto do usuário"
         ],
         "correta": 3,
         "explicacao": "O texto conecta a coleta de dados a 'improve your experience' e avisa que o opt-out 'may limit the personalization'. A compensação prometida é uma experiência personalizada. O texto não menciona conteúdo premium (A), custos (B) nem proteção legal específica (C). Criptografia e não venda dos dados ('encrypted, never sold') são garantias de segurança, não a compensação oferecida."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:df2c7560",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
@@ -347,7 +361,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -375,17 +391,17 @@
         "type": "multipla-escolha",
         "pergunta": "Considere este editorial de um jornal:\n\n'The city's decision to cut public transportation budget by 25% will disproportionately affect low-income residents who depend on buses and trains. While cost reduction is important, the city should explore alternative funding sources rather than burdening the most vulnerable citizens.'\n\nQual é a posição do editorial?",
         "opcoes": [
-          "O corte é inadequado sem explorar alternativas que protejam os mais vulneráveis",
-          "Cidades não deveriam investir em transporte público",
-          "Cortes de orçamento são sempre injustos e devem ser eliminados",
-          "Pessoas de baixa renda não usam transporte público"
+          "O corte é inadequado se a cidade não explorar alternativas que protejam os mais vulneráveis",
+          "A cidade não deve manter o transporte público, pois ele custa caro demais para a prefeitura",
+          "Qualquer corte de orçamento é injusto, e a cidade deve recusar reduções de gastos públicos",
+          "Pessoas de baixa renda não dependem do transporte público, então o corte não as afetará"
         ],
         "correta": 0,
         "explicacao": "O editorial reconhece a importância de 'cost reduction', mas critica que o corte recaia sobre os 'most vulnerable citizens' sem explorar 'alternative funding sources'. Ele não nega o valor do transporte público (B), não é categórico contra todo corte (C) e afirma o contrário de (D): os moradores de baixa renda 'depend on buses and trains'. É uma crítica à forma do corte, não ao princípio de reduzir custos."
       },
       "meta": {
         "id": "gen:ing:interpretacao-texto-curto:2fd8b9ad",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:interpretacao-texto-curto"
         ],
@@ -393,7 +409,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"

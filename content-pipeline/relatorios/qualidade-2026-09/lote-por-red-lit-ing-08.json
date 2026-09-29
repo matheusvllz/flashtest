@@ -1,0 +1,1078 @@
+[
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:1c24e247",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: 'famosa' é adjetivo). Alternativas de uma palavra (5-11 caracteres); o tamanho não é pista. Explicação correta.",
+    "lens": [
+      11,
+      8,
+      5,
+      8
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.533Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:79ee0af2",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: 'juntos' varia e concorda com 'nós', então é adjetivo predicativo). Classificação discutível em algumas gramáticas (advérbio), mas o item deixa o critério claro na explicação e 'advérbio' não é a leitura mais aceita aqui. Alternativas de uma palavra (8-11).",
+    "lens": [
+      11,
+      10,
+      8,
+      8
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.534Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:a71267e5",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: 'cuidadosos' é adjetivo). Alternativas de uma palavra; a correta não é a mais longa. Explicação correta.",
+    "lens": [
+      5,
+      8,
+      8,
+      11
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.534Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:aa799286",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: 'amplamente' é advérbio). Alternativas C e D com o mesmo tamanho (28); explicação correta.",
+    "lens": [
+      10,
+      5,
+      28,
+      28
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.534Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:e4bd117b",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.818,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.818,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: 'embora' conjunção concessiva). Alternativas de uma palavra; a correta não é a mais longa. Explicação correta.",
+    "lens": [
+      9,
+      11,
+      10,
+      8
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.534Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:concordancia-verbal-nominal:65bb4bab",
+    "arquivo": "src/content/banco/por/por-concordancia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.374,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1: sujeito composto, verbo no plural). Correta 125 caracteres contra 55-91; C chamava 'ambos' de advérbio (pronome/numeral). Alternativas reescritas (82-92).",
+    "lens": [
+      92,
+      92,
+      87,
+      84
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.535Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:crase-casos-proibidos:f747605a",
+    "arquivo": "src/content/banco/por/por-crase-casos-proibidos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.337,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.903,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: locução adverbial feminina, crase obrigatória). Correta 119 caracteres contra 56-89. Alternativas reescritas (84-92).",
+    "lens": [
+      93,
+      88,
+      87,
+      102
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.535Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:539bf45e",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.654,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.654,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: felizmente = feliz + -mente, sufixação). Correta não é a mais longa; explicação correta.",
+    "lens": [
+      17,
+      26,
+      19,
+      18
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.535Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:9926def0",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.038,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.038,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: guarda + chuva, justaposição). Correta 27 contra 26 caracteres (razão 1,04); explicação correta.",
+    "lens": [
+      26,
+      27,
+      17,
+      18
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.535Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:9e03770d",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.963,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.963,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: plano + alto, aglutinação). Correta não é a mais longa; explicação correta.",
+    "lens": [
+      18,
+      27,
+      26,
+      19
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:b1e2900b",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.214,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.785,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1: derivação regressiva). Correta 51 caracteres contra 18-42 e a mais longa. Alternativas reescritas (51-62); A passa a citar o sufixo que o aluno costuma ver ('-e').",
+    "lens": [
+      65,
+      50,
+      53,
+      53
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:ce695006",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.292,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.847,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: justaposição). Correta 93 caracteres contra 37-72. Alternativas reescritas (70-83).",
+    "lens": [
+      69,
+      78,
+      98,
+      82
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:430a2317",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.323,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.925,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: monossílabo tônico em -os). Razão 1,32: correta 41 caracteres contra 13-31. Alternativas reescritas (55-62), cada uma com uma regra real aplicada ao caso errado.",
+    "lens": [
+      55,
+      56,
+      61,
+      67
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:468e9412",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.71,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.71,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: oxítona terminada em e). Correta 22 contra 13-31; não é a mais longa; explicação correta.",
+    "lens": [
+      13,
+      16,
+      31,
+      22
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:59debbbf",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.394,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.913,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: proparoxítona). Razão da correta / menor incorreta 0,39 (aviso de correta curta demais): 13 caracteres contra 22-33. Alternativas reescritas (37-46).",
+    "lens": [
+      42,
+      45,
+      37,
+      46
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:a4466233",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.409,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.892,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: paroxítona terminada em ditongo). Correta 31 caracteres contra 13-22 e a mais longa; a alternativa 'proparoxítona' também poderia ser defendida como 'proparoxítona aparente' (R3), então foi trocada. Alternativas reescritas (52-57).",
+    "lens": [
+      60,
+      64,
+      49,
+      58
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.536Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:pontuacao-virgula-regras:d702199c",
+    "arquivo": "src/content/banco/por/por-pontuacao-virgula-regras.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.062,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.93,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). A alternativa B dizia que haveria erro 'se tivesse vírgula depois de orçamento', mas a vírgula já existe no trecho, e C dizia 'falta vírgula antes de contudo', também já presente (R4/R3). Alternativas reescritas (85-101) com erros de pontuação plausíveis.",
+    "lens": [
+      95,
+      100,
+      114,
+      106
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.537Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:188d9b9a",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.25,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.844,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: assistir a). Correta 110 caracteres contra 64-72. Alternativas reescritas (88-101).",
+    "lens": [
+      89,
+      91,
+      102,
+      120
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.537Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:9f578833",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.941,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.941,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: insistir em que). Correta 95 caracteres contra 63-101; não é a mais longa. Explicação correta.",
+    "lens": [
+      63,
+      95,
+      101,
+      78
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.537Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:e064e7db",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.977,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.977,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1: assistir a). A alternativa C ('assite') testava só grafia, sem erro conceitual de regência (R4): trocada por 'assiste do'. Explicação ajustada.",
+    "lens": [
+      41,
+      40,
+      41,
+      42
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.537Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-periodo-composto:e7fd2a93",
+    "arquivo": "src/content/banco/por/por-sintaxe-periodo-composto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.926,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.926,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito D confere (R1: concessiva, causal e adjetiva, três subordinadas). A explicação terminava com 'habilidade essencial no nível 4 de dificuldade' (metadado vazando para o aluno): removido.",
+    "lens": [
+      26,
+      22,
+      24,
+      24
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.537Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:051e03fc",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.591,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.591,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: objeto direto). Alternativas de 7-22 caracteres, correta não é a mais longa; explicação correta.",
+    "lens": [
+      22,
+      6,
+      13,
+      15
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.538Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:2a174754",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.789,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.789,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: objeto indireto). Alternativas curtas; correta não é a mais longa; explicação correta.",
+    "lens": [
+      19,
+      6,
+      13,
+      15
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.538Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:6bccf852",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.413,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.867,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: sujeito oculto 'nós'). Razão 1,41: correta 65 caracteres contra 36-46. Alternativas reescritas (56-72).",
+    "lens": [
+      61,
+      73,
+      65,
+      68
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.538Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:a3108ca0",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.024,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.024,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: sujeito composto). Correta 42 contra 41 caracteres (razão 1,02); explicação correta.",
+    "lens": [
+      40,
+      40,
+      20,
+      18
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:42:57.538Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

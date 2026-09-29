@@ -36,8 +36,8 @@ function Premium() {
         <div
           className="card-soft p-5"
           style={{
-            background: "color-mix(in srgb, var(--color-recompensa) 20%, var(--color-cards))",
-            borderColor: "var(--color-recompensa)",
+            background: "color-mix(in srgb, var(--alert) 20%, var(--cards))",
+            borderColor: "var(--alert)",
           }}
         >
           <Sparkles className="text-abismo" />
@@ -61,6 +61,7 @@ function Premium() {
 
         {!trial.active && (
           <button
+            type="button"
             onClick={() =>
               setState((ss) => {
                 ss.premiumTrial = { active: true, startedAt: new Date().toISOString() };
@@ -95,6 +96,7 @@ function Premium() {
             </p>
             <div className="mt-3 grid grid-cols-2 gap-2">
               <button
+                type="button"
                 onClick={() => {
                   setState((ss) => {
                     ss.premiumTrial = { active: false, startedAt: null };
@@ -106,7 +108,7 @@ function Premium() {
               >
                 Voltar ao gratuito
               </button>
-              <button className="btn-abismo">Quero ser avisado</button>
+              <button type="button" className="btn-abismo">Quero ser avisado</button>
             </div>
           </div>
         )}

@@ -18,6 +18,7 @@ export function TimeStep() {
       <div className="mt-6 flex flex-wrap gap-2">
         {OPCOES.map((n) => (
           <button
+            type="button"
             key={n}
             onClick={() => setDailyMinutes(n)}
             className={`chip font-mono ${minutos === n ? "chip-on" : ""}`}

@@ -41,7 +41,7 @@ export function ChapterCompleteSheet({
             {COPY.trilha.fazerRevisao}
           </Link>
         ) : (
-          <button onClick={onClose} className="btn-primary w-full">
+          <button type="button" onClick={onClose} className="btn-primary w-full">
             {COPY.trilha.continuar}
           </button>
         )}

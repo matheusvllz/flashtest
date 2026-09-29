@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o trecho: 'Ele abriu a porta e viu a rua vazia. Ninguém passava. O vento soprava sobre as casas fechadas. Tudo era silêncio.' O que essa construção revela sobre o estado emocional da personagem?",
         "opcoes": [
-          "Alegria e esperança em relação ao futuro",
+          "Alegria e esperança em relação ao futuro que o espera",
           "Solidão, abandono e possível desespero ou melancolia",
-          "Raiva intensa contra as pessoas da rua",
-          "Curiosidade científica sobre fenômenos naturais"
+          "Raiva intensa contra as pessoas que moram na rua",
+          "Curiosidade científica sobre os fenômenos da natureza"
         ],
         "correta": 1,
-        "explicacao": "A repetição de palavras como 'vazio', 'ninguém', 'fechadas' e 'silêncio', além da ausência de movimento, cria atmosfera de isolamento e desolação. Isso reflete um estado emocional de tristeza ou melancolia, não alegria. Não há indício de raiva nem interesse científico: só um cenário que espelha solidão interior."
+        "explicacao": "A repetição de palavras como 'vazia', 'ninguém', 'fechadas' e 'silêncio', além da ausência de movimento, cria atmosfera de isolamento e desolação. Isso reflete um estado emocional de tristeza ou melancolia, não alegria. Não há indício de raiva nem interesse científico: só um cenário que espelha solidão interior."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:3236476e",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +55,25 @@
         "type": "multipla-escolha",
         "pergunta": "Em um romance, a personagem sempre escolhe ficar sozinha em seu quarto enquanto sua família celebra. O que essa atitude pode simbolizar na narrativa?",
         "opcoes": [
-          "Falta de interesse por qualquer tipo de atividade",
-          "Obediência cega às regras da casa",
-          "Saúde emocional perfeita e integração social",
-          "Isolamento voluntário, rejeição ou sofrimento interior não resolvido"
+          "Falta de interesse por qualquer tipo de atividade em família",
+          "Obediência cega às regras da casa e aos costumes da família",
+          "Saúde emocional perfeita e boa integração social com a família",
+          "Isolamento voluntário ou sofrimento interior não resolvido"
         ],
         "correta": 3,
         "explicacao": "O isolamento voluntário em contexto de celebração coletiva geralmente sinaliza conflito interno, sofrimento silencioso ou rejeição social. Não indica saúde emocional nem desinteresse genérico por atividades, mas um afastamento específico que carrega peso emocional ou relacional."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:d9fb98bd",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -100,24 +104,24 @@
         "pergunta": "Um narrador descreve: 'As mãos tremiam enquanto lia a carta. Seu coração acelerou. Leu novamente, sem acreditar.' Qual é o efeito dessa sequência no leitor?",
         "opcoes": [
           "Tensão e curiosidade, antecipando algo importante ou perturbador",
-          "Tédio, pela repetição monótona de ações",
-          "Compreensão de que tudo é normal e previsível",
-          "Calma e tranquilidade, pois não há conflito visível"
+          "Tédio, causado pela repetição monótona das ações da personagem",
+          "Sensação de que tudo é normal, previsível e sem novidade",
+          "Calma e tranquilidade, pois o conflito não é visível na cena"
         ],
         "correta": 0,
         "explicacao": "Os sinais físicos (tremor, aceleração cardíaca) e a ação de reler criam suspense e sugerem que o conteúdo da carta é impactante ou inesperado. Isso mobiliza o leitor emocionalmente. Não há calma. A repetição reforça urgência, não tédio. O conteúdo é claramente excepcional, não normal."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:dfbded00",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -145,25 +151,25 @@
         "type": "multipla-escolha",
         "pergunta": "Em um poema, o verso 'Como uma folha ao vento, sem rumo nem lar' traz uma comparação. O que essa comparação sugere principalmente?",
         "opcoes": [
-          "Força e determinação da personagem",
-          "Fragilidade, desamparo e falta de estabilidade",
-          "Rapidez de movimento e agilidade",
-          "Beleza natural e renovação sazonal"
+          "Força e determinação da personagem diante das dificuldades",
+          "Fragilidade, desamparo e falta de estabilidade na vida",
+          "Rapidez de movimento e agilidade para atravessar o mundo",
+          "Beleza natural e renovação sazonal, como a das folhas"
         ],
         "correta": 1,
         "explicacao": "A comparação com uma folha ao vento (marcada pelo 'como') evoca passividade, descontrole e falta de raízes, imagens de vulnerabilidade e abandono. 'Sem rumo nem lar' reforça isso explicitamente. Não fala de força, mas de fraqueza; não destaca velocidade, mas desamparo; não celebra beleza, mas carência."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:78ae9992",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +199,17 @@
         "type": "multipla-escolha",
         "pergunta": "Releia: 'O pai nunca disse que a amava. Tampouco disse que a desprezava. Apenas a ignorava, como quem passa por um móvel velho sem perceber. Ela cresceu acreditando que era invisível.' O que a falta de fala revela sobre a relação?",
         "opcoes": [
-          "Que o pai tinha expressões de carinho secretas",
-          "Um amor profundo, mas mal expressado",
-          "Indiferença e negligência emocional como forma de rejeição",
-          "Um conflito temporário que será resolvido"
+          "Que o pai tinha expressões de carinho secretas que a filha não percebia",
+          "Um amor profundo, mas mal expressado pelo pai ao longo dos anos",
+          "Indiferença e negligência emocional do pai, que funcionam como rejeição",
+          "Um conflito temporário entre pai e filha, que será resolvido no futuro"
         ],
         "correta": 2,
         "explicacao": "O silêncio e a indiferença ('como quem passa por um móvel velho') são formas de negligência que machucam tanto quanto rejeição explícita. A conclusão 'ela cresceu acreditando que era invisível' explicita o dano psicológico: não é falta de expressão de um amor profundo, mas ausência de reconhecimento. Não há sugestão de conflito temporário nem de carinhos secretos."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:524e72d3",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -237,17 +247,17 @@
         "type": "multipla-escolha",
         "pergunta": "Em um romance, toda vez que a protagonista entra em conflito com a sociedade, ela volta ao diário e desenha flores. O que esse detalhe pode sugerir sobre sua estratégia psicológica?",
         "opcoes": [
-          "Que gosta apenas de desenho, não de literatura",
-          "Que está planejando uma vingança silenciosa",
-          "Que ela desiste de lutar contra a injustiça",
-          "Que procura restaurar beleza e ordem interior como refúgio ante caos externo"
+          "Que ela gosta de desenho, mas não de literatura, e usa o diário só para desenhar",
+          "Que ela está planejando uma vingança silenciosa contra as pessoas que a criticam",
+          "Que ela desiste de lutar contra a injustiça e escolhe se isolar do mundo",
+          "Que ela busca beleza e ordem interior como refúgio diante do caos externo"
         ],
         "correta": 3,
         "explicacao": "Os desenhos de flores (símbolos de beleza, vida e criação) funcionam como resposta emocional ao caos e à hostilidade do mundo. É um mecanismo de autocuidado e recuperação psicológica. Não indica desistência (ela volta ao diário, sinal de reflexão ativa), não exclui a escrita e não aponta para vingança, e sim para ressignificação pessoal."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:a8d5d4ce",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
@@ -255,7 +265,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -283,17 +295,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um autor frequentemente alterna entre descrições de natureza exuberante e reflexões sobre morte e finitude. Qual efeito estilístico predomina nessa estratégia?",
         "opcoes": [
-          "Contraste que enfatiza a fugacidade da vida e a transitoriedade da beleza",
-          "Indiferença emocional do narrador face aos temas",
-          "Separação clara entre poesia e filosofia sem integração",
-          "Confusão estética sem propósito artístico"
+          "Contraste que enfatiza a fugacidade da vida e da beleza natural",
+          "Indiferença emocional do narrador diante dos temas que apresenta",
+          "Separação clara entre poesia e filosofia, sem integração entre as duas",
+          "Confusão estética sem propósito artístico, que dificulta a leitura"
         ],
         "correta": 0,
         "explicacao": "A alternância entre vitalidade (natureza exuberante) e morte cria uma tensão que sublinha a transitoriedade, recurso clássico para explorar memento mori. Não é confusão; demonstra controle artístico. Não indica indiferença; revela sensibilidade. Integra poesia e reflexão filosoficamente, não as separa."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:ccab9f25",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
@@ -301,7 +313,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +343,17 @@
         "type": "multipla-escolha",
         "pergunta": "Em um conto, o narrador descreve minuciosamente objetos comuns (um relógio, uma xícara, um livro) que pertenceram a uma pessoa falecida. Qual é a função narrativa dessa descrição?",
         "opcoes": [
-          "Preencher espaço sem importância temática",
-          "Revitalizar a memória da pessoa através de objetos que guardam sua presença",
-          "Demonstrar que objetos são mais importantes que pessoas",
-          "Criticar o materialismo excessivo de modo direto e óbvio"
+          "Preencher espaço no texto, sem importância para o tema do conto",
+          "Reviver a memória da pessoa por meio de objetos que guardam sua presença",
+          "Mostrar que os objetos são mais importantes do que as pessoas que os usaram",
+          "Criticar o materialismo excessivo de modo direto e óbvio, sem qualquer sutileza"
         ],
         "correta": 1,
         "explicacao": "Objetos que pertenceram a um morto funcionam como pontes para memória e continuidade emocional: guardam traços de presença. A descrição minuciosa revitaliza a ausência através do concreto. Não é preenchimento vazio. Não privilegia objetos sobre pessoas (ao contrário, humaniza-os). A crítica ao materialismo, se houver, é sutil, não óbvia."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:cbaa7d1d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
@@ -347,7 +361,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +391,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia: 'Ela sorriu para ele como quem sorri para um estrangeiro, cortês, distante, sem esperança de real compreensão.' Considerando que os dois vivem juntos há vinte anos, o que esse trecho revela sobre o relacionamento?",
         "opcoes": [
-          "Que ambos se amam profundamente, mas escondem por timidez",
-          "Um casal perfeitamente harmonioso e compreensivo",
-          "Uma intimidade erosionada pela rotina e pela impossibilidade de real conexão emocional",
-          "Que um deles está planejando deixar o outro"
+          "Que ambos se amam profundamente, mas escondem esse sentimento um do outro por timidez",
+          "Que o casal é perfeitamente harmonioso e compreensivo, mesmo depois de tantos anos",
+          "Que a intimidade foi desgastada pela rotina e pela dificuldade de uma conexão emocional real",
+          "Que um deles está planejando deixar o outro em breve e ainda não contou ao parceiro"
         ],
         "correta": 2,
         "explicacao": "A comparação com um 'estrangeiro' e a adjetivação 'cortês, distante, sem esperança' mostram um distanciamento emocional profundo apesar da convivência longa. É intimidade esvaziada, não separação iminente nem amor oculto. O trecho é reflexão sobre erosão lenta de conexão autêntica."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:b6f0cc67",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -421,25 +439,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um autor escreve um romance inteiro em primeira pessoa, mas nunca nomeia o narrador. Qual efeito estilístico isso produz?",
         "opcoes": [
-          "Universaliza a experiência pessoal, permitindo que qualquer leitor se projete na história",
-          "Torna a narrativa confusa e ilegível",
-          "Indica que o narrador não é importante para a trama",
-          "Negligência criativa; deve haver nome sempre"
+          "Universaliza a experiência pessoal, permitindo que o leitor se projete na história",
+          "Torna a narrativa confusa e ilegível, pois o leitor não consegue saber quem está contando",
+          "Indica que o narrador é pouco importante para a trama e pode ser trocado por outro",
+          "Revela negligência criativa do autor, já que todo narrador em primeira pessoa deve ter nome"
         ],
         "correta": 0,
         "explicacao": "A ausência de nome numa narrativa em primeira pessoa é escolha estilística que impede a ancoragem numa identidade específica e favorece a identificação do leitor. É recurso deliberado, não negligência. Não torna o texto confuso se bem executado e não diminui a importância do narrador, apenas redistribui o foco."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:58d69dda",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +472,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -467,25 +487,25 @@
         "type": "multipla-escolha",
         "pergunta": "Considere: 'A cidade crescia, mas ele envelhecia no mesmo bairro velho.' Como essa frase estrutura significado através do contraste?",
         "opcoes": [
-          "Que crescimento urbano é sempre negativo",
-          "A cidade e o homem vivem em sincronia perfeita",
-          "Enquanto o mundo avança, o personagem fica preso ao passado, visualizando estagnação pessoal",
-          "Que a velhice é culpa da cidade"
+          "Mostra que o crescimento urbano é prejudicial e deve ser evitado nas grandes cidades",
+          "Mostra que a cidade e o homem vivem em perfeita sincronia, crescendo e amadurecendo juntos no tempo",
+          "Mostra que, enquanto o mundo avança, o personagem fica preso ao passado, em estagnação pessoal",
+          "Mostra que a velhice do personagem é culpa da cidade, que cresce e o deixa para trás"
         ],
         "correta": 2,
         "explicacao": "O contraste entre 'crescia' (ação dinâmica) e 'envelhecia no mesmo bairro' (imobilidade, repetição) cria significado sobre a desconexão entre o progresso externo e a estagnação existencial. Não é sincronia, não culpa a cidade e não faz julgamento universal: é a observação da distância entre mudança e imobilidade pessoal."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:b992ddde",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +520,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -513,25 +535,25 @@
         "type": "multipla-escolha",
         "pergunta": "Como se chama o recurso pelo qual um narrador deixa dicas ou sinais ocultos que o leitor só percebe em segunda leitura ou ao final da obra?",
         "opcoes": [
-          "Foreshadowing (antecipação de eventos futuros)",
-          "Flashback (volta ao passado)",
-          "Metáfora explícita",
-          "Diálogo"
+          "Prenúncio (foreshadowing): pistas que antecipam eventos futuros da narrativa",
+          "Flashback: salto no tempo que volta a um momento anterior da história",
+          "Elipse: omissão de um trecho do tempo da história, que fica subentendido",
+          "Monólogo interior: fluxo dos pensamentos da personagem, sem intervenção do narrador"
         ],
         "correta": 0,
-        "explicacao": "Foreshadowing é técnica de plantar pistas sutis que ganham sentido posterior, preparando o leitor inconscientemente. Diálogo é conversa entre personagens. Flashback é salto temporal para trás. Metáfora explícita é comparação clara. Nenhum desses é o recurso de antecipação oculta."
+        "explicacao": "O prenúncio (foreshadowing) é a técnica de plantar pistas sutis que ganham sentido depois, preparando o leitor sem que ele perceba. O flashback é um salto temporal para trás. A elipse omite um trecho do tempo da história. O monólogo interior mostra os pensamentos da personagem. Nenhum desses é o recurso de antecipação oculta."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:8961d37a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +568,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -559,25 +583,25 @@
         "type": "multipla-escolha",
         "pergunta": "Em um romance, quando o narrador alterna entre 'ele pensava' e 'ele sentia', qual efeito estilístico se cria?",
         "opcoes": [
-          "Confusão clara sobre o estado da personagem",
-          "Profundidade psicológica que mostra tanto atividade mental quanto emocional do personagem",
-          "Que pensamento e emoção são irrelevantes para a trama",
-          "Redundância desnecessária e falha narrativa"
+          "Confusão sobre o estado da personagem, porque o narrador troca de foco o tempo todo",
+          "Profundidade psicológica, pois mostra a atividade mental e a emoção da personagem",
+          "A ideia de que pensamento e emoção são irrelevantes para o andamento da trama",
+          "Redundância desnecessária, que revela uma falha do narrador na condução da história"
         ],
         "correta": 1,
         "explicacao": "A alternância entre 'pensava' e 'sentia' revela a complexidade humana: razão e emoção em tensão ou harmonia. Não é confusão; cria profundidade. Não é irrelevância; define a personagem. É recurso sofisticado, não falha, quando bem executado."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:1962b79f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -593,7 +617,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -606,17 +632,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um trecho literário descreve a pobreza de um bairro através de detalhes específicos: ruas sem asfalto, casas com telhas furadas, crianças descalças. Qual propósito essa abordagem cumpre?",
         "opcoes": [
-          "Criar empatia no leitor e denunciar injustiça social através do concreto, não do abstrato",
-          "Demonstrar superioridade do narrador sobre os personagens pobres",
-          "Preencher páginas sem propósito artístico",
-          "Apenas descrever a realidade objetiva sem significado maior"
+          "Criar empatia no leitor e denunciar a injustiça social por meio de imagens concretas",
+          "Mostrar a superioridade do narrador, que observa de fora os personagens pobres e os julga",
+          "Encher o texto com detalhes sem função artística, só para alongar a descrição do bairro",
+          "Registrar a realidade de modo objetivo e neutro, sem que os detalhes carreguem significado maior"
         ],
         "correta": 0,
         "explicacao": "Detalhes específicos (telhas furadas, descalços) funcionam como evidência concreta de sofrimento, gerando conexão emocional e crítica social implícita. Não é objetividade neutra (há seleção intencional). Não busca superioridade. É recurso de solidariedade narrativa cuidadosamente construído."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:06f23385",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
@@ -624,7 +650,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -639,7 +665,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -652,17 +680,17 @@
         "type": "multipla-escolha",
         "pergunta": "Quando uma personagem literária realiza ação que contradiz seus valores declarados, como isso afeta a interpretação dessa personagem?",
         "opcoes": [
-          "A personagem é mal escrita e deve ser descartada",
-          "Revela profundidade: hipocrisia, conflito interno ou fraqueza humana que torna a personagem mais real e complexa",
-          "Que os valores dela não importam de verdade",
-          "Que o autor não planejou bem a narrativa"
+          "Indica que a personagem foi mal construída pelo autor e deve ser desconsiderada por completo na leitura",
+          "Revela profundidade, como conflito interno ou fraqueza humana, o que a torna mais real e complexa",
+          "Mostra que os valores declarados por ela deixam de ter qualquer importância para a narrativa",
+          "Sugere que o autor não planejou bem o enredo e deixou a contradição por descuido na história"
         ],
         "correta": 1,
         "explicacao": "Contradição entre valores e ação é marca de realismo psicológico: ninguém é perfeitamente consistente. Isso cria profundidade, revela conflito e humaniza. Não é falha de escrita; é sofisticação. Não invalida valores (que podem representar aspiração fracassada, não hipocrisia simples)."
       },
       "meta": {
         "id": "gen:lit:interpretacao-texto-literario:88a9fd70",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:interpretacao-texto-literario"
         ],
@@ -670,7 +698,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -685,7 +713,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"

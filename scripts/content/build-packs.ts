@@ -10,9 +10,14 @@
  * <materia>/<qualquerNome>.json`, cada arquivo um `ContentPackage` PARCIAL
  * (`{ subjectId, items?, lessons? }` — `version` é opcional na entrada,
  * default 1). Vários arquivos da mesma matéria são fundidos num pacote só.
+ *
+ * `--root <dir>` (docs/36 T-07.6): constrói TUDO dentro de `<dir>` — entrada em `<dir>/banco`,
+ * pacotes em `<dir>/public-content`, índices gerados em `<dir>/aulas-geradas.ts` e
+ * `<dir>/itens-gerados.ts` — sem tocar `src/content/banco` nem `public/content`. É o que os testes
+ * usam (fixture em diretório temporário); sem a flag, o comportamento é o de sempre.
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { createHash } from "node:crypto";
 import type {
   ContentManifest,
@@ -22,13 +27,33 @@ import type {
   GeneratedLessonRef,
 } from "@/content/items/package";
 
-const BANCO_DIR = "src/content/banco";
-const OUT_DIR = "public/content/v1";
-const AULAS_GERADAS_PATH = "src/content/banco/aulas-geradas.ts";
-const ITENS_GERADOS_PATH = "src/content/banco/itens-gerados.ts";
+export interface BuildPaths {
+  bancoDir: string;
+  outDir: string;
+  aulasGeradasPath: string;
+  itensGeradosPath: string;
+}
+
+export const DEFAULT_PATHS: BuildPaths = {
+  bancoDir: "src/content/banco",
+  outDir: "public/content/v1",
+  aulasGeradasPath: "src/content/banco/aulas-geradas.ts",
+  itensGeradosPath: "src/content/banco/itens-gerados.ts",
+};
+
+/** Caminhos de um build isolado sob `root` (ver `--root`). */
+export function pathsUnderRoot(root: string): BuildPaths {
+  return {
+    bancoDir: join(root, "banco"),
+    outDir: join(root, "public-content"),
+    aulasGeradasPath: join(root, "aulas-geradas.ts"),
+    itensGeradosPath: join(root, "itens-gerados.ts"),
+  };
+}
 
 /** Índice leve de um item de pacote (docs/30 §21.3) — só o que o motor precisa pra escolher o item antes do pacote carregar. */
 export function itemRefOf(subjectId: string, item: ContentPackageItem): GeneratedItemRef {
+  const source = item.meta.source;
   return {
     id: item.id,
     subjectId,
@@ -39,6 +64,18 @@ export function itemRefOf(subjectId: string, item: ContentPackageItem): Generate
     c: item.meta.irt.c,
     roles: item.meta.roles,
     status: item.meta.validation.status,
+    // Só o que foge do padrão: oficial carrega a atribuição no índice (docs/36 T-07.5) e retirado é marcado (T-07.6).
+    ...(source.kind !== "ia-validada"
+      ? {
+          source: {
+            kind: source.kind,
+            ...(source.exam !== undefined ? { exam: source.exam } : {}),
+            ...(source.year !== undefined ? { year: source.year } : {}),
+            ...(source.ref !== undefined ? { ref: source.ref } : {}),
+          },
+        }
+      : {}),
+    ...(item.retired === true ? { retired: true as const } : {}),
   };
 }
 
@@ -82,7 +119,8 @@ function mergePackages(subjectId: string, parts: Partial<ContentPackage>[]): Con
   return { version: 1, subjectId, items, lessons };
 }
 
-function build(): void {
+export function build(paths: BuildPaths = DEFAULT_PATHS): void {
+  const { bancoDir: BANCO_DIR, outDir: OUT_DIR, aulasGeradasPath: AULAS_GERADAS_PATH, itensGeradosPath: ITENS_GERADOS_PATH } = paths;
   const files = findJsonFiles(BANCO_DIR);
   const bySubject = new Map<string, Partial<ContentPackage>[]>();
 
@@ -102,6 +140,8 @@ function build(): void {
   }
 
   mkdirSync(OUT_DIR, { recursive: true });
+  mkdirSync(dirname(AULAS_GERADAS_PATH), { recursive: true });
+  mkdirSync(dirname(ITENS_GERADOS_PATH), { recursive: true });
 
   const manifest: ContentManifest = { version: 1, generatedAt: new Date().toISOString(), subjects: {} };
   const aulasGeradas: GeneratedLessonRef[] = [];
@@ -162,4 +202,17 @@ export const ITENS_GERADOS: GeneratedItemRef[] = ${JSON.stringify(itensGerados)}
   );
 }
 
-build();
+function parseRoot(argv: string[]): string | undefined {
+  const i = argv.indexOf("--root");
+  if (i >= 0) {
+    const v = argv[i + 1];
+    if (!v || v.startsWith("--")) throw new Error("[build-packs] --root exige um diretório");
+    return v;
+  }
+  return argv.find((a) => a.startsWith("--root="))?.split("=")[1];
+}
+
+if (import.meta.main) {
+  const root = parseRoot(process.argv.slice(2));
+  build(root ? pathsUnderRoot(root) : DEFAULT_PATHS);
+}

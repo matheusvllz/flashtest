@@ -42,7 +42,7 @@ export function ChapterBanner({
       </span>
       {done && (
         <span
-          className="grid h-7 w-7 shrink-0 place-items-center rounded-full border-2 border-abismo bg-recompensa text-abismo"
+          className="grid h-7 w-7 shrink-0 place-items-center rounded-full border-2 border-abismo bg-recompensa text-on-alert"
           aria-hidden="true"
         >
           <Stamp size={14} />

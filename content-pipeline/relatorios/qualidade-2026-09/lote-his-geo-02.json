@@ -1,0 +1,746 @@
+[
+  {
+    "id": "oficial:2023:015ab1af",
+    "arquivo": "src/content/banco/oficial/2023-bio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.056,
+        "corretaMaisLonga": true,
+        "absolutismo": 4,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.056,
+        "corretaMaisLonga": true,
+        "absolutismo": 4,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Gametas com 1 ou 2 cromossomos 21 combinam em 3 zigotos possíveis. Explicação correta. Habilidade bio:genetica-leis-mendel é o encaixe mais próximo na taxonomia (não há habilidade de cromossomos/aneuploidia); mantida. Texto oficial intocado.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:03b666ec",
+    "arquivo": "src/content/banco/oficial/2023-mat.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.8,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.8,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Sistema linear: v = 0,70, cartela = R$ 6,30 (conferido). Explicação correta. Metadado coerente (d=3, equação).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:09e00433",
+    "arquivo": "src/content/banco/oficial/2023-qui.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.789,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.789,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Caráter iônico do cloridrato aumenta a solubilidade em água. Explicação correta. Metadado coerente (d=4).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:16a24cc9",
+    "arquivo": "src/content/banco/oficial/2023-geo.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.795,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.795,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Tripé grileiros/madeireiros/pecuaristas remete à apropriação de terras devolutas. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:28e93b86",
+    "arquivo": "src/content/banco/oficial/2023-his.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.886,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.886,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Cooptar sindicatos rurais para controlar tensões políticas. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:2c2ba620",
+    "arquivo": "src/content/banco/oficial/2023-por.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.865,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.865,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Mudança impulsionada pelo uso público da petição. Explicação correta. Metadado coerente (d=2).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:3bb5b31f",
+    "arquivo": "src/content/banco/oficial/2023-mat.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Média ponderada (75x2000 + 25x7000)/100 = 3250 (conferido). Explicação correta. Metadado coerente (d=2).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:406ba302",
+    "arquivo": "src/content/banco/oficial/2023-bio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.697,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.697,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Metais tóxicos ficam acumulados nos tecidos da planta. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:4c8f312e",
+    "arquivo": "src/content/banco/oficial/2023-bio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.739,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.739,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Regressão do corpo lúteo reduz estrógeno e progesterona. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:4d1a63bc",
+    "arquivo": "src/content/banco/oficial/2023-por.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.99,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.99,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Citação e dados sustentam a tese da vulnerabilidade da população negra à violência. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:686fb94a",
+    "arquivo": "src/content/banco/oficial/2023-mat.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.857,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.857,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. 5750 folhas = 57,5 embalagens, arredondadas a 58 = R$ 232; desconto de 5,17%, intervalo (5,0; 5,5) (conferido). Explicação correta. Metadado coerente (d=3).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:843adf61",
+    "arquivo": "src/content/banco/oficial/2023-geo.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.069,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.069,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Produtores rurais defendem barreiras fitossanitárias e a indústria a livre circulação de mercadorias. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:8862844c",
+    "arquivo": "src/content/banco/oficial/2023-mat.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. 300/800 = 3/8 (conferido). Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:8e0f4f5f",
+    "arquivo": "src/content/banco/oficial/2023-por.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.948,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.948,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Serenidade pela entrega ao afeto presente. Explicação correta. Habilidade por:sentido-figuras-linguagem aceitável (leitura de poema); mantida.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:93c2ba3f",
+    "arquivo": "src/content/banco/oficial/2023-por.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.946,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.946,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. \"Juntos\" ressalta solidariedade/cooperação. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:b6169899",
+    "arquivo": "src/content/banco/oficial/2023-mat.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Lista de 440, meta 330, 110 crianças a mais = 11 salas (conferido). Explicação correta. Dificuldade 5 vem do parâmetro oficial (item de raciocínio em vários passos); mantida.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:fe606f85",
+    "arquivo": "src/content/banco/oficial/2023-soc.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.846,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.846,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. Origem do termo mulambo remete à escravidão; rejeição de preconceito racial. Explicação correta. Metadado coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "oficial:2023:273a7d48",
+    "arquivo": "src/content/banco/oficial/2023-mat.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "falha",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "retirar"
+    ],
+    "motivo": "R1: resolvi antes do gabarito e coincidiu com o gabarito do Inep. R2 FALHA na explicação: a equação escrita (\"600(1+i)^2 + 600(1+i) - 900(1+i)^2 = 0\") está errada (omite o termo 600 e daria 1+i = 2, isto é, 100%), embora o resultado citado (i = 21,5%) e o gabarito D estejam certos. Como oficial não pode ter texto alterado, a regra manda retirar. Correção proposta para o orquestrador decidir (reativar exige editar a explicação, o que a regra desta revisão não permite): \"O valor financiado é 1500 x 1,2 = 1800, em 3 parcelas de 600. A 1a é paga no ato, então o saldo a financiar é 1500 - 600 = 900, pago em duas parcelas de 600 em 30 e 60 dias. Com x = 1/(1+i): 600x + 600x^2 = 900, isto é, 2x^2 + 2x - 3 = 0, e x = (-2 + raiz de 28)/4 = (-2 + 5,29)/4 = 0,8225. Então 1+i = 1,2158 e i = 21,5%.\"",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  }
+]

@@ -11,7 +11,19 @@
  * docs/15-mascote-e-voz.md §5. Enquanto a arte final não chega, todas caem no
  * fallback interino (arte neutra) gerado por `scripts/gerar-logos-foca.ps1`
  * (docs/18 D5) — ver `src/assets/branding/foca/README.md`.
+ *
+ * Se a imagem não carregar (rede, arquivo ausente), a `<img>` fica `visibility:
+ * hidden`: mantém a caixa `size × size`, então o layout não pula e o navegador não
+ * mostra o ícone quebrado nem o texto alternativo (docs/36 T-08.6, §G.8).
+ *
+ * Variante por tema (docs/36 §G.8): a marca d'água de linha muda com o tema —
+ * `line-dark` no claro, `line-light` no escuro. Quem precisa das duas monta o par
+ * dentro de wrappers `dark:hidden` / `hidden dark:block` (ver `/aha`): o `display`
+ * da `<img>` é fixo (`block`), então quem esconde a marca é o wrapper, nunca uma classe
+ * passada por `className`.
  */
+import { useEffect, useRef, useState } from "react";
+
 export type FocaVariant = "color" | "line-light" | "line-dark";
 export type FocaExpression =
   | "neutra"
@@ -89,16 +101,34 @@ export function FocaMark({
   const table = variant === "color" ? EXPRESSAO_SRC[expression ?? "neutra"] : SRC[variant];
   const src = size <= 48 ? table.small : table.large;
   const motionClass = MOTION_CLASS[motion];
+  // Guarda QUAL src falhou (não um booleano): se a variante/expressão muda, tenta de novo.
+  const [srcQueFalhou, setSrcQueFalhou] = useState<string | null>(null);
+  const falhou = srcQueFalhou === src;
+  const imgRef = useRef<HTMLImageElement>(null);
+  // O `error` pode disparar ANTES da hidratação (SSR): o React não vê esse evento. Confere depois de montar.
+  useEffect(() => {
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth === 0) setSrcQueFalhou(src);
+  }, [src]);
   return (
     <img
       src={src}
+      ref={imgRef}
+      onError={() => setSrcQueFalhou(src)}
       alt={decorative ? "" : "Foca"}
       aria-hidden={decorative ? true : undefined}
       width={size}
       height={size}
       draggable={false}
       className={[className, motionClass].filter(Boolean).join(" ") || undefined}
-      style={{ width: size, height: size, objectFit: "contain", display: "block", flexShrink: 0 }}
+      style={{
+        width: size,
+        height: size,
+        objectFit: "contain",
+        display: "block",
+        flexShrink: 0,
+        visibility: falhou ? "hidden" : undefined,
+      }}
     />
   );
 }

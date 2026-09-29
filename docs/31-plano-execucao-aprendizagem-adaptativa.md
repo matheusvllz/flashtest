@@ -1630,6 +1630,8 @@ Não publique item reprovado. Não corrija gabarito manualmente sem registrar. N
 ### Objetivo
 Home com "Sessão de hoje" e caminho único misturado, execução das atividades dinâmicas pelo player existente, foco permanente e temporário, e "Praticar"/"Progresso" alimentados pelo modelo — tudo atrás de `jornadaAdaptativa`, com a trilha atual intacta como mapa por matéria.
 
+> **Nota (28/09/2026):** os contratos de início, conclusão e reposição da fila desta fase foram revistos pelo `36` (RF-1…RF-9, Fase 2): a rota `/atividade/$activityId` é a dona da seleção de itens, a conclusão é idempotente e a reposição preserva as comprometidas. Registro no `37`.
+
 ### Motivação
 `30` §14–15; P6; O1, O2.
 
@@ -1779,6 +1781,8 @@ Não apague nem reescreva `buildTrail`, `SubjectPath`, `LearningPath`. Não crie
 
 ### Objetivo
 Onboarding com prova, data, tempo por dia, foco e matérias fáceis, sem ficar cansativo; oferta de nivelamento opcional; teste adaptativo por área que gera estimativas por habilidade.
+
+> **Nota (28/09/2026):** o contrato de finalização, retomada e resultado do nivelamento desta fase foi revisto pelo `36` (RF-10…RF-13 e §F.5, Fases 3 e 6): aplicação única dos priors, retomada igual à execução contínua e resultado por faixa de área. Registro no `37`.
 
 ### Motivação
 `30` §12; P8; O6.
@@ -2122,7 +2126,7 @@ Não declare "pronto" com pendência escondida. Não ligue flag com teste vermel
 | G1 | Home responde "o que estudar agora" com motivo, tempo e um CTA | E2E `journey.spec.ts` | F12 |
 | G2 | Jornada mistura matérias sem 3 seguidas da mesma e com toda atividade explicada | `sim-engine.test.ts` + E2E | F8, F12 |
 | G3 | Mastery e Confidence separados, dentro das tabelas de referência | `mastery-model`, `confidence` | F5 |
-| G4 | Proporção 70/20/10 respeitada em janela de 20 | `sim-engine.test.ts` | F8 |
+| G4 | Proporção 70/20/10 respeitada em janela de 20 *(nota 28/09/2026, `36` K12: medir duas janelas consecutivas de 10; a regra operacional é a janela móvel de 10, com teto de 3 revisões por janela)* | `sim-engine.test.ts` | F8 |
 | G5 | Nenhum pré-requisito violado; `core` nunca pulada sem confirmação | `adaptive-planner`, `sim-engine` | F8 |
 | G6 | Nivelamento opcional, adaptativo, ≤ 24 itens, sem nota | `placement`, E2E | F13 |
 | G7 | Checkpoints recalibram e antecipam revisão | `sim-checkpoint` | F14 |

@@ -34,6 +34,11 @@ function hashMod4(s: string): number {
  * que a certa caia numa posição-alvo determinística (hash do `candidateId`) —
  * mesmo conteúdo, mesma alternativa certa, só muda a ordem. Roda DEPOIS da
  * verificação: o solucionador respondeu sobre a ordem original.
+ *
+ * Item que rotula AFIRMAÇÕES com (A)/(B)/(C)/(D) no enunciado (`rotulaAfirmacoes`) gira as
+ * alternativas do mesmo jeito, mas NÃO remapeia letras da explicação: ali "A", "C e D" são
+ * rótulos do TEXTO, não posições (achado real da repescagem, docs/32 L365; o conserto original
+ * nunca chegou ao repo — portado na T-07.6 do docs/36).
  */
 export function balancearPosicaoGabarito<
   T extends { opcoes: string[]; correta: number; explicacao?: string },
@@ -44,7 +49,11 @@ export function balancearPosicaoGabarito<
   if (rotacao === 0) return exercise;
   const opcoes = [0, 1, 2, 3].map((k) => exercise.opcoes[(k - rotacao + 4) % 4]);
   const explicacao =
-    exercise.explicacao === undefined ? undefined : remapearLetras(exercise.explicacao, rotacao);
+    exercise.explicacao === undefined
+      ? undefined
+      : rotulaAfirmacoes(exercise as { pergunta?: string; opcoes: string[] })
+        ? exercise.explicacao
+        : remapearLetras(exercise.explicacao, rotacao);
   return { ...exercise, opcoes, correta: alvo, ...(explicacao === undefined ? {} : { explicacao }) };
 }
 
@@ -63,6 +72,29 @@ export function remapearLetras(texto: string, rotacao: number): string {
     const letra = (a ?? b ?? c) as string;
     return trecho.replace(letra, L[(L.indexOf(letra) + rotacao) % 4]);
   });
+}
+
+/** Rótulo de afirmação no enunciado: "(A)", "(B)"… */
+const RE_ROTULO_NO_ENUNCIADO = /\(([A-E])\)/g;
+/**
+ * Alternativa que só cita rótulos de afirmações: "Somente A", "Apenas B", "C e D", "A, B e C",
+ * "As afirmativas A e C.", "Só a alternativa B"… (letras maiúsculas isoladas; case-insensitive só
+ * nas palavras de ligação).
+ */
+const RE_ALTERNATIVA_SO_ROTULOS =
+  /^\s*(?:(?:somente|apenas|s[oó])\s+)?(?:(?:as?|os)\s+(?:afirmativas?|afirma(?:ç|c)(?:ão|ões|ao|oes)|senten(?:ç|c)as?|frases?|alternativas?|itens?|op(?:ç|c)(?:ão|ões|ao|oes))\s+)?[A-E](?:\s*(?:,|e|ou)\s*[A-E])*\s*\.?\s*$/i;
+
+/**
+ * O item rotula afirmações com (A)/(B)/… no enunciado E responde por rótulos ("Somente A", "C e D")?
+ * Nesse formato as letras do enunciado, das alternativas e da explicação são do TEXTO — girar as
+ * alternativas não muda o que elas significam, e `remapearLetras` estragaria a explicação.
+ * Exige as duas marcas (≥ 2 rótulos distintos no enunciado e ≥ 1 alternativa só de rótulos) pra
+ * não pegar enunciado comum que cita "(A)" de passagem.
+ */
+export function rotulaAfirmacoes(exercise: { pergunta?: string; opcoes: string[] }): boolean {
+  const rotulos = new Set([...(exercise.pergunta ?? "").matchAll(RE_ROTULO_NO_ENUNCIADO)].map((m) => m[1]));
+  if (rotulos.size < 2) return false;
+  return exercise.opcoes.some((o) => RE_ALTERNATIVA_SO_ROTULOS.test(o));
 }
 
 export type EscalationVerdict =

@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Ao entrar no quarto escuro, ele tateou a parede em busca do interruptor da lâmpada que ficava perto da porta', a palavra 'lâmpada' é acentuada por ser:",
         "opcoes": [
-          "proparoxítona",
-          "monossílaba tônica terminada em a",
-          "oxítona terminada em a",
-          "paroxítona terminada em ditongo"
+          "proparoxítona, com tônica na antepenúltima",
+          "monossílaba tônica terminada em 'a', como 'já'",
+          "oxítona terminada em 'a', como 'sofá'",
+          "paroxítona terminada em ditongo, como 'jóquei'"
         ],
         "correta": 0,
         "explicacao": "Lâmpada se divide em lâm-pa-da. A tônica 'lâm' está na antepenúltima, logo é proparoxítona. Toda proparoxítona é acentuada, sem exceção. Termina em 'a', é verdade, mas isso não muda nada: proparoxítona sempre leva acento."
       },
       "meta": {
         "id": "gen:por:ortografia-acentuacao:59debbbf",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:ortografia-acentuacao"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +55,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'A nadadora fez uma saída rápida da piscina assim que o juiz apitou o fim da prova', a palavra 'saída' recebe acento porque:",
         "opcoes": [
-          "é oxítona terminada em a",
-          "tem hiato tônico, com o 'i' sozinho na sílaba após vogal",
-          "é proparoxítona",
-          "é monossílabo tônico"
+          "é oxítona terminada em 'a', como 'sofá', 'maná' e 'alvará'",
+          "tem hiato, pois o 'i' tônico fica sozinho na sílaba",
+          "é proparoxítona, como 'lâmpada' e 'árvore'",
+          "é monossílabo tônico terminado em 'a', 'e' ou 'o'"
         ],
         "correta": 1,
         "explicacao": "Saída se divide em sa-í-da. O 'i' tônico fica sozinho em sua sílaba, o que chamamos de hiato. O acento marca exatamente isso: o hiato. Se as vogais estivessem juntas, seria só paroxítona terminada em 'a' e não teria acento."
       },
       "meta": {
         "id": "gen:por:ortografia-acentuacao:64c06660",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:ortografia-acentuacao"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +103,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Nós vamos visitar os avós no fim de semana, mas o pai ainda não confirmou o passeio', a palavra 'nós' é acentuada porque é:",
         "opcoes": [
-          "oxítona terminada em consoante",
-          "paroxítona terminada em ditongo",
-          "monossílabo tônico terminado em o (com s)",
-          "proparoxítona"
+          "oxítona terminada em consoante, como 'papel' e 'jornal'",
+          "paroxítona terminada em ditongo, como 'jóquei' e 'órfão'",
+          "monossílabo tônico terminado em 'o', com ou sem 's', como 'pó'",
+          "proparoxítona, com a sílaba tônica na antepenúltima, como 'lâmpada'"
         ],
         "correta": 2,
         "explicacao": "Nós é monossílabo tônico terminado em 'os', e essa terminação sempre leva acento. O acento ainda diferencia nós (pronome reto, sujeito) de nos (pronome átono). Os sons são diferentes, e a função na frase também muda."
       },
       "meta": {
         "id": "gen:por:ortografia-acentuacao:430a2317",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:ortografia-acentuacao"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -162,8 +168,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,7 +216,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +231,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -255,7 +263,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +278,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -301,7 +310,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +325,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +339,17 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'O professor explicou que o texto tinha um vocabulário muito técnico para os alunos do primeiro ano', a palavra 'vocabulário' recebe acento gráfico porque é classificada como:",
         "opcoes": [
-          "proparoxítona",
-          "monossílaba tônica",
-          "oxítona terminada em o",
-          "paroxítona terminada em ditongo"
+          "oxítona terminada em 'a', 'e' ou 'o', como 'sofá' e 'jacaré'",
+          "monossílaba tônica terminada em 'a', 'e' ou 'o', como 'já' e 'pé'",
+          "paroxítona terminada em 'a', como 'casa' e 'mesa'",
+          "paroxítona terminada em ditongo, como 'história' e 'série'"
         ],
         "correta": 3,
         "explicacao": "Vocabulário se divide em vo-ca-bu-lá-rio. A tônica 'lá' cai na penúltima, logo é paroxítona. Termina em ditongo crescente io e recebe acento. Paroxítonas terminadas em ditongo sempre têm acento, diferente das terminadas em 'a', 'e' ou 'o', que normalmente não levam."
       },
       "meta": {
         "id": "gen:por:ortografia-acentuacao:a4466233",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:ortografia-acentuacao"
         ],
@@ -347,7 +357,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +372,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"

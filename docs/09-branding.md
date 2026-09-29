@@ -1,5 +1,7 @@
 # 09 — Branding & Design System (Foca)
 
+> **Nota (28/09/2026, `38`):** este arquivo é histórico. Para escrever texto do produto, ver [COPY.md](COPY.md); as opções de slogan da §6 estão superadas pelo guia de posicionamento em [copy/01-estrategia.md](copy/01-estrategia.md) §5. A referência visual atual, com os logos novos, é [brand/foca-design-system-2026-09-28.html](brand/foca-design-system-2026-09-28.html).
+
 Status: 🟡 **marca nova em definição (20/09/2026)** — o projeto voltou ao nome **Foca**, com a foca como mascote da marca. Este arquivo é a fonte de verdade da marca. O mascote (personalidade, expressões, voz) tem documento próprio: `15-mascote-e-voz.md`. O sistema de recompensa (sons, animações, streak): `16-gamificacao-e-dopamina.md`.
 
 > **✅ Aplicado no código em 20/09/2026 — ver `17-plano-migracao-visual-foca.md`.** A arte final da logo (cabeça em 3/4, 6 versões) substituiu o SVG de referência da §2; os originais estão em `src/assets/branding/foca/`.
@@ -36,7 +38,7 @@ O mascote deixa de ser enfeite pelo mesmo motivo: a persona (`14-persona-joao.md
 
 ### O que é
 
-A **cabeça da foca, de frente** — desenho simples, geométrico, sem corpo e sem cenário. Precisa funcionar como ícone de app em 48px, em monocromático, e tatuado numa camiseta.
+A **cabeça da foca, meio de lado** — desenho simples, geométrico, sem corpo e sem cenário. Precisa funcionar como ícone de app em 48px, em monocromático, e tatuado numa camiseta.
 
 ### O problema de desenho a resolver
 

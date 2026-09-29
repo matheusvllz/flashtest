@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The chef was meticulous in her work, carefully arranging each ingredient on the plate with precision and care.'\n\nNeste contexto, qual é o significado mais próximo de 'meticulous'?",
         "opcoes": [
-          "Apressado e distraído",
+          "Apressado e distraído no trabalho",
           "Atencioso aos detalhes e rigoroso",
-          "Criativo e inovador",
-          "Caro e exclusivo"
+          "Criativo e inovador nas receitas",
+          "Caro e exclusivo, feito para poucos"
         ],
         "correta": 1,
         "explicacao": "O contexto descreve ações cuidadosas: 'carefully arranging each ingredient with precision and care'. 'Meticulous' encaixa com precisão e atenção ao detalhe. Não é apressado (A), criatividade isolada não é garantida (C), valor de custo não é implicado (D)."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:21294fa4",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -70,8 +72,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -116,8 +119,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -162,8 +166,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +182,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +196,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The negotiations between the two companies began cordially, but as disputes over financial terms emerged, the atmosphere became fraught with tension and suspicion.'\n\nQual é o significado de 'fraught' neste contexto?",
         "opcoes": [
-          "Dominado por argumentos legais",
-          "Cheio de esperança e otimismo",
+          "Dominado por argumentos legais e contratos",
+          "Cheio de esperança e otimismo sobre o acordo",
           "Carregado de emoção negativa ou perigoso",
-          "Saturado de informações técnicas"
+          "Saturado de informações técnicas e números"
         ],
         "correta": 2,
         "explicacao": "O contexto mostra uma mudança negativa: de 'cordially' para 'tension and suspicion'. 'Fraught with tension' significa carregado de tensão, de algo negativo. O texto não fala em argumentos legais (A), esperança é o oposto do clima descrito (B) e não há menção a dados técnicos (D)."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:e94edde9",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
@@ -209,7 +214,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +229,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-10"
         },
         "examProfiles": [
           "enem"
@@ -255,7 +262,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +277,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -301,7 +309,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +324,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +338,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'Despite her initial skepticism about online learning, the student found the experience to be quite efficacious, with flexible schedules and personalized feedback improving her grades dramatically.'\n\nQual é o significado de 'efficacious' neste contexto?",
         "opcoes": [
-          "Economicamente viável",
-          "Eficaz e produtivo em alcançar resultados desejados",
-          "Facilmente acessível a todos",
-          "Tecnicamente sofisticado"
+          "Economicamente viável e barato para a maioria dos alunos",
+          "Eficaz, capaz de produzir os resultados desejados",
+          "Facilmente acessível a qualquer pessoa, de qualquer lugar",
+          "Tecnicamente sofisticado e cheio de recursos modernos"
         ],
         "correta": 1,
         "explicacao": "O contexto mostra resultado positivo: 'improving her grades dramatically'. 'Efficacious' descreve algo que funciona efetivamente. Não é viabilidade econômica (A), acessibilidade (C), ou sofisticação técnica (D). Significa capacidade comprovada de produzir efeito desejado."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:7a7a3720",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
@@ -347,7 +356,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +371,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -375,7 +386,7 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The documentary's unflinching portrayal of poverty in developing nations was at once harrowing and essential viewing, forcing audiences to confront uncomfortable truths about global inequality.'\n\nQual é o significado de 'harrowing' neste contexto?",
         "opcoes": [
-          "Comercialmente bem-sucedido",
+          "Comercialmente bem-sucedido e muito lucrativo",
           "Extremamente abrasivo e ofensivo",
           "Profundamente perturbador e angustiante",
           "Didático e informativo acima de tudo"
@@ -385,15 +396,15 @@
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:6a1ebcde",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +419,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"
@@ -438,8 +451,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +467,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -467,25 +481,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The historical revisionism in the textbook was pernicious, subtly distorting events and omitting perspectives to promote a particular ideological narrative.'\n\nQual é o significado de 'pernicious' neste contexto?",
         "opcoes": [
-          "Financeiramente custoso",
-          "Óbvio e facilmente identificado",
+          "Financeiramente custoso para as escolas e famílias",
+          "Óbvio e facilmente identificado por qualquer leitor",
           "Prejudicial de modo insidioso e difícil de perceber",
-          "Relacionado a educação formal"
+          "Relacionado à educação formal e ao ensino escolar"
         ],
         "correta": 2,
         "explicacao": "O contexto destaca um dano discreto: 'subtly distorting', 'omitting perspectives'. 'Pernicious' descreve algo prejudicial de modo sorrateiro. Custo financeiro não é mencionado (A), 'subtly' contradiz a ideia de óbvio (B) e o livro didático é o cenário, não o sentido da palavra (D)."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:b0b87e35",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +514,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -530,8 +546,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +562,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -559,25 +576,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The novelist's use of arcane vocabulary alienated many readers, despite the book's compelling narrative and vivid descriptions.'\n\nQual é o significado de 'arcane' neste contexto?",
         "opcoes": [
-          "Conhecido apenas por poucos; obscuro e misterioso",
-          "Relacionado a maldições ou magia negra",
-          "Facilmente entendido por qualquer pessoa",
-          "Inovador e moderno"
+          "Conhecido por poucos; obscuro e misterioso",
+          "Relacionado a maldições, feitiços ou magia negra",
+          "Facilmente entendido por qualquer pessoa comum",
+          "Inovador e moderno, próprio de novos tempos"
         ],
         "correta": 0,
         "explicacao": "O contexto mostra que o vocabulário 'alienated many readers', afastou leitores. 'Arcane' descreve palavras obscuras, conhecidas por poucos. O trecho fala de vocabulário, não de sobrenatural (B); se fosse fácil de entender, não afastaria leitores (C); e nada indica inovação (D)."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:aa127f0c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +609,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-10"
         },
         "examProfiles": [
           "enem"
@@ -605,25 +624,25 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The philanthropist's largesse was instrumental in funding the new hospital wing, demonstrating that individual generosity could complement government initiatives in healthcare.'\n\nQual é o significado de 'largesse' neste contexto?",
         "opcoes": [
-          "Deficiência de recursos públicos",
-          "Infraestrutura hospitalar",
-          "Generosidade magnânima; distribuição generosa de recursos",
-          "Competição entre instituições"
+          "Deficiência de recursos públicos na área da saúde",
+          "Infraestrutura hospitalar, como a ala nova do hospital",
+          "Generosidade magnânima; doação generosa de recursos",
+          "Competição entre instituições públicas e privadas"
         ],
         "correta": 2,
         "explicacao": "'Largesse' é generosidade: o filantropo financiou a nova ala do hospital, e o próprio trecho retoma a ideia com 'individual generosity'. Não se refere à falta de recursos públicos (A), nem à ala do hospital em si (B), nem a competição (D)."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:80805303",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +657,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -651,9 +672,9 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The athlete's comportment during the post-game interview was professional and gracious, earning praise from both fans and critics for his humility despite victory.'\n\nQual é o significado de 'comportment' neste contexto?",
         "opcoes": [
-          "Capacidade de resistir à fadiga",
-          "Velocidade de reação",
-          "Habilidade técnica no esporte",
+          "Capacidade de resistir ao cansaço físico",
+          "Velocidade de reação diante das perguntas",
+          "Habilidade técnica no esporte que pratica",
           "Maneira de se comportar; conduta e porte"
         ],
         "correta": 3,
@@ -661,7 +682,7 @@
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:9033184a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
@@ -669,7 +690,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +705,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -697,17 +720,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The evidence presented by the defense attorney was tendentious, cherry-picking facts to support a predetermined conclusion while ignoring contradictory data.'\n\nQual é o significado de 'tendentious' neste contexto?",
         "opcoes": [
-          "Apresentado com tendência de apoiar visão predeterminada",
-          "Relacionado ao sistema legal",
-          "Emocionalmente impactante",
-          "Baseado em fatos científicos estabelecidos"
+          "Parcial, escolhido para sustentar uma conclusão já decidida",
+          "Relacionado ao sistema legal e ao trabalho do advogado",
+          "Emocionalmente impactante para o júri e para o público",
+          "Baseado em fatos científicos estabelecidos e amplamente aceitos"
         ],
         "correta": 0,
         "explicacao": "O contexto mostra viés intencional: 'cherry-picking facts', 'predetermined conclusion', 'ignoring contradictory data'. 'Tendentious' significa enviesado, parcial. O tribunal é o cenário, não o sentido da palavra (B); emoção não é o ponto (C); e escolher só os fatos convenientes é o oposto de se basear em fatos estabelecidos (D)."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:5412066c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
@@ -715,7 +738,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -730,7 +753,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -743,17 +768,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o contexto:\n\n'The artist's technique was inimitable, creating effects through brushwork that no contemporary painter could reproduce, cementing her reputation as a master.'\n\nQual é o significado de 'inimitable' neste contexto?",
         "opcoes": [
-          "Desagradável e ofensivo",
+          "Desagradável e ofensivo ao olhar do público",
           "Impossível de imitar; único e inigualável",
-          "Relacionado a técnicas antigas",
-          "Rapidamente executado"
+          "Relacionado a técnicas muito antigas de pintura",
+          "Feito com rapidez, em poucas pinceladas"
         ],
         "correta": 1,
         "explicacao": "O contexto estabelece unicidade: 'no contemporary painter could reproduce'. 'Inimitable' significa que não pode ser copiado. Não é desagradável (A), não é sobre antiguidade (C), nem rapidez (D). Refere-se à impossibilidade de reproduzir."
       },
       "meta": {
         "id": "gen:ing:vocabulario-contexto:51a48922",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "ing:vocabulario-contexto"
         ],
@@ -761,7 +786,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -776,7 +801,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"

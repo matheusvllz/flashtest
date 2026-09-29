@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { skillDisplay } from "@/lib/adaptive/display";
+import { faixaDaAreaPlacement, precisaoDaArea, skillDisplay } from "@/lib/adaptive/display";
 import type { SkillEvidenceEntry, SkillModelEntry } from "@/lib/learning/types";
 
 /**
@@ -90,5 +90,40 @@ describe("skillDisplay — fronteiras (docs/30 §10.4)", () => {
     };
     const d = skillDisplay(masteryAlta, evidenciaPouca, undefined, "2026-09-21");
     expect(d.dominated).toBe(false);
+  });
+});
+
+/**
+ * Resultado do nivelamento (docs/36 §F.5, T-06.1; RP-6): faixa por θ̂ da área e precisão pela SE da
+ * área, testadas nos limiares EXATOS — o corte é onde o plano diz, não "por perto".
+ */
+describe("precisaoDaArea — SE da área (docs/36 §F.5)", () => {
+  test("SE ≤ 0,45 → firme; 0,45 < SE ≤ 0,70 → inicial; SE > 0,70 → poucas", () => {
+    expect(precisaoDaArea(0.2)).toBe("firme");
+    expect(precisaoDaArea(0.45)).toBe("firme"); // limiar inclusivo (mesmo corte de parada do CAT)
+    expect(precisaoDaArea(0.4501)).toBe("inicial");
+    expect(precisaoDaArea(0.7)).toBe("inicial"); // limiar inclusivo
+    expect(precisaoDaArea(0.7001)).toBe("poucas");
+    expect(precisaoDaArea(1.2)).toBe("poucas");
+  });
+
+  test("sem SE (área não medida) → null", () => {
+    expect(precisaoDaArea(null)).toBeNull();
+  });
+});
+
+describe("faixaDaAreaPlacement — θ̂ da área (docs/36 §F.5)", () => {
+  test("θ̂ < −0,5 → construção; −0,5 ≤ θ̂ < 0,7 → no caminho; θ̂ ≥ 0,7 → firme", () => {
+    expect(faixaDaAreaPlacement(-2)).toBe("construcao");
+    expect(faixaDaAreaPlacement(-0.5001)).toBe("construcao");
+    expect(faixaDaAreaPlacement(-0.5)).toBe("caminho");
+    expect(faixaDaAreaPlacement(0)).toBe("caminho");
+    expect(faixaDaAreaPlacement(0.6999)).toBe("caminho");
+    expect(faixaDaAreaPlacement(0.7)).toBe("firme");
+    expect(faixaDaAreaPlacement(3)).toBe("firme");
+  });
+
+  test("área não medida (θ̂ nulo) → null, nunca uma faixa inventada", () => {
+    expect(faixaDaAreaPlacement(null)).toBeNull();
   });
 });

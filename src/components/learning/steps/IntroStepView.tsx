@@ -12,7 +12,7 @@ export function IntroStepView({ step, onNext }: { step: IntroStep; onNext: () =>
     <div className="space-y-5">
       <FocaSays text={step.body} expression="neutra" size={56} />
       <h2 className="font-display text-xl font-bold text-abismo">{step.title}</h2>
-      <button onClick={onNext} className="btn-primary w-full">
+      <button type="button" onClick={onNext} className="btn-primary w-full">
         {COPY.licao.comecar}
       </button>
     </div>

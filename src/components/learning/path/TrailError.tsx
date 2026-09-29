@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { Link, useRouter, type ErrorComponentProps } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
-import { COPY } from "@/lib/copy";
+import { COPY, textoSePersistiu } from "@/lib/copy";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
+import { usePersistStatus } from "@/lib/store";
 
 /**
  * Erro da rota `/trilha` (docs/27 §6.7, docs/28 T-16) — mesmo layout do erro
@@ -15,6 +16,7 @@ import { reportLovableError } from "@/lib/lovable-error-reporting";
 export function TrailError({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
+  const persist = usePersistStatus();
   useEffect(() => {
     reportLovableError(error, { boundary: "trilha_route_error_component" });
   }, [error]);
@@ -24,10 +26,11 @@ export function TrailError({ error, reset }: ErrorComponentProps) {
         <FocaMark expression="entediada" size={96} decorative />
         <div>
           <h1 className="font-display text-xl font-bold text-abismo">{COPY.trilha.erroTitulo}</h1>
-          <p className="mt-2 text-sm text-nevoa">{COPY.trilha.erroCorpo}</p>
+          <p className="mt-2 text-sm text-nevoa">{textoSePersistiu(persist, COPY.trilha.erroCorpo, COPY.trilha.erroCorpoSemSalvo)}</p>
         </div>
         <div className="mt-2 flex w-full flex-col gap-2">
           <button
+            type="button"
             onClick={() => {
               router.invalidate();
               reset();

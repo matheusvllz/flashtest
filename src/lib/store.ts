@@ -33,7 +33,7 @@ import {
 import { SUBJECT_MAP } from "@/data/subjects";
 import { FEATURES } from "@/lib/features";
 import { probabilityCorrect, updateSkill, type ItemIrtLike } from "@/lib/adaptive/model";
-import { ALGO_VERSION, PESO_HABILIDADE_SECUNDARIA, PESO_REPETICAO_MESMO_DIA, PLACEMENT_PRIOR_MEAN, PLACEMENT_PRIOR_SD, THETA_PRIOR } from "@/lib/adaptive/constants";
+import { ALGO_VERSION, DESAFIO_SINAL_DIAS, PLANNER_VERSION, PESO_HABILIDADE_SECUNDARIA, PESO_REPETICAO_MESMO_DIA, PLACEMENT_APPLY_VERSION, PLACEMENT_PRIOR_MEAN, PLACEMENT_PRIOR_SD, THETA_PRIOR } from "@/lib/adaptive/constants";
 import {
   advancePlacement,
   placementConcluido,
@@ -320,6 +320,111 @@ function agendarBootstrapAdaptativo(iso: string): void {
 }
 
 /**
+ * Estado de runtime da persistência (docs/36 T-05.1…T-05.3; §H "Estado de
+ * persistência"). NÃO é persistido nem faz parte de `AppState`: é o que o
+ * `PersistenceBanner` precisa saber para nunca fingir que salvou.
+ * - `persist`: `"ok"` | `"falhou"` (a última gravação lançou: quota/storage
+ *   bloqueado) | `"versao-futura"` (o storage veio de uma versão mais nova do
+ *   app: não gravamos nada por cima — RU-6).
+ * - `recuperouCorrompido`: o JSON salvo estava ilegível, foi copiado para
+ *   `foca.state.corrupt.<ISO>` e o app recomeçou do padrão (RU-5).
+ * Objeto imutável (troca de referência a cada mudança) para servir de snapshot
+ * do `useSyncExternalStore`.
+ */
+export type PersistStatus = "ok" | "falhou" | "versao-futura";
+interface RuntimeStatus {
+  persist: PersistStatus;
+  recuperouCorrompido: boolean;
+}
+let runtime: RuntimeStatus = { persist: "ok", recuperouCorrompido: false };
+const runtimeListeners = new Set<() => void>();
+/** Prefixo da cópia do JSON ilegível (`foca.state.corrupt.<ISO>`). */
+export const CORRUPT_KEY_PREFIX = "foca.state.corrupt.";
+
+/**
+ * Guarda o bruto ilegível numa chave à parte, sem acumular: se já existe uma cópia
+ * idêntica (recarga sem interação), não cria outra (docs/36 T-05.3; achado D-001 da
+ * revisão de segurança — cópias sem limite podiam consumir a cota do localStorage).
+ */
+function guardarCopiaCorrompida(raw: string): void {
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(CORRUPT_KEY_PREFIX) && localStorage.getItem(k) === raw) return;
+    }
+    localStorage.setItem(CORRUPT_KEY_PREFIX + new Date().toISOString(), raw);
+  } catch {
+    // sem espaço: a cópia é melhor-esforço.
+  }
+}
+/** Storage de versão futura: nenhuma gravação até recarregar a página com o app novo (RU-6). */
+let versaoFuturaAtiva = false;
+
+function setRuntime(patch: Partial<RuntimeStatus>) {
+  const next = { ...runtime, ...patch };
+  if (next.persist === runtime.persist && next.recuperouCorrompido === runtime.recuperouCorrompido) return;
+  runtime = next;
+  runtimeListeners.forEach((l) => l());
+}
+
+/**
+ * Monta o `AppState` a partir do JSON já parseado + campos aditivos. Usada
+ * pelo `load()` (boot) e pela adoção do que outra aba gravou (T-05.2), para
+ * que as duas leituras tenham exatamente as mesmas regras.
+ */
+function montarEstado(
+  parsed: Record<string, unknown>,
+  aditivos: ReturnType<typeof computeAdditiveFields>,
+  iso: string,
+): AppState {
+  const parsedProgress = (parsed.progress ?? {}) as Partial<Progress>;
+  const parsedToday = parsedProgress.today;
+  return {
+    ...defaultState,
+    ...parsed,
+    schemaVersion: aditivos.schemaVersion,
+    prefs: {
+      ...defaultState.prefs,
+      ...((parsed.prefs as Partial<Prefs>) || {}),
+      examTargets: aditivos.examTargets,
+      showExamTips: aditivos.showExamTips,
+      trailSubjectId: aditivos.trailSubjectId,
+      studyFocus: aditivos.studyFocus,
+      easySubjects: aditivos.easySubjects,
+      dailyMinutes: aditivos.dailyMinutes,
+      onboardingVersion: aditivos.onboardingVersion,
+    },
+    learning: aditivos.learning,
+    progress: {
+      ...defaultState.progress,
+      ...parsedProgress,
+      activityDaysSinceFreezeAward: aditivos.activityDaysSinceFreezeAward,
+      // Vira estale à meia-noite: se o dia mudou desde a última gravação,
+      // o balde de hoje reseta ao carregar (docs/18 §15 Fase 6).
+      today:
+        parsedToday && parsedToday.date === iso
+          ? { ...parsedToday, completedBlockIds: aditivos.completedBlockIds }
+          : todayBucketVazio(iso),
+    },
+    quiz: { ...defaultState.quiz, ...((parsed.quiz as Partial<AppState["quiz"]>) || {}) },
+    // O balão sempre volta fechado e sem foco: o histórico persiste, o
+    // estado de UI não.
+    tutor: {
+      ...defaultState.tutor,
+      messages: ((parsed.tutor as { messages?: TutorMessage[] } | undefined)?.messages ??
+        []) as TutorMessage[],
+    },
+    // (open/focus sempre voltam ao default: são estado de UI. Um `autoPrompt`
+    // de storage antigo, pré-docs/20, cai fora daqui sem ser executado.)
+    premiumTrial: {
+      ...defaultState.premiumTrial,
+      ...((parsed.premiumTrial as Partial<AppState["premiumTrial"]>) || {}),
+    },
+    offline: { ...defaultState.offline, ...((parsed.offline as Partial<AppState["offline"]>) || {}) },
+  } as AppState;
+}
+
+/**
  * Lê e migra o estado salvo (docs/20 §15.3, Fase 5). A fusão dos campos que
  * já existiam desde o v2/v3 (prefs/progress/quiz/tutor/premiumTrial/offline)
  * continua aditiva aqui mesmo; os campos NOVOS do schema v4 vêm prontos de
@@ -341,7 +446,15 @@ function load() {
 
     const { parsed, warning } = parseStoredState(raw);
     if (warning) console.warn(`[store] ${warning}`);
-    if (!parsed) return; // storage ilegível: segue com defaultState, nada é sobrescrito às cegas.
+    if (!parsed) {
+      // Storage ilegível: segue com defaultState, mas ANTES de qualquer
+      // gravação (a 1ª mutação sobrescreve a chave principal) guarda o bruto
+      // numa chave à parte para recuperação manual (docs/36 T-05.3, RF-16).
+      // Máx. 1 cópia por conteúdo (não duplica em recargas); se nem a cópia couber, o aviso sai mesmo assim.
+      guardarCopiaCorrompida(raw);
+      setRuntime({ recuperouCorrompido: true });
+      return;
+    }
 
     const iso = hojeISO();
     ensureBackup(
@@ -359,48 +472,14 @@ function load() {
     );
     const aditivos = computeAdditiveFields(parsed, iso);
 
-    const parsedProgress = (parsed.progress ?? {}) as Partial<Progress>;
-    const parsedToday = parsedProgress.today;
-    state = {
-      ...defaultState,
-      ...parsed,
-      schemaVersion: aditivos.schemaVersion,
-      prefs: {
-        ...defaultState.prefs,
-        ...(parsed.prefs || {}),
-        examTargets: aditivos.examTargets,
-        showExamTips: aditivos.showExamTips,
-        trailSubjectId: aditivos.trailSubjectId,
-        studyFocus: aditivos.studyFocus,
-        easySubjects: aditivos.easySubjects,
-        dailyMinutes: aditivos.dailyMinutes,
-        onboardingVersion: aditivos.onboardingVersion,
-      },
-      learning: aditivos.learning,
-      progress: {
-        ...defaultState.progress,
-        ...parsedProgress,
-        activityDaysSinceFreezeAward: aditivos.activityDaysSinceFreezeAward,
-        // Vira estale à meia-noite: se o dia mudou desde a última gravação,
-        // o balde de hoje reseta ao carregar (docs/18 §15 Fase 6).
-        today:
-          parsedToday && parsedToday.date === iso
-            ? { ...parsedToday, completedBlockIds: aditivos.completedBlockIds }
-            : todayBucketVazio(iso),
-      },
-      quiz: { ...defaultState.quiz, ...(parsed.quiz || {}) },
-      // O balão sempre volta fechado e sem foco: o histórico persiste, o
-      // estado de UI não.
-      tutor: {
-        ...defaultState.tutor,
-        messages: ((parsed.tutor as { messages?: TutorMessage[] } | undefined)?.messages ??
-          []) as TutorMessage[],
-      },
-      // (open/focus sempre voltam ao default: são estado de UI. Um `autoPrompt`
-      // de storage antigo, pré-docs/20, cai fora daqui sem ser executado.)
-      premiumTrial: { ...defaultState.premiumTrial, ...(parsed.premiumTrial || {}) },
-      offline: { ...defaultState.offline, ...(parsed.offline || {}) },
-    };
+    state = montarEstado(parsed, aditivos, iso);
+
+    // Versão futura (docs/36 T-05.1, RU-6): nada é gravado por cima — nem no
+    // boot, nem em `setState` — enquanto esta página estiver aberta.
+    if (aditivos.futureVersion) {
+      versaoFuturaAtiva = true;
+      setRuntime({ persist: "versao-futura" });
+    }
 
     // Bootstrap/replay do modelo adaptativo (docs/30 §9.6, Fase 5) — só
     // quando o algoritmo mudou de versão desde a última gravação (inclusive
@@ -438,16 +517,39 @@ function load() {
   }
 }
 
-/** `false` quando a escrita falhou (quota, storage bloqueado) — o chamador NUNCA deve anunciar persistência bem-sucedida nesse caso (docs/20 §15.3, item 9). O estado em memória continua correto de qualquer forma. */
+/**
+ * `false` quando a escrita falhou (quota, storage bloqueado) ou foi recusada
+ * (versão futura) — o chamador NUNCA deve anunciar persistência bem-sucedida
+ * nesse caso (docs/20 §15.3, item 9). O estado em memória continua correto de
+ * qualquer forma. Atualiza o estado de runtime que o `PersistenceBanner` lê
+ * (docs/36 T-05.1): falha → `"falhou"`; a próxima gravação que der certo volta
+ * a `"ok"`. Sem `window` (SSR/testes de motor) não há storage: devolve `false`
+ * sem tocar o status, para não acusar falha onde nunca houve tentativa.
+ */
 function persist(): boolean {
   if (typeof window === "undefined") return false;
+  if (versaoFuturaAtiva) {
+    setRuntime({ persist: "versao-futura" });
+    return false;
+  }
   try {
     localStorage.setItem(KEY, JSON.stringify(state));
+    setRuntime({ persist: "ok" });
     return true;
   } catch {
     console.warn("[store] não foi possível salvar — a sessão continua em memória.");
+    setRuntime({ persist: "falhou" });
     return false;
   }
+}
+
+/**
+ * "Tentar de novo" do banner (docs/36 T-05.1): regrava o estado atual em
+ * memória. `true` só se gravou de verdade; em versão futura devolve `false`
+ * (a saída é recarregar a página, não tentar de novo).
+ */
+export function retryPersist(): boolean {
+  return persist();
 }
 
 export function getState() {
@@ -459,6 +561,76 @@ export function setState(mut: (s: AppState) => AppState | void) {
   state = (next as AppState) ?? state;
   persist();
   listeners.forEach((l) => l());
+}
+
+/**
+ * Adota o que OUTRA aba gravou (docs/36 T-05.2, RF-15): evento `storage` com
+ * a nossa chave → mesmo parse/migração do boot, sem gravar de volta (senão as
+ * duas abas trocariam escritas para sempre) e sem reagendar bootstrap. Fica
+ * de fora o que é estado de UI (balão aberto, foco, contexto pedagógico): só
+ * as mensagens do tutor vêm do storage. `newValue` nulo (a outra aba limpou o
+ * storage) e valor ilegível são ignorados — nunca apagam o que esta aba tem.
+ * Um storage de versão futura não é adotado: trava as gravações desta aba
+ * também (RU-6), para não sobrescrever dados que este código não entende.
+ */
+function adotarGravacaoDeOutraAba(raw: string | null): void {
+  if (!raw) return;
+  try {
+    const { parsed } = parseStoredState(raw);
+    if (!parsed) return;
+    const iso = hojeISO();
+    const aditivos = computeAdditiveFields(parsed, iso);
+    if (aditivos.futureVersion) {
+      versaoFuturaAtiva = true;
+      setRuntime({ persist: "versao-futura" });
+      return;
+    }
+    const novo = montarEstado(parsed, aditivos, iso);
+    state = { ...novo, tutor: { ...state.tutor, messages: novo.tutor.messages } };
+    listeners.forEach((l) => l());
+  } catch {
+    // Leitura defensiva: um valor estranho de outra aba nunca derruba esta.
+  }
+}
+
+function aoMudarStorage(e: StorageEvent) {
+  if (e.key !== KEY) return;
+  adotarGravacaoDeOutraAba(e.newValue);
+}
+
+/** Leitura pontual (sem hook) do estado de runtime — testes e código fora do React. */
+export function getRuntimeStatus(): Readonly<{ persist: PersistStatus; recuperouCorrompido: boolean }> {
+  return runtime;
+}
+
+/** Estado de persistência para o `PersistenceBanner` (docs/36 T-05.1). Nunca lê o `AppState`. */
+export function usePersistStatus(): PersistStatus {
+  hydrate();
+  return useSyncExternalStore(
+    subscribeRuntime,
+    () => runtime.persist,
+    () => "ok" as PersistStatus,
+  );
+}
+
+/** `true` uma vez, quando o boot recuperou um JSON ilegível (RU-5, T-05.3). */
+export function useCorruptRecoveryNotice(): boolean {
+  hydrate();
+  return useSyncExternalStore(
+    subscribeRuntime,
+    () => runtime.recuperouCorrompido,
+    () => false,
+  );
+}
+
+/** O aluno tocou "Ok" no aviso de storage recuperado. */
+export function dismissCorruptRecoveryNotice(): void {
+  setRuntime({ recuperouCorrompido: false });
+}
+
+function subscribeRuntime(cb: () => void) {
+  runtimeListeners.add(cb);
+  return () => runtimeListeners.delete(cb);
 }
 
 function subscribe(cb: () => void) {
@@ -478,6 +650,9 @@ export function hydrate(): AppState {
   if (typeof window !== "undefined" && !loaded) {
     load();
     loaded = true;
+    // Uma vez por página (docs/36 T-05.2): a aba em segundo plano adota o que
+    // a outra gravou antes da próxima mutação dela.
+    window.addEventListener("storage", aoMudarStorage);
   }
   return state;
 }
@@ -624,6 +799,18 @@ export function starsForPct(pct: number): 1 | 2 | 3 {
   return 1;
 }
 
+/**
+ * Esta TENTATIVA (sessão que começou em `sessionStartedAt`) já registrou a conclusão da lição? Vale
+ * quando o registro tem `completedAt >= sessionStartedAt`: a mesma regra que `syncJourneyWithCompletions`
+ * usa para "conclusão desta tentativa". Sem `sessionStartedAt` (chamador que não sabe) nunca bloqueia —
+ * o comportamento de sempre (replay conta como atividade e paga só a diferença de XP).
+ * Fecha a janela em que a conclusão foi gravada mas a sessão ativa ainda existe (fechar/recarregar o app
+ * entre as duas gravações, ou 2 abas na tela de resultado) sem inflar `today.lessons`/blocos do dia.
+ */
+export function conclusaoJaContada(completedAt: string | undefined, sessionStartedAt: string | undefined): boolean {
+  return Boolean(sessionStartedAt && typeof completedAt === "string" && completedAt >= sessionStartedAt);
+}
+
 export type CompleteLessonResult = {
   progress: LessonProgress;
   /** XP concedido AGORA (0 em replay sem melhora). */
@@ -642,10 +829,16 @@ export function completeLesson(
   lessonId: string,
   correct: number,
   total: number,
+  opts: { sessionStartedAt?: string } = {},
 ): CompleteLessonResult {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   const stars = starsForPct(pct);
   const prev = getState().progress.lessons[lessonId];
+  // Idempotência por tentativa (docs/36 G-3): se a conclusão registrada é POSTERIOR ao início desta
+  // tentativa, ela já foi contada — nada de novo bloco do dia, contagem de lições nem XP.
+  if (prev && conclusaoJaContada(prev.completedAt, opts.sessionStartedAt)) {
+    return { progress: prev, xpAwarded: 0, improved: false, first: false };
+  }
   const bestStars = prev ? (Math.max(prev.stars, stars) as 1 | 2 | 3) : stars;
 
   const progress: LessonProgress = {
@@ -688,10 +881,15 @@ export function completeMicroLesson(
   version: number,
   correctPractice: number,
   totalPractice: number,
+  opts: { sessionStartedAt?: string } = {},
 ): CompleteMicroLessonResult {
   const pct = totalPractice > 0 ? Math.round((correctPractice / totalPractice) * 100) : 0;
   const stars = starsForPct(pct);
   const prev = getState().learning.completedLessons[lessonId];
+  // Idempotência por tentativa (docs/36 G-3), igual à de `completeLesson`.
+  if (prev && conclusaoJaContada(prev.completedAt, opts.sessionStartedAt)) {
+    return { xpAwarded: 0, alreadyCompleted: true, stars: prev.stars };
+  }
   const bestStars = prev ? (Math.max(prev.stars, stars) as 1 | 2 | 3) : stars;
   const xpAwarded = Math.max(0, XP_BY_STARS[bestStars] - (prev ? XP_BY_STARS[prev.stars] : 0));
 
@@ -972,6 +1170,9 @@ export function recordLearningAttempt(
   itemMeta?: { irt: ItemIrtLike; difficulty?: 1 | 2 | 3 | 4 | 5 },
 ): void {
   setState((s) => {
+    // Idempotência (docs/36 RF-6, C4d): a mesma tentativa (mesmo `attempt.id`)
+    // nunca empilha duas vezes — nem modelo, nem evidência, nem agenda.
+    if (s.learning.recentAttempts.some((a) => a.id === attempt.id)) return s;
     // Horas desde a última tentativa que toca QUALQUER habilidade em comum,
     // calculado ANTES de empilhar a nova (docs/20 §13: recuperação de
     // revisão exige tempo real decorrido, não só o `role` da tentativa).
@@ -1095,6 +1296,22 @@ export function clearFocusSession() {
   });
 }
 
+/**
+ * "Só hoje" vencido some sem precisar recarregar o app (docs/36 RF-9): antes só
+ * `load()` podava `focusSession` (via `parseFocusSession`). Não grava nada se
+ * não há sessão vencida — chamada no efeito da Home e no `visibilitychange`.
+ * Devolve `true` quando limpou.
+ */
+export function clearExpiredFocusSession(hoje: string = hojeISO()): boolean {
+  const fs = getState().learning.focusSession;
+  if (!fs || fs.expiresOn >= hoje) return false;
+  setState((s) => {
+    s.learning.focusSession = null;
+    return s;
+  });
+  return true;
+}
+
 /* --------------------------------------------------------- nivelamento (docs/30 §12.3, Fase 13 do docs/31) --- */
 
 /**
@@ -1157,7 +1374,12 @@ export function submitPlacementResponse(
   setState((s) => {
     const antes = s.learning.placement;
     if (!antes) return s;
+    // Guardas (docs/36 RF-10, T-03.1): nunca conta uma resposta depois do fechamento,
+    // nem o mesmo item duas vezes (duplo toque, re-render, remontagem) — a checagem
+    // é feita dentro do mutator, sobre o estado FRESCO.
+    if (antes.status === "concluido") return s;
     const areaAntes = antes.areas[item.area];
+    if (areaAntes?.itemIds.includes(item.id)) return s;
     const thetaColdStart = areaAntes?.theta ?? PLACEMENT_PRIOR_MEAN;
     const seColdStart = areaAntes?.se ?? PLACEMENT_PRIOR_SD;
 
@@ -1195,12 +1417,67 @@ export function submitPlacementResponse(
  * resultado, que importa `placement-pool.ts`). Habilidades medidas
  * diretamente já chegaram como `"evidencia"` via `submitPlacementResponse`;
  * esta troca só acrescenta os priors das habilidades não medidas.
+ *
+ * @deprecated docs/36 T-03.3: sem chamadores em `src`. Substituída por
+ * `applyPlacementOutcome`, que é idempotente e faz tudo numa transação só.
+ * Mantida (com o teste dela) só até a Fase 10 decidir remover.
  */
 export function finishPlacement(skillModelComPriors: Record<string, SkillModelEntry>) {
   setState((s) => {
     s.learning.skillModel = skillModelComPriors;
     return s;
   });
+}
+
+/**
+ * Aplica o resultado do nivelamento UMA vez, numa única transação (docs/36
+ * T-03.3, RF-10/RF-11; bug C1/B3): mescla os priors no `skillModel`, marca
+ * `placement.appliedAt`/`appliedVersion`, esvazia a fila preservando a atividade
+ * iniciada e registra o evento `placement-applied`.
+ *
+ * O `skillModel` de `o` foi calculado fora (`computePlacementOutcome`, que
+ * importa conteúdo — o store nunca importa) sobre uma fotografia anterior do
+ * estado. Por isso a guarda é reconferida no estado FRESCO dentro do mutator e a
+ * mescla nunca deixa um prior (ou evidência mais velha) sobrescrever uma
+ * entrada `"evidencia"` gravada nesse meio-tempo.
+ *
+ * Devolve `true` se aplicou; `false` (sem tocar em nada) se não há placement
+ * `concluido` ou se ele já foi aplicado.
+ */
+export function applyPlacementOutcome(o: {
+  skillModel: Record<string, SkillModelEntry>;
+  appliedAt: string;
+  /** Itens respondidos que o catálogo não resolveu mais (só vai para o evento, como `meta.ausentes`). */
+  ausentes?: number;
+}): boolean {
+  let aplicou = false;
+  setState((s) => {
+    const p = s.learning.placement;
+    if (!p || p.status !== "concluido" || p.appliedAt) return s;
+    const fresco = s.learning.skillModel;
+    const mesclado: Record<string, SkillModelEntry> = { ...fresco };
+    for (const [id, entrada] of Object.entries(o.skillModel)) {
+      const atual = fresco[id];
+      if (atual?.source === "evidencia" && (entrada.source !== "evidencia" || atual.updatedAt >= entrada.updatedAt)) continue;
+      mesclado[id] = entrada;
+    }
+    s.learning.skillModel = mesclado;
+    s.learning.placement = { ...p, appliedAt: o.appliedAt, appliedVersion: PLACEMENT_APPLY_VERSION };
+    // A atividade INICIADA nunca sai do topo por replano (docs/36 RF-8).
+    const ativa = s.learning.journey.activeActivity;
+    s.learning.journey.committed = ativa ? [ativa] : [];
+    s.learning.journey.upcoming = [];
+    const agora = new Date();
+    pushEvento(s, {
+      type: "placement-applied",
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      ...(o.ausentes ? { meta: { ausentes: o.ausentes } } : {}),
+    });
+    aplicou = true;
+    return s;
+  });
+  return aplicou;
 }
 
 /**
@@ -1346,13 +1623,31 @@ export function clearTutorAutoSend() {
  * `store.ts` não pode importar `@/lib/adaptive/journey` nem `/index`
  * (puxam taxonomia/itens; guardado por `store-bundle-boundary.test.ts`).
  */
-export function commitPlan(committed: PlannedActivity[], upcoming: PlannedActivity[]) {
+export function commitPlan(committed: PlannedActivity[], upcoming: PlannedActivity[], focusSignature?: string) {
   setState((s) => {
     s.learning.journey.committed = committed;
     s.learning.journey.upcoming = upcoming;
-    s.learning.journey.planVersion = ALGO_VERSION;
+    // Versão do PLANEJADOR (docs/36 RP-5): separada de `ALGO_VERSION` (modelo).
+    s.learning.journey.planVersion = PLANNER_VERSION;
+    // Foco vigente no momento deste plano (docs/36 RF-9) — a Home compara com a
+    // assinatura atual pra detectar mudança feita em QUALQUER tela.
+    if (focusSignature !== undefined) s.learning.journey.focusSignature = focusSignature;
     return s;
   });
+}
+
+/** Próximo valor do contador monotônico da jornada (docs/36 §H, RF-7): default `history.length`, nunca diminui. */
+function bumpJourneySeq(j: AppState["learning"]["journey"]) {
+  j.seq = (j.seq ?? j.history.length) + 1;
+}
+
+function attemptKeyOf(activity: Pick<PlannedActivity, "id" | "startedAt">): string {
+  return `${activity.id}@${activity.startedAt ?? "sem-inicio"}`;
+}
+
+function pushEvento(s: AppState, evento: LearningEvent) {
+  s.learning.events.push(evento);
+  if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
 }
 
 /**
@@ -1370,27 +1665,138 @@ export function commitPlan(committed: PlannedActivity[], upcoming: PlannedActivi
  */
 export function invalidateJourneyPlan() {
   setState((s) => {
-    s.learning.journey.committed = [];
+    // A atividade INICIADA nunca sai do topo por replano (docs/36 RF-8).
+    const ativa = s.learning.journey.activeActivity;
+    s.learning.journey.committed = ativa ? [ativa] : [];
     s.learning.journey.upcoming = [];
     return s;
   });
 }
 
-export function setActiveActivity(activity: PlannedActivity) {
+/**
+ * Marca o INÍCIO de uma tentativa (docs/36 RF-2, T-02.1) — ação "burra": num
+ * único `setState`. Reentrar na mesma atividade nunca troca `startedAt` (a
+ * tentativa é uma só) nem sobrescreve `itemIds` já escolhidos; o evento
+ * `activity-started` só sai na primeira vez. Devolve a atividade gravada.
+ *
+ * A SELEÇÃO de itens de atividade dinâmica é da rota `/atividade/$activityId`
+ * (único proprietário) — quem só navega (aula/legado) chama esta ação SEM itens.
+ */
+export function startJourneyActivity(activity: PlannedActivity): PlannedActivity {
+  let gravada: PlannedActivity = activity;
   setState((s) => {
-    s.learning.journey.activeActivity = activity;
     const agora = new Date();
-    const evento: LearningEvent = {
-      type: "activity-started",
-      at: agora.toISOString(),
-      localDate: hojeISO(agora),
-      activityId: activity.id,
-      skillId: activity.skillIds[0],
-    };
-    s.learning.events.push(evento);
-    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    const atual = s.learning.journey.activeActivity;
+    let jaIniciada = false;
+    if (atual && atual.id === activity.id) {
+      jaIniciada = Boolean(atual.startedAt);
+      gravada = {
+        ...atual,
+        ...activity,
+        startedAt: atual.startedAt ?? agora.toISOString(),
+        itemIds: atual.itemIds && atual.itemIds.length > 0 ? atual.itemIds : (activity.itemIds ?? atual.itemIds),
+      };
+    } else {
+      gravada = { ...activity, startedAt: agora.toISOString() };
+    }
+    s.learning.journey.activeActivity = gravada;
+    if (!jaIniciada) {
+      pushEvento(s, {
+        type: "activity-started",
+        at: agora.toISOString(),
+        localDate: hojeISO(agora),
+        activityId: activity.id,
+        skillId: activity.skillIds[0],
+      });
+    }
     return s;
   });
+  return gravada;
+}
+
+/** @deprecated Alias de `startJourneyActivity` (docs/36 T-02.1) — mantido só para compatibilidade; código novo chama a ação nova. */
+export function setActiveActivity(activity: PlannedActivity) {
+  startJourneyActivity(activity);
+}
+
+/**
+ * Descarta uma atividade que não dá pra cumprir (docs/36 RF-3, T-02.2): sai de
+ * `committed` e de `activeActivity` (se o id bater), o contador `seq` avança
+ * (o próximo plano não reusa o id) e um evento `activity-skipped` registra o
+ * motivo. NÃO paga XP, NÃO entra no histórico, NÃO mexe em `sinceCheckpoint`
+ * nem no bloco do dia — descartar não é estudar.
+ */
+export function discardJourneyActivity(id: string, reason: "sem-itens" | "conteudo-removido") {
+  setState((s) => {
+    const j = s.learning.journey;
+    const ehAtiva = j.activeActivity?.id === id;
+    const alvo = j.committed.find((a) => a.id === id) ?? (ehAtiva ? j.activeActivity : null);
+    // Idempotente: descartar o que já não está na fila (StrictMode, duplo disparo) não conta de novo.
+    if (!alvo) return s;
+    j.committed = j.committed.filter((a) => a.id !== id);
+    if (ehAtiva) j.activeActivity = null;
+    bumpJourneySeq(j);
+    const agora = new Date();
+    pushEvento(s, {
+      type: "activity-skipped",
+      at: agora.toISOString(),
+      localDate: hojeISO(agora),
+      activityId: id,
+      skillId: alvo?.skillIds[0],
+      meta: { reason },
+    });
+    return s;
+  });
+}
+
+/** `YYYY-MM-DD` local + `dias` (sem UTC, mesma aritmética de `review.ts`). */
+function somaDiasLocal(dataISO: string, dias: number): string {
+  const d = new Date(`${dataISO}T00:00:00`);
+  d.setDate(d.getDate() + dias);
+  return hojeISO(d);
+}
+
+/**
+ * Recalibração pós-checkpoint (docs/36 T-04.4, RP-4, G7 do `32`).
+ * - `antecipar` (superestimadas — o modelo achava que sabia e errou): a revisão
+ *   passa a vencer no máximo amanhã. SÓ antecipa: nunca adia uma revisão que já
+ *   vence antes. Habilidade sem agenda ganha uma de 1 dia.
+ * - `desafio` (subestimadas — o modelo achava difícil e acertou): `journey.
+ *   challengeEligible[skill] = hoje + `DESAFIO_SINAL_DIAS` (o planner gera desafio
+ *   para ela enquanto o sinal valer).
+ * Poda os sinais vencidos. Idempotente (mínimo/mesma data). Só registra o evento
+ * quando algo foi de fato aplicado. Devolve `true` se houve alguma lista não vazia.
+ */
+export function applyCheckpointRecalibration(o: { antecipar: string[]; desafio: string[]; today: string }): boolean {
+  const antecipar = [...new Set(o.antecipar)];
+  const desafio = [...new Set(o.desafio)];
+  if (antecipar.length === 0 && desafio.length === 0) return false;
+  setState((s) => {
+    const amanha = somaDiasLocal(o.today, 1);
+    for (const skillId of antecipar) {
+      const atual = s.learning.reviewSchedule[skillId];
+      if (!atual) {
+        s.learning.reviewSchedule[skillId] = { skillId, intervalDays: 1, dueDate: amanha, lastResult: "incorrect" };
+      } else if (atual.dueDate > amanha) {
+        s.learning.reviewSchedule[skillId] = { ...atual, dueDate: amanha };
+      }
+    }
+    const j = s.learning.journey;
+    const validade = somaDiasLocal(o.today, DESAFIO_SINAL_DIAS);
+    const sinais: Record<string, string> = {};
+    for (const [skillId, ate] of Object.entries(j.challengeEligible ?? {})) if (ate >= o.today) sinais[skillId] = ate;
+    for (const skillId of desafio) sinais[skillId] = validade;
+    j.challengeEligible = sinais;
+    const agora = new Date();
+    pushEvento(s, {
+      type: "checkpoint-recalibrated",
+      at: agora.toISOString(),
+      localDate: o.today,
+      meta: { antecipadas: antecipar.length, desafio: desafio.length },
+    });
+    return s;
+  });
+  return true;
 }
 
 /** XP por faixa de acerto (docs/30 §14.4): prática/desafio/reforço 10/20/30 (`starsForPct`); revisão 5 fixo; checkpoint 20 fixo. */
@@ -1402,27 +1808,46 @@ function xpAlvoDaAtividade(kind: PlannedActivity["kind"], correct: number, total
 }
 
 /**
- * Fecha uma atividade da jornada (docs/30 §14.4) — XP idempotente via
- * `rewardLedger["atividade:<id>"]` (mesmo padrão de `registrarResposta`),
- * conta como bloco do dia, empilha histórico (podado em
- * `LIMITE_HISTORICO_JORNADA`), tira do topo de `committed` SÓ se for
- * mesmo a atividade ativa (nunca uma comprometida que não começou), e
- * zera/avança `sinceCheckpoint`. NÃO replaneja sozinho — `committed`
- * fica com < 3 depois disto de propósito, e é isso que faz `ensurePlan`
- * (chamado pela tela, no próximo render) perceber que precisa repor.
+ * Fecha uma atividade da jornada (docs/30 §14.4; idempotência docs/36 RF-6).
+ *
+ * A TENTATIVA é a unidade: `attemptKey = "<id>@<startedAt|sem-inicio>"`. Se o
+ * histórico já tem essa chave, a chamada é um no-op de efeitos (nada de XP,
+ * bloco do dia, histórico, `sinceCheckpoint`, contador ou evento repetidos —
+ * clique duplo, re-render, remontagem, reload na tela de resultado) e devolve
+ * `alreadyCompleted: true`. XP: pelo ledger — chave por tentativa quando há
+ * `startedAt` (`atividade:<attemptKey>`); a chave antiga `atividade:<id>` é
+ * preservada para tentativas iniciadas antes do plano 36. O ledger é lido
+ * DENTRO do mutator (não numa fotografia anterior).
+ *
+ * Tira do topo de `committed` SÓ se for a mesma atividade (nunca uma
+ * comprometida que não começou) e zera/avança `sinceCheckpoint`. NÃO replaneja
+ * sozinho — `committed` fica com < 3 de propósito, e é isso que faz
+ * `ensurePlan` (chamado pela tela) repor.
  */
 export function completeJourneyActivity(
   activity: PlannedActivity,
   correct: number,
   total: number,
-): { xpAwarded: number; stars: 1 | 2 | 3 | null } {
-  const ledgerKey = `atividade:${activity.id}`;
-  const jaPago = getState().learning.rewardLedger[ledgerKey]?.xp ?? 0;
+): { xpAwarded: number; stars: 1 | 2 | 3 | null; alreadyCompleted: boolean } {
+  const attemptKey = attemptKeyOf(activity);
+  const ledgerKey = activity.startedAt ? `atividade:${attemptKey}` : `atividade:${activity.id}`;
   const alvo = xpAlvoDaAtividade(activity.kind, correct, total);
-  const xpAwarded = Math.max(0, alvo - jaPago);
   const stars = total > 0 ? starsForPct(Math.round((correct / total) * 100)) : null;
+  let xpAwarded = 0;
+  let alreadyCompleted = false;
 
   setState((s) => {
+    const j = s.learning.journey;
+    if (j.history.some((h) => h.attemptKey === attemptKey)) {
+      alreadyCompleted = true;
+      // Só higiene: se algo ainda aponta pra esta atividade, tira (sem efeito de progresso).
+      if (j.committed[0]?.id === activity.id) j.committed = j.committed.slice(1);
+      if (j.activeActivity?.id === activity.id) j.activeActivity = null;
+      return s;
+    }
+
+    const jaPago = s.learning.rewardLedger[ledgerKey]?.xp ?? 0;
+    xpAwarded = Math.max(0, alvo - jaPago);
     if (xpAwarded > 0) {
       s.progress.xp += xpAwarded;
       s.learning.rewardLedger[ledgerKey] = { key: ledgerKey, awardedAt: new Date().toISOString(), xp: jaPago + xpAwarded };
@@ -1431,45 +1856,50 @@ export function completeJourneyActivity(
 
     const agora = new Date();
     const pct = total > 0 ? Math.round((correct / total) * 100) : null;
-    s.learning.journey.history.push({
+    bumpJourneySeq(j);
+    j.history.push({
       activityId: activity.id,
       kind: activity.kind,
       skillIds: activity.skillIds,
       subjectId: activity.subjectId,
       completedAt: agora.toISOString(),
       scorePct: pct,
+      attemptKey,
+      localDate: hojeISO(agora),
     });
-    if (s.learning.journey.history.length > LIMITE_HISTORICO_JORNADA) s.learning.journey.history.shift();
+    if (j.history.length > LIMITE_HISTORICO_JORNADA) j.history.shift();
 
     if (activity.kind === "checkpoint") {
-      s.learning.journey.sinceCheckpoint = 0;
-      s.learning.journey.lastCheckpointDate = hojeISO(agora);
+      j.sinceCheckpoint = 0;
+      j.lastCheckpointDate = hojeISO(agora);
     } else {
-      s.learning.journey.sinceCheckpoint += 1;
+      j.sinceCheckpoint += 1;
+    }
+    // O sinal de desafio da recalibração (docs/36 RP-4) é consumido pelo desafio da própria habilidade.
+    if (activity.kind === "desafio" && j.challengeEligible && activity.skillIds[0] in j.challengeEligible) {
+      delete j.challengeEligible[activity.skillIds[0]];
     }
 
-    if (s.learning.journey.committed[0]?.id === activity.id) {
-      s.learning.journey.committed = s.learning.journey.committed.slice(1);
+    if (j.committed[0]?.id === activity.id) {
+      j.committed = j.committed.slice(1);
     }
-    if (s.learning.journey.activeActivity?.id === activity.id) {
-      s.learning.journey.activeActivity = null;
+    if (j.activeActivity?.id === activity.id) {
+      j.activeActivity = null;
     }
 
-    const evento: LearningEvent = {
+    pushEvento(s, {
       type: "activity-completed",
       at: agora.toISOString(),
       localDate: hojeISO(agora),
       activityId: activity.id,
       skillId: activity.skillIds[0],
       meta: pct !== null ? { scorePct: pct } : undefined,
-    };
-    s.learning.events.push(evento);
-    if (s.learning.events.length > LIMITE_EVENTOS) s.learning.events.shift();
+    });
 
     return s;
   });
 
-  return { xpAwarded, stars };
+  return { xpAwarded, stars, alreadyCompleted };
 }
 
 /**
@@ -1478,29 +1908,44 @@ export function completeJourneyActivity(
  * só DETECTA que a `activeActivity` foi concluída por fora e move pro
  * histórico, sem pagar XP de novo (docs/30 §14.4). Chamar ao voltar pra
  * home, nunca dentro do próprio player.
+ *
+ * Só conta a conclusão DESTA tentativa (docs/36 RF-4): com `startedAt`, o
+ * registro precisa ter `completedAt >= startedAt` — um reforço de aula já
+ * concluída ontem não vira "feito" só porque o registro antigo existe. Sem
+ * `startedAt` (atividade de antes do plano 36) vale a regra antiga (existência).
+ * `completeMicroLesson`/`completeLesson` regravam `completedAt` a cada conclusão
+ * (replay), então um reforço concluído agora carrega a data nova.
  */
 export function syncJourneyWithCompletions() {
   setState((s) => {
-    const ativa = s.learning.journey.activeActivity;
+    const j = s.learning.journey;
+    const ativa = j.activeActivity;
     if (!ativa || !ativa.lessonId) return s;
-    const concluida =
-      ativa.kind === "legado" ? Boolean(s.progress.lessons[ativa.lessonId]) : Boolean(s.learning.completedLessons[ativa.lessonId]);
-    if (!concluida) return s;
+    const registro: { completedAt?: string } | undefined =
+      ativa.kind === "legado" ? s.progress.lessons[ativa.lessonId] : s.learning.completedLessons[ativa.lessonId];
+    if (!registro) return s;
+    if (ativa.startedAt && !(typeof registro.completedAt === "string" && registro.completedAt >= ativa.startedAt)) return s;
 
+    const attemptKey = attemptKeyOf(ativa);
     const agora = new Date();
-    s.learning.journey.history.push({
-      activityId: ativa.id,
-      kind: ativa.kind,
-      skillIds: ativa.skillIds,
-      subjectId: ativa.subjectId,
-      completedAt: agora.toISOString(),
-      scorePct: null,
-    });
-    if (s.learning.journey.history.length > LIMITE_HISTORICO_JORNADA) s.learning.journey.history.shift();
-    if (s.learning.journey.committed[0]?.id === ativa.id) {
-      s.learning.journey.committed = s.learning.journey.committed.slice(1);
+    if (!j.history.some((h) => h.attemptKey === attemptKey)) {
+      bumpJourneySeq(j);
+      j.history.push({
+        activityId: ativa.id,
+        kind: ativa.kind,
+        skillIds: ativa.skillIds,
+        subjectId: ativa.subjectId,
+        completedAt: agora.toISOString(),
+        scorePct: null,
+        attemptKey,
+        localDate: hojeISO(agora),
+      });
+      if (j.history.length > LIMITE_HISTORICO_JORNADA) j.history.shift();
     }
-    s.learning.journey.activeActivity = null;
+    if (j.committed[0]?.id === ativa.id) {
+      j.committed = j.committed.slice(1);
+    }
+    j.activeActivity = null;
     return s;
   });
 }

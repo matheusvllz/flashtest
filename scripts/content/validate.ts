@@ -7,17 +7,45 @@
  * (docs/25 §6.5) — não reimplementados aqui.
  */
 import type { Exercise } from "@/lib/lessons/types";
+import { rotulaAfirmacoes } from "./verify";
+import {
+  avisoQuaseDuplicata,
+  avisosDeForma,
+  bigramas,
+  filtrarExcecoes,
+  jaccardBigramas,
+  type AvisoQualidade,
+  type ExcecaoQualidade,
+  type Severidade,
+} from "./qualidade-forma";
 
 export interface ValidationIssue {
   rule: string;
   message: string;
 }
 
+/**
+ * Alerta (docs/30 §19.5: "heurística só de alerta"; docs/36 §G.7) — nunca bloqueia `ok`. Traz
+ * `{ regra, severidade, detalhe }` (docs/36 T-07.2) e mantém `rule`/`message` (= `regra`/`detalhe`)
+ * pra quem já lia o formato antigo.
+ */
+export interface ValidationWarning extends ValidationIssue {
+  regra: string;
+  severidade: Severidade;
+  detalhe: string;
+}
+
 export interface ValidationResult {
   ok: boolean;
   issues: ValidationIssue[];
-  /** Alertas (docs/30 §19.5: "heurística só de alerta") — nunca bloqueiam `ok`. */
-  warnings: ValidationIssue[];
+  /** Alertas — nunca bloqueiam `ok`. Os de severidade "alta" exigem aprovação explícita em `publish.ts`. */
+  warnings: ValidationWarning[];
+  /** Alertas cobertos por uma exceção registrada em `excecoes-qualidade.json` (id + regra) — saem de `warnings` e aparecem no relatório. */
+  excecoes: ValidationWarning[];
+}
+
+function comoAviso(a: AvisoQualidade): ValidationWarning {
+  return { rule: a.regra, message: a.detalhe, regra: a.regra, severidade: a.severidade, detalhe: a.detalhe };
 }
 
 function contarPalavras(texto: string): number {
@@ -77,6 +105,10 @@ export interface ValidateContext {
   existingStatementsBySkill: (skillId: string) => string[];
   /** Passos que o solucionador usou pra resolver (se disponível) — heurística de dificuldade coerente. */
   solutionSteps?: number;
+  /** Id final do item (`generatedItemId`) — só usado pra casar exceções registradas. */
+  itemId?: string;
+  /** Conteúdo de `content-pipeline/excecoes-qualidade.json` (docs/36 §G.7). */
+  excecoes?: ExcecaoQualidade[];
 }
 
 /** 5-gramas de palavras normalizadas, pra similaridade de Jaccard. */
@@ -100,7 +132,7 @@ export const LIMIAR_DUPLICATA = 0.6;
 
 export function validateExercise(ex: Exercise, skillId: string, ctx: ValidateContext): ValidationResult {
   const issues: ValidationIssue[] = [];
-  const warnings: ValidationIssue[] = [];
+  const warnings: ValidationWarning[] = [];
 
   // Habilidade existe e está ativa.
   if (!ctx.skillExists(skillId)) issues.push({ rule: "habilidade-existe", message: `habilidade "${skillId}" não existe na taxonomia` });
@@ -166,18 +198,40 @@ export function validateExercise(ex: Exercise, skillId: string, ctx: ValidateCon
 
   // Dificuldade coerente com a solução (heurística — só alerta).
   if (ctx.solutionSteps !== undefined && ctx.solutionSteps <= 2) {
-    warnings.push({ rule: "dificuldade-coerente", message: `solução em ${ctx.solutionSteps} passo(s) — considere dificuldade ≤ 2` });
+    warnings.push(
+      comoAviso({ regra: "dificuldade-coerente", severidade: "info", detalhe: `solução em ${ctx.solutionSteps} passo(s) — considere dificuldade ≤ 2` }),
+    );
   }
+
+  // Sinais de FORMA (docs/36 T-07.2, §G.7): pista de tamanho, absolutismo, travessão, letra citada na explicação. Só alerta.
+  const avisosDeQualidade: AvisoQualidade[] = opcoesInfo
+    ? avisosDeForma(opcoesInfo.opcoes, opcoesInfo.correta, ex.explicacao, {
+        ignorarLetras: ex.type === "multipla-escolha" && rotulaAfirmacoes(ex),
+      })
+    : [];
 
   // Duplicata semântica (Jaccard de 5-gramas > 0,6 com item existente da mesma habilidade).
   const gramsNovo = fiveGrams(enunciado);
-  for (const existente of ctx.existingStatementsBySkill(skillId)) {
+  const existentes = ctx.existingStatementsBySkill(skillId);
+  let bloqueadoPorDuplicata = false;
+  for (const existente of existentes) {
     const similaridade = jaccard(gramsNovo, fiveGrams(existente));
     if (similaridade > LIMIAR_DUPLICATA) {
       issues.push({ rule: "duplicata-semantica", message: `similaridade de ${(similaridade * 100).toFixed(0)}% com item existente da mesma habilidade` });
+      bloqueadoPorDuplicata = true;
       break;
     }
   }
+  // Abaixo do bloqueio (5-gramas > 0,6) mas parecido (bigramas ≥ 0,4): só informa (§G.7 `quase-duplicata`).
+  if (!bloqueadoPorDuplicata && existentes.length > 0) {
+    const bigramasNovo = bigramas(enunciado);
+    const maior = Math.max(...existentes.map((e) => jaccardBigramas(bigramasNovo, bigramas(e))));
+    const aviso = avisoQuaseDuplicata(maior);
+    if (aviso) avisosDeQualidade.push(aviso);
+  }
 
-  return { ok: issues.length === 0, issues, warnings };
+  const { avisos: valem, excecoes } = filtrarExcecoes(ctx.itemId, avisosDeQualidade, ctx.excecoes);
+  warnings.push(...valem.map(comoAviso));
+
+  return { ok: issues.length === 0, issues, warnings, excecoes: excecoes.map(comoAviso) };
 }

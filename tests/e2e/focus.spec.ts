@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { comAtividades, lerEstado, seedOnce } from "./helpers/estado";
 
 /**
  * Modo foco (docs/30 §15, Fase 12 do docs/31 F12.5) — "Só hoje" (sessão
@@ -136,4 +137,59 @@ test("'Voltar a todas' limpa foco permanente e sessão temporária", async ({ pa
   );
   expect(estado.learning.focusSession).toBeNull();
   expect(estado.prefs.studyFocus.mode).toBe("todas");
+});
+
+/**
+ * docs/36 RF-9 (T-02.8): o foco mudado FORA da Home (aqui, em `/profile`) força o
+ * replano na próxima montagem da Home. Antes a comparação era com um ref de
+ * montagem (`lastFocusSignatureRef` nascia `null`), então a mudança feita em
+ * outra tela nunca era vista como "mudou".
+ */
+test("RF-9: foco 'Física' definido em /profile -> ao voltar pra /trilha a fila é só de Física", async ({ page }) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- estado local dinâmico de fixture E2E
+  const estado: any = comAtividades(["pratica", "pratica", "pratica"]);
+  estado.learning.journey.focusSignature = "todas:::|"; // assinatura do último plano: foco "todas"
+  await seedOnce(page, estado);
+  await page.goto("/profile?debug=1", { waitUntil: "domcontentloaded" });
+
+  await page.getByRole("button", { name: "Todas as matérias" }).click();
+  await page.getByRole("button", { name: "Física" }).click();
+  await page.getByRole("button", { name: "Daqui pra frente" }).click();
+
+  // Navegação de cliente (sem recarregar): a Home monta com o estado que o /profile gravou.
+  await page.getByRole("link", { name: "Aprender" }).click();
+  await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
+  await expect(page.getByText("Foco: Física")).toBeVisible();
+
+  await expect
+    .poll(async () => {
+      const e = await lerEstado(page);
+      const c = e.learning.journey.committed as { id: string; subjectId: string; kind: string }[];
+      return c.length > 0 && c.every((a) => a.subjectId === "fis" || a.kind === "checkpoint");
+    })
+    .toBe(true);
+  const depois = await lerEstado(page);
+  expect(depois.learning.journey.committed.map((a: { id: string }) => a.id)).not.toContain("atv-test-pratica");
+  expect(depois.learning.journey.focusSignature).toBe("materias:fis:|");
+});
+
+test("RF-9: 'só hoje' vencido some SEM recarregar quando o app volta à aba depois da meia-noite", async ({ page }) => {
+  // Relógio controlado: 28/09 ao meio-dia; a sessão vale até o fim do dia 28.
+  await page.clock.install({ time: new Date("2026-09-28T12:00:00") });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- estado local dinâmico de fixture E2E
+  const estado: any = comAtividades(["pratica", "pratica", "pratica"]);
+  estado.learning.focusSession = { subjectIds: ["fis"], startedAt: "2026-09-28T08:00:00.000Z", expiresOn: "2026-09-28" };
+  await seedOnce(page, estado);
+  await page.goto("/trilha?debug=1", { waitUntil: "domcontentloaded" });
+  await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
+  await expect(page.getByText("Foco: Física")).toBeVisible();
+
+  // Passa a meia-noite com a aba aberta e o app volta ao primeiro plano (sem recarregar).
+  await page.clock.fastForward("14:00:00");
+  await page.evaluate(() => document.dispatchEvent(new Event("visibilitychange")));
+
+  await expect(page.getByText("Todas as matérias")).toBeVisible();
+  await expect(page.getByText(/^Foco:/)).toHaveCount(0);
+  const depois = await lerEstado(page);
+  expect(depois.learning.focusSession).toBeNull();
 });

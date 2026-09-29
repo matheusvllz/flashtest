@@ -242,3 +242,103 @@ describe("recordPlacementResponse / advancePlacement / currentPlacementArea", ()
     expect(placementConcluido(state, scope2)).toBe(true);
   });
 });
+
+/**
+ * docs/36 RF-12 (bug C3, corrigido na T-03.2): retomar o nivelamento depois de
+ * recarregar dá o MESMO θ̂/SE da execução contínua.
+ *
+ * Roteiro sintético de §D C3: pool de 12 itens (a 1,2; b de −1,5 a +1,8;
+ * c 0,2), semente fixa, área MT prioritária (6 itens), respostas alternadas
+ * (certo, errado, certo…). Execução contínua vs. execução "recarregada": ao
+ * remontar `/nivelamento` a rota recriava `itemsShownRef = new Map()`;
+ * `recordPlacementResponse` descarta em silêncio as respostas cujo item não
+ * está no mapa e θ̂/SE divergiam. A correção da rota é reconstituir o mapa a
+ * partir do `PlacementState` (`placementItemsById`, em `placement-pool.ts`,
+ * que importa o catálogo e por isso NÃO é usado aqui — este arquivo é o motor
+ * puro). `reconstituirDoEstado` abaixo é o mesmo contrato sobre o pool
+ * sintético: id respondido → item do pool. A reconstituição REAL, com o
+ * catálogo, é coberta em `placement-pool.test.ts`.
+ */
+describe("nivelamento retomado após reload = execução contínua (docs/36 RF-12, C3)", () => {
+  const scope: PlacementScope = { areas: ["MT"], priorityAreas: new Set(["MT"]) };
+  const bs = [-1.5, -1.2, -0.9, -0.6, -0.3, 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8];
+  const pool: PlacementPoolItem[] = bs.map((b, i) => ({
+    id: `c3-${i}`,
+    skillId: `mat:s${i}`,
+    subjectId: i % 2 === 0 ? "mat" : "fis",
+    area: "MT",
+    irt: { a: 1.2, b, c: 0.2 },
+    incidence: 2,
+  }));
+  const poolFn = () => pool;
+  const SEED = "seed-fixa";
+  const TOTAL = 6;
+
+  /**
+   * Roda o CAT respondendo certo/errado alternado; `recarregarAntesDe` = índice
+   * (0-based) da resposta em que a página é "recarregada". `sequencia` fixa os
+   * itens mostrados (a da execução contínua), isolando a estimativa: só o mapa
+   * de itens difere entre as duas execuções (o plano §D C3 mede "mesmos itens
+   * escolhidos; só a estimativa diverge").
+   */
+  function rodar(
+    recarregarAntesDe: number | null,
+    remontar: (estado: ReturnType<typeof startPlacement>) => Map<string, PlacementPoolItem>,
+    sequencia?: string[],
+  ) {
+    let state = startPlacement(SEED, "2026-09-28T10:00:00.000Z");
+    let mapa = new Map<string, PlacementPoolItem>();
+    let ultimaMateria: string | null = null;
+    const escolhidos: string[] = [];
+    for (let i = 0; i < TOTAL; i++) {
+      if (recarregarAntesDe === i) mapa = remontar(state); // nova montagem da rota
+      const escolha = pickPlacementItem(state, scope, poolFn, SEED, ultimaMateria);
+      const item = sequencia ? pool.find((p) => p.id === sequencia[i]) : escolha.item;
+      if (!item) break;
+      mapa.set(item.id, item); // `itemsShownRef.current.set(...)` da rota
+      escolhidos.push(item.id);
+      state = advancePlacement(escolha.state, scope, item, i % 2 === 0, false, mapa);
+      ultimaMateria = item.subjectId;
+    }
+    return { state, escolhidos };
+  }
+
+  /** O que a rota agora faz ao montar: os itens JÁ respondidos voltam pro mapa (contrato de `placementItemsById`). */
+  const reconstituirDoEstado = (estado: ReturnType<typeof startPlacement>) => {
+    const mapa = new Map<string, PlacementPoolItem>();
+    for (const a of Object.values(estado.areas)) {
+      for (const id of a.itemIds) {
+        const it = pool.find((p) => p.id === id);
+        if (it) mapa.set(id, it);
+      }
+    }
+    return mapa;
+  };
+  /** O comportamento ANTIGO da rota (a causa do bug): mapa recriado vazio a cada montagem. */
+  const mapaVazioDaRotaAntiga = () => new Map<string, PlacementPoolItem>();
+
+  test("6 respostas alternadas, recarregando antes da 4ª: mesmo θ̂ e SE da execução contínua (tolerância 1e-9)", () => {
+    const continuo = rodar(null, reconstituirDoEstado);
+    const retomado = rodar(3, reconstituirDoEstado, continuo.escolhidos);
+    expect(continuo.escolhidos).toHaveLength(TOTAL);
+    expect(retomado.escolhidos).toEqual(continuo.escolhidos);
+    expect(Math.abs(retomado.state.areas.MT!.theta! - continuo.state.areas.MT!.theta!)).toBeLessThan(1e-9);
+    expect(Math.abs(retomado.state.areas.MT!.se! - continuo.state.areas.MT!.se!)).toBeLessThan(1e-9);
+  });
+
+  test("controle: SEM reconstituir (mapa vazio, o comportamento antigo) a estimativa diverge — é isso que o teste acima protege", () => {
+    const continuo = rodar(null, reconstituirDoEstado);
+    const antigo = rodar(3, mapaVazioDaRotaAntiga, continuo.escolhidos);
+    const dTheta = Math.abs(antigo.state.areas.MT!.theta! - continuo.state.areas.MT!.theta!);
+    expect(dTheta).toBeGreaterThan(0.05);
+  });
+
+  test("recarregar em QUALQUER ponto (1ª a 5ª resposta) também preserva θ̂/SE", () => {
+    const continuo = rodar(null, reconstituirDoEstado);
+    for (let ponto = 1; ponto < TOTAL; ponto++) {
+      const retomado = rodar(ponto, reconstituirDoEstado, continuo.escolhidos);
+      expect(Math.abs(retomado.state.areas.MT!.theta! - continuo.state.areas.MT!.theta!)).toBeLessThan(1e-9);
+      expect(Math.abs(retomado.state.areas.MT!.se! - continuo.state.areas.MT!.se!)).toBeLessThan(1e-9);
+    }
+  });
+});

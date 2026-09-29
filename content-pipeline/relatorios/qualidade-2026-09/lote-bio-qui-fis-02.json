@@ -1,0 +1,1125 @@
+{
+  "lote": "bio-qui-fis-lote-02",
+  "materias": [
+    "bio",
+    "qui",
+    "fis"
+  ],
+  "revisor": "ia-delegada:sonnet",
+  "revisadoEm": "2026-09-28",
+  "contagemPorAcao": {
+    "manter": 9,
+    "melhorar-alternativas": 14,
+    "revisar-explicacao": 3,
+    "substituir": 1,
+    "melhorar-enunciado": 3
+  },
+  "itens": [
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:710f425d",
+      "arquivo": "src/content/banco/fis/fis-eletricidade-circuitos-basicos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.667,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.667,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: V = 1,5 x 10 = 15 V. Distratores 11,5 (soma), 8,5 (subtração) e 6,7 (divisão) são erros de operação. Alternativas curtas e parelhas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:c5c8630b",
+      "arquivo": "src/content/banco/fis/fis-eletricidade-circuitos-basicos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.6,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.6,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: R = 4 + 2 = 6 ohms, I = 12/6 = 2 A. Distratores 6 A (12/2), 3 A (12/4) e 0,5 A (R/V) são erros reais.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:34d44ba9",
+      "arquivo": "src/content/banco/fis/fis-energia-trabalho-conservacao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.2,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.2,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ajustado",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "R2/R1: 3 x 10 x 4 x sen 45 = 60 raiz de 2 = 84,85 J, que arredonda para 84,9 J, não 84,8 J (truncamento). Alternativa B e explicação passam a 84,9 J; posição e conteúdo do gabarito B mantidos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:a29fb360",
+      "arquivo": "src/content/banco/fis/fis-energia-trabalho-conservacao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "atencao",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter",
+        "substituir"
+      ],
+      "motivo": "R1 conferido: a = 5 m/s², t = 2/5 = 0,4 s. R6: a resolução usa força, aceleração e cinemática (segunda lei + v = v0 - at), não conservação de energia; o item não mede fis:energia-trabalho-conservacao. Sem falha R1 a R3, fica 'manter' com pedido de substituição por item de conservação de energia (pedidos-de-lote). Não reclassificada a habilidade (mesma razão dos itens de genética).",
+      "pedidoDeLote": "fis:energia-trabalho-conservacao, 1 item, papel diagnostico, dificuldade 3: conservação de energia mecânica sem atrito (altura x velocidade); substitui gen:fis:energia-trabalho-conservacao:a29fb360, que resolve por Newton e cinemática.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:4ab6159a",
+      "arquivo": "src/content/banco/qui/qui-estequiometria-calculo-mols.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos: 34 g / 34 g/mol = 1 mol de H2O2, proporção 2:1, 0,5 mol de O2. Distratores 1 mol (sem a razão), 2 mols e 0,25 mol são erros de proporção.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:ce23be64",
+      "arquivo": "src/content/banco/qui/qui-estequiometria-calculo-mols.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos: proporção 1:1, 0,5 mol de PbI2. Distratores 0,25 (divide por 2), 1 e 2 mols são erros de coeficiente.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:37e9d3c2",
+      "arquivo": "src/content/banco/qui/qui-estrutura-atomica-modelos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: 47 prótons, cátion +1, 46 elétrons. Distratores 47, 48 (sinal trocado) e 45 (perde 2) são erros reais. Alternativas com mesmo tamanho.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:4b3fc967",
+      "arquivo": "src/content/banco/qui/qui-estrutura-atomica-modelos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.9,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.9,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: 22 e 21 nêutrons, diferença de 1. Alternativas parelhas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:66de6f9d",
+      "arquivo": "src/content/banco/qui/qui-estrutura-atomica-modelos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: 56 - 26 = 30 nêutrons. Distratores 56 (massa), 26 (Z) e 82 (soma) são erros reais.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:4cd6558d",
+      "arquivo": "src/content/banco/qui/qui-quimica-organica-funcoes.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.16,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.16,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "revisar-explicacao"
+      ],
+      "motivo": "R8/R3: o enunciado tinha 'alcóol' (erro de grafia) e 'funções alcóol' (o item conta grupos -OH). A explicação trazia uma frase interna ('habilidade crítica no nível 2'). Corrigidos; alternativas e gabarito C mantidos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:8344c458",
+      "arquivo": "src/content/banco/qui/qui-tabela-periodica-propriedades.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "revisar-explicacao"
+      ],
+      "motivo": "R3: 'configuração terminada em 4s²' é ambígua (elementos de transição do 4º período também têm 4s² e a ordem de escrita varia). O enunciado passou a dar a configuração completa (1s² ... 3p⁶ 4s², 20 elétrons, cálcio), sem ambiguidade; explicação acompanha. Alternativas e gabarito D mantidos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:f74d9f41",
+      "arquivo": "src/content/banco/qui/qui-tabela-periodica-propriedades.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos: ΔEN H-F 1,78; C-O 0,89; N-O 0,40; C-H 0,35. Alternativas parelhas (24 a 27 caracteres).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:tabela-periodica-propriedades:fdfde98c",
+      "arquivo": "src/content/banco/qui/qui-tabela-periodica-propriedades.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.913,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.261,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: pista invertida: o distrator D tinha 46 caracteres contra 10 a 12 (razão 0,26, a correta a mais curta), o que denuncia a 'resposta óbvia'. Reescritas com 62 a 68 caracteres e justificativas ligadas a erros (mais elétrons na última camada, mesma linha, não comparável). Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:1b398a65",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.531,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 2
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: razão 2,53, correta com 124 caracteres, travessão em 2 alternativas; distrator A ('uma competição as eliminou') contradizia o enunciado (coexistem há séculos) e B ('por pena') não era erro conceitual. Reescritas com 81 a 90 caracteres, sem travessão; distratores: exclusão competitiva mal aplicada, dominância, mutualismo. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:3646a34e",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.937,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.658,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 2
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R4: razão 2,66, travessão e absolutismo ('sempre'); o distrator B ('não prosperam ambas') contradizia o enunciado ('ambas prosperam'). Reescritas com 72 a 100 caracteres: recurso ilimitado, predação, divisão igual sem diferença de hábito. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:6e93ee63",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.933,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 3.24,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 3
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 3,24 (correta 81 caracteres contra 19 a 25) e travessão. Reescritas no mesmo formato (relação + definição), com 70 a 77 caracteres. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:982399ed",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.88,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.645,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R4: razão 2,65 e travessão; os distratores A e C ('igualmente') eram frases sem sentido. Reescritas com 75 a 85 caracteres, distratores plausíveis (primeiro nível, distribuição uniforme, local da aplicação). Gabarito B mantido. R7: dificuldade 4 acima do raciocínio pedido (biomagnificação por definição); não reclassificada.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:a74260f8",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.967,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.051,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ajustado",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R2/R5: a correta dizia que bactérias fixadoras convertem N2 em nitrato (a fixação dá amônia; a nitrificação, feita por outras bactérias, dá o nitrato), o que contradizia a própria explicação; além disso razão 2,05 e absolutismo ('apenas'). Correta reescrita com os dois passos, distratores sem absolutismo e com tamanho parelho. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:b9bc002a",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.952,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 4.3,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Exemplo do 35 (razão 4,30): correta com 86 caracteres contra 15 a 20, travessão, e a alternativa correta trazia 'secundária ou ecológica'. O enunciado dizia 'solo nu', que sugere sucessão primária; passou a dizer que o solo permanece após o incêndio. Alternativas reescritas com 68 a 80 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:c65afc20",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.913,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.25,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R4: razão 2,25, absolutismo ('todas') e travessão; o distrator C ('espécies diversas são todas iguais') se confundia com a própria explicação da redundância. Reescritas com 72 a 88 caracteres; distratores: biodiversidade irrelevante, espécies raras no controle, mais predadores contra pragas. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:d7e944a2",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.906,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,0 e travessão. Reescritas com 60 a 76 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:de1f28cf",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.813,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.774,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,77 e distratores com 'infinitamente'/'imediatamente' (pistas de exagero). Reescritas com 62 a 76 caracteres, sem exagero. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:ea303b98",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.898,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.853,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,85 (correta 97 caracteres contra 25 a 34). Reescritas com 62 a 80 caracteres. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:39a9d21d",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.965,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.12,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,12 e absolutismo ('nunca'). Reescritas com 80 a 95 caracteres, sem absolutismo. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:cc69ffe1",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 0.989,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.36,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,36 (correta 118 caracteres contra 25 a 50). Reescritas com 82 a 95 caracteres; distratores: lamarckismo, ensino entre espécies, puro acaso. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    }
+  ]
+}

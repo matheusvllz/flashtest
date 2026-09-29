@@ -5,6 +5,8 @@
 
 > **Leia primeiro [docs/PRODUCT.md](../docs/PRODUCT.md).** Ele é o resumo canônico do produto (persona, propósito, posicionamento, voz, evidências e restrições) e prevalece sobre este arquivo. Aqui ficam **só** os campos que as skills de marketing (`coreyhaines31/marketingskills`) pedem e que o `PRODUCT.md` não cobre. Tudo tem fonte no SDD (`docs/NN-*.md`); o que não tem está marcado **TODO/UNKNOWN** e não pode ser preenchido por inferência. Não copie conteúdo do `PRODUCT.md` para cá: atualize lá.
 >
+> **Voz, promessas permitidas e proibidas, e pipeline de skills de marketing:** [docs/COPY.md](../docs/COPY.md) e [docs/copy/06-marketing.md](../docs/copy/06-marketing.md).
+>
 > Regras que nenhuma skill de marketing sobrepõe: sem depoimento, número de retenção, preço ou "aluno aprovado" inventados (`PRODUCT.md` → Evidence on Hand); sem analytics externo nem coleta de dados de menores sem spec autorizando (`docs/20` §14, §22); toda copy passa pela voz de `docs/20` §7.1 e pelo inventário de `docs/21`.
 
 ## Product Overview

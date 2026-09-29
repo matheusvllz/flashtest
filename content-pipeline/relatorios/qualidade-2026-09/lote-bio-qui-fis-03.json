@@ -1,0 +1,1117 @@
+{
+  "lote": "bio-qui-fis-lote-03",
+  "materias": [
+    "bio",
+    "qui",
+    "fis"
+  ],
+  "revisor": "ia-delegada:sonnet",
+  "revisadoEm": "2026-09-28",
+  "contagemPorAcao": {
+    "melhorar-alternativas": 25,
+    "melhorar-enunciado": 1
+  },
+  "itens": [
+    {
+      "id": "gen:bio:evolucao-selecao-natural:e4445391",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1.097,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.612,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 2,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: razão 2,61, absolutismo em 2 distratores ('nunca', 'sempre') e travessão. Reescritas com 82 a 98 caracteres; distratores: mutação induzida durante a exposição, aprendizado (lamarckismo), mutação induzida depois. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:f86cdb2b",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1.041,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.383,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: razão 2,38 (correta 112 caracteres contra 30 a 47) e travessão. Reescritas com 85 a 105 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:56c9c3a0",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1.041,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "atencao",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R1: razão 2,0 (correta 132 caracteres contra 47 a 66) e o distrator D ('aminoácidos hidrofílicos em contato com a água') é verdadeiro para as extremidades da proteína, o que enfraquecia o gabarito único; trocado por uma inversão inequívoca (hidrofílicos junto às caudas). Reescritas com 78 a 110 caracteres, sem 'totalmente'. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:ae3dd6fb",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.29,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,29 e absolutismo ('apenas', 'permanentemente'). Reescritas com 85 a 100 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-funcao:c0fab581",
+      "arquivo": "src/content/banco/bio/bio-membrana-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1.082,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 3.623,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 3,62 (correta 192 caracteres contra 38 a 53). Reescritas com 88 a 108 caracteres. Gabarito C mantido. R7: dificuldade 1 baixa para o conceito de proteína integral e transporte mediado; mantida.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:quimica-organica-funcoes:e8723d10",
+      "arquivo": "src/content/banco/qui/qui-quimica-organica-funcoes.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1a",
+      "metricas": {
+        "razaoTamanho": 1.011,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.017,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 2,02 (correta 117 caracteres contra 54 a 58). Reescritas com 85 a 95 caracteres, no mesmo formato (função; papel do -OH). Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:3c388487",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 0.886,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.906,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 1,91, correta a mais longa e absolutismo ('todos têm quantidade igual'). Reescritas com 66 a 73 caracteres; o distrator C passou a ser a ideia de que a energia se conserva sem perdas entre os níveis. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:03272373",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1.02,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.646,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta a mais longa (163 contra 84 a 99) e distrator B com 'apenas'. Reescritas com 85 a 100 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:0a3197f9",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1.052,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.753,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta 156 caracteres contra 84 a 89 e absolutismo ('todos'). Reescritas com 83 a 100 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:4ed876e4",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1.11,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.46,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta a mais longa (92 contra 52 a 63) e absolutismo ('todas as cores'). Reescritas com 72 a 90 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:6c26b9f8",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 0.988,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.356,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta a mais longa (99 contra 57 a 73) e absolutismo ('todos os tentilhões'). Reescritas com 76 a 86 caracteres. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:71178154",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1.054,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.694,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "atencao"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta com 188 caracteres contra 88 a 111 e absolutismo ('todos os insetos'). Reescritas com 83 a 98 caracteres. Gabarito A mantido. O enunciado é longo (carga de leitura alta), mas cada dado é usado no raciocínio; mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:73b2d057",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 0.933,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.348,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 2,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta a mais longa e absolutismo em 2 distratores ('nenhuma', 'nunca'). Reescritas com 84 a 100 caracteres; o distrator B (garbled 'usaram mais os nados') virou lamarckismo claro. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:a9250298",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 0.989,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.296,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: correta a mais longa, absolutismo ('sempre') e travessão. Reescritas com 86 a 93 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:b5a116d5",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 0.989,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.24,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "R3: o enunciado não dizia contra que fundo a pelagem clara é visível; sem isso 'claros são mais vistos' não decorre do texto. Passou a dizer 'ilha de solo escuro'. Alternativas reescritas no mesmo formato (frequência sobe, desce ou não muda + causa), sem absolutismo. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:aedcdaf2",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1.051,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.784,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 2,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta 157 caracteres contra 57 a 88 e absolutismo em 2 distratores ('todas', 'apenas', 'nada', 'completamente'). Reescritas com 90 a 105 caracteres. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:e07270a4",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1.02,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.253,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta 114 caracteres contra 78 a 91 e absolutismo ('apenas', 'completamente'). Reescritas com 92 a 102 caracteres. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:e587542a",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 0.934,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.814,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 1,81 (correta 107 caracteres contra 43 a 59) e absolutismo ('todas as temperaturas'). Reescritas com 78 a 90 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:organelas-funcao:b1ef80bc",
+      "arquivo": "src/content/banco/bio/bio-organelas-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1b",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.676,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta a mais longa (62 contra 29 a 37) e absolutismo ('para sempre'). Reescritas com 70 a 83 caracteres. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:de61fd79",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1c",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.821,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: razão 1,82 (correta 51 caracteres contra 10 a 28) e travessão. Reescritas no formato relação + definição, com 65 a 68 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:5755907d",
+      "arquivo": "src/content/banco/bio/bio-fisiologia-humana-sistemas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1c",
+      "metricas": {
+        "razaoTamanho": 0.965,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.808,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: razão 1,81 (correta 94 caracteres contra 27 a 52), travessão, e o distrator C entregava a resposta ('pulmões respiram, coração não'). Reescritas com 78 a 84 caracteres. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:1e8222ec",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.902,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Amostra do estrato 2 (razão 1,90; correta 78 caracteres contra 16 a 41). Reescritas com 76 a 82 caracteres. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:aeccadea",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 1.026,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.5,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Amostra do estrato 2 (razão 1,50; correta 78 contra 50 a 52 caracteres). Reescritas com 72 a 80 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:e56debb1",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 0.925,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.891,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Amostra do estrato 2 (razão 1,89; correta 121 caracteres contra 58 a 64). Reescritas com 82 a 103 caracteres; sem 'imediatamente'. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:63ab8545",
+      "arquivo": "src/content/banco/bio/bio-fisiologia-humana-sistemas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 1.049,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.597,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Amostra do estrato 2 (razão 1,60; correta 123 caracteres contra 73 a 77). Reescritas com 85 a 105 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    }
+  ]
+}

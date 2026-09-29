@@ -7,17 +7,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o trecho: 'A vida é uma longa jornada.' Que figura de linguagem está presente nesta frase? Qual é seu efeito no sentido do texto?",
         "opcoes": [
-          "Metáfora, que compara a vida com uma jornada, sugerindo movimento, transformação e experiências diversas ao longo do tempo.",
-          "Metonímia, que substitui a palavra 'vida' por um sinônimo mais poético.",
-          "Hipérbole, que exagera a duração da vida de forma cômica.",
-          "Personificação, atribuindo características humanas ao conceito abstrato de vida."
+          "Metáfora, que identifica a vida a uma jornada e sugere movimento, etapas e transformação ao longo do tempo",
+          "Metonímia, que troca a palavra 'vida' por um sinônimo mais poético e menos comum na fala do dia a dia",
+          "Hipérbole, que exagera a duração da vida de forma cômica para provocar riso e leveza no leitor",
+          "Personificação, que atribui características humanas ao conceito abstrato de vida e a seus caminhos"
         ],
         "correta": 0,
         "explicacao": "Aqui tem metáfora: 'vida' e 'jornada' estão comparadas, mas sem 'como' ou 'parece'. O sentido que fica é profundo: a vida vira uma viagem com etapas, desafios, destino. Passa a ideia de movimento, aprendizado e transformação pessoal."
       },
       "meta": {
         "id": "gen:por:sentido-figuras-linguagem:a3e2ca3e",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sentido-figuras-linguagem"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.482Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-07"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +55,17 @@
         "type": "multipla-escolha",
         "pergunta": "No verso 'O coração é um pássaro selvagem que voa para longe', identifique a figura de linguagem predominante e seu propósito expressivo.",
         "opcoes": [
-          "Metonímia, que substitui 'sentimento' por 'coração' de forma poética.",
-          "Metáfora, que compara o coração (sede das emoções) a um pássaro selvagem, sugerindo liberdade e incontrolabilidade dos sentimentos.",
-          "Hipérbole, que exagera a capacidade do coração de voar.",
-          "Aliteração, que repete sons para criar musicalidade."
+          "Metonímia, que substitui 'sentimento' por 'coração' de forma poética e com valor afetivo",
+          "Metáfora, que identifica o coração a um pássaro selvagem e sugere sentimentos livres e incontroláveis",
+          "Hipérbole, que exagera a capacidade do coração de voar para longe e de escapar de quem o sente",
+          "Aliteração, que repete sons parecidos para criar musicalidade e ritmo ao longo do verso"
         ],
         "correta": 1,
         "explicacao": "A metáfora compara o coração (não o órgão, mas o lugar das emoções) a um pássaro selvagem que voa. O efeito é mostrar que os sentimentos são livres, selvagens e fogem do controle. A imagem do pássaro reforça a incontrolabilidade muito mais que uma descrição literal."
       },
       "meta": {
         "id": "gen:por:sentido-figuras-linguagem:8d9ac6b8",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sentido-figuras-linguagem"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.482Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-07"
         },
         "examProfiles": [
           "enem"
@@ -97,27 +101,27 @@
       "id": "gen:por:sentido-figuras-linguagem:5e544870",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "No poema, encontra-se: 'A música sussurrou doce melodia nos ouvidos atentos do músico.' Qual figura de linguagem predomina? Explique seu efeito.",
+        "pergunta": "No poema, encontra-se: 'A música sussurrou doce melodia nos ouvidos atentos do músico.' Qual figura de linguagem predomina e qual é o seu efeito?",
         "opcoes": [
-          "Aliteração, pela repetição do som 's' em 'sussurrou'.",
-          "Hipérbole, exagerando a delicadeza da melodia.",
-          "Metonímia, pois 'música' substitui 'compositor'.",
-          "Personificação, atribuindo à música (abstrato) a ação de sussurrar, criando uma atmosfera íntima e sensorial delicada."
+          "Aliteração, pela repetição do som 's' em 'sussurrou', que imita o barulho suave da melodia",
+          "Hipérbole, pois a frase exagera a delicadeza da melodia para impressionar o leitor",
+          "Metonímia, pois a palavra 'música' substitui 'compositor' para indicar quem produz o som",
+          "Personificação, pois a música recebe a ação humana de sussurrar, criando um clima íntimo"
         ],
         "correta": 3,
         "explicacao": "A personificação atribui à música (entidade abstrata) a ação humana de 'sussurrar', criando efeito sensorial vívido e íntimo. O verbo 'sussurrar' transfere qualidades humanas (o tom de voz baixo, confidencial) para a música, intensificando a percepção sensorial e emocional da experiência de ouvir, não apenas descrevendo, mas dramatizando-a poeticamente."
       },
       "meta": {
         "id": "gen:por:sentido-figuras-linguagem:5e544870",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sentido-figuras-linguagem"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.482Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -143,27 +149,27 @@
       "id": "gen:por:sentido-figuras-linguagem:62962bf5",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "No texto: 'A noite cobriu a cidade com seu manto negro.' Identifique qual figura de linguagem está presente. Qual é seu papel narrativo?",
+        "pergunta": "No texto: 'A noite cobriu a cidade com seu manto negro.' Qual figura de linguagem está presente na ação atribuída à noite, e qual é o seu papel narrativo?",
         "opcoes": [
-          "Hipérbole, exagerando a escuridão da noite.",
-          "Metonímia, pois 'manto' substitui 'escuridão'.",
-          "Personificação, atribuindo a 'noite' capacidade de cobrir com um manto, criando atmosfera visual poética e sensação de envolvimento.",
-          "Aliteração, pela repetição de 'n' em 'noite' e 'negro'."
+          "Hipérbole, pois a frase exagera a escuridão da noite para dar ideia de perigo",
+          "Metonímia, pois a palavra 'manto' substitui 'escuridão' para nomear a noite escura, sem luz nem estrelas",
+          "Personificação, pois a noite recebe a ação humana de cobrir a cidade, criando um clima poético",
+          "Aliteração, pela repetição do som 'n' em 'noite' e 'negro', que reforça o clima escuro"
         ],
         "correta": 2,
         "explicacao": "A personificação atribui à noite (fenômeno natural) a ação de 'cobrir com um manto' (ação humana). O efeito narrativo é criar uma atmosfera envolvente e misteriosa, como se a noite abraçasse a cidade suavemente. Deixa o tom mais poético e melancólico que uma descrição literal."
       },
       "meta": {
         "id": "gen:por:sentido-figuras-linguagem:62962bf5",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sentido-figuras-linguagem"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.482Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -189,19 +197,19 @@
       "id": "gen:por:sentido-figuras-linguagem:a04475d4",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Leia: 'O silêncio gritava nos corredores vazios da escola abandonada.' Qual figura de linguagem está presente e qual seu efeito?",
+        "pergunta": "Leia: 'O silêncio gritava nos corredores vazios da escola abandonada.' A expressão 'o silêncio gritava' une duas ideias que se contradizem. Qual figura de linguagem está presente e qual é o seu efeito?",
         "opcoes": [
-          "Metonímia, substituindo 'vazio' por 'silêncio'.",
-          "Oxímoro ou paradoxo, pois silêncio não pode gritar, criando contraste que intensifica a atmosfera desconfortável e perturbadora.",
-          "Hipérbole, exagerando a intensidade do silêncio.",
-          "Antítese, opondo silêncio e som de forma equilibrada."
+          "Metonímia, pois a palavra 'silêncio' substitui 'vazio' para nomear o estado dos corredores da escola",
+          "Paradoxo, pois o silêncio, que é ausência de som, aparece gritando, o que reforça o clima de abandono",
+          "Hipérbole, pois a frase exagera a intensidade do silêncio para dar ideia de grandeza e de tamanho",
+          "Antítese, pois silêncio e som aparecem em frases separadas e em equilíbrio, opondo dois momentos"
         ],
         "correta": 1,
-        "explicacao": "A figura é oxímoro: combina 'silêncio' (ausência de som) com 'gritava' (som forte). O efeito é desconcertante e perturbador, sugerindo que o silêncio é tão profundo e presente na ausência que fica quase audível e opressivo, intensificando a sensação de abandono e inquietação."
+        "explicacao": "A figura é o paradoxo (ou oxímoro): 'silêncio' (ausência de som) une-se a 'gritava' (som forte). O efeito é desconcertante e perturbador: o silêncio é tão profundo que parece audível e opressivo, o que intensifica a sensação de abandono e inquietação."
       },
       "meta": {
         "id": "gen:por:sentido-figuras-linguagem:a04475d4",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sentido-figuras-linguagem"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.482Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-01"
         },
         "examProfiles": [
           "enem"

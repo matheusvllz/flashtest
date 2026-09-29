@@ -16,6 +16,7 @@ export function TrueFalseView({
     const selected = answer === value;
     return (
       <button
+        type="button"
         role="radio"
         aria-checked={selected}
         disabled={checked}

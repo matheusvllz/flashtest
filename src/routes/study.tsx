@@ -263,6 +263,7 @@ function Study() {
         <header className="sticky top-0 z-10 border-b-2 border-gelo bg-neve/95 px-3 pt-3 pb-3 backdrop-blur">
           <div className="flex items-center gap-3">
             <button
+              type="button"
               onClick={() => nav({ to: HOME_ROUTE })}
               aria-label="Sair da aula"
               className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"
@@ -281,6 +282,7 @@ function Study() {
               {formatClock(elapsed)}
             </span>
             <button
+              type="button"
               onClick={() => {
                 const ligar = !s.prefs.sound;
                 setPrefs({ sound: ligar });
@@ -328,6 +330,7 @@ function Study() {
                 const isWrong = answered && isSel && a.key !== q.correct;
                 return (
                   <button
+                    type="button"
                     key={a.key}
                     disabled={answered}
                     onClick={() => setSelected(a.key)}
@@ -367,9 +370,10 @@ function Study() {
                         <p className="mt-1">{q.hint}</p>
                       </div>
                       <button
+                        type="button"
                         onClick={() => setShowHint(false)}
                         aria-label="Fechar dica"
-                        className="text-nevoa"
+                        className="tap-area text-nevoa"
                       >
                         <X size={14} />
                       </button>
@@ -377,6 +381,7 @@ function Study() {
                   </div>
                 )}
                 <button
+                  type="button"
                   onClick={submit}
                   disabled={!selected}
                   className="btn-primary w-full disabled:opacity-40"
@@ -388,6 +393,7 @@ function Study() {
                 )}
                 <div className="grid grid-cols-2 gap-2">
                   <button
+                    type="button"
                     onClick={() => {
                       hintUsedRef.current = true;
                       setShowHint(true);
@@ -397,6 +403,7 @@ function Study() {
                     <Lightbulb size={16} /> Pedir dica
                   </button>
                   <button
+                    type="button"
                     onClick={() => {
                       tutorUsedRef.current = true;
                       askTutorFromCurrent();
@@ -413,6 +420,7 @@ function Study() {
                 isLast={idx + 1 >= questions.length}
                 onContinue={nextQ}
                 onAskTutor={!session.feedback.correct ? () => askTutorFromCurrent(true) : undefined}
+                acimaDaNav
               >
                 <div className="card-soft space-y-3 p-4">
                   <div>
@@ -447,6 +455,7 @@ function SalvarFlashcard({ questionId }: { questionId: string }) {
   const [saved, setSaved] = useState(false);
   return (
     <button
+      type="button"
       onClick={() => {
         setState((st) => {
           if (!st.progress.savedFlashcards.includes(questionId))

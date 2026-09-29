@@ -6,7 +6,7 @@
 
 ## Platform
 
-web
+web (mobile-first; layout de tela larga com coluna de 560–640 px e `NavRail` a partir de 1024 px desde o `36` §F.6)
 
 ## Users
 
@@ -19,7 +19,7 @@ web
 
 ## Product Purpose
 
-- App mobile-first de preparação para o ENEM em **aulas de 60 segundos** (1–2 questões por vez), feedback imediato, e uma trilha que decide o próximo passo (`08` §1; `CLAUDE.md`).
+- App mobile-first de preparação para o ENEM em **aulas curtas** (a aula da trilha tem 4–8 questões, o `/study` tem 2), feedback imediato, e uma trilha que decide o próximo passo (`08` §1; `CLAUDE.md`).
 - A dor tratada é falta de **constância** (o hábito não gruda) + falta de **direção** (não sabe onde está fraco) — não falta de conteúdo (`08` §0, §1; `14` §3).
 - Sucesso, na visão de produto: o aluno fecha o app pensando "pelo menos hoje eu fiz alguma coisa" e volta amanhã (`14` §6; `08` §2, loop central).
 - Estado atual: protótipo funcional, sem backend; login e cadastro são mock intencional (`CLAUDE.md`, "Stack real").
@@ -27,6 +27,7 @@ web
 ## Positioning
 
 - Frase de posicionamento: *"Não é mais aula. É o hábito que te aprova. 60 segundos por dia."* (`08` §1).
+  - *Decisão de 28/09/2026 (D-1):* a frase é mantida por enquanto. Ela promete aprovação e "60 segundos", que nenhum dado sustenta; opções alternativas e o diagnóstico estão em [copy/01-estrategia.md](copy/01-estrategia.md) §5.
 - Linha de defesa: *conteúdo todo mundo já tem de graça, inclusive do governo — o que ninguém resolve é constância e saber exatamente onde você está fraco* (`08` §10).
 - O concorrente real é o **MEC Enem** (grátis, oficial, conteúdo completo + correção de redação). Qualquer proposta que compita em "mais conteúdo" perde por padrão (`08` §0, §10).
 - Diferença vs. ChatGPT direto: currículo, estado do aluno, decisão do que estudar amanhã, hábito (`08` §10).
@@ -41,6 +42,8 @@ web
 ## Capabilities and Constraints
 
 **Existe (ver `22` e `26` para evidência):** trilha como home, lições por passos, revisão de capítulo, feedback imutável, tutor manual com IA (OpenAI `gpt-5.4-mini` via server function, fallback local em erro/timeout de 12s), identidade sonora por evento, flashcards com repetição espaçada, progresso/mapa de lacunas, ranking **mock** (a tela diz isso), dark mode.
+
+**Desde o `36` (28/09/2026, evidência no `37`):** jornada adaptativa misturada na `/trilha` (matérias intercaladas, foco, motivo e "Depois: {próxima}" no card), nivelamento adaptativo opcional com resultado por faixa de área (sem nota), checkpoint que recalibra o modelo, aviso quando a gravação local falha, seleção de curso com busca (82 cursos em 13 grupos, também no Perfil), layout de tela larga (coluna de 560–640 px, `NavRail` a partir de 1024 px) e atribuição de questão oficial na folha de feedback.
 
 **Restrições técnicas duras** (`CLAUDE.md`; `25` "Como usar", item 4):
 - Um só store (`src/lib/store.ts`, `useSyncExternalStore` + `localStorage`); nunca um segundo mecanismo de estado.
@@ -58,6 +61,7 @@ web
 
 ## Brand Commitments
 
+- **Guia operacional de copy:** [COPY.md](COPY.md) (contexto rápido, voz e tom, UX writing e glossário, Foca IA, marketing, roteamento das skills de escrita). O resumo abaixo continua valendo; o guia detalha.
 - **Nome e mascote:** Foca. A mascote é a marca (estilo Duo); sempre via `<FocaMark />`, nunca esticada nem rotacionada; aparece em transições emocionais, nunca como decoração de header nem durante a questão (`15` §1, §4; `CLAUDE.md`).
 - **Voz vigente** (`20` §7.1 — prevalece sobre o arquétipo "cobradora" do `15`): colega de estudo atento e direto, que entende a dificuldade sem dramatizar. Não é professor dando sermão, coach, nem adolescente performático. Humor no máximo uma vez por sessão, sobre a mascote ou a situação, nunca sobre a capacidade do aluno. Sem emoji em controles, erros, explicações ou alertas. Sem sequência de exclamações. Retorno sem culpa, ameaça ou cobrança pela ausência.
 - **Tamanhos-alvo de copy** (`20` §7.1): botão 1–4 palavras; feedback 2–7; fala decorativa até 14; explicação curta 25–55; card de ensino 15–35.
@@ -67,14 +71,14 @@ web
 
 ## Evidence on Hand
 
-- Conteúdo real: 59 questões cobrindo 11 matérias (`08` §8); 134 lições / 1.204 exercícios de redação (`08` §5); conteúdo novo da Jornada V2 (`26`).
-- Testes: 257 unitários + 33 E2E passando em 22/09/2026, incluindo projeto Playwright `narrow` 320×700 (`26`).
+- Conteúdo real: 59 questões cobrindo 11 matérias (`08` §8); 134 lições / 1.204 exercícios de redação (`08` §5); conteúdo novo da Jornada V2 (`26`); acervo de pacote com 755 itens (737 gerados por IA e 18 do ENEM 2023, 3 retirados) e 48 aulas geradas, revisados por modelo delegado (`reviewKind: ia-delegada`, não é revisão humana) (`32`, `37`).
+- Testes: 257 unitários + 33 E2E passando em 22/09/2026, incluindo projeto Playwright `narrow` 320×700 (`26`). No Gate F9 do `36` (28/09/2026): 1.146 unitários e 281 E2E (251 passaram, 30 pulados por desenho, 0 falhas) em três projetos — `chromium` 390×844, `desktop` 1280×800 e `narrow` 320×700 (`37`).
 - Copy de landing escrita na voz do João (`13`); LP do link da bio em `docs/brand/`.
 - **Ausências que ninguém pode preencher por inferência:**
   - Nenhuma entrevista estruturada com aluno foi feita (`08` §8; `14` §10) — **não inventar depoimento, citação ou persona validada**.
   - Nenhum dado de retenção próprio (`08` §10) — **não afirmar que o aluno volta**.
   - Preço, DRE e custo de IA por aluno nunca foram fechados (`08` §11) — **não inventar preço nem plano pago**.
-  - Nenhuma revisão pedagógica externa do conteúdo novo; nenhum teste em dispositivo físico; nenhuma observação de participante real (`26` §8).
+  - Nenhuma revisão pedagógica externa do conteúdo novo; nenhum teste em dispositivo físico; nenhuma observação de participante real (`26` §8); nenhuma revisão humana item a item dos 755 itens de pacote nem dos 1.204 exercícios legados (`37`).
 
 ## Product Principles
 
@@ -89,9 +93,10 @@ web
 - `prefers-reduced-motion` obrigatório: a recompensa (cor, som, número) continua sem movimento (`16` §5; `src/styles.css`).
 - Foco visível em todo elemento interativo (`:focus-visible`, 3px na cor de foco — `src/styles.css`).
 - Contraste AA em texto: o verde de sucesso ganhou variante de texto (`--success-texto`) porque o original reprovava (3.4:1) (`src/styles.css`).
-- Mobile a partir de 320px de largura (projeto Playwright `narrow` 320×700, `26`).
+  - Desde o `36` (T-08.9, `37`): `--nevoa` (4,47 → 4,81:1) e `--error` do escuro foram ajustados, e há tokens `--on-mar/-success/-error/-alert` para texto sobre preenchimento — 58 casos em `tests/unit/contrast.test.ts`. Alvos de toque ≥ 44 px, diálogos com trap de foco e `inert`, `type="button"` em todo botão: todos com teste automatizado.
+- Mobile a partir de 320px de largura (projeto Playwright `narrow` 320×700, `26`); tela larga a partir de 768 px (projeto `desktop` 1280×800, `36` §F.6).
 - Público 16–19 anos: linguagem simples, termos técnicos explicados (`20` §7.1).
-- **TODO/UNKNOWN:** padrão formal (ex.: WCAG 2.2 AA) não foi declarado como requisito em nenhuma spec; teste com leitor de tela real não foi registrado.
+- **TODO/UNKNOWN:** padrão formal (ex.: WCAG 2.2 AA) não foi declarado como requisito em nenhuma spec; teste com leitor de tela real não foi registrado. Diálogos, resultado do nivelamento e busca de curso têm teste automatizado de semântica e teclado (`37`); a checagem com VoiceOver/TalkBack continua manual e pendente.
 
 ## Métricas
 

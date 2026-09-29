@@ -7,7 +7,25 @@ $root = Split-Path -Parent $PSScriptRoot
 $src  = Join-Path $root "src\assets\branding\foca"
 $out  = Join-Path $root "public\branding\foca"
 New-Item -ItemType Directory -Force $out | Out-Null
-$crop = New-Object System.Drawing.Rectangle 320, 287, 1410, 1410   # bounding box da cabeca, igual nas 6 artes
+# Recorte quadrado centrado na caixa da cabeca (alfa > 16 na arte colorida transparente), igual nas 6 artes.
+# Calculado, nao fixo: a arte de 28/09/2026 tem 480x480 e a anterior tinha 2000x2000 (recorte fixo 320,287,1410).
+function Get-CabecaCrop($file) {
+  $b = [System.Drawing.Bitmap]::FromFile($file)
+  $minx = $b.Width; $miny = $b.Height; $maxx = -1; $maxy = -1
+  $step = [Math]::Max(1, [int]($b.Width / 480))
+  for ($y = 0; $y -lt $b.Height; $y += $step) { for ($x = 0; $x -lt $b.Width; $x += $step) {
+    if ($b.GetPixel($x, $y).A -gt 16) {
+      if ($x -lt $minx) { $minx = $x }; if ($x -gt $maxx) { $maxx = $x }
+      if ($y -lt $miny) { $miny = $y }; if ($y -gt $maxy) { $maxy = $y } } } }
+  $side = [Math]::Max($maxx - $minx, $maxy - $miny) + 1
+  $cx = ($minx + $maxx) / 2; $cy = ($miny + $maxy) / 2
+  $x0 = [int][Math]::Max(0, [Math]::Round($cx - $side / 2)); $y0 = [int][Math]::Max(0, [Math]::Round($cy - $side / 2))
+  $side = [int][Math]::Min($side, [Math]::Min($b.Width - $x0, $b.Height - $y0))
+  $b.Dispose()
+  return New-Object System.Drawing.Rectangle $x0, $y0, $side, $side
+}
+$crop = Get-CabecaCrop (Join-Path $src "foca-color-transparent.png")
+Write-Host "recorte da cabeca: $($crop.X),$($crop.Y) $($crop.Width)x$($crop.Height)"
 # Grafite de Lápis — paleta Rabisco na Margem (docs/18-plano-reestilizacao-rabisco.md §6.1).
 # Era #0B2545 (Abismo, paleta Ártica) até o rebrand de 20/09/2026.
 $ABISMO = "#3A3A3C"

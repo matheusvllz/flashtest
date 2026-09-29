@@ -198,7 +198,7 @@ async function main() {
   writeFileSync(destino, `${JSON.stringify(combinados, null, 2)}\n`, "utf-8");
 
   const readmePath = "src/content/oficial/README.md";
-  const linhaFonte = `- ${ano}: ${itens.length} item(ns) importado(s), ${puladas} pulado(s) (sem parâmetro publicado) — de \`${csvPath}\`, em ${new Date().toISOString().slice(0, 10)}. Fonte: [microdados abertos do Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem).\n`;
+  const linhaFonte = `- ${ano}: ${itens.length} linha(s) do CSV importada(s) (uma por item × caderno de prova; o arquivo guarda 1 registro por item, ver a nota abaixo), ${puladas} pulada(s) (sem parâmetro publicado) — de \`${csvPath}\`, em ${new Date().toISOString().slice(0, 10)}. Fonte: [microdados abertos do Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem).\n`;
   const readmeAtual = existsSync(readmePath)
     ? readFileSync(readmePath, "utf-8")
     : "# Parâmetros oficiais do Inep (docs/30 §12.4, Fase 10)\n\nSó números/códigos — sem dado pessoal, sem reprodução de enunciado (isso é `src/content/banco/oficial/`, F10.5). Nunca versionar microdados de PARTICIPANTES, só o arquivo de itens.\n\n## Importações\n\n";

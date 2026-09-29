@@ -24,8 +24,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -71,7 +72,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -117,7 +119,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +134,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -162,8 +165,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +181,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -208,8 +212,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +228,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -254,8 +259,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +275,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -300,8 +306,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +322,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -347,7 +354,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +369,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -392,8 +400,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +416,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:45.628Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -439,7 +448,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +463,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:45.628Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"

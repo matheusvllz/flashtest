@@ -1,0 +1,739 @@
+[
+  {
+    "id": "gen:por:crase-casos-proibidos:b27731e9",
+    "arquivo": "src/content/banco/por/por-crase-casos-proibidos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.738,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.021,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: casa sem especificador, sem crase). Razão 1,74: correta 139 caracteres contra 58-80. Alternativas reescritas (70-97) com o mesmo formato.",
+    "lens": [
+      83,
+      95,
+      93,
+      97
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.401Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:37c9f847",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.64,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.88,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: derivação imprópria). Razão 1,64: correta 82 caracteres contra 44-50. Alternativas reescritas (73-83).",
+    "lens": [
+      75,
+      80,
+      72,
+      83
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.402Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:pontuacao-virgula-regras:be6a1ebd",
+    "arquivo": "src/content/banco/por/por-pontuacao-virgula-regras.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.945,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.009,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1: vírgula após oração reduzida de gerúndio deslocada). Razão 1,95: correta 177 caracteres contra 69-91, com formulação hesitante ('ou gerúndio introdutório'). Alternativas reescritas (80-108). Explicação dizia 'adjunto adverbial inicial longo exige vírgula' e 'oração adverbial de modo'; reescrita para a regra real.",
+    "lens": [
+      82,
+      110,
+      109,
+      107
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.402Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:c9c21607",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.716,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.913,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1: aspirar a). Razão 1,72: correta 151 caracteres contra 72-88. O enunciado 'Qual é o erro' contradizia as alternativas 'Não há erro' (R3): passa a 'Há algum erro'. Alternativas no formato Sim/Não (88-98); D vira erro real de concordância nominal.",
+    "lens": [
+      94,
+      95,
+      103,
+      104
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.402Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:tempos-verbais-emprego:926402c3",
+    "arquivo": "src/content/banco/por/por-tempos-verbais-emprego.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.556,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.875,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1: mais-que-perfeito). Razão 1,56 por serem formas de uma palavra contra 'tinha começado'. Distratores reescritos com duas palavras ('começou há pouco', 'iria começar', 'vai começar') e a explicação ajustada.",
+    "lens": [
+      16,
+      14,
+      12,
+      11
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.403Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:argumentacao-repertorio:356f67bd",
+    "arquivo": "src/content/banco/red/red-argumentacao-repertorio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.736,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Razão 1,74: correta 92 caracteres contra 38-53. Alternativas reescritas (86-92).",
+    "lens": [
+      89,
+      92,
+      84,
+      92
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.403Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:bc1bd8a2",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.789,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.98,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: C3). Razão 1,79: correta 127 caracteres contra 67-71. Alternativas reescritas (88-98) no mesmo formato 'Competência N, que avalia'.",
+    "lens": [
+      99,
+      89,
+      94,
+      97
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.403Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:d9c9465d",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.94,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.048,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: generalização precipitada). Razão 1,94: correta 97 caracteres contra 31-50. Alternativas reescritas (76-85).",
+    "lens": [
+      87,
+      77,
+      78,
+      81
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.403Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:caracteristicas-escolas-literarias:1f8b45bb",
+    "arquivo": "src/content/banco/lit/lit-caracteristicas-escolas-literarias.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.75,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.93,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "observacao",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 1,75: correta 119 caracteres contra 59-68. Alternativas reescritas (91-98). Explicação tinha 'A dificuldade 4 requer análise interpretativa profunda' (metadado vazando para o aluno): removido. Observação R6: o item mede leitura alegórica, mais próxima de interpretação do que de reconhecer escola; mantido na habilidade original por ser diagnóstico de Modernismo (Primeira Fase).",
+    "lens": [
+      99,
+      93,
+      90,
+      95
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.404Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:8961d37a",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.643,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.916,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1: foreshadowing). Razão 1,64 e distratores sem sentido ('Diálogo', 'Metáfora explícita'). Alternativas reescritas com recursos narrativos reais (57-82), nome em português com o termo em inglês entre parênteses; explicação ajustada.",
+    "lens": [
+      76,
+      69,
+      71,
+      83
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.404Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:b6f0cc67",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.509,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.082,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 1,51: correta 86 caracteres contra 43-57; 'erosionada' (R8). Alternativas reescritas (82-90).",
+    "lens": [
+      84,
+      81,
+      92,
+      83
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.404Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:modernismo-fases-brasil:6266aea1",
+    "arquivo": "src/content/banco/lit/lit-modernismo-fases-brasil.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.549,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.975,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 1,55: correta 79 caracteres contra 44-51. B ('vitória do Brasil na Primeira Guerra') era discutível; reescrita como 'fim da Primeira Guerra' (fato datado) e explicação ajustada. Alternativas de 74-78 caracteres.",
+    "lens": [
+      75,
+      74,
+      76,
+      78
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.404Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:interpretacao-texto-curto:1f5078cb",
+    "arquivo": "src/content/banco/ing/ing-interpretacao-texto-curto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.814,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.963,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 1,81: correta 78 caracteres contra 35-43. Alternativas reescritas (70-80).",
+    "lens": [
+      76,
+      75,
+      76,
+      80
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.404Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:interpretacao-texto-curto:b8ee8a00",
+    "arquivo": "src/content/banco/ing/ing-interpretacao-texto-curto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.569,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.978,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 1,57: correta 91 caracteres contra 38-58. Alternativas reescritas (86-89).",
+    "lens": [
+      86,
+      85,
+      86,
+      90
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.405Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:21294fa4",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.571,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.943,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 1,57: correta 33 caracteres contra 16-21. Alternativas reescritas (32-35); a correta deixa de ser a mais longa.",
+    "lens": [
+      32,
+      33,
+      31,
+      34
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.405Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:80805303",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.781,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.944,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: largesse = generosidade). Razão 1,78: correta 57 caracteres contra 25-32. Alternativas reescritas (49-54); a correta deixa de ser a mais longa.",
+    "lens": [
+      49,
+      54,
+      50,
+      48
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.405Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:b0b87e35",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.645,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: pernicious = prejudicial de modo sorrateiro). Razão 1,65: correta 51 caracteres contra 23-31. Alternativas reescritas (49-51).",
+    "lens": [
+      49,
+      51,
+      51,
+      49
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:39:55.405Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

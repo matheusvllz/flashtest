@@ -87,7 +87,7 @@ export function CelebracaoAula({
       );
     }
     return (
-      <button onClick={onClick} className={className}>
+      <button type="button" onClick={onClick} className={className}>
         {label}
       </button>
     );

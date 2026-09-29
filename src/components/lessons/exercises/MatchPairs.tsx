@@ -73,9 +73,9 @@ export function MatchPairsView({
           "absolute -left-2 -top-2 grid h-5 w-5 place-items-center rounded-full text-[10px] font-bold shadow-sm",
           checked
             ? correct
-              ? "bg-success text-white"
-              : "bg-error text-white"
-            : "bg-mar text-white",
+              ? "bg-success-texto text-on-success"
+              : "bg-error text-on-error"
+            : "bg-mar text-on-mar",
         )}
         aria-hidden
       >
@@ -85,7 +85,7 @@ export function MatchPairsView({
   }
 
   const cellBase =
-    "relative flex min-h-[52px] w-full items-center justify-center rounded-xl border-2 px-2 py-2 text-center text-[13px] font-semibold leading-snug shadow-[0_2px_0_var(--color-gelo)] transition-all duration-150";
+    "relative flex min-h-[52px] w-full items-center justify-center rounded-xl border-2 px-2 py-2 text-center text-[13px] font-semibold leading-snug shadow-[0_2px_0_var(--gelo)] transition-all duration-150";
 
   return (
     <div className="space-y-3">
@@ -103,6 +103,7 @@ export function MatchPairsView({
             const n = numeroDoEsquerdo(i);
             return (
               <button
+                type="button"
                 key={i}
                 disabled={checked}
                 onClick={() => tapLeft(i)}
@@ -136,6 +137,7 @@ export function MatchPairsView({
             const n = numeroDoDireito(j);
             return (
               <button
+                type="button"
                 key={j}
                 disabled={checked}
                 onClick={() => tapRight(j)}

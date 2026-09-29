@@ -24,8 +24,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -70,8 +71,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -117,7 +119,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +134,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -163,7 +166,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +181,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -208,8 +212,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +228,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -254,8 +259,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +275,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -300,8 +306,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +322,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -346,8 +353,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +369,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -375,17 +383,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um estudante quer comparar o raio atômico de Potássio (K) e Enxofre (S). Qual elemento tem raio maior?",
         "opcoes": [
-          "Potássio (K)",
-          "Enxofre (S)",
-          "São iguais",
-          "Não pode ser determinado pela tabela periódica"
+          "Potássio (K), porque tem mais camadas eletrônicas que o enxofre",
+          "Enxofre (S), porque tem mais elétrons na última camada que o potássio",
+          "São iguais, porque os dois elementos estão na mesma linha da tabela",
+          "Não dá para comparar, porque os dois estão em famílias diferentes"
         ],
         "correta": 0,
         "explicacao": "O potássio (período 4, grupo 1) tem raio maior que o enxofre (período 3, grupo 16). As duas tendências apontam no mesmo sentido: K está um período abaixo (uma camada eletrônica a mais) e na extrema esquerda da tabela (menor carga nuclear efetiva). Por isso K é bem maior: cerca de 227 pm contra cerca de 104 pm do S."
       },
       "meta": {
         "id": "gen:qui:tabela-periodica-propriedades:fdfde98c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "qui:tabela-periodica-propriedades"
         ],
@@ -393,7 +401,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +416,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-02"
         },
         "examProfiles": [
           "enem"
@@ -439,7 +449,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +464,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -465,7 +476,7 @@
       "id": "gen:qui:tabela-periodica-propriedades:8344c458",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Um elemento tem configuração eletrônica terminada em 4s². Em que período e grupo está esse elemento?",
+        "pergunta": "Um átomo neutro tem a configuração eletrônica 1s² 2s² 2p⁶ 3s² 3p⁶ 4s². Em que período e grupo da tabela periódica está esse elemento?",
         "opcoes": [
           "Período 2, grupo 4",
           "Período 4, grupo 4",
@@ -473,11 +484,11 @@
           "Período 4, grupo 2"
         ],
         "correta": 3,
-        "explicacao": "A configuração terminada em 4s² indica que a camada mais externa é a 4ª, então o elemento está no período 4. Os 2 elétrons no subnível s de valência o colocam no grupo 2 (metais alcalino-terrosos). É o cálcio (Ca), período 4, grupo 2."
+        "explicacao": "A configuração termina em 4s², então a camada mais externa é a 4ª e o elemento está no período 4. Os 2 elétrons do subnível s de valência o colocam no grupo 2 (metais alcalino-terrosos). Somando os elétrons (2 + 2 + 6 + 2 + 6 + 2 = 20), é o cálcio (Ca), período 4, grupo 2."
       },
       "meta": {
         "id": "gen:qui:tabela-periodica-propriedades:8344c458",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "qui:tabela-periodica-propriedades"
         ],
@@ -485,7 +496,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +511,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:23:27.525Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-02"
         },
         "examProfiles": [
           "enem"

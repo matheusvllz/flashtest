@@ -1,4 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
+import { readdirSync, readFileSync } from "node:fs";
+import { atribuicaoOficial, itemMetaOf } from "@/content/items";
 import {
   buildItemMetaOficial,
   conferirGabaritoOficial,
@@ -99,6 +101,70 @@ describe("buildItemMetaOficial", () => {
     });
     expect(meta.validation.status).toBe("oficial-conferida");
     expect(meta.roles).toContain("diagnostico");
+  });
+});
+
+describe("buildItemMetaOficial: proveniência (docs/36 T-07.5, RP-9)", () => {
+  test("item novo já sai com reviewKind 'gabarito-oficial' (status continua 'oficial-conferida')", () => {
+    const meta = buildItemMetaOficial(entrada());
+    expect(meta.validation.reviewKind).toBe("gabarito-oficial");
+    expect(meta.validation.status).toBe("oficial-conferida");
+  });
+});
+
+describe("itens oficiais publicados (docs/36 T-07.5, RP-9/RP-10)", () => {
+  // Lê só metadados dos JSON de `banco/oficial` — nenhum texto de questão é reproduzido aqui.
+  const DIR = "src/content/banco/oficial";
+  const itens = readdirSync(DIR)
+    .filter((f) => f.endsWith(".json"))
+    .flatMap((f) => (JSON.parse(readFileSync(`${DIR}/${f}`, "utf-8")) as { items: Array<{ id: string; exercise: { fonte?: string }; meta: { source: { kind: string; exam?: string; year?: number }; validation: { status: string; reviewKind?: string } } }> }).items);
+
+  test("os 18 têm reviewKind 'gabarito-oficial', status 'oficial-conferida' e origem 'oficial'", () => {
+    expect(itens).toHaveLength(18);
+    for (const it of itens) {
+      expect(it.meta.validation.reviewKind, it.id).toBe("gabarito-oficial");
+      expect(it.meta.validation.status, it.id).toBe("oficial-conferida");
+      expect(it.meta.source.kind, it.id).toBe("oficial");
+    }
+  });
+
+  test("a meta RESOLVIDA (mesmo sem o pacote carregado) mantém source.kind 'oficial' — não vira 'ia-validada' pelo índice leve", () => {
+    for (const it of itens) {
+      const meta = itemMetaOf(it.id);
+      expect(meta.source.kind, it.id).toBe("oficial");
+      expect(meta.source.exam, it.id).toBe("ENEM");
+      expect(meta.source.year, it.id).toBe(2023);
+    }
+  });
+
+  test("atribuição (ano + prova) da meta resolvida é a mesma gravada no exercício", () => {
+    for (const it of itens) {
+      expect(atribuicaoOficial(itemMetaOf(it.id).source), it.id).toBe("ENEM 2023");
+      expect(it.exercise.fonte, it.id).toBe("ENEM 2023");
+    }
+  });
+});
+
+describe("atribuicaoOficial", () => {
+  test("oficial com prova e ano → 'ENEM 2023'; sem ano → só a prova; não oficial ou sem prova → undefined", () => {
+    expect(atribuicaoOficial({ kind: "oficial", exam: "ENEM", year: 2023 })).toBe("ENEM 2023");
+    expect(atribuicaoOficial({ kind: "oficial", exam: "ENEM" })).toBe("ENEM");
+    expect(atribuicaoOficial({ kind: "ia-validada" })).toBeUndefined();
+    expect(atribuicaoOficial({ kind: "adaptada-de-oficial", exam: "ENEM", year: 2023 })).toBeUndefined();
+    expect(atribuicaoOficial({ kind: "oficial", year: 2023 })).toBeUndefined();
+    expect(atribuicaoOficial(undefined)).toBeUndefined();
+  });
+});
+
+describe("buildItemMetaOficial — irt (docs/36 T-04.2)", () => {
+  test("b segue a dificuldade editorial e c = 1/nOpções; source continua 'estimado' (Inep não entra no modelo)", () => {
+    const bs = ([1, 2, 3, 4, 5] as const).map((d) => buildItemMetaOficial(entrada({ difficulty: d })).irt);
+    expect(bs.map((i) => i.b)).toEqual([-1.6, -0.8, 0, 0.8, 1.6]);
+    for (const irt of bs) {
+      expect(irt.c).toBeCloseTo(0.2, 10); // 5 alternativas
+      expect(irt.a).toBe(1);
+      expect(irt.source).toBe("estimado");
+    }
   });
 });
 

@@ -1,24 +1,15 @@
 import { SUBJECT_MAP } from "@/data/subjects";
 import { SKILL_MAP } from "@/content/taxonomy";
 import { activityTitle } from "@/lib/adaptive/activity-lesson";
-import { navigationTargetFor } from "@/lib/adaptive/journey";
+import { hrefForActivity, iniciaAoNavegar } from "@/lib/adaptive/journey";
 import type { PlannedActivity } from "@/lib/adaptive/types";
 import { COPY } from "@/lib/copy";
 import type { JourneyHistoryEntry } from "@/lib/learning/types";
-import { setActiveActivity } from "@/lib/store";
+import { startJourneyActivity } from "@/lib/store";
 import { PathConnector } from "@/components/learning/path/PathConnector";
-import { PathNode, rowStyle, type PathNodeData } from "@/components/learning/path/PathNode";
+import { PathNode, rowStyle } from "@/components/learning/path/PathNode";
 
 const MAX_HISTORY = 6;
-
-function hrefFor(activity: PlannedActivity): PathNodeData["href"] {
-  const target = navigationTargetFor(activity);
-  if (target.kind === "aula")
-    return { to: "/learn/$lessonId", params: { lessonId: target.lessonId } };
-  if (target.kind === "legado")
-    return { to: "/redacao/$licaoId", params: { licaoId: target.lessonId } };
-  return { to: "/atividade/$activityId", params: { activityId: target.activityId } };
-}
 
 function subjectLabelOf(subjectId: string): string {
   return SUBJECT_MAP[subjectId]?.name ?? subjectId;
@@ -74,7 +65,7 @@ export function JourneyPath({
   if (!current) return null;
 
   return (
-    <ol className="path-list">
+    <ol className="path-list mx-auto max-w-[calc(var(--path-col)-2.5rem)]">
       {historyRows.map((entry, i) => (
         <li key={`h-${entry.activityId}-${i}`} className="path-row" style={rowStyle(0, false)}>
           <div className="path-row-node">
@@ -110,13 +101,17 @@ export function JourneyPath({
               kind: current.kind,
               status: "current",
               title: activityTitle(current),
-              href: hrefFor(current),
+              href: hrefForActivity(current),
             }}
             // Aula/legado (`/learn`, `/redacao`) terminam fora da jornada e só
             // avisam de volta via `syncJourneyWithCompletions` (docs/32 F15.3)
             // — sem marcar QUEM está em andamento antes de sair daqui, essa
             // sincronização nunca tinha o que comparar e a fila nunca avançava.
-            onClick={() => setActiveActivity(current)}
+            // Dinâmica (`/atividade`) só navega: a rota inicia a tentativa com
+            // os itens já escolhidos (docs/36 T-02.1).
+            onClick={() => {
+              if (iniciaAoNavegar(current)) startJourneyActivity(current);
+            }}
           />
         </div>
       </li>
@@ -136,7 +131,7 @@ export function JourneyPath({
                 kind: activity.kind,
                 status: "available",
                 title: activityTitle(activity),
-                href: hrefFor(activity),
+                href: hrefForActivity(activity),
               }}
             />
           </div>

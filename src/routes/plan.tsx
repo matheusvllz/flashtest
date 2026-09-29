@@ -51,7 +51,7 @@ function Plan() {
   return (
     <AppShell title="Meu Plano">
       <div className="px-5 pt-5 space-y-4">
-        <div className="card-soft p-5" style={{ borderColor: "var(--color-mar)" }}>
+        <div className="card-soft p-5" style={{ borderColor: "var(--mar)" }}>
           <p className="ds-label">Plano de hoje</p>
           <h2 className="mt-1.5 font-display text-2xl font-bold leading-tight text-abismo">
             {lessons} aulas de 60s, montadas pelas suas lacunas
@@ -89,6 +89,7 @@ function Plan() {
           <div className="mt-3 grid grid-cols-3 gap-2">
             {[1, 3, 5].map((n) => (
               <button
+                type="button"
                 key={n}
                 onClick={() =>
                   setState((ss) => {
@@ -122,9 +123,9 @@ function Plan() {
                       "grid h-10 w-full place-items-center rounded-lg border-2",
                       feito ? "bg-mar" : hoje ? "border-solid" : "border-dashed border-gelo",
                     )}
-                    style={hoje && !feito ? { borderColor: "var(--color-mar)" } : undefined}
+                    style={hoje && !feito ? { borderColor: "var(--mar)" } : undefined}
                   >
-                    {feito && <Check size={14} strokeWidth={3} className="text-white" />}
+                    {feito && <Check size={14} strokeWidth={3} className="text-on-mar" />}
                   </div>
                   <span className="text-[10px] font-bold text-nevoa">{DIAS_SEMANA[i]}</span>
                 </div>

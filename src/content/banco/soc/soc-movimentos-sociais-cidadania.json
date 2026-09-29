@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "Nos anos 1960, o movimento negro pelos direitos civis nos EUA conquistou leis que proibiam discriminação em escolas e serviços públicos. Qual direito de cidadania foi mobilizado por esse movimento social?",
         "opcoes": [
-          "Direito de igualdade e não-discriminação em acesso a bens e serviços públicos",
-          "Direito de possuir propriedades rurais ilimitadas",
-          "Direito de voto fora do país",
-          "Direito a ser candidato a presidente"
+          "Direito de igualdade e de não discriminação no acesso a bens e serviços públicos",
+          "Direito de possuir grandes propriedades rurais, sem limite de tamanho, em qualquer região",
+          "Direito de votar em eleições realizadas fora do país, para quem vive no exterior",
+          "Direito de ser candidato à presidência do país, sem exigência de idade mínima"
         ],
         "correta": 0,
         "explicacao": "O movimento mobilizou o direito civil de igualdade perante a lei e de acesso não discriminado a serviços e espaços públicos. Protestos contra a segregação racial em escolas, restaurantes e transportes buscavam garantir que pessoas negras tivessem o mesmo acesso que os brancos. As outras alternativas (propriedade ilimitada, voto no exterior, candidatura à presidência) não eram a pauta central desse movimento."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:9592ef5d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.722Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-05"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +55,25 @@
         "type": "multipla-escolha",
         "pergunta": "O Movimento Feminista do século XX conquistou direitos para mulheres, incluindo acesso a educação superior, direito a propriedade sem autorização do marido, e acesso igualitário a cargos públicos. Qual dimensão de cidadania essas conquistas representam?",
         "opcoes": [
-          "Direitos políticos puramente, sem dimensão social",
-          "Direitos sociais, civis e políticos de igualdade de gênero",
-          "Direitos econômicos para homens apenas",
-          "Ausência de direitos para ninguém"
+          "Direitos exclusivamente políticos, como votar e ser votada, sem efeito sobre a vida social e civil das mulheres",
+          "Direitos sociais (educação), civis (propriedade) e políticos (cargos públicos), ligados à igualdade de gênero",
+          "Deveres cívicos, como o serviço militar e o pagamento de impostos, ampliados também para as mulheres",
+          "Privilégios de classe: benefícios concedidos a mulheres de famílias ricas, sem alcance de direitos gerais"
         ],
         "correta": 1,
         "explicacao": "O Movimento Feminista mobilizou múltiplas dimensões de cidadania: direitos sociais, como educação; direitos civis, como propriedade e igualdade perante a lei; e direitos políticos, como participação eleitoral e cargos públicos. Essas conquistas estavam entrelaçadas: acesso à educação abriu caminho para empregos e participação política; propriedade garantiu autonomia econômica. Cidadania completa exigiu transformação em todas as esferas."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:0c1abfc6",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.723Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +103,25 @@
         "type": "multipla-escolha",
         "pergunta": "O Movimento LGBTQIA+ tem lutado por direitos, incluindo casamento igualitário, adoção, reconhecimento legal de identidade de gênero, e proteção contra discriminação em emprego e moradia. Qual conceito de cidadania fundamenta essa luta?",
         "opcoes": [
-          "Direitos políticos proibidos para grupos específicos",
-          "Direitos exclusivos para maiorias demográficas",
-          "Direitos civis e sociais de igualdade e reconhecimento para minorias",
-          "Ausência de direito à vida privada"
+          "Direitos políticos restritos a grupos específicos, com voto e candidatura limitados",
+          "Direitos reservados às maiorias demográficas, que decidem quem pode ser cidadão",
+          "Direitos civis e sociais de igualdade e reconhecimento, ampliados para as minorias",
+          "Ausência de direito à vida privada, com o Estado decidindo os vínculos afetivos"
         ],
         "correta": 2,
         "explicacao": "O Movimento LGBTQIA+ mobiliza uma cidadania baseada em igualdade e reconhecimento: direitos civis, como casar, adotar, herdar e ter nome e gênero legalmente reconhecidos; e direitos sociais, como acesso sem discriminação a emprego e moradia. Essas pautas questionam exclusões históricas e expandem a cidadania para incluir grupos até então marginalizados."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:9bb056fc",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.723Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-06"
         },
         "examProfiles": [
           "enem"
@@ -145,25 +151,25 @@
         "type": "multipla-escolha",
         "pergunta": "Movimentos indígenas na América Latina têm conquistado o reconhecimento legal de territórios tradicionais, direito à educação bilíngue, e autonomia para administrar conflitos internos segundo suas normas. Qual pauta de cidadania esses movimentos representam?",
         "opcoes": [
-          "Eliminação de qualquer direito específico",
-          "Submissão às leis estatais sem exceção",
-          "Assimilação total à cultura dominante",
-          "Direitos culturais, sociais e territoriais de povos originários"
+          "Eliminação de direitos específicos, com um único conjunto de regras para toda a população",
+          "Submissão às leis do Estado sem exceção, mesmo quando contrariam as normas do próprio povo",
+          "Assimilação à cultura dominante, com abandono gradual da língua e dos costumes originais",
+          "Direitos culturais, sociais e territoriais de povos originários, com autonomia sobre suas normas"
         ],
         "correta": 3,
         "explicacao": "Movimentos indígenas mobilizam direitos coletivos de povos: direitos territoriais, terra como bem comum, não apenas propriedade privada, direitos culturais como educação na língua materna e práticas tradicionais, e direitos políticos como autonomia sobre decisões internas. Esses direitos diferem da cidadania individual liberal: reconhecem que grupos têm direitos distintos baseados em identidade e história coletiva."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:b1b3f3f6",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.723Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-05"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +199,17 @@
         "type": "multipla-escolha",
         "pergunta": "Durante a Ditadura Militar no Brasil (1964-1985), movimentos de favela, sindicatos e grupos de direitos humanos reivindicavam moradia adequada, jornadas de trabalho reduzidas e fim à prisão sem julgamento. Esses movimentos conectavam qual pauta de cidadania à democracia?",
         "opcoes": [
-          "Apenas direitos políticos formais sem conteúdo social",
-          "Direitos sociais (bem-estar material), civis (liberdade pessoal) e políticos como indissociáveis da democracia",
-          "Exclusão total de participação política das classes populares",
-          "Democracia sem necessidade de direitos materiais"
+          "Direitos políticos formais, como o voto, sem conteúdo social nem garantias de liberdade pessoal",
+          "Direitos sociais (bem-estar material), civis (liberdade pessoal) e políticos como partes inseparáveis da democracia",
+          "Exclusão da participação política das classes populares, tida como condição para manter a ordem e a estabilidade",
+          "Democracia sem necessidade de direitos materiais: bastam eleições livres para garantir a cidadania de todos"
         ],
         "correta": 1,
         "explicacao": "Movimentos sociais durante a Ditadura conectavam luta por democracia com luta por direitos: não bastava liberdade formal, direitos civis, se faltava pão, direitos sociais, nem adiantava votar, direitos políticos, se preso sem julgamento. Essa articulação mostrou que democracia verdadeira exige que os três pilares, civis, sociais, políticos, sejam garantidos juntos; faltando um, a cidadania fica incompleta."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:48c52eba",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.723Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -237,17 +247,17 @@
         "type": "multipla-escolha",
         "pergunta": "Movimentos de Reforma Agrária mobilizam o direito à terra como direito social fundamental, conectando-o a direitos econômicos (renda), direitos políticos (poder de decisão sobre produção), e direitos culturais (modo de vida no campo). Como essa articulação redefine a ideia de cidadania?",
         "opcoes": [
-          "Ausência de qualquer direito ao trabalho",
-          "Desigualdade como fundamento natural da cidadania",
-          "Cidadania restrita apenas a proprietários urbanos",
-          "Cidadania como direitos indivisíveis que conectam terra, economia, política e cultura"
+          "Cidadania sem direito ao trabalho: a terra é assunto privado e não tem relação com os direitos sociais",
+          "Cidadania fundada na desigualdade natural: quem tem terra tem mais direitos do que quem não tem",
+          "Cidadania restrita aos proprietários urbanos, que decidem sobre o uso da terra no campo",
+          "Cidadania como conjunto de direitos indivisíveis que conectam terra, renda, poder político e modo de vida"
         ],
         "correta": 3,
         "explicacao": "Reforma Agrária não é só sobre propriedade; é sobre dignidade e participação completa. Ao conectar terra, direito social, com capacidade de ganhar renda, direito econômico, e poder participar de decisões, direito político, o movimento redefine cidadania como integração de direitos que se reforçam mutuamente. Sem terra, o trabalhador fica dependente de salários baixos e sem voz; com terra, recupera autonomia e poder."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:1cdffd3b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
@@ -255,7 +265,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -283,17 +295,17 @@
         "type": "multipla-escolha",
         "pergunta": "O Movimento Estudantil de 1968 em diversos países (México, França, Brasil) mobilizava direitos educacionais, liberdade de expressão e participação democrática nas decisões de universidades. Que transformação na ideia de cidadania esse movimento representava?",
         "opcoes": [
-          "Educação como direito social indissociável de liberdade de expressão e participação política",
-          "Rejeição total da educação formal",
-          "Cidadania restrita aos diplomados",
-          "Educação como privilégio a ser concedido, não direito"
+          "Educação como direito social, indissociável da liberdade de expressão e da participação política nas decisões",
+          "Rejeição da educação formal, vista como instrumento de dominação que deveria ser abandonado",
+          "Cidadania restrita aos diplomados, que teriam mais direito de participar das decisões da universidade",
+          "Educação como privilégio concedido pelo Estado a quem o merece, e não como direito dos cidadãos"
         ],
         "correta": 0,
         "explicacao": "O Movimento Estudantil de 1968 mobilizava três dimensões entrelaçadas: acesso à educação, direito social, liberdade para pensar e questionar, direito civil, e poder de participar nas decisões sobre ensino, direito político. Essa articulação redefiniu educação não como privilégio controlado de cima, mas como direito fundamental à formação crítica e participação democrática."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:276ddf94",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
@@ -301,7 +313,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -329,25 +343,25 @@
         "type": "multipla-escolha",
         "pergunta": "Movimentos climáticos contemporâneos (como Fridays for Future) conectam o direito ao meio ambiente saudável aos direitos de crianças que ainda não nasceram, questionando como sociedades podem ser cidadãs sem proteger as próximas gerações. Qual expansão temporal e conceitual de cidadania isso representa?",
         "opcoes": [
-          "Cidadania restrita a indivíduos adultos vivos hoje",
+          "Cidadania restrita: os direitos e os deveres pertencem aos adultos vivos hoje, que decidem sozinhos o uso dos recursos",
           "Cidadania intergeracional: inclui direitos de futuras gerações e responsabilidade do presente com o futuro",
-          "Negação de qualquer responsabilidade ambiental",
-          "Desconsideração total de impactos ecológicos"
+          "Cidadania ambiental individual: cabe a cada pessoa reduzir seu consumo, sem responsabilidade coletiva do Estado",
+          "Cidadania nacional: a proteção do ambiente é assunto de cada país e não gera direitos para gerações futuras"
         ],
         "correta": 1,
         "explicacao": "Movimentos climáticos expandem a cidadania no tempo: não basta proteger os direitos de quem vive agora; é preciso garantir que as futuras gerações tenham direito a um planeta habitável. Essa é a cidadania intergeracional. Ela conecta direitos ambientais (natureza saudável) com os direitos de quem ainda vai nascer (um mundo viável), transformando como entendemos obrigações e responsabilidades."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:6070f741",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-03"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +391,25 @@
         "type": "multipla-escolha",
         "pergunta": "Movimentos de Imigrantes em países receptores lutam por direitos trabalhistas, acesso a saúde, educação para filhos, e regularização documental. Como essas pautas relacionam-se à redefinição de cidadania além da nacionalidade?",
         "opcoes": [
-          "Exclusão permanente de acesso a educação e saúde",
-          "Cidadania ligada apenas a nascimento em um país específico",
-          "Cidadania como direitos sociais, civis e políticos que devem ser garantidos independentemente de nacionalidade original",
-          "Negação total de direitos a não-nacionais"
+          "Cidadania nacional restrita: só tem direitos sociais quem nasceu no país, o que exclui os imigrantes da saúde e da escola",
+          "Cidadania de nascimento: os direitos derivam do local onde cada pessoa nasceu e não podem ser estendidos a ninguém mais",
+          "Cidadania como direitos sociais, civis e políticos, que devem ser garantidos independentemente da nacionalidade de origem",
+          "Cidadania temporária: os imigrantes recebem direitos enquanto trabalham e os perdem ao ficarem sem emprego formal"
         ],
         "correta": 2,
         "explicacao": "Movimentos de imigrantes questionam a ideia de que cidadania depende apenas de nacionalidade. Ao reivindicar acesso a trabalho digno, saúde, educação e documentação, conectam direitos sociais e civis à capacidade de viver com dignidade, independentemente de onde se nasceu. Isso expande a cidadania além das fronteiras nacionais, reconhecendo direitos humanos fundamentais que antecedem e ultrapassam a nacionalidade."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:9888767b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-03"
         },
         "examProfiles": [
           "enem"
@@ -421,25 +439,25 @@
         "type": "multipla-escolha",
         "pergunta": "Movimentos antirracistas contemporâneos reivindicam reparações históricas (cotas, políticas de ação afirmativa, educação sobre história de escravidão) conectadas a direitos atuais de grupos descendentes de escravizados. Que conceito de cidadania fundamenta essas políticas?",
         "opcoes": [
-          "Cidadania reparatória: reconhecimento de injustiças históricas como fundamento para políticas de igualdade presente",
-          "Igualdade perfeita já alcançada no passado",
-          "Rejeição de qualquer ação afirmativa",
-          "Esquecimento de violências históricas como precondição de igualdade"
+          "Cidadania reparatória: reconhecer injustiças históricas como base para políticas de igualdade no presente",
+          "Cidadania formal plena: a igualdade jurídica já foi alcançada e políticas específicas seriam desnecessárias",
+          "Cidadania meritocrática: as vagas e os direitos devem ser distribuídos só pelo desempenho individual",
+          "Cidadania do esquecimento: superar o passado exige silenciar as violências históricas e olhar para frente"
         ],
         "correta": 0,
         "explicacao": "Reparações não tratam o passado como neutro; reconhecem que a escravidão e a discriminação sistemática criaram desvantagens acumuladas que persistem. Cotas e ações afirmativas compensam essas desvantagens históricas, tratando cidadania não só como igualdade formal (mesmas regras para todos), mas como igualdade real (compensar desigualdades estruturais herdadas). Isso conecta a história de violência com direitos atuais."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:9865a584",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +472,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -467,25 +487,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um movimento comunitário em um bairro periférico ocupa uma escola em ruínas para exigir que o Estado cumpra seu dever de oferecer educação de qualidade. Qual direito de cidadania é mobilizado nessa ação?",
         "opcoes": [
-          "Direito de propriedade privada sem restrições",
-          "Direito social à educação de qualidade e ação coletiva para exigir cumprimento estatal",
-          "Rejeição de educação pública",
-          "Aceitação passiva de serviços públicos precários"
+          "Direito à propriedade privada, pois o movimento passa a ser dono do prédio que ocupou",
+          "Direito social à educação de qualidade e ação coletiva para exigir o cumprimento estatal",
+          "Direito de rejeitar a educação pública e de substituí-la por escolas administradas pelo bairro",
+          "Direito de aceitar os serviços públicos como estão, evitando conflito com o Estado"
         ],
         "correta": 1,
         "explicacao": "A ocupação mobiliza dupla dimensão de cidadania: direito social à educação, que o Estado deve garantir, e direito político de ação coletiva para exigir cumprimento desse direito. Não é simplesmente reclamar; é ação direta que torna visível o descumprimento estatal e coloca pressão concreta. Cidadania ativa inclui a capacidade de mobilizar-se quando direitos são negados."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:32177b80",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +520,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-05"
         },
         "examProfiles": [
           "enem"
@@ -513,25 +535,25 @@
         "type": "multipla-escolha",
         "pergunta": "Movimentos de Economia Solidária criam cooperativas e empresas autogestionadas como forma de exercer cidadania econômica. Que transformação essa prática representa comparada ao trabalho assalariado tradicional?",
         "opcoes": [
-          "Submissão total a empregadores sem voz",
-          "Trabalho assalariado como única forma válida de economia",
-          "Cidadania econômica expandida: direito de participar nas decisões sobre produção, distribuição de lucros e organização do trabalho",
-          "Rejeição total de qualquer forma de organização econômica"
+          "Cidadania tutelada: o trabalhador continua sem voz e depende da decisão dos donos do capital sobre a produção",
+          "Cidadania puramente política: os direitos se limitam ao voto, e a organização do trabalho não faz parte dela",
+          "Cidadania econômica ampliada: direito de participar das decisões sobre produção, divisão dos lucros e organização do trabalho",
+          "Cidadania de mercado: a pessoa é cidadã por consumir e empreender por conta própria, sem participar de decisões coletivas sobre o trabalho"
         ],
         "correta": 2,
         "explicacao": "Cooperativas e economia solidária transformam cidadania econômica: em vez de apenas receber salário, papel passivo, trabalhadores participam de decisões sobre o que produzir, como organizar o trabalho, e como dividir resultados. Isso liga direitos políticos, voz, participação, e direitos econômicos, renda justa, segurança, através da autogestão. Expande cidadania de direito formal a poder decisório concreto."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:70cea2e0",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +568,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-03"
         },
         "examProfiles": [
           "enem"
@@ -559,25 +583,25 @@
         "type": "multipla-escolha",
         "pergunta": "Experiências de orçamento participativo permitem que cidadãos votem em que projetos municipais construir (parques, escolas, centros de saúde). Qual inovação de cidadania essas práticas representam?",
         "opcoes": [
-          "Cidadania participativa: poder decisório direto de cidadãos sobre alocação de recursos públicos",
-          "Completa rejeição de democracia",
-          "Decisões todas nas mãos de burocratas sem transparência",
-          "Cidadania puramente representativa, sem participação direta"
+          "Cidadania participativa: poder de decisão direto dos cidadãos sobre o uso dos recursos públicos",
+          "Cidadania tutelada: o Estado decide sozinho e a população é apenas informada dos resultados",
+          "Cidadania de consumo: o cidadão avalia os serviços públicos como cliente, sem decidir sobre eles",
+          "Cidadania puramente representativa: só os eleitos decidem e a população vota nas eleições"
         ],
         "correta": 0,
         "explicacao": "O orçamento participativo expande a cidadania política para além do voto: permite que pessoas decidam diretamente como recursos coletivos são gastos. Essa é a cidadania participativa, não só representativa. Conecta direitos políticos (ter voz) com direitos sociais (priorizar quais necessidades coletivas são atendidas), transformando a relação entre Estado e população: de consumidores passivos para coprodutores de políticas."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:164ad899",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +616,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -605,17 +631,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um movimento de mulheres negras articula que vivem múltiplas discriminações: sexismo, racismo e classismo que se reforçam mutuamente. Ao demandar políticas específicas para essa intersecção, qual conceito de cidadania esse movimento mobiliza?",
         "opcoes": [
-          "Rejeição de qualquer política específica",
-          "Cidadania universal e indiferenciada idêntica para todos",
-          "Cidadania interseccional: reconhecimento de que pessoas enfrentam múltiplas opressões simultâneas e demandam políticas que as considerem juntas",
-          "Invisibilidade de mulheres negras nas demandas de direitos"
+          "Cidadania meritocrática: cada pessoa deve superar sozinha os obstáculos, sem políticas específicas para o seu grupo",
+          "Cidadania universal e indiferenciada: os mesmos direitos e as mesmas políticas para todos, sem considerar diferenças",
+          "Cidadania interseccional: reconhece que as pessoas enfrentam opressões combinadas e exige políticas que as considerem juntas",
+          "Cidadania invisibilizada: as demandas das mulheres negras seriam incluídas nas pautas gerais de gênero ou de raça"
         ],
         "correta": 2,
         "explicacao": "Cidadania interseccional reconhece que mulheres negras não vivem 'sexismo + racismo' como soma, mas como experiência única que combina essas dimensões. Políticas só contra racismo podem ignorar sexismo; só contra sexismo podem ignorar racismo. Cidadania interseccional exige que políticas públicas enxerguem essas combinações e protejam grupos em suas especificidades, não diluindo suas demandas em categorias genéricas."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:f5823824",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
@@ -623,7 +649,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +664,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-03"
         },
         "examProfiles": [
           "enem"
@@ -649,19 +677,19 @@
       "id": "gen:soc:movimentos-sociais-cidadania:436b80ae",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Movimentos de pessoas em situação de rua organizam assembleias para reclamar direito a moradia digna, acesso a saneamento e saúde. Qual aspecto de cidadania falta radicalmente quando essas necessidades básicas não são atendidas?",
+        "pergunta": "Movimentos de pessoas em situação de rua organizam assembleias para reclamar direito a moradia digna, acesso a saneamento e saúde. Qual dimensão da cidadania fica comprometida quando essas necessidades básicas não são atendidas?",
         "opcoes": [
-          "Exclusão permanente do direito à vida",
-          "Inexistência de qualquer responsabilidade estatal",
-          "Apenas direitos políticos abstratos sem conteúdo material",
-          "Direitos sociais e dignidade básica: cidadania incompleta quando faltam moradia, higiene e saúde"
+          "Os direitos políticos, como votar e ser votado, que ficam suspensos para quem não tem endereço fixo",
+          "Os direitos civis, como a liberdade de expressão e a igualdade perante a lei, garantidos só no papel",
+          "Os deveres cívicos, como pagar impostos e cumprir a lei, que o Estado deixa de cobrar dessas pessoas",
+          "Os direitos sociais, como moradia, saneamento e saúde, sem os quais a cidadania fica incompleta"
         ],
         "correta": 3,
         "explicacao": "Cidadania sem moradia, higiene e saúde é vazia: não se consegue votar ou participar plenamente quando se está preocupado em onde dormir ou como se lavar. Direitos sociais, moradia, saúde, são pré-requisitos para exercer direitos civis e políticos. Pessoas em situação de rua demonstram que cidadania formal, ter documentos, voto, não é suficiente; precisa incluir direitos à vida digna. Estado que não garante isso não garante cidadania real."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:436b80ae",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
@@ -669,7 +697,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +712,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-03"
         },
         "examProfiles": [
           "enem"
@@ -697,17 +727,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um movimento sindical conquista redução de jornada de trabalho de 8 para 6 horas mantendo salário integral, conectando luta trabalhista a direito ao tempo livre, lazer e educação continuada. Que transformação de cidadania essa conquista representa?",
         "opcoes": [
-          "Cidadania expansiva: direito ao tempo e lazer como dimensões de vida digna, não só trabalho remunerado",
-          "Rejeição total de qualquer direito laboral",
-          "Jornadas infinitas como natural",
-          "Trabalho como única forma válida de se relacionar com vida"
+          "Cidadania expansiva: o direito ao tempo livre, ao lazer e à educação passa a compor a vida digna, além do trabalho remunerado",
+          "Cidadania puramente política: os direitos ficam restritos ao voto e à participação em eleições, sem efeito no trabalho",
+          "Concessão patronal: a redução de jornada é um favor da empresa e não tem relação com direitos de cidadania",
+          "Cidadania regulada: só tem direitos quem ocupa uma profissão reconhecida, e o trabalho define o valor da pessoa"
         ],
         "correta": 0,
         "explicacao": "A redução de jornada expande a cidadania porque reconhece que vida digna não é só trabalhar; inclui tempo para educação, família, descanso e participação política. Jornadas longas, somadas ao deslocamento, deixam pouco tempo para estudar, descansar ou participar de assembleias. Jornada reduzida libera tempo para exercer outras dimensões de cidadania: o direito passa a ser não só ao salário, mas a uma vida com qualidade."
       },
       "meta": {
         "id": "gen:soc:movimentos-sociais-cidadania:92a430f5",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "soc:movimentos-sociais-cidadania"
         ],
@@ -715,7 +745,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -730,7 +760,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.725Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-03"
         },
         "examProfiles": [
           "enem"

@@ -395,3 +395,87 @@ describe("computeAdditiveFields — schema v6 (docs/30 §21.1, Fase 4 do docs/31
     expect(campos.learning.events).toHaveLength(300);
   });
 });
+
+describe("computeAdditiveFields — campos opcionais do plano 36 (docs/36 §H, T-01.1) — sem bump de schema", () => {
+  test("schemaVersion continua 6 (o plano 36 não muda o schema)", () => {
+    expect(CURRENT_SCHEMA_VERSION).toBe(6);
+  });
+
+  test("journey v6 com os campos novos (seq, challengeEligible, focusSignature, startedAt, attemptKey, localDate) passa intacta", () => {
+    const journey = {
+      committed: [{ id: "atv-1", kind: "pratica", subjectId: "mat", skillIds: ["mat:porcentagem-valor"] }],
+      upcoming: [],
+      history: [
+        {
+          activityId: "atv-0",
+          kind: "pratica",
+          skillIds: ["mat:porcentagem-valor"],
+          subjectId: "mat",
+          completedAt: "2026-10-01T12:00:00.000Z",
+          scorePct: 80,
+          attemptKey: "atv-0@2026-10-01T11:58:00.000Z",
+          localDate: "2026-10-01",
+        },
+      ],
+      activeActivity: {
+        id: "atv-1",
+        kind: "pratica",
+        subjectId: "mat",
+        skillIds: ["mat:porcentagem-valor"],
+        itemIds: ["q10", "q21"],
+        startedAt: "2026-10-01T12:05:00.000Z",
+      },
+      sinceCheckpoint: 1,
+      lastCheckpointDate: null,
+      planVersion: 2,
+      seq: 7,
+      challengeEligible: { "mat:porcentagem-valor": "2026-10-08" },
+      focusSignature: "materias:mat:|",
+    };
+    const campos = computeAdditiveFields({ learning: { journey } }, "2026-10-01");
+    expect(campos.learning.journey).toEqual(journey);
+  });
+
+  test("placement v6 com appliedAt/appliedVersion mantém os campos (load() não os descarta)", () => {
+    const placement = {
+      status: "concluido",
+      startedAt: "2026-10-01T10:00:00.000Z",
+      finishedAt: "2026-10-01T10:10:00.000Z",
+      areas: {},
+      seed: "abc123",
+      appliedAt: "2026-10-01T10:10:05.000Z",
+      appliedVersion: 1,
+    };
+    const campos = computeAdditiveFields({ learning: { placement } }, "2026-10-01");
+    expect(campos.learning.placement).toEqual(placement);
+    expect(campos.learning.placement?.appliedAt).toBe("2026-10-01T10:10:05.000Z");
+  });
+
+  test("v6 SEM os campos novos continua válida (defaults na leitura, nada é inventado no estado)", () => {
+    const journey = {
+      committed: [],
+      upcoming: [],
+      history: [],
+      activeActivity: null,
+      sinceCheckpoint: 0,
+      lastCheckpointDate: null,
+      planVersion: 1,
+    };
+    const placement = { status: "concluido", startedAt: "a", finishedAt: "b", areas: {}, seed: "s" };
+    const campos = computeAdditiveFields({ learning: { journey, placement } }, "2026-10-01");
+    expect(campos.learning.journey).toEqual(journey);
+    expect("seq" in campos.learning.journey).toBe(false);
+    expect(campos.learning.placement).toEqual(placement);
+    expect("appliedAt" in campos.learning.placement!).toBe(false);
+  });
+
+  test("eventos dos tipos novos (activity-skipped, placement-applied, checkpoint-recalibrated) sobrevivem ao parse", () => {
+    const events = (["activity-skipped", "placement-applied", "checkpoint-recalibrated"] as const).map((type) => ({
+      type,
+      at: "2026-10-01T12:00:00.000Z",
+      localDate: "2026-10-01",
+    }));
+    const campos = computeAdditiveFields({ learning: { events } }, "2026-10-01");
+    expect(campos.learning.events.map((e) => e.type)).toEqual(["activity-skipped", "placement-applied", "checkpoint-recalibrated"]);
+  });
+});

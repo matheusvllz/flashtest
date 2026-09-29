@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ImagePlus, Image as ImageIcon, Send, X } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
+import { useDialogA11y } from "@/hooks/useDialogA11y";
 import { COPY } from "@/lib/copy";
 import {
   clearTutorAutoSend,
@@ -117,6 +118,19 @@ export function TutorBubble() {
   const [revelando, setRevelando] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  // Painel = diálogo modal acessível (docs/36 T-08.5, RA-1): foco no título, Tab preso, Escape fecha,
+  // fundo inert, scroll do fundo travado. Sem scrim novo — visualmente igual a antes. O botão flutuante é
+  // desmontado enquanto o painel está aberto, então o foco volta ao NOVO botão (`data-tutor-fab`).
+  const panelRef = useRef<HTMLDivElement>(null);
+  const tituloRef = useRef<HTMLSpanElement>(null);
+  const tituloId = useId();
+  useDialogA11y({
+    open,
+    onClose: closeTutor,
+    dialogRef: panelRef,
+    initialFocusRef: tituloRef,
+    restoreFocusFallback: () => document.querySelector<HTMLElement>("[data-tutor-fab]"),
+  });
 
   function rolarParaOFim(suave = true) {
     scrollRef.current?.scrollTo({
@@ -233,9 +247,11 @@ export function TutorBubble() {
   if (!open) {
     return (
       <button
+        type="button"
         onClick={() => openTutor()}
         aria-label={COPY.tutor.abrirAriaLabel}
-        className="fixed bottom-24 right-[max(1rem,calc(50%-13.75rem+1rem))] z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-gelo bg-cards shadow-[0_3px_0_var(--color-gelo)] transition active:translate-y-[3px] active:shadow-none"
+        data-tutor-fab
+        className="anchor-col-right fixed bottom-24 z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-gelo bg-cards shadow-[0_3px_0_var(--gelo)] transition active:translate-y-[3px] active:shadow-none lg:bottom-8"
       >
         <FocaMark size={40} decorative motion="none" />
       </button>
@@ -243,13 +259,28 @@ export function TutorBubble() {
   }
 
   return (
-    <div className="sheet fixed inset-x-0 bottom-0 z-50 mx-auto flex max-h-[80vh] w-full max-w-[440px] flex-col">
+    <div
+      ref={panelRef}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={tituloId}
+      tabIndex={-1}
+      className="sheet anchor-col-center col-max-w fixed bottom-0 z-50 flex max-h-[80vh] flex-col overscroll-contain outline-none"
+    >
       <header className="flex items-center justify-between px-5 pt-4 pb-3">
         <div className="flex items-center gap-2">
           <FocaMark size={28} decorative />
-          <span className="font-display text-base font-bold text-abismo">{COPY.tutor.nome}</span>
+          <span
+            id={tituloId}
+            ref={tituloRef}
+            tabIndex={-1}
+            className="font-display text-base font-bold text-abismo outline-none"
+          >
+            {COPY.tutor.nome}
+          </span>
         </div>
         <button
+          type="button"
           onClick={closeTutor}
           aria-label={COPY.tutor.fecharAriaLabel}
           className="grid h-11 w-11 place-items-center text-nevoa"
@@ -275,7 +306,7 @@ export function TutorBubble() {
           m.role === "user" ? (
             <div
               key={i}
-              className="ml-auto max-w-[85%] rounded-lg rounded-br-md bg-mar px-4 py-2.5 text-sm font-medium text-white"
+              className="ml-auto max-w-[85%] rounded-lg rounded-br-md bg-mar px-4 py-2.5 text-sm font-medium text-on-mar"
             >
               {m.hasImage && (
                 <ImageIcon size={13} className="mr-1.5 inline-block align-text-bottom opacity-80" />
@@ -318,9 +349,9 @@ export function TutorBubble() {
 
       <div className="border-t-2 border-gelo bg-cards px-5 pt-3 pb-5">
         {!pending && (
-          <div className="mb-2.5 flex gap-2 overflow-x-auto pb-1">
+          <div className="-mt-1 mb-2.5 flex gap-2 overflow-x-auto pt-1 pb-1">
             {suggestions.map((sug) => (
-              <button key={sug} onClick={() => send(sug)} className="chip shrink-0">
+              <button type="button" key={sug} onClick={() => send(sug)} className="chip shrink-0">
                 {sug}
               </button>
             ))}
@@ -338,9 +369,10 @@ export function TutorBubble() {
             <img src={image.preview} alt="" className="h-12 w-12 rounded object-cover" />
             <span className="flex-1 text-xs font-semibold text-nevoa">{COPY.tutor.fotoAnexada}</span>
             <button
+              type="button"
               onClick={() => setImage(null)}
               aria-label={COPY.tutor.removerFotoAriaLabel}
-              className="text-nevoa"
+              className="tap-area text-nevoa"
             >
               <X size={16} />
             </button>
@@ -360,6 +392,7 @@ export function TutorBubble() {
             }}
           />
           <button
+            type="button"
             onClick={() => fileRef.current?.click()}
             aria-label={COPY.tutor.anexarAriaLabel}
             className="btn-outline h-11 w-11 shrink-0 p-0"
@@ -367,6 +400,8 @@ export function TutorBubble() {
             <ImagePlus size={18} />
           </button>
           <input
+            aria-label={COPY.tutor.placeholder}
+            autoComplete="off"
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             onKeyDown={(e) => {
@@ -376,6 +411,7 @@ export function TutorBubble() {
             className="input-ds min-w-0 flex-1 text-base"
           />
           <button
+            type="button"
             onClick={() => send(draft)}
             disabled={pending || (!draft.trim() && !image)}
             aria-label={COPY.tutor.enviarAriaLabel}

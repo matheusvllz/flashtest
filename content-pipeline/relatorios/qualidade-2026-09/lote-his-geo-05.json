@@ -1,0 +1,718 @@
+[
+  {
+    "id": "gen:geo:climatologia-fenomenos:051d07c8",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.507,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.022,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ajustado"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "R8: 'geológico-ecológicas' não descreve a cadeia (que é ecológica/química). Razão 1,51 e absolutismo (exclusivo); distratores agora plausíveis e de tamanho parecido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:meio-ambiente-impactos:77e10ba0",
+    "arquivo": "src/content/banco/geo/geo-meio-ambiente-impactos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.978,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.942,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Razão 1,98 e ponto e vírgula na correta; explicação afirmava contaminação 'irreversível' (exagero). Distratores plausíveis no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:74a70185",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.861,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.905,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 1,86 e distratores curtos e absurdos (reflorestamento automático); agora plausíveis (efeitos da densidade em teoria) mas incompatíveis com a falta de infraestrutura do enunciado.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:84f07294",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.675,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.938,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 1,68 e absolutismo (automática); distratores agora plausíveis e detalhados no mesmo nível.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:936f37ef",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.558,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.957,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ajustado"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Razão 1,56 e absolutismo (automaticamente); explicação com concordância errada ('exigem... reduz') corrigida. Distratores plausíveis no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:brasil-colonia-economia-sociedade:3806cbbf",
+    "arquivo": "src/content/banco/his/his-brasil-colonia-economia-sociedade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.615,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.955,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "R2/R3: o enunciado dizia que a Coroa 'recrutava fidalgos endividados e homens de segunda categoria', afirmação sem base clara e que não explica o regime de sesmarias (concedidas a quem tinha meios de cultivar). Razão 1,62 e absolutismo (completamente).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:brasil-colonia-economia-sociedade:8faedf30",
+    "arquivo": "src/content/banco/his/his-brasil-colonia-economia-sociedade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.917,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.048,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 1,92 e absolutismo (permanentemente, completa); distratores agora plausíveis (escravidão indígena e jesuítas, transferência da corte como confusão com 1808) no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:2e836843",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.967,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.029,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ajustado"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 1,97 e absolutismo (total, unânime). O enunciado repetia 'morte em suicídio' (pleonasmo) e 'renuncia' sem acento; reescrito.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:4c5a70f5",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.689,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.891,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Razão 1,69; a explicação dizia que o muro marcou 'toda a Guerra Fria' (existiu de 1961 a 1989), ajustado. Distratores no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:5ae280de",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.61,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.96,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Razão 1,61; correta com lista longa e distratores curtos ('colônias militares permanentes', 'não tinham interesse'). Agora no mesmo nível de detalhe. R7: 1 → 2 (com distratores plausíveis, exige diferenciar apoio ao regime de intervenção direta).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 1,
+    "dificuldadeDepois": 2,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:788f575c",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.294,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.917,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Distratores curtos (razão 1,29) e de menor nível de detalhe; agora plausíveis (salinidade, evaporação, chuva) com o mesmo detalhe. Gabarito conferido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:geopolitica-globalizacao:3008789e",
+    "arquivo": "src/content/banco/geo/geo-geopolitica-globalizacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.933,
+        "corretaMaisLonga": false,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.96,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Absolutismo (total, todas) e distratores com pouco detalhe; agora plausíveis e no mesmo nível. Gabarito conferido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:80e171a1",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.345,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.077,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Distratores curtos ('automático', 'garantia'); agora plausíveis e no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:brasil-colonia-economia-sociedade:5c31940d",
+    "arquivo": "src/content/banco/his/his-brasil-colonia-economia-sociedade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.407,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.912,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Razão 1,41 e 'unicamente' (absolutismo); explicação ajustada às novas alternativas e com o dado do ouro (século XVIII).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:cd9762a0",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.12,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.939,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "corrigir",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2: a explicação citava o 'Palácio do Planalto' como sede do poder nos anos 1930-1940, anacronismo (a sede era o Palácio do Catete, no Rio; o Planalto é de 1960); corrigido. Distratores absolutistas ('independente', 'sem interferência', 'autônomo') no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:3a267f51",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.431,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.022,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 1,43 e absolutismo (ambos os lados); a correta falava em 'confrontação direta', contraditória com a ausência de guerra aberta; agora 'sem guerra aberta'. Distratores no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  }
+]

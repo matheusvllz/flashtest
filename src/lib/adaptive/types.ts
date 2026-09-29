@@ -33,6 +33,12 @@ export interface PlannedActivity {
   lessonId?: string;
   /** Prática/revisão/desafio/checkpoint — escolhidos ao COMEÇAR a atividade (docs/30 §11.7), não no planejamento. */
   itemIds?: string[];
+  /**
+   * ISO UTC do início da tentativa (docs/36 §H, RF-2/RF-4). Gravado uma vez por
+   * `startJourneyActivity` (T-02.1); ausente = atividade de antes do plano 36
+   * (a sincronização mantém a regra antiga, por mera existência do registro).
+   */
+  startedAt?: string;
   targetP?: number;
   estimatedMinutes: number;
   reasons: ReasonCode[];

@@ -7,17 +7,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um texto dissertativo-argumentativo precisa apresentar uma tese, desenvolver argumentos e oferecer uma conclusão. João está estruturando seu texto sobre a importância da educação financeira no ensino médio. Ele começou com uma introdução apresentando o problema, mas agora enfrenta uma dúvida: em qual parte deve apresentar explicitamente sua posição, a afirmação de que a educação financeira deveria ser obrigatória nas escolas brasileiras?",
         "opcoes": [
-          "Apenas em rodapés, para não parecer impositiva",
+          "Em notas de rodapé no fim do texto, para não parecer impositiva",
           "Na conclusão, para não influenciar o leitor antes de conhecer os argumentos",
-          "Na introdução, deixando claro sua posição desde o início",
-          "Espalhada em todos os parágrafos de desenvolvimento, sem centralidade"
+          "Na introdução, deixando clara a sua posição desde o início",
+          "Espalhada nos parágrafos de desenvolvimento, sem centralidade"
         ],
         "correta": 2,
         "explicacao": "A tese entra na introdução, de forma clara e explícita. Assim o leitor sabe desde o começo qual é a posição do texto, e os argumentos seguintes a sustentam. Rodapé não é lugar de tese (A); guardá-la para a conclusão deixa o desenvolvimento sem rumo (B); e espalhá-la sem centralidade tira a clareza do projeto de texto (D)."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:425fb6ea",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +55,17 @@
         "type": "multipla-escolha",
         "pergunta": "Ao escrever um parágrafo de desenvolvimento em uma dissertação, um aluno tem que escolher entre dois caminhos: (1) começar com uma frase genérica sobre o tema e gradualmente chegar ao ponto; (2) abrir com uma afirmação clara sobre o aspecto que será desenvolvido. Qual estratégia segue melhor o padrão de estrutura dissertativa do ENEM?",
         "opcoes": [
-          "As duas são equivalentes e o aluno pode escolher conforme seu estilo",
-          "Nenhuma delas; o parágrafo deve começar com uma pergunta retórica",
-          "A estratégia 1, pois a introdução lenta ao tema mostra erudição",
-          "A estratégia 2, apresentando claramente qual será o argumento antes de desenvolvê-lo"
+          "As duas são equivalentes, e o aluno pode escolher conforme o seu estilo pessoal de escrita",
+          "Nem uma nem outra; o parágrafo deveria começar com uma pergunta retórica dirigida ao leitor",
+          "A estratégia 1, pois a introdução lenta ao tema mostra erudição e prepara o leitor para o ponto",
+          "A estratégia 2, que apresenta com clareza qual será o argumento antes de desenvolvê-lo"
         ],
         "correta": 3,
         "explicacao": "Bons parágrafos de desenvolvimento começam com um tópico frasal que enuncia o argumento (estratégia 2). Isso organiza a leitura e deixa clara a progressão do texto. As duas estratégias não têm o mesmo efeito (A); pergunta retórica não é abertura obrigatória (B); e rodeio não é erudição, só adia o argumento (C)."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:3bbe2540",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +103,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma dissertação sobre mobilidade urbana contém este parágrafo: 'Japão, Alemanha e Suécia implementaram sistemas de transporte público eficiente, reduzindo emissões de carbono em 40%. Isso prova que investimento em transporte coletivo é solução viável em qualquer contexto urbano.' Qual problema argumentativo existe aqui?",
         "opcoes": [
-          "Generalização precipitada a partir de exemplos internacionais sem considerar contextos diferentes",
-          "Excesso de argumentos tornando o parágrafo confuso",
-          "Ausência de tópico frasal claro",
-          "Falta de dados numéricos sobre emissões"
+          "Generalização precipitada: três países ricos não bastam para provar uma regra universal",
+          "Excesso de argumentos, que torna o parágrafo confuso para quem lê a dissertação",
+          "Ausência de um tópico frasal claro na abertura do parágrafo de desenvolvimento",
+          "Falta de dados numéricos que comprovem a redução das emissões de carbono nos países"
         ],
         "correta": 0,
         "explicacao": "O argumento salta de três exemplos de países ricos ('Japão, Alemanha e Suécia') para uma conclusão universal ('em qualquer contexto urbano'), ignorando diferenças de renda, população e geografia. O parágrafo é curto e tem um só argumento (B), tem uma ideia central clara (C) e traz dado numérico, os 40% (D). O erro é lógico: generalização indevida."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:d9c9465d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -145,17 +151,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um aluno estrutura sua dissertação em cinco parágrafos: introdução com tese, argumento 1, argumento 2, argumento 3 e conclusão. Durante a revisão, percebe que dois argumentos tratam do mesmo tópico sob ângulos ligeiramente diferentes. Qual ação é mais apropriada, segundo as boas práticas da redação dissertativo-argumentativa?",
         "opcoes": [
-          "Remover ambos para não parecer repetitivo",
-          "Deixar como está; o leitor saberá diferenciar os ângulos",
-          "Manter os dois; quanto mais argumentos, melhor a dissertação",
-          "Mesclar os dois argumentos em um mais robusto e, se necessário, introduzir novo terceiro argumento"
+          "Remover os dois argumentos para não parecer repetitivo e ficar só com a introdução e a conclusão",
+          "Deixar como está, porque o leitor saberá diferenciar os ângulos e a repetição não prejudica o texto",
+          "Manter os dois, porque quanto mais argumentos o texto tiver, melhor será a avaliação da dissertação",
+          "Mesclar os dois em um argumento mais robusto e, se necessário, criar um novo terceiro argumento"
         ],
         "correta": 3,
         "explicacao": "Argumentos repetidos enfraquecem a progressão do texto. A solução é fundir os dois em um argumento mais sólido e, se fizer falta, desenvolver outro aspecto do tema. Remover os dois joga fora conteúdo útil (A), contar que o leitor vai diferenciar é arriscado (B) e quantidade não garante qualidade (C)."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:81616399",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
@@ -163,7 +169,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +199,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um escritor está analisando como conectar o terceiro argumento à conclusão. Seu argumento 3 é que 'campanhas educativas reduzem comportamentos prejudiciais.' Como ele deve usar essa informação na conclusão?",
         "opcoes": [
-          "Sintetizá-lo junto aos demais argumentos, demonstrando como todos apontam para a tese",
-          "Ignorá-lo e focar apenas no primeiro argumento",
-          "Transformá-lo em nova pergunta para futuro debate",
-          "Repetir o terceiro argumento de forma idêntica na conclusão"
+          "Sintetizá-lo junto aos demais argumentos, mostrando como todos apontam para a tese defendida",
+          "Ignorá-lo e retomar na conclusão só o primeiro argumento, que é o mais importante",
+          "Transformá-lo em uma nova pergunta que fique aberta para um debate futuro sobre o tema",
+          "Repetir o terceiro argumento de forma idêntica, com as mesmas palavras usadas no desenvolvimento"
         ],
         "correta": 0,
         "explicacao": "A conclusão retoma os argumentos de forma sintética, mostrando que todos convergem para a tese. O argumento sobre campanhas educativas deve ser brevemente retomado como parte desse quadro geral. Ignorá-lo quebra a coerência (B), abrir uma pergunta nova enfraquece o fechamento (C) e repetir o argumento de forma idêntica é redundante (D)."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:4bc78726",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -237,17 +247,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um texto dissertativo sobre preservação do patrimônio cultural inclui: 'Preservação do patrimônio é importante porque edifícios históricos atraem turistas, geram renda e preservam memória. Logo, o governo deveria investir em restauração.' Que tipo de argumento o escritor utilizou aqui?",
         "opcoes": [
-          "Exclusivamente econômico, ignorando valor cultural",
-          "Múltiplos ângulos: econômico, identitário e de memória coletiva",
-          "Apenas sentimental, sem dados concretos",
-          "Comparativo, contrastando cidades com e sem patrimônio"
+          "Só econômico: o texto trata do lucro com turismo e deixa de lado o valor cultural",
+          "Com mais de um ângulo: econômico (turismo e renda) e cultural (preservação da memória)",
+          "Emocional: o texto se apoia em sentimentos da população e não apresenta dados concretos",
+          "Comparativo: o texto contrasta cidades com e sem patrimônio para mostrar a diferença"
         ],
         "correta": 1,
         "explicacao": "O argumento articula o benefício econômico ('atraem turistas, geram renda') com o benefício cultural ('preservam memória'), ligado à identidade coletiva. É uma abordagem com mais de um ângulo. Não é exclusivamente econômico (A), pois inclui a memória; tem fundamentação além do sentimento (C); e não compara cidades (D)."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:c83ce330",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
@@ -255,7 +265,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.356Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -285,23 +297,23 @@
         "opcoes": [
           "A apresentação clara da tese a ser defendida, com delimitação do tema",
           "Exemplos concretos e estatísticas que comprovem a argumentação",
-          "A conclusão antecipada do raciocínio",
-          "A intervenção social detalhada que resolva o problema"
+          "A conclusão antecipada do raciocínio, já no início do texto",
+          "A intervenção social detalhada que resolva o problema apresentado no texto"
         ],
         "correta": 0,
         "explicacao": "O primeiro parágrafo (introdução) de uma dissertação-argumentativa deve apresentar o tema de forma contextualizada e expor a tese, isto é, a posição ou argumento central que será desenvolvido. A tese delimita o debate e orienta a leitura. Exemplos e estatísticas vêm no desenvolvimento; a intervenção é para a conclusão. Esta estrutura está alinhada com a Competência 3 do ENEM (seleção e organização de argumentos)."
       },
       "meta": {
         "id": "gen:red:estrutura-dissertativo-argumentativa:ad930a46",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:estrutura-dissertativo-argumentativa"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"

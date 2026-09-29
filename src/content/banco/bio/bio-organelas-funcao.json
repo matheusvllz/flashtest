@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +54,17 @@
         "type": "multipla-escolha",
         "pergunta": "O retículo endoplasmático rugoso sintetiza proteínas destinadas à secreção. Depois de sintetizadas, qual é o próximo passo delas?",
         "opcoes": [
-          "Entram em lisossomos para degradação",
-          "Passam pelo complexo de Golgi para modificação e empacotamento",
-          "Ficam no retículo para sempre",
-          "Vão direto para a membrana plasmática"
+          "Entram nos lisossomos para serem degradadas logo depois de sintetizadas",
+          "Seguem para o complexo de Golgi, onde são modificadas e empacotadas para a secreção",
+          "Ficam retidas no retículo endoplasmático rugoso e não seguem para outras organelas",
+          "Vão direto para a membrana plasmática e são liberadas sem passar por outra organela"
         ],
         "correta": 1,
         "explicacao": "Proteínas sintetizadas no retículo rugoso entram no lúmen e são transportadas em vesículas até o Golgi, onde sofrem modificações pós-traducionais (glicosilação, fosforilação), classificação e empacotamento em vesículas secretórias. Depois essas vesículas fundem-se à membrana para liberar a proteína. Lisossomos degradam, não processam secretórias."
       },
       "meta": {
         "id": "gen:bio:organelas-funcao:b1ef80bc",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:organelas-funcao"
         ],
@@ -71,7 +72,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -116,8 +119,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -162,8 +166,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +182,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,7 +214,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +229,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -235,19 +241,19 @@
       "id": "gen:bio:organelas-funcao:a655cd73",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Uma célula que precisa secretar grande quantidade de muco viscoso provavelmente tem quantidades muito elevadas de qual organela?",
+        "pergunta": "Uma célula que precisa secretar grande quantidade de muco viscoso provavelmente tem quantidades muito elevadas de quais organelas?",
         "opcoes": [
-          "Cloroplastos",
-          "Ribossomos, retículo rugoso e complexo de Golgi",
-          "Lisossomos",
-          "Centríolos"
+          "Cloroplastos e vacúolos, que atuam na fotossíntese e no armazenamento de água e de açúcares",
+          "Ribossomos, retículo rugoso e Golgi, que atuam na síntese e no empacotamento de proteínas",
+          "Lisossomos e peroxissomos, que atuam na digestão e na eliminação de substâncias",
+          "Centríolos e microtúbulos, que atuam na divisão celular e no movimento da célula"
         ],
         "correta": 1,
         "explicacao": "Muco é principalmente proteína e carboidratos complexos. Células produtoras de muco têm ribossomos abundantes (síntese), retículo rugoso desenvolvido (processamento inicial) e Golgi bem amplo (glicosilação e empacotamento). Essa tríade (ribossomos → retículo rugoso → Golgi) é marca de células secretoras. Cloroplastos fotossintetizam; lisossomos degradam; centríolos organizam."
       },
       "meta": {
         "id": "gen:bio:organelas-funcao:a655cd73",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:organelas-funcao"
         ],
@@ -255,7 +261,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +276,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -283,17 +291,17 @@
         "type": "multipla-escolha",
         "pergunta": "O peroxissomo é uma organela responsável por degradar peróxido de hidrogênio (H2O2), uma substância tóxica produzida no metabolismo. Qual é o valor adaptativo dessa função?",
         "opcoes": [
-          "Facilitar a absorção de nutrientes",
-          "Aumentar a produção de ATP",
-          "Proteger a célula de danos causados por radicais livres",
-          "Reciclar lipídios antigos"
+          "Facilitar a absorção de nutrientes pela superfície da célula",
+          "Aumentar a produção de ATP a partir da degradação do peróxido",
+          "Proteger a célula dos danos que os radicais livres causam às moléculas",
+          "Reciclar os lipídios antigos da célula para formar novas membranas celulares"
         ],
         "correta": 2,
         "explicacao": "H2O2 é um oxidante potente que pode gerar radicais livres e danificar membranas, proteínas e DNA. Peroxissomos contêm a enzima catalase, que decompõe H2O2 em água e oxigênio, neutralizando a ameaça. Isso protege a célula do estresse oxidativo. Degradar H2O2 não produz ATP, não recicla lipídios e não tem relação com a absorção de nutrientes."
       },
       "meta": {
         "id": "gen:bio:organelas-funcao:d14a0153",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:organelas-funcao"
         ],
@@ -301,7 +309,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +324,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.154Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-01"
         },
         "examProfiles": [
           "enem"

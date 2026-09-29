@@ -5,19 +5,19 @@
       "id": "gen:por:sintaxe-termos-oracao:c6beb080",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Na oração 'Os estudiosos apresentaram seus projetos aos professores', identifique o sujeito, o predicado e o complemento do verbo.",
+        "pergunta": "Na oração 'Os estudiosos apresentaram seus projetos aos professores', identifique o sujeito, o predicado e os complementos do verbo.",
         "opcoes": [
-          "Sujeito: 'Os estudiosos'; Predicado: 'apresentaram seus projetos aos professores'; Complemento: 'seus projetos aos professores'",
-          "Sujeito: 'Os estudiosos'; Predicado: 'apresentaram'; Complemento: 'seus projetos'",
-          "Sujeito: 'Os professores'; Predicado: 'apresentaram seus projetos'; Complemento: 'aos professores'",
-          "Sujeito: 'Os colegas'; Predicado: 'apresentaram seus trabalhos'; Complemento: 'aos professores'"
+          "Sujeito: 'Os estudiosos'; predicado: 'apresentaram seus projetos aos professores'; complementos: 'seus projetos' e 'aos professores'",
+          "Sujeito: 'Os estudiosos'; predicado: 'apresentaram'; complementos: 'seus projetos' e 'aos professores'",
+          "Sujeito: 'Os estudiosos'; predicado: 'seus projetos aos professores'; complementos: 'seus projetos' e 'aos professores'",
+          "Sujeito: 'Os estudiosos'; predicado: 'apresentaram seus projetos'; complementos: 'seus projetos' e 'aos professores'"
         ],
         "correta": 0,
-        "explicacao": "O sujeito é quem faz a ação (Os estudiosos). O predicado é o verbo e tudo ligado a ele: 'apresentaram seus projetos aos professores'. Aí estão o objeto direto ('seus projetos') e o indireto ('aos professores'). Essas são as três partes principais da oração."
+        "explicacao": "O sujeito é quem faz a ação (Os estudiosos). O predicado é o verbo e tudo o que se liga a ele: 'apresentaram seus projetos aos professores'. Nele estão o objeto direto ('seus projetos') e o objeto indireto ('aos professores'), que são os complementos do verbo."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:c6beb080",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.596Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-01"
         },
         "examProfiles": [
           "enem"
@@ -51,19 +53,19 @@
       "id": "gen:por:sintaxe-termos-oracao:6e7431b8",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Observe: 'A professora entregou ao aluno uma carta importante'. Qual termo exerce a função de adjunto adnominal nesta sentença?",
+        "pergunta": "Observe: 'A professora entregou ao aluno uma carta importante'. Entre as opções, qual termo exerce a função de adjunto adnominal nesta sentença?",
         "opcoes": [
           "'carta'",
           "'importante'",
-          "'para que fosse lido'",
+          "'A professora'",
           "'ao aluno'"
         ],
         "correta": 1,
-        "explicacao": "O adjunto adnominal é aquele termo que modifica um nome/substantivo, atribuindo uma qualidade ou circunstância. Na sentença, 'importante' é um adjetivo que qualifica diretamente o substantivo 'carta', exercendo função de adjunto adnominal. Os outros termos desempenham funções diferentes: 'ao aluno' é objeto indireto, 'carta' é núcleo do complemento, e o sintagma final seria completivo nominal."
+        "explicacao": "O adjunto adnominal é o termo que se liga a um substantivo para qualificá-lo ou determiná-lo. Na frase, 'importante' é um adjetivo que qualifica 'carta' e funciona como adjunto adnominal. Os outros termos têm outras funções: 'ao aluno' é objeto indireto, 'carta' é o núcleo do objeto direto e 'A professora' é o sujeito. O artigo 'uma' também é adjunto adnominal, mas não está entre as opções."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:6e7431b8",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.596Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-01"
         },
         "examProfiles": [
           "enem"
@@ -99,17 +103,17 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Os estudantes do terceiro ano apresentaram o projeto de ciências para toda a escola na sexta-feira', o sujeito da oração é:",
         "opcoes": [
-          "toda a escola",
+          "apresentaram o projeto de ciências",
           "os estudantes do terceiro ano",
-          "na sexta-feira",
-          "o projeto de ciências"
+          "o projeto de ciências para toda a escola",
+          "na sexta-feira"
         ],
         "correta": 1,
         "explicacao": "Apresentaram concorda com os estudantes do terceiro ano, que praticam a ação. Esse é o sujeito. O projeto de ciências é objeto direto, e toda a escola e na sexta-feira são complementos que não concordam com o verbo."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:11f608a6",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
@@ -117,7 +121,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -163,7 +169,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,7 +216,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +231,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -255,7 +263,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +278,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -300,8 +309,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +325,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -329,25 +339,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Estudamos a matéria inteira na véspera da prova e, mesmo assim, sentimos insegurança na hora de responder', o sujeito da oração é:",
         "opcoes": [
-          "composto, com dois núcleos distintos",
-          "indeterminado, pois não há termo expresso",
+          "composto, formado por dois núcleos ligados pela conjunção 'e'",
+          "indeterminado, pois não há termo expresso e o verbo está na terceira pessoa",
           "oculto (elíptico), identificado pela desinência verbal como 'nós'",
-          "inexistente, tratando-se de oração sem sujeito"
+          "inexistente, pois se trata de oração sem sujeito, com verbo impessoal"
         ],
         "correta": 2,
         "explicacao": "Estudamos e sentimos estão na 1ª pessoa do plural, desinência que indica nós, mesmo sem o pronome escrito. O sujeito é oculto (elíptico ou desinencial). Sujeito indeterminado é quando não há pista nenhuma, nem no verbo."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:6bccf852",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +372,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +387,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Havia muitos problemas estruturais naquele prédio antigo, segundo o relatório da vistoria feita pelos engenheiros', a oração é classificada como:",
         "opcoes": [
-          "sujeito composto",
-          "sujeito simples",
-          "sujeito indeterminado",
-          "oração sem sujeito, pois o verbo 'haver' no sentido de existir é impessoal"
+          "sujeito composto, formado por 'problemas estruturais' e 'prédio antigo'",
+          "sujeito simples, 'muitos problemas estruturais', que concorda com o verbo",
+          "sujeito indeterminado, pois não se sabe quem produziu o relatório",
+          "oração sem sujeito, pois 'haver' com sentido de existir é verbo impessoal"
         ],
         "correta": 3,
         "explicacao": "Haver com o sentido de existir é impessoal e não tem sujeito. Muitos problemas estruturais é objeto direto, não sujeito. A oração é sem sujeito. Sujeito indeterminado ocorre quando há sujeito não identificado, mas o verbo continua tendo um."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:2d070f9b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +420,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -419,27 +433,27 @@
       "id": "gen:por:sintaxe-termos-oracao:f6ac2e83",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Na frase 'Roubaram a bicicleta que estava estacionada em frente ao mercado durante a tarde de ontem', o sujeito da oração é:",
+        "pergunta": "Na frase 'Roubaram a bicicleta que estava estacionada em frente ao mercado durante a tarde de ontem', a classificação do sujeito é:",
         "opcoes": [
-          "sujeito indeterminado, pois o verbo está na 3ª pessoa do plural sem referente definido no texto",
-          "oração sem sujeito",
-          "sujeito composto",
-          "sujeito simples, 'a bicicleta'"
+          "sujeito indeterminado, pois o verbo está na 3ª pessoa do plural e não se sabe quem roubou",
+          "oração sem sujeito, pois o verbo 'roubar' é impessoal e não admite sujeito na oração",
+          "sujeito composto, formado por 'a bicicleta' e 'o mercado', ambos citados na frase dada",
+          "sujeito simples, 'a bicicleta', que é o termo sobre o qual a frase informa uma ação"
         ],
         "correta": 0,
         "explicacao": "O verbo 'roubaram' está na 3ª pessoa do plural, mas nada na frase indica quem são essas pessoas: 'a bicicleta' é o objeto direto, não o sujeito. Por isso, o sujeito é classificado como indeterminado, diferente da oração sem sujeito, em que o verbo é impessoal e simplesmente não admite nenhum sujeito, nem mesmo desconhecido."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:f6ac2e83",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +468,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -465,19 +481,19 @@
       "id": "gen:por:sintaxe-termos-oracao:6d1fcdcc",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Na frase 'O time visitante venceu o jogo decisivo do campeonato nos últimos minutos da partida', o predicado da oração é:",
+        "pergunta": "Na frase 'O time visitante venceu o jogo decisivo do campeonato nos últimos minutos da partida', o predicado completo da oração é:",
         "opcoes": [
-          "nos últimos minutos da partida",
-          "o time visitante",
+          "venceu o jogo decisivo do campeonato",
+          "o time visitante venceu o jogo decisivo",
           "venceu o jogo decisivo do campeonato nos últimos minutos da partida",
-          "o jogo decisivo do campeonato"
+          "o jogo decisivo do campeonato nos últimos minutos da partida"
         ],
         "correta": 2,
-        "explicacao": "Predicado é tudo que se declara sobre o sujeito, ou seja, toda a oração menos o sujeito. O núcleo é o verbo venceu, então é predicado verbal. Inclui também o objeto direto e o complemento de tempo que vêm depois do verbo."
+        "explicacao": "Predicado é tudo que se declara sobre o sujeito, ou seja, toda a oração menos o sujeito. O núcleo é o verbo venceu, então é predicado verbal. Inclui também o objeto direto e o adjunto adverbial de tempo que vêm depois do verbo."
       },
       "meta": {
         "id": "gen:por:sintaxe-termos-oracao:6d1fcdcc",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:sintaxe-termos-oracao"
         ],
@@ -485,7 +501,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +516,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-01"
         },
         "examProfiles": [
           "enem"

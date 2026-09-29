@@ -42,7 +42,7 @@ function Learn() {
   // Link errado ou lição despublicada não pode virar tela branca (docs/20 §8.1, item 9).
   if (!lesson) {
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-8">
           <EmptyState
             text="Essa lição não existe ou ainda não foi publicada."
@@ -57,7 +57,7 @@ function Learn() {
   // pode ignorar o bloqueio por acidente (docs/20 §11, Fase 9, item 6).
   if (isTrailLessonLocked(lessonId, s)) {
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-8">
           <EmptyState
             text="Essa lição ainda está bloqueada — conclua a anterior primeiro."

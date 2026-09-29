@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +54,17 @@
         "type": "multipla-escolha",
         "pergunta": "A Guerra da Coreia (1950-1953) reflete a lógica bipolar da Guerra Fria porque conflitos locais rapidamente se transformavam em confrontos entre as superpotências. Qual foi o papel de cada bloco nesse conflito?",
         "opcoes": [
-          "Ambas as Coreias mantiveram-se neutras durante o conflito",
-          "EUA apoiaram a Coreia do Sul enquanto URSS apoiou Coreia do Norte",
-          "França interveio ao lado de EUA enquanto Alemanha Ocidental forneceu recursos financeiros",
-          "China apoiou EUA enquanto Japão defendeu a URSS"
+          "EUA e URSS mantiveram-se neutros, e o conflito foi decidido só entre as duas Coreias",
+          "EUA e aliados apoiaram a Coreia do Sul; URSS e China apoiaram a Coreia do Norte",
+          "EUA e URSS apoiaram a Coreia do Sul, e China e Japão apoiaram a Coreia do Norte",
+          "A URSS apoiou a Coreia do Sul e os EUA apoiaram a Coreia do Norte, com a China neutra"
         ],
         "correta": 1,
         "explicacao": "A Guerra da Coreia exemplifica como qualquer conflito regional virava jogo bipolar: EUA e aliados (capitalismo) apoiavam o Sul, enquanto URSS e China (comunismo) apoiavam o Norte. Cada lado usava conflitos locais pra expandir sua esfera de influência."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:cc4c9592",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
@@ -71,7 +72,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.308Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +102,25 @@
         "type": "multipla-escolha",
         "pergunta": "Entre 1961 e 1989, o Muro de Berlim dividiu a cidade em duas partes: a oriental, sob controle soviético, e a ocidental, sob controle dos países aliados aos EUA. A construção do muro exemplifica qual aspecto fundamental da Guerra Fria?",
         "opcoes": [
-          "A disputa por fontes de energia na Europa",
-          "A corrida tecnológica entre as superpotências",
-          "A divisão do mundo em dois blocos antagônicos com sistemas políticos opostos",
-          "A supremacia econômica dos EUA sobre a URSS"
+          "A disputa por fontes de energia na Europa, que dividiu o continente em áreas de influência energética",
+          "A corrida tecnológica entre as superpotências, que levou à construção de barreiras de defesa",
+          "A divisão do mundo em dois blocos antagônicos, com sistemas políticos e econômicos opostos",
+          "A supremacia econômica dos EUA sobre a URSS, que forçou os soviéticos a isolar sua metade da cidade"
         ],
         "correta": 2,
-        "explicacao": "O Muro de Berlim simbolizava a divisão do mundo em dois blocos: o socialista soviético e o capitalista ocidental. Essa separação física mostrava o conflito ideológico e político que marcou toda a Guerra Fria. Não era só disputa tecnológica ou econômica, mas divisão territorial efetiva de populações."
+        "explicacao": "O Muro de Berlim simbolizava a divisão do mundo em dois blocos: o socialista soviético e o capitalista ocidental. Essa separação física mostrava o conflito ideológico e político que marcou boa parte da Guerra Fria. Não era só disputa tecnológica ou econômica, mas divisão territorial efetiva de populações."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:4c5a70f5",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.256Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -145,25 +150,25 @@
         "type": "multipla-escolha",
         "pergunta": "A Crise dos Mísseis de Cuba em 1962 foi um momento de tensão extrema entre EUA e URSS. O presidente Kennedy ordenou o bloqueio naval de Cuba para evitar a entrada de mísseis soviéticos na ilha. Que lógica bipolar este evento ilustra?",
         "opcoes": [
-          "A tentativa de ambos os lados conquistar novos territórios",
-          "A disputa por recursos naturais no Caribe",
-          "A competição pela hegemonia econômica nas Américas",
-          "A confrontação direta entre dois sistemas político-ideológicos que dividiam o mundo"
+          "A tentativa de cada lado de conquistar o território do outro por meio de uma guerra aberta",
+          "A disputa por recursos naturais do Caribe, como petróleo e açúcar, entre as duas potências",
+          "A competição pela hegemonia econômica nas Américas, por meio de acordos e embargos",
+          "O confronto entre dois sistemas político-ideológicos que dividiam o mundo, sem guerra aberta"
         ],
         "correta": 3,
         "explicacao": "A Crise dos Mísseis exemplifica o confronto binário da Guerra Fria: qualquer ação de um lado (URSS aproximando-se do continente americano) era vista como ameaça pelo outro (EUA). Essa lógica de dois blocos opostos definiu toda a política internacional da época."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:3a267f51",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +183,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.257Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -192,24 +199,24 @@
         "pergunta": "A Guerra da Coreia (1950-1953) opôs a Coreia do Norte, apoiada pela URSS e China, contra a Coreia do Sul, apoiada pelos EUA e pelas Nações Unidas. O conflito dividiu a península em duas nações rivais. Qual conceito de Guerra Fria este evento expressa?",
         "opcoes": [
           "A divisão do mundo em dois blocos rivais liderados por superpotências opostas",
-          "O colapso econômico do sistema socialista",
-          "A supremacia demográfica dos países asiáticos",
-          "A incapacidade tecnológica da URSS em comparação aos EUA"
+          "O colapso econômico do sistema socialista, que forçou a URSS a apoiar a Coreia do Norte",
+          "A supremacia demográfica dos países asiáticos, que decidiu o rumo da guerra na península",
+          "A incapacidade tecnológica da URSS diante dos EUA, que impediu sua participação"
         ],
         "correta": 0,
-        "explicacao": "A Guerra da Coreia mostrou a realidade bipolar: o mundo estava dividido entre aliados dos EUA e aliados da URSS. Nenhum conflito era realmente local. Ambos os lados enviavam apoio político e militar. Essa divisão em dois campos opostos era o que marcava toda a Guerra Fria."
+        "explicacao": "A Guerra da Coreia mostrou a realidade bipolar: o mundo estava dividido entre aliados dos EUA e aliados da URSS. Conflitos regionais eram lidos como parte da disputa maior, e os dois lados enviavam apoio político e militar. Essa divisão em dois campos opostos era o que marcava a Guerra Fria."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:80a6c60f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +231,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.257Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-07"
         },
         "examProfiles": [
           "enem"
@@ -237,17 +246,17 @@
         "type": "multipla-escolha",
         "pergunta": "A Doutrina Truman (1947) comprometeu os EUA a conter a expansão soviética em qualquer parte do mundo, incluindo Europa e Ásia. Posteriormente, a URSS respondeu com a Doutrina Brezhnev (1968), que justificava intervenção em países socialistas para impedir 'restauração capitalista'. O padrão bipolar que estas doutrinas revelam é:",
         "opcoes": [
-          "A primazia dos conflitos econômicos sobre os ideológicos",
-          "Dois modelos antagônicos de mundo, cada um tentando expandir sua influência sobre regiões estratégicas",
-          "A impossibilidade de coexistência pacífica entre superpotências",
-          "A superioridade tecnológica como determinante de conflito"
+          "A primazia dos conflitos econômicos sobre os ideológicos, com disputa por mercados e matérias-primas",
+          "Dois modelos de mundo opostos, cada um buscando ampliar sua influência em regiões estratégicas",
+          "A impossibilidade de coexistência pacífica entre as superpotências, mesmo nas fases de distensão",
+          "A superioridade tecnológica de uma superpotência como principal causa dos conflitos regionais"
         ],
         "correta": 1,
-        "explicacao": "Ambas as doutrinas não tratavam de economia ou tecnologia, mas de controle ideológico: EUA continham a URSS, URSS garantia lealdade soviética. Cada doutrina operava em lógica expansionista, uma defensiva e outra ofensiva, mas ambas pressupunham que o mundo deveria estar sob uma ou outra esfera ideológica."
+        "explicacao": "As duas doutrinas tratavam de esferas de influência e de controle ideológico: os EUA buscavam conter a URSS, e a URSS garantia a lealdade dos países socialistas. Era a lógica de dois modelos opostos, cada um querendo manter e ampliar sua área de influência. Economia e tecnologia contavam, mas não eram o eixo dessas doutrinas."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:04d9b454",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
@@ -255,7 +264,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +279,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.257Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +294,25 @@
         "type": "multipla-escolha",
         "pergunta": "Durante a Guerra Fria, o Brasil se inseriu numa lógica de bipolaridade entre superpotências. Qual era essa lógica e como o Brasil se posicionou durante o regime militar?",
         "opcoes": [
-          "Lógica de isolamento total do Brasil do resto do mundo",
-          "Lógica de equilíbrio perfeito entre potências rivais sem preferência alguma",
-          "Lógica de cooperação entre todas as nações numa organização internacional única",
-          "Lógica de confronto entre dois blocos: o Ocidente capitalista (liderado pelos EUA) e o Oriente comunista (liderado pela URSS); o Brasil se posicionou como aliado do Ocidente, recebendo apoio dos EUA"
+          "Isolamento de cada país, com o Brasil evitando relações diplomáticas com as duas superpotências",
+          "Equilíbrio entre as potências rivais, com o Brasil neutro e sem preferência por um dos lados",
+          "Cooperação entre as nações dentro de uma organização internacional única, com o Brasil liderando esse processo na América Latina",
+          "Confronto entre o bloco capitalista, liderado pelos EUA, e o comunista, liderado pela URSS, com o Brasil aliado ao Ocidente"
         ],
         "correta": 3,
         "explicacao": "A Guerra Fria dividiu o mundo em dois blocos antagônicos. O Brasil, sob regime militar, se alinhava com o Ocidente capitalista e os EUA, recebendo apoio militar, tecnológico e diplomático em troca de anticomunismo. Isso reforçava a repressão interna contra ameaças comunistas e integrava o Brasil na geopolítica da Guerra Fria como aliado dos EUA na América Latina."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:ce8fae5d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +327,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -329,25 +342,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um evento-chave que exemplificou a tensão bipolar da Guerra Fria na América Latina foi a Crise dos Mísseis de Cuba (1962). Como esse evento afetou diretamente a percepção de ameaça comunista no Brasil?",
         "opcoes": [
-          "Demonstrou que comunismo estava próximo às portas do Brasil (na América Latina), reforçando narrativas de ameaça comunista e justificando vigilância interna; isso contribuiu posteriormente para o golpe de 1964",
-          "Levou o Brasil a se aliar com a URSS contra os EUA",
-          "Causou a abolição do sistema capitalista no Brasil imediatamente após 1962",
-          "Nenhum efeito, porque Cuba fica muito longe do Brasil"
+          "Reforçou a ideia de que o comunismo avançava na América Latina e alimentou o clima que levou ao golpe de 1964",
+          "Levou o governo brasileiro a firmar uma aliança militar com a URSS contra os Estados Unidos",
+          "Provocou a abolição imediata do sistema capitalista no Brasil, com a estatização das grandes empresas",
+          "Não teve efeito no Brasil, pois Cuba fica longe e o país não participou da disputa entre os blocos"
         ],
         "correta": 0,
         "explicacao": "A presença de mísseis soviéticos em Cuba (1962) era vista como ameaça existencial à ordem capitalista americana. No Brasil, isso reforçou narrativas de que comunismo avançava na América Latina. Elites brasileiras usaram essa narrativa para justificar vigilância contra esquerdistas domésticos. Essa percepção de ameaça contribuiu para o clima político que precedeu o golpe de 1964."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:0fd2ad2d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
-        "difficulty": 1,
+        "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +375,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +390,25 @@
         "type": "multipla-escolha",
         "pergunta": "Como os Estados Unidos influenciaram diretamente a política interna brasileira durante a Guerra Fria, particularmente durante a ditadura militar?",
         "opcoes": [
-          "Os EUA não tinham interesse na América Latina durante a Guerra Fria",
-          "Os EUA financiavam e treinavam militares brasileiros, forneciam armas e inteligência, e apoiavam diplomaticamente o regime militar contra pressões por democracia",
-          "Os EUA trabalhavam para fortalecer democracia e direitos humanos no Brasil sem interesse geopolítico",
-          "Os EUA estabeleceram colônias militares permanentes no Brasil para controle direto"
+          "Os EUA tinham pouco interesse na América Latina, região que consideravam distante do conflito",
+          "Os EUA financiavam e treinavam militares brasileiros e apoiavam diplomaticamente o regime militar",
+          "Os EUA fortaleciam a democracia e os direitos humanos no Brasil, sem interesses geopolíticos próprios",
+          "Os EUA mantinham bases militares permanentes no Brasil, com comando direto sobre as Forças Armadas"
         ],
         "correta": 1,
         "explicacao": "Os EUA financiavam programas de ajuda militar ao Brasil (MAP), treinavam militares em técnicas de contrainsurgência e apoiavam o regime militar como aliado estratégico contra comunismo. O embaixador americano participava de negociações políticas. Isso mostra como superpotências da Guerra Fria manipulavam política interna de aliados para fins geopolíticos."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:5ae280de",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
-        "difficulty": 1,
+        "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +423,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -421,17 +438,17 @@
         "type": "multipla-escolha",
         "pergunta": "Qual foi o principal argumento ideológico usado por militares e conservadores brasileiros para justificar o golpe de 1964, dentro da lógica bipolar da Guerra Fria?",
         "opcoes": [
-          "Golpes militares eram a forma democrática ideal de governança",
-          "O Brasil estava prosperando demais e precisava de um golpe para frear seu desenvolvimento",
-          "O Brasil estava sendo infiltrado por agentes comunistas e estava à beira de uma revolução comunista, similar à Revolução Cubana; era necessário um golpe para proteger a 'civilização ocidental'",
-          "O Brasil precisava se aliar com a URSS para se desenvolver melhor"
+          "Os golpes militares eram a forma mais democrática de governar, por afastarem os partidos políticos",
+          "O Brasil crescia depressa demais e precisava de um golpe para frear o seu desenvolvimento",
+          "O país estava sob risco de uma revolução comunista, como a cubana, e o golpe defenderia o mundo ocidental",
+          "O Brasil precisava se aliar à URSS para se desenvolver, e o golpe evitaria o domínio dos Estados Unidos na América"
         ],
         "correta": 2,
         "explicacao": "A narrativa central era que o governo Goulart estava sob controle comunista ou facilitava avanço comunista e que havia risco iminente de revolução similar à Cubana. Esse argumento invocava a bipolaridade da Guerra Fria para justificar um golpe que protegeria o Brasil do bloco comunista. A narrativa era exagerada, mas foi eficaz politicamente."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:881c6ad0",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
@@ -439,7 +456,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +471,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -465,19 +484,19 @@
       "id": "gen:his:guerra-fria-bipolaridade:0604ae05",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Como governos e movimentos de esquerda no Brasil percebiam a lógica bipolar da Guerra Fria, e qual era sua resposta às pressões geopolíticas?",
+        "pergunta": "Como parte da esquerda brasileira percebia a lógica bipolar da Guerra Fria nos anos 1960 e 1970, e qual foi o resultado dessa postura diante do regime militar?",
         "opcoes": [
-          "Esquerdistas acreditavam que a bipolaridade não existia e era inventada pela imprensa",
-          "Esquerdistas tinham influência total na política brasileira nos anos 1960",
-          "Esquerdistas abraçavam o capitalismo americano completamente sem questionar",
-          "Esquerdistas viam a URSS ou Cuba como modelos alternativos ao capitalismo ocidental, buscavam revolução socialista, e enfrentavam forte repressão do regime militar apoiado pelos EUA"
+          "Achava que a bipolaridade era invenção da imprensa e por isso não se organizava politicamente contra o regime",
+          "Controlava o governo federal e definia a política externa do país durante o regime militar",
+          "Apoiava o alinhamento aos EUA e o capitalismo e por isso foi aliada do regime militar",
+          "Via URSS ou Cuba como modelos alternativos ao capitalismo e sofreu forte repressão do regime militar"
         ],
         "correta": 3,
-        "explicacao": "Movimentos de esquerda brasileiros (PCB, organizações guerrilheiras) viam a URSS e Cuba como alternativas ao imperialismo americano e buscavam revolução socialista. Isso os colocava em confronto direto com o regime militar pró-EUA. Para eles a bipolaridade era real: escolha forçada entre capitalismo americano ou comunismo soviético, sem terceira opção aparente."
+        "explicacao": "Parte da esquerda brasileira, como o PCB e as organizações guerrilheiras, via a URSS e Cuba como alternativas ao imperialismo americano e buscava a revolução socialista. Isso a colocou em confronto direto com o regime militar, alinhado aos EUA. Para esses grupos a bipolaridade era real: as alternativas ao capitalismo americano pareciam passar pelo bloco soviético."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:0604ae05",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
@@ -485,7 +504,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +519,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -513,25 +534,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual evento específico da Guerra Fria exemplificou o medo de 'dominó comunista' que motivava militares e EUA a intervir na América Latina?",
         "opcoes": [
-          "A Revolução Cubana de 1959 e a tentativa de invasão da Baía dos Porcos (1961), que demonstravam que comunismo poderia vencer em solo americano",
-          "A Primeira Conferência de Bandung de 1955",
-          "A criação das Nações Unidas em 1945",
-          "A Primeira Guerra Mundial (1914-1918)"
+          "A Revolução Cubana (1959) e a invasão fracassada da Baía dos Porcos (1961), que levaram o comunismo às Américas",
+          "A Conferência de Bandung de 1955, que reuniu países da Ásia e da África contra o colonialismo europeu",
+          "A criação da ONU em 1945, que instituiu o Conselho de Segurança com cinco membros permanentes",
+          "A Primeira Guerra Mundial (1914-1918), que enfraqueceu os impérios europeus e abriu espaço na América Latina"
         ],
         "correta": 0,
         "explicacao": "A Revolução Cubana (1959) e a invasão fracassada da Baía dos Porcos (1961) foram momentos importantes que reforçaram a percepção de ameaça comunista na América Latina. O medo de dominó: se um país virava comunista, outros seguiriam. Isso motivava golpes preventivos como o de 1964 no Brasil. Explica por que militares e EUA viam Goulart como ameaça existencial."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:9cdc9803",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +567,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -557,27 +580,27 @@
       "id": "gen:his:guerra-fria-bipolaridade:400a5bf8",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Durante a Guerra Fria, qual foi uma das formas pelas quais a bipolaridade moldou as escolhas de política externa do Brasil?",
+        "pergunta": "Durante a Guerra Fria, qual foi uma das formas pelas quais a bipolaridade limitou as escolhas de política externa do Brasil, sobretudo durante o regime militar?",
         "opcoes": [
-          "O Brasil poderia escolher livremente entre aliança com EUA ou URSS, ou neutralidade absoluta, sem pressões externas",
-          "O Brasil estava obrigado a se aliar com os EUA (Ocidente) e manter distância da URSS (Oriente), sendo punido diplomaticamente, economicamente, ou militarmente se rompesse esse alinhamento",
-          "A bipolaridade não afetava política externa brasileira de forma alguma",
-          "O Brasil era uma potência independente que ignorava ambas as superpotências"
+          "O Brasil podia escolher livremente entre a aliança com os EUA, com a URSS ou a neutralidade, sem sofrer pressões",
+          "Havia forte pressão para se alinhar aos EUA e se afastar da URSS, e romper esse alinhamento trazia riscos",
+          "A bipolaridade afetava a política externa dos outros países, mas o Brasil ficava à margem da disputa",
+          "O Brasil era uma potência independente, que ignorava as duas superpotências e definia sozinho sua política"
         ],
         "correta": 1,
-        "explicacao": "A Guerra Fria reduzia opções: aliado dos EUA ou arriscava-se a represálias. O Brasil, economicamente dependente de investimentos e mercados americanos e militarmente inferior, tinha liberdade limitada. Rompimento com EUA significaria isolamento econômico e militar. Esse constrangimento estrutural transformava a política externa brasileira."
+        "explicacao": "A Guerra Fria reduzia as opções: alinhar-se aos EUA ou arriscar represálias. O Brasil, economicamente dependente de investimentos e mercados americanos e militarmente inferior, tinha liberdade limitada. Romper com os EUA poderia significar isolamento econômico e político. Esse constrangimento moldava a política externa brasileira, ainda que houvesse períodos de maior autonomia, como o início dos anos 1960."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:400a5bf8",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +615,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-06"
         },
         "examProfiles": [
           "enem"
@@ -603,27 +628,27 @@
       "id": "gen:his:guerra-fria-bipolaridade:1aa87534",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Qual foi uma tentativa de escape da lógica bipolar que alguns países em desenvolvimento, incluindo seguidores do Brasil, buscaram durante a Guerra Fria?",
+        "pergunta": "Durante a Guerra Fria, alguns países em desenvolvimento buscaram escapar da lógica bipolar. Qual foi uma dessas tentativas?",
         "opcoes": [
-          "Aderir simultaneamente aos dois blocos sem contradicação",
-          "Isolamento geográfico extremo do resto do mundo",
-          "Movimento dos Não-Alinhados: países em desenvolvimento que buscavam neutralidade entre EUA e URSS, enfatizando soberania e desenvolvimento independente",
-          "Fusão com um bloco em governo único mundial"
+          "Aderir formalmente aos dois blocos ao mesmo tempo, para receber ajuda militar de EUA e URSS",
+          "Fechar as fronteiras e romper relações comerciais e diplomáticas com os dois blocos",
+          "Movimento dos Não Alinhados, que defendia neutralidade entre EUA e URSS e desenvolvimento autônomo",
+          "Propor a fusão dos dois blocos em uma aliança única, coordenada pela ONU, para pôr fim à divisão do mundo"
         ],
         "correta": 2,
-        "explicacao": "O Movimento dos Não-Alinhados (Conferência de Bandung, 1955; países como Índia, Egito, Iugoslávia) buscava construir uma terceira via, recusando alinhamento compulsório com EUA ou URSS. Embora o Brasil nunca aderisse formalmente, essa alternativa demonstrava que escapar da bipolaridade era concebível politicamente, ainda que difícil estruturalmente."
+        "explicacao": "O Movimento dos Não Alinhados nasceu de Bandung (1955) e foi formalizado em Belgrado (1961), com países como Índia, Egito e Iugoslávia. Recusava o alinhamento automático com EUA ou URSS e buscava uma terceira via. O Brasil não aderiu formalmente, mas seguiu uma política externa independente no início dos anos 1960. Escapar da bipolaridade era possível na política, embora difícil na prática."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:1aa87534",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +663,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -651,25 +678,25 @@
         "type": "multipla-escolha",
         "pergunta": "Como o fim da Guerra Fria (com a queda da URSS em 1991) afetou a política brasileira após a redemocratização de 1985?",
         "opcoes": [
-          "Fim da narrativa de ameaça comunista iminente permitiu espaço político para movimentos sociais, ONGs, e democracia sem suspeitas de alinhamento soviético automático",
-          "Brasil foi imediatamente conquistado militarmente pelos EUA",
-          "Brasil se alinhava ainda mais próximo aos EUA por falta de alternativa",
-          "Nenhum efeito, porque o Brasil já era independente em 1985"
+          "O fim da ameaça comunista reduziu o argumento do risco soviético e abriu espaço a movimentos sociais e ONGs",
+          "Os militares brasileiros voltaram ao poder para conter o avanço de partidos de esquerda",
+          "O Brasil rompeu relações com os EUA e passou a buscar aliança com a Rússia pós-soviética",
+          "O fim da URSS não alterou o debate político, pois o anticomunismo seguiu como eixo principal da disputa eleitoral"
         ],
         "correta": 0,
         "explicacao": "Com a URSS desaparecida, a narrativa de ameaça comunista existencial perdia poder. Movimentos sociais, sindicatos, ONGs e esquerda podiam operar com menos perseguição sob suspeita de alinhamento soviético. Isso abria espaço para diversidade política que a bipolaridade havia restringido. O Brasil mantinha alinhamento ocidental, mas com menos justificativa de urgência geopolítica."
       },
       "meta": {
         "id": "gen:his:guerra-fria-bipolaridade:0946a468",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "his:guerra-fria-bipolaridade"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +711,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.100Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"

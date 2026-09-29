@@ -6,6 +6,8 @@
 
 ✅ = ativo · ⏳ = planejado
 
+**Proveniência dos itens (docs/36 §G.5):** no catálogo de itens, `status: revisada-humano` significa **aprovada no portão de revisão** (é o que o pool filtra), não necessariamente lida por uma pessoa; **quem revisou** está em `meta.validation.reviewKind` (`humano`, `ia-delegada`, `gabarito-oficial`, `autoria-legada`; ausente = desconhecido).
+
 **Pendência conhecida (registrada em docs/32):** a coluna "Matriz ENEM" (`enemSkills`, referência aos códigos H1–H30 da Matriz de Referência do Inep por área) não foi preenchida nesta rodada — preencher os códigos exatos sem a fonte primária em mãos seria inventar dado, o que os documentos normativos (docs/20 §13, docs/30) proíbem. Preencher na Fase 10 (F10.3), consultando a Matriz de Referência do Inep diretamente.
 
 ## Linguagens, Códigos e suas Tecnologias (LC)

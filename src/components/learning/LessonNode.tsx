@@ -52,7 +52,7 @@ export const LessonNode = memo(function LessonNode({
       className={cn(
         "grid h-10 w-10 shrink-0 place-items-center rounded-full",
         highlight && "anim-pop-in",
-        node.status === "completed" && "bg-mar text-white",
+        node.status === "completed" && "bg-mar text-on-mar",
         node.status === "in-progress" && "border-2 border-mar bg-mar/12 text-mar-fundo",
         node.status === "current" && "border-[3px] border-mar bg-cards text-mar-fundo anim-breathe",
         node.status === "available" && "border-2 border-abismo bg-cards text-abismo",

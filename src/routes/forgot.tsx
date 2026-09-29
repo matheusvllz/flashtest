@@ -42,7 +42,7 @@ function Forgot() {
                 className="input-ds mt-1.5"
               />
             </label>
-            <button className="btn-primary w-full">Enviar link</button>
+            <button type="submit" className="btn-primary w-full">Enviar link</button>
           </form>
         )}
       </div>

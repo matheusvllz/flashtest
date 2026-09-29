@@ -3,20 +3,21 @@
  * de conteúdo (docs/30 §12.3, Fase 13 do docs/31) — importa `@/content/*`,
  * de propósito SEPARADO de `placement.ts` pra `store.ts` nunca precisar
  * importar este arquivo (regra de fronteira de bundle, docs/30 §21.3,
- * `tests/unit/store-bundle-boundary.test.ts`). Só a rota `/nivelamento` e a
- * tela de resultado chamam isto.
+ * `tests/unit/store-bundle-boundary.test.ts`). Só a rota `/nivelamento`, o
+ * hook de reconciliação (`usePlacementReconciliation`) e a tela de resultado
+ * chamam isto.
  *
- * Estado real hoje (docs/32, Fase 13): **zero** itens do catálogo têm papel
- * `"diagnostico"` — isso é produzido pela Fase 11 (conteúdo em escala via
- * IA), que ainda não rodou (sem chave/orçamento de LLM neste ambiente). Até
- * lá, `poolDiagnosticoDaArea` devolve vazio pra toda área e o nivelamento cai
- * no caso de borda já previsto no `30` §12.3 ("pool abaixo de 4 itens
- * elegíveis → área não é medida") — o motor está pronto e testado (com pools
- * sintéticos, como a simulação G do `30` §26.3 já pede), só não tem dado
- * real pra usar ainda. Mesmo padrão das Fases 8/9.
+ * Estado real (docs/32, Fase 15.1, 27/09/2026): o pool diagnóstico existe — a
+ * Onda 1 promoveu ~40–45 itens revisados por área (LC/MT/CN/CH) e o
+ * nivelamento está ligado. `poolDiagnosticoDaArea` só devolve item de pacote
+ * com o pacote em memória (`itemDisponivel`, docs/30 §21.3), então quem monta
+ * o pool antes precisa ter chamado `carregarTodosOsPacotes()`. Uma área cujo
+ * pool elegível fica abaixo de `PLACEMENT_MIN_ITENS_ELEGIVEIS_AREA` não é
+ * medida (`30` §12.3, caso de borda) — hoje só acontece se o pacote não
+ * carregou (offline) ou se o foco do aluno deixa a área de fora.
  */
-import { itemDisponivel, itemIndex } from "@/content/items";
-import { activeSkills } from "@/content/taxonomy";
+import { itemDisponivel, itemIndex, itemMetaOf } from "@/content/items";
+import { activeSkills, SKILL_MAP } from "@/content/taxonomy";
 import { areaOfSubject } from "@/content/taxonomy/areas";
 import type { EnemArea } from "@/content/taxonomy/types";
 import type { PlacementResponse, PlacementState, SkillModelEntry } from "@/lib/learning/types";
@@ -37,7 +38,11 @@ export function poolDiagnosticoDaArea(area: EnemArea): PlacementPoolItem[] {
       subjectId: e.subjectId as string,
       area,
       irt: { a: e.a, b: e.b, c: e.c },
-      incidence: 2 as const, // TODO(Fase 11): trocar por `SKILL_MAP[e.skill].incidence` quando o pool real existir.
+      // Constante de propósito: a incidência ENEM que existe hoje é por HABILIDADE
+      // (`SkillDef.incidence`), não por item, e só desempata o PRIMEIRO item de cada
+      // área (`primeiroItem`, docs/30 §12.3). Trocar por `SKILL_MAP[..].incidence`
+      // mudaria a abertura de todo nivelamento sem dado que justifique a diferença.
+      incidence: 2 as const,
     }));
 }
 
@@ -115,4 +120,75 @@ export function applyPlacement(
   }
 
   return novo;
+}
+
+/**
+ * Reconstitui o mapa `itemId → PlacementPoolItem` a partir do que o
+ * `PlacementState` guardou (docs/36 T-03.2, RF-12, bug C3). O motor recalcula
+ * θ̂/SE da área inteira a cada resposta e DESCARTA em silêncio a resposta cujo
+ * item não está no mapa — a rota recriava o mapa vazio a cada montagem, então
+ * retomar depois de recarregar dava outra estimativa que a execução contínua.
+ *
+ * Ordem de resolução por item respondido: (1) pool diagnóstico atual da área;
+ * (2) senão, a meta atual do catálogo (`itemMetaOf` + `SKILL_MAP`) — um item que
+ * deixou de ser diagnóstico ou foi retirado continua com `irt`/matéria/habilidade
+ * da meta; (3) senão vai para `ausentes` (o chamador decide; nunca lança).
+ */
+export function placementItemsById(placement: PlacementState): {
+  byId: Map<string, PlacementPoolItem>;
+  ausentes: string[];
+} {
+  const byId = new Map<string, PlacementPoolItem>();
+  const ausentes: string[] = [];
+  for (const [chave, areaState] of Object.entries(placement.areas)) {
+    const area = chave as EnemArea;
+    const doPool = new Map(poolDiagnosticoDaArea(area).map((i) => [i.id, i]));
+    for (const id of areaState.itemIds) {
+      if (byId.has(id)) continue;
+      const noPool = doPool.get(id);
+      if (noPool) {
+        byId.set(id, noPool);
+        continue;
+      }
+      const daMeta = itemDaMeta(id, area);
+      if (daMeta) byId.set(id, daMeta);
+      else ausentes.push(id);
+    }
+  }
+  return { byId, ausentes };
+}
+
+function itemDaMeta(id: string, area: EnemArea): PlacementPoolItem | null {
+  try {
+    const meta = itemMetaOf(id);
+    const skillId = meta.skillIds[0];
+    const def = skillId ? SKILL_MAP[skillId] : undefined;
+    if (!skillId || !def) return null;
+    return {
+      id,
+      skillId,
+      subjectId: def.subjectId,
+      area,
+      irt: { a: meta.irt.a, b: meta.irt.b, c: meta.irt.c },
+      incidence: 2 as const, // mesmo motivo do pool (ver `poolDiagnosticoDaArea`)
+    };
+  } catch {
+    // Id que nem a meta consegue resolver (ex.: item removido do acervo).
+    return null;
+  }
+}
+
+/**
+ * Resultado da aplicação do nivelamento (docs/36 T-03.3, RF-10/RF-11) — o
+ * `skillModel` com priors das habilidades não medidas + os ids que não deu
+ * pra resolver. Pura sobre o catálogo carregado; NUNCA importada pelo store
+ * (o store só recebe o resultado, em `applyPlacementOutcome`).
+ */
+export function computePlacementOutcome(
+  p: PlacementState,
+  skillModel: Record<string, SkillModelEntry>,
+  today: string,
+): { skillModel: Record<string, SkillModelEntry>; ausentes: string[] } {
+  const { byId, ausentes } = placementItemsById(p);
+  return { skillModel: applyPlacement(p, skillModel, byId, today), ausentes };
 }

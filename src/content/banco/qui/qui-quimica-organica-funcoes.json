@@ -24,8 +24,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -71,7 +72,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -117,7 +119,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +134,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -163,7 +166,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +181,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,7 +213,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +228,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -254,8 +259,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +275,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +289,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma molécula de poliéster biodegradável contém unidades repetidas de -CO-O- (éster), grupos -OH (álcool) livres e uma dupla ligação C=C conjugada. Qual é a função principal e como a presença de -OH livres afeta a estrutura?",
         "opcoes": [
-          "Éster é a função principal; -OH livres atuam como grupos terminais e permitem ligações de hidrogênio intermoleculares",
-          "Álcool é a função principal; -OH não afeta a estrutura",
-          "Éter é a função principal; -OH são ignorados em polímeros",
-          "Cetona é a função principal; -OH são substituintes menores"
+          "Éster; os -OH livres ficam nas pontas das cadeias e permitem ligações de hidrogênio entre elas",
+          "Álcool; os -OH não afetam a estrutura, pois não interagem com as cadeias vizinhas do polímero",
+          "Éter; os -OH são ignorados nos polímeros, pois não formam ligações com outras moléculas",
+          "Cetona; os -OH são substituintes menores que não alteram a forma nem a união das cadeias"
         ],
         "correta": 0,
         "explicacao": "Em poliésteres, a ligação -CO-O- (éster) é a que se repete e forma a cadeia, então o éster é a função principal. Os -OH livres costumam ficar nas extremidades da cadeia (grupos terminais) e podem fazer ligações de hidrogênio entre moléculas, o que influencia propriedades como o ponto de fusão. A biodegradabilidade vem principalmente da ligação éster, que pode ser quebrada por hidrólise."
       },
       "meta": {
         "id": "gen:qui:quimica-organica-funcoes:e8723d10",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "qui:quimica-organica-funcoes"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +322,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:24.886Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -327,7 +335,7 @@
       "id": "gen:qui:quimica-organica-funcoes:4cd6558d",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Uma molécula apresenta a estrutura: HO-CH₂-CH₂-OH. Qual é o nome correto e quantas funções alcóol ela contém?",
+        "pergunta": "Uma molécula tem a estrutura HO-CH₂-CH₂-OH. Qual é o nome mais comum dela e quantos grupos álcool (-OH) ela contém?",
         "opcoes": [
           "Acetileno, com 3 álcoois",
           "Etanol, com 1 álcool",
@@ -335,19 +343,19 @@
           "Dietil éter, com 1 álcool"
         ],
         "correta": 2,
-        "explicacao": "A molécula HO-CH₂-CH₂-OH (etileno glicol ou 1,2-etanodiol) contém DOIS grupos hidroxila (-OH), um em cada extremidade. É um diol usado em anticongelantes. Etanol tem apenas um -OH; dietil éter não contém -OH; acetileno (HC≡CH) não contém nenhuma função álcool. Contar grupos funcionais é habilidade crítica no nível 2."
+        "explicacao": "A molécula HO-CH₂-CH₂-OH (etileno glicol ou 1,2-etanodiol) contém DOIS grupos hidroxila (-OH), um em cada extremidade. É um diol usado em anticongelantes. Etanol tem apenas um -OH; dietil éter não contém -OH; acetileno (HC≡CH) não contém nenhuma função álcool."
       },
       "meta": {
         "id": "gen:qui:quimica-organica-funcoes:4cd6558d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "qui:quimica-organica-funcoes"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -363,7 +371,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.598Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-02"
         },
         "examProfiles": [
           "enem"

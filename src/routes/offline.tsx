@@ -63,7 +63,7 @@ function Offline() {
               <Check size={16} /> Pronto para estudar offline
             </div>
           ) : (
-            <button onClick={download} className="btn-primary mt-3 w-full">
+            <button type="button" onClick={download} className="btn-primary mt-3 w-full">
               <Download size={16} /> Baixar para estudar offline
             </button>
           )}
@@ -74,7 +74,7 @@ function Offline() {
           <p className="mt-1 text-sm text-nevoa">
             Suas respostas e progresso são sincronizados automaticamente quando você volta online.
           </p>
-          <button onClick={sync} disabled={syncing} className="btn-outline mt-3 w-full">
+          <button type="button" onClick={sync} disabled={syncing} className="btn-outline mt-3 w-full">
             {syncing ? "Sincronizando..." : "Sincronizar agora"}
           </button>
         </div>

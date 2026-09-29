@@ -1,0 +1,1171 @@
+{
+  "lote": "mat-fil-soc-01",
+  "geradoEm": "2026-09-28T23:01:23.762Z",
+  "revisor": "ia-delegada:sonnet",
+  "itens": [
+    {
+      "id": "gen:fil:epistemologia-conhecimento:ad89ad66",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.475,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.931,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Correta era a mais longa (razao 1,47) e a A trazia 'nunca'. Distratores reescritos com o mesmo nivel de detalhe, cada um ligado a uma escola real.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:adc93b2a",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e",
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.033,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.173,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "corrigido",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito A confere. Razao 2,03 (A com 183 caracteres contra 90 do maior distrator); distratores B, C e D ampliados e A enxugada. Explicacao citava 'opcoes B, C e D' por letra (D-43): reescrita pelo conteudo. 'Ambos aceitam' virou 'podem aceitar' (Descartes era dualista).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:cb459baa",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.4,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito A confere, mas o enunciado nao dizia de que posicao se respondia: 'Sim, positivismo logico' (D) era tambem uma posicao filosofica defensavel. Enunciado agora ancora no realismo. B era autocontraditoria ('Sim ... nao verificacao'). Alternativas com mesmo detalhe (razao 1,40 antes).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:f1789440",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e",
+        "1b",
+        "1c"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.266,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "metricas": {
+        "razaoTamanho": 0.943,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "corrigido"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito C confere. Enunciado tinha concordancia de genero errada ('uma ... outra' para cientistas); A tinha travessao e B ('sempre objetivos') era um non sequitur com pista de absolutismo. Alternativas equilibradas em tamanho; explicacao sem letra.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:23054b2f",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.422,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.088,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Correta era a mais longa (91 x 64). Distratores ampliados: relativismo (A), egoismo etico (B) e utilitarismo (D), cada um com erro conceitual nomeavel.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:3bae9fa9",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e",
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.784,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.116,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 2,78 (142 x 51): correta encurtada e distratores B, C e D ampliados; B inverte os papeis (erro de trocar as correntes), C e D negam a tensao que a pergunta pede.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:57662da2",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.013,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.179,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "corrigido",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito B confere. O enunciado entregava a resposta ('viola um dever fundamental de respeitar a lei, independentemente das consequencias') e reduzia a deontologia a 'cumprir a lei'. Enunciado agora so pede o raciocinio deontologico; B fala de dever moral. Explicacao citava 'alternativas A, C e D' por letra (D-43): reescrita pelo conteudo.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:8629af6e",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.833,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": true
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.054,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,83 e distratores B e C sem erro conceitual real (status social, 'questao tecnica'). Agora B e C sao posicoes nomeaveis e D e o consequencialismo (erro de trocar a corrente).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:20996b71",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.951,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.951,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Gabarito A confere; correta (78) mais curta que D (82), razao 0,95, distratores equilibrados e ligados a filosofos reais.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:89b9db3b",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.111,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.899,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A (estado de excecao, Agamben) confere. Correta era estritamente a mais longa; distratores B, C e D com mais detalhe, sem mudar o sentido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:8ae9efb5",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.254,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.952,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere (igualdade formal + substancial). Correta era estritamente a mais longa; A, B e C ganharam detalhe equivalente. Distratores seguem ligados a tradicoes reais.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:733f794d",
+      "arquivo": "src/content/banco/mat/mat-area-perimetro-figuras-planas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "18 m2 / 9 = 2 latas. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:889b7454",
+      "arquivo": "src/content/banco/mat/mat-area-perimetro-figuras-planas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.857,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.857,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "((7+11) x 9)/2 = 81. Distrator 162 e o erro de esquecer o /2. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:area-perimetro-figuras-planas:9ce919a9",
+      "arquivo": "src/content/banco/mat/mat-area-perimetro-figuras-planas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "10x5 + 3x3 = 59 (figura em L sem sobreposicao, o enunciado diz dois retangulos). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:8e5bd15c",
+      "arquivo": "src/content/banco/mat/mat-equacao-primeiro-grau.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "P = 2A e P - A = 50 => A = 50, P = 100. Distratores: 50 (valor de Ana), 75 e 150. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:equacao-primeiro-grau:9cdbd5b1",
+      "arquivo": "src/content/banco/mat/mat-equacao-primeiro-grau.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "d = 80 x 4 = 320; t = 320/100 = 3,2 h. Dificuldade 4 aceitavel (2 etapas + proporcao inversa). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-afim-grafico:20e4c4e6",
+      "arquivo": "src/content/banco/mat/mat-funcao-afim-grafico.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "a = (7-3)/(3-1) = 2, b = 1. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-afim-grafico:89dd8415",
+      "arquivo": "src/content/banco/mat/mat-funcao-afim-grafico.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "a = (7-1)/(2-(-1)) = 2. Dificuldade 4 um pouco alta para um sistema 2x2 simples, dentro da margem +-1: mantida. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-afim-grafico:9ccd4c44",
+      "arquivo": "src/content/banco/mat/mat-funcao-afim-grafico.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.65,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.65,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "D = R e Im = R para reta nao horizontal. Razao 0,65 (correta mais curta) nao e pista. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-exponencial-crescimento:3743769a",
+      "arquivo": "src/content/banco/mat/mat-funcao-exponencial-crescimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "18 h = 3 meias-vidas; 1200/8 = 150. Distrator 75 = 4 periodos. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-exponencial-crescimento:3a32c4d6",
+      "arquivo": "src/content/banco/mat/mat-funcao-exponencial-crescimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "1000 x 1,15^3 = 1520,875 ~ 1521. Distrator 1450 = juros simples. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-exponencial-crescimento:3e42e455",
+      "arquivo": "src/content/banco/mat/mat-funcao-exponencial-crescimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "900 / 3^2 = 100. Distratores: 300 (900/3), 450, 50. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-quadratica-vertice:4d775c3d",
+      "arquivo": "src/content/banco/mat/mat-funcao-quadratica-vertice.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "a<0, vertice (1,8), maximo 8. Distrator 1 = coordenada x do vertice. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:funcao-quadratica-vertice:6adbee94",
+      "arquivo": "src/content/banco/mat/mat-funcao-quadratica-vertice.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "11 = a(4-2)^2 + 3 => a = 2. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:b41b57ef",
+      "arquivo": "src/content/banco/mat/mat-leitura-grafico-tabela.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "25% de 1000 = 250. Distratores sao os outros setores do grafico (20, 15, 30%). Dificuldade 3 acima do raciocinio (1 etapa), dentro de +-2: mantida. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:01:23.762Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    }
+  ]
+}

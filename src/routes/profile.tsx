@@ -1,7 +1,9 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
+import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
+import { CourseStep } from "@/components/onboarding/CourseStep";
 import { FocusSheet } from "@/components/learning/journey/FocusSheet";
 import { activeFocusNames } from "@/components/learning/journey/FocusLine";
 import { setAudioEnabled, unlockAudioFromGesture } from "@/lib/audio/engine";
@@ -16,6 +18,7 @@ import {
   setDailyMinutes,
   setExamTarget,
   setPrefs,
+  setState,
   setShowExamTips,
   setStudyFocus,
   startFocusSession,
@@ -35,6 +38,7 @@ function Profile() {
   const nav = useNavigate();
   const p = s.prefs;
   const [focusSheetOpen, setFocusSheetOpen] = useState(false);
+  const [cursoSheetOpen, setCursoSheetOpen] = useState(false);
   const nivel = nivelDeXp(s.progress.xp);
   const initials = (p.name || "F T")
     .split(" ")
@@ -83,6 +87,7 @@ function Profile() {
           <p className="ds-label">Som e vibração</p>
           <div className="mt-2.5 grid grid-cols-2 gap-2">
             <button
+              type="button"
               onClick={() => {
                 const ligar = !p.sound;
                 setPrefs({ sound: ligar });
@@ -97,6 +102,7 @@ function Profile() {
               Som {p.sound ? "ligado" : "desligado"}
             </button>
             <button
+              type="button"
               onClick={() => setPrefs({ haptics: !p.haptics })}
               aria-pressed={p.haptics}
               className={cn("chip justify-center", p.haptics && "chip-on")}
@@ -114,6 +120,7 @@ function Profile() {
               ] as const
             ).map(([value, label]) => (
               <button
+                type="button"
                 key={value}
                 onClick={() => {
                   setPrefs({ theme: value });
@@ -143,6 +150,7 @@ function Profile() {
               const selecionado = alvoAtual?.examId === exam.id;
               return (
                 <button
+                  type="button"
                   key={exam.id}
                   onClick={() =>
                     setExamTarget(selecionado ? null : { examId: exam.id, stage: exam.stages?.[0] })
@@ -159,6 +167,7 @@ function Profile() {
             <div className="mt-2.5 flex flex-wrap gap-2">
               {EXAM_MAP[p.examTargets[0].examId]?.stages?.map((stage) => (
                 <button
+                  type="button"
                   key={stage}
                   onClick={() => setExamTarget({ examId: p.examTargets[0].examId, stage })}
                   aria-pressed={p.examTargets[0].stage === stage}
@@ -170,6 +179,7 @@ function Profile() {
             </div>
           )}
           <button
+            type="button"
             onClick={() => setShowExamTips(!p.showExamTips)}
             aria-pressed={p.showExamTips}
             className={cn("chip mt-2.5 w-full justify-center", p.showExamTips && "chip-on")}
@@ -185,6 +195,7 @@ function Profile() {
             <div className="mt-2.5 grid grid-cols-5 gap-2">
               {MINUTOS_OPCOES.map((min) => (
                 <button
+                  type="button"
                   key={min}
                   onClick={() => setDailyMinutes(min)}
                   aria-pressed={p.dailyMinutes === min}
@@ -195,6 +206,7 @@ function Profile() {
               ))}
             </div>
             <button
+              type="button"
               onClick={() => setFocusSheetOpen(true)}
               className="chip mt-2.5 w-full justify-center"
             >
@@ -223,6 +235,7 @@ function Profile() {
             <p className="ds-label">{COPY.nivelamento.tituloRota}</p>
             <p className="mt-1 text-xs text-nevoa">{COPY.onboarding.ofertaCorpo}</p>
             <button
+              type="button"
               onClick={() => {
                 // "Refazer" precisa começar um placement NOVO antes de navegar — a
                 // rota `/nivelamento` só chama `beginPlacement` sozinha quando não
@@ -245,8 +258,8 @@ function Profile() {
         <div
           className="card-soft p-4"
           style={{
-            background: "color-mix(in srgb, var(--color-recompensa) 20%, var(--color-cards))",
-            borderColor: "var(--color-recompensa)",
+            background: "color-mix(in srgb, var(--alert) 20%, var(--cards))",
+            borderColor: "var(--alert)",
           }}
         >
           <p className="ds-label">Plano atual</p>
@@ -263,6 +276,14 @@ function Profile() {
           <Row label="Meu plano" onClick={() => nav({ to: "/plan" })} />
           <Row label="Meta diária" value={`${p.dailyLessons} aulas de 60s`} />
           <Row label="Faculdade-alvo" value={p.targetInstitution || "—"} />
+          <div className="flex min-h-[52px] items-center justify-between gap-3 px-4 py-3">
+            <span className="min-w-0 text-sm font-semibold text-abismo">
+              {COPY.cursos.perfilRotulo}: <span className="break-words font-normal text-nevoa">{p.targetCourse || "—"}</span>
+            </span>
+            <button type="button" onClick={() => setCursoSheetOpen(true)} className="chip shrink-0">
+              {COPY.cursos.perfilMudar}
+            </button>
+          </div>
           <Row label="Estado" value={p.residenceState || "—"} />
           <Row label="Nível escolar" value={p.level || "—"} />
           <Row label="Dificuldades" value={(p.difficultSubjects ?? []).join(", ") || "—"} />
@@ -282,6 +303,7 @@ function Profile() {
 
         <div className="flex flex-col gap-2">
           <button
+            type="button"
             onClick={() => {
               reset();
               nav({ to: "/welcome" });
@@ -291,6 +313,7 @@ function Profile() {
             <RotateCcw size={14} /> Resetar demonstração
           </button>
           <button
+            type="button"
             onClick={() => {
               logout();
               nav({ to: "/welcome" });
@@ -301,6 +324,20 @@ function Profile() {
           </button>
         </div>
       </div>
+      <BottomSheet open={cursoSheetOpen} onClose={() => setCursoSheetOpen(false)} title={COPY.cursos.perfilSheetTitulo}>
+        <div className="max-h-[70vh] overflow-y-auto pb-1">
+          <CourseStep
+            value={p.targetCourse}
+            onSelect={(curso) => {
+              setState((st) => {
+                st.prefs.targetCourse = curso;
+                return st;
+              });
+              setCursoSheetOpen(false);
+            }}
+          />
+        </div>
+      </BottomSheet>
     </AppShell>
   );
 }
@@ -318,6 +355,7 @@ function Row({
 }) {
   return (
     <button
+      type="button"
       onClick={onClick}
       className="flex min-h-[52px] w-full items-center justify-between px-4 py-3 text-left"
     >

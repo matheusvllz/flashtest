@@ -20,6 +20,7 @@ export function InterpretView({
       <div className="space-y-2.5" role="radiogroup" aria-label="Opções de resposta">
         {exercise.opcoes.map((opcao, i) => (
           <button
+            type="button"
             key={i}
             role="radio"
             aria-checked={answer === i}

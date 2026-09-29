@@ -1,5 +1,7 @@
 # Foca — Rabisco na Margem
 
+> **Nota (28/09/2026, `38`):** a parte visual deste arquivo (cor, tipografia) segue vigente. As seções de arquétipo, posicionamento e persona são anteriores ao `20` §7.1 e ao guia de copy; para voz e público, ver [../COPY.md](../COPY.md) e [../copy/01-estrategia.md](../copy/01-estrategia.md).
+
 Direção cromática escolhida (14ª de vinte exploradas) para substituir a paleta Ártica documentada em `docs/09-branding.md`. Grafite de lápis, papel pautado e uma canetinha azul-elétrica de gel — a paleta de quem rabisca na margem do caderno em vez de copiar a matéria.
 
 Os tokens correspondentes, prontos pra colar em `src/styles.css`, estão em `foca-rabisco-tokens.css` (mesmo arquivo entregue junto com este).
@@ -40,11 +42,11 @@ Direta: o grafite (`--color-abismo`) não é uma aproximação de cinza genéric
 | Fundo de página | `--color-neve` | `#F6F5F1` | `#1C1B18` |
 | Cards / superfícies | `--color-cards` | `#FFFFFF` | `#262523` |
 | Texto principal | `--foreground` | `#26262A` | `#F3F1EC` |
-| Texto secundário | `--color-nevoa` | `#737075` | `#A6A29A` |
+| Texto secundário | `--color-nevoa` | `#6E6B71` | `#A6A29A` |
 | Bordas / divisores | `--color-gelo` | `#E1DFDA` | `#38352F` |
 | Sucesso | `--color-success` | `#2E9E5B` | `#45B876` |
 | Alerta | `--color-alert` | `#D9A017` | `#E8B23D` |
-| Erro | `--color-error` | `#C23B3B` | `#D65B5B` |
+| Erro | `--color-error` | `#C23B3B` | `#DF6B6B` |
 
 \* No sistema anterior, Mar e Coral eram duas cores de marca distintas (progresso/seleção vs. CTA/recompensa). Nesta direção elas são a mesma cor — o azul-caneta é o único accent da marca, e cumpre as duas funções.
 
@@ -86,3 +88,4 @@ Rompe mais com o padrão visual atual — vale considerar se a marca quiser se a
 
 - `foca-rabisco-tokens.css` — bloco `@theme inline` + `:root` + `.dark` prontos pra colar em `src/styles.css`, mantendo os nomes de variável já usados no projeto (nenhuma `@utility` precisa mudar de nome).
 - `foca-rabisco-branding.md` — este arquivo, pra guardar em `docs/` como referência da direção escolhida.
+- `foca-design-system-2026-09-28.html` — **design system atualizado, com os logos novos** (28/09/2026): página de referência visual com logos, cor, tipografia, espaçamento, geometria e elevação, clara e escura. Substitui `Flash Test - design System.html` (marca anterior, mantido como histórico). Os logos derivados ficam em `public/branding/foca/` (gerados por `scripts/gerar-logos-foca.ps1`).

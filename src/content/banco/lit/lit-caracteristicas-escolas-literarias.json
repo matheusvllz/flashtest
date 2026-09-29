@@ -7,17 +7,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia o trecho: 'Naquela tarde monótona, enquanto observava os detalhes sem importância da rua, percebi como a vida burguesa era fundamentalmente vazia de sentido, como rotina e convenção sufocavam qualquer autenticidade.' A qual escola pertence essa perspectiva?",
         "opcoes": [
-          "Realismo, pela análise crítica da sociedade burguesa e rejeição de ilusões idealistas.",
-          "Arcadismo, pela harmonia com a natureza.",
-          "Romantismo, pela emotividade intensa.",
-          "Barroco, pela angústia e conflito."
+          "Realismo, pela análise crítica da sociedade burguesa e pela rejeição das ilusões idealistas",
+          "Arcadismo, pela harmonia com a natureza e pela busca de uma vida simples no campo",
+          "Romantismo, pela emotividade intensa e pela idealização do amor, da natureza e do herói ideal",
+          "Barroco, pela angústia e pelo conflito entre os prazeres do mundo e a fé religiosa"
         ],
         "correta": 0,
         "explicacao": "O trecho exemplifica Realismo (séc. XIX, segunda metade): olhar crítico sobre a burguesia, denúncia de vazio existencial na rotina social, recusa do idealismo romântico, análise psicológica e social minuciosa. Machado de Assis e Eça de Queiroz praticam esse distanciamento crítico e ironia. Realismo contrasta com Romantismo justamente por essa sobriedade analítica."
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:9dbc745f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.483Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +55,17 @@
         "type": "multipla-escolha",
         "pergunta": "Leia este trecho: 'O homem moderno, preso em sua própria rede de contradições, busca significado numa sociedade que o nega a cada passo, enquanto máquinas e mercadorias substituem sua humanidade.' A qual século e movimento literário pertence melhor?",
         "opcoes": [
-          "Século XX, Modernismo ou períodos posteriores que criticam desumanização.",
-          "Século XVII, Barroco.",
-          "Século XVIII, Arcadismo.",
-          "Século XIX, Romantismo."
+          "Século XX, Modernismo, que critica a desumanização e a alienação da vida moderna",
+          "Século XVII, Barroco, que expressa o conflito entre fé e razão diante das contradições humanas",
+          "Século XVIII, Arcadismo, que valoriza a vida simples no campo e a busca do equilíbrio",
+          "Século XIX, Romantismo, que exalta o sentimento e o individualismo do herói"
         ],
         "correta": 0,
-        "explicacao": "O trecho reflete crítica moderna à alienação humana, máquinas, perda de sentido, temas recorrentes em literatura do séc. XX. Modernismo português e literatura de vanguarda frequentemente expressam angústia com modernidade, mecanização, perda de identidade. Não reflete Barroco (foco religioso), Arcadismo (harmonia racional) ou Romantismo (idealismo emocional) de forma central."
+        "explicacao": "O trecho critica a alienação do ser humano diante de máquinas e mercadorias, tema recorrente na literatura do século XX, a partir do Modernismo. Ele não reflete de forma central o Barroco (conflito religioso), o Arcadismo (harmonia racional) nem o Romantismo (idealismo emocional)."
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:3960ba72",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:21:53.483Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -100,7 +104,7 @@
         "pergunta": "Leia: 'Quando a madrugada chegava, o rouxinol cantava entre as flores, despertando esperança nos corações tristes'. Que características românticas aparecem neste trecho?",
         "opcoes": [
           "Amor pela natureza, introspecção e sentimentalismo",
-          "Crítica social e denúncia de injustiças",
+          "Crítica social e denúncia de injustiças e desigualdades",
           "Busca pelo perfeito equilíbrio formal e clareza",
           "Nacionalismo e valorização da história colonial"
         ],
@@ -109,15 +113,15 @@
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:a6ef313d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -162,8 +168,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -179,7 +185,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,8 +216,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -225,7 +232,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -236,7 +244,7 @@
       "id": "gen:lit:caracteristicas-escolas-literarias:7820341c",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Qual período do Modernismo brasileiro caracteriza-se pela experimentação formal radical, ruptura com a sintaxe tradicional e busca de uma linguagem revolucionária que espelhasse a modernidade industrial?",
+        "pergunta": "Qual período do Modernismo brasileiro caracteriza-se pela ruptura inaugural com a tradição, pela experimentação formal radical, pelo abandono da sintaxe tradicional e busca de uma linguagem revolucionária que espelhasse a modernidade industrial?",
         "opcoes": [
           "Segunda fase (1930-1945): Romance de 30 com foco em questões sociais e regionais",
           "Terceira fase (1945-1960): Geração de 45 com retorno à poesia mais elaborada e musical",
@@ -248,15 +256,15 @@
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:7820341c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -271,7 +279,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -284,25 +294,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual característica distingue a poesia de Manuel Bandeira (primeira fase) do movimento modernista de Oswald de Andrade no mesmo período?",
         "opcoes": [
-          "Bandeira busca harmonia lírica; Oswald utiliza provocação e paródia como método estético",
-          "Bandeira rejeita a modernidade; Oswald a celebra exclusivamente",
-          "Bandeira escreve para o público culto; Oswald para o popular",
-          "Bandeira usa verso livre; Oswald mantém forma tradicional"
+          "Bandeira busca harmonia lírica; Oswald usa a provocação e a paródia como método estético",
+          "Bandeira rejeita a modernidade; Oswald a celebra e a defende em seus manifestos",
+          "Bandeira escreve para o público culto e erudito; Oswald escreve para o público popular",
+          "Bandeira usa verso livre em seus poemas; Oswald mantém as formas fixas da tradição"
         ],
         "correta": 0,
-        "explicacao": "Embora ambos façam parte do Modernismo, suas poéticas diferem: Bandeira cultiva um lirismo melancólico e sensível, preservando certa harmonia; Oswald de Andrade utiliza provocação, paródia e desconstrução como ferramentas revolucionárias. Essa dualidade interna do Modernismo (coexistência de tendências lírico-reflexivas e radicalmente destrutivas) é foco do ensino em nível 4 de dificuldade."
+        "explicacao": "Embora ambos façam parte do Modernismo, suas poéticas diferem: Bandeira cultiva um lirismo melancólico e sensível, preservando certa harmonia; Oswald de Andrade utiliza provocação, paródia e desconstrução como ferramentas revolucionárias. Essa dualidade interna do Modernismo (coexistência de tendências lírico-reflexivas e radicalmente destrutivas) é o que torna a comparação relevante."
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:2625b28e",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -317,7 +327,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"
@@ -330,25 +342,25 @@
         "type": "multipla-escolha",
         "pergunta": "A obra 'Macunaíma', de Mário de Andrade, é frequentemente interpretada como uma alegoria do Brasil. Qual aspecto da narrativa melhor sustenta essa leitura?",
         "opcoes": [
-          "A jornada do herói reflete o desenvolvimento linear da nação",
-          "As características contraditórias de Macunaíma (inteligência e ingenuidade) espelham contradições culturais brasileiras",
-          "O final trágico do herói prediz inevitável declínio do país",
-          "A presença de personagens indígenas garante autenticidade documental"
+          "A jornada do herói reflete o desenvolvimento linear e progressivo da nação, da colônia à modernidade",
+          "As contradições do herói, entre inteligência e ingenuidade, espelham as da cultura brasileira",
+          "O final trágico do herói prediz o declínio inevitável do país ao longo de todo o século XX",
+          "A presença de personagens indígenas garante a autenticidade documental e histórica da narrativa"
         ],
         "correta": 1,
-        "explicacao": "Macunaíma é uma figura paradoxal que encarna contradições da identidade brasileira: comporta-se simultaneamente como herói e malandro, é inteligente mas ingênuo, sagaz mas imoral. Essa ambiguidade reflete a complexidade cultural do Brasil, que mistura tradições indígenas, heranças coloniais e modernidade. A leitura alegórica se sustenta nessas contradições, não na linearidade ou em determinismo. A dificuldade 4 requer análise interpretativa profunda."
+        "explicacao": "Macunaíma é uma figura paradoxal que encarna contradições da identidade brasileira: comporta-se simultaneamente como herói e malandro, é inteligente mas ingênuo, sagaz mas imoral. Essa ambiguidade reflete a complexidade cultural do Brasil, que mistura tradições indígenas, heranças coloniais e modernidade. A leitura alegórica se sustenta nessas contradições, não na linearidade ou em determinismo."
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:1f8b45bb",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -363,7 +375,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -382,11 +396,11 @@
           "Ambientação psicológica que projeta estados emocionais"
         ],
         "correta": 0,
-        "explicacao": "O fragmento se concentra em elementos naturais (raios solares, floresta, sons, silêncio matinal) que criam uma atmosfera poética de renovação e despertar. Essa ambientação privilegia a natureza para evocar sentimentos e estados líricos. Não há indicação histórica explícita, estrutura social ou projeção psicológica do personagem. A ambientação natural é predominante nesse nível 3."
+        "explicacao": "O fragmento se concentra em elementos naturais (raios solares, floresta, sons, silêncio matinal) que criam uma atmosfera poética de renovação e despertar. Essa ambientação privilegia a natureza para evocar sentimentos e estados líricos. Não há indicação histórica explícita, estrutura social ou projeção psicológica do personagem."
       },
       "meta": {
         "id": "gen:lit:caracteristicas-escolas-literarias:2821d052",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:caracteristicas-escolas-literarias"
         ],
@@ -394,7 +408,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -409,7 +423,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -439,8 +455,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -455,7 +471,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"

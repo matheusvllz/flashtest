@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "Durante a Revolução Industrial na Inglaterra, a população da mariposa Biston betularia passou de predominantemente clara para predominantemente escura em cerca de 50 anos. Qual fenômeno evolutivo explica essa mudança rápida?",
         "opcoes": [
-          "Adaptação ao clima mais frio das fábricas inglesas",
-          "Mutação induzida diretamente pelos gases poluentes",
-          "Aumento de alimentação diferenciada entre populações",
-          "Seleção natural favorecendo indivíduos mais camuflados nos troncos enegrecidos"
+          "Adaptação dos indivíduos ao clima mais frio das cidades cheias de fábricas",
+          "Mutação causada diretamente pelos gases poluentes emitidos pelas fábricas",
+          "Mudança na alimentação, que escurece a cor das mariposas em algumas populações",
+          "Seleção natural favorecendo as mariposas mais camufladas nos troncos escurecidos"
         ],
         "correta": 3,
         "explicacao": "Em troncos enegrecidos pela poluição, mariposas claras ficavam visíveis aos predadores enquanto as escuras se camuflavam. As escuras sobreviviam e se reproduziam mais, aumentando o alelo escuro na população. Nenhuma mariposa mudou de cor durante a vida: o que mudou foi a proporção de claras e escuras ao longo das gerações. É o mecanismo clássico de seleção natural: ambiente → pressão seletiva → mudança de frequência gênica entre gerações."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:aeccadea",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.617Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +55,25 @@
         "type": "multipla-escolha",
         "pergunta": "Observando as ilhas Galápagos, Darwin notou que tentilhões diferentes tinham bicos de tamanhos variados conforme o tamanho de sementes disponíveis. Como a seleção natural explica essa variação?",
         "opcoes": [
-          "Indivíduos com bicos adequados ao alimento conseguem maior sobrevivência e deixam mais descendentes",
-          "As sementes modificam geneticamente os bicos dos pássaros",
-          "Todos os tentilhões nascem com bicos iguais, mas modificam conforme comem",
-          "Cada tentilhão muda voluntariamente seu bico para caber as sementes"
+          "Indivíduos com bicos adequados ao alimento sobrevivem mais e deixam mais descendentes",
+          "As sementes modificam geneticamente os bicos das aves que se alimentam delas",
+          "As aves nascem com bicos iguais, mas os modificam conforme o tipo de semente que comem",
+          "Cada tentilhão muda o bico de propósito para que ele caiba nas sementes disponíveis"
         ],
         "correta": 0,
         "explicacao": "Tentilhões com bicos naturalmente maiores conseguem quebrar sementes grandes, comem melhor e sobrevivem mais. Tentilhões com bicos pequenos exploram sementes pequenas com eficiência. Cada grupo deixa mais descendentes com seus traços, aumentando a frequência daquele tamanho de bico na população, assim o ambiente 'seleciona' bicos de tamanhos diferentes entre ilhas."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:6c26b9f8",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -99,25 +103,25 @@
         "type": "multipla-escolha",
         "pergunta": "Cavalos modernos têm um único casco, enquanto alguns de seus ancestrais fósseis tinham vários dedos. Isso demonstra qual aspecto da seleção natural?",
         "opcoes": [
-          "Que animais extinguem espontaneamente quando não adaptados",
-          "Que estruturas se modificam ao longo de gerações porque indivíduos com variações mais vantajosas deixam mais descendentes",
-          "Que dedos extras eram inúteis, então desapareceram imediatamente",
-          "Que cavalos escolheram ter um casco para ficar mais rápidos"
+          "Os animais se extinguem por conta própria quando deixam de estar bem adaptados ao ambiente em que vivem",
+          "As estruturas mudam ao longo das gerações, porque quem tem variações vantajosas deixa mais filhotes",
+          "Os dedos extras eram inúteis e desapareceram de forma súbita, numa única geração",
+          "Os cavalos decidiram ficar com um só casco, porque assim conseguiam correr mais rápido do que os predadores"
         ],
         "correta": 1,
         "explicacao": "Ancestrais de cavalos com dedos reduzidos tinham cascos mais resistentes pra corrida em terreno seco, evitando lesões. Esses indivíduos sobreviviam melhor e deixavam mais filhotes com o traço de 'menos dedos'. Ao longo de milhões de anos, a população evoluiu pra um único casco, prova de que seleção natural atua sobre a variação natural já existente na população."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:e56debb1",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -145,25 +151,25 @@
         "type": "multipla-escolha",
         "pergunta": "Insetos que vivem em plantas verdes frequentemente têm coloração verde, enquanto os que vivem em plantas avermelhadas têm cor avermelhada. Por que a seleção natural favorece esses padrões?",
         "opcoes": [
-          "Insetos mudam de cor conscientemente para se adaptar",
-          "A cor da planta transpassa para o inseto através de consumo",
-          "Indivíduos camuflados escapam melhor de predadores e deixam mais descendentes com aquela cor",
-          "Todas as cores de inseto são igualmente visíveis aos predadores"
+          "Os insetos mudam de cor de propósito para se adaptar à planta onde vivem",
+          "A cor da planta passa para o inseto por meio da alimentação e altera os genes dele",
+          "Os insetos camuflados escapam mais dos predadores e deixam mais descendentes com aquela cor",
+          "As cores dos insetos são igualmente visíveis para os predadores em qualquer planta"
         ],
         "correta": 2,
         "explicacao": "Insetos verdes em plantas verdes não são vistos por predadores: conseguem se alimentar e reproduzir. Insetos verdes em plantas vermelhas são detectados e comidos. Assim, cada ambiente 'seleciona' a cor mais camuflada, porque indivíduos dessa cor deixam mais filhotes vivos: a variação natural de cor é 'filtrada' pela predação entre gerações."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:4ed876e4",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +199,17 @@
         "type": "multipla-escolha",
         "pergunta": "Bactérias expostas a antibióticos morrem em massa, mas após 10 gerações a população cresce novamente, resistindo ao mesmo antibiótico. A mutação que causa resistência surgiu antes ou depois da exposição ao antibiótico?",
         "opcoes": [
-          "Simultaneamente durante a exposição",
-          "Mutações nunca conferem resistência em bactérias",
-          "Sempre depois, causada pelos danos do antibiótico",
-          "Antes — alguns indivíduos já nasciam com mutações de resistência, que foram selecionados quando o antibiótico eliminou os demais"
+          "Durante a exposição, porque o antibiótico faz as bactérias mutarem no mesmo instante",
+          "Não foi necessária mutação alguma, porque as bactérias aprendem a resistir com o uso repetido",
+          "Depois da exposição, porque os danos do antibiótico causaram a mutação de resistência",
+          "Antes da exposição: alguns indivíduos já tinham a mutação, e o antibiótico selecionou os sobreviventes"
         ],
         "correta": 3,
         "explicacao": "Numa população bacteriana grande, a variação genética pré-existente inclui, raramente, alguns mutantes resistentes. O antibiótico mata a maioria, mas os resistentes sobrevivem, se reproduzem rápido e dominam a população em poucas gerações. O antibiótico não 'causa' a mutação, apenas seleciona mutantes que já existiam. Experimentos clássicos, como o de Luria e Delbrück e o das placas-réplica de Lederberg, mostraram que a resistência surge ao acaso, antes do contato com o agente."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:e4445391",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -237,17 +247,17 @@
         "type": "multipla-escolha",
         "pergunta": "As nadadeiras anteriores das baleias têm ossos que correspondem aos do braço e dos dedos de mamíferos terrestres. Se baleias evoluíram de mamíferos terrestres, como explicar essas estruturas aparentemente iguais?",
         "opcoes": [
-          "Os ossos mudaram forma conforme a vida aquática, mantendo a estrutura básica do ancestral",
-          "Baleias usaram mais os nados e desenvolveram ossos de braço",
-          "Essas estruturas não têm relação evolutiva nenhuma",
-          "Baleias nunca foram terrestres, essas semelhanças são coincidência"
+          "Os ossos vêm do ancestral terrestre e mudaram de forma com a vida na água, mantendo o plano geral",
+          "As baleias usaram mais os braços para nadar e, por isso, desenvolveram ossos de braço",
+          "Essas estruturas parecidas surgiram sem relação evolutiva entre os dois grupos de mamíferos",
+          "As baleias não descendem de animais terrestres, e as semelhanças ósseas são só coincidência entre grupos"
         ],
         "correta": 0,
         "explicacao": "Ossos homólogos na nadadeira da baleia e no braço de mamíferos terrestres (úmero, rádio, ulna e falanges em posições correspondentes) indicam herança de um ancestral comum terrestre. Ao longo de muitas gerações, a seleção natural favoreceu variações em que esses ossos ficaram mais curtos e achatados, formando a nadadeira. A 'receita' ancestral permaneceu, mas foi moldada pela seleção para a vida aquática: nenhuma baleia mudou os próprios ossos por usá-los mais."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:73b2d057",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
@@ -255,7 +265,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -283,17 +295,17 @@
         "type": "multipla-escolha",
         "pergunta": "Dois predadores diferentes, tubarão (peixe) e golfinho (mamífero), têm corpo hidrodinâmico muito similar, apesar de ancestrais distantes. Que nome recebe esse padrão evolutivo?",
         "opcoes": [
-          "Homologia direta entre tubarão e golfinho",
-          "Evolução paralela, pois seguem caminho idêntico",
-          "Convergência evolutiva — respostas similares a pressões seletivas similares (água) em linhagens não relacionadas",
-          "Divergência evolutiva clássica"
+          "Homologia, pois o corpo hidrodinâmico veio de um ancestral comum próximo dos dois animais",
+          "Evolução paralela, pois as duas linhagens seguiram exatamente o mesmo caminho evolutivo",
+          "Convergência evolutiva, em que linhagens distantes respondem de modo parecido à mesma pressão seletiva",
+          "Divergência evolutiva, em que uma linhagem se separa em espécies cada vez mais diferentes entre si"
         ],
         "correta": 2,
         "explicacao": "Tubarão e golfinho têm um ancestral comum muito distante. Ambos vivem na água e enfrentam a mesma pressão seletiva: reduzir o atrito e nadar rápido. A seleção natural agiu sobre linhagens diferentes (um peixe de esqueleto cartilaginoso e um mamífero de esqueleto ósseo) e chegou a uma forma parecida: corpo fusiforme e hidrodinâmico. Isso é convergência: estruturas análogas, não homólogas. Evolução paralela se aplica a linhagens próximas, e divergência é o contrário (parentes que ficam diferentes)."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:f86cdb2b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
@@ -301,7 +313,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -329,25 +343,25 @@
         "type": "multipla-escolha",
         "pergunta": "Duas populações de uma mesma espécie têm alelos diferentes para coloração. A população A está em habitat denso de predadores; população B em habitat com poucos predadores. Qual predição faz a seleção natural?",
         "opcoes": [
-          "Ambas populações têm frequência de alelos idêntica",
-          "População A evolui preferindo cores camufladas (pressão alta); B mantém cores variadas (sem pressão forte)",
-          "Cor não influencia sobrevivência nunca",
-          "População B fica mais vermelha porque tem mais luz"
+          "As duas populações terão frequências de alelos idênticas, pois são da mesma espécie",
+          "A população A tende a favorecer cores camufladas, e a B mantém cores mais variadas",
+          "A cor não influencia a sobrevivência, então a seleção natural não atua sobre ela",
+          "A população B fica mais vermelha, porque o habitat dela recebe mais luz durante o dia"
         ],
         "correta": 1,
         "explicacao": "Seleção natural depende do contexto: age diferente conforme o ambiente. Onde há muitos predadores, indivíduos camuflados sobrevivem e se reproduzem bem mais que os outros, e a variação de cor diminui (seleção forte). Com poucos predadores, a cor pesa pouco na sobrevivência, e várias cores continuam na população (polimorfismo). Essa diferença de pressão seletiva entre ambientes explica por que populações da mesma espécie divergem."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:39a9d21d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-02"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +391,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma espécie de sapo vive em lagoas com musgo verde. Sapos de cor verde escapam de aves predadoras melhor que sapos marrons. Qual traço a seleção natural favorecerá em gerações sucessivas?",
         "opcoes": [
-          "Cor verde, pois indivíduos verdes sobrevivem e deixam mais descendentes verdes",
-          "Ambas igualmente",
-          "Cor preta, por ser ainda melhor camuflada",
-          "Cor marrom, porque é rara"
+          "Cor verde, pois os indivíduos verdes sobrevivem e deixam mais descendentes verdes",
+          "Ambas as cores se mantêm iguais, porque a seleção natural não distingue os sapos",
+          "Cor preta, porque uma cor mais escura camufla ainda melhor os sapos entre o musgo",
+          "Cor marrom, porque é a cor mais rara e por isso os predadores não a procuram"
         ],
         "correta": 0,
         "explicacao": "Sapos verdes ficam quase invisíveis no musgo: as aves comem mais sapos marrons. Sapos verdes sobrevivem mais e deixam filhotes verdes. Ao longo de gerações, os alelos para cor verde aumentam enquanto os de cor marrom diminuem. Esse é o mecanismo central da seleção natural: 'sucesso reprodutivo diferencial'. O traço que favorece a sobrevivência se espalha porque seus portadores deixam mais descendentes."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:1e8222ec",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -421,25 +439,25 @@
         "type": "multipla-escolha",
         "pergunta": "Algumas borboletas evitam predadores imitando a aparência de espécies tóxicas. Como a seleção natural explica a evolução dessa imitação?",
         "opcoes": [
-          "Borboletas aprendem a parecer com espécies tóxicas",
-          "Indivíduos que casualmente se parecem com espécies tóxicas não são comidos; deixam mais descendentes com traço similar",
-          "Espécies tóxicas ensinam imitação",
-          "É puro acaso, sem seleção"
+          "As borboletas aprendem a imitar as espécies tóxicas e passam esse aprendizado para os filhotes",
+          "As que por acaso se parecem com espécies tóxicas são menos comidas e deixam mais descendentes",
+          "As espécies tóxicas ensinam as outras borboletas a imitar a sua aparência",
+          "A imitação surge só por acaso, sem que a seleção natural tenha qualquer papel nisso"
         ],
         "correta": 1,
         "explicacao": "Predadores aprendem que borboletas tóxicas são perigosas. Borboletas imitadoras mais parecidas com as tóxicas são evitadas por engano: o predador as confunde. Essas imitadoras vivem mais, se reproduzem mais e passam adiante os genes da 'boa imitação'. Ao longo de gerações, a população fica cada vez mais parecida com a espécie tóxica. É o mimetismo, moldado pela seleção feita pelos predadores."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:cc69ffe1",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +472,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-02"
         },
         "examProfiles": [
           "enem"
@@ -467,25 +487,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um ambiente oferece alimento abundante no alto (copas de árvores). Indivíduos com pescoço mais longo conseguem forragear melhor. Como a seleção natural moldará a população?",
         "opcoes": [
-          "Pescoços ficarão sempre iguais",
-          "Alguns indivíduos passam a crescer o pescoço na vida — seleção não atua",
-          "Frequência de alelos para pescoço longo aumenta, população média fica com pescoço mais longo",
-          "Pescoço encurta porque ambiente muda"
+          "Os pescoços permanecem do mesmo tamanho ao longo das gerações, porque a seleção não atua",
+          "Os indivíduos esticam o pescoço durante a vida e passam isso aos filhotes, sem seleção natural",
+          "A frequência dos alelos para pescoço longo aumenta, e o pescoço médio da população fica maior",
+          "O pescoço da população encurta ao longo das gerações, porque o ambiente muda com o tempo"
         ],
         "correta": 2,
         "explicacao": "Indivíduos que nascem com alelos para pescoço longo alcançam a comida das copas: comem mais, sobrevivem melhor e deixam mais filhotes, que herdam esses alelos. Ao longo de gerações, os alelos de pescoço longo ficam mais frequentes e a média da população aumenta. A seleção natural não altera o corpo de um indivíduo durante a vida (essa ideia é o lamarckismo); ela muda a frequência de alelos na população entre gerações."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:a9250298",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +520,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -513,17 +535,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um inseto herbívoro vive sobre plantas que desenvolvem toxinas defensivas. Alguns insetos têm mutações que neutralizam essas toxinas no tubo digestivo, outros não. Qual padrão evolutivo esperamos?",
         "opcoes": [
-          "Insetos sensíveis a toxinas morrem ou não se reproduzem; frequência de mutantes defensores aumenta gradualmente",
-          "Ambos grupos evoluem juntos sem mudança",
-          "Plantas sempre ganham a corrida evolutiva",
-          "Toxinas são neutras para insetos"
+          "Os insetos sensíveis deixam menos descendentes e a resistência às toxinas fica mais comum",
+          "Os dois grupos permanecem sem mudança, porque as mutações não influenciam a sobrevivência",
+          "As plantas ganham a corrida evolutiva, porque produzem toxinas novas mais rápido do que os insetos mudam",
+          "As toxinas passam a ser neutras para os insetos, porque eles se acostumam com a exposição"
         ],
         "correta": 0,
         "explicacao": "Plantas com toxinas se defendem melhor; insetos capazes de neutralizá-las conseguem comer e se reproduzir. Insetos sem essa defesa morrem envenenados ou deixam menos descendentes, então os alelos de resistência ficam mais frequentes. Isso cria uma 'corrida armamentista': plantas com toxinas novas são favorecidas, depois insetos com novas defesas, num ciclo contínuo. Cada rodada é seleção natural: um exemplo clássico de coevolução antagonística."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:037774b6",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
@@ -531,7 +553,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +568,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -559,17 +583,17 @@
         "type": "multipla-escolha",
         "pergunta": "Uma espécie de ave tem bicos pequenos e grandes em frequência similar (polimorfismo). Investigadores observam que em anos secos, bicos grandes comem melhor sementes duras; em anos úmidos, bicos pequenos prosperam comendo sementes macias. Qual efeito isso tem no polimorfismo?",
         "opcoes": [
-          "Polimorfismo desaparece — um traço sempre ganha",
-          "Seleção flutuante: alternância de vantagem mantém ambos alelos em frequência similar ao longo do tempo",
-          "Bicos médios evoluem",
-          "Clima não influencia seleção"
+          "O polimorfismo desaparece, porque um dos traços acaba sendo fixado pela seleção",
+          "A seleção muda de direção conforme o ano, e isso mantém os dois tipos de bico na população",
+          "Cada ave muda o tamanho do bico durante a vida, conforme o tipo de semente disponível em cada ano",
+          "O clima não altera a seleção, e a variação do bico se deve à mutação ao acaso"
         ],
         "correta": 1,
         "explicacao": "Quando a seleção 'bate ping-pong' entre traços (favorecendo bicos grandes em alguns anos e pequenos em outros), nenhum alelo se fixa completamente. A seleção flutuante mantém o polimorfismo porque o traço vantajoso muda conforme o ambiente. Se os anos secos fossem permanentes, bicos grandes tenderiam a se fixar. Como o clima oscila, a população mantém a variação. Isso mostra que a seleção natural nem sempre leva à fixação de um único traço."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:bdbf1036",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
@@ -577,7 +601,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +616,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -605,17 +631,17 @@
         "type": "multipla-escolha",
         "pergunta": "Parte de uma população de peixes passa a desovar em águas rasas, em vez de profundas, e a acasalar só entre si. Ao longo de muitos anos, os dois grupos divergem em cor, tamanho de nadadeira e até estrutura óssea. Qual foi a causa primária?",
         "opcoes": [
-          "Cor não tem relação com habitat",
-          "Decisão consciente dos peixes mudar de habitat",
-          "Isolamento reprodutivo (mudança de comportamento) criou populações separadas — cada uma sofreu seleção e deriva diferentes",
-          "Habitat raso causa mutações em tamanho de nadadeira"
+          "A mudança de cor veio primeiro e levou os peixes a escolher águas diferentes",
+          "Os peixes decidiram, de forma consciente, mudar de habitat e também mudar o formato do corpo",
+          "O isolamento reprodutivo separou as populações, e cada uma sofreu seleção e deriva próprias",
+          "O ambiente raso provocou mutações dirigidas para nadadeiras de tamanho e forma diferentes"
         ],
         "correta": 2,
         "explicacao": "A mudança de comportamento (desova em águas rasas) reduziu o cruzamento com os peixes de águas profundas: isolamento reprodutivo. Sem fluxo gênico, cada grupo acumula mutações próprias e sofre pressões seletivas distintas (luz, temperatura, predação diferentes no raso e no fundo). Gerações de isolamento levam a divergência em vários traços. A especiação frequentemente começa com uma barreira reprodutiva (geográfica, comportamental ou temporal) que interrompe o fluxo gênico."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:6e807023",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
@@ -623,7 +649,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +664,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -651,25 +679,25 @@
         "type": "multipla-escolha",
         "pergunta": "Numa população de besouros que habitam troncos de árvores, alguns indivíduos nascem com asas mais largas que facilitam voos mais longos, enquanto outros têm asas menores. Numa região afetada por seca severa, a vegetação se espalha e os troncos se distanciam. Ao longo de gerações, a frequência de besouros com asas largas aumenta nessa população. Como a seleção natural explica essa mudança?",
         "opcoes": [
-          "A seleção natural força a população a evoluir conscientemente para o tamanho de asa ideal",
-          "Os besouros com asas menores desenvolvem asas maiores durante a vida para se adaptar",
-          "Besouros com asas largas conseguem se deslocar entre troncos distantes, deixam mais descendentes, transmitindo o alelo para asas largas com maior frequência",
-          "O ambiente causa mutações que produzem asas maiores em todos os indivíduos da população"
+          "A seleção natural leva a população a evoluir de propósito até o tamanho de asa considerado ideal",
+          "Os besouros de asas menores desenvolvem asas maiores durante a vida para se adaptar",
+          "Besouros de asas largas alcançam troncos distantes, deixam mais descendentes e passam o alelo adiante",
+          "A seca causa mutações que produzem asas maiores em cada indivíduo da população"
         ],
         "correta": 2,
         "explicacao": "Seleção natural atua sobre a variação que já existe na população. Indivíduos com asas largas conseguem alcançar recursos em troncos distantes, sobrevivem melhor e reproduzem mais. Com o tempo, o alelo para asas largas fica mais frequente. O indivíduo não muda; a população muda porque os portadores do alelo vantajoso deixam mais descendentes."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:0a3197f9",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +712,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.098Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -697,25 +727,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma espécie de salmão passa a maior parte de sua vida no oceano, mas retorna a rios de água doce para reproduzir. Estudos recentes detectam que, em rios com maior turbidez (água turva), machos com coloração vermelha brilhante foram perdendo oportunidades de acasalamento para machos com cores menos chamativas. Como a seleção natural atua nesse cenário?",
         "opcoes": [
-          "Os machos com cor vermelha naturalmente desaparecem porque a água os descolore ao longo do tempo",
-          "A seleção natural não atua nesse caso porque a cor não afeta a sobrevivência, apenas o acasalamento",
-          "A cor vermelha brilhante é selecionada porque atrai mais fêmeas em qualquer ambiente",
-          "Em água turva, cores menos visíveis (menos chamativas) permitem sucesso reprodutivo maior, aumentando a frequência de alelos para cores discretas naquela população"
+          "Os machos vermelhos desaparecem porque a água turva descolore a pele deles com o tempo",
+          "A seleção natural não atua, porque a cor afeta o acasalamento e não a sobrevivência",
+          "A cor vermelha brilhante é favorecida, porque atrai mais fêmeas em qualquer tipo de água ou de luz",
+          "Na água turva, cores discretas dão mais sucesso reprodutivo, e os alelos para elas ficam mais comuns"
         ],
         "correta": 3,
         "explicacao": "Seleção natural favorece traços que aumentam sucesso reprodutivo, não só sobrevivência (é seleção sexual). Em água turva, cores discretas deixam o indivíduo menos visível a predadores e aumentam chances de acasalar. Cores brilhantes reduzem sucesso reprodutivo. Ao longo de gerações, alelos para cores discretas ficam mais frequentes."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:03272373",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -730,7 +760,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.099Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -743,25 +775,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma população de insetos vive numa floresta onde há várias plantas hospedeiras com toxinas distintas. Alguns indivíduos da população conseguem digerir a toxina A, outros conseguem digerir a toxina B, e a maioria consegue digerir ambas mas com menor eficiência. Após uma doença de plantas que elimina 80% das plantas com toxina A, a proporção de insetos que digerem apenas a toxina B aumenta significativamente. Qual mecanismo explica essa mudança?",
         "opcoes": [
-          "Insetos que digerem toxina A morrem de fome porque sua planta hospedeira desapareceu; insetos que digerem toxina B sobrevivem e deixam mais descendentes, aumentando a frequência do alelo B",
-          "A toxina A se transforma em toxina B, causando mudança direta no genótipo de todos os insetos",
-          "A doença de plantas causa uma mutação que converte alelos para digerir toxina A em alelos para digerir toxina B",
-          "Os insetos que digerem toxina A desenvolvem a capacidade de digerir toxina B rapidamente"
+          "Os insetos que digerem a toxina A ficam sem alimento e os que digerem a B deixam mais descendentes",
+          "A toxina A se transforma em toxina B e, com isso, muda o genótipo dos insetos da população",
+          "A doença das plantas causa mutações que trocam os alelos da toxina A pelos alelos da toxina B",
+          "Os insetos que digerem a toxina A aprendem rapidamente, durante a vida, a digerir também a B"
         ],
         "correta": 0,
         "explicacao": "É seleção natural por redução de habitat e mudança na disponibilidade de recursos. Indivíduos com alelos para digerir toxina B (que está abundantemente disponível) sobrevivem e deixam mais descendentes. O alelo B fica mais frequente não porque muta, mas porque seus portadores deixam mais descendentes na geração seguinte."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:71178154",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -776,7 +808,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.099Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -787,27 +821,27 @@
       "id": "gen:bio:evolucao-selecao-natural:b5a116d5",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Observando um banco de dados genético, você encontra que uma espécie de roedor possui alguns indivíduos com pelagem escura e outros com pelagem clara. A pelagem é controlada por genes, e a cor clara é recessiva. Em uma ilha onde predadores visuais são abundantes, qual mudança na frequência alélica você esperaria encontrar em algumas gerações?",
+        "pergunta": "Observando um banco de dados genético, você encontra uma espécie de roedor com alguns indivíduos de pelagem escura e outros de pelagem clara. A pelagem é controlada por genes, e a cor clara é recessiva. Numa ilha de solo escuro onde predadores visuais são abundantes, qual mudança na frequência alélica você esperaria encontrar em algumas gerações?",
         "opcoes": [
-          "Aumento da frequência do alelo recessivo porque pelagem clara é mais bonita",
-          "Diminuição da frequência do alelo recessivo porque roedores claros são mais vistos e predados",
-          "Nenhuma mudança, porque a cor da pelagem não afeta a sobrevivência",
-          "Aumento rápido da frequência do alelo recessivo porque confunde predadores"
+          "A frequência do alelo recessivo aumenta, porque a pelagem clara é considerada mais bonita",
+          "A frequência do alelo recessivo diminui, porque os roedores claros são mais vistos e predados",
+          "A frequência do alelo recessivo não muda, porque a cor da pelagem não afeta a sobrevivência",
+          "A frequência do alelo recessivo aumenta com rapidez, porque a cor clara confunde os predadores"
         ],
         "correta": 1,
         "explicacao": "Roedores com pelagem clara (genótipo recessivo) são mais visíveis a predadores e ficam presas com mais frequência, deixando menos descendentes. Os escuros sobrevivem melhor e transmitem o alelo dominante mais vezes para a geração seguinte. A frequência do alelo recessivo diminui ao longo das gerações."
       },
       "meta": {
         "id": "gen:bio:evolucao-selecao-natural:b5a116d5",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:evolucao-selecao-natural"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -822,7 +856,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.099Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"

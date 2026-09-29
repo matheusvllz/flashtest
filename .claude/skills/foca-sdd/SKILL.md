@@ -16,7 +16,7 @@ Você está no repo do Foca. Aqui **a spec em `docs/` é a fonte da verdade**; s
 
 ## 2. Escolha as skills
 
-Classifique a tarefa em `docs/ai/SKILL-ROUTING.md` §2 e carregue **no máximo 3 primárias** + **1 revisão** no fim. Nunca as cinco de design juntas. Marketing e GSAP estão desativados por padrão (ver §6 do roteamento).
+Classifique a tarefa em `docs/ai/SKILL-ROUTING.md` §2 e carregue **no máximo 3 primárias** + **1 revisão** no fim. Nunca as cinco de design juntas. Marketing e GSAP estão desativados por padrão (ver §6 do roteamento). Para escrita, o roteamento detalhado está em `SKILL-ROUTING.md` §2.1: skill só quando traz algo que o guia não traz.
 
 ## 3. Overrides (valem mais que o padrão das skills)
 
@@ -25,7 +25,7 @@ Classifique a tarefa em `docs/ai/SKILL-ROUTING.md` §2 e carregue **no máximo 3
 - Sem commit, push, merge ou worktree sem pedido. Nunca reescrever histórico publicado (Lovable).
 - Sem dependência nova (GSAP, Motion, analytics, SDK) sem spec aprovada. Sem analytics externo nem coleta de dados de menores.
 - Errar uma questão nunca abre nem envia mensagem ao tutor automaticamente.
-- Copy: voz de `docs/20` §7.1; strings em `src/lib/copy.ts` + inventário `docs/21`.
+- Copy: ler `docs/COPY.md` (Quick Context e roteamento de escrita) antes de mudar texto do aluno; norma de voz `docs/20` §7.1; strings em `src/lib/copy.ts` + inventário `docs/21`. Nenhuma skill de copy em conteúdo pedagógico.
 
 ## 4. Feche o ciclo
 

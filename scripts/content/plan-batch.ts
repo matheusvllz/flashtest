@@ -142,7 +142,7 @@ async function main() {
   const skills = activeSkills().map((s) => ({ id: s.id, status: s.status }));
   const banco = await conteudoDoBanco();
   const items = [
-    ...itemIndex().flatMap((entry) =>
+    ...itemIndex().filter((entry) => !entry.retired).flatMap((entry) =>
       entry.skills.map((skillId) => ({
         skillId,
         difficulty: entry.difficulty,

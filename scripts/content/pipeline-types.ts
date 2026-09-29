@@ -19,7 +19,13 @@ export interface CandidateStages {
   solution?: { model: string; answerIndex: number | number[]; confidence: number; reasoning: string };
   verification?: { agree: boolean; escalated: boolean; finalAnswer?: number | number[]; judge?: string; note?: string };
   humanized?: { model: string; accepted: boolean; rejectedBecause?: string[] };
-  validation?: { ok: boolean; issues: string[] };
+  /** `warnings`/`excecoes`: alertas de forma de `validate.ts` (docs/36 §G.7) — nunca bloqueiam `ok`; os de severidade "alta" exigem aprovação explícita pra publicar. */
+  validation?: {
+    ok: boolean;
+    issues: string[];
+    warnings?: Array<{ regra: string; severidade: "alta" | "media" | "info"; detalhe: string }>;
+    excecoes?: Array<{ regra: string; severidade: "alta" | "media" | "info"; detalhe: string }>;
+  };
   humanReview?: { reviewer: string; verdict: "aprova" | "reprova"; note?: string };
 }
 

@@ -23,6 +23,19 @@ const ensino = {
 } as const;
 
 describe("aulas geradas (docs/31 F11.3)", () => {
+  test("item retirado (docs/36 T-07.6) nunca entra numa aula nova: com ele fora sobram < 6 → null; com sobra, ele não é escolhido", () => {
+    const oito = [3, 3, 4, 4, 5, 3, 4, 3].map((d, i) => item(`i${i}`, d));
+    // 8 itens usáveis, 3 retirados → 5 → não dá aula.
+    const comRetirados = oito.map((it, i) => (i < 3 ? ({ ...it, retired: true } as ItemPublicado) : it));
+    expect(escolherQuestoes(comRetirados)).toBeNull();
+    // 10 itens, 2 retirados: escolhe normalmente e nenhum dos retirados aparece (nem em questões, nem em revisão).
+    const dez = [3, 3, 4, 4, 5, 3, 4, 3, 3, 4].map((d, i) => item(`j${i}`, d));
+    const retirados = new Set(["j0", "j4"]);
+    const e = escolherQuestoes(dez.map((it) => (retirados.has(it.id) ? ({ ...it, retired: true } as ItemPublicado) : it)))!;
+    const usados = [...e.questoes.map((q) => q.exerciseId), ...e.revisao];
+    for (const id of retirados) expect(usados).not.toContain(id);
+  });
+
   test("menos de 6 itens usáveis → null (diagnóstico não conta)", () => {
     const itens = [1, 2, 3, 3, 4].map((d, i) => item(`i${i}`, d)).concat(item("d1", 2, ["diagnostico"]));
     expect(escolherQuestoes(itens)).toBeNull();

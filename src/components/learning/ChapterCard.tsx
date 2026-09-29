@@ -57,6 +57,7 @@ export function ChapterCard({
   return (
     <section className="card-soft overflow-hidden">
       <button
+        type="button"
         onClick={() => setAberto((v) => !v)}
         className="flex w-full items-center justify-between gap-3 px-4 py-3.5"
         aria-expanded={aberto}

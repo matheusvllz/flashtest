@@ -1,0 +1,547 @@
+{
+  "lote": "bio-qui-fis-lote-04",
+  "materias": [
+    "bio",
+    "qui",
+    "fis"
+  ],
+  "revisor": "ia-delegada:sonnet",
+  "revisadoEm": "2026-09-28",
+  "contagemPorAcao": {
+    "melhorar-enunciado": 2,
+    "melhorar-alternativas": 3,
+    "manter": 9
+  },
+  "itens": [
+    {
+      "id": "gen:bio:membrana-estrutura:e39ba25c",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 1.044,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.579,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Amostra do estrato 2 (razão 1,58; correta 120 caracteres contra 52 a 76). O enunciado terminava em 'Explique...' (imperativo numa questão objetiva); passou a perguntar 'Qual fenômeno...'. Alternativas reescritas com 70 a 95 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:f2f2c956",
+      "arquivo": "src/content/banco/qui/qui-estrutura-atomica-modelos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 0.973,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.842,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Amostra do estrato 2 (razão 1,84; a correta tinha 35 caracteres contra 15 a 19 nas outras). 'Definitivamente igual' trocado por 'necessariamente igual'; alternativas no formato propriedade + porquê, com 66 a 72 caracteres. Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:a2f24d07",
+      "arquivo": "src/content/banco/bio/bio-fisiologia-humana-sistemas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "metricas": {
+        "razaoTamanho": 0.95,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.532,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Expansão do estrato 2 de biologia para 100% (as 5 amostras tiveram ação em 100% dos itens, acima de 20%). Correta 110 caracteres contra 70 a 78. Reescritas com 93 a 102 caracteres, no mesmo formato (via neural; hormônio e origem). Gabarito A mantido; explicação continua coerente.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:292b2ac4",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 0.976,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.976,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "atencao",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1 conferido: o consumidor primário (pequeno peixe) responde primeiro. Forma equilibrada (razão 0,98). R4: os distratores A e B são fracos, mas representam controle de cima para baixo e salto de níveis; sem falha R1 a R3.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:32d614e4",
+      "arquivo": "src/content/banco/bio/bio-genetica-leis-mendel.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 0.8,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.8,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1/R2 conferidos: X^d do pai + X^D da mãe, filha portadora e normal. R7: dificuldade 4 acima do raciocínio pedido (cruzamento único, sem probabilidade); não reclassificada (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-funcao:533f1126",
+      "arquivo": "src/content/banco/bio/bio-membrana-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 1.067,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.067,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1/R2 conferidos: contra o gradiente, com proteína e gasto de ATP, é transporte ativo. Forma equilibrada.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:0c4ff9c0",
+      "arquivo": "src/content/banco/fis/fis-eletricidade-circuitos-basicos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1 conferido: I = 60/120 = 0,5 A. Distratores 2 A (V/P), 60 A e 7200 A (P x V) são erros de fórmula.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:eletricidade-circuitos-basicos:c0dcac4c",
+      "arquivo": "src/content/banco/fis/fis-eletricidade-circuitos-basicos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1 conferido: paralelo de 20 e 20 ohms = 10 ohms, I = 4 A. Distrator 1 A corresponde à ligação em série (40/40); 2 A a uma lâmpada só.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:energia-trabalho-conservacao:5d5d4fd0",
+      "arquivo": "src/content/banco/fis/fis-energia-trabalho-conservacao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 0.8,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.8,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1 conferido: E_c = m g h = 1 x 10 x 5 = 50 J. Alternativas numéricas parelhas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estequiometria-calculo-mols:4fc40e66",
+      "arquivo": "src/content/banco/qui/qui-estequiometria-calculo-mols.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 0.556,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.556,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1/R2 conferidos: 14/28 = 0,5 mol de N2 e proporção 1:2, logo 1 mol de NH3. Distratores 0,25 (divide por 2 de novo), 0,5 (ignora o coeficiente) e 2. R7: dificuldade 4 alta para dois passos diretos (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:a9308d80",
+      "arquivo": "src/content/banco/qui/qui-estrutura-atomica-modelos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1 conferido: Na+ tem 10 elétrons. R7: dificuldade 4 muito acima do raciocínio (uma subtração), igual a itens de dificuldade 1 da mesma habilidade; não reclassificada porque o b é estimado/calibrado (proposta no resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:qui:estrutura-atomica-modelos:e32507dd",
+      "arquivo": "src/content/banco/qui/qui-estrutura-atomica-modelos.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Amostra do estrato 3. R1 conferido: 17 prótons e carga -1 dão 18 elétrons. Alternativas parelhas; distratores erros de sinal.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": false,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    }
+  ]
+}

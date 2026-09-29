@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
+import { readFileSync } from "node:fs";
 import { validateExercise, type ValidateContext } from "../../scripts/content/validate";
+import { avisoPosicaoLote, avisosDeForma, metricasForma, parseExcecoes } from "../../scripts/content/qualidade-forma";
+import { isPublishable, temAvisoAlto } from "../../scripts/content/publish";
+import type { Candidate } from "../../scripts/content/pipeline-types";
 import type { Exercise, MultipleChoiceExercise } from "@/lib/lessons/types";
 
 /**
@@ -213,5 +217,248 @@ describe("validateExercise — item válido não gera nenhum issue", () => {
     const r = validateExercise(itemBase(), "mat:x", ctxOk);
     expect(r.ok).toBe(true);
     expect(r.issues).toEqual([]);
+  });
+});
+
+/**
+ * Warnings de qualidade de forma (docs/36 T-07.2, §G.7, RP-8): pista de tamanho/absolutismo/
+ * travessão/letra citada. Nunca bloqueiam `ok`; severidade e exceção registrável por id+regra.
+ */
+function itemDoBanco(arquivo: string, id: string): MultipleChoiceExercise {
+  const json = JSON.parse(readFileSync(`src/content/banco/${arquivo}`, "utf-8")) as {
+    items: Array<{ id: string; exercise: MultipleChoiceExercise }>;
+  };
+  const item = json.items.find((i) => i.id === id);
+  if (!item) throw new Error(`item ${id} não está em ${arquivo}`);
+  return item.exercise;
+}
+
+const regras = (r: { warnings: Array<{ regra: string }> }) => r.warnings.map((w) => w.regra);
+const sev = (r: { warnings: Array<{ regra: string; severidade: string }> }, regra: string) =>
+  r.warnings.find((w) => w.regra === regra)?.severidade;
+
+/** Exemplos do docs/35 §7.1 na versão original (antes da revisão da Fase 7), congelados em fixture. */
+function itemOriginalDocs35(id: string): MultipleChoiceExercise {
+  const json = JSON.parse(readFileSync("tests/unit/fixtures/itens-docs35-versao-original.json", "utf-8")) as {
+    items: Array<{ id: string; exercise: MultipleChoiceExercise }>;
+  };
+  const item = json.items.find((i) => i.id === id);
+  if (!item) throw new Error(`item ${id} não está no fixture`);
+  return item.exercise;
+}
+
+describe("validateExercise — warnings de forma: positivos (ids do docs/35 §7.1, versão original congelada)", () => {
+  const casos: Array<[string, string, string]> = [
+    ["bio/bio-membrana-estrutura.json", "gen:bio:membrana-estrutura:6553a1bf", "4.51"],
+    ["bio/bio-membrana-estrutura.json", "gen:bio:membrana-estrutura:5ae4f57c", "4.27"],
+    ["bio/bio-ecologia-relacoes-ecossistema.json", "gen:bio:ecologia-relacoes-ecossistema:b9bc002a", "4.30"],
+    ["bio/bio-organelas-funcao.json", "gen:bio:organelas-funcao:a655cd73", "3.92"],
+  ];
+  for (const [arquivo, id, razao] of casos) {
+    test(`${id}: tamanho-correta-maior alta (razão ${razao}), sem mudar ok`, () => {
+      const ex = itemOriginalDocs35(id);
+      const r = validateExercise(ex, "bio:x", { ...ctxOk, itemId: id });
+      expect(sev(r, "tamanho-correta-maior")).toBe("alta");
+      const w = r.warnings.find((x) => x.regra === "tamanho-correta-maior")!;
+      expect(w.detalhe).toContain(`razão ${razao}`);
+      // Compatibilidade do formato antigo: rule/message espelham regra/detalhe.
+      expect(w.rule).toBe(w.regra);
+      expect(w.message).toBe(w.detalhe);
+      // O aviso nunca é bloqueio: nenhum `issue` de tamanho de alternativa.
+      expect(r.issues.some((i) => i.rule.startsWith("tamanho-correta"))).toBe(false);
+    });
+  }
+
+  test("5ae4f57c também acusa absolutismo nos distratores; b9bc002a acusa travessão", () => {
+    const a = validateExercise(itemOriginalDocs35("gen:bio:membrana-estrutura:5ae4f57c"), "bio:x", ctxOk);
+    expect(regras(a)).toContain("absolutismo-distratores");
+    const b = validateExercise(
+      itemOriginalDocs35("gen:bio:ecologia-relacoes-ecossistema:b9bc002a"),
+      "bio:x",
+      ctxOk,
+    );
+    expect(regras(b)).toContain("travessao-alternativa");
+  });
+});
+
+describe("validateExercise — warnings de forma: negativos", () => {
+  test("item de matemática com correta curta e distratores do mesmo tamanho não gera aviso de forma", () => {
+    const r = validateExercise(itemBase({ opcoes: ["60", "70", "80", "50"], correta: 0 }), "mat:x", ctxOk);
+    expect(r.warnings).toEqual([]);
+    expect(r.excecoes).toEqual([]);
+  });
+
+  test("item base (alternativas de tamanhos parecidos) não gera aviso", () => {
+    expect(validateExercise(itemBase(), "mat:x", ctxOk).warnings).toEqual([]);
+  });
+});
+
+describe("avisosDeForma: limiares exatos de §G.7", () => {
+  const com = (correta: string, outras: string[]) => [correta, ...outras];
+  const nomes = (opcoes: string[], correta = 0, expl?: string) =>
+    avisosDeForma(opcoes, correta, expl).map((a) => `${a.regra}:${a.severidade}`);
+
+  test("razão 2,0 → alta; 1,5 → média; logo abaixo de 1,5 → nada", () => {
+    expect(nomes(com("a".repeat(20), ["b".repeat(10), "c".repeat(10), "d".repeat(10)]))).toContain("tamanho-correta-maior:alta");
+    expect(nomes(com("a".repeat(15), ["b".repeat(10), "c".repeat(10), "d".repeat(10)]))).toContain("tamanho-correta-maior:media");
+    expect(nomes(com("a".repeat(14), ["b".repeat(10), "c".repeat(10), "d".repeat(10)]))).not.toContain("tamanho-correta-maior:media");
+  });
+
+  test("a medida usa trim e colapso de espaços", () => {
+    const m = metricasForma(["  aa   bb  ", "aa bb", "cc dd", "ee ff"], 0)!;
+    expect(m.lenCorreta).toBe(5);
+    expect(m.razaoMaior).toBe(1);
+  });
+
+  test("correta ≤ 0,4 da menor incorreta → tamanho-correta-menor (média)", () => {
+    expect(nomes(com("ab", ["a".repeat(5), "b".repeat(5), "c".repeat(5)]))).toContain("tamanho-correta-menor:media");
+    expect(nomes(com("abc", ["a".repeat(5), "b".repeat(5), "c".repeat(5)]))).not.toContain("tamanho-correta-menor:media");
+  });
+
+  test("dispersão: coeficiente de variação > 0,6 → info", () => {
+    expect(nomes(com("a".repeat(4), ["b".repeat(4), "c".repeat(4), "d".repeat(40)]))).toContain("dispersao-tamanhos:info");
+    expect(nomes(com("a".repeat(10), ["b".repeat(11), "c".repeat(12), "d".repeat(13)]))).not.toContain("dispersao-tamanhos:info");
+  });
+
+  test("absolutismo: ≥ 2 incorretas e a correta sem → média; 1 só ou correta também com → nada", () => {
+    expect(nomes(["Depende do meio", "Nunca ocorre", "Sempre ocorre", "Em parte"])).toContain("absolutismo-distratores:media");
+    expect(nomes(["Depende do meio", "Nunca ocorre", "Ocorre às vezes", "Em parte"])).not.toContain("absolutismo-distratores:media");
+    expect(nomes(["Ocorre apenas no verão", "Nunca ocorre", "Sempre ocorre", "Em parte"])).not.toContain("absolutismo-distratores:media");
+    // palavra inteira: "todavia"/"sempreviva" não são absolutismo
+    expect(nomes(["Depende", "Todavia ocorre", "A sempreviva ocorre", "Em parte"])).not.toContain("absolutismo-distratores:media");
+  });
+
+  test("travessão (— e –) em alternativa → média", () => {
+    expect(nomes(["Ocorre — sempre", "Em parte", "Depende", "Nenhum"])).toContain("travessao-alternativa:media");
+    expect(nomes(["Ocorre 2–3 vezes", "Em parte", "Depende", "Outra"])).toContain("travessao-alternativa:media");
+    expect(nomes(["Ocorre-se", "Em parte", "Depende", "Outra"])).not.toContain("travessao-alternativa:media");
+  });
+
+  test("explicação cita letra ≠ gabarito → alta; cita a do gabarito → nada", () => {
+    const ops = ["Ocorre", "Em parte", "Depende", "Outra"];
+    expect(nomes(ops, 0, "A alternativa B está errada porque nada disso ocorre.")).toContain("explicacao-cita-alternativa-errada:alta");
+    expect(nomes(ops, 0, "A alternativa A está certa porque ocorre sempre.")).not.toContain("explicacao-cita-alternativa-errada:alta");
+    // "C = cinzento" (alelo) e letras soltas não são alternativa
+    expect(nomes(ops, 0, "O alelo C = cinzento domina; a opção A resume isso.")).not.toContain("explicacao-cita-alternativa-errada:alta");
+  });
+
+  test("item com afirmações rotuladas (A)/(B): as letras da explicação são do texto, não acusam (falso positivo conhecido)", () => {
+    const rotulado = itemBase({
+      pergunta:
+        "Qual das sentenças abaixo viola a norma culta da língua portuguesa? (A) Fazem dois anos que não a vejo. (B) Houve muitos erros na prova. (C) Haviam poucos alunos na sala.",
+      opcoes: ["Somente A", "A e C", "Somente B", "B e C"],
+      correta: 1,
+      explicacao:
+        "Violam a norma a sentença (A), com fazer no plural, e a sentença (C), com haver no plural. A sentença B está correta, então a resposta é a que reúne apenas A e C, sem nenhuma outra.",
+    });
+    const r = validateExercise(rotulado, "por:x", ctxOk);
+    expect(regras(r)).not.toContain("explicacao-cita-alternativa-errada");
+    // Sem o formato rotulado, a mesma explicação citando "alternativa A" com gabarito B acusaria.
+    expect(nomes(["Somente A", "A e C", "Somente B", "B e C"], 1, "A alternativa A está errada.")).toContain("explicacao-cita-alternativa-errada:alta");
+    expect(nomes(["Somente A", "A e C", "Somente B", "B e C"], 1, "A alternativa A está errada.")).not.toEqual([]);
+    expect(avisosDeForma(["a", "b", "c", "d"], 1, "A alternativa A está errada.", { ignorarLetras: true })).toEqual([]);
+  });
+
+  test("item sem como medir (uma alternativa, gabarito fora do intervalo) não quebra", () => {
+    expect(avisosDeForma(["só uma"], 0)).toEqual([]);
+    expect(avisosDeForma(["a", "b"], 5)).toEqual([]);
+  });
+});
+
+describe("avisoPosicaoLote", () => {
+  test("≥ 20 itens e uma posição acima de 40 % → info; exatamente 40 % ou lote pequeno → nada", () => {
+    const quarentaECinco = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3]; // 9/20 = 45 %
+    expect(avisoPosicaoLote(quarentaECinco)?.severidade).toBe("info");
+    const quarenta = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]; // 8/20 = 40 %
+    expect(avisoPosicaoLote(quarenta)).toBeNull();
+    expect(avisoPosicaoLote([0, 0, 0, 0, 0])).toBeNull();
+  });
+});
+
+describe("validateExercise — exceção registrada (falso positivo conhecido)", () => {
+  // Resposta numérica com unidade é legitimamente mais longa que os distratores curtos.
+  const numerica = itemBase({
+    opcoes: ["2,5 metros por segundo ao quadrado", "2", "5", "10"],
+    correta: 0,
+  });
+  const excecao = { id: "gen:mat:x:1", regra: "tamanho-correta-maior", motivo: "resposta numérica com unidade", registradoEm: "2026-09-28" };
+
+  test("sem exceção o aviso aparece; com id+regra ele sai de warnings e vai para excecoes", () => {
+    const sem = validateExercise(numerica, "mat:x", { ...ctxOk, itemId: "gen:mat:x:1" });
+    expect(sev(sem, "tamanho-correta-maior")).toBe("alta");
+
+    const com = validateExercise(numerica, "mat:x", { ...ctxOk, itemId: "gen:mat:x:1", excecoes: [excecao] });
+    expect(regras(com)).not.toContain("tamanho-correta-maior");
+    expect(com.excecoes.map((e) => e.regra)).toEqual(["tamanho-correta-maior"]);
+    expect(com.ok).toBe(sem.ok);
+  });
+
+  test("exceção de OUTRO id ou de OUTRA regra não suprime", () => {
+    const outroId = validateExercise(numerica, "mat:x", { ...ctxOk, itemId: "gen:mat:x:2", excecoes: [excecao] });
+    expect(sev(outroId, "tamanho-correta-maior")).toBe("alta");
+    const outraRegra = validateExercise(numerica, "mat:x", {
+      ...ctxOk,
+      itemId: "gen:mat:x:1",
+      excecoes: [{ ...excecao, regra: "travessao-alternativa" }],
+    });
+    expect(sev(outraRegra, "tamanho-correta-maior")).toBe("alta");
+  });
+
+  test("parseExcecoes exige id, regra e motivo não vazio", () => {
+    expect(parseExcecoes([])).toEqual([]);
+    expect(parseExcecoes([excecao])).toHaveLength(1);
+    expect(() => parseExcecoes([{ id: "x", regra: "y", motivo: "  " }])).toThrow();
+    expect(() => parseExcecoes({} as unknown)).toThrow();
+  });
+});
+
+describe("validateExercise — quase-duplicata (bigramas ≥ 0,4, só informa)", () => {
+  test("enunciado parecido mas abaixo do bloqueio de 5-gramas → info, ok segue true", () => {
+    const novo = itemBase({
+      pergunta:
+        "Calcule o volume de um cilindro com raio de 3 metros e altura de 10 metros, usando pi aproximado por 3,14 na conta final.",
+    });
+    const existente =
+      "Calcule o volume de um cilindro com raio de 5 metros e altura de 8 metros, usando pi aproximado por 3,14 na conta final.";
+    const r = validateExercise(novo, "mat:x", { ...ctxOk, existingStatementsBySkill: () => [existente] });
+    expect(r.issues.some((i) => i.rule === "duplicata-semantica")).toBe(false);
+    expect(sev(r, "quase-duplicata")).toBe("info");
+    expect(r.ok).toBe(true);
+  });
+
+  test("enunciado sem relação não avisa", () => {
+    const r = validateExercise(itemBase(), "mat:x", {
+      ...ctxOk,
+      existingStatementsBySkill: () => ["Qual é a capital do estado de Minas Gerais, conhecida por sua arquitetura histórica barroca?"],
+    });
+    expect(regras(r)).not.toContain("quase-duplicata");
+  });
+});
+
+describe("isPublishable: aviso ALTO exige aprovação explícita (docs/36 T-07.2)", () => {
+  const cand = (over: Partial<Candidate["stages"]> = {}): Candidate => ({
+    candidateId: "l-1",
+    skillId: "mat:x",
+    difficulty: 2,
+    role: "pratica",
+    kind: "item",
+    meta: {},
+    stages: {
+      validation: { ok: true, issues: [], warnings: [{ regra: "tamanho-correta-maior", severidade: "alta", detalhe: "x" }] },
+      ...over,
+    },
+  });
+
+  test("aprovação do lote por amostra NÃO libera item com aviso alto; `aprova` do item libera; `reprova` bloqueia", () => {
+    expect(temAvisoAlto(cand())).toBe(true);
+    expect(isPublishable(cand(), true)).toBe(false);
+    expect(isPublishable(cand({ humanReview: { reviewer: "ia-delegada:sonnet", verdict: "aprova" } }), false)).toBe(true);
+    expect(isPublishable(cand({ humanReview: { reviewer: "x", verdict: "reprova" } }), true)).toBe(false);
+  });
+
+  test("aviso média/info não muda nada: continua valendo a aprovação por amostra", () => {
+    const c = cand({ validation: { ok: true, issues: [], warnings: [{ regra: "dispersao-tamanhos", severidade: "info", detalhe: "x" }] } });
+    expect(temAvisoAlto(c)).toBe(false);
+    expect(isPublishable(c, true)).toBe(true);
   });
 });

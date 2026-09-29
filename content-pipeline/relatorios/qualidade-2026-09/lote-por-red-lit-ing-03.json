@@ -1,0 +1,1098 @@
+[
+  {
+    "id": "gen:por:interpretacao-ideia-principal:5c83c19e",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 3.483,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.991,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "corrigido",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Gabarito D confere (R1). Razão 3,48: correta com 202 caracteres contra 41-58 (distratores 'totalmente inútil', 'sempre melhores', 'categoricamente'). Alternativas reescritas (93-110). R7: identificar a ideia principal de um parágrafo curto com um único passo de leitura é dificuldade 3, não 4 (irt.b 0,8 para 0). Enunciado completado.",
+    "lens": [
+      114,
+      93,
+      95,
+      113
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.220Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:ca550a5e",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 3.523,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.98,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 3,52: correta com 155 caracteres contra 29-44 ('Adolescentes são preguiçosos.'). Alternativas reescritas (87-98) com o mesmo formato verbal.",
+    "lens": [
+      97,
+      93,
+      95,
+      78
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.220Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:ce8fb679",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 3.358,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.018,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "corrigido",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 3,36: correta com 178 caracteres contra 38-53. Alternativas reescritas (96-112). R7: ideia principal de um parágrafo curto, dificuldade 3 (irt.b 0). Enunciado 'Identifique a intenção.' completado.",
+    "lens": [
+      113,
+      115,
+      96,
+      95
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.221Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:e193de94",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.557,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.961,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Razão 2,56: correta com 156 caracteres contra 42-61. Alternativas reescritas (90-98), sem 'todas' e sem 'sempre', com o mesmo formato verbal.",
+    "lens": [
+      90,
+      100,
+      91,
+      97
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.221Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:f0414c1a",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 3.273,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.972,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "corrigido",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 3,27: correta com 144 caracteres contra 31-44. Alternativas reescritas (89-103). R7: ideia central de um parágrafo curto, dificuldade 3 (irt.b 0).",
+    "lens": [
+      88,
+      99,
+      102,
+      105
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.221Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:64c06660",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.333,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.879,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1: sa-í-da, hiato). Razão 2,33 com correta de 56 caracteres contra 15-24. Alternativas reescritas (42-57), cada uma com uma regra real de acentuação aplicada errado (oxítonas em -a, proparoxítonas, monossílabos tônicos).",
+    "lens": [
+      58,
+      51,
+      42,
+      48
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.222Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:pontuacao-virgula-regras:199c1dc3",
+    "arquivo": "src/content/banco/por/por-pontuacao-virgula-regras.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.705,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 2.705,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "falha",
+      "R2": "falha",
+      "R3": "falha",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "retirar",
+      "substituir"
+    ],
+    "motivo": "Falha de R1: o gabarito C (Não; usar ponto e vírgula) é contestável, a justificativa de C está errada ('coordenada aditiva, não conclusiva': 'portanto' é conclusiva) e o enunciado é incoerente ('porque ... portanto' e 'considerava desfavorável' sem pronome). Minha solução foi D (Sim, vírgulas em torno de 'portanto'); a segunda solução independente (subagente, só enunciado e alternativas) foi B (Não; ponto antes de 'portanto'). As duas discordam do gabarito e entre si, então pela regra do plano não há correção segura: retirado. Não mudei o índice do gabarito.",
+    "lens": [
+      72,
+      64,
+      210,
+      78
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.222Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [
+      "tamanho-correta-maior:alta"
+    ],
+    "issuesDepois": [],
+    "substituir": "Item de por:pontuacao-virgula-regras sobre vírgula entre sujeito e verbo ou vírgula de conjunção conclusiva, com enunciado coerente."
+  },
+  {
+    "id": "gen:por:sentido-figuras-linguagem:5e544870",
+    "arquivo": "src/content/banco/por/por-sentido-figuras-linguagem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.226,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.978,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: personificação). Razão 2,23: correta com 118 caracteres contra 46-53. Enunciado pedia 'Explique seu efeito', impossível em múltipla escolha (R3/R8): passa a 'e qual é o seu efeito'. Alternativas reescritas (82-89).",
+    "lens": [
+      89,
+      81,
+      88,
+      87
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.222Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sentido-figuras-linguagem:62962bf5",
+    "arquivo": "src/content/banco/por/por-sentido-figuras-linguagem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.4,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.904,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 2,40: correta com 132 caracteres contra 43-55. R3: 'manto negro' também é metáfora e a opção não existia; o enunciado passa a perguntar pela figura da ação atribuída à noite. Alternativas reescritas (78-93).",
+    "lens": [
+      77,
+      103,
+      94,
+      86
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.222Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:2d070f9b",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 3.524,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: haver com sentido de existir, oração sem sujeito). Razão 3,52: correta com 74 caracteres contra 15-21. Alternativas reescritas (64-70).",
+    "lens": [
+      70,
+      72,
+      64,
+      72
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.223Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:f6ac2e83",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 3.167,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.035,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: sujeito indeterminado). Razão 3,17: correta com 95 caracteres contra 16-30. Enunciado 'o sujeito da oração é: sujeito indeterminado' tautológico: passa a 'a classificação do sujeito é'. Alternativas reescritas (76-88).",
+    "lens": [
+      87,
+      83,
+      85,
+      82
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.223Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:argumentacao-repertorio:1e8211b1",
+    "arquivo": "src/content/banco/red/red-argumentacao-repertorio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.475,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.971,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 2,48: correta com 99 caracteres contra 33-40 ('números são abstratos'). O dado do exemplo (12%, USP 2023) é inventado: o enunciado passa a dizer que a frase é hipotética. Alternativas reescritas (90-98), sem 'apenas'.",
+    "lens": [
+      101,
+      103,
+      91,
+      92
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.223Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:35d30795",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.419,
+      "corretaMaisLonga": true,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.954,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Razão 2,42; correta com 104 caracteres contra 30-43, dois 'apenas' e um travessão. As alternativas A, B e C não respondiam à pergunta (afirmações soltas sobre C5, C1, C2). Reescritas no formato 'O erro está em Cn', cada uma com um erro real sobre a competência (95-101), sem travessão.",
+    "lens": [
+      109,
+      94,
+      100,
+      103
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.223Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:4ced543f",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.669,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.967,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 2,67: correta com 315 caracteres contra 100-118; B tinha 'é necessário políticas' (concordância). Alternativas reescritas (~150-165) com o mesmo formato; a explicação foi ajustada ao novo texto de B.",
+    "lens": [
+      158,
+      175,
+      182,
+      158
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.223Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:caracteristicas-escolas-literarias:9dbc745f",
+    "arquivo": "src/content/banco/lit/lit-caracteristicas-escolas-literarias.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.15,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.978,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: Realismo). Razão 2,15: correta com 86 caracteres contra 34-40. Alternativas reescritas (75-90) no mesmo formato 'escola, pela característica', sem ponto final.",
+    "lens": [
+      90,
+      81,
+      93,
+      82
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.224Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:b992ddde",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.949,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 2,0: correta com 92 caracteres contra 31-46, e 'sempre' em distrator. Alternativas reescritas (82-92) com o mesmo início ('Mostra que'), cada uma uma leitura errada do contraste.",
+    "lens": [
+      83,
+      99,
+      92,
+      83
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.224Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:concordancia-verbal-nominal:c97ae91c",
+    "arquivo": "src/content/banco/por/por-concordancia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.126,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.837,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito C confere (R1: concordância com o núcleo 'série'). B e C afirmavam o mesmo veredito (verbo no singular) e B trazia 'sempre' e 'atração' (termo que descreve outra regra), o que dava duas respostas defensáveis (R3). B agora tem o mesmo veredito com razão errada explícita (concorda com o termo mais próximo); A vira erro de concordância nominal com 'livros'. Explicação sem 'sempre concordam'.",
+    "lens": [
+      99,
+      103,
+      86,
+      103
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.224Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:pontuacao-virgula-regras:1a7516c9",
+    "arquivo": "src/content/banco/por/por-pontuacao-virgula-regras.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.029,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "observacao",
+      "R3": "corrigido",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: vírgulas de informação extra). Correta 141 caracteres contra 58-137 e chamava o trecho de 'oração subordinada adjetiva explicativa' (é reduzida de particípio). Enunciado 'Onde a vírgula está correta?' não combinava com alternativas de sim/não: passa a 'O uso das vírgulas está correto?'. Alternativas reescritas (~105-115), sem 'nenhuma'.",
+    "lens": [
+      103,
+      92,
+      105,
+      89
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.224Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-periodo-composto:7544d6a2",
+    "arquivo": "src/content/banco/por/por-sintaxe-periodo-composto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.463,
+      "corretaMaisLonga": true,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.917,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 1,46 e dois distratores com 'Todas'/'nunca'. O enunciado pedia todas as orações, mas a correta só classificava duas (não citava 'que depositaram em você'): agora pergunta pelas orações iniciadas por 'Se' e por 'pois'. Alternativas no mesmo formato (95-108), com 'pois causal' como armadilha.",
+    "lens": [
+      111,
+      121,
+      95,
+      107
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.224Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:11f608a6",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.381,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.725,
+      "corretaMaisLonga": false,
+      "absolutismo": 1
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 1,38: correta 29 caracteres contra 13-21 e a mais longa. Alternativas reescritas com trechos reais da frase (14-39), incluindo verbo mais objeto e o objeto com o indireto, erros comuns ao localizar o sujeito.",
+    "lens": [
+      33,
+      29,
+      40,
+      14
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.224Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:argumentacao-repertorio:9c5c2eba",
+    "arquivo": "src/content/banco/red/red-argumentacao-repertorio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.738,
+      "corretaMaisLonga": true,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.929,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 1,74 e dois distratores absolutos ('sempre', 'Toda', 'automaticamente'). Alternativas reescritas (98-104), sem absolutismo.",
+    "lens": [
+      99,
+      104,
+      97,
+      112
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.225Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:1fedf343",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.015,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.815,
+      "corretaMaisLonga": false,
+      "absolutismo": 1
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito D confere (R1: pergunta em negativo, a coloquial é a que NÃO exemplifica a C1). A explicação dizia 'A opção 3' (as opções são letras). B trazia 'corrigida'. Correta encurtada para 53 caracteres, sem passar a maior alternativa.",
+    "lens": [
+      48,
+      65,
+      45,
+      53
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.225Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:24cab1d6",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.213,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.931,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Correta 154 caracteres contra 101-127 e a mais longa. Alternativas reescritas (93-112), correta deixa de ser a mais longa; sem 'nem sempre'.",
+    "lens": [
+      116,
+      98,
+      108,
+      95
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.225Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:a5d3abda",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.386,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.386,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "marcas": {
+      "R1": "falha",
+      "R2": "ok",
+      "R3": "falha",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "falha",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "retirar",
+      "substituir"
+    ],
+    "motivo": "Falha de R3 (enunciado ambíguo) e de R6: um fragmento de uma frase com aposto não permite dizer qual competência é 'primariamente' avaliada; C1 (pontuação com vírgulas, alternativa D) é tão defensável quanto C4, e a explicação justifica C4 com argumentos frágeis ('construção paralela cria fluxo coesivo'). A frase também é mal formada ('permitindo... possibilita'). Retirado; não há como corrigir sem novo item.",
+    "lens": [
+      78,
+      57,
+      54,
+      38
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.225Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": [],
+    "substituir": "Item de red:competencias-avaliacao-enem que peça associar um trecho claramente marcado (por exemplo, proposta de intervenção com agente, ação e meio) a uma competência, sem depender de leitura de um único fragmento ambíguo."
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:3bbe2540",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "metricas": {
+      "razaoTamanho": 1.235,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.905,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Razão 1,24 e B com 'Nenhuma'. Alternativas reescritas (85-93), sem absolutismo, com a correta deixando de ser a mais longa.",
+    "lens": [
+      89,
+      91,
+      95,
+      86
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:37:10.225Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

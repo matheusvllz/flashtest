@@ -60,7 +60,7 @@ export function ContinueCard({
     return (
       <div
         className="card-soft relative p-4"
-        style={{ borderColor: "var(--color-mar)", "--pointer-k": pointerK ?? 0 } as CSSProperties}
+        style={{ borderColor: "var(--mar)", "--pointer-k": pointerK ?? 0 } as CSSProperties}
       >
         <span className="path-callout-pointer" aria-hidden="true" />
         {lead && <div className="mb-3">{lead}</div>}
@@ -78,7 +78,7 @@ export function ContinueCard({
   }
 
   return (
-    <div className="card-soft p-5" style={{ borderColor: "var(--color-mar)" }}>
+    <div className="card-soft p-5" style={{ borderColor: "var(--mar)" }}>
       <p className="ds-label">{rotulo}</p>
       <h2 className="mt-2 font-display text-[22px] font-bold leading-tight text-abismo">{target.title}</h2>
       <p className="mt-1 text-xs font-semibold text-nevoa">

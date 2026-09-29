@@ -1,0 +1,1157 @@
+{
+  "lote": "mat-fil-soc-09",
+  "geradoEm": "2026-09-28T23:41:17.121Z",
+  "revisor": "ia-delegada:sonnet",
+  "itens": [
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:0d948e78",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "100 x 1,2 = 120. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:1e625c54",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "2500 x 1,08 = 2700. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:24672a3c",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "60 x 0,8 = 48. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:351b1a5b",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "500 x 1,12 x 1,08 = 604,8 ~ 605 (enunciado ja diz 'aproximadamente'). Distrator 600 = somar as taxas. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:5a4b5ef8",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "200 x 0,85 x 0,9 = 153. Quase duplicata de template de 863645fc. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:863645fc",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "2000 x 0,9 x 0,85 = 1530. Distrator 1500 = descontos somados (25%). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:8c43a8e4",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "100000 x 1,25 x 1,2 = 150000. Distrator 145000 = somar taxas. Dificuldade 4 (desafio) alta para o mesmo raciocinio d3 de outros itens (proposta d3, nao aplicada). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:c62342f8",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "100 x 0,92 x 1,12 = 103,04. Distrator 104 = somar as taxas (+4%). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:f21f5db7",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "500 x 0,7 = 350. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:1173e724",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "100 x 0,8 x 0,9 = 72. Distrator 70 = descontos somados (30%). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:16caa81d",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "8000 x 0,28 = 2240. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:58c4dfb9",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "18% de 1200 = 216. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:6d925fdf",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "50 x 0,9 = 45. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:746c09aa",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "1200 x 1,15 = 1380. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:779f7935",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "60 x 0,85 = 51. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:7a9fed4d",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "12000 x 0,035 x 0,6 = 252. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:87d7f841",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.923,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.923,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "3% de 1200000 = 36000. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:a38ed374",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "6% de 5000 = 300. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:b6c700dd",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "25% de 80 = 20. Quase duplicata de bf45e5b4 (mesmo calculo, 80 e 25%). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:bf45e5b4",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "25% de 80 = 20. Quase duplicata de b6c700dd (mesma conta, mesmos numeros). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:cb91a881",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "10000 x 0,95 x 0,08 = 760. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:cd2a1593",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "50000 / 0,25 = 200000. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:0c31e79b",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "corrigido"
+      },
+      "acoes": [
+        "melhorar-enunciado"
+      ],
+      "motivo": "1000 x 1,2^2 = 1440 confere. Portugues do enunciado corrigido ('Se reinveste-se o ganho' para 'o ganho e reinvestido'). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:55d17647",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "corrigido"
+      },
+      "acoes": [
+        "revisar-explicacao"
+      ],
+      "motivo": "2000 x 1,15 = 2300. Explicacao tinha ' - ' no lugar de travessao: trocado por dois-pontos. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:5a470c25",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado"
+      ],
+      "motivo": "0,93 x 0,97 = 0,9021 => economia de 9,79% (B). O enunciado nao dizia sobre que valor incidia o cashback (3% de 500 daria 10%, alternativa A): agora explicita 'sobre o valor ja com desconto'. Gabarito e alternativas intactos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:41:17.121Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    }
+  ]
+}

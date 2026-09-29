@@ -16,12 +16,14 @@ export function FocusStep() {
       </h2>
       <div className="mt-6 flex gap-2">
         <button
+          type="button"
           onClick={() => setStudyFocus({ mode: "todas", subjectIds: [], areas: [] })}
           className={`chip ${!escolhendo ? "chip-on" : ""}`}
         >
           {COPY.foco.todasAsMaterias}
         </button>
         <button
+          type="button"
           onClick={() => {
             if (!escolhendo) setStudyFocus({ mode: "materias", subjectIds: [], areas: [] });
           }}
@@ -37,6 +39,7 @@ export function FocusStep() {
             const on = foco.subjectIds.includes(sub.id);
             return (
               <button
+                type="button"
                 key={sub.id}
                 onClick={() =>
                   setStudyFocus({

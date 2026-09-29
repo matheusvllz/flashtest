@@ -23,6 +23,7 @@ export function ExamStep() {
       <div className="mt-6 flex flex-col gap-2.5">
         {EXAMS.map((exam) => (
           <button
+            type="button"
             key={exam.id}
             onClick={() => setExamTarget({ examId: exam.id, stage: exam.stages?.[0] })}
             className={`card-press px-4 py-3.5 text-left text-sm font-semibold text-abismo ${
@@ -33,6 +34,7 @@ export function ExamStep() {
           </button>
         ))}
         <button
+          type="button"
           onClick={() => setExamTarget({ examId: "enem" })}
           className={`card-press px-4 py-3.5 text-left text-sm font-semibold text-abismo ${
             alvo && !EXAMS.some((e) => e.id === alvo.examId) ? "border-mar bg-mar/8" : ""
@@ -61,6 +63,7 @@ export function ExamStep() {
             className="input-ds mt-2 font-mono disabled:opacity-40"
           />
           <button
+            type="button"
             onClick={() =>
               setState((st) => {
                 if (st.prefs.examTargets[0]) {

@@ -17,6 +17,7 @@ import { ensureSubjects, isSubjectLoaded } from "@/lib/content/repository";
 import { TrailPathSkeleton } from "@/components/learning/path/TrailSkeleton";
 import { phaseById } from "@/content/microlicoes";
 import { ensurePlan } from "@/lib/adaptive/journey";
+import { usePlacementReconciliation } from "@/hooks/usePlacementReconciliation";
 import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
 import { COPY } from "@/lib/copy";
 import { FEATURES } from "@/lib/features";
@@ -25,8 +26,10 @@ import { studyFocusVazio, type StudyFocus } from "@/lib/learning/types";
 import { buildTrail, isSectionCompleted, type TrailChapter, type TrailModel } from "@/lib/learning/trail";
 import {
   atividadeHoje,
+  clearExpiredFocusSession,
   clearFocusSession,
   commitPlan,
+  getState,
   hojeISO,
   marcarMetaCelebrada,
   markChapterCelebrated,
@@ -44,10 +47,14 @@ export const Route = createFileRoute("/trilha")({
   ssr: false,
   pendingComponent: TrailSkeleton,
   errorComponent: TrailError,
-  validateSearch: (raw: Record<string, unknown>): { concluida?: string; capitulo?: string; vista?: "mapa" } => ({
+  validateSearch: (
+    raw: Record<string, unknown>,
+  ): { concluida?: string; capitulo?: string; vista?: "mapa"; pulada?: "1" } => ({
     concluida: typeof raw.concluida === "string" ? raw.concluida : undefined,
     capitulo: typeof raw.capitulo === "string" ? raw.capitulo : undefined,
     vista: raw.vista === "mapa" ? "mapa" : undefined,
+    // `?pulada=1` (docs/36 RF-3): a atividade que o aluno tentou abrir foi descartada por falta de questões.
+    pulada: raw.pulada === "1" || raw.pulada === 1 ? "1" : undefined,
   }),
 });
 
@@ -88,6 +95,10 @@ function TrilhaRoute() {
   const s = useAppState();
   const navigate = useNavigate();
   const search = Route.useSearch();
+  // Ordem dos efeitos desta rota (docs/36 T-03.3): reconciliação do nivelamento -> sincronização
+  // da jornada (e) -> `ensurePlan`. O hook vem ANTES de todos os efeitos abaixo de propósito, e
+  // `ensurePlan` não roda enquanto `aplicando` (senão montaria plano com o modelo velho).
+  const { aplicando } = usePlacementReconciliation();
   // Bump quando um pacote de matéria termina de carregar: as aulas geradas
   // passam a resolver em `phaseById` e o modelo precisa ser refeito.
   const [pacotesVersao, setPacotesVersao] = useState(0);
@@ -195,19 +206,51 @@ function TrilhaRoute() {
   // desligada: nada abaixo deste bloco roda (`/trilha` idêntica a hoje).
   const [focusSheetOpen, setFocusSheetOpen] = useState(false);
   const focusSignature = `${s.prefs.studyFocus.mode}:${s.prefs.studyFocus.subjectIds.join(",")}:${s.prefs.studyFocus.areas.join(",")}|${s.learning.focusSession ? s.learning.focusSession.subjectIds.join(",") : ""}`;
-  const lastFocusSignatureRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (!FEATURES.jornadaAdaptativa) return;
+    if (aplicando) return;
     const hoje = hojeISO();
-    // Mudança de foco força replano mesmo com `committed` cheio (docs/30
-    // §15: "comprometidas fora do novo foco são descartadas") — `ensurePlan`
-    // sozinho só replaneja por `committed` curto/`planVersion` velha.
-    const focusMudou = lastFocusSignatureRef.current !== null && lastFocusSignatureRef.current !== focusSignature;
-    lastFocusSignatureRef.current = focusSignature;
-    const result = ensurePlan(s, hoje, hoje, { forceReplan: focusMudou });
-    if (result) commitPlan(result.committed, result.upcoming);
-  }, [s, focusSignature]);
+    // "Só hoje" vencido some sem recarregar o app (docs/36 RF-9). Ao limpar, o
+    // estado muda e este efeito roda de novo com o foco já sem a sessão.
+    if (clearExpiredFocusSession(hoje)) return;
+    // Estado MAIS RECENTE (não a fotografia do render): o efeito de sincronização (e) acima
+    // roda antes e já pode ter movido/tirado a atividade concluída de `committed`.
+    const atual = getState();
+    // Mudança de foco força replano mesmo com `committed` cheio (docs/30 §15:
+    // "comprometidas fora do novo foco são descartadas") — `ensurePlan` sozinho só
+    // replaneja por `committed` curto/`planVersion` velha. Compara com a assinatura
+    // PERSISTIDA no último plano (docs/36 RF-9), não com um ref desta montagem: o
+    // foco mudado em `/profile` também é visto aqui. Sem assinatura persistida
+    // (conta antiga) grava sem forçar.
+    const persistida = atual.learning.journey.focusSignature;
+    const focusMudou = persistida !== undefined && persistida !== focusSignature;
+    const result = ensurePlan(atual, hoje, hoje, { forceReplan: focusMudou });
+    if (result) commitPlan(result.committed, result.upcoming, focusSignature);
+    else if (persistida !== focusSignature) {
+      // Nada a trocar na fila, mas a assinatura precisa ser registrada (senão o replano forçado repetiria a cada mudança de estado).
+      commitPlan(atual.learning.journey.committed, atual.learning.journey.upcoming, focusSignature);
+    }
+  }, [s, focusSignature, aplicando]);
+
+  // Volta ao app depois da meia-noite (aba em segundo plano): o "só hoje" de ontem some (docs/36 RF-9).
+  useEffect(() => {
+    if (!FEATURES.jornadaAdaptativa) return;
+    const aoVoltar = () => {
+      if (document.visibilityState === "visible") clearExpiredFocusSession(hojeISO());
+    };
+    document.addEventListener("visibilitychange", aoVoltar);
+    return () => document.removeEventListener("visibilitychange", aoVoltar);
+  }, []);
+
+  // Aviso de uma linha quando a atividade foi descartada (docs/36 RF-3/RU-1): some ao fechar ou em 6 s.
+  const avisoPulada = search.pulada === "1";
+  const fecharAvisoPulada = () => navigate({ to: "/trilha", search: {}, replace: true });
+  useEffect(() => {
+    if (!avisoPulada) return;
+    const t = setTimeout(() => navigate({ to: "/trilha", search: {}, replace: true }), 6000);
+    return () => clearTimeout(t);
+  }, [avisoPulada, navigate]);
 
   function applyFocus(subjectIds: string[], scope: "permanent" | "session") {
     if (scope === "session") startFocusSession(subjectIds);
@@ -261,10 +304,11 @@ function TrilhaRoute() {
         <div className="mx-5 mb-3 card-soft p-4">
           <p className="text-sm font-bold text-abismo">{COPY.nivelamento.cardTrilhaTitulo}</p>
           <div className="mt-2.5 flex gap-2">
-            <button onClick={() => navigate({ to: "/nivelamento" })} className="btn-primary flex-1">
+            <button type="button" onClick={() => navigate({ to: "/nivelamento" })} className="btn-primary flex-1">
               {COPY.nivelamento.fazerNivelamento}
             </button>
             <button
+              type="button"
               onClick={() => recordEvent("placement-card-dismissed")}
               className="btn-ghost flex-1"
             >
@@ -276,22 +320,47 @@ function TrilhaRoute() {
 
       {mostrarJornada ? (
         <div className="bg-neve px-5 pb-6">
-          <SessionCard
-            committed={s.learning.journey.committed}
-            history={s.learning.journey.history}
-            dailyMinutes={s.prefs.dailyMinutes}
-            greeting={greeting}
-          />
-          <FocusLine
-            studyFocus={s.prefs.studyFocus}
-            focusSession={s.learning.focusSession}
-            onOpenSheet={() => setFocusSheetOpen(true)}
-          />
-          <JourneyPath
-            history={s.learning.journey.history}
-            committed={s.learning.journey.committed}
-            upcoming={s.learning.journey.upcoming}
-          />
+          {avisoPulada && (
+            <div className="card-soft mb-3 flex items-start gap-2 p-3" role="status">
+              <p className="flex-1 text-sm text-abismo">{COPY.jornada.puladaSemItens}</p>
+              <button
+                type="button"
+                onClick={fecharAvisoPulada}
+                aria-label={COPY.comum.fecharAviso}
+                className="btn-ghost px-2 py-0.5 text-sm"
+              >
+                ×
+              </button>
+            </div>
+          )}
+          {aplicando ? (
+            // Nivelamento sendo aplicado (docs/36 T-03.3, T-06.2, RU-11): nunca mostra o plano velho.
+            <>
+              <p role="status" className="text-sm font-semibold text-nevoa">
+                {COPY.nivelamento.aplicando}
+              </p>
+              <TrailPathSkeleton />
+            </>
+          ) : (
+            <>
+              <SessionCard
+                committed={s.learning.journey.committed}
+                history={s.learning.journey.history}
+                dailyMinutes={s.prefs.dailyMinutes}
+                greeting={greeting}
+              />
+              <FocusLine
+                studyFocus={s.prefs.studyFocus}
+                focusSession={s.learning.focusSession}
+                onOpenSheet={() => setFocusSheetOpen(true)}
+              />
+              <JourneyPath
+                history={s.learning.journey.history}
+                committed={s.learning.journey.committed}
+                upcoming={s.learning.journey.upcoming}
+              />
+            </>
+          )}
           <button
             type="button"
             onClick={() => navigate({ to: "/trilha", search: { vista: "mapa" } })}

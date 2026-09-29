@@ -121,3 +121,153 @@ describe("Cenário H — foco temporário em Física", () => {
     }
   });
 });
+
+/* -------------------------------------------------------------------------
+ * Mix — cota mínima de revisão e teto de desafio (docs/36 T-04.3, G4, RP-3,
+ * G-8). Sem cota, a revisão perdia para NOVA sempre que o atraso era pequeno
+ * ([sim] do 36 §C6: 0–1 revisão por janela com 6 devidas atrasadas 2 dias;
+ * 0 com 1 ou 3 devidas). Janela = 10 posições consecutivas do plano.
+ * ---------------------------------------------------------------------- */
+
+const HOJE_MIX = "2026-09-28";
+const N_MIX = 24;
+
+function estadoMix(): Pick<AppState, "prefs" | "learning" | "progress"> {
+  return {
+    prefs: {
+      difficultSubjects: [],
+      easySubjects: [],
+      dailyMinutes: 10,
+      studyFocus: { mode: "todas", subjectIds: [], areas: [] },
+      examTargets: [],
+    } as unknown as AppState["prefs"],
+    learning: learningStateVazio(),
+    progress: { bySubject: {}, lessons: {}, today: { date: HOJE_MIX, completedBlockIds: [] } } as unknown as AppState["progress"],
+  };
+}
+
+/** Primeira habilidade sem pré-requisito de cada matéria, em ordem — evita BLOQUEADA e garante matérias distintas. */
+function habilidadesLivres(n: number): string[] {
+  const vistas = new Set<string>();
+  const out: string[] = [];
+  for (const sk of activeSkills()) {
+    if (vistas.has(sk.subjectId) || sk.prerequisites.length > 0) continue;
+    vistas.add(sk.subjectId);
+    out.push(sk.id);
+    if (out.length >= n) break;
+  }
+  return out;
+}
+
+function diasAtras(dias: number): string {
+  return new Date(Date.UTC(2026, 8, 28 - dias)).toISOString().slice(0, 10);
+}
+
+/** Habilidades com evidência (3 respostas: certa, errada, certa) e revisão vencida há `atrasoDias`. */
+function comRevisoesDevidas(s: ReturnType<typeof estadoMix>, skillIds: string[], atrasoDias: number): void {
+  for (const id of skillIds) {
+    const r = responderVezes(undefined, undefined, id, true, 2, "2026-09-10");
+    const m = updateSkill(r.modelo, id, { role: "pratica", correct: false }, FACIL, "2026-09-10", { difficulty: 3, now: "2026-09-10T10:09:00.000Z" });
+    s.learning.skillModel[id] = m;
+    s.learning.skillEvidence[id] = r.evidencia;
+    s.learning.reviewSchedule[id] = { skillId: id, intervalDays: 3, dueDate: diasAtras(atrasoDias), lastResult: "correct" };
+  }
+}
+
+function janelas10(kinds: string[], alvo: string): number[] {
+  const out: number[] = [];
+  for (let i = 0; i + 10 <= kinds.length; i++) out.push(kinds.slice(i, i + 10).filter((k) => k === alvo).length);
+  return out;
+}
+
+describe("Mix — cota de revisão e teto de desafio (docs/36 T-04.3, RP-3, G-8)", () => {
+  test("(1) iniciante, sem nenhuma revisão devida: 100 % 'atual' em 20 posições (esperado e documentado)", () => {
+    const plano = planNext(estadoMix(), HOJE_MIX, "seed-mix", { n: 20 });
+    expect(plano).toHaveLength(20);
+    expect(plano.every((a) => a.kind === "aula" || a.kind === "pratica" || a.kind === "legado")).toBe(true);
+  });
+
+  test("(2) backlog: 6 devidas (2 dias de atraso) -> toda janela de 10 tem 2 a 4 revisões, todas das habilidades devidas", () => {
+    const s = estadoMix();
+    const devidas = habilidadesLivres(6);
+    expect(devidas).toHaveLength(6);
+    comRevisoesDevidas(s, devidas, 2);
+    const plano = planNext(s, HOJE_MIX, "seed-mix", { n: N_MIX });
+    const kinds = plano.map((a) => a.kind);
+    for (const c of janelas10(kinds, "revisao")) {
+      expect(c).toBeGreaterThanOrEqual(2);
+      expect(c).toBeLessThanOrEqual(4);
+    }
+    for (const a of plano.filter((x) => x.kind === "revisao")) expect(devidas).toContain(a.skillIds[0]);
+    // nunca 2 revisões forçadas seguidas da MESMA habilidade (restrição dura preservada)
+    for (let i = 1; i < plano.length; i++) {
+      if (plano[i].skillIds[0] === plano[i - 1].skillIds[0]) {
+        expect(plano[i - 1].kind).toBe("aula");
+        expect(plano[i].kind).toBe("pratica");
+      }
+    }
+  });
+
+  test("(2b) mesmo com UMA única revisão devida (atraso pequeno), a janela recebe ≥ 2 (antes: 0)", () => {
+    const s = estadoMix();
+    comRevisoesDevidas(s, habilidadesLivres(1), 2);
+    const kinds = planNext(s, HOJE_MIX, "seed-mix", { n: N_MIX }).map((a) => a.kind);
+    for (const c of janelas10(kinds, "revisao")) expect(c).toBeGreaterThanOrEqual(2);
+  });
+
+  test("(3) estabelecido com revisões atrasadas > 3 dias -> toda janela tem ≥ 3 revisões e ≤ 35 %", () => {
+    const s = estadoMix();
+    comRevisoesDevidas(s, habilidadesLivres(8), 10);
+    const kinds = planNext(s, HOJE_MIX, "seed-mix", { n: N_MIX }).map((a) => a.kind);
+    for (const c of janelas10(kinds, "revisao")) {
+      expect(c).toBeGreaterThanOrEqual(3);
+      expect(c / 10).toBeLessThanOrEqual(0.35);
+    }
+  });
+
+  test("(4a) alto Mastery e baixa Confidence NÃO vira desafio (desafio exige C ≥ 50)", () => {
+    const s = estadoMix();
+    const skills = MAT_SKILLS.slice(0, 6);
+    for (const sk of skills) {
+      // θ alto, mas só 1,5 de evidência efetiva: Mastery ≥ 75 e Confidence baixa.
+      const entry: SkillModelEntry = {
+        skillId: sk.id, theta: 2, sigma: 0.6, nEff: 1.5, difficultiesSeen: [3], recent: [1, 1],
+        independentShare: 1, lastEvidenceDate: HOJE_MIX, lapses: 0, dontKnowRecent: 0, helpHeavyRecent: 0,
+        source: "evidencia", algoVersion: 1, updatedAt: `${HOJE_MIX}T09:00:00.000Z`,
+      };
+      s.learning.skillModel[sk.id] = entry;
+      s.learning.skillEvidence[sk.id] = updateSkillEvidence(undefined, sk.id, { exerciseId: `${sk.id}-0`, correct: true, localDate: HOJE_MIX });
+    }
+    s.prefs.studyFocus = { mode: "materias", subjectIds: ["mat"], areas: [] };
+    const plano = planNext(s, HOJE_MIX, "seed-mix", { n: N_MIX });
+    expect(plano.some((a) => a.kind === "desafio")).toBe(false);
+  });
+
+  test("(4b) com muitas habilidades FIRMES, desafio aparece mas nunca passa de 2 por janela de 10", () => {
+    const s = estadoMix();
+    s.prefs.studyFocus = { mode: "materias", subjectIds: ["mat"], areas: [] };
+    for (const sk of MAT_SKILLS) {
+      const { modelo, evidencia } = responderVezes(undefined, undefined, sk.id, true, 10, "2026-09-24");
+      s.learning.skillModel[sk.id] = modelo;
+      s.learning.skillEvidence[sk.id] = evidencia;
+    }
+    const kinds = planNext(s, HOJE_MIX, "seed-mix", { n: N_MIX }).map((a) => a.kind);
+    expect(kinds.includes("desafio")).toBe(true);
+    for (const c of janelas10(kinds, "desafio")) expect(c).toBeLessThanOrEqual(2);
+  });
+
+  test("(5) revisão devida + desafio disponível: as duas regras convivem (≥ 2 revisões e ≤ 2 desafios por janela)", () => {
+    const s = estadoMix();
+    for (const sk of MAT_SKILLS) {
+      const { modelo, evidencia } = responderVezes(undefined, undefined, sk.id, true, 10, "2026-09-24");
+      s.learning.skillModel[sk.id] = modelo;
+      s.learning.skillEvidence[sk.id] = evidencia;
+    }
+    // 2 das habilidades de mat ficam com revisão vencida (viram DEVIDA em vez de FIRME)
+    for (const sk of MAT_SKILLS.slice(0, 2)) s.learning.reviewSchedule[sk.id] = { skillId: sk.id, intervalDays: 3, dueDate: diasAtras(2), lastResult: "correct" };
+    s.prefs.studyFocus = { mode: "materias", subjectIds: ["mat"], areas: [] };
+    const kinds = planNext(s, HOJE_MIX, "seed-mix", { n: N_MIX }).map((a) => a.kind);
+    for (const c of janelas10(kinds, "revisao")) expect(c).toBeGreaterThanOrEqual(2);
+    for (const c of janelas10(kinds, "desafio")) expect(c).toBeLessThanOrEqual(2);
+  });
+});

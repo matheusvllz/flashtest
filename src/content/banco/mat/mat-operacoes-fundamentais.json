@@ -5,7 +5,7 @@
       "id": "gen:mat:operacoes-fundamentais:8661883f",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Um comerciante vendeu produtos em três dias. No primeiro dia, vendeu 2 caixas com 15 produtos cada. No segundo dia, vendeu 3 caixas com 12 produtos cada e depois recebeu 8 produtos devolvidos. No terceiro dia, vendeu o dobro do segundo dia. Qual foi o total de produtos vendidos nos três dias?",
+        "pergunta": "Um comerciante vendeu produtos em três dias. No primeiro dia, vendeu 2 caixas com 15 produtos cada. No segundo dia, vendeu 3 caixas com 12 produtos cada, mas 8 produtos foram devolvidos, então as vendas líquidas do dia foram menores. No terceiro dia, vendeu o dobro das vendas líquidas do segundo dia. Qual foi o total de vendas líquidas nos três dias?",
         "opcoes": [
           "110",
           "114",
@@ -17,7 +17,7 @@
       },
       "meta": {
         "id": "gen:mat:operacoes-fundamentais:8661883f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "mat:operacoes-fundamentais"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-08"
         },
         "examProfiles": [
           "enem"
@@ -70,8 +72,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -116,8 +119,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -162,8 +166,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +182,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,7 +214,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +229,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -255,7 +261,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +276,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -301,7 +308,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +323,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.298Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"

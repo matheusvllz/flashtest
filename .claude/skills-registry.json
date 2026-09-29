@@ -1,7 +1,7 @@
 {
   "$comment": "Registry de skills/plugins do Foca. Humano: docs/ai/SKILLS.md. Roteamento: docs/ai/SKILL-ROUTING.md. Validar: node scripts/validate-skills.mjs. Skills nunca prevalecem sobre a spec (docs/ai/SDD-WORKFLOW.md §1).",
   "schemaVersion": 1,
-  "updated": "2026-09-22",
+  "updated": "2026-09-28",
   "claudeCodeVersion": "2.1.280",
   "precedence": [
     "explicit user request",
@@ -17,6 +17,7 @@
     "product": "docs/PRODUCT.md",
     "design": "docs/DESIGN.md",
     "marketing": ".agents/product-marketing.md",
+    "copy": "docs/COPY.md",
     "sddWorkflow": "docs/ai/SDD-WORKFLOW.md",
     "routing": "docs/ai/SKILL-ROUTING.md",
     "catalog": "docs/ai/SKILLS.md",
@@ -341,6 +342,48 @@
       "triggers": ["review UI", "accessibility check", "after implementing UI"],
       "doNotUse": ["creating or redesigning"],
       "overlaps": ["impeccable audit", "design:accessibility-review (user plugin)"]
+    },
+    {
+      "id": "better-writing",
+      "source": "https://github.com/boraoztunc/skills/tree/main/better-writing",
+      "upstream": "https://github.com/jakubkrehel/skills (skills/better-writing, MIT, Jakub Krehel) — the boraoztunc copy is an older, more complete vendoring and differs from upstream HEAD",
+      "type": "local-skill",
+      "installMethod": "DISABLE_TELEMETRY=1 DO_NOT_TRACK=1 npx skills@1.7.0 add https://github.com/boraoztunc/skills --skill better-writing --skill ogilvy-copywriting -a claude-code --copy -y",
+      "scope": "project",
+      "enabledByDefault": true,
+      "commit": "645553ca7622570479e330cc089c65fcf34e0ba8",
+      "location": ".claude/skills",
+      "skills": ["better-writing"],
+      "license": "MIT (LICENSE-jakubkrehel in the boraoztunc repo; no license file inside the skill folder)",
+      "localModifications": "none — Foca-specific adaptations live in docs/ai/SKILLS.md §Q, never in the vendored files",
+      "category": "writing",
+      "role": "primary",
+      "alwaysOnTokens": 160,
+      "alwaysOnTokensNote": "estimate (description length / 4), not measured with claude plugin details",
+      "triggers": ["error message", "confirmation dialog", "empty state", "new screen or flow copy", "2+ interface strings", "copy audit"],
+      "doNotUse": ["pedagogical content", "tutor prompt", "Foca mascot lines (voz.ts)", "marketing persuasion copy", "single-label tweaks"],
+      "overlaps": ["humanizer (prose polish)", "impeccable (UX copy mode)", "design:ux-copy (user plugin)"]
+    },
+    {
+      "id": "ogilvy-copywriting",
+      "source": "https://github.com/boraoztunc/skills/tree/main/ogilvy",
+      "upstream": "none — compilation by the boraoztunc maintainer from Ogilvy's books; license: MIT in the SKILL.md frontmatter",
+      "type": "local-skill",
+      "installMethod": "same command as better-writing (one install, two skills); the source folder is ogilvy/ but the skill name is ogilvy-copywriting",
+      "scope": "project",
+      "enabledByDefault": true,
+      "commit": "645553ca7622570479e330cc089c65fcf34e0ba8",
+      "location": ".claude/skills",
+      "skills": ["ogilvy-copywriting"],
+      "license": "MIT (declared in the SKILL.md frontmatter)",
+      "localModifications": "none — Foca-specific conflict rules live in docs/ai/SKILLS.md §R, never in the vendored file",
+      "category": "writing",
+      "role": "specialist",
+      "alwaysOnTokens": 100,
+      "alwaysOnTokensNote": "estimate (description length / 4), not measured with claude plugin details",
+      "triggers": ["positioning", "value proposition", "headline / hero", "OG or store description"],
+      "doNotUse": ["any app screen", "feedback and tutor text", "pedagogical content", "microcopy", "invented testimonials or long copy in the UI"],
+      "overlaps": ["marketing-skills:copywriting (runs after Ogilvy)", "marketing-skills:product-marketing (context, not strategy)"]
     },
     {
       "id": "react-best-practices",
@@ -721,6 +764,42 @@
     {
       "item": "Consensys scripts/setup.sh",
       "reason": "global installs via curl|tar /usr/local/bin, pip --break-system-packages, sudo; wrong artifacts on Windows"
+    },
+    {
+      "item": "boraoztunc/skills copywriting, copy-editing",
+      "reason": "1.0.0 forks of coreyhaines31/marketingskills; the marketing-skills plugin already has 2.0.2 / 2.0.0 of the originals (docs/38, 28/09/2026)"
+    },
+    {
+      "item": "boraoztunc/skills stop-slop",
+      "reason": "same function as humanizer, with absolute rules (no adverbs, no passive voice, no dashes) that break correct pt-BR microcopy and contradict docs/20 §7.1; humanizer stays the single anti-AI-writing reviewer"
+    },
+    {
+      "item": "boraoztunc/skills page-cro, content-strategy, seo-audit, programmatic-seo, schema-markup, competitor-alternatives, analytics-tracking",
+      "reason": "older forks of skills already in marketing-skills; analytics-tracking also conflicts with docs/20 §14/§22"
+    },
+    {
+      "item": "boraoztunc/skills landing-page, pricing-page, product-proof-saas",
+      "reason": "overlap cro / design-taste-frontend; no price defined (docs/08 §11); product-proof-saas: reassess if a landing with an AI demo is specified"
+    },
+    {
+      "item": "boraoztunc/skills better-accessibility, better-colors, better-layout, better-typography, better-ui, better-interface, interface-review",
+      "reason": "outside copy scope; overlap web-design-guidelines and impeccable; candidates for a future design plan"
+    },
+    {
+      "item": "boraoztunc/skills frontend-design, impeccable, web-design-guidelines, vercel-react-best-practices",
+      "reason": "already installed from their original upstreams"
+    },
+    {
+      "item": "boraoztunc/skills visual presets and effects (visual-style-presets, glass-dark-ui, skeuomorphic-ui, mesh-gradient-dark-blue-clean, liquid-metal-border, beam-glow-states, webgl-laser, thinking-orbs, shaders-cursor-ripples, progressive-blur, reveal-hover-effect, staggered-word-reveal, container-lines, framed-grid-layout, corner-diagonals, css-border-gradient, beautiful-shadows, apple-design, emil-design-eng, documentary-brutalist-agency, editorial-portfolio-chapters, minimal-zine-poster)",
+      "reason": "aesthetic presets conflict with the fixed Rabisco na Margem identity (same reason as the Taste presets)"
+    },
+    {
+      "item": "boraoztunc/skills HyperFrames and animation adapters (hyperframes*, remotion-to-hyperframes, website-to-hyperframes, contribute-catalog, gsap, animejs, waapi, css-animations, lottie, three, typegpu, tailwind)",
+      "reason": "no use in the app; HyperFrames already available at user scope on this machine"
+    },
+    {
+      "item": "boraoztunc/skills tailwind-v4, app-store-screenshots, service-booking-flow, operational-enterprise-ai, conductor-rewrite-performance, linear-local-first-architecture, adversarial-review",
+      "reason": "outside the product, or duplicate engineering tools already installed (SecondSky covers Tailwind v4)"
     }
   ],
   "routes": [
@@ -795,17 +874,54 @@
       "never": ["full review on every small change"]
     },
     {
-      "class": "app-copy",
+      "class": "microcopy",
       "primary": [],
-      "review": ["humanizer"],
-      "never": ["global replace", "pedagogical content"]
+      "conditional": ["better-writing (only if 2+ strings, or error/confirmation/empty state)"],
+      "review": [],
+      "never": ["humanizer on labels", "more than 1 skill", "global replace"]
+    },
+    {
+      "class": "ux-writing",
+      "primary": ["better-writing"],
+      "conditional": ["humanizer (body text with 2+ sentences only)"],
+      "review": ["better-writing (review format, on the diff)"],
+      "never": ["marketing-skills in app screens", "pedagogical content"]
+    },
+    {
+      "class": "foca-voice",
+      "primary": [],
+      "review": [],
+      "never": ["humanizer", "better-writing", "ogilvy-copywriting"],
+      "guide": "docs/copy/04-foca-ia.md"
+    },
+    {
+      "class": "foca-ai",
+      "primary": [],
+      "review": [],
+      "never": ["humanizer on the prompt", "removing the anti-LaTeX rule"],
+      "guide": "docs/copy/04-foca-ia.md",
+      "note": "prompt engineering + L2 security review (docs/ai/SDD-WORKFLOW.md §6)"
+    },
+    {
+      "class": "pedagogical-content",
+      "primary": [],
+      "review": [],
+      "never": ["any writing skill on statements, alternatives, answer keys, formulas, quotes", "rewriting official questions (docs/34)"],
+      "guide": "docs/copy/05-conteudo-pedagogico.md"
     },
     {
       "class": "marketing",
-      "primary": ["marketing-skills:product-marketing", "marketing-skills:<goal skill>"],
-      "conditional": ["design-taste-frontend (if a page is built)"],
-      "review": ["humanizer"],
-      "never": ["external analytics without spec", "invented proof"]
+      "primary": ["marketing-skills:product-marketing", "ogilvy-copywriting", "marketing-skills:copywriting"],
+      "conditional": ["design-taste-frontend (if a page is built)", "humanizer (recommended, after the draft)"],
+      "review": ["marketing-skills:copy-editing"],
+      "never": ["external analytics without spec", "invented proof", "better-writing"]
+    },
+    {
+      "class": "positioning",
+      "primary": ["ogilvy-copywriting"],
+      "review": ["marketing-skills:copy-editing"],
+      "never": ["changing the positioning sentence without user approval (docs/38 D-1)"],
+      "guide": "docs/copy/01-estrategia.md"
     },
     {
       "class": "docs",

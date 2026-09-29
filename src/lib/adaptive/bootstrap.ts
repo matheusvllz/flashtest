@@ -100,16 +100,31 @@ export function priorPorMateria(
 }
 
 /**
- * Bootstrap completo — replay + prior de matéria (docs/30 §9.6). Chamado
- * por `store.ts#load()` quando `modelMeta.algoVersion < ALGO_VERSION`.
- * Determinístico: mesma entrada, mesma saída (idempotente — rodar 2x dá o
- * mesmo resultado, já que não lê o `skillModel` atual, só reconstrói).
+ * Bootstrap completo — replay + prior de matéria (docs/30 §9.6), preservando
+ * evidência/prior de nivelamento que o replay não cobre (docs/36 T-04.1).
+ * Chamado por `store.ts#load()` quando `modelMeta.algoVersion < ALGO_VERSION`.
+ * Determinístico: mesma entrada, mesma saída (idempotente).
  */
 export function bootstrapModel(
   s: Pick<AppState, "progress" | "learning">,
   now: string = new Date().toISOString(),
 ): Record<string, SkillModelEntry> {
   const doReplay = replayAttempts(s.learning.recentAttempts, now);
-  const priors = priorPorMateria(s.progress.bySubject, new Set(Object.keys(doReplay)), now);
-  return { ...priors, ...doReplay };
+  // docs/36 §G.4 (T-04.1): o replay só enxerga `recentAttempts`; as respostas
+  // do nivelamento NÃO viram `Attempt` e a evidência mais velha pode já ter
+  // saído do anel de tentativas. Por isso, entradas atuais de habilidades que
+  // o replay NÃO tocou são mantidas quando são `evidencia` ou
+  // `prior-nivelamento`. Só `prior-materia` (derivado de `progress`) é
+  // recalculado. Uma habilidade que o replay tocou vem do replay (fonte de
+  // verdade quando o algoritmo mudou). Continua determinístico e idempotente:
+  // a saída só depende de (recentAttempts, skillModel, bySubject, now), e uma
+  // segunda rodada sobre a própria saída mantém as mesmas entradas.
+  const mantidas: Record<string, SkillModelEntry> = {};
+  for (const [skillId, entry] of Object.entries(s.learning.skillModel ?? {})) {
+    if (skillId in doReplay) continue;
+    if (entry.source === "evidencia" || entry.source === "prior-nivelamento") mantidas[skillId] = entry;
+  }
+  const jaPopuladas = new Set([...Object.keys(doReplay), ...Object.keys(mantidas)]);
+  const priors = priorPorMateria(s.progress.bySubject, jaPopuladas, now);
+  return { ...priors, ...mantidas, ...doReplay };
 }

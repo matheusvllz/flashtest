@@ -1,0 +1,303 @@
+[
+  {
+    "id": "gen:por:crase-casos-proibidos:199d4671",
+    "arquivo": "src/content/banco/por/por-crase-casos-proibidos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.779,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.128,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: sem crase diante de pronome pessoal). Razão 1,78: correta 121 caracteres contra 51-68. Alternativas reescritas (80-95), sem 'apenas'. Expansão do estrato 2 (a amostra teve 100 % de ação).",
+    "lens": [
+      84,
+      85,
+      96,
+      82
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.513Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:crase-casos-proibidos:f2e9d408",
+    "arquivo": "src/content/banco/por/por-crase-casos-proibidos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.528,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.989,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: nome próprio masculino sem crase). Razão 1,53: correta 81 caracteres contra 34-53. Alternativas reescritas (86-90).",
+    "lens": [
+      91,
+      91,
+      87,
+      91
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.514Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:289e8368",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.798,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.979,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: recusar-se a). Razão 1,80: correta 151 caracteres contra 72-84. Alternativas reescritas (91-93); a correta cita só a forma que vale para a frase ('recusou-se a assinar').",
+    "lens": [
+      95,
+      96,
+      93,
+      95
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.514Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:43f034ea",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.854,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.01,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: frequentar é transitivo direto, 'que' e não 'onde'). Razão 1,85: correta 165 caracteres contra 64-89. Alternativas reescritas (86-95).",
+    "lens": [
+      97,
+      91,
+      87,
+      96
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.515Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:90819332",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.685,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.97,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: visar a). Razão 1,69: correta 155 caracteres contra 80-92. Alternativas reescritas (86-98); B deixa de propor uma forma inexistente.",
+    "lens": [
+      92,
+      92,
+      99,
+      96
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.515Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sentido-figuras-linguagem:8d9ac6b8",
+    "arquivo": "src/content/banco/por/por-sentido-figuras-linguagem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.899,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.074,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1: metáfora). Razão 1,90: correta 131 caracteres contra 52-69. Alternativas reescritas (87-99), sem ponto final.",
+    "lens": [
+      88,
+      99,
+      94,
+      87
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.515Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sentido-figuras-linguagem:a3e2ca3e",
+    "arquivo": "src/content/banco/por/por-sentido-figuras-linguagem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "metricas": {
+      "razaoTamanho": 1.538,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.05,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: metáfora). Razão 1,54: correta 123 caracteres contra 57-80. Alternativas reescritas (96-104), sem ponto final.",
+    "lens": [
+      106,
+      101,
+      94,
+      97
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:40:38.515Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

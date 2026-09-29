@@ -1,4 +1,6 @@
 import { describe, expect, test } from "bun:test";
+import { readdirSync, readFileSync, statSync } from "node:fs";
+import { join } from "node:path";
 import { guessingProbability, irtFromDifficulty } from "@/content/items/irt";
 import {
   itemDisponivel,
@@ -6,7 +8,9 @@ import {
   itemMetaOf,
   itemsOfSkill,
   isPackagedItem,
+  itemRetirado,
   _resetItemIndexCacheForTests,
+  _setRetiredForTests,
 } from "@/content/items";
 import { ITENS_GERADOS } from "@/content/banco/itens-gerados";
 import { FEATURES } from "@/lib/features";
@@ -123,6 +127,64 @@ describe("itemMetaOf", () => {
 
   test("id que não existe em lugar nenhum lança — mesma filosofia de resolveExercise (referência quebrada nunca silenciosa)", () => {
     expect(() => itemMetaOf("id-que-nao-existe-em-lugar-nenhum")).toThrow();
+  });
+});
+
+describe("proveniência da revisão (docs/36 T-07.5, RP-9)", () => {
+  function itensDoBanco(): Array<{ id: string; meta: { source: { kind: string }; validation: { status: string; reviewKind?: string } } }> {
+    const out: Array<{ id: string; meta: { source: { kind: string }; validation: { status: string; reviewKind?: string } } }> = [];
+    const walk = (dir: string) => {
+      for (const n of readdirSync(dir)) {
+        const f = join(dir, n);
+        if (statSync(f).isDirectory()) walk(f);
+        else if (n.endsWith(".json")) out.push(...(JSON.parse(readFileSync(f, "utf-8")) as { items?: typeof out }).items ?? []);
+      }
+    };
+    walk("src/content/banco");
+    return out;
+  }
+
+  test("os 737 itens gerados têm reviewKind 'ia-delegada'; nenhum item do banco fica sem reviewKind", () => {
+    const itens = itensDoBanco();
+    const gerados = itens.filter((i) => i.meta.source.kind === "ia-validada");
+    expect(gerados).toHaveLength(737);
+    for (const i of gerados) {
+      expect(i.meta.validation.reviewKind, i.id).toBe("ia-delegada");
+      // `status` e elegibilidade NÃO mudam: continua "revisada-humano" (o pool filtra por ele).
+      expect(i.meta.validation.status, i.id).toBe("revisada-humano");
+    }
+    expect(itens.filter((i) => i.meta.validation.reviewKind === undefined)).toEqual([]);
+  });
+
+  test("meta de exercício de trilha legada é 'autoria-legada'", () => {
+    expect(itemMetaOf("crase-01-a-regra-de-ouro:0").validation.reviewKind).toBe("autoria-legada");
+  });
+
+  test("item de pacote comum resolve como 'ia-validada' a partir do índice leve; sem 'retired' vazando pra entrada do índice", () => {
+    if (!FEATURES.pacotesConteudo || ITENS_GERADOS.length === 0) return;
+    const ref = ITENS_GERADOS.find((r) => !r.source);
+    if (!ref) return;
+    expect(itemMetaOf(ref.id).source.kind).toBe("ia-validada");
+    expect(itemIndex().find((e) => e.id === ref.id)).not.toHaveProperty("retired");
+  });
+});
+
+describe("item retirado (docs/36 T-07.6)", () => {
+  test("itemDisponivel exclui, itemIndex marca e itemMetaOf continua resolvendo; some do pool ao desmarcar", () => {
+    const id = Object.keys(EXERCISE_IDS)[0]; // embarcado: disponível sempre, então isola o efeito de `retired`
+    _resetItemIndexCacheForTests();
+    expect(itemDisponivel(id)).toBe(true);
+    _setRetiredForTests(id, true);
+    try {
+      expect(itemRetirado(id)).toBe(true);
+      expect(itemDisponivel(id)).toBe(false);
+      expect(itemIndex().find((e) => e.id === id)?.retired).toBe(true);
+      expect(itemMetaOf(id).id).toBe(id); // continua resolvível (histórico, sessão ativa, aula)
+    } finally {
+      _setRetiredForTests(id, false);
+    }
+    expect(itemDisponivel(id)).toBe(true);
+    expect(itemIndex().find((e) => e.id === id)).not.toHaveProperty("retired");
   });
 });
 

@@ -1,0 +1,1164 @@
+{
+  "lote": "mat-fil-soc-04",
+  "geradoEm": "2026-09-28T23:18:32.944Z",
+  "revisor": "ia-delegada:sonnet",
+  "itens": [
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:0c1abfc6",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.184,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.982,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Distratores eram absurdos ('Ausencia de direitos para ninguem', 'Direitos economicos para homens apenas'). Agora sao dimensoes/conceitos reais que nao descrevem as conquistas (so politicos, deveres, privilegio).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:164ad899",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.61,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.99,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,61; B e C eram absurdos ('Completa rejeicao de democracia', 'Decisoes todas nas maos de burocratas'). Agora sao tutela, cidadania de consumo e representativa pura.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:1cdffd3b",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.735,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.029,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 1,73 (85 x 49). Distratores agora sao visoes reais que a Reforma Agraria contesta (terra como assunto privado, desigualdade natural, cidadania de proprietarios), sem 'qualquer/apenas'.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:48c52eba",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.803,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.027,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Razao 1,80 (110 x 61) e 'Apenas'/'Exclusao total' em A e C. Alternativas equilibradas, cada uma uma concepcao restritiva de democracia.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:5f8239cb",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1c"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.667,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "metricas": {
+        "razaoTamanho": 0.923,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "corrigido",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "corrigido"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito C confere. Razao 1,67; C tinha travessao e 'direito e absoluto'. Sem travessao, sem absolutismo e alternativas equilibradas; explicacao trocou 'regra e absoluta' por 'e um dever'.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:d7013d7e",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.593,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.91,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere (utilitarismo: obrigatorio, ao estilo de Singer). Razao 1,59. Distratores com detalhe equivalente, cada um uma posicao nomeavel (neutralidade, opcionalidade, soberania).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:71f78a40",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.684,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": true
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.98,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": true
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere (Hobbes). Razao 1,68 (128 x 76): correta enxuta e distratores com detalhe equivalente.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:837475c7",
+      "arquivo": "src/content/banco/mat/mat-leitura-grafico-tabela.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.698,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.886,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere (sem o total nao ha frequencia relativa). Razao 1,70. C ('30 e 60% de 50') era um raciocinio sem sentido; agora e a confusao entre presenca da faixa e concentracao. Alternativas equilibradas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:a5bf2bb5",
+      "arquivo": "src/content/banco/mat/mat-leitura-grafico-tabela.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.667,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.667,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "excecao-proposta",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "revisar-explicacao"
+      ],
+      "motivo": "(500+600+550+700)/4 = 587,5. Razao 1,67 e falso positivo: as alternativas sao numericas de 3 digitos e a correta tem uma virgula (5 x 3 caracteres). Excecao proposta para tamanho-correta-maior. Explicacao trocou a frase sobre incidencia no ENEM (sem fonte) por instrucao de calculo.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": [
+        "tamanho-correta-maior:media"
+      ]
+    },
+    {
+      "id": "gen:mat:probabilidade-evento-simples:16817e9d",
+      "arquivo": "src/content/banco/mat/mat-probabilidade-evento-simples.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.545,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito D confere (10/50). Ambiguidade: a alternativa A dizia '10/49 ≈ 20%', que tambem arredonda para 20%, e o enunciado ('pelo menos um', 'sem reposicao') nao dizia que cada pessoa ganha so um premio. Enunciado explicito; A virou 9/49 (erro de subtrair 1); formas das alternativas igualadas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:5e7040cd",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.909,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.984,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 1,91 (126 x 66). Distratores: universalismo etnocentrico (A), biologismo (B), esvaziar o gesto (C), com detalhe equivalente e sem 'algum'/'universal ... unica'.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:9de94b61",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.558,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.991,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Razao 1,56 (120 x 77). Alternativas equilibradas: determinismo biologico (A), programacao inata (C) e transmissao genetica da cultura (D).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:bc242bf9",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.776,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 1,78. O enunciado entregava a resposta ('Isso nao reflete capacidades biologicas ... mas sim aprendizado de normas'): frase removida. Distratores equilibrados e sem 'naturalmente/completamente' como pista. Dificuldade 4 (desafio) alta para o raciocinio exigido, proposta d3, nao aplicada (o papel 'desafio' e separado).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:276ddf94",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.736,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.079,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,74 (92 x 53); B e D absurdos ('Rejeicao total da educacao formal'). Alternativas equilibradas, com visoes restritivas reais (educacao como privilegio, cidadania dos diplomados).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:9865a584",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "2",
+      "marcasEstrato": [
+        "2"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.716,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.981,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,72 (115 x 67); B, C e D absurdos ('Rejeicao de qualquer acao afirmativa'). Agora sao as posicoes reais no debate sobre acoes afirmativas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:65fbb645",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.312,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.04,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere (panoptico, Bentham/Foucault). Razao 1,31. O enunciado ('controle estatal sem limite claro') permitia defender a divisao de poderes de Montesquieu (B): 'observacao constante' desfaz a ambiguidade. A trazia 'igualdade perpetua'. Alternativas equilibradas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:6b756cce",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.014,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.833,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere (razao 1,01, correta estritamente a mais longa por 1 caractere). A ganhou detalhe para igualar tamanho.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:71973212",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.012,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.879,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere (Marx, Estado como instrumento de classe). Razao 1,01 com a correta estritamente a mais longa por 1 caractere; C ganhou detalhe.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:leitura-grafico-tabela:ac337126",
+      "arquivo": "src/content/banco/mat/mat-leitura-grafico-tabela.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "revisar-explicacao"
+      ],
+      "motivo": "160/700 = 22,86% ~ 23%. Explicacao trocou a frase sobre incidencia em prova (sem fonte) por instrucao de calculo. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:media-mediana-moda:09b78f9a",
+      "arquivo": "src/content/banco/mat/mat-media-mediana-moda.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "Ordenado 3, 5, 7, 8, 12: mediana 7. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:7c7f3b59",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.889,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "100 x 0,7 x 1,4 = 98. Distrator 110 = +40% e -30% mal combinados (100 - 30 + 40). Dificuldade 4 (desafio) alta para um fator composto simples, proposta d3, nao aplicada. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:8180ae98",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "corrigido"
+      },
+      "acoes": [
+        "revisar-explicacao"
+      ],
+      "motivo": "1000 x 0,9 x 0,8 = 720. Explicacao tinha ' - ' no lugar de travessao ('fatores - nao soma'): trocado por virgula. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-fator-multiplicativo:d9dbb4df",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-fator-multiplicativo.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "10000 x 1,25 x 1,2 = 15000. Distrator 14500 = somar as taxas (25% + 20% = 45%). Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:534957eb",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "12% de 250000 = 30000. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:mat:porcentagem-valor:627f6ca6",
+      "arquivo": "src/content/banco/mat/mat-porcentagem-valor.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "3",
+      "marcasEstrato": [
+        "3"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "28% de 50000 = 14000; 32% (16000) e o distrator de outro percentual do enunciado. Dificuldade 4 (desafio) alta para um percentual direto, proposta d2, nao aplicada. Resolvi de forma independente e o gabarito confere; alternativas numericas curtas legitimas (razao de tamanho nao e pista), distratores ligados a erros de calculo tipicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:18:32.944Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    }
+  ]
+}

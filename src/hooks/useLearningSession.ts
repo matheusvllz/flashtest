@@ -314,7 +314,10 @@ export function useLearningSession(lesson: MicroLesson, opts: UseLearningSession
 
     const antes = getState();
     const { correct, total } = scoreOf(steps, answers);
-    const result = opts.onComplete ? opts.onComplete(correct, total) : completeMicroLesson(lesson.id, lesson.version, correct, total);
+    const result = opts.onComplete
+      ? opts.onComplete(correct, total)
+      : // `startedAt` da sessão: uma conclusão já gravada DEPOIS dela não é contada de novo (docs/36 G-3).
+        completeMicroLesson(lesson.id, lesson.version, correct, total, { sessionStartedAt: startedAt });
     const depois = getState();
 
     const nivelSubiu = nivelDeXp(depois.progress.xp).nivel > nivelDeXp(antes.progress.xp).nivel;

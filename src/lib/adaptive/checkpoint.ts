@@ -24,7 +24,7 @@ import {
   FIRME_CONFIDENCE_MIN,
   FIRME_MASTERY_MIN,
 } from "./constants";
-import type { JourneyHistoryEntry, LearningState } from "@/lib/learning/types";
+import type { Attempt, JourneyHistoryEntry, LearningState } from "@/lib/learning/types";
 
 export interface CheckpointWindowEntry {
   skillIds: string[];
@@ -210,4 +210,24 @@ export function recalibrar(respostas: RecalibrarInput[]): RecalibrarResult {
     }
   }
   return { antecipandoRevisao, elegivelDesafio };
+}
+
+/**
+ * Entradas de `recalibrar` a partir das tentativas DESTE checkpoint (docs/36 T-04.4).
+ * Preferência: a sessão do player (`sessionId`); sem ela (sessão já limpa), as
+ * tentativas dos `itemIds` da atividade enviadas depois de `startedAt`. Tentativa sem
+ * `predictedP` (ex.: "Não sei") não entra — `recalibrar` também as ignora.
+ */
+export function checkpointRecalibrationInputs(
+  attempts: Attempt[],
+  ctx: { sessionId?: string | null; itemIds?: string[]; startedAt?: string },
+): RecalibrarInput[] {
+  const itemIds = new Set(ctx.itemIds ?? []);
+  const doCheckpoint = attempts.filter((a) => {
+    if (ctx.sessionId) return a.sessionId === ctx.sessionId;
+    return itemIds.has(a.exerciseId) && (!ctx.startedAt || a.submittedAt >= ctx.startedAt);
+  });
+  return doCheckpoint
+    .filter((a) => a.skillIds.length > 0)
+    .map((a) => ({ skillId: a.skillIds[0], predictedP: a.predictedP, correct: a.correct }));
 }

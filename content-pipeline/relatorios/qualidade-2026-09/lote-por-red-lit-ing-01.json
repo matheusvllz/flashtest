@@ -1,0 +1,919 @@
+[
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:2750c039",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito D confere (R1). Explicação citava 'saiu-se' (forma que não está na frase) e 'nunca junto de verbo' de modo absoluto; reescrita curta e correta.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.865Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:7aac65a2",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.375,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.375,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B). Resposta de uma palavra: o tamanho não carrega informação (Substantivo é só a palavra mais longa); distratores são classes reais confundíveis com o nome 'paciência'.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.866Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:concordancia-verbal-nominal:05966e98",
+    "arquivo": "src/content/banco/por/por-concordancia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.967,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.903,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "ok",
+      "R6": "corrigido",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito C confere, mas o item não media a habilidade (R3/R6): 'alegres' tem a mesma forma no masculino e no feminino, então a mistura de gêneros nunca aparece; a explicação citava 'alegras e alegros' e dizia 'plural masculino' de uma forma que não existe. Trocado por 'satisfeitos' (adjetivo variável) e distratores por erros reais: gênero da maioria, concordar com o termo mais próximo, repetir a flexão de cada sujeito. Índice da correta mantido (C).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.866Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:concordancia-verbal-nominal:d95d3030",
+    "arquivo": "src/content/banco/por/por-concordancia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.098,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.098,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito D confere (R1). Explicação generalizava ('sempre pluralizar quando houver e') e não dizia por que 'recursos' não comanda o verbo; reescrita com a regra e o papel de predicativo.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.866Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:crase-casos-proibidos:12fb3940",
+    "arquivo": "src/content/banco/por/por-crase-casos-proibidos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.529,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Correta 130 caracteres contra 85 (razão 1,53) e única com 'apenas'; distrator D era ininteligível ('dois tons'). Alternativas reescritas com tamanho parecido e erros reais (crase no plural, crase obrigatória antes de infinitivo, verbo 'feminino').",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.867Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:crase-casos-proibidos:7ddf6596",
+    "arquivo": "src/content/banco/por/por-crase-casos-proibidos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.255,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 118 caracteres contra 94 e a mais longa; alternativas igualadas (~95-99). Explicação tratava 'dedicação' como verbo transitivo indireto; corrigido para regência nominal.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.867Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:crase-regra-basica:8cf0568c",
+    "arquivo": "src/content/banco/por/por-crase-regra-basica.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.556,
+      "corretaMaisLonga": false,
+      "absolutismo": 3
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D (C e D) confere: 'à aumentar' e 'à cumprir' violam a norma; A e B estão corretas (R1). Três alternativas com 'Somente/Apenas' e a correta única com dois itens (pista de forma). Alternativas passam a ser todas pares de letras (A e B, B e C, A e D, C e D), cada uma ligada a um erro de leitura da lista. Item de afirmações rotuladas: a explicação cita as letras do enunciado e continua válida.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.868Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:0cd9507b",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.692,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.692,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: re + ler, prefixação). Resposta de termo técnico curto; correta é a mais curta ou próxima; explicação correta.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.868Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:16bc47e7",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.63,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.63,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: jardim + -eiro, sufixação). Termo técnico curto; correta não é a mais longa; explicação correta.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.868Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:dc8f4d25",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.038,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.038,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: passa + tempo, justaposição). Correta 27 contra 26 caracteres (razão 1,04); aglutinação é o distrator conceitual esperado.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.868Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:9a4b5587",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 2.667,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.941,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 2,67: correta com 160 caracteres ('mecanismos bioquímicos específicos', 'riscos multifatoriais', afirmações que o texto não faz) contra distratores de 39-60 e com absolutismo. Enunciado 'Qual a intenção?' incompleto. Alternativas igualadas (~80) e sem a extrapolação na correta; explicação sem 'essencial'.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.868Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:fda39617",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 3.339,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.969,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 3,34: correta com 187 caracteres e distratores de 28-56 ('Educar meninas é impossível.'), sem erro conceitual real (R4). Alternativas reescritas com ~90 caracteres, cada distrator com um erro plausível de leitura (solução única, impossibilidade, culpa de um só agente).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.868Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:13b59ab8",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.893,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.893,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: paroxítona terminada em l). Correta não é a mais longa; explicação correta.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.869Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:5399f2d9",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.742,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.742,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: oxítona terminada em -es). Correta não é a mais longa; explicação correta.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.869Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:ortografia-acentuacao:e0372ef8",
+    "arquivo": "src/content/banco/por/por-ortografia-acentuacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 3
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.727,
+      "corretaMaisLonga": false,
+      "absolutismo": 3
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: proparoxítonas sempre levam acento). Todas as alternativas têm o mesmo formato 'toda X é sempre acentuada'; o 'sempre' é o conteúdo da regra, não pista. Correta não é a mais longa.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.869Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:pontuacao-virgula-regras:11103178",
+    "arquivo": "src/content/banco/por/por-pontuacao-virgula-regras.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.529,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.939,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "observacao",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A mantido, mas a explicação dizia que a vírgula antes do 'e' final ('Oxford') é opcional e as duas formas são aceitas; em português a vírgula antes do 'e' em enumeração simples não se usa (R2 falha, contradizia a própria alternativa B). O enunciado usava dois-pontos logo após 'foram' (uso discutível, R3): passou a 'são os seguintes:'. Alternativa D repetia o veredito de A com argumento fraco; virou erro real (trocar os dois-pontos por vírgula). Alternativas com ~100 caracteres e correta sem ser a mais longa. Dificuldade 4 mantida (não alterei irt).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.869Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:regencia-verbal-nominal:4f83c73b",
+    "arquivo": "src/content/banco/por/por-regencia-verbal-nominal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.609,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.052,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1: simpatizar com). Correta 103 caracteres contra 64 (razão 1,61); alternativas igualadas (~90-97). Explicação dizia 'ter simpatia com', o que não é a paráfrase; reescrita.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.869Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sentido-figuras-linguagem:a04475d4",
+    "arquivo": "src/content/banco/por/por-sentido-figuras-linguagem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 2.415,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.01,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B mantido. Razão 2,42 (correta 128 caracteres contra 47-53). R3: 'hipérbole' e 'antítese' eram defensáveis para 'o silêncio gritava'; o enunciado passa a dizer que a expressão une ideias que se contradizem, o que deixa o paradoxo como única leitura. Alternativas com ~95-100 caracteres; explicação alinhada ('paradoxo, ou oxímoro').",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-periodo-composto:2ae6fec3",
+    "arquivo": "src/content/banco/por/por-sintaxe-periodo-composto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.345,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.972,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Correta 74 caracteres contra 55, única sem absolutismo entre distratores com 'apenas'; alternativas igualadas (~64-71).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-periodo-composto:d1db6ac3",
+    "arquivo": "src/content/banco/por/por-sintaxe-periodo-composto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.362,
+      "corretaMaisLonga": true,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.925,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1: 3 orações). Rótulo impreciso 'uma principal, uma coordenada': a primeira é coordenada assindética e a segunda é coordenada adversativa e principal da causal. Alternativas reescritas com ~90-103 caracteres, sem 'todas' nos distratores; explicação nomeia a assindética.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:6d1fcdcc",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 2.233,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.117,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito C confere (R1). Razão 2,23: o predicado completo é naturalmente longo e os distratores eram termos soltos de 16-30 caracteres. Enunciado passa a pedir o predicado completo (R3); distratores viram predicados parciais e sintagmas sem o verbo, com 36-59 caracteres. Explicação: 'complemento de tempo' trocado por 'adjunto adverbial de tempo'.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:6e7431b8",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.571,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.857,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito B confere (R1). Distrator C ('para que fosse lido') não existe na frase (R4) e a explicação o chamava de 'sintagma final... completivo nominal'. Trocado por 'A professora' (sujeito). Enunciado passa a dizer 'entre as opções', pois o artigo 'uma' também é adjunto adnominal e não é opção (R3); explicação diz isso.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:sintaxe-termos-oracao:c6beb080",
+    "arquivo": "src/content/banco/por/por-sintaxe-termos-oracao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.296,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.109,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "corrigido",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1). Distratores C e D trocavam o sujeito por termos que não estão na frase (R4). Enunciado pedia 'o complemento' no singular, mas há dois (objeto direto e indireto): passa a 'os complementos'. Alternativas reescritas: mesmo sujeito e mesmos complementos, variando só o predicado (só o verbo; sem o verbo; sem o objeto indireto), o que testa o conceito de predicado.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:tempos-verbais-emprego:3049eab0",
+    "arquivo": "src/content/banco/por/por-tempos-verbais-emprego.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: futuro do presente). Alternativas de uma palavra com o mesmo tamanho; distratores são tempos verbais reais.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.870Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:tempos-verbais-emprego:4c788da7",
+    "arquivo": "src/content/banco/por/por-tempos-verbais-emprego.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.167,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.167,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: pretérito perfeito). Alternativas de uma palavra (5-7 caracteres); o tamanho não vale como pista.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:03:34.871Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

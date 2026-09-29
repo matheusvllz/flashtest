@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { BRAND, PALETTE } from "../lib/brand";
 import { PhoneFrame } from "../components/AppShell";
 import { FocaMark } from "../components/brand/FocaMark";
+import { PersistenceBanner } from "../components/PersistenceBanner";
 import { fala } from "../lib/voz";
 import { getState } from "../lib/store";
 import {
@@ -60,6 +61,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </div>
         <div className="mt-2 flex w-full flex-col gap-2">
           <button
+            type="button"
             onClick={() => {
               router.invalidate();
               reset();
@@ -171,6 +173,8 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      {/* Aviso de persistência local (docs/36 T-05.1/T-05.3): acima de toda rota, inclusive as sem AppShell. */}
+      <PersistenceBanner />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

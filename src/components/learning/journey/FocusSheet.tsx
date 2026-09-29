@@ -68,7 +68,7 @@ export function FocusSheet({
                   className={cn(
                     "min-h-11 rounded-full border-2 px-3 text-sm font-semibold transition-colors",
                     selected.includes(subject.id)
-                      ? "border-mar bg-mar text-white"
+                      ? "border-mar bg-mar text-on-mar"
                       : "border-abismo text-abismo",
                   )}
                 >

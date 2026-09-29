@@ -112,7 +112,7 @@ function Dashboard() {
         </div>
 
         {/* CTA único: a próxima aula de 60s. Sem seletor de minutos (SDD 12, D1). */}
-        <div className="card-soft mt-5 p-5" style={{ borderColor: "var(--color-mar)" }}>
+        <div className="card-soft mt-5 p-5" style={{ borderColor: "var(--mar)" }}>
           <div className="ds-label">Aula de hoje · 60s</div>
           <h2 className="mt-2 font-display text-[22px] font-bold leading-tight text-abismo">
             {nextTopic}
@@ -214,8 +214,8 @@ function Dashboard() {
         <div
           className="card-soft p-4"
           style={{
-            background: "color-mix(in srgb, var(--color-recompensa) 20%, var(--color-cards))",
-            borderColor: "var(--color-recompensa)",
+            background: "color-mix(in srgb, var(--alert) 20%, var(--cards))",
+            borderColor: "var(--alert)",
           }}
         >
           <p className="ds-label">Teste premium</p>
@@ -235,7 +235,7 @@ function Mission({ done, label }: { done: boolean; label: string }) {
       <div
         className={`grid h-6 w-6 shrink-0 place-items-center rounded-full ${done ? "bg-mar" : "border-2 border-dashed border-gelo"}`}
       >
-        {done && <Check size={14} strokeWidth={3} className="text-white" />}
+        {done && <Check size={14} strokeWidth={3} className="text-on-mar" />}
       </div>
       <span className={`text-sm font-semibold ${done ? "text-abismo" : "text-nevoa"}`}>
         {label}

@@ -35,10 +35,10 @@ export function choiceClasses(state: {
   return cn(
     "w-full rounded-lg border-2 px-4 py-3.5 text-left text-[15px] leading-relaxed transition-all duration-100",
     !state.checked &&
-      "border-gelo bg-cards text-abismo shadow-[0_3px_0_var(--color-gelo)] active:translate-y-[3px] active:shadow-none hover:border-mar/40",
+      "border-gelo bg-cards text-abismo shadow-[0_3px_0_var(--gelo)] active:translate-y-[3px] active:shadow-none hover:border-mar/40",
     !state.checked &&
       state.selected &&
-      "border-mar bg-mar/8 font-semibold text-abismo shadow-[0_3px_0_color-mix(in_srgb,var(--color-mar)_40%,transparent)]",
+      "border-mar bg-mar/8 font-semibold text-abismo shadow-[0_3px_0_color-mix(in_srgb,var(--mar)_40%,transparent)]",
     state.checked &&
       state.isCorrect &&
       "border-success bg-success/10 font-semibold text-abismo shadow-none",
@@ -66,9 +66,9 @@ export function marcadorClasses(state: {
   return cn(
     "grid h-7 w-7 shrink-0 place-items-center rounded-full font-display text-xs font-bold",
     !state.checked && !state.selected && "bg-gelo text-abismo",
-    !state.checked && state.selected && "bg-mar text-white",
-    state.checked && state.isCorrect && "bg-success text-white",
-    state.checked && state.isWrongPick && "bg-error text-white",
+    !state.checked && state.selected && "bg-mar text-on-mar",
+    state.checked && state.isCorrect && "bg-success-texto text-on-success",
+    state.checked && state.isWrongPick && "bg-error text-on-error",
     state.checked && !state.isCorrect && !state.isWrongPick && "bg-gelo text-abismo",
   );
 }

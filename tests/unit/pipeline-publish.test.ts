@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   amostrarParaRevisao,
   buildPublishPlan,
+  conteudoDoArquivoDeBanco,
   formatarAmostraMarkdown,
   formatarRelatorio,
   generatedItemId,
@@ -144,6 +145,24 @@ describe("buildPublishPlan", () => {
     expect(segundaPassada[0].items[0].id).toBe(idJaPublicado);
   });
 
+  test("sem meta.irt, o default segue a dificuldade editorial (RP-2, T-04.2) — não é mais b = 0 para todos", () => {
+    const bs = ([1, 2, 3, 4, 5] as const).map(
+      (d) => buildPublishPlan([candidato({ difficulty: d })], true, () => [])[0].items[0].meta.irt,
+    );
+    expect(bs.map((i) => i.b)).toEqual([-1.6, -0.8, 0, 0.8, 1.6]);
+    for (const irt of bs) {
+      expect(irt.a).toBe(1);
+      expect(irt.c).toBeCloseTo(0.25, 10); // 4 alternativas
+      expect(irt.source).toBe("estimado");
+    }
+  });
+
+  test("meta.irt explícito do candidato continua valendo (só o default mudou)", () => {
+    const irt = { a: 1.3, b: 0.4, c: 0.2, source: "estimado" as const };
+    const plano = buildPublishPlan([candidato({ meta: { irt } })], true, () => []);
+    expect(plano[0].items[0].meta.irt).toEqual(irt);
+  });
+
   test("itens JÁ existentes no arquivo (de outros candidatos) são preservados", () => {
     const existente: PublishedItem = {
       id: "gen:mat:porcentagem-conceito:aaaaaaaa",
@@ -263,5 +282,84 @@ describe("formatarAmostraMarkdown / formatarRelatorio", () => {
     });
     expect(relatorio).toContain("20.0%");
     expect(relatorio).toContain("acima de 15%");
+  });
+});
+
+describe("formatarRelatorio: avisos de forma (docs/36 T-07.2)", () => {
+  test("mostra contagens por severidade, exceções, retidos por aviso alto e a posição do gabarito", () => {
+    const relatorio = formatarRelatorio({
+      loteId: "lote-1",
+      totalCandidatos: 10,
+      rejeitadosNaCritica: 0,
+      taxaConflito: 0,
+      humanizacoesAceitas: 0,
+      humanizacoesRejeitadas: 0,
+      validos: 10,
+      invalidos: 0,
+      publicados: 7,
+      avisos: { alta: 3, media: 4, info: 5, excecoes: 1, retidosPorAvisoAlto: 3, posicaoLote: "45% dos 20 itens têm o gabarito na posição A" },
+    });
+    expect(relatorio).toContain("3 alta · 4 média · 5 info; exceções registradas: 1");
+    expect(relatorio).toContain("3 candidato(s) com aviso ALTO");
+    expect(relatorio).toContain("posição A");
+  });
+
+  test("sem o campo `avisos` o relatório antigo não muda", () => {
+    const relatorio = formatarRelatorio({
+      loteId: "lote-1",
+      totalCandidatos: 1,
+      rejeitadosNaCritica: 0,
+      taxaConflito: 0,
+      humanizacoesAceitas: 0,
+      humanizacoesRejeitadas: 0,
+      validos: 1,
+      invalidos: 0,
+      publicados: 1,
+    });
+    expect(relatorio).not.toContain("Avisos de forma");
+  });
+});
+
+/**
+ * Republicar itens NÃO pode apagar as `lessons` do arquivo de banco (docs/36 T-07.6, achado C7):
+ * `publish.ts` gravava só `{ subjectId, items }`.
+ */
+describe("conteudoDoArquivoDeBanco: preserva o que já existe fora de `items`", () => {
+  const aula = { id: "aula-mat-porcentagem-conceito", skillIds: ["mat:porcentagem-conceito"], steps: [] };
+  const itemAntigo: PublishedItem = {
+    id: "gen:mat:porcentagem-conceito:aaaaaaaa",
+    exercise: exercicio("Enunciado antigo do item retirado, longo o bastante pra ser realista no teste."),
+    meta: { id: "gen:mat:porcentagem-conceito:aaaaaaaa" } as never,
+    retired: true,
+  };
+
+  test("republicar num arquivo com aulas mantém `lessons` (e outras chaves) e troca só subjectId/items", () => {
+    const existente = { subjectId: "mat", items: [itemAntigo], lessons: [aula], extra: { nota: "mantida" } };
+    const plano = buildPublishPlan([candidato()], true, () => existente.items);
+    const conteudo = conteudoDoArquivoDeBanco(existente, plano[0]);
+    expect(conteudo.lessons).toEqual([aula]);
+    expect(conteudo.extra).toEqual({ nota: "mantida" });
+    expect(Object.keys(conteudo)).toEqual(["subjectId", "items", "lessons", "extra"]); // ordem existente preservada
+    const itens = conteudo.items as PublishedItem[];
+    expect(itens).toHaveLength(2);
+    // O item retirado que já estava no arquivo continua retirado (o merge por id não o reescreve).
+    expect(itens.find((i) => i.id === itemAntigo.id)?.retired).toBe(true);
+  });
+
+  test("arquivo novo (sem existente) grava só subjectId e items, como antes", () => {
+    const plano = buildPublishPlan([candidato()], true, () => []);
+    const conteudo = conteudoDoArquivoDeBanco(null, plano[0]);
+    expect(Object.keys(conteudo)).toEqual(["subjectId", "items"]);
+    expect(conteudo).not.toHaveProperty("lessons");
+  });
+
+  test("republicar o MESMO candidato 2× não duplica item nem mexe nas aulas (idempotente)", () => {
+    const existente = { subjectId: "mat", items: [] as PublishedItem[], lessons: [aula] };
+    const p1 = buildPublishPlan([candidato()], true, () => existente.items);
+    const c1 = conteudoDoArquivoDeBanco(existente, p1[0]);
+    const p2 = buildPublishPlan([candidato()], true, () => c1.items as PublishedItem[]);
+    const c2 = conteudoDoArquivoDeBanco(c1, p2[0]);
+    expect((c2.items as PublishedItem[]).length).toBe(1);
+    expect(c2.lessons).toEqual([aula]);
   });
 });

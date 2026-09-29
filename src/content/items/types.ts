@@ -46,10 +46,24 @@ export interface ItemSource {
   generatedBy?: string;
 }
 
+/**
+ * COMO o item foi revisado (docs/36 §G.5, RP-9) — separado de `status` de propósito: `revisada-humano`
+ * é "passou no portão de revisão" (é o que o pool filtra), e renomeá-lo despublicaria itens e
+ * reinterpretaria a autorização de `32`. Ausente = desconhecido.
+ * - `humano`: pessoa leu e aprovou;
+ * - `ia-delegada`: revisão feita por modelo por delegação do usuário (completa ou por amostra);
+ * - `gabarito-oficial`: item oficial com gabarito conferido contra a fonte;
+ * - `autoria-legada`: conteúdo autoral das trilhas antigas, revisado na autoria (docs/22/26).
+ */
+export type ItemReviewKind = "humano" | "ia-delegada" | "gabarito-oficial" | "autoria-legada";
+
 export interface ItemValidation {
   status: ItemValidationStatus;
   reviewedAt?: string;
   reviewer?: string;
+  reviewKind?: ItemReviewKind;
+  /** Id do lote de revisão de qualidade (docs/36 Fase 7) que decidiu sobre o item, quando houve. */
+  reviewNote?: string;
 }
 
 export interface ItemMeta {

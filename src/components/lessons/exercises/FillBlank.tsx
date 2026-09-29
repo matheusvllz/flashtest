@@ -35,6 +35,7 @@ export function FillBlankView({
           const selected = answer === i;
           return (
             <button
+              type="button"
               key={i}
               role="radio"
               aria-checked={selected}

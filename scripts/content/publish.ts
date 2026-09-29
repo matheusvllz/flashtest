@@ -9,13 +9,22 @@
 import { createHash } from "node:crypto";
 import type { Exercise } from "@/lib/lessons/types";
 import type { ItemMeta } from "@/content/items/types";
+import { irtFromDifficulty } from "@/content/items/irt";
+import { reviewKindDe } from "./marcar-proveniencia";
 import type { Candidate } from "./pipeline-types";
 
 export function isPublishable(candidate: Candidate, loteAprovadoPorAmostra: boolean): boolean {
   if (candidate.stages.validation?.ok !== true) return false;
   if (candidate.stages.humanReview?.verdict === "aprova") return true;
   if (candidate.stages.humanReview?.verdict === "reprova") return false;
+  // docs/36 T-07.2: warning de severidade "alta" (pista forte de forma, explicação citando letra errada)
+  // não passa "de carona" na aprovação do lote por amostra — exige o `aprova` explícito do item.
+  if (temAvisoAlto(candidate)) return false;
   return loteAprovadoPorAmostra && candidate.stages.verification?.escalated !== true;
+}
+
+export function temAvisoAlto(candidate: Candidate): boolean {
+  return (candidate.stages.validation?.warnings ?? []).some((w) => w.severidade === "alta");
 }
 
 function normalizarEnunciado(texto: string): string {
@@ -53,6 +62,22 @@ export interface PublishedItem {
   id: string;
   exercise: Exercise;
   meta: ItemMeta;
+  /** Item retirado de circulação (docs/36 §G.6): preservado ao republicar. */
+  retired?: boolean;
+}
+
+/**
+ * Conteúdo de um arquivo de banco depois de republicar (docs/36 T-07.6, achado C7): parte do
+ * arquivo que JÁ existe e troca só `subjectId` e `items`. Antes gravava `{ subjectId, items }`
+ * e apagava as `lessons` (aulas geradas) de todo arquivo republicado — as 48 aulas publicadas
+ * sumiriam ao republicar itens de uma habilidade que já tinha aula. Qualquer outra chave do
+ * arquivo também é preservada; a ordem das chaves existentes se mantém.
+ */
+export function conteudoDoArquivoDeBanco(
+  existente: Record<string, unknown> | null,
+  arquivo: Pick<PublishFileEntry, "subjectId" | "items">,
+): Record<string, unknown> {
+  return { ...(existente ?? {}), subjectId: arquivo.subjectId, items: arquivo.items };
 }
 
 export interface PublishFileEntry {
@@ -99,7 +124,8 @@ export function buildPublishPlan(
       version: 1,
       skillIds: [candidate.skillId],
       difficulty: candidate.difficulty,
-      irt: candidate.meta.irt ?? { a: 1, b: 0, c: 0.2, source: "estimado" },
+      // docs/36 T-04.2: o default NÃO é mais `b = 0` para todo item — `b` segue a dificuldade editorial (`irt.ts`), senão a seleção por informação degenera.
+      irt: candidate.meta.irt ?? irtFromDifficulty(candidate.difficulty, candidate.exercise),
       roles: candidate.meta.roles ?? [candidate.role],
       estimatedSeconds: candidate.meta.estimatedSeconds ?? 60,
       dontKnowAllowed: candidate.meta.dontKnowAllowed ?? true,
@@ -109,6 +135,10 @@ export function buildPublishPlan(
         status,
         reviewedAt: new Date().toISOString(),
         reviewer: candidate.stages.humanReview?.reviewer,
+        // docs/36 T-07.5: diz COMO foi revisado, sem mexer no `status` (que o pool filtra). Sem regra → ausente.
+        ...(reviewKindDe(status, candidate.stages.humanReview?.reviewer)
+          ? { reviewKind: reviewKindDe(status, candidate.stages.humanReview?.reviewer) }
+          : {}),
       },
       examProfiles: candidate.meta.examProfiles ?? ["enem"],
     };
@@ -164,6 +194,17 @@ export function formatarAmostraMarkdown(loteId: string, amostra: Candidate[]): s
   return linhas.join("\n");
 }
 
+export interface AvisosDoLote {
+  alta: number;
+  media: number;
+  info: number;
+  excecoes: number;
+  /** Candidatos com aviso alto que ficaram de fora por falta de aprovação explícita. */
+  retidosPorAvisoAlto: number;
+  /** `posicao-lote` (info), quando disparou. */
+  posicaoLote?: string;
+}
+
 interface RelatorioLote {
   loteId: string;
   totalCandidatos: number;
@@ -174,6 +215,7 @@ interface RelatorioLote {
   validos: number;
   invalidos: number;
   publicados: number;
+  avisos?: AvisosDoLote;
 }
 
 export function formatarRelatorio(r: RelatorioLote): string {
@@ -187,6 +229,15 @@ export function formatarRelatorio(r: RelatorioLote): string {
     `- Válidos na validação determinística (estágio 6): ${r.validos}`,
     `- Inválidos: ${r.invalidos}`,
     `- Publicados: ${r.publicados}`,
+    ...(r.avisos
+      ? [
+          `- Avisos de forma (não bloqueiam): ${r.avisos.alta} alta · ${r.avisos.media} média · ${r.avisos.info} info; exceções registradas: ${r.avisos.excecoes}`,
+          ...(r.avisos.retidosPorAvisoAlto > 0
+            ? [`- ⚠️ ${r.avisos.retidosPorAvisoAlto} candidato(s) com aviso ALTO retido(s): só publicam com \`aprova\` explícito em 08-amostra-verdicts.json`]
+            : []),
+          ...(r.avisos.posicaoLote ? [`- Posição do gabarito: ${r.avisos.posicaoLote}`] : []),
+        ]
+      : []),
     "",
   ].join("\n");
 }
@@ -205,6 +256,7 @@ async function main() {
   const { dirname } = await import("node:path");
   const { readJSONL, lotePath, writeJSON, writeText } = await import("./lote-io");
   const { validateExercise } = await import("./validate");
+  const { avisoPosicaoLote, parseExcecoes } = await import("./qualidade-forma");
   const { SKILL_MAP } = await import("@/content/taxonomy");
   const { itemsOfSkill } = await import("@/content/items");
   const { resolveExercise } = await import("@/content/microlicoes");
@@ -251,18 +303,28 @@ async function main() {
       })
       .filter((s): s is string => s !== null);
 
+  const excecoesPath = "content-pipeline/excecoes-qualidade.json";
+  const excecoes = existsSync(excecoesPath) ? parseExcecoes(JSON.parse(readFileSync(excecoesPath, "utf-8"))) : [];
+
   const validados: Candidate[] = candidatos.map((c) => {
     if (!c.exercise) return c;
     const resultado = validateExercise(c.exercise, c.skillId, {
       skillExists,
       skillActive,
       existingStatementsBySkill,
+      itemId: generatedItemId(c.skillId, c.exercise),
+      excecoes,
     });
     return {
       ...c,
       stages: {
         ...c.stages,
-        validation: { ok: resultado.ok, issues: resultado.issues.map((i) => i.message) },
+        validation: {
+          ok: resultado.ok,
+          issues: resultado.issues.map((i) => i.message),
+          warnings: resultado.warnings.map((w) => ({ regra: w.regra, severidade: w.severidade, detalhe: w.detalhe })),
+          excecoes: resultado.excecoes.map((w) => ({ regra: w.regra, severidade: w.severidade, detalhe: w.detalhe })),
+        },
       },
     };
   });
@@ -274,6 +336,14 @@ async function main() {
     invalidos: validados
       .filter((c) => c.stages.validation && !c.stages.validation.ok)
       .map((c) => ({ candidateId: c.candidateId, issues: c.stages.validation!.issues })),
+    // docs/36 §G.7: alertas de forma por candidato (não bloqueiam), com severidade e exceções aplicadas.
+    avisos: validados
+      .filter((c) => (c.stages.validation?.warnings?.length ?? 0) > 0 || (c.stages.validation?.excecoes?.length ?? 0) > 0)
+      .map((c) => ({
+        candidateId: c.candidateId,
+        warnings: c.stages.validation!.warnings ?? [],
+        excecoes: c.stages.validation!.excecoes ?? [],
+      })),
   });
 
   const verdictsPath = lotePath(loteId, "08-amostra-verdicts.json");
@@ -314,17 +384,17 @@ async function main() {
 
   let publicados = 0;
   if (amostraAprovada && !bloqueado) {
-    const plano = buildPublishPlan(comVerdictos, true, (path) => {
+    const lerBanco = (path: string): Record<string, unknown> | null => {
       const full = `src/content/banco/${path}`;
-      if (!existsSync(full)) return [];
-      return (JSON.parse(readFileSync(full, "utf-8")) as { items?: PublishedItem[] }).items ?? [];
-    });
+      return existsSync(full) ? (JSON.parse(readFileSync(full, "utf-8")) as Record<string, unknown>) : null;
+    };
+    const plano = buildPublishPlan(comVerdictos, true, (path) => (lerBanco(path)?.items as PublishedItem[] | undefined) ?? []);
     for (const arquivo of plano) {
       const full = `src/content/banco/${arquivo.path}`;
       if (!existsSync(dirname(full))) mkdirSync(dirname(full), { recursive: true });
       writeFileSync(
         full,
-        `${JSON.stringify({ subjectId: arquivo.subjectId, items: arquivo.items }, null, 2)}\n`,
+        `${JSON.stringify(conteudoDoArquivoDeBanco(lerBanco(arquivo.path), arquivo), null, 2)}\n`,
         "utf-8",
       );
       publicados += arquivo.items.length;
@@ -336,6 +406,10 @@ async function main() {
     );
   }
 
+  const todosAvisos = validados.flatMap((c) => c.stages.validation?.warnings ?? []);
+  const corretasDoLote = validados.flatMap((c) =>
+    c.exercise && c.exercise.type === "multipla-escolha" ? [c.exercise.correta] : [],
+  );
   const relatorio = formatarRelatorio({
     loteId,
     totalCandidatos: candidatos.length,
@@ -346,6 +420,16 @@ async function main() {
     validos: validados.filter((c) => c.stages.validation?.ok).length,
     invalidos: validados.filter((c) => c.stages.validation && !c.stages.validation.ok).length,
     publicados,
+    avisos: {
+      alta: todosAvisos.filter((w) => w.severidade === "alta").length,
+      media: todosAvisos.filter((w) => w.severidade === "media").length,
+      info: todosAvisos.filter((w) => w.severidade === "info").length,
+      excecoes: validados.reduce((n, c) => n + (c.stages.validation?.excecoes?.length ?? 0), 0),
+      retidosPorAvisoAlto: comVerdictos.filter(
+        (c) => temAvisoAlto(c) && c.stages.validation?.ok && c.stages.humanReview?.verdict !== "aprova",
+      ).length,
+      posicaoLote: avisoPosicaoLote(corretasDoLote)?.detalhe,
+    },
   });
   writeText(`content-pipeline/relatorios/${loteId}.md`, relatorio);
   console.log(relatorio);

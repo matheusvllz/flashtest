@@ -33,6 +33,8 @@ export function QuestionStepView({
   explanationLayers,
   /** Nivelamento (Fase 13) e checkpoint (Fase 14, docs/30 §12.3/§13.3): sem feedback certo/errado, sem explicação, sem tutor — só confirma e segue. */
   silent = false,
+  /** Atribuição de item oficial na folha de feedback (docs/36 RP-10) — `atribuicaoOficial(meta.source)` de quem chama. */
+  fonteOficial,
 }: {
   step: QuestionStep;
   exercise: Exercise;
@@ -50,6 +52,7 @@ export function QuestionStepView({
   questionTotal: number;
   explanationLayers?: ItemExplanationLayers;
   silent?: boolean;
+  fonteOficial?: string;
 }) {
   const View = exerciseViewFor(exercise.type);
   const checked = feedback !== null;
@@ -88,7 +91,7 @@ export function QuestionStepView({
         <div className="space-y-2">
           {/* O `:disabled` da utility já cuida da opacidade — nada de
               `opacity-40` manual por cima (docs/25 §18 T-10). */}
-          <button className="btn-primary w-full" disabled={!canVerify} onClick={onVerify}>
+          <button type="button" className="btn-primary w-full" disabled={!canVerify} onClick={onVerify}>
             {COPY.licao.verificar}
           </button>
           {onDontKnow && <DontKnowButton onClick={onDontKnow} />}
@@ -96,7 +99,7 @@ export function QuestionStepView({
       ) : silent ? (
         <div className="space-y-3" role="status">
           <p className="text-sm font-semibold text-nevoa">{COPY.licao.respostaRegistrada}</p>
-          <button className="btn-primary w-full" onClick={onContinue}>
+          <button type="button" className="btn-primary w-full" onClick={onContinue}>
             {isLast ? COPY.feedback.verResultado : COPY.feedback.continuar}
           </button>
         </div>
@@ -107,6 +110,7 @@ export function QuestionStepView({
             isLast={isLast}
             onContinue={onContinue}
             onAskTutor={onAskTutor}
+            fonte={fonteOficial}
           >
             {hasExplanationLayers(explanationLayers) ? <ExplanationLayers layers={explanationLayers} /> : undefined}
           </FeedbackSheet>

@@ -1,0 +1,1084 @@
+[
+  {
+    "id": "gen:por:tempos-verbais-emprego:9d994498",
+    "arquivo": "src/content/banco/por/por-tempos-verbais-emprego.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.714,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.714,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: presente do indicativo para verdade geral). Alternativas de uma palavra com 5-7 caracteres; a correta é a mais curta.",
+    "lens": [
+      6,
+      5,
+      7,
+      6
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.495Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:argumentacao-repertorio:0f32482d",
+    "arquivo": "src/content/banco/red/red-argumentacao-repertorio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 2.417,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.974,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 2,42: correta com 203 caracteres contra 61-84. Alternativas reescritas com 100-112 caracteres, cada distrator um uso fraco de repertório (só autoria, só lista de poetas, só definição do gênero).",
+    "lens": [
+      114,
+      116,
+      100,
+      103
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.495Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:argumentacao-repertorio:4d517053",
+    "arquivo": "src/content/banco/red/red-argumentacao-repertorio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.904,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.904,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: relato pessoal inventado apresentado como real compromete a veracidade). Alternativas de 82-104 caracteres (razão 0,90); correta não é a mais longa; explicação coerente.",
+    "lens": [
+      104,
+      91,
+      90,
+      81
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.496Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:2fde1c7b",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 2.058,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.902,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 2,06 com 'Apenas' em distrator. Alternativas reescritas com 95-100 caracteres, todas com o mesmo formato (lista de elementos do parágrafo), sem absolutismo. Enunciado: 'atende as competências' corrigido para 'atende às'.",
+    "lens": [
+      101,
+      99,
+      111,
+      95
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.496Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:competencias-avaliacao-enem:b194184b",
+    "arquivo": "src/content/banco/red/red-competencias-avaliacao-enem.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.652,
+      "corretaMaisLonga": true,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "observacao",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1: proposta de intervenção é C5). Razão 1,65, correta com 76 caracteres contra 39-46 e duas incorretas com 'Apenas'; a correta dizia 'detalhada', o que o trecho não é. Alternativas reescritas com 84-90 caracteres, sem absolutismo e sem 'detalhada'.",
+    "lens": [
+      89,
+      94,
+      88,
+      93
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.496Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:4bc78726",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.441,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.958,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 85 caracteres contra 46-59 e única a mais longa. Alternativas reescritas (78-92); explicação cita (B), (C) e (D) e as posições foram mantidas.",
+    "lens": [
+      92,
+      81,
+      86,
+      96
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.497Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:81616399",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.633,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.96,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Razão 1,63 e correta 98 caracteres contra 41-60. Alternativas reescritas (93-97); explicação cita (A), (B), (C) e as posições foram mantidas.",
+    "lens": [
+      96,
+      99,
+      98,
+      94
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.497Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:c83ce330",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.167,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.989,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "observacao",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Correta citava um ângulo 'identitário' que o trecho não traz (só turismo, renda e memória), em desacordo com a própria explicação (econômico e cultural). Alternativas reescritas (80-87), sem 'Exclusivamente', 'Apenas' nem 'sem dados'.",
+    "lens": [
+      81,
+      86,
+      86,
+      84
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.497Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:caracteristicas-escolas-literarias:2821d052",
+    "arquivo": "src/content/banco/lit/lit-caracteristicas-escolas-literarias.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "falha",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "revisar-explicacao",
+      "substituir"
+    ],
+    "motivo": "Gabarito A confere (R1). Falha de R6 (habilidade): o item mede o tipo de ambientação de um trecho, não uma característica de escola literária, que é o que lit:caracteristicas-escolas-literarias cobra; não é falha R1-R3, então o item fica (mantido) e vira pedido de substituição. Explicação tinha 'nesse nível 3' (metadado vazando para o aluno): removido. Não reclassifiquei a habilidade porque o arquivo e as aulas são por habilidade.",
+    "lens": [
+      58,
+      58,
+      48,
+      53
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.497Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": [],
+    "substituir": "Item diagnóstico de lit:caracteristicas-escolas-literarias que peça reconhecer a escola (por exemplo Romantismo ou Arcadismo) a partir de um trecho com natureza idealizada, no lugar de pedir o tipo de ambientação."
+  },
+  {
+    "id": "gen:lit:caracteristicas-escolas-literarias:2fa5e406",
+    "arquivo": "src/content/banco/lit/lit-caracteristicas-escolas-literarias.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 0.896,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.896,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: Barroco, dualismo e conflito interior). Alternativas de 27-48 caracteres, correta não é a mais longa; explicação coerente.",
+    "lens": [
+      27,
+      43,
+      47,
+      32
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.498Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:caracteristicas-escolas-literarias:3960ba72",
+    "arquivo": "src/content/banco/lit/lit-caracteristicas-escolas-literarias.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 3.042,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.851,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 3,04: correta com 73 caracteres e uma ressalva ('ou períodos posteriores') contra distratores de 21-24. Alternativas reescritas (75-93) com o mesmo formato 'século, movimento, marca'; distratores com pista plausível ('contradições' para o Barroco). Explicação falava em 'Modernismo português', fora do escopo do item, e foi reescrita.",
+    "lens": [
+      80,
+      92,
+      85,
+      75
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.498Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:06f23385",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.391,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.875,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 89 caracteres contra 41-64 e distratores sem erro real (R4: 'preencher páginas sem propósito'). Alternativas reescritas (84-94), sem 'Apenas'.",
+    "lens": [
+      83,
+      89,
+      87,
+      96
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.498Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:1962b79f",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.679,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.976,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 1,68: correta com 89 caracteres contra 43-53; 'Confusão clara' sem sentido. Alternativas reescritas (77-83).",
+    "lens": [
+      83,
+      81,
+      77,
+      82
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.498Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:88a9fd70",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 2.333,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.942,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 2,33: correta com 112 caracteres contra 40-48; distratores com sintaxe diferente do enunciado. Alternativas reescritas com o mesmo formato verbal (Indica, Revela, Mostra, Sugere), 90-98 caracteres.",
+    "lens": [
+      103,
+      97,
+      92,
+      92
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.498Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:modernismo-fases-brasil:7fd7ad69",
+    "arquivo": "src/content/banco/lit/lit-modernismo-fases-brasil.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.111,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.968,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "corrigido",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito C confere (R1). Correta 90 caracteres contra 42-81 e a mais longa; a alternativa B afirmava 'Brasil se industrializava rapidamente' na Primeira Guerra (discutível) e a explicação a negava. B passa a ser só cronologia (anterior a 1922); explicação reescrita.",
+    "lens": [
+      84,
+      93,
+      89,
+      88
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.499Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:modernismo-fases-brasil:95f41a21",
+    "arquivo": "src/content/banco/lit/lit-modernismo-fases-brasil.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.397,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.892,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 88 caracteres contra 44-63; B tinha 'nunca'. Alternativas reescritas (88-99), sem absolutismo.",
+    "lens": [
+      90,
+      92,
+      90,
+      102
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.499Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:interpretacao-texto-curto:2fd8b9ad",
+    "arquivo": "src/content/banco/ing/ing-interpretacao-texto-curto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.274,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 79 caracteres contra 50-62; C com 'sempre'. Alternativas reescritas (86-91), sem absolutismo; a explicação cita (B), (C), (D) e as posições foram mantidas.",
+    "lens": [
+      90,
+      91,
+      89,
+      86
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.499Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:interpretacao-texto-curto:3fdb7321",
+    "arquivo": "src/content/banco/ing/ing-interpretacao-texto-curto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.35,
+      "corretaMaisLonga": true,
+      "absolutismo": 1
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.931,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Correta 81 caracteres contra 38-60, B com 'todos'; D com concordância errada ('a maioria das pessoas têm', R8). Alternativas reescritas (85-87).",
+    "lens": [
+      87,
+      86,
+      81,
+      86
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.499Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:interpretacao-texto-curto:df2c7560",
+    "arquivo": "src/content/banco/ing/ing-interpretacao-texto-curto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.171,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.929,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Correta 48 caracteres contra 35-41 (razão 1,17), única a mais longa. Alternativas reescritas (50-55) para tamanho parecido, com D a mais curta que A.",
+    "lens": [
+      55,
+      48,
+      50,
+      52
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.499Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:51a48922",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.367,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.872,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Correta 41 caracteres contra 21-30 e a mais longa. Alternativas reescritas (40-46) com a correta parelha aos distratores.",
+    "lens": [
+      43,
+      40,
+      47,
+      38
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.499Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:5412066c",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.333,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.937,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 56 caracteres contra 25-42 e com redação estranha ('com tendência de apoiar'). Alternativas reescritas (53-62); a correta deixa de ser a mais longa.",
+    "lens": [
+      59,
+      54,
+      54,
+      62
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.500Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:9033184a",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "metricas": {
+      "razaoTamanho": 1.29,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.976,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito D confere (R1). Correta 40 caracteres contra 20-31 e a mais longa. Alternativas reescritas (40-41); explicação cita (A), (B), (C) e as posições foram mantidas.",
+    "lens": [
+      40,
+      40,
+      41,
+      40
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.500Z",
+    "afetaDiagnostico": true,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:085f4890",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.701,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "corrigido",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "corrigido",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 2,70: correta com 181 caracteres contra 38-67 ('completamente inútil'). R7: identificar a ideia principal de um parágrafo curto é dificuldade 3 como os itens irmãos (por:interpretacao-ideia-principal 3), não 4; reclassificado de 4 para 3 (irt.b de 0,8 para 0, valor padrão da faixa). Enunciado 'Qual a intenção principal?' completado.",
+    "lens": [
+      93,
+      93,
+      90,
+      83
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.500Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:099fe97b",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.355,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.944,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Razão 2,36: correta com 146 caracteres contra 36-62. Alternativas reescritas (79-88), cada distrator uma leitura extrapolada plausível.",
+    "lens": [
+      84,
+      79,
+      79,
+      89
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.500Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:interpretacao-ideia-principal:22cf92cd",
+    "arquivo": "src/content/banco/por/por-interpretacao-ideia-principal.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "metricas": {
+      "razaoTamanho": 2.032,
+      "corretaMaisLonga": true,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.91,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "corrigido",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Razão 2,03 e dois distratores com 'apenas'/'nunca'. Alternativas reescritas (92-100), sem absolutismo; C passa a ser uma leitura errada de 'não é mais uma opção'.",
+    "lens": [
+      110,
+      101,
+      97,
+      95
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:07:09.500Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

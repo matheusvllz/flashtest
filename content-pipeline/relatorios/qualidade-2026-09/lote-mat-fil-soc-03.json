@@ -1,0 +1,1170 @@
+{
+  "lote": "mat-fil-soc-03",
+  "geradoEm": "2026-09-28T23:06:21.636Z",
+  "revisor": "ia-delegada:sonnet",
+  "itens": [
+    {
+      "id": "gen:soc:desigualdade-social-estrutura:b7234f3d",
+      "arquivo": "src/content/banco/soc/soc-desigualdade-social-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.537,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.018,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "corrigido"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito C confere. Razao 1,54; A, B e D eram frases soltas sem conceito ('Preferencia natural pela juventude'). Agora sao conceitos reais de outra forma de discriminacao (sexismo, capacitismo) e a meritocracia. Explicacao com concordancia corrigida.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:436b80ae",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.684,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.95,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere (direitos sociais). Razao 1,68 e distratores sem erro conceitual (A 'Exclusao permanente do direito a vida', B 'Inexistencia de qualquer responsabilidade estatal'). Agora sao as outras dimensoes classicas da cidadania (politica, civil, deveres). Enunciado 'falta radicalmente' trocado por 'fica comprometida'.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:92a430f5",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.759,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.059,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,76 (A 102 x 58); B, C e D eram frases sem sentido ('Jornadas infinitas como natural'). Agora ligam a erros reais: cidadania so politica, direito como favor e cidadania regulada (trabalho como criterio de valor).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:f5823824",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1e",
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.466,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.069,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Razao 2,47 (143 x 58). Distratores viram posicoes reais que o movimento critica (meritocracia, universalismo indiferenciado, diluicao nas pautas gerais).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": true,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:23e4d067",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.506,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.013,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "corrigido",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Razao 2,51 (218 x 87). Enunciado dizia 'responderiam diferentemente' mas a explicacao (correta) diz que ambos podem chegar a revelar por logicas diferentes: enunciado agora fala em raciocinio diferente. Distratores equilibrados; D inverte os papeis.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:95fa84a9",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.412,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 3,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.958,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 2,41 (123 x 51) e distratores absurdos ('todos devem aceitar suborno', 'nunca'/'sempre'). Agora sao dilemas classicos que nao estao no caso (justica x misericordia, verdade x lealdade, igualdade x liberdade).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:a7452ba9",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 3.029,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.965,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 3,03 (106 x 35): distratores eram frases soltas ('Ausencia de diferencias entre grupos'). Agora sao determinismo biologico, anomia (Durkheim) e etnocentrismo, cada um um erro de conceito. Dificuldade 1 baixa para um item que exige conhecer 'habitus' (proposta d2-d3, nao aplicada: item de pratica, sem efeito no pool diagnostico).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:dd843021",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.315,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.071,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 2,31 (125 x 54); B e C eram frases absurdas ('gíria é um erro que deve ser eliminado', 'Toda gíria é universal'). Agora B e purismo linguistico, C trata a giria como sem valor social, D e o inatismo biologico.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:6070f741",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.12,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.898,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Razao 2,12; C e D eram 'Negacao de qualquer responsabilidade' e 'Desconsideracao total' (absurdos com absolutismo). Agora sao cidadania restrita aos vivos, responsabilidade so individual e cidadania so nacional.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:70cea2e0",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.281,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.906,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Razao 2,28 (130 x 57); A ('Submissao total') e D ('Rejeicao total') eram absurdos. Agora sao a tutela do trabalhador, a cidadania so politica e a cidadania de mercado.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:movimentos-sociais-cidadania:9888767b",
+      "arquivo": "src/content/banco/soc/soc-movimentos-sociais-cidadania.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1a",
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 2.052,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Razao 2,05; A ('Exclusao permanente') e D ('Negacao total') eram absurdos e B repetia o enunciado. Agora sao tres concepcoes restritivas reais (nacional, de nascimento, temporaria).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:528a85d9",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.134,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.012,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "corrigido",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito B confere. Alternativas quase iguais (razao 1,13) mas a correta era a mais longa: igualadas. Explicacao afirmava 'Apenas racionalismo explica faculdades inatas' (afirmacao absoluta falsa, Kant e outros): trocada por formulacao correta; Chomsky removido da lista de racionalistas classicos.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:df77b7f5",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.435,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.83,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "corrigido",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito C confere (autorrefutacao do criterio empirista). Razao 1,44. B ('Ambas posicoes sao equivalentes') e D ('sempre tem razao') eram absurdos com absolutismo; agora ceticismo e um passo logico errado. Explicacao citava B e D por letra: reescrita pelo conteudo.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:epistemologia-conhecimento:e9ae0d53",
+      "arquivo": "src/content/banco/fil/fil-epistemologia-conhecimento.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.133,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.962,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,13; 'Nietzschianismo' (C) nao e uma posicao epistemologica reconhecivel como resposta: trocado por ceticismo radical; B e D com detalhe equivalente. Explicacao atualizada.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:75e6bb03",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.867,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.017,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 1,87 (155 x 83): correta enxuta e distratores ampliados; agora ligados a erros reais (confundir consequencialismo com lucro, negar o custo da seguranca, ver o lucro como dever).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:9a32185a",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.569,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 3,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.879,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 1,57; A ('sempre vence'), B ('nunca') e C ('Nenhum dilema... sempre') eram absurdos com absolutismo nos tres distratores. Agora sao dilemas classicos que nao estao no caso.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:etica-correntes-filosoficas:bb9578b8",
+      "arquivo": "src/content/banco/fil/fil-etica-correntes-filosoficas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.97,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 3,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.071,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,97 (132 x 67) e 'sempre' em B e D. Distratores equilibrados: B inverte os papeis, C e D negam a diferenca. Explicacao mantida (menciona 'nunca' como fala do deontologo, nao como pista de alternativa).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:7229d8b6",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.154,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.931,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere (razao 1,15, correta era a mais longa por pouco). Distratores com mais detalhe e sem 'sempre'; A e B tinham absolutismo.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:fil:politica-poder-estado:7ad87e54",
+      "arquivo": "src/content/banco/fil/fil-politica-poder-estado.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.211,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.885,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Correta era a mais longa (razao 1,21); distratores ganharam detalhe equivalente. Cada um segue ligado a um regime real.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:32581b63",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.246,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.99,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Razao 1,25 (81 x 65) e 'fixa'/'apenas uma' em B e D. Alternativas equilibradas, sem pistas de absolutismo.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:554d82fa",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.678,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 2,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Razao 1,68 (151 x 90); 'apenas', 'todas as culturas' e 'imutavel' nos distratores. Alternativas equilibradas (determinismo biologico, essencialismo, aptidao biologica).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:61ae5bc7",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.582,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.964,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "corrigido",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito B confere. Razao 1,58; A e D repetiam o mesmo erro (biologico) com 'exclusivamente'. D agora e o individualismo (cultura como invencao individual).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:73f1d9b5",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.638,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 3,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.053,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito C confere. Razao 1,64; 'apenas'/'todas' em A e B. Alternativas equilibradas: etnocentrismo (A), recorte de genero indevido (B), determinismo biologico (D).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:b9933523",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.575,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 1.095,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito A confere. Razao 1,57; 'nunca', 'imutavel' e 'exclusivamente' nos distratores. Alternativas equilibradas em tamanho, sem absolutismo.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    },
+    {
+      "id": "gen:soc:cultura-identidade-sociedade:dc946c67",
+      "arquivo": "src/content/banco/soc/soc-cultura-identidade-sociedade.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1",
+      "marcasEstrato": [
+        "1b"
+      ],
+      "metricasAntes": {
+        "razaoTamanho": 1.326,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricas": {
+        "razaoTamanho": 0.912,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "corrigido",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Gabarito D confere. Razao 1,33; 'apenas' e 'so' em A e B. Alternativas equilibradas (biologismo, etnocentrismo, reducao a consumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28T23:06:21.636Z",
+      "afetaDiagnostico": false,
+      "avisosAposRevisao": []
+    }
+  ]
+}

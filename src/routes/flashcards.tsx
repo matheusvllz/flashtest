@@ -102,21 +102,24 @@ function Flashcards() {
       <div className="px-5 pt-4 space-y-4">
         <div className="flex gap-2">
           <button
+            type="button"
             onClick={() => setFilter("all")}
             className={cn("chip", filter === "all" && "chip-on")}
           >
             Todos
           </button>
           <button
+            type="button"
             onClick={() => setFilter("saved")}
             className={cn("chip", filter === "saved" && "chip-on")}
           >
             Salvos ({s.progress.savedFlashcards.length})
           </button>
           <select
+            aria-label="Filtrar por matéria"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="input-ds ml-auto w-auto min-h-9 py-1.5 text-xs font-semibold"
+            className="input-ds ml-auto w-auto min-h-11 py-1.5 text-xs font-semibold"
           >
             {subjects.map((x) => (
               <option key={x}>{x}</option>
@@ -133,6 +136,7 @@ function Flashcards() {
                 Cartão {(posicao % fila.length) + 1} de {fila.length}
               </div>
               <button
+                type="button"
                 onClick={() =>
                   setState((st) => {
                     const list = st.progress.savedFlashcards ?? (st.progress.savedFlashcards = []);
@@ -159,6 +163,7 @@ function Flashcards() {
 
             <div className="[perspective:1000px]">
               <button
+                type="button"
                 onClick={() => setFlip((f) => !f)}
                 aria-label="Virar cartão"
                 className="relative block min-h-[260px] w-full text-left"
@@ -202,18 +207,18 @@ function Flashcards() {
             ) : (
               <>
                 <div className="grid grid-cols-2 gap-2">
-                  <button onClick={() => grade("hard")} className="btn-outline">
+                  <button type="button" onClick={() => grade("hard")} className="btn-outline">
                     <Minus size={14} /> Difícil
                   </button>
-                  <button onClick={() => grade("easy")} className="btn-outline">
+                  <button type="button" onClick={() => grade("easy")} className="btn-outline">
                     <CheckCheck size={14} /> Fácil
                   </button>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  <button onClick={() => grade("again")} className="btn-outline">
+                  <button type="button" onClick={() => grade("again")} className="btn-outline">
                     <X size={14} /> Não lembrei
                   </button>
-                  <button onClick={() => grade("good")} className="btn-outline">
+                  <button type="button" onClick={() => grade("good")} className="btn-outline">
                     <Check size={14} /> Lembrei
                   </button>
                 </div>

@@ -62,7 +62,7 @@ export function SubjectPath({
 
   let chapterIndex = 0;
   return (
-    <div className="path-margin">
+    <div className="path-margin mx-auto max-w-[calc(var(--path-col)-2.5rem)]">
       {subject.sections.map((section) => (
         <Fragment key={section.id}>
           <div className="mt-6 first:mt-2">

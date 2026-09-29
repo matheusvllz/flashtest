@@ -2,7 +2,12 @@ import type { ReviewScheduleEntry, SkillEvidenceEntry, SkillModelEntry } from "@
 import { skillEvidenceState } from "@/lib/learning/review";
 import { confidence } from "./confidence";
 import { mastery } from "./model";
-import { CONFIDENCE_BOA_EVIDENCIA, CONFIDENCE_EVIDENCIA_RAZOAVEL, CONFIDENCE_MOSTRA_MASTERY } from "./constants";
+import {
+  CONFIDENCE_BOA_EVIDENCIA,
+  CONFIDENCE_EVIDENCIA_RAZOAVEL,
+  CONFIDENCE_MOSTRA_MASTERY,
+  PLACEMENT_SE_STOP,
+} from "./constants";
 
 /**
  * Como mostrar Mastery/Confidence pro aluno (docs/30 §10.4, Fase 5) — nunca
@@ -49,4 +54,38 @@ export function skillDisplay(
     consistent,
     dominated,
   };
+}
+
+/* -------------------------------------------------------------------------- *
+ * Resultado do nivelamento (docs/36 §F.5, T-06.1; RP-6) — só o que foi medido,
+ * nunca um número: faixa por ÁREA medida e precisão pela SE da área. Nenhuma
+ * função aqui devolve porcentagem, θ, SE numérica, nota ou "nível N".
+ * -------------------------------------------------------------------------- */
+
+/** Faixa de uma área medida — mesmos limiares do resultado original (`faixaDaArea` da rota: θ̂ < −0,5; < 0,7; ≥ 0,7). */
+export type FaixaPlacement = "construcao" | "caminho" | "firme";
+
+export const PLACEMENT_FAIXA_CAMINHO_MIN_THETA = -0.5;
+export const PLACEMENT_FAIXA_FIRME_MIN_THETA = 0.7;
+
+/** `null` quando a área não foi medida (sem resposta = θ̂ `null`). */
+export function faixaDaAreaPlacement(theta: number | null): FaixaPlacement | null {
+  if (theta === null) return null;
+  if (theta < PLACEMENT_FAIXA_CAMINHO_MIN_THETA) return "construcao";
+  if (theta < PLACEMENT_FAIXA_FIRME_MIN_THETA) return "caminho";
+  return "firme";
+}
+
+/** Precisão da estimativa DA ÁREA (SE do nivelamento, não a Confidence de habilidade). */
+export type PrecisaoArea = "firme" | "inicial" | "poucas";
+
+/** Limite superior de "Estimativa inicial": acima disso são "poucas questões". `firme` usa o mesmo corte de parada do CAT (`PLACEMENT_SE_STOP`). */
+export const PLACEMENT_SE_INICIAL_MAX = 0.7;
+
+/** SE ≤ 0,45 → firme; 0,45 < SE ≤ 0,70 → inicial; SE > 0,70 → poucas. `null` (sem SE) → `null`. */
+export function precisaoDaArea(se: number | null): PrecisaoArea | null {
+  if (se === null) return null;
+  if (se <= PLACEMENT_SE_STOP) return "firme";
+  if (se <= PLACEMENT_SE_INICIAL_MAX) return "inicial";
+  return "poucas";
 }

@@ -15,6 +15,7 @@
 8. **Clareza**: alguém do nível certo entenderia o enunciado numa leitura? → `corrige` a redação se confuso.
 9. **Português normativo** (achado real, lote onda1-07 bloqueado com 25% de conflito): a regra testada tem caso facultativo ou exceção que torna outra alternativa também aceitável pela norma culta (crase antes de possessivo feminino ou nome próprio feminino, depois de "até"; "a maioria de + plural" no singular ou plural)? → `rejeita`. Confira as armadilhas que o gerador já errou: "à noite"/"às pressas" têm crase obrigatória; "casa"/"terra" sem especificador não levam crase.
 11. **Citação e autoria**: alguma frase entre aspas atribuída a pessoa real que você não reconhece como textual e amplamente conhecida? Trecho literário de autor que não está em domínio público? → `rejeita` (citação inventada é dado inventado).
+12. **Forma das alternativas (docs/36 §G.7):** a correta é bem mais longa ou mais detalhada que as outras (razão ≥ 1,5 entre a correta e a maior errada)? Só os distratores têm "nunca/sempre/apenas/somente/todos/nenhum/jamais"? Alguma alternativa tem travessão (— ou –)? → `corrige`: reescreva as alternativas pra terem tamanho e detalhe parecidos, sem pista de absolutismo e sem travessão, **mantendo a correta na mesma posição**.
 10. **Explicação coerente com o gabarito**: a `explicacao` defende a MESMA alternativa marcada em `correta`? (Achado real: explicação dizendo "é advérbio" com gabarito "Adjetivo".) → `corrige`.
 
 **Saída:**

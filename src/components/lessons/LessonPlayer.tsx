@@ -21,7 +21,7 @@ import { checkAnswer, shuffled } from "@/lib/lessons/define";
 import { exerciseViewFor } from "@/lib/lessons/registry";
 import { focusFromExercise } from "@/lib/lessons/tutor-focus";
 import { buildPedagogicalContext } from "@/lib/tutor-context";
-import { COPY } from "@/lib/copy";
+import { COPY, textoSePersistiu } from "@/lib/copy";
 import type { ExerciseAnswer, Lesson, Trilha } from "@/lib/lessons/types";
 import type { SoundEvent } from "@/lib/feedback/dispatch-feedback";
 import { FEATURES } from "@/lib/features";
@@ -34,6 +34,7 @@ import {
   openTutorWithContext,
   recordLearningAttempt,
   useAppState,
+  usePersistStatus,
   type CompleteLessonResult,
 } from "@/lib/store";
 import { cn } from "@/lib/utils";
@@ -50,6 +51,7 @@ import { cn } from "@/lib/utils";
 export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesson }) {
   const navigate = useNavigate();
   const s = useAppState();
+  const persist = usePersistStatus();
   const total = lesson.exercicios.length;
   const [idx, setIdx] = useState(0);
   const [answer, setAnswer] = useState<ExerciseAnswer | null>(null);
@@ -65,6 +67,8 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
     nivel: number;
   } | null>(null);
   const [replayKey, setReplayKey] = useState(0);
+  // Início desta tentativa: a conclusão já gravada depois dele não é contada de novo (docs/36 G-3).
+  const tentativaIniciadaEm = useRef(new Date().toISOString());
   const [confirmExit, setConfirmExit] = useState(false);
   // Se ESTA conclusão fechou o capítulo — decide se "Voltar à trilha" abre a
   // folha de celebração (docs/25 §12.3/§18 T-19).
@@ -181,7 +185,9 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
     session.advance(() => {
       if (idx + 1 >= total) {
         const antes = getState();
-        const lessonResult = completeLesson(lesson.id, correctCount, total);
+        const lessonResult = completeLesson(lesson.id, correctCount, total, {
+          sessionStartedAt: tentativaIniciadaEm.current,
+        });
         const depois = getState();
         setAntesFechamento({
           streak: antes.progress.streak,
@@ -222,6 +228,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
     setResult(null);
     setAntesFechamento(null);
     setCapituloFechou(false);
+    tentativaIniciadaEm.current = new Date().toISOString();
     setReplayKey((k) => k + 1);
   }
 
@@ -229,7 +236,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
   if (result && antesFechamento) {
     const nivelAtual = nivelDeXp(s.progress.xp).nivel;
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <CelebracaoAula
           acertos={correctCount}
           total={total}
@@ -253,11 +260,12 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
 
   /* --------------------------------------------------------------- jogando */
   return (
-    <PhoneFrame>
+    <PhoneFrame variant="reading">
       <div className="flex min-h-screen flex-col bg-neve px-5 pb-5 pt-4">
         {/* Topo: sair + progresso */}
         <div className="flex items-center gap-3">
           <button
+            type="button"
             onClick={() => setConfirmExit(true)}
             aria-label="Sair da lição"
             className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"
@@ -323,6 +331,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         ) : (
           <div className="space-y-2">
             <button
+              type="button"
               className={cn("btn-primary w-full", answer === null && "opacity-40")}
               disabled={answer === null}
               onClick={verify}
@@ -348,13 +357,13 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         icon={<FocaMark expression="desapontada" size={56} decorative />}
       >
         <p className="mt-1.5 text-sm text-abismo">
-          O progresso desta lição não fica salvo pela metade — você recomeça do zero na próxima vez.
+          {textoSePersistiu(persist, COPY.licao.sairCorpoLegado, COPY.licao.sairCorpoLegadoSemSalvo)}
         </p>
         <div className="mt-4 space-y-2">
-          <button onClick={() => setConfirmExit(false)} className="btn-primary w-full">
+          <button type="button" onClick={() => setConfirmExit(false)} className="btn-primary w-full">
             Continuar estudando
           </button>
-          <button onClick={() => navigate({ to: "/trilha" })} className="btn-ghost w-full">
+          <button type="button" onClick={() => navigate({ to: "/trilha" })} className="btn-ghost w-full">
             Sair mesmo assim
           </button>
         </div>

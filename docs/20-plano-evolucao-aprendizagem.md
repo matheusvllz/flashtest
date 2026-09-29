@@ -338,6 +338,8 @@ Tamanhos-alvo: botão 1–4 palavras; feedback 2–7 palavras; fala decorativa a
 
 Exemplos de direção: acerto “Isso. Resposta certa.” / “Boa. É por aí.” / “Essa fechou.”; erro “Vamos por partes.” / “O detalhe está aqui.”; retorno “Vamos de onde você parou?”; CTA “Perguntar à Foca”; recuperação de rede “Não consegui responder agora. Tente de novo.” Não usar “Você domina isso!” com uma resposta, “Foi só desatenção” sem evidência ou “Continue assim!” como biblioteca inteira.
 
+> **Operacionalizado (28/09/2026):** esta seção é a norma de origem e continua valendo. O guia operacional para agentes, com matriz de tom, padrões de microcopy, glossário e roteamento de skills de escrita, está em [38](38-plano-sistema-copy-e-skills.md) e [COPY.md](COPY.md).
+
 ### 7.2 Inventário obrigatório antes de substituir textos
 
 **NOVO ARQUIVO:** `docs/21-brand-voice-e-inventario-copy.md`, a criar na fase 3. Colunas: ID, arquivo/componente, estado/gatilho, texto atual, texto proposto, limite, dado necessário, risco, revisão/aprovação. Centralização funcional em **NOVO ARQUIVO** `src/lib/copy.ts`; falas da mascote continuam no catálogo `voz.ts`, com seleção fora do render.

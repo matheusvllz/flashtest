@@ -9,15 +9,15 @@
         "opcoes": [
           "A maioria dos clientes assiste ao webinar.",
           "A maioria dos clientes assiste o webinar.",
-          "A maioria dos clientes assite ao webinar.",
+          "A maioria dos clientes assiste do webinar.",
           "A maioria dos clientes assistem no webinar."
         ],
         "correta": 0,
-        "explicacao": "No sentido de ver, 'assistir' pede a preposição 'a': assiste ao webinar (a + o). Por isso 'assiste o webinar' e 'assistem no webinar' ficam errados, e 'assite' é grafia errada. Com 'a maioria dos clientes', o singular é a concordância mais segura."
+        "explicacao": "No sentido de ver, 'assistir' pede a preposição 'a': assiste ao webinar (a + o). Por isso 'assiste o webinar' e 'assistem no webinar' ficam errados, e 'assiste do' usa a preposição errada. Com 'a maioria dos clientes', o singular é a concordância mais segura."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:e064e7db",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:05:02.997Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -51,19 +53,19 @@
       "id": "gen:por:regencia-verbal-nominal:c9c21607",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Em um ensaio, lê-se: 'Os sociólogos aspiram uma sociedade mais igualitária e justa para todos.' Qual é o erro de regência nessa frase?",
+        "pergunta": "Em um ensaio, lê-se: 'Os sociólogos aspiram uma sociedade mais igualitária e justa para todos.' Há algum erro de regência nessa frase?",
         "opcoes": [
-          "Não há erro, mas seria melhor usar 'anseiam por' em lugar de 'aspiram a'",
-          "O verbo 'aspirar' no sentido de 'desejar' exige a preposição 'a', não objeto direto. Deveria ser 'aspiram a uma sociedade', não 'aspiram uma sociedade'",
-          "Não há erro; 'aspirar' pode receber objeto direto quando significa desejo",
-          "O erro está em 'justa', que deveria ser 'justos' para concordar com 'sociedade' feminina"
+          "Não; a regência está correta, mas seria mais elegante usar 'anseiam por' no lugar de 'aspiram'",
+          "Sim; o verbo 'aspirar', no sentido de desejar, pede a preposição 'a': 'aspiram a uma sociedade'",
+          "Não; 'aspirar' recebe objeto direto quando significa desejo, então 'aspiram uma sociedade' está correto",
+          "Sim; o erro está em 'igualitária e justa', que deveriam ir para o plural para concordar com 'sociólogos'"
         ],
         "correta": 1,
         "explicacao": "Verbo 'aspirar' no sentido de 'desejar' ou 'ambicionar' rege preposição 'a': 'aspiram a uma sociedade igualitária'. A forma 'aspiram uma sociedade' (transitivo direto) é arcaica ou só pro sentido literal de 'respirar'. A regência correta no português moderno exige 'aspirar a'. Você confundiu porque a preposição 'a' soa opcional, mas é obrigatória nesse verbo quando significa desejo."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:c9c21607",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -99,17 +103,17 @@
         "type": "multipla-escolha",
         "pergunta": "Uma redação contém: 'O adolescente desobedeceu ao pai e continuou assistindo a programas violentos na televisão.' O verbo 'assistir' está em regência correta?",
         "opcoes": [
-          "Não; deveria ser 'assistir em programas' para indicar participação ativa",
-          "Sim, mas seria mais idiomático usar 'ver' em lugar de 'assistir'",
-          "Sim; 'assistir a programas' é regência correta; o verbo significa 'ver' ou 'presenciar' e exige preposição 'a'",
-          "Não; o correto é 'assistir programas' (sem preposição), pois o verbo é transitivo direto"
+          "Não; deveria ser 'assistir em programas', para indicar que o adolescente participa da ação",
+          "Sim, mas seria mais idiomático usar 'ver' em lugar de 'assistir', que é um verbo pouco usado",
+          "Sim; 'assistir a programas' é regência correta, pois o verbo, no sentido de ver, exige a preposição 'a'",
+          "Não; o correto é 'assistir programas', sem preposição, pois nesse caso o verbo é transitivo direto e dispensa a preposição"
         ],
         "correta": 2,
         "explicacao": "Verbo 'assistir' significando 'ver' ou 'presenciar' é transitivo indireto e exige preposição 'a': 'assistir a um filme', 'assistir a uma peça', 'assistir a programas'. Não se diz 'assistir filmes' (sem preposição). 'Assistir' tem outro sentido ('socorrer', 'ajudar') que é transitivo direto: 'assistir o doente'. Você conhece só uma regência e tenta aplicar em ambos os significados. Para 'ver', a preposição 'a' é obrigatória."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:188d9b9a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
@@ -117,7 +121,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -145,25 +151,25 @@
         "type": "multipla-escolha",
         "pergunta": "Em um texto de opinião, está escrito: 'A população não visa apenas de sobreviver, mas também de prosperar economicamente.' Qual é o erro de regência nessa construção?",
         "opcoes": [
-          "Não há erro; 'visar de' é forma aceita em português formal para indicar intenção",
-          "O erro está em duplicar a preposição; seria mais correto 'visa a sobreviver ou de prosperar'",
-          "Não há erro de regência, mas a frase seria mais clara usando 'objetivo' em lugar de 'visa'",
-          "O verbo 'visar' no sentido de 'pretender' ou 'objetivar' exige preposição 'a', não 'de'. Deveria ser 'não visa apenas a sobreviver, mas também a prosperar'"
+          "Não há erro; 'visar de' é forma aceita em português formal para indicar intenção ou objetivo",
+          "O erro está em repetir a preposição 'de'; bastaria uma vez: 'visa de sobreviver e prosperar'",
+          "Não há erro de regência, mas a frase seria mais clara usando 'tem como objetivo' no lugar de 'visa'",
+          "O verbo 'visar', no sentido de pretender, pede 'a' e não 'de': 'visa a sobreviver e a prosperar'"
         ],
         "correta": 3,
         "explicacao": "Verbo 'visar' no sentido de 'pretender', 'objetivar' ou 'almejar' rege preposição 'a': 'visar a melhorias', 'visa a crescimento', 'visamos a educação de qualidade'. Jamais 'visar de'. A confusão ocorre quando o aluno mistura regência de 'visar a' (pretender) com outros verbos que usam 'de' (gostar de, aproveitar de). 'De' está errado neste contexto: regência normativa é 'a'. A frase corrigida: 'não visa apenas a sobreviver, mas também a prosperar economicamente'."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:90819332",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-07"
         },
         "examProfiles": [
           "enem"
@@ -191,25 +199,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um jornalista redigiu: 'O bairro onde os turistas frequentam é conhecido pelas belezas naturais e pela segurança.' Há erro de regência nessa sentença?",
         "opcoes": [
-          "Sim; o verbo 'frequentar' é transitivo direto e não exige preposição; deveria ser 'que os turistas frequentam' ou 'que frequentam', não 'onde os turistas frequentam'",
-          "Não; 'frequentam' em construção relativa com 'onde' está correto",
-          "Não há erro, mas seria mais elegante usar 'que' em lugar de 'onde'",
-          "Sim, porque 'frequentam' deveria estar regido por 'a' ('frequentam a') em contexto formal"
+          "Sim; 'frequentar' é transitivo direto e não pede 'onde': o correto é 'que os turistas frequentam'",
+          "Não; 'onde' está correto em qualquer oração relativa que se refira a um lugar como 'bairro'",
+          "Não há erro, mas seria mais elegante usar 'que' em lugar de 'onde', sem mudar o sentido",
+          "Sim; o verbo 'frequentar' deveria ser regido pela preposição 'a', como em 'frequentam ao bairro'"
         ],
         "correta": 0,
         "explicacao": "Verbo 'frequentar' é transitivo direto (não exige preposição). Erro comum é usar 'onde' como pronome relativo para 'frequentar', quando 'onde' introduz oração de lugar, não objeto direto. Correto: 'o bairro que os turistas frequentam'. 'Onde' é pro lugar: 'a região onde vivem', 'a escola onde estudam'. Quando o verbo precisa de objeto (frequentar, visitar, conhecer), usa 'que'. Você confundiu regência verbal com pronomes relativos."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:43f034ea",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-07"
         },
         "examProfiles": [
           "enem"
@@ -254,8 +264,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +294,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um estudante escreveu: 'A empresa se recusou de assinar o contrato porque não concordava com as cláusulas principais.' O verbo 'recusar' está em regência correta?",
         "opcoes": [
-          "Não; a preposição correta seria 'em', não 'de' ('recusou-se em assinar')",
-          "Sim; em português antigo, 'recusar de' era forma aceita e ainda é considerada válida",
-          "Não; o verbo 'recusar' é transitivo direto e não exige preposição; deveria ser 'recusou assinar' ou 'recusou-se a assinar', não 'recusou-se de assinar'",
-          "Sim; 'recusar de' é forma correta quando o verbo é reflexivo ('recusar-se de')"
+          "Não; a preposição correta seria 'em', e a frase deveria ficar 'recusou-se em assinar o contrato'",
+          "Sim; em português antigo 'recusar de' era aceito, e a construção ainda vale na norma culta atual",
+          "Não; 'recusar-se' pede a preposição 'a', e a forma correta é 'recusou-se a assinar o contrato'",
+          "Sim; 'recusar de' é a forma correta quando o verbo aparece na forma reflexiva ('recusar-se de')"
         ],
         "correta": 2,
         "explicacao": "Verbo 'recusar' é transitivo direto: 'recusou o contrato', 'recusou a oferta'. Na forma reflexiva, pode ser transitivo indireto com preposição 'a': 'recusou-se a assinar', 'recusam-se a participar'. Jamais 'recusar-se de'. A forma 'de' é arcaica e não está na norma culta moderna. Você confunde regência misturando formas antigas com modernas ou pensando que reflexivo permite qualquer preposição."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:289e8368",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +327,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-07"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +342,17 @@
         "type": "multipla-escolha",
         "pergunta": "Em um artigo científico, lê-se: 'Os pesquisadores simpatizam com as metas ambientais propostas pelo governo federal.' A regência está correta?",
         "opcoes": [
-          "Sim, mas forma alternativa 'simpatizam a' também seria aceitável",
-          "Sim; 'simpatizar com' é a regência correta quando significa 'ter simpatia por' ou 'estar de acordo com'",
-          "Não; o verbo correto seria 'simpatizar a' (não 'com')",
-          "Não; deveria ser 'simpatizam por' para indicar sentimento"
+          "Sim, mas a forma 'simpatizam a' também seria aceitável nesse contexto, com o mesmo sentido",
+          "Sim; 'simpatizar com' é a regência correta quando o verbo significa 'ter simpatia por' algo ou alguém",
+          "Não; o verbo correto seria 'simpatizar a', e a preposição 'com' não é usada com esse verbo",
+          "Não; deveria ser 'simpatizam por', pois a preposição 'por' indica o sentimento dos pesquisadores"
         ],
         "correta": 1,
-        "explicacao": "Verbo 'simpatizar' rege preposição 'com': 'simpatizar com uma pessoa', 'simpatizar com ideias', 'simpatizar com propostas'. Não se usa 'simpatizar a' ou 'simpatizar por': só 'com'. A regência é fixa e corresponde a 'ter simpatia com'. Você confundiu com outros sentimentos (gostar de, interessar-se por) e tentou usar preposição diferente. 'Com' é a única correta."
+        "explicacao": "O verbo 'simpatizar' pede a preposição 'com': 'simpatizar com uma pessoa', 'simpatizar com ideias', 'simpatizar com propostas'. Não se usa 'simpatizar a' nem 'simpatizar por'. É fácil errar por analogia com outros verbos de sentimento, como 'gostar de' e 'interessar-se por'. Aqui, 'com' é a preposição correta."
       },
       "meta": {
         "id": "gen:por:regencia-verbal-nominal:4f83c73b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:regencia-verbal-nominal"
         ],
@@ -347,7 +360,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +375,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:58:25.765Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-01"
         },
         "examProfiles": [
           "enem"

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "gen:ing:vocabulario-contexto:188f2e40",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.029,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.029,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: dilapidated = em ruína). Correta 36 contra 35 caracteres (razão 1,03): sem pista de tamanho; distratores são leituras opostas ao contexto. Explicação correta.",
+    "lens": [
+      35,
+      30,
+      26,
+      36
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.751Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:724c1634",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.061,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.061,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: egregious = flagrante, extremamente culpável). Correta 52 contra 48-49 (razão 1,06); explicação correta.",
+    "lens": [
+      48,
+      32,
+      49,
+      52
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.751Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:9c167aaf",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.04,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.04,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: predicated on = baseado em). Correta 26 contra 25 caracteres (razão 1,04); explicação correta.",
+    "lens": [
+      25,
+      22,
+      22,
+      26
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.752Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:a5625fd9",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.029,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.029,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: ascertain = determinar com certeza). Correta 35 contra 34 (razão 1,03); explicação correta.",
+    "lens": [
+      35,
+      22,
+      34,
+      21
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.752Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:aa127f0c",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.225,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.875,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: arcane = obscuro, conhecido por poucos). Correta 49 caracteres contra 18-40, única com 'apenas'. Alternativas reescritas (43-48), sem absolutismo.",
+    "lens": [
+      42,
+      48,
+      45,
+      42
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.752Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:e94edde9",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.25,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.909,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: fraught = carregado de tensão). Correta 40 caracteres contra 29-32 (razão 1,25). Alternativas reescritas (42-44).",
+    "lens": [
+      41,
+      44,
+      40,
+      41
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.752Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:ecefed03",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.077,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.077,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (A: lackluster = sem brilho, decepcionante). Correta 42 contra 20-39 (razão 1,08); a comparação do contexto ('compared to previous competitions') fecha o sentido; explicação correta.",
+    "lens": [
+      42,
+      28,
+      20,
+      38
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:44:43.752Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

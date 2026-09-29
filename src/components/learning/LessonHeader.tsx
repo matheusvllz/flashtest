@@ -25,6 +25,7 @@ export function LessonHeader({
     <div className="sticky top-0 z-10 border-b-2 border-gelo bg-neve/95 px-5 pt-4 pb-3 backdrop-blur">
       <div className="flex items-center gap-3">
         <button
+          type="button"
           onClick={onExit}
           aria-label="Sair da lição"
           className="grid h-11 w-11 shrink-0 place-items-center text-nevoa"

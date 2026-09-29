@@ -1,0 +1,1122 @@
+{
+  "lote": "bio-qui-fis-lote-01",
+  "materias": [
+    "bio",
+    "qui",
+    "fis"
+  ],
+  "revisor": "ia-delegada:sonnet",
+  "revisadoEm": "2026-09-28",
+  "contagemPorAcao": {
+    "melhorar-enunciado": 4,
+    "melhorar-alternativas": 11,
+    "revisar-explicacao": 1,
+    "manter": 13
+  },
+  "itens": [
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:7cfdb954",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.902,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.852,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ajustado",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas",
+        "revisar-explicacao"
+      ],
+      "motivo": "R3/R2: o enunciado misturava biomassa (kg) com energia e a explicação chamava 10.000 kg de energia (kg não mede energia). Reescrito em unidades de energia, com as quatro alternativas no mesmo formato (valor + justificativa) e distratores ligados a erros reais (energia se renova, metade por nível, quase tudo passa adiante). Gabarito (10% por nível) e posição C mantidos. R7: dificuldade 4 alta para a regra dos 10%, mantida (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:ecologia-relacoes-ecossistema:e7666060",
+      "arquivo": "src/content/banco/bio/bio-ecologia-relacoes-ecossistema.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.937,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.354,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 4
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: as quatro alternativas usavam travessão e tinham de 24 a 65 caracteres, com a correta entre as maiores. Reescritas sem travessão e com tamanho e estrutura parecidos (conceito + definição). Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:037774b6",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.856,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.707,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: correta 2,7 vezes maior que a maior incorreta e distratores com absolutismo (sempre, neutras). Reescritas com tamanho parelho, sem absolutismo, e com distratores ligados a erros (mutação sem efeito na sobrevivência, plantas vencem a corrida, o inseto se acostuma). Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:6e807023",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.989,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.392,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R4: correta 2,4 vezes maior, com travessão; o distrator A ('cor não tem relação com habitat') não representava erro conceitual. Reescritas: inversão de causa (cor primeiro), teleologia (decisão consciente) e mutação dirigida pelo ambiente. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:evolucao-selecao-natural:bdbf1036",
+      "arquivo": "src/content/banco/bio/bio-evolucao-selecao-natural.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.928,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 2.17,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 1
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R3: correta 2,2 vezes maior, absolutismo em distrator e travessão. O distrator 'bicos médios evoluem' podia ser defensável num clima que oscila, o que ameaçava o gabarito único; trocado por um erro inequívoco (o bico muda durante a vida, lamarckismo). Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:0a79e08a",
+      "arquivo": "src/content/banco/bio/bio-fisiologia-humana-sistemas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.222,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.222,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido (bronquíolos). Forma equilibrada (razão 1,22). R7: recordação direta, dificuldade 3 alta; não reclassificado porque o b do item diagnóstico é estimado/calibrado (proposta no resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:5afa29f5",
+      "arquivo": "src/content/banco/bio/bio-fisiologia-humana-sistemas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.2,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.2,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos: néfron, cálice, ureter, bexiga, uretra. Distratores com vasos sanguíneos e ordem invertida são erros reais. Forma equilibrada (razão 1,2).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:fisiologia-humana-sistemas:c357f051",
+      "arquivo": "src/content/banco/bio/bio-fisiologia-humana-sistemas.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.928,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.233,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ajustado",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R2: absolutismo em distrator ('todos os sinais') e o número '90%' na correta é aproximação que varia por fonte (80 a 90%). Alternativas reescritas com tamanho parelho (80 a 90 caracteres), sem absolutismo e sem percentual exato. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:5511b43e",
+      "arquivo": "src/content/banco/bio/bio-genetica-leis-mendel.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.162,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.162,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "atencao",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido (seleção natural direcional). R6: mede fatores evolutivos, não cruzamento mendeliano; a habilidade etiquetada (bio:genetica-leis-mendel) não é a que o item mede. Não reclassificada: mudar skillIds de item diagnóstico altera pool e aulas em paralelo à revisão de outras matérias; proposta registrada no resumo (mover para bio:evolucao-selecao-natural).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:genetica-leis-mendel:ff5f7daf",
+      "arquivo": "src/content/banco/bio/bio-genetica-leis-mendel.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "atencao",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos: 2pq = 2 x 0,7 x 0,3 = 0,42; distratores p2 (0,49), q2 (0,09) e pq (0,21) são erros reais. Todas as alternativas com 4 caracteres. R6: genética de populações, mais próxima de evolução que de cruzamento mendeliano (atenção, ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:322a8d29",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.941,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 3.842,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ajustado"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5/R8: correta com 219 caracteres contra 42 a 57 (razão 3,84) e enunciado com carga de leitura alta (movimento browniano, reconcilia). Enunciado simplificado sem mudar o que mede; alternativas reescritas com 85 a 100 caracteres. Gabarito A mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:5ae4f57c",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.175,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 4.269,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 2,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Exemplo do 35 (razão 4,27): correta com 222 caracteres contra 34 a 52 e dois distratores com absolutismo ('apenas', 'todas... exatamente'). Reescritas com 90 a 140 caracteres, sem absolutismo, com distratores ligados a erros (só o colesterol importa, composição fixa, temperatura sem efeito). Gabarito D mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-estrutura:6553a1bf",
+      "arquivo": "src/content/banco/bio/bio-membrana-estrutura.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.19,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 4.511,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 1,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ajustado",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "Exemplo do 35 (razão 4,51): correta com 203 caracteres contra 25 a 45. Reescritas com 85 a 125 caracteres; distratores ligados a erros (fluidez só por proteínas, só o comprimento importa, insaturação enrijece). Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-funcao:16cd90e6",
+      "arquivo": "src/content/banco/bio/bio-membrana-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado"
+      ],
+      "motivo": "R3: o enunciado perguntava pelos 'íons intracelulares' sem dizer quais; as alternativas falam de sódio e potássio. Passou a nomear os dois íons e a dizer 'concentrações dentro da célula'. Alternativas e gabarito C inalterados.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-funcao:30d14b26",
+      "arquivo": "src/content/banco/bio/bio-membrana-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos (Na+ acumula dentro, K+ sai). Forma equilibrada (razão 1,0). R7: dificuldade 4 acima do raciocínio pedido (consequência direta de uma bomba bloqueada); não reclassificada (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:membrana-funcao:de3ae2f1",
+      "arquivo": "src/content/banco/bio/bio-membrana-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1.125,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.125,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos (difusão facilitada, GLUT5). Alternativas curtas de tamanho parecido; distratores (endocitose, transporte ativo, osmose) são confusões clássicas.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:organelas-funcao:a655cd73",
+      "arquivo": "src/content/banco/bio/bio-organelas-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.978,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 3.917,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ajustado",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-enunciado",
+        "melhorar-alternativas"
+      ],
+      "motivo": "Razão 3,92: a correta (três organelas, 47 caracteres) contra nomes de uma organela (10 a 12). Todas as alternativas viraram pares de organelas com a função, com 76 a 87 caracteres; o enunciado passou a perguntar 'quais organelas', coerente com a resposta em conjunto. Gabarito B mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:organelas-funcao:d14a0153",
+      "arquivo": "src/content/banco/bio/bio-organelas-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 2,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.921,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1.618,
+        "corretaMaisLonga": true,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ajustado",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "melhorar-alternativas"
+      ],
+      "motivo": "R5: razão 1,62 (correta 55 caracteres contra 25 a 34), no estrato 1e por ser diagnóstico. Reescritas com 58 a 72 caracteres. Gabarito C mantido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:bio:organelas-funcao:ed4dd112",
+      "arquivo": "src/content/banco/bio/bio-organelas-funcao.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.545,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.545,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos (núcleo; 'cromossômico' exclui o DNA mitocondrial). Correta não é a mais longa. R7: recordação direta com dificuldade 3, alta (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:244907a4",
+      "arquivo": "src/content/banco/fis/fis-cinematica-movimento-uniforme.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: v = 60/3 = 20 cm/s, 20 x 8 = 160 cm. Alternativas numéricas com mesmo tamanho; distratores plausíveis (180, 120, 140).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:5e750ddb",
+      "arquivo": "src/content/banco/fis/fis-cinematica-movimento-uniforme.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: 120 + 60 x 3,5 = 330 km. Distratores ligados a erros de arredondamento e soma. R7: aplicação direta da função horária, dificuldade 4 alta; não reclassificada (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:cinematica-movimento-uniforme:a70d832f",
+      "arquivo": "src/content/banco/fis/fis-cinematica-movimento-uniforme.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "atencao",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: 20 x 15 = 300 m. R7: multiplicação direta, dificuldade 3 acima do exigido; não reclassificada (ver resumo).",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:46fdbff7",
+      "arquivo": "src/content/banco/fis/fis-dinamica-leis-newton.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 0.857,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 0.857,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: (20 - 8)/3 = 4 m/s². O distrator 28 (soma das forças) é erro de composição; 8 e 2 são erros de divisão. Alternativas curtas de tamanho parecido.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:687a6885",
+      "arquivo": "src/content/banco/fis/fis-dinamica-leis-newton.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1 conferido: F - 240 = 80 x 0,5, F = 280 N. Distratores 40 (só a resultante), 80 e 320 (soma no lugar da subtração) plausíveis.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    },
+    {
+      "id": "gen:fis:dinamica-leis-newton:ccf701eb",
+      "arquivo": "src/content/banco/fis/fis-dinamica-leis-newton.json",
+      "versaoAntes": 1,
+      "versaoDepois": 1,
+      "estrato": "1e",
+      "metricas": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "metricasAntes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": {
+          "incorretas": 0,
+          "correta": false
+        },
+        "travessao": 0
+      },
+      "marcas": {
+        "R1": "ok",
+        "R2": "ok",
+        "R3": "ok",
+        "R4": "ok",
+        "R5": "ok",
+        "R6": "ok",
+        "R7": "ok",
+        "R8": "ok"
+      },
+      "acoes": [
+        "manter"
+      ],
+      "motivo": "R1/R2 conferidos: a = 100/0,2 = 500 m/s²; a explicação diz que o tempo não entra no cálculo. Distratores 200, 20, 50 razoáveis.",
+      "revisor": "ia-delegada:sonnet",
+      "revisadoEm": "2026-09-28",
+      "afetaDiagnostico": true,
+      "avisosDepois": [],
+      "validateExercise": "ok"
+    }
+  ]
+}

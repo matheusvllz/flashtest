@@ -73,3 +73,29 @@ describe("recordLearningAttempt", () => {
     expect(evidencia?.hasReviewCorrectAfter24h).toBe(false);
   });
 });
+
+/** docs/36 RF-6 (C4d, T-02.5): a mesma tentativa (mesmo `attempt.id`) nunca empilha nem atualiza o modelo duas vezes. */
+describe("recordLearningAttempt — idempotência por attempt.id (docs/36 RF-6)", () => {
+  beforeEach(() => reset());
+
+  test("mesmo attempt.id 2x -> 1 entrada em recentAttempts", () => {
+    recordLearningAttempt(tentativaBase({ id: "at-dup" }));
+    recordLearningAttempt(tentativaBase({ id: "at-dup" }));
+    expect(getState().learning.recentAttempts.filter((a) => a.id === "at-dup")).toHaveLength(1);
+  });
+
+  test("a 2ª chamada não mexe em evidência nem agenda", () => {
+    recordLearningAttempt(tentativaBase({ id: "at-dup", role: "pratica" }));
+    const evidenciaAntes = JSON.stringify(getState().learning.skillEvidence);
+    const modeloAntes = JSON.stringify(getState().learning.skillModel);
+    recordLearningAttempt(tentativaBase({ id: "at-dup", role: "pratica" }));
+    expect(JSON.stringify(getState().learning.skillEvidence)).toBe(evidenciaAntes);
+    expect(JSON.stringify(getState().learning.skillModel)).toBe(modeloAntes);
+  });
+
+  test("ids diferentes continuam empilhando normalmente", () => {
+    recordLearningAttempt(tentativaBase({ id: "at-a" }));
+    recordLearningAttempt(tentativaBase({ id: "at-b" }));
+    expect(getState().learning.recentAttempts).toHaveLength(2);
+  });
+});

@@ -38,3 +38,59 @@ test("A2 — tutor não abre nem envia mensagem automaticamente ao errar", async
   await expect(page.locator(".bg-mar.px-4.py-2\\.5")).toContainText("Me ensina isso do começo");
   await expect.poll(() => chamadasApi.length).toBe(1);
 });
+
+/**
+ * RF-18 / G13 (docs/36 T-05.5) — tutor sem rede não trava o estudo nem a
+ * correção. Padrão de URL da server function conferido no dev server
+ * (28/09/2026): `POST /_serverFn/<id>` — o que o resto da suíte já casa com
+ * `req.url().includes("_serverFn")`; aqui toda rota que casa com `_serverFn` (glob no `page.route`) é abortada.
+ *
+ * Comportamento real (registrado no docs/37): quando a CHAMADA em si falha, o
+ * balão mostra `COPY.tutor.falhaResposta` ("Não consegui responder agora.
+ * Tente de novo."); o `localFallback` de `tutor-prompt.ts` é o fallback do
+ * SERVIDOR (sem chave/erro upstream) e só chega ao cliente quando o servidor
+ * responde — não é exercido com a rede cortada. Nenhuma mudança de código foi
+ * necessária: o tutor continua estritamente manual.
+ */
+test("RF-18 — sem rede: errar não abre o tutor, 'Explicar melhor' mostra o aviso local e a aula continua", async ({ page }) => {
+  const tentativasApi: string[] = [];
+  page.on("request", (req) => {
+    if (req.method() === "POST" && req.url().includes("_serverFn")) tentativasApi.push(req.url());
+  });
+  await page.route("**/_serverFn/**", (rota) => rota.abort());
+
+  await page.goto("/learn/porcentagem-valor", { waitUntil: "domcontentloaded" });
+  await page.getByRole("button", { name: "Começar" }).waitFor({ timeout: 15_000 });
+  await page.getByRole("button", { name: "Começar" }).click();
+  await page.getByRole("button", { name: "Continuar" }).click(); // teach
+
+  // Questão 1: erra de propósito (gabarito real: 1; escolhe 0) — mesmo caminho de lesson-v2.spec.ts.
+  await page.getByRole("button", { name: "Verificar" }).waitFor();
+  await page.locator('[role="radio"]').nth(0).click();
+  await page.getByRole("button", { name: "Verificar" }).click();
+  await page.locator('[role="status"]').waitFor();
+
+  // Errar NÃO abre o tutor nem tenta rede — nem depois de esperar.
+  await page.waitForTimeout(2_000);
+  await expect(page.locator('[aria-label="Fechar tutor"]')).toHaveCount(0);
+  expect(tentativasApi).toHaveLength(0);
+
+  // Só o CTA explícito abre; o envio automático dele falha na rede e vira o aviso local.
+  await page.getByRole("button", { name: "Explicar melhor" }).click();
+  await expect(page.locator('[aria-label="Fechar tutor"]')).toBeVisible();
+  await expect(page.getByText("Não consegui responder agora. Tente de novo.")).toHaveCount(1, { timeout: 10_000 });
+  expect(tentativasApi.length).toBeGreaterThanOrEqual(1);
+
+  // O balão continua usável: uma pergunta manual também falha com o mesmo aviso, sem travar.
+  await page.getByPlaceholder("Pergunta qualquer coisa...").fill("Pode explicar de outro jeito?");
+  await page.getByRole("button", { name: "Enviar" }).click();
+  await expect(page.getByText("Não consegui responder agora. Tente de novo.")).toHaveCount(2, { timeout: 10_000 });
+
+  // A correção e o estudo seguem: fecha o balão, a folha de feedback continua, "Continuar" avança
+  // pro próximo passo e a lição chega na questão seguinte.
+  await page.locator('[aria-label="Fechar tutor"]').click();
+  await page.getByRole("button", { name: "Continuar" }).click(); // segue do checkpoint
+  await page.getByRole("button", { name: "Continuar" }).click(); // teach: "Exemplo: 15% de 500"
+  await page.getByRole("button", { name: "Verificar" }).waitFor({ timeout: 10_000 });
+  await expect(page.locator('[role="radio"]').first()).toBeVisible();
+});

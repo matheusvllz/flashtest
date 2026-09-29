@@ -32,8 +32,10 @@ Cinco tipos de integração, cada um instalado pelo método oficial do seu upstr
 | N | claude-mem | Plugin (escopo **usuário**) | ativo | ~2k tok + contexto injetado | Reference (memória) |
 | O | SecondSky (3 de 145) | Plugin | ativo | ~390 tok | Reference |
 | P | OmniRoute MCP | MCP server (projeto) | ativo | 0 (só via `npx` sob demanda) | Reference (ferramenta externa, sob demanda) |
+| Q | Better Writing (`boraoztunc/skills`) | Local | ativo | ~160 tok (estimativa) | Primary (escrita de interface) |
+| R | Ogilvy Copywriting (`boraoztunc/skills`) | Local | ativo | ~100 tok (estimativa) | Specialist (só marketing/posicionamento) |
 
-\* Medido com `claude plugin details <plugin>` (descrições de skills que entram em toda sessão). Skills locais: estimativa pelo tamanho da descrição. O custo **ao invocar** (corpo da skill) é pago só quando ela é usada. Total ativo por padrão: ~11–12k tokens; com Marketing e GSAP ligados, ~26k. Ver [SKILL-ROUTING.md](SKILL-ROUTING.md) §5.
+\* Medido com `claude plugin details <plugin>` (descrições de skills que entram em toda sessão). Skills locais: estimativa pelo tamanho da descrição. O custo **ao invocar** (corpo da skill) é pago só quando ela é usada. Total ativo por padrão: ~11–12k tokens (~+260 com Q e R, 28/09/2026); com Marketing e GSAP ligados, ~26k. Ver [SKILL-ROUTING.md](SKILL-ROUTING.md) §5.
 
 Estes plugins convivem com outros **já instalados no escopo de usuário** desta máquina (sincronizados do claude.ai: `engineering:*`, `design:*`, `marketing:*`, `product-management:*` etc.). Eles não fazem parte da configuração do projeto e não foram alterados. Quando um deles e uma ferramenta daqui cobrirem a mesma coisa, o roteamento indica qual usar.
 
@@ -199,6 +201,8 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Do not use when:** UI do app sem objetivo de conversão; qualquer sugestão de tracking/pixel/analytics externo sem spec (`20` §14, §22); qualquer prova social, métrica ou preço que não exista (`docs/PRODUCT.md` → Evidence on Hand).
 **Related skills:** Humanizer (acabamento), Taste (LP), `marketing:*` (plugins de usuário).
 **Possible overlap:** plugins de usuário `marketing:seo-audit`, `marketing:content-creation`, `small-business:seo-ai-visibility` etc. Dentro do projeto, preferir este pacote.
+**Canônicas para escrita de marketing (`38`, 28/09/2026):** `copywriting` (2.0.2) e `copy-editing` (2.0.0) deste pacote são as versões usadas. As cópias do `boraoztunc/skills` (1.0.0, forks antigos das mesmas skills) foram avaliadas e **não instaladas** (ver "Avaliadas e não instaladas" abaixo).
+**Usar sem ligar as 50 skills:** para uma revisão isolada, ler o `SKILL.md` direto do cache — `~/.claude/plugins/cache/marketingskills/marketing-skills/2.11.1/skills/copy-editing/SKILL.md` (ou `copywriting`); caminho no registry → `cachePath`. Ligar o pacote inteiro só para trabalho de marketing com várias skills.
 **Priority:** Primary (sob demanda).
 
 ## L. Humanizer
@@ -212,6 +216,8 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Do not use when:** código, comentário técnico, spec, JSON/schema, conteúdo pedagógico (enunciado, gabarito, explicação), prompt do tutor.
 **Conflito resolvido com a spec:** o `20` §7.1 afirma que **não existe lista de palavras que prove autoria por IA** e proíbe tratar travessão como detector; o Humanizer manda remover todo travessão "a menos que a amostra do autor use". No Foca: (1) a **amostra do autor** é a copy aprovada no `21` §2 (que usa travessão); (2) nenhuma string marcada "revisado" no `21` muda sem atualizar o inventário; (3) é checklist editorial, não detector; (4) as regras de voz do `20` §7.1 prevalecem. O Humanizer foi escrito para inglês; em pt-BR aplicar só os padrões estruturais (§1–§5 da skill), não as listas de palavras.
 **Related skills:** Marketing `copywriting`/`copy-editing`, `design:ux-copy` (usuário).
+**Papel desde o `38` (28/09/2026):** único revisor anti-escrita-artificial do projeto, **só em texto de 2+ frases** (marketing, corpo de onboarding, estado vazio longo, doc para humanos). Nunca em rótulo/botão, `voz.ts`, prompt do tutor, conteúdo pedagógico, spec ou código. Microcopy e erro vão para `better-writing` (§Q).
+**Comparação com Stop Slop (`boraoztunc/skills`, avaliada e não instalada em 28/09/2026):** as duas removem padrões de texto de IA, mas o método difere. O Humanizer tem 25 padrões ordenados por força (os "fracos sozinhos" só contam em conjunto), deixa a amostra do autor mandar (inclusive no travessão), manda conferir fato/número/citação adicionados ou perdidos e tem seção "quando não agir". O Stop Slop usa regras absolutas — cortar **todo** advérbio, **toda** voz passiva, **todo** travessão, listas de três, frase iniciada por pronome interrogativo — e uma nota de 1 a 10 em cinco dimensões, sem amostra do autor e sem checagem de fato. Em pt-BR e em microcopy isso remove texto correto ("Resposta registrada." é passiva; "Só falta uma." tem advérbio) e contradiz o `20` §7.1. Decisão: um revisor só, o Humanizer. Dois padrões que o Stop Slop nomeia bem — "agência falsa" (objeto fazendo ação de pessoa: "a decisão emerge") e "narrador de longe" — entram no checklist pt-BR de `docs/copy/02-voz-e-tom.md`, sem depender da skill.
 **Possible overlap:** `humanize-writing` do SecondSky — **não instalado**.
 **Priority:** Review.
 
@@ -274,6 +280,63 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Related skills:** nenhuma — é uma ferramenta externa, não compete com skills de engenharia/design.
 **Priority:** Reference (sob demanda explícita).
 
+## Q. Better Writing (`boraoztunc/skills`)
+
+**Source:** https://github.com/boraoztunc/skills/tree/main/better-writing. Upstream original: https://github.com/jakubkrehel/skills (`skills/better-writing`, MIT, Jakub Krehel). A cópia do `boraoztunc` foi vendorizada antes de uma reescrita do upstream e **difere do HEAD atual dele** (`267330e`): é mais completa na estrutura e traz o `review-output.md`. Ficou a do `boraoztunc`, no commit fixado.
+**Installation method:** skill local — `DISABLE_TELEMETRY=1 DO_NOT_TRACK=1 npx skills@1.7.0 add https://github.com/boraoztunc/skills --skill better-writing --skill ogilvy-copywriting -a claude-code --copy -y` (instala as duas, Q e R, de uma vez).
+**Installed location:** `.claude/skills/better-writing/` (`SKILL.md`, `review-output.md`); hash em `skills-lock.json`.
+**Version / commit:** `645553ca7622570479e330cc089c65fcf34e0ba8` (15/08/2026, sem tag). Pré-instalação (28/09/2026): clone fora do repo, 3 arquivos entre as duas skills, nenhum script, hook, `package.json` ou chamada de rede; `diff -r` clone × instalado sem diferença.
+**License:** MIT (`LICENSE-jakubkrehel` no repo `boraoztunc`; a pasta da skill não traz arquivo de licença e não foi criado nenhum).
+**Local modifications:** nenhuma. Adaptações ao Foca ficam **aqui**, nunca nos arquivos da skill (facilita `update`).
+**Purpose:** escrever e revisar texto de interface — rótulo de botão e link, erro, confirmação, estado vazio, placeholder, onboarding de uso, notificação, capitalização.
+**Use when (REQUIRED):** mensagem de erro, confirmação (principalmente destrutiva ou de saída), estado vazio, tela ou fluxo novo, qualquer mudança em 2+ strings de interface. **RECOMMENDED:** auditoria de copy (`docs/copy/auditoria-*.md`, uma chamada por área). **OPTIONAL:** ajuste de 1 rótulo (o padrão do guia costuma bastar).
+**Do not use when:** conteúdo pedagógico (enunciado, alternativa, gabarito, explicação); prompt do tutor; falas da mascote em `voz.ts` (a regra "sem humor" da skill vale para mensagem de sistema, não para a Foca); copy de marketing de persuasão; mudança de um único rótulo.
+**Inputs esperados:** `docs/COPY.md` (Quick Context), `docs/copy/03-ux-writing.md` §2–§3, a(s) string(s) com `arquivo:linha` ou chave `COPY.x.y`, o estado/gatilho, o limite de palavras (`20` §7.1).
+**Outputs esperados:** tabela de achados no formato de `review-output.md` (Severity · Location · Before · After · Why) + verificação + veredito (Block / Needs changes / Approve). Na escrita, a(s) string(s) proposta(s) já no glossário do Foca.
+**Dependencies:** nenhuma skill antes. A skill cita `better-typography`, `better-accessibility` e `better-layout`, **que não estão instaladas** — ignorar essas remissões (a11y e semântica ficam com `web-design-guidelines`).
+**Adaptação ao Foca:** exemplos em inglês valem como princípio, aplicar em pt-BR; "tap/click" → "toque"/"clique"; "sentence case" = maiúscula só na primeira palavra; a voz de marca do Foca (`20` §7.1) é a "established voice" que a skill manda preservar; a ordem de prioridade do Foca (clareza, ação, contexto, brevidade, personalidade) vale sobre qualquer outra.
+**Related skills:** `humanizer` (só depois, se houver 2+ frases), `web-design-guidelines` (a11y), `marketing-skills:copy-editing` (só marketing).
+**Possible overlap:** Humanizer (polimento de prosa), Impeccable (modo UX copy), `design:ux-copy` (usuário, não reproduzível). Regra: `better-writing` para interface, Humanizer para prosa, Impeccable e `design:ux-copy` não entram na rota de copy.
+**Exemplos no Foca:** (1) erro de pacote "Não deu pra carregar agora." + "Tentar de novo" (`36` RU-3) — checar que o corpo diz o que fazer; (2) modal "Sair da lição?" — botões repetem a consequência ("Sair mesmo assim" / "Continuar estudando", já cumpre); (3) `COPY.trilha.tudoConcluido` — estado vazio com próximo passo ("Praticar"), já cumpre; (4) padronizar "Tente/Tenta/Tentar de novo" como vocabulário de fluxo.
+**Priority:** Primary (escrita de interface).
+
+## R. Ogilvy Copywriting (`boraoztunc/skills`)
+
+**Source:** https://github.com/boraoztunc/skills/tree/main/ogilvy (pasta `ogilvy/`; o `name` no frontmatter é `ogilvy-copywriting`, e a pasta instalada segue o `name`). Compilação do mantenedor a partir de livros de David Ogilvy; sem upstream anterior; `license: MIT` no frontmatter.
+**Installation method:** o mesmo comando da seção Q (uma instalação, duas skills).
+**Installed location:** `.claude/skills/ogilvy-copywriting/SKILL.md` (arquivo único); hash em `skills-lock.json`.
+**Version / commit:** `645553ca7622570479e330cc089c65fcf34e0ba8`. Mesma auditoria pré-instalação da seção Q.
+**License:** MIT (declarada no frontmatter).
+**Local modifications:** nenhuma.
+**Purpose:** estratégia de mensagem — posicionamento (o que faz e para quem), promessa única, big idea, regras de título, fatos acima de adjetivos, dez perguntas diagnósticas.
+**Use when (RECOMMENDED):** posicionamento, proposta de valor, hero/título de landing, descrição de OG/loja de apps. **OPTIONAL:** campanha, post.
+**Do not use when (DO NOT USE):** qualquer tela do app, feedback, texto do tutor, conteúdo pedagógico, microcopy. Não gera a página inteira (isso é do `copywriting`).
+**Inputs esperados:** `docs/copy/01-estrategia.md` (persona, problema→mecanismo→resultado, posicionamento), `docs/copy/06-marketing.md`, `docs/PRODUCT.md` → Evidence on Hand.
+**Outputs esperados:** respostas às dez perguntas diagnósticas, uma promessa, 3–5 opções de título com a promessa. Não a página.
+**Dependencies:** ler persona e Evidence on Hand antes. Depois dela: `marketing-skills:copywriting` (rascunho) → `copy-editing` (revisão).
+**Regras de conflito com o Foca (valem sobre a skill):** "testimonials work" e "long copy sells" **não** autorizam depoimento inventado nem texto longo na UI (`PRODUCT.md` → Evidence on Hand); "brand name in the headline" é opcional; as regras de TV, foto e "avoid animation for adults" não se aplicam ao app; nenhuma big idea vira promessa que o produto não cumpre (`docs/copy/01` §4).
+**Related skills:** `marketing-skills:copywriting`, `copy-editing`, `product-marketing` (contexto, não estratégia), Humanizer (depois do rascunho).
+**Possible overlap:** `copywriting` do Corey — sobreposição parcial, mas Ogilvy atua **antes** (decide posicionamento e promessa) e o `copywriting` escreve depois.
+**Exemplos no Foca:** (1) gerar as três opções de frase de posicionamento (decisão D-1 do `38`); (2) título de uma futura landing com a promessa "próximo passo claro" e um fato verificável; (3) revisar `BRAND.description` depois que o `36` T-08.7 terminar.
+**Priority:** Specialist (só marketing/posicionamento).
+
+## Avaliadas e não instaladas — `boraoztunc/skills` (28/09/2026, commit `645553c`)
+
+Registradas para que nenhum agente reavalie a mesma decisão sem contexto. Repositório com 72 pastas de skill; leitura integral das cinco candidatas prioritárias e triagem das demais.
+
+| Skill | Motivo |
+|---|---|
+| `copywriting`, `copy-editing` | Forks 1.0.0 do `coreyhaines31/marketingskills`; o Foca já tem a 2.0.2 e a 2.0.0 do upstream original (K) |
+| `stop-slop` | Mesma função do Humanizer, com regras absolutas que em pt-BR e microcopy removem texto correto e contradizem o `20` §7.1 (comparação em L) |
+| `page-cro`, `content-strategy`, `seo-audit`, `programmatic-seo`, `schema-markup`, `competitor-alternatives`, `analytics-tracking` | Forks antigos de skills do pacote Marketing já instalado; `analytics-tracking` também conflita com `20` §14/§22 |
+| `landing-page`, `pricing-page` | Sobrepõem `cro`/`design-taste-frontend`; não há preço definido (`08` §11) |
+| `product-proof-saas` | Reavaliar se uma landing com demo da IA for especificada |
+| `better-accessibility`, `better-colors`, `better-layout`, `better-typography`, `better-ui`, `better-interface`, `interface-review` | Fora do escopo de copy; candidatas a um plano de design; sobrepõem `web-design-guidelines` e Impeccable |
+| `frontend-design`, `impeccable`, `web-design-guidelines`, `vercel-react-best-practices` | Já instaladas a partir do upstream original |
+| Presets visuais e efeitos: `visual-style-presets`, `glass-dark-ui`, `skeuomorphic-ui`, `mesh-gradient-dark-blue-clean`, `liquid-metal-border`, `beam-glow-states`, `webgl-laser`, `thinking-orbs`, `shaders-cursor-ripples` (dependência paga), `progressive-blur`, `reveal-hover-effect`, `staggered-word-reveal`, `container-lines`, `framed-grid-layout`, `corner-diagonals`, `css-border-gradient`, `beautiful-shadows`, `apple-design`, `emil-design-eng`, `documentary-brutalist-agency`, `editorial-portfolio-chapters`, `minimal-zine-poster` | Brigam com a identidade Rabisco fixa (mesmo motivo da recusa de 11 skills do Taste) |
+| HyperFrames e adaptadores: `hyperframes`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `remotion-to-hyperframes`, `website-to-hyperframes`, `contribute-catalog`, `gsap`, `animejs`, `waapi`, `css-animations`, `lottie`, `three`, `typegpu`, `tailwind` | Sem uso no app; HyperFrames já existe no escopo de usuário desta máquina |
+| `tailwind-v4`, `app-store-screenshots`, `service-booking-flow`, `operational-enterprise-ai`, `conductor-rewrite-performance`, `linear-local-first-architecture`, `adversarial-review` | Fora do produto ou duplicam ferramentas de engenharia já instaladas (SecondSky cobre Tailwind v4) |
+
 ---
 
 ## Problemas conhecidos e configuração manual
@@ -307,5 +370,6 @@ Antes de instalar, cada upstream foi clonado e lido: manifests (`plugin.json`, `
 |---|---|---|
 | Plugin | `claude plugin marketplace update <marketplace>` e `claude plugin update <plugin>@<marketplace>` | Reauditar diff de hooks/scripts; atualizar versão/commit aqui e no registry |
 | Skill local (Vercel, LottieFiles, Taste) | `DISABLE_TELEMETRY=1 DO_NOT_TRACK=1 npx skills@latest update -p` | Conferir diff em `.claude/skills/` e `skills-lock.json` |
+| Skills locais do `boraoztunc` (Q, R) | Clonar o repo **fora** do projeto, `git diff 645553c..HEAD -- better-writing ogilvy` e ler; reinstalar com o comando da seção Q (ou `skills update -p`); `diff -r` clone × `.claude/skills/` | Atualizar commit aqui e no registry; nunca editar os `SKILL.md` — adaptações ficam nas seções Q/R |
 | Repo Security Review | Clonar upstream, ler o diff, copiar `SKILL.md README.md references scripts` por cima | Atualizar commit aqui e no registry |
 | Verificação | `node scripts/validate-skills.mjs` | Deve terminar sem `FAIL` |

@@ -55,11 +55,11 @@ function Ranking() {
             const sobe = pos <= LIGA.sobeAte;
             const cai = pos >= LIGA.caiApartirDe;
             const corBorda = c.eu
-              ? "var(--color-mar)"
+              ? "var(--mar)"
               : sobe
-                ? "var(--color-mar)"
+                ? "var(--mar)"
                 : cai
-                  ? "var(--color-gelo)"
+                  ? "var(--gelo)"
                   : "transparent";
             return (
               <li

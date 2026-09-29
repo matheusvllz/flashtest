@@ -24,8 +24,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +54,25 @@
         "type": "multipla-escolha",
         "pergunta": "A Semana de Arte Moderna de 1922 representou um marco na literatura brasileira. Qual foi o principal objetivo desse evento?",
         "opcoes": [
-          "Criar uma academia para preservar o português antigo",
-          "Reafirmar os valores do Romantismo como resistência à modernidade",
-          "Lançar manifestos que questionavam as convenções literárias tradicionais",
-          "Promover apenas a música clássica europeia no Brasil"
+          "Criar uma academia para preservar o português antigo e as formas tradicionais de escrever",
+          "Reafirmar os valores do Romantismo como resistência às mudanças trazidas pela modernidade",
+          "Lançar manifestos e obras que questionavam as convenções literárias e artísticas tradicionais",
+          "Promover a música clássica europeia no Brasil, com pouco espaço para os artistas brasileiros da época"
         ],
         "correta": 2,
         "explicacao": "A Semana de Arte Moderna buscava questionar e romper com convenções literárias tradicionais, promovendo manifestos que defendiam inovação, liberdade formal e uma linguagem mais próxima da realidade brasileira. Não pretendia restaurar o Romantismo, nem censurava música europeia, nem preservava formas antigas. Justamente o contrário, rompeu com elas."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:d9615d1d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -99,17 +102,17 @@
         "type": "multipla-escolha",
         "pergunta": "Considerando o contexto histórico do Modernismo brasileiro, qual fator contribuiu mais para a diversidade de temas na Segunda Fase?",
         "opcoes": [
-          "A Grande Depressão econômica e o surgimento de preocupações sociais e políticas",
-          "A vitória do Brasil na Primeira Guerra Mundial",
-          "A rejeição completa de qualquer influência europeia",
-          "O otimismo econômico dos anos 1920 no Brasil"
+          "A Grande Depressão e o surgimento de preocupações sociais e políticas no país",
+          "O fim da Primeira Guerra Mundial e o clima de festa que tomou conta do país",
+          "A rejeição completa de qualquer influência europeia na literatura brasileira",
+          "O otimismo econômico dos anos 1920 e a modernização das grandes cidades do país"
         ],
         "correta": 0,
-        "explicacao": "A Segunda Fase do Modernismo coincidiu com crises econômicas e políticas graves (Grande Depressão, ascensão de regimes autoritários), o que levou autores como Graciliano Ramos e Rachel de Queiroz a incorporar denúncias sociais e reflexões sobre injustiça em suas obras. A economia de 1920 era promissora, não os anos 1930; o Brasil não venceu a Primeira Guerra decisivamente; a influência europeia continuou relevante."
+        "explicacao": "A Segunda Fase do Modernismo coincidiu com crises econômicas e políticas graves (Grande Depressão, ascensão de regimes autoritários), o que levou autores como Graciliano Ramos e Rachel de Queiroz a incorporar denúncias sociais e reflexões sobre injustiça em suas obras. A economia de 1920 era promissora, não os anos 1930; o fim da Primeira Guerra Mundial, em 1918, é anterior e não explica os temas dos anos 1930; a influência europeia continuou relevante."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:6266aea1",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
@@ -117,7 +120,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -145,17 +150,17 @@
         "type": "multipla-escolha",
         "pergunta": "Na Primeira Fase do Modernismo, o conceito de 'antropofagia' em Oswald de Andrade significa principalmente:",
         "opcoes": [
-          "A eliminação da literatura portuguesa como influência no Brasil",
-          "A rejeição total de toda cultura brasileira em favor apenas da europeia",
-          "A devoração criativa da cultura europeia para criar algo único e brasileiro",
-          "O retorno ao Realismo como forma de crítica social"
+          "A eliminação da literatura portuguesa como influência sobre a produção literária do Brasil",
+          "A rejeição da cultura brasileira em favor da cultura europeia, vista como modelo superior",
+          "A devoração criativa da cultura europeia, transformada para criar algo novo e brasileiro",
+          "O retorno ao Realismo como forma de crítica social e de descrição objetiva da sociedade"
         ],
         "correta": 2,
         "explicacao": "A antropofagia oswaldiana propõe 'devorar' criativamente a cultura estrangeira (especialmente europeia) para transformá-la em expressão genuinamente brasileira. Não é rejeição da Europa, mas absorção crítica e ressignificação. Não é volta ao Realismo nem eliminação da influência portuguesa: é reelaboração cultural consciente."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:49b2515e",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
@@ -163,7 +168,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +183,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -191,25 +198,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual período histórico melhor explica a transição da Primeira para a Segunda Fase do Modernismo e o aprofundamento temático dessa última?",
         "opcoes": [
-          "A Grande Depressão (1929) e suas consequências econômicas e políticas globais",
-          "A independência política do Brasil frente à Europa",
-          "O fortalecimento exclusivo de movimentos artísticos tradicionais",
-          "A consolidação da industrialização brasileira sem conflitos sociais"
+          "A Grande Depressão (1929) e suas consequências econômicas e políticas",
+          "A independência política do Brasil frente à Europa, no início do século XIX",
+          "O fortalecimento de movimentos artísticos tradicionais que rejeitavam a inovação",
+          "A consolidação da industrialização brasileira, vista como fim dos conflitos sociais"
         ],
         "correta": 0,
         "explicacao": "A crise de 1929 alterou o contexto socioeconômico mundial. No Brasil, coincidiu com a crise do café e a Revolução de 1930, e a Segunda Fase passou a tratar de injustiça e sofrimento social com mais urgência. A independência política do Brasil é de 1822, um século antes; a industrialização foi irregular e conflituosa; e os movimentos tradicionais foram combatidos, não fortalecidos."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:17e81105",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +231,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"
@@ -237,25 +246,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual é o traço comum entre as três fases do Modernismo brasileiro, apesar de suas diferenças temáticas?",
         "opcoes": [
-          "Todas mantêm uma linguagem atualizada e afastada de formas acadêmicas rígidas",
-          "Todas pregam um retorno às formas clássicas de versificação",
-          "Todas evitam qualquer tipo de inovação formal ou temática",
-          "Todas rejeitam completamente a influência europeia"
+          "Linguagem atualizada e afastada das formas acadêmicas rígidas, ainda que em graus diferentes",
+          "Retorno às formas clássicas de versificação, como o soneto de métrica e rima fixas",
+          "Recusa de qualquer inovação formal ou temática, com preferência pelos modelos do passado",
+          "Rejeição completa da influência europeia, com o uso exclusivo de modelos nacionais"
         ],
         "correta": 0,
         "explicacao": "Embora com graus diferentes de radicalidade, todas as três fases compartilham recusa ao academicismo rígido e valorização de linguagem mais viva e próxima da realidade. A influência europeia não é totalmente rejeitada. Não há retorno ao clássico. Há intensa inovação mantida ao longo de todas elas."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:beeb8b91",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +279,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -283,17 +294,17 @@
         "type": "multipla-escolha",
         "pergunta": "Em qual contexto histórico-cultural a Segunda Fase do Modernismo se aprofunda em temas de denúncia social e política no Brasil?",
         "opcoes": [
-          "No final do século 20, com o advento da internet",
-          "Durante a Primeira Guerra Mundial, quando o Brasil se industrializava rapidamente",
+          "No fim do século 20, com o avanço da internet e da comunicação global entre as pessoas",
+          "Na década de 1910, durante a Primeira Guerra Mundial, antes da Semana de Arte Moderna de 1922",
           "Na década de 1930, marcada por crise econômica, autoritarismo político e conflitos sociais",
-          "No século 19, durante o Império Brasileiro"
+          "No século 19, durante o Império, quando o Romantismo e o Realismo dominavam a literatura"
         ],
         "correta": 2,
-        "explicacao": "A Segunda Fase coincide com a Depressão de 1929 e clima de totalitarismo político dos anos 1930 (ditaduras ascendendo), levando autores como Graciliano Ramos a escrever com urgência sobre injustiça social. A Primeira Guerra não causou industrialização rápida no Brasil. O século 19 pré-data o Modernismo. A internet é anacrônica."
+        "explicacao": "A Segunda Fase coincide com a Depressão de 1929 e clima de totalitarismo político dos anos 1930 (ditaduras ascendendo), levando autores como Graciliano Ramos a escrever com urgência sobre injustiça social. A Primeira Guerra (1914 a 1918) é anterior à Primeira Fase, o século 19 é anterior ao Modernismo e a internet só surgiu muito depois."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:7fd7ad69",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
@@ -301,7 +312,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +327,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -329,17 +342,17 @@
         "type": "multipla-escolha",
         "pergunta": "Qual elemento da Primeira Fase do Modernismo foi posteriormente criticado ou revisto pela Segunda Fase?",
         "opcoes": [
-          "O otimismo radical em relação à forma cedeu espaço a preocupações sociais mais profundas",
-          "A rejeição da tradição nunca foi questionada",
-          "O caráter experimental tornou-se ainda mais radical",
-          "A total liberdade formal manteve-se sem questionar seus limites"
+          "O tom de ruptura e experimentação formal cedeu espaço a preocupações sociais mais profundas",
+          "A rejeição da tradição foi mantida sem revisão, com o mesmo ímpeto crítico dos primeiros anos",
+          "O caráter experimental tornou-se ainda mais radical, com novas rupturas na forma dos textos",
+          "A liberdade formal foi mantida integralmente, sem questionamento de seus limites e sem mudança de foco"
         ],
         "correta": 0,
         "explicacao": "A Segunda Fase manteve conquistas formais da Primeira, como o verso livre e a linguagem coloquial, mas trocou a euforia da experimentação pela preocupação social e pela reflexão existencial. As outras alternativas descrevem continuidade ou radicalização, e não uma revisão: a experimentação não ficou mais radical, ela amadureceu."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:95f41a21",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
@@ -347,7 +360,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +375,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:22:54.474Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +390,25 @@
         "type": "multipla-escolha",
         "pergunta": "Compare 'Menino de Engenho', de José Lins do Rego, e 'O Quinze', de Rachel de Queiroz. Qual diferença fundamental caracteriza sua abordagem temática?",
         "opcoes": [
-          "Ambos têm temática idêntica e são frequentemente confundidos",
-          "'Menino de Engenho' critica o nordeste; 'O Quinze' o celebra",
+          "Ambos têm a mesma temática e por isso são frequentemente confundidos pelos leitores",
+          "'Menino de Engenho' critica o Nordeste; 'O Quinze' celebra a região e sua paisagem",
           "'Menino de Engenho' retrata memória individual; 'O Quinze' aborda catástrofe coletiva",
-          "'O Quinze' privilegia a região Sul; 'Menino de Engenho' o agreste central"
+          "'O Quinze' se passa na região Sul do país; 'Menino de Engenho', no agreste central"
         ],
         "correta": 2,
         "explicacao": "'Menino de Engenho' rememora a infância do narrador de forma pessoal, lírica e nostálgica. 'O Quinze' aborda a seca de 1915 no sertão como evento coletivo traumático que afeta comunidades inteiras. Essa oposição entre memória individual e catástrofe coletiva é o que diferencia fundamentalmente as duas narrativas regionalistas."
       },
       "meta": {
         "id": "gen:lit:modernismo-fases-brasil:48674ea2",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "lit:modernismo-fases-brasil"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +423,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-09"
         },
         "examProfiles": [
           "enem"

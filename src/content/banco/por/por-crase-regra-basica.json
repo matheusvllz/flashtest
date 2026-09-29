@@ -7,9 +7,9 @@
         "type": "multipla-escolha",
         "pergunta": "Qual sentença viola a norma culta de crase? (A) 'Todos os candidatos foram à prova munidos de documentos.' (B) 'O tribunal chegou à decisão após longas deliberações.' (C) 'Estamos dedicados à aumentar a produtividade.' (D) 'A empresa se comprometeu à cumprir os prazos estabelecidos.'",
         "opcoes": [
-          "Somente C",
-          "Somente A",
-          "Apenas B",
+          "A e B",
+          "B e C",
+          "A e D",
           "C e D"
         ],
         "correta": 3,
@@ -17,15 +17,15 @@
       },
       "meta": {
         "id": "gen:por:crase-regra-basica:8cf0568c",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:crase-regra-basica"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -41,7 +41,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:45.629Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-01"
         },
         "examProfiles": [
           "enem"

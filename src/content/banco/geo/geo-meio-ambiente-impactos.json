@@ -7,17 +7,17 @@
         "type": "multipla-escolha",
         "pergunta": "A construção de uma barragem hidrelétrica em um rio compartilhado entre três países reduz a água disponível para países a jusante. Qual impacto ambiental e geopolítico isto cria?",
         "opcoes": [
-          "Nenhum impacto, pois energia renovável sempre beneficia todos",
-          "Escassez hídrica nos países a jusante, aumentando tensão internacional sobre acesso à água",
-          "Melhoria automática da qualidade de água em todas as regiões",
-          "Redução de conflitos entre nações por falta de recursos competitivos"
+          "Impacto irrelevante, pois a energia renovável beneficia os países da bacia sem prejudicar o rio",
+          "Escassez de água nos países a jusante, o que aumenta a tensão internacional pelo acesso ao rio",
+          "Melhoria da qualidade da água nas regiões vizinhas, porque o reservatório retém as impurezas",
+          "Redução dos conflitos entre os países, porque a energia gerada é dividida entre os três países da bacia"
         ],
         "correta": 1,
-        "explicacao": "Barragens alteram o fluxo de um recurso compartilhado: geram energia para o país que constrói, mas podem reduzir a água dos vizinhos que dependem do rio para irrigação, abastecimento e pesca. Isso cria assimetria: o país a montante controla a vazão, e o país a jusante fica vulnerável. Exemplos reais: o Nilo (barragem etíope e as preocupações do Egito) e o Eufrates (barragens turcas e as preocupações de Síria e Iraque). Energia renovável não traz benefício automático a todos."
+        "explicacao": "Barragens alteram o fluxo de um recurso compartilhado: geram energia para o país que constrói, mas podem reduzir a água dos vizinhos que dependem do rio. Isso cria assimetria: o país a montante controla a vazão e o país a jusante fica vulnerável. Exemplos reais são o Nilo (barragem etíope e as preocupações do Egito) e o Eufrates (barragens turcas, Síria e Iraque). Energia renovável não traz benefício automático a todos."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:b5e8ac37",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.446Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -53,17 +55,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um país industrial despeja poluição atmosférica que cruza fronteiras e causa chuva ácida em país vizinho. A vítima exige compensação ambiental. Que tipo de impacto isto descreve?",
         "opcoes": [
-          "Benefício compartilhado que aumenta bem-estar dos dois países",
-          "Fenômeno natural que nenhum governo pode controlar ou regular",
-          "Impacto ambiental puramente local sem consequências internacionais",
-          "Externalidade transfronteiriça que viola soberania ambiental do país afetado"
+          "Benefício compartilhado, pois a produção industrial do vizinho também gera empregos no país afetado",
+          "Fenômeno natural, causado pela dinâmica do clima, que os governos não têm como controlar ou regular",
+          "Impacto ambiental restrito ao local da emissão, sem consequências fora do território do país emissor",
+          "Externalidade transfronteiriça, que transfere o custo ambiental ao vizinho e fere sua soberania"
         ],
         "correta": 3,
-        "explicacao": "Poluição que cruza fronteiras é externalidade transfronteiriça: país poluidor não paga custo total de suas emissões, jogando impacto em terceiros. Violação de soberania ambiental: país afetado não causou, mas sofre. Gera disputa diplomática (exigir compensação, regulação) e conflito comercial (ameaçar tarifas se não reduzir poluição). Diferencia-se de impacto local (afeta terceiros) e de 'fenômeno natural incontrolável' (é ação humana evitável com melhor tecnologia)."
+        "explicacao": "Poluição que cruza fronteiras é uma externalidade transfronteiriça: o país poluidor não paga o custo total de suas emissões e o transfere a terceiros. O país afetado não causou o dano, mas sofre as consequências, o que gera disputa diplomática e pedidos de compensação. Não é um fenômeno natural incontrolável nem um impacto local: é uma ação humana que a regulação e a tecnologia podem reduzir."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:8f0ba4d0",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
@@ -71,7 +73,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.446Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -99,17 +103,17 @@
         "type": "multipla-escolha",
         "pergunta": "Uma multinacional extrai petróleo em zona de reserva indígena, afetando terras, água e biodiversidade das quais povos tradicionais dependem para sobreviver. Qual tipo de impacto ambiental isto caracteriza?",
         "opcoes": [
-          "Atividade com benefício social garantido para toda população",
-          "Impacto desigual que onera comunidades vulneráveis enquanto lucros vão para corporação e governo central",
-          "Decisão feita com consentimento livre e informado de todas as partes",
-          "Impacto ambiental neutro que não afeta ninguém"
+          "Atividade com benefício social garantido, pois o petróleo gera empregos e receita para a região",
+          "Impacto desigual, que pesa sobre comunidades vulneráveis enquanto os lucros vão para empresa e governo",
+          "Decisão tomada com consentimento livre e informado dos povos afetados, com compensação justa",
+          "Impacto ambiental neutro, porque a região é pouco povoada e a natureza se recupera sozinha"
         ],
         "correta": 1,
-        "explicacao": "Extração em terras indígenas junta impacto ambiental e injustiça social: a empresa e o Estado ficam com a receita, enquanto as comunidades sofrem com poluição da água, perda de caça e pesca, problemas de saúde e deslocamento. Os custos recaem de forma desproporcional sobre quem menos se beneficia. Isso difere de um projeto com consentimento livre e informado das comunidades e de um benefício distribuído igualmente. Exemplo real: a contaminação deixada pela Texaco (depois Chevron) na Amazônia equatoriana."
+        "explicacao": "Extrair petróleo em terras indígenas junta impacto ambiental e injustiça social: a empresa e o Estado ficam com a receita, enquanto as comunidades sofrem com a poluição da água, a perda de caça e pesca e problemas de saúde. Os custos recaem sobre quem menos se beneficia. Um exemplo real é a contaminação deixada pela Texaco (depois Chevron) na Amazônia equatoriana."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:6a0dd66f",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
@@ -117,7 +121,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.446Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -145,17 +151,17 @@
         "type": "multipla-escolha",
         "pergunta": "Suponha que uma cidade implementou restrições ao uso de plástico e, anos depois, a poluição por microplásticos em seus rios caiu 40%. Qual tipo de impacto ambiental isto exemplifica?",
         "opcoes": [
-          "Impacto que ocorre apenas em países industrializados",
-          "Impacto negativo permanente que não pode ser revertido",
-          "Ausência completa de impacto, pois cidade é pequena",
-          "Impacto ambiental evitável através de mudança de comportamento e política pública"
+          "Impacto natural, causado por processos da própria natureza, que não depende da ação humana",
+          "Impacto de escala global, que não pode ser reduzido por decisões tomadas no nível local",
+          "Impacto proporcional ao tamanho da população, que só diminui quando a cidade encolhe",
+          "Impacto evitável e reversível, por meio de mudança de hábitos e de políticas públicas"
         ],
         "correta": 3,
-        "explicacao": "A restrição ao plástico é uma ação preventiva que reduz o dano ambiental: menos microplásticos chegam aos rios. Isso mostra que o impacto não é inevitável; escolhas de regulação e de consumo determinam quanto a atividade humana prejudica o ecossistema. Não é um impacto permanente, já que foi reduzido, e o tamanho da cidade não o torna inexistente."
+        "explicacao": "A restrição ao plástico é uma ação preventiva: menos microplásticos chegam aos rios. Isso mostra que o impacto não é natural nem inevitável, e que decisões locais de regulação e de consumo mudam o resultado. Como a poluição caiu 40%, o efeito também não é permanente nem irreversível."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:9f61390a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
@@ -163,7 +169,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.446Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -191,17 +199,17 @@
         "type": "multipla-escolha",
         "pergunta": "Uma empresa de agropecuária usa um pesticida que extermina pragas rapidamente, mas também mata abelhas (polinizadores essenciais). Como você avaliaria o impacto ambiental desta decisão?",
         "opcoes": [
-          "Impacto multifatorial: ganho curto-prazo (menos praga, mais colheita) mas risco de médio-prazo (sem abelhas, polinização cai, safra futura cai)",
-          "Sem impacto ambiental relevante",
-          "Impacto ambiental positivo puro, pois elimina pragas",
-          "Impacto ambiental negativo aceitável pois benefício agrícola compensa"
+          "Ganha em produção agora, mas perde no futuro, pois sem abelhas a polinização e a safra caem",
+          "Tem impacto ambiental irrelevante, porque o pesticida atua só sobre as pragas da lavoura",
+          "É positivo, pois eliminar as pragas aumenta a produção e não afeta os outros seres vivos do ambiente",
+          "É negativo, mas aceitável, porque o benefício agrícola compensa a perda das abelhas"
         ],
         "correta": 0,
         "explicacao": "O pesticida mata a praga e também as abelhas: há ganho imediato na colheita, mas prepara uma queda futura, porque sem polinizadores a produção de muitas culturas cai. É um dilema de escala temporal: otimizar o presente prejudica o futuro. Alternativas seriam controles menos tóxicos, como inseticidas seletivos ou controle biológico. Chamar o impacto de 'aceitável' ignora que o benefício agrícola depende dos próprios polinizadores."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:a002811d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
@@ -209,7 +217,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +232,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:25.446Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -237,25 +247,25 @@
         "type": "multipla-escolha",
         "pergunta": "A mineração de ouro em rios (garimpo ilegal) no estado do Pará envolve revolvimento do fundo do rio e uso de mercúrio para separar o ouro do sedimento. Qual é o impacto ambiental mais crítico dessa prática?",
         "opcoes": [
-          "Redução da temperatura das águas fluviais",
-          "Contaminação de peixes e da cadeia alimentar com mercúrio; destruição do habitat aquático",
-          "Aumento da produtividade agrícola nas margens",
-          "Melhoria da navegabilidade dos rios"
+          "Redução da temperatura das águas do rio, porque o revolvimento do fundo traz água mais fria à superfície",
+          "Contaminação dos peixes e da cadeia alimentar por mercúrio, além da destruição do habitat aquático",
+          "Aumento da produtividade agrícola nas margens, porque o sedimento revolvido funciona como adubo",
+          "Melhoria da navegabilidade dos rios, porque a retirada do sedimento aprofunda o canal para os barcos"
         ],
         "correta": 1,
-        "explicacao": "Garimpo com mercúrio causa dois impactos graves: mercúrio se acumula nos peixes e sobe a cadeia alimentar, envenenando quem come peixe. Sedimento revolvido destrói o habitat de larvas. Ribeirinhos que bebem essa água ou comem peixe local sofrem contaminação crônica e irreversível."
+        "explicacao": "O garimpo com mercúrio causa dois impactos graves: o mercúrio se acumula nos peixes e sobe a cadeia alimentar, envenenando quem come peixe, e o sedimento revolvido destrói o habitat de larvas e outros organismos. Ribeirinhos que bebem essa água ou comem peixe local sofrem contaminação crônica."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:77e10ba0",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +280,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.258Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-05"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +295,25 @@
         "type": "multipla-escolha",
         "pergunta": "A criação intensiva de gado em grande escala em pastagens naturais do Cerrado brasileiro envolve: desmatamento de vegetação nativa, compactação do solo, consumo de água, e digestão do gado que libera metano. Qual é o impacto mais significativo dessa atividade em escala ecossistêmica?",
         "opcoes": [
-          "Redução de erosão do solo",
-          "Aumento de biodiversidade de insetos",
-          "Perda de cobertura vegetal, degradação do solo, e emissão de gases estufa",
-          "Melhoria da qualidade do ar"
+          "Redução da erosão do solo, porque o pisoteio do gado deixa a terra mais firme",
+          "Recuperação da vegetação nativa, porque o gado dispersa as sementes pelas pastagens",
+          "Perda de cobertura vegetal, degradação do solo e emissão de gases de efeito estufa",
+          "Melhoria da qualidade do ar, pois as pastagens absorvem mais poluentes que a mata nativa"
         ],
         "correta": 2,
-        "explicacao": "Pecuária em larga escala no Cerrado causa perda irreversível: a vegetação nativa desaparece, o solo se degrada pela compactação e exposição, e o gado libera metano atmosférico. O ecossistema perde biodiversidade e resiliência. Os efeitos saem do habitat local e chegam até a atmosfera global."
+        "explicacao": "A pecuária em larga escala no Cerrado causa perdas difíceis de reverter: a vegetação nativa desaparece, o solo se degrada pela compactação e pela exposição, e o gado libera metano na atmosfera. O ecossistema perde biodiversidade e resiliência. Os efeitos saem do habitat local e chegam até a atmosfera global."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:02ee8f7d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
-        "difficulty": 4,
+        "difficulty": 3,
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +328,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.258Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -329,25 +343,25 @@
         "type": "multipla-escolha",
         "pergunta": "A construção de uma barragem para hidrelétrica em um rio envolve a formação de um reservatório que inunda terras adjacentes. Isso causa: submersão de vegetação e solo, alteração do fluxo de água, mudança de temperatura e oxigenação da água. Qual é o impacto ambiental mais direto sobre a biota aquática?",
         "opcoes": [
-          "Melhoria da qualidade da água",
-          "Aumento da produtividade de peixes",
-          "Mudança radical do ecossistema fluvial; morte de espécies adaptadas ao fluxo corrente; proliferação de espécies de água parada",
-          "Redução de poluição"
+          "Melhoria da qualidade da água, pois o reservatório decanta e filtra as impurezas do rio",
+          "Aumento da produtividade pesqueira das espécies migratórias, pois o reservatório amplia o habitat disponível",
+          "Mudança profunda do ecossistema, com perda de espécies de água corrente e avanço das de água parada",
+          "Redução da poluição do rio, pois a água parada dilui e degrada os poluentes mais rápido"
         ],
         "correta": 2,
         "explicacao": "Um rio é um ecossistema dinâmico: peixes migram, larvas se desenvolvem em correnteza, oxigenação é alta. Uma barragem transforma tudo em lago parado e muda a oxigenação, a temperatura, a profundidade. Espécies de água corrente desaparecem; algas e bactérias de água parada proliferam. O ecossistema aquático muda por completo."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:4e4a686a",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
-        "difficulty": 4,
+        "difficulty": 3,
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +376,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.258Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +391,25 @@
         "type": "multipla-escolha",
         "pergunta": "A agricultura convencional intensiva usa fertilizantes químicos (nitrogênio e fósforo) em grandes volumes. Esses nutrientes escorrem para rios e lagos durante chuvas. Qual é a consequência ecológica dessa prática?",
         "opcoes": [
-          "Aumento de peixes comestíveis",
-          "Melhoria da qualidade da água",
-          "Redução de algas aquáticas",
-          "Eutrofização: proliferação excessiva de algas; morte de fauna aquática por falta de oxigênio"
+          "Aumento de peixes comestíveis, porque os nutrientes alimentam a cadeia alimentar aquática",
+          "Melhoria da qualidade da água, pois os nutrientes deixam a água mais limpa e transparente",
+          "Redução das algas, pois o nitrogênio e o fósforo em excesso são tóxicos para elas",
+          "Eutrofização, com proliferação excessiva de algas e morte da fauna aquática por falta de oxigênio"
         ],
         "correta": 3,
         "explicacao": "Fertilizantes em excesso alimentam algas microscópicas que proliferam descontroladamente (floração). Quando morrem, sua decomposição consome todo o oxigênio dissolvido, criando zonas mortas onde peixes e invertebrados não sobrevivem. Isso é eutrofização, um colapso ecossistêmico causado por nutrientes em excesso."
       },
       "meta": {
         "id": "gen:geo:meio-ambiente-impactos:967551c7",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "geo:meio-ambiente-impactos"
         ],
-        "difficulty": 4,
+        "difficulty": 3,
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +424,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:46:12.258Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "his-geo-lote-03"
         },
         "examProfiles": [
           "enem"

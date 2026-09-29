@@ -1,5 +1,7 @@
 # 21 — Brand voice: inventário de copy e registro da Fase 3
 
+> **Regras de escrita:** [COPY.md](COPY.md). Este arquivo continua sendo o **inventário** (o que está revisado, com evidência). Estados de "revisado" só mudam junto com a mudança da string.
+
 Execução: 21/09/2026. Fase 3 de [20-plano-evolucao-aprendizagem.md](20-plano-evolucao-aprendizagem.md) — não confundir com revisão pedagógica de conteúdo (enunciados/explicações dos 1.204 exercícios e 59 questões seguem **fora** desta passada; ver seção 4).
 
 ## 1. O que este documento é (e o que não é)
@@ -78,7 +80,7 @@ Tom conferido contra as mesmas regras da seção 7 do `20` que já valiam pro re
 | `estrelas(n, max)` | "N de M estrelas" | Só no `aria-label` do carimbo concluído | Revisão manual |
 | `metaHoje(feitas, meta)` | "N/M hoje" | Texto ao lado do `GoalRing` na barra de métricas | Revisão manual — some abaixo de 360px |
 | `fimDaMateria(materia)` | "Você fechou tudo o que está publicado em {materia}." | Fim de trilha da matéria (RF-12) | `tests/e2e/trail-path.spec.ts` (RF-12/RF-6, "acolhedora vence...") |
-| `erroTitulo` / `erroCorpo` / `tentarDeNovo` | "A trilha não carregou." / "Tenta de novo. Seu progresso está salvo neste aparelho." / "Tentar de novo" | `errorComponent` da rota `/trilha` (`TrailError`) | Verificado manualmente (`throw` temporário + screenshot, docs/29 §2) — sem E2E automatizado |
+| `erroTitulo` / `erroCorpo` / `tentarDeNovo` | "A trilha não carregou." / "Tenta de novo. Seu progresso está salvo neste aparelho." / "Tentar de novo" | `errorComponent` da rota `/trilha` (`TrailError`) | Verificado manualmente (`throw` temporário + screenshot, docs/29 §2); a variante com gravação falhando (`erroCorpoSemSalvo`, §2.9) e o texto com gravação ok têm E2E em `state-migration.spec.ts` (28/09/2026) |
 | `abrirCapitulo(titulo)` / `recolherCapitulo(titulo)` | "Abrir {titulo}" / "Recolher {titulo}" | **Criadas e não usadas** — o nome acessível do banner do capítulo vem do próprio texto visível + `aria-expanded`, decisão da auditoria de acessibilidade de T-19 (docs/29 §5c) | — |
 
 Tom conferido manualmente contra a seção 7 do `20` — nenhuma string cobra o aluno; `fimDaMateria`/`erroCorpo` descrevem estado sem culpa. Sem regressão automatizada de tom em `brand-voice.test.ts` ainda, mesma ressalva da seção 2.2.
@@ -113,13 +115,64 @@ Regra de tom aplicada (docs/20 §7.1): sem cobrança, sem "tudo bem" performáti
 | `COPY.onboarding.blocoVoce`/`blocoSuaProva`/`blocoSeuRitmo` | "Você" / "Sua prova" / "Seu ritmo" | Kicker dos passos novos do quiz (`ExamStep`/`TimeStep`/`FocusStep`) | Rótulo de agrupamento neutro, do próprio `30` §12.2 |
 | `COPY.onboarding.dataProva`/`euSeiAData`/`aindaNaoSeiData` | "Data da prova" / "Eu sei a data" / "Ainda não sei" | `ExamStep.tsx` | Texto funcional, opção "ainda não sei" nunca obrigatória (`30` §12.2) |
 | `COPY.nivelamento.duranteHint` | "Sem dica nesta parte. Se não souber, toque em Não sei. Isso também ajuda a ajustar a trilha." | Cabeçalho da rota `/nivelamento` durante o CAT | Cópia verbatim do `30` §12.2 |
-| `COPY.nivelamento.resultadoTitulo`/`resultadoCorpo` | "Pronto." / "Isso é um ponto de partida, e ele fica mais preciso conforme você estuda." | Tela de resultado do nivelamento | Cópia verbatim do `30` §12.5 — sem nota, sem "Nível N" (`brand-voice.test.ts` cobre) |
+| `COPY.nivelamento.resultadoTitulo`/`resultadoCorpo` | "Pronto." / "Isso é um ponto de partida, e ele fica mais preciso conforme você estuda." | Tela de resultado do nivelamento | Cópia verbatim do `30` §12.5 — sem nota, sem "Nível N" (`brand-voice.test.ts` cobre). **Superado em 28/09/2026 pelo `36` RU-10:** título e corpo atuais na §2.9 |
 | `COPY.nivelamento.faixaBaseConstrucao`/`faixaNoCaminho`/`faixaBaseFirme` | "Base em construção" / "No caminho" / "Base firme" | Uma linha por área na tela de resultado | Cópia verbatim do `30` §12.5 |
-| `COPY.nivelamento.areaNaoMedida(area)` | "Ainda não temos questões suficientes de {área} para medir." | Área sem pool suficiente (caso de borda `30` §12.3 — hoje TODA área, Fase 11 pendente) | Cópia verbatim do `30` §12.3 |
+| `COPY.nivelamento.areaNaoMedida(area)` | "Ainda não temos questões suficientes de {área} para medir." | Área sem pool suficiente (caso de borda `30` §12.3 — hoje só a área sem pool suficiente, fora do escopo por foco ou abandonada; o pool existe desde a F11.6) | Cópia verbatim do `30` §12.3 |
 | `COPY.checkpoint.introTitulo`/`introCorpo`/`comecar`/`agoraNao` | "Checkpoint" / "Questões misturadas, sem dica..." / "Começar" / "Agora não" | `CheckpointIntro.tsx` | Adaptado do `30` §13.3 (corpo simplificado — não cita "8 questões" porque a contagem real varia 6-8, `composeCheckpoint`) |
 | `COPY.licao.respostaRegistrada` | "Resposta registrada." | Modo `silent` do `QuestionStepView` (nivelamento e checkpoint — sem cor de certo/errado) | Texto neutro, nenhuma avaliação de desempenho |
 
 Revisão feita por autorrevisão direta contra `20` §7.1 (mesmo padrão do item 2.5, não o pipeline completo do Humanizer) — `tests/unit/brand-voice.test.ts` cobre `COPY.onboarding.*`/`COPY.nivelamento.*` com um teste genérico (sem "você precisa/deveria" + verbo, sem "!!", sem "nota"/"nível N").
+
+### 2.7 `BRAND.*` — título, descrição e compartilhamento do site (docs/36 RU-20, T-08.7)
+
+| Chave | Texto | Uso | Revisão |
+|---|---|---|---|
+| `BRAND.tagline` | "Estudo curto, todo dia." | `<title>` (`Foca — {tagline}`) e `og:description` em `src/routes/__root.tsx` | Texto literal do `36` §F.4 RU-20. Antes: "Foca 60 segundos." (duração que o produto não mede). `tests/unit/brand-voice.test.ts` fixa o texto e proíbe "60 segundos", "60s" e "cobra" |
+| `BRAND.description` | "Preparação para o ENEM em aulas curtas. A Foca acompanha o que você já sabe e escolhe o próximo passo." | `<meta name="description">` e `og:description` em `src/routes/__root.tsx` | Texto literal do `36` §F.4 RU-20. Antes: "…aulas de 60 segundos. Uma foca que aprende suas lacunas e te cobra todo dia." (duração sem lastro e tom de cobrança, `20` §7.1). Mesmo teste |
+
+A frase de posicionamento de `PRODUCT.md` (D-1 do `COPY.md`) **não** foi tocada; `welcome.tsx` e `index.tsx` ainda exibem "Foca 60 segundos." — fora do `36`, pendentes no plano de copy (`39`).
+
+### 2.8 `COPY.cursos.*` — seleção de curso (docs/36 §F.7, T-09.2/T-09.3, RU-40, RA-5)
+
+| Chave | Texto/forma | Uso | Revisão |
+|---|---|---|---|
+| `COPY.cursos.rotuloBusca` / `placeholderBusca` | "Curso" / "Buscar pelo nome" | `<label>` visível e placeholder do campo de busca (`CourseStep.tsx`) | "Curso" é o rótulo literal do `36` §F.7 (RA-5). O placeholder é texto funcional novo, sem tom |
+| `COPY.cursos.areasAriaLabel` | "Áreas" | `aria-label` do grupo dos 13 chips de área | Texto funcional (leitor de tela) |
+| `COPY.cursos.escolhaUmaArea` | "Escolha uma área ou busque pelo nome." | Estado inicial, sem área marcada e sem busca | Literal do `36` §F.7 |
+| `COPY.cursos.naoAchei` / `usarTexto(texto)` | "Não achei esse curso." / "Usar “{texto}”" | Busca sem resultado; o botão grava o texto (≤ 60 caracteres) como curso | Literais do `36` §F.7. Sem culpar o aluno |
+| `COPY.cursos.aindaNaoDecidi` | "Ainda não decidi" | Botão que grava o valor literal lido por `tutor-prompt.ts:72` e `aha.tsx:59` | Texto já existente no `/quiz`; o valor gravado não mudou |
+| `COPY.cursos.escolhido(curso)` | "Escolhido: {curso}" | Linha com o valor salvo (do catálogo, texto livre ou legado desconhecido), mostrado como está | Texto funcional novo |
+| `COPY.cursos.contagem(n)` | "1 curso" / "{n} cursos" | Região `aria-live="polite"`: anuncia a contagem de resultados ou da área | Texto funcional novo; sem promessa nenhuma |
+| `COPY.cursos.perfilRotulo` / `perfilMudar` / `perfilSheetTitulo` | "Curso pretendido" / "Mudar" / "Curso pretendido" | Linha "Curso pretendido: {valor}" no `/profile`, botão e título da `BottomSheet` | Rótulo e botão literais do `36` §F.7 |
+
+Os nomes dos 82 cursos e os sinônimos ficam em `src/data/courses.ts` (dado, não copy); os 59 nomes anteriores não mudaram. Revisão por autorrevisão contra `20` §7.1 (sem emoji, sem exclamação, sem cobrança); nenhuma string prevê nota de corte nem "área da prova". `tests/unit/brand-voice.test.ts` **não** cobre `COPY.cursos` (mesma lacuna dos outros blocos de UI).
+
+### 2.9 Avisos e estados novos do `36` — jornada, persistência, nivelamento e folha de feedback (docs/36 RU-1…RU-6, RU-10…RU-12, RP-10; T-02…T-07)
+
+| Chave | Texto | Uso | Revisão |
+|---|---|---|---|
+| `COPY.comum.tentarDeNovo` / `fecharAviso` / `ok` | "Tentar de novo" / "Fechar aviso" / "Ok" | Botões reutilizados pelos avisos de erro, pela faixa de persistência e pela recuperação de storage | `brand-voice.test.ts`; `journey-start.spec.ts` e `state-migration.spec.ts` clicam em "Tentar de novo" |
+| `COPY.jornada.puladaSemItens` | "Essa atividade ficou sem questões agora. Segui com a próxima." | RU-1: aviso de uma linha na Home quando uma atividade dinâmica é descartada por falta de questões | Literal do `36` §F.4. `journey-start.spec.ts` (pool vazio: 1 aviso, próxima atividade diferente) e `brand-voice.test.ts` |
+| `COPY.jornada.carregando` | "Separando suas questões…" | RU-2: texto de `/atividade/$activityId` depois de 400 ms de espera | Literal do `36`; só `brand-voice.test.ts` (aparece só em rede lenta, sem E2E do texto) |
+| `COPY.jornada.erroPacoteTitulo` / `erroPacoteCorpo` / `voltarTrilha` | "Não deu pra carregar agora." / "Confere a internet e tenta de novo." / "Voltar à trilha" | RU-3: pacote de conteúdo indisponível, com "Tentar de novo" como ação primária | Literais do `36`. `journey-start.spec.ts` e `brand-voice.test.ts` |
+| `COPY.jornada.depois(titulo)` | "Depois: {título}" | RU-12: próxima atividade da fila no card da Home (`text-xs text-nevoa`) e no resultado do nivelamento | Literal do `36`. `journey-start.spec.ts` e `placement.spec.ts` |
+| `COPY.persistencia.falhaAoSalvar` | "Não consegui salvar neste aparelho. O que você fez agora pode se perder se fechar o app." | RU-4: faixa fixa (`PersistenceBanner`) com "Tentar de novo"; nunca some enquanto a gravação falha | Literal do `36`. `state-migration.spec.ts` (gravação sabotada; a tela de questão não diz "salvo") e `brand-voice.test.ts` |
+| `COPY.persistencia.storageRecuperado` | "Não consegui ler seu progresso salvo. Guardei uma cópia e comecei do zero neste aparelho." | RU-5: uma vez, com "Ok", depois de copiar o JSON ilegível para `foca.state.corrupt.<ISO>` | Literal do `36`. `state-migration.spec.ts` e `brand-voice.test.ts` |
+| `COPY.persistencia.versaoFutura` | "Seus dados são de uma versão mais nova do app. Recarregue a página para atualizar. Até lá, nada do que você fizer aqui fica salvo." | RU-6: storage de versão futura; as gravações desta aba ficam travadas | Literal do `36`. `state-migration.spec.ts` e `brand-voice.test.ts` |
+| `COPY.nivelamento.aplicando` | "Montando sua trilha…" | RU-11: entre o fim do nivelamento e `placement.appliedAt` | Literal do `36`. `placement.spec.ts` |
+| `COPY.nivelamento.resultadoTitulo` / `resultadoCorpo` / `resultadoSemDados` | "Pronto. Sua trilha foi ajustada." / "Isso é um ponto de partida, não uma nota. Muda conforme você estuda." / "Não tivemos questões suficientes para medir agora. Sua trilha começa pelo básico e se ajusta enquanto você estuda." | RU-10 (`36` §F.5): substitui o título e o corpo da §2.6. O "Pronto." inicial é o que os E2E esperam | Literais do `36`. `brand-voice.test.ts` (textos exatos) e `placement.spec.ts`. A busca por `nota` ignora só a frase de negação "não uma nota" (D-38 do `37`); fora dela, nenhum `\d+ ?%`, "nível N" ou "nota" |
+| `COPY.nivelamento.precisaoFirme` / `precisaoInicial` / `precisaoPoucas` / `questoesRespondidas(n)` | "Estimativa firme" / "Estimativa inicial" / "Poucas questões. Vamos confirmar estudando." / "{n} questão(ões)" | Linha de precisão por área, pela SE da área (nunca o número) | Literais do `36` §F.5. `placement.spec.ts` e `brand-voice.test.ts` |
+| `COPY.nivelamento.faixaAriaLabel(área, faixa, precisão)` | "{Área}: {faixa}. {precisão}." | `aria-label` do indicador de 3 segmentos (a cor nunca é o único sinal) | Formato do `36` §F.5. `placement.spec.ts` (`aria-label` exato) e `brand-voice.test.ts` |
+| `COPY.nivelamento.porOndeComecamos` / `primeiraAtividade(titulo)` / `ctaIrParaTrilha` | "Por onde começamos" / "Sua primeira atividade: {título}" / "Ir para a trilha" | Fecho do resultado; o CTA "Ir para a trilha" só aparece com a jornada desligada (senão o CTA é "Começar") | Literais do `36`. `placement.spec.ts` e `brand-voice.test.ts` |
+| `COPY.feedback.fonteOficial(fonte)` | "Questão do {fonte}" (ex.: "Questão do ENEM 2023") | RP-10: linha de atribuição na `FeedbackSheet` (`text-[11px] text-nevoa`), para item oficial | Formato do `34`. `feedback.spec.ts` (atribuição visível em item oficial; item não oficial não ganha linha) |
+| `COPY.jornada.recapSemSalvo` | "Por agora é isso." | Recap da atividade quando a gravação local NÃO está ok (`persist !== "ok"`); com gravação ok segue `COPY.jornada.recap` ("Por agora é isso — seu progresso já está salvo.", inalterada). Escolha por `textoSePersistiu` em `RecapStepView` | RF-14/G-15 (achado A1, `37`). `persist-copy.test.ts` (variante, ordem e guarda estática) e `state-migration.spec.ts` ("nenhuma tela promete 'salvo'…") |
+| `COPY.licao.sairCorpoSemSalvo` | "Não consegui guardar seu avanço. Se sair agora, talvez você precise recomeçar esta lição." | Corpo de "Sair da lição?" da aula/atividade (`MicroLessonPlayer`) com a gravação falhando; com gravação ok segue `COPY.licao.sairCorpo` (inalterada) | Mesmo teste. Diz o que aconteceu (não guardou) e o que muda para o aluno, sem culpa |
+| `COPY.licao.sairCorpoLegado` / `sairCorpoLegadoSemSalvo` | "O progresso desta lição não fica salvo pela metade — você recomeça do zero na próxima vez." / "Se sair agora, você recomeça esta lição do zero na próxima vez." | Corpo de "Sair da lição?" da lição legada de redação (`LessonPlayer`); o texto antigo estava fixo no componente e foi para `copy.ts` | Mesmo teste (E2E com gravação sabotada na lição de redação) |
+| `COPY.trilha.erroCorpoSemSalvo` | "Tenta de novo." | Corpo do erro da trilha (`TrailError`) com a gravação falhando; com gravação ok segue `COPY.trilha.erroCorpo` ("Tenta de novo. Seu progresso está salvo neste aparelho.", inalterada) | Mesmo teste (E2E força o erro com `progress.lessons: null` e a gravação sabotada; e o controle com gravação ok) |
+
+Os blocos `COPY.cursos.*` e `BRAND.*` (RU-40, RU-20) estão nas §2.8 e §2.7. Revisão por autorrevisão contra `20` §7.1 (sem emoji, sem exclamação, sem cobrança); todas as strings acima são literais do plano, sem passar por skill de escrita.
+
+**Fechada em 28/09/2026 (D-34 do `37`, achado A1): frases estáticas de "salvo".** As quatro frases que afirmam persistência (`COPY.jornada.recap`, `COPY.licao.sairCorpo`, `COPY.licao.sairCorpoLegado`, `COPY.trilha.erroCorpo`) ganharam uma variante neutra, sem promessa, e o componente escolhe por `textoSePersistiu(usePersistStatus(), salvo, neutro)` (`src/lib/copy.ts`): só `persist === "ok"` mantém o texto original. Continuam com a palavra "salvo" só os avisos da faixa RU-4/RU-5/RU-6 (que descrevem a falha) e, fora do RF-14, os rótulos de favorito "Salvo!"/"Salvo" de flashcards (`study.tsx`, `flashcards.tsx`), que dizem que o flashcard está marcado, não que o progresso foi gravado.
 
 ## 3. Pendente — inventariado, não revisado
 

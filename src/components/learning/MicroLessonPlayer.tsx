@@ -14,12 +14,12 @@ import { LessonHeader } from "@/components/learning/LessonHeader";
 import { SUBJECT_MAP } from "@/data/subjects";
 import { chapterById } from "@/content/curriculum-tree";
 import { resolveExercise } from "@/content/microlicoes";
-import { itemMetaOf } from "@/content/items";
+import { atribuicaoOficial, itemMetaOf } from "@/content/items";
 import { focusFromExercise } from "@/lib/lessons/tutor-focus";
 import { buildPedagogicalContext } from "@/lib/tutor-context";
 import { useLearningSession } from "@/hooks/useLearningSession";
 import type { CompleteStrategyResult, UseLearningSessionOptions } from "@/hooks/useLearningSession";
-import { COPY } from "@/lib/copy";
+import { COPY, textoSePersistiu } from "@/lib/copy";
 import { FEATURES } from "@/lib/features";
 import type { MicroLesson } from "@/lib/learning/types";
 import {
@@ -28,6 +28,7 @@ import {
   nivelDeXp,
   openTutorWithContext,
   setActiveLearningSession,
+  usePersistStatus,
 } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -82,6 +83,8 @@ function MicroLessonPlayerInner({
   const navigate = useNavigate();
   const session = useLearningSession(lesson, { mode, onComplete });
   const [confirmExit, setConfirmExit] = useState(false);
+  // Sem promessa de "salvo" quando a gravação local não está ok (docs/36 RF-14).
+  const persist = usePersistStatus();
   // Streak/nível ANTES do fechamento — capturados no player bem antes de
   // chamar `session.complete()`, a mesma tática que `LessonPlayer.tsx` usa
   // pro par antes/depois de `completeLesson`.
@@ -155,7 +158,7 @@ function MicroLessonPlayerInner({
     if (session.completion.chapterCompleted && search.concluida) search.capitulo = lesson.chapterId;
 
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <CelebracaoAula
           acertos={session.score?.correct ?? 0}
           total={session.score?.total ?? 0}
@@ -179,7 +182,7 @@ function MicroLessonPlayerInner({
     step.kind === "question" ? `${session.questionNumber}/${session.questionTotal}` : undefined;
 
   return (
-    <PhoneFrame>
+    <PhoneFrame variant="reading">
       <div className="flex min-h-screen flex-col bg-neve">
         <LessonHeader
           onExit={() => setConfirmExit(true)}
@@ -217,6 +220,7 @@ function MicroLessonPlayerInner({
               questionNumber={session.questionNumber}
               questionTotal={session.questionTotal}
               explanationLayers={itemMetaOf(step.exerciseId).explanationLayers}
+              fonteOficial={atribuicaoOficial(itemMetaOf(step.exerciseId).source)}
               silent={mode === "checkpoint"}
             />
           )}
@@ -237,12 +241,14 @@ function MicroLessonPlayerInner({
         title={COPY.licao.sairTitulo}
         icon={<FocaMark expression="desapontada" size={56} decorative />}
       >
-        <p className="mt-1.5 text-sm text-abismo">{COPY.licao.sairCorpo}</p>
+        <p className="mt-1.5 text-sm text-abismo">
+          {textoSePersistiu(persist, COPY.licao.sairCorpo, COPY.licao.sairCorpoSemSalvo)}
+        </p>
         <div className="mt-4 space-y-2">
-          <button onClick={() => setConfirmExit(false)} className="btn-primary w-full">
+          <button type="button" onClick={() => setConfirmExit(false)} className="btn-primary w-full">
             {COPY.licao.sairFicar}
           </button>
-          <button onClick={sair} className="btn-ghost w-full">
+          <button type="button" onClick={sair} className="btn-ghost w-full">
             {COPY.licao.sairMesmo}
           </button>
         </div>

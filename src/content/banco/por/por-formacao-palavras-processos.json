@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -71,7 +72,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +87,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -117,7 +119,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +134,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -163,7 +166,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +181,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -191,25 +195,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'O ataque da seleção brasileira surpreendeu os adversários logo nos primeiros minutos da partida decisiva', a palavra 'ataque', substantivo formado a partir do verbo 'atacar', surgiu por:",
         "opcoes": [
-          "derivação sufixal, com acréscimo de sufixo",
-          "derivação regressiva, com redução do radical verbal",
-          "composição por aglutinação",
-          "derivação prefixal"
+          "Derivação sufixal, com acréscimo do sufixo '-e' ao radical verbal",
+          "Derivação regressiva, com redução do radical verbal",
+          "Composição por aglutinação, com fusão de dois radicais",
+          "Derivação prefixal, com acréscimo de prefixo ao verbo"
         ],
         "correta": 1,
         "explicacao": "O substantivo 'ataque' vem do verbo 'atacar' com redução da terminação verbal, sem acréscimo de nenhum sufixo. Esse processo é a derivação regressiva, típico de substantivos que nomeiam a própria ação do verbo, como 'choro' (de 'chorar') e 'busca' (de 'buscar'), diferente da derivação sufixal, que sempre acrescenta um afixo ao radical."
       },
       "meta": {
         "id": "gen:por:formacao-palavras-processos:b1e2900b",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:formacao-palavras-processos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +228,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -237,25 +243,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Depois do jantar, a família se reuniu na sala para assistir a um filme antes de dormir', a palavra 'jantar', funcionando como substantivo, foi formada por:",
         "opcoes": [
-          "derivação sufixal, pois recebeu um sufixo nominal",
-          "derivação regressiva, pois perdeu parte do radical",
-          "derivação imprópria, pois o verbo mudou de classe gramatical sem alterar sua forma",
-          "composição por justaposição de dois radicais"
+          "Derivação sufixal, pois o verbo recebeu um sufixo que o transformou em nome",
+          "Derivação regressiva, pois a palavra perdeu parte do radical ao virar substantivo",
+          "Derivação imprópria, pois o verbo mudou de classe sem alterar a sua forma",
+          "Composição por justaposição, pois juntou dois radicais para formar uma palavra nova"
         ],
         "correta": 2,
         "explicacao": "A palavra 'jantar' passa de verbo a substantivo apenas pela presença do artigo 'o', sem nenhum acréscimo ou redução de afixo: a forma da palavra permanece idêntica. Esse processo, em que uma palavra muda de classe gramatical sem alteração morfológica, chama-se derivação imprópria, diferente da derivação sufixal ou prefixal, que sempre modificam a estrutura da palavra."
       },
       "meta": {
         "id": "gen:por:formacao-palavras-processos:37c9f847",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:formacao-palavras-processos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +276,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +291,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'Ele ficou infeliz com o resultado da prova, mesmo tendo estudado bastante durante toda a semana', a palavra 'infeliz' foi formada por:",
         "opcoes": [
-          "derivação prefixal, com acréscimo do prefixo 'in-' ao adjetivo 'feliz'",
-          "derivação regressiva do substantivo 'felicidade'",
-          "composição por aglutinação",
-          "composição por justaposição de dois radicais independentes"
+          "Derivação prefixal, com acréscimo do prefixo 'in-' ao adjetivo 'feliz'",
+          "Derivação regressiva, a partir do substantivo 'felicidade', com perda de terminação",
+          "Composição por aglutinação, com fusão de dois radicais e perda de sons",
+          "Composição por justaposição de dois radicais independentes, sem mudança de forma"
         ],
         "correta": 0,
         "explicacao": "Infeliz acrescenta o prefixo in- ao adjetivo feliz, mudando o significado sem alterar a classe gramatical. Isso é derivação prefixal. Composição é quando dois radicais independentes se unem, como girassol ou guarda-chuva."
       },
       "meta": {
         "id": "gen:por:formacao-palavras-processos:cb48da3d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:formacao-palavras-processos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +324,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"
@@ -347,7 +357,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +372,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.982Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -393,7 +404,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +419,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -421,25 +433,25 @@
         "type": "multipla-escolha",
         "pergunta": "Na frase 'No jardim da vovó havia um imenso girassol que acompanhava o movimento do sol durante todo o dia', a palavra 'girassol' foi formada por:",
         "opcoes": [
-          "derivação prefixal, com acréscimo do prefixo 'gira-'",
-          "derivação regressiva do verbo 'girar'",
-          "composição por aglutinação, pois houve fusão fonética entre os elementos",
-          "composição por justaposição, pois os radicais 'gira' e 'sol' mantêm sua forma e som originais"
+          "Derivação prefixal, com acréscimo do prefixo 'gira-' ao radical 'sol'",
+          "Derivação regressiva, a partir do verbo 'girar', com perda da terminação verbal",
+          "Composição por aglutinação, pois houve fusão fonética entre os dois elementos que formam a palavra",
+          "Composição por justaposição, pois 'gira' e 'sol' mantêm sua forma e o som originais"
         ],
         "correta": 3,
         "explicacao": "Girassol é escrita sem hífen, mas mantém intacto o som e a forma de gira e sol. Não há fusão fonética. Isso é composição por justaposição, não aglutinação. O critério que diferencia os dois é a preservação do som, não o hífen."
       },
       "meta": {
         "id": "gen:por:formacao-palavras-processos:ce695006",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "por:formacao-palavras-processos"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +466,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-08"
         },
         "examProfiles": [
           "enem"
@@ -485,7 +499,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +514,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T23:55:13.983Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"

@@ -7,7 +7,7 @@ export function XpChip({ amount, animate = false }: { amount: number; animate?: 
   return (
     <span
       aria-live="polite"
-      className={`inline-flex rounded-full bg-recompensa px-3 py-1 font-mono text-sm font-bold text-abismo ${animate ? "anim-xp" : ""}`}
+      className={`inline-flex rounded-full bg-recompensa px-3 py-1 font-mono text-sm font-bold text-on-alert ${animate ? "anim-xp" : ""}`}
     >
       +{amount} XP
     </span>

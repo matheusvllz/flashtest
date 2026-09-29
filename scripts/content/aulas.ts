@@ -20,6 +20,8 @@ export interface ItemPublicado {
   id: string;
   exercise: Exercise;
   meta: ItemMeta;
+  /** Item retirado de circulação (docs/36 §G.6): nunca entra numa aula NOVA. */
+  retired?: boolean;
 }
 
 export interface QuestaoEscolhida {
@@ -48,11 +50,11 @@ export const idDoCapitulo = (skillId: string) => `gen-${sanitizar(skillId)}`;
  * Escolhe as questões e os 2 itens de revisão de uma aula (validateLessonSteps:
  * 4-8 questões, dificuldade não decrescente começando em 1 com "checkpoint",
  * terminando ≥ 2; 2 de revisão distintos). Evita item diagnóstico (é do
- * nivelamento). `null` quando a habilidade ainda não tem itens suficientes.
+ * nivelamento) e item `retired` (docs/36 T-07.6). `null` quando a habilidade ainda não tem itens suficientes.
  */
 export function escolherQuestoes(itens: ItemPublicado[]): { questoes: QuestaoEscolhida[]; revisao: string[] } | null {
   const usaveis = itens
-    .filter((i) => !i.meta.roles.includes("diagnostico") && i.exercise.type === "multipla-escolha")
+    .filter((i) => !i.retired && !i.meta.roles.includes("diagnostico") && i.exercise.type === "multipla-escolha")
     .sort((a, b) => a.meta.difficulty - b.meta.difficulty || a.id.localeCompare(b.id));
   if (usaveis.length < 6) return null;
 

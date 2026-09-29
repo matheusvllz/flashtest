@@ -46,7 +46,7 @@ function Video() {
               allowFullScreen
             />
           ) : thumb ? (
-            <button onClick={() => setPlaying(true)} className="group relative block h-full w-full">
+            <button type="button" onClick={() => setPlaying(true)} className="group relative block h-full w-full">
               <img
                 src={thumb}
                 alt={q.videoSuggestion.title}

@@ -1,0 +1,519 @@
+[
+  {
+    "id": "gen:por:classes-gramaticais-identificacao:4eb819ef",
+    "arquivo": "src/content/banco/por/por-classes-gramaticais-identificacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.375,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 1.375,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: 'afinco' é substantivo). Alternativas de uma palavra (5-11 caracteres): o tamanho não carrega pista. Explicação correta e coerente (a locução 'com afinco' é adverbial, a palavra é substantivo).",
+    "lens": [
+      8,
+      11,
+      5,
+      8
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.150Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:929dbcc6",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.667,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.667,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: des- + fazer, prefixação). Correta não é a mais longa; explicação correta.",
+    "lens": [
+      19,
+      17,
+      27,
+      18
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.150Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:por:formacao-palavras-processos:cb48da3d",
+    "arquivo": "src/content/banco/por/por-formacao-palavras-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.207,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.843,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1: in- + feliz). Correta 70 caracteres e única com explicação anexa ('com acréscimo do prefixo'); distratores de 26-58. Alternativas reescritas (70-82), todas com o processo e um detalhe.",
+    "lens": [
+      70,
+      82,
+      69,
+      80
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.151Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:argumentacao-repertorio:2bffe779",
+    "arquivo": "src/content/banco/red/red-argumentacao-repertorio.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.89,
+      "corretaMaisLonga": false,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.88,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Gabarito C confere (R1: (I) e (II)). Duas alternativas com 'Apenas' (aviso de absolutismo) e a correta sem. Trocadas por '(I) sozinho' e '(II) sozinho'; explicação ajustada.",
+    "lens": [
+      89,
+      92,
+      81,
+      84
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.151Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:425fb6ea",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.747,
+      "corretaMaisLonga": false,
+      "absolutismo": 2
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.773,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "corrigido"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1: tese na introdução). Duas alternativas com 'Apenas' e 'todos' (absolutismo) e 'deixando claro sua posição' (R8). Alternativas reescritas (57-75), sem absolutismo; a explicação cita (A), (B) e (D) e as posições foram mantidas.",
+    "lens": [
+      63,
+      74,
+      58,
+      61
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.151Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:red:estrutura-dissertativo-argumentativa:ad930a46",
+    "arquivo": "src/content/banco/red/red-estrutura-dissertativo-argumentativa.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.113,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.932,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 69 caracteres contra 36-62, a mais longa. Distrator D ampliado (72) para a correta deixar de ser a mais longa.",
+    "lens": [
+      69,
+      62,
+      59,
+      74
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.152Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:caracteristicas-escolas-literarias:fe30da17",
+    "arquivo": "src/content/banco/lit/lit-caracteristicas-escolas-literarias.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.692,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.692,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (C: Arcadismo). Alternativas de uma palavra (8-13 caracteres). Observação R3: o trecho é autoral e poderia lembrar o Romantismo, mas o Romantismo não é opção, então só o Arcadismo (natureza idílica, tom pastoril) fecha. Explicação coerente.",
+    "lens": [
+      13,
+      8,
+      9,
+      10
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.152Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:interpretacao-texto-literario:78ae9992",
+    "arquivo": "src/content/banco/lit/lit-interpretacao-texto-literario.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.353,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.931,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito B confere (R1). Correta 46 caracteres contra 32-34, a mais longa. Alternativas reescritas (53-58).",
+    "lens": [
+      57,
+      54,
+      55,
+      52
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.152Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:lit:modernismo-fases-brasil:17e81105",
+    "arquivo": "src/content/banco/lit/lit-modernismo-fases-brasil.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.149,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.831,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito A confere (R1). Correta 77 caracteres contra 50-64 e a mais longa; C e D com 'exclusivo' e 'sem conflitos'. Alternativas reescritas (68-82).",
+    "lens": [
+      67,
+      75,
+      80,
+      82
+    ],
+    "corretaIdx": 0,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.152Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:42104024",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.851,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.851,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (B: platitudes = clichês vazios). Correta 40 caracteres contra 32-47; não é a mais longa; explicação correta.",
+    "lens": [
+      47,
+      40,
+      31,
+      32
+    ],
+    "corretaIdx": 1,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.152Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:554b3d1f",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 0.94,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.94,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 confere (D: obscure = pouco claro). Correta 47 contra 31-50; não é a mais longa; explicação correta.",
+    "lens": [
+      50,
+      39,
+      31,
+      47
+    ],
+    "corretaIdx": 3,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.153Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  },
+  {
+    "id": "gen:ing:vocabulario-contexto:6a1ebcde",
+    "arquivo": "src/content/banco/ing/ing-vocabulario-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "metricas": {
+      "razaoTamanho": 1.083,
+      "corretaMaisLonga": true,
+      "absolutismo": 0
+    },
+    "metricasDepois": {
+      "razaoTamanho": 0.867,
+      "corretaMaisLonga": false,
+      "absolutismo": 0
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "corrigido",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Gabarito C confere (R1). Correta 39 caracteres contra 27-36, a mais longa. A reescrita de A (45) deixa a correta de fora do topo.",
+    "lens": [
+      45,
+      32,
+      39,
+      36
+    ],
+    "corretaIdx": 2,
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28T23:41:22.153Z",
+    "afetaDiagnostico": false,
+    "avisosDepois": [],
+    "issuesDepois": []
+  }
+]

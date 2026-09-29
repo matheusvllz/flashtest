@@ -382,6 +382,10 @@ export interface JourneyHistoryEntry {
   subjectId: string;
   completedAt: string;
   scorePct: number | null;
+  /** `${activityId}@${startedAt ?? "sem-inicio"}` — guarda de idempotência da conclusão (docs/36 §H, RF-6). Ausente em entradas antigas (não participam da guarda). */
+  attemptKey?: string;
+  /** `YYYY-MM-DD` local da conclusão (docs/36 §H) — ausente em entradas antigas: derivar de `completedAt` em fuso local. */
+  localDate?: string;
 }
 
 /**
@@ -399,6 +403,12 @@ export interface JourneyState {
   sinceCheckpoint: number;
   lastCheckpointDate: string | null;
   planVersion: number;
+  /** Contador monotônico da jornada (docs/36 §H, RF-7) — entra no id da atividade para nunca colidir com uma já concluída. Ausente = `history.length`. */
+  seq?: number;
+  /** habilidade -> `YYYY-MM-DD` de validade do sinal "elegível a desafio" da recalibração do checkpoint (docs/36 RP-4, `DESAFIO_SINAL_DIAS`). Ausente = `{}`. */
+  challengeEligible?: Record<string, string>;
+  /** Assinatura do foco vigente no último plano (`modo:materias:areas|sessao`, docs/36 RF-9) — detecta mudança de foco feita fora da Home. Ausente = não força replano na 1ª vez. */
+  focusSignature?: string;
 }
 
 export function journeyVazia(): JourneyState {
@@ -441,6 +451,10 @@ export interface PlacementState {
   areas: Record<string, PlacementAreaState>;
   /** Semente do plano — mesma entrada e semente reproduzem a mesma sequência de itens (docs/30 §11.1). */
   seed: string;
+  /** ISO de quando os priors foram aplicados ao modelo (docs/36 §H, RF-10) — guarda de idempotência. Ausente/`null` = "concluído e ainda não aplicado". */
+  appliedAt?: string | null;
+  /** `PLACEMENT_APPLY_VERSION` vigente quando aplicou — reaplicar se for menor que a atual. */
+  appliedVersion?: number;
 }
 
 /** Sessão de foco TEMPORÁRIA ("só hoje") — distinta de `prefs.studyFocus` (permanente, docs/30 §15). */
@@ -472,7 +486,10 @@ export type LearningEventType =
   | "placement-completed"
   | "placement-card-dismissed"
   | "focus-changed"
-  | "plan-fallback";
+  | "plan-fallback"
+  | "activity-skipped"
+  | "placement-applied"
+  | "checkpoint-recalibrated";
 
 export interface LearningEvent {
   type: LearningEventType;

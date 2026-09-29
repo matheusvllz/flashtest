@@ -1,7 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { composeCheckpoint, recalibrar } from "@/lib/adaptive/checkpoint";
+import { checkpointRecalibrationInputs, composeCheckpoint, recalibrar } from "@/lib/adaptive/checkpoint";
+import { historicoDesdeUltimoCheckpoint } from "@/lib/adaptive";
+import type { Attempt } from "@/lib/learning/types";
 import { learningStateVazio } from "@/lib/learning/types";
-import type { LearningState, SkillModelEntry } from "@/lib/learning/types";
+import type { JourneyHistoryEntry, LearningState, SkillModelEntry } from "@/lib/learning/types";
 
 /**
  * Composição/recalibração do checkpoint (docs/30 §13.2/§13.4, Fase 14 do
@@ -149,5 +151,75 @@ describe("recalibrar — sinais de super/subestimação (docs/30 §13.4)", () =>
     const r = recalibrar([{ skillId: "mat:x", predictedP: 0.9, correct: true }]);
     expect(r.antecipandoRevisao).toEqual([]);
     expect(r.elegivelDesafio).toEqual([]);
+  });
+});
+
+/* docs/36 T-04.4 (RP-4) — entradas da recalibração e data local do checkpoint. */
+function tentativa(over: Partial<Attempt>): Attempt {
+  return {
+    id: "t1", sessionId: "s-check", exerciseId: "gen:mat:x:1", exerciseVersion: 1, skillIds: ["mat:x"], role: "checkpoint",
+    answer: 0, correct: false, hintUsed: false, tutorUsed: false, firstSubmission: true,
+    submittedAt: "2026-09-28T15:00:00.000Z", localDate: "2026-09-28", durationMs: 1000, predictedP: 0.9, ...over,
+  };
+}
+
+describe("checkpointRecalibrationInputs", () => {
+  test("com sessionId: só as tentativas da sessão do checkpoint entram", () => {
+    const attempts = [
+      tentativa({ id: "a", sessionId: "s-check", skillIds: ["mat:x"] }),
+      tentativa({ id: "b", sessionId: "outra-sessao", skillIds: ["mat:y"] }),
+    ];
+    expect(checkpointRecalibrationInputs(attempts, { sessionId: "s-check" })).toEqual([
+      { skillId: "mat:x", predictedP: 0.9, correct: false },
+    ]);
+  });
+
+  test("sem sessionId: usa itemIds da atividade enviados depois de startedAt", () => {
+    const attempts = [
+      tentativa({ id: "a", sessionId: null, exerciseId: "gen:mat:x:1", submittedAt: "2026-09-28T15:00:00.000Z" }),
+      tentativa({ id: "antes", sessionId: null, exerciseId: "gen:mat:x:1", submittedAt: "2026-09-27T09:00:00.000Z" }),
+      tentativa({ id: "outroItem", sessionId: null, exerciseId: "gen:mat:z:9" }),
+    ];
+    const r = checkpointRecalibrationInputs(attempts, { itemIds: ["gen:mat:x:1"], startedAt: "2026-09-28T14:00:00.000Z" });
+    expect(r).toHaveLength(1);
+  });
+
+  test("alimentando recalibrar: alto+errou antecipa, baixo+acertou vira elegível a desafio, 'Não sei' (sem predictedP) é ignorado", () => {
+    const attempts = [
+      tentativa({ id: "1", skillIds: ["mat:a"], predictedP: 0.9, correct: false }),
+      tentativa({ id: "2", skillIds: ["mat:b"], predictedP: 0.3, correct: true }),
+      tentativa({ id: "3", skillIds: ["mat:c"], predictedP: undefined, correct: false }),
+    ];
+    const r = recalibrar(checkpointRecalibrationInputs(attempts, { sessionId: "s-check" }));
+    expect(r.antecipandoRevisao).toEqual(["mat:a"]);
+    expect(r.elegivelDesafio).toEqual(["mat:b"]);
+  });
+});
+
+describe("historicoDesdeUltimoCheckpoint — data local, não UTC (docs/36 C7, T-04.4)", () => {
+  const h = (over: Partial<JourneyHistoryEntry>): JourneyHistoryEntry => ({
+    activityId: "x", kind: "pratica", skillIds: ["mat:x"], subjectId: "mat", completedAt: "2026-09-28T12:00:00.000Z", scorePct: 80, ...over,
+  });
+
+  test("atividade às 22h30 locais (01h30 UTC do dia seguinte) NÃO conta como 'depois' do checkpoint do mesmo dia local", () => {
+    const tarde = h({ completedAt: "2026-09-29T01:30:00.000Z", localDate: "2026-09-28" });
+    expect(historicoDesdeUltimoCheckpoint([tarde], "2026-09-28")).toEqual([]);
+  });
+
+  test("com localDate gravado, ele manda; o dia local seguinte conta", () => {
+    const amanha = h({ completedAt: "2026-09-29T15:00:00.000Z", localDate: "2026-09-29" });
+    expect(historicoDesdeUltimoCheckpoint([amanha], "2026-09-28")).toEqual([amanha]);
+  });
+
+  test("sem localDate (entrada antiga), deriva da data local do ISO — mesmo dia local ainda fica de fora", () => {
+    const local = new Date(2026, 8, 28, 22, 30, 0); // 28/09 22:30 no fuso da máquina
+    const antiga = h({ completedAt: local.toISOString() });
+    expect(historicoDesdeUltimoCheckpoint([antiga], "2026-09-28")).toEqual([]);
+  });
+
+  test("sem checkpoint anterior entra tudo, exceto checkpoints", () => {
+    const a = h({});
+    const c = h({ kind: "checkpoint" });
+    expect(historicoDesdeUltimoCheckpoint([a, c], null)).toEqual([a]);
   });
 });

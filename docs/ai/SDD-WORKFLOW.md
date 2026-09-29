@@ -44,14 +44,14 @@ REQUEST → CONTEXT DISCOVERY → SPEC → PLAN → IMPLEMENTATION → TESTS →
 | Etapa | O que fazer | Ferramentas (ver roteamento) | Saída |
 |---|---|---|---|
 | **1. Request** | Classificar a tarefa (tabela de [SKILL-ROUTING.md](SKILL-ROUTING.md) §2). Tarefa trivial (typo, ajuste de 1 arquivo sem mudança de comportamento) pode pular 3–4. | — | Classe da tarefa |
-| **2. Context discovery** | Ler `docs/00-README.md` (plano vigente) → a spec relevante + seu registro → os arquivos de código envolvidos. Produto/design só se a tarefa tocar UI ou copy (`PRODUCT.md`, `DESIGN.md`). | claude-mem (pista, não fato) | Lista do que existe e do que a spec manda |
+| **2. Context discovery** | Ler `docs/00-README.md` (plano vigente) → a spec relevante + seu registro → os arquivos de código envolvidos. Produto/design só se a tarefa tocar UI ou copy (`PRODUCT.md`, `DESIGN.md`). Se tocar texto que o aluno lê: `docs/COPY.md`, no nível de leitura do tamanho da tarefa. | claude-mem (pista, não fato) | Lista do que existe e do que a spec manda |
 | **3. Spec** | Existe spec cobrindo? Use-a. Não existe e a mudança altera comportamento, dados, UX ou escopo? **Escreva ou estenda a spec antes de codar** e peça aprovação. Requisito ambíguo: pergunte. | `superpowers:brainstorming` ou `agent-skills:interview-me` só para **descobrir** requisitos | `docs/NN-plano-<tema>.md` |
 | **4. Plan** | Tarefas pequenas, verticais, com critério de aceite e comando de verificação. Numerar `T-xx` como nos planos existentes. | `superpowers:writing-plans` ou `agent-skills:planning-and-task-breakdown` (escolha **um**) | Seção de tarefas da spec |
 | **5. Implementation** | Uma tarefa por vez, na ordem; o projeto compila ao fim de cada uma. Carregar só as skills da classe da tarefa. | Ver roteamento | Código |
 | **6. Tests** | `bunx tsc --noEmit` · `bun test tests/unit` · `bunx playwright test` quando tocar UI · `bun run build` antes de declarar pronto. Teste novo para comportamento novo. | `superpowers:test-driven-development` **ou** `agent-skills:test-driven-development` (um) | Saída real dos comandos |
 | **7. Review** | Revisão especializada **só da classe da tarefa**, sobre o diff. | Ver roteamento §3 (revisores) | Achados corrigidos ou registrados |
 | **8. Verification** | Comparar o resultado com **cada** critério de aceite da spec. Critério sem evidência = não cumprido. | `superpowers:verification-before-completion`, agent `spec-verifier` | Tabela critério → evidência |
-| **9. Documentation** | Registro de execução (`docs/NN+1-registro-*.md` ou seção no registro existente), atualizar `docs/00-README.md` e, se o plano vigente mudou, o topo do `CLAUDE.md`. Copy nova → inventário do `21`. | — | Docs atualizados |
+| **9. Documentation** | Registro de execução (`docs/NN+1-registro-*.md` ou seção no registro existente), atualizar `docs/00-README.md` e, se o plano vigente mudou, o topo do `CLAUDE.md`. Copy nova → inventário do `21`; termo novo → glossário de `docs/copy/03-ux-writing.md` §3. | — | Docs atualizados |
 
 ## 4. "Implemente a próxima spec"
 
@@ -101,5 +101,6 @@ Várias skills instaladas têm convenções próprias de arquivo. **No Foca, est
 - Não adicionar dependência (GSAP, Motion, analytics, SDK de IA) sem spec aprovada.
 - Não editar `src/routeTree.gen.ts`. Não criar segundo store.
 - Não trocar copy aprovada (`21` §2) sem atualizar o inventário.
+- Skills de escrita só pelo roteamento de [SKILL-ROUTING.md](SKILL-ROUTING.md) §2.1, e só quando trazem algo que o guia `docs/COPY.md` não traz. Nenhuma skill de copy em conteúdo pedagógico.
 - Não declarar pronto sem a saída real dos comandos da etapa 6.
 - Não rodar scripts de instalação de skills de terceiros sem ler (ver [SKILLS.md](SKILLS.md) §Segurança).

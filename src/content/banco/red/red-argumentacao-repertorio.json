@@ -7,17 +7,17 @@
         "type": "multipla-escolha",
         "pergunta": "Uma dissertação sobre tecnologia e desigualdade afirma: 'A transformação digital criou oportunidades, mas também abriu novo fosso: quem tem acesso à internet de qualidade prospera; quem não tem, fica para trás.' Que repertório culturalmente pertinente o escritor pode usar para sustentar essa argumentação?",
         "opcoes": [
-          "Conceito de 'exclusão digital' — termo que descreve disparidade de acesso a tecnologia em sociedades modernas",
-          "Citação direta de um filósofo do século XIX sobre industrialização",
-          "Dados de ano específico sobre PIB nacional",
-          "Descrição técnica de como funciona um modem"
+          "O conceito de 'exclusão digital', termo que descreve a desigualdade de acesso à tecnologia",
+          "Uma citação direta de um filósofo do século XIX sobre a industrialização e o trabalho nas fábricas",
+          "Dados de um ano específico sobre o PIB nacional e o crescimento da economia do país",
+          "A descrição técnica de como funciona um modem e de como ele se conecta à rede telefônica"
         ],
         "correta": 0,
         "explicacao": "'Exclusão digital' é um conceito sociocultural que nomeia justamente a desigualdade de acesso à tecnologia: é o repertório mais pertinente e direto para esse argumento. Um filósofo do século XIX falando de industrialização não trata do acesso digital (B), o PIB não mede quem tem ou não acesso à internet (C) e a descrição técnica de um modem não sustenta um argumento social (D)."
       },
       "meta": {
         "id": "gen:red:argumentacao-repertorio:3bf4d7d4",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:argumentacao-repertorio"
         ],
@@ -25,7 +25,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:25:52.357Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-04"
         },
         "examProfiles": [
           "enem"
@@ -53,25 +55,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma redação sobre sustentabilidade ambiental defende que consumo consciente é essencial para frear o aquecimento global. Para validar esse argumento com repertório sociocultural, qual abordagem é mais adequada: (I) citar ipsis litteris uma frase de Greta Thunberg sobre mudança climática, (II) referenciar estudos do IPCC (Painel Intergovernamental sobre Mudanças Climáticas) sobre emissões de carbono, (III) incluir um depoimento anônimo de um ativista ambiental inventado?",
         "opcoes": [
-          "Apenas (I), porque Greta Thunberg é figura internacional reconhecida em sustentabilidade",
-          "Apenas (II), porque dados científicos são a única base legítima para argumentar sobre clima",
+          "(I) sozinho, porque Greta Thunberg é figura internacional reconhecida em sustentabilidade",
+          "(II) sozinho, porque dados científicos são a única base legítima para argumentar sobre clima",
           "(I) e (II) juntos: citação reconhecida + dados científicos estabelecem dupla base",
           "(II) e (III) juntos: ciência + narrativa pessoal criam conexão emocional com o leitor"
         ],
         "correta": 2,
-        "explicacao": "A abordagem mais robusta junta (I) e (II). Os relatórios do IPCC dão base científica reconhecida internacionalmente, e uma frase real e documentada de Greta Thunberg complementa como voz do debate público. 'Apenas (II)' erra na justificativa: dado científico não é a única base legítima de repertório. Já o depoimento inventado (III) é inaceitável: apresenta como fato algo que não existe e compromete a credibilidade do texto. Repertório sociocultural exige verificabilidade: dados reais ou falas documentadas de pessoas reais."
+        "explicacao": "A abordagem mais robusta junta (I) e (II). Os relatórios do IPCC dão base científica reconhecida internacionalmente, e uma frase real e documentada de Greta Thunberg complementa como voz do debate público. '(II) sozinho' erra na justificativa: dado científico não é a única base legítima de repertório. Já o depoimento inventado (III) é inaceitável: apresenta como fato algo que não existe e compromete a credibilidade do texto. Repertório sociocultural exige verificabilidade: dados reais ou falas documentadas de pessoas reais."
       },
       "meta": {
         "id": "gen:red:argumentacao-repertorio:2bffe779",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:argumentacao-repertorio"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.039Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-06"
         },
         "examProfiles": [
           "enem"
@@ -99,17 +103,17 @@
         "type": "multipla-escolha",
         "pergunta": "Um aluno prepara uma redação sobre o impacto cultural da literatura de cordel no sertão nordestino. Qual abordagem melhor exemplifica uso pertinente de repertório sociocultural?",
         "opcoes": [
-          "Referenciar que o cordel funcionou historicamente como meio de disseminação de notícias, valores morais e crítica social em comunidades com baixa alfabetização, conectando forma literária a função social",
-          "Mencionar que autores de cordel são tipicamente nordestinos e ganharam fama nacional",
-          "Listar nomes de poetas que escrevem cordel contemporaneamente",
-          "Citar que o cordel é um gênero poético escrito em versos rimados com temas populares"
+          "Mostrar que o cordel divulgava notícias e crítica social a comunidades pouco alfabetizadas, ligando forma e função",
+          "Apontar que os autores de cordel são, em geral, nordestinos e que alguns ganharam fama em todo o país com seus versos",
+          "Enumerar poetas que escrevem cordel na atualidade e citar alguns dos folhetos que eles já publicaram",
+          "Definir o cordel como gênero poético em versos rimados, de temas populares, vendido em feiras e mercados"
         ],
         "correta": 0,
         "explicacao": "Repertório sociocultural não é só descrever o gênero ou listar nomes. É entender como literatura de cordel se conecta ao contexto social: por que funcionava em comunidades com baixa escolaridade, como disseminava valores e crítica social. Essa articulação entre forma literária e função histórica é o que torna seu repertório robusto e argumentativamente eficaz, não apenas informativo."
       },
       "meta": {
         "id": "gen:red:argumentacao-repertorio:0f32482d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:argumentacao-repertorio"
         ],
@@ -117,7 +121,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +136,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.039Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-02"
         },
         "examProfiles": [
           "enem"
@@ -163,7 +169,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +184,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:31:19.039Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -191,25 +198,25 @@
         "type": "multipla-escolha",
         "pergunta": "Qual tipo de repertório sociocultural é MAIS apropriado para fundamentar um argumento numa dissertação ENEM sobre desigualdade social?",
         "opcoes": [
-          "Opinião pessoal do autor sobre economia",
-          "Boatos e informações não verificadas de redes sociais",
-          "Ficção científica e filmes de fantasia",
-          "Dados científicos, dados históricos consolidados ou teóricos consagrados de ciências humanas"
+          "A opinião pessoal do autor sobre economia, sem apoio em fontes ou em dados que a comprovem",
+          "Boatos e informações não verificadas que circulam nas redes sociais e nos grupos de mensagens",
+          "Cenas de ficção científica e de filmes de fantasia, tomadas como se fossem fatos reais",
+          "Dados científicos, fatos históricos consolidados ou teóricos consagrados das ciências humanas"
         ],
         "correta": 3,
         "explicacao": "Repertório válido inclui fatos históricos verificáveis, dados científicos, teóricos reconhecidos (filósofos, sociólogos) e referências culturais conhecidas. Ficção funciona se você disser que é ficção. Opinião pessoal sem sustentação não cola. A Competência 2 premia repertório verificável."
       },
       "meta": {
         "id": "gen:red:argumentacao-repertorio:356f67bd",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:argumentacao-repertorio"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +231,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-05"
         },
         "examProfiles": [
           "enem"
@@ -235,27 +244,27 @@
       "id": "gen:red:argumentacao-repertorio:1e8211b1",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Um texto argumentativo cita: 'Conforme demonstrou pesquisa publicada em 2023 pela Universidade de São Paulo, o desemprego afeta 12% da população economicamente ativa'. Como avaliar esta estratégia argumentativa?",
+        "pergunta": "Um texto argumentativo cita, em uma frase hipotética criada para este exercício: 'Conforme demonstrou pesquisa publicada em 2023 pela Universidade de São Paulo, o desemprego afeta 12% da população economicamente ativa'. Como avaliar esta estratégia argumentativa?",
         "opcoes": [
-          "É forte porque apresenta fonte identificável, dado recente e verificável para sustentar o argumento",
-          "É inválida porque números são abstratos",
-          "É exagerada porque cita apenas uma fonte",
-          "É fraca porque usa números exatos"
+          "É forte, porque apresenta fonte identificável e dado recente e verificável para sustentar o argumento",
+          "É inválida, porque números são abstratos demais e não servem como prova em um texto dissertativo do ENEM",
+          "É exagerada, porque cita uma única fonte e o ideal seria apresentar várias fontes diferentes",
+          "É fraca, porque usa números exatos, e o recomendado é citar porcentagens aproximadas ou vagas"
         ],
         "correta": 0,
         "explicacao": "A estratégia argumentativa é robusta: identifica fonte confiável (universidade reconhecida), data recente que garante atualidade, dado quantificado e contexto claro (população economicamente ativa). Isso constitui repertório sociocultural pertinente conforme avaliado pela Competência 2 do ENEM. Uma única fonte bem escolhida é suficiente se bem documentada; múltiplas fontes fracas não agregam valor."
       },
       "meta": {
         "id": "gen:red:argumentacao-repertorio:1e8211b1",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:argumentacao-repertorio"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +279,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"
@@ -283,25 +294,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um aluno argumenta: 'Assim como o educador Paulo Freire defendeu a educação como ferramenta de libertação, nós devemos expandir acesso ao ensino superior'. Qual aspecto dessa argumentação merece atenção crítica?",
         "opcoes": [
-          "Referência a educador reconhecido é sempre válida em dissertações",
-          "A conexão entre o pensamento de Freire e a expansão do ensino superior precisa ser explicitada com clareza lógica",
-          "Citar Paulo Freire é insuficiente; é melhor não usar referências",
-          "Toda citação de filósofo automaticamente valida o argumento"
+          "A referência a um educador reconhecido é válida e basta para sustentar a tese, sem outra explicação",
+          "A conexão entre o pensamento de Freire e a expansão do ensino superior precisa ser explicada com clareza",
+          "Citar Paulo Freire é insuficiente, e o melhor seria trocar a referência por dados e evitar autores",
+          "A citação de um pensador conhecido valida o argumento por si só, mesmo sem relação direta com a tese apresentada"
         ],
         "correta": 1,
         "explicacao": "Embora Paulo Freire seja referência legítima em educação, a argumentação fica incompleta se não explicita como exatamente o pensamento dele sustenta a tese. Há salto lógico: 'educação como libertação' não significa automaticamente 'expansão do ensino superior'. Argumentar com repertório exige desenvolvimento claro da conexão. Competência 3 (ENEM) premia esse tipo de raciocínio encadeado e não apenas nominação de autores."
       },
       "meta": {
         "id": "gen:red:argumentacao-repertorio:9c5c2eba",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "red:argumentacao-repertorio"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +327,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:55:26.597Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "por-red-lit-ing-03"
         },
         "examProfiles": [
           "enem"

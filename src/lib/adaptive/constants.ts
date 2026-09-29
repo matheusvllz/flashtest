@@ -85,6 +85,8 @@ export const MASTERY_PREREQUISITO_MIN = 60;
 export const CONFIDENCE_PREREQUISITO_MIN = 30;
 export const MASTERY_DESAFIO_MIN = 75;
 export const CONFIDENCE_DESAFIO_MIN = 50;
+/** Mastery mínima pra o sinal de desafio da recalibração do checkpoint valer numa habilidade EM_APRENDIZADO (docs/36 T-04.4). */
+export const MASTERY_SINAL_DESAFIO_MIN = 60;
 export const MASTERY_AULA_OPCIONAL_MIN = 80;
 export const CONFIDENCE_AULA_OPCIONAL_MIN = 60;
 
@@ -137,6 +139,25 @@ export const FIRME_CONFIDENCE_MIN = 50;
 /** Restrições duras do planejador (§11.4). */
 export const MAX_MESMA_MATERIA_SEGUIDAS = 2;
 export const MAX_DESAFIOS_POR_10 = 2;
+/**
+ * Cota mínima de revisão por janela de `JANELA_MIX` (docs/36 T-04.3, G4/RP-3):
+ * com revisão DEVIDA disponível e menos que isto na janela, a posição vai pra
+ * melhor revisão (nunca 2 forçadas seguidas). `_ATRASO` vale quando alguma
+ * revisão devida está atrasada > 3 dias. Regra de PLANO (`PLANNER_VERSION`),
+ * não do modelo.
+ */
+export const REVISAO_MIN_JANELA = 2;
+export const REVISAO_MIN_JANELA_ATRASO = 3;
+/** Atraso (dias) acima do qual a revisão devida conta como "atrasada" (mesmo limiar de `reasonsFor`/mix). */
+export const REVISAO_ATRASO_DIAS = 3;
+/** Teto de desafio por janela (docs/36 T-04.3) — mesmo valor e mesmo limite duro de `MAX_DESAFIOS_POR_10`. */
+export const DESAFIO_MAX_JANELA = MAX_DESAFIOS_POR_10;
+/**
+ * Teto de revisão por janela de `JANELA_MIX` (RP-3: "teto 35 %"): `floor(0,35 × 10) = 3`. Com o
+ * teto atingido, revisão só volta a ser escolhida quando NÃO há outro candidato. Sem isto, com
+ * várias revisões muito atrasadas o score já satura em 4 por janela (medido no `37`).
+ */
+export const REVISAO_TETO_JANELA = Math.floor(REVISAO_MAX_ATRASO * JANELA_MIX);
 export const AULA_PRATICA_JANELA_MAX = 2;
 
 // ---- NIVELAMENTO (CAT com EAP, §12.3, Fase 13) ---------------------------
@@ -174,3 +195,18 @@ export const CHECKPOINT_SUPERESTIMADO_PREDICTED_MIN = 0.8;
 export const CHECKPOINT_SUBESTIMADO_PREDICTED_MAX = 0.4;
 /** XP fixo por checkpoint (§13.6, ledger `checkpoint:<id>`). */
 export const CHECKPOINT_XP = 20;
+
+// ---- PLANO vs. MODELO (docs/36 §H, T-01.1) --------------------------------
+
+/**
+ * Versão do PLANEJADOR (fila da jornada) — separada de `ALGO_VERSION` (modelo
+ * Mastery/Confidence, que NÃO muda: RP-5). Mudar a política de plano incrementa
+ * esta constante e provoca 1 replano por conta, preservando a atividade
+ * iniciada. Lida por `ensurePlan` e gravada por `commitPlan` desde a T-02.7 (antes
+ * ambos usavam `ALGO_VERSION`, docs/37 D-1).
+ */
+export const PLANNER_VERSION = 2;
+/** Versão do procedimento de aplicação do nivelamento (`PlacementState.appliedVersion`); reaplicar se a gravada for menor. */
+export const PLACEMENT_APPLY_VERSION = 1;
+/** Validade (dias) do sinal "elegível a desafio" gravado pela recalibração do checkpoint (`JourneyState.challengeEligible`). */
+export const DESAFIO_SINAL_DIAS = 7;

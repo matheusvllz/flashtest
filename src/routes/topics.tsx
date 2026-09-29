@@ -33,6 +33,7 @@ function TopicsWidget() {
               const on = chosen.includes(sub.name);
               return (
                 <button
+                  type="button"
                   key={sub.id}
                   onClick={() =>
                     setState((ss) => {
@@ -60,6 +61,7 @@ function TopicsWidget() {
           <div className="mt-3 flex flex-col gap-2">
             {MODOS.map(({ key, label }) => (
               <button
+                type="button"
                 key={key}
                 onClick={() =>
                   setState((ss) => {
@@ -71,7 +73,7 @@ function TopicsWidget() {
                   "rounded-lg border-2 px-4 py-3.5 text-left text-sm font-semibold text-abismo transition-all duration-100",
                   mode === key
                     ? "border-mar bg-mar/8 font-semibold"
-                    : "border-gelo bg-cards shadow-[0_3px_0_var(--color-gelo)] active:translate-y-[3px] active:shadow-none",
+                    : "border-gelo bg-cards shadow-[0_3px_0_var(--gelo)] active:translate-y-[3px] active:shadow-none",
                 )}
               >
                 {label}
@@ -95,6 +97,7 @@ function TopicsWidget() {
                     <div className="mb-3 flex items-center justify-between">
                       <h3 className="font-display font-bold text-abismo">{sub.name}</h3>
                       <button
+                        type="button"
                         onClick={() =>
                           setState((ss) => {
                             const cur = ss.prefs.selectedTopics[sub.id] || [];
@@ -113,6 +116,7 @@ function TopicsWidget() {
                         const on = sel.includes(t.id);
                         return (
                           <button
+                            type="button"
                             key={t.id}
                             onClick={() =>
                               setState((ss) => {

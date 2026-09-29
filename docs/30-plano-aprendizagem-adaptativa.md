@@ -61,7 +61,7 @@ Esta atualização transforma isso numa plataforma adaptativa sem jogar fora o q
 - **Currículo e motor separados.** O currículo ganha um grafo de habilidades com pré-requisitos (`src/content/taxonomy/`). Um motor puro e determinístico (`src/lib/adaptive/`) decide *quando*, *quanto* e *em que dificuldade*, navegando dentro do currículo. Ele nunca pula fundamento sem evidência.
 - **Mastery e Confidence por habilidade, separados.** Mastery (0–100) é a chance estimada de acertar uma questão média daquela habilidade, atualizada por um modelo inspirado em TRI (3PL com escorregão, atualização estilo Elo/Glicko). Confidence (0–100) mede quanta evidência sustenta esse número (quantidade, diversidade, datas, independência, retenção, recência). Mastery só cai com evidência; o tempo derruba a Confidence e agenda revisão.
 - **Uma jornada única e misturada** na home, com proporção pedagógica 70/20/10 (nível atual / revisão / desafio), foco opcional em matérias (permanente ou só por hoje) e o mapa por matéria mantido como vista secundária.
-- **Nivelamento adaptativo opcional** (≈20 itens, ≈10 min, EAP com prior normal) e **checkpoints** a cada 15–25 atividades, sem ajuda, que recalibram o modelo.
+- **Nivelamento adaptativo opcional** (≈20 itens, ≈10 min, EAP com prior normal) e **checkpoints** a cada 15–25 atividades, sem ajuda, que recalibram o modelo. *(Nota 28/09/2026, `36` §B.3 K13: o teto real é 24 itens — `PLACEMENT_MAX_ITENS_TOTAL = 24`; o mínimo para medir uma área é 4 itens elegíveis; "≥ 12" era critério de rollout, cumprido com 40–45 itens diagnósticos por área.)*
 - **"Não sei"** como sinal próprio e **explicação em três camadas** (curta → detalhada → Foca IA já com contexto pedagógico).
 - **Conteúdo em escala via pipeline com portões**: gerador → crítico → solucionador independente (sem gabarito) → verificador → validação automática → amostragem humana. Modelos baratos fazem o volume; modelos fortes só resolvem conflito. Conteúdo sai como pacotes JSON estáticos carregados sob demanda, fora do bundle JS.
 - **Áudio**: o motor já é centralizado (`src/lib/audio/engine.ts`) e os WAVs **são** publicados corretamente no build Vercel (verificado em 23/09/2026). As causas prováveis do silêncio em produção são de tempo e de ativação por gesto (prazo de 300 ms que inclui download/decodificação/`resume()`, desbloqueio só em `pointerdown`), e a correção começa por instrumentar e reproduzir no aparelho. **Háptico**: `navigator.vibrate` não existe no iOS; o plano cria detecção de capacidade e uma interface pronta para um adaptador nativo futuro.
@@ -203,7 +203,7 @@ Balão global (`TutorBubble`, montado no `AppShell` e nos players). Abre só por
 | O1 | Aluno vê na home uma sessão recomendada, com motivo e tempo | E2E: home mostra CTA único, motivo em texto, estimativa em minutos |
 | O2 | Jornada única mistura matérias sem parecer aleatória | Teste de motor: em 30 atividades simuladas, nenhuma sequência de 3 da mesma matéria; toda atividade tem `reason` |
 | O3 | Mastery e Confidence por habilidade, independentes | Testes de cenário A–G (§26.3) dentro das faixas esperadas |
-| O4 | Adaptação conservadora 70/20/10 | Teste de motor: em janela de 20 atividades, 60–80% nível atual, 15–30% revisão, ≤15% desafio |
+| O4 | Adaptação conservadora 70/20/10 | Teste de motor: em janela de 20 atividades, 60–80% nível atual, 15–30% revisão, ≤15% desafio. *Nota 28/09/2026 (`36` K12): a regra operacional é a janela móvel de 10 (`JANELA_MIX = 10`); esta validação de 20 significa medir duas janelas consecutivas de 10 num plano de 20, não é outra regra.* |
 | O5 | Currículo protegido | Teste: habilidade com pré-requisito sem evidência nunca é introduzida; `core` nunca é pulada sem confirmação |
 | O6 | Nivelamento opcional e adaptativo | E2E: pular funciona; fazer gera estimativas por área e por habilidade medida |
 | O7 | Checkpoints periódicos recalibram | Teste: checkpoint com erros em habilidade "forte" reduz Mastery e agenda revisão |
@@ -507,6 +507,8 @@ O teste de unidade confere faixas (±5), não casas decimais, para que recalibra
 - Mudou a fórmula ou constante? Incrementar `ALGO_VERSION`. Na carga, se alguma entrada tiver versão menor, o store **recalcula replayando** `learning.recentAttempts` (até 500, em ordem) sobre o prior atual. O que não estiver nas tentativas recentes (histórico podado) permanece como prior da matéria.
 - Recalibração de itens (`irt.source = "calibrado-foca"`) exige dados de muitos alunos, portanto backend. Fica **FUTURA**; o formato já suporta.
 
+> **Nota (28/09/2026, `36` RP-5/T-04.1):** o plano da jornada tem versão própria, `PLANNER_VERSION = 2` (`adaptive/constants.ts`). Mudança de regra de plano incrementa `PLANNER_VERSION` (1 replano por conta, preservando a atividade iniciada) sem tocar `ALGO_VERSION`, que continua 1 e só muda com fórmula/constante do modelo. Antes do `36`, `ensurePlan` e `commitPlan` comparavam `ALGO_VERSION`.
+
 ### 9.7 Casos extremos
 
 | Caso | Tratamento |
@@ -653,6 +655,8 @@ planNext(state, catalog, today, seed, n = 8):
 
 **Estabilidade visual:** as 3 próximas atividades ficam "comprometidas" em `learning.journey.committed` e só mudam se ficarem inválidas (conteúdo removido, habilidade bloqueada). O resto é "a seguir" e é replanejado a cada atividade concluída. A trilha não se reembaralha na frente do aluno.
 
+> **Nota (28/09/2026, `36` RF-8/RP-3, T-02.7/T-04.3):** "só mudam se ficarem inválidas" virou contrato de implementação: a reposição preenche só as vagas, as comprometidas válidas mantêm a ordem e a atividade iniciada nunca sai do topo por replano. Substituem tudo (menos a iniciada): aplicação do nivelamento, mudança de foco, `PLANNER_VERSION` nova, comprometida inválida. O mix ganhou cota mínima de revisão por janela de 10 (≥ 2; ≥ 3 se atrasada > 3 dias) e teto duro de 3 revisões por janela (35 %) — `37` D-26.
+
 ### 11.6 Contratos
 
 ```ts
@@ -714,6 +718,8 @@ Com `jornadaAdaptativa` ligada, `pickQuestions` passa a pedir `selectItems` para
 ---
 
 ## 12. Nivelamento (placement)
+
+> **Nota (28/09/2026, `36` RF-10…RF-13, Fase 3):** o nivelamento termina por qualquer caminho (última resposta, teto de área, orçamento, pool insuficiente) aplicando os priors **uma vez** (`placement.appliedAt`, hook `usePlacementReconciliation`, com reparo de contas concluídas sem aplicar). Retomar depois de reload reproduz o mesmo θ̂/SE da execução contínua (reconstituição por `placementItemsById`), e refazer preserva a evidência medida. O resultado (§12.5) segue o contrato de tela do `36` §F.5: faixa por área medida, precisão pela SE da área, nenhuma nota nem porcentagem.
 
 ### 12.1 Posição no fluxo
 

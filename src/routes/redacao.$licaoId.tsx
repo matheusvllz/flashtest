@@ -13,7 +13,7 @@ function Licao() {
   // Link velho/errado não pode virar tela branca na demo.
   if (!found) {
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neve px-8">
           <EmptyState
             text="Esse link não aponta para nenhuma lição da trilha de redação."

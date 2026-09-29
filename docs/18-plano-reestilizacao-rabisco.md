@@ -209,18 +209,21 @@ Nomes de variável mantidos do projeto (`--color-abismo`, `--color-mar`…), val
 | **Surface** (cartão) | `--color-cards` (novo) | `#FFFFFF` | `#262523` | `card-soft`, header, nav, inputs, folhas |
 | **Surface secondary** | `--color-gelo` | `#E1DFDA` | `#38352F` | Chip inativo, trilho de barra, skeleton, borda de cartão, pauta |
 | **Text primary** | `--foreground` | `#26262A` | `#F3F1EC` | Corpo |
-| **Text secondary** | `--color-nevoa` | `#737075` | `#A6A29A` | Legendas, placeholders, nav inativo. 4.5:1 sobre papel — **não** usar em tamanho < 12px |
+| **Text secondary** | `--color-nevoa` | `#6E6B71` (era `#737075` — ver nota T-08.9) | `#A6A29A` | Legendas, placeholders, nav inativo. 4.8:1 sobre papel, 5.2:1 sobre cartão — **não** usar em tamanho < 12px |
 | **Text on dark / border input** | `--color-pelo` | `#D6D6D4` | `#55534E` | Borda de input, texto sobre `abismo` |
 | **Border** | `--border` = `gelo` | `#E1DFDA` | `#38352F` | 2px em cartões, 1px em divisores |
 | **Success** (fill/borda/ícone) | `--color-success` | `#2E9E5B` | `#45B876` | Folha de acerto, alternativa certa |
 | **Success (texto)** (novo) | `--color-success-texto` | `#1F7A45` | `#45B876` | Título "Acertou" sobre `cards` (5.4:1) |
-| **Error** | `--color-error` | `#C23B3B` | `#D65B5B` | Folha de erro, alternativa errada (5.3:1 sobre branco — serve para texto) |
+| **Error** | `--color-error` | `#C23B3B` | `#DF6B6B` (era `#D65B5B` — ver nota T-08.9) | Folha de erro, alternativa errada (5.3:1 sobre branco no claro, 4.7:1 sobre cartão no escuro — serve para texto) |
+| **On-color** (novo, T-08.9) | `--on-mar`, `--on-success`, `--on-error`, `--on-alert` (`text-on-*`) | `#FFFFFF` (`--on-alert`: `#3A3A3C`) | `#1C1B18` | Texto/ícone SOBRE preenchimento de cor (`btn-primary`, marcador de alternativa, balão do aluno, chip de XP). No escuro os preenchimentos são mais claros e o branco reprovaria (3.2:1). Sobre `--success` usar `bg-success-texto` (o verde de texto) |
 | **Disabled** | — | `opacity: .4` + `cursor: not-allowed` + aresta removida | idem | Nunca cinza próprio: opacidade preserva a forma |
 | **Focus ring** | `--ring` = `mar` | `#2E6BFF` | `#5C8CFF` | `outline: 3px solid` + `outline-offset: 2px`, sempre visível com teclado |
 
 ⚑ **D1** (§14): se o time recusar o marca-texto, `--color-recompensa: var(--color-mar)` e nada mais muda.
 
 **Contrastes verificados (WCAG, calculados):** `#26262A`/papel ≈ 14:1 ✓ · `#737075`/branco 4.9:1 ✓ · `#737075`/papel 4.5:1 ✓ (limite) · `#2E6BFF`/branco 4.5:1 ✓ (limite; por isso texto em azul usa `mar-fundo`) · branco/`#2E6BFF` 4.5:1 ✓ · `#1E4FCC`/branco 6.9:1 ✓ · `#3A3A3C`/branco 11.3:1 ✓ · `#2E9E5B`/branco 3.4:1 ✗ texto (só ≥18px bold ou ícone) · `#1F7A45`/branco 5.4:1 ✓ · `#C23B3B`/branco 5.3:1 ✓ · `#D9A017`/branco 2.3:1 ✗ texto (só fundo) · `#3A3A3C`/`#D9A017` 4.9:1 ✓ · escuro: `#5C8CFF`/`#1C1B18` 5.5:1 ✓ · `#A6A29A`/`#1C1B18` 6.8:1 ✓.
+
+**Nota T-08.9 (28/09/2026, `36`):** a verificação por cálculo (`tests/unit/contrast.test.ts`) mostrou que a linha "`#737075`/papel 4.5:1 ✓ (limite)" acima era 4,47:1 (arredondada para cima) e que branco sobre `--mar` do **escuro** (`#5C8CFF`) dá 3,16:1. Ajustes dentro da paleta, sem trocar de matiz: `--nevoa` claro `#737075` → `#6E6B71` (4,81:1 sobre o papel; `--muted-foreground` acompanha; `--pelo-sombra` fica `#737075`, é só gráfico); `--error` escuro `#D65B5B` → `#DF6B6B` (4,71:1 sobre cartão; `--destructive` acompanha); novos tokens `--on-mar/-success/-error/-alert` (branco no claro, `#1C1B18` no escuro — o mesmo critério de `--accent-foreground`) e texto de marcador/CTA passa a usá-los. Não muda o desenho do claro, exceto o cinza secundário (~4 % mais escuro) e o verde de marcador de alternativa certa (`bg-success-texto`, `#1F7A45`).
 
 **Proporção-alvo por tela:** papel + cartões 70% · grafite (texto/ícones) 20% · caneta 7% · marca-texto ≤ 3%. Sucesso/erro não contam — são eventos.
 
@@ -299,6 +302,8 @@ Base 4px. Escala usada: 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48.
 | 3 — flutuante | `box-shadow: 0 8px 24px -8px rgb(38 38 42 / .25)` | FAB da Foca, folha de baixo, modal |
 
 Nenhuma outra sombra. O `PhoneFrame` perde a sombra navy (vira `bg-neve` puro; no desktop, borda `gelo` 1px lateral).
+
+> **Nota de precedência (28/09/2026, `36` §F.6, T-08.1/T-08.2):** o `PhoneFrame` de 440 px (e o `max-w-[440px]` do §7.15/Fase 4, `md:border-x md:border-gelo`) vale só < 768 px. Em ≥ 768 px a coluna vem dos tokens `--app-col`/`--reading-col` (560 px; 600/640 px a partir de 1024), a borda lateral é `@utility frame-border` e a bottom nav vira `NavRail` em ≥ 1024. Ver `DESIGN.md` §Layout e `37` Fase 8. (O plano cita esse assunto como "§8"; no `18` o `PhoneFrame` está nesta seção 6.5, no §7.11–7.12 e na Fase 4.)
 
 ### 6.6 Movimento
 
@@ -400,6 +405,8 @@ Formato pedido. Componentes ordenados por alcance.
 ### 7.15 Modal de confirmação (`LessonPlayer` "Sair da lição?")
 - **Atual:** caixa branca centrada sobre navy/60.
 - **Novo:** `src/components/ds/BottomSheet.tsx` — folha de baixo raio-t 28, `cards`, fundo escurecido `abismo/40`, fecha com botão e com toque fora; título H2, texto body, botões empilhados (primário em cima). Foca `desapontada` 56px à esquerda do título.
+
+> **Nota (28/09/2026, `36` T-08.4/T-08.5):** o fundo escurecido é o token `--scrim` (`rgb(0 0 0 / 0.4)` no claro, `0.55` no escuro), não `abismo/40` (nem o `bg-black/40` que o código usou antes). A folha ancora à coluna do app (não a `max-w-[440px]` fixo) e ganhou trap de foco, `inert` no fundo e retorno do foco ao disparador (`useDialogA11y`). Ver `DESIGN.md` e `37`.
 - **Motivo:** zona do polegar; personagem em transição emocional.
 
 ### 7.16 Tile de estatística (`StatTile`, novo) e chip de XP (`XpChip`, novo)
@@ -767,7 +774,7 @@ Cada fase: objetivo · arquivos · passos · critérios de aceite · riscos · t
    - Animações novas: `@keyframes ft-bump { 0%{transform:scale(1)} 40%{transform:scale(1.12)} 100%{transform:scale(1)} }` → `anim-bump` 220ms; `ft-breathe` (scale 1→1.04→1, 2.4s infinite) → `anim-breathe`; `ft-float-in` (translateY 24px→0 + opacity) → `anim-float-in` 400ms `var(--ease-out)`; `ft-shake` → `translateX ±4px`, `anim-shake` 180ms.
 2. `ProgressBar.tsx`: `({ value, max = 100, tone = "caneta", size = "sm", label })` → `<div role="progressbar" aria-valuenow aria-valuemax aria-label className="h-2|h-3 w-full overflow-hidden rounded-full bg-gelo"><div style={{ width: pct }} className="h-full rounded-full transition-[width] duration-500 bg-mar|bg-recompensa|bg-success"/></div>`; `useEffect` que adiciona `anim-bump` por 220ms quando `value` aumenta (guardar `prev` em `useRef`).
 3. `GoalRing.tsx`: SVG 72×72, `stroke-dasharray`, trilho `var(--color-gelo)` 8px, traço `var(--color-mar)` (ou `recompensa` quando `value >= max`), `stroke-linecap: round`, transição de `stroke-dashoffset` 600ms; centro com `<span className="font-mono font-bold">{value}/{max}</span>`; `role="progressbar"`.
-4. `BottomSheet.tsx`: `({ open, onClose, title, children, foca?: { expression, size } })` → overlay `fixed inset-0 bg-abismo/40` (fecha no clique) + `sheet` `fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[440px] p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] anim-slide-up`; `role="dialog" aria-modal aria-labelledby`; fecha com `Escape`; foco inicial no título.
+4. `BottomSheet.tsx`: `({ open, onClose, title, children, foca?: { expression, size } })` → overlay `fixed inset-0 bg-abismo/40` (fecha no clique) + `sheet` `fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[440px] p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] anim-slide-up`; `role="dialog" aria-modal aria-labelledby`; fecha com `Escape`; foco inicial no título. *(Superado em 28/09/2026 pelo `36`: `--scrim` no lugar de `bg-abismo/40` e coluna por token no lugar de `max-w-[440px]`; ver nota no §7.15.)*
 5. `EmptyState.tsx`: `({ slot, cta?: { label, to } })` → `card-soft border-dashed p-6 text-center` com `FocaMark expression="entediada" size={72}` e a fala de `voz.ts` (Fase 3 — até lá, aceitar `text` direto).
 6. `StatTile.tsx`: `({ icon, label, value })` conforme §7.16.
 7. `XpChip.tsx`: `({ amount, animate })` → `inline-flex rounded-full bg-recompensa px-3 py-1 font-mono font-bold text-abismo` com `anim-xp` quando `animate`, `aria-live="polite"`.

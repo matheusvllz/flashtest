@@ -93,7 +93,7 @@ function DebugPanel() {
     <div className="space-y-4 p-4">
       <div className="flex items-center justify-between">
         <h1 className="font-display text-lg font-bold text-abismo">Debug</h1>
-        <button onClick={exportarJSON} className="btn-outline px-3 py-1.5 text-xs">
+        <button type="button" onClick={exportarJSON} className="btn-outline px-3 py-1.5 text-xs">
           Exportar JSON
         </button>
       </div>
@@ -101,11 +101,12 @@ function DebugPanel() {
       <div className="flex flex-wrap gap-1.5" role="tablist">
         {(["plano", "habilidades", "tentativas", "audio", "flags"] as Aba[]).map((t) => (
           <button
+            type="button"
             key={t}
             role="tab"
             aria-selected={aba === t}
             onClick={() => setAba(t)}
-            className={`rounded-full px-3 py-1.5 text-xs font-bold capitalize ${aba === t ? "bg-mar text-white" : "border-2 border-gelo text-abismo"}`}
+            className={`rounded-full px-3 py-1.5 text-xs font-bold capitalize ${aba === t ? "bg-mar text-on-mar" : "border-2 border-gelo text-abismo"}`}
           >
             {t}
           </button>

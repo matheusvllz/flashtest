@@ -9,7 +9,7 @@ colors:
   papel: "#f6f5f1"
   borda-papel: "#e1dfda"
   papel-pautado: "#d6d6d4"
-  nevoa: "#737075"
+  nevoa: "#6E6B71"
   cards: "#ffffff"
   texto: "#26262a"
   marca-texto: "#d9a017"
@@ -83,7 +83,7 @@ components:
 > **Autoridade.** Este arquivo é um **resumo para agentes** do design system. Não é a fonte normativa:
 > 1. `src/styles.css` — tokens reais (claro e `.dark`) e as `@utility` (`btn-*`, `card-*`, `chip*`, `anim-*`). **Se um valor aqui divergir de `styles.css`, `styles.css` vence** e este arquivo precisa ser atualizado.
 > 2. [18-plano-reestilizacao-rabisco.md](18-plano-reestilizacao-rabisco.md) — o design system completo, componente a componente (executado; registro em [19](19-registro-execucao-rabisco.md)).
-> 3. [brand/foca-rabisco-branding.md](brand/foca-rabisco-branding.md) — a direção de marca.
+> 3. [brand/foca-rabisco-branding.md](brand/foca-rabisco-branding.md) — a direção de marca. Referência visual atualizada, com os logos novos: [brand/foca-design-system-2026-09-28.html](brand/foca-design-system-2026-09-28.html).
 >
 > O frontmatter lista **só a paleta clara**. O modo escuro existe (`.dark` em `styles.css`) e é obrigatório: todo token novo nasce como variável base em `:root` **e** `.dark`, referenciada por `--color-*` em `@theme inline` — nunca hex literal no `@theme inline` (o Tailwind v4 grava o literal e a classe ignora `.dark`). `docs/09-branding.md` (paleta Ártica) é **histórico**.
 >
@@ -93,7 +93,7 @@ components:
 
 "O caderno rabiscado." Um app de ENEM que se recusa a parecer material escolar: fundo de papel, tinta de grafite, e uma caneta azul que só aparece quando há ação ou conquista de verdade. A sensação-alvo é *tédio produtivo* — nem euforia de startup, nem seriedade de plataforma de curso (`brand/foca-rabisco-branding.md`).
 
-Modo dominante: **Operate** (o aluno completa uma tarefa curta). Landing e LP do link da bio são **Persuade** e ficam fora do app.
+Modo dominante: **Operate** (o aluno completa uma tarefa curta). Landing e LP do link da bio são **Persuade** e ficam fora do app. A landing pública vive isolada em `landing/` e usa os tokens deste sistema (cópia) mais os **Marketing Design Tokens** (`--lp-*`, escala tipográfica de marketing, `docs/40` §12.8), válidos só lá.
 
 Os dez princípios do `18` §3 são a régua de qualquer decisão visual; os que mais pegam agentes desprevenidos: *papel, não painel* · *um azul, com regras de reserva* · *recompensa é marca-texto* · *borda antes de sombra* · *cor nunca é o único sinal* · *um CTA primário por tela* · *nenhum contador que o store não sustente*.
 
@@ -106,8 +106,10 @@ Os dez princípios do `18` §3 são a régua de qualquer decisão visual; os que
 | Caneta escurecida | `--color-mar-fundo` | Aresta do botão primário; texto/link azul sobre fundo claro. |
 | Marca-texto (recompensa) | `--color-recompensa` | **Só** XP, streak, marco. É fundo com texto grafite — **nunca texto amarelo**. Aparece depois do feedback, nunca dentro dele. |
 | Papel / cartões / borda | `--color-neve` / `--color-cards` / `--color-gelo` | Neutros. Use `bg-cards`, não `bg-white` (dark mode). |
-| Texto secundário | `--color-nevoa` | Nunca abaixo de 12px. |
+| Texto secundário | `--color-nevoa` | Nunca abaixo de 12px. `#6E6B71` no claro (4,8:1 sobre o papel) e `#A6A29A` no escuro; o `#737075` antigo reprovava AA (4,47:1, `36` T-08.9). |
 | Sucesso / Erro | `--color-success` / `--color-error` | **Só** feedback de resposta certa/errada. Título "Acertou" usa `--color-success-texto` (o verde base reprova contraste em texto). |
+| Texto sobre preenchimento | `--on-mar`, `--on-success`, `--on-error`, `--on-alert` (`text-on-*`) | Use no lugar de `text-white`/`text-abismo` sobre `bg-mar`, `bg-success-texto`, `bg-error` e `bg-recompensa`. Claro: branco (exceto `--on-alert` = grafite); escuro: tinta escura `#1C1B18`. Razão ≥ 4,5:1 medida em `tests/unit/contrast.test.ts` (`36` T-08.9). |
+| Fundo de folha/modal | `--scrim` (`@utility scrim`) | `rgb(0 0 0 / 0.4)` no claro, `0.55` no escuro (o preto é fixo de propósito: scrim não inverte). Nunca `bg-black/40` nem `bg-abismo/40` (`36` T-08.4). |
 
 ## Typography
 
@@ -118,10 +120,12 @@ Os dez princípios do `18` §3 são a régua de qualquer decisão visual; os que
 
 ## Layout
 
-- Mobile-first; `PhoneFrame` com largura máxima de 440px. QA em 320 (projeto Playwright `narrow`), 360, 390 e 440.
+- Mobile-first. A largura da coluna vem de tokens em `styles.css` (`:root`): `--app-col` (telas com `AppShell`), `--reading-col` (players imersivos: aula, legado, atividade, nivelamento, `/quiz`, `/aha`), `--path-col` (caminho zigue-zague, fixo em 440 — a geometria de `path-layout.ts` é calibrada para 440) e `--nav-rail`. Abaixo de 768 px tudo é 440 (o mobile é idêntico ao histórico, e é aí que valem o `27` D-7 e o `18` de 440 px); 768–1023 px: 560/560; ≥ 1024 px: 600 (app) e 640 (leitura), `--nav-rail` 96. Regra do `36` §F.6, só em ≥ 768 px.
+- `PhoneFrame variant="app" | "reading"` declara `--frame-col`; o wrapper do `AppShell` declara `--frame-rail`. Elementos fixos (FAB do tutor, folhas, rodapés de `/quiz`/`/aha`, botão de voltar ao foco) se ancoram à coluna em que moram pelos utilitários `anchor-col-left/right/center` e `col-max-w` — nunca `13.75rem`, `left-1/2` com `440px` solto nem `max-w-[440px]` (`css-tokens.test.ts` falha). Borda lateral do frame: `@utility frame-border` (só ≥ 768 px). Desktop = mesma jornada em coluna centrada; sem barras laterais de conteúdo.
+- QA em 320 (projeto Playwright `narrow`), 360, 390 e 440 (mobile), 640, 768, 1024 e 1440 (`layout.spec.ts`; projeto `desktop` 1280×800).
 - Base 4px; gutter de página 20px (`px-5`); 16px entre cartões; 12px entre alternativas.
 - Rodapé fixo com `env(safe-area-inset-bottom)`; CTA principal na zona do polegar, no rodapé.
-- Bottom nav de 64px + safe area, 4 itens (Aprender, Praticar, Progresso, Perfil).
+- Bottom nav de 64px + safe area, 4 itens (Aprender, Praticar, Progresso, Perfil). A altura (`min-h-16` + borda de 2px) é o token `--bottom-nav-h`. A partir de 1024 px ela some e o `NavRail` (`src/components/NavRail.tsx`, 96px, lateral, mesmos 4 itens e `aria-label="Principal"`) a substitui: só um `nav` principal visível por vez.
 - `min-h-[100dvh]`, não `100vh`. Inputs com fonte ≥ 16px (evita zoom no iOS). Nada de scroll horizontal fora das sugestões do chat.
 
 ## Elevation & Depth
@@ -138,6 +142,8 @@ Elevação por **aresta**, não por sombra difusa:
 
 Nenhuma outra sombra.
 
+O fundo escurecido que cobre a página atrás de folhas e modais é o token `--scrim`, não uma sombra (ver Colors).
+
 ## Shapes
 
 Raio único por papel: marcador 6px (`rounded-md`) · botão/input/alternativa 16px (`rounded-lg`, `--radius`) · cartão 20px (`rounded-xl`, `--radius-card`) · folha de baixo e modal 28px (`rounded-3xl`) · chip, barra, avatar, FAB, nó de trilha em pílula (`rounded-full`). `rounded-[Npx]` é proibido. "Redondo, não fofo."
@@ -145,8 +151,9 @@ Raio único por papel: marcador 6px (`rounded-md`) · botão/input/alternativa 1
 ## Components
 
 - **Use o que existe antes de criar:** utilities em `styles.css` (`btn-primary`, `btn-abismo`, `btn-outline`, `btn-ghost`, `card-soft`, `card-press`, `chip`, `chip-on`, `ds-label`, `input-ds`, `sheet`, `skeleton`, `mark-texto`, `surface-pauta`, e o bloco `path-*`/`anim-halo` da trilha visual — docs/27/28), componentes em `src/components/ds/`, `src/components/learning/` (inclusive `src/components/learning/path/`, o caminho visual da home — `PathNode`, `PathConnector`, `ChapterBanner`, `ChapterSegment`, `SubjectPath`, `ChapterMilestone`, `FocusCallout`, `MarginDoodle`), `src/components/lessons/`, e o shadcn/ui completo em `src/components/ui/`.
-- **Mascote:** sempre `<FocaMark expression=… />` (`src/components/brand/FocaMark.tsx`); falas via `src/lib/voz.ts`, nunca hardcoded.
-- **Copy:** strings funcionais em `src/lib/copy.ts`; toda string nova entra também no inventário do `21`.
+- **Casca, avisos e acessibilidade (`36`, `37`):** `NavRail`; `PersistenceBanner` (faixa fixa no topo do frame — nunca verde/vermelho de feedback); `useDialogA11y` em `src/hooks/` (foco inicial no título, trap de Tab, Escape, `inert` nos irmãos, `overflow` do `body` travado, foco volta ao disparador) usado por `BottomSheet` e pelo painel do tutor; `FeedbackSheet` com `acimaDaNav` (só `/study`, que tem `BottomNav` fixa); `CourseStep` (seleção de curso do `/quiz` e do Perfil).
+- **Mascote:** sempre `<FocaMark expression=… />` (`src/components/brand/FocaMark.tsx`); falas via `src/lib/voz.ts`, nunca hardcoded. Se a imagem falhar, o `FocaMark` fica oculto mantendo a caixa (sem ícone quebrado nem texto alternativo). Em fundo escuro use a variante de contorno claro (`/aha` troca a marca d'água por tema, com wrappers `dark:hidden`/`hidden dark:block` — o `display` inline do `FocaMark` vence qualquer classe).
+- **Copy:** strings funcionais em `src/lib/copy.ts`; toda string nova entra também no inventário do `21`. Guia de escrita: [COPY.md](COPY.md).
 - Especificação por componente (atual → problema → novo → motivo): `18` §7.
 
 ## Do's and Don'ts
@@ -161,8 +168,9 @@ Raio único por papel: marcador 6px (`rounded-md`) · botão/input/alternativa 1
 **Do**
 - Certo/errado sempre com ícone + palavra + cor.
 - Seleção com borda 2px + peso 600, não só fundo.
-- Alvo de toque ≥ 44×44 (botões 52, nav 64).
+- Alvo de toque ≥ 44×44 (botões 52, nav 64). Controle visualmente menor (chip de 36px, link de texto) usa o `chip` ou `@utility tap-area` (área expandida por `::after`, sem mexer no layout); `layout.spec.ts` mede todos.
 - Foco visível (`outline` 3px `mar`, offset 2).
+- Diálogo com `useDialogA11y` (`role="dialog"`, `aria-modal`, `aria-labelledby`); `<button>` sempre com `type` explícito; campo sem rótulo visível com `aria-label`.
 
 **Don't**
 - Azul-caneta como decoração, ícone ilustrativo ou texto corrido.
@@ -172,4 +180,7 @@ Raio único por papel: marcador 6px (`rounded-md`) · botão/input/alternativa 1
 - Foca no header ou durante a questão.
 - Sombra difusa em cartão ou botão.
 - Hex literal em componente; token novo sem par em `.dark`.
+- `var(--color-*)` em `style` inline ou atributo SVG (use a variável base: `var(--mar)`, `var(--gelo)`; `tests/unit/css-tokens.test.ts` falha).
+- `text-white` sobre preenchimento colorido (use `text-on-*`).
+- Largura de coluna ou offset de elemento fixo com `440px`/`13.75rem` escrito à mão.
 - Rolagem infinita, recompensa aleatória, esconder o botão de sair (`16` §9).

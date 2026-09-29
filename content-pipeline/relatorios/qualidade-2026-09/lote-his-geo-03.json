@@ -1,0 +1,995 @@
+[
+  {
+    "id": "gen:geo:meio-ambiente-impactos:02ee8f7d",
+    "arquivo": "src/content/banco/geo/geo-meio-ambiente-impactos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.028,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.932,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao",
+      "reclassificar"
+    ],
+    "motivo": "Razão 2,03 e distratores absurdos (redução de erosão, biodiversidade de insetos); trocados por equívocos plausíveis. Explicação: 'perda irreversível' era exagero. R7: a questão lista os processos no enunciado e pede a consequência (uma inferência), dificuldade 4 era alta; meta 3 (a aula usa o passo com sua própria dificuldade).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 4,
+    "dificuldadeDepois": 3,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:meio-ambiente-impactos:4e4a686a",
+    "arquivo": "src/content/banco/geo/geo-meio-ambiente-impactos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 3.706,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.917,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Razão 3,71 (correta enorme, distratores de 3 palavras) e um distrator ('aumento da produtividade de peixes') contestável. Distratores agora são equívocos plausíveis sobre reservatórios, no mesmo nível de detalhe. R7: 4 → 3 (inferência a partir da lista dada no enunciado).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 4,
+    "dificuldadeDepois": 3,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:meio-ambiente-impactos:967551c7",
+    "arquivo": "src/content/banco/geo/geo-meio-ambiente-impactos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 3.172,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.09,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Razão 3,17; distratores de 4 palavras e contraditórios. Reescritos com o mesmo nível de detalhe e ligados a erros reais (nutriente = alimento para os peixes, água 'mais limpa', toxicidade). R7: 4 → 3 (recall direto do termo eutrofização).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 4,
+    "dificuldadeDepois": 3,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:34307c19",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.086,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,09 e distratores que só negavam a resposta; agora afirmações plausíveis (o que o programa promete) de tamanho parecido; correta permanece a única que descreve a desvantagem.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:ditadura-militar-contexto:0b8e77fe",
+    "arquivo": "src/content/banco/his/his-ditadura-militar-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.351,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.891,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,35 e absolutismo (eliminação completa, todas as indústrias, irrestrita). Distratores agora inversões plausíveis das políticas do início do regime; correta enxugada. Fato conferido (PAEG, arrocho e abertura ao capital externo).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:ditadura-militar-contexto:1b0db310",
+    "arquivo": "src/content/banco/his/his-ditadura-militar-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.362,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.939,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2/R3: a explicação tratava do AI-5 (1968) e falava em 'consolidar o poder entre 1960-1970', mas a pergunta é sobre os primeiros atos (AI-1, 1964); reescrita. Razão 2,36 e distratores absurdos ('restauração completa da democracia') trocados por falsidades plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:ditadura-militar-contexto:514adf19",
+    "arquivo": "src/content/banco/his/his-ditadura-militar-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.417,
+        "corretaMaisLonga": true,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.95,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ajustado"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "R8: 'minerar legitimidade' (erro de português, o certo é 'minar a legitimidade'); razão 2,42 e absolutismo (completa, todos, apenas). Correta enxugada e distratores são falsidades históricas plausíveis (arrocho salarial contradiz a opção de aumento contínuo).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:ditadura-militar-contexto:b2b9ab1c",
+    "arquivo": "src/content/banco/his/his-ditadura-militar-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.397,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.952,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2: a explicação dizia que 'uma eleição direta foi agendada, mas o eleito (Tancredo) morreu', o que está errado (Tancredo foi eleito indiretamente pelo Colégio Eleitoral, depois da derrota da emenda Diretas Já); corrigida. R3: a pergunta pedia 'a importância do processo', que nenhuma alternativa respondia; enunciado reescrito. Razão 2,40 e distratores absurdos trocados (Diretas Já como armadilha plausível).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:684c502c",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.105,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.014,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,11; distratores (todos posteriores ao Estado Novo) detalhados no mesmo nível da correta, mantendo o anacronismo como pista de raciocínio, não de tamanho.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:82a6c68e",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.017,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.93,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,02 e absolutismo (completamente, inevitável, igualmente, toda); distratores agora leituras equivocadas plausíveis (política revolucionária/redistributiva) no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:a24b649f",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.203,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.01,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,20; distratores confusos ('repressão pura', 'antes existiam sem limitação') e absolutistas (total, completamente). Agora contrapontos plausíveis, mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:d94def43",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.423,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.839,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,42 e absolutismo ('sem interferência', 'plena', 'garantida'); a opção 'totalitarismo' era contestável. Distratores são rótulos políticos equivocados com o mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:0604ae05",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.129,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.917,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R3: 'governos e movimentos de esquerda' não casava com as alternativas (só falam de esquerdistas) e generalizava toda a esquerda (o PCB rejeitava a luta armada); enunciado e correta passam a 'parte da esquerda'. Razão 2,13 e absolutismo (total, completamente). Explicação sem o exagero 'sem terceira opção'.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:0946a468",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.343,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.947,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,34 e absolutismo (Nenhum efeito, imediatamente conquistado). Distratores contestáveis ('alinhava ainda mais aos EUA', em parte verdadeiro nos anos 1990) trocados por falsidades claras. Gabarito conferido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:0fd2ad2d",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.824,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.079,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Razão 2,82 e absolutismo (Nenhum efeito, imediatamente). Correta sem o trecho 'justificando vigilância interna'. R7: o raciocínio é causal em dois passos (mísseis em Cuba, percepção de ameaça, clima do golpe), não recall; meta 1 → 2 (o passo da aula mantém a própria dificuldade 1).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 1,
+    "dificuldadeDepois": 2,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:1aa87534",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.696,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.933,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ajustado"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R3: o enunciado dizia 'seguidores do Brasil', sem sentido. R2: a explicação misturava a Conferência de Bandung (1955) com o Movimento dos Não Alinhados (formalizado em Belgrado, 1961). R8: erro de digitação 'contradicação'. Razão 2,70 e absolutismo trocados por distratores plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:881c6ad0",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.157,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.921,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,16; distratores absurdos com o mesmo nível de detalhe da correta, que perdeu o trecho sobre 'agentes infiltrados' (a explicação mantém o argumento).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:9cdc9803",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 3.463,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.028,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 3,46; distratores de 6 a 8 palavras contra uma correta de 25. Agora eventos reais mas fora do tema, com o mesmo nível de detalhe. Correta agora só 'levaram o comunismo às Américas' (Cuba) em vez de 'poderia vencer em solo americano'.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:ce8fae5d",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1a",
+    "marcasEstrato1": [
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.506,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.961,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,51 e absolutismo (total, perfeito, todas, alguma). Distratores no mesmo nível de detalhe, ligados a erros (neutralidade, isolamento, cooperação universal).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:06335b6a",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "marcasEstrato1": [
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.456,
+        "corretaMaisLonga": true,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.917,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Distratores absolutistas e fora de tema (desaparecimento total, furacões, aumento uniforme); agora equívocos plausíveis sobre deslocamento e umidade. Correta reescrita sem alterar o sentido (expansão da célula de Hadley empurra os cinturões secos para latitudes maiores).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:c5481be2",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1b",
+    "marcasEstrato1": [
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.328,
+        "corretaMaisLonga": true,
+        "absolutismo": 3,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.076,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Três distratores com absolutismo (somente, apenas, apenas); agora três escalas erradas plausíveis (local, global uniforme, restrita ao entorno).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  }
+]

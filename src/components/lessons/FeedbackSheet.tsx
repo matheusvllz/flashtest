@@ -33,6 +33,8 @@ export function FeedbackSheet({
   isLast,
   onContinue,
   onAskTutor,
+  fonte,
+  acimaDaNav = false,
 }: {
   feedback: AnswerFeedback;
   /** Resolução detalhada, colapsável — passo a passo, salvar flashcard, videoaula. */
@@ -41,6 +43,18 @@ export function FeedbackSheet({
   /** Chamado ao clicar "Continuar" — o guard contra clique duplo mora em `useExerciseSession().advance`, não aqui. */
   onContinue: () => void;
   onAskTutor?: () => void;
+  /**
+   * Atribuição de item OFICIAL ("ENEM 2023"; docs/34, docs/36 RP-10) — vem de `atribuicaoOficial(meta.source)`,
+   * nunca de texto de apoio (`exercise.fonte` também guarda a fonte de um texto de interpretação).
+   * Ausente = item não oficial: nada é desenhado.
+   */
+  fonte?: string;
+  /**
+   * true nas telas com `BottomNav` fixa (`/study`, dentro do `AppShell`): a folha gruda ACIMA da nav
+   * (`--bottom-nav-h`), não no fim da janela — senão, com a resolução expandida, a nav cobre o "Continuar"
+   * (achado do docs/36 T-08.10, B1). A nav some em ≥ 1024 px (vira NavRail), então lá volta a colar em 0.
+   */
+  acimaDaNav?: boolean;
 }) {
   const [aberto, setAberto] = useState(false);
   const { correct, kind, messageText, explanation, xpAwarded } = feedback;
@@ -49,7 +63,11 @@ export function FeedbackSheet({
   return (
     <div
       role="status"
-      className="sheet anim-slide-up sticky bottom-0 -mx-5 px-5 pb-5 pt-4"
+      data-resultado={dontKnow ? "nao-sei" : correct ? "acerto" : "erro"}
+      className={cn(
+        "sheet anim-slide-up sticky -mx-5 px-5 pb-5 pt-4",
+        acimaDaNav ? "bottom-[calc(var(--bottom-nav-h)+env(safe-area-inset-bottom))] lg:bottom-0" : "bottom-0",
+      )}
       // Fundo composto opaco, calculado a partir de `--color-cards`: evitar
       // duas classes de background (`sheet` + `bg-success/10`) competindo na
       // mesma camada de utilitários, o que deixava o resultado dependente da
@@ -89,6 +107,7 @@ export function FeedbackSheet({
             )}
             {messageText}
           </p>
+          {fonte && <p className="mt-0.5 text-[11px] text-nevoa">{COPY.feedback.fonteOficial(fonte)}</p>}
           <p className="mt-0.5 text-[13px] leading-relaxed text-abismo">{explanation}</p>
         </div>
       </div>
@@ -96,8 +115,9 @@ export function FeedbackSheet({
       {children && (
         <div className="mt-3">
           <button
+            type="button"
             onClick={() => setAberto((v) => !v)}
-            className="flex items-center gap-1 text-xs font-bold text-nevoa"
+            className="tap-area flex items-center gap-1 text-xs font-bold text-nevoa"
           >
             {aberto ? COPY.feedback.ocultarResolucao : COPY.feedback.verResolucao}
             <ChevronDown size={14} className={cn("transition-transform", aberto && "rotate-180")} />
@@ -114,11 +134,11 @@ export function FeedbackSheet({
 
       <div className="mt-3 flex gap-2">
         {!correct && onAskTutor && (
-          <button onClick={onAskTutor} className="btn-outline shrink-0 px-3 text-[13px]">
+          <button type="button" onClick={onAskTutor} className="btn-outline shrink-0 px-3 text-[13px]">
             <Sparkles size={15} /> {COPY.feedback.explicarMelhor}
           </button>
         )}
-        <button onClick={onContinue} className="btn-primary flex-1">
+        <button type="button" onClick={onContinue} className="btn-primary flex-1">
           {isLast ? COPY.feedback.verResultado : COPY.feedback.continuar}
         </button>
       </div>

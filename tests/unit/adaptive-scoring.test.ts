@@ -34,6 +34,48 @@ describe("scoreCandidate — necessidade", () => {
     expect(r.breakdown.necessidade).toBeCloseTo(0.8, 5);
   });
 
+  // docs/36 T-04.2 (RP-1): prior de nivelamento muda a ORDEM entre habilidades NOVA.
+  function priorComTheta(theta: number) {
+    return {
+      skillId: skill.id, theta, sigma: 0.9, nEff: 0, difficultiesSeen: [], recent: [], independentShare: 0,
+      lastEvidenceDate: null, lapses: 0, dontKnowRecent: 0, helpHeavyRecent: 0,
+      source: "prior-nivelamento" as const, algoVersion: 1, updatedAt: "2026-09-24T10:00:00.000Z",
+    };
+  }
+
+  test("NOVA com prior de nivelamento: θ −1,5 > 0,8 (sem prior) > θ +1,0; θ 0 ≈ 0,8", () => {
+    const fraca = scoreCandidate(baseInput({ state: "NOVA", entry: priorComTheta(-1.5) })).breakdown.necessidade;
+    const meio = scoreCandidate(baseInput({ state: "NOVA", entry: priorComTheta(0) })).breakdown.necessidade;
+    const forte = scoreCandidate(baseInput({ state: "NOVA", entry: priorComTheta(1) })).breakdown.necessidade;
+    const semPrior = scoreCandidate(baseInput({ state: "NOVA" })).breakdown.necessidade;
+    expect(semPrior).toBeCloseTo(0.8, 5);
+    expect(fraca).toBeGreaterThan(0.8);
+    expect(fraca).toBeCloseTo(0.95, 2); // m ≈ 18 -> teto 0,95
+    expect(meio).toBeCloseTo(0.8, 5); // m = 50
+    expect(forte).toBeLessThan(0.8);
+    expect(forte).toBeCloseTo(0.685, 2); // m ≈ 73
+  });
+
+  test("necessidade de NOVA com prior nunca cai abaixo de 0,55 nem passa de 0,95", () => {
+    for (const theta of [-4, -2, 0, 2, 4]) {
+      const n = scoreCandidate(baseInput({ state: "NOVA", entry: priorComTheta(theta) })).breakdown.necessidade;
+      expect(n).toBeGreaterThanOrEqual(0.55);
+      expect(n).toBeLessThanOrEqual(0.95);
+    }
+  });
+
+  test("prior-materia (não é nivelamento) e evidencia em NOVA continuam 0,8", () => {
+    const pm = { ...priorComTheta(-1.5), source: "prior-materia" as const };
+    expect(scoreCandidate(baseInput({ state: "NOVA", entry: pm })).breakdown.necessidade).toBeCloseTo(0.8, 5);
+  });
+
+  test("EM_APRENDIZADO com prior-nivelamento segue a fórmula antiga (só NOVA mudou)", () => {
+    const e = priorComTheta(-1.5);
+    const r = scoreCandidate(baseInput({ state: "EM_APRENDIZADO", entry: e })).breakdown.necessidade;
+    const semSource = scoreCandidate(baseInput({ state: "EM_APRENDIZADO", entry: { ...e, source: "evidencia" } })).breakdown.necessidade;
+    expect(r).toBeCloseTo(semSource, 10);
+  });
+
   test("mais Mastery -> menos necessidade (monotonicidade)", () => {
     let baixaEntry = undefined;
     let altaEntry = undefined;

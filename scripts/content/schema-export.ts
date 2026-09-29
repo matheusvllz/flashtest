@@ -48,7 +48,11 @@ const ITEM_META_SCHEMA = {
     validation: {
       type: "object",
       required: ["status"],
-      properties: { status: { type: "string", enum: ["gerada", "verificada-ia", "revisada-humano", "oficial-conferida"] } },
+      properties: {
+        status: { type: "string", enum: ["gerada", "verificada-ia", "revisada-humano", "oficial-conferida"] },
+        reviewKind: { type: "string", enum: ["humano", "ia-delegada", "gabarito-oficial", "autoria-legada"] },
+        reviewNote: { type: "string" },
+      },
     },
     examProfiles: { type: "array", items: { type: "string" } },
   },

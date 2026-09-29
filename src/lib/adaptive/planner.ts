@@ -14,7 +14,7 @@ import { activeSkills, SKILL_MAP, SUBJECT_AREA, type EnemArea } from "@/content/
 import { SUBJECT_MAP } from "@/data/subjects";
 import type { AppState } from "@/lib/store";
 import type { PlannedActivity, ActivityKind, ReasonCode } from "./types";
-import { candidateForSkill, legacyCandidateForSkill, lessonForSkill, type Candidate } from "./candidates";
+import { aulaConcluidaDaHabilidade, candidateForSkill, legacyCandidateForSkill, lessonIdsForSkill, type Candidate } from "./candidates";
 import { classifySkill, prerequisiteSatisfied, type SkillClassification } from "./classify";
 import { scoreCandidate, type MateriaPeso } from "./scoring";
 import { deveInserirCheckpoint } from "./checkpoint";
@@ -24,14 +24,18 @@ import { confidence } from "./confidence";
 import { ALGO_VERSION } from "./constants";
 import {
   BONUS_DEFICIT,
+  DESAFIO_MAX_JANELA,
   ITEM_SEGUNDOS_PADRAO,
   JANELA_EQUILIBRIO,
   JANELA_MIX,
-  MAX_DESAFIOS_POR_10,
   MAX_MESMA_MATERIA_SEGUIDAS,
   MIX_ALVO,
   PLANO_N,
+  REVISAO_ATRASO_DIAS,
   REVISAO_MAX_ATRASO,
+  REVISAO_MIN_JANELA,
+  REVISAO_MIN_JANELA_ATRASO,
+  REVISAO_TETO_JANELA,
 } from "./constants";
 
 function fnv1a(str: string): number {
@@ -64,7 +68,7 @@ interface SlotEntry {
 }
 
 /** Matérias permitidas pelo foco (§11.5 algoritmo). */
-function materiasPermitidas(s: Pick<AppState, "prefs" | "learning">, today: string): Set<string> {
+export function materiasPermitidas(s: Pick<AppState, "prefs" | "learning">, today: string): Set<string> {
   const fs = s.learning.focusSession;
   if (fs && fs.expiresOn >= today) return new Set(fs.subjectIds);
   const focus = s.prefs.studyFocus;
@@ -148,8 +152,11 @@ export function planNext(
     kind: h.kind,
   }));
 
+  const seqBase = s.learning.journey.seq ?? s.learning.journey.history.length;
   const plano: PlannedActivity[] = [];
   const planoSlots: SlotEntry[] = [];
+  /** Desafios vindos do sinal do checkpoint neste plano — máx. 1 (docs/36 T-04.4). */
+  let desafiosPorSinalNoPlano = 0;
   let guard = 0;
 
   while (plano.length < n && guard < n * 20) {
@@ -160,7 +167,7 @@ export function planNext(
       completedAt: h.completedAt,
     }));
     if (deveInserirCheckpoint(s.learning, checkpointJanela, today, checkpointsHabilitado)) {
-      const id = `atv-${today}-${fnv1a(`${seed}:checkpoint:${plano.length}`)}`;
+      const id = `atv-${today}-${fnv1a(`${seed}:checkpoint:${plano.length}:${seqBase}`)}`;
       const atividade: PlannedActivity = {
         id,
         kind: "checkpoint",
@@ -197,11 +204,10 @@ export function planNext(
       const prereqsSatisfeitos = sk.prerequisites.every((pid) => {
         const p = SKILL_MAP[pid];
         if (!p) return true;
-        const aulaDoPrereq = lessonForSkill(pid);
-        return prerequisiteSatisfied(p, s.learning, aulaDoPrereq ? [aulaDoPrereq.id] : [], today);
+        return prerequisiteSatisfied(p, s.learning, lessonIdsForSkill(pid), today);
       });
-      const aulaDaHabilidade = lessonForSkill(sk.id);
-      const aulaConcluida = aulaDaHabilidade ? Boolean(s.learning.completedLessons[aulaDaHabilidade.id]) : false;
+      // Aula (autoral OU gerada) concluída conta (docs/36 RF-5, C4b).
+      const aulaConcluida = aulaConcluidaDaHabilidade(sk.id, s.learning.completedLessons);
       const classification = classifySkill(sk, s.learning, today, {
         temConteudo: true,
         aulaConcluida,
@@ -209,8 +215,10 @@ export function planNext(
       });
       if (classification.state === "IGNORAR" || classification.state === "BLOQUEADA") continue;
 
-      const principal = candidateForSkill(sk, classification.state, s.learning, today);
-      const legado = legacyCandidateForSkill(sk.id, classification.state, s.learning);
+      const principal = candidateForSkill(sk, classification.state, s.learning, today, {
+        sinalDeDesafioPermitido: desafiosPorSinalNoPlano < 1,
+      });
+      const legado = legacyCandidateForSkill(sk.id, classification.state, s.progress.lessons ?? {});
       for (const cand of [principal, legado]) {
         if (!cand) continue;
         // Restrição dura: nunca a mesma habilidade duas vezes seguidas, EXCETO aula→prática da mesma.
@@ -225,10 +233,10 @@ export function planNext(
           const ultimasMesmaMateria = [anterior, penultima].filter((e) => e && e.subjectId === sk.subjectId).length;
           if (ultimasMesmaMateria >= MAX_MESMA_MATERIA_SEGUIDAS) continue;
         }
-        // Restrição dura: desafio no máximo MAX_DESAFIOS_POR_10 a cada 10.
+        // Restrição dura: desafio no máximo DESAFIO_MAX_JANELA a cada 10.
         if (cand.kind === "desafio") {
           const desafiosNaJanela = janelaMaisPlano.slice(-JANELA_MIX).filter((e) => e.kind === "desafio").length;
-          if (desafiosNaJanela >= MAX_DESAFIOS_POR_10) continue;
+          if (desafiosNaJanela >= DESAFIO_MAX_JANELA) continue;
         }
 
         const evidence = s.learning.skillEvidence[sk.id];
@@ -272,14 +280,46 @@ export function planNext(
 
     if (candidatos.length === 0) break; // nada elegível — quem chama decide (planWithFallback ou "infinita" vazia, Fase 12).
 
-    candidatos.sort((x, y) => {
+    const porScore = (x: Scored, y: Scored) => {
       if (y.score !== x.score) return y.score - x.score;
       if (x.cand.skillId !== y.cand.skillId) return x.cand.skillId < y.cand.skillId ? -1 : 1;
       return fnv1a(`${seed}:${x.cand.skillId}`) - fnv1a(`${seed}:${y.cand.skillId}`);
-    });
-    const escolhido = candidatos[0];
+    };
+    candidatos.sort(porScore);
+
+    // Cota mínima de revisão (docs/36 T-04.3, G4/RP-3). O score sozinho deixa a
+    // revisão perder para NOVA quando o atraso é pequeno (necessidade 0,8 × 0,3
+    // contra `(1−M)` × 0,3 + urgência baixa) — com backlog, o aluno passava
+    // janelas inteiras sem revisar. Regra: com revisão devida disponível e
+    // menos que o mínimo na janela, esta posição recebe a melhor revisão,
+    // desde que a anterior não tenha sido revisão (intercala; nunca 2 forçadas
+    // seguidas). Teto simétrico (`REVISAO_TETO_JANELA`, 35 %): com várias revisões
+    // muito atrasadas o score sozinho chega a 4 por janela. Sem revisão devida, o
+    // plano segue 100 % "atual" (iniciante).
+    let escolhido = candidatos[0];
+    const revisoesDevidas = candidatos.filter((c) => c.cand.kind === "revisao");
+    if (revisoesDevidas.length > 0) {
+      // A janela de 10 que TERMINA nesta posição = as 9 anteriores + esta: se as 9 já
+      // têm o mínimo, a janela fecha OK mesmo sem revisão aqui; se não têm, esta posição
+      // precisa ser revisão (é o que garante "toda janela de 10 tem ≥ mínimo").
+      const janela = janelaMaisPlano.slice(-(JANELA_MIX - 1));
+      const revisoesNaJanela = janela.filter((e) => e.kind === "revisao").length;
+      const atrasada = revisoesDevidas.some((c) => c.diasAtraso > REVISAO_ATRASO_DIAS);
+      const minimo = atrasada ? REVISAO_MIN_JANELA_ATRASO : REVISAO_MIN_JANELA;
+      const ultima = janelaMaisPlano[janelaMaisPlano.length - 1] ?? null;
+      if (revisoesNaJanela >= REVISAO_TETO_JANELA) {
+        // Teto (RP-3, 35 %): sem estourar a janela — mas nunca esvazia o plano.
+        const semRevisao = candidatos.find((c) => c.cand.kind !== "revisao");
+        if (semRevisao && escolhido.cand.kind === "revisao") escolhido = semRevisao;
+      } else if (revisoesNaJanela < minimo && ultima?.kind !== "revisao") {
+        escolhido = revisoesDevidas[0]; // já ordenado por score
+      }
+    }
     const equilibrioForte = escolhido.breakdown.equilibrio > 0.15;
-    const id = `atv-${today}-${fnv1a(`${seed}:${escolhido.cand.skillId}:${plano.length}`)}`;
+    // `seqBase` (docs/36 RF-7): contador monotônico da jornada — o id nunca colide
+    // com uma atividade já concluída/descartada do mesmo dia, e continua estável
+    // entre renders (só muda em conclusão/descarte).
+    const id = `atv-${today}-${fnv1a(`${seed}:${escolhido.cand.skillId}:${plano.length}:${seqBase}`)}`;
 
     const atividade: PlannedActivity = {
       id,
@@ -294,6 +334,7 @@ export function planNext(
       scoreBreakdown: escolhido.breakdown as unknown as Record<string, number>,
     };
     plano.push(atividade);
+    if (escolhido.cand.porSinalDeDesafio) desafiosPorSinalNoPlano++;
     planoSlots.push({ skillId: escolhido.cand.skillId, subjectId: escolhido.cand.subjectId, kind: escolhido.cand.kind });
 
     if (opts.gravarTrace) {

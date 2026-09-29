@@ -48,7 +48,7 @@ Teste do João (`14`): o João abre o app no ônibus com 60 segundos de disposi�
 - O2 — A trilha é um caminho vertical em zigue-zague **orientado por dados** (`nodes.map`), igual para 3 ou 117 nós.
 - O3 — Marcos determinísticos e reais: carimbo de capítulo (concluído / pendente, com estrelas somadas), revisão de capítulo como checkpoint, cabeçalho de seção.
 - O4 — Identidade Foca "Rabisco na Margem": caneta azul traça o que foi feito, grafite/lápis esboça o que falta, rabiscos temáticos na margem, a Foca só onde há transição emocional.
-- O5 — Mobile-first de 320 a 440 px; desktop mantém a coluna central de 440 px (decisão D-7).
+- O5 — Mobile-first de 320 a 440 px; desktop mantém a coluna central de 440 px (decisão D-7). *(Nota 28/09/2026: substituída em ≥ 768 px pelo `36` §F.6 — coluna de 560–640 px e `NavRail` a partir de 1024 px; no mobile continua 440. O caminho em si segue com `--path-col` = 440 px. Ver D-7.)*
 - O6 — Rolagem até o nó atual ao entrar, sem brigar com a restauração de scroll do router e sem repetir a cada render.
 - O7 — URL pública HTTPS do Foca atual, abrindo no celular sem login, com refresh de rota funcionando.
 
@@ -466,7 +466,7 @@ Não se aplica — nenhuma chave, tipo persistido ou migração nova. `TrailMode
 | D-4 | Callout **abaixo** do nó foco, com a Foca dentro | zona do polegar; a Foca fica na transição "retomar"; uma Foca só |
 | D-5 | `TrailHeader` vira barra de métricas não-sticky | só os chips ficam fixos; economiza altura no celular |
 | D-6 | Cabeçalho de capítulo sticky por CSS dentro do segmento | zero JS; contexto sempre visível |
-| D-7 | Desktop mantém a coluna de 440 px, sem barras laterais | `PhoneFrame`, bottom nav e FAB são 440 px em todo o app; não há conteúdo real para laterais (sem ligas, sem missões); consistência > espaço |
+| D-7 | Desktop mantém a coluna de 440 px, sem barras laterais | `PhoneFrame`, bottom nav e FAB são 440 px em todo o app; não há conteúdo real para laterais (sem ligas, sem missões); consistência > espaço. **Nota (28/09/2026):** substituída em ≥ 768 px pelo `36` §F.6 (coluna de 560–640 px, `NavRail` a partir de 1024 px, pedido explícito do usuário); no mobile e no caminho (`--path-col`) continua 440 px. |
 | D-8 | Capítulos concluídos e não iniciados ficam recolhidos por padrão | reduz rolagem e DOM; o carimbo no cabeçalho mantém a sensação de jornada |
 | D-9 | Nada de animação de entrada no scroll | ruído com dezenas de nós; `motion-design` 1/3 |
 | D-10 | Sem `content-visibility` nas linhas | contenção de pintura cortaria o conector |

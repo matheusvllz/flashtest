@@ -9,6 +9,10 @@ import { FEATURES } from "../../src/lib/features";
  * esperados vêm da PRÓPRIA flag (`FEATURES.trilhaComoHome`), lida em vez de
  * fixada em "5" — passa hoje (nav v1, 5 itens) e passa depois de T-22 sem
  * precisar editar este arquivo.
+ *
+ * docs/36 T-08.2: há DOIS `<nav>` no DOM (a `BottomNav` some em ≥ 1024 px e o
+ * `NavRail` só aparece nessa largura) — os seletores CSS usam `nav:visible` para
+ * contar só o que o aluno vê; o `getByRole` do Playwright já ignora o oculto.
  */
 test("bottom nav mostra os itens certos pro estado atual da flag, com aria-current correto", async ({
   page,
@@ -23,13 +27,13 @@ test("bottom nav mostra os itens certos pro estado atual da flag, com aria-curre
 
   await expect(nav.getByRole("link")).toHaveCount(expectedHrefs.length);
   for (const href of expectedHrefs) {
-    await expect(page.locator(`nav a[href="${href}"]`)).toHaveCount(1);
+    await expect(page.locator(`nav:visible a[href="${href}"]`)).toHaveCount(1);
   }
 
   // O item "início" (Início na v1, Aprender na v2) tem `aria-current="page"`
   // na tela atual (`/dashboard`, que a nav v1 trata como raiz).
   const homeHref = FEATURES.trilhaComoHome ? "/trilha" : "/dashboard";
-  await expect(page.locator(`nav a[href="${homeHref}"]`)).toHaveAttribute("aria-current", "page");
+  await expect(page.locator(`nav:visible a[href="${homeHref}"]`)).toHaveAttribute("aria-current", "page");
 
   // Em `/redacao`: na v2, "Aprender" (`/trilha`) acende porque `isNavActive`
   // trata redação como parte do mesmo pilar (docs/25 §12.5); na v1, é o
@@ -37,7 +41,7 @@ test("bottom nav mostra os itens certos pro estado atual da flag, com aria-curre
   // testamos o que está de fato ativo hoje.
   await page.goto("/redacao", { waitUntil: "domcontentloaded" });
   const redacaoActiveHref = FEATURES.trilhaComoHome ? "/trilha" : "/redacao";
-  await expect(page.locator(`nav a[href="${redacaoActiveHref}"]`)).toHaveAttribute(
+  await expect(page.locator(`nav:visible a[href="${redacaoActiveHref}"]`)).toHaveAttribute(
     "aria-current",
     "page",
     { timeout: 15000 },

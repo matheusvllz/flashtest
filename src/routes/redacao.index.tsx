@@ -77,7 +77,7 @@ function Redacao() {
             to="/redacao/$licaoId"
             params={{ licaoId: next.lesson.id }}
             className="card-soft mt-5 block p-4"
-            style={{ borderColor: "var(--color-mar)" }}
+            style={{ borderColor: "var(--mar)" }}
           >
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
@@ -101,12 +101,14 @@ function Redacao() {
       {/* Eixos: a redação em si e a base de português que sustenta a nota. */}
       <div className="sticky top-0 z-10 flex gap-2 border-b-2 border-gelo bg-neve/95 px-5 py-3 backdrop-blur">
         <button
+          type="button"
           onClick={() => setEixo("redacao")}
           className={cn("chip", eixo === "redacao" && "chip-on")}
         >
           Redação
         </button>
         <button
+          type="button"
           onClick={() => setEixo("base")}
           className={cn("chip", eixo === "base" && "chip-on")}
         >
@@ -181,7 +183,7 @@ function TrilhaCard({
                 className={cn(
                   "grid h-11 w-11 shrink-0 place-items-center rounded-full font-display text-[13px] font-bold",
                   prog
-                    ? "bg-mar text-white"
+                    ? "bg-mar text-on-mar"
                     : isAtual
                       ? cn(
                           "border-2 text-abismo",
@@ -191,7 +193,7 @@ function TrilhaCard({
                         ? "border-2 border-abismo text-abismo"
                         : "bg-gelo text-nevoa",
                 )}
-                style={isAtual && !prog ? { borderColor: "var(--color-mar)" } : undefined}
+                style={isAtual && !prog ? { borderColor: "var(--mar)" } : undefined}
               >
                 {prog ? <Check size={18} strokeWidth={3} /> : unlocked ? i + 1 : <Lock size={14} />}
               </div>

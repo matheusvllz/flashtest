@@ -104,10 +104,11 @@ export async function conteudoDoBanco(): Promise<{ items: CoverageItemInput[]; l
   const lessonSkillIds = new Set<string>();
   for (const arquivo of arquivos) {
     const pkg = JSON.parse(readFileSync(arquivo, "utf-8")) as {
-      items?: Array<{ meta: { skillIds: string[]; difficulty: 1 | 2 | 3 | 4 | 5; roles: ItemRole[]; validation: { status: string } } }>;
+      items?: Array<{ retired?: boolean; meta: { skillIds: string[]; difficulty: 1 | 2 | 3 | 4 | 5; roles: ItemRole[]; validation: { status: string } } }>;
       lessons?: Array<{ skillIds: string[] }>;
     };
     for (const item of pkg.items ?? []) {
+      if (item.retired) continue;
       for (const skillId of item.meta.skillIds) {
         items.push({ skillId, difficulty: item.meta.difficulty, roles: item.meta.roles, validationStatus: item.meta.validation.status });
       }
@@ -125,7 +126,8 @@ async function main() {
   const skills = activeSkills().map((s) => ({ id: s.id, status: s.status }));
   const banco = await conteudoDoBanco();
   const items = [
-    ...itemIndex().flatMap((entry) =>
+    // Item retirado (docs/36 T-07.6) não conta como cobertura.
+    ...itemIndex().filter((entry) => !entry.retired).flatMap((entry) =>
       entry.skills.map((skillId) => ({
         skillId,
         difficulty: entry.difficulty,

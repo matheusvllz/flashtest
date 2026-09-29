@@ -2,6 +2,8 @@
 
 > **Direção vigente — 21/09/2026:** ler a seção 7 de [20-plano-evolucao-aprendizagem.md](20-plano-evolucao-aprendizagem.md) antes de escrever copy. Ela substitui prescrições incompatíveis de sarcasmo, culpa e cobrança deste documento. Frases de feedback serão selecionadas no evento e armazenadas, nunca sorteadas no render. A revisão completa da biblioteca e o inventário editorial são tarefas futuras da fase 3; este aviso não declara essa revisão implementada.
 
+> **Guia operacional — 28/09/2026 (`38`):** para escrever texto do produto, da Foca ou do tutor, usar [COPY.md](COPY.md) e [copy/04-foca-ia.md](copy/04-foca-ia.md). Este arquivo passa a ser registro do arquétipo antigo e das expressões visuais; §4 (onde a Foca aparece) e a regra "piada fora da explicação" (§6) continuam úteis, mas as linhas de cobrança e a expressão "Cobrando" estão superadas pelo `20` §7.1.
+
 Status: 🟡 **em definição (20/09/2026)** — arquétipo escolhido, biblioteca de falas escrita, arte final pendente. Marca e logo: `09-branding.md`. Sistema de recompensa: `16-gamificacao-e-dopamina.md`.
 
 > Este arquivo é **operacional**: abra antes de escrever qualquer texto que o usuário vá ler. Se uma frase do app não passa no teste da Seção 8, ela não entra.

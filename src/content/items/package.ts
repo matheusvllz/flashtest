@@ -1,6 +1,6 @@
 import type { Exercise } from "@/lib/lessons/types";
 import type { MicroLessonV2 } from "@/lib/learning/types";
-import type { ItemMeta } from "./types";
+import type { ItemMeta, ItemSource } from "./types";
 
 /**
  * Formato de um pacote de conteúdo por matéria (docs/30 §21.3, Fase 3 T-3.7)
@@ -13,6 +13,12 @@ export interface ContentPackageItem {
   id: string;
   exercise: Exercise;
   meta: ItemMeta;
+  /**
+   * Item retirado de circulação pela revisão de qualidade (docs/36 §G.6): sai de pools, seleção,
+   * checkpoint e aulas novas, mas continua RESOLVÍVEL (tentativas antigas, sessão ativa e aulas
+   * que o referenciam não quebram). Ausente = `false`.
+   */
+  retired?: boolean;
 }
 
 export interface ContentPackage {
@@ -53,6 +59,14 @@ export interface GeneratedItemRef {
   c: number;
   roles: ItemMeta["roles"];
   status: ItemMeta["validation"]["status"];
+  /**
+   * Origem do item, só quando NÃO é o padrão `ia-validada` (item oficial: `{ kind, exam, year, ref }`),
+   * pra `metaFromRef` não afirmar "IA" sobre uma questão do ENEM enquanto o pacote não carregou
+   * (docs/36 T-07.5). Ausente = `{ kind: "ia-validada" }`.
+   */
+  source?: Pick<ItemSource, "kind" | "exam" | "year" | "ref">;
+  /** Item retirado (ver `ContentPackageItem.retired`); gravado só quando `true`. */
+  retired?: true;
 }
 
 /** Uma aula gerada pelo pipeline, registrada pra a árvore de currículo saber que ela existe (docs/30 §21.3). */

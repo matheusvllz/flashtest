@@ -121,6 +121,18 @@
             "revisada-humano",
             "oficial-conferida"
           ]
+        },
+        "reviewKind": {
+          "type": "string",
+          "enum": [
+            "humano",
+            "ia-delegada",
+            "gabarito-oficial",
+            "autoria-legada"
+          ]
+        },
+        "reviewNote": {
+          "type": "string"
         }
       }
     },

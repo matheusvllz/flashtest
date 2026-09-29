@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { bootstrapModel, priorPorMateria, replayAttempts } from "@/lib/adaptive/bootstrap";
 import { ALGO_VERSION } from "@/lib/adaptive/constants";
-import type { Attempt } from "@/lib/learning/types";
+import type { Attempt, SkillModelEntry } from "@/lib/learning/types";
 import type { AppState } from "@/lib/store";
 
 /**
@@ -131,6 +131,56 @@ describe("bootstrapModel (docs/30 §9.6)", () => {
     const a = bootstrapModel(estado, "2026-09-21T00:00:00.000Z");
     const b = bootstrapModel(estado, "2026-09-21T00:00:00.000Z");
     expect(a).toEqual(b);
+  });
+
+  // docs/36 T-04.1 (RP-5): o bootstrap não pode apagar o efeito do nivelamento.
+  function entrada(skillId: string, source: SkillModelEntry["source"], theta = -1.2): SkillModelEntry {
+    return {
+      skillId, theta, sigma: 0.9, nEff: source === "evidencia" ? 3 : 0, difficultiesSeen: [], recent: [],
+      independentShare: 0, lastEvidenceDate: null, lapses: 0, dontKnowRecent: 0, helpHeavyRecent: 0,
+      source, algoVersion: 1, updatedAt: "2026-09-20T00:00:00.000Z",
+    };
+  }
+
+  test("prior-nivelamento existente + replay vazio -> entrada mantida (não é recalculada)", () => {
+    const prior = entrada("mat:razao-proporcao", "prior-nivelamento");
+    const estado = estadoBase({ recentAttempts: [], skillModel: { "mat:razao-proporcao": prior } });
+    const model = bootstrapModel(estado, "2026-09-21T00:00:00.000Z");
+    expect(model["mat:razao-proporcao"]).toBe(prior);
+    // e o prior de matéria não passa por cima dele
+    expect(model["mat:razao-proporcao"].source).toBe("prior-nivelamento");
+  });
+
+  test("evidencia existente que o replay não cobre (saiu do anel de tentativas) -> mantida", () => {
+    const ev = entrada("mat:razao-proporcao", "evidencia", 0.4);
+    const model = bootstrapModel(estadoBase({ recentAttempts: [], skillModel: { "mat:razao-proporcao": ev } }), "2026-09-21T00:00:00.000Z");
+    expect(model["mat:razao-proporcao"]).toBe(ev);
+  });
+
+  test("prior-materia existente é recalculado (não é mantido como estava)", () => {
+    const velho = entrada("mat:razao-proporcao", "prior-materia", 1.9);
+    const model = bootstrapModel(estadoBase({ recentAttempts: [], skillModel: { "mat:razao-proporcao": velho } }), "2026-09-21T00:00:00.000Z");
+    expect(model["mat:razao-proporcao"]).not.toBe(velho);
+    expect(model["mat:razao-proporcao"].source).toBe("prior-materia");
+    expect(model["mat:razao-proporcao"].theta).not.toBeCloseTo(1.9, 3);
+  });
+
+  test("habilidade que o replay tocou vem do replay, mesmo com prior-nivelamento anterior", () => {
+    const prior = entrada("mat:porcentagem-conceito", "prior-nivelamento");
+    const model = bootstrapModel(
+      estadoBase({ recentAttempts: [attempt()], skillModel: { "mat:porcentagem-conceito": prior } }),
+      "2026-09-21T00:00:00.000Z",
+    );
+    expect(model["mat:porcentagem-conceito"].source).toBe("evidencia");
+    expect(model["mat:porcentagem-conceito"].nEff).toBeGreaterThan(0);
+  });
+
+  test("com mescla continua idempotente: rodar sobre a própria saída não muda nada", () => {
+    const prior = entrada("mat:razao-proporcao", "prior-nivelamento");
+    const base = estadoBase({ recentAttempts: [attempt()], skillModel: { "mat:razao-proporcao": prior } });
+    const a = bootstrapModel(base, "2026-09-21T00:00:00.000Z");
+    const b = bootstrapModel({ ...base, learning: { ...base.learning, skillModel: a } }, "2026-09-21T00:00:00.000Z");
+    expect(b).toEqual(a);
   });
 
   test("roda em menos de 10ms com 500 tentativas (docs/30 §9.6)", () => {

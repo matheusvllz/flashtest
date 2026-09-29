@@ -1,0 +1,715 @@
+[
+  {
+    "id": "gen:geo:climatologia-fenomenos:b651838c",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.511,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.895,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,51, correta a mais longa); distratores um pouco mais detalhados e ligados a confusões comuns (filtro solar, ozônio). Correta preservada.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:c8c225bc",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.6,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.901,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,60); distratores curtos (31 a 40 caracteres) contra a correta de 64; agora no mesmo nível de detalhe e plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:geopolitica-globalizacao:4246308f",
+    "arquivo": "src/content/banco/geo/geo-geopolitica-globalizacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.613,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.864,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,61); distratores de 29 a 31 caracteres contra 50; agora com detalhe parecido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:geopolitica-globalizacao:d1d6bfb8",
+    "arquivo": "src/content/banco/geo/geo-geopolitica-globalizacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.542,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.023,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,54); correta encurtada (91 para 86 caracteres) e distratores detalhados; conteúdo da correta preservado.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:28387c17",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.622,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.914,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,62) e absolutismo (automática); distratores curtos ('Redução de diferenças sociais') e contraditórios com o enunciado; agora plausíveis com o mesmo detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:3ec2cb14",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.556,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.058,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,56) e 'automática' (absolutismo); distratores mais plausíveis e de tamanho parecido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:74f6685a",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.714,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.012,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao",
+      "reclassificar"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,71); explicação com 'irreversível' (exagero), reescrita. R7: a relação causa e efeito pedida está quase dada no enunciado (encosta, córregos, sem saneamento), dificuldade 4 era alta; meta 3.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 4,
+    "dificuldadeDepois": 3,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:4f6eedc9",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.943,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.934,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,94; correta com 171 caracteres e o absolutismo 'completamente'); correta enxugada e distratores no mesmo nível de detalhe.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:400a5bf8",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "2",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.626,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.938,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Estrato 2 (expansão) (razão 1,63); R2/R3: a correta afirmava que o Brasil 'estava obrigado' a se alinhar e seria 'punido militarmente', exagero (a política externa independente do início dos anos 1960 mostra margem de manobra); reescrita como 'forte pressão'. Absolutismo (absoluta, forma alguma).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:1d539c60",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.13,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.927,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 3 (expansão); distratores agora ligados a confusões comuns (ozônio, radiação ultravioleta, reflexão da luz) e com detalhe parecido. Gabarito conferido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:334ac333",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.969,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.929,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ajustado",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "reclassificar"
+    ],
+    "motivo": "Expansão do estrato ('aumento uniforme em todo o país' contradizia o enunciado); distratores mais plausíveis. R7: o enunciado entrega os dados (seca no Nordeste em anos de El Niño), então a resposta é uma leitura direta; dificuldade 4 → 3.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "dificuldadeAntes": 4,
+    "dificuldadeDepois": 3,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:43421d9a",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.429,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.94,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 3 (expansão) (razão 1,43) e absolutismo ('exclusivamente', 'exatamente'); distratores plausíveis com o mesmo detalhe. Fato conferido (NAO positiva, invernos mais suaves).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:5034015f",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.429,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.923,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 3 (expansão) (razão 1,43); distratores curtos e sem sentido ('a temperatura não sofre alteração') trocados por equívocos sobre densidade e salinidade.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:77710338",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.133,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.955,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 3 (expansão); distrator 'o ciclo do carbono inverteu-se completamente' absurdo e curto; distratores no mesmo nível de detalhe. Números conferidos (180 ppm, 420 ppm, cerca de 2,3 vezes).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:a096e28b",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.182,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.788,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 3 (expansão); a correta era estritamente a mais longa por poucos caracteres (26 contra 22); distrator C ganha um complemento, sem alterar a lógica (nomes de oceano/mar).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:geopolitica-globalizacao:3b3f208f",
+    "arquivo": "src/content/banco/geo/geo-geopolitica-globalizacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "3",
+    "marcasEstrato1": [],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1,
+        "corretaMaisLonga": false,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.739,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Estrato 3 (expansão); dois distratores com absolutismo (Apenas, todas) e correta empatada como a mais longa; agora com detalhe parecido e sem pista. Gabarito conferido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": false,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  }
+]

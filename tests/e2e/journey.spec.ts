@@ -8,16 +8,7 @@ import { expect, test } from "@playwright/test";
  * aqui) sem tocar em `src/lib/features.ts`.
  */
 
-const USUARIO_ONBOARDED = {
-  authed: true,
-  onboarded: true,
-  prefs: { name: "Ana", sound: true, haptics: true, theme: "auto", dailyLessons: 3 },
-  progress: { xp: 100, streak: 2, lessonsCompleted: 1, completedQuestions: [] },
-  quiz: { answers: [], gaps: [], completedAt: "2026-01-01T00:00:00.000Z" },
-  tutor: { open: false, messages: [], focus: null },
-  premiumTrial: { active: false, startedAt: null },
-  offline: { downloaded: false },
-};
+import { comAtividades, definirFlags, lerEstado, seedOnce, USUARIO_ONBOARDED } from "./helpers/estado";
 
 /**
  * Estado com uma atividade de prática JÁ comprometida (`mat:porcentagem-conceito`,
@@ -25,56 +16,24 @@ const USUARIO_ONBOARDED = {
  * `committed` com exatamente 3 entradas e `planVersion` em dia faz
  * `ensurePlan` não substituir o seed por um plano do motor (que dependeria
  * de pontuação entre ~65 habilidades, não determinístico o bastante pra um
- * E2E). `parseJourney`/`pareceAtividadePlanejada` (`state-migrations.ts`) só
- * exigem `id`/`kind`/`subjectId`/`skillIds` como forma mínima — os campos
- * extras (`score`, `scoreBreakdown`, `targetP`) são os que o motor de
- * verdade também gravaria.
+ * E2E). Desde o docs/36 (T-01.2) o fixture vem de `helpers/estado.ts`
+ * (`comAtividades`), e o storage é semeado por `seedOnce` — nunca por um
+ * `addInitScript` incondicional, que apagaria o que o app gravou a cada
+ * navegação completa.
  */
 function comAtividadeComprometida() {
-  const atividade = (id: string) => ({
-    id,
-    kind: "pratica",
-    skillIds: ["mat:porcentagem-conceito"],
-    subjectId: "mat",
-    estimatedMinutes: 2,
-    reasons: ["consolidar"],
-    score: 1,
-    scoreBreakdown: {},
-    targetP: 0.7,
-  });
-  return {
-    ...USUARIO_ONBOARDED,
-    learning: {
-      journey: {
-        committed: [
-          atividade("atv-test-pratica"),
-          atividade("atv-test-2"),
-          atividade("atv-test-3"),
-        ],
-        upcoming: [],
-        history: [],
-        activeActivity: null,
-        sinceCheckpoint: 0,
-        lastCheckpointDate: null,
-        planVersion: 1,
-      },
-    },
-  };
+  return comAtividades(["pratica", "pratica", "pratica"]);
 }
 
 async function ligarJornada(page: import("@playwright/test").Page) {
-  await page.addInitScript(() => {
-    localStorage.setItem("foca.flags", JSON.stringify({ jornadaAdaptativa: true }));
-  });
+  await definirFlags(page, { jornadaAdaptativa: true });
 }
 
 /** `jornadaAdaptativa` é `true` em `BASE_FEATURES` desde a F15.1 (docs/32) — testar
  * o estado "flag desligada" agora precisa de um override explícito (`readFlagOverrides`,
  * `?debug=1`), não mais do padrão. */
 async function desligarJornada(page: import("@playwright/test").Page) {
-  await page.addInitScript(() => {
-    localStorage.setItem("foca.flags", JSON.stringify({ jornadaAdaptativa: false }));
-  });
+  await definirFlags(page, { jornadaAdaptativa: false });
 }
 
 async function responderComNaoSeiAteConcluir(page: import("@playwright/test").Page) {
@@ -95,10 +54,7 @@ async function responderComNaoSeiAteConcluir(page: import("@playwright/test").Pa
 test.describe("flag desligada — /trilha idêntica a hoje (AC-12.5)", () => {
   test("sem 'Sessão de hoje': mapa por matéria de sempre", async ({ page }) => {
     await desligarJornada(page);
-    await page.addInitScript(
-      (raw) => localStorage.setItem("foca.state.v3", JSON.stringify(raw)),
-      USUARIO_ONBOARDED,
-    );
+    await seedOnce(page, USUARIO_ONBOARDED);
     await page.goto("/trilha?debug=1", { waitUntil: "domcontentloaded" });
     await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
     await expect(page.getByRole("button", { name: /^Matemática/ })).toBeVisible();
@@ -108,10 +64,7 @@ test.describe("flag desligada — /trilha idêntica a hoje (AC-12.5)", () => {
 test.describe("flag ligada — jornada (AC-12.1, AC-12.2, AC-12.6)", () => {
   test.beforeEach(async ({ page }) => {
     await ligarJornada(page);
-    await page.addInitScript(
-      (raw) => localStorage.setItem("foca.state.v3", JSON.stringify(raw)),
-      USUARIO_ONBOARDED,
-    );
+    await seedOnce(page, USUARIO_ONBOARDED);
   });
 
   test("card 'Sessão de hoje': um CTA primário, motivo e minutos visíveis", async ({ page }) => {
@@ -178,10 +131,7 @@ test.describe("atividade dinâmica — /atividade/$activityId (AC-12.3)", () => 
     page,
   }) => {
     await ligarJornada(page);
-    await page.addInitScript(
-      (raw) => localStorage.setItem("foca.state.v3", JSON.stringify(raw)),
-      comAtividadeComprometida(),
-    );
+    await seedOnce(page, comAtividadeComprometida());
 
     await page.goto("/atividade/atv-test-pratica?debug=1", { waitUntil: "domcontentloaded" });
     await page.getByRole("button", { name: "Começar" }).click();
@@ -206,18 +156,39 @@ test.describe("atividade dinâmica — /atividade/$activityId (AC-12.3)", () => 
         (h: { activityId: string }) => h.activityId === "atv-test-pratica",
       ),
     ).toBe(true);
-    expect(estado.learning.rewardLedger["atividade:atv-test-pratica"]).toBeDefined();
+    // Ledger por TENTATIVA (docs/36 RF-6): `atividade:<id>@<startedAt>`, pois a rota inicia a tentativa.
+    expect(
+      Object.keys(estado.learning.rewardLedger).some((k: string) => k.startsWith("atividade:atv-test-pratica")),
+    ).toBe(true);
   });
 
   test("id que não é a atividade ativa nem a comprometida atual redireciona pra /trilha", async ({
     page,
   }) => {
     await ligarJornada(page);
-    await page.addInitScript(
-      (raw) => localStorage.setItem("foca.state.v3", JSON.stringify(raw)),
-      USUARIO_ONBOARDED,
-    );
+    await seedOnce(page, USUARIO_ONBOARDED);
     await page.goto("/atividade/id-que-nao-existe?debug=1", { waitUntil: "domcontentloaded" });
     await page.waitForURL(/\/trilha/, { timeout: 10000 });
+  });
+});
+
+test.describe("harness — seedOnce não resemeia (docs/36 T-01.2)", () => {
+  test("uma mutação gravada pelo app/teste sobrevive a page.reload()", async ({ page }) => {
+    await ligarJornada(page);
+    await seedOnce(page, comAtividadeComprometida());
+    await page.goto("/trilha?debug=1", { waitUntil: "domcontentloaded" });
+    await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
+
+    // Mutação simulando "o app gravou algo depois do seed".
+    await page.evaluate(() => {
+      const s = JSON.parse(localStorage.getItem("foca.state.v3")!);
+      s.progress.xp = 4242;
+      localStorage.setItem("foca.state.v3", JSON.stringify(s));
+    });
+    await page.reload({ waitUntil: "domcontentloaded" });
+    await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
+
+    const estado = await lerEstado(page);
+    expect(estado.progress.xp).toBe(4242);
   });
 });

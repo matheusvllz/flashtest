@@ -7,25 +7,25 @@
         "type": "multipla-escolha",
         "pergunta": "O coração bombeia sangue para os pulmões e para o resto do corpo. A qual sistema corporal o coração pertence?",
         "opcoes": [
-          "Sistema circulatório — coração e vasos sanguíneos transportam nutrientes e oxigênio pelo corpo",
-          "Sistema esquelético (ossos)",
-          "Sistema respiratório (pulmões respiram, coração não)",
-          "Sistema digestivo (processa alimento)"
+          "Sistema circulatório, que transporta o sangue com nutrientes e oxigênio pelo corpo",
+          "Sistema esquelético, formado pelos ossos, que sustentam e protegem os órgãos do corpo",
+          "Sistema respiratório, porque o coração participa diretamente da troca de gases",
+          "Sistema digestivo, que processa o alimento e distribui os nutrientes ao corpo"
         ],
         "correta": 0,
         "explicacao": "O coração é o órgão central do sistema circulatório. Ele recebe dos pulmões o sangue rico em oxigênio e o bombeia pelas artérias para os órgãos; recebe dos órgãos, pelas veias, o sangue pobre em oxigênio e o bombeia para os pulmões. Assim, o sistema circulatório leva oxigênio e nutrientes às células e retira o gás carbônico. A troca gasosa em si acontece nos pulmões (sistema respiratório); o coração faz o transporte."
       },
       "meta": {
         "id": "gen:bio:fisiologia-humana-sistemas:5755907d",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:fisiologia-humana-sistemas"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.618Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"
@@ -70,8 +72,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -117,7 +120,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -163,7 +167,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +182,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -209,7 +214,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +229,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -255,7 +261,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +276,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -300,8 +307,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +323,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -346,8 +354,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +370,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -375,25 +384,25 @@
         "type": "multipla-escolha",
         "pergunta": "Em uma situação de estresse agudo, a glândula adrenal libera adrenalina, causando aumento da frequência cardíaca e da pressão arterial. Qual caminho neural ativa a medula adrenal e qual hormônio amplifica essa resposta de forma prolongada?",
         "opcoes": [
-          "Nervo simpático estimula a medula adrenal; adrenalina amplifica a resposta inicialmente e cortisol sustenta a resposta",
-          "Nervo vago estimula a medula adrenal; insulina amplifica a resposta",
-          "Nervo acessório estimula a medula adrenal; glucagon amplifica a resposta",
-          "Nervo parassimpático estimula a medula adrenal; cortisol amplifica a resposta"
+          "Fibras simpáticas (nervo esplâncnico) estimulam a medula adrenal; o cortisol sustenta a resposta",
+          "O nervo vago estimula a medula adrenal; a insulina, liberada pelo pâncreas, amplifica a resposta",
+          "O nervo acessório estimula a medula adrenal; o glucagon, liberado pelo pâncreas, amplifica a resposta",
+          "Fibras parassimpáticas estimulam a medula adrenal; o cortisol, do córtex, sustenta a resposta"
         ],
         "correta": 0,
         "explicacao": "O sistema simpático via nervo esplâncnico ativa a medula adrenal a liberar adrenalina (efeito rápido). O córtex adrenal libera cortisol, que sustenta a resposta de estresse a longo prazo. O parassimpático reduz a frequência, a insulina diminui glicemia, e o glucagon aumenta glicemia mas não amplifica o estresse de forma geral."
       },
       "meta": {
         "id": "gen:bio:fisiologia-humana-sistemas:a2f24d07",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:fisiologia-humana-sistemas"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +417,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-04"
         },
         "examProfiles": [
           "enem"
@@ -438,8 +449,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +465,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -484,8 +496,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +512,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -513,17 +526,17 @@
         "type": "multipla-escolha",
         "pergunta": "Uma lesão no córtex motor primário de um hemisfério cerebral causa paralisia do lado oposto do corpo. Por qual processo neurológico isso ocorre?",
         "opcoes": [
-          "A lesão cerebral afeta diretamente os neurônios motores da medula espinal",
-          "Decussação das fibras piramidais: 90% das fibras nervosas motoras cruzam no bulbo raquídeo",
-          "O tálamo redireciona todos os sinais motores para o lado oposto",
-          "As fibras nervosas do cérebro não cruzam para o lado oposto"
+          "A lesão no córtex danifica diretamente os neurônios motores que ficam na medula espinal",
+          "Decussação das fibras piramidais: a maior parte das fibras motoras cruza no bulbo raquídeo",
+          "O tálamo recebe os comandos do córtex e os redireciona para o lado oposto do corpo",
+          "As fibras motoras descem pelo mesmo lado do cérebro, sem cruzar, até chegar aos músculos do corpo"
         ],
         "correta": 1,
         "explicacao": "As fibras do trato corticoespinal (fibras piramidais) sofrem decussação (cruzamento), principalmente no bulbo raquídeo, e por isso cada hemisfério controla os movimentos do lado oposto do corpo. Uma lesão no córtex motor esquerdo afeta o lado direito. A lesão é no córtex, não na medula, e o tálamo retransmite sinais sensoriais, não redireciona os comandos motores."
       },
       "meta": {
         "id": "gen:bio:fisiologia-humana-sistemas:c357f051",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:fisiologia-humana-sistemas"
         ],
@@ -531,7 +544,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +559,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-01"
         },
         "examProfiles": [
           "enem"
@@ -577,7 +592,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +607,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -623,7 +639,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +654,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:32:30.875Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -651,25 +668,25 @@
         "type": "multipla-escolha",
         "pergunta": "Um paciente chega ao hospital reclamando de fraqueza muscular progressiva e dificuldade de respiração. Exames mostram que o coração está funcionando normalmente, mas o diafragma (principal músculo da respiração) e os músculos das pernas estão enfraquecidos. Uma biópsia revela dano mitocondrial. Qual sistema do corpo está diretamente afetado, e por quê?",
         "opcoes": [
-          "Sistema nervoso, porque neurônios não conseguem enviar sinais aos músculos",
-          "Sistema endócrino, porque as glândulas não secretam hormônios suficientes",
-          "Sistema circulatório, porque o coração não consegue bombear sangue suficiente",
-          "Sistema respiratório e sistema muscular, porque as mitocôndrias produzem ATP (energia) que músculos precisam para contração"
+          "Sistema nervoso, porque os neurônios não conseguem enviar sinais aos músculos das pernas e ao diafragma",
+          "Sistema endócrino, porque as glândulas não secretam hormônios em quantidade suficiente",
+          "Sistema circulatório, porque o coração não consegue bombear sangue em quantidade suficiente",
+          "Sistema muscular e respiratório, porque as mitocôndrias fornecem o ATP que os músculos usam para se contrair"
         ],
         "correta": 3,
         "explicacao": "Mitocôndrias geram ATP através da respiração celular. Músculos e diafragma consomem muita energia para contrações repetidas. Dano mitocondrial reduz ATP disponível e causa fraqueza muscular e falha respiratória. O coração é músculo, mas tem perfusão sanguínea melhor e suporta dano mitocondrial moderado por mais tempo."
       },
       "meta": {
         "id": "gen:bio:fisiologia-humana-sistemas:63ab8545",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "bio:fisiologia-humana-sistemas"
         ],
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -684,7 +701,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T22:49:56.099Z",
-          "reviewer": "amostra"
+          "reviewer": "amostra",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "bio-qui-fis-lote-03"
         },
         "examProfiles": [
           "enem"

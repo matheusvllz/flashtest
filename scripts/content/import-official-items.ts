@@ -25,6 +25,7 @@
 import { createHash } from "node:crypto";
 import type { MultipleChoiceExercise } from "@/lib/lessons/types";
 import type { ItemMeta } from "@/content/items/types";
+import { irtFromDifficulty } from "@/content/items/irt";
 import { respostasIguais } from "./verify-utils";
 import { callStage } from "./run-stage";
 
@@ -119,12 +120,8 @@ export function buildItemMetaOficial(entrada: ItemOficialEntrada): ItemMeta {
     version: 1,
     skillIds: [entrada.skillId],
     difficulty: entrada.difficulty,
-    irt: {
-      a: 1,
-      b: 0,
-      c: entrada.exercise.opcoes.length > 0 ? 1 / entrada.exercise.opcoes.length : 0.2,
-      source: "estimado",
-    },
+    // docs/36 T-04.2: `b` pela dificuldade editorial (não mais 0 fixo); `c = 1/nOpções`; source continua "estimado" (parâmetros Inep não entram no modelo — §G.3).
+    irt: irtFromDifficulty(entrada.difficulty, entrada.exercise),
     roles: ["pratica", "revisao", "diagnostico"],
     estimatedSeconds: 90,
     dontKnowAllowed: true,
@@ -133,6 +130,8 @@ export function buildItemMetaOficial(entrada: ItemOficialEntrada): ItemMeta {
       status: "oficial-conferida",
       reviewedAt: new Date().toISOString(),
       reviewer: "solucionador-independente",
+      // docs/36 T-07.5: gabarito conferido contra a fonte oficial — a proveniência é essa, não "IA".
+      reviewKind: "gabarito-oficial",
     },
     examProfiles: ["enem"],
   };

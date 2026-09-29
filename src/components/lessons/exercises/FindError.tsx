@@ -22,6 +22,7 @@ export function FindErrorView({
           const isTheError = i === exercise.erroIndex;
           return (
             <button
+              type="button"
               key={i}
               disabled={checked}
               onClick={() => onAnswer(selected ? null : i)}

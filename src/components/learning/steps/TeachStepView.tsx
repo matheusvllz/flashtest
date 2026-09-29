@@ -10,7 +10,7 @@ export function TeachStepView({ step, onNext }: { step: TeachStep; onNext: () =>
   return (
     <div className="space-y-4">
       <LearningBlockView block={step.block} />
-      <button onClick={onNext} className="btn-primary w-full">
+      <button type="button" onClick={onNext} className="btn-primary w-full">
         {COPY.licao.continuar}
       </button>
     </div>

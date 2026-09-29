@@ -12,12 +12,27 @@
  * falta. Não declarar cobertura maior do que a registrada lá.
  */
 export const COPY = {
+  /** Textos reutilizáveis entre telas (docs/36 T-02.2; RU-3). */
+  comum: {
+    tentarDeNovo: "Tentar de novo",
+    fecharAviso: "Fechar aviso",
+    ok: "Ok",
+  },
+  /** Avisos de persistência local (docs/36 T-05.1/T-05.3; RU-4, RU-5, RU-6). Nunca prometem sincronização nem "salvo" quando não foi. */
+  persistencia: {
+    falhaAoSalvar: "Não consegui salvar neste aparelho. O que você fez agora pode se perder se fechar o app.",
+    storageRecuperado: "Não consegui ler seu progresso salvo. Guardei uma cópia e comecei do zero neste aparelho.",
+    versaoFutura:
+      "Seus dados são de uma versão mais nova do app. Recarregue a página para atualizar. Até lá, nada do que você fizer aqui fica salvo.",
+  },
   feedback: {
     verResolucao: "Ver resolução",
     ocultarResolucao: "Ocultar resolução",
     explicarMelhor: "Explicar melhor",
     continuar: "Continuar",
     verResultado: "Ver resultado",
+    /** Atribuição de item oficial na folha (docs/34, docs/36 RP-10): ano + prova, sem enfeite. */
+    fonteOficial: (fonte: string) => `Questão do ${fonte}`,
   },
   tutor: {
     nome: "Foca",
@@ -55,6 +70,13 @@ export const COPY = {
     sairTitulo: "Sair da lição?",
     sairCorpo:
       "Seu progresso nesta lição fica salvo — você retoma de onde parou na próxima vez.",
+    /** Variante sem promessa (docs/36 RF-14): usada quando a gravação local não está ok. */
+    sairCorpoSemSalvo:
+      "Não consegui guardar seu avanço. Se sair agora, talvez você precise recomeçar esta lição.",
+    /** Confirmação de saída da lição legada (`LessonPlayer`): a lição não grava pela metade. */
+    sairCorpoLegado:
+      "O progresso desta lição não fica salvo pela metade — você recomeça do zero na próxima vez.",
+    sairCorpoLegadoSemSalvo: "Se sair agora, você recomeça esta lição do zero na próxima vez.",
     sairFicar: "Continuar estudando",
     sairMesmo: "Sair mesmo assim",
     voceAprendeu: "Você aprendeu",
@@ -121,6 +143,8 @@ export const COPY = {
     fimDaMateria: (materia: string) => `Você fechou tudo o que está publicado em ${materia}.`,
     erroTitulo: "A trilha não carregou.",
     erroCorpo: "Tenta de novo. Seu progresso está salvo neste aparelho.",
+    /** Variante sem promessa (docs/36 RF-14): usada quando a gravação local não está ok. */
+    erroCorpoSemSalvo: "Tenta de novo.",
     tentarDeNovo: "Tentar de novo",
     abrirCapitulo: (titulo: string) => `Abrir ${titulo}`,
     recolherCapitulo: (titulo: string) => `Recolher ${titulo}`,
@@ -177,6 +201,18 @@ export const COPY = {
     checkpointConcluido: "Checkpoint concluído",
     checkpointPendente: "Checkpoint",
     recap: "Por agora é isso — seu progresso já está salvo.",
+    /** Variante sem promessa (docs/36 RF-14): usada quando a gravação local não está ok. */
+    recapSemSalvo: "Por agora é isso.",
+    /** Atividade descartada por falta de questões (docs/36 RU-1) — aviso de uma linha na Home. */
+    puladaSemItens: "Essa atividade ficou sem questões agora. Segui com a próxima.",
+    /** Carregando a atividade por mais de 400 ms (docs/36 RU-2). */
+    carregando: "Separando suas questões…",
+    /** Pacote de conteúdo indisponível (docs/36 RU-3). */
+    erroPacoteTitulo: "Não deu pra carregar agora.",
+    erroPacoteCorpo: "Confere a internet e tenta de novo.",
+    voltarTrilha: "Voltar à trilha",
+    /** Próxima atividade da fila no card da Home (docs/36 RU-12, T-06.2). */
+    depois: (titulo: string) => `Depois: ${titulo}`,
   },
   /** Modo foco (docs/30 §15, Fase 12 F12.9/F12.5). */
   foco: {
@@ -212,19 +248,50 @@ export const COPY = {
     ofertaCtaSecundario: "Começar sem nivelamento",
     ofertaRodape: "Dá pra fazer depois, pelo Perfil.",
   },
+  /** Seleção de curso (docs/36 §F.7, T-09.2/T-09.3, RU-40, RA-5). Textos do contrato; a contagem é anunciada por `aria-live`. */
+  cursos: {
+    rotuloBusca: "Curso",
+    placeholderBusca: "Buscar pelo nome",
+    areasAriaLabel: "Áreas",
+    escolhaUmaArea: "Escolha uma área ou busque pelo nome.",
+    naoAchei: "Não achei esse curso.",
+    usarTexto: (texto: string) => `Usar “${texto}”`,
+    aindaNaoDecidi: "Ainda não decidi",
+    escolhido: (curso: string) => `Escolhido: ${curso}`,
+    contagem: (n: number) => (n === 1 ? "1 curso" : `${n} cursos`),
+    perfilRotulo: "Curso pretendido",
+    perfilMudar: "Mudar",
+    perfilSheetTitulo: "Curso pretendido",
+  },
   /** Nivelamento adaptativo — CAT (docs/30 §12.3/§12.5, Fase 13 F13.4/F13.6/F13.8). */
   nivelamento: {
     tituloRota: "Nivelamento",
     duranteHint: "Sem dica nesta parte. Se não souber, toque em Não sei. Isso também ajuda a ajustar a trilha.",
     naoSei: "Não sei",
     pausarEContinuar: "Pausar e continuar depois",
-    resultadoTitulo: "Pronto.",
-    resultadoCorpo: "Isso é um ponto de partida, e ele fica mais preciso conforme você estuda.",
+    /** Resultado (docs/36 §F.5, RU-10) — o "Pronto." inicial é o que os E2E esperam. */
+    resultadoTitulo: "Pronto. Sua trilha foi ajustada.",
+    resultadoCorpo: "Isso é um ponto de partida, não uma nota. Muda conforme você estuda.",
+    /** Nenhuma área medida (todas com θ̂ nulo): o corpo troca (docs/36 §F.5, "sem respostas"). */
+    resultadoSemDados:
+      "Não tivemos questões suficientes para medir agora. Sua trilha começa pelo básico e se ajusta enquanto você estuda.",
     faixaBaseConstrucao: "Base em construção",
     faixaNoCaminho: "No caminho",
     faixaBaseFirme: "Base firme",
+    /** Precisão pela SE da ÁREA (docs/36 §F.5) — nunca a SE numérica. */
+    precisaoFirme: "Estimativa firme",
+    precisaoInicial: "Estimativa inicial",
+    precisaoPoucas: "Poucas questões. Vamos confirmar estudando.",
+    questoesRespondidas: (n: number) => (n === 1 ? "1 questão" : `${n} questões`),
+    /** `aria-label` do indicador de faixa: "{Área}: {faixa}. {precisão}." (a cor nunca é o único sinal). */
+    faixaAriaLabel: (area: string, faixa: string, precisao: string) =>
+      `${area}: ${faixa}. ${precisao.replace(/\.$/, "")}.`,
+    porOndeComecamos: "Por onde começamos",
+    primeiraAtividade: (titulo: string) => `Sua primeira atividade: ${titulo}`,
     areaNaoMedida: (area: string) => `Ainda não temos questões suficientes de ${area} para medir.`,
     ctaIrParaTrilha: "Ir para a trilha",
+    /** Aplicando o resultado do nivelamento, antes do resultado aparecer (docs/36 RU-11, T-03.3). */
+    aplicando: "Montando sua trilha…",
     fazerNivelamento: "Fazer nivelamento",
     refazerNivelamento: "Refazer nivelamento",
     continuarNivelamento: "Continuar nivelamento",
@@ -240,3 +307,13 @@ export const COPY = {
     agoraNao: "Agora não",
   },
 } as const;
+
+/**
+ * Escolhe entre a frase que afirma "salvo" e a neutra (docs/36 RF-14, G-15):
+ * só `"ok"` (a última gravação local deu certo) autoriza a promessa. Qualquer
+ * outro status (`falhou`, `versao-futura`) usa a variante sem promessa. Recebe
+ * o status como string para não importar o store aqui (copy.ts é folha).
+ */
+export function textoSePersistiu(persist: string, salvo: string, neutro: string): string {
+  return persist === "ok" ? salvo : neutro;
+}

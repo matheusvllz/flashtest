@@ -14,10 +14,10 @@ export function PlacementOffer({ onFazer, onPular }: { onFazer: () => void; onPu
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-nevoa">{COPY.onboarding.ofertaCorpo}</p>
       <div className="mt-6 flex flex-col gap-2.5">
-        <button onClick={onFazer} className="btn-primary w-full">
+        <button type="button" onClick={onFazer} className="btn-primary w-full">
           {COPY.onboarding.ofertaCtaPrimario}
         </button>
-        <button onClick={onPular} className="btn-outline w-full">
+        <button type="button" onClick={onPular} className="btn-outline w-full">
           {COPY.onboarding.ofertaCtaSecundario}
         </button>
       </div>

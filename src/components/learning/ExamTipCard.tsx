@@ -16,7 +16,7 @@ export function ExamTipCard({ tip, onDismiss }: { tip: ExamTip; onDismiss: () =>
         <p className="ds-label">Dica de prova</p>
         <p className="mt-1 text-[13px] leading-relaxed text-abismo">{tip.text}</p>
       </div>
-      <button onClick={onDismiss} aria-label="Dispensar dica" className="shrink-0 text-nevoa">
+      <button type="button" onClick={onDismiss} aria-label="Dispensar dica" className="shrink-0 text-nevoa">
         <X size={16} />
       </button>
     </div>

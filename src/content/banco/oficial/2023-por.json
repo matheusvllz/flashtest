@@ -26,7 +26,7 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
+          "b": -0.8,
           "c": 0.2,
           "source": "estimado"
         },
@@ -46,7 +46,8 @@
         "validation": {
           "status": "oficial-conferida",
           "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente"
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
@@ -78,7 +79,7 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
+          "b": -0.8,
           "c": 0.2,
           "source": "estimado"
         },
@@ -98,7 +99,8 @@
         "validation": {
           "status": "oficial-conferida",
           "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente"
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
@@ -130,7 +132,7 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
+          "b": 0.8,
           "c": 0.2,
           "source": "estimado"
         },
@@ -150,7 +152,8 @@
         "validation": {
           "status": "oficial-conferida",
           "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente"
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
@@ -202,7 +205,8 @@
         "validation": {
           "status": "oficial-conferida",
           "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente"
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"

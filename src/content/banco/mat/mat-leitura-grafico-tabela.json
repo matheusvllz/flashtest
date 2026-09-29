@@ -13,19 +13,19 @@
           "Janeiro"
         ],
         "correta": 0,
-        "explicacao": "Comparando: 100 < 110 < 120 < 130. Abril foi o campeão em vendas (130). Ler tabela certinho é base pra análise de dados no ENEM."
+        "explicacao": "Comparando: 100 < 110 < 120 < 130. Abril teve a maior venda (130). Ler a tabela com atenção é a base para qualquer análise de dados."
       },
       "meta": {
         "id": "gen:mat:leitura-grafico-tabela:aac59381",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "mat:leitura-grafico-tabela"
         ],
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -40,7 +40,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-08"
         },
         "examProfiles": [
           "enem"
@@ -70,8 +72,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -86,7 +88,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -116,8 +119,8 @@
         "difficulty": 1,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -1.6,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -132,7 +135,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -151,11 +155,11 @@
           "575"
         ],
         "correta": 0,
-        "explicacao": "Média = (500 + 600 + 550 + 700) / 4 = 2350 / 4 = 587,5. Média de dados tabulados é comum no ENEM."
+        "explicacao": "Média = (500 + 600 + 550 + 700) / 4 = 2350 / 4 = 587,5. Some os valores das quatro semanas e divida pelo número de semanas."
       },
       "meta": {
         "id": "gen:mat:leitura-grafico-tabela:a5bf2bb5",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "mat:leitura-grafico-tabela"
         ],
@@ -163,7 +167,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -178,7 +182,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -197,11 +203,11 @@
           "25%"
         ],
         "correta": 1,
-        "explicacao": "Total: 120 + 150 + 140 + 160 + 130 = 700. Percentual na quinta: (160/700) × 100 ≈ 22,86% ≈ 23%. Percentual de dados tabulados é algo que cai bastante."
+        "explicacao": "Total: 120 + 150 + 140 + 160 + 130 = 700. Percentual na quinta: (160 / 700) × 100 ≈ 22,86%, que arredonda para 23%. Some todos os dias para achar o total e depois divida a parte pelo total."
       },
       "meta": {
         "id": "gen:mat:leitura-grafico-tabela:ac337126",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "mat:leitura-grafico-tabela"
         ],
@@ -209,7 +215,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -224,7 +230,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -235,7 +243,7 @@
       "id": "gen:mat:leitura-grafico-tabela:27204e3e",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Uma tabela apresenta a altura de 4 alunos: Ana 1,60 m, Bruno 1,75 m, Carlos 1,70 m, Diana 1,65 m. Qual é a altura média dos 4 alunos?",
+        "pergunta": "Uma tabela apresenta a altura de 4 alunos: Ana 1,60 m, Bruno 1,75 m, Carlos 1,70 m, Diana 1,65 m. Qual é a altura média dos 4 alunos, arredondada para duas casas decimais?",
         "opcoes": [
           "1,65 m",
           "1,75 m",
@@ -243,11 +251,11 @@
           "1,70 m"
         ],
         "correta": 2,
-        "explicacao": "Média = (1,60 + 1,75 + 1,70 + 1,65) / 4 = 6,70 / 4 = 1,675 m ≈ 1,68 m. Média com decimal aparece em questões de medida."
+        "explicacao": "Média = (1,60 + 1,75 + 1,70 + 1,65) / 4 = 6,70 / 4 = 1,675 m ≈ 1,68 m. Some as quatro alturas, divida por 4 e arredonde para duas casas decimais."
       },
       "meta": {
         "id": "gen:mat:leitura-grafico-tabela:27204e3e",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "mat:leitura-grafico-tabela"
         ],
@@ -255,7 +263,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -270,7 +278,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-07"
         },
         "examProfiles": [
           "enem"
@@ -301,7 +311,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -316,7 +326,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.808Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -346,8 +357,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -362,7 +373,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -392,8 +404,8 @@
         "difficulty": 4,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": 0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -408,7 +420,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -438,8 +451,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -454,7 +467,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -484,8 +498,8 @@
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -500,7 +514,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -513,25 +528,25 @@
         "type": "multipla-escolha",
         "pergunta": "Uma tabela compara renda familiar de dois bairros. Bairro A: 50 famílias com renda até 2 salários mínimos. Bairro B: 30 famílias com renda até 2 salários mínimos. Qual bairro tem maior concentração relativa nessa faixa?",
         "opcoes": [
-          "Bairro A, porque tem mais famílias",
-          "Não é possível determinar sem conhecer o total de famílias de cada bairro",
-          "Bairro B, porque 30 é 60% de 50",
-          "Bairro B, com menos famílias de baixa renda"
+          "Bairro A, porque tem mais famílias nessa faixa de renda",
+          "Não dá para saber, pois falta o total de famílias de cada bairro para comparar",
+          "Os dois bairros têm a mesma concentração, pois ambos têm famílias até 2 salários mínimos",
+          "Bairro B, porque tem menos famílias nessa faixa e, portanto, uma concentração menor"
         ],
         "correta": 1,
         "explicacao": "Sem saber quantas famílias tem em cada bairro no total, a gente não consegue calcular o percentual. 50 e 30 são números absolutos. Você precisa dividir cada um pelo total do seu bairro pra achar a proporção real. Erro bem comum: misturar frequência absoluta com frequência relativa."
       },
       "meta": {
         "id": "gen:mat:leitura-grafico-tabela:837475c7",
-        "version": 1,
+        "version": 2,
         "skillIds": [
           "mat:leitura-grafico-tabela"
         ],
         "difficulty": 2,
         "irt": {
           "a": 1,
-          "b": 0,
-          "c": 0.2,
+          "b": -0.8,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -546,7 +561,9 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada",
+          "reviewNote": "mat-fil-soc-04"
         },
         "examProfiles": [
           "enem"
@@ -577,7 +594,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -592,7 +609,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"
@@ -623,7 +641,7 @@
         "irt": {
           "a": 1,
           "b": 0,
-          "c": 0.2,
+          "c": 0.25,
           "source": "estimado"
         },
         "roles": [
@@ -638,7 +656,8 @@
         "validation": {
           "status": "revisada-humano",
           "reviewedAt": "2026-09-27T18:40:36.931Z",
-          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador"
+          "reviewer": "revisao-completa-7b (Sonnet, delegada pelo usuário) + amostra lida pelo orquestrador",
+          "reviewKind": "ia-delegada"
         },
         "examProfiles": [
           "enem"

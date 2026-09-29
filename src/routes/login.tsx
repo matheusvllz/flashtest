@@ -62,7 +62,7 @@ function Login() {
               <AlertCircle size={14} /> {error}
             </p>
           )}
-          <Link to="/forgot" className="self-end text-xs font-semibold text-mar-fundo underline">
+          <Link to="/forgot" className="tap-area self-end text-xs font-semibold text-mar-fundo underline">
             Esqueci minha senha
           </Link>
           <button type="submit" className="btn-primary mt-2 w-full">
@@ -84,7 +84,7 @@ function Login() {
 
         <p className="mt-auto pt-8 text-center text-sm text-nevoa">
           Ainda não tem conta?{" "}
-          <Link to="/quiz" className="font-bold text-mar-fundo underline">
+          <Link to="/quiz" className="tap-area font-bold text-mar-fundo underline">
             Começar em 60s
           </Link>
         </p>

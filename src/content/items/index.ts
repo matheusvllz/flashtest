@@ -17,12 +17,26 @@ export function isPackagedItem(id: string): boolean {
   return REF_GERADO.has(id);
 }
 
+/** Só teste: ids tratados como retirados além dos que o índice gerado marca (o índice é gerado, não se edita). */
+const RETIRADOS_TESTE = new Set<string>();
+
+/**
+ * Item retirado de circulação pela revisão de qualidade (docs/36 §G.6, T-07.6)? Sai de pools,
+ * seleção, checkpoint e aulas novas — mas `resolveExercise` continua resolvendo (tentativa antiga,
+ * sessão ativa e aula que o referencia não quebram).
+ */
+export function itemRetirado(id: string): boolean {
+  return REF_GERADO.get(id)?.retired === true || RETIRADOS_TESTE.has(id);
+}
+
 /**
  * Dá pra montar a questão agora? Item embarcado sempre; item de pacote só com o
  * pacote em memória. A SELEÇÃO usa isto — assim, pacote que não carregou vira o
  * fallback "só conteúdo embarcado" do `30` §21.3 sozinho, sem tela quebrada.
+ * Item `retired` nunca é servido por seleção (mas segue resolvível por id).
  */
 export function itemDisponivel(id: string): boolean {
+  if (itemRetirado(id)) return false;
   return !REF_GERADO.has(id) || packagedExercise(id) !== undefined;
 }
 
@@ -47,13 +61,15 @@ function metaFromRef(ref: GeneratedItemRef): ItemMeta {
     roles: ref.roles,
     estimatedSeconds: 60,
     dontKnowAllowed: true,
-    source: { kind: "ia-validada" },
+    // Origem do índice (docs/36 T-07.5): item oficial não pode virar "ia-validada" só porque o pacote ainda não carregou.
+    source: ref.source ? { ...ref.source } : { kind: "ia-validada" },
     validation: { status: ref.status },
     examProfiles: ["enem"],
   };
 }
 
-export type { ItemCommonMistake, ItemExplanationLayers, ItemIrt, ItemMeta, ItemRole, ItemSource, ItemSourceKind, ItemValidation, ItemValidationStatus } from "./types";
+export type { ItemCommonMistake, ItemExplanationLayers, ItemIrt, ItemMeta, ItemReviewKind, ItemRole, ItemSource, ItemSourceKind, ItemValidation, ItemValidationStatus } from "./types";
+export { atribuicaoOficial } from "./atribuicao";
 export { guessingProbability, irtFromDifficulty } from "./irt";
 
 /**
@@ -106,6 +122,8 @@ export interface ItemIndexEntry {
   roles: ItemMeta["roles"];
   status: ItemMeta["validation"]["status"];
   subjectId: string | null;
+  /** `true` só quando o item foi retirado (docs/36 T-07.6); quem monta pool usa `itemDisponivel`, que já exclui. */
+  retired?: true;
 }
 
 let cache: ItemIndexEntry[] | null = null;
@@ -137,6 +155,7 @@ export function itemIndex(): ItemIndexEntry[] {
       roles: meta.roles,
       status: meta.validation.status,
       subjectId: meta.skillIds[0]?.split(":")[0] ?? null,
+      ...(itemRetirado(id) ? { retired: true as const } : {}),
     };
   });
   return cache;
@@ -148,5 +167,12 @@ export function itemsOfSkill(skillId: string): ItemIndexEntry[] {
 
 /** Só para teste — evita índice desatualizado entre cargas de módulo isoladas. */
 export function _resetItemIndexCacheForTests(): void {
+  cache = null;
+}
+
+/** Só para teste — marca/desmarca um item como retirado sem editar o índice gerado (e zera o cache do índice). */
+export function _setRetiredForTests(id: string, retired: boolean): void {
+  if (retired) RETIRADOS_TESTE.add(id);
+  else RETIRADOS_TESTE.delete(id);
   cache = null;
 }

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
+import { PlacementResult } from "@/components/learning/PlacementResult";
 import { QuestionStepView } from "@/components/learning/steps/QuestionStepView";
 import { resolveExercise } from "@/content/microlicoes";
 import { AREA_NAMES, areaOfSubject } from "@/content/taxonomy/areas";
@@ -16,17 +17,20 @@ import {
   type PlacementPoolItem,
   type PlacementScope,
 } from "@/lib/adaptive/placement";
-import { applyPlacement, poolDiagnosticoDaArea } from "@/lib/adaptive/placement-pool";
+import { placementItemsById, poolDiagnosticoDaArea } from "@/lib/adaptive/placement-pool";
+import { ensurePlan, hrefForActivity, iniciaAoNavegar } from "@/lib/adaptive/journey";
+import { usePlacementReconciliation } from "@/hooks/usePlacementReconciliation";
 import { SUBJECTS } from "@/data/subjects";
 import { FEATURES } from "@/lib/features";
 import { carregarTodosOsPacotes } from "@/lib/content/preload";
 import { COPY } from "@/lib/copy";
 import {
   beginPlacement,
-  finishPlacement,
+  commitPlan,
+  getState,
   hojeISO,
-  invalidateJourneyPlan,
   setPlacementState,
+  startJourneyActivity,
   submitPlacementResponse,
   useAppState,
 } from "@/lib/store";
@@ -113,8 +117,38 @@ function Nivelamento() {
     };
   }, [pacotesProntos]);
 
+  // Aplica o resultado de um nivelamento concluído e ainda não aplicado (docs/36 T-03.3): é o
+  // único caminho que aplica priors, então a rota não decide mais nada sobre isso.
+  const { aplicando } = usePlacementReconciliation();
+
+  // Fila recomposta com o nivelamento aplicado (docs/36 T-06.1): o resultado mostra "Por onde começamos"
+  // com a atividade que a Home vai oferecer, então a fila é recomposta AQUI (a aplicação a esvaziou) antes
+  // de a tela aparecer — sem quadro com a atividade velha nem seção que aparece depois. Mesma chamada da
+  // Home (`ensurePlan` + `commitPlan`, idempotente: sem mudança devolve `null`).
+  const aplicado = s.learning.placement?.status === "concluido" && Boolean(s.learning.placement.appliedAt);
+  const [planoPronto, setPlanoPronto] = useState(!FEATURES.jornadaAdaptativa);
+  useEffect(() => {
+    if (!FEATURES.jornadaAdaptativa || !FEATURES.nivelamento || !aplicado) return;
+    const atual = getState();
+    const hoje = hojeISO();
+    const result = ensurePlan(atual, hoje, hoje);
+    if (result) commitPlan(result.committed, result.upcoming, atual.learning.journey.focusSignature);
+    setPlanoPronto(true);
+  }, [aplicado]);
+
   const placement = s.learning.placement;
   const emAndamento = !!placement && placement.status !== "concluido";
+  // Retomar depois de recarregar (docs/36 T-03.2, RF-12, bug C3): o motor recalcula θ̂/SE da área a
+  // cada resposta e descarta as respostas cujo item não está no mapa. Reconstitui o mapa dos itens JÁ
+  // respondidos, uma vez por montagem e antes do primeiro `pickPlacementItem`; os itens já mostrados
+  // nesta montagem têm precedência.
+  const mapaReconstituidoRef = useRef(false);
+  if (pacotesProntos && placement && !mapaReconstituidoRef.current) {
+    mapaReconstituidoRef.current = true;
+    for (const [id, item] of placementItemsById(placement).byId) {
+      if (!itemsShownRef.current.has(id)) itemsShownRef.current.set(id, item);
+    }
+  }
   // Calculada uma vez por render, reusada pelo efeito (que só COMMITA se
   // precisar) e pela renderização (que só LÊ) — evita rodar o motor 2x.
   const escolha =
@@ -140,29 +174,60 @@ function Nivelamento() {
       if (escolha.state !== placement) setPlacementState(escolha.state);
       return;
     }
-    // Sem mais item nenhum (áreas fechadas por SE/limite, OU pool insuficiente
-    // desde o início — docs/32 Fase 13, "Fase 11 pendente") — fecha e aplica.
-    const estadoFinal = { ...escolha.state, status: "concluido" as const, finishedAt: new Date().toISOString() };
-    setPlacementState(estadoFinal);
-    const comPriors = applyPlacement(estadoFinal, s.learning.skillModel, itemsShownRef.current, hojeISO());
-    finishPlacement(comPriors);
-    // O nivelamento muda os priors de várias habilidades de uma vez só — sem
-    // isto, `/trilha` reabria com o MESMO plano de antes (achado de teste em
-    // dispositivo físico, docs/32 F15.3): `committed` já estava cheio e
-    // `planVersion` em dia, então `ensurePlan` não tinha motivo pra replanejar.
-    invalidateJourneyPlan();
+    // Sem mais item nenhum (áreas fechadas por SE/limite, OU pool que acabou antes do teto) —
+    // SÓ fecha o status. Quem aplica os priors e recompõe a fila é `usePlacementReconciliation`
+    // (docs/36 T-03.3): o término normal também fecha o status pelo store, e os dois caminhos
+    // precisam terminar no mesmo lugar.
+    setPlacementState({ ...escolha.state, status: "concluido" as const, finishedAt: new Date().toISOString() });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s, scope, pacotesProntos]);
 
   if (!FEATURES.nivelamento || !pacotesProntos)
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <div className="min-h-screen bg-neve" />
       </PhoneFrame>
     );
 
+  // Concluído e ainda não aplicado (ou aplicando agora): nunca mostra o resultado antes do
+  // `appliedAt` (docs/36 F.5 "estados", RU-11).
+  if (!emAndamento && (aplicando || (placement?.status === "concluido" && (!placement.appliedAt || !planoPronto)))) {
+    return (
+      <PhoneFrame variant="reading">
+        <div className="flex min-h-screen flex-col items-center justify-center bg-neve px-6 text-center">
+          <p role="status" className="text-sm font-semibold text-nevoa">
+            {COPY.nivelamento.aplicando}
+          </p>
+        </div>
+      </PhoneFrame>
+    );
+  }
+
   if (!emAndamento) {
-    return <PlacementResultView placement={placement} scope={scope} onIr={() => nav({ to: "/trilha" })} />;
+    if (!placement) {
+      return (
+        <PhoneFrame variant="reading">
+          <div className="min-h-screen bg-neve" />
+        </PhoneFrame>
+      );
+    }
+    const primeira = FEATURES.jornadaAdaptativa ? (s.learning.journey.committed[0] ?? null) : null;
+    return (
+      <PlacementResult
+        placement={placement}
+        scope={scope}
+        primeira={primeira}
+        onComecar={() => {
+          if (!primeira) {
+            void nav({ to: "/trilha" });
+            return;
+          }
+          // Mesmo caminho do card e do nó da Home (RF-1): aula/legado marcam o início antes de sair.
+          if (iniciaAoNavegar(primeira)) startJourneyActivity(primeira);
+          void nav(hrefForActivity(primeira));
+        }}
+      />
+    );
   }
 
   const area = currentPlacementArea(placement, scope);
@@ -170,7 +235,7 @@ function Nivelamento() {
 
   if (!itemAtual) {
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <div className="min-h-screen bg-neve" />
       </PhoneFrame>
     );
@@ -208,7 +273,7 @@ function Nivelamento() {
   );
 
   return (
-    <PhoneFrame>
+    <PhoneFrame variant="reading">
       <div className="flex min-h-screen flex-col bg-neve">
         <header className="px-5 pt-6">
           <p className="ds-label">{COPY.nivelamento.tituloRota}</p>
@@ -250,8 +315,9 @@ function Nivelamento() {
         </div>
         <footer className="px-6 pb-8">
           <button
+            type="button"
             onClick={() => nav({ to: "/trilha" })}
-            className="w-full text-center text-xs font-semibold text-nevoa underline"
+            className="tap-area w-full text-center text-xs font-semibold text-nevoa underline"
           >
             {COPY.nivelamento.pausarEContinuar}
           </button>
@@ -259,49 +325,4 @@ function Nivelamento() {
       </div>
     </PhoneFrame>
   );
-}
-
-function PlacementResultView({
-  placement,
-  scope,
-  onIr,
-}: {
-  placement: ReturnType<typeof useAppState>["learning"]["placement"];
-  scope: PlacementScope;
-  onIr: () => void;
-}) {
-  return (
-    <PhoneFrame>
-      <div className="flex min-h-screen flex-col justify-center bg-neve px-6 py-10">
-        <h1 className="font-display text-2xl font-bold text-abismo">
-          {COPY.nivelamento.resultadoTitulo}
-        </h1>
-        <p className="mt-2 text-sm leading-relaxed text-nevoa">{COPY.nivelamento.resultadoCorpo}</p>
-        <div className="mt-6 flex flex-col gap-3">
-          {scope.areas.map((area) => {
-            const areaState = placement?.areas[area];
-            const faixa = faixaDaArea(areaState?.theta ?? null);
-            return (
-              <div key={area} className="card-press px-4 py-3.5 text-left">
-                <p className="text-sm font-bold text-abismo">{AREA_NAMES[area]}</p>
-                <p className="mt-1 text-xs font-semibold text-nevoa">
-                  {faixa ?? COPY.nivelamento.areaNaoMedida(AREA_NAMES[area])}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-        <button onClick={onIr} className="btn-primary mt-8 w-full">
-          {COPY.nivelamento.ctaIrParaTrilha}
-        </button>
-      </div>
-    </PhoneFrame>
-  );
-}
-
-function faixaDaArea(theta: number | null): string | null {
-  if (theta === null) return null;
-  if (theta < -0.5) return COPY.nivelamento.faixaBaseConstrucao;
-  if (theta < 0.7) return COPY.nivelamento.faixaNoCaminho;
-  return COPY.nivelamento.faixaBaseFirme;
 }

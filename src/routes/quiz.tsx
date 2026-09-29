@@ -5,7 +5,7 @@ import { FocaMark } from "@/components/brand/FocaMark";
 import { completeQuiz, setEasySubjects, setState, useAppState, type Prefs } from "@/lib/store";
 import { computeGaps } from "@/lib/gaps";
 import { ChevronDown } from "lucide-react";
-import { AREA_OF, COURSES } from "@/data/courses";
+import { CourseStep } from "@/components/onboarding/CourseStep";
 import { SUBJECTS } from "@/data/subjects";
 import {
   BR_STATES,
@@ -69,7 +69,7 @@ function Quiz() {
 
   if (oferta) {
     return (
-      <PhoneFrame>
+      <PhoneFrame variant="reading">
         <div className="flex min-h-screen flex-col justify-center bg-neve px-6">
           <PlacementOffer
             onFazer={() => {
@@ -87,7 +87,7 @@ function Quiz() {
   }
 
   return (
-    <PhoneFrame>
+    <PhoneFrame variant="reading">
       <div className="flex min-h-screen flex-col bg-neve">
         {/* Barra de progresso estilo Stories */}
         <header className="px-5 pt-6">
@@ -103,6 +103,7 @@ function Quiz() {
           </div>
           <div className="mt-3 flex items-center justify-between">
             <button
+              type="button"
               onClick={() => (idx === 0 ? nav({ to: "/welcome" }) : setIdx(idx - 1))}
               className="min-h-11 text-sm font-bold text-nevoa"
             >
@@ -119,8 +120,9 @@ function Quiz() {
           <StepView step={step} onNext={next} />
         </div>
 
-        <footer className="fixed bottom-0 left-1/2 w-full max-w-[440px] -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
+        <footer className="fixed bottom-0 left-1/2 col-max-w -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
           <button
+            type="button"
             onClick={next}
             disabled={!canAdvance(step, s)}
             className="btn-primary w-full disabled:opacity-30"
@@ -165,6 +167,9 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
       >
         <input
           autoFocus
+          aria-label="Seu primeiro nome"
+          autoComplete="given-name"
+          name="nome"
           value={p.name}
           onChange={(e) =>
             set((pp) => {
@@ -210,6 +215,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
       >
         <div className="relative">
           <select
+            aria-label="Onde você mora?"
             value={p.residenceState}
             onChange={(e) => {
               const st = e.target.value;
@@ -239,7 +245,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
 
   if (step === "target") return <TargetStep onNext={onNext} />;
 
-  if (step === "course") return <CourseStep onNext={onNext} />;
+  if (step === "course") return <CourseStepView onNext={onNext} />;
 
   if (step === "subjects")
     return (
@@ -249,6 +255,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
             const on = p.difficultSubjects.includes(sub.name);
             return (
               <button
+                type="button"
                 key={sub.id}
                 onClick={() =>
                   set((pp) => {
@@ -284,8 +291,9 @@ function EasySubjectsDisclosure() {
   if (!aberta) {
     return (
       <button
+        type="button"
         onClick={() => setAberta(true)}
-        className="mt-4 text-sm font-semibold text-mar underline underline-offset-2"
+        className="mt-4 text-sm font-semibold text-mar-fundo underline underline-offset-2"
       >
         Alguma você já manda bem?
       </button>
@@ -300,6 +308,7 @@ function EasySubjectsDisclosure() {
           const on = p.easySubjects.includes(sub.name);
           return (
             <button
+              type="button"
               key={sub.id}
               onClick={() =>
                 setEasySubjects(on ? p.easySubjects.filter((x) => x !== sub.name) : [...p.easySubjects, sub.name])
@@ -315,12 +324,9 @@ function EasySubjectsDisclosure() {
   );
 }
 
-function CourseStep({ onNext }: { onNext: () => void }) {
+function CourseStepView({ onNext }: { onNext: () => void }) {
   const s = useAppState();
   const p = s.prefs;
-  const [q, setQ] = useState("");
-  const filtered = q ? COURSES.filter((c) => c.toLowerCase().includes(q.toLowerCase())) : COURSES;
-  const list = filtered.slice(0, 12);
 
   return (
     <Wrap
@@ -332,54 +338,16 @@ function CourseStep({ onNext }: { onNext: () => void }) {
           : "Não precisa ter certeza — dá pra mudar depois."
       }
     >
-      <input
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        placeholder="Buscar curso..."
-        className="input-ds mb-3"
-      />
-      <div className="flex flex-col gap-2">
-        {list.map((c) => (
-          <button
-            key={c}
-            onClick={() => {
-              setState((st) => {
-                st.prefs.targetCourse = c;
-                return st;
-              });
-              onNext();
-            }}
-            className={`card-press flex items-center justify-between gap-3 px-4 py-3 text-left ${
-              p.targetCourse === c ? "border-mar bg-mar/8" : ""
-            }`}
-          >
-            <span className="min-w-0 text-sm font-semibold text-abismo">{c}</span>
-            <span className="shrink-0 text-[11px] font-semibold text-nevoa">{AREA_OF[c]}</span>
-          </button>
-        ))}
-        {list.length === 0 && (
-          <p className="py-4 text-center text-sm text-nevoa">Nenhum curso encontrado.</p>
-        )}
-      </div>
-
-      {filtered.length > list.length && (
-        <p className="mt-3 text-center text-xs text-nevoa">
-          +{filtered.length - list.length} outros — refine a busca
-        </p>
-      )}
-
-      <button
-        onClick={() => {
+      <CourseStep
+        value={p.targetCourse}
+        onSelect={(curso) => {
           setState((st) => {
-            st.prefs.targetCourse = "Ainda não decidi";
+            st.prefs.targetCourse = curso;
             return st;
           });
           onNext();
         }}
-        className="mt-3 w-full rounded-lg border-2 border-dashed border-gelo py-3 text-sm font-semibold text-nevoa"
-      >
-        Ainda não decidi
-      </button>
+      />
     </Wrap>
   );
 }
@@ -420,6 +388,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
           ] as const
         ).map(([key, label]) => (
           <button
+            type="button"
             key={key}
             onClick={() => {
               setScope(key);
@@ -433,6 +402,8 @@ function TargetStep({ onNext }: { onNext: () => void }) {
       </div>
 
       <input
+        aria-label={scope === "br" ? "Buscar faculdade no Brasil" : "Buscar faculdade no exterior"}
+        autoComplete="off"
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder={
@@ -444,6 +415,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
       <div className="flex flex-col gap-2">
         {list.map((u) => (
           <button
+            type="button"
             key={u}
             onClick={() => {
               setState((st) => {
@@ -473,6 +445,7 @@ function TargetStep({ onNext }: { onNext: () => void }) {
       )}
 
       <button
+        type="button"
         onClick={() => {
           setState((st) => {
             st.prefs.targetInstitution = "Ainda não decidi";
@@ -514,6 +487,7 @@ function Wrap({
 function Choice({ label, on, onClick }: { label: string; on: boolean; onClick: () => void }) {
   return (
     <button
+      type="button"
       onClick={onClick}
       className={`card-press px-4 py-3.5 text-left text-sm font-semibold text-abismo ${
         on ? "border-mar bg-mar/8" : ""

@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { ExamTipCard } from "@/components/learning/ExamTipCard";
 import { EXAM_TIPS } from "@/content/exam-tips";
-import { COPY } from "@/lib/copy";
+import { COPY, textoSePersistiu } from "@/lib/copy";
 import { pickTip } from "@/lib/learning/tips";
 import type { ExamTip, MicroLesson } from "@/lib/learning/types";
-import { dismissTip, hojeISO, recordTipShown, useAppState } from "@/lib/store";
+import { dismissTip, hojeISO, recordTipShown, useAppState, usePersistStatus } from "@/lib/store";
 
 /**
  * Passo `recap` (docs/25 §12.2/§18 T-10) — Foca orgulhosa 72px + resumo +
@@ -14,6 +14,13 @@ import { dismissTip, hojeISO, recordTipShown, useAppState } from "@/lib/store";
  */
 export function RecapStepView({ lesson, onComplete }: { lesson: MicroLesson; onComplete: () => void }) {
   const s = useAppState();
+  const persist = usePersistStatus();
+  // A frase de recap da jornada promete "salvo": só vale com a gravação local ok (docs/36 RF-14).
+  // A variante neutra é escolhida aqui, na renderização, para o módulo de conteúdo não depender do store.
+  const recap =
+    lesson.recap === COPY.jornada.recap
+      ? textoSePersistiu(persist, COPY.jornada.recap, COPY.jornada.recapSemSalvo)
+      : lesson.recap;
   // Escolhida uma vez, na montagem — não a cada render (docs/20 §3 B1, §4.1:
   // "registrar exposição uma vez por evento, não por render"). Só aparece
   // aqui, inline no recap: nunca modal, nunca timer (regra 1/3).
@@ -41,7 +48,7 @@ export function RecapStepView({ lesson, onComplete }: { lesson: MicroLesson; onC
       <FocaMark size={72} decorative expression="orgulhosa" className="mx-auto" />
       <div className="card-soft p-4 text-center">
         <p className="ds-label">Recap</p>
-        <p className="mt-1.5 text-[15px] leading-relaxed text-abismo">{lesson.recap}</p>
+        <p className="mt-1.5 text-[15px] leading-relaxed text-abismo">{recap}</p>
       </div>
       {tip && !dispensada && (
         <ExamTipCard
@@ -52,7 +59,7 @@ export function RecapStepView({ lesson, onComplete }: { lesson: MicroLesson; onC
           }}
         />
       )}
-      <button onClick={onComplete} className="btn-primary w-full">
+      <button type="button" onClick={onComplete} className="btn-primary w-full">
         {COPY.licao.concluir}
       </button>
     </div>

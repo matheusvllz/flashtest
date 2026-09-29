@@ -1,0 +1,992 @@
+[
+  {
+    "id": "gen:geo:climatologia-fenomenos:5d260344",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.571,
+        "corretaMaisLonga": true,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.011,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Distratores absolutistas e inverossímeis (apenas, nunca) trocados por erros conceituais reais (ZCIT presa ao Equador, causa vulcânica, rotação); correta encurtada; gabarito e posição preservados.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:62877568",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.827,
+        "corretaMaisLonga": true,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.96,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Distratores absolutistas (nunca, apenas) e um que contradizia o enunciado; agora erros plausíveis (confundir com hipóxia, efeito só sobre tecido mole) de tamanho parecido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:climatologia-fenomenos:95e37021",
+    "arquivo": "src/content/banco/geo/geo-climatologia-fenomenos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.38,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.15,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2: 'aumento exponencial de emissões' era impreciso, reescrito. Distratores fracos/desconexos (ciclos que 'diminuem', refração) trocados por equívocos comuns (ozônio, sol, ciclos naturais). Correta era a única mais longa.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:geopolitica-globalizacao:0e05c39c",
+    "arquivo": "src/content/banco/geo/geo-geopolitica-globalizacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.344,
+        "corretaMaisLonga": true,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.943,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Distratores com absolutismo (todos, apenas) e forma de pergunta 'moeda única obrigatória' pouco plausível; trocados por erros conceituais reais (cartel de cotas, protecionismo, bloco de exportadores iguais). Explicação acompanha as novas alternativas.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:geopolitica-globalizacao:bd757b00",
+    "arquivo": "src/content/banco/geo/geo-geopolitica-globalizacao.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.185,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.952,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas"
+    ],
+    "motivo": "R3: 'qual região' não casava com a resposta (lista de países) e a correta citava 'África' de forma vaga; enunciado e alternativas passam a falar de grupos de países e exemplos coerentes com a explicação (Chile, RDC). Distratores absolutistas trocados por equívocos plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:meio-ambiente-impactos:9f61390a",
+    "arquivo": "src/content/banco/geo/geo-meio-ambiente-impactos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.5,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.944,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Distratores absolutistas e um ('ausência completa de impacto, pois cidade é pequena') ligado a nada conceitual; trocados por erros reais (impacto natural, escala global, proporção à população).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:meio-ambiente-impactos:a002811d",
+    "arquivo": "src/content/banco/geo/geo-meio-ambiente-impactos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.072,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.91,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ajustado"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,07 (correta muito mais longa, com hífen indevido 'curto-prazo'); correta enxugada e distratores detalhados no mesmo nível, cada um ligado a um erro (ignorar efeito colateral, só o ganho, compensação).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:19a7a93f",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.658,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.023,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,66; distratores curtos e contraditórios com o enunciado (crescimento em torno da universidade). Agora de tamanho parecido e ligados a equívocos (efeito oposto na demanda, esvaziamento, isolamento).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:4a43841d",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.822,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.011,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Distratores curtos e óbvios (razão 1,82); agora com o mesmo nível de detalhe e ligados a equívocos (concreto filtra, escoamento vira recarga, captar mais = ter mais).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:geo:urbanizacao-processos:5be436f6",
+    "arquivo": "src/content/banco/geo/geo-urbanizacao-processos.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.821,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.932,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 1,82 e absolutismo ('permanente'); distratores detalhados no mesmo nível, correta ajustada em forma.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:brasil-colonia-economia-sociedade:5f65e97c",
+    "arquivo": "src/content/banco/his/his-brasil-colonia-economia-sociedade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.477,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 1.01,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "corrigir",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2/R3: a correta dizia que 'fidalgos leais' recebiam as sesmarias e que o beneficiário 'fornecia produtos para a Coroa', o que não descreve o regime (recebia quem tinha meios de cultivar; obrigação de cultivar e pagar dízimo; retomada pela Coroa). Gabarito (posição A) se mantém correto; texto da correta e da explicação corrigidos. Distratores absolutistas trocados.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:brasil-colonia-economia-sociedade:6778686b",
+    "arquivo": "src/content/banco/his/his-brasil-colonia-economia-sociedade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.098,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.934,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ajustado",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-enunciado",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2/R3: o enunciado falava em 'pequena população de mulatos e mamelucos', contradizendo a explicação ('eram maioria'); a pergunta 'qual dessas características' não casava com as alternativas. Enunciado reescrito, alternativas com paralelismo (sujeito+verbo, sem 'todos'/'absoluta'), explicação coerente.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:brasil-colonia-economia-sociedade:dd440c57",
+    "arquivo": "src/content/banco/his/his-brasil-colonia-economia-sociedade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.172,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.917,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,17; distratores absolutos e contraditórios com o enunciado. Reescritos com o mesmo nível de detalhe (câmara decorativa, interesses idênticos, ausência de fiscalização).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:ditadura-militar-contexto:5052f39e",
+    "arquivo": "src/content/banco/his/his-ditadura-militar-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1a",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.181,
+        "corretaMaisLonga": true,
+        "absolutismo": 2,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.964,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,18; dois distratores absurdos ('todos foram condenados', 'nunca ocorreram') e o enunciado pede 'razão institucional'. Distratores agora são explicações institucionais falsas plausíveis, de tamanho parecido. Fato da correta (Lei da Anistia, 1979) conferido.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:ditadura-militar-contexto:f6a639fd",
+    "arquivo": "src/content/banco/his/his-ditadura-militar-contexto.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.271,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.917,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Razão 2,27; correta enxugada e distratores (características comuns às duas ditaduras) detalhados no mesmo nível, o que preserva a lógica do enunciado ('presente na primeira, menos central na segunda').",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:191a466b",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.28,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.885,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "Correta encurtada e distratores ajustados em tamanho; removidos 'completa'/'toda' (absolutismo) e a opção contraditória de influência militar 'eliminada'. Fato conferido (economia agroexportadora predominante até os anos 1930-1945).",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:d5cee279",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1b"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.897,
+        "corretaMaisLonga": true,
+        "absolutismo": 1,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.921,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2: a explicação dizia que o poder federal 'era dividido em política dos governadores', o que descreve mal o acordo entre governo federal e oligarquias; reescrita. Razão 1,90 e distratores absolutistas ('todas', 'completa', 'universal') trocados por equívocos plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:era-vargas-politica-economia:da44d210",
+    "arquivo": "src/content/banco/his/his-era-vargas-politica-economia.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e",
+      "1a"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 2.118,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.927,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ajustado",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "corrigir",
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "R2: a correta chamava o evento de 'golpe militar liderado por Getúlio'; Vargas era o candidato civil da Aliança Liberal e a Revolução de 1930 foi um movimento armado apoiado por militares (Góis Monteiro, Juarez Távora) e oligarquias dissidentes. Texto da correta e da explicação corrigidos; gabarito permanece a mesma alternativa (posição C). Distratores agora equívocos históricos plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:015b0ad6",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 1,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.877,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.877,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "manter"
+    ],
+    "motivo": "R1 ok (EUA e URSS). Correta mais curta que os distratores (razão 0,88), sem absolutismo. Dificuldade 3 é um pouco alta para o raciocínio (identificar os dois blocos), mas mantida para não desbalancear as faixas do pool diagnóstico de CH; registrado para a Fase de calibração.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:04d9b454",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 1.619,
+        "corretaMaisLonga": true,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.94,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ajustado",
+      "R3": "ok",
+      "R4": "ok",
+      "R5": "ajustado",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas",
+      "revisar-explicacao"
+    ],
+    "motivo": "Razão 1,62 (correta a mais longa); explicação exagerava ('não tratavam de economia ou tecnologia'). Alternativas no mesmo nível de detalhe e explicação calibrada. R1: gabarito confere.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  },
+  {
+    "id": "gen:his:guerra-fria-bipolaridade:cc4c9592",
+    "arquivo": "src/content/banco/his/his-guerra-fria-bipolaridade.json",
+    "versaoAntes": 1,
+    "versaoDepois": 2,
+    "estrato": "1e",
+    "marcasEstrato1": [
+      "1e"
+    ],
+    "metricas": {
+      "antes": {
+        "razaoTamanho": 0.73,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      },
+      "depois": {
+        "razaoTamanho": 0.929,
+        "corretaMaisLonga": false,
+        "absolutismo": 0,
+        "travessao": 0
+      }
+    },
+    "marcas": {
+      "R1": "ok",
+      "R2": "ok",
+      "R3": "ajustado",
+      "R4": "ajustado",
+      "R5": "ok",
+      "R6": "ok",
+      "R7": "ok",
+      "R8": "ok"
+    },
+    "acoes": [
+      "melhorar-alternativas"
+    ],
+    "motivo": "R3/R4: um distrator dizia que a França interveio ao lado dos EUA, o que é historicamente verdadeiro (França enviou batalhão sob comando da ONU), tornando a alternativa duvidosa; outro ('Ambas as Coreias neutras') contradizia o enunciado. Correta passa a citar também a China, coerente com a explicação; distratores agora são inversões de aliança plausíveis.",
+    "revisor": "ia-delegada:sonnet",
+    "revisadoEm": "2026-09-28",
+    "afetaDiagnostico": true,
+    "validacao": {
+      "ok": true,
+      "issues": [],
+      "avisos": []
+    }
+  }
+]

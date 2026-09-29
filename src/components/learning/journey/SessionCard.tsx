@@ -2,26 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { SUBJECT_MAP } from "@/data/subjects";
 import { FocaMark, type FocaExpression } from "@/components/brand/FocaMark";
 import { activityReasonText, activityTitle } from "@/lib/adaptive/activity-lesson";
-import { navigationTargetFor } from "@/lib/adaptive/journey";
+import { hrefForActivity, iniciaAoNavegar } from "@/lib/adaptive/journey";
 import type { PlannedActivity } from "@/lib/adaptive/types";
 import { COPY } from "@/lib/copy";
 import type { JourneyHistoryEntry } from "@/lib/learning/types";
-import { setActiveActivity } from "@/lib/store";
+import { startJourneyActivity } from "@/lib/store";
 import { fala, type VozSlot } from "@/lib/voz";
-
-type ActivityHref =
-  | { to: "/learn/$lessonId"; params: { lessonId: string } }
-  | { to: "/redacao/$licaoId"; params: { licaoId: string } }
-  | { to: "/atividade/$activityId"; params: { activityId: string } };
-
-function hrefFor(activity: PlannedActivity): ActivityHref {
-  const target = navigationTargetFor(activity);
-  if (target.kind === "aula")
-    return { to: "/learn/$lessonId", params: { lessonId: target.lessonId } };
-  if (target.kind === "legado")
-    return { to: "/redacao/$licaoId", params: { licaoId: target.lessonId } };
-  return { to: "/atividade/$activityId", params: { activityId: target.activityId } };
-}
 
 /**
  * Card "Sessão de hoje" (docs/30 §14.1 item 2, Fase 12 do docs/31 F12.3) —
@@ -47,7 +33,7 @@ export function SessionCard({
   // quando não sobra NADA elegível/publicado).
   if (!current) {
     return (
-      <div className="card-soft p-4" style={{ borderColor: "var(--color-mar)" }}>
+      <div className="card-soft border-mar p-4">
         <div className="mb-3">
           <FocaMark expression="orgulhosa" size={40} decorative />
         </div>
@@ -73,7 +59,7 @@ export function SessionCard({
   const subjectName = SUBJECT_MAP[current.subjectId]?.name ?? "";
 
   return (
-    <div className="card-soft p-4" style={{ borderColor: "var(--color-mar)" }}>
+    <div className="card-soft border-mar p-4">
       <div className="mb-2 flex items-start gap-2">
         <FocaMark expression={greeting.expression} size={40} decorative />
         <p className="mt-1.5 text-sm text-abismo">{fala(greeting.slot)}</p>
@@ -86,11 +72,24 @@ export function SessionCard({
         {subjectName} · {COPY.jornada.minutos(minutos)}
       </p>
       <p className="mt-1 text-xs text-nevoa">{activityReasonText(current)}</p>
-      {/* Mesmo motivo do `onClick` em `JourneyPath` (docs/32 F15.3): marca
-          `activeActivity` antes de sair pra `/learn`/`/redacao`, pra
-          `syncJourneyWithCompletions` conseguir tirar `current` de
-          `committed` quando a lição terminar e a jornada voltar aqui. */}
-      <Link {...hrefFor(current)} onClick={() => setActiveActivity(current)} className="btn-primary mt-4 w-full">
+      {/* Próximo passo (docs/36 RU-12, T-06.2): o aluno vê o que vem depois sem abrir a fila. */}
+      {committed[1] && (
+        <p className="mt-1 text-xs text-nevoa" data-testid="session-card-depois">
+          {COPY.jornada.depois(activityTitle(committed[1]))}
+        </p>
+      )}
+      {/* Aula/legado (`/learn`, `/redacao`) terminam fora da jornada: marcar o início
+          (`startJourneyActivity`, docs/32 F15.3 + docs/36 RF-2) antes de sair é o que deixa
+          `syncJourneyWithCompletions` tirar `current` de `committed` quando a lição
+          terminar. Atividade dinâmica (`/atividade`) só NAVEGA: a rota é a única dona
+          da seleção de itens e do início da tentativa (T-02.1). */}
+      <Link
+        {...hrefForActivity(current)}
+        onClick={() => {
+          if (iniciaAoNavegar(current)) startJourneyActivity(current);
+        }}
+        className="btn-primary mt-4 w-full"
+      >
         {rotulo}
       </Link>
     </div>

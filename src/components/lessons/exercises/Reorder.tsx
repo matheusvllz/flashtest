@@ -51,11 +51,12 @@ export function ReorderView({
         )}
         {sequence.map((shownIdx, pos) => (
           <button
+            type="button"
             key={`${shownIdx}-${pos}`}
             disabled={checked}
             onClick={() => removeAt(pos)}
             className={cn(
-              "rounded-lg border-2 border-gelo bg-cards px-3 py-2 text-left text-[15px] text-abismo shadow-[0_2px_0_var(--color-gelo)] transition-all duration-150",
+              "rounded-lg border-2 border-gelo bg-cards px-3 py-2 text-left text-[15px] text-abismo shadow-[0_2px_0_var(--gelo)] transition-all duration-150",
               !checked && "active:scale-95 hover:border-error/50",
               checked && "cursor-default",
             )}
@@ -71,6 +72,7 @@ export function ReorderView({
           const used = sequence.includes(idx);
           return (
             <button
+              type="button"
               key={idx}
               disabled={checked || used}
               onClick={() => add(idx)}
@@ -78,7 +80,7 @@ export function ReorderView({
                 "rounded-lg border-2 px-3 py-2 text-left text-[15px] transition-all duration-150",
                 used
                   ? "select-none border-transparent bg-gelo text-transparent"
-                  : "border-gelo bg-cards text-abismo shadow-[0_2px_0_var(--color-gelo)] active:scale-95 hover:border-mar/40",
+                  : "border-gelo bg-cards text-abismo shadow-[0_2px_0_var(--gelo)] active:scale-95 hover:border-mar/40",
                 checked && "cursor-default",
               )}
               aria-hidden={used}
