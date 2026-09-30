@@ -1,6 +1,6 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { EntryShell } from "@/components/EntryShell";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { completeQuiz, setEasySubjects, setState, useAppState, type Prefs } from "@/lib/store";
@@ -21,6 +21,7 @@ import { FocusStep, canAdvanceFocusStep } from "@/components/onboarding/FocusSte
 import { PlacementOffer } from "@/components/onboarding/PlacementOffer";
 import { FEATURES } from "@/lib/features";
 import { sessao } from "@/lib/sessao";
+import { COPY } from "@/lib/copy";
 
 export const Route = createFileRoute("/quiz")({ component: Quiz, ssr: false });
 
@@ -57,15 +58,19 @@ function Quiz() {
   }
 
   /**
-   * Estudar exige conta (decisão 0006). O perfil respondido aqui fica no aparelho; sem sessão, o aluno cria a conta
-   * e depois segue para `destino` (o perfil vai para a conta em /cadastro/completar).
+   * O perfil fica no aparelho, e o nivelamento e o diagnóstico são abertos (D-16): a conta é pedida só quando o aluno
+   * vai começar a estudar (`irParaEstudo`). O perfil vai para a conta em /cadastro/completar.
    */
-  async function seguirPara(destino: "/aha" | "/nivelamento") {
+  function seguirPara(destino: "/aha" | "/nivelamento") {
     fecharQuiz();
-    const atual = await sessao().catch(() => null);
-    if (atual?.autenticado) nav({ to: destino });
-    else nav({ to: "/cadastro", search: { volta: destino } });
+    nav({ to: destino });
   }
+
+  // "Já tem uma conta? Entrar" só para quem ainda não entrou.
+  const [temSessao, setTemSessao] = useState(false);
+  useEffect(() => {
+    sessao().then((a) => setTemSessao(a.autenticado), () => undefined);
+  }, []);
 
   function next() {
     if (isLast) {
@@ -115,10 +120,16 @@ function Quiz() {
             >
               ← Voltar
             </button>
-            <div className="flex items-center gap-1.5">
-              <FocaMark size={18} decorative />
-              <span className="font-display text-sm font-bold text-abismo">Foca</span>
-            </div>
+            {temSessao ? (
+              <div className="flex items-center gap-1.5">
+                <FocaMark size={18} decorative />
+                <span className="font-display text-sm font-bold text-abismo">Foca</span>
+              </div>
+            ) : (
+              <Link to="/login" className="inline-flex min-h-11 items-center text-sm text-nevoa">
+                {COPY.conta.quizJaTemConta}&nbsp;<span className="font-bold text-mar">{COPY.conta.entrarBotao}</span>
+              </Link>
+            )}
           </div>
         </header>
 

@@ -18,6 +18,7 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:reset:local": "bun scripts/db/resetar-local.ts",
+    "conta:teste": "bun scripts/dev/criar-conta-teste.ts",
     "docs:check": "bun scripts/docs/verificar-links.ts",
     "skills:sync": "bun scripts/agents/sincronizar-skills.ts && bun scripts/agents/tabela-skills.ts",
     "skills:check": "node scripts/validate-skills.mjs",

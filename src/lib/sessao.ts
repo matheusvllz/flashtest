@@ -4,12 +4,17 @@
  */
 import { obterSessao, type EstadoDaSessao } from "@/lib/api/sessao";
 
-/** Rotas abertas sem conta: landing, onboarding de perfil, acesso e documentos legais. */
+/**
+ * Rotas abertas sem conta: landing, onboarding (perfil, nivelamento e diagnóstico — D-16: a conta é pedida só na hora
+ * de começar a estudar), acesso e documentos legais.
+ */
 const ROTAS_PUBLICAS = new Set([
   "/",
   "/app",
   "/welcome",
   "/quiz",
+  "/nivelamento",
+  "/aha",
   "/signup",
   "/onboarding",
   "/forgot",

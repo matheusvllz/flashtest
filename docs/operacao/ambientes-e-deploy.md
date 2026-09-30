@@ -29,6 +29,10 @@ substituido-por: null
 
 A proteção de preview (Vercel Authentication) continua ligada.
 
+**Modo de demonstração (D-15):** num ambiente implantado (build de produção ou qualquer ambiente da Vercel) sem `DATABASE_URL`, `BETTER_AUTH_SECRET` e `BETTER_AUTH_URL`, as contas ficam desligadas e "Entrar" é local. `/api/saude` responde `{ "ok": true, "contas": "desligadas" }`.
+
+**Conta de teste local:** com `bun run dev` rodando, `bun run conta:teste` cria (ou confere) `teste@foca.dev` / `foca-teste-123` no banco local, pela API real (cadastro → link lido de `.data/emails/` → e-mail confirmado). O script recusa qualquer endereço que não seja `localhost`; em produção não existe essa conta.
+
 ## 3. Variáveis
 
 Nunca com prefixo `VITE_` (entraria no bundle do navegador), exceto as públicas listadas.

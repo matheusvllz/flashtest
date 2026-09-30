@@ -145,6 +145,8 @@ export const COPY = {
     criarBotao: "Criar conta",
     criando: "Criando conta…",
     jaTemConta: "Já tem conta?",
+    /** Topo do quiz de perfil (D-16). */
+    quizJaTemConta: "Já tem uma conta?",
     emailDesligado: "Por enquanto, o acesso é pela conta do Google.",
 
     verificarTitulo: "Confirme seu e-mail",

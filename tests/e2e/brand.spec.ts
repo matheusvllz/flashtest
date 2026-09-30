@@ -72,7 +72,7 @@ test.describe("FocaMark sem imagem (docs/36 T-08.6)", () => {
     expect(await pequena.evaluate((el) => (el as HTMLElement).offsetWidth)).toBe(64);
     // Nada de rolagem horizontal e o CTA continua ali.
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
-    await expect(page.getByRole("link", { name: "Entrar no meu plano" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Entrar no meu plano" })).toBeVisible();
   });
 
   test("imagem que carrega fica visível (controle do teste anterior)", async ({ page }) => {

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Flame } from "lucide-react";
 import { PhoneFrame } from "@/components/AppShell";
@@ -9,6 +9,7 @@ import { StatTile } from "@/components/ds/StatTile";
 import { XpChip } from "@/components/ds/XpChip";
 import { useAppState } from "@/lib/store";
 import { HOME_ROUTE } from "@/lib/features";
+import { irParaEstudo } from "@/lib/conta/entrada";
 
 export const Route = createFileRoute("/aha")({ component: Aha, ssr: false });
 
@@ -26,6 +27,7 @@ const SEVERITY: Record<string, { label: string; badgeClass: string; fill: number
  */
 function Aha() {
   const s = useAppState();
+  const navigate = useNavigate();
   const firstName = (s.prefs.name || "estudante").split(" ")[0];
   const chosen = s.prefs.targetInstitution;
   const hasTarget = !!chosen && chosen !== "Ainda não decidi";
@@ -135,9 +137,9 @@ function Aha() {
         </div>
 
         <footer className="fixed bottom-0 left-1/2 col-max-w -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
-          <Link to={HOME_ROUTE} className="btn-primary w-full">
+          <button type="button" onClick={() => void irParaEstudo(navigate, HOME_ROUTE)} className="btn-primary w-full">
             Entrar no meu plano
-          </Link>
+          </button>
         </footer>
       </div>
     </PhoneFrame>

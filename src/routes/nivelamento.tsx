@@ -20,6 +20,7 @@ import {
 } from "@/lib/adaptive/placement";
 import { placementItemsById, poolDiagnosticoDaArea } from "@/lib/adaptive/placement-pool";
 import { ensurePlan, hrefForActivity, iniciaAoNavegar } from "@/lib/adaptive/journey";
+import { sessao } from "@/lib/sessao";
 import { usePlacementReconciliation } from "@/hooks/usePlacementReconciliation";
 import { SUBJECTS } from "@/data/subjects";
 import { FEATURES } from "@/lib/features";
@@ -86,6 +87,14 @@ function Nivelamento() {
   // Desktop: 1–5 / A–E escolhem, Enter confirma (docs/44 §5).
   useAtalhosDeQuestao();
   const nav = useNavigate();
+  // Nivelamento é aberto (D-16): sem conta, "Começar" e "Pausar" levam ao cadastro e voltam à trilha, que já abre na
+  // primeira atividade. Conferido na montagem para o clique seguir síncrono (o plano pode mudar durante uma espera).
+  const [temSessao, setTemSessao] = useState<boolean | null>(null);
+  useEffect(() => {
+    sessao().then((a) => setTemSessao(a.autenticado), () => setTemSessao(false));
+  }, []);
+  const semConta = temSessao === false;
+  const irAoCadastro = () => nav({ to: "/cadastro", search: { volta: "/trilha" } });
   const s = useAppState();
   const scope = useMemo(
     () => scopeFromPrefs(s.prefs),
@@ -221,6 +230,10 @@ function Nivelamento() {
         scope={scope}
         primeira={primeira}
         onComecar={() => {
+          if (semConta) {
+            irAoCadastro();
+            return;
+          }
           if (!primeira) {
             void nav({ to: "/trilha" });
             return;
@@ -319,7 +332,7 @@ function Nivelamento() {
         <footer className="px-6 pb-8">
           <button
             type="button"
-            onClick={() => nav({ to: "/trilha" })}
+            onClick={() => (semConta ? irAoCadastro() : nav({ to: "/trilha" }))}
             className="tap-area w-full text-center text-xs font-semibold text-nevoa underline"
           >
             {COPY.nivelamento.pausarEContinuar}

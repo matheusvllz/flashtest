@@ -97,3 +97,38 @@ test("sair encerra a sessão: a trilha volta a pedir login (T14)", async ({ page
   await page.goto("/trilha");
   await expect(page).toHaveURL(/\/login/);
 });
+
+/** Quiz de perfil completo, sem conta e com o nivelamento desligado (vai direto ao diagnóstico). */
+async function quizSemConta(page: import("@playwright/test").Page) {
+  await page.addInitScript(() => localStorage.setItem("foca.flags", JSON.stringify({ nivelamento: false })));
+  await page.goto("/quiz?debug=1", { waitUntil: "domcontentloaded" });
+  await page.getByPlaceholder("Seu primeiro nome").fill("Ana");
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await page.getByText("1º ano do ensino médio").click();
+  await page.getByRole("button", { name: "ENEM", exact: true }).click();
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await page.locator("select").selectOption("SP");
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await page.getByRole("button", { name: "Ainda não decidi" }).click();
+  await page.getByRole("button", { name: "Ainda não decidi" }).click();
+  await page.getByRole("button", { name: "Matemática" }).click();
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await page.getByRole("button", { name: "10 min" }).click();
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await page.getByRole("button", { name: "Ver meu diagnóstico" }).click();
+}
+
+test("quiz: 'Já tem uma conta? Entrar' no topo leva ao login", async ({ page }) => {
+  await page.goto("/quiz");
+  await page.getByRole("link", { name: "Já tem uma conta? Entrar" }).click();
+  await expect(page).toHaveURL(/\/login/);
+});
+
+test("a conta é pedida só depois do quiz e do diagnóstico, na hora de começar a estudar (D-16)", async ({ page }) => {
+  await quizSemConta(page);
+  await expect(page).toHaveURL(/\/aha/, { timeout: 15_000 });
+  await expect(page.getByRole("button", { name: "Entrar no meu plano" })).toBeVisible();
+  await page.getByRole("button", { name: "Entrar no meu plano" }).click();
+  await expect(page).toHaveURL(/\/cadastro\?volta=%2Ftrilha/, { timeout: 15_000 });
+  await expect(page.getByRole("heading", { name: "Criar sua conta" })).toBeVisible();
+});
