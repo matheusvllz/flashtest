@@ -1,4 +1,4 @@
-﻿/** Foca v2: WAVs approved on 2026-09-21. Scores: docs/audio-proposal-v2/manifest.json. */
+﻿/** Foca v2: WAVs approved on 2026-09-21. Scores: docs/design/audio/v2/manifest.json. */
 export const SOUND_ASSETS = {
   "resposta-correta": "/sfx/v2/resposta-correta.wav",
   "resposta-incorreta": "/sfx/v2/resposta-incorreta.wav",

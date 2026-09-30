@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Valida a instalação de skills/plugins contra .claude/skills-registry.json.
+// Valida a instalação de skills/plugins contra docs/ai/skills-registry.json (Claude Code e Codex).
 // Uso: node scripts/validate-skills.mjs   (sai com código 1 se houver FAIL)
 // Ver docs/ai/SKILLS.md. Não depende de nada além do Node.
 import fs from "node:fs";
@@ -62,7 +62,7 @@ function pluginSkills(cache, skillsDir) {
   return found;
 }
 
-const regPath = path.join(root, ".claude/skills-registry.json");
+const regPath = path.join(root, "docs/ai/skills-registry.json");
 section("Registry");
 let reg;
 try {
@@ -159,17 +159,42 @@ for (const s of reg.skills.filter((s) => s.type === "plugin")) {
   }
 }
 
-section("Skills locais (.claude/skills)");
+section("Skills do projeto (.agents/skills = fonte; .claude/skills = espelho + só-Claude)");
+const agentsSkillsDir = path.join(root, ".agents/skills");
 const localDir = path.join(root, ".claude/skills");
-const localDirs = fs
-  .readdirSync(localDir, { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => d.name);
-const registeredLocal = new Set(
-  reg.skills.filter((s) => s.type === "local-skill").flatMap((s) => s.skills),
-);
+const listDirs = (d) =>
+  exists(d)
+    ? fs
+        .readdirSync(d, { withFileTypes: true })
+        .filter((e) => e.isDirectory())
+        .map((e) => e.name)
+    : [];
+const sourceDirs = listDirs(agentsSkillsDir);
+const mirrorDirs = listDirs(localDir);
+const localDirs = [...new Set([...sourceDirs, ...mirrorDirs])];
+const localEntries = reg.skills.filter((s) => s.type === "local-skill");
+const registeredLocal = new Set(localEntries.flatMap((s) => s.skills));
+const agentsOf = new Map(localEntries.flatMap((s) => s.skills.map((n) => [n, s.agents || ["claude"]])));
+// Conteúdo normalizado (CRLF → LF) para a comparação não depender do checkout no Windows.
+const readTree = (dir) => {
+  const out = new Map();
+  const walk = (d) => {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) walk(p);
+      else
+        out.set(
+          path.relative(dir, p).split(path.sep).join("/"),
+          fs.readFileSync(p, "latin1").replace(/\r\n/g, "\n"),
+        );
+    }
+  };
+  walk(dir);
+  return out;
+};
 for (const d of localDirs) {
-  const f = path.join(localDir, d, "SKILL.md");
+  const inSource = sourceDirs.includes(d);
+  const f = path.join(inSource ? agentsSkillsDir : localDir, d, "SKILL.md");
   if (!exists(f)) {
     fail(`${d}: sem SKILL.md`);
     continue;
@@ -184,11 +209,28 @@ for (const d of localDirs) {
   broken.length
     ? fail(`${d}: links quebrados: ${broken.join(", ")}`)
     : ok(`${d}: links internos resolvem`);
-  registeredLocal.has(d) ? null : fail(`${d}: está em .claude/skills mas não no registry`);
+  if (!registeredLocal.has(d)) fail(`${d}: existe no disco mas não no registry`);
+  const agents = agentsOf.get(d) || ["claude"];
+  if (agents.includes("codex")) {
+    if (!inSource)
+      fail(`${d}: registry diz codex, mas não está em .agents/skills (o Codex não a encontra)`);
+    else if (!mirrorDirs.includes(d))
+      fail(`${d}: ausente no espelho .claude/skills (rode bun scripts/agents/sincronizar-skills.ts)`);
+    else {
+      const ta = readTree(path.join(agentsSkillsDir, d));
+      const tb = readTree(path.join(localDir, d));
+      const diff = [...new Set([...ta.keys(), ...tb.keys()])].filter((k) => ta.get(k) !== tb.get(k));
+      diff.length
+        ? fail(
+            `${d}: espelho diverge da fonte em ${diff.slice(0, 3).join(", ")} (edite em .agents/skills e sincronize)`,
+          )
+        : ok(`${d}: espelho igual à fonte (Claude + Codex)`);
+    }
+  } else if (inSource) warn(`${d}: está em .agents/skills mas o registry diz só Claude`);
   addKnown(d, "local");
 }
 for (const n of registeredLocal)
-  if (!localDirs.includes(n)) fail(`${n}: no registry mas ausente em .claude/skills`);
+  if (!localDirs.includes(n)) fail(`${n}: no registry mas ausente no disco`);
 
 const lockPath = path.join(root, "skills-lock.json");
 if (exists(lockPath)) {
@@ -203,6 +245,17 @@ if (exists(lockPath)) {
   for (const n of viaCli)
     if (!lock[n]) fail(`${n} instalado via npx skills mas fora do skills-lock.json`);
 }
+
+section("Agents do Codex (.codex/agents)");
+const codexAgentsDir = path.join(root, ".codex/agents");
+if (exists(codexAgentsDir))
+  for (const f of fs.readdirSync(codexAgentsDir).filter((f) => f.endsWith(".toml"))) {
+    const t = fs.readFileSync(path.join(codexAgentsDir, f), "utf8");
+    const need = ["name", "description", "developer_instructions"].filter(
+      (k) => !new RegExp(`^${k}\\s*=`, "m").test(t),
+    );
+    need.length ? fail(`codex agent ${f}: faltam ${need.join(", ")}`) : ok(`codex agent ${f}`);
+  }
 
 section("Agents locais (.claude/agents)");
 const agentsDir = path.join(root, ".claude/agents");

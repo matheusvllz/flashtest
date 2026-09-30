@@ -1,106 +1,136 @@
-# SDD + Skills — o fluxo de trabalho de um agente no Foca
+---
+estado: aprovado
+atualizado: 2026-09-29
+canonico-de: [fluxo de trabalho de agentes, estados de documentos e tarefas]
+substitui: [versão de 22/09/2026 (convenção docs/NN-plano-*.md na raiz)]
+substituido-por: null
+---
 
-> Para quem é: qualquer agente (Claude Code ou outro) que vá mexer no Foca, e quem mantém o repo. Complementa o SDD existente em `docs/` — **não o substitui**. Catálogo de ferramentas: [SKILLS.md](SKILLS.md). Qual ferramenta usar em cada caso: [SKILL-ROUTING.md](SKILL-ROUTING.md). Registry: [`.claude/skills-registry.json`](../../.claude/skills-registry.json). Criado em 22/09/2026.
+# SDD — como agentes trabalham no Foca
+
+> Para Claude Code, Codex e quem mantém o repositório. A convenção foi aprovada em 29/09/2026 ([decisão 0004](../decisoes/0004-organizacao-do-sdd.md)). Matriz de skills: [SKILL-ROUTING.md](SKILL-ROUTING.md). Catálogo: [SKILLS.md](SKILLS.md).
 
 ## 1. Hierarquia de autoridade
 
 Quando duas fontes discordam, vence a de número menor:
 
-| # | Fonte | Onde |
+| # | Fonte |
+|---|---|
+| 1 | Pedido explícito do proprietário na conversa |
+| 2 | Spec aprovada e ativa (`docs/specs/NN-tema/spec.md`) |
+| 3 | Documentos canônicos (`docs/produto/`, `docs/arquitetura/`, `docs/design/`, `docs/copy/`, `docs/seguranca/`, `docs/operacao/`) e decisões (`docs/decisoes/`) |
+| 4 | `AGENTS.md` (resto) e `CLAUDE.md` |
+| 5 | Skills e plugins |
+| 6 | Conhecimento geral do modelo |
+
+Acima da tabela, sempre: segredos, Git, dados de menores e conteúdo pedagógico protegido ([../../AGENTS.md](../../AGENTS.md) → Regras duras). Memória persistente é pista, não fato. Planos arquivados em `docs/historico/` são consulta de detalhe: se contradizem um documento canônico, o canônico vence.
+
+## 2. Onde fica cada coisa
+
+| Tipo | Caminho | Modelo |
 |---|---|---|
-| 1 | Pedido explícito do usuário nesta conversa | — |
-| 2 | Spec aprovada / plano vigente | `docs/NN-plano-*.md` marcado como vigente em `docs/00-README.md` e no `CLAUDE.md`, lido junto com o registro de execução (`docs/NN-registro-*.md`) |
-| 3 | Arquitetura e decisões documentadas | Convenções técnicas do `CLAUDE.md`, `docs/12` (decisões), registros de execução |
-| 4 | Contexto de produto e design | [docs/PRODUCT.md](../PRODUCT.md), [docs/DESIGN.md](../DESIGN.md) e suas fontes (`08`, `14`, `18`, `20` §7) |
-| 5 | Resto do `CLAUDE.md` | raiz |
-| 6 | Skills e plugins | [SKILLS.md](SKILLS.md) |
-| 7 | Conhecimento geral do modelo | — |
+| Iniciativa (spec + tarefas + registro) | `docs/specs/NN-tema/` | [templates/spec.md](templates/spec.md), [tarefas.md](templates/tarefas.md), [registro.md](templates/registro.md) |
+| Decisão | `docs/decisoes/NNNN-tema.md` | [templates/adr.md](templates/adr.md) |
+| Encerramento | `docs/historico/iniciativas/NN-…/resumo.md` | [templates/resumo.md](templates/resumo.md) |
+| Regras e contratos vigentes | `docs/produto/regras.md`, `docs/arquitetura/contratos.md`, `docs/design/*` | — |
+| Pendências | `docs/produto/backlog.md` | — |
+| Painel de retomada | `docs/ESTADO.md` | — |
 
-Três regras valem acima da tabela, sempre: **segredos** (chave só no servidor, nunca `VITE_*`), **Git/Lovable** (nunca reescrever histórico publicado; commit e push só quando pedido) e **dados de menores** (sem coleta nova nem analytics externo sem spec autorizando — `20` §14, §22).
+**Numeração:** `NN` é o próximo número livre ([../specs/README.md](../specs/README.md)) e é **permanente**, mesmo depois de arquivado. Nunca renumerar.
 
-**Memória persistente (claude-mem) está abaixo de tudo isso.** Código atual e spec atual vencem memória antiga. Uma observação lembrada que cite arquivo, função ou flag é uma pista a verificar, não um fato.
+**Nunca** criar `SPEC.md`, `tasks/`, `docs/superpowers/`, `PRODUCT.md`/`DESIGN.md` na raiz, nem outro índice paralelo.
 
-**Skills não decidem produto.** Se uma skill sugerir algo que a spec proíbe (outra fonte, outra paleta, uma biblioteca nova, analytics, "mais conteúdo"), siga a spec e, se valer a pena, registre a sugestão como pergunta aberta.
+**Frontmatter** de todo documento canônico ou de spec:
 
-## 2. Como o SDD do Foca funciona hoje
-
-Não é o formato genérico SPEC.md/PLAN.md. É este:
-
-- **Índice e estado:** `docs/00-README.md`. O topo diz qual é o plano vigente e se foi implementado.
-- **Plano (Specify + Plan + Tasks num arquivo só):** `docs/NN-plano-<tema>.md`. Abre com "Como a IA implementadora deve usar este documento", tem objetivos, **não objetivos**, arquitetura, modelo de dados, tarefas numeradas (`T-01…`) com critério de aceite, dependências, critérios globais (`G1…`), testes, edge cases, riscos e checklist. Exemplos: `20`, `25`.
-- **Registro de execução:** `docs/NN-registro-execucao-<tema>.md` (ou `NN-validacao-*`). O que foi feito por tarefa, decisões tomadas no caminho, **números reais de teste**, status de cada critério e o que ficou para depois. Exemplos: `22`, `26`.
-- **Precedência entre planos:** um plano novo diz explicitamente sobre quais assuntos prevalece sobre o anterior (ex.: `25` §6.7 sobre o `20`).
-- **Histórico não se apaga:** documentos substituídos ganham cabeçalho de precedência; `_arquivo-abroad/` é arquivo morto.
-- **Toda decisão relevante vai para `docs/`, com data** — não fica só no chat.
-
-Modelo para uma spec nova: [SPEC-TEMPLATE.md](SPEC-TEMPLATE.md).
-
-## 3. O pipeline
-
-```text
-REQUEST → CONTEXT DISCOVERY → SPEC → PLAN → IMPLEMENTATION → TESTS → REVIEW → VERIFICATION → DOCUMENTATION
+```yaml
+---
+estado: aprovado
+atualizado: AAAA-MM-DD
+canonico-de: [assunto]      # só em documentos canônicos
+substitui: []
+substituido-por: null
+---
 ```
 
-| Etapa | O que fazer | Ferramentas (ver roteamento) | Saída |
+## 3. Estados e transições
+
+### Documentos e specs
+
+| Estado | Significado | Vai para | Quem move, com que evidência |
 |---|---|---|---|
-| **1. Request** | Classificar a tarefa (tabela de [SKILL-ROUTING.md](SKILL-ROUTING.md) §2). Tarefa trivial (typo, ajuste de 1 arquivo sem mudança de comportamento) pode pular 3–4. | — | Classe da tarefa |
-| **2. Context discovery** | Ler `docs/00-README.md` (plano vigente) → a spec relevante + seu registro → os arquivos de código envolvidos. Produto/design só se a tarefa tocar UI ou copy (`PRODUCT.md`, `DESIGN.md`). Se tocar texto que o aluno lê: `docs/COPY.md`, no nível de leitura do tamanho da tarefa. | claude-mem (pista, não fato) | Lista do que existe e do que a spec manda |
-| **3. Spec** | Existe spec cobrindo? Use-a. Não existe e a mudança altera comportamento, dados, UX ou escopo? **Escreva ou estenda a spec antes de codar** e peça aprovação. Requisito ambíguo: pergunte. | `superpowers:brainstorming` ou `agent-skills:interview-me` só para **descobrir** requisitos | `docs/NN-plano-<tema>.md` |
-| **4. Plan** | Tarefas pequenas, verticais, com critério de aceite e comando de verificação. Numerar `T-xx` como nos planos existentes. | `superpowers:writing-plans` ou `agent-skills:planning-and-task-breakdown` (escolha **um**) | Seção de tarefas da spec |
-| **5. Implementation** | Uma tarefa por vez, na ordem; o projeto compila ao fim de cada uma. Carregar só as skills da classe da tarefa. | Ver roteamento | Código |
-| **6. Tests** | `bunx tsc --noEmit` · `bun test tests/unit` · `bunx playwright test` quando tocar UI · `bun run build` antes de declarar pronto. Teste novo para comportamento novo. | `superpowers:test-driven-development` **ou** `agent-skills:test-driven-development` (um) | Saída real dos comandos |
-| **7. Review** | Revisão especializada **só da classe da tarefa**, sobre o diff. | Ver roteamento §3 (revisores) | Achados corrigidos ou registrados |
-| **8. Verification** | Comparar o resultado com **cada** critério de aceite da spec. Critério sem evidência = não cumprido. | `superpowers:verification-before-completion`, agent `spec-verifier` | Tabela critério → evidência |
-| **9. Documentation** | Registro de execução (`docs/NN+1-registro-*.md` ou seção no registro existente), atualizar `docs/00-README.md` e, se o plano vigente mudou, o topo do `CLAUDE.md`. Copy nova → inventário do `21`; termo novo → glossário de `docs/copy/03-ux-writing.md` §3. | — | Docs atualizados |
+| `rascunho` | Em escrita | `aguardando-aprovacao` | Agente, com as seções obrigatórias preenchidas |
+| `aguardando-aprovacao` | Pronto para decidir | `aprovado` ou `rascunho` | **Proprietário, por escrito**; registrar a data e o escopo aprovado |
+| `aprovado` | Autorizado, não iniciado | `em-execucao` | Agente, ao iniciar a primeira tarefa |
+| `em-execucao` | Há tarefa em andamento | `bloqueado`, `concluido` | Agente |
+| `bloqueado` | Não avança sem algo externo | `em-execucao` | Precisa de motivo e dono |
+| `concluido` | Todo critério global com evidência, ou com pendência levada ao backlog | `arquivado` | Agente, depois da verificação (`spec-verifier`) |
+| `substituido` | Outro documento assumiu o assunto | `arquivado` | Registrar `substituido-por` |
+| `arquivado` | Em `docs/historico/` com resumo | — | — |
 
-## 4. "Implemente a próxima spec"
+### Tarefas (`T-FF.n`)
 
-1. Abrir `docs/00-README.md` e ler o bloco de **plano vigente** no topo.
-2. Se o plano vigente está marcado como IMPLEMENTADO, a "próxima" é:
-   - uma spec em `docs/` marcada como *não implementada* ou *proposal* e que não tenha sido absorvida por um documento posterior (conferir o índice: o `23`, por exemplo, diz "proposta", mas foi aprovado e integrado pelo `24`);
-   - ou um item da lista "o que fica pra depois" do registro mais recente (`26` §8) — **mas isso não é spec**: vira spec primeiro (etapa 3).
+| Estado | Regra |
+|---|---|
+| `pendente` → `em-andamento` | Só com as dependências `concluida` |
+| `bloqueada` | Motivo, dono e o que desbloqueia |
+| `concluida` | Critério de aceite com evidência (comando e saída, arquivo, captura) |
+| `cancelada` / `adiada` | Motivo; `adiada` vira item do backlog |
 
-   Estado em 22/09/2026: `20` e `25` implementados (`22`, `26`), `23` integrado pelo `24`. **Não há spec aprovada pendente de execução** — o próximo passo é escrever uma a partir do `26` §8 ou de um pedido novo.
-3. Se houver mais de um candidato, ou nenhum aprovado, **pare e pergunte** qual é. Não escolha sozinho escopo de produto.
-4. Com a spec escolhida: ler a seção "Como a IA deve usar", executar as tarefas na ordem numerada, registrar divergências entre spec e código no registro de execução (não "consertar" a spec em silêncio).
+### Encerrar uma iniciativa (checklist)
 
-## 5. Onde cada ferramenta pode escrever (overrides obrigatórios)
+1. O registro cobre todas as tarefas; os testes passam; contratos-chave conferidos no código.
+2. Regras e contratos que continuam valendo extraídos para os canônicos, cada um com a origem `(NN §x)`.
+3. Pendências levadas ao backlog, com origem.
+4. `resumo.md` escrito (o que mudou, decisões, evidência, limitações).
+5. Pasta movida para `docs/historico/iniciativas/` com `git mv`; mapa de IDs atualizado; `bun run docs:check` verde.
 
-Várias skills instaladas têm convenções próprias de arquivo. **No Foca, estas prevalecem:**
+## 4. Retomar o projeto (≤ 4 leituras)
 
-| Ferramenta | Convenção dela | No Foca |
-|---|---|---|
-| Superpowers `brainstorming` | `docs/superpowers/specs/AAAA-MM-DD-<tema>-design.md` + commit | Spec vai para `docs/NN-plano-<tema>.md`. **Sem commit automático.** |
-| Superpowers `writing-plans` | `docs/superpowers/plans/…` | Tarefas `T-xx` dentro da própria spec |
-| Superpowers `using-git-worktrees` / `finishing-a-development-branch` | Worktree, merge, PR | Só quando o usuário pedir. Nunca force-push, rebase ou amend de commit publicado (Lovable) |
-| Addy `/spec`, `spec-driven-development` | `SPEC.md` na raiz | `docs/NN-plano-<tema>.md` |
-| Addy `/plan`, `planning-and-task-breakdown` | `tasks/plan.md`, `tasks/todo.md` | Seção de tarefas da spec; progresso no registro de execução |
-| Impeccable `init` / `document` | `PRODUCT.md` / `DESIGN.md` na raiz | Os canônicos são `docs/PRODUCT.md` e `docs/DESIGN.md` (o Impeccable os encontra em `docs/`). Nunca criar outro na raiz. `document` não sobrescreve sem mostrar o diff |
-| Marketing `product-marketing` | `.agents/product-marketing.md` | Já existe; aponta para `docs/PRODUCT.md`. Atualizar lá, não duplicar |
-| UI UX Pro Max `--persist` | `design-system/` | Não usar `--persist`; o design system é o de `docs/DESIGN.md` |
-| Repo Security Review | `.security-review/` | Gitignorado. Relatório final que valha guardar vai para `docs/` com data |
+1. `AGENTS.md` (carrega sozinho).
+2. [../ESTADO.md](../ESTADO.md): iniciativa ativa, tarefa em curso, próximo passo, bloqueios, último checkpoint verde.
+3. A tarefa na spec ativa: só a seção dela e os contratos que ela cita.
+4. As últimas entradas do `registro.md`.
 
-## 6. Níveis de revisão de segurança
+Depois: `git status` e `git log -5`. O repositório bate com o checkpoint? Se tocou código, rode `bunx tsc --noEmit` e `bun test tests/unit` antes de continuar. **Se não bater, pare e registre a divergência** — não "conserte" às cegas.
 
-| Nível | Quando | O que roda |
-|---|---|---|
-| **L1 — revisão normal** | Toda mudança de código | O review da etapa 7. Checar: segredo em código, `VITE_*` indevido, `dangerouslySetInnerHTML`, entrada do aluno indo para prompt sem limite |
-| **L2 — feature sensível** | Mexe em `src/lib/tutor*.ts` (IA, prompt, server function), dados do aluno no store/`localStorage`, upload de foto, dependência nova, headers/deploy (`netlify.toml`) | L1 + `agent-skills:security-and-hardening` + `/repo-security-review . --pr origin/main` (modo PR, só o diff) |
-| **L3 — antes de release grande** | Antes de expor a usuários reais, de adicionar backend/auth/pagamento, ou periodicamente | `/repo-security-review .` completo (7 fases). Instalar antes `gitleaks`, `osv-scanner`, `semgrep`, `jq` (ver [SKILLS.md](SKILLS.md) → Repo Security Review) |
+## 5. Executar a próxima tarefa aprovada
+
+1. No `ESTADO.md`, a primeira tarefa `pendente` sem dependência aberta e sem bloqueio. Se não houver, **pare e pergunte**. Uma pendência do backlog não é tarefa aprovada: vira spec primeiro.
+2. Carregue as skills que a [matriz](SKILL-ROUTING.md) indica para o tipo da tarefa (no máximo 3 primárias + 1 revisão).
+3. Implemente, uma tarefa por vez; o projeto compila ao fim de cada uma.
+4. Teste com saída real; revise na classe da tarefa (e no nível de segurança: [../seguranca/README.md](../seguranca/README.md)).
+5. **Checkpoint:** estado da tarefa + evidência no registro; `ESTADO.md` atualizado (próxima tarefa, último comando verde, commit); pendências no backlog; commit local se autorizado.
+
+Uma tarefa que depende de credencial ou ação externa fica `bloqueada` com dono; siga com o trabalho independente.
+
+## 6. Pipeline
+
+```text
+PEDIDO → CONTEXTO (ESTADO + spec) → SPEC (se não existe, escrever e pedir aprovação) → TAREFAS → IMPLEMENTAÇÃO → TESTES → REVISÃO → VERIFICAÇÃO → REGISTRO + CHECKPOINT
+```
+
+- **Tarefa trivial** (typo, ajuste de um arquivo sem mudança de comportamento) pode pular spec e tarefas; o registro fica no commit.
+- **Mudança de comportamento, dados, UX ou escopo sem spec** → escrever a spec antes de codar e pedir aprovação.
+- **Testes:** `bunx tsc --noEmit` · `bun test tests/unit` · `bunx playwright test` (se tocou UI ou fluxo) · `bun run build` · `bun run lint` · `bun run docs:check` (se tocou documentação). Teste novo para comportamento novo.
+- **Verificação:** cada critério de aceite comparado com evidência (`spec-verifier` no Claude; `.codex/agents/spec-verifier.toml` no Codex). Critério sem evidência = não cumprido.
+- **Estados de validação** a declarar em toda entrega: implementado · validado localmente · validado em ambiente integrado · publicado.
+- **Texto do aluno:** strings novas em `src/lib/copy.ts` com linha no [inventário](../copy/inventario.md); termo novo no glossário de `docs/copy/03-ux-writing.md` §3.
 
 ## 7. Subagentes
 
-- Paralelizar só o que não compartilha arquivo. **Dois subagentes nunca editam o mesmo arquivo ao mesmo tempo.**
-- Formato recomendado: um orquestrador implementa; revisores rodam **em paralelo sobre o diff** e só leem (UI → `impeccable` finish/`web-design-guidelines`; testes → `agent-skills` test-engineer; segurança → `agent-skills` security-auditor; aderência à spec → `spec-verifier`).
-- Subagente recebe caminho da spec e critérios; não recebe o histórico inteiro.
-- O resultado do subagente é relatado ao usuário pelo orquestrador — o usuário não vê o relatório do subagente.
+- Paralelize só o que não compartilha arquivo. Dois subagentes nunca editam o mesmo arquivo ao mesmo tempo.
+- Um orquestrador implementa; revisores rodam sobre o diff e só leem.
+- O subagente recebe o caminho da spec e os critérios, não o histórico inteiro.
+- O usuário não vê o relatório do subagente: o orquestrador repassa o que importa.
 
-## 8. Regras rápidas que evitam os erros mais prováveis
+## 8. Onde as ferramentas escrevem (prevalece sobre o padrão de qualquer skill)
 
-- Não criar `SPEC.md`, `tasks/`, `docs/superpowers/`, nem `PRODUCT.md`/`DESIGN.md` na raiz.
-- Não adicionar dependência (GSAP, Motion, analytics, SDK de IA) sem spec aprovada.
-- Não editar `src/routeTree.gen.ts`. Não criar segundo store.
-- Não trocar copy aprovada (`21` §2) sem atualizar o inventário.
-- Skills de escrita só pelo roteamento de [SKILL-ROUTING.md](SKILL-ROUTING.md) §2.1, e só quando trazem algo que o guia `docs/COPY.md` não traz. Nenhuma skill de copy em conteúdo pedagógico.
-- Não declarar pronto sem a saída real dos comandos da etapa 6.
-- Não rodar scripts de instalação de skills de terceiros sem ler (ver [SKILLS.md](SKILLS.md) §Segurança).
+| Ferramenta | Convenção dela | No Foca |
+|---|---|---|
+| Superpowers `brainstorming` / `writing-plans` | `docs/superpowers/…` + commit | `docs/specs/NN-tema/`; sem commit automático |
+| Addy `spec-driven-development` / `planning-and-task-breakdown` | `SPEC.md`, `tasks/` | `docs/specs/NN-tema/` |
+| Impeccable `init` / `document` | `PRODUCT.md`/`DESIGN.md` na raiz | `docs/PRODUCT.md`, `docs/DESIGN.md`; nunca sobrescrever sem mostrar o diff |
+| Marketing `product-marketing` | `.agents/product-marketing.md` | Já existe; aponta para `docs/PRODUCT.md` |
+| UI UX Pro Max `--persist` | `design-system/` | Não usar `--persist` |
+| Repo Security Review | `.security-review/` | Ignorado pelo Git; resumo em `docs/seguranca/auditorias/` |
+| Worktrees, merge, PR | — | Só a pedido do proprietário |

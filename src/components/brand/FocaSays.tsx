@@ -3,7 +3,7 @@ import { FocaMark, type FocaExpression, type FocaMotion } from "@/components/bra
 import { fala, type VozSlot } from "@/lib/voz";
 
 /**
- * Foca + balão de fala (docs/18-plano-reestilizacao-rabisco.md §8.4). A frase
+ * Foca + balão de fala (docs/design/sistema-rabisco.md §8.4). A frase
  * vem de `src/lib/voz.ts` pelo `slot` — nunca hardcoded aqui, pra toda tela
  * herdar a mesma biblioteca e a mesma regra de não-repetição. `text` (docs/25
  * §18 T-10) sobrescreve isso quando a fala vem do CONTEÚDO (ex.: objetivo/dica

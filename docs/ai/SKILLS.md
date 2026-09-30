@@ -1,6 +1,51 @@
+---
+estado: aprovado
+atualizado: 2026-09-29
+canonico-de: [catálogo de skills e ferramentas de agente]
+substitui: []
+substituido-por: null
+---
+
 # Skills, plugins e ferramentas de agente do Foca
 
-> Para quem é: agentes que trabalham no Foca e quem mantém o repo. Instalado e auditado em 22/09/2026 (Claude Code 2.1.280, Windows 11). **Skills são ferramentas auxiliares: nunca prevalecem sobre a spec** — ver a hierarquia em [SDD-WORKFLOW.md](SDD-WORKFLOW.md) §1. Qual usar em cada caso: [SKILL-ROUTING.md](SKILL-ROUTING.md). Versão legível por máquina: [`.claude/skills-registry.json`](../../.claude/skills-registry.json).
+> Para agentes (Claude Code e Codex) e quem mantém o repo. **Skills são ferramentas: nunca prevalecem sobre a spec** ([SDD-WORKFLOW.md](SDD-WORKFLOW.md) §1). Qual usar em cada caso: [SKILL-ROUTING.md](SKILL-ROUTING.md). Catálogo de máquina (fonte da tabela abaixo): [skills-registry.json](skills-registry.json). Validação: `node scripts/validate-skills.mjs`.
+
+## 0. Por agente (atualizado em 29/09/2026)
+
+- **Onde cada agente procura:** o Codex lê skills em `.agents/skills/` (e em `~/.agents/skills`) e agentes em `.codex/agents/*.toml`; o Claude Code lê skills em `.claude/skills/`, `~/.claude/skills/` e nos plugins, e agentes em `.claude/agents/`. O Codex **não** lê `.claude/`; o Claude **não** lê `.agents/`.
+- **Por isso:** as skills do projeto têm a fonte em `.agents/skills/` e um espelho gerado em `.claude/skills/` (`bun scripts/agents/sincronizar-skills.ts`; o validador falha se divergirem). Skills só do Claude ficam só em `.claude/skills/`.
+- **Instruções:** `AGENTS.md` é a entrada dos dois (o Codex o lê direto; o `CLAUDE.md` o importa com `@AGENTS.md`).
+- **Plugins do Claude dependem do host:** estão habilitados no projeto, mas podem não carregar numa sessão (ex.: SDK/desktop). A matriz de roteamento sempre traz uma alternativa.
+- **Skills de sistema do Codex** (`review-agent`, `openai-docs`, `skill-creator`…) vêm com o próprio Codex e não são catalogadas aqui.
+
+<!-- tabela-skills:inicio (gerado por scripts/agents/tabela-skills.ts; não editar à mão) -->
+| Skill / pacote | Tipo | Claude Code | Codex | Onde | Sem ela |
+|---|---|---|---|---|---|
+| superpowers@superpowers-marketplace (15 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| agent-skills@addy-agent-skills (25 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| frontend-design@claude-code-plugins (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| impeccable@impeccable (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| ui-ux-pro-max@ui-ux-pro-max-skill (7 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| design-taste-frontend, redesign-existing-projects | local-skill | sim | sim | `.agents/skills` | — |
+| web-design-guidelines | local-skill | sim | sim | `.agents/skills` | — |
+| better-writing | local-skill | sim | sim | `.agents/skills` | — |
+| ogilvy-copywriting | local-skill | sim | sim | `.agents/skills` | — |
+| vercel-react-best-practices | local-skill | sim | sim | `.agents/skills` | — |
+| gsap-skills@gsap-skills (8 skills) | plugin | desligado por padrão | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| motion-design | local-skill | sim | sim | `.agents/skills` | — |
+| marketing-skills@marketingskills (50 skills) | plugin | desligado por padrão | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| humanizer@humanizer (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| repo-security-review | local-skill | sim | — | `.claude/skills` | gitleaks + osv-scanner + semgrep à mão + review-agent (docs/seguranca/README.md) |
+| claude-mem@thedotmack (0 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| tanstack-start@claude-skills (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| tanstack-router@claude-skills (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| tailwind-v4-shadcn@claude-skills (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
+| foca-sdd | local-skill | sim | sim | `.agents/skills` | — |
+| foca-social | local-skill | sim | sim | `.agents/skills` | — |
+| omniroute-mcp | mcp-server | sim | — | `.mcp.json` | — |
+| agente `spec-verifier` | agente | sim (`.claude/agents/spec-verifier.md`) | sim (`.codex/agents/spec-verifier.toml`) | — | — |
+| agente `foca-social` | agente | sim (`.claude/agents/foca-social.md`) | — | — | — |
+<!-- tabela-skills:fim -->
 
 ## 1. Visão geral
 
@@ -9,7 +54,7 @@ Cinco tipos de integração, cada um instalado pelo método oficial do seu upstr
 | Tipo | O que é | Onde vive | Versionado no repo? |
 |---|---|---|---|
 | **CLAUDE CODE PLUGINS** (escopo de projeto) | Pacotes com skills/agents/hooks/commands vindos de um marketplace | Declarados em `.claude/settings.json` (`extraKnownMarketplaces` + `enabledPlugins`); código baixado em `~/.claude/plugins/cache/` | Só a declaração. Cada pessoa que abrir o repo e **confiar na pasta** recebe o pedido de instalação |
-| **LOCAL PROJECT SKILLS** | Pastas `SKILL.md` copiadas para o projeto | `.claude/skills/<nome>/` + `skills-lock.json` (hash) na raiz | Sim, inteiras |
+| **LOCAL PROJECT SKILLS** | Pastas `SKILL.md` copiadas para o projeto | `.agents/skills/<nome>/` (fonte) + espelho em `.claude/skills/<nome>/` + `skills-lock.json` (hash) na raiz | Sim, inteiras |
 | **EXTERNAL TOOLING** | Binários/CLIs de que uma skill depende | Máquina do dev | Não — instruções abaixo |
 | **REFERENCE LIBRARIES** | Conteúdo consultado sob demanda (CSV, referências) dentro de uma skill | Dentro da skill | Conforme a skill |
 | **PROJECT MCP SERVERS** | Servidor MCP externo (não é uma skill — não tem `SKILL.md`) registrado só para este projeto | `.mcp.json` na raiz (`mcpServers`) | Sim, o `.mcp.json` inteiro |
@@ -111,12 +156,12 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Installed location:** `.claude/settings.json` → `ui-ux-pro-max@ui-ux-pro-max-skill`; cache `~/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.13.0/`
 **Version / commit:** 2.13.0 — `dcc40ff5133ef78276117db0cc34e7b83cc8aeba`
 **Skills (7):** `ui-ux-pro-max`, `design`, `design-system`, `ui-styling`, `brand`, `banner-design`, `slides`.
-**Dependência externa:** Python 3 para `scripts/search.py` (busca nos CSVs). Nesta máquina `python` não está no PATH (só o alias da Microsoft Store), mas `py -3` (Python 3.13.6) funciona — é o fallback que a própria skill documenta. Sem Python, `references/quick-reference.md` e `references/pro-rules.md` continuam utilizáveis.
+**Dependência externa:** Python 3 para o script `search.py` do próprio plugin (busca nos CSVs). Nesta máquina `python` não está no PATH (só o alias da Microsoft Store), mas `py -3` (Python 3.13.6) funciona — é o fallback que a própria skill documenta. Sem Python, `references/quick-reference.md` e `references/pro-rules.md` continuam utilizáveis.
 **Purpose:** base consultável de conhecimento de UI/UX (estilos, paletas, tipografia, 119 guidelines de UX, charts, ícones, stacks).
 **Use when:** pesquisa pontual para embasar uma decisão ("qual padrão de navegação para X?", "regra de UX para Y").
 **Do not use when:** para escolher paleta, fonte ou estilo do Foca (já decididos em `docs/DESIGN.md`); `--design-system --persist` (criaria `design-system/` concorrente); as skills `brand`, `banner-design` e `slides` não têm uso no app.
 **Related skills:** Frontend Design, Web Design Guidelines.
-**Possible overlap:** `design-system` tem o mesmo nome curto de `design:design-system` (plugin de usuário) — são namespaces diferentes. `brand` sobrepõe `docs/brand/`.
+**Possible overlap:** `design-system` tem o mesmo nome curto de `design:design-system` (plugin de usuário) — são namespaces diferentes. `brand` sobrepõe `docs/design/brand/`.
 **Priority:** Reference.
 
 ## F. Taste
@@ -128,7 +173,7 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Skills instaladas (nome real do frontmatter → pasta upstream):** `design-taste-frontend` (`skills/taste-skill/`), `redesign-existing-projects` (`skills/redesign-skill/`).
 **Não instaladas (11), e por quê:** `design-taste-frontend-v1` (versão antiga), `gpt-taste`, `high-end-visual-design`, `minimalist-ui`, `industrial-brutalist-ui`, `stitch-design-taste` (presets estéticos que brigariam com a identidade fixa do Foca), `brandkit` (marca já decidida), `image-to-code`, `imagegen-frontend-web`, `imagegen-frontend-mobile` (fluxo de geração de imagem fora do escopo), `full-output-enforcement` (altera comportamento geral do agente).
 **Purpose:** reduzir cara de template em superfícies de marketing.
-**Use when:** landing page, LP do link da bio (`docs/brand/`), página de campanha — superfícies **Persuade**.
+**Use when:** landing page, LP do link da bio (`docs/design/brand/`), página de campanha — superfícies **Persuade**.
 **Do not use when:** UI do app. A própria skill diz: "Not dashboards, not data tables, not multi-step product UI." Nunca adotar o stack padrão dela (biblioteca Motion, fontes Geist/Satoshi) no lugar dos tokens do Foca.
 **Related skills:** Frontend Design, Impeccable, Marketing Skills (`cro`, `copywriting`).
 **Possible overlap:** Frontend Design (criação) e Impeccable (crítica).

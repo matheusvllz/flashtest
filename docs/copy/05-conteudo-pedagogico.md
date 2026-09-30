@@ -30,7 +30,7 @@ Nenhuma dessas skills foi feita para isso, e a chance de "melhorar" um texto tro
 
 ## 3. Questões oficiais do ENEM
 
-Decisão registrada em [34](../34-decisao-questoes-oficiais.md): o texto de questões do ENEM pode ser reproduzido **com o ano e "ENEM" visíveis junto ao enunciado, sempre**. Sem imagem, charge, gráfico ou mapa de terceiro. Outros vestibulares não foram aprovados.
+Decisão registrada em [34](../decisoes/0002-questoes-oficiais-enem.md): o texto de questões do ENEM pode ser reproduzido **com o ano e "ENEM" visíveis junto ao enunciado, sempre**. Sem imagem, charge, gráfico ou mapa de terceiro. Outros vestibulares não foram aprovados.
 
 - Nunca alterar enunciado nem alternativas de questão oficial. Só metadados (dificuldade, habilidade). Se um oficial precisar de mudança de texto, o caminho é `retirar` (rubrica do `36` §G.6).
 - A atribuição visível é requisito, não enfeite: nenhuma mudança de interface a esconde.
@@ -48,7 +48,7 @@ Decisão registrada em [34](../34-decisao-questoes-oficiais.md): o texto de ques
 
 Não é tarefa de copy. É revisão factual, com a rubrica e o processo do plano técnico:
 
-- **Rubrica R1 a R8** (gabarito único e correto; explicação coerente; enunciado sem ambiguidade; distratores plausíveis; paralelismo de forma; mede a habilidade etiquetada; dificuldade coerente; português correto): [36](../36-plano-qualidade-pedagogica-ux-confiabilidade.md) §G.6. **DEPENDÊNCIA DO PLANO PRINCIPAL:** a rubrica e o relatório de lotes são do `36` Fase 7.
+- **Rubrica R1 a R8** (gabarito único e correto; explicação coerente; enunciado sem ambiguidade; distratores plausíveis; paralelismo de forma; mede a habilidade etiquetada; dificuldade coerente; português correto): [36](../historico/iniciativas/35-36-37-qualidade/36-plano-qualidade-pedagogica-ux-confiabilidade.md) §G.6. **DEPENDÊNCIA DO PLANO PRINCIPAL:** a rubrica e o relatório de lotes são do `36` Fase 7.
 - Falha em R1 a R3 é bloqueante.
 - Item alterado incrementa `version`. Nunca reescrever tentativa antiga. Nunca mudar a ordem das alternativas de item em uso.
 - O acervo de redação legado (1.204 exercícios) não é revisado item a item por esse plano.

@@ -1,7 +1,7 @@
 import { getState } from "@/lib/store";
 
 /**
- * Háptico (docs/16-gamificacao-e-dopamina.md §4). Reforça o som e funciona
+ * Háptico (docs/historico/fundacao/16-gamificacao-e-dopamina.md §4). Reforça o som e funciona
  * com o celular no silencioso — onde o público-alvo passa metade do dia.
  * `navigator.vibrate` não existe no iOS Safari: degrada em silêncio, sem
  * try/catch barulhento. Toggle próprio (`prefs.haptics`) — tem gente que

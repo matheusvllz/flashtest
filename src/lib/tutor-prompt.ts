@@ -8,7 +8,7 @@
  * calculados pelo app; só a frase é gerada pela IA. Por isso o desempenho entra
  * aqui como fato pronto, e o prompt proíbe a IA de inventar estatística.
  *
- * Persona revisada na Fase 3 do docs/20-plano-evolucao-aprendizagem.md (§7,
+ * Persona revisada na Fase 3 do docs/historico/iniciativas/20-22-aprendizagem/20-plano-evolucao-aprendizagem.md (§7,
  * precedência): a personalidade "seca, sarcástica" que cobrava disciplina do
  * aluno foi substituída por companhia direta e respeitosa — humor, quando
  * aparece, é sobre a mascote/situação, nunca sobre a capacidade do aluno, e

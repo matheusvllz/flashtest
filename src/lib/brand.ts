@@ -1,6 +1,6 @@
 /**
- * Paleta Rabisco na Margem da Foca (docs/brand/foca-rabisco-branding.md,
- * docs/18-plano-reestilizacao-rabisco.md §6.1) para os poucos lugares que
+ * Paleta Rabisco na Margem da Foca (docs/design/brand/foca-rabisco-branding.md,
+ * docs/design/sistema-rabisco.md §6.1) para os poucos lugares que
  * precisam do hex em JavaScript (meta theme-color, cores calculadas com alpha).
  * Em JSX use as classes Tailwind (`bg-abismo`) ou, em `style`/valor arbitrário, a
  * variável BASE (`var(--mar)`, `var(--gelo)`, `var(--alert)`…), nunca o alias

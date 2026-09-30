@@ -124,7 +124,7 @@ Cada termo tem um nome visível canônico, o que se evita, uma definição de um
 
 ## 4. Manutenção
 
-- **String nova:** entra em `src/lib/copy.ts` (falas da Foca em `voz.ts`), ganha linha no inventário [`21`](../21-brand-voice-e-inventario-copy.md) e passa pelo teste de voz ([02](02-voz-e-tom.md) §5) e por esta tabela.
+- **String nova:** entra em `src/lib/copy.ts` (falas da Foca em `voz.ts`), ganha linha no inventário [`21`](inventario.md) e passa pelo teste de voz ([02](02-voz-e-tom.md) §5) e por esta tabela.
 - **Termo novo:** primeiro na seção 3, depois a string.
 - **Mudar string marcada "revisado" no `21`:** só junto com a atualização do inventário.
 - **Mudança de 1 rótulo:** pode dispensar skill. Erro, confirmação, estado vazio ou 2+ strings: `better-writing`.

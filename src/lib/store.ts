@@ -58,7 +58,7 @@ export type Prefs = {
   dailyLessons: number; // aulas de 60s por dia (a unidade de estudo, ver SDD 12)
   selectedTopics: Record<string, string[]>; // subjectId -> topicIds
   topicMode: "chose" | "recommend" | "skip" | null;
-  /** Toggles sensoriais (docs/18-plano-reestilizacao-rabisco.md §10, docs/16-gamificacao-e-dopamina.md §3/§4). */
+  /** Toggles sensoriais (docs/design/sistema-rabisco.md §10, docs/historico/fundacao/16-gamificacao-e-dopamina.md §3/§4). */
   sound: boolean;
   haptics: boolean;
   /** "auto" segue o sistema (docs/18 §12.4, D4). */
@@ -117,7 +117,7 @@ export type Progress = {
    */
   lessons: Record<string, LessonProgress>;
   /**
-   * Registro honesto de atividade (docs/18-plano-reestilizacao-rabisco.md §6,
+   * Registro honesto de atividade (docs/design/sistema-rabisco.md §6,
    * §9). Datas em ISO `YYYY-MM-DD`, sempre locais (nunca UTC — ver `hojeISO`).
    * Guarda até 60 dias; é o que faz a meta diária, o calendário semanal e o
    * "voltou depois de sumir" refletirem a realidade em vez de números soltos.
@@ -239,7 +239,7 @@ const defaultState: AppState = {
     selectedTopics: {},
     topicMode: null,
     // Primeiro uso começa com som ligado, mas com aviso visível de como
-    // desligar (docs/16-gamificacao-e-dopamina.md §3, regra 3).
+    // desligar (docs/historico/fundacao/16-gamificacao-e-dopamina.md §3, regra 3).
     sound: true,
     haptics: true,
     theme: "auto",
@@ -668,7 +668,7 @@ export function useAppState(): AppState {
 
 /**
  * Registra presença do dia — a peça central da honestidade do produto
- * (docs/16-gamificacao-e-dopamina.md §6, docs/18-plano-reestilizacao-rabisco.md
+ * (docs/historico/fundacao/16-gamificacao-e-dopamina.md §6, docs/design/sistema-rabisco.md
  * §9). Chamada por toda ação que conta como "estudou hoje": responder uma
  * questão da aula de 60s, concluir uma lição de redação, revisar um flashcard.
  *

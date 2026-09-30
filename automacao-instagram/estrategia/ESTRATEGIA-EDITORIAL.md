@@ -1,6 +1,6 @@
 # Estratégia editorial — Instagram do Foca
 
-> Derivada de `docs/14-persona-joao.md`, `docs/copy/01-estrategia.md`, `docs/copy/06-marketing.md` e `docs/PRODUCT.md`.
+> Derivada de `docs/produto/persona-joao.md`, `docs/copy/01-estrategia.md`, `docs/copy/06-marketing.md` e `docs/PRODUCT.md`.
 > Se uma dessas fontes mudar, este arquivo é que está desatualizado.
 
 ## 1. Para quem

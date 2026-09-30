@@ -22,10 +22,10 @@ function formatClock(total: number) {
 
 /**
  * Tela de fechamento única para os dois pilares — aula de 60s e lição de
- * redação (docs/18-plano-reestilizacao-rabisco.md §9, §13.6/§13.8). Substitui
+ * redação (docs/design/sistema-rabisco.md §9, §13.6/§13.8). Substitui
  * `LessonDone` (study.tsx) e o bloco de resultado do `LessonPlayer`.
  *
- * O CTA primário é sempre a SAÍDA (docs/16-gamificacao-e-dopamina.md §2: "a
+ * O CTA primário é sempre a SAÍDA (docs/historico/fundacao/16-gamificacao-e-dopamina.md §2: "a
  * saída tem que ser limpa") — nunca "mais uma", que reintroduziria a rolagem
  * infinita que o produto existe para recusar.
  */

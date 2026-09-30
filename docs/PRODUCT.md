@@ -15,14 +15,14 @@ web (mobile-first; layout de tela larga com coluna de 560–640 px e `NavRail` a
 - **Job to be done:** "Quando eu tenho 2 minutos livres e bate a sensação de que estou ficando pra trás, eu quero fazer alguma coisa que conte de verdade pro meu vestibular, pra eu sentir que hoje eu não perdi o dia." Tem que caber em 2 minutos, contar de verdade e dar prova visível de progresso (`14` §5).
 - **Gatilho emocional:** alívio, não ambição. A culpa não faz o João voltar; ela o faz evitar o app (`14` §4, §6).
 - Toda feature se testa contra ele: *isso resolve o João, ou um estudante genérico?* (`14` §0).
-- Público é menor de idade na maior parte: coleta adicional de dados de menores **não está autorizada** (`20` §22).
+- Público majoritariamente adolescente. **Desde a decisão 0006 (29/09/2026), conta só a partir de 17 anos e estudar exige conta.** Coleta de dados pessoais só a listada em [seguranca/privacidade.md](seguranca/privacidade.md) (46 §E.2, §H.2); qualquer outra continua proibida sem spec (`20` §22, substituída em parte pela 46 §B.4).
 
 ## Product Purpose
 
 - App mobile-first de preparação para o ENEM em **aulas curtas** (a aula da trilha tem 4–8 questões, o `/study` tem 2), feedback imediato, e uma trilha que decide o próximo passo (`08` §1; `CLAUDE.md`).
 - A dor tratada é falta de **constância** (o hábito não gruda) + falta de **direção** (não sabe onde está fraco) — não falta de conteúdo (`08` §0, §1; `14` §3).
 - Sucesso, na visão de produto: o aluno fecha o app pensando "pelo menos hoje eu fiz alguma coisa" e volta amanhã (`14` §6; `08` §2, loop central).
-- Estado atual: protótipo funcional, sem backend; login e cadastro são mock intencional (`CLAUDE.md`, "Stack real").
+- Estado atual (29/09/2026): protótipo funcional, sem backend; login e cadastro ainda são simulados. **A regra "cadastro mock é intencional" foi substituída pela 46** (contas reais, backend, sincronização — em execução em [specs/46-producao/](specs/46-producao/spec.md)). Estado de cada funcionalidade: [produto/funcionalidades.md](produto/funcionalidades.md).
 
 ## Positioning
 
@@ -47,13 +47,13 @@ web (mobile-first; layout de tela larga com coluna de 560–640 px e `NavRail` a
 
 **Restrições técnicas duras** (`CLAUDE.md`; `25` "Como usar", item 4):
 - Um só store (`src/lib/store.ts`, `useSyncExternalStore` + `localStorage`); nunca um segundo mecanismo de estado.
-- Sem backend, sem banco, sem autenticação real, sem pagamento.
+- ~~Sem backend, sem banco, sem autenticação real~~ — substituída pela 46 (backend Neon + Better Auth, [decisão 0005](decisoes/0005-stack-de-backend.md)). **Sem pagamento** continua valendo.
 - Sem nova biblioteca de UI, nova dependência de IA ou nova biblioteca de áudio sem decisão registrada em spec.
 - Chave da IA só no servidor; nunca `VITE_*`.
 - `src/routeTree.gen.ts` é gerado; nunca editar à mão.
-- Repo conectado ao Lovable: nunca reescrever histórico publicado.
+- Nunca reescrever histórico publicado; push em `main` publica em produção (a Lovable foi desconectada em 29/09/2026).
 
-**Não autorizado automaticamente** (`20` §14, §22): analytics externo, coleta adicional de dados de menores, pagamento real, ranking real, notas previstas, geração livre de aulas em tempo real.
+**Não autorizado automaticamente** (`20` §14, §22): analytics externo, coleta de dados além da listada em `seguranca/privacidade.md`, pagamento real, ranking real, notas previstas, geração livre de aulas em tempo real. (Backend e sincronização foram autorizados pela 46.)
 
 **Terminologia** (`25`, vocabulário): Matéria, Seção, Capítulo, **Lição** (tipo `MicroLesson` no código), passos (`LessonStep`), Questão.
 
@@ -73,7 +73,7 @@ web (mobile-first; layout de tela larga com coluna de 560–640 px e `NavRail` a
 
 - Conteúdo real: 59 questões cobrindo 11 matérias (`08` §8); 134 lições / 1.204 exercícios de redação (`08` §5); conteúdo novo da Jornada V2 (`26`); acervo de pacote com 755 itens (737 gerados por IA e 18 do ENEM 2023, 3 retirados) e 48 aulas geradas, revisados por modelo delegado (`reviewKind: ia-delegada`, não é revisão humana) (`32`, `37`).
 - Testes: 257 unitários + 33 E2E passando em 22/09/2026, incluindo projeto Playwright `narrow` 320×700 (`26`). No Gate F9 do `36` (28/09/2026): 1.146 unitários e 281 E2E (251 passaram, 30 pulados por desenho, 0 falhas) em três projetos — `chromium` 390×844, `desktop` 1280×800 e `narrow` 320×700 (`37`).
-- Copy de landing escrita na voz do João (`13`); LP do link da bio em `docs/brand/`.
+- Copy de landing escrita na voz do João (`13`); LP do link da bio em `docs/design/brand/`.
 - **Ausências que ninguém pode preencher por inferência:**
   - Nenhuma entrevista estruturada com aluno foi feita (`08` §8; `14` §10) — **não inventar depoimento, citação ou persona validada**.
   - Nenhum dado de retenção próprio (`08` §10) — **não afirmar que o aluno volta**.

@@ -1,6 +1,6 @@
 # Logos e expressões da Foca — originais
 
-Arte final da cabeça da Foca. Logos **atualizados em 29/09/2026** (registro em `docs/37-registro-execucao-qualidade.md`, "Troca do logo da Foca") e **as 8 expressões oficiais entregues no mesmo dia** (registro em `docs/45-registro-execucao-integracao.md` §5; sistema em `docs/44-plano-integracao-produto-web.md` §6). Referência visual em `docs/brand/foca-design-system-2026-09-28.html`.
+Arte final da cabeça da Foca. Logos **atualizados em 29/09/2026** (registro em `docs/historico/iniciativas/35-36-37-qualidade/37-registro-execucao-qualidade.md`, "Troca do logo da Foca") e **as 8 expressões oficiais entregues no mesmo dia** (registro em `docs/historico/iniciativas/44-45-integracao-web/45-registro-execucao-integracao.md` §5; sistema em `docs/historico/iniciativas/44-45-integracao-web/44-plano-integracao-produto-web.md` §6). Referência visual em `docs/design/brand/foca-design-system-2026-09-28.html`.
 
 **A logo oficial é a `Logo Oficial.png`: a Foca de frente, colorida.** As outras são variações de apoio e nunca a substituem como marca.
 
@@ -24,6 +24,6 @@ Quando a marca aparece **só como ícone** (favicon, ícone de app, PWA, atalho,
 
 ## Expressões (`expressoes/`)
 
-Os 8 PNGs oficiais (1254×1254, fundo transparente), com os nomes oficiais: `acolhedora`, `entediada`, `surpresa`, `desapontada`, `empolgada`, `orgulhosa`, `cobrando`, `neutra`. Registro tipado em `src/lib/brand/foca-expressions.ts` (fallback `neutra`); quando usar cada uma: `docs/15-mascote-e-voz.md` §5. Derivados: `public/branding/foca/expressoes/<nome>-{96,320}.{webp,png}`.
+Os 8 PNGs oficiais (1254×1254, fundo transparente), com os nomes oficiais: `acolhedora`, `entediada`, `surpresa`, `desapontada`, `empolgada`, `orgulhosa`, `cobrando`, `neutra`. Registro tipado em `src/lib/brand/foca-expressions.ts` (fallback `neutra`); quando usar cada uma: `docs/historico/fundacao/15-mascote-e-voz.md` §5. Derivados: `public/branding/foca/expressoes/<nome>-{96,320}.{webp,png}`.
 
-Recorte quadrado: calculado pelo gerador **por arquivo**, a partir da caixa de alfa. Regras: nunca esticar, rotacionar ou recolorir (`docs/18-plano-reestilizacao-rabisco.md` §8.2).
+Recorte quadrado: calculado pelo gerador **por arquivo**, a partir da caixa de alfa. Regras: nunca esticar, rotacionar ou recolorir (`docs/design/sistema-rabisco.md` §8.2).

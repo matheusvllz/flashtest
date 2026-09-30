@@ -1,8 +1,8 @@
 # Copy do Foca — entrada e contexto rápido
 
-> Para quem é: qualquer agente ou pessoa que vai escrever, mudar ou revisar **texto que o aluno lê** (botão, erro, fala da Foca, tutor, tela pública, marketing). Origem: [38-plano-sistema-copy-e-skills.md](38-plano-sistema-copy-e-skills.md). Registro: [39](39-registro-execucao-copy.md). Detalhe em [copy/](copy/).
+> Para quem é: qualquer agente ou pessoa que vai escrever, mudar ou revisar **texto que o aluno lê** (botão, erro, fala da Foca, tutor, tela pública, marketing). Origem: [38-plano-sistema-copy-e-skills.md](historico/iniciativas/38-39-copy/38-plano-sistema-copy-e-skills.md). Registro: [39](historico/iniciativas/38-39-copy/39-registro-execucao-copy.md). Detalhe em [copy/](copy/).
 >
-> **Ordem de autoridade:** (1) pedido do usuário · (2) spec ou plano vigente que fixa um texto literal (ex.: `36` §F.4 RU-*) · (3) [`20` §7.1](20-plano-evolucao-aprendizagem.md), norma de voz de origem · (4) este guia · (5) inventário [`21`](21-brand-voice-e-inventario-copy.md) (string "revisada" só muda com o inventário) · (6) skills de escrita.
+> **Ordem de autoridade:** (1) pedido do usuário · (2) spec ou plano vigente que fixa um texto literal (ex.: `36` §F.4 RU-*) · (3) [`20` §7.1](historico/iniciativas/20-22-aprendizagem/20-plano-evolucao-aprendizagem.md), norma de voz de origem · (4) este guia · (5) inventário [`21`](copy/inventario.md) (string "revisada" só muda com o inventário) · (6) skills de escrita.
 
 ## Quick Context for AI Agents
 

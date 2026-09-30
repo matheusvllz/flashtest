@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 /**
- * Gera docs/33-taxonomia-habilidades.md a partir de src/content/taxonomy/
+ * Gera docs/arquitetura/taxonomia-habilidades.md a partir de src/content/taxonomy/
  * (docs/30 §8, Fase 2 T-2.7). Nunca editar o docs/33 à mão — rodar este
  * script de novo depois de mudar a taxonomia. Roda sem diff quando nada
  * mudou (idempotente).
@@ -10,7 +10,7 @@ import { AREA_NAMES, SKILLS, activeSkills } from "@/content/taxonomy";
 import { SUBJECT_MAP } from "@/data/subjects";
 import type { EnemArea, SkillDef } from "@/content/taxonomy/types";
 
-const OUT_PATH = "docs/33-taxonomia-habilidades.md";
+const OUT_PATH = "docs/arquitetura/taxonomia-habilidades.md";
 const AREAS: EnemArea[] = ["LC", "MT", "CN", "CH", "RED"];
 
 function statusEmoji(s: SkillDef): string {

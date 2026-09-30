@@ -15,11 +15,11 @@ Quando duas fontes divergirem, vence a de cima.
 | 3 | Guia de copy | `docs/COPY.md` → `docs/copy/01…06` | Voz, tom, glossário, o que nunca prometer |
 | 4 | Resumo de produto | `docs/PRODUCT.md` (seção *Evidence on Hand*) | O que existe e o que não pode ser inventado |
 | 5 | Resumo de design | `docs/DESIGN.md` | Princípios, elevação, don'ts |
-| 6 | Design system completo | `docs/18-plano-reestilizacao-rabisco.md` | Componente a componente |
-| 7 | Direção de marca | `docs/brand/foca-rabisco-branding.md` | Paleta, arquétipo, tipografia |
-| 8 | Mascote e voz | `docs/15-mascote-e-voz.md` §4 e §5 | Onde a Foca aparece; as 8 expressões |
-| 9 | Referência visual | `docs/brand/foca-design-system-2026-09-28.html` | Conferência visual (logos de 29/09/2026) |
-| 10 | Persona | `docs/14-persona-joao.md` | Para quem é cada post |
+| 6 | Design system completo | `docs/design/sistema-rabisco.md` | Componente a componente |
+| 7 | Direção de marca | `docs/design/brand/foca-rabisco-branding.md` | Paleta, arquétipo, tipografia |
+| 8 | Mascote e voz | `docs/historico/fundacao/15-mascote-e-voz.md` §4 e §5 | Onde a Foca aparece; as 8 expressões |
+| 9 | Referência visual | `docs/design/brand/foca-design-system-2026-09-28.html` | Conferência visual (logos de 29/09/2026) |
+| 10 | Persona | `docs/produto/persona-joao.md` | Para quem é cada post |
 | 11 | Marca no código | `src/lib/brand.ts` (`BRAND.tagline`, `BRAND.description`) | Tagline vigente |
 
 ## Assets — arquivos reais, conferidos
@@ -46,7 +46,7 @@ Quando duas fontes divergirem, vence a de cima.
 | `entediada` | Estado vazio, tédio de estudar |
 | `acolhedora` | Retorno depois de sumir — **nunca** com traço de cobrança |
 
-**Conferido em 29/09/2026:** as 8 artes existem e são distintas entre si (hash por arquivo em `snapshot.json`). Registro oficial da entrega: `src/assets/branding/foca/README.md` e `docs/45-registro-execucao-integracao.md` §5. O gerador dos derivados é `bun scripts/gerar-marca.ts` (na raiz; não é desta automação).
+**Conferido em 29/09/2026:** as 8 artes existem e são distintas entre si (hash por arquivo em `snapshot.json`). Registro oficial da entrega: `src/assets/branding/foca/README.md` e `docs/historico/iniciativas/44-45-integracao-web/45-registro-execucao-integracao.md` §5. O gerador dos derivados é `bun scripts/gerar-marca.ts` (na raiz; não é desta automação).
 
 ### Regras duras sobre a mascote
 

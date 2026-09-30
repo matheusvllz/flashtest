@@ -8,7 +8,7 @@ from dsp import SR, frequency, bell, mallet, felt, ceramic, pluck, pad, air, mix
 from audit import read, stats
 
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/audio-proposal-v2'
+OUT=ROOT/'docs/design/audio/v2'
 VOICES=dict(bell=bell,mallet=mallet,felt=felt,ceramic=ceramic,pluck=pluck,pad=pad)
 
 # Explicit compositions: no global melody transformed into multiple files.

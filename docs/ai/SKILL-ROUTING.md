@@ -1,50 +1,78 @@
-# Roteamento de skills — qual ferramenta usar, e quantas
+---
+estado: aprovado
+atualizado: 2026-09-29
+canonico-de: [roteamento de skills para Claude e Codex]
+substitui: [versão de 22/09/2026 (só Claude)]
+substituido-por: null
+---
 
-> Para quem é: o agente decidindo o que carregar antes de agir. Catálogo completo em [SKILLS.md](SKILLS.md); fluxo SDD em [SDD-WORKFLOW.md](SDD-WORKFLOW.md). Versão legível por máquina: [`.claude/skills-registry.json`](../../.claude/skills-registry.json) (`routes`).
+# Roteamento de skills — qual usar, quando é obrigatória e o que fazer sem ela
 
-## 1. Regra de ouro: progressive disclosure
+> Para Claude Code **e** Codex. Catálogo (o que existe, onde, para qual agente): [SKILLS.md](SKILLS.md) e [skills-registry.json](skills-registry.json). Fluxo SDD: [SDD-WORKFLOW.md](SDD-WORKFLOW.md). Skills são ferramentas: nenhuma prevalece sobre uma spec aprovada nem sobre o `AGENTS.md`.
+
+## 1. Regras gerais
 
 ```text
-PEDIDO → CLASSIFICAR (§2) → LER A SPEC RELEVANTE → CARREGAR 1–3 SKILLS PRIMÁRIAS → EXECUTAR → 1 REVISÃO DA CLASSE → VERIFICAR CONTRA A SPEC
+PEDIDO → CLASSIFICAR (§2) → LER O CONTEXTO OBRIGATÓRIO → 1–3 SKILLS PRIMÁRIAS → EXECUTAR → 1 REVISÃO DA CLASSE → VERIFICAR CONTRA A SPEC
 ```
 
-- **Primárias:** no máximo 3 por tarefa, só da classe dela.
-- **Revisão:** só no fim, sobre o diff, só a da classe.
-- **Referência** (UI UX Pro Max, SecondSky, claude-mem): consulta pontual, não "carregar e seguir".
-- **OmniRoute MCP** (`.mcp.json`, catálogo completo em [SKILLS.md](SKILLS.md) §P) não é skill nem faz parte do roteamento acima — é ferramenta MCP externa, só invocada se o usuário pedir uma `omniroute_*` explicitamente. **Nunca** usar como substituto da integração de IA do Foca (`src/lib/tutor.ts`, OpenAI via `fetch` direto) sem spec aprovada.
+- **No máximo 3 primárias por tarefa**, só da classe dela; **1 revisão** no fim, sobre o diff.
+- **Obrigatória** significa: obrigatória **quando disponível para o agente**. Se não estiver (plugin que não carregou, skill só do outro agente), a **alternativa** da coluna "Sem a skill" passa a ser obrigatória, e o registro anota "skill X indisponível; usei Y". Nunca afirmar que usou uma skill que não carregou.
+- **Disponibilidade:**
+  - **[repo]** skill do projeto: fonte em `.agents/skills/` (Codex) com espelho em `.claude/skills/` (Claude) — os dois agentes a veem;
+  - **[C]** só Claude Code (skill do usuário ou embutida: `/code-review`, `/security-review`, `/simplify`; skills `design:*`);
+  - **[C-plug]** plugin do projeto em `.claude/settings.json` — depende do host e pode não carregar numa sessão;
+  - **[X]** só Codex (skills de sistema: `review-agent`, `openai-docs`).
 - Nunca carregar juntas, sem motivo explícito, as cinco de design: `frontend-design`, `impeccable`, `design-taste-frontend`, `ui-ux-pro-max`, `web-design-guidelines`.
-- Duas skills de processo concorrentes (Superpowers × Addy) nunca na mesma etapa: escolha uma (§4).
+- Duas skills de processo concorrentes (Superpowers × Addy `agent-skills`) nunca na mesma etapa: escolha uma (§3).
 - Skill carregada que não se aplica: diga por quê e não a siga.
-- **Nomes:** skills de plugin aparecem com namespace `plugin:skill` — `impeccable:impeccable`, `frontend-design:frontend-design`, `humanizer:humanizer`, `tanstack-start:tanstack-start`, `ui-ux-pro-max:ui-ux-pro-max`, `agent-skills:<skill>`, `superpowers:<skill>`. As tabelas abaixo abreviam quando não há ambiguidade. Skills locais (`motion-design`, `web-design-guidelines`, `vercel-react-best-practices`, `design-taste-frontend`, `redesign-existing-projects`, `repo-security-review`, `foca-sdd`, `foca-social`, `better-writing`, `ogilvy-copywriting`) não têm prefixo. Os comandos do Addy aparecem como skills (`agent-skills:review`, `agent-skills:spec`…).
+- **OmniRoute MCP** (`.mcp.json`) não é skill nem entra no roteamento; só com pedido explícito, e nunca substitui a integração de IA do Foca.
 
-## 2. Classificação da tarefa
+## 2. Matriz operacional
 
-| Classe | Sinais no pedido | Primárias | Revisão no fim | Nunca |
-|---|---|---|---|---|
-| **spec** — requisito novo/ambíguo | "quero que…", "nova feature", "e se…", não existe spec | `superpowers:brainstorming` ou `agent-skills:interview-me` → escrever em `docs/NN-plano-*.md` ([SPEC-TEMPLATE.md](SPEC-TEMPLATE.md)) | usuário aprova | codar antes da spec aprovada |
-| **execução de spec** | "implemente a spec/próxima spec", "T-07" | `superpowers:executing-plans` (ou `subagent-driven-development` se as tarefas forem independentes) + as skills indicadas em cada `T-xx` | `superpowers:verification-before-completion` + agent `spec-verifier` | pular tarefa, reordenar sem registrar |
-| **UI nova** | "crie uma tela", "novo componente", "redesign" (com spec) | `frontend-design` · `vercel-react-best-practices` durante a implementação · `ui-ux-pro-max` só se precisar pesquisar padrão | `web-design-guidelines` | taste, marketing |
-| **refino de UI** | "parece genérica", "polir", "hierarquia", "espaçamento" | `impeccable` (`critique` → `polish`/`layout`/`typeset`) | `web-design-guidelines` | frontend-design junto |
-| **auditoria de UI / a11y** | "revise a UI", "acessibilidade", "checar contraste" | `web-design-guidelines` (+ `impeccable audit` se pedirem profundidade) | — | editar durante a auditoria sem pedido |
-| **motion** | "animação", "transição", "microinteração", "celebração" | `motion-design` (intenção) → implementação em CSS (`styles.css`, `anim-*`) · `gsap-*` **só** com spec aprovando GSAP | `web-design-guidelines` (reduced motion) | escolher GSAP antes da intenção |
-| **engenharia / refactor** | "refatore", "simplifique", "extraia", "organize" | `agent-skills:code-simplification` ou `incremental-implementation` + `test-driven-development` (uma das duas versões) | `agent-skills:code-review-and-quality` | design, marketing |
-| **bug** | erro, stack trace, "quebrou", comportamento diferente do esperado | `superpowers:systematic-debugging` → teste que reproduz → correção | `code-review-and-quality` | corrigir sem reproduzir |
-| **performance** | "lento", "bundle", "re-render", "trava" | `vercel-react-best-practices` + `agent-skills:performance-optimization` | agent `web-performance-auditor` | regras de Next.js |
-| **framework** | erro de TanStack Start/Router, Tailwind v4, shadcn, dark mode | `tanstack-start` / `tanstack-router` / `tailwind-v4-shadcn` (referência) | — | seguir viés Cloudflare do `tanstack-start` sem conferir |
-| **segurança** | IA/prompt, dados do aluno, upload, deps, deploy, "release" | ver níveis L1/L2/L3 em [SDD-WORKFLOW.md](SDD-WORKFLOW.md) §6 | `repo-security-review --pr` (L2) / completo (L3) | auditoria completa a cada mudança pequena |
-| **microcopy** — rótulo, botão, aria-label, 1 frase | "muda esse botão", "texto do toast" | `docs/COPY.md` (Quick Context) + a linha do padrão em `docs/copy/03` §2. **Nenhuma skill** para 1 rótulo; `better-writing` se forem 2+ strings ou erro/confirmação/estado vazio | autorrevisão com o teste de voz (`COPY.md`) | Humanizer em rótulo; mais de 1 skill; substituição global |
-| **UX writing** — tela ou fluxo novo, erro, estado vazio, onboarding de uso | "tela nova", "mensagem de erro", "onboarding" | `COPY.md` + `docs/copy/01` §1–2, `02`, `03` → `better-writing` (escreve) → `humanizer` só em corpo de 2+ frases | `better-writing` no formato de revisão, sobre o diff | skills do pacote Marketing em tela do app; conteúdo pedagógico |
-| **fala da Foca** (`voz.ts`) | "fala da mascote", "mensagem de marco" | `COPY.md` + `docs/copy/04` §2 + `15` §4 (onde a Foca aparece). Sem skill | teste de voz + teste da Foca (`docs/copy/04`) | Humanizer (achata o humor), `better-writing`, Ogilvy |
-| **Foca IA** (`tutor-prompt.ts`) | "o tutor responde…", "persona do tutor" | `COPY.md` + `docs/copy/04` + `20` §7.1 (linha Tutor). Sem skill de escrita: é prompt + L2 | L2 (`SDD-WORKFLOW` §6) + `tests/unit/brand-voice.test.ts` | Humanizer no prompt; remover a regra anti-LaTeX |
-| **conteúdo pedagógico** | enunciado, alternativa, gabarito, explicação, lição | `docs/copy/05` + rubrica do `36` §G.6. **Nenhuma skill de copy** | revisão factual (`36` Fase 7) | qualquer skill de escrita em enunciado/alternativa/gabarito/fórmula/citação; "melhorar o texto" de questão oficial (`34`) |
-| **marketing** — landing, hero, OG, loja, post, campanha | "landing", "headline", "descrição", "post" | `COPY.md` + `docs/copy/01`, `06` + `PRODUCT.md` → Evidence on Hand → **ligar o pacote** (§6) ou ler do cache → `product-marketing` (contexto) → `ogilvy-copywriting` (estratégia) → `copywriting` (rascunho) · `design-taste-frontend` se houver página | `copy-editing` (**obrigatória**) → `humanizer` (recomendada) → teste de voz | prova social, número ou preço inventados; analytics externo sem spec; `better-writing` |
-| **posicionamento** — proposta de valor, tagline | "como explicar o Foca", "tagline" | `docs/copy/01` inteiro → `ogilvy-copywriting`. Só ler `copy/01` §5 se a pergunta for "qual é a nossa proposta?" | `copy-editing` (passadas "Prove It" e "Especificidade") + aprovação do usuário | trocar a frase de posicionamento sem aprovação (decisão D-1 do `38`) |
-| **docs** | registro de execução, README, ADR | `agent-skills:documentation-and-adrs` (formato) — o **conteúdo** segue o SDD | `humanizer` só em doc para humanos, nunca em spec | — |
-| **memória** | "já fizemos isso?", "como resolvemos X?" | `claude-mem:mem-search` | confirmar no código/spec atual | tratar lembrança como fato |
+| Tarefa e gatilho | Contexto obrigatório | Obrigatórias | Recomendadas | Opcionais | Ordem | Não usar quando | Revisão e validação | Evidência | Sem a skill |
+|---|---|---|---|---|---|---|---|---|---|
+| **Retomar / próxima tarefa** ("continue", "próxima", sessão nova) | `AGENTS.md` → `docs/ESTADO.md` → tarefa na spec → fim do registro | `foca-sdd` [repo] | — | — | ler → `git status` → verificar → executar | — | Checkpoint no `ESTADO.md` | ESTADO atualizado | [SDD-WORKFLOW.md](SDD-WORKFLOW.md) §4–§5 à mão |
+| **Planejamento / spec nova** ("quero…", sem spec) | `docs/produto/estrategia.md`, `persona-joao.md`, `regras.md`, `funcionalidades.md` | `foca-sdd` | `superpowers:brainstorming` **ou** `agent-skills:interview-me` [C-plug] | `superpowers:writing-plans` [C-plug] | descobrir → `spec.md` → aprovação | Escopo já aprovado | Proprietário aprova | `spec.md` com estado | [templates/spec.md](templates/spec.md) |
+| **Execução de spec** ("T-05.2") | Tarefa + dependências + contratos citados | `foca-sdd` | `superpowers:executing-plans` [C-plug] | `superpowers:subagent-driven-development` [C-plug] se as tarefas forem independentes | uma tarefa por vez | — | `spec-verifier` [C] / `.codex/agents/spec-verifier.toml` [X] | Critério → evidência | Checklist da tarefa |
+| **Backend / API** (server function, rota de servidor, regra de negócio) | `docs/arquitetura/visao-geral.md`, `contratos.md`, `dados.md`, `docs/seguranca/README.md` | `foca-backend` [repo] (criada no 46 T-06.7) | `agent-skills:api-and-interface-design`, `superpowers:test-driven-development` [C-plug] | `tanstack-start` [C-plug] (referência; conferir o viés Cloudflare) | contrato → teste → código | UI pura | **L2** + `/code-review` [C] ou `review-agent` [X] | Testes de integração com 2 usuários | Documentação oficial (TanStack Start, Better Auth, Drizzle) + checklist L2 |
+| **Banco / migração** | `docs/arquitetura/dados.md`, [ADR 0005](../decisoes/0005-stack-de-backend.md) | `foca-backend` | — | — | esquema → `db:generate` → revisar o SQL → `db:migrate` local → teste | — | SQL gerado revisado; reversível ou com plano de rollback | Migração versionada + teste | Documentação do Drizzle |
+| **Autenticação / sessão / conta** | `docs/seguranca/modelo-de-ameacas.md`, `privacidade.md`, ADR 0005/0006 | `foca-backend` | `agent-skills:security-and-hardening` [C-plug] | — | ameaça → controle → teste | — | **L2 obrigatório** + testes de isolamento | Testes de ataque do modelo de ameaças | Checklist L2 + documentação do Better Auth |
+| **Segurança L1** (toda mudança de código) | `docs/seguranca/README.md` §3 | — | — | — | — | — | Checklist L1 | Linha no registro | — |
+| **Segurança L2** (auth, dado pessoal, IA, upload, dependência, headers, deploy) | + modelo de ameaças | `agent-skills:security-and-hardening` [C-plug] **ou** checklist L2 | `/security-review` [C] | `repo-security-review --pr` [C] | — | — | Achados classificados | Relatório no registro | Checklist L2 + `review-agent` [X] |
+| **Segurança L3** (antes de abrir contas ou vender) | Tudo de `docs/seguranca/` | `repo-security-review` completo [C] | `/security-review` [C] | — | segredos → dependências → código → validação | — | Auditoria final | `docs/seguranca/auditorias/AAAA-MM-DD.md` | gitleaks + osv-scanner + semgrep à mão + revisão manual (Codex) |
+| **UI nova** | `docs/DESIGN.md`, `docs/design/sistema-rabisco.md` (seção), `docs/design/mascote.md` | — | `vercel-react-best-practices` [repo]; `frontend-design` [C-plug] | `ui-ux-pro-max` [C-plug] (pesquisa) | implementar → revisar | Só backend | `web-design-guidelines` [repo] | E2E + capturas em 320/390/1280 | Seções do `DESIGN.md` + checklist de acessibilidade |
+| **Refino de UI** ("parece genérica", "polir") | idem | — | `impeccable` [C-plug] (`critique` → `polish`) | `design-taste-frontend` [repo] (marketing) | crítica → polimento | Tela nova | `web-design-guidelines` | Antes/depois | `web-design-guidelines` |
+| **UX / fluxo** (cadastro, importação, exclusão de conta) | `persona-joao.md`, `docs/copy/03-ux-writing.md`, `regras.md` | — | `better-writing` [repo] (texto) | `design:ux-copy` [C] | fluxo → estados (vazio, carregando, erro, sucesso) → texto | — | `web-design-guidelines` | E2E de todos os estados | `copy/03` §2 |
+| **Acessibilidade** | `docs/PRODUCT.md` → Accessibility | `web-design-guidelines` [repo] em UI nova | `design:accessibility-review` [C] | `impeccable audit` [C-plug] | — | — | axe (`@axe-core/playwright`) nos E2E | Sem violação séria no axe | axe + teclado manual |
+| **Motion** | `docs/design/sistema-rabisco.md` (movimento) | `motion-design` [repo] (intenção) | — | `gsap-*` [C-plug, desligado] **só** com spec aprovando GSAP | intenção → CSS | Sem intenção definida | `web-design-guidelines` (reduced motion) | `prefers-reduced-motion` testado | CSS existente em `styles.css` |
+| **Copy de interface** | `docs/COPY.md` no nível do tamanho da tarefa | Pelo §2.1 | `better-writing` [repo] | — | — | Conteúdo pedagógico, prompt do tutor, `voz.ts` | Teste de voz | Linha no inventário `docs/copy/inventario.md` | Guia `COPY.md` |
+| **Marketing** | `COPY.md` + `copy/01`, `06` + `PRODUCT.md` → Evidence | Pelo §2.1 | `ogilvy-copywriting` [repo] | pacote `marketing-skills` [C-plug, desligado] | §2.1 | Tela do app | `copy-editing` (obrigatória quando o pacote estiver ligado) | Afirmações dentro das permitidas | `copy/06` §3–§4 |
+| **Texto legal** (termos, privacidade) | `docs/seguranca/privacidade.md`, `docs/legal/README.md`, fontes oficiais | — (nenhuma skill de copy altera substância jurídica) | `better-writing` **só** para clareza de frase, sem mudar o sentido | — | fatos do sistema → rascunho → pendências → revisão jurídica | Marketing, persuasão, `humanizer` | **Revisão jurídica humana antes de publicar** | Pendências listadas | — |
+| **Conteúdo pedagógico** | `docs/copy/05-conteudo-pedagogico.md`, [decisão 0002](../decisoes/0002-questoes-oficiais-enem.md) | nenhuma de copy | — | — | — | Qualquer skill de escrita | Revisão factual | — | — |
+| **Foca IA** (prompt, contexto, cota) | `docs/copy/04-foca-ia.md`, `contratos.md` (tutor), modelo de ameaças | — | — | — | — | `humanizer` no prompt; remover a regra anti-LaTeX | **L2** + `tests/unit/brand-voice.test.ts` | Testes de injeção e de cota | — |
+| **Testes** | Critério da tarefa | — | `superpowers:test-driven-development` **ou** `agent-skills:test-driven-development` (uma) | agent `test-engineer` [C-plug] | teste falhando → código → verde | — | Suite completa da fase | Saída real dos comandos | Escrever o teste antes, à mão |
+| **Depuração** | Reprodução do erro | `superpowers:systematic-debugging` [C-plug] | `agent-skills:debugging-and-error-recovery` [C-plug] | — | reproduzir → isolar → teste → corrigir | — | `/code-review` [C] / `review-agent` [X] | Teste de regressão | Reproduzir, isolar, escrever o teste que falha, corrigir — nesta ordem |
+| **Refatoração** | Código e testes existentes | — | `agent-skills:code-simplification` [C-plug] | `/simplify` [C] | — | Mudança de comportamento | `/code-review` / `review-agent` | Testes verdes antes e depois | — |
+| **Performance** | Regras de code splitting em `contratos.md` | — | `vercel-react-best-practices` [repo] | agent `web-performance-auditor` [C-plug] | medir → mudar → medir | — | Lighthouse (`scripts/marketing/lighthouse.ts`) | Números antes e depois | — |
+| **Documentação / SDD** | [SDD-WORKFLOW.md](SDD-WORKFLOW.md), templates | — | `agent-skills:documentation-and-adrs` [C-plug] (formato) | `humanizer` [C-plug] só em doc para humanos, nunca em spec | — | — | `bun run docs:check` | Links sem erro | Templates |
+| **Deploy / operação** | `docs/operacao/ambientes-e-deploy.md`, [ADR 0001](../decisoes/0001-hospedagem-vercel.md) | — | `agent-skills:shipping-and-launch` [C-plug] | — | — | Sem pedido do proprietário | Checklist de release | Registro do deploy | Checklist de `docs/operacao/` |
+| **Memória** ("já fizemos isso?") | — | — | `claude-mem:mem-search` [C, se habilitado] | — | lembrar → conferir no código/spec | — | Confirmar no código atual | — | `git log`, `grep`, registros |
+
+### Lacunas conhecidas (29/09/2026)
+
+| Lacuna | Solução | Verificação |
+|---|---|---|
+| Nenhuma skill de backend, banco ou autenticação nos dois agentes | Skill local `foca-backend`, escrita **depois** que as convenções existirem (46 T-06.7) | O validador a encontra nos dois agentes; uma tarefa de backend a usa e o registro cita |
+| Nenhuma skill de LGPD ou dados de menores | Não criar skill: a checklist vive em `docs/seguranca/privacidade.md`, e o `foca-sdd` manda lê-la quando a tarefa toca dado pessoal | `foca-sdd` contém a regra |
+| Plugins do Claude dependem do host | A matriz sempre traz uma alternativa | — |
+| Codex sem skills do projeto até 29/09/2026 | `.agents/skills/` como fonte + espelho em `.claude/skills/` + agente TOML (46 T-02.2, T-02.6) | Sessão do Codex lista as skills do projeto |
+| Ferramentas do `repo-security-review` ausentes (gitleaks, osv-scanner, semgrep) | Instalação local (46 T-12.3) | `--version` de cada uma no registro |
+| Nenhuma skill de Playwright ou de deploy na Vercel | Documentação oficial + `docs/operacao/` | — |
 
 ### 2.1 Escrita: níveis, ordem e orçamento
 
-> Origem: [38](../38-plano-sistema-copy-e-skills.md). Guia de copy: [docs/COPY.md](../COPY.md). **Skill de escrita é ferramenta, não etapa obrigatória:** só roda quando traz algo que o guia não traz. Botão de duas palavras não passa por skill.
+> Origem: [38](../historico/iniciativas/38-39-copy/38-plano-sistema-copy-e-skills.md). Guia de copy: [docs/COPY.md](../COPY.md). **Skill de escrita é ferramenta, não etapa obrigatória:** só roda quando traz algo que o guia não traz. Botão de duas palavras não passa por skill.
 
 **Níveis por skill** (REQUIRED = deve; RECOMMENDED = normalmente, salvo motivo claro; OPTIONAL = quando ajudar; DO NOT USE = prejudica):
 
@@ -68,7 +96,7 @@ PEDIDO → CLASSIFICAR (§2) → LER A SPEC RELEVANTE → CARREGAR 1–3 SKILLS 
 | Foca IA / fala da Foca | `copy/01` §1 → `copy/02` → `copy/04` | nenhuma de escrita | L2 obrigatório no prompt |
 | Conteúdo pedagógico | `copy/05` | nenhuma de copy | revisão factual |
 
-**Marketing sem ligar as 50 skills:** para uma revisão isolada, ler o `SKILL.md` direto do cache (`~/.claude/plugins/cache/marketingskills/marketing-skills/2.11.1/skills/copy-editing/SKILL.md`; caminho no registry → `cachePath`). Ligar o pacote (§6) só quando o trabalho usar várias skills dele.
+**Marketing sem ligar as 50 skills:** para uma revisão isolada, ler o `SKILL.md` direto do cache (`~/.claude/plugins/cache/marketingskills/marketing-skills/2.11.1/skills/copy-editing/SKILL.md`; caminho no registry → `cachePath`). Ligar o pacote (§4, "Ligar e desligar") só quando o trabalho usar várias skills dele.
 
 **Pipelines resultantes:**
 
@@ -81,36 +109,14 @@ Tutor .......... copy/04 → L2
 Pedagógico ..... sem skill de copy → revisão factual
 ```
 
-## 3. Matriz de responsabilidade
 
-| Ferramenta | Papel no Foca | Cria? | Revisa? | Decide produto? |
-|---|---|---|---|---|
-| SDD / spec (`docs/`) | Fonte da verdade | — | — | **Sim** |
-| Superpowers | Processo: descoberta, plano, execução, debug, verificação | processo | verificação | Não |
-| Addy Agent Skills | Engenharia por domínio | código | code review, segurança, perf | Não |
-| Frontend Design | Criação/direção de UI **dentro** do Rabisco na Margem | UI | — | Não |
-| UI UX Pro Max | Base de conhecimento de UX consultável | — | — | Não |
-| Taste | Anti-template em **superfícies de marketing** | LP | LP | Não |
-| Impeccable | Crítica, polimento, acabamento de UI existente | ajustes | **Sim** | Não |
-| Web Design Guidelines | Auditoria (a11y, semântica, foco, formulários) | — | **Sim** | Não |
-| React Best Practices | Performance e padrões React | código | **Sim** | Não |
-| Motion Design | Direção de movimento (por quê, o quê, quando, quanto) | intenção | — | Não |
-| GSAP Skills | Implementação GSAP, só com spec | código | — | Não |
-| Marketing Skills | Growth, copy, CRO, SEO/ASO | copy/estratégia | — | Não |
-| Humanizer | Acabamento anti-artificialidade (texto de 2+ frases) | — | **Sim** | Não |
-| Better Writing | Escrita e revisão de texto de interface | texto de interface | **Sim** | Não |
-| Ogilvy Copywriting | Estratégia de mensagem (só marketing/posicionamento) | promessa, título | — | Não |
-| Repo Security Review | Segurança L2/L3 | — | **Sim** | Não |
-| claude-mem | Memória entre sessões | — | — | Não |
-| SecondSky | Referência de TanStack e Tailwind v4 | — | — | Não |
-
-## 4. Overlaps e como desempatar
+## 3. Sobreposições e como desempatar
 
 | Sobreposição | Regra |
 |---|---|
 | **TDD:** `superpowers:test-driven-development` × `agent-skills:test-driven-development` | Superpowers quando a tarefa veio de um plano executado por Superpowers; Addy quando a tarefa é de engenharia avulsa. Nunca as duas. |
 | **Plano:** `superpowers:writing-plans` × `agent-skills:planning-and-task-breakdown` × Addy `/plan` | Qualquer um serve para **pensar** o plano; o **arquivo** é sempre a seção de tarefas da spec. |
-| **Spec:** `superpowers:brainstorming` × `agent-skills:spec-driven-development` × Addy `/spec` × `product-management:write-spec` (usuário) | Descoberta: brainstorming ou interview-me. Arquivo: `docs/NN-plano-*.md` no formato do [SPEC-TEMPLATE.md](SPEC-TEMPLATE.md). |
+| **Spec:** `superpowers:brainstorming` × `agent-skills:spec-driven-development` × Addy `/spec` × `product-management:write-spec` (usuário) | Descoberta: brainstorming ou interview-me. Arquivo: `docs/specs/NN-tema/spec.md` no formato de [templates/spec.md](templates/spec.md). |
 | **Debug:** `superpowers:systematic-debugging` × `agent-skills:debugging-and-error-recovery` × `engineering:debug` (usuário) | Superpowers por padrão. |
 | **Code review:** `agent-skills:code-review-and-quality` × `superpowers:requesting-code-review` × `/code-review` nativo × `engineering:code-review` (usuário) | `/code-review` nativo para revisão de diff pedida pelo usuário; `code-review-and-quality` como etapa 7 do SDD. |
 | **Criar UI:** `frontend-design` × `impeccable` × `design-taste-frontend` | App → `frontend-design`. Marketing/LP → `design-taste-frontend`. Existente → `impeccable`. |
@@ -123,7 +129,8 @@ Pedagógico ..... sem skill de copy → revisão factual
 | **Segurança:** `repo-security-review` × Addy `security-and-hardening`/`security-auditor` × `/security-review` nativo | L1: `/security-review` ou o review normal. L2: Addy + `repo-security-review --pr`. L3: completo. |
 | **Memória:** claude-mem × memória nativa do Claude Code | Fatos duráveis → `docs/`. Memória é pista. |
 
-## 5. Orçamento de tokens
+
+## 4. Orçamento de tokens (medido no Claude Code em 22/09/2026)
 
 Medido com `claude plugin details` em 22/09/2026 (descrições que entram em **toda** sessão):
 
@@ -143,7 +150,7 @@ Medido com `claude plugin details` em 22/09/2026 (descrições que entram em **t
 - Referências longas dentro das skills (ex.: `repo-security-review/references/*`, `vercel-react-best-practices/rules/*`, CSVs do UI UX Pro Max) são lidas **por arquivo, quando necessárias** — nunca a pasta inteira.
 - Documentos do SDD são grandes (`18`, `20`, `25` passam de 100 KB): ler por seção (`grep -n "^## "` e depois o trecho), não inteiros, salvo quando a spec em execução pede leitura integral.
 
-## 6. Ligar e desligar pacotes sob demanda
+### Ligar e desligar pacotes do Claude sob demanda
 
 ```bash
 # ligar só para você (settings.local.json, não versionado) e recarregar
@@ -154,9 +161,10 @@ claude plugin enable marketing-skills@marketingskills --scope local
 claude plugin disable marketing-skills@marketingskills --scope local
 ```
 
-Mesmo padrão para `gsap-skills@gsap-skills`. Se o CLI não estiver no PATH (extensão do VS Code), use `/plugin` dentro da sessão. Sem religar, o agente ainda pode ler um `SKILL.md` específico direto do cache — caminho em `.claude/skills-registry.json` → `cachePath`.
+Mesmo padrão para `gsap-skills@gsap-skills`. Se o CLI não estiver no PATH (extensão do VS Code), use `/plugin` dentro da sessão. Sem religar, o agente ainda pode ler um `SKILL.md` específico direto do cache — caminho em `docs/ai/skills-registry.json` → `cachePath`.
 
-## 7. Casos de teste do roteamento
+
+## 5. Casos de teste do roteamento
 
 Validação conceitual: para cada pedido, a rota esperada segundo §2. Revisar esta tabela quando uma skill for adicionada ou removida.
 
@@ -173,7 +181,7 @@ Validação conceitual: para cada pedido, a rota esperada segundo §2. Revisar e
 | "Refatore isso" | engenharia | `agent-skills:code-simplification` + `test-driven-development` → `code-review-and-quality` | **nenhuma** skill de design ou marketing |
 | "Página está lenta" | performance | `vercel-react-best-practices` + `agent-skills:performance-optimization` → `web-performance-auditor` | regras de Next.js |
 | "Vamos lançar essa feature" | verificação + segurança | `superpowers:verification-before-completion` contra a spec → testes (etapa 6) → L2/L3 conforme o que mudou → `agent-skills:shipping-and-launch` | push/merge sem pedido |
-| "Implemente a próxima spec" | execução de spec | [SDD-WORKFLOW.md](SDD-WORKFLOW.md) §4 → `executing-plans` → skills por `T-xx` → `spec-verifier` | inventar escopo se não houver spec aprovada |
+| "Implemente a próxima spec" | execução de spec | [SDD-WORKFLOW.md](SDD-WORKFLOW.md) §5 → `executing-plans` → skills por `T-xx` → `spec-verifier` | inventar escopo se não houver spec aprovada |
 | "O tutor está respondendo errado" | bug + IA (L2) | `systematic-debugging` → `tutor-core.ts`/`tutor-prompt.ts` → teste → L2 | abrir o tutor automaticamente ao errar (proibido pelo `20`) |
 | "Troque o texto do botão Continuar da lição" | microcopy | Quick Context → padrão "continuar" | qualquer skill |
 | "Reescreva a mensagem de erro do pacote que não carrega" | UX writing | `better-writing` | Humanizer, marketing |

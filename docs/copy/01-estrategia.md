@@ -1,6 +1,6 @@
 # Estratégia de copy: persona, estados, JTBD, mecanismo e posicionamento
 
-> Para quem é: quem vai escrever ou revisar texto do Foca e precisa saber **para quem** fala, **o que o produto realmente faz** e **o que não pode prometer**. Entrada do sistema: [../COPY.md](../COPY.md). Origem: [../38-plano-sistema-copy-e-skills.md](../38-plano-sistema-copy-e-skills.md).
+> Para quem é: quem vai escrever ou revisar texto do Foca e precisa saber **para quem** fala, **o que o produto realmente faz** e **o que não pode prometer**. Entrada do sistema: [../COPY.md](../COPY.md). Origem: [../38-plano-sistema-copy-e-skills.md](../historico/iniciativas/38-39-copy/38-plano-sistema-copy-e-skills.md).
 >
 > Este arquivo **resume e organiza**; não substitui as fontes. Onde divergir do `14`, do `08` ou do código, a fonte vence e este arquivo está desatualizado. Onde a fonte não existe, a linha está marcada **[lacuna]**. Nada aqui foi preenchido por inferência.
 >
@@ -8,7 +8,7 @@
 
 ## 1. Persona
 
-Uma persona só, **João** ([14](../14-persona-joao.md)). Ela vale como critério de decisão: toda frase passa pelo teste "isso resolve o João, ou um estudante genérico?" (`14` §0).
+Uma persona só, **João** ([14](../produto/persona-joao.md)). Ela vale como critério de decisão: toda frase passa pelo teste "isso resolve o João, ou um estudante genérico?" (`14` §0).
 
 | Campo | Resumo | Fonte |
 |---|---|---|

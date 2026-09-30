@@ -2,7 +2,7 @@
 
 > Para quem é: quem escreve texto público do Foca (tela de boas-vindas, título e descrição do site, landing, loja de apps, redes, campanha). Entrada: [../COPY.md](../COPY.md). O que se pode prometer: [01-estrategia.md](01-estrategia.md) §4 e §6. Voz de base: [02-voz-e-tom.md](02-voz-e-tom.md).
 >
-> Estado conferido em 28/09/2026 (atualização de 29/09/2026: a landing pública é a rota `/` do app, **integrada** por pedido do proprietário, ver `docs/44` e `docs/45`; a história dela está em `docs/40`–`43`). **Não existe página de loja de apps, perfil de rede social nem campanha ativa** no repositório (o que há em `docs/brand/` é da marca anterior, Flash Test). O `36` T-08.7 (RU-20) troca a tagline e a descrição de `brand.ts`. **DEPENDÊNCIA DO PLANO PRINCIPAL.**
+> Estado conferido em 28/09/2026 (atualização de 29/09/2026: a landing pública é a rota `/` do app, **integrada** por pedido do proprietário, ver `docs/44` e `docs/45`; a história dela está em `docs/40`–`43`). **Não existe página de loja de apps, perfil de rede social nem campanha ativa** no repositório (o que há em `docs/design/brand/` é da marca anterior, Flash Test). O `36` T-08.7 (RU-20) troca a tagline e a descrição de `brand.ts`. **DEPENDÊNCIA DO PLANO PRINCIPAL.**
 
 ## 1. Marketing pode ser mais energético que a interface. Não pode prometer mais que o produto.
 
@@ -21,7 +21,7 @@ A interface é calma e direta. Marketing pode ter mais verbo, mais benefício e 
 | Título e descrição do site, texto de compartilhamento | `src/lib/brand.ts`, `src/routes/__root.tsx` | Ativa; `BRAND.tagline`, `BRAND.description`, título `Foca — {tagline}` | **`36` T-08.7 (RU-20)** |
 | Landing pública | rota `/`, `src/marketing/content/copy.ts` | v2 **integrada ao app** (29/09/2026, `44`/`45`); afirmações permitidas em `docs/40` §9.4 com as mudanças do `docs/42` §5 (CTA "Começar grátis" por decisão do usuário; sem "sem conta"; sem lista do que o Foca não faz) | `docs/42`, `docs/43` e este guia |
 | Página `/premium` | `src/routes/premium.tsx` | Demonstrativa, sem plano real (regra de escopo do `CLAUDE.md`) | Não tratar como oferta |
-| LP do link da bio | `docs/brand/Flash Test - LP Link da Bio v3.html` | **Histórico**, marca anterior | Só referência de estrutura |
+| LP do link da bio | `docs/design/brand/Flash Test - LP Link da Bio v3.html` | **Histórico**, marca anterior | Só referência de estrutura |
 | Copy da landing do Instagram | `docs/13` | **Histórico** (Flash Test), voz do João da época | Só referência |
 | Loja de apps (App Store, Google Play) | — | Não existe | A criar; ver seção 6 |
 | Instagram orgânico | `automacao-instagram/` (ferramenta independente, `/foca-social`) | Ferramenta pronta (29/09/2026); **nenhum post publicado**; 3 exemplos em `pronto` | Este guia; o agente segue `automacao-instagram/AGENTE.md` e o validador `ferramentas/validar/regras.json` |

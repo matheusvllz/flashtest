@@ -82,10 +82,10 @@ components:
 
 > **Autoridade.** Este arquivo é um **resumo para agentes** do design system. Não é a fonte normativa:
 > 1. `src/styles.css` — tokens reais (claro e `.dark`) e as `@utility` (`btn-*`, `card-*`, `chip*`, `anim-*`). **Se um valor aqui divergir de `styles.css`, `styles.css` vence** e este arquivo precisa ser atualizado.
-> 2. [18-plano-reestilizacao-rabisco.md](18-plano-reestilizacao-rabisco.md) — o design system completo, componente a componente (executado; registro em [19](19-registro-execucao-rabisco.md)).
-> 3. [brand/foca-rabisco-branding.md](brand/foca-rabisco-branding.md) — a direção de marca. Referência visual atualizada: [brand/foca-design-system-2026-09-28.html](brand/foca-design-system-2026-09-28.html) — logos trocados em 29/09/2026; a logo oficial é a Foca de frente colorida (originais e uso em `src/assets/branding/foca/README.md`).
+> 2. [18-plano-reestilizacao-rabisco.md](design/sistema-rabisco.md) — o design system completo, componente a componente (executado; registro em [19](historico/iniciativas/17-18-19-rabisco/19-registro-execucao-rabisco.md)).
+> 3. [brand/foca-rabisco-branding.md](design/brand/foca-rabisco-branding.md) — a direção de marca. Referência visual atualizada: [brand/foca-design-system-2026-09-28.html](design/brand/foca-design-system-2026-09-28.html) — logos trocados em 29/09/2026; a logo oficial é a Foca de frente colorida (originais e uso em `src/assets/branding/foca/README.md`).
 >
-> O frontmatter lista **só a paleta clara**. O modo escuro existe (`.dark` em `styles.css`) e é obrigatório: todo token novo nasce como variável base em `:root` **e** `.dark`, referenciada por `--color-*` em `@theme inline` — nunca hex literal no `@theme inline` (o Tailwind v4 grava o literal e a classe ignora `.dark`). `docs/09-branding.md` (paleta Ártica) é **histórico**.
+> O frontmatter lista **só a paleta clara**. O modo escuro existe (`.dark` em `styles.css`) e é obrigatório: todo token novo nasce como variável base em `:root` **e** `.dark`, referenciada por `--color-*` em `@theme inline` — nunca hex literal no `@theme inline` (o Tailwind v4 grava o literal e a classe ignora `.dark`). `docs/historico/fundacao/09-branding.md` (paleta Ártica) é **histórico**.
 >
 > Refinamento preserva; redesign substitui — e **redesign da identidade não está autorizado** sem spec aprovada (ver [docs/ai/SDD-WORKFLOW.md](ai/SDD-WORKFLOW.md)).
 

@@ -13,7 +13,10 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "test:unit": "bun test tests/unit",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "docs:check": "bun scripts/docs/verificar-links.ts",
+    "skills:sync": "bun scripts/agents/sincronizar-skills.ts && bun scripts/agents/tabela-skills.ts",
+    "skills:check": "node scripts/validate-skills.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

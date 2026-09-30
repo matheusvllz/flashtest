@@ -51,7 +51,7 @@ bun run build           # build de produção
 
 ## Deploy
 
-Hospedagem: **Vercel**, conectado a este repositório no GitHub — cada push em `main` gera um deploy de produção automaticamente (ver `docs/27-plano-home-trilha-visual.md` §14 para o diagnóstico completo do que já foi tentado e por quê).
+Hospedagem: **Vercel**, conectado a este repositório no GitHub — cada push em `main` gera um deploy de produção automaticamente (ver `docs/historico/iniciativas/27-28-29-home-trilha/27-plano-home-trilha-visual.md` §14 para o diagnóstico completo do que já foi tentado e por quê).
 
 - O app é SSR (TanStack Start/Nitro) porque o balão do tutor de IA precisa de uma função de servidor real para chamar a OpenAI — não é publicável como site estático (GitHub Pages fica de fora por isso).
 - `vite.config.ts` escolhe o preset do Nitro pelo ambiente: `vercel` quando a variável `VERCEL` está definida (o próprio Vercel define), `netlify` fora dele — o mesmo código builda para as duas plataformas sem alterações.

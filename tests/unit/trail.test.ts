@@ -7,7 +7,7 @@ import type { LearningSession } from "@/lib/learning/types";
 import type { AppState } from "@/lib/store";
 
 /**
- * T-15 (docs/25-plano-jornada-aprendizado-v2.md §7.5/§18) — `buildTrail`/
+ * T-15 (docs/historico/iniciativas/25-26-jornada-v2/25-plano-jornada-aprendizado-v2.md §7.5/§18) — `buildTrail`/
  * `isTrailLessonLocked` com estados sintéticos, cobrindo cada critério de
  * aceite listado no plano. Usa conteúdo REAL (`ALL_PHASES`, `TRILHAS` via
  * `allLessonsInOrder`) — não inventa ids — pra não divergir da árvore de

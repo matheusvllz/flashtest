@@ -8,7 +8,7 @@ import sys
 import wave
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / 'docs/audio-proposal-v2'
+OUT = ROOT / 'docs/design/audio/v2'
 
 def read(path):
     with wave.open(str(path), 'rb') as w:
@@ -30,7 +30,7 @@ def run():
     OUT.mkdir(exist_ok=True)
     rows = []
     data = {}
-    for p in sorted((ROOT/'docs/audio-candidates').glob('*.wav')):
+    for p in sorted((ROOT/'docs/design/audio/candidatos').glob('*.wav')):
         x, meta = read(p)
         data[p.stem] = x
         rows.append(dict(file=str(p.relative_to(ROOT)),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),**meta,**stats(x,meta['sample_rate'])))
@@ -43,7 +43,7 @@ def run():
             corr = sum(u*v for u,v in zip(x,y))/math.sqrt(sum(u*u for u in x)*sum(v*v for v in y))
             pairs.append(dict(a=a,b=b,prefix_cosine=round(corr,5),window_ms=round(n/44.1,1)))
     preserved = {}
-    for folder in ['src','public','docs/audio-candidates']:
+    for folder in ['src','public','docs/design/audio/candidatos']:
         for p in (ROOT/folder).rglob('*'):
             if p.is_file():
                 preserved[str(p.relative_to(ROOT))] = hashlib.sha256(p.read_bytes()).hexdigest()

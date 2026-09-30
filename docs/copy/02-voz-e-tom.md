@@ -2,7 +2,7 @@
 
 > Para quem é: quem escreve ou revisa qualquer texto que o aluno lê. Entrada: [../COPY.md](../COPY.md). Estratégia (para quem falamos): [01-estrategia.md](01-estrategia.md). Padrões por componente: [03-ux-writing.md](03-ux-writing.md).
 >
-> **Norma de origem: [`20` §7.1](../20-plano-evolucao-aprendizagem.md).** Este arquivo a incorpora e a estende, sem contradizer. A tabela da seção 3.1 é citação literal. Onde este arquivo estender o `20`, está marcado **(estende o `20`)**. Se algum ponto parecer contradizer o `20` §7.1, o `20` vence.
+> **Norma de origem: [`20` §7.1](../historico/iniciativas/20-22-aprendizagem/20-plano-evolucao-aprendizagem.md).** Este arquivo a incorpora e a estende, sem contradizer. A tabela da seção 3.1 é citação literal. Onde este arquivo estender o `20`, está marcado **(estende o `20`)**. Se algum ponto parecer contradizer o `20` §7.1, o `20` vence.
 >
 > Este documento segue o que prescreve: os exemplos "NÃO" são os únicos lugares onde os padrões proibidos aparecem.
 
@@ -10,7 +10,7 @@
 
 **Colega de estudo atento e direto, que entende a dificuldade sem dramatizar.** Não é professor dando sermão, coach nem adolescente performático (`20` §7.1). A voz é uma só; o tom muda com o contexto (seção 2).
 
-Cinco atributos. Cada um tem significado, exemplo que passa, exemplo que não passa e limite. Os exemplos "SIM" vêm de texto já aprovado no [`21`](../21-brand-voice-e-inventario-copy.md) §2 sempre que existe.
+Cinco atributos. Cada um tem significado, exemplo que passa, exemplo que não passa e limite. Os exemplos "SIM" vêm de texto já aprovado no [`21`](inventario.md) §2 sempre que existe.
 
 | Atributo | Significado | SIM | NÃO | Limite |
 |---|---|---|---|---|

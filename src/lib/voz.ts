@@ -1,6 +1,6 @@
 /**
- * Biblioteca de falas da Foca (docs/15-mascote-e-voz.md §7, docs/18-plano-
- * reestilizacao-rabisco.md Apêndice B; docs/20-plano-evolucao-aprendizagem.md
+ * Biblioteca de falas da Foca (docs/historico/fundacao/15-mascote-e-voz.md §7, docs/18-plano-
+ * reestilizacao-rabisco.md Apêndice B; docs/historico/iniciativas/20-22-aprendizagem/20-plano-evolucao-aprendizagem.md
  * §7 prevalece em conflito de tom). Toda frase daqui passou pelo teste da `15`
  * §8 antes de entrar — não adicionar frase nova sem passar por ele.
  *

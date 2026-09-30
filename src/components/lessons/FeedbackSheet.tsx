@@ -7,7 +7,7 @@ import type { AnswerFeedback } from "@/lib/feedback/types";
 import { cn } from "@/lib/utils";
 
 /**
- * Folha de feedback pós-resposta (docs/18-plano-reestilizacao-rabisco.md §7.9,
+ * Folha de feedback pós-resposta (docs/design/sistema-rabisco.md §7.9,
  * §13.6; docs/20 §5, Fase 2). Usada pelos dois pilares — aula de 60s e lição
  * de redação — pra falar a mesma língua. Verde/vermelho aqui são legítimos: é
  * exatamente o feedback de resposta certa/errada que o design system reserva

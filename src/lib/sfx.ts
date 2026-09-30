@@ -1,7 +1,7 @@
 import { getState } from "@/lib/store";
 
 /**
- * Sistema de som ORIGINAL (docs/16-gamificacao-e-dopamina.md §3, docs/18-plano-
+ * Sistema de som ORIGINAL (docs/historico/fundacao/16-gamificacao-e-dopamina.md §3, docs/18-plano-
  * reestilizacao-rabisco.md §10.2, decisão D3). Sintetizado via WebAudio puro
  * — sem arquivo, sem biblioteca.
  *

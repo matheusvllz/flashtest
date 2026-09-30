@@ -9,7 +9,7 @@ from dsp import SR, frequency, modal, mix, room, master, export
 from generate import VOICES
 from verify import cosine, envelope
 
-OUT = ROOT/'docs/audio-proposal-v2/alternatives'
+OUT = ROOT/'docs/design/audio/v2/alternatives'
 
 def tine(freq, duration):
     return modal(freq,duration,[(1,1,1),(2,.32,.5),(3,.07,.3),(5,.025,.12)],duration/4.5,.005)
@@ -36,7 +36,7 @@ OPTIONS = {
 }
 
 def run():
-    original=ROOT/'docs/audio-proposal-v2/wav'
+    original=ROOT/'docs/design/audio/v2/wav'
     baseline={p:hashlib.sha256(p.read_bytes()).hexdigest() for p in original.glob('*.wav')}
     OUT.mkdir(exist_ok=True)
     voices={**VOICES,'tine':tine}

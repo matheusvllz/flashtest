@@ -79,7 +79,7 @@ function isNavActive(pathname: string, to: string) {
 }
 
 /**
- * A Foca fica ausente do header de tela comum (docs/15-mascote-e-voz.md §4:
+ * A Foca fica ausente do header de tela comum (docs/historico/fundacao/15-mascote-e-voz.md §4:
  * "presença constante mata o impacto") — no lugar entra um botão de voltar
  * quando a tela não é um destino direto do bottom nav.
  */

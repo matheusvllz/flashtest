@@ -33,7 +33,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Tokens oficiais da marca Foca — paleta Rabisco na Margem
-   (docs/brand/foca-rabisco-branding.md, docs/18-plano-reestilizacao-rabisco.md).
+   (docs/design/brand/foca-rabisco-branding.md, docs/design/sistema-rabisco.md).
    Grafite (abismo) é tinta — texto/contorno, nunca fundo grande. Caneta (mar) é o
    único accent de ação/seleção/progresso. Marca-texto (recompensa) é XP/streak/marco.
    Sucesso e Erro: SÓ feedback de resposta certa/errada, nunca decorativos. */

@@ -37,8 +37,8 @@ Depois leia, no nível que a tarefa pede:
 | Qualquer uma | `estrategia/ESTRATEGIA-EDITORIAL.md` (inteiro na 1ª vez da sessão) |
 | Copy nova | `../docs/COPY.md` → `../docs/copy/06-marketing.md` → `../docs/copy/02-voz-e-tom.md` → `../docs/PRODUCT.md` (*Evidence on Hand*) |
 | Visual | `marca/INDICE-REFERENCIAS.md` → `../docs/DESIGN.md` |
-| Mascote | `../docs/15-mascote-e-voz.md` §4–§5 |
-| Persona | `../docs/14-persona-joao.md` |
+| Mascote | `../docs/historico/fundacao/15-mascote-e-voz.md` §4–§5 |
+| Persona | `../docs/produto/persona-joao.md` |
 
 Se o `marca:sync` mostrar hash diferente em `styles.css`, `DESIGN.md`, `COPY.md` ou `PRODUCT.md` em relação ao último conteúdo (`bun run hist ver <id>` → `referenciasMarca`), **releia a fonte que mudou** antes de desenhar.
 

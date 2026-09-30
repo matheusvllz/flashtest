@@ -8,7 +8,7 @@
  * Cobertura desta primeira passada (Fase 3): feedback de resposta e o balão
  * do tutor — as duas superfícies que as Fases 1/2 já tinham em mãos. O resto
  * do app ainda não foi migrado pra cá; ver
- * docs/21-brand-voice-e-inventario-copy.md pro inventário completo e o que
+ * docs/copy/inventario.md pro inventário completo e o que
  * falta. Não declarar cobertura maior do que a registrada lá.
  */
 export const COPY = {

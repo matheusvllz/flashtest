@@ -21,7 +21,7 @@ export interface ExerciseViewProps<E extends Exercise = Exercise> {
  * Estilo compartilhado das opções "tocáveis" (docs/18 §7.10). Caneta (mar) para
  * seleção — nunca abismo, que é reservado a texto/contorno — e as cores de
  * feedback SÓ aparecem depois de verificar: verde/vermelho são reservados a
- * certo/errado, nunca decorativos (docs/09-branding.md §3, docs/18 §5).
+ * certo/errado, nunca decorativos (docs/historico/fundacao/09-branding.md §3, docs/18 §5).
  *
  * Usado tanto pelos exercícios de redação quanto por `/study` (aula de 60s) —
  * uma linguagem só nos dois pilares do produto.

@@ -18,7 +18,7 @@ describe("identity — assets aprovados", () => {
     expect(TODOS_OS_EVENTOS).toHaveLength(12);
     for (const evento of TODOS_OS_EVENTOS) {
       const production = readFileSync(`public${SOUND_ASSETS[evento]}`);
-      const approved = readFileSync(`docs/audio-proposal-v2/wav/${evento}.wav`);
+      const approved = readFileSync(`docs/design/audio/v2/wav/${evento}.wav`);
       expect(createHash("sha256").update(production).digest("hex")).toBe(
         createHash("sha256").update(approved).digest("hex"),
       );
