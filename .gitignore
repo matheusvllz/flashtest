@@ -16,15 +16,15 @@ dist-ssr
 .nitro
 *.local
 
-# Wrangler / Cloudflare
-.wrangler/
-.dev.vars
-
-# Netlify (build output + CLI local state)
-.netlify/
-
-# Vercel (saída local do preset `vercel` do Nitro, docs/27 §14 — VERCEL=1 bun run build)
+# Vercel (saída local do preset `vercel` do Nitro — VERCEL=1 bun run build; ADR 0001)
 .vercel/
+
+# Banco e caixa de saída de e-mail locais (PGlite; docs/operacao/ambientes-e-deploy.md)
+.data/
+
+# Pastas locais fora do Git (decisão D-05 do 46): edição de vídeo e rascunhos de sessões.
+/edição Videos/
+/Claude outputs/
 
 # Aprendizagem adaptativa (docs/30/31) — lotes brutos do pipeline de conteúdo (dados
 # intermediários, não versionados; só o publicado em src/content/banco/ é versionado)

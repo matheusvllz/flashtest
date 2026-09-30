@@ -2,7 +2,7 @@
 // semeia o estado local do jeito que o motor gravaria, tira screenshots de cada tela em claro e escuro
 // e gera AVIF/WebP em 2 larguras. Nada é desenhado à mão: cada pixel vem da interface do app.
 //
-// Uso:  bun run shots            (todos)    |    bun scripts/capture-product-shots.ts --only=hero-atividade,quiz-prova
+// Uso:  bun run shots            (todos)    |    bun scripts/marketing/capturar-telas.ts --only=hero-atividade,quiz-prova
 //
 // O app NÃO é iniciado nem alterado por este script. Os PNGs mestres ficam em assets-src/ (gitignorado);
 // os derivados vão para assets-src/shots-web/ e as dimensões para assets-src/shots-meta.ts (referência visual das
@@ -13,7 +13,7 @@ import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 const APP = (process.env.APP_URL ?? "http://localhost:8080").replace(/\/+$/, "");
-const ROOT = resolve(import.meta.dir, "..");
+const ROOT = resolve(import.meta.dir, "..", "..");
 // v2 (docs/42 §7): a página não usa mais imagens das telas (elas são HTML). Os retratos viram referência visual.
 const OUT = resolve(ROOT, "assets-src/shots-web");
 const MASTER = resolve(ROOT, "assets-src/shots");
@@ -359,6 +359,6 @@ try {
     .join("\n");
   writeFileSync(
     resolve(ROOT, "assets-src/shots-meta.ts"),
-    `// AUTOGERADO por scripts/capture-product-shots.ts (bun run shots). Não edite à mão.\n// Dimensões CSS de cada retrato real do app; arquivos em /lp/shots/<id>-<tema>-<largura>.<avif|webp>.\nexport interface ShotMeta {\n  width: number;\n  height: number;\n  widths: number[];\n}\n\nexport const SHOTS = {\n${linhas}\n} as const satisfies Record<string, ShotMeta>;\n\nexport type ShotId = keyof typeof SHOTS;\n`,
+    `// AUTOGERADO por scripts/marketing/capturar-telas.ts (bun run shots). Não edite à mão.\n// Dimensões CSS de cada retrato real do app; arquivos em /lp/shots/<id>-<tema>-<largura>.<avif|webp>.\nexport interface ShotMeta {\n  width: number;\n  height: number;\n  widths: number[];\n}\n\nexport const SHOTS = {\n${linhas}\n} as const satisfies Record<string, ShotMeta>;\n\nexport type ShotId = keyof typeof SHOTS;\n`,
   );
 }

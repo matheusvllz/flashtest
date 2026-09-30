@@ -127,3 +127,50 @@ Ver a tabela acima. Build com preset padrão e E2E ficaram atrás do lint no mes
 - Pendente (vai com a F03).
 
 **Gate F02:** `node scripts/validate-skills.mjs` ✅ · `bun run docs:check` ✅ · `bun scripts/agents/sincronizar-skills.ts --checar` ✅ · `bun scripts/agents/tabela-skills.ts --checar` ✅ · sessões novas do Claude e do Codex: **pendentes (manual)**.
+
+## F03 — Build e repositório sem Lovable e Netlify
+
+### T-03.1 — `vite.config.ts` sem o wrapper
+- Configuração explícita com os mesmos plugins e opções do wrapper fora do sandbox (lidos em `node_modules/@lovable.dev/vite-tanstack-config/dist/index.js:505-640`): `tailwindcss()`, `tsConfigPaths`, `tanstackStart` com `server.entry: "server"` e **`importProtection`** (`**/server/**` e `server-only` bloqueados no cliente), `nitro` só no build, `viteReact()`, alias `@`, `dedupe`, `optimizeDeps`, `css.transformer: "lightningcss"`, servidor em `::`/8080 com `awaitWriteFinish`. Fora do sandbox, os plugins da Lovable (bridge, hmr-gate, proxy de assets, loggers de erro do dev server) não faziam nada — saíram. Devtools do TanStack (só em modo development, sem uso no código) também saíram.
+- Preset padrão fora da Vercel: `netlify` → **`node-server`**.
+- `lightningcss@1.32.0` declarado como devDependency (a mesma versão que já vinha como transitiva).
+- **Evidência de equivalência:** `NITRO_PRESET=node-server bun run build` antes e depois → os 91 arquivos de `.output/public/assets` com os **mesmos nomes com hash e os mesmos tamanhos** (JS total 1.754.941 bytes antes e depois; `styles-BOTdZqk7.css` 109.686 e `marketing-DXCFTi6n.css` 25.808 bytes nos dois), `.output/server` com 3.272.994 bytes nos dois.
+- DV-01 corrigida: `tests/unit/css-tokens.test.ts` passa a ler o CSS do build mais recente (`.output`, `.vercel` ou `dist`) e a considerar as variáveis declaradas nos outros CSS do build (`marketing-*.css`). No CI, os unitários passam a rodar **depois** do build, para esses testes não ficarem pulados. Resultado: 9 pass, 0 fail.
+- `VERCEL=1 bun run build`: pendente — espera terminar o lint da linha de base, que ainda está lendo `.vercel/`.
+- **Estado:** implementada; validada localmente (build `node-server`, unitários, E2E — ver o gate).
+
+### T-03.2 — Dependência e resquícios
+- `bun remove @lovable.dev/vite-tanstack-config` (sai do `bun.lock` a única entrada do registry privado da Lovable); `bunfig.toml`: `minimumReleaseAgeExcludes = []` (as 6 exceções `@lovable.dev/*` saíram; a guarda de 24 h continua).
+- `src/lib/lovable-error-reporting.ts` → `src/lib/error-reporting.ts` (`reportarErro`: console, linha estruturada com boundary, rota e mensagem, sem dado pessoal); `__root.tsx` e `TrailError.tsx` atualizados.
+- `git grep -i lovable` fora de `docs/historico`, specs e do comentário explicativo do `vite.config.ts`: nenhuma ocorrência em código. **Estado:** concluída.
+
+### T-03.3 — Netlify, `.gitignore`, ESLint
+- `netlify.toml` removido; blocos Wrangler/Cloudflare e Netlify saem do `.gitignore`; entram `.data/` (banco local), `/edição Videos/` e `/Claude outputs/` (D-05, sem apagar as pastas).
+- `eslint.config.js` passa a ignorar artefatos de build (`.vercel`, `.netlify`, `.nitro`, `.tanstack`, `public/content`, relatórios do Playwright) e as ferramentas independentes. **`bun run lint` passou de mais de 1 h 30 min para 43 s.**
+- **Linha de base real do lint:** 29.081 problemas, dos quais 29.062 são formatação Prettier corrigível automaticamente (dívida conhecida). Sem as regras do Prettier: 3 erros e 17 avisos. Os 3 erros foram corrigidos (`prefer-const` em `src/content/taxonomy/validate.ts:188`; expressão solta em `src/marketing/lib/chrome-dom.ts:46`; `no-empty-pattern` em `tests/e2e/marketing/responsive.spec.ts:15` — mantido o `{}` com exceção comentada, porque o Playwright exige desestruturação no primeiro argumento). Novo script `lint:ci` (sem Prettier): **0 erros, 17 avisos**. A formatação em massa fica no backlog (commit separado, para não misturar com esta iniciativa).
+- **Estado:** concluída.
+
+### T-03.4 — Lovable
+- O proprietário não tem mais conta (D-04): `.lovable/project.json` removido; o bloco `LOVABLE:BEGIN/END` já tinha saído do `AGENTS.md` novo (T-02.1). **Estado:** concluída.
+
+### T-03.5 — Scripts de marketing
+- `scripts/marketing/og-image.ts`: caminhos da landing integrada (`src/marketing/content/copy`, tokens do `:root` de `src/styles.css`, `public/fonts/`, `public/branding/foca/`, saída em `public/og/og-landing.png`). **Executado com sucesso** (`og OK: public/og/og-landing.png 1200x630`, imagem conferida visualmente); a imagem gerada difere em bytes da publicada (35.190 × 33.279), por isso a publicada foi **restaurada** — regenerar a arte não é escopo desta tarefa.
+- `scripts/marketing/css-blocks.ts`: caminho do `src/styles.css` corrigido (apontava para fora do repo).
+- `scripts/marketing/capturar-telas.ts`: raiz corrigida (`scripts/` → raiz do repo). Execução não verificada (precisa do app rodando e grava retratos em `assets-src/`).
+- Scripts `shots` e `og` no `package.json`. **Estado:** concluída (captura: implementada, não executada).
+
+### T-03.6 — README e CI
+- `README.md` reescrito (Foca, Bun, verificação, build local, deploy, ferramentas no repo).
+- CI: `tsc` → `lint:ci` → `docs:check` → `build` → unitários (depois do build). O validador de skills fica fora do CI porque confere plugins instalados na máquina do Claude; o espelho de skills e a tabela do catálogo são conferidos pelo teste unitário `docs-e-skills.test.ts`. **Estado:** implementada (o CI só roda no GitHub depois de um push, que é decisão do proprietário).
+
+### T-02.7 — `.mcp.json` (feito junto da F03)
+- `omniroute@3.8.50`, fixado. A versão mais nova (3.8.51) foi publicada há menos de 24 h e ficaria fora da guarda `minimumReleaseAge` do projeto. **Estado:** concluída.
+
+### T-03.7 — Artefatos locais
+- Removidos `dist/` (saída do preset Netlify) e `.tanstack/tmp`. `.netlify/` e `.vercel/output` ficam até o lint antigo terminar (ele ainda os lê). **Estado:** parcial.
+
+### Gate F03 (30/09/2026)
+- `bunx tsc --noEmit` ✅ · `bun test tests/unit` **1245 pass, 0 fail** (97 arquivos; os testes de CSS compilado agora rodam) · `bun run lint:ci` 0 erros, 17 avisos · `bun run docs:check` ✅ · `NITRO_PRESET=node-server bun run build` ✅ (saída idêntica à de antes) · `VERCEL=1 bun run build` ✅ (gerou `.vercel/output/functions/__server.func`, Build Output API v3, Nitro 3.0.260603-beta).
+- **E2E completo** (`bunx playwright test`, 541 testes): **461 passed, 7 failed, 73 skipped** (os pulados são por desenho). A rodada competiu com outra execução da suíte (a linha de base em segundo plano reusou o mesmo servidor de desenvolvimento, `reuseExistingServer: true`): 3 falhas foram `ENOENT` em `test-results/` (as duas execuções escreviam na mesma pasta) e 3 foram timeouts.
+- **Reexecução isolada** dos 4 arquivos com falha (`a11y-dialogs`, `layout`, `placement`, `trail-path`), já com `optimizeDeps.ignoreOutdatedRequests: true` (opção do wrapper antigo, restaurada): **121 passed, 1 failed, 30 skipped**. A falha restante (`a11y-dialogs.spec.ts:107`, primeira navegação a `/trilha` num servidor de desenvolvimento frio: erro de streaming do React no SSR) **também acontece no commit anterior à troca do build** (`92e5963`, conferido num worktree temporário com `bun install --frozen-lockfile`) → preexistente, não é regressão; no build de produção `/trilha` responde 200 com HTML completo. Registrada no backlog B-022.
+- A execução da linha de base que ficou em segundo plano (T-00.1) **não vale como evidência**: o lint dela terminou com erro depois de 1 h 40 min porque um arquivo que ele ia ler foi removido no T-03.2; os builds dela já rodaram com a configuração nova; e o E2E dela perdeu o servidor no meio (51 `ERR_CONNECTION_REFUSED`).

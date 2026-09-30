@@ -11,12 +11,15 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
+    "lint:ci": "eslint . --rule \"prettier/prettier: off\"",
     "format": "prettier --write .",
     "test:unit": "bun test tests/unit",
     "test:e2e": "playwright test",
     "docs:check": "bun scripts/docs/verificar-links.ts",
     "skills:sync": "bun scripts/agents/sincronizar-skills.ts && bun scripts/agents/tabela-skills.ts",
-    "skills:check": "node scripts/validate-skills.mjs"
+    "skills:check": "node scripts/validate-skills.mjs",
+    "shots": "bun scripts/marketing/capturar-telas.ts",
+    "og": "bun scripts/marketing/og-image.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -76,7 +79,6 @@
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "@eslint/js": "^9.32.0",
-    "@lovable.dev/vite-tanstack-config": "2.7.7",
     "@playwright/test": "^1.63.0",
     "@types/node": "^22.16.5",
     "@types/react": "^19.2.0",
@@ -88,6 +90,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
+    "lightningcss": "1.32.0",
     "nitro": "3.0.260603-beta",
     "prettier": "^3.7.3",
     "sharp": "0.35.5",

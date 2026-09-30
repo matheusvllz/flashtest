@@ -22,5 +22,9 @@ jobs:
           bun-version: 1.4.2
       - run: bun install --frozen-lockfile
       - run: bunx tsc --noEmit
-      - run: bun test tests/unit
+      # ESLint sem as regras de formatação do Prettier (a formatação em massa é um item do backlog).
+      - run: bun run lint:ci
+      - run: bun run docs:check
       - run: bun run build
+      # Depois do build, para os testes de "CSS compilado" (tests/unit/css-tokens.test.ts) rodarem de verdade.
+      - run: bun test tests/unit

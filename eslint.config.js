@@ -6,7 +6,24 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", ".output", ".vinxi"] },
+  {
+    // Artefatos de build e ferramentas independentes (lint próprio ou nenhum) — docs/specs/46-producao T-03.3.
+    ignores: [
+      "dist",
+      ".output",
+      ".vinxi",
+      ".vercel",
+      ".netlify",
+      ".nitro",
+      ".tanstack",
+      "public/content",
+      "automacao-instagram",
+      "edição Videos",
+      "Claude outputs",
+      "test-results",
+      "playwright-report",
+    ],
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],

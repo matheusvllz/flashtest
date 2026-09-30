@@ -12,6 +12,7 @@ const TAMANHOS: [number, number][] = [
   [1440, 900],
 ];
 
+// eslint-disable-next-line no-empty-pattern -- o Playwright exige desestruturação no 1º argumento.
 test.beforeEach(({}, info) => {
   test.skip(info.project.name !== "lp-desktop", "os tamanhos são varridos dentro do teste");
 });

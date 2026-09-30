@@ -14,9 +14,9 @@ import {
  * chamada falhar, devolvemos o fallback local — o balão nunca aparece vazio na
  * frente da banca.
  *
- * Usamos `fetch` direto em vez do SDK oficial de propósito: o build tem como
- * alvo o runtime de worker (Nitro/Cloudflare), onde uma dependência pensada
- * para Node é risco desnecessário — e a API de chat é uma única chamada HTTP.
+ * Usamos `fetch` direto em vez do SDK oficial de propósito: a API de chat é uma
+ * única chamada HTTP feita por uma função de servidor (Nitro na Vercel), e uma
+ * dependência a mais não compensa.
  */
 
 const ENDPOINT = "https://api.openai.com/v1/chat/completions";

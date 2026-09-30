@@ -185,7 +185,7 @@ export function topologicalOrder(skills: SkillDef[], subjectId: string): SkillDe
     return a.localeCompare(b);
   };
 
-  let ready = ofSubject.filter((s) => (inDegree.get(s.id) ?? 0) === 0).map((s) => s.id);
+  const ready = ofSubject.filter((s) => (inDegree.get(s.id) ?? 0) === 0).map((s) => s.id);
   ready.sort(compare);
   const result: SkillDef[] = [];
   while (ready.length > 0) {

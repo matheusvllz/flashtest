@@ -14,7 +14,7 @@ import { join, relative } from "node:path";
  * Duas camadas:
  *  1) só código-fonte (sempre roda): sem `var(--color-*)` em `src/**`; sem `13.75rem`/`440px`
  *     soltos (a largura da coluna e o recuo dos elementos fixos vêm dos tokens de layout);
- *  2) CSS compilado (roda quando `dist/assets/styles-*.css` existe — no gate, depois de
+ *  2) CSS compilado (roda quando há `styles-*.css` de um build em `.output`, `.vercel` ou `dist` — no gate, depois de
  *     `bun run build`): toda variável base referenciada em `src` existe no CSS, as de cor têm
  *     valor em `:root` E em `.dark`, e toda `var(--x)` do CSS compilado tem declaração.
  */
@@ -94,8 +94,18 @@ describe("código-fonte", () => {
 
 /* ------------------------------------------------------------------ CSS compilado */
 
-const DIST = join(RAIZ, "dist", "assets");
-const CSS_COMPILADO = existsSync(DIST) ? readdirSync(DIST).find((n) => /^styles-.*\.css$/.test(n)) : undefined;
+// Onde o build deixa o CSS: `.output/public/assets` (preset node-server, o padrão fora da Vercel),
+// `.vercel/output/static/assets` (VERCEL=1) ou `dist/assets` (preset antigo). Usa o mais recente.
+const CANDIDATOS = [
+  join(RAIZ, ".output", "public", "assets"),
+  join(RAIZ, ".vercel", "output", "static", "assets"),
+  join(RAIZ, "dist", "assets"),
+].filter((d) => existsSync(d) && readdirSync(d).some((n) => /^styles-.*\.css$/.test(n)));
+const DIST = CANDIDATOS.sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0] ?? "";
+const CSS_COMPILADO = DIST ? readdirSync(DIST).find((n) => /^styles-.*\.css$/.test(n)) : undefined;
+// Os outros CSS do build (ex.: `marketing-*.css`, carregado só na landing, docs/44 §3): as
+// variáveis declaradas neles contam como declaradas para quem as usa.
+const OUTROS_CSS = DIST ? readdirSync(DIST).filter((n) => n.endsWith(".css") && n !== CSS_COMPILADO) : [];
 const compilado = test.skipIf(!CSS_COMPILADO);
 
 interface Regra {
@@ -129,6 +139,10 @@ const EH_COR = /^(#[0-9a-f]{3,8}|rgba?\(|hsla?\(|oklch\(|oklab\()/i;
 
 describe("CSS compilado (roda depois de `bun run build`)", () => {
   const css = CSS_COMPILADO ? readFileSync(join(DIST, CSS_COMPILADO), "utf8") : "";
+  const declaradasEmOutros = new Set<string>();
+  for (const n of OUTROS_CSS) {
+    for (const m of readFileSync(join(DIST, n), "utf8").matchAll(/(--[\w-]+)\s*:/g)) declaradasEmOutros.add(m[1]);
+  }
   const todas = regras(css);
   const doRaiz = new Map<string, string>();
   const doDark = new Map<string, string>();
@@ -167,6 +181,7 @@ describe("CSS compilado (roda depois de `bun run build`)", () => {
       const valor = doRaiz.get(nome);
       if (valor === undefined) {
         if (definidasNoCodigo.has(nome) || RUNTIME_OU_NAO_USADA.test(nome)) continue; // atribuída em runtime por quem a usa (ex.: --frame-col)
+        if (declaradasEmOutros.has(nome)) continue; // declarada no CSS da própria área (ex.: --lp-* em marketing-*.css)
         faltando.push(`${nome} (usada em ${arquivo}) não está declarada em :root no CSS compilado`);
       } else if (EH_COR.test(valor) && !doDark.has(nome)) {
         faltando.push(`${nome} (usada em ${arquivo}) é cor em :root mas não tem valor em .dark`);
@@ -179,6 +194,7 @@ describe("CSS compilado (roda depois de `bun run build`)", () => {
     const declaradas = new Set<string>();
     for (const m of css.matchAll(/(--[\w-]+)\s*:/g)) declaradas.add(m[1]);
     for (const nome of definidasNoCodigo) declaradas.add(nome);
+    for (const nome of declaradasEmOutros) declaradas.add(nome);
 
     const usadas = new Set<string>();
     for (const m of css.matchAll(/var\(\s*(--[\w-]+)\s*([,)])/g)) if (m[2] === ")") usadas.add(m[1]); // sem fallback

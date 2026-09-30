@@ -1,110 +1,55 @@
-# Flash Test
+# Foca
 
-Protótipo do **Flash Test**: um app mobile-first de preparação para o ENEM em **aulas de 60 segundos** (1–2 questões por vez), com uma IA que aprende a lacuna de cada aluno e decide o que vem a seguir.
+App web mobile-first de preparação para o ENEM em **aulas curtas** (4–8 questões por lição), com um motor adaptativo que decide a próxima questão e uma tutora de IA (a Foca IA) que o aluno chama quando quiser. O diferencial é **constância e personalização**, não mais conteúdo.
 
-O diferencial do produto é **constância e personalização**, não volume de conteúdo — conteúdo gratuito já existe de sobra. O app monta a próxima aula a partir do diagnóstico do aluno e explica o erro *dele*, não o erro médio.
+- **Para agentes (Claude Code, Codex):** comece por [AGENTS.md](AGENTS.md).
+- **Documentação:** [docs/README.md](docs/README.md) (mapa) e [docs/ESTADO.md](docs/ESTADO.md) (o que está em andamento).
 
-> Primeira versão pública (v1), construída como protótipo de pitch.
+## Estado
 
-## O que já funciona
+O app de estudo funciona de ponta a ponta no navegador, com o progresso guardado **só no aparelho**. Conta de verdade (e-mail e Google), banco de dados, sincronização entre aparelhos, proteção da Foca IA e documentos legais estão em implementação — [docs/specs/46-producao/](docs/specs/46-producao/spec.md). O que é real, local ou simulado hoje: [docs/produto/funcionalidades.md](docs/produto/funcionalidades.md).
 
-**Dois pilares de estudo**
+## Rodar localmente
 
-- **Aulas de 60s** — 59 questões de ENEM/vestibular cobrindo as 11 matérias, com explicação, passo a passo, flashcard sugerido e videoaula por tópico.
-- **Micro-treino de redação** — 15 trilhas, 134 lições e 1.204 exercícios em 7 formatos interativos (múltipla escolha, encontre o erro, complete a lacuna, ordenar, interpretação, parear e verdadeiro/falso). Desbloqueio sequencial, com estrelas e XP por lição.
-
-**Tutor de IA**
-
-Balão global presente em todas as telas pós-quiz. Abre sozinho quando o aluno erra, aceita **foto de questão** (multimodal) e responde com o contexto real do aluno — faculdade-alvo, lacunas do diagnóstico e desempenho medido.
-
-Regra de honestidade do projeto: **os números vêm do app, só a frase é gerada pela IA.** O prompt proíbe explicitamente inventar estatística. Sem chave de API configurada, o tutor cai num fallback local em vez de quebrar.
-
-**Progresso e engajamento**
-
-Mapa de lacunas por matéria, ranking semanal de turma, streak, XP e flashcards com repetição espaçada.
-
-## Rodando localmente
-
-Requer [bun](https://bun.sh) (gerenciador de pacotes do projeto — não usar npm/yarn/pnpm, que geram um lockfile paralelo).
+Requer [Bun](https://bun.sh) — **não use npm, yarn ou pnpm** (gerariam um lockfile paralelo).
 
 ```sh
-git clone https://github.com/matheusvllz/flashtest.git
-cd flashtest
+git clone https://github.com/matheusvllz/flashtest.git foca
+cd foca
 bun install
-cp .env.example .env   # preencha OPENAI_API_KEY (opcional)
-bun run dev
+cp .env.example .env   # OPENAI_API_KEY é opcional: sem ela, a Foca IA usa um fallback local
+bun run dev            # http://localhost:8080
 ```
 
-Abre em `http://localhost:8080`.
-
-O app é **mobile-first** e a interface é enquadrada num frame de 440px — no desktop, use o modo dispositivo do navegador (Ctrl+Shift+M) para ver como foi desenhado.
-
-### Verificar
+## Verificar
 
 ```sh
-bunx tsc --noEmit      # checagem de tipos
-bun test tests/unit    # testes unitários
-bunx playwright install chromium   # só na primeira vez
-bunx playwright test   # testes end-to-end
-bun run build           # build de produção
+bunx tsc --noEmit                    # tipos
+bun test tests/unit                  # testes unitários
+bunx playwright install chromium     # só na primeira vez
+bunx playwright test                 # testes end-to-end (sobe o servidor de desenvolvimento)
+bun run build                        # build de produção
+bun run lint:ci                      # ESLint (sem as regras de formatação)
+bun run docs:check                   # links e caminhos da documentação
+bun run skills:check                 # skills e agentes (Claude Code e Codex)
+```
+
+Build de produção servido localmente (para testar como na Vercel):
+
+```sh
+NITRO_PRESET=node-server bun run build
+PORT=3100 node .output/server/index.mjs
 ```
 
 ## Deploy
 
-Hospedagem: **Vercel**, conectado a este repositório no GitHub — cada push em `main` gera um deploy de produção automaticamente (ver `docs/historico/iniciativas/27-28-29-home-trilha/27-plano-home-trilha-visual.md` §14 para o diagnóstico completo do que já foi tentado e por quê).
-
-- O app é SSR (TanStack Start/Nitro) porque o balão do tutor de IA precisa de uma função de servidor real para chamar a OpenAI — não é publicável como site estático (GitHub Pages fica de fora por isso).
-- `vite.config.ts` escolhe o preset do Nitro pelo ambiente: `vercel` quando a variável `VERCEL` está definida (o próprio Vercel define), `netlify` fora dele — o mesmo código builda para as duas plataformas sem alterações.
-- `vercel.json` fixa o gerenciador de pacotes (`bun install --frozen-lockfile`) e o comando de build.
-- Variável de ambiente a configurar no painel do Vercel (**Settings → Environment Variables**): `OPENAI_API_KEY` (Production e Preview). Sem ela o tutor cai no fallback local em vez de quebrar.
-- **Proteção de deploy:** por padrão o Vercel protege a URL de produção atrás de login (SSO) — para abrir num celular sem estar logado no Vercel, desligue ou restrinja a "Vercel Authentication" a Preview Deployments em **Settings → Deployment Protection**.
-
-### Chave de IA
-
-A chave vive em `.env` (gitignorado) e é lida **somente no servidor**, numa server function do TanStack Start — nunca chega ao navegador. Não use o prefixo `VITE_`, que a colocaria no bundle do cliente.
-
-```dotenv
-OPENAI_API_KEY=sk-...
-```
-
-Sem a chave o app roda normalmente: o tutor responde pelo fallback local.
+Hospedagem na **Vercel**, conectada a este repositório: cada push em `main` gera um deploy de produção. Por isso, **push só com decisão do proprietário**. Detalhes (preset do Nitro por ambiente, variáveis, proteção de preview, limites do plano): [docs/operacao/ambientes-e-deploy.md](docs/operacao/ambientes-e-deploy.md) e [decisão 0001](docs/decisoes/0001-hospedagem-vercel.md).
 
 ## Stack
 
-- **TanStack Start** (React 19) + TanStack Router com rotas *file-based* — `src/routeTree.gen.ts` é autogerado, não editar à mão
-- **Vite 8** + **Tailwind CSS v4** (tokens em `src/styles.css`) + shadcn/ui
-- **Estado**: um único store em `src/lib/store.ts` (`useSyncExternalStore` + `localStorage`)
-- **IA**: OpenAI via `fetch` numa server function (`src/lib/tutor-core.ts`)
-- Sem backend e sem banco — o cadastro é mock por decisão de escopo do protótipo
+TanStack Start + TanStack Router (rotas por arquivo em `src/routes/`), React 19, Vite 8, Nitro, Tailwind CSS v4 + shadcn/ui, Bun. Arquitetura: [docs/arquitetura/visao-geral.md](docs/arquitetura/visao-geral.md).
 
-## Estrutura
+## Ferramentas no mesmo repositório (fora do app)
 
-```text
-src/
-  routes/            # rotas file-based (quiz, aha, study, redacao, progress, ranking…)
-  components/
-    lessons/         # player da trilha de redação + os 7 tipos de exercício
-    TutorBubble.tsx  # balão global do tutor de IA
-  lib/
-    lessons/         # motor de lições: tipos, builders e correção algorítmica
-    store.ts         # estado único do app
-    tutor-core.ts    # camada de IA (testável fora do transporte)
-  content/trilhas/   # as 134 lições, declarativas
-  data/              # questões, matérias, universidades, ranking
-```
-
-O motor de lições é declarativo: **lição é dado, motor é código**. Um tipo novo de exercício = um componente + uma linha no registry, sem `if/else` de tipo espalhado pelo app.
-
-## Scripts
-
-| Comando | O que faz |
-| --- | --- |
-| `npm run dev` | servidor de desenvolvimento |
-| `npm run build` | build de produção |
-| `npm run lint` | ESLint |
-| `npm run format` | Prettier |
-
-## Notas
-
-- `bun.lock` vem do template original; o caminho documentado e usado no projeto é o **npm** (`package-lock.json`).
-- O projeto é conectado ao [Lovable](https://lovable.dev). Evite reescrever histórico já publicado (force push, rebase ou amend de commits enviados) — isso quebra a sincronia do editor.
+- `automacao-instagram/` — produção de conteúdo do Instagram, com dependências próprias.
+- `content-pipeline/` — pipeline offline de geração e revisão de questões.

@@ -3,22 +3,22 @@ import { Link, useRouter, type ErrorComponentProps } from "@tanstack/react-route
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { COPY, textoSePersistiu } from "@/lib/copy";
-import { reportLovableError } from "@/lib/lovable-error-reporting";
+import { reportarErro } from "@/lib/error-reporting";
 import { usePersistStatus } from "@/lib/store";
 
 /**
  * Erro da rota `/trilha` (docs/27 §6.7, docs/28 T-16) — mesmo layout do erro
- * global de `__root.tsx`, incluindo o mesmo report pro Lovable (achado da
+ * global de `__root.tsx`, incluindo o mesmo relato de erro (achado da
  * revisão de T-28: um `errorComponent` de rota não reporta por padrão, só o
  * global — sem isso, erro capturado aqui em vez de subir pro boundary
- * global ficaria mudo pro Lovable).
+ * global ficaria mudo). Destino do relato: `src/lib/error-reporting.ts`.
  */
 export function TrailError({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   const persist = usePersistStatus();
   useEffect(() => {
-    reportLovableError(error, { boundary: "trilha_route_error_component" });
+    reportarErro(error, { boundary: "trilha_route_error_component" });
   }, [error]);
   return (
     <PhoneFrame>

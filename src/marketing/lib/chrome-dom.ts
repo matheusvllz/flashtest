@@ -43,7 +43,10 @@ export function bootChrome(): () => void {
     const fim = ["como-funciona", "tenta-uma", "fechamento", "rodape"].map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
     const noFimSet = new Set<Element>();
     const ioFim = new IntersectionObserver((entradas) => {
-      for (const e of entradas) (e.isIntersecting ? noFimSet.add(e.target) : noFimSet.delete(e.target));
+      for (const e of entradas) {
+        if (e.isIntersecting) noFimSet.add(e.target);
+        else noFimSet.delete(e.target);
+      }
       const html = document.documentElement;
       noFim = [...noFimSet].some((el) => el.id !== "como-funciona" || html.classList.contains("lp-story-on"));
       atualizar();

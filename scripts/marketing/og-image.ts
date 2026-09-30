@@ -1,24 +1,26 @@
 // Imagem de compartilhamento 1200x630 (docs/40 §18): papel com pauta, o H1 da landing com o marca-texto e a logo
 // oficial (Foca de frente colorida, 29/09/2026). Renderizada com o Chromium do Playwright a partir de um HTML local que usa
-// os mesmos tokens (lidos de src/styles/tokens.css) e as mesmas fontes da página. Só o H1 e "Foca" viram texto.
+// os mesmos tokens (lidos do :root de src/styles.css) e as mesmas fontes da página. Só o H1 e "Foca" viram texto.
+//
+// Uso: bun scripts/marketing/og-image.ts   → public/og/og-landing.png (caminhos da landing integrada ao app, docs/44).
 import { chromium } from "@playwright/test";
 import sharp from "sharp";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
-import { LP } from "../src/content/copy";
-import { blockBody, extractBlock, parseVars } from "./lib/css-blocks";
+import { LP } from "../../src/marketing/content/copy";
+import { blockBody, extractBlock, parseVars, readAppStyles } from "./css-blocks";
 
-const ROOT = resolve(import.meta.dir, "..");
-const tokens = readFileSync(resolve(ROOT, "src/styles/tokens.css"), "utf8");
+const ROOT = resolve(import.meta.dir, "..", "..");
+const tokens = readAppStyles().css;
 const v = parseVars(blockBody(extractBlock(tokens, /^:root\s*\{/m)!));
 const cor = (n: string) => v.get(`--${n}`)!;
 const url = (p: string) => pathToFileURL(resolve(ROOT, p)).href;
 
 const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8" />
 <style>
-@font-face{font-family:"Space Grotesk";font-weight:300 700;src:url("${url("public/lp/fonts/space-grotesk-latin-wght.woff2")}") format("woff2")}
-@font-face{font-family:"Plus Jakarta Sans";font-weight:200 800;src:url("${url("public/lp/fonts/plus-jakarta-sans-latin-wght.woff2")}") format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:300 700;src:url("${url("public/fonts/space-grotesk-latin-wght.woff2")}") format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:200 800;src:url("${url("public/fonts/plus-jakarta-sans-latin-wght.woff2")}") format("woff2")}
 *{box-sizing:border-box;margin:0}
 body{width:1200px;height:630px;background:${cor("neve")};color:#26262a;font-family:"Plus Jakarta Sans",sans-serif;position:relative;overflow:hidden}
 .pauta{position:absolute;right:0;top:0;bottom:0;width:470px;background-image:repeating-linear-gradient(to bottom,transparent 0 27px,${cor("gelo")} 27px 28px);opacity:.75}
@@ -37,8 +39,8 @@ h1 span{display:block}
   <p class="eyebrow">${LP.hero.eyebrow}</p>
   <h1><span>${LP.hero.pergunta}</span><span>${LP.hero.respostaAntes}<b class="hl" style="font-weight:700">${LP.hero.respostaDestaque}</b></span></h1>
 </div>
-<div class="marca"><img src="${url("public/lp/brand/foca-color-96.png")}" alt="" />${LP.marca}</div>
-<img class="foca" src="${url("assets-src/foca-color-320.png")}" alt="" />
+<div class="marca"><img src="${url("public/branding/foca/foca-color-96.png")}" alt="" />${LP.marca}</div>
+<img class="foca" src="${url("public/branding/foca/foca-color-320.png")}" alt="" />
 </body></html>`;
 
 mkdirSync(resolve(ROOT, "assets-src"), { recursive: true });
@@ -53,8 +55,8 @@ await page.waitForTimeout(400);
 const png = await page.screenshot({ type: "png" });
 await browser.close();
 
-mkdirSync(resolve(ROOT, "public/lp/og"), { recursive: true });
+mkdirSync(resolve(ROOT, "public/og"), { recursive: true });
 // Paleta reduzida: a arte é chapada, então o PNG cai para uma fração do tamanho sem perda visível.
-await sharp(png).png({ palette: true, quality: 90, compressionLevel: 9 }).toFile(resolve(ROOT, "public/lp/og/og-landing.png"));
-const meta = await sharp(resolve(ROOT, "public/lp/og/og-landing.png")).metadata();
-console.log(`og OK: public/lp/og/og-landing.png ${meta.width}x${meta.height}`);
+await sharp(png).png({ palette: true, quality: 90, compressionLevel: 9 }).toFile(resolve(ROOT, "public/og/og-landing.png"));
+const meta = await sharp(resolve(ROOT, "public/og/og-landing.png")).metadata();
+console.log(`og OK: public/og/og-landing.png ${meta.width}x${meta.height}`);

@@ -11,7 +11,7 @@ import {
 import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportarErro } from "../lib/error-reporting";
 import { BRAND, PALETTE } from "../lib/brand";
 import { FocaMark } from "../components/brand/FocaMark";
 import { fala } from "../lib/voz";
@@ -67,7 +67,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportarErro(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (

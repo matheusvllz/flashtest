@@ -1,9 +1,9 @@
-// Utilidades de leitura do src/styles.css do app. SÓ LEITURA do app; a escrita é sempre em landing/.
+// Utilidades de leitura do src/styles.css do app (somente leitura), usadas pelos scripts de marketing.
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-export const APP_STYLES = resolve(import.meta.dir, "../../../src/styles.css");
+export const APP_STYLES = resolve(import.meta.dir, "../../src/styles.css");
 
 export function readAppStyles(): { css: string; hash: string } {
   const css = readFileSync(APP_STYLES, "utf8");
