@@ -1,0 +1,166 @@
+/**
+ * Funções de servidor da conta (docs/specs/46-producao §E.3, §E.6; T-05.4, T-05.5, T-09.1).
+ * O `userId` vem só da sessão. Dados pessoais: só os de docs/seguranca/privacidade.md.
+ */
+import { createServerFn } from "@tanstack/react-start";
+import { randomUUID } from "node:crypto";
+import { z } from "zod";
+import type { Json, JsonObjeto } from "@/lib/json";
+import { LEGAL, idadePeloAno } from "@/lib/legal";
+import { banco } from "@/server/db/client";
+import {
+  aiUsage,
+  attempt,
+  completion,
+  consent,
+  legalAcceptance,
+  learningDoc,
+  profile,
+  studyDay,
+  user,
+  xpLedger,
+} from "@/server/db/schema";
+import { env } from "@/server/env";
+import { ErroApp, checarOrigem, exigirSessao, respostaDeErro, sessaoAtual } from "@/server/http";
+import { limitar } from "@/server/limite";
+import { and, eq } from "drizzle-orm";
+
+/** O que a interface precisa saber da sessão (sem e-mail em claro além do próprio aluno). */
+export interface EstadoDaSessao {
+  autenticado: boolean;
+  /** Cadastro completo: ano de nascimento informado e documentos legais vigentes aceitos. */
+  cadastroCompleto: boolean;
+  emailVerificado: boolean;
+  nome: string | null;
+  email: string | null;
+  /** Precisa aceitar de novo porque a versão dos termos ou da política mudou. */
+  reaceitePendente: boolean;
+}
+
+export const obterSessao = createServerFn({ method: "GET" }).handler(async (): Promise<EstadoDaSessao> => {
+  const s = await sessaoAtual();
+  if (!s) return { autenticado: false, cadastroCompleto: false, emailVerificado: false, nome: null, email: null, reaceitePendente: false };
+  const aceitouVigentes = s.termosVersao === LEGAL.termos.versao && s.privacidadeVersao === LEGAL.privacidade.versao;
+  return {
+    autenticado: true,
+    cadastroCompleto: s.anoNascimento !== null && aceitouVigentes,
+    emailVerificado: s.emailVerificado,
+    nome: s.nome,
+    email: s.email,
+    reaceitePendente: s.anoNascimento !== null && !aceitouVigentes,
+  };
+});
+
+const pedidoCompletar = z.object({
+  anoNascimento: z.number().int().min(1900).max(new Date().getFullYear()),
+  termosVersao: z.string().max(40),
+  privacidadeVersao: z.string().max(40),
+  /** Perfil respondido no onboarding antes do cadastro (fica no aparelho até aqui). */
+  perfil: z
+    .object({
+      primeiroNome: z.string().trim().max(40).optional(),
+      etapa: z.string().max(40).optional(),
+      uf: z.string().regex(/^[A-Z]{2}$/).optional(),
+      cursoAlvo: z.string().max(80).optional(),
+      instituicaoAlvo: z.string().max(120).optional(),
+      provas: z.array(z.unknown()).max(10).optional(),
+      preferencias: z.record(z.string(), z.unknown()).optional(),
+    })
+    .optional(),
+});
+
+/**
+ * Completa o cadastro: idade mínima (ADR 0006), aceite dos documentos vigentes e perfil. Abaixo da
+ * idade mínima a conta é apagada na hora (não guardamos dado de quem não pode ter conta).
+ */
+export const completarCadastro = createServerFn({ method: "POST" })
+  .validator((d: unknown) => pedidoCompletar.parse(d))
+  .handler(async ({ data }) => {
+    try {
+      checarOrigem();
+      const s = await exigirSessao();
+      const db = await banco();
+      await limitar(db, `completar:${s.userId}`, 60, 10);
+      if (data.termosVersao !== LEGAL.termos.versao || data.privacidadeVersao !== LEGAL.privacidade.versao) {
+        throw new ErroApp(400, "VERSAO_DESATUALIZADA");
+      }
+      if (idadePeloAno(data.anoNascimento) < env().MIN_ACCOUNT_AGE) {
+        await db.delete(user).where(eq(user.id, s.userId));
+        return { ok: false as const, codigo: "IDADE_MINIMA" };
+      }
+      const p: NonNullable<typeof data.perfil> = data.perfil ?? {};
+      await db.transaction(async (tx) => {
+        await tx
+          .update(user)
+          .set({ birthYear: data.anoNascimento, termsVersion: data.termosVersao, privacyVersion: data.privacidadeVersao })
+          .where(eq(user.id, s.userId));
+        for (const [documento, versao] of [
+          ["termos", data.termosVersao],
+          ["privacidade", data.privacidadeVersao],
+        ] as const) {
+          await tx.insert(legalAcceptance).values({ id: randomUUID(), userId: s.userId, document: documento, version: versao }).onConflictDoNothing();
+        }
+        await tx
+          .insert(profile)
+          .values({
+            userId: s.userId,
+            firstName: p.primeiroNome || null,
+            level: p.etapa ?? null,
+            residenceState: p.uf ?? null,
+            targetCourse: p.cursoAlvo ?? null,
+            targetInstitution: p.instituicaoAlvo ?? null,
+            examTargets: (p.provas ?? []) as Json[],
+            studyPrefs: (p.preferencias ?? {}) as JsonObjeto,
+            onboardedAt: new Date(),
+          })
+          .onConflictDoUpdate({
+            target: profile.userId,
+            set: {
+              ...(p.primeiroNome ? { firstName: p.primeiroNome } : {}),
+              ...(p.etapa ? { level: p.etapa } : {}),
+              ...(p.uf ? { residenceState: p.uf } : {}),
+              ...(p.cursoAlvo ? { targetCourse: p.cursoAlvo } : {}),
+              ...(p.instituicaoAlvo ? { targetInstitution: p.instituicaoAlvo } : {}),
+              updatedAt: new Date(),
+            },
+          });
+      });
+      return { ok: true as const };
+    } catch (e) {
+      return respostaDeErro(e);
+    }
+  });
+
+/**
+ * Exportação dos dados do aluno (LGPD art. 18; docs/seguranca/privacidade.md §5). Não inclui
+ * hash de senha, tokens, sessões nem dados de outros alunos.
+ */
+export const exportarDados = createServerFn({ method: "POST" }).handler(async () => {
+  try {
+    checarOrigem();
+    const s = await exigirSessao();
+    const db = await banco();
+    await limitar(db, `exportar:${s.userId}`, 3600, 1);
+    const doAluno = <T extends { userId: unknown }>(t: T) => eq(t.userId as never, s.userId);
+    const [u] = await db
+      .select({ nome: user.name, email: user.email, emailVerificado: user.emailVerified, criadoEm: user.createdAt, anoNascimento: user.birthYear })
+      .from(user)
+      .where(eq(user.id, s.userId));
+    return {
+      ok: true as const,
+      geradoEm: new Date().toISOString(),
+      conta: u,
+      perfil: (await db.select().from(profile).where(doAluno(profile)))[0] ?? null,
+      aceites: await db.select({ documento: legalAcceptance.document, versao: legalAcceptance.version, em: legalAcceptance.acceptedAt }).from(legalAcceptance).where(doAluno(legalAcceptance)),
+      consentimentos: await db.select({ finalidade: consent.purpose, por: consent.grantedBy, em: consent.grantedAt, revogadoEm: consent.revokedAt }).from(consent).where(doAluno(consent)),
+      respostas: await db.select({ item: attempt.itemId, correta: attempt.correct, fonte: attempt.source, em: attempt.answeredAt }).from(attempt).where(doAluno(attempt)),
+      conclusoes: await db.select({ chave: completion.key, tipo: completion.kind, pct: completion.scorePct, em: completion.completedAt }).from(completion).where(doAluno(completion)),
+      xp: await db.select({ chave: xpLedger.key, xp: xpLedger.xp, dia: xpLedger.localDate }).from(xpLedger).where(doAluno(xpLedger)),
+      diasDeEstudo: await db.select({ dia: studyDay.localDate }).from(studyDay).where(doAluno(studyDay)),
+      planejamento: (await db.select({ doc: learningDoc.doc }).from(learningDoc).where(doAluno(learningDoc)))[0]?.doc ?? null,
+      usoDaFocaIA: await db.select({ dia: aiUsage.day, mensagens: aiUsage.messages, fotos: aiUsage.images }).from(aiUsage).where(and(doAluno(aiUsage))),
+    };
+  } catch (e) {
+    return respostaDeErro(e);
+  }
+});

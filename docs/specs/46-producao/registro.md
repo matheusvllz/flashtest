@@ -174,3 +174,52 @@ Ver a tabela acima. Build com preset padrão e E2E ficaram atrás do lint no mes
 - **E2E completo** (`bunx playwright test`, 541 testes): **461 passed, 7 failed, 73 skipped** (os pulados são por desenho). A rodada competiu com outra execução da suíte (a linha de base em segundo plano reusou o mesmo servidor de desenvolvimento, `reuseExistingServer: true`): 3 falhas foram `ENOENT` em `test-results/` (as duas execuções escreviam na mesma pasta) e 3 foram timeouts.
 - **Reexecução isolada** dos 4 arquivos com falha (`a11y-dialogs`, `layout`, `placement`, `trail-path`), já com `optimizeDeps.ignoreOutdatedRequests: true` (opção do wrapper antigo, restaurada): **121 passed, 1 failed, 30 skipped**. A falha restante (`a11y-dialogs.spec.ts:107`, primeira navegação a `/trilha` num servidor de desenvolvimento frio: erro de streaming do React no SSR) **também acontece no commit anterior à troca do build** (`92e5963`, conferido num worktree temporário com `bun install --frozen-lockfile`) → preexistente, não é regressão; no build de produção `/trilha` responde 200 com HTML completo. Registrada no backlog B-022.
 - A execução da linha de base que ficou em segundo plano (T-00.1) **não vale como evidência**: o lint dela terminou com erro depois de 1 h 40 min porque um arquivo que ele ia ler foi removido no T-03.2; os builds dela já rodaram com a configuração nova; e o E2E dela perdeu o servidor no meio (51 `ERR_CONNECTION_REFUSED`).
+
+## F04 — Fundação do backend (30/09/2026)
+
+### T-04.1 — ADRs e documentos-base
+- ADRs 0005 (stack) e 0006 (conta e idade); `arquitetura/dados.md`; `seguranca/modelo-de-ameacas.md` (T1–T18, com o estado de cada controle); `seguranca/privacidade.md` v1; `operacao/ambientes-e-deploy.md`. **Estado:** concluída.
+
+### T-04.2 — Prova técnica
+- Num projeto isolado no scratchpad (sem tocar o `node_modules` do app), com as versões exatas: better-auth 1.7.6 + @better-auth/drizzle-adapter 1.7.6 + drizzle-orm 0.45.3 + drizzle-kit 0.31.11 + PGlite 0.5.8. Esquema gerado por `npx auth@1.7.6 generate`, migração por `drizzle-kit generate`, aplicada no PGlite. Resultados: cadastro → login antes de verificar **403** → verificação → login **200** com cookie `HttpOnly; SameSite=Lax` → sessão lida; 4ª tentativa de login em 10 s **429**; e-mail inexistente e senha errada com **resposta idêntica**; cadastro repetido responde igual a um novo.
+- Não testado na prova: Google, vínculo de contas, Neon (sem credenciais).
+- **Estado:** concluída.
+
+### T-04.3 — Banco e migrações
+- `src/server/db/schema/{auth,estudo,index}.ts` (17 tabelas; toda tabela de aluno com `ON DELETE CASCADE`; `audit_event` sem FK de propósito), `src/server/db/client.ts` (PGlite `pglite:memoria`/`pglite:<pasta>` com migração automática; Neon por `@neondatabase/serverless` Pool), `drizzle.config.ts`, migração `drizzle/0000_inicial.sql` (revisada: PKs, uniques, checks de plano/UF/nome/XP, FKs em cascata), scripts `db:generate`, `db:migrate`.
+- **Estado:** concluída (validada localmente com PGlite; Neon pendente de credencial — T-04.7).
+
+### T-04.4 — Variáveis e segredos
+- `src/server/env.ts` (zod; produção sem `DATABASE_URL`, `BETTER_AUTH_SECRET` ou `BETTER_AUTH_URL` não inicia; padrões seguros só em desenvolvimento e teste; e-mail desligado em produção por padrão — D-10).
+- Varredura do bundle do navegador depois do build: nenhuma ocorrência de `drizzle-orm`, `@electric-sql/pglite`, `BETTER_AUTH_SECRET`, `drizzleAdapter`, `neondatabase` ou `scrypt` em `.output/public/assets/`. (O teste automatizado dessa varredura fica para o T-12.4.)
+- **Estado:** concluída.
+
+### T-04.5 — Convenções de servidor
+- `src/server/http.ts`: `ErroApp`, `sessaoAtual`/`exigirSessao` (id só da sessão), `checarOrigem` (CSRF por `Sec-Fetch-Site`/`Origin`), `respostaDeErro` (sem stack), `log` estruturado que omite campos com nome sensível; `src/server/limite.ts`: rate limit atômico em Postgres (tabela `rate_limit`, chaves `foca:`).
+- **Estado:** implementada; testes automatizados do CSRF das funções do Foca e do logger ficam para o T-12.4 (o CSRF das rotas do Better Auth foi conferido: origem estranha → **403 `INVALID_ORIGIN`** no build de produção).
+
+### T-04.6 — Infraestrutura de testes
+- `tests/unit/servidor/ajuda.ts`: banco PGlite em memória migrado por teste, autenticação real do Foca, caixa de saída de e-mail, `alunoVerificado()`.
+- **Estado:** concluída para unitários/integração; o helper de E2E com sessão real vem com as telas (F05).
+
+### T-04.7 — Provisionamento externo
+- **Bloqueada:** conta Neon e integração na Vercel dependem do proprietário.
+
+### Divergências e decisões técnicas desta fase
+| ID | O quê | Decisão |
+|---|---|---|
+| DV-08 | Better Auth usa zod 4; o projeto tinha zod 3.25 na raiz e o bundle do servidor resolveu `zod` para ela (`(void 0) is not a function` em `z.looseObject`) | Projeto passa a zod **4.6.5** (a mesma do Better Auth, uma cópia só). Nenhum código antigo do app usava zod; os novos foram ajustados (`z.record(chave, valor)`) |
+| DV-09 | PGlite embutido no bundle do servidor não achava seus arquivos `.wasm/.data` | `nitro.traceDeps: ["@electric-sql/pglite*"]` (o pacote vai inteiro para `.output/server/node_modules`). Custo: a função da Vercel leva o PGlite sem usar (31 MB no total; limite 250 MB) |
+| DV-10 | Com verificação de e-mail ligada, o Better Auth responde sucesso sintético a qualquer falha de cadastro (anti-enumeração), inclusive à recusa por idade | A regra vale no servidor (conta não é criada nem recebe e-mail — testado); o formulário confere a idade antes de enviar e mostra a mensagem explícita |
+| DV-11 | O teste de concorrência roda no PGlite (uma conexão só) | Não exercita `FOR UPDATE` entre conexões diferentes; validar no Neon (ambiente integrado) |
+
+### Evidência (30/09/2026)
+- `bunx tsc --noEmit` ✅ · `bun test tests/unit` **1276 pass, 0 fail** (100 arquivos; inclui `servidor/auth.test.ts` 9 testes e `servidor/sincronizar.test.ts` 13 testes contra PGlite real) · `NITRO_PRESET=node-server bun run build` ✅ · `VERCEL=1 bun run build` ✅ (função com 31 MB).
+- **Build de produção servido localmente** (`NODE_ENV=production`, PGlite em disco): `/api/saude` **200** `{"ok":true,"banco":"ok"}` (banco criado e migrado na primeira requisição); `/api/auth/ok` **200**; login com senha errada **401** com mensagem genérica; login e cadastro vindos de outra origem **403**.
+- Estado de validação: **validado localmente**. Nada validado em ambiente integrado (sem Neon, sem Google, sem Resend).
+
+## F05/F06 — já adiantado nesta sessão (servidor)
+- `src/server/auth/index.ts`: Better Auth com e-mail e senha verificados (desligável por `AUTH_EMAIL_HABILITADO`), Google quando há credenciais, sessão de 30 dias com renovação diária, redefinição revoga sessões, vínculo de contas sem provedor "confiável", rate limit em banco com regras por rota, cookies seguros em HTTPS, ano de nascimento e versões dos termos como campos do usuário, hook que recusa idade abaixo de `MIN_ACCOUNT_AGE` e aceite fora da versão vigente. Rotas `/api/auth/$` e `/api/saude`.
+- `src/server/email/`: envio (memória em teste, arquivo em `.data/emails/` no desenvolvimento, Resend por `fetch` com domínio) e os 4 modelos (verificação, redefinição, conta excluída, consentimento do responsável), revisados com `better-writing` contra `docs/COPY.md`.
+- `src/lib/recompensas.ts` (regras puras de XP e sequência, fonte única para app e servidor; 9 testes), `src/lib/sync/contrato.ts` (contrato zod dos eventos), `src/server/estudo/{conteudo,sincronizar}.ts` (correção pelo gabarito com `checkAnswer`, livro de XP com teto por chave, teto diário de 60 atividades pagas, sequência pelos dias, janela de datas de 7 dias, transação com o perfil travado), `src/lib/api/{estudo,conta}.ts` (funções de servidor: enviar eventos, obter estado, salvar documento com revisão otimista, sessão, completar cadastro, exportar dados), `src/lib/auth-client.ts`, `src/lib/legal.ts`.
+- **Ainda não ligado às telas**: nada disso muda a experiência atual até as telas de acesso (T-05.4) e a outbox no store (T-06.4).

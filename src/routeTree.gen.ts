@@ -36,6 +36,8 @@ import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
 import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
+import { Route as ApiSaudeRouteImport } from './routes/api/saude'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const WelcomeRoute = WelcomeRouteImport.update({
   id: '/welcome',
@@ -172,6 +174,16 @@ const AtividadeActivityIdRoute = AtividadeActivityIdRouteImport.update({
   path: '/atividade/$activityId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSaudeRoute = ApiSaudeRouteImport.update({
+  id: '/api/saude',
+  path: '/api/saude',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -196,11 +208,13 @@ export interface FileRoutesByFullPath {
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/api/saude': typeof ApiSaudeRoute
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -225,11 +239,13 @@ export interface FileRoutesByTo {
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/api/saude': typeof ApiSaudeRoute
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -255,11 +271,13 @@ export interface FileRoutesById {
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
   '/welcome': typeof WelcomeRoute
+  '/api/saude': typeof ApiSaudeRoute
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -286,11 +304,13 @@ export interface FileRouteTypes {
     | '/topics'
     | '/trilha'
     | '/welcome'
+    | '/api/saude'
     | '/atividade/$activityId'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao/'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -315,11 +335,13 @@ export interface FileRouteTypes {
     | '/topics'
     | '/trilha'
     | '/welcome'
+    | '/api/saude'
     | '/atividade/$activityId'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao'
+    | '/api/auth/$'
   id:
     | '__root__'
     | '/'
@@ -344,11 +366,13 @@ export interface FileRouteTypes {
     | '/topics'
     | '/trilha'
     | '/welcome'
+    | '/api/saude'
     | '/atividade/$activityId'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao/'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -374,11 +398,13 @@ export interface RootRouteChildren {
   TopicsRoute: typeof TopicsRoute
   TrilhaRoute: typeof TrilhaRoute
   WelcomeRoute: typeof WelcomeRoute
+  ApiSaudeRoute: typeof ApiSaudeRoute
   AtividadeActivityIdRoute: typeof AtividadeActivityIdRoute
   LearnLessonIdRoute: typeof LearnLessonIdRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -572,6 +598,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AtividadeActivityIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/saude': {
+      id: '/api/saude'
+      path: '/api/saude'
+      fullPath: '/api/saude'
+      preLoaderRoute: typeof ApiSaudeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -598,11 +638,13 @@ const rootRouteChildren: RootRouteChildren = {
   TopicsRoute: TopicsRoute,
   TrilhaRoute: TrilhaRoute,
   WelcomeRoute: WelcomeRoute,
+  ApiSaudeRoute: ApiSaudeRoute,
   AtividadeActivityIdRoute: AtividadeActivityIdRoute,
   LearnLessonIdRoute: LearnLessonIdRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

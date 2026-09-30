@@ -29,7 +29,12 @@ export default defineConfig(({ command }) => ({
     // (.vercel/output). Fora dela, um servidor Node local (`node .output/server/index.mjs`), usado
     // para testar o build de produção e medir a landing. NITRO_PRESET sobrepõe os dois.
     command === "build"
-      ? nitro({ preset: process.env.NITRO_PRESET ?? (process.env.VERCEL ? "vercel" : "node-server") })
+      ? nitro({
+          preset: process.env.NITRO_PRESET ?? (process.env.VERCEL ? "vercel" : "node-server"),
+          // PGlite (banco local de desenvolvimento e testes, docs/operacao/ambientes-e-deploy.md) carrega
+          // arquivos .wasm/.data do próprio pacote: precisa ir inteiro, não embutido no bundle.
+          traceDeps: ["@electric-sql/pglite*"],
+        })
       : null,
     viteReact(),
   ],
