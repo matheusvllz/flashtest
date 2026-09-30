@@ -712,6 +712,23 @@
       "overlaps": ["superpowers:using-superpowers (entry routing)"]
     },
     {
+      "id": "foca-social",
+      "source": "local (this repo)",
+      "type": "local-skill",
+      "installMethod": "authored in repo",
+      "scope": "project",
+      "enabledByDefault": true,
+      "location": ".claude/skills",
+      "skills": ["foca-social"],
+      "category": "marketing",
+      "role": "primary",
+      "alwaysOnTokens": 170,
+      "triggers": ["ideias de post", "carrossel", "post do Instagram", "Reels", "motion de divulgacao", "publicar/agendar no Instagram"],
+      "doNotUse": ["app (src/)", "landing page", "conteudo pedagogico"],
+      "overlaps": ["marketing-skills:social (lida do cache pela propria skill)"],
+      "implementation": "automacao-instagram/ (isolada; instrucoes em automacao-instagram/AGENTE.md)"
+    },
+    {
       "id": "omniroute-mcp",
       "source": "https://github.com/diegosouzapw/OmniRoute",
       "type": "mcp-server",
@@ -737,6 +754,13 @@
       "path": ".claude/agents/spec-verifier.md",
       "role": "review",
       "readOnly": true
+    },
+    {
+      "name": "foca-social",
+      "path": ".claude/agents/foca-social.md",
+      "role": "production",
+      "readOnly": false,
+      "note": "escreve so em automacao-instagram/; publica apenas com pedido explicito"
     }
   ],
   "declined": [

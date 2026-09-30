@@ -1,0 +1,39 @@
+{
+  "id": "20260929-carrossel-cronograma-fez-marco",
+  "versao": 2,
+  "estado": "pronto",
+  "formato": "carrossel",
+  "criadoEm": "2026-09-29T21:09:40.143Z",
+  "atualizadoEm": "2026-09-29T21:26:12.978Z",
+  "referenciasMarca": {
+    "snapshotEm": "2026-09-29T20:51:40.562Z",
+    "stylesCss": "78947094204c6daa",
+    "logoOficial": "28da75732c576453"
+  },
+  "arquivos": {
+    "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco",
+    "export": [
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p01.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p02.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p03.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p04.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p05.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p06.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p07.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p08.jpg"
+    ],
+    "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\preview\\index.html"
+  },
+  "assets": [
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p01.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p02.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p03.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p04.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p05.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p06.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p07.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p08.png",
+    "assets-src/marketing/shots/atividade-motivo-light.png",
+    "assets-src/marketing/shots/nivelamento-resultado-light.png"
+  ]
+}

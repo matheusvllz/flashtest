@@ -1,0 +1,28 @@
+{
+  "_fonte": "docs/copy/01-estrategia.md §6, docs/copy/06-marketing.md §4, docs/copy/02-voz-e-tom.md §4 e §3.4. Se o guia mudar, atualize este arquivo.",
+  "proibidos": [
+    { "re": "\\b(voc[eê] vai passar|garante a aprova[cç][aã]o|aprova[cç][aã]o garantida)\\b", "porque": "promessa de aprovacao (copy/01 §6)" },
+    { "re": "\\b\\d+\\s*(segundos?|minutos?)\\b", "porque": "duracao nunca foi medida (copy/06 §4)" },
+    { "re": "\\b(\\d+[.,]?\\d*\\s*%\\s*(mais|a mais|mais r[aá]pido)|estude\\s+\\d+%)", "porque": "ganho de desempenho em numero" },
+    { "re": "\\b(milhares|milh[oõ]es)\\s+de\\s+(alunos|estudantes)\\b", "porque": "numero de alunos inventado" },
+    { "re": "\\b(aprovad[oa]s?\\s+(na|no|em)\\s|depoimento)\\b", "porque": "prova social que nao existe" },
+    { "re": "\\bR\\$\\s*\\d", "porque": "preco nunca foi fechado (08 §11)" },
+    { "re": "\\bgr[aá]tis\\s+para\\s+sempre\\b", "porque": "modelo de negocio nunca foi fechado" },
+    { "re": "\\b(descobre|aprende)\\s+(as\\s+)?suas\\s+lacunas\\b", "porque": "o /aha e heuristica de perfil, nao medicao (copy/06 §4)" },
+    { "re": "\\bvoc[eê]\\s+domina\\b|\\bdominad[oa]\\b", "porque": "'domina' proibido como resultado de medicao (copy/02 §3.4)" },
+    { "re": "\\brank(ing)?\\s+(real|de verdade)\\b|\\bcompare?\\s+com\\s+outros\\s+alunos\\b", "porque": "o ranking e mock e a tela diz isso" },
+    { "re": "\\bcrie\\s+o\\s+h[aá]bito\\s+em\\s+\\d+\\s+dias\\b|\\bvoc[eê]\\s+vai\\s+voltar\\s+amanh[aã]\\b", "porque": "retencao nunca foi medida" },
+    { "re": "N[aã]o\\s+[eé]\\s+[^.!?]{2,40}[.]\\s*[EÉ]\\s+", "porque": "padrao 'Nao e X. E Y.' (copy/02 §4)" },
+    { "re": "\\b(revolucion[aá]ri[oa]|incr[ií]vel|sensacional|o melhor app|game[- ]?changer)\\b", "porque": "adjetivo de anuncio sem fato (copy/06 §1)" },
+    { "re": "\\b(cada passo conta|acredite em voc[eê]|continue assim|voc[eê] est[aá] no caminho certo|desbloqueie seu potencial)\\b", "porque": "motivacao generica (copy/02 §4)" },
+    { "re": "\\b(sentimos sua falta|voc[eê] sumiu)\\b", "porque": "cobranca pela ausencia (copy/02 §2)" },
+    { "re": "\\bjornada\\b", "porque": "'jornada' nao vai para o aluno (COPY.md glossario)" },
+    { "re": "\\bduolingo\\b", "porque": "explicacao interna; nao usar em copy (copy/01 §5.1)" },
+    { "re": "!{2,}", "porque": "sequencia de exclamacoes (20 §7.1)" }
+  ],
+  "alerta": [
+    { "re": "[\\u{1F300}-\\u{1FAFF}\\u{2600}-\\u{27BF}]", "porque": "emoji: so em celebracao editorial (fim de capitulo, marco). Conferir se e o caso" },
+    { "re": "\\bn[ií]vel\\s+\\d\\b|\\bnota\\s+\\d", "porque": "resultado por nota ou nivel N e proibido; conferir o contexto" },
+    { "re": "\\bIA\\b", "porque": "dizer o que a IA decide, com que dado (00-constituicao). Conferir se a frase se sustenta" }
+  ]
+}

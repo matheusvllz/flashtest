@@ -1,0 +1,104 @@
+{
+  "id": "20260929-story-destaque-foca",
+  "formato": "story",
+  "pilar": "produto",
+  "tema": "destaque o que e o foca",
+  "gancho": "Destaque \"Próximo passo\": Por onde eu começo? O Foca já escolheu.",
+  "argumento": "A promessa mostrada em telas reais: o próximo passo já está na tela, com o motivo dito pela Foca (revisão atrasada, travou duas vezes, firmar antes de avançar), e o recomeço sem cobrança.",
+  "publico": "Quem trava na hora de decidir por onde começar",
+  "objetivo": "Mostrar a promessa única funcionando, com três motivos reais de escolha",
+  "conceitoVisual": "Celular com tela real, contorno a caneta no motivo; fala real da Foca no retorno; capa com seta a caneta",
+  "cta": "Começar grátis (link no perfil)",
+  "destaque": {
+    "titulo": "Próximo passo",
+    "capa": "seta"
+  },
+  "paginas": [
+    {
+      "modelo": "abertura",
+      "manchete": "Por onde eu começo?",
+      "apoio": "Você abre o Foca e ele já escolheu.",
+      "expressao": "neutra"
+    },
+    {
+      "modelo": "tela",
+      "titulo": "O próximo passo já está na tela.",
+      "tela": "trilha-home",
+      "recorte": {
+        "y": 60,
+        "h": 285
+      },
+      "anotacoes": [
+        {
+          "alvo": "tituloCard",
+          "nota": "escolhido pra você"
+        }
+      ],
+      "legenda": "Você abre e começa. O planejamento fica com o Foca."
+    },
+    {
+      "modelo": "tela",
+      "titulo": "E ele mostra por quê.",
+      "tela": "atividade-revisao",
+      "recorte": {
+        "y": 0,
+        "h": 420
+      },
+      "anotacoes": [
+        {
+          "alvo": "motivo",
+          "nota": "o motivo da escolha"
+        }
+      ],
+      "legenda": "Aqui: faz tempo que você não revisa esse assunto, então ele voltou."
+    },
+    {
+      "modelo": "tela",
+      "titulo": "Travou? Ele volta com calma.",
+      "tela": "atividade-reforco",
+      "recorte": {
+        "y": 0,
+        "h": 420
+      },
+      "anotacoes": [
+        {
+          "alvo": "motivo",
+          "nota": "errou duas vezes"
+        }
+      ],
+      "legenda": "Errar mostra o que revisar."
+    },
+    {
+      "modelo": "tela",
+      "titulo": "Foi bem? Firma antes de avançar.",
+      "tela": "atividade-consolidar",
+      "recorte": {
+        "y": 0,
+        "h": 420
+      },
+      "anotacoes": [
+        {
+          "alvo": "motivo",
+          "nota": "mais umas pra firmar"
+        }
+      ],
+      "legenda": "Cada resposta entra na conta do que você sabe e ajuda a escolher o que vem depois."
+    },
+    {
+      "modelo": "fala",
+      "expressao": "acolhedora",
+      "rotuloFala": "Quando você volta",
+      "fala": "Voltou. Não vou perguntar onde você tava.",
+      "apoio": "Parou uns dias? Continua de onde estava, sem cobrança."
+    },
+    {
+      "modelo": "fechamento",
+      "manchete": "Seu próximo passo já está escolhido.",
+      "apoio": "Falta só você abrir.",
+      "cta": "Começar grátis",
+      "nota": "o link tá no perfil"
+    }
+  ],
+  "legenda": "",
+  "fontesFato": []
+}

@@ -1,0 +1,22 @@
+{
+  "nome": "atividade-consolidar",
+  "largura": 390,
+  "altura": 844,
+  "dsf": 3,
+  "capturadoEm": "2026-09-29T23:37:27.970Z",
+  "rota": "/atividade/atv-c",
+  "alvos": {
+    "comecar": {
+      "x": 20,
+      "y": 299.75,
+      "w": 350,
+      "h": 52
+    },
+    "motivo": {
+      "x": 116,
+      "y": 134,
+      "w": 238,
+      "h": 57.75
+    }
+  }
+}

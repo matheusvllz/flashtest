@@ -1,0 +1,39 @@
+{
+  "id": "20260929-story-destaque-foca",
+  "versao": 1,
+  "estado": "em_revisao",
+  "formato": "story",
+  "criadoEm": "2026-09-29T23:30:16.662Z",
+  "atualizadoEm": "2026-09-29T23:52:31.838Z",
+  "referenciasMarca": {
+    "snapshotEm": "2026-09-29T23:29:20.269Z",
+    "stylesCss": "c50ba6a3411ab097",
+    "logoOficial": "28da75732c576453"
+  },
+  "arquivos": {
+    "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca",
+    "export": [
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s01.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s02.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s03.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s04.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s05.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s06.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s07.jpg"
+    ],
+    "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\preview\\index.html"
+  },
+  "assets": [
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s01.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s02.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s03.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s04.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s05.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s06.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s07.png",
+    "assets-src/marketing/shots/trilha-home.png",
+    "assets-src/marketing/shots/atividade-revisao.png",
+    "assets-src/marketing/shots/atividade-reforco.png",
+    "assets-src/marketing/shots/atividade-consolidar.png"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "20260929-post-estatico-licao-questoes",
+  "formato": "post-estatico",
+  "pilar": "bastidor",
+  "tema": "a lição tem fim: decisão de produto contra o loop infinito",
+  "gancho": "4 a 8 questões. E aí acaba.",
+  "argumento": "A lição do Foca termina de propósito. Não há rolagem depois da última questão nem próximo episódio: um app de estudo que usa as armas do feed para prender perde para o feed.",
+  "publico": "João, e também quem desconfia de app gamificado",
+  "objetivo": "Mostrar uma decisão de produto que diferencia, sem prometer resultado",
+  "conceitoVisual": "Composição oposta à do carrossel: nada de cartões nem mascote grande. Um numeral gigante em Space Mono ocupando o terço superior, o título logo abaixo em Space Grotesk, e a assinatura de marca no rodapé — o ícone oficial sobre o azul do design system.",
+  "cta": "Me conta o que te faz largar um app de estudo",
+  "continuidade": { "tipo": "nenhuma" },
+  "paginas": [
+    {
+      "modelo": "numero",
+      "numero": "4",
+      "unidade": "a 8",
+      "titulo": "questões por lição.\nE aí acaba.",
+      "corpo": "Sem rolagem depois da última, sem próximo episódio. Você fecha e fez o dia.",
+      "nota": "o fim faz parte",
+      "assinatura": true
+    }
+  ],
+  "legenda": "A lição do Foca tem de 4 a 8 questões. Quando acaba, acaba: não fica nada rolando embaixo e não tem próximo episódio te segurando.\n\nIsso é decisão de produto, não limite técnico. Um app de estudo que usa as armas do feed para prender está competindo com o feed — e o feed ganha essa.\n\nSe você pegou um intervalo, dá para fazer uma. Se não pegou, ela continua lá amanhã, sem cobrança.\n\nMe conta: o que mais te faz largar um app de estudo?",
+  "fontesFato": []
+}

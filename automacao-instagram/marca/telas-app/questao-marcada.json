@@ -1,0 +1,28 @@
+{
+  "nome": "questao-marcada",
+  "largura": 390,
+  "altura": 844,
+  "dsf": 3,
+  "capturadoEm": "2026-09-29T23:43:13.338Z",
+  "rota": "/atividade/atv-q",
+  "alvos": {
+    "marcada": {
+      "x": 20,
+      "y": 263.125,
+      "w": 350,
+      "h": 56.375
+    },
+    "verificar": {
+      "x": 20,
+      "y": 468.25,
+      "w": 350,
+      "h": 52
+    },
+    "naoSei": {
+      "x": 20,
+      "y": 528.25,
+      "w": 350,
+      "h": 44
+    }
+  }
+}

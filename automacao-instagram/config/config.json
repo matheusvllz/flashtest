@@ -1,0 +1,27 @@
+{
+  "conta": {
+    "usuario": "",
+    "fuso": "America/Sao_Paulo"
+  },
+  "instagram": {
+    "host": "graph.instagram.com",
+    "versao": "v25.0",
+    "tipoLogin": "instagram",
+    "simulacaoPadrao": true
+  },
+  "midia": {
+    "adaptador": "manual",
+    "adaptadoresDisponiveis": ["manual", "pasta-publica", "base-url"]
+  },
+  "formatos": {
+    "feed": { "largura": 1080, "altura": 1350, "proporcao": "4:5" },
+    "reels": { "largura": 1080, "altura": 1920, "proporcao": "9:16", "fps": 30 },
+    "jpegQualidade": 92,
+    "maxBytesImagem": 8388608,
+    "maxPaginasCarrossel": 10
+  },
+  "agendador": {
+    "fuso": "America/Sao_Paulo",
+    "janela": { "inicio": "08:00", "fim": "21:00" }
+  }
+}

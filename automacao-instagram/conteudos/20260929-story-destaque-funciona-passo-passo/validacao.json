@@ -1,0 +1,98 @@
+{
+  "id": "20260929-story-destaque-funciona-passo-passo",
+  "validadoEm": "2026-09-29T23:52:19.546Z",
+  "erros": 0,
+  "alertas": 0,
+  "achados": [
+    {
+      "nivel": "ok",
+      "item": "stories",
+      "detalhe": "7 stories, ordem 1..7"
+    },
+    {
+      "nivel": "ok",
+      "item": "s1 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s1 jpeg",
+      "detalhe": "138 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "s2 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s2 jpeg",
+      "detalhe": "185 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "s3 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s3 jpeg",
+      "detalhe": "220 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "s4 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s4 jpeg",
+      "detalhe": "199 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "s5 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s5 jpeg",
+      "detalhe": "207 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "s6 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s6 jpeg",
+      "detalhe": "210 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "s7 dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "s7 jpeg",
+      "detalhe": "138 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "capa dimensao",
+      "detalhe": "1080x1080"
+    },
+    {
+      "nivel": "ok",
+      "item": "capa jpeg",
+      "detalhe": "40 KB"
+    },
+    {
+      "nivel": "ok",
+      "item": "medicao",
+      "detalhe": "nada essencial nas areas seguras nem fora da margem"
+    }
+  ]
+}

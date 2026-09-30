@@ -1,0 +1,45 @@
+{
+  "id": "20260929-motion-proximo-passo-escolhido",
+  "formato": "motion",
+  "pilar": "produto",
+  "tema": "o Foca escolhe o próximo passo e mostra o motivo",
+  "gancho": "Por onde eu começo hoje?",
+  "argumento": "Em 13 segundos: a pergunta que trava o estudo, a resposta escrita à mão, a tela real onde o motivo aparece, e o fato de que a lição termina.",
+  "publico": "João, rolando o feed",
+  "objetivo": "Apresentar o mecanismo do produto em movimento, terminando na assinatura da marca",
+  "conceitoVisual": "Papel pautado, grafite e a caneta azul. O traço de caneta desenha durante os 13 s inteiros (camada ambiente). Entradas sobem 40 px com a curva ease-out do app; só o numeral e o anel de foco usam ease-bounce, porque são os momentos de recompensa.",
+  "cta": "Começar grátis",
+  "video": {
+    "cena": "proximo-passo",
+    "largura": 1080,
+    "altura": 1920,
+    "proporcao": "9:16",
+    "fps": 30,
+    "duracao": 13,
+    "arquivo": "export/proximo-passo.mp4",
+    "fonteEditavel": "fonte/proximo-passo.html",
+    "geradorDaCena": "ferramentas/video/cenas/proximo-passo.ts",
+    "audio": {
+      "origem": "Identidade sonora do próprio Foca — 3 dos 12 WAVs aprovados pelo usuário em 21/09/2026 (docs/24-integracao-identidade-sonora.md), servidos em public/sfx/v2/",
+      "licenca": "Autoria e uso do projeto. Nenhuma faixa de terceiros, nenhuma música do acervo do Instagram embutida.",
+      "faixas": [
+        "abertura-importante.wav @0,55 s",
+        "meta-diaria.wav @5,35 s",
+        "conclusao-licao.wav @11,05 s"
+      ],
+      "observacao": "Se for preferível usar uma música do acervo do Instagram, exporte a versão muda e adicione a faixa no aplicativo, na publicação manual. Pela API o áudio vai embutido e não passa pelo licenciamento do Instagram."
+    },
+    "textosNaTela": [
+      "para quem estuda sozinho",
+      "Por onde eu começo hoje?",
+      "o Foca já escolheu",
+      "o motivo vem escrito",
+      "4 a 8 questões por lição. E aí acaba.",
+      "O próximo passo já está escolhido.",
+      "Começar grátis"
+    ]
+  },
+  "paginas": [],
+  "legenda": "Antes de qualquer matéria, a pergunta que trava o estudo é outra: por onde eu começo hoje?\n\nO Foca responde essa antes de você abrir o caderno: a atividade já vem escolhida e o motivo fica escrito no card — revisão que venceu, erro que voltou, capítulo novo.\n\nA tela que aparece no vídeo é do app, sem retoque. O som é a identidade sonora do próprio Foca.\n\nComeçar grátis no link da bio.",
+  "fontesFato": []
+}

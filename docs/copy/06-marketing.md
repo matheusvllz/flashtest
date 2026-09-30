@@ -24,6 +24,7 @@ A interface é calma e direta. Marketing pode ter mais verbo, mais benefício e 
 | LP do link da bio | `docs/brand/Flash Test - LP Link da Bio v3.html` | **Histórico**, marca anterior | Só referência de estrutura |
 | Copy da landing do Instagram | `docs/13` | **Histórico** (Flash Test), voz do João da época | Só referência |
 | Loja de apps (App Store, Google Play) | — | Não existe | A criar; ver seção 6 |
+| Instagram orgânico | `automacao-instagram/` (ferramenta independente, `/foca-social`) | Ferramenta pronta (29/09/2026); **nenhum post publicado**; 3 exemplos em `pronto` | Este guia; o agente segue `automacao-instagram/AGENTE.md` e o validador `ferramentas/validar/regras.json` |
 | Campanha, outras redes | — | Não existem | A criar |
 
 ## 3. Promessas permitidas

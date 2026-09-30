@@ -1,0 +1,33 @@
+{
+  "id": "20260929-post-estatico-licao-questoes",
+  "validadoEm": "2026-09-29T21:35:26.019Z",
+  "erros": 0,
+  "alertas": 0,
+  "achados": [
+    {
+      "nivel": "ok",
+      "item": "ordem",
+      "detalhe": "ordem de publicacao 1..1, sem buraco"
+    },
+    {
+      "nivel": "ok",
+      "item": "p1 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p1 jpeg",
+      "detalhe": "108 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "legenda",
+      "detalhe": "437 caracteres"
+    },
+    {
+      "nivel": "ok",
+      "item": "fatos",
+      "detalhe": "nenhum fato externo declarado: o conteudo so afirma o que o produto demonstra"
+    }
+  ]
+}

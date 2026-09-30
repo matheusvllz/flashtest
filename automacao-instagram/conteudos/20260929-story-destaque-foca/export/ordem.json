@@ -1,0 +1,77 @@
+{
+  "id": "20260929-story-destaque-foca",
+  "formato": "story",
+  "destaque": "Próximo passo",
+  "geradoEm": "2026-09-29T23:51:37.556Z",
+  "hashConteudo": "7a446ab240402fa5",
+  "paginas": [
+    {
+      "pagina": 1,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s01.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s01.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 128174
+    },
+    {
+      "pagina": 2,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s02.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s02.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 193552
+    },
+    {
+      "pagina": 3,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s03.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s03.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 186857
+    },
+    {
+      "pagina": 4,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s04.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s04.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 164514
+    },
+    {
+      "pagina": 5,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s05.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s05.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 209978
+    },
+    {
+      "pagina": 6,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s06.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s06.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 137167
+    },
+    {
+      "pagina": 7,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s07.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s07.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 141015
+    }
+  ],
+  "capa": {
+    "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\capa.png",
+    "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\capa.jpg",
+    "largura": 1080,
+    "altura": 1080
+  },
+  "referenciasMarca": {
+    "snapshotEm": "2026-09-29T23:29:20.269Z",
+    "stylesCss": "c50ba6a3411ab097",
+    "logoOficial": "28da75732c576453"
+  },
+  "medicao": []
+}

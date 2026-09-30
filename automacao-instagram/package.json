@@ -1,0 +1,23 @@
+{
+  "name": "foca-automacao-instagram",
+  "private": true,
+  "type": "module",
+  "description": "Agente de criacao de conteudo e automacao organica para o Instagram do Foca. Isolado do app e da landing page.",
+  "scripts": {
+    "marca:sync": "bun ferramentas/marca/sincronizar.ts",
+    "hist": "bun ferramentas/historico/cli.ts",
+    "render": "bun ferramentas/render/renderizar.ts",
+    "validar": "bun ferramentas/validar/validar.ts",
+    "preview": "bun ferramentas/render/preview.ts",
+    "motion": "bun ferramentas/video/motion.ts",
+    "editar-video": "bun ferramentas/video/editar.ts",
+    "publicar": "bun ferramentas/instagram/publicar.ts",
+    "agendar": "bun ferramentas/agendador/agendar.ts",
+    "fila": "bun ferramentas/agendador/executar-fila.ts",
+    "test": "bun test testes"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0",
+    "sharp": "0.35.5"
+  }
+}

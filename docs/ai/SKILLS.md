@@ -320,6 +320,15 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Exemplos no Foca:** (1) gerar as três opções de frase de posicionamento (decisão D-1 do `38`); (2) título de uma futura landing com a promessa "próximo passo claro" e um fato verificável; (3) revisar `BRAND.description` depois que o `36` T-08.7 terminar.
 **Priority:** Specialist (só marketing/posicionamento).
 
+## S. foca-social (local, 29/09/2026)
+
+**Source:** escrita neste repo. **Installed location:** skill `.claude/skills/foca-social/SKILL.md` e agente `.claude/agents/foca-social.md`; os dois só apontam para a implementação em `automacao-instagram/` (isolada do app, `package.json` próprio). **License:** do projeto.
+**Purpose:** conteúdo orgânico do Instagram — ideias, posts e carrosséis 4:5, Reels, motion, histórico editorial, publicação (API da Meta) e agendamento.
+**Use when:** qualquer pedido sobre o Instagram do Foca. A skill serve a conversa (ideias → escolha → produção); o agente serve a produção delegada.
+**Do not use when:** app, landing, conteúdo pedagógico. Não publica sem pedido explícito para um conteúdo identificado.
+**Dependencies:** lê do cache, sem ligar o pacote, `marketing-skills:social`, `copywriting` e `copy-editing` (§K); `humanizer` (§L); `motion-design` (§J); as skills de vídeo de `edição Videos/` (`watch`, `remotion-*`, `faster-whisper`) por caminho. Roteamento completo em `automacao-instagram/AGENTE.md` §2.
+**Priority:** Primary (marketing orgânico).
+
 ## Avaliadas e não instaladas — `boraoztunc/skills` (28/09/2026, commit `645553c`)
 
 Registradas para que nenhum agente reavalie a mesma decisão sem contexto. Repositório com 72 pastas de skill; leitura integral das cinco candidatas prioritárias e triagem das demais.

@@ -1,0 +1,25 @@
+{
+  "id": "20260929-motion-proximo-passo-escolhido",
+  "versao": 1,
+  "estado": "pronto",
+  "formato": "motion",
+  "criadoEm": "2026-09-29T21:16:46.646Z",
+  "atualizadoEm": "2026-09-29T21:25:51.635Z",
+  "referenciasMarca": {
+    "snapshotEm": "2026-09-29T20:51:40.562Z",
+    "stylesCss": "78947094204c6daa",
+    "logoOficial": "28da75732c576453"
+  },
+  "arquivos": {
+    "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-motion-proximo-passo-escolhido",
+    "export": [
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-motion-proximo-passo-escolhido\\export\\proximo-passo.mp4"
+    ],
+    "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-motion-proximo-passo-escolhido\\preview\\index.html"
+  },
+  "assets": [
+    "public/sfx/v2/abertura-importante.wav",
+    "public/sfx/v2/meta-diaria.wav",
+    "public/sfx/v2/conclusao-licao.wav"
+  ]
+}

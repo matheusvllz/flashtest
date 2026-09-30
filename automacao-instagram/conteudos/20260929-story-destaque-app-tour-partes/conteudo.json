@@ -1,0 +1,102 @@
+{
+  "id": "20260929-story-destaque-app-tour-partes",
+  "formato": "story",
+  "pilar": "produto",
+  "tema": "destaque o app tour das partes",
+  "gancho": "Destaque \"O app\": o que tem dentro do Foca, tela por tela.",
+  "argumento": "Tour das partes do produto em telas reais: trilha e as quatro abas, lição com Não sei, explicação e tutor sob demanda, o mesmo app no computador, começar grátis.",
+  "publico": "Quem chega no perfil e quer saber o que o app é antes de abrir",
+  "objetivo": "Mostrar o produto inteiro, sem lista de recursos em texto",
+  "conceitoVisual": "Celular com tela real e anotação a mão circulando o elemento; notebook para o desktop; capa com a logo oficial sobre --mar",
+  "cta": "Começar grátis (link no perfil)",
+  "destaque": {
+    "titulo": "O app",
+    "capa": "logo"
+  },
+  "paginas": [
+    {
+      "modelo": "abertura",
+      "manchete": "O Foca é um app de estudo para o ENEM.",
+      "apoio": "Ele acompanha o que você acerta e erra, escolhe a próxima atividade e mostra o motivo.",
+      "dica": "toca pra ver por dentro →"
+    },
+    {
+      "modelo": "tela",
+      "titulo": "Tudo começa na trilha.",
+      "tela": "trilha-home",
+      "recorte": {
+        "y": 367,
+        "h": 477
+      },
+      "anotacoes": [
+        {
+          "caixa": {
+            "x": 150,
+            "y": 592,
+            "w": 210,
+            "h": 90
+          },
+          "nota": "o que vem agora"
+        },
+        {
+          "alvo": "nav",
+          "nota": "as 4 abas"
+        }
+      ],
+      "legenda": "As matérias em ordem, com redação junto. Embaixo: Aprender, Praticar, Progresso e Perfil."
+    },
+    {
+      "modelo": "tela",
+      "titulo": "Lições de 4 a 8 questões.",
+      "tela": "questao",
+      "recorte": {
+        "y": 90,
+        "h": 510
+      },
+      "anotacoes": [
+        {
+          "alvo": "naoSei",
+          "nota": "não sabe? diz, sem chutar"
+        }
+      ],
+      "legenda": "Dá pra fazer uma no intervalo e parar quando quiser."
+    },
+    {
+      "modelo": "tela",
+      "titulo": "Errou? A explicação aparece na hora.",
+      "tela": "feedback-errado",
+      "recorte": {
+        "y": 150,
+        "h": 520
+      },
+      "anotacoes": [
+        {
+          "alvo": "explicar",
+          "nota": "quer mais? a Foca explica"
+        }
+      ],
+      "legenda": "O tutor só abre quando você pede."
+    },
+    {
+      "modelo": "tela-larga",
+      "titulo": "No celular e no computador.",
+      "tela": "tutor-desktop",
+      "legenda": "Abre no navegador. No computador, a Foca fica do lado da questão.",
+      "recorte": {
+        "x": 250,
+        "y": 0,
+        "w": 1190,
+        "h": 720
+      }
+    },
+    {
+      "modelo": "fechamento",
+      "manchete": "Começar é grátis.",
+      "apoio": "Você conta qual é a sua prova e o Foca monta o ponto de partida.",
+      "cta": "Começar grátis",
+      "nota": "o link tá no perfil"
+    }
+  ],
+  "legenda": "",
+  "fontesFato": []
+}

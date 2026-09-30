@@ -1,0 +1,80 @@
+{
+  "id": "20260929-carrossel-cronograma-fez-marco",
+  "formato": "carrossel",
+  "pilar": "reconhecimento",
+  "tema": "o cronograma de estudos que não passou da segunda semana",
+  "gancho": "O cronograma que você fez em março",
+  "argumento": "O plano de estudos morre porque estudar sozinho obriga a decidir de novo todo dia, e decidir cansa antes da matéria começar. O Foca tira a decisão do caminho: abre na atividade escolhida, com o motivo escrito.",
+  "publico": "João, 16-19 anos, estuda sozinho no celular, já tentou cronograma e largou",
+  "objetivo": "Reconhecimento da situação, terminando numa demonstração real do mecanismo",
+  "conceitoVisual": "Página de caderno: pauta contínua, margem, e um traço de caneta azul que atravessa as 8 páginas pela faixa de baixo. Escala tipográfica varia bastante entre páginas (132px na capa, 56px na fala) para dar ritmo.",
+  "cta": "Salva para a próxima segunda-feira",
+  "continuidade": { "tipo": "traco-caneta", "semente": 12, "faixa": [0.93, 0.965] },
+  "paginas": [
+    {
+      "modelo": "capa",
+      "rotulo": "para quem estuda sozinho",
+      "manchete": "O cronograma\nque você fez\nem março.",
+      "apoio": "Parado desde a segunda semana.",
+      "nota": "ainda tá lá",
+      "expressao": "entediada",
+      "escala": "xl"
+    },
+    {
+      "modelo": "citacao",
+      "texto": "Fazer o plano\nfoi a parte fácil.",
+      "nota": "O difícil é decidir de novo, toda vez que você senta.",
+      "escala": "l"
+    },
+    {
+      "modelo": "contraste",
+      "rotulo": "a diferença",
+      "titulo": "Decidir cansa\nmais que estudar",
+      "ruim": {
+        "rotulo": "toda segunda-feira",
+        "texto": "Você abre o caderno, olha três matérias e fecha."
+      },
+      "bom": {
+        "rotulo": "no Foca",
+        "texto": "Abre já na atividade escolhida, com o motivo escrito no card."
+      }
+    },
+    {
+      "modelo": "passos",
+      "titulo": "O que acontece\nquando você abre",
+      "passos": [
+        { "titulo": "A atividade já está escolhida", "texto": "Você não escolhe matéria, capítulo nem questão." },
+        { "titulo": "O motivo fica à vista", "texto": "Revisão que venceu, erro que voltou, capítulo novo. Está escrito no card." },
+        { "titulo": "Termina", "texto": "São 4 a 8 questões e acaba. Não tem rolagem depois da última." }
+      ]
+    },
+    {
+      "modelo": "tela",
+      "titulo": "O motivo vem escrito",
+      "tela": "atividade-motivo-light",
+      "legenda": "Tela do app, sem retoque.",
+      "recorte": { "topo": 0, "altura": 1 }
+    },
+    {
+      "modelo": "tela",
+      "titulo": "E o resultado vem\npor faixa, não por nota",
+      "tela": "nivelamento-resultado-light",
+      "legenda": "Base em construção, no caminho, base firme. Sem porcentagem, sem nível N.",
+      "recorte": { "topo": 0, "altura": 0.435 }
+    },
+    {
+      "modelo": "fala",
+      "expressao": "acolhedora",
+      "fala": "Parou uns dias?\nContinua de onde estava.",
+      "apoio": "Ninguém vai contar os dias parados."
+    },
+    {
+      "modelo": "fechamento",
+      "manchete": "O próximo passo\njá está escolhido.",
+      "apoio": "Abre e faz. Decidir fica comigo.",
+      "cta": "Começar grátis"
+    }
+  ],
+  "legenda": "Você já fez um cronograma de estudos. Ele durou até quando?\n\nEstudar sozinho obriga a decidir, todo dia, por onde começar. Essa decisão cansa antes da matéria começar — e é aí que o plano morre, não na preguiça.\n\nO Foca tira essa parte do caminho. Abre já na atividade escolhida e escreve o motivo no card: revisão que venceu, erro que voltou, capítulo novo. Você vê o que fazer agora e onde a base ainda não está firme.\n\nAs telas do carrossel são do app, sem retoque.\n\nSalva para a próxima segunda-feira.",
+  "fontesFato": []
+}

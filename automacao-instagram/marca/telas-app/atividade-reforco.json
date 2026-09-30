@@ -1,0 +1,22 @@
+{
+  "nome": "atividade-reforco",
+  "largura": 390,
+  "altura": 844,
+  "dsf": 3,
+  "capturadoEm": "2026-09-29T23:37:24.776Z",
+  "rota": "/atividade/atv-f",
+  "alvos": {
+    "comecar": {
+      "x": 20,
+      "y": 280.5,
+      "w": 350,
+      "h": 52
+    },
+    "motivo": {
+      "x": 116,
+      "y": 134,
+      "w": 238,
+      "h": 38.5
+    }
+  }
+}

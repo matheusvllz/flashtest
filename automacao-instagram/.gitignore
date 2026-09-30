@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+logs/*.log
+logs/*.jsonl
+previews/*.png
+previews/*.html
+# Quadros intermediarios de motion (grandes, regeneraveis)
+conteudos/*/fonte/quadros/
+conteudos/*/tmp/
+testes/tmp/
+logs/*.lock

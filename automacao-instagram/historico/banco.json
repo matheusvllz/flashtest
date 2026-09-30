@@ -1,0 +1,487 @@
+{
+  "versaoEsquema": 1,
+  "registros": [
+    {
+      "id": "20260929-carrossel-cronograma-fez-marco",
+      "estado": "pronto",
+      "formato": "carrossel",
+      "pilar": "reconhecimento",
+      "tema": "o cronograma de estudos que não passou da segunda semana",
+      "gancho": "O cronograma que você fez em março",
+      "argumento": "O plano de estudos morre porque estudar sozinho obriga a decidir de novo todo dia, e decidir cansa antes da matéria começar. O Foca tira a decisão do caminho: abre na atividade escolhida, com o motivo escrito.",
+      "publico": "João, 16-19 anos, estuda sozinho no celular, já tentou cronograma e largou",
+      "objetivo": "Reconhecimento da situação, terminando numa demonstração real do mecanismo",
+      "conceitoVisual": "Página de caderno: pauta contínua, margem, e um traço de caneta azul que atravessa as 8 páginas pela faixa de baixo. A escala tipográfica varia entre páginas (108 px na manchete da capa, 56 px na fala da Foca) para dar ritmo. Contador de página no alto, porque a faixa de baixo é do traço.",
+      "cta": "Salva para a próxima segunda-feira",
+      "legenda": "Você já fez um cronograma de estudos. Ele durou até quando?\n\nEstudar sozinho obriga a decidir, todo dia, por onde começar. Essa decisão cansa antes da matéria começar — e é aí que o plano morre, não na preguiça.\n\nO Foca tira essa parte do caminho. Abre já na atividade escolhida e escreve o motivo no card: revisão que venceu, erro que voltou, capítulo novo. Você vê o que fazer agora e onde a base ainda não está firme.\n\nAs telas do carrossel são do app, sem retoque.\n\nSalva para a próxima segunda-feira.",
+      "assets": [
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p01.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p02.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p03.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p04.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p05.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p06.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p07.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p08.png",
+        "assets-src/marketing/shots/atividade-motivo-light.png",
+        "assets-src/marketing/shots/nivelamento-resultado-light.png"
+      ],
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T20:51:40.562Z",
+        "stylesCss": "78947094204c6daa",
+        "logoOficial": "28da75732c576453"
+      },
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p01.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p02.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p03.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p04.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p05.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p06.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p07.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\export\\p08.jpg"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-carrossel-cronograma-fez-marco\\preview\\index.html"
+      },
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "criadoEm": "2026-09-29T21:09:40.143Z",
+      "atualizadoEm": "2026-09-29T21:26:12.978Z",
+      "versao": 2,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T21:09:40.143Z",
+          "de": null,
+          "para": "pronto"
+        }
+      ],
+      "publicacao": {
+        "tentativas": [
+          {
+            "em": "2026-09-29T21:21:34.653Z",
+            "resultado": "em-andamento",
+            "chave": "20260929-carrossel-cronograma-fez-marco@v1#7dac3a2666dcb28d",
+            "modo": "simulacao",
+            "creationId": "c000009",
+            "containerIds": [
+              "c000001",
+              "c000002",
+              "c000003",
+              "c000004",
+              "c000005",
+              "c000006",
+              "c000007",
+              "c000008"
+            ]
+          },
+          {
+            "em": "2026-09-29T21:21:34.654Z",
+            "resultado": "simulado",
+            "chave": "20260929-carrossel-cronograma-fez-marco@v1#7dac3a2666dcb28d",
+            "modo": "simulacao",
+            "mediaId": "m000010",
+            "creationId": "c000009",
+            "containerIds": [
+              "c000001",
+              "c000002",
+              "c000003",
+              "c000004",
+              "c000005",
+              "c000006",
+              "c000007",
+              "c000008"
+            ]
+          }
+        ]
+      },
+      "hashConteudo": "c8aec4e8b13ddb8f"
+    },
+    {
+      "id": "20260929-post-estatico-licao-questoes",
+      "estado": "pronto",
+      "formato": "post-estatico",
+      "pilar": "bastidor",
+      "tema": "a lição tem fim: decisão de produto contra o loop infinito",
+      "gancho": "4 a 8 questões. E aí acaba.",
+      "argumento": "A lição do Foca termina de propósito. Não há rolagem depois da última questão nem próximo episódio: um app de estudo que usa as armas do feed para prender perde para o feed.",
+      "publico": "João, e também quem desconfia de app gamificado",
+      "objetivo": "Mostrar uma decisão de produto que diferencia, sem prometer resultado",
+      "conceitoVisual": "Composição oposta à do carrossel: nada de cartões nem mascote grande. Um numeral gigante em Space Mono ocupando o terço superior, o título logo abaixo em Space Grotesk, e a assinatura de marca no rodapé — o ícone oficial sobre o azul do design system.",
+      "cta": "Me conta o que te faz largar um app de estudo",
+      "legenda": "A lição do Foca tem de 4 a 8 questões. Quando acaba, acaba: não fica nada rolando embaixo e não tem próximo episódio te segurando.\n\nIsso é decisão de produto, não limite técnico. Um app de estudo que usa as armas do feed para prender está competindo com o feed — e o feed ganha essa.\n\nSe você pegou um intervalo, dá para fazer uma. Se não pegou, ela continua lá amanhã, sem cobrança.\n\nMe conta: o que mais te faz largar um app de estudo?",
+      "assets": [
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-post-estatico-licao-questoes\\export\\p01.png"
+      ],
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T20:51:40.562Z",
+        "stylesCss": "78947094204c6daa",
+        "logoOficial": "28da75732c576453"
+      },
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-post-estatico-licao-questoes",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-post-estatico-licao-questoes\\export\\p01.jpg"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-post-estatico-licao-questoes\\preview\\index.html"
+      },
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "criadoEm": "2026-09-29T21:09:40.206Z",
+      "atualizadoEm": "2026-09-29T21:25:51.301Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T21:09:40.206Z",
+          "de": null,
+          "para": "pronto"
+        }
+      ],
+      "publicacao": {
+        "tentativas": [
+          {
+            "em": "2026-09-29T21:21:41.967Z",
+            "resultado": "erro",
+            "chave": "20260929-post-estatico-licao-questoes@v1#24e4e621c0e9a991",
+            "modo": "simulacao",
+            "erro": "Error validating access token: Session has expired"
+          }
+        ]
+      },
+      "hashConteudo": "e7a0405715da11fa"
+    },
+    {
+      "id": "20260929-motion-proximo-passo-escolhido",
+      "estado": "pronto",
+      "formato": "motion",
+      "pilar": "produto",
+      "tema": "o Foca escolhe o próximo passo e mostra o motivo",
+      "gancho": "Por onde eu começo hoje?",
+      "argumento": "Em 13 segundos: a pergunta que trava o estudo, a resposta escrita à mão, a tela real onde o motivo aparece, e o fato de que a lição termina.",
+      "publico": "João, rolando o feed",
+      "objetivo": "Apresentar o mecanismo do produto em movimento, terminando na assinatura da marca",
+      "conceitoVisual": "Papel pautado, grafite e a caneta azul. O traço de caneta desenha durante os 13 s inteiros (camada ambiente). Entradas sobem 40 px com a curva ease-out do app; só o numeral e o anel de foco usam ease-bounce, porque são os momentos de recompensa.",
+      "cta": "Começar grátis",
+      "legenda": "Antes de qualquer matéria, a pergunta que trava o estudo é outra: por onde eu começo hoje?\n\nO Foca responde essa antes de você abrir o caderno: a atividade já vem escolhida e o motivo fica escrito no card — revisão que venceu, erro que voltou, capítulo novo.\n\nA tela que aparece no vídeo é do app, sem retoque. O som é a identidade sonora do próprio Foca.\n\nComeçar grátis no link da bio.",
+      "assets": [
+        "public/sfx/v2/abertura-importante.wav",
+        "public/sfx/v2/meta-diaria.wav",
+        "public/sfx/v2/conclusao-licao.wav"
+      ],
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-motion-proximo-passo-escolhido",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-motion-proximo-passo-escolhido\\export\\proximo-passo.mp4"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-motion-proximo-passo-escolhido\\preview\\index.html"
+      },
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "criadoEm": "2026-09-29T21:16:46.646Z",
+      "atualizadoEm": "2026-09-29T21:25:51.635Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T21:16:46.646Z",
+          "de": null,
+          "para": "pronto"
+        }
+      ],
+      "publicacao": {
+        "tentativas": [
+          {
+            "em": "2026-09-29T21:21:41.418Z",
+            "resultado": "em-andamento",
+            "chave": "20260929-motion-proximo-passo-escolhido@v1#c83151b752075d5d",
+            "modo": "simulacao",
+            "creationId": "c000001",
+            "containerIds": []
+          },
+          {
+            "em": "2026-09-29T21:21:41.419Z",
+            "resultado": "simulado",
+            "chave": "20260929-motion-proximo-passo-escolhido@v1#c83151b752075d5d",
+            "modo": "simulacao",
+            "mediaId": "m000002",
+            "creationId": "c000001",
+            "containerIds": []
+          }
+        ]
+      },
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T20:51:40.562Z",
+        "stylesCss": "78947094204c6daa",
+        "logoOficial": "28da75732c576453"
+      },
+      "hashConteudo": "c8c80bba85787fe8"
+    },
+    {
+      "formato": "story",
+      "pilar": "produto",
+      "tema": "destaque o que e o foca",
+      "gancho": "Destaque \"Próximo passo\": Por onde eu começo? O Foca já escolheu.",
+      "argumento": "A promessa mostrada em telas reais: o próximo passo já está na tela, com o motivo dito pela Foca (revisão atrasada, travou duas vezes, firmar antes de avançar), e o recomeço sem cobrança.",
+      "publico": "Quem trava na hora de decidir por onde começar",
+      "objetivo": "Mostrar a promessa única funcionando, com três motivos reais de escolha",
+      "conceitoVisual": "Celular com tela real, contorno a caneta no motivo; fala real da Foca no retorno; capa com seta a caneta",
+      "cta": "Começar grátis (link no perfil)",
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "id": "20260929-story-destaque-foca",
+      "estado": "em_revisao",
+      "criadoEm": "2026-09-29T23:30:16.662Z",
+      "atualizadoEm": "2026-09-29T23:52:31.838Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T23:30:16.662Z",
+          "de": null,
+          "para": "ideia"
+        }
+      ],
+      "legenda": "",
+      "assets": [
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s01.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s02.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s03.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s04.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s05.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s06.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s07.png",
+        "assets-src/marketing/shots/trilha-home.png",
+        "assets-src/marketing/shots/atividade-revisao.png",
+        "assets-src/marketing/shots/atividade-reforco.png",
+        "assets-src/marketing/shots/atividade-consolidar.png"
+      ],
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T23:29:20.269Z",
+        "stylesCss": "c50ba6a3411ab097",
+        "logoOficial": "28da75732c576453"
+      },
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s01.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s02.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s03.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s04.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s05.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s06.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\export\\s07.jpg"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-foca\\preview\\index.html"
+      },
+      "hashConteudo": "7a446ab240402fa5"
+    },
+    {
+      "formato": "story",
+      "pilar": "util",
+      "tema": "destaque duvidas frequentes",
+      "gancho": "Destaque \"Dúvidas\": as perguntas antes de baixar, uma por story.",
+      "argumento": "Cinco dúvidas com a resposta aprovada da landing, e a tela real que prova a resposta quando existe: é grátis, quanto cabe numa lição, cursinho e videoaula, matéria em que está mal, redação.",
+      "publico": "Quem já se interessou e está com uma objeção específica",
+      "objetivo": "Tirar objeções com respostas curtas e verdadeiras, mostrando a tela quando ela prova",
+      "conceitoVisual": "Caixa de pergunta de papel, resposta grande embaixo, celular com tela real e nota a mão como prova; capa com ponto de interrogação a caneta",
+      "cta": "Me manda a sua dúvida por DM",
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "id": "20260929-story-destaque-duvidas-frequentes",
+      "estado": "em_revisao",
+      "criadoEm": "2026-09-29T23:30:16.677Z",
+      "atualizadoEm": "2026-09-29T23:52:31.919Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T23:30:16.677Z",
+          "de": null,
+          "para": "ideia"
+        }
+      ],
+      "legenda": "",
+      "assets": [
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s01.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s02.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s03.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s04.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s05.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s06.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s07.png"
+      ],
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T23:29:20.269Z",
+        "stylesCss": "c50ba6a3411ab097",
+        "logoOficial": "28da75732c576453"
+      },
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s01.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s02.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s03.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s04.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s05.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s06.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\export\\s07.jpg"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-duvidas-frequentes\\preview\\index.html"
+      },
+      "hashConteudo": "eb75b2c4f7df913b"
+    },
+    {
+      "formato": "story",
+      "pilar": "produto",
+      "tema": "destaque como funciona passo a passo telas reais",
+      "gancho": "Destaque \"Como funciona\": do primeiro toque à primeira lição, em telas reais.",
+      "argumento": "Tutorial em telas reais, com o toque circulado: escolher a prova, nivelamento opcional, tocar em Começar por aqui, marcar e verificar, errar e pedir Explicar melhor.",
+      "publico": "Quem quer ver o app por dentro antes de abrir",
+      "objetivo": "Provar o mecanismo com o produto em ação, mostrando onde tocar",
+      "conceitoVisual": "Passo numerado, celular com tela real à esquerda, nota a mão e contorno a caneta em cima do botão real; capa com o caminho de três nós da trilha",
+      "cta": "Começar grátis (link no perfil)",
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "id": "20260929-story-destaque-funciona-passo-passo",
+      "estado": "em_revisao",
+      "criadoEm": "2026-09-29T23:30:16.689Z",
+      "atualizadoEm": "2026-09-29T23:52:31.764Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T23:30:16.689Z",
+          "de": null,
+          "para": "ideia"
+        }
+      ],
+      "legenda": "",
+      "assets": [
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s01.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s02.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s03.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s04.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s05.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s06.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s07.png",
+        "assets-src/marketing/shots/quiz-prova.png",
+        "assets-src/marketing/shots/trilha-home.png",
+        "assets-src/marketing/shots/trilha-home.png",
+        "assets-src/marketing/shots/questao-marcada.png",
+        "assets-src/marketing/shots/feedback-errado.png"
+      ],
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T23:29:20.269Z",
+        "stylesCss": "c50ba6a3411ab097",
+        "logoOficial": "28da75732c576453"
+      },
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s01.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s02.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s03.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s04.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s05.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s06.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s07.jpg"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\preview\\index.html"
+      },
+      "hashConteudo": "870ec5552a071f52"
+    },
+    {
+      "formato": "story",
+      "pilar": "personagem",
+      "tema": "destaque a foca mascote expressoes",
+      "gancho": "Destaque \"A Foca\": uma foca numa pedra que estuda com você.",
+      "argumento": "6 stories apresentando a Foca pelas expressões oficiais e o momento de cada uma: acolhedora quando você erra, orgulhosa quando acerta, neutra quando você pede ajuda. Ela explica quando você pede e não cobra quando você some.",
+      "publico": "Quem gosta da personagem e quem precisa saber que errar ali não é punição",
+      "objetivo": "Dar rosto e voz à marca e mostrar o tom do app (erro não é punição)",
+      "conceitoVisual": "Uma expressão grande por story com o nome dela em Caveat e a situação em uma linha; fala da Foca com as frases reais de voz.ts",
+      "cta": "sem CTA",
+      "notas": "Expressões pelo registro oficial; nunca desapontada ou cobrando ligadas ao aluno.",
+      "id": "20260929-story-destaque-foca-mascote-expressoes",
+      "estado": "ideia",
+      "criadoEm": "2026-09-29T23:30:16.701Z",
+      "atualizadoEm": "2026-09-29T23:30:16.701Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T23:30:16.701Z",
+          "de": null,
+          "para": "ideia"
+        }
+      ]
+    },
+    {
+      "formato": "story",
+      "pilar": "bastidor",
+      "tema": "destaque quem somos por que o foca existe",
+      "gancho": "Destaque \"Quem somos\": quem faz o Foca e por que ele existe.",
+      "argumento": "5 a 6 stories: quem faz (foto e texto do dono do projeto), o problema que motivou (começar custa caro, não falta conteúdo), as decisões de produto (ordem em vez de mais material, a Foca não cobra, o tutor abre quando você pede), o que está em teste agora, e o convite para conversar.",
+      "publico": "Quem quer saber se dá para confiar: aluno, mãe, pai, professor",
+      "objetivo": "Humanizar e dar transparência, sem história de fundador heroico nem número inventado",
+      "conceitoVisual": "Foto real do dono do projeto no primeiro story; o resto em papel com anotações à mão; logo oficial sobre --mar no fecho",
+      "cta": "Me conta por onde você trava (DM)",
+      "notas": "Depende de material do usuário: foto, nome/como quer se apresentar e 2-3 frases sobre por que começou.",
+      "id": "20260929-story-destaque-quem-somos-foca",
+      "estado": "ideia",
+      "criadoEm": "2026-09-29T23:30:16.711Z",
+      "atualizadoEm": "2026-09-29T23:30:16.712Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T23:30:16.711Z",
+          "de": null,
+          "para": "ideia"
+        }
+      ]
+    },
+    {
+      "formato": "story",
+      "pilar": "produto",
+      "tema": "destaque o app tour das partes",
+      "gancho": "Destaque \"O app\": o que tem dentro do Foca, tela por tela.",
+      "argumento": "Tour das partes do produto em telas reais: trilha e as quatro abas, lição com Não sei, explicação e tutor sob demanda, o mesmo app no computador, começar grátis.",
+      "publico": "Quem chega no perfil e quer saber o que o app é antes de abrir",
+      "objetivo": "Mostrar o produto inteiro, sem lista de recursos em texto",
+      "conceitoVisual": "Celular com tela real e anotação a mão circulando o elemento; notebook para o desktop; capa com a logo oficial sobre --mar",
+      "cta": "Começar grátis (link no perfil)",
+      "notas": "validacao: 0 erro(s), 0 alerta(s)",
+      "id": "20260929-story-destaque-app-tour-partes",
+      "estado": "em_revisao",
+      "criadoEm": "2026-09-29T23:46:56.209Z",
+      "atualizadoEm": "2026-09-29T23:52:31.691Z",
+      "versao": 1,
+      "historicoEstados": [
+        {
+          "em": "2026-09-29T23:46:56.209Z",
+          "de": null,
+          "para": "ideia"
+        }
+      ],
+      "legenda": "",
+      "assets": [
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s01.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s02.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s03.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s04.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s05.png",
+        "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s06.png",
+        "assets-src/marketing/shots/trilha-home.png",
+        "assets-src/marketing/shots/questao.png",
+        "assets-src/marketing/shots/feedback-errado.png"
+      ],
+      "referenciasMarca": {
+        "snapshotEm": "2026-09-29T23:29:20.269Z",
+        "stylesCss": "c50ba6a3411ab097",
+        "logoOficial": "28da75732c576453"
+      },
+      "arquivos": {
+        "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes",
+        "export": [
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s01.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s02.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s03.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s04.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s05.jpg",
+          "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s06.jpg"
+        ],
+        "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\preview\\index.html"
+      },
+      "hashConteudo": "41ff822a5a275027"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>20260929-story-destaque-app-tour-partes</title>
+<!-- GERADO por ferramentas/render/stories.ts a partir de conteudo.json. -->
+<style>
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:300 700;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/space-grotesk-latin-wght.woff2") format("woff2");}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:200 800;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/plus-jakarta-sans-latin-wght.woff2") format("woff2");}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:700;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/space-mono-latin-700.woff2") format("woff2");}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:600;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/caveat-latin-600.woff2") format("woff2");}
+
+:root{
+  --abismo:#3a3a3c; --mar:#2e6bff; --mar-fundo:#1e4fcc;
+  --gelo:#e1dfda; --neve:#f6f5f1; --cards:#ffffff; --pelo:#d6d6d4;
+  --nevoa:#6e6b71; --recompensa:#d9a017; --on-mar:#ffffff;
+  --texto:#26262a; --coral-claro:#8fb0ff;
+  --r-marcador:6px; --r-botao:16px; --r-card:20px; --r-folha:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:var(--neve);}
+body{font-family:"Plus Jakarta Sans",sans-serif;color:var(--texto);-webkit-font-smoothing:antialiased;}
+
+/* Superficie panoramica: as paginas em linha, recortadas depois em 1080x1350 exatos. */
+.tira{position:relative;display:flex;height:1350px;overflow:hidden;background:var(--neve);
+  /* pauta continua: atravessa a tira inteira, entao nunca desalinha na emenda */
+  background-image:repeating-linear-gradient(to bottom, transparent 0 63px, color-mix(in srgb, var(--gelo) 82%, transparent) 63px 65px);}
+.pagina{position:relative;z-index:2;background:transparent;width:1080px;height:1350px;flex:0 0 1080px;overflow:hidden;}
+.conteudo{position:relative;z-index:3;height:100%;padding:88px;display:flex;flex-direction:column;}
+
+/* Fundo continuo: pauta de caderno + traco de caneta que atravessa a tira inteira. */
+.fundo{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.margem-esq{position:absolute;top:0;bottom:0;left:64px;width:3px;background:color-mix(in srgb, var(--coral-claro) 55%, transparent);}
+
+/* Tipografia — escala propria de 1080 px (o app nao passa de 32 px) */
+.rotulo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:var(--nevoa);}
+.manchete{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.025em;line-height:.98;color:var(--abismo);}
+.m-xxl{font-size:132px;} .m-xl{font-size:108px;} .m-l{font-size:88px;} .m-m{font-size:70px;} .m-s{font-size:56px;}
+.corpo{font-size:38px;line-height:1.38;color:var(--texto);}
+.corpo-s{font-size:34px;line-height:1.4;color:var(--nevoa);}
+.dado{font-family:"Space Mono",monospace;font-weight:700;font-variant-numeric:tabular-nums;color:var(--mar);}
+.mao{font-family:"Caveat",cursive;font-weight:600;color:var(--mar);}
+
+.azul{color:var(--mar);}
+.grafite{color:var(--abismo);}
+/* recompensa = marca-texto: fundo amarelo com texto grafite, nunca texto amarelo */
+.marcatexto{background:var(--recompensa);color:var(--abismo);padding:0 .12em;border-radius:var(--r-marcador);box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.sublinha{background:linear-gradient(to top, color-mix(in srgb, var(--mar) 28%, transparent) 0 .34em, transparent .34em);}
+
+.cartao{background:var(--cards);border:3px solid var(--gelo);border-radius:var(--r-card);box-shadow:0 5px 0 var(--gelo);padding:36px 40px;}
+.cartao-azul{background:var(--mar);color:var(--on-mar);border:none;border-radius:var(--r-card);box-shadow:0 6px 0 var(--mar-fundo);padding:36px 40px;}
+.pilula{display:inline-flex;align-items:center;gap:14px;border-radius:999px;border:3px solid var(--abismo);padding:14px 28px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:28px;color:var(--abismo);background:var(--cards);}
+.pilula-azul{border-color:transparent;background:var(--mar);color:var(--on-mar);box-shadow:0 5px 0 var(--mar-fundo);}
+.botao{display:inline-flex;align-items:center;justify-content:center;height:96px;padding:0 44px;border-radius:var(--r-botao);background:var(--mar);color:var(--on-mar);box-shadow:0 7px 0 var(--mar-fundo);font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:38px;}
+
+.foca{display:block;width:100%;height:100%;object-fit:contain;}
+.icone-azul{background:var(--mar);border-radius:var(--r-card);display:grid;place-items:center;}
+
+.empurra{flex:1 1 auto;}
+.linha{display:flex;align-items:center;gap:20px;}
+.num{font-family:"Space Mono",monospace;font-weight:700;color:var(--mar);}
+
+/* Moldura de celular para tela real do app — grafite, aresta solida, sem sombra difusa */
+.aparelho{border:10px solid var(--abismo);border-radius:44px;overflow:hidden;background:var(--cards);box-shadow:0 8px 0 color-mix(in srgb, var(--abismo) 45%, transparent);}
+.aparelho img{display:block;width:100%;}
+.selo-real{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;flex:0 0 auto;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:var(--nevoa);}
+
+.story{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--neve);
+  background-image:repeating-linear-gradient(to bottom, transparent 0 63px, color-mix(in srgb, var(--gelo) 82%, transparent) 63px 65px);}
+.story .margem-esq{position:absolute;top:0;bottom:0;left:64px;width:3px;background:color-mix(in srgb, var(--coral-claro) 55%, transparent);}
+.story .cabeca{position:absolute;left:88px;right:88px;top:230px;height:64px;display:flex;align-items:center;justify-content:space-between;z-index:3}
+.story .col{position:absolute;left:88px;right:88px;top:340px;bottom:260px;display:flex;flex-direction:column;z-index:3}
+.titulo-story{font-size:80px;line-height:1.02;max-width:904px}
+.legenda-story{margin-top:78px;font-size:40px;line-height:1.36;max-width:904px}
+.bloco-cel{position:relative;width:100%}
+.anot{position:absolute;left:0;top:0;overflow:visible;z-index:5;pointer-events:none}
+.nota-mao{position:absolute;transform:translateY(-50%) rotate(-3deg);font-family:"Caveat",cursive;font-weight:600;font-size:56px;line-height:1.02;color:var(--mar);z-index:6}
+.caixa-pergunta{background:var(--cards);border:3px solid var(--gelo);border-radius:var(--r-folha);box-shadow:0 6px 0 var(--gelo);padding:40px 48px 50px}
+.balao{position:relative;border-radius:var(--r-folha);padding:48px 52px}
+.story .traco-base{position:absolute;left:0;right:0;top:1770px;z-index:1;opacity:.9}
+.capa{position:relative;width:1080px;height:1080px;background:var(--mar);overflow:hidden}
+ body{display:flex;flex-direction:column;gap:40px;align-items:flex-start;background:#ddd}</style></head>
+<body>
+<section class="story" id="s1"><div class="margem-esq"></div><svg class="traco-base" width="1260" height="90" viewBox="0 0 1260 90" style="transform:translateX(-81px)"><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" fill="none" opacity=".16"/><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".5" transform="translate(0,26)"/></svg><div class="cabeca">
+    <div class="rotulo">O app</div>
+    
+  </div>
+  <div class="col">
+    <div class="empurra" style="flex:.6"></div>
+    <h1 class="manchete m-xl" data-medir>O Foca é um app de estudo para o ENEM.</h1>
+    <p class="corpo" style="margin-top:40px;font-size:44px;max-width:860px" data-medir>Ele acompanha o que você acerta e erra, escolhe a próxima atividade e mostra o motivo.</p>
+    <div class="empurra"></div>
+    <div class="linha" style="justify-content:space-between;align-items:flex-end">
+      <div class="mao" style="font-size:54px;transform:rotate(-3deg);margin-bottom:30px">toca pra ver por dentro →</div>
+      <img src="file:///C:/Users/mathe/Documents/foca/src/assets/branding/foca/Logo%20Oficial.png" style="width:400px;height:400px;object-fit:contain;margin-right:-24px" alt="" data-medir>
+    </div>
+  </div></section>
+<section class="story" id="s2"><div class="margem-esq"></div><svg class="traco-base" width="1260" height="90" viewBox="0 0 1260 90" style="transform:translateX(-118px)"><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" fill="none" opacity=".16"/><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".5" transform="translate(0,26)"/></svg><div class="cabeca">
+    <div class="rotulo">O app</div>
+    
+  </div>
+  <div class="col">
+    <h2 class="manchete m-m titulo-story" data-medir>Tudo começa na trilha.</h2>
+    <div style="margin:auto 0">
+      <div style="margin-top:48px"><div class="bloco-cel" style="height:754px">
+  <div class="aparelho" style="position:absolute;left:0px;top:0;width:620px;height:754px">
+    <img src="file:///C:/Users/mathe/Documents/foca/automacao-instagram/marca/telas-app/trilha-home.png" style="width:600px;margin-top:-565px" alt="">
+  </div>
+  <svg class="anot" width="904" height="754" viewBox="0 0 904 754"><g fill="none" stroke="var(--mar)" stroke-linecap="round">
+      <rect x="226.76923076923077" y="342.1538461538462" width="351.0769230769231" height="166.46153846153848" rx="34" stroke-width="7" transform="rotate(-1.4 402.3076923076923 425.3846153846154)"/>
+      <rect x="229.76923076923077" y="340.1538461538462" width="347.0769230769231" height="169.46153846153848" rx="34" stroke-width="3.5" opacity=".45" transform="rotate(0.9 402.3076923076923 425.3846153846154)"/>
+    </g><g fill="none" stroke="var(--mar)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 650 425.3846153846154 Q 618.9230769230769 385.3846153846154, 587.8461538461538 425.3846153846154"/>
+        <path d="M 607.152970207742 414.83725353532293 L 587.8461538461538 425.3846153846154 L 607.152970207742 435.9319772339079"/>
+      </g><g fill="none" stroke="var(--mar)" stroke-linecap="round">
+      <rect x="-4" y="628.3076923076924" width="628" height="129.53846153846155" rx="34" stroke-width="7" transform="rotate(-1.4 310 693.0769230769231)"/>
+      <rect x="-1" y="626.3076923076924" width="624" height="132.53846153846155" rx="34" stroke-width="3.5" opacity=".45" transform="rotate(0.9 310 693.0769230769231)"/>
+    </g><g fill="none" stroke="var(--mar)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 650 693.0769230769231 Q 642 653.0769230769231, 634 693.0769230769231"/>
+        <path d="M 653.3068163615882 682.5295612276307 L 634 693.0769230769231 L 653.3068163615882 703.6242849262155"/>
+      </g></svg>
+  <div class="nota-mao" style="left:664px;top:425.3846153846154px;width:252px">o que vem agora</div><div class="nota-mao" style="left:664px;top:693.0769230769231px;width:252px">as 4 abas</div>
+  <div class="selo-real" style="position:absolute;left:0px;top:772px;font-size:22px">tela real do app</div>
+</div></div>
+      <p class="corpo legenda-story" data-medir>As matérias em ordem, com redação junto. Embaixo: Aprender, Praticar, Progresso e Perfil.</p>
+    </div>
+  </div></section>
+<section class="story" id="s3"><div class="margem-esq"></div><svg class="traco-base" width="1260" height="90" viewBox="0 0 1260 90" style="transform:translateX(-65px)"><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" fill="none" opacity=".16"/><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".5" transform="translate(0,26)"/></svg><div class="cabeca">
+    <div class="rotulo">O app</div>
+    
+  </div>
+  <div class="col">
+    <h2 class="manchete m-m titulo-story" data-medir>Lições de 4 a 8 questões.</h2>
+    <div style="margin:auto 0">
+      <div style="margin-top:48px"><div class="bloco-cel" style="height:805px">
+  <div class="aparelho" style="position:absolute;left:0px;top:0;width:620px;height:805px">
+    <img src="file:///C:/Users/mathe/Documents/foca/automacao-instagram/marca/telas-app/questao.png" style="width:600px;margin-top:-138px" alt="">
+  </div>
+  <svg class="anot" width="904" height="805" viewBox="0 0 904 805"><g fill="none" stroke="var(--mar)" stroke-linecap="round">
+      <rect x="26.769230769230774" y="670.2307692307693" width="566.4615384615385" height="95.6923076923077" rx="34" stroke-width="7" transform="rotate(-1.4 310 718.0769230769231)"/>
+      <rect x="29.769230769230774" y="668.2307692307693" width="562.4615384615385" height="98.6923076923077" rx="34" stroke-width="3.5" opacity=".45" transform="rotate(0.9 310 718.0769230769231)"/>
+    </g><g fill="none" stroke="var(--mar)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 650 718.0769230769231 Q 626.6153846153846 678.0769230769231, 603.2307692307693 718.0769230769231"/>
+        <path d="M 622.5375855923575 707.5295612276307 L 603.2307692307693 718.0769230769231 L 622.5375855923575 728.6242849262155"/>
+      </g></svg>
+  <div class="nota-mao" style="left:664px;top:718.0769230769231px;width:252px">não sabe? diz, sem chutar</div>
+  <div class="selo-real" style="position:absolute;left:0px;top:823px;font-size:22px">tela real do app</div>
+</div></div>
+      <p class="corpo legenda-story" data-medir>Dá pra fazer uma no intervalo e parar quando quiser.</p>
+    </div>
+  </div></section>
+<section class="story" id="s4"><div class="margem-esq"></div><svg class="traco-base" width="1260" height="90" viewBox="0 0 1260 90" style="transform:translateX(-102px)"><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" fill="none" opacity=".16"/><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".5" transform="translate(0,26)"/></svg><div class="cabeca">
+    <div class="rotulo">O app</div>
+    
+  </div>
+  <div class="col">
+    <h2 class="manchete m-m titulo-story" data-medir>Errou? A explicação aparece na hora.</h2>
+    <div style="margin:auto 0">
+      <div style="margin-top:48px"><div class="bloco-cel" style="height:820px">
+  <div class="aparelho" style="position:absolute;left:0px;top:0;width:620px;height:820px">
+    <img src="file:///C:/Users/mathe/Documents/foca/automacao-instagram/marca/telas-app/feedback-errado.png" style="width:600px;margin-top:-231px" alt="">
+  </div>
+  <svg class="anot" width="904" height="820" viewBox="0 0 904 820"><g fill="none" stroke="var(--mar)" stroke-linecap="round">
+      <rect x="26.769230769230774" y="670.6153846153846" width="255.21153846153848" height="108" rx="34" stroke-width="7" transform="rotate(-1.4 154.375 724.6153846153846)"/>
+      <rect x="29.769230769230774" y="668.6153846153846" width="251.21153846153848" height="111" rx="34" stroke-width="3.5" opacity=".45" transform="rotate(0.9 154.375 724.6153846153846)"/>
+    </g><g fill="none" stroke="var(--mar)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 650 724.6153846153846 Q 470.99038461538464 684.6153846153846, 291.9807692307693 724.6153846153846"/>
+        <path d="M 311.28758559235746 714.0680227660922 L 291.9807692307693 724.6153846153846 L 311.28758559235746 735.1627464646771"/>
+      </g></svg>
+  <div class="nota-mao" style="left:664px;top:724.6153846153846px;width:252px">quer mais? a Foca explica</div>
+  <div class="selo-real" style="position:absolute;left:0px;top:838px;font-size:22px">tela real do app</div>
+</div></div>
+      <p class="corpo legenda-story" data-medir>O tutor só abre quando você pede.</p>
+    </div>
+  </div></section>
+<section class="story" id="s5"><div class="margem-esq"></div><svg class="traco-base" width="1260" height="90" viewBox="0 0 1260 90" style="transform:translateX(-139px)"><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" fill="none" opacity=".16"/><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".5" transform="translate(0,26)"/></svg><div class="cabeca">
+    <div class="rotulo">O app</div>
+    
+  </div>
+  <div class="col">
+    <h2 class="manchete m-m titulo-story" data-medir>No celular e no computador.</h2>
+    <div class="empurra" style="flex:.5"></div>
+    <div style="position:relative;margin-top:8px">
+  <div style="background:var(--abismo);border-radius:26px;padding:14px;box-shadow:0 8px 0 color-mix(in srgb, var(--abismo) 45%, transparent)">
+    <div style="width:876px;height:530px;overflow:hidden;border-radius:12px;background:var(--cards)">
+      <img src="file:///C:/Users/mathe/Documents/foca/automacao-instagram/marca/telas-app/tutor-desktop.png" style="width:1060px;margin-left:-184px;margin-top:-0px" alt="">
+    </div>
+  </div>
+  <div style="margin:0 auto;width:297.84000000000003px;height:22px;background:color-mix(in srgb, var(--abismo) 80%, transparent);border-radius:0 0 18px 18px"></div>
+  <div class="selo-real" style="margin-top:14px;font-size:22px">tela real do app</div>
+</div>
+    <p class="corpo legenda-story" data-medir>Abre no navegador. No computador, a Foca fica do lado da questão.</p>
+    <div class="empurra"></div>
+  </div></section>
+<section class="story" id="s6"><div class="margem-esq"></div><svg class="traco-base" width="1260" height="90" viewBox="0 0 1260 90" style="transform:translateX(-86px)"><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" fill="none" opacity=".16"/><path d="M -20 40 C 60 70, 120 10, 180 40 C 240 10, 300 70, 360 40 C 420 70, 480 10, 540 40 C 600 10, 660 70, 720 40 C 780 70, 840 10, 900 40 C 960 10, 1020 70, 1080 40 C 1140 70, 1200 10, 1260 40" stroke="var(--mar)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".5" transform="translate(0,26)"/></svg><div class="cabeca">
+    <div class="rotulo">O app</div>
+    
+  </div>
+  <div class="col">
+    <div class="empurra"></div>
+    <div class="icone-azul" style="width:196px;height:196px;border-radius:44px"><img src="file:///C:/Users/mathe/Documents/foca/src/assets/branding/foca/Logo%20Oficial.png" style="width:156px;height:156px;object-fit:contain" alt=""></div>
+    <h2 class="manchete m-l" style="margin-top:64px;max-width:880px" data-medir>Começar é grátis.</h2>
+    <p class="corpo" style="margin-top:32px;font-size:44px;max-width:860px" data-medir>Você conta qual é a sua prova e o Foca monta o ponto de partida.</p>
+    <div style="margin-top:64px"><span class="botao" style="height:118px;font-size:46px;padding:0 60px" data-medir>Começar grátis</span></div>
+    <div class="mao" style="font-size:54px;margin-top:40px;transform:rotate(-2deg)" data-medir>o link tá no perfil</div>
+    <div class="empurra"></div>
+  </div></section>
+<section class="capa" id="capa"><div style="position:absolute;inset:0;display:grid;place-items:center"><div style="transform:scale(1)"><img src="file:///C:/Users/mathe/Documents/foca/src/assets/branding/foca/Logo%20Oficial.png" style="width:760px;height:760px;object-fit:contain" alt=""></div></div></section>
+</body></html>

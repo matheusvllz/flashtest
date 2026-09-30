@@ -1,0 +1,252 @@
+{
+  "geradoEm": "2026-09-29T23:29:20.269Z",
+  "aviso": "Arquivo GERADO por ferramentas/marca/sincronizar.ts. Nao editar a mao. Se um valor aqui divergir de src/styles.css, styles.css vence — rode o sync de novo.",
+  "marca": {
+    "tagline": "Estudo curto, todo dia.",
+    "descricao": "Preparação para o ENEM em aulas curtas. A Foca acompanha o que você já sabe e escolhe o próximo passo."
+  },
+  "cores": {
+    "abismo": "#3a3a3c",
+    "mar": "#2e6bff",
+    "mar-fundo": "#1e4fcc",
+    "gelo": "#e1dfda",
+    "neve": "#f6f5f1",
+    "coral-claro": "#8fb0ff",
+    "pelo": "#d6d6d4",
+    "pelo-sombra": "#737075",
+    "nevoa": "#6e6b71",
+    "cards": "#ffffff",
+    "success": "#2e9e5b",
+    "success-texto": "#1f7a45",
+    "alert": "#d9a017",
+    "error": "#c23b3b",
+    "on-mar": "#ffffff",
+    "on-success": "#ffffff",
+    "on-error": "#ffffff",
+    "on-alert": "#3a3a3c",
+    "background": "#f6f5f1",
+    "foreground": "#26262a",
+    "card": "#ffffff",
+    "card-foreground": "#26262a",
+    "primary": "#3a3a3c",
+    "primary-foreground": "#ffffff",
+    "secondary": "#e1dfda",
+    "secondary-foreground": "#26262a",
+    "muted": "#e1dfda",
+    "muted-foreground": "#6e6b71",
+    "accent": "#2e6bff",
+    "accent-foreground": "#ffffff",
+    "destructive": "#c23b3b",
+    "destructive-foreground": "#ffffff",
+    "border": "#e1dfda",
+    "input": "#d6d6d4",
+    "ring": "#2e6bff"
+  },
+  "layout": {
+    "radius": "1rem",
+    "radius-card": "1.25rem",
+    "ease-out": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "ease-bounce": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "app-col": "440px",
+    "reading-col": "440px",
+    "path-col": "440px",
+    "nav-rail": "0px",
+    "wide-col": "var(--app-col)",
+    "side-col": "0px",
+    "tutor-painel": "0px",
+    "bottom-nav-h": "4.125rem",
+    "scrim": "rgb(0 0 0 / 0.4)"
+  },
+  "tipografia": {
+    "display": "Space Grotesk",
+    "corpo": "Plus Jakarta Sans",
+    "dados": "Space Mono",
+    "manuscrito": "Caveat (so em superficie de marketing; no app nao existe)"
+  },
+  "raios": {
+    "marcador": 6,
+    "botao": 16,
+    "card": 20,
+    "folha": 28,
+    "pilula": 999
+  },
+  "fontesArquivos": [
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\fonts\\space-grotesk-latin-wght.woff2",
+      "hash": "0640890476fc1198"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\fonts\\plus-jakarta-sans-latin-wght.woff2",
+      "hash": "153fc85b70298bee"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\fonts\\space-mono-latin-700.woff2",
+      "hash": "2d46bd159b53f55c"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\fonts\\caveat-latin-600.woff2",
+      "hash": "d51e2283010e661d"
+    }
+  ],
+  "logos": {
+    "oficialColorida": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\foca-color-320.png",
+      "hash": "28da75732c576453"
+    },
+    "iconeAzul512": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\icon-512.png",
+      "hash": "8faf97923c46d6be"
+    },
+    "contornoEscuro": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\foca-line-dark-720.png",
+      "hash": "28a0db003592c5fe"
+    },
+    "contornoClaro": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\foca-line-light-720.png",
+      "hash": "4a0b22cda00254d6"
+    }
+  },
+  "expressoes": {
+    "neutra": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\neutra-320.png",
+      "hash": "707479949b64973d"
+    },
+    "cobrando": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\cobrando-320.png",
+      "hash": "ce9aa93d4da9ee35"
+    },
+    "orgulhosa": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\orgulhosa-320.png",
+      "hash": "dd4a3f8924af3326"
+    },
+    "desapontada": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\desapontada-320.png",
+      "hash": "1a5017e9b5fdd31a"
+    },
+    "empolgada": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\empolgada-320.png",
+      "hash": "ae31ef07acee2de1"
+    },
+    "acolhedora": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\acolhedora-320.png",
+      "hash": "837c7b2b905610ce"
+    },
+    "surpresa": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\surpresa-320.png",
+      "hash": "ffaf32f991c187c8"
+    },
+    "entediada": {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\public\\branding\\foca\\expressoes\\entediada-320.png",
+      "hash": "a44d91460cbad53a"
+    }
+  },
+  "telasReais": [
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\atividade-consolidar-dark.png",
+      "nome": "atividade-consolidar-dark",
+      "hash": "8b0c570960480de9"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\atividade-consolidar-light.png",
+      "nome": "atividade-consolidar-light",
+      "hash": "0874b072706a867d"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\atividade-motivo-dark.png",
+      "nome": "atividade-motivo-dark",
+      "hash": "a6d32646f5ad0994"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\atividade-motivo-light.png",
+      "nome": "atividade-motivo-light",
+      "hash": "fd342270fcfe100a"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\feedback-explicar-dark.png",
+      "nome": "feedback-explicar-dark",
+      "hash": "22b7ce79d8caaa3f"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\feedback-explicar-light.png",
+      "nome": "feedback-explicar-light",
+      "hash": "4aab90bb5ee00c69"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\hero-atividade-dark.png",
+      "nome": "hero-atividade-dark",
+      "hash": "b5b4bc6463a08243"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\hero-atividade-light.png",
+      "nome": "hero-atividade-light",
+      "hash": "4e0e8b8b97f1e66a"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\nivelamento-exploracao.png",
+      "nome": "nivelamento-exploracao",
+      "hash": "e51b6632b681f6c5"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\nivelamento-resultado-dark.png",
+      "nome": "nivelamento-resultado-dark",
+      "hash": "1b611dbaa2fb4826"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\nivelamento-resultado-light.png",
+      "nome": "nivelamento-resultado-light",
+      "hash": "0fee07cae4acd7fa"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\progresso-exploracao.png",
+      "nome": "progresso-exploracao",
+      "hash": "bdd0877021e59551"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\quiz-prova-dark.png",
+      "nome": "quiz-prova-dark",
+      "hash": "1d4d0bf31cfc9b1f"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\quiz-prova-light.png",
+      "nome": "quiz-prova-light",
+      "hash": "9b464406f803d3cf"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\tutor-balao-dark.png",
+      "nome": "tutor-balao-dark",
+      "hash": "427a1dd2cd81903f"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\tutor-balao-light.png",
+      "nome": "tutor-balao-light",
+      "hash": "9cd4a2d026334dfe"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\assets-src\\marketing\\shots\\tutor-exploracao.png",
+      "nome": "tutor-exploracao",
+      "hash": "9cd4a2d026334dfe"
+    }
+  ],
+  "fontesDocumentais": [
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\src\\styles.css",
+      "hash": "c50ba6a3411ab097"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\docs\\DESIGN.md",
+      "hash": "221761e9b9e37da5"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\src\\lib\\brand.ts",
+      "hash": "5d2f125eb1ff8fda"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\docs\\COPY.md",
+      "hash": "344fee9d3664dcd5"
+    },
+    {
+      "arquivo": "C:\\Users\\mathe\\Documents\\foca\\docs\\PRODUCT.md",
+      "hash": "2da1bdf472fee216"
+    }
+  ]
+}

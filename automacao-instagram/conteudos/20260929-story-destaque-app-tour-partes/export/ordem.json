@@ -1,0 +1,69 @@
+{
+  "id": "20260929-story-destaque-app-tour-partes",
+  "formato": "story",
+  "destaque": "O app",
+  "geradoEm": "2026-09-29T23:51:28.355Z",
+  "hashConteudo": "41ff822a5a275027",
+  "paginas": [
+    {
+      "pagina": 1,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s01.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s01.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 173596
+    },
+    {
+      "pagina": 2,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s02.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s02.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 244110
+    },
+    {
+      "pagina": 3,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s03.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s03.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 174922
+    },
+    {
+      "pagina": 4,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s04.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s04.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 195159
+    },
+    {
+      "pagina": 5,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s05.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s05.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 176662
+    },
+    {
+      "pagina": 6,
+      "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s06.png",
+      "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\s06.jpg",
+      "largura": 1080,
+      "altura": 1920,
+      "bytesJpg": 151043
+    }
+  ],
+  "capa": {
+    "png": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\capa.png",
+    "jpg": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-app-tour-partes\\export\\capa.jpg",
+    "largura": 1080,
+    "altura": 1080
+  },
+  "referenciasMarca": {
+    "snapshotEm": "2026-09-29T23:29:20.269Z",
+    "stylesCss": "c50ba6a3411ab097",
+    "logoOficial": "28da75732c576453"
+  },
+  "medicao": []
+}

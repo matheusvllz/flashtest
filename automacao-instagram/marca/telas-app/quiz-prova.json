@@ -1,0 +1,16 @@
+{
+  "nome": "quiz-prova",
+  "largura": 390,
+  "altura": 844,
+  "dsf": 3,
+  "capturadoEm": "2026-09-29T23:37:09.667Z",
+  "rota": "/quiz",
+  "alvos": {
+    "enem": {
+      "x": 24,
+      "y": 238,
+      "w": 342,
+      "h": 52
+    }
+  }
+}

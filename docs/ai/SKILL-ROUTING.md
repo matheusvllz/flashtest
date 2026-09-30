@@ -15,7 +15,7 @@ PEDIDO → CLASSIFICAR (§2) → LER A SPEC RELEVANTE → CARREGAR 1–3 SKILLS 
 - Nunca carregar juntas, sem motivo explícito, as cinco de design: `frontend-design`, `impeccable`, `design-taste-frontend`, `ui-ux-pro-max`, `web-design-guidelines`.
 - Duas skills de processo concorrentes (Superpowers × Addy) nunca na mesma etapa: escolha uma (§4).
 - Skill carregada que não se aplica: diga por quê e não a siga.
-- **Nomes:** skills de plugin aparecem com namespace `plugin:skill` — `impeccable:impeccable`, `frontend-design:frontend-design`, `humanizer:humanizer`, `tanstack-start:tanstack-start`, `ui-ux-pro-max:ui-ux-pro-max`, `agent-skills:<skill>`, `superpowers:<skill>`. As tabelas abaixo abreviam quando não há ambiguidade. Skills locais (`motion-design`, `web-design-guidelines`, `vercel-react-best-practices`, `design-taste-frontend`, `redesign-existing-projects`, `repo-security-review`, `foca-sdd`, `better-writing`, `ogilvy-copywriting`) não têm prefixo. Os comandos do Addy aparecem como skills (`agent-skills:review`, `agent-skills:spec`…).
+- **Nomes:** skills de plugin aparecem com namespace `plugin:skill` — `impeccable:impeccable`, `frontend-design:frontend-design`, `humanizer:humanizer`, `tanstack-start:tanstack-start`, `ui-ux-pro-max:ui-ux-pro-max`, `agent-skills:<skill>`, `superpowers:<skill>`. As tabelas abaixo abreviam quando não há ambiguidade. Skills locais (`motion-design`, `web-design-guidelines`, `vercel-react-best-practices`, `design-taste-frontend`, `redesign-existing-projects`, `repo-security-review`, `foca-sdd`, `foca-social`, `better-writing`, `ogilvy-copywriting`) não têm prefixo. Os comandos do Addy aparecem como skills (`agent-skills:review`, `agent-skills:spec`…).
 
 ## 2. Classificação da tarefa
 

@@ -1,0 +1,129 @@
+{
+  "id": "20260929-story-destaque-funciona-passo-passo",
+  "formato": "story",
+  "pilar": "produto",
+  "tema": "destaque como funciona passo a passo telas reais",
+  "gancho": "Destaque \"Como funciona\": do primeiro toque à primeira lição, em telas reais.",
+  "argumento": "Tutorial em telas reais, com o toque circulado: escolher a prova, nivelamento opcional, tocar em Começar por aqui, marcar e verificar, errar e pedir Explicar melhor.",
+  "publico": "Quem quer ver o app por dentro antes de abrir",
+  "objetivo": "Provar o mecanismo com o produto em ação, mostrando onde tocar",
+  "conceitoVisual": "Passo numerado, celular com tela real à esquerda, nota a mão e contorno a caneta em cima do botão real; capa com o caminho de três nós da trilha",
+  "cta": "Começar grátis (link no perfil)",
+  "destaque": {
+    "titulo": "Como funciona",
+    "capa": "passos"
+  },
+  "paginas": [
+    {
+      "modelo": "abertura",
+      "manchete": "Do primeiro toque à primeira lição.",
+      "apoio": "Passo a passo, em telas reais do app.",
+      "expressao": "neutra"
+    },
+    {
+      "modelo": "tela",
+      "passo": 1,
+      "titulo": "Conta pra qual prova você estuda.",
+      "tela": "quiz-prova",
+      "recorte": {
+        "y": 0,
+        "h": 450
+      },
+      "anotacoes": [
+        {
+          "alvo": "enem",
+          "nota": "toca na sua"
+        }
+      ],
+      "legenda": "Depois vêm o curso e as matérias em que você tem mais dificuldade."
+    },
+    {
+      "modelo": "tela",
+      "passo": 2,
+      "titulo": "Nivelamento, se você quiser.",
+      "tela": "trilha-home",
+      "recorte": {
+        "y": 60,
+        "h": 285
+      },
+      "anotacoes": [
+        {
+          "alvo": "nivelamento",
+          "nota": "quer? faz"
+        },
+        {
+          "alvo": "agoraNao",
+          "nota": "não quer? pula"
+        }
+      ],
+      "legenda": "Umas questões pra ver onde sua base já está firme. O resultado sai por faixa, sem nota."
+    },
+    {
+      "modelo": "tela",
+      "passo": 3,
+      "titulo": "Toca em “Começar por aqui”.",
+      "tela": "trilha-home",
+      "recorte": {
+        "y": 367,
+        "h": 280
+      },
+      "anotacoes": [
+        {
+          "alvo": "motivoCard",
+          "nota": "o porquê"
+        },
+        {
+          "alvo": "cta",
+          "nota": "toca aqui"
+        }
+      ],
+      "legenda": "O Foca já escolheu o que vem agora e mostra o motivo."
+    },
+    {
+      "modelo": "tela",
+      "passo": 4,
+      "titulo": "Marca e toca em Verificar.",
+      "tela": "questao-marcada",
+      "recorte": {
+        "y": 90,
+        "h": 500
+      },
+      "anotacoes": [
+        {
+          "alvo": "marcada",
+          "nota": "1. marca"
+        },
+        {
+          "alvo": "verificar",
+          "nota": "2. verifica"
+        }
+      ],
+      "legenda": "Não sabe? Toca em “Não sei”. Isso também ajuda o Foca a escolher o que vem depois."
+    },
+    {
+      "modelo": "tela",
+      "passo": 5,
+      "titulo": "Errou? Toca em Explicar melhor.",
+      "tela": "feedback-errado",
+      "recorte": {
+        "y": 150,
+        "h": 520
+      },
+      "anotacoes": [
+        {
+          "alvo": "explicar",
+          "nota": "pede outra explicação"
+        }
+      ],
+      "legenda": "A Foca já sabe de qual questão você está falando. Você pergunta do seu jeito."
+    },
+    {
+      "modelo": "fechamento",
+      "manchete": "Quando voltar, o próximo passo já vai estar escolhido.",
+      "cta": "Começar grátis",
+      "nota": "o link tá no perfil"
+    }
+  ],
+  "legenda": "",
+  "fontesFato": []
+}

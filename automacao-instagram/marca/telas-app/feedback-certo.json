@@ -1,0 +1,22 @@
+{
+  "nome": "feedback-certo",
+  "largura": 390,
+  "altura": 844,
+  "dsf": 3,
+  "capturadoEm": "2026-09-29T23:39:51.274Z",
+  "rota": "/atividade/atv-q",
+  "alvos": {
+    "folha": {
+      "x": 0,
+      "y": 468.25,
+      "w": 390,
+      "h": 168.25
+    },
+    "continuar": {
+      "x": 20,
+      "y": 564.5,
+      "w": 350,
+      "h": 52
+    }
+  }
+}

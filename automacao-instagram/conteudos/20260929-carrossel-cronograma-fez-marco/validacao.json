@@ -1,0 +1,108 @@
+{
+  "id": "20260929-carrossel-cronograma-fez-marco",
+  "validadoEm": "2026-09-29T21:35:56.354Z",
+  "erros": 0,
+  "alertas": 0,
+  "achados": [
+    {
+      "nivel": "ok",
+      "item": "ordem",
+      "detalhe": "ordem de publicacao 1..8, sem buraco"
+    },
+    {
+      "nivel": "ok",
+      "item": "p1 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p1 jpeg",
+      "detalhe": "121 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p2 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p2 jpeg",
+      "detalhe": "83 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p3 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p3 jpeg",
+      "detalhe": "135 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p4 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p4 jpeg",
+      "detalhe": "159 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p5 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p5 jpeg",
+      "detalhe": "136 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p6 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p6 jpeg",
+      "detalhe": "192 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p7 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p7 jpeg",
+      "detalhe": "83 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "p8 dimensao",
+      "detalhe": "1080x1350 (4:5)"
+    },
+    {
+      "nivel": "ok",
+      "item": "p8 jpeg",
+      "detalhe": "110 KB, 1080x1350"
+    },
+    {
+      "nivel": "ok",
+      "item": "emendas",
+      "detalhe": "8/8 paginas identicas a sua faixa na panoramica: sem sobreposicao, lacuna ou deslocamento"
+    },
+    {
+      "nivel": "ok",
+      "item": "legenda",
+      "detalhe": "505 caracteres"
+    },
+    {
+      "nivel": "ok",
+      "item": "fatos",
+      "detalhe": "nenhum fato externo declarado: o conteudo so afirma o que o produto demonstra"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "20260929-story-destaque-funciona-passo-passo",
+  "versao": 1,
+  "estado": "em_revisao",
+  "formato": "story",
+  "criadoEm": "2026-09-29T23:30:16.689Z",
+  "atualizadoEm": "2026-09-29T23:52:31.764Z",
+  "referenciasMarca": {
+    "snapshotEm": "2026-09-29T23:29:20.269Z",
+    "stylesCss": "c50ba6a3411ab097",
+    "logoOficial": "28da75732c576453"
+  },
+  "arquivos": {
+    "pasta": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo",
+    "export": [
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s01.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s02.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s03.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s04.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s05.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s06.jpg",
+      "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s07.jpg"
+    ],
+    "preview": "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\preview\\index.html"
+  },
+  "assets": [
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s01.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s02.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s03.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s04.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s05.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s06.png",
+    "C:\\Users\\mathe\\Documents\\foca\\automacao-instagram\\conteudos\\20260929-story-destaque-funciona-passo-passo\\export\\s07.png",
+    "assets-src/marketing/shots/quiz-prova.png",
+    "assets-src/marketing/shots/trilha-home.png",
+    "assets-src/marketing/shots/trilha-home.png",
+    "assets-src/marketing/shots/questao-marcada.png",
+    "assets-src/marketing/shots/feedback-errado.png"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "20260929-motion-proximo-passo-escolhido",
+  "validadoEm": "2026-09-29T21:35:26.511Z",
+  "erros": 0,
+  "alertas": 0,
+  "achados": [
+    {
+      "nivel": "ok",
+      "item": "codec",
+      "detalhe": "h264"
+    },
+    {
+      "nivel": "ok",
+      "item": "croma",
+      "detalhe": "yuv420p (4:2:0)"
+    },
+    {
+      "nivel": "ok",
+      "item": "dimensao",
+      "detalhe": "1080x1920"
+    },
+    {
+      "nivel": "ok",
+      "item": "lado maior",
+      "detalhe": "<= 1920 px"
+    },
+    {
+      "nivel": "ok",
+      "item": "fps",
+      "detalhe": "30"
+    },
+    {
+      "nivel": "ok",
+      "item": "duracao",
+      "detalhe": "13.00 s"
+    },
+    {
+      "nivel": "ok",
+      "item": "duracao pedida",
+      "detalhe": "bate com 13 s"
+    },
+    {
+      "nivel": "ok",
+      "item": "tamanho",
+      "detalhe": "0.57 MB"
+    },
+    {
+      "nivel": "ok",
+      "item": "conteiner",
+      "detalhe": "mov,mp4,m4a,3gp,3g2,mj2"
+    },
+    {
+      "nivel": "ok",
+      "item": "audio",
+      "detalhe": "aac 48000 Hz 2 canal(is)"
+    },
+    {
+      "nivel": "ok",
+      "item": "licenca do audio",
+      "detalhe": "Autoria e uso do projeto. Nenhuma faixa de terceiros, nenhuma música d"
+    },
+    {
+      "nivel": "ok",
+      "item": "moov no inicio",
+      "detalhe": "faststart"
+    }
+  ]
+}

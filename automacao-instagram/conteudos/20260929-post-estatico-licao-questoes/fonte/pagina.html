@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>20260929-post-estatico-licao-questoes</title>
+<!-- GERADO por ferramentas/render/compor.ts a partir de conteudo.json. Editavel: ajuste e rode 'bun run render <id>' de novo. -->
+<style>
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:300 700;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/space-grotesk-latin-wght.woff2") format("woff2");}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:200 800;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/plus-jakarta-sans-latin-wght.woff2") format("woff2");}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:700;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/space-mono-latin-700.woff2") format("woff2");}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:600;font-display:block;src:url("file:///C:/Users/mathe/Documents/foca/public/fonts/caveat-latin-600.woff2") format("woff2");}
+
+:root{
+  --abismo:#3a3a3c; --mar:#2e6bff; --mar-fundo:#1e4fcc;
+  --gelo:#e1dfda; --neve:#f6f5f1; --cards:#ffffff; --pelo:#d6d6d4;
+  --nevoa:#6e6b71; --recompensa:#d9a017; --on-mar:#ffffff;
+  --texto:#26262a; --coral-claro:#8fb0ff;
+  --r-marcador:6px; --r-botao:16px; --r-card:20px; --r-folha:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:var(--neve);}
+body{font-family:"Plus Jakarta Sans",sans-serif;color:var(--texto);-webkit-font-smoothing:antialiased;}
+
+/* Superficie panoramica: as paginas em linha, recortadas depois em 1080x1350 exatos. */
+.tira{position:relative;display:flex;height:1350px;overflow:hidden;background:var(--neve);
+  /* pauta continua: atravessa a tira inteira, entao nunca desalinha na emenda */
+  background-image:repeating-linear-gradient(to bottom, transparent 0 63px, color-mix(in srgb, var(--gelo) 82%, transparent) 63px 65px);}
+.pagina{position:relative;z-index:2;background:transparent;width:1080px;height:1350px;flex:0 0 1080px;overflow:hidden;}
+.conteudo{position:relative;z-index:3;height:100%;padding:88px;display:flex;flex-direction:column;}
+
+/* Fundo continuo: pauta de caderno + traco de caneta que atravessa a tira inteira. */
+.fundo{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.margem-esq{position:absolute;top:0;bottom:0;left:64px;width:3px;background:color-mix(in srgb, var(--coral-claro) 55%, transparent);}
+
+/* Tipografia — escala propria de 1080 px (o app nao passa de 32 px) */
+.rotulo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:var(--nevoa);}
+.manchete{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.025em;line-height:.98;color:var(--abismo);}
+.m-xxl{font-size:132px;} .m-xl{font-size:108px;} .m-l{font-size:88px;} .m-m{font-size:70px;} .m-s{font-size:56px;}
+.corpo{font-size:38px;line-height:1.38;color:var(--texto);}
+.corpo-s{font-size:32px;line-height:1.4;color:var(--nevoa);}
+.dado{font-family:"Space Mono",monospace;font-weight:700;font-variant-numeric:tabular-nums;color:var(--mar);}
+.mao{font-family:"Caveat",cursive;font-weight:600;color:var(--mar);}
+
+.azul{color:var(--mar);}
+.grafite{color:var(--abismo);}
+/* recompensa = marca-texto: fundo amarelo com texto grafite, nunca texto amarelo */
+.marcatexto{background:var(--recompensa);color:var(--abismo);padding:0 .12em;border-radius:var(--r-marcador);box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.sublinha{background:linear-gradient(to top, color-mix(in srgb, var(--mar) 28%, transparent) 0 .34em, transparent .34em);}
+
+.cartao{background:var(--cards);border:3px solid var(--gelo);border-radius:var(--r-card);box-shadow:0 5px 0 var(--gelo);padding:36px 40px;}
+.cartao-azul{background:var(--mar);color:var(--on-mar);border:none;border-radius:var(--r-card);box-shadow:0 6px 0 var(--mar-fundo);padding:36px 40px;}
+.pilula{display:inline-flex;align-items:center;gap:14px;border-radius:999px;border:3px solid var(--abismo);padding:14px 28px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:28px;color:var(--abismo);background:var(--cards);}
+.pilula-azul{border-color:transparent;background:var(--mar);color:var(--on-mar);box-shadow:0 5px 0 var(--mar-fundo);}
+.botao{display:inline-flex;align-items:center;justify-content:center;height:96px;padding:0 44px;border-radius:var(--r-botao);background:var(--mar);color:var(--on-mar);box-shadow:0 7px 0 var(--mar-fundo);font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:38px;}
+
+.foca{display:block;width:100%;height:100%;object-fit:contain;}
+.icone-azul{background:var(--mar);border-radius:var(--r-card);display:grid;place-items:center;}
+
+.empurra{flex:1 1 auto;}
+.linha{display:flex;align-items:center;gap:20px;}
+.num{font-family:"Space Mono",monospace;font-weight:700;color:var(--mar);}
+
+/* Moldura de celular para tela real do app — grafite, aresta solida, sem sombra difusa */
+.aparelho{border:10px solid var(--abismo);border-radius:44px;overflow:hidden;background:var(--cards);box-shadow:0 8px 0 color-mix(in srgb, var(--abismo) 45%, transparent);}
+.aparelho img{display:block;width:100%;}
+.selo-real{display:inline-flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:var(--nevoa);}
+
+.tira{width:1080px}
+.tira > .fundo-tira{position:absolute;inset:0;z-index:1}
+</style></head>
+<body>
+<div class="tira" id="tira">
+  
+  <section class="pagina" data-pagina="1">
+  <div class="margem-esq"></div>
+  <div class="conteudo">
+  <div class="empurra"></div>
+  <div class="linha" style="align-items:baseline;gap:18px">
+    <div class="num" style="font-size:300px;line-height:.78;letter-spacing:-.04em">4</div>
+    <div class="num" style="font-size:78px;letter-spacing:-.03em">a 8</div>
+  </div>
+  <h2 class="manchete m-m" style="margin-top:34px;max-width:880px">questões por lição.<br>E aí acaba.</h2>
+  <p class="corpo" style="margin-top:26px;max-width:840px">Sem rolagem depois da última, sem próximo episódio. Você fecha e fez o dia.</p>
+  <div class="mao" style="font-size:46px;margin-top:34px;transform:rotate(-2deg)">o fim faz parte</div>
+  <div class="empurra"></div>
+  <div class="linha" style="gap:18px;margin-top:8px">
+    <div class="icone-azul" style="width:78px;height:78px;border-radius:18px"><img class="foca" src="file:///C:/Users/mathe/Documents/foca/public/branding/foca/foca-color-320.png" width="58" height="58" alt=""></div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;color:var(--abismo)">Foca</div>
+  </div>
+  
+</div>
+</section>
+</div>
+</body></html>

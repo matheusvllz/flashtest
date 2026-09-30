@@ -1,0 +1,28 @@
+{
+  "nome": "feedback-errado",
+  "largura": 390,
+  "altura": 844,
+  "dsf": 3,
+  "capturadoEm": "2026-09-29T23:43:27.331Z",
+  "rota": "/atividade/atv-q",
+  "alvos": {
+    "folha": {
+      "x": 0,
+      "y": 468.25,
+      "w": 390,
+      "h": 192.25
+    },
+    "explicar": {
+      "x": 20,
+      "y": 588.5,
+      "w": 147.6875,
+      "h": 52
+    },
+    "continuar": {
+      "x": 175.6875,
+      "y": 588.5,
+      "w": 194.3125,
+      "h": 52
+    }
+  }
+}
