@@ -19,6 +19,7 @@ canonico-de: [estado atual, próxima tarefa]
 
 - **Concluído:** F00–F04 (commits na branch) e F05–F07 (contas, guarda de rotas, sincronização com a conta, importação do estudo local) — evidência no [registro](specs/46-producao/registro.md). Estado de validação: **validado localmente** (PGlite, e-mail em arquivo). Nada validado em ambiente integrado: sem Neon, Google e Resend.
 - **Pendências dentro de F05–F07** (no registro): E2E de conta e de sincronização só no projeto `chromium` (faltam 320/1280); suíte `isolamento.test.ts` de todas as funções de servidor (T-06.6); teste de queda no meio da importação; `/conta` com perfil editável e lista de sessões (vai com a F09).
+- **Produção em modo de demonstração (D-15, temporário):** sem `DATABASE_URL`, `BETTER_AUTH_SECRET` e `BETTER_AUTH_URL` na Vercel, o app entra com um botão local e o progresso fica só no aparelho. Configurar as três liga as contas reais sem mudar código.
 - **Próxima fase:** F08 — Foca IA em produção (sessão e política de idade no tutor, contexto montado no servidor, cotas por plano — grátis 3 mensagens/dia, Pro 20 + 5 fotos —, teto global de custo, compressão de imagem, moderação, protocolo de autocuidado, consentimento do responsável aos 17).
 
 ## Último checkpoint verde

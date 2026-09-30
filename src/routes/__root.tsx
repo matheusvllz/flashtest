@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
    * documentos vigentes), vai para /cadastro/completar. A landing e o onboarding de perfil não consultam nada.
    */
   beforeLoad: async ({ location }) => {
-    if (ehRotaPublica(location.pathname)) return { userIdDaSessao: null };
+    if (ehRotaPublica(location.pathname)) return { guarda: null };
     const s = await sessao();
     if (!s.autenticado) throw redirect({ to: "/login", search: { volta: location.href } });
     if (!s.cadastroCompleto && !ehRotaDeCadastro(location.pathname)) {
@@ -118,10 +118,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     }
     // Navegação no cliente: o store confere, antes da próxima tela, se o estado local é desta conta (T-07.2).
     if (typeof window !== "undefined") definirUsuarioDaSessao(s.userId);
-    return { userIdDaSessao: s.userId };
+    return { guarda: { userId: s.userId, modo: s.modo } };
   },
   // Na primeira carga a guarda roda no servidor; o dono da sessão chega ao navegador por aqui.
-  loader: ({ context }) => ({ userIdDaSessao: context.userIdDaSessao ?? null }),
+  loader: ({ context }) => ({ guarda: context.guarda ?? null }),
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -198,12 +198,12 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const { userIdDaSessao } = Route.useLoaderData();
+  const { guarda } = Route.useLoaderData();
   // Primeira carga: antes de qualquer tela filha ler o store (ele só hidrata quando a primeira tela o lê). Sem avisar
   // ninguém: é renderização. E vale como a última sessão conhecida se a rede cair antes da próxima consulta.
   if (typeof window !== "undefined") {
-    informarUsuarioDaPrimeiraCarga(userIdDaSessao);
-    lembrarSessaoDaPrimeiraCarga(userIdDaSessao);
+    informarUsuarioDaPrimeiraCarga(guarda?.userId);
+    lembrarSessaoDaPrimeiraCarga(guarda);
   }
   const router = useRouter();
   const naLanding = useRouterState({ select: (s) => s.location.pathname === "/" });

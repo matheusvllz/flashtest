@@ -60,6 +60,13 @@ export type Env = z.infer<typeof esquema> & {
   BETTER_AUTH_SECRET: string;
   BETTER_AUTH_URL: string;
   AUTH_EMAIL_HABILITADO: boolean;
+  /**
+   * Contas reais ligadas. Em produção, só com banco, segredo e URL configurados; sem eles o app roda em modo de
+   * demonstração (entrada local, progresso só no aparelho, sem sincronização) — decisão D-15, temporária.
+   */
+  contasAtivas: boolean;
+  /** O que falta em produção para ligar as contas (nomes das variáveis, nunca valores). */
+  faltandoParaContas: string[];
 };
 
 let cache: Env | undefined;
@@ -76,18 +83,27 @@ export function env(): Env {
   const producao = e.NODE_ENV === "production" && e.VERCEL_ENV !== "preview" && e.VERCEL_ENV !== "development";
   const teste = e.NODE_ENV === "test";
 
+  // Implantado = build de produção ou qualquer ambiente da Vercel (inclusive preview): aí não há PGlite em disco nem
+  // segredo de desenvolvimento. Sem as três variáveis, as contas ficam desligadas (modo de demonstração, D-15).
+  const implantado = e.NODE_ENV === "production" || e.VERCEL_ENV !== undefined;
   const faltando: string[] = [];
-  if (producao && !e.DATABASE_URL) faltando.push("DATABASE_URL");
-  if (producao && !e.BETTER_AUTH_SECRET) faltando.push("BETTER_AUTH_SECRET");
-  if (producao && !e.BETTER_AUTH_URL) faltando.push("BETTER_AUTH_URL");
-  if (faltando.length) throw new Error(`[env] faltam variáveis obrigatórias em produção: ${faltando.join(", ")}`);
+  if (implantado && !e.DATABASE_URL) faltando.push("DATABASE_URL");
+  if (implantado && !e.BETTER_AUTH_SECRET) faltando.push("BETTER_AUTH_SECRET");
+  if (implantado && !e.BETTER_AUTH_URL) faltando.push("BETTER_AUTH_URL");
+  const contasAtivas = faltando.length === 0;
+  if (!contasAtivas) {
+    console.warn(`[env] contas desligadas (modo de demonstração): faltam ${faltando.join(", ")}`);
+  }
 
   cache = {
     ...e,
     producao,
     teste,
-    // Desenvolvimento e teste: banco PGlite local (arquivo em .data/, ou memória nos testes).
-    DATABASE_URL: e.DATABASE_URL ?? (teste ? "pglite:memoria" : "pglite:.data/pglite"),
+    contasAtivas,
+    faltandoParaContas: faltando,
+    // Desenvolvimento e teste: banco PGlite local (arquivo em .data/, ou memória nos testes). Produção sem banco:
+    // nenhum (as contas ficam desligadas e `banco()` recusa).
+    DATABASE_URL: e.DATABASE_URL ?? (implantado ? "desligado:" : teste ? "pglite:memoria" : "pglite:.data/pglite"),
     // Segredo fixo só fora de produção (produção exige o seu, acima).
     BETTER_AUTH_SECRET: e.BETTER_AUTH_SECRET ?? "segredo-de-desenvolvimento-nao-usar-em-producao-0000",
     BETTER_AUTH_URL: e.BETTER_AUTH_URL ?? "http://localhost:8080",

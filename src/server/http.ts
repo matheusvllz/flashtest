@@ -34,6 +34,8 @@ export interface Sessao {
 
 /** A sessão da requisição atual, ou `null`. */
 export async function sessaoAtual(headers: Headers = getRequestHeaders() as unknown as Headers): Promise<Sessao | null> {
+  // Modo de demonstração (D-15): não há conta de verdade, então não há sessão no servidor.
+  if (!env().contasAtivas) return null;
   const a = await auth();
   const s = await a.api.getSession({ headers });
   if (!s) return null;

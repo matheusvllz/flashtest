@@ -81,14 +81,15 @@ export async function sessao(forcar = false): Promise<EstadoDaSessao> {
  * Primeira carga: a guarda rodou no servidor e deixou passar para uma rota de estudo, então havia sessão com cadastro
  * completo. Fica como a última conhecida (só para o caso de a rede cair antes da primeira consulta nesta aba).
  */
-export function lembrarSessaoDaPrimeiraCarga(userId: string | null | undefined): void {
+export function lembrarSessaoDaPrimeiraCarga(guarda: { userId: string | null; modo: EstadoDaSessao["modo"] } | null): void {
   // Uma vez por página: depois de sair, a raiz ainda re-renderiza com o dado da carga anterior, e ele não vale mais.
-  if (primeiraCargaLembrada || !userId) return;
+  if (primeiraCargaLembrada || !guarda) return;
   primeiraCargaLembrada = true;
   if (ultimaConfirmada || cache) return;
   ultimaConfirmada = {
     autenticado: true,
-    userId,
+    userId: guarda.userId,
+    modo: guarda.modo,
     cadastroCompleto: true,
     emailVerificado: true,
     nome: null,

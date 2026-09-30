@@ -42,6 +42,8 @@ async function abrir(url: string): Promise<Banco> {
 
 /** A conexão do processo (criada na primeira chamada). */
 export function banco(): Promise<Banco> {
+  // Modo de demonstração (D-15): sem banco configurado em produção, nada abre conexão — nem PGlite em disco.
+  if (!env().contasAtivas) return Promise.reject(new Error("[db] contas desligadas (modo de demonstração)"));
   conexao ??= abrir(env().DATABASE_URL);
   return conexao;
 }

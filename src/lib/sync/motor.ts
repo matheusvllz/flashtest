@@ -73,6 +73,7 @@ async function salvarDocumentoSeMudou(): Promise<void> {
 
 /** Puxa agregado e documento do servidor (login, abrir o app, voltar à aba, e a cada 5 min). */
 export async function puxar(): Promise<void> {
+  if (!getState().account?.userId) return; // sem conta vinculada (ou modo de demonstração): nada a puxar
   const r = await obterEstado();
   if (!r.ok) return;
   ultimoPull = Date.now();

@@ -6,6 +6,11 @@ import { createFileRoute } from "@tanstack/react-router";
  */
 async function saude(): Promise<Response> {
   const inicio = Date.now();
+  const { env } = await import("@/server/env");
+  // Modo de demonstração (D-15): o app está no ar, sem contas. Diz o estado, sem citar o que falta configurar.
+  if (!env().contasAtivas) {
+    return Response.json({ ok: true, contas: "desligadas" }, { headers: { "cache-control": "no-store" } });
+  }
   try {
     const { banco } = await import("@/server/db/client");
     const { sql } = await import("drizzle-orm");

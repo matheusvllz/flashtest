@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { EntradaDemonstracao } from "@/components/conta/EntradaDemonstracao";
 import { AvisoErro, AvisoInfo, BotaoGoogle, Campo, Separador, TelaDeAcesso } from "@/components/conta/TelaDeAcesso";
 import { EMAIL_VALIDO, mensagemDeErro } from "@/components/conta/erros";
 import { configAcesso } from "@/lib/api/conta";
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/login")({
 function Login() {
   const navigate = useNavigate();
   const { volta, aviso } = Route.useSearch();
-  const [acesso, setAcesso] = useState<{ emailHabilitado: boolean; googleHabilitado: boolean } | null>(null);
+  const [acesso, setAcesso] = useState<{ emailHabilitado: boolean; googleHabilitado: boolean; contasAtivas?: boolean } | null>(null);
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [erros, setErros] = useState<{ email?: string; senha?: string; geral?: string }>({});
@@ -59,6 +60,9 @@ function Login() {
       setEnviando(false);
     }
   }
+
+  // Contas desligadas no servidor (D-15): entrada local, sem formulário.
+  if (acesso?.contasAtivas === false) return <EntradaDemonstracao volta={volta} />;
 
   return (
     <TelaDeAcesso titulo={COPY.conta.entrarTitulo} subtitulo={COPY.conta.entrarSubtitulo} voltarPara="/">

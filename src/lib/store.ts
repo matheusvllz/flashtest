@@ -2047,6 +2047,14 @@ export function marcarContaAtiva() {
   });
 }
 
+/** Sair do modo de demonstração (D-15): o progresso fica no aparelho, como era antes das contas. */
+export function sairDaEntradaLocal() {
+  setState((s) => {
+    s.authed = false;
+    return s;
+  });
+}
+
 /** Sair da conta (D-14): nada da conta fica no aparelho. Quem chama encerra a sessão no servidor antes. */
 export function logout() {
   limparAparelho();

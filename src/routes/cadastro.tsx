@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { EntradaDemonstracao } from "@/components/conta/EntradaDemonstracao";
 import { AceiteLegal, AvisoErro, BotaoGoogle, Campo, Separador, TelaDeAcesso } from "@/components/conta/TelaDeAcesso";
 import { EMAIL_VALIDO, mensagemDeErro } from "@/components/conta/erros";
 import { configAcesso } from "@/lib/api/conta";
@@ -23,7 +24,7 @@ type Erros = { nome?: string; email?: string; senha?: string; ano?: string; acei
 function Cadastro() {
   const navigate = useNavigate();
   const { volta } = Route.useSearch();
-  const [acesso, setAcesso] = useState<{ emailHabilitado: boolean; googleHabilitado: boolean; idadeMinima: number } | null>(null);
+  const [acesso, setAcesso] = useState<{ emailHabilitado: boolean; googleHabilitado: boolean; idadeMinima: number; contasAtivas?: boolean } | null>(null);
   const [nome, setNome] = useState(() => getState().prefs.name?.trim().split(/\s+/)[0] ?? "");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -83,6 +84,9 @@ function Cadastro() {
       setEnviando(false);
     }
   }
+
+  // Contas desligadas no servidor (D-15): entrada local, sem formulário.
+  if (acesso?.contasAtivas === false) return <EntradaDemonstracao volta={volta} />;
 
   if (abaixoDaIdade) {
     return (

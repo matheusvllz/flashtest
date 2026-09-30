@@ -127,4 +127,34 @@ describe("configuração de produção", () => {
       redefinirEnv();
     }
   });
+
+  test("produção sem banco e segredo: contas desligadas (modo de demonstração, D-15), sem abrir banco nem sessão", async () => {
+    const antes = { ...process.env };
+    try {
+      for (const k of ["DATABASE_URL", "BETTER_AUTH_SECRET", "BETTER_AUTH_URL"]) delete process.env[k];
+      Object.assign(process.env, { NODE_ENV: "production", VERCEL_ENV: "production" });
+      const { redefinirEnv, env } = await import("../../../src/server/env");
+      redefinirEnv();
+      const e = env();
+      expect(e.contasAtivas).toBe(false);
+      expect(e.faltandoParaContas).toEqual(["DATABASE_URL", "BETTER_AUTH_SECRET", "BETTER_AUTH_URL"]);
+      expect(e.DATABASE_URL.startsWith("pglite:")).toBe(false); // nunca PGlite em disco na produção
+      const { banco, definirBanco } = await import("../../../src/server/db/client");
+      definirBanco(undefined);
+      await expect(banco()).rejects.toThrow(/contas desligadas/);
+      const { sessaoAtual } = await import("../../../src/server/http");
+      expect(await sessaoAtual(new Headers({ cookie: "better-auth.session_token=qualquer" }))).toBeNull();
+
+      // Preview da Vercel sem as variáveis: também modo de demonstração (disco só de leitura, sem PGlite).
+      Object.assign(process.env, { VERCEL_ENV: "preview" });
+      redefinirEnv();
+      expect(env().producao).toBe(false);
+      expect(env().contasAtivas).toBe(false);
+      expect(env().DATABASE_URL.startsWith("pglite:")).toBe(false);
+    } finally {
+      process.env = antes;
+      const { redefinirEnv } = await import("../../../src/server/env");
+      redefinirEnv();
+    }
+  });
 });

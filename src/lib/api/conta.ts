@@ -53,6 +53,8 @@ export const configAcesso = createServerFn({ method: "GET" }).handler(async () =
     emailHabilitado: e.AUTH_EMAIL_HABILITADO,
     googleHabilitado: Boolean(e.GOOGLE_CLIENT_ID && e.GOOGLE_CLIENT_SECRET),
     idadeMinima: e.MIN_ACCOUNT_AGE,
+    /** `false` = modo de demonstração (D-15): entrada local, sem conta. */
+    contasAtivas: e.contasAtivas,
   };
 });
 

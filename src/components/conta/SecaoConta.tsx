@@ -11,12 +11,14 @@ import { authClient } from "@/lib/auth-client";
 import { COPY } from "@/lib/copy";
 import { esquecerUsuarioDaSessao } from "@/lib/conta/usuario-da-sessao";
 import { esquecerSessao, sessao } from "@/lib/sessao";
-import { logout, useAppState } from "@/lib/store";
+import { sairDaDemonstracao } from "@/lib/conta/demonstracao";
+import { logout, sairDaEntradaLocal, useAppState } from "@/lib/store";
 import { sincronizarAgora } from "@/lib/sync/motor";
 
 export function SecaoConta() {
   const nav = useNavigate();
   const [email, setEmail] = useState<string | null>(null);
+  const [demonstracao, setDemonstracao] = useState(false);
   const [saindo, setSaindo] = useState(false);
   const [erro, setErro] = useState<string>();
   const [pendente, setPendente] = useState<null | { deTodos: boolean }>(null);
@@ -24,12 +26,23 @@ export function SecaoConta() {
 
   useEffect(() => {
     sessao().then(
-      (s) => setEmail(s.email),
+      (s) => {
+        setEmail(s.email);
+        setDemonstracao(s.modo === "demonstracao");
+      },
       () => undefined,
     );
   }, []);
 
   async function sair(deTodos: boolean, confirmado = false) {
+    // Modo de demonstração (D-15): não há conta nem fila; sair só encerra a entrada local e mantém o progresso.
+    if (demonstracao) {
+      sairDaDemonstracao();
+      sairDaEntradaLocal();
+      esquecerSessao();
+      nav({ to: "/", replace: true });
+      return;
+    }
     setSaindo(true);
     setErro(undefined);
     if (!confirmado) {
@@ -61,7 +74,7 @@ export function SecaoConta() {
       </h2>
       {email && <p className="break-all text-sm text-abismo">{email}</p>}
       <p role="status" className="text-sm text-nevoa">
-        {naFila > 0 ? COPY.conta.syncPendente : COPY.conta.syncEmDia}
+        {demonstracao ? COPY.conta.syncDemonstracao : naFila > 0 ? COPY.conta.syncPendente : COPY.conta.syncEmDia}
       </p>
       <AvisoErro>{erro}</AvisoErro>
       {pendente ? (
@@ -96,14 +109,16 @@ export function SecaoConta() {
           >
             <LogOut size={16} aria-hidden /> {saindo ? COPY.conta.saindo : COPY.conta.sair}
           </button>
-          <button
-            type="button"
-            className="btn-ghost w-full text-sm"
-            onClick={() => sair(true)}
-            disabled={saindo}
-          >
-            {COPY.conta.sairDeTodos}
-          </button>
+          {!demonstracao && (
+            <button
+              type="button"
+              className="btn-ghost w-full text-sm"
+              onClick={() => sair(true)}
+              disabled={saindo}
+            >
+              {COPY.conta.sairDeTodos}
+            </button>
+          )}
         </>
       )}
     </section>
