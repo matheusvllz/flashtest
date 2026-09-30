@@ -3,6 +3,7 @@ import {
   Outlet,
   Link,
   createRootRouteWithContext,
+  redirect,
   useRouter,
   useRouterState,
   HeadContent,
@@ -12,6 +13,8 @@ import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportarErro } from "../lib/error-reporting";
+import { ehRotaDeCadastro, ehRotaPublica, lembrarSessaoDaPrimeiraCarga, sessao } from "../lib/sessao";
+import { definirUsuarioDaSessao, informarUsuarioDaPrimeiraCarga } from "../lib/conta/usuario-da-sessao";
 import { BRAND, PALETTE } from "../lib/brand";
 import { FocaMark } from "../components/brand/FocaMark";
 import { fala } from "../lib/voz";
@@ -101,6 +104,24 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  /**
+   * Estudar exige conta (decisão 0006; docs/specs/46-producao T-05.6). Negar por padrão: toda rota fora de
+   * `ROTAS_PUBLICAS` (src/lib/sessao.ts) pede sessão; sem cadastro completo (ano de nascimento e aceite dos
+   * documentos vigentes), vai para /cadastro/completar. A landing e o onboarding de perfil não consultam nada.
+   */
+  beforeLoad: async ({ location }) => {
+    if (ehRotaPublica(location.pathname)) return { userIdDaSessao: null };
+    const s = await sessao();
+    if (!s.autenticado) throw redirect({ to: "/login", search: { volta: location.href } });
+    if (!s.cadastroCompleto && !ehRotaDeCadastro(location.pathname)) {
+      throw redirect({ to: "/cadastro/completar", search: { volta: location.href } });
+    }
+    // Navegação no cliente: o store confere, antes da próxima tela, se o estado local é desta conta (T-07.2).
+    if (typeof window !== "undefined") definirUsuarioDaSessao(s.userId);
+    return { userIdDaSessao: s.userId };
+  },
+  // Na primeira carga a guarda roda no servidor; o dono da sessão chega ao navegador por aqui.
+  loader: ({ context }) => ({ userIdDaSessao: context.userIdDaSessao ?? null }),
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -177,6 +198,13 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { userIdDaSessao } = Route.useLoaderData();
+  // Primeira carga: antes de qualquer tela filha ler o store (ele só hidrata quando a primeira tela o lê). Sem avisar
+  // ninguém: é renderização. E vale como a última sessão conhecida se a rede cair antes da próxima consulta.
+  if (typeof window !== "undefined") {
+    informarUsuarioDaPrimeiraCarga(userIdDaSessao);
+    lembrarSessaoDaPrimeiraCarga(userIdDaSessao);
+  }
   const router = useRouter();
   const naLanding = useRouterState({ select: (s) => s.location.pathname === "/" });
 

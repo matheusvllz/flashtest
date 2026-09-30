@@ -1,12 +1,9 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
 
-/**
- * "Criar conta" deixou de ser uma tela: virou o quiz de entrada (SDD 12, Development 1).
- * A rota fica só como redirect para não quebrar links antigos.
- */
+/** Link antigo de "criar conta": leva ao cadastro real (docs/specs/46-producao T-05.4). */
 export const Route = createFileRoute("/signup")({
   ssr: false,
   beforeLoad: () => {
-    throw redirect({ to: "/quiz" });
+    throw redirect({ to: "/cadastro" });
   },
 });

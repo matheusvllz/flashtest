@@ -236,7 +236,8 @@ export function useLearningSession(lesson: MicroLesson, opts: UseLearningSession
       startedAtMs: questionShownAtRef.current,
       localDate: hojeISO(),
       itemDifficulty: meta.difficulty,
-      source: "microlicao",
+      // A atividade da trilha precisa se identificar: o servidor paga a atividade pelas respostas DELA (docs/specs/46-producao §E.4).
+      source: opts.mode === "atividade" ? "atividade" : opts.mode === "checkpoint" ? "checkpoint" : "microlicao",
     });
     recordLearningAttempt(attempt, { irt: meta.irt, difficulty: meta.difficulty });
   }

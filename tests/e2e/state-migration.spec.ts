@@ -78,9 +78,13 @@ test("migração cria backup v4 uma única vez e adiciona schemaVersion sem apag
   expect(atualParsed.learning).toBeDefined();
 });
 
-test("usuário novo (sem storage nenhum) vai pro onboarding (/quiz) pela porta /app", async ({ page }) => {
-  await page.goto("/app", { waitUntil: "domcontentloaded" });
-  await page.waitForURL("**/quiz", { timeout: 5000 });
+test.describe("sem conta", () => {
+  // Estudar exige conta (decisão 0006): quem ainda não tem conta nem estudou neste aparelho vai para o onboarding.
+  test.use({ storageState: { cookies: [], origins: [] } });
+  test("usuário novo (sem storage nenhum e sem conta) vai pro onboarding (/quiz) pela porta /app", async ({ page }) => {
+    await page.goto("/app", { waitUntil: "domcontentloaded" });
+    await page.waitForURL("**/quiz", { timeout: 10_000 });
+  });
 });
 
 const V5_COM_PROGRESSO = JSON.stringify({
@@ -334,6 +338,8 @@ test.describe("RF-14 — nenhuma tela promete 'salvo' com a gravação falhando 
 });
 
 test.describe("RF-16 — JSON corrompido guarda cópia e avisa uma vez (docs/36 T-05.3)", () => {
+  // Sem conta: o estado corrompido vira o padrão (não onboarded) e /app leva ao onboarding, onde a faixa aparece.
+  test.use({ storageState: { cookies: [], origins: [] } });
   test("bruto ilegível: cópia foca.state.corrupt.<ISO>, faixa RU-5 com 'Ok', app segue do padrão", async ({ page }) => {
     await page.addInitScript(() => {
       if (!localStorage.getItem("foca.state.v3")) localStorage.setItem("foca.state.v3", "{quebrado");

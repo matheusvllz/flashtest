@@ -31,6 +31,11 @@ const esquema = z.object({
 
   /** Liga o login por e-mail e senha. Desligado em produção até existir domínio para e-mail (D-10). */
   AUTH_EMAIL_HABILITADO: booleano.optional(),
+  /**
+   * Desliga o rate limit do login (só fora de produção; em produção é ignorado). Usado pelos E2E, em que todos os
+   * testes saem do mesmo IP. O rate limit é coberto pelos testes de integração (tests/unit/servidor/auth.test.ts).
+   */
+  AUTH_RATE_LIMIT_DESLIGADO: booleano.optional(),
   RESEND_API_KEY: z.string().min(1).optional(),
   EMAIL_FROM: z.string().min(3).optional(),
 

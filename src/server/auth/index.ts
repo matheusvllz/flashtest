@@ -74,7 +74,7 @@ function criar(db: Banco) {
     },
     session: { expiresIn: 30 * DIA, updateAge: DIA },
     rateLimit: {
-      enabled: true,
+      enabled: e.producao || !e.AUTH_RATE_LIMIT_DESLIGADO,
       storage: "database",
       window: 60,
       max: 100,
@@ -110,6 +110,22 @@ function criar(db: Banco) {
               }
             }
             return { data: dados };
+          },
+          // Cadastro por e-mail já traz ano e aceite: registra o histórico do aceite e cria o perfil.
+          // (Conta pelo Google faz isso em /cadastro/completar.)
+          after: async (criado) => {
+            const u = criado as { id: string; birthYear?: number | null; termsVersion?: string | null; privacyVersion?: string | null };
+            if (u.birthYear == null || !u.termsVersion || !u.privacyVersion) return;
+            await db.insert(schema.profile).values({ userId: u.id }).onConflictDoNothing();
+            for (const [documento, versao] of [
+              ["termos", u.termsVersion],
+              ["privacidade", u.privacyVersion],
+            ] as const) {
+              await db
+                .insert(schema.legalAcceptance)
+                .values({ id: crypto.randomUUID(), userId: u.id, document: documento, version: versao })
+                .onConflictDoNothing();
+            }
           },
         },
       },

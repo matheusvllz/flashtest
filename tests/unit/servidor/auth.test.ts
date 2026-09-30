@@ -100,3 +100,31 @@ describe("recuperação e sessões (T4)", () => {
     expect(await amb.auth.api.getSession({ headers: new Headers({ cookie }) })).toBeNull();
   });
 });
+
+describe("configuração de produção", () => {
+  test("em produção o rate limit fica ligado mesmo com AUTH_RATE_LIMIT_DESLIGADO", async () => {
+    const antes = { ...process.env };
+    try {
+      Object.assign(process.env, {
+        NODE_ENV: "production",
+        VERCEL_ENV: "production",
+        DATABASE_URL: "pglite:memoria",
+        BETTER_AUTH_SECRET: "x".repeat(48),
+        BETTER_AUTH_URL: "https://foca.exemplo",
+        AUTH_RATE_LIMIT_DESLIGADO: "true",
+      });
+      const { redefinirEnv, env } = await import("../../../src/server/env");
+      redefinirEnv();
+      expect(env().producao).toBe(true);
+      const { authDeTeste } = await import("../../../src/server/auth");
+      const a = authDeTeste(amb.db);
+      expect(a.options.rateLimit?.enabled).toBe(true);
+      expect(a.options.advanced?.useSecureCookies).toBe(true);
+      expect(a.options.emailAndPassword?.enabled).toBe(false); // sem domínio, e-mail desligado em produção (D-10)
+    } finally {
+      process.env = antes;
+      const { redefinirEnv } = await import("../../../src/server/env");
+      redefinirEnv();
+    }
+  });
+});

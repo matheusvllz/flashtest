@@ -41,6 +41,7 @@ substituido-por: null
 | tanstack-router@claude-skills (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
 | tailwind-v4-shadcn@claude-skills (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
 | foca-sdd | local-skill | sim | sim | `.agents/skills` | — |
+| foca-backend | local-skill | sim | sim | `.agents/skills` | — |
 | foca-social | local-skill | sim | sim | `.agents/skills` | — |
 | omniroute-mcp | mcp-server | sim | — | `.mcp.json` | — |
 | agente `spec-verifier` | agente | sim (`.claude/agents/spec-verifier.md`) | sim (`.codex/agents/spec-verifier.toml`) | — | — |

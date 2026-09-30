@@ -21,53 +21,55 @@ import {
   xpLedger,
 } from "@/server/db/schema";
 import { env } from "@/server/env";
-import { ErroApp, checarOrigem, exigirSessao, respostaDeErro, sessaoAtual } from "@/server/http";
+import { ErroApp, checarOrigem, exigirSessao, respostaDeErro } from "@/server/http";
+import { gravarPerfil } from "@/server/conta/perfil";
 import { limitar } from "@/server/limite";
 import { and, eq } from "drizzle-orm";
 
-/** O que a interface precisa saber da sessão (sem e-mail em claro além do próprio aluno). */
-export interface EstadoDaSessao {
-  autenticado: boolean;
-  /** Cadastro completo: ano de nascimento informado e documentos legais vigentes aceitos. */
-  cadastroCompleto: boolean;
-  emailVerificado: boolean;
-  nome: string | null;
-  email: string | null;
-  /** Precisa aceitar de novo porque a versão dos termos ou da política mudou. */
-  reaceitePendente: boolean;
-}
+/** Perfil respondido no onboarding (fica no aparelho até a conta existir). Só os campos de privacidade.md. */
+export const esquemaPerfil = z.object({
+  primeiroNome: z.string().trim().max(40).optional(),
+  etapa: z.string().max(40).optional(),
+  uf: z.string().regex(/^[A-Z]{2}$/).optional(),
+  cursoAlvo: z.string().max(80).optional(),
+  instituicaoAlvo: z.string().max(120).optional(),
+  provas: z.array(z.unknown()).max(10).optional(),
+  preferencias: z.record(z.string(), z.unknown()).optional(),
+});
+export type PerfilDoOnboarding = z.infer<typeof esquemaPerfil>;
 
-export const obterSessao = createServerFn({ method: "GET" }).handler(async (): Promise<EstadoDaSessao> => {
-  const s = await sessaoAtual();
-  if (!s) return { autenticado: false, cadastroCompleto: false, emailVerificado: false, nome: null, email: null, reaceitePendente: false };
-  const aceitouVigentes = s.termosVersao === LEGAL.termos.versao && s.privacidadeVersao === LEGAL.privacidade.versao;
+const pedidoCompletar = z.object({
+  /** Obrigatório só se a conta ainda não tem ano (login pelo Google). O ano já registrado nunca é trocado. */
+  anoNascimento: z.number().int().min(1900).max(new Date().getFullYear()).optional(),
+  termosVersao: z.string().max(40),
+  privacidadeVersao: z.string().max(40),
+  perfil: esquemaPerfil.optional(),
+});
+
+/** O que a tela de acesso pode oferecer (e-mail desligado em produção até haver domínio — D-10). */
+export const configAcesso = createServerFn({ method: "GET" }).handler(async () => {
+  const e = env();
   return {
-    autenticado: true,
-    cadastroCompleto: s.anoNascimento !== null && aceitouVigentes,
-    emailVerificado: s.emailVerificado,
-    nome: s.nome,
-    email: s.email,
-    reaceitePendente: s.anoNascimento !== null && !aceitouVigentes,
+    emailHabilitado: e.AUTH_EMAIL_HABILITADO,
+    googleHabilitado: Boolean(e.GOOGLE_CLIENT_ID && e.GOOGLE_CLIENT_SECRET),
+    idadeMinima: e.MIN_ACCOUNT_AGE,
   };
 });
 
-const pedidoCompletar = z.object({
-  anoNascimento: z.number().int().min(1900).max(new Date().getFullYear()),
-  termosVersao: z.string().max(40),
-  privacidadeVersao: z.string().max(40),
-  /** Perfil respondido no onboarding antes do cadastro (fica no aparelho até aqui). */
-  perfil: z
-    .object({
-      primeiroNome: z.string().trim().max(40).optional(),
-      etapa: z.string().max(40).optional(),
-      uf: z.string().regex(/^[A-Z]{2}$/).optional(),
-      cursoAlvo: z.string().max(80).optional(),
-      instituicaoAlvo: z.string().max(120).optional(),
-      provas: z.array(z.unknown()).max(10).optional(),
-      preferencias: z.record(z.string(), z.unknown()).optional(),
-    })
-    .optional(),
-});
+export const salvarPerfil = createServerFn({ method: "POST" })
+  .validator((d: unknown) => esquemaPerfil.parse(d))
+  .handler(async ({ data }) => {
+    try {
+      checarOrigem();
+      const s = await exigirSessao();
+      const db = await banco();
+      await limitar(db, `perfil:${s.userId}`, 60, 20);
+      await gravarPerfil(db, s.userId, data);
+      return { ok: true as const };
+    } catch (e) {
+      return respostaDeErro(e);
+    }
+  });
 
 /**
  * Completa o cadastro: idade mínima (ADR 0006), aceite dos documentos vigentes e perfil. Abaixo da
@@ -84,15 +86,17 @@ export const completarCadastro = createServerFn({ method: "POST" })
       if (data.termosVersao !== LEGAL.termos.versao || data.privacidadeVersao !== LEGAL.privacidade.versao) {
         throw new ErroApp(400, "VERSAO_DESATUALIZADA");
       }
-      if (idadePeloAno(data.anoNascimento) < env().MIN_ACCOUNT_AGE) {
+      const [atual] = await db.select({ ano: user.birthYear }).from(user).where(eq(user.id, s.userId));
+      const ano = atual?.ano ?? data.anoNascimento;
+      if (ano == null) throw new ErroApp(400, "ANO_OBRIGATORIO");
+      if (idadePeloAno(ano) < env().MIN_ACCOUNT_AGE) {
         await db.delete(user).where(eq(user.id, s.userId));
         return { ok: false as const, codigo: "IDADE_MINIMA" };
       }
-      const p: NonNullable<typeof data.perfil> = data.perfil ?? {};
       await db.transaction(async (tx) => {
         await tx
           .update(user)
-          .set({ birthYear: data.anoNascimento, termsVersion: data.termosVersao, privacyVersion: data.privacidadeVersao })
+          .set({ birthYear: ano, termsVersion: data.termosVersao, privacyVersion: data.privacidadeVersao })
           .where(eq(user.id, s.userId));
         for (const [documento, versao] of [
           ["termos", data.termosVersao],
@@ -100,31 +104,8 @@ export const completarCadastro = createServerFn({ method: "POST" })
         ] as const) {
           await tx.insert(legalAcceptance).values({ id: randomUUID(), userId: s.userId, document: documento, version: versao }).onConflictDoNothing();
         }
-        await tx
-          .insert(profile)
-          .values({
-            userId: s.userId,
-            firstName: p.primeiroNome || null,
-            level: p.etapa ?? null,
-            residenceState: p.uf ?? null,
-            targetCourse: p.cursoAlvo ?? null,
-            targetInstitution: p.instituicaoAlvo ?? null,
-            examTargets: (p.provas ?? []) as Json[],
-            studyPrefs: (p.preferencias ?? {}) as JsonObjeto,
-            onboardedAt: new Date(),
-          })
-          .onConflictDoUpdate({
-            target: profile.userId,
-            set: {
-              ...(p.primeiroNome ? { firstName: p.primeiroNome } : {}),
-              ...(p.etapa ? { level: p.etapa } : {}),
-              ...(p.uf ? { residenceState: p.uf } : {}),
-              ...(p.cursoAlvo ? { targetCourse: p.cursoAlvo } : {}),
-              ...(p.instituicaoAlvo ? { targetInstitution: p.instituicaoAlvo } : {}),
-              updatedAt: new Date(),
-            },
-          });
       });
+      await gravarPerfil(db, s.userId, data.perfil ?? {});
       return { ok: true as const };
     } catch (e) {
       return respostaDeErro(e);

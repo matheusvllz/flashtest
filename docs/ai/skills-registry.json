@@ -1000,6 +1000,38 @@
       "canonicalDir": ".agents/skills"
     },
     {
+      "id": "foca-backend",
+      "source": "local (this repo)",
+      "type": "local-skill",
+      "installMethod": "authored in repo",
+      "scope": "project",
+      "enabledByDefault": true,
+      "location": ".claude/skills",
+      "skills": [
+        "foca-backend"
+      ],
+      "category": "backend",
+      "role": "primary",
+      "alwaysOnTokens": 80,
+      "triggers": [
+        "server function",
+        "banco",
+        "migração",
+        "autenticação",
+        "sincronização",
+        "recompensa no servidor"
+      ],
+      "doNotUse": [
+        "UI pura"
+      ],
+      "overlaps": [],
+      "agents": [
+        "claude",
+        "codex"
+      ],
+      "canonicalDir": ".agents/skills"
+    },
+    {
       "id": "foca-social",
       "source": "local (this repo)",
       "type": "local-skill",

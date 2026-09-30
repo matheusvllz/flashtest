@@ -5,6 +5,7 @@ import { NavRail } from "@/components/NavRail";
 import { TutorBubble } from "@/components/TutorBubble";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { FEATURES, HOME_ROUTE } from "@/lib/features";
+import { useContaNoAparelho } from "@/lib/sync/vinculo";
 import { cn } from "@/lib/utils";
 
 /** Logo da marca nos headers e telas de entrada. Delegada ao FocaMark para haver um único ponto de verdade. */
@@ -97,6 +98,8 @@ export function AppShell({
   const router = useRouter();
   const navigate = useNavigate();
   const isNavRoute = NAV_ITEMS.some((item) => isNavActive(pathname, item.to));
+  // Sincronização com a conta e a oferta de importação (docs/specs/46-producao T-06.4/T-07.2).
+  useContaNoAparelho();
 
   function voltar() {
     if (window.history.length > 1) router.history.back();

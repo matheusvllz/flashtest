@@ -17,9 +17,10 @@ describe("destinos da landing", () => {
     for (const destino of Object.values(APP_DESTINOS)) expect(arquivos).toContain(arquivoDaRota(destino));
   });
 
-  test("/app decide entre a home e o onboarding; /welcome redireciona para a landing", () => {
+  test("/app decide pela sessão entre a home, o login e o onboarding; /welcome redireciona para a landing", () => {
+    // Estudar exige conta (decisão 0006): com sessão vai para a home; sem, quem já estudou aqui vai ao login.
     const app = readFileSync(resolve(ROTAS, "app.tsx"), "utf8");
-    expect(app).toContain('s.authed && s.onboarded ? HOME_ROUTE : "/quiz"');
+    expect(app).toContain('s.autenticado ? HOME_ROUTE : local.onboarded ? "/login" : "/quiz"');
     const welcome = readFileSync(resolve(ROTAS, "welcome.tsx"), "utf8");
     expect(welcome).toContain('redirect({ to: "/"');
   });

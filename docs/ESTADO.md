@@ -1,6 +1,6 @@
 ---
 estado: em-execucao
-atualizado: 2026-09-29
+atualizado: 2026-09-30
 canonico-de: [estado atual, próxima tarefa]
 ---
 
@@ -17,14 +17,14 @@ canonico-de: [estado atual, próxima tarefa]
 
 ## Onde estamos
 
-- **Fase:** F03 — Build e repositório sem Lovable e Netlify.
-- **Concluído:** F00 (preparação), F01 (reorganização do SDD), F02 (instruções e skills para Claude e Codex) — evidência no [registro](specs/46-producao/registro.md).
-- **Próxima tarefa:** T-03.1 (`vite.config.ts` sem o wrapper da Lovable), junto da correção do teste de CSS compilado (DV-01).
+- **Concluído:** F00–F04 (commits na branch) e F05–F07 (contas, guarda de rotas, sincronização com a conta, importação do estudo local) — evidência no [registro](specs/46-producao/registro.md). Estado de validação: **validado localmente** (PGlite, e-mail em arquivo). Nada validado em ambiente integrado: sem Neon, Google e Resend.
+- **Pendências dentro de F05–F07** (no registro): E2E de conta e de sincronização só no projeto `chromium` (faltam 320/1280); suíte `isolamento.test.ts` de todas as funções de servidor (T-06.6); teste de queda no meio da importação; `/conta` com perfil editável e lista de sessões (vai com a F09).
+- **Próxima fase:** F08 — Foca IA em produção (sessão e política de idade no tutor, contexto montado no servidor, cotas por plano — grátis 3 mensagens/dia, Pro 20 + 5 fotos —, teto global de custo, compressão de imagem, moderação, protocolo de autocuidado, consentimento do responsável aos 17).
 
 ## Último checkpoint verde
 
-- Commit: ver `git log -1` na branch `producao-46` (F01 + F02).
-- `bun run docs:check` ✅ · `bunx tsc --noEmit` ✅ · `bun test tests/unit` 1243 pass / 2 fail preexistentes (DV-01) · `NITRO_PRESET=node-server bun run build` ✅ · `node scripts/validate-skills.mjs` ✅.
+- Branch `producao-46`, commit da F05–F07 (ver `git log -1`).
+- `bunx tsc --noEmit` ✅ · `bun test tests/unit` 1311 pass / 0 fail · `bun run lint:ci` 0 erros · `bun run docs:check` ✅ · `bun run build` ✅ · `bunx playwright test` 484 passed / 0 failed / 73 skipped.
 
 ## Verificações manuais pedidas ao proprietário
 

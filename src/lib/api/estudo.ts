@@ -10,7 +10,9 @@ import type { JsonObjeto } from "@/lib/json";
 import { pedidoEnvio, type Agregado, type RespostaEnvio } from "@/lib/sync/contrato";
 import { banco } from "@/server/db/client";
 import { learningDoc } from "@/server/db/schema";
+import { importarEstado } from "@/server/estudo/importar";
 import { agregadoDoAluno, aplicarEventos } from "@/server/estudo/sincronizar";
+import { pedidoImportacao, type ResumoImportacao } from "@/lib/sync/importacao";
 import { checarOrigem, exigirSessao, respostaDeErro } from "@/server/http";
 import { limitar } from "@/server/limite";
 import { eq, sql } from "drizzle-orm";
@@ -85,6 +87,25 @@ export const salvarDocumento = createServerFn({ method: "POST" })
       if (r.length) return { ok: true, rev: r[0].rev };
       const [atual] = await db.select({ rev: learningDoc.rev }).from(learningDoc).where(eq(learningDoc.userId, s.userId));
       return { ok: false, codigo: "CONFLITO", rev: atual?.rev };
+    } catch (e) {
+      return respostaDeErro(e);
+    }
+  });
+
+/**
+ * Importa o progresso que ficou no aparelho de antes da conta (docs/specs/46-producao T-07.1). Uma vez por
+ * aparelho e conta (`importId`); o servidor recalcula tudo e limita o XP ao que o aparelho mostrava.
+ */
+export const importarEstadoLocal = createServerFn({ method: "POST" })
+  .validator((d: unknown) => pedidoImportacao.parse(d))
+  .handler(async ({ data }): Promise<{ ok: true; resumo: ResumoImportacao; agregado: Agregado } | { ok: false; codigo: string }> => {
+    try {
+      checarOrigem();
+      const s = await exigirSessao();
+      const db = await banco();
+      await limitar(db, `importar:${s.userId}`, 3600, 5);
+      const r = await importarEstado(db, s.userId, data);
+      return { ok: true, ...r };
     } catch (e) {
       return respostaDeErro(e);
     }

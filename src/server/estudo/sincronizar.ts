@@ -42,9 +42,9 @@ function diaValido(dataLocal: string, hoje: string): boolean {
   return diff >= -1 && diff <= JANELA_DIAS_ATRAS;
 }
 
-type Tx = Parameters<Parameters<Banco["transaction"]>[0]>[0];
+export type Tx = Parameters<Parameters<Banco["transaction"]>[0]>[0];
 
-async function pagarXp(tx: Tx, userId: string, chave: string, alvo: number, motivo: string, dataLocal: string) {
+export async function pagarXp(tx: Tx, userId: string, chave: string, alvo: number, motivo: string, dataLocal: string) {
   await tx
     .insert(xpLedger)
     .values({ userId, key: chave, xp: alvo, reason: motivo, localDate: dataLocal })
@@ -54,7 +54,7 @@ async function pagarXp(tx: Tx, userId: string, chave: string, alvo: number, moti
     });
 }
 
-async function marcarDia(tx: Tx, userId: string, dataLocal: string) {
+export async function marcarDia(tx: Tx, userId: string, dataLocal: string) {
   await tx
     .insert(studyDay)
     .values({ userId, localDate: dataLocal, blocks: 1 })

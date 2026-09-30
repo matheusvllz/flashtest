@@ -73,3 +73,6 @@ __pycache__/
 
 # Referências visuais de trabalho da landing (retratos do app, revisões): regeneráveis, fora do repo (docs/44).
 assets-src/
+
+# Sessão da conta de teste dos E2E (gerada por tests/e2e/auth.setup.ts).
+tests/e2e/.auth/

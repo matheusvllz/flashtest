@@ -1,6 +1,6 @@
 ---
 estado: em-execucao
-atualizado: 2026-09-29
+atualizado: 2026-09-30
 iniciativa: 46
 id: 47
 ---
@@ -16,7 +16,10 @@ id: 47
 | Commit | Conteúdo |
 |---|---|
 | `9109d8f` | Trabalho preexistente (automação do Instagram, foca-social, remoção dos arquivos Abroad e Flash Test — D-02/D-05) |
-| (ver `git log`) | F01 + F02: reorganização do SDD, instruções e skills para Claude e Codex |
+| `92e5963` | F01 + F02: reorganização do SDD, instruções e skills para Claude e Codex |
+| `8a631c3` | F03: build e repositório sem Lovable e Netlify |
+| `acd62df` | F04: fundação do backend (banco, autenticação, sincronização no servidor) |
+| (ver `git log -1`) | F05–F07: contas e telas de acesso, guarda de rotas, outbox e motor de sincronização, vínculo do aparelho, importação; skill `foca-backend` (T-06.7) |
 
 ## Linha de base (T-00.1, 29/09/2026, HEAD `9109d8f`)
 
@@ -218,8 +221,71 @@ Ver a tabela acima. Build com preset padrão e E2E ficaram atrás do lint no mes
 - **Build de produção servido localmente** (`NODE_ENV=production`, PGlite em disco): `/api/saude` **200** `{"ok":true,"banco":"ok"}` (banco criado e migrado na primeira requisição); `/api/auth/ok` **200**; login com senha errada **401** com mensagem genérica; login e cadastro vindos de outra origem **403**.
 - Estado de validação: **validado localmente**. Nada validado em ambiente integrado (sem Neon, sem Google, sem Resend).
 
-## F05/F06 — já adiantado nesta sessão (servidor)
+## F05 — Contas e autenticação (30/09/2026)
+
+### T-05.1 / T-05.2 / T-05.3 — Identidade, Better Auth e e-mail
 - `src/server/auth/index.ts`: Better Auth com e-mail e senha verificados (desligável por `AUTH_EMAIL_HABILITADO`), Google quando há credenciais, sessão de 30 dias com renovação diária, redefinição revoga sessões, vínculo de contas sem provedor "confiável", rate limit em banco com regras por rota, cookies seguros em HTTPS, ano de nascimento e versões dos termos como campos do usuário, hook que recusa idade abaixo de `MIN_ACCOUNT_AGE` e aceite fora da versão vigente. Rotas `/api/auth/$` e `/api/saude`.
 - `src/server/email/`: envio (memória em teste, arquivo em `.data/emails/` no desenvolvimento, Resend por `fetch` com domínio) e os 4 modelos (verificação, redefinição, conta excluída, consentimento do responsável), revisados com `better-writing` contra `docs/COPY.md`.
-- `src/lib/recompensas.ts` (regras puras de XP e sequência, fonte única para app e servidor; 9 testes), `src/lib/sync/contrato.ts` (contrato zod dos eventos), `src/server/estudo/{conteudo,sincronizar}.ts` (correção pelo gabarito com `checkAnswer`, livro de XP com teto por chave, teto diário de 60 atividades pagas, sequência pelos dias, janela de datas de 7 dias, transação com o perfil travado), `src/lib/api/{estudo,conta}.ts` (funções de servidor: enviar eventos, obter estado, salvar documento com revisão otimista, sessão, completar cadastro, exportar dados), `src/lib/auth-client.ts`, `src/lib/legal.ts`.
-- **Ainda não ligado às telas**: nada disso muda a experiência atual até as telas de acesso (T-05.4) e a outbox no store (T-06.4).
+- **Estado:** implementado e validado localmente. Produção bloqueada por Resend + domínio (D-10).
+
+### T-05.4 — Telas de acesso
+- `/login`, `/cadastro`, `/cadastro/completar` (ano de nascimento e aceite; também o reaceite quando a versão dos documentos muda), `/verificar-email`, `/esqueci-a-senha`, `/redefinir-senha`; `/signup` → `/cadastro`, `/forgot` → `/esqueci-a-senha`. Peças em `src/components/conta/` (rótulo visível, erro por `aria-describedby`, alvos ≥ 44 px). Copy em `COPY.conta` e no inventário (`docs/copy/inventario.md` §2.11). Nenhuma mensagem revela se o e-mail tem conta.
+- **Estado:** implementado e validado localmente (`tests/e2e/conta.spec.ts`). **Pendente:** os E2E dos 5 fluxos nos 3 tamanhos (320/390/1280) — hoje rodam só no projeto `chromium`.
+
+### T-05.5 — Sessão no app e área da conta
+- `src/lib/api/sessao.ts` (`obterSessao`, leve e sem zod, porque a raiz o importa) e `src/lib/sessao.ts` (cache de 1 min; `destinoSeguro` contra redirecionamento aberto). Seção "Conta" no perfil (`SecaoConta`): e-mail, estado da sincronização, sair, sair de todos os aparelhos.
+- **Divergência:** a spec pede `/conta` com perfil editável e lista de sessões; por ora é a seção no `/profile` (sair e sair de todos). Perfil editável e lista de sessões → F09, junto de exportar e excluir.
+
+### T-05.6 — Rotas de estudo exigem conta
+- Guarda "negar por padrão" no `beforeLoad` da raiz (`ROTAS_PUBLICAS` em `src/lib/sessao.ts`): sem sessão → `/login?volta=`; sem cadastro completo → `/cadastro/completar`. A raiz continua sem importar store nem AppShell (teste do `45` verde).
+- **DV-12 — sem schema v7:** a spec pedia migração v6 → v7 para `account`/`outbox`/`deviceId`. Ficou um campo **opcional** `account` no schema v6 (o padrão do `36`: campo novo opcional não sobe o schema), normalizado na leitura (`normalizarConta`: formato inválido vira "sem conta"). Motivo: não há dado existente a migrar, e um schema novo travaria abas antigas abertas (proteção de versão futura) sem ganho. `authed` continua um indicador local (a landing o lê); quem decide o acesso é a sessão.
+- **DV-13 — sessão sem rede:** a guarda consultava o servidor a cada navegação (cache de 1 min); sem rede, a consulta falhava e a tela caía no erro da raiz ("Isso aqui não carregou"). Achado pelo E2E de falha de rede. Correção: sem rede, `sessao()` segue com a última sessão confirmada nesta aba (ou a da primeira carga, que o servidor já validou). É seguro porque a guarda só controla a navegação: toda função de servidor confere a sessão de novo.
+
+### T-05.7 — Google OAuth
+- **Bloqueada** (proprietário: projeto no Google Cloud + domínio). O código só liga o Google quando `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET` existem.
+
+### T-05.8 — Testes de autenticação
+- `tests/unit/servidor/auth.test.ts` (10: cadastro, verificação, senha errada, idade mínima sem criar conta nem e-mail, aceite fora da versão, rate limit ligado em produção mesmo com a chave de desligar, revogação na redefinição, origem cruzada, anti-enumeração) e `tests/e2e/conta.spec.ts` (9).
+
+## F06 — Dados de estudo no servidor e sincronização (30/09/2026)
+
+### T-06.1 / T-06.2 / T-06.3 — Esquema, regras e API
+- Tabelas de estudo em `src/server/db/schema/estudo.ts` (FK com cascata em tudo o que é do aluno). Regras puras em `src/lib/recompensas.ts`, a mesma fonte para app e servidor. `src/server/estudo/sincronizar.ts`: correção pelo gabarito (`checkAnswer`), livro de XP com teto por chave, teto diário de 60 atividades pagas, sequência pelos dias, janela de datas, transação com o perfil travado. Funções de servidor em `src/lib/api/estudo.ts` (enviar eventos, obter estado, salvar documento com revisão otimista e limite de 512 KB).
+- **Divergência:** a spec nomeia `src/server/estudo/regras.ts`; as regras ficaram em `src/lib/recompensas.ts` (puras, sem dependência de servidor) para o app e o servidor usarem literalmente a mesma função.
+
+### T-06.4 — Outbox no store
+- **Um store só.** `src/lib/store.ts` ganhou `account` (`userId`, `outbox`, `docRev`, `docAssinatura`, `aparelhoId`). As ações que já existiam enfileiram eventos: `recordLearningAttempt` (resposta, com a fonte pela origem da tentativa), `completeLesson`/`completeMicroLesson` (lição), `completeJourneyActivity` (atividade, com a `attemptKey` da tentativa), `registrarAulaConcluida`/`registrarLoteFlashcardsConcluido` (bloco) e o bônus de entrada ao vincular. Sem conta vinculada nada é enfileirado. Teto de 1000 eventos. Nenhuma regra pedagógica mudou.
+- Motor em `src/lib/sync/motor.ts`, montado pelo `AppShell` via `useContaNoAparelho` (`src/lib/sync/vinculo.ts`): lotes de até 200, espera crescente de 1 s a 5 min, tira da fila o que o servidor aplicou ou recusou, puxa agregado e documento no login, ao voltar à aba, ao reconectar e a cada 5 min. O agregado do servidor (XP, sequência, congelamentos) substitui o local quando a fila está vazia.
+- Aviso de sincronização atrasada na seção Conta do perfil.
+- **DV-14 — resposta da aula de 60 s em letra:** o `/study` grava a alternativa como letra ("B"), e o contrato leva o índice. Sem conversão, toda resposta certa chegaria ao servidor como "Não sei" (5 XP em vez de 15). O store converte letra → índice (A = 0), na mesma ordem de `questionToExercise`; um teste confere que o banco inteiro está em ordem A–E.
+- **DV-15 — respostas de atividade da trilha registradas como `microlicao`:** o `useLearningSession` fixava a origem, então o servidor não acharia as respostas da atividade e recusaria a conclusão (`ATIVIDADE_SEM_RESPOSTAS`). A origem agora segue o `mode` do player (`atividade`/`checkpoint`). Nenhuma regra do app lê essa origem (conferido por busca).
+- **DV-16 — E2E antigos com o motor pausado:** os E2E que já existiam usam uma conta de teste compartilhada e semeiam estado local sem conta. Para eles, a sessão de teste leva `foca.sync.pausadaDev=1` (chave lida **só** no servidor de desenvolvimento, `import.meta.env.DEV`) e a pergunta da importação adiada; senão o XP e o documento de um teste entrariam no outro. A sincronização tem E2E próprios, com contas separadas e o motor ligado.
+
+### T-06.5 — Multiaparelho
+- Documento de planejamento com revisão otimista: aparelho novo adota o documento do servidor; aparelho com mudança local ainda não salva não é sobrescrito (a próxima gravação daqui vence; fatos e recompensas estão no servidor de qualquer forma). E2E "dois aparelhos".
+
+### T-06.6 / T-06.7
+- **Parcial:** isolamento testado em `sincronizar.test.ts` e `importar.test.ts` (A não lê nem altera B). A suíte `isolamento.test.ts` cobrindo **todas** as funções de servidor ainda não existe → pendente, junto de F08/F09, que trazem mais funções.
+- **T-06.7 concluída:** skill `foca-backend` em `.agents/skills/foca-backend/` (espelhada em `.claude/skills/`, registrada no `skills-registry.json`, tabela do `SKILLS.md` regenerada) com as convenções que existem no código: molde da função de servidor, recompensas e sincronização, migração, autenticação, testes com duas contas e checklist L2. `node scripts/validate-skills.mjs` → 0 FAIL; a skill aparece nos dois agentes. O critério "uma tarefa seguinte a usa e o registro cita" fica para a F08.
+
+## F07 — Migração do estado local (30/09/2026)
+
+### T-07.1 — Contrato de importação
+- `src/lib/sync/importacao.ts` (zod, limites) e `src/server/estudo/importar.ts`: transação única, idempotente por `importId`, correção pelo gabarito, XP recalculado com teto no XP que o aparelho mostrava, datas entre 2026-01-01 e agora, `origin = import`. 7 testes (envio duplo, XP adulterado, gabarito, datas impossíveis, isolamento, lista acima do limite). **Pendente:** teste que interrompa a transação no meio (a transação garante o "tudo ou nada", mas não há teste disso).
+
+### T-07.2 — Vínculo do aparelho
+- O estado local pertence a uma conta (`account.userId`). A raiz informa a conta da sessão (`src/lib/conta/usuario-da-sessao.ts`, módulo mínimo, porque a raiz não importa o store) antes de qualquer tela ler o store. Se o estado salvo é de **outra** conta, ele é apagado antes de aparecer, junto dos backups e das cópias corrompidas. Na navegação no cliente (entrar com outra conta com o app aberto), a reconciliação acontece na hora.
+- Sair (`logout`) apaga o aparelho inteiro (D-14). Antes, a seção Conta tenta mandar a fila; se algo ficou, pede confirmação ("Sair mesmo assim" / "Continuar na conta").
+- Estudo de antes da conta **não** é vinculado em silêncio: vai para a tela de escolha.
+
+### T-07.3 — Tela de escolha
+- `/importar-progresso`: resumo (respostas, lições), "Levar para a conta", "Começar do zero" (com confirmação que repete a consequência) e "Decidir depois" (adia por um dia; o estudo segue só no aparelho). Falha de rede mostra o erro e deixa tentar de novo. Axe sem violação séria nem crítica (E2E).
+
+### T-07.4 — Fluxo completo
+- `tests/e2e/sync.spec.ts` (8): dois aparelhos; aparelho compartilhado; sair apaga e entrar de novo traz o progresso; sem conexão o estudo fica na fila e sobe quando a conexão volta; sair com fila pendente pede confirmação; importar; começar do zero. **Pendente:** rodar nos 3 projetos Playwright (hoje só `chromium`).
+
+### Evidência F05–F07 (30/09/2026)
+- `bunx tsc --noEmit` ✅ · `bun test tests/unit` **1311 pass, 0 fail** (103 arquivos; novos: `store-conta.test.ts` com 27 testes de outbox, vínculo, aparelho compartilhado, agregado, documento, importação e saída) · `bun run lint:ci` 0 erros (17 avisos preexistentes) · `bun run docs:check` ✅ · `bun run build` ✅ · `node scripts/validate-skills.mjs` 0 FAIL.
+- **E2E completo** (`bunx playwright test`, servidor de desenvolvimento, PGlite, e-mail em arquivo): **484 passed, 0 failed, 73 skipped** (os mesmos pulados de antes). Uma rodada anterior teve 3 falhas (`audio.spec.ts:9`, `trail-path.spec.ts:230` e `:290` no `narrow`) causadas por edição de código durante a execução (recarga do Vite); as três passaram isoladas e na rodada completa seguinte, sem edição.
+- `tests/e2e/sync.spec.ts`: **8/8** (rodado de novo depois do último ajuste — documento com as 200 tentativas mais recentes).
+- Estado de validação: **validado localmente**. Não validado em ambiente integrado (Neon, Google, Resend) nem publicado.

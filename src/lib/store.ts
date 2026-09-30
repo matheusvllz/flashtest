@@ -22,6 +22,9 @@ import {
   LIMITE_TENTATIVAS_RECENTES,
 } from "@/lib/learning/types";
 import type { PlannedActivity } from "@/lib/adaptive/types";
+import type { Agregado, EventoEstudo } from "@/lib/sync/contrato";
+import type { PedidoImportacao } from "@/lib/sync/importacao";
+import { aoMudarUsuarioDaSessao, usuarioDaSessao } from "@/lib/conta/usuario-da-sessao";
 import { recordAttemptForSkill } from "@/lib/learning/review";
 import {
   BACKUP_KEY_V6,
@@ -173,7 +176,27 @@ export type AppState = {
   };
   premiumTrial: { active: boolean; startedAt: string | null };
   offline: { downloaded: boolean };
+  /**
+   * Conta e sincronização neste aparelho (docs/specs/46-producao §E.4, T-06.4/T-07.2). Opcional, sem subir o
+   * schema (mesmo padrão do 36): ausente = aparelho sem conta vinculada. Ver `ContaNoAparelho`.
+   */
+  account?: ContaNoAparelho;
 };
+
+/**
+ * O que o aparelho sabe da conta: a quem este estado local pertence (`userId` — estado de outra conta nunca é mostrado
+ * a ninguém), os eventos de estudo ainda não enviados (`outbox`) e a revisão do documento de planejamento.
+ */
+export interface ContaNoAparelho {
+  userId: string | null;
+  outbox: EventoEstudo[];
+  /** Revisão do documento de planejamento que este aparelho viu por último no servidor. */
+  docRev: number;
+  /** Assinatura do último documento salvo no servidor (evita reenviar o mesmo). */
+  docAssinatura: string | null;
+  /** Id aleatório deste aparelho (importação idempotente). */
+  aparelhoId: string;
+}
 
 // v3: rebranding para Foca (docs/17 Fase 8). O formato é o mesmo da v2; a chave
 // antiga é lida uma vez e copiada, para não apagar o progresso de quem já usou.
@@ -421,6 +444,7 @@ function montarEstado(
       ...((parsed.premiumTrial as Partial<AppState["premiumTrial"]>) || {}),
     },
     offline: { ...defaultState.offline, ...((parsed.offline as Partial<AppState["offline"]>) || {}) },
+    account: normalizarConta(parsed.account),
   } as AppState;
 }
 
@@ -650,6 +674,9 @@ export function hydrate(): AppState {
   if (typeof window !== "undefined" && !loaded) {
     load();
     loaded = true;
+    // Aparelho compartilhado (docs/specs/46-producao T-07.2): o estado de outra conta some antes de qualquer tela ler.
+    const donoDaSessao = usuarioDaSessao();
+    if (donoDaSessao && !versaoFuturaAtiva) reconciliarConta(donoDaSessao);
     // Uma vez por página (docs/36 T-05.2): a aba em segundo plano adota o que
     // a outra gravou antes da próxima mutação dela.
     window.addEventListener("storage", aoMudarStorage);
@@ -737,14 +764,6 @@ function registrarAtividade(
   }
 }
 
-export function login(email: string, name: string) {
-  setState((s) => {
-    s.authed = true;
-    s.prefs.email = email;
-    if (name) s.prefs.name = name;
-    return s;
-  });
-}
 
 /**
  * Fecha o quiz de entrada: grava as lacunas e liga as flags de roteamento.
@@ -852,6 +871,15 @@ export function completeLesson(
   setState((s) => {
     s.progress.lessons[lessonId] = progress;
     s.progress.xp += xpAwarded;
+    enfileirar(s, {
+      tipo: "licao-concluida",
+      id: idDeEvento(`licao-${novoId()}`),
+      licaoId: lessonId,
+      tipoLicao: "redacao",
+      acertos: Math.min(correct, 100),
+      total: Math.min(Math.max(total, 1), 100),
+      ...quandoAgora(),
+    });
     // A trilha conta para a sequência tanto quanto a aula de 60s: o que o
     // produto premia é ter estudado hoje, não qual pilar foi tocado.
     registrarAtividade(s, "redacao", true);
@@ -901,6 +929,16 @@ export function completeMicroLesson(
       bestPct: Math.max(prev?.bestPct ?? 0, pct),
     };
     s.progress.xp += xpAwarded;
+    enfileirar(s, {
+      tipo: "licao-concluida",
+      id: idDeEvento(`micro-${novoId()}`),
+      licaoId: lessonId,
+      tipoLicao: "micro",
+      versao: version,
+      acertos: Math.min(correctPractice, 100),
+      total: Math.min(Math.max(totalPractice, 1), 100),
+      ...quandoAgora(),
+    });
     registrarAtividade(s, "lesson", true);
     return s;
   });
@@ -977,6 +1015,7 @@ export function registrarResposta(
 export function registrarAulaConcluida() {
   setState((s) => {
     s.progress.lessonsCompleted += 1;
+    enfileirar(s, { tipo: "bloco-concluido", id: idDeEvento(`aula-${novoId()}`), bloco: "aula-60s", ...quandoAgora() });
     registrarAtividade(s, "lesson", true);
     return s;
   });
@@ -1007,6 +1046,7 @@ export function registrarLoteFlashcardsConcluido() {
   setState((s) => {
     if (s.progress.today.date !== hojeISO()) s.progress.today = todayBucketVazio(hojeISO());
     s.progress.today.completedBlockIds.push(`flashcards-lote-${Date.now()}-${Math.floor(Math.random() * 1e6)}`);
+    enfileirar(s, { tipo: "bloco-concluido", id: idDeEvento(`cards-${novoId()}`), bloco: "flashcards", ...quandoAgora() });
     return s;
   });
 }
@@ -1190,6 +1230,7 @@ export function recordLearningAttempt(
     const attemptFinal = aplicarModeloAdaptativo(s, attempt, repetidoHoje, itemMeta);
 
     s.learning.recentAttempts.push(attemptFinal);
+    enfileirarResposta(s, attemptFinal);
     if (s.learning.recentAttempts.length > LIMITE_TENTATIVAS_RECENTES) {
       s.learning.recentAttempts.shift();
     }
@@ -1856,6 +1897,14 @@ export function completeJourneyActivity(
 
     const agora = new Date();
     const pct = total > 0 ? Math.round((correct / total) * 100) : null;
+    enfileirar(s, {
+      tipo: "atividade-concluida",
+      id: idDeEvento(`ativ-${novoId()}`),
+      attemptKey: attemptKey.slice(0, 200),
+      atividadeId: activity.id.slice(0, 200),
+      kind: activity.kind,
+      ...quandoAgora(agora),
+    });
     bumpJourneySeq(j);
     j.history.push({
       activityId: activity.id,
@@ -1987,11 +2036,405 @@ export function performanceFacts(s: AppState): string[] {
   return facts;
 }
 
-export function logout() {
+/**
+ * Marca, neste aparelho, que há uma conta com sessão (docs/specs/46-producao T-05.5). É só um indicador local
+ * (a landing o usa para mostrar "Continuar estudando"); quem decide o acesso é a sessão no servidor.
+ */
+export function marcarContaAtiva() {
   setState((s) => {
-    s.authed = false;
+    s.authed = true;
     return s;
   });
+}
+
+/** Sair da conta (D-14): nada da conta fica no aparelho. Quem chama encerra a sessão no servidor antes. */
+export function logout() {
+  limparAparelho();
+}
+
+/* ------------------------------------------- conta e sincronização (docs/specs/46-producao §E.4, §G) --- */
+
+/** Teto da outbox (~300 KB). Passou disso sem conexão por muito tempo, os eventos mais antigos saem. */
+export const LIMITE_OUTBOX = 1000;
+/** Tentativas recentes que vão no documento de planejamento. */
+const DOC_TENTATIVAS = 200;
+
+type FonteResposta = Extract<EventoEstudo, { tipo: "resposta" }>["fonte"];
+
+function novoId(): string {
+  const c = globalThis.crypto;
+  return c?.randomUUID
+    ? c.randomUUID().replaceAll("-", "")
+    : `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 14)}`;
+}
+
+/** Id de evento aceito pelo contrato (`[A-Za-z0-9_-]{8,64}`), estável para o mesmo id de origem (idempotência). */
+export function idDeEvento(origem: string): string {
+  const limpo = origem.replace(/[^A-Za-z0-9_-]/g, "_").slice(0, 64);
+  return limpo.length >= 8 ? limpo : limpo.padEnd(8, "0");
+}
+
+function contaVazia(aparelhoId: string = novoId()): ContaNoAparelho {
+  return { userId: null, outbox: [], docRev: 0, docAssinatura: null, aparelhoId };
+}
+
+/** Lê `account` do storage sem confiar no formato (lixo vira "sem conta"). */
+function normalizarConta(bruto: unknown): ContaNoAparelho | undefined {
+  if (!bruto || typeof bruto !== "object") return undefined;
+  const c = bruto as Partial<ContaNoAparelho>;
+  return {
+    userId: typeof c.userId === "string" && c.userId ? c.userId : null,
+    outbox: Array.isArray(c.outbox)
+      ? c.outbox
+          .filter((e) => e && typeof e === "object" && typeof (e as { id?: unknown }).id === "string")
+          .slice(-LIMITE_OUTBOX)
+      : [],
+    docRev: typeof c.docRev === "number" && c.docRev >= 0 ? c.docRev : 0,
+    docAssinatura: typeof c.docAssinatura === "string" ? c.docAssinatura : null,
+    aparelhoId:
+      typeof c.aparelhoId === "string" && /^[A-Za-z0-9_-]{8,64}$/.test(c.aparelhoId) ? c.aparelhoId : novoId(),
+  };
+}
+
+function quandoAgora(d: Date = new Date()): { ocorreuEm: string; dataLocal: string } {
+  return { ocorreuEm: d.toISOString(), dataLocal: hojeISO(d) };
+}
+
+/** Enfileira um evento de estudo. Sem conta vinculada não enfileira: o progresso de antes vai pela importação. */
+function enfileirar(s: AppState, ev: EventoEstudo): void {
+  if (!s.account?.userId) return;
+  if (s.account.outbox.some((e) => e.id === ev.id)) return;
+  s.account.outbox.push(ev);
+  if (s.account.outbox.length > LIMITE_OUTBOX) s.account.outbox.splice(0, s.account.outbox.length - LIMITE_OUTBOX);
+}
+
+const FONTE_POR_ORIGEM: Record<NonNullable<Attempt["source"]>, FonteResposta> = {
+  estudo: "questao-geral",
+  microlicao: "licao",
+  legado: "redacao",
+  atividade: "atividade",
+  checkpoint: "atividade",
+  nivelamento: "nivelamento",
+};
+
+function respostaDoAttempt(a: Attempt): number | number[] | null {
+  if (a.response === "dont-know") return null;
+  const r = a.answer;
+  if (typeof r === "number" && Number.isInteger(r) && r >= 0 && r <= 50) return r;
+  // A aula de 60 s grava a LETRA da alternativa ("B"); o contrato leva o índice (A = 0), igual a `questionToExercise`.
+  if (typeof r === "string" && /^[A-J]$/.test(r)) return r.charCodeAt(0) - 65;
+  if (Array.isArray(r) && r.length <= 20 && r.every((x) => Number.isInteger(x) && x >= 0 && x <= 50)) {
+    return r as number[];
+  }
+  return null;
+}
+
+/** A resposta vira evento (o servidor recorrige pelo gabarito e decide o XP). */
+function enfileirarResposta(s: AppState, a: Attempt): void {
+  const fonte = FONTE_POR_ORIGEM[a.source ?? "microlicao"];
+  const ativa = s.learning.journey.activeActivity;
+  const attemptKey = fonte === "atividade" && ativa ? attemptKeyOf(ativa) : undefined;
+  enfileirar(s, {
+    tipo: "resposta",
+    id: idDeEvento(a.id),
+    itemId: a.exerciseId.slice(0, 200),
+    resposta: respostaDoAttempt(a),
+    ...(a.presentedOrder?.length ? { exibidos: a.presentedOrder.slice(0, 20).map((x) => String(x).slice(0, 500)) } : {}),
+    fonte,
+    ...(attemptKey ? { attemptKey } : {}),
+    ocorreuEm: new Date(a.submittedAt).toISOString(),
+    dataLocal: a.localDate,
+    ...(Number.isInteger(a.durationMs) && a.durationMs >= 0 && a.durationMs <= 3_600_000 ? { duracaoMs: a.durationMs } : {}),
+  });
+}
+
+export function assinarMudancas(cb: () => void): () => void {
+  const cancelar = subscribe(cb);
+  return () => void cancelar();
+}
+
+export function removerDaOutbox(ids: string[]): void {
+  if (!ids.length) return;
+  const fora = new Set(ids);
+  setState((s) => {
+    if (s.account) s.account.outbox = s.account.outbox.filter((e) => !fora.has(e.id));
+    return s;
+  });
+}
+
+/**
+ * XP e sequência vêm do servidor. Enquanto houver evento local ainda não enviado, o número local (otimista) fica —
+ * senão a tela "perderia" pontos por alguns segundos.
+ */
+export function aplicarAgregadoDoServidor(a: Agregado): void {
+  if (!state.account?.userId || state.account.outbox.length) return;
+  setState((s) => {
+    s.progress.xp = a.xp;
+    s.progress.streak = a.sequencia;
+    s.progress.bestStreak = a.melhorSequencia;
+    s.progress.streakFreezes = a.congelamentos;
+    s.progress.lastStudyDate = a.ultimoDia ? new Date(`${a.ultimoDia}T12:00:00`).toDateString() : null;
+    return s;
+  });
+}
+
+/** Assinatura simples (djb2) do documento, só para saber se mudou. */
+function assinar(texto: string): string {
+  let h = 5381;
+  for (let i = 0; i < texto.length; i++) h = ((h << 5) + h + texto.charCodeAt(i)) | 0;
+  return `${texto.length}:${(h >>> 0).toString(36)}`;
+}
+
+/**
+ * O estado de planejamento que vai para o servidor: preferências, progresso por item e o estado do motor
+ * adaptativo. Fica de fora o que é recompensa (vem do agregado), conversa com a IA e estado de UI.
+ */
+function montarDocumento(s: AppState): Record<string, unknown> {
+  const { name, email: _email, ...prefs } = s.prefs;
+  const { xp: _xp, streak: _st, bestStreak: _bs, streakFreezes: _sf, lastStudyDate: _ld, today: _t, ...progress } =
+    s.progress;
+  return {
+    onboarded: s.onboarded,
+    prefs: { ...prefs, name },
+    progress,
+    // As respostas já estão no servidor como fatos; aqui só as recentes, para o motor adaptativo de outro aparelho
+    // (e o documento fica bem abaixo do limite de 512 KB).
+    learning: { ...s.learning, recentAttempts: s.learning.recentAttempts.slice(-DOC_TENTATIVAS), activeSession: null, events: [] },
+    quiz: { gaps: s.quiz.gaps, completedAt: s.quiz.completedAt },
+  };
+}
+
+export function documentoParaSincronizar(): {
+  rev: number;
+  schemaVersion: number;
+  doc: Record<string, never>;
+  assinatura: string;
+} | null {
+  const s = state;
+  if (!s.account?.userId) return null;
+  const doc = montarDocumento(s);
+  const assinatura = assinar(JSON.stringify(doc));
+  if (assinatura === s.account.docAssinatura) return null;
+  return { rev: s.account.docRev, schemaVersion: s.schemaVersion, doc: doc as Record<string, never>, assinatura };
+}
+
+export function marcarDocumentoSalvo(rev: number, assinatura: string): void {
+  setState((s) => {
+    if (s.account) {
+      s.account.docRev = rev;
+      s.account.docAssinatura = assinatura;
+    }
+    return s;
+  });
+}
+
+function objeto(v: unknown): Record<string, unknown> | undefined {
+  return v && typeof v === "object" && !Array.isArray(v) ? (v as Record<string, unknown>) : undefined;
+}
+
+/**
+ * Documento do servidor (outro aparelho gravou). Adota o conteúdo se este aparelho não tem mudança local ainda
+ * não salva (ou é um aparelho novo, sem estudo); senão só registra a revisão, e a próxima gravação daqui vence
+ * (vale a última gravação; os FATOS de estudo e as recompensas estão no servidor de qualquer forma).
+ */
+export function aplicarDocumentoDoServidor(d: { rev: number; schemaVersion: number; doc: Record<string, unknown> }): void {
+  setState((s) => {
+    if (!s.account?.userId) return s;
+    const semMudancaLocal =
+      s.account.docAssinatura !== null && assinar(JSON.stringify(montarDocumento(s))) === s.account.docAssinatura;
+    const aparelhoNovo = s.account.docAssinatura === null && !temProgressoLocal(s);
+    if (d.rev > s.account.docRev && d.schemaVersion === s.schemaVersion && (semMudancaLocal || aparelhoNovo)) {
+      const doc = d.doc;
+      if (typeof doc.onboarded === "boolean") s.onboarded = doc.onboarded;
+      const prefs = objeto(doc.prefs);
+      if (prefs) s.prefs = { ...s.prefs, ...(prefs as Partial<Prefs>) };
+      const progress = objeto(doc.progress);
+      if (progress) s.progress = { ...s.progress, ...(progress as Partial<Progress>) };
+      const learning = objeto(doc.learning);
+      if (learning) s.learning = { ...s.learning, ...(learning as Partial<LearningState>), activeSession: s.learning.activeSession };
+      const quiz = objeto(doc.quiz);
+      if (quiz) s.quiz = { ...s.quiz, ...(quiz as Partial<AppState["quiz"]>) };
+      s.account.docAssinatura = assinar(JSON.stringify(montarDocumento(s)));
+    }
+    s.account.docRev = Math.max(s.account.docRev, d.rev);
+    return s;
+  });
+}
+
+/** Há estudo neste aparelho (além do onboarding)? Base da oferta de importação (docs/specs/46-producao §G). */
+export function temProgressoLocal(s: AppState = state): boolean {
+  return (
+    s.learning.recentAttempts.length > 0 ||
+    Object.keys(s.progress.lessons).length > 0 ||
+    Object.keys(s.learning.completedLessons).length > 0 ||
+    s.learning.journey.history.length > 0
+  );
+}
+
+export type ResultadoVinculo = "ja-vinculado" | "vinculado" | "outra-conta-limpa" | "tem-progresso-antigo";
+
+/**
+ * Liga este aparelho à conta (docs/specs/46-producao T-07.2). Estado de OUTRA conta nunca é mostrado: é apagado.
+ * Progresso de antes da conta não é vinculado em silêncio: devolve "tem-progresso-antigo" para a tela oferecer a
+ * importação (`concluirImportacao`) ou o recomeço (`descartarProgressoAntigo`).
+ */
+export function vincularConta(userId: string, opts: { descartarProgressoAntigo?: boolean } = {}): ResultadoVinculo {
+  const atual = state.account?.userId ?? null;
+  if (atual === userId) return "ja-vinculado";
+  let resultado: ResultadoVinculo = "vinculado";
+  if (atual) {
+    limparAparelho();
+    resultado = "outra-conta-limpa";
+  } else if (temProgressoLocal()) {
+    if (!opts.descartarProgressoAntigo) return "tem-progresso-antigo";
+    limparAparelho();
+  }
+  setState((s) => {
+    s.account = { ...contaVazia(s.account?.aparelhoId), userId };
+    s.authed = true;
+    // Bônus de entrada dado no onboarding, antes da conta existir: agora vai para o servidor (idempotente lá).
+    if (s.learning.rewardLedger[LEDGER_KEY_ONBOARDING]) {
+      enfileirar(s, { tipo: "entrada", id: idDeEvento(`entrada-${userId}`), ...quandoAgora() });
+    }
+    return s;
+  });
+  return resultado;
+}
+
+/** Depois da importação aceita pelo servidor: vincula, apaga as cópias antigas e adota o agregado. */
+export function concluirImportacao(userId: string, agregado: Agregado): void {
+  apagarCopiasLocais();
+  setState((s) => {
+    s.account = { ...contaVazia(s.account?.aparelhoId), userId };
+    s.authed = true;
+    return s;
+  });
+  aplicarAgregadoDoServidor(agregado);
+}
+
+/** Id deste aparelho (cria se ainda não existe). */
+export function aparelhoId(): string {
+  if (state.account?.aparelhoId) return state.account.aparelhoId;
+  const id = novoId();
+  setState((s) => {
+    s.account = { ...(s.account ?? contaVazia(id)), aparelhoId: id };
+    return s;
+  });
+  return id;
+}
+
+/**
+ * Garante que o estado deste aparelho é da conta da sessão. Outra conta: apaga tudo. Sem conta vinculada e sem
+ * estudo: vincula direto. Com estudo de antes da conta: não vincula — a tela de importação decide
+ * (`precisaDecidirImportacao`).
+ */
+function reconciliarConta(userId: string): void {
+  const dono = state.account?.userId ?? null;
+  if (dono === userId) return;
+  if (dono) limparAparelho();
+  if (!temProgressoLocal()) vincularConta(userId);
+}
+
+// A guarda das rotas confirma a sessão depois que o store já carregou (navegação no cliente): reconcilia na hora.
+aoMudarUsuarioDaSessao((userId) => {
+  if (loaded && !versaoFuturaAtiva) reconciliarConta(userId);
+});
+
+/** Há estudo de antes da conta esperando a escolha do aluno (levar para a conta ou começar do zero)? */
+export function precisaDecidirImportacao(): boolean {
+  return Boolean(usuarioDaSessao()) && !state.account?.userId && temProgressoLocal();
+}
+
+/**
+ * O progresso local no formato da importação (docs/specs/46-producao T-07.1): só FATOS — o servidor recorrige e
+ * recalcula o XP, com teto no XP que o aparelho mostra. Id da importação estável por aparelho (repetir é seguro).
+ */
+export function montarPedidoImportacao(): PedidoImportacao {
+  const s = state;
+  const aparelho = aparelhoId();
+  const iso = (t: string | undefined) => {
+    const d = t ? new Date(t) : null;
+    return d && Number.isFinite(d.getTime()) ? d.toISOString() : null;
+  };
+  const respostas = s.learning.recentAttempts.slice(-500).flatMap((a) => {
+    const ocorreuEm = iso(a.submittedAt);
+    if (!ocorreuEm || !/^\d{4}-\d{2}-\d{2}$/.test(a.localDate)) return [];
+    return [
+      {
+        id: idDeEvento(a.id),
+        itemId: a.exerciseId.slice(0, 200),
+        resposta: respostaDoAttempt(a),
+        ...(a.presentedOrder?.length ? { exibidos: a.presentedOrder.slice(0, 20).map((x) => String(x).slice(0, 500)) } : {}),
+        fonte: FONTE_POR_ORIGEM[a.source ?? "microlicao"],
+        ocorreuEm,
+        dataLocal: a.localDate,
+      },
+    ];
+  });
+  const licoes = [
+    ...Object.values(s.progress.lessons).map((l) => ({ licaoId: l.lessonId, tipoLicao: "redacao" as const, pct: l.bestPct, em: l.completedAt })),
+    ...Object.entries(s.learning.completedLessons).map(([licaoId, l]) => ({ licaoId, tipoLicao: "micro" as const, pct: l.bestPct, em: l.completedAt })),
+  ]
+    .flatMap(({ em, pct, ...l }) => {
+      const concluidaEm = iso(em);
+      return concluidaEm ? [{ ...l, licaoId: l.licaoId.slice(0, 200), pct: Math.max(0, Math.min(100, Math.round(pct))), concluidaEm }] : [];
+    })
+    .slice(-500);
+  // Aula e legado já pagam como lição; aqui só as atividades que pagam por si.
+  const atividades = s.learning.journey.history
+    .filter((h) => h.kind !== "aula" && h.kind !== "legado" && h.attemptKey)
+    .flatMap((h) => {
+      const concluidaEm = iso(h.completedAt);
+      return concluidaEm
+        ? [
+            {
+              attemptKey: String(h.attemptKey).slice(0, 200),
+              atividadeId: h.activityId.slice(0, 200),
+              kind: h.kind,
+              pct: h.scorePct === null || h.scorePct === undefined ? null : Math.max(0, Math.min(100, Math.round(h.scorePct))),
+              concluidaEm,
+            },
+          ]
+        : [];
+    })
+    .slice(-300);
+  return {
+    importId: idDeEvento(`imp-${aparelho}`),
+    aparelhoId: aparelho,
+    schemaVersion: Math.min(s.schemaVersion, 6),
+    xpNoAparelho: Math.max(0, Math.min(1_000_000, Math.round(s.progress.xp))),
+    respostas,
+    licoes,
+    atividades,
+    diasComAtividade: s.progress.activityDays.filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).slice(-60),
+    bonusDeEntrada: Boolean(s.learning.rewardLedger[LEDGER_KEY_ONBOARDING]),
+  };
+}
+
+/** Cópias de backup e corrompidas do estado local (docs/36 T-05.3): dados do aluno também. */
+function apagarCopiasLocais(): void {
+  if (typeof window === "undefined") return;
+  try {
+    const chaves: string[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && (k.startsWith("foca.state.backup.") || k.startsWith(CORRUPT_KEY_PREFIX))) chaves.push(k);
+    }
+    chaves.forEach((k) => localStorage.removeItem(k));
+  } catch {
+    /* storage indisponível: o estado em memória é limpo mesmo assim */
+  }
+}
+
+/**
+ * Apaga do aparelho tudo o que é do aluno (D-14): estado, cópias de backup e cópias corrompidas. Usado ao sair da
+ * conta e ao entrar com outra conta.
+ */
+export function limparAparelho(): void {
+  apagarCopiasLocais();
+  state = structuredClone(defaultState);
+  persist();
+  listeners.forEach((l) => l());
 }
 
 export function reset() {

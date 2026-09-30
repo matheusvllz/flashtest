@@ -1,6 +1,13 @@
 import { defineConfig, devices } from "@playwright/test";
 
 /**
+ * Estudar exige conta (decisão 0006): o projeto "setup" cria uma conta real e verificada e grava a sessão; os projetos
+ * que visitam rotas de estudo reusam essa sessão (docs/specs/46-producao T-04.6). A landing não precisa de conta.
+ */
+const SESSAO_ALUNO = "tests/e2e/.auth/aluno.json";
+const comConta = { dependencies: ["setup"] as string[] };
+
+/**
  * Config mínima da Fase 0 (docs/20 §19.1/§19.3): servidor local, projeto
  * desktop Chromium, fixtures isoladas (cada teste usa seu próprio contexto de
  * navegador, então `localStorage` nunca vaza entre testes) e captura em falha.
@@ -20,13 +27,15 @@ export default defineConfig({
     viewport: { width: 390, height: 844 }, // largura mínima da matriz (§19.2)
   },
   projects: [
+    { name: "setup", testMatch: /.*.setup.ts/ },
     // Mobile de verdade (docs/36 T-01.4): o `viewport` global (390×844) era
     // ANULADO pelo spread de `devices["Desktop Chrome"]` (que traz 1280×720),
     // então o projeto "chromium" sempre rodou em 1280×720. Aqui o viewport
     // vem DEPOIS do spread, de propósito.
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"], viewport: { width: 390, height: 844 } },
+      use: { ...devices["Desktop Chrome"], viewport: { width: 390, height: 844 }, storageState: SESSAO_ALUNO },
+      ...comConta,
       // A landing tem os próprios projetos, com as cinco larguras dela (docs/44 §9).
       testIgnore: ["**/marketing/**"],
     },
@@ -49,7 +58,8 @@ export default defineConfig({
     // "desktop" no §L.2 do plano (layout.spec.ts, criado na T-08.1/T-08.2).
     {
       name: "desktop",
-      use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 } },
+      use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 }, storageState: SESSAO_ALUNO },
+      ...comConta,
       testMatch: ["**/layout.spec.ts"],
     },
     // Largura mínima real da matriz (docs/25 §12/§21, §18 T-27, G12) — só
@@ -58,7 +68,8 @@ export default defineConfig({
     // docs/36 T-01.4: ganha também o spec novo de layout.
     {
       name: "narrow",
-      use: { ...devices["Desktop Chrome"], viewport: { width: 320, height: 700 } },
+      use: { ...devices["Desktop Chrome"], viewport: { width: 320, height: 700 }, storageState: SESSAO_ALUNO },
+      ...comConta,
       testMatch: ["**/trail-home.spec.ts", "**/lesson-v2.spec.ts", "**/trail-path.spec.ts", "**/layout.spec.ts"],
     },
   ],
@@ -66,6 +77,8 @@ export default defineConfig({
     command: "bun run dev",
     url: "http://localhost:8080",
     reuseExistingServer: true,
+    // Todos os testes saem do mesmo IP: sem isto o rate limit do login barraria os E2E (ignorado em produção).
+    env: { AUTH_RATE_LIMIT_DESLIGADO: "true" },
     timeout: 30_000,
   },
 });

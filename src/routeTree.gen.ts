@@ -10,24 +10,31 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WelcomeRouteImport } from './routes/welcome'
+import { Route as VerificarEmailRouteImport } from './routes/verificar-email'
 import { Route as TrilhaRouteImport } from './routes/trilha'
 import { Route as TopicsRouteImport } from './routes/topics'
+import { Route as TermosRouteImport } from './routes/termos'
 import { Route as StudyRouteImport } from './routes/study'
 import { Route as SignupRouteImport } from './routes/signup'
+import { Route as RedefinirSenhaRouteImport } from './routes/redefinir-senha'
 import { Route as RankingRouteImport } from './routes/ranking'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as ProgressRouteImport } from './routes/progress'
 import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as PremiumRouteImport } from './routes/premium'
 import { Route as PlanRouteImport } from './routes/plan'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as OfflineRouteImport } from './routes/offline'
 import { Route as NivelamentoRouteImport } from './routes/nivelamento'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as ImportarProgressoRouteImport } from './routes/importar-progresso'
 import { Route as ForgotRouteImport } from './routes/forgot'
 import { Route as FlashcardsRouteImport } from './routes/flashcards'
+import { Route as EsqueciASenhaRouteImport } from './routes/esqueci-a-senha'
 import { Route as DebugRouteImport } from './routes/debug'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as CadastroRouteImport } from './routes/cadastro'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AhaRouteImport } from './routes/aha'
 import { Route as IndexRouteImport } from './routes/index'
@@ -35,6 +42,7 @@ import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
+import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.completar'
 import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
 import { Route as ApiSaudeRouteImport } from './routes/api/saude'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
@@ -42,6 +50,11 @@ import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 const WelcomeRoute = WelcomeRouteImport.update({
   id: '/welcome',
   path: '/welcome',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerificarEmailRoute = VerificarEmailRouteImport.update({
+  id: '/verificar-email',
+  path: '/verificar-email',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TrilhaRoute = TrilhaRouteImport.update({
@@ -54,6 +67,11 @@ const TopicsRoute = TopicsRouteImport.update({
   path: '/topics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StudyRoute = StudyRouteImport.update({
   id: '/study',
   path: '/study',
@@ -62,6 +80,11 @@ const StudyRoute = StudyRouteImport.update({
 const SignupRoute = SignupRouteImport.update({
   id: '/signup',
   path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedefinirSenhaRoute = RedefinirSenhaRouteImport.update({
+  id: '/redefinir-senha',
+  path: '/redefinir-senha',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RankingRoute = RankingRouteImport.update({
@@ -82,6 +105,11 @@ const ProgressRoute = ProgressRouteImport.update({
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PremiumRoute = PremiumRouteImport.update({
@@ -114,6 +142,11 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImportarProgressoRoute = ImportarProgressoRouteImport.update({
+  id: '/importar-progresso',
+  path: '/importar-progresso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ForgotRoute = ForgotRouteImport.update({
   id: '/forgot',
   path: '/forgot',
@@ -124,6 +157,11 @@ const FlashcardsRoute = FlashcardsRouteImport.update({
   path: '/flashcards',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsqueciASenhaRoute = EsqueciASenhaRouteImport.update({
+  id: '/esqueci-a-senha',
+  path: '/esqueci-a-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DebugRoute = DebugRouteImport.update({
   id: '/debug',
   path: '/debug',
@@ -132,6 +170,11 @@ const DebugRoute = DebugRouteImport.update({
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CadastroRoute = CadastroRouteImport.update({
+  id: '/cadastro',
+  path: '/cadastro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppRoute = AppRouteImport.update({
@@ -169,6 +212,11 @@ const LearnLessonIdRoute = LearnLessonIdRouteImport.update({
   path: '/learn/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CadastroCompletarRoute = CadastroCompletarRouteImport.update({
+  id: '/cadastro_/completar',
+  path: '/cadastro/completar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AtividadeActivityIdRoute = AtividadeActivityIdRouteImport.update({
   id: '/atividade/$activityId',
   path: '/atividade/$activityId',
@@ -189,27 +237,35 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
   '/app': typeof AppRoute
+  '/cadastro': typeof CadastroRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
+  '/esqueci-a-senha': typeof EsqueciASenhaRoute
   '/flashcards': typeof FlashcardsRoute
   '/forgot': typeof ForgotRoute
+  '/importar-progresso': typeof ImportarProgressoRoute
   '/login': typeof LoginRoute
   '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
   '/premium': typeof PremiumRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
   '/quiz': typeof QuizRoute
   '/ranking': typeof RankingRoute
+  '/redefinir-senha': typeof RedefinirSenhaRoute
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
+  '/termos': typeof TermosRoute
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
+  '/verificar-email': typeof VerificarEmailRoute
   '/welcome': typeof WelcomeRoute
   '/api/saude': typeof ApiSaudeRoute
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
+  '/cadastro/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
@@ -220,27 +276,35 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
   '/app': typeof AppRoute
+  '/cadastro': typeof CadastroRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
+  '/esqueci-a-senha': typeof EsqueciASenhaRoute
   '/flashcards': typeof FlashcardsRoute
   '/forgot': typeof ForgotRoute
+  '/importar-progresso': typeof ImportarProgressoRoute
   '/login': typeof LoginRoute
   '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
   '/premium': typeof PremiumRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
   '/quiz': typeof QuizRoute
   '/ranking': typeof RankingRoute
+  '/redefinir-senha': typeof RedefinirSenhaRoute
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
+  '/termos': typeof TermosRoute
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
+  '/verificar-email': typeof VerificarEmailRoute
   '/welcome': typeof WelcomeRoute
   '/api/saude': typeof ApiSaudeRoute
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
+  '/cadastro/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
@@ -252,27 +316,35 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
   '/app': typeof AppRoute
+  '/cadastro': typeof CadastroRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
+  '/esqueci-a-senha': typeof EsqueciASenhaRoute
   '/flashcards': typeof FlashcardsRoute
   '/forgot': typeof ForgotRoute
+  '/importar-progresso': typeof ImportarProgressoRoute
   '/login': typeof LoginRoute
   '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
   '/premium': typeof PremiumRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
   '/progress': typeof ProgressRoute
   '/quiz': typeof QuizRoute
   '/ranking': typeof RankingRoute
+  '/redefinir-senha': typeof RedefinirSenhaRoute
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
+  '/termos': typeof TermosRoute
   '/topics': typeof TopicsRoute
   '/trilha': typeof TrilhaRoute
+  '/verificar-email': typeof VerificarEmailRoute
   '/welcome': typeof WelcomeRoute
   '/api/saude': typeof ApiSaudeRoute
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
+  '/cadastro_/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
@@ -285,27 +357,35 @@ export interface FileRouteTypes {
     | '/'
     | '/aha'
     | '/app'
+    | '/cadastro'
     | '/dashboard'
     | '/debug'
+    | '/esqueci-a-senha'
     | '/flashcards'
     | '/forgot'
+    | '/importar-progresso'
     | '/login'
     | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
     | '/premium'
+    | '/privacidade'
     | '/profile'
     | '/progress'
     | '/quiz'
     | '/ranking'
+    | '/redefinir-senha'
     | '/signup'
     | '/study'
+    | '/termos'
     | '/topics'
     | '/trilha'
+    | '/verificar-email'
     | '/welcome'
     | '/api/saude'
     | '/atividade/$activityId'
+    | '/cadastro/completar'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
@@ -316,27 +396,35 @@ export interface FileRouteTypes {
     | '/'
     | '/aha'
     | '/app'
+    | '/cadastro'
     | '/dashboard'
     | '/debug'
+    | '/esqueci-a-senha'
     | '/flashcards'
     | '/forgot'
+    | '/importar-progresso'
     | '/login'
     | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
     | '/premium'
+    | '/privacidade'
     | '/profile'
     | '/progress'
     | '/quiz'
     | '/ranking'
+    | '/redefinir-senha'
     | '/signup'
     | '/study'
+    | '/termos'
     | '/topics'
     | '/trilha'
+    | '/verificar-email'
     | '/welcome'
     | '/api/saude'
     | '/atividade/$activityId'
+    | '/cadastro/completar'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
@@ -347,27 +435,35 @@ export interface FileRouteTypes {
     | '/'
     | '/aha'
     | '/app'
+    | '/cadastro'
     | '/dashboard'
     | '/debug'
+    | '/esqueci-a-senha'
     | '/flashcards'
     | '/forgot'
+    | '/importar-progresso'
     | '/login'
     | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
     | '/premium'
+    | '/privacidade'
     | '/profile'
     | '/progress'
     | '/quiz'
     | '/ranking'
+    | '/redefinir-senha'
     | '/signup'
     | '/study'
+    | '/termos'
     | '/topics'
     | '/trilha'
+    | '/verificar-email'
     | '/welcome'
     | '/api/saude'
     | '/atividade/$activityId'
+    | '/cadastro_/completar'
     | '/learn/$lessonId'
     | '/redacao/$licaoId'
     | '/video/$id'
@@ -379,27 +475,35 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AhaRoute: typeof AhaRoute
   AppRoute: typeof AppRoute
+  CadastroRoute: typeof CadastroRoute
   DashboardRoute: typeof DashboardRoute
   DebugRoute: typeof DebugRoute
+  EsqueciASenhaRoute: typeof EsqueciASenhaRoute
   FlashcardsRoute: typeof FlashcardsRoute
   ForgotRoute: typeof ForgotRoute
+  ImportarProgressoRoute: typeof ImportarProgressoRoute
   LoginRoute: typeof LoginRoute
   NivelamentoRoute: typeof NivelamentoRoute
   OfflineRoute: typeof OfflineRoute
   OnboardingRoute: typeof OnboardingRoute
   PlanRoute: typeof PlanRoute
   PremiumRoute: typeof PremiumRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   ProfileRoute: typeof ProfileRoute
   ProgressRoute: typeof ProgressRoute
   QuizRoute: typeof QuizRoute
   RankingRoute: typeof RankingRoute
+  RedefinirSenhaRoute: typeof RedefinirSenhaRoute
   SignupRoute: typeof SignupRoute
   StudyRoute: typeof StudyRoute
+  TermosRoute: typeof TermosRoute
   TopicsRoute: typeof TopicsRoute
   TrilhaRoute: typeof TrilhaRoute
+  VerificarEmailRoute: typeof VerificarEmailRoute
   WelcomeRoute: typeof WelcomeRoute
   ApiSaudeRoute: typeof ApiSaudeRoute
   AtividadeActivityIdRoute: typeof AtividadeActivityIdRoute
+  CadastroCompletarRoute: typeof CadastroCompletarRoute
   LearnLessonIdRoute: typeof LearnLessonIdRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   VideoIdRoute: typeof VideoIdRoute
@@ -416,6 +520,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WelcomeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verificar-email': {
+      id: '/verificar-email'
+      path: '/verificar-email'
+      fullPath: '/verificar-email'
+      preLoaderRoute: typeof VerificarEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/trilha': {
       id: '/trilha'
       path: '/trilha'
@@ -430,6 +541,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TopicsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/study': {
       id: '/study'
       path: '/study'
@@ -442,6 +560,13 @@ declare module '@tanstack/react-router' {
       path: '/signup'
       fullPath: '/signup'
       preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redefinir-senha': {
+      id: '/redefinir-senha'
+      path: '/redefinir-senha'
+      fullPath: '/redefinir-senha'
+      preLoaderRoute: typeof RedefinirSenhaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ranking': {
@@ -470,6 +595,13 @@ declare module '@tanstack/react-router' {
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/premium': {
@@ -514,6 +646,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/importar-progresso': {
+      id: '/importar-progresso'
+      path: '/importar-progresso'
+      fullPath: '/importar-progresso'
+      preLoaderRoute: typeof ImportarProgressoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/forgot': {
       id: '/forgot'
       path: '/forgot'
@@ -528,6 +667,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FlashcardsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/esqueci-a-senha': {
+      id: '/esqueci-a-senha'
+      path: '/esqueci-a-senha'
+      fullPath: '/esqueci-a-senha'
+      preLoaderRoute: typeof EsqueciASenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/debug': {
       id: '/debug'
       path: '/debug'
@@ -540,6 +686,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cadastro': {
+      id: '/cadastro'
+      path: '/cadastro'
+      fullPath: '/cadastro'
+      preLoaderRoute: typeof CadastroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/app': {
@@ -591,6 +744,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearnLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cadastro_/completar': {
+      id: '/cadastro_/completar'
+      path: '/cadastro/completar'
+      fullPath: '/cadastro/completar'
+      preLoaderRoute: typeof CadastroCompletarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/atividade/$activityId': {
       id: '/atividade/$activityId'
       path: '/atividade/$activityId'
@@ -619,27 +779,35 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AhaRoute: AhaRoute,
   AppRoute: AppRoute,
+  CadastroRoute: CadastroRoute,
   DashboardRoute: DashboardRoute,
   DebugRoute: DebugRoute,
+  EsqueciASenhaRoute: EsqueciASenhaRoute,
   FlashcardsRoute: FlashcardsRoute,
   ForgotRoute: ForgotRoute,
+  ImportarProgressoRoute: ImportarProgressoRoute,
   LoginRoute: LoginRoute,
   NivelamentoRoute: NivelamentoRoute,
   OfflineRoute: OfflineRoute,
   OnboardingRoute: OnboardingRoute,
   PlanRoute: PlanRoute,
   PremiumRoute: PremiumRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   ProfileRoute: ProfileRoute,
   ProgressRoute: ProgressRoute,
   QuizRoute: QuizRoute,
   RankingRoute: RankingRoute,
+  RedefinirSenhaRoute: RedefinirSenhaRoute,
   SignupRoute: SignupRoute,
   StudyRoute: StudyRoute,
+  TermosRoute: TermosRoute,
   TopicsRoute: TopicsRoute,
   TrilhaRoute: TrilhaRoute,
+  VerificarEmailRoute: VerificarEmailRoute,
   WelcomeRoute: WelcomeRoute,
   ApiSaudeRoute: ApiSaudeRoute,
   AtividadeActivityIdRoute: AtividadeActivityIdRoute,
+  CadastroCompletarRoute: CadastroCompletarRoute,
   LearnLessonIdRoute: LearnLessonIdRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   VideoIdRoute: VideoIdRoute,

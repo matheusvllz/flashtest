@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
+import { SecaoConta } from "@/components/conta/SecaoConta";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { CourseStep } from "@/components/onboarding/CourseStep";
@@ -297,8 +298,8 @@ function Profile() {
             onClick={() => nav({ to: "/offline" })}
             icon={<Download size={16} />}
           />
-          <Row label="Termos de uso" />
-          <Row label="Política de privacidade" />
+          <Row label={COPY.conta.termos} onClick={() => nav({ to: "/termos" })} />
+          <Row label={COPY.conta.privacidade} onClick={() => nav({ to: "/privacidade" })} />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -312,17 +313,9 @@ function Profile() {
           >
             <RotateCcw size={14} /> Resetar demonstração
           </button>
-          <button
-            type="button"
-            onClick={() => {
-              logout();
-              nav({ to: "/" });
-            }}
-            className="btn-ghost w-full text-sm"
-          >
-            <LogOut size={14} /> Sair da conta
-          </button>
         </div>
+
+        <SecaoConta />
       </div>
       <BottomSheet open={cursoSheetOpen} onClose={() => setCursoSheetOpen(false)} title={COPY.cursos.perfilSheetTitulo}>
         <div className="max-h-[70vh] overflow-y-auto pb-1">

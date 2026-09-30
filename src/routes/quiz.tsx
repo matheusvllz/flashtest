@@ -20,6 +20,7 @@ import { TimeStep } from "@/components/onboarding/TimeStep";
 import { FocusStep, canAdvanceFocusStep } from "@/components/onboarding/FocusStep";
 import { PlacementOffer } from "@/components/onboarding/PlacementOffer";
 import { FEATURES } from "@/lib/features";
+import { sessao } from "@/lib/sessao";
 
 export const Route = createFileRoute("/quiz")({ component: Quiz, ssr: false });
 
@@ -55,14 +56,24 @@ function Quiz() {
     completeQuiz([], computeGaps([], s.prefs.difficultSubjects));
   }
 
+  /**
+   * Estudar exige conta (decisão 0006). O perfil respondido aqui fica no aparelho; sem sessão, o aluno cria a conta
+   * e depois segue para `destino` (o perfil vai para a conta em /cadastro/completar).
+   */
+  async function seguirPara(destino: "/aha" | "/nivelamento") {
+    fecharQuiz();
+    const atual = await sessao().catch(() => null);
+    if (atual?.autenticado) nav({ to: destino });
+    else nav({ to: "/cadastro", search: { volta: destino } });
+  }
+
   function next() {
     if (isLast) {
       if (FEATURES.nivelamento) {
         setOferta(true);
         return;
       }
-      fecharQuiz();
-      nav({ to: "/aha" });
+      void seguirPara("/aha");
       return;
     }
     setIdx(idx + 1);
@@ -73,14 +84,8 @@ function Quiz() {
       <EntryShell><PhoneFrame variant="reading">
         <div className="flex min-h-screen flex-col justify-center bg-neve px-6">
           <PlacementOffer
-            onFazer={() => {
-              fecharQuiz();
-              nav({ to: "/nivelamento" });
-            }}
-            onPular={() => {
-              fecharQuiz();
-              nav({ to: "/aha" });
-            }}
+            onFazer={() => void seguirPara("/nivelamento")}
+            onPular={() => void seguirPara("/aha")}
           />
         </div>
       </PhoneFrame></EntryShell>
@@ -164,7 +169,7 @@ function StepView({ step, onNext }: { step: string; onNext: () => void }) {
       <Wrap
         kicker="Vamos começar"
         title="Como devemos te chamar?"
-        hint="Sem e-mail, sem senha. Só o seu nome."
+        hint="Pode ser só o primeiro nome."
       >
         <input
           autoFocus
