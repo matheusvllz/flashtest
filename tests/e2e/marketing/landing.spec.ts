@@ -45,6 +45,25 @@ test("links para o app: 'Começar grátis' vai para /quiz e 'Entrar' para /login
   // Um único rótulo para a ação principal.
   const rotulos = await ctas.evaluateAll((els) => [...new Set(els.map((e) => (e.textContent ?? "").trim()))]);
   expect(rotulos).toEqual(["Começar grátis"]);
+  await page.locator("#cta-hero").click();
+  await expect(page).toHaveURL(/\/quiz$/);
+  await expect(page.getByPlaceholder("Seu primeiro nome")).toBeVisible();
+});
+
+test("começar com flags antigas no aparelho abre o quiz, sem exigir login (D-20)", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("foca.state.v3", JSON.stringify({ authed: true, onboarded: true }));
+  });
+  await abrir(page);
+  const ctas = page.locator("a[data-cta]");
+  for (const href of await ctas.evaluateAll((els) => els.map((e) => (e as HTMLAnchorElement).pathname))) {
+    expect(href).toBe("/quiz");
+  }
+  await expect(page.locator("#cta-hero")).toHaveText("Começar grátis");
+  await page.locator("#cta-hero").click();
+  await expect(page).toHaveURL(/\/quiz$/);
+  await expect(page.getByPlaceholder("Seu primeiro nome")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Já tem uma conta? Entrar" })).toBeVisible();
 });
 
 test("âncoras da navegação levam às seções certas", async ({ page }) => {

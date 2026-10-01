@@ -8,8 +8,8 @@ const ROTAS = resolve(import.meta.dir, "../../../src/routes");
 const arquivoDaRota = (path: string) => `${path.slice(1).replace(/\//g, ".") || "index"}.tsx`;
 
 describe("destinos da landing", () => {
-  test("começar → /quiz, entrar → /login, quem já tem conta → /app", () => {
-    expect(APP_DESTINOS).toEqual({ comecar: "/quiz", entrar: "/login", continuar: "/app" });
+  test("começar → /quiz e entrar → /login, sem desvio por conta local (46 D-20)", () => {
+    expect(APP_DESTINOS).toEqual({ comecar: "/quiz", entrar: "/login" });
   });
 
   test("toda rota de destino existe em src/routes", () => {

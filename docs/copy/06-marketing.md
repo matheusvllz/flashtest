@@ -41,6 +41,8 @@ Só as que a coluna "Resultado que a copy pode prometer" de [01](01-estrategia.m
 
 Fato específico permitido: lições de **4 a 8 questões** (`25`).
 
+**Bordão preservado por decisão do proprietário (30/09/2026):** "60 segundos"/"60s" faz parte da marca ([46 D-19](../specs/46-producao/spec.md)). A restrição a promessas de duração não manda retirar o bordão; ele não garante o tempo de conclusão de toda lição. Os achados históricos abaixo devem ser lidos com essa decisão.
+
 ## 4. Promessas proibidas
 
 Ver a lista completa em [01](01-estrategia.md) §6. Resumo para conferir antes de publicar:

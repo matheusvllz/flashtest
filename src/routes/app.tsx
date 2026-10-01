@@ -9,7 +9,7 @@ import { sessao } from "@/lib/sessao";
 /**
  * `/app` = a porta do produto (docs/44 §3). Com sessão, vai para a home (`HOME_ROUTE`, a trilha); sem sessão, quem já
  * estudou neste aparelho vai para o login e quem é novo vai para o onboarding (`/quiz`) — estudar exige conta
- * (decisão 0006). É o `start_url` do PWA e o destino de "Continuar estudando" na landing.
+ * (decisão 0006). É o `start_url` do PWA; a landing começa diretamente em `/quiz` (46 D-20).
  */
 export const Route = createFileRoute("/app")({
   component: Entrada,

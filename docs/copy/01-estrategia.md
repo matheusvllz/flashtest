@@ -93,6 +93,8 @@ Só entra mecanismo que **existe no código** ou tem spec aprovada. A coluna "Es
 
 ### 5.2 A frase atual e seus problemas
 
+**Atualização de 30/09/2026 — [46 D-19](../specs/46-producao/spec.md):** o proprietário determinou preservar "60 segundos" como bordão do app. P5 abaixo permanece como diagnóstico histórico da leitura literal de duração; não autoriza retirar o bordão. P6/P7 e outras promessas continuam sujeitos às regras de copy.
+
 Frase vigente (`08` §1, repetida em `PRODUCT.md`): *"Não é mais aula. É o hábito que te aprova. 60 segundos por dia."*
 
 | # | Problema |

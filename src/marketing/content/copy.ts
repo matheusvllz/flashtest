@@ -29,8 +29,6 @@ export const NAV = {
   duvidas: "Dúvidas",
   entrar: "Entrar",
   cta: "Começar grátis", // F-22
-  /** Quem já tem conta neste aparelho (docs/44 §3): todos os CTAs viram este, para /app. */
-  ctaComConta: "Continuar estudando",
 } as const;
 
 // S-1 Hero. A pergunta do João primeiro, a promessa do Foca depois (docs/42 §5; 14 §3, §7).

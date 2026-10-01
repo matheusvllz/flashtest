@@ -15,7 +15,7 @@ Para uma mudança pequena, isto basta. Não leia mais que o necessário (seção
 **Dez proibições.**
 1. Cobrar ausência ou dizer "sentimos sua falta".
 2. Julgar a pessoa ("você é ruim em X") ou ironizar o erro.
-3. Prometer o que o produto não demonstra: aprovação, nota, retenção, número, preço, duração em minutos.
+3. Prometer o que o produto não demonstra: aprovação, nota, retenção, número, preço, duração em minutos. **Exceção de marca aprovada:** "60 segundos"/"60s" permanece como bordão do app ([46 D-19](specs/46-producao/spec.md)); não é garantia de duração de toda lição nem deve ser removido automaticamente por auditoria de copy.
 4. "Não é X. É Y." e motivação genérica ("cada passo conta", "continue assim").
 5. Emoji em controle, erro, explicação ou alerta. Exclamação em série.
 6. "Domina", "dominado", nota, porcentagem ou "nível N" como resultado de medição.
