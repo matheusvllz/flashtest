@@ -30,14 +30,18 @@ function carregarDoDisco(): Partial<ContentPackage>[] {
 }
 
 function carregarDoBundle(): Partial<ContentPackage>[] | undefined {
-  // `import.meta.glob` só existe quando o Vite compila (dev e build); no `bun test` cai no disco.
-  const glob = (import.meta as unknown as { glob?: unknown }).glob;
-  if (typeof glob !== "function") return undefined;
-  const modulos = import.meta.glob<Partial<ContentPackage>>("/src/content/banco/**/*.json", {
-    eager: true,
-    import: "default",
-  });
-  return Object.values(modulos);
+  // O Vite troca a CHAMADA `import.meta.glob(...)` pelos módulos no build; `import.meta.glob` como valor continua
+  // `undefined`, então não dá para testar com `typeof` (era o que deixava a produção lendo um disco que não existe:
+  // `ENOENT … src/content/banco`, spec 48 D48-17). No `bun test` a chamada lança e cai no disco.
+  try {
+    const modulos = import.meta.glob<Partial<ContentPackage>>("/src/content/banco/**/*.json", {
+      eager: true,
+      import: "default",
+    });
+    return Object.values(modulos);
+  } catch {
+    return undefined;
+  }
 }
 
 function indice(): Map<string, ContentPackageItem> {
