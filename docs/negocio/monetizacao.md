@@ -99,6 +99,42 @@ Leitura honesta:
 - **`AI_TETO_DIARIO_USD` = US$ 1** cobre cerca de 120 mensagens por dia no total. Dez assinantes mandando 12 mensagens por dia já esgotam o teto e o tutor sai do ar para todos, inclusive para quem pagou. Antes de vender, o teto precisa ser dimensionado pelo número de assinantes (sugestão: US$ 0,15 por assinante ativo por dia + folga para o grátis) e revisto toda semana no começo.
 - O disjuntor global não pode punir quem pagou. Fica para a spec decidir se o Pro tem uma reserva própria dentro do teto.
 
+### 2.5 Três planos: Free, Basic e Pro (pedido do proprietário em 01/10, a decidir na spec 49)
+
+O proprietário pediu três planos: **Free** com menos funções e **5 a 10 lições por dia**; **Basic** com mais Foca IA e algumas funções; **Pro** com **todas** as funções, inclusive **corretor de redação por IA** e a Foca IA com mais limite. Esta seção substitui a 2.2 se for aprovada. Preços são proposta; custos usam a tabela 2.3 (R$ 0,043 por mensagem típica).
+
+| | **Free** | **Basic** | **Pro** |
+|---|---|---|---|
+| Preço proposto | R$ 0 | **R$ 14,90/mês** | **R$ 29,90/mês** · passe até o ENEM 2027 **R$ 249,90** |
+| Lições por dia | **até 6** (o dobro da meta padrão de 3) | sem teto | sem teto |
+| Foca IA | 3 mensagens/dia | 10 mensagens + 2 fotos/dia | 25 mensagens + 8 fotos/dia (uso justo com teto mensal nos termos) |
+| Trilha, nivelamento, checagem, flashcards, sequência | ✓ | ✓ | ✓ |
+| Caderno de erros inteligente (ideia 2) | — | ✓ | ✓ |
+| Cronograma até o ENEM (ideia 3) | — | ✓ | ✓ |
+| Estudo sem internet (ideia 6) | — | ✓ | ✓ |
+| **Corretor de redação por IA** (5 competências) | — | — | ✓ 8 correções/mês |
+| Simulados, "explica de outro jeito", treino de redação por partes, relatório para o responsável, áudio (ideias 1, 4, 5, 7) | — | — | ✓ |
+
+**Cuidados que vêm junto:**
+- **Teto de lições do Free.** A estratégia (§11) e a persona (§9) dizem que o grátis entrega o loop inteiro e que o pago não é "mais conteúdo". Um teto **acima da meta diária** preserva o loop: quem estuda a meta nunca vê o limite. O teto nunca interrompe uma lição no meio (conta ao começar a 7ª), não some com o progresso, e depois dele flashcards e revisão continuam livres. Sugestão: 6, não 5 (5 fica perto demais da meta de 3 de quem aumenta a meta).
+- **Custo da Foca IA.** Quem usa a cota inteira todo dia custa ~R$ 13/mês no Basic (10 × 30 × R$ 0,043) e ~R$ 32/mês no Pro, contra R$ 29,90. A maioria usa bem menos, mas o Pro precisa de um teto mensal de uso justo escrito nos termos, e o teto global (`AI_TETO_DIARIO_USD`) precisa crescer antes de vender.
+- **Corretor de redação.** Custo estimado ~US$ 0,02 por correção de texto digitado (cerca de R$ 0,10); foto de redação manuscrita custa mais e erra mais na transcrição, por isso o aluno confere o texto transcrito antes de corrigir. A nota é **estimativa por competência**, nunca "sua nota no ENEM". Precisa de revisão pedagógica externa da rubrica (B-040) antes de lançar.
+- **Nunca à venda:** proteção de sequência, XP, vidas ou recuperar sequência (R-GAM-2, R-GAM-3: "nunca custa dinheiro"); ranking com outros alunos; anúncio (§7).
+
+### 2.6 Sete ideias de funções só do pago
+
+Todas são "mais IA e mais personalização por aluno", não mais conteúdo, como a estratégia pede. Nenhuma abre a Foca IA sozinha (regra dura 7): tudo é por toque do aluno.
+
+1. **Simulado ENEM cronometrado** (Pro). Prova de 45 ou 90 questões no ritmo do dia de prova, com relatório por habilidade e a lista do que revisar, que vira a próxima semana da trilha. Usa só itens revisados (B-040, B-041). Mostra desempenho por área, sem prometer nota do ENEM. Já está no backlog (B-075).
+2. **Caderno de erros inteligente** (Basic e Pro). Cada questão errada entra num caderno que volta em revisão espaçada no dia certo, com a explicação da questão e, se o aluno pedir, uma reexplicação da Foca IA. O motor adaptativo já sabe o que o aluno erra; o caderno torna isso visível e acionável.
+3. **Cronograma até o ENEM** (Basic e Pro). O aluno diz quantos dias por semana e quanto tempo tem; o motor monta o plano semana a semana até a prova, por área e peso, e reorganiza sozinho quando ele falta ou adianta. Estende o `/plan` que a 48 tornou real.
+4. **"Explica de outro jeito"** (Pro). Depois do feedback de uma questão, três botões: passo a passo, com um exemplo do dia a dia, ou "o que a questão pediu" (como ler o comando). A explicação oficial não muda (regra dura 8); a IA só acrescenta. Gasta da cota da Foca IA.
+5. **Relatório semanal para o responsável** (Pro). E-mail de domingo (Resend) com dias estudados, tempo e o que melhorou, sem conversa com a IA e sem dado sensível. É o que convence quem paga, que costuma ser o responsável. Só com o consentimento do aluno e o fluxo de responsável da 46 (T-11.4), e linha nova em `privacidade.md`.
+6. **Estudo sem internet** (Basic e Pro). Baixar a semana da trilha no Wi-Fi e estudar no ônibus sem gastar dados; as respostas sobem quando a conexão volta (a fila de sincronização já faz isso). Combina com a persona, que tem pacote de dados curto.
+7. **Treino de redação por partes** (Pro). Antes do texto inteiro, o aluno treina cada peça com um tema da semana: tese, um parágrafo de argumento, repertório e proposta de intervenção com os cinco elementos. A Foca IA comenta cada parte; o corretor avalia o texto final. Repertório sugerido nunca inventa citação nem dado (copy/05).
+
+Ficaram de fora de propósito: vender proteção de sequência (proibido), ranking entre alunos (48 D48-16, ECA Digital) e "sem anúncios" (não há anúncio).
+
 ## 3. Checkout e gateway
 
 ### 3.1 "Terminal de pagamento"
