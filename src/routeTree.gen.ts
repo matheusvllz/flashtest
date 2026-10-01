@@ -9,178 +9,48 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WelcomeRouteImport } from './routes/welcome'
-import { Route as VerificarEmailRouteImport } from './routes/verificar-email'
-import { Route as TrilhaRouteImport } from './routes/trilha'
-import { Route as TopicsRouteImport } from './routes/topics'
-import { Route as TermosRouteImport } from './routes/termos'
-import { Route as StudyRouteImport } from './routes/study'
-import { Route as SignupRouteImport } from './routes/signup'
-import { Route as RedefinirSenhaRouteImport } from './routes/redefinir-senha'
-import { Route as RankingRouteImport } from './routes/ranking'
-import { Route as QuizRouteImport } from './routes/quiz'
-import { Route as ProgressRouteImport } from './routes/progress'
-import { Route as ProfileRouteImport } from './routes/profile'
-import { Route as PrivacidadeRouteImport } from './routes/privacidade'
-import { Route as PremiumRouteImport } from './routes/premium'
-import { Route as PlanRouteImport } from './routes/plan'
-import { Route as OnboardingRouteImport } from './routes/onboarding'
-import { Route as OfflineRouteImport } from './routes/offline'
-import { Route as NivelamentoRouteImport } from './routes/nivelamento'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as ImportarProgressoRouteImport } from './routes/importar-progresso'
-import { Route as ForgotRouteImport } from './routes/forgot'
-import { Route as FlashcardsRouteImport } from './routes/flashcards'
-import { Route as EsqueciASenhaRouteImport } from './routes/esqueci-a-senha'
-import { Route as DebugRouteImport } from './routes/debug'
-import { Route as DashboardRouteImport } from './routes/dashboard'
-import { Route as CadastroRouteImport } from './routes/cadastro'
-import { Route as AppRouteImport } from './routes/app'
-import { Route as AhaRouteImport } from './routes/aha'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
-import { Route as VideoIdRouteImport } from './routes/video.$id'
-import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
-import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
-import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.completar'
-import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
+import { Route as AhaRouteImport } from './routes/aha'
+import { Route as AppRouteImport } from './routes/app'
+import { Route as CadastroRouteImport } from './routes/cadastro'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DebugRouteImport } from './routes/debug'
+import { Route as EsqueciASenhaRouteImport } from './routes/esqueci-a-senha'
+import { Route as FlashcardsRouteImport } from './routes/flashcards'
+import { Route as ForgotRouteImport } from './routes/forgot'
+import { Route as ImportarProgressoRouteImport } from './routes/importar-progresso'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as NivelamentoRouteImport } from './routes/nivelamento'
+import { Route as OfflineRouteImport } from './routes/offline'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as PlanRouteImport } from './routes/plan'
+import { Route as PremiumRouteImport } from './routes/premium'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as RankingRouteImport } from './routes/ranking'
+import { Route as RedefinirSenhaRouteImport } from './routes/redefinir-senha'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as StudyRouteImport } from './routes/study'
+import { Route as TermosRouteImport } from './routes/termos'
+import { Route as TopicsRouteImport } from './routes/topics'
+import { Route as TrilhaRouteImport } from './routes/trilha'
+import { Route as VerificarEmailRouteImport } from './routes/verificar-email'
+import { Route as WelcomeRouteImport } from './routes/welcome'
 import { Route as ApiSaudeRouteImport } from './routes/api/saude'
-import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
+import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
+import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.completar'
+import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
+import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
+import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
+import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
 
-const WelcomeRoute = WelcomeRouteImport.update({
-  id: '/welcome',
-  path: '/welcome',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VerificarEmailRoute = VerificarEmailRouteImport.update({
-  id: '/verificar-email',
-  path: '/verificar-email',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TrilhaRoute = TrilhaRouteImport.update({
-  id: '/trilha',
-  path: '/trilha',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TopicsRoute = TopicsRouteImport.update({
-  id: '/topics',
-  path: '/topics',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermosRoute = TermosRouteImport.update({
-  id: '/termos',
-  path: '/termos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudyRoute = StudyRouteImport.update({
-  id: '/study',
-  path: '/study',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SignupRoute = SignupRouteImport.update({
-  id: '/signup',
-  path: '/signup',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RedefinirSenhaRoute = RedefinirSenhaRouteImport.update({
-  id: '/redefinir-senha',
-  path: '/redefinir-senha',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RankingRoute = RankingRouteImport.update({
-  id: '/ranking',
-  path: '/ranking',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuizRoute = QuizRouteImport.update({
-  id: '/quiz',
-  path: '/quiz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgressRoute = ProgressRouteImport.update({
-  id: '/progress',
-  path: '/progress',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProfileRoute = ProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacidadeRoute = PrivacidadeRouteImport.update({
-  id: '/privacidade',
-  path: '/privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PremiumRoute = PremiumRouteImport.update({
-  id: '/premium',
-  path: '/premium',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlanRoute = PlanRouteImport.update({
-  id: '/plan',
-  path: '/plan',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OnboardingRoute = OnboardingRouteImport.update({
-  id: '/onboarding',
-  path: '/onboarding',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OfflineRoute = OfflineRouteImport.update({
-  id: '/offline',
-  path: '/offline',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NivelamentoRoute = NivelamentoRouteImport.update({
-  id: '/nivelamento',
-  path: '/nivelamento',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ImportarProgressoRoute = ImportarProgressoRouteImport.update({
-  id: '/importar-progresso',
-  path: '/importar-progresso',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ForgotRoute = ForgotRouteImport.update({
-  id: '/forgot',
-  path: '/forgot',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FlashcardsRoute = FlashcardsRouteImport.update({
-  id: '/flashcards',
-  path: '/flashcards',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsqueciASenhaRoute = EsqueciASenhaRouteImport.update({
-  id: '/esqueci-a-senha',
-  path: '/esqueci-a-senha',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DebugRoute = DebugRouteImport.update({
-  id: '/debug',
-  path: '/debug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DashboardRoute = DashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CadastroRoute = CadastroRouteImport.update({
-  id: '/cadastro',
-  path: '/cadastro',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AppRoute = AppRouteImport.update({
-  id: '/app',
-  path: '/app',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AhaRoute = AhaRouteImport.update({
@@ -188,39 +58,139 @@ const AhaRoute = AhaRouteImport.update({
   path: '/aha',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RedacaoIndexRoute = RedacaoIndexRouteImport.update({
-  id: '/redacao/',
-  path: '/redacao/',
+const CadastroRoute = CadastroRouteImport.update({
+  id: '/cadastro',
+  path: '/cadastro',
   getParentRoute: () => rootRouteImport,
 } as any)
-const VideoIdRoute = VideoIdRouteImport.update({
-  id: '/video/$id',
-  path: '/video/$id',
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RedacaoLicaoIdRoute = RedacaoLicaoIdRouteImport.update({
-  id: '/redacao/$licaoId',
-  path: '/redacao/$licaoId',
+const DebugRoute = DebugRouteImport.update({
+  id: '/debug',
+  path: '/debug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LearnLessonIdRoute = LearnLessonIdRouteImport.update({
-  id: '/learn/$lessonId',
-  path: '/learn/$lessonId',
+const EsqueciASenhaRoute = EsqueciASenhaRouteImport.update({
+  id: '/esqueci-a-senha',
+  path: '/esqueci-a-senha',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CadastroCompletarRoute = CadastroCompletarRouteImport.update({
-  id: '/cadastro_/completar',
-  path: '/cadastro/completar',
+const FlashcardsRoute = FlashcardsRouteImport.update({
+  id: '/flashcards',
+  path: '/flashcards',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AtividadeActivityIdRoute = AtividadeActivityIdRouteImport.update({
-  id: '/atividade/$activityId',
-  path: '/atividade/$activityId',
+const ForgotRoute = ForgotRouteImport.update({
+  id: '/forgot',
+  path: '/forgot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImportarProgressoRoute = ImportarProgressoRouteImport.update({
+  id: '/importar-progresso',
+  path: '/importar-progresso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NivelamentoRoute = NivelamentoRouteImport.update({
+  id: '/nivelamento',
+  path: '/nivelamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OfflineRoute = OfflineRouteImport.update({
+  id: '/offline',
+  path: '/offline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanRoute = PlanRouteImport.update({
+  id: '/plan',
+  path: '/plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PremiumRoute = PremiumRouteImport.update({
+  id: '/premium',
+  path: '/premium',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgressRoute = ProgressRouteImport.update({
+  id: '/progress',
+  path: '/progress',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RankingRoute = RankingRouteImport.update({
+  id: '/ranking',
+  path: '/ranking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedefinirSenhaRoute = RedefinirSenhaRouteImport.update({
+  id: '/redefinir-senha',
+  path: '/redefinir-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudyRoute = StudyRouteImport.update({
+  id: '/study',
+  path: '/study',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TopicsRoute = TopicsRouteImport.update({
+  id: '/topics',
+  path: '/topics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrilhaRoute = TrilhaRouteImport.update({
+  id: '/trilha',
+  path: '/trilha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerificarEmailRoute = VerificarEmailRouteImport.update({
+  id: '/verificar-email',
+  path: '/verificar-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WelcomeRoute = WelcomeRouteImport.update({
+  id: '/welcome',
+  path: '/welcome',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiSaudeRoute = ApiSaudeRouteImport.update({
@@ -228,14 +198,44 @@ const ApiSaudeRoute = ApiSaudeRouteImport.update({
   path: '/api/saude',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiCronRetencaoRoute = ApiCronRetencaoRouteImport.update({
-  id: '/api/cron/retencao',
-  path: '/api/cron/retencao',
+const AtividadeActivityIdRoute = AtividadeActivityIdRouteImport.update({
+  id: '/atividade/$activityId',
+  path: '/atividade/$activityId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CadastroCompletarRoute = CadastroCompletarRouteImport.update({
+  id: '/cadastro_/completar',
+  path: '/cadastro/completar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnLessonIdRoute = LearnLessonIdRouteImport.update({
+  id: '/learn/$lessonId',
+  path: '/learn/$lessonId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedacaoIndexRoute = RedacaoIndexRouteImport.update({
+  id: '/redacao/',
+  path: '/redacao/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedacaoLicaoIdRoute = RedacaoLicaoIdRouteImport.update({
+  id: '/redacao/$licaoId',
+  path: '/redacao/$licaoId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VideoIdRoute = VideoIdRouteImport.update({
+  id: '/video/$id',
+  path: '/video/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCronRetencaoRoute = ApiCronRetencaoRouteImport.update({
+  id: '/api/cron/retencao',
+  path: '/api/cron/retencao',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -526,193 +526,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/welcome': {
-      id: '/welcome'
-      path: '/welcome'
-      fullPath: '/welcome'
-      preLoaderRoute: typeof WelcomeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/verificar-email': {
-      id: '/verificar-email'
-      path: '/verificar-email'
-      fullPath: '/verificar-email'
-      preLoaderRoute: typeof VerificarEmailRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/trilha': {
-      id: '/trilha'
-      path: '/trilha'
-      fullPath: '/trilha'
-      preLoaderRoute: typeof TrilhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/topics': {
-      id: '/topics'
-      path: '/topics'
-      fullPath: '/topics'
-      preLoaderRoute: typeof TopicsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/termos': {
-      id: '/termos'
-      path: '/termos'
-      fullPath: '/termos'
-      preLoaderRoute: typeof TermosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/study': {
-      id: '/study'
-      path: '/study'
-      fullPath: '/study'
-      preLoaderRoute: typeof StudyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/signup': {
-      id: '/signup'
-      path: '/signup'
-      fullPath: '/signup'
-      preLoaderRoute: typeof SignupRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/redefinir-senha': {
-      id: '/redefinir-senha'
-      path: '/redefinir-senha'
-      fullPath: '/redefinir-senha'
-      preLoaderRoute: typeof RedefinirSenhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ranking': {
-      id: '/ranking'
-      path: '/ranking'
-      fullPath: '/ranking'
-      preLoaderRoute: typeof RankingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quiz': {
-      id: '/quiz'
-      path: '/quiz'
-      fullPath: '/quiz'
-      preLoaderRoute: typeof QuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/progress': {
-      id: '/progress'
-      path: '/progress'
-      fullPath: '/progress'
-      preLoaderRoute: typeof ProgressRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/profile': {
-      id: '/profile'
-      path: '/profile'
-      fullPath: '/profile'
-      preLoaderRoute: typeof ProfileRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidade': {
-      id: '/privacidade'
-      path: '/privacidade'
-      fullPath: '/privacidade'
-      preLoaderRoute: typeof PrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/premium': {
-      id: '/premium'
-      path: '/premium'
-      fullPath: '/premium'
-      preLoaderRoute: typeof PremiumRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/plan': {
-      id: '/plan'
-      path: '/plan'
-      fullPath: '/plan'
-      preLoaderRoute: typeof PlanRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/onboarding': {
-      id: '/onboarding'
-      path: '/onboarding'
-      fullPath: '/onboarding'
-      preLoaderRoute: typeof OnboardingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/offline': {
-      id: '/offline'
-      path: '/offline'
-      fullPath: '/offline'
-      preLoaderRoute: typeof OfflineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/nivelamento': {
-      id: '/nivelamento'
-      path: '/nivelamento'
-      fullPath: '/nivelamento'
-      preLoaderRoute: typeof NivelamentoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/importar-progresso': {
-      id: '/importar-progresso'
-      path: '/importar-progresso'
-      fullPath: '/importar-progresso'
-      preLoaderRoute: typeof ImportarProgressoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/forgot': {
-      id: '/forgot'
-      path: '/forgot'
-      fullPath: '/forgot'
-      preLoaderRoute: typeof ForgotRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/flashcards': {
-      id: '/flashcards'
-      path: '/flashcards'
-      fullPath: '/flashcards'
-      preLoaderRoute: typeof FlashcardsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esqueci-a-senha': {
-      id: '/esqueci-a-senha'
-      path: '/esqueci-a-senha'
-      fullPath: '/esqueci-a-senha'
-      preLoaderRoute: typeof EsqueciASenhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/debug': {
-      id: '/debug'
-      path: '/debug'
-      fullPath: '/debug'
-      preLoaderRoute: typeof DebugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dashboard': {
-      id: '/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cadastro': {
-      id: '/cadastro'
-      path: '/cadastro'
-      fullPath: '/cadastro'
-      preLoaderRoute: typeof CadastroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/app': {
-      id: '/app'
-      path: '/app'
-      fullPath: '/app'
-      preLoaderRoute: typeof AppRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aha': {
@@ -722,53 +540,193 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AhaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/redacao/': {
-      id: '/redacao/'
-      path: '/redacao'
-      fullPath: '/redacao/'
-      preLoaderRoute: typeof RedacaoIndexRouteImport
+    '/cadastro': {
+      id: '/cadastro'
+      path: '/cadastro'
+      fullPath: '/cadastro'
+      preLoaderRoute: typeof CadastroRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/video/$id': {
-      id: '/video/$id'
-      path: '/video/$id'
-      fullPath: '/video/$id'
-      preLoaderRoute: typeof VideoIdRouteImport
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/redacao/$licaoId': {
-      id: '/redacao/$licaoId'
-      path: '/redacao/$licaoId'
-      fullPath: '/redacao/$licaoId'
-      preLoaderRoute: typeof RedacaoLicaoIdRouteImport
+    '/debug': {
+      id: '/debug'
+      path: '/debug'
+      fullPath: '/debug'
+      preLoaderRoute: typeof DebugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/learn/$lessonId': {
-      id: '/learn/$lessonId'
-      path: '/learn/$lessonId'
-      fullPath: '/learn/$lessonId'
-      preLoaderRoute: typeof LearnLessonIdRouteImport
+    '/esqueci-a-senha': {
+      id: '/esqueci-a-senha'
+      path: '/esqueci-a-senha'
+      fullPath: '/esqueci-a-senha'
+      preLoaderRoute: typeof EsqueciASenhaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cadastro_/completar': {
-      id: '/cadastro_/completar'
-      path: '/cadastro/completar'
-      fullPath: '/cadastro/completar'
-      preLoaderRoute: typeof CadastroCompletarRouteImport
+    '/flashcards': {
+      id: '/flashcards'
+      path: '/flashcards'
+      fullPath: '/flashcards'
+      preLoaderRoute: typeof FlashcardsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/atividade/$activityId': {
-      id: '/atividade/$activityId'
-      path: '/atividade/$activityId'
-      fullPath: '/atividade/$activityId'
-      preLoaderRoute: typeof AtividadeActivityIdRouteImport
+    '/forgot': {
+      id: '/forgot'
+      path: '/forgot'
+      fullPath: '/forgot'
+      preLoaderRoute: typeof ForgotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/importar-progresso': {
+      id: '/importar-progresso'
+      path: '/importar-progresso'
+      fullPath: '/importar-progresso'
+      preLoaderRoute: typeof ImportarProgressoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nivelamento': {
+      id: '/nivelamento'
+      path: '/nivelamento'
+      fullPath: '/nivelamento'
+      preLoaderRoute: typeof NivelamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/offline': {
+      id: '/offline'
+      path: '/offline'
+      fullPath: '/offline'
+      preLoaderRoute: typeof OfflineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plan': {
+      id: '/plan'
+      path: '/plan'
+      fullPath: '/plan'
+      preLoaderRoute: typeof PlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/premium': {
+      id: '/premium'
+      path: '/premium'
+      fullPath: '/premium'
+      preLoaderRoute: typeof PremiumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/progress': {
+      id: '/progress'
+      path: '/progress'
+      fullPath: '/progress'
+      preLoaderRoute: typeof ProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ranking': {
+      id: '/ranking'
+      path: '/ranking'
+      fullPath: '/ranking'
+      preLoaderRoute: typeof RankingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redefinir-senha': {
+      id: '/redefinir-senha'
+      path: '/redefinir-senha'
+      fullPath: '/redefinir-senha'
+      preLoaderRoute: typeof RedefinirSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/study': {
+      id: '/study'
+      path: '/study'
+      fullPath: '/study'
+      preLoaderRoute: typeof StudyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/topics': {
+      id: '/topics'
+      path: '/topics'
+      fullPath: '/topics'
+      preLoaderRoute: typeof TopicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trilha': {
+      id: '/trilha'
+      path: '/trilha'
+      fullPath: '/trilha'
+      preLoaderRoute: typeof TrilhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verificar-email': {
+      id: '/verificar-email'
+      path: '/verificar-email'
+      fullPath: '/verificar-email'
+      preLoaderRoute: typeof VerificarEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/welcome': {
+      id: '/welcome'
+      path: '/welcome'
+      fullPath: '/welcome'
+      preLoaderRoute: typeof WelcomeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/saude': {
@@ -778,11 +736,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSaudeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/cron/retencao': {
-      id: '/api/cron/retencao'
-      path: '/api/cron/retencao'
-      fullPath: '/api/cron/retencao'
-      preLoaderRoute: typeof ApiCronRetencaoRouteImport
+    '/atividade/$activityId': {
+      id: '/atividade/$activityId'
+      path: '/atividade/$activityId'
+      fullPath: '/atividade/$activityId'
+      preLoaderRoute: typeof AtividadeActivityIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cadastro_/completar': {
+      id: '/cadastro_/completar'
+      path: '/cadastro/completar'
+      fullPath: '/cadastro/completar'
+      preLoaderRoute: typeof CadastroCompletarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn/$lessonId': {
+      id: '/learn/$lessonId'
+      path: '/learn/$lessonId'
+      fullPath: '/learn/$lessonId'
+      preLoaderRoute: typeof LearnLessonIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redacao/': {
+      id: '/redacao/'
+      path: '/redacao'
+      fullPath: '/redacao/'
+      preLoaderRoute: typeof RedacaoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redacao/$licaoId': {
+      id: '/redacao/$licaoId'
+      path: '/redacao/$licaoId'
+      fullPath: '/redacao/$licaoId'
+      preLoaderRoute: typeof RedacaoLicaoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/video/$id': {
+      id: '/video/$id'
+      path: '/video/$id'
+      fullPath: '/video/$id'
+      preLoaderRoute: typeof VideoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/auth/$': {
@@ -790,6 +783,13 @@ declare module '@tanstack/react-router' {
       path: '/api/auth/$'
       fullPath: '/api/auth/$'
       preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/cron/retencao': {
+      id: '/api/cron/retencao'
+      path: '/api/cron/retencao'
+      fullPath: '/api/cron/retencao'
+      preLoaderRoute: typeof ApiCronRetencaoRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

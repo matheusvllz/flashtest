@@ -66,12 +66,14 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error: bruto, reset }: { error: unknown; reset: () => void }) {
+  // TanStack Router 1.170+: o erro chega como `unknown`.
+  const error = bruto instanceof Error ? bruto : new Error(String(bruto));
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportarErro(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+    reportarErro(bruto, { boundary: "tanstack_root_error_component" });
+  }, [bruto]);
 
   return (
     <ColunaSimples>
@@ -103,13 +105,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+/** Quem a guarda da raiz reconheceu (serializável: vai do servidor para o navegador na primeira carga). */
+type Guarda = { userId: string | null; modo: "contas" | "demonstracao" } | null;
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   /**
    * Estudar exige conta (decisão 0006; docs/specs/46-producao T-05.6). Negar por padrão: toda rota fora de
    * `ROTAS_PUBLICAS` (src/lib/sessao.ts) pede sessão; sem cadastro completo (ano de nascimento e aceite dos
    * documentos vigentes), vai para /cadastro/completar. A landing e o onboarding de perfil não consultam nada.
    */
-  beforeLoad: async ({ location }) => {
+  beforeLoad: async ({ location }): Promise<{ guarda: Guarda }> => {
     if (ehRotaPublica(location.pathname)) return { guarda: null };
     const s = await sessao();
     if (!s.autenticado) throw redirect({ to: "/login", search: { volta: location.href } });
