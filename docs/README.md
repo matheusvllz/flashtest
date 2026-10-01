@@ -23,6 +23,7 @@ O Foca é um app de preparação para o ENEM em aulas curtas, com um motor adapt
 | O que existe e em que estado (real, local, simulado…) | [produto/funcionalidades.md](produto/funcionalidades.md) |
 | O que falta fazer | [produto/backlog.md](produto/backlog.md) |
 | Checklist de lançamento | [produto/lancamento.md](produto/lancamento.md) |
+| Planos, preços, pagamento e anúncios (proposta aguardando aprovação) | [negocio/monetizacao.md](negocio/monetizacao.md) |
 | Arquitetura hoje | [arquitetura/visao-geral.md](arquitetura/visao-geral.md) |
 | Contratos de código em vigor | [arquitetura/contratos.md](arquitetura/contratos.md) |
 | Dados (estado local e servidor) | [arquitetura/dados.md](arquitetura/dados.md) (criado no 46 T-04.1) |

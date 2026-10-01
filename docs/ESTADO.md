@@ -1,6 +1,6 @@
 ---
 estado: em-execucao
-atualizado: 2026-09-30
+atualizado: 2026-10-01
 canonico-de: [estado atual, próxima tarefa]
 ---
 
@@ -10,21 +10,22 @@ canonico-de: [estado atual, próxima tarefa]
 
 ## Iniciativa ativa
 
-**48 — Backend integrado ao Neon, Foca IA em produção e funções que hoje são cosméticas** (vinculada à 46). Aprovada em 30/09/2026 pelo proprietário (escopo do pedido inteiro; sem commit, push nem deploy).
+**48 — Backend integrado ao Neon, Foca IA em produção e funções que hoje são cosméticas** (vinculada à 46). Aprovada em 30/09/2026 pelo proprietário; commit e deploy da 48 inteira autorizados em 01/10.
 - Spec: [specs/48-integracao-e-evolucao/spec.md](specs/48-integracao-e-evolucao/spec.md) — decisões D48-01…D48-16, tarefas T-48.0.1…T-48.10.1
 - Registro: [specs/48-integracao-e-evolucao/registro.md](specs/48-integracao-e-evolucao/registro.md)
 - **Implementado e validado localmente (30/09, working tree, sem commit):** F0 (Neon: CLI, skills, MCP, branch `dev`, ADR 0007, ambiente que não derruba o app, migração e `test:neon`, domínio/URLs), F1 (isolamento de todas as funções, importação interrompida, conta/sync em 320 e 1280), **F2 Foca IA completa** (B-102, sessão/idade/consentimento, contexto no servidor, cotas e teto, foto, moderação e autocuidado, desligar no perfil, estados), F3 (exportar, excluir conta, retenção, runbooks), F4 (tópicos e plano funcionais, diagnóstico honesto), F5 (resultado da checagem, resultado visual do nivelamento), F6 (sequência com foguinho e proteção), F7 (telas secundárias no desktop), F8 (retomada, laço de navegação DV48-04, estados de salvamento), F9 (medição e uma correção de desempenho).
 - **Validado em ambiente integrado:** Neon `dev` (branch temporária: 7 testes, inclusive concorrência de cota e de recompensa entre conexões reais) e esquema aplicado na `production` (1/1, 17 tabelas, sem dados).
-- **Publicado:** nada desta iniciativa (sem commit, push nem deploy).
-- **Produção hoje:** `/api/saude`, `/api/auth/ok` e `/trilha` respondem **500** (variável vazia ou inválida na Vercel derruba o `env()`; DV48-01). Corrigido no código (D48-08), **não publicado**.
-- **Próximo passo:** decisão do proprietário sobre commit/deploy da correção D48-08; depois, os bloqueios abaixo (Resend ou Google para ligar as contas; chave da OpenAI para a T-48.2.8).
+- **Publicado (01/10):** a 48 inteira na `main` (`382a359`, deploy `foca-88os7m6b3` Ready), com a correção D48-08 e o TanStack 1.168.60 (DV48-08, bloqueio de XSS da Vercel). Neon Auth avaliado de novo e não adotado (DV48-07).
+- **Produção hoje:** contas reais com login pelo Google **e por e-mail** (Resend, 01/10); sincronização corrigida (D48-17) e chama da sequência nova (D48-18), publicadas na `main` em 01/10 com autorização do proprietário; banco Neon `production` respondendo; `/trilha` protegida; Foca IA no fallback local (sem chave da OpenAI). Verificado em produção até o redirecionamento ao Google, sem criar conta.
+- **Monetização:** [negocio/monetizacao.md](negocio/monetizacao.md) (aguardando aprovação). Em 01/10 o proprietário pediu **três planos** (Free com 5–10 lições/dia, Basic, Pro com todas as funções e corretor de redação por IA) — tensão com a [estratégia §11](produto/estrategia.md) e a [persona §9](produto/persona-joao.md) (o free entrega o loop inteiro; o pago não é "mais conteúdo"): um teto acima da meta diária (3 lições) preserva o loop. Decidir na spec 49.
+- **Próximo passo:** spec 49 (pagamentos e planos) depois das decisões do proprietário; chave da OpenAI (T-48.2.8) com o teto global redimensionado; rotação dos segredos do Google e da Resend.
 
 ### Iniciativa base
 
 **46 — Do protótipo ao produto** (SDD reorganizado, backend real, autenticação, segurança, documentos legais). Aprovada em 29/09/2026 com as decisões do §0.
 - Spec: [specs/46-producao/spec.md](specs/46-producao/spec.md)
 - Registro: [specs/46-producao/registro.md](specs/46-producao/registro.md)
-- Branch: `producao-46` (commits locais autorizados; **sem push** sem pedido do proprietário)
+- Branch: `producao-46` (enviada para a `main` em 01/10 com autorização; a branch em si não foi enviada ao `origin`)
 
 ## Onde estamos
 
@@ -39,8 +40,9 @@ canonico-de: [estado atual, próxima tarefa]
 
 ## Último checkpoint verde
 
+- **Publicação da 48 (01/10, `382a359`):** tipos ✅ · unitários ✅ · lint 0 erros · build e build `vercel` ✅ · E2E completo **542 passed / 1 instável / 73 skipped** · produção: `/api/saude` banco ok, rotas 200/307/401 esperadas, Google redireciona com o `client_id` e o retorno certos. CI do GitHub falha no `docs:check` por caminhos gerados de `public/content/` (preexistente, não bloqueia a Vercel).
 - **48 completa (30/09, working tree, sem commit):** tipos ✅ · unitários **1381 pass / 0 fail** · lint 0 erros / 17 avisos · build e build `vercel` ✅ · docs:check ✅ · **E2E completo 540 passed / 0 failed / 73 skipped** · `test:neon` **7 pass**. Validado localmente (F1–F9) e em ambiente integrado (Neon). Nada publicado.
-- **Conta de teste local nova:** `aluno.teste@foca.dev` / `foca-aluno-2026` (com `bun run dev`; criar outra: `CONTA_EMAIL=… CONTA_SENHA=… bun run conta:teste`). Em produção não há login possível até o deploy da correção D48-08 (500 em todas as rotas de autenticação).
+- **Conta de teste local nova:** `aluno.teste@foca.dev` / `foca-aluno-2026` (com `bun run dev`; criar outra: `CONTA_EMAIL=… CONTA_SENHA=… bun run conta:teste`). Em produção, nenhuma conta de teste é criada: o acesso é pelo Google.
 
 - **Correção D-20 (working tree, 30/09):** tipos ✅ · unitários **1312 pass / 0 fail** · build ✅ · lint **0 erros / 17 avisos** · docs:check ✅ · E2E direcionados de landing, demo, conta, onboarding e nivelamento **87 passed / 0 failed / 1 skipped**. Entrada testada em 320/390/1280, incluindo flags legadas. Revisão `spec-verifier` sem divergência D-20. Validado localmente; não publicado. Esta rodada não substitui a suíte E2E completa abaixo.
 
@@ -58,11 +60,12 @@ canonico-de: [estado atual, próxima tarefa]
 |---|---|---|
 | ~~Domínio~~ | **Resolvido em 30/09:** `focaedu.com` registrado e no ar (46 D-10 mantida como histórico) | — |
 | Domínio primário na Vercel é o `www` (apex responde 308) | Usar `https://focaedu.com` como URL de auth e canonical sem redirecionamento (48 D48-05) | Proprietário (painel da Vercel) |
-| Variáveis da Vercel: corrigir a vazia/inválida, ou autorizar o deploy da correção | Tirar a produção do 500 (48 DV48-01) | Proprietário |
-| `focaedu.com` verificado na Resend (DNS na Cloudflare) | E-mail em produção: verificação, recuperação (48 T-48.0.8) | Proprietário |
+| ~~`focaedu.com` verificado na Resend~~ | **Resolvido em 01/10:** domínio verificado e variáveis na Vercel; liga no próximo deploy | — |
 | Caixas de correio (contato, privacidade, encarregado) | Textos legais finais; nenhum endereço publicado antes (48 D48-06) | Proprietário |
-| Variáveis do Neon na Vercel e integração de previews | Contas reais em produção — só com um método de acesso pronto (48 D48-07, T-48.0.7) | Proprietário |
-| Projeto no Google Cloud (OAuth) | Login com Google em produção (46 T-05.7, 48 T-48.0.8) | Proprietário |
+| Publicar a tela de consentimento do Google (Google Auth Platform → Público → Publicar app) | Login com Google para qualquer aluno; hoje só usuários de teste (46 T-05.7, 48 T-48.0.8) | Proprietário |
+| Rotacionar o segredo do cliente Google e a chave da Resend (os dois foram colados no chat) | Higiene de segredo; depois atualizar `GOOGLE_CLIENT_SECRET` e `RESEND_API_KEY` na Vercel | Proprietário + agente |
+| Integração de previews da Vercel com branches do Neon | Previews com banco próprio (48 T-48.0.7) | Proprietário |
+| CI do GitHub: `docs:check` acusa caminhos gerados de `public/content/` | CI verde (não bloqueia a Vercel) | Agente, com pedido |
 | Chave da OpenAI | Foca IA real (sem ela, fallback local) (46 T-08.6, 48 T-48.2.8) | Proprietário |
 | E-mail de contato de privacidade e encarregado | Textos legais finais (46 §H.5) | Proprietário |
 | Revisão jurídica | Publicar termos e política; confirmar a política de idade | Proprietário (contratação) |
