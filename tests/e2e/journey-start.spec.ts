@@ -84,6 +84,27 @@ test.describe("RF-1/RF-2 — atividade dinâmica abre pelo card e pelo nó (docs
     expect(depois.startedAt).toBe(antes.startedAt);
   });
 
+  test("retomada (spec 48 T-48.8.1): recarregar depois de confirmar uma resposta volta na questão seguinte, sem duplicar a resposta", async ({ page }) => {
+    await abrirHome(page);
+    await page.locator("a.btn-primary").first().click();
+    await esperarPrimeiraQuestao(page);
+    await page.getByRole("button", { name: "Não sei" }).click();
+    await page.locator('[role="status"]').waitFor();
+    await page.getByRole("button", { name: /^(Continuar|Ver resultado)$/ }).click();
+    await expect(page.getByRole("radio").first()).toBeVisible({ timeout: 10_000 });
+    const antes = await lerEstado(page);
+    const passo = antes.learning.activeSession.stepIndex as number;
+    const respostas = antes.learning.recentAttempts.length as number;
+
+    await page.reload({ waitUntil: "domcontentloaded" });
+    await clicarComecarSeHouver(page, 1);
+    await expect(page.getByRole("radio").first()).toBeVisible({ timeout: 10_000 });
+    const depois = await lerEstado(page);
+    expect(depois.learning.activeSession.stepIndex).toBe(passo);
+    expect(depois.learning.activeSession.answers).toEqual(antes.learning.activeSession.answers);
+    expect(depois.learning.recentAttempts.length).toBe(respostas);
+  });
+
   test("entrar 2x pelo card não troca os itens nem reescreve startedAt (RF-2)", async ({ page }) => {
     await abrirHome(page);
     await page.locator("a.btn-primary").first().click();
@@ -312,7 +333,7 @@ const FAMILIAS: Familia[] = [
     },
     esperar: async (page) => {
       await expect(page).toHaveURL(/\/atividade\/atv-test-checkpoint/, { timeout: 10_000 });
-      await expect(page.getByRole("heading", { name: "Checkpoint" })).toBeVisible({ timeout: 10_000 });
+      await expect(page.getByRole("heading", { name: "Checagem" })).toBeVisible({ timeout: 10_000 });
       await clicarComecarSeHouver(page, 2);
       await expect(page.getByRole("radio").first()).toBeVisible({ timeout: 10_000 });
     },

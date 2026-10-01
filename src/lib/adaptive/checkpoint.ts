@@ -231,3 +231,38 @@ export function checkpointRecalibrationInputs(
     .filter((a) => a.skillIds.length > 0)
     .map((a) => ({ skillId: a.skillIds[0], predictedP: a.predictedP, correct: a.correct }));
 }
+
+/** Rótulo por habilidade no resultado da checagem (30 §13.5; spec 48 D48-13). */
+export type RotuloChecagem = "subiu" | "firme" | "revisar";
+
+export interface LinhaDaChecagem {
+  skillId: string;
+  rotulo: RotuloChecagem;
+  /** A revisão desta habilidade foi antecipada para amanhã (superestimada). */
+  revisaoAmanha: boolean;
+  /** Ficou elegível a desafio (subestimada). */
+  desafio: boolean;
+}
+
+/** Diferença de Domínio que conta como mudança (31 Fase 14: ±5). */
+export const CHECAGEM_DELTA = 5;
+
+/**
+ * Resultado por habilidade (spec 48 T-48.5.1, D48-13): ΔDomínio ≥ +5 → "Subiu"; |Δ| < 5 → "Firme"; Δ ≤ −5 **ou** erro com
+ * probabilidade prevista ≥ 0,8 → "Vale revisar". Só entram as habilidades respondidas nesta checagem; sem retrato de
+ * antes (checagem de antes desta versão), a habilidade fica "Firme" salvo o sinal de superestimação. Sem número na tela.
+ */
+export function resultadoDaChecagem(
+  antes: Record<string, number> | undefined,
+  depois: Record<string, number>,
+  respostas: RecalibrarInput[],
+): LinhaDaChecagem[] {
+  const { antecipandoRevisao, elegivelDesafio } = recalibrar(respostas);
+  const vistas = [...new Set(respostas.map((r) => r.skillId))];
+  return vistas.map((skillId) => {
+    const delta = antes && skillId in antes && skillId in depois ? depois[skillId] - antes[skillId] : 0;
+    const superestimada = antecipandoRevisao.includes(skillId);
+    const rotulo: RotuloChecagem = superestimada || delta <= -CHECAGEM_DELTA ? "revisar" : delta >= CHECAGEM_DELTA ? "subiu" : "firme";
+    return { skillId, rotulo, revisaoAmanha: superestimada, desafio: elegivelDesafio.includes(skillId) };
+  });
+}

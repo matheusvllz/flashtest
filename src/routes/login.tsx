@@ -28,9 +28,12 @@ function Login() {
   const [naoVerificado, setNaoVerificado] = useState(false);
   const [enviando, setEnviando] = useState(false);
 
-  useEffect(() => {
-    configAcesso().then(setAcesso, () => setAcesso({ emailHabilitado: true, googleHabilitado: false }));
-  }, []);
+  const [indisponivel, setIndisponivel] = useState(false);
+  function carregar() {
+    setIndisponivel(false);
+    configAcesso().then(setAcesso, () => setIndisponivel(true));
+  }
+  useEffect(carregar, []);
 
   const depois = `/cadastro/completar${volta ? `?volta=${encodeURIComponent(volta)}` : ""}`;
 
@@ -59,6 +62,18 @@ function Login() {
     } finally {
       setEnviando(false);
     }
+  }
+
+  // Sem a configuração de acesso (servidor fora ou com erro), nenhum formulário funcionaria: diz isso e deixa tentar
+  // de novo, em vez de mostrar um e-mail e senha que sempre falham (achado em produção, 30/09/2026).
+  if (indisponivel) {
+    return (
+      <TelaDeAcesso titulo={COPY.conta.entrarTitulo} subtitulo={COPY.conta.acessoIndisponivel} voltarPara="/">
+        <button type="button" className="btn-primary mt-8 w-full" onClick={carregar}>
+          {COPY.conta.tentarDeNovo}
+        </button>
+      </TelaDeAcesso>
+    );
   }
 
   // Contas desligadas no servidor (D-15): entrada local, sem formulário.

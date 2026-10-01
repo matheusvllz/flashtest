@@ -2,8 +2,16 @@
   "mcpServers": {
     "omniroute": {
       "command": "npx",
-      "args": ["-y", "omniroute@3.8.50", "--mcp"],
+      "args": [
+        "-y",
+        "omniroute@3.8.50",
+        "--mcp"
+      ],
       "env": {}
+    },
+    "Neon": {
+      "type": "http",
+      "url": "https://mcp.neon.tech/mcp?projectId=billowing-bread-71576526"
     }
   }
 }

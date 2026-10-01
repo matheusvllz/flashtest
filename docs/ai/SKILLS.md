@@ -42,8 +42,10 @@ substituido-por: null
 | tailwind-v4-shadcn@claude-skills (1 skills) | plugin | sim (depende do host) | — | `.claude/settings.json` + cache do Claude | alternativa da matriz (SKILL-ROUTING §2) |
 | foca-sdd | local-skill | sim | sim | `.agents/skills` | — |
 | foca-backend | local-skill | sim | sim | `.agents/skills` | — |
+| neon, neon-postgres, neon-postgres-branches | local-skill | sim | sim | `.agents/skills` | — |
 | foca-social | local-skill | sim | sim | `.agents/skills` | — |
 | omniroute-mcp | mcp-server | sim | — | `.mcp.json` | — |
+| neon-mcp | mcp-server | sim | sim | `.mcp.json` | — |
 | agente `spec-verifier` | agente | sim (`.claude/agents/spec-verifier.md`) | sim (`.codex/agents/spec-verifier.toml`) | — | — |
 | agente `foca-social` | agente | sim (`.claude/agents/foca-social.md`) | — | — | — |
 <!-- tabela-skills:fim -->
@@ -372,7 +374,7 @@ Estes plugins convivem com outros **já instalados no escopo de usuário** desta
 **Purpose:** conteúdo orgânico do Instagram — ideias, posts e carrosséis 4:5, Reels, motion, histórico editorial, publicação (API da Meta) e agendamento.
 **Use when:** qualquer pedido sobre o Instagram do Foca. A skill serve a conversa (ideias → escolha → produção); o agente serve a produção delegada.
 **Do not use when:** app, landing, conteúdo pedagógico. Não publica sem pedido explícito para um conteúdo identificado.
-**Dependencies:** lê do cache, sem ligar o pacote, `marketing-skills:social`, `copywriting` e `copy-editing` (§K); `humanizer` (§L); `motion-design` (§J); as skills de vídeo de `edição Videos/` (`watch`, `remotion-*`, `faster-whisper`) por caminho. Roteamento completo em `automacao-instagram/AGENTE.md` §2.
+**Dependencies:** lê do cache, sem ligar o pacote, `marketing-skills:social`, `copywriting` e `copy-editing` (§K); `humanizer` (§L), **obrigatória em toda copy pública desde 30/09/2026**, com portão no código (`bun run humanizar`: o render final, o validador e o publicador recusam copy sem registro ou alterada depois dele); `motion-design` (§J); as skills de vídeo de `edição Videos/` (`watch`, `remotion-*`, `faster-whisper`) por caminho. Roteamento completo em `automacao-instagram/AGENTE.md` §2.
 **Priority:** Primary (marketing orgânico).
 
 ## Avaliadas e não instaladas — `boraoztunc/skills` (28/09/2026, commit `645553c`)
@@ -418,6 +420,17 @@ Antes de instalar, cada upstream foi clonado e lido: manifests (`plugin.json`, `
 - **Rede em tempo de uso:** Web Design Guidelines (busca regras no GitHub da Vercel), Impeccable (checagem de update), claude-mem (worker local).
 - **Telemetria:** o CLI `skills` (usado para instalar as skills locais) envia um evento de instalação — foi rodado com `DISABLE_TELEMETRY=1 DO_NOT_TRACK=1`. Repita isso ao atualizar.
 - **Acesso a segredos:** nenhum plugin lê `.env`. O Impeccable detecta `OPENAI_API_KEY` no ambiente só para anunciar geração de imagem.
+
+## T. Neon — skills e MCP (30/09/2026)
+
+**O que é:** skills oficiais da Neon (`neon`, `neon-postgres`, `neon-postgres-branches`, repositório `neondatabase/agent-skills`, commit `b8250e6`) e o servidor MCP remoto da Neon (`https://mcp.neon.tech/mcp`), instalados a pedido do proprietário seguindo `https://neon.com/.well-known/agent-skills/neon/SKILL.md`.
+**Installation method:** CLI `neon@7.0.1` global (`bun add -g neon@7.0.1`; não é dependência do repositório).
+- Skills: `neon skills -s neon -s neon-postgres -s neon-postgres-branches --agent claude-code --agent codex -y`. A CLI grava em `.agents/skills/` e cria **symlinks absolutos** em `.claude/skills/`; eles foram trocados por cópia com `bun scripts/agents/sincronizar-skills.ts` (convenção do projeto). Hash por skill no `skills-lock.json`.
+- MCP: `neon mcp --oauth --project --agent claude-code --agent codex --project-id billowing-bread-71576526 -y`. Grava só a URL (`?projectId=billowing-bread-71576526`) em `.mcp.json` (o `omniroute` foi preservado) e em `.codex/config.toml`. **Nenhuma chave de API no repositório:** o cliente MCP pede o login Neon no primeiro uso.
+**Não instaladas, de propósito:** `neon-auth` (o Foca mantém o Better Auth próprio, ADR 0005), `neon-functions`, `neon-object-storage`, `neon-ai-gateway` (fora da arquitetura aprovada; também indisponíveis em `aws-sa-east-1`).
+**Use when:** conexão, migração, branch ou inspeção do banco Neon. Preferir a CLI ao MCP (a própria skill recomenda).
+**Do not use when:** trocar o Better Auth por Neon Auth (`auth: true`); rodar teste ou criar conta de teste na branch `production`; Data API no navegador.
+**Atualizar:** `NO_UPDATE_NOTIFIER=1 neon skills update -y`, trocar de novo os symlinks por cópia (`sincronizar-skills.ts`) e rodar `node scripts/validate-skills.mjs`.
 
 ## Como atualizar
 

@@ -9,13 +9,12 @@ import { z } from "zod";
 import type { JsonObjeto } from "@/lib/json";
 import { pedidoEnvio, type Agregado, type RespostaEnvio } from "@/lib/sync/contrato";
 import { banco } from "@/server/db/client";
-import { learningDoc } from "@/server/db/schema";
+import { estadoDoAluno, salvarDocumentoDoAluno } from "@/server/estudo/documento";
 import { importarEstado } from "@/server/estudo/importar";
-import { agregadoDoAluno, aplicarEventos } from "@/server/estudo/sincronizar";
+import { aplicarEventos } from "@/server/estudo/sincronizar";
 import { pedidoImportacao, type ResumoImportacao } from "@/lib/sync/importacao";
 import { checarOrigem, exigirSessao, respostaDeErro } from "@/server/http";
 import { limitar } from "@/server/limite";
-import { eq, sql } from "drizzle-orm";
 
 /** Teto do documento de planejamento (bytes de JSON). */
 export const LIMITE_DOCUMENTO = 512 * 1024;
@@ -44,12 +43,7 @@ export const obterEstado = createServerFn({ method: "GET" }).handler(async (): P
   try {
     const s = await exigirSessao();
     const db = await banco();
-    const [doc] = await db.select().from(learningDoc).where(eq(learningDoc.userId, s.userId)).limit(1);
-    return {
-      ok: true,
-      agregado: await agregadoDoAluno(db, s.userId),
-      documento: doc ? { rev: doc.rev, schemaVersion: doc.schemaVersion, doc: doc.doc } : null,
-    };
+    return { ok: true, ...(await estadoDoAluno(db, s.userId)) };
   } catch (e) {
     return respostaDeErro(e);
   }
@@ -74,19 +68,7 @@ export const salvarDocumento = createServerFn({ method: "POST" })
       const s = await exigirSessao();
       const db = await banco();
       await limitar(db, `doc:${s.userId}`, 60, 30);
-      // Grava só se a revisão bate (ou se ainda não existe documento e o cliente mandou 0).
-      const r = await db
-        .insert(learningDoc)
-        .values({ userId: s.userId, rev: 1, schemaVersion: data.schemaVersion, doc: data.doc })
-        .onConflictDoUpdate({
-          target: learningDoc.userId,
-          set: { rev: sql`${learningDoc.rev} + 1`, schemaVersion: data.schemaVersion, doc: data.doc, updatedAt: sql`now()` },
-          setWhere: sql`${learningDoc.rev} = ${data.rev}`,
-        })
-        .returning({ rev: learningDoc.rev });
-      if (r.length) return { ok: true, rev: r[0].rev };
-      const [atual] = await db.select({ rev: learningDoc.rev }).from(learningDoc).where(eq(learningDoc.userId, s.userId));
-      return { ok: false, codigo: "CONFLITO", rev: atual?.rev };
+      return await salvarDocumentoDoAluno(db, s.userId, data);
     } catch (e) {
       return respostaDeErro(e);
     }

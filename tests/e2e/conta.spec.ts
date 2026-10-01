@@ -101,7 +101,9 @@ test("sair encerra a sessão: a trilha volta a pedir login (T14)", async ({ page
 /** Quiz de perfil completo, sem conta e com o nivelamento desligado (vai direto ao diagnóstico). */
 async function quizSemConta(page: import("@playwright/test").Page) {
   await page.addInitScript(() => localStorage.setItem("foca.flags", JSON.stringify({ nivelamento: false })));
-  await page.goto("/quiz?debug=1", { waitUntil: "domcontentloaded" });
+  await page.goto("/?debug=1", { waitUntil: "domcontentloaded" });
+  await page.locator("#cta-hero").click();
+  await expect(page).toHaveURL(/\/quiz$/);
   await page.getByPlaceholder("Seu primeiro nome").fill("Ana");
   await page.getByRole("button", { name: "Continuar" }).click();
   await page.getByText("1º ano do ensino médio").click();
@@ -124,11 +126,24 @@ test("quiz: 'Já tem uma conta? Entrar' no topo leva ao login", async ({ page })
   await expect(page).toHaveURL(/\/login/);
 });
 
-test("a conta é pedida só depois do quiz e do diagnóstico, na hora de começar a estudar (D-16)", async ({ page }) => {
+test("landing → quiz → diagnóstico → cadastro: conta só ao começar a estudar (D-16/D-20)", async ({ page }) => {
   await quizSemConta(page);
   await expect(page).toHaveURL(/\/aha/, { timeout: 15_000 });
   await expect(page.getByRole("button", { name: "Entrar no meu plano" })).toBeVisible();
   await page.getByRole("button", { name: "Entrar no meu plano" }).click();
   await expect(page).toHaveURL(/\/cadastro\?volta=%2Ftrilha/, { timeout: 15_000 });
   await expect(page.getByRole("heading", { name: "Criar sua conta" })).toBeVisible();
+});
+
+test("servidor fora: /login diz que não carregou e oferece tentar de novo, sem formulário que sempre falha (48, achado em produção)", async ({ browser }) => {
+  const ctx = await browser.newContext({ storageState: { cookies: [], origins: [] } });
+  const page = await ctx.newPage();
+  await page.route("**/_serverFn/**", (r) => r.fulfill({ status: 500, body: "erro" }));
+  await page.goto("/login", { waitUntil: "domcontentloaded" });
+  await expect(page.getByText("Não deu para carregar a entrada agora.")).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByLabel(/e-mail/i)).toHaveCount(0);
+  await page.unroute("**/_serverFn/**");
+  await page.getByRole("button", { name: "Tentar de novo" }).click();
+  await expect(page.getByLabel(/e-mail/i).first()).toBeVisible({ timeout: 15_000 });
+  await ctx.close();
 });

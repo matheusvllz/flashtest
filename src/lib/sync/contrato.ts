@@ -104,6 +104,8 @@ export interface Agregado {
   /** Último dia com atividade (`AAAA-MM-DD`) ou `null`. */
   ultimoDia: string | null;
   diasComAtividade: number;
+  /** Último dia parado coberto por proteção (spec 48 D48-14), ou `null`. Aditivo: servidor antigo não manda. */
+  diaProtegido?: string | null;
 }
 
 export type MotivoRejeicao =

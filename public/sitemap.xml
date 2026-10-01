@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Só a landing é indexável (docs/44 §7); o produto é noindex. Domínio: spec 48 D48-05. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://focaedu.com/</loc>
+  </url>
+</urlset>

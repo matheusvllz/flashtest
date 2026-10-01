@@ -15,6 +15,7 @@ import {
   documentoParaSincronizar,
   getState,
   marcarDocumentoSalvo,
+  marcarSync,
   removerDaOutbox,
 } from "@/lib/store";
 
@@ -43,6 +44,7 @@ async function ciclo(): Promise<void> {
   if (!conta?.userId) return;
   if (!navigator.onLine) return;
   enviando = true;
+  marcarSync({ sync: "enviando" });
   try {
     let lote = getState().account?.outbox.slice(0, LIMITE_EVENTOS_POR_ENVIO) ?? [];
     while (lote.length) {
@@ -50,12 +52,15 @@ async function ciclo(): Promise<void> {
       if (!r.ok) throw new Error(r.codigo);
       removerDaOutbox([...r.aplicados, ...r.rejeitados.map((x) => x.id)]);
       aplicarAgregadoDoServidor(r.agregado);
+      marcarSync({ syncConfirmadoEm: Date.now() });
       lote = getState().account?.outbox.slice(0, LIMITE_EVENTOS_POR_ENVIO) ?? [];
     }
     await salvarDocumentoSeMudou();
     if (Date.now() - ultimoPull > INTERVALO_PULL) await puxar();
     espera = ESPERA_MIN;
+    marcarSync({ sync: "ocioso" });
   } catch {
+    marcarSync({ sync: "falhou" });
     espera = Math.min(ESPERA_MAX, espera * 2);
     agendar(espera);
   } finally {
@@ -77,6 +82,7 @@ export async function puxar(): Promise<void> {
   const r = await obterEstado();
   if (!r.ok) return;
   ultimoPull = Date.now();
+  marcarSync({ syncConfirmadoEm: ultimoPull });
   aplicarAgregadoDoServidor(r.agregado);
   if (r.documento) aplicarDocumentoDoServidor(r.documento);
 }

@@ -199,3 +199,16 @@ describe("ALGO_VERSION", () => {
     expect(ALGO_VERSION).toBe(1);
   });
 });
+
+describe("atalho sem nada a reprocessar (spec 48 T-48.9.2)", () => {
+  test("estado vazio: o bootstrap daria {}; o atalho reconhece o caso e não precisa baixar conteúdo", async () => {
+    const { bootstrapModel } = await import("@/lib/adaptive/bootstrap");
+    const { semNadaParaReprocessar } = await import("@/lib/store");
+    const { learningStateVazio } = await import("@/lib/learning/types");
+    const vazio = { learning: learningStateVazio(), progress: { bySubject: {} } } as never;
+    expect(bootstrapModel(vazio)).toEqual({});
+    expect(semNadaParaReprocessar(vazio)).toBe(true);
+    const comAcerto = { learning: learningStateVazio(), progress: { bySubject: { mat: { answered: 2, correct: 1 } } } } as never;
+    expect(semNadaParaReprocessar(comAcerto)).toBe(false);
+  });
+});

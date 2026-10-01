@@ -8,23 +8,13 @@ import { z } from "zod";
 import type { Json, JsonObjeto } from "@/lib/json";
 import { LEGAL, idadePeloAno } from "@/lib/legal";
 import { banco } from "@/server/db/client";
-import {
-  aiUsage,
-  attempt,
-  completion,
-  consent,
-  legalAcceptance,
-  learningDoc,
-  profile,
-  studyDay,
-  user,
-  xpLedger,
-} from "@/server/db/schema";
+import { legalAcceptance, user } from "@/server/db/schema";
 import { env } from "@/server/env";
 import { ErroApp, checarOrigem, exigirSessao, respostaDeErro } from "@/server/http";
+import { exportarDadosDoAluno, focaIALigada, gravarFocaIA } from "@/server/conta/dados";
 import { gravarPerfil } from "@/server/conta/perfil";
 import { limitar } from "@/server/limite";
-import { and, eq } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 
 /** Perfil respondido no onboarding (fica no aparelho até a conta existir). Só os campos de privacidade.md. */
 export const esquemaPerfil = z.object({
@@ -124,26 +114,37 @@ export const exportarDados = createServerFn({ method: "POST" }).handler(async ()
     const s = await exigirSessao();
     const db = await banco();
     await limitar(db, `exportar:${s.userId}`, 3600, 1);
-    const doAluno = <T extends { userId: unknown }>(t: T) => eq(t.userId as never, s.userId);
-    const [u] = await db
-      .select({ nome: user.name, email: user.email, emailVerificado: user.emailVerified, criadoEm: user.createdAt, anoNascimento: user.birthYear })
-      .from(user)
-      .where(eq(user.id, s.userId));
-    return {
-      ok: true as const,
-      geradoEm: new Date().toISOString(),
-      conta: u,
-      perfil: (await db.select().from(profile).where(doAluno(profile)))[0] ?? null,
-      aceites: await db.select({ documento: legalAcceptance.document, versao: legalAcceptance.version, em: legalAcceptance.acceptedAt }).from(legalAcceptance).where(doAluno(legalAcceptance)),
-      consentimentos: await db.select({ finalidade: consent.purpose, por: consent.grantedBy, em: consent.grantedAt, revogadoEm: consent.revokedAt }).from(consent).where(doAluno(consent)),
-      respostas: await db.select({ item: attempt.itemId, correta: attempt.correct, fonte: attempt.source, em: attempt.answeredAt }).from(attempt).where(doAluno(attempt)),
-      conclusoes: await db.select({ chave: completion.key, tipo: completion.kind, pct: completion.scorePct, em: completion.completedAt }).from(completion).where(doAluno(completion)),
-      xp: await db.select({ chave: xpLedger.key, xp: xpLedger.xp, dia: xpLedger.localDate }).from(xpLedger).where(doAluno(xpLedger)),
-      diasDeEstudo: await db.select({ dia: studyDay.localDate }).from(studyDay).where(doAluno(studyDay)),
-      planejamento: (await db.select({ doc: learningDoc.doc }).from(learningDoc).where(doAluno(learningDoc)))[0]?.doc ?? null,
-      usoDaFocaIA: await db.select({ dia: aiUsage.day, mensagens: aiUsage.messages, fotos: aiUsage.images }).from(aiUsage).where(and(doAluno(aiUsage))),
-    };
+    return { ok: true as const, ...(await exportarDadosDoAluno(db, s.userId)) };
   } catch (e) {
     return respostaDeErro(e);
   }
 });
+
+/**
+ * Foca IA ligada ou desligada pelo aluno (spec 48 T-48.2.6; ECA Digital art. 17 §4 VIII; 46 §E.7.5). Fica no
+ * `profile` (o servidor recusa o tutor quando desligado); o aparelho guarda um espelho só para esconder o botão.
+ */
+export const preferenciaFocaIA = createServerFn({ method: "GET" }).handler(async () => {
+  try {
+    const s = await exigirSessao();
+    const db = await banco();
+    return { ok: true as const, ligada: await focaIALigada(db, s.userId) };
+  } catch (e) {
+    return respostaDeErro(e);
+  }
+});
+
+export const definirFocaIA = createServerFn({ method: "POST" })
+  .validator((d: unknown) => z.object({ ligada: z.boolean() }).parse(d))
+  .handler(async ({ data }) => {
+    try {
+      checarOrigem();
+      const s = await exigirSessao();
+      const db = await banco();
+      await limitar(db, `foca-ia:${s.userId}`, 60, 20);
+      await gravarFocaIA(db, s.userId, data.ligada);
+      return { ok: true as const, ligada: data.ligada };
+    } catch (e) {
+      return respostaDeErro(e);
+    }
+  });

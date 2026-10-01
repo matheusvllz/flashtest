@@ -170,16 +170,19 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
       ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, exerciseId, mode, hojeISO())
       : null;
     openTutorWithContext(
-      focusFromExercise(
-        exercise,
-        answer,
-        lesson.id,
-        lesson.titulo,
-        trilha.nome,
-        idx,
-        shownBlocksByIdx[idx],
-        session.feedback?.correct ?? false,
-      ),
+      {
+        ...focusFromExercise(
+          exercise,
+          answer,
+          lesson.id,
+          lesson.titulo,
+          trilha.nome,
+          idx,
+          shownBlocksByIdx[idx],
+          session.feedback?.correct ?? false,
+        ),
+        itemId: exerciseId,
+      },
       { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null },
     );
   }

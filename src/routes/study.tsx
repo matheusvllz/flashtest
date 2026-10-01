@@ -122,6 +122,9 @@ function Study() {
       wasCorrect: session.feedback?.correct ?? false,
       explanation: q.explanation,
       hint: q.hint,
+      itemId: q.id,
+      // Letra → índice (A = 0), a mesma conversão do contrato de sincronização (46 DV-14).
+      resposta: answered && selected ? selected.charCodeAt(0) - 65 : null,
     };
   }
 

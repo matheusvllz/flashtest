@@ -4,7 +4,10 @@ import { PhoneFrame } from "@/components/AppShell";
 import { CheckpointIntro } from "@/components/learning/CheckpointIntro";
 import { MicroLessonPlayer } from "@/components/learning/MicroLessonPlayer";
 import { selectItemsForActivity } from "@/lib/adaptive";
-import { checkpointRecalibrationInputs, recalibrar } from "@/lib/adaptive/checkpoint";
+import { CheckpointResult } from "@/components/learning/CheckpointResult";
+import { itemMetaOf } from "@/content/items";
+import { checkpointRecalibrationInputs, recalibrar, resultadoDaChecagem, type LinhaDaChecagem } from "@/lib/adaptive/checkpoint";
+import { mastery } from "@/lib/adaptive/model";
 import { buildActivityLesson } from "@/lib/adaptive/activity-lesson";
 import { isReadyToResume } from "@/lib/adaptive/journey";
 import type { PlannedActivity } from "@/lib/adaptive/types";
@@ -14,6 +17,7 @@ import { FEATURES } from "@/lib/features";
 import {
   applyCheckpointRecalibration,
   completeJourneyActivity,
+  guardarDominioAntesDaChecagem,
   discardJourneyActivity,
   getState,
   hojeISO,
@@ -37,15 +41,42 @@ const ATRASO_TEXTO_MS = 400;
  * antecipam a revisão pra amanhã, subestimadas ficam elegíveis a desafio por 7 dias. Roda depois de
  * `completeJourneyActivity` e só na primeira conclusão da tentativa (idempotente de qualquer forma).
  */
-function recalibrarDoCheckpoint(atividade: PlannedActivity): void {
+function recalibrarDoCheckpoint(atividade: PlannedActivity, sessionId: string | null): void {
   const { learning } = getState();
   const entradas = checkpointRecalibrationInputs(learning.recentAttempts, {
-    sessionId: learning.activeSession?.id ?? null,
+    sessionId,
     itemIds: atividade.itemIds,
     startedAt: atividade.startedAt,
   });
   const r = recalibrar(entradas);
   applyCheckpointRecalibration({ antecipar: r.antecipandoRevisao, desafio: r.elegivelDesafio, today: hojeISO() });
+}
+
+/** Habilidades principais dos itens da checagem. */
+function habilidadesDaChecagem(a: PlannedActivity): string[] {
+  const ids = new Set<string>();
+  for (const itemId of a.itemIds ?? []) {
+    try {
+      const sk = itemMetaOf(itemId).skillIds[0];
+      if (sk) ids.add(sk);
+    } catch {
+      /* item sem metadados: fica de fora do retrato */
+    }
+  }
+  return [...ids];
+}
+
+/** Domínio atual (0–100) de cada habilidade — o retrato de antes e o de depois da checagem. */
+function retratoDoDominio(skillIds: string[]): Record<string, number> {
+  const modelo = getState().learning.skillModel;
+  return Object.fromEntries(skillIds.map((id) => [id, mastery(modelo[id])]));
+}
+
+/** Linhas do resultado da checagem (spec 48 T-48.5.1), calculadas logo depois da conclusão. */
+function linhasDaChecagem(atividade: PlannedActivity, antes: Record<string, number> | undefined, sessionId: string | null): LinhaDaChecagem[] {
+  const { learning } = getState();
+  const entradas = checkpointRecalibrationInputs(learning.recentAttempts, { sessionId, itemIds: atividade.itemIds, startedAt: atividade.startedAt });
+  return resultadoDaChecagem(antes, retratoDoDominio(entradas.map((e) => e.skillId)), entradas);
 }
 
 /** `true` quando a atividade já monta com o que está em memória (itens embarcados ou pacote já carregado). */
@@ -91,7 +122,13 @@ function Atividade() {
   // ser setado e a tela ficava em branco pra sempre).
   const resolvidaRef = useRef<string | null>(null);
   const [travada, setTravada] = useState<PlannedActivity | null>(null);
-  const [comecou, setComecou] = useState(false);
+  // Checagem já começada (retrato do Domínio gravado) não volta para a tela de entrada ao recarregar (spec 48 T-48.8.1).
+  const [comecou, setComecou] = useState(() => {
+    const ativa = getState().learning.journey.activeActivity;
+    return ativa?.id === activityId && Boolean(ativa.masteryAntes);
+  });
+  /** Resultado da checagem, calculado na conclusão (spec 48 T-48.5.1). */
+  const linhasRef = useRef<LinhaDaChecagem[] | null>(null);
   const [erroPacote, setErroPacote] = useState(false);
   const [lento, setLento] = useState(false);
   const [tentativa, setTentativa] = useState(0);
@@ -233,7 +270,11 @@ function Atividade() {
     return (
       <PhoneFrame variant="reading">
         <CheckpointIntro
-          onComecar={() => setComecou(true)}
+          onComecar={() => {
+            // Retrato do Domínio antes da primeira resposta (o "Subiu / Firme / Vale revisar" compara com ele).
+            guardarDominioAntesDaChecagem(travada.id, retratoDoDominio(habilidadesDaChecagem(travada)));
+            setComecou(true);
+          }}
           onAgoraNao={() => navigate({ to: "/trilha", replace: true })}
         />
       </PhoneFrame>
@@ -263,10 +304,22 @@ function Atividade() {
       lesson={lesson}
       mode={travada.kind === "checkpoint" ? "checkpoint" : "atividade"}
       onComplete={(correct, total) => {
+        // Antes de concluir: a sessão e o retrato ainda estão na atividade em andamento.
+        const { learning } = getState();
+        const sessionId = learning.activeSession?.id ?? null;
+        const antes = learning.journey.activeActivity?.id === travada.id ? learning.journey.activeActivity.masteryAntes : undefined;
         const resultado = completeJourneyActivity(travada, correct, total);
-        if (travada.kind === "checkpoint" && !resultado.alreadyCompleted) recalibrarDoCheckpoint(travada);
+        if (travada.kind === "checkpoint" && !resultado.alreadyCompleted) {
+          recalibrarDoCheckpoint(travada, sessionId);
+          linhasRef.current = linhasDaChecagem(travada, antes, sessionId);
+        }
         return resultado;
       }}
+      conclusao={
+        travada.kind === "checkpoint"
+          ? ({ xpGanho }) => <CheckpointResult linhas={linhasRef.current ?? []} xpGanho={xpGanho} />
+          : undefined
+      }
     />
   );
 }

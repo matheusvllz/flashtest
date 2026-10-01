@@ -1,5 +1,6 @@
 import type { FocaExpression } from "@/components/brand/FocaMark";
 import { GoalRing } from "@/components/ds/GoalRing";
+import { IndicadorSequencia } from "@/components/learning/IndicadorSequencia";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { COPY } from "@/lib/copy";
 import { atividadeHoje, diasSemAtividade, nivelDeXp, type AppState } from "@/lib/store";
@@ -29,10 +30,8 @@ export function TrailHeader({ s }: { s: AppState }) {
 
   return (
     <div className="flex items-center gap-3">
-      <span className="shrink-0 font-mono text-sm font-bold text-abismo">
-        <span className="mark-texto">{s.progress.streak}</span>{" "}
-        {s.progress.streak === 1 ? "dia" : "dias"}
-      </span>
+      {/* Sequência com foguinho e proteção (spec 48 T-48.6.1); toca para ver como funciona. */}
+      <IndicadorSequencia s={s} />
       <span className="flex shrink-0 items-center gap-1.5">
         <GoalRing value={doneToday} max={goal} size={40} />
         <span className="hidden font-mono text-xs font-bold text-nevoa min-[360px]:inline">

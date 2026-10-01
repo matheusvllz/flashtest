@@ -88,7 +88,7 @@ test("checkpoint comprometido: mostra a tela de entrada, sem Foca nem escada, e 
 
   await page.goto("/atividade/atv-test-checkpoint?debug=1", { waitUntil: "domcontentloaded" });
 
-  await expect(page.getByRole("heading", { name: "Checkpoint" })).toBeVisible({ timeout: 15000 });
+  await expect(page.getByRole("heading", { name: "Checagem" })).toBeVisible({ timeout: 15000 });
   await expect(page.getByText("Questões misturadas, sem dica.")).toBeVisible();
   const comecar = page.getByRole("button", { name: "Começar" });
   await expect(comecar).toBeVisible();
@@ -137,7 +137,7 @@ test("'Agora não' volta pra trilha sem gastar XP nem tirar o checkpoint de 'com
   );
 
   await page.goto("/atividade/atv-test-checkpoint?debug=1", { waitUntil: "domcontentloaded" });
-  await expect(page.getByRole("heading", { name: "Checkpoint" })).toBeVisible({ timeout: 15000 });
+  await expect(page.getByRole("heading", { name: "Checagem" })).toBeVisible({ timeout: 15000 });
 
   const xpAntes = await page.evaluate(
     () => JSON.parse(localStorage.getItem("foca.state.v3") ?? "{}").progress.xp,
@@ -225,7 +225,7 @@ test("checkpoint concluído recalibra: superestimada antecipa a revisão para am
   }, estado);
 
   await page.goto("/atividade/atv-test-checkpoint?debug=1", { waitUntil: "domcontentloaded" });
-  await expect(page.getByRole("heading", { name: "Checkpoint" })).toBeVisible({ timeout: 15000 });
+  await expect(page.getByRole("heading", { name: "Checagem" })).toBeVisible({ timeout: 15000 });
   await page.getByRole("button", { name: "Começar" }).click();
   const abertura = page.getByRole("button", { name: "Começar" });
   if (await abertura.isVisible().catch(() => false)) await abertura.click();
@@ -269,4 +269,43 @@ test("checkpoint concluído recalibra: superestimada antecipa a revisão para am
     if (!sinalizadas.has(sk) && reviewSchedule[sk]) expect(ent.dueDate).toBe(dataLocalMais(30));
   }
   expect(s.learning.events.filter((e: { type: string }) => e.type === "checkpoint-recalibrated")).toHaveLength(1);
+
+  // Resultado da checagem (spec 48 T-48.5.1, B-069): tela própria, uma linha por habilidade, sem número.
+  const resultado = page.getByTestId("checagem-resultado");
+  await expect(resultado).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Checagem feita" })).toBeVisible();
+  await expect(resultado.locator("li[data-rotulo]")).not.toHaveCount(0);
+  if (super_.length > 0) {
+    await expect(resultado.locator('li[data-rotulo="revisar"]')).not.toHaveCount(0);
+    await expect(resultado.getByText(/A revisão de .+ vem amanhã./).first()).toBeVisible();
+  }
+  if (sub.length > 0) await expect(resultado.getByText(/Um desafio de .+ fica liberado./).first()).toBeVisible();
+  await expect(resultado.getByText(/\d+\s?%/)).toHaveCount(0);
+  await page.getByRole("link", { name: "Continuar" }).click();
+  await expect(page).toHaveURL(/\/trilha/);
+});
+
+test("retomada (spec 48 T-48.8.1): recarregar no meio da checagem não volta à tela de entrada nem troca o retrato de antes", async ({ page }) => {
+  await ligarJornada(page);
+  // Semeia só uma vez (o init script roda de novo no reload).
+  await page.addInitScript((raw) => {
+    if (!localStorage.getItem("foca.state.v3")) localStorage.setItem("foca.state.v3", JSON.stringify(raw));
+  }, comCheckpointComprometido());
+  await page.goto("/atividade/atv-test-checkpoint?debug=1", { waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("heading", { name: "Checagem" })).toBeVisible({ timeout: 15000 });
+  await page.getByRole("button", { name: "Começar" }).click();
+  const abertura = page.getByRole("button", { name: "Começar" });
+  if (await abertura.isVisible().catch(() => false)) await abertura.click();
+  await expect(page.getByRole("radio").first()).toBeVisible({ timeout: 15000 });
+  const retrato = (await lerEstado(page)).learning.journey.activeActivity.masteryAntes;
+  expect(retrato && Object.keys(retrato).length).toBeGreaterThan(0);
+
+  await page.getByRole("button", { name: "Não sei" }).click();
+  await page.locator('[role="status"]').waitFor();
+  await page.getByRole("button", { name: /^(Continuar|Ver resultado)$/ }).click();
+
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("radio").first()).toBeVisible({ timeout: 15000 });
+  await expect(page.getByRole("heading", { name: "Checagem" })).toHaveCount(0);
+  expect((await lerEstado(page)).learning.journey.activeActivity.masteryAntes).toEqual(retrato);
 });

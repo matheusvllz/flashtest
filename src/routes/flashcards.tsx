@@ -46,7 +46,10 @@ function Flashcards() {
 
   function loteAtual(): string[] {
     return cards
-      .filter((c) => (filter === "saved" ? c.saved : c.due) && (subject === "Todas" || c.subject === subject))
+      .filter(
+        (c) =>
+          (filter === "saved" ? c.saved : c.due) && (subject === "Todas" || c.subject === subject),
+      )
       .map((c) => c.id);
   }
 
@@ -98,134 +101,156 @@ function Flashcards() {
   }
 
   return (
-    <AppShell title="Flashcards">
-      <div className="px-5 pt-4 space-y-4">
-        <div className="flex gap-2">
-          <button
-            type="button"
-            onClick={() => setFilter("all")}
-            className={cn("chip", filter === "all" && "chip-on")}
-          >
-            Todos
-          </button>
-          <button
-            type="button"
-            onClick={() => setFilter("saved")}
-            className={cn("chip", filter === "saved" && "chip-on")}
-          >
-            Salvos ({s.progress.savedFlashcards.length})
-          </button>
-          <select
-            aria-label="Filtrar por matéria"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className="input-ds ml-auto w-auto min-h-11 py-1.5 text-xs font-semibold"
-          >
-            {subjects.map((x) => (
-              <option key={x}>{x}</option>
-            ))}
-          </select>
+    <AppShell title="Flashcards" layout="wide">
+      {/* Desktop (spec 48 T-48.7.1, B-074): filtros num painel à direita e o cartão maior no centro; no celular, a
+          ordem de sempre (filtros em cima). */}
+      <div className="desk-split px-5 pt-4 pb-8">
+        <div className="desk-aside">
+          <div className="flex flex-wrap gap-2 lg:flex-col lg:items-stretch">
+            <button
+              type="button"
+              onClick={() => setFilter("all")}
+              className={cn("chip", filter === "all" && "chip-on")}
+            >
+              Todos
+            </button>
+            <button
+              type="button"
+              onClick={() => setFilter("saved")}
+              className={cn("chip", filter === "saved" && "chip-on")}
+            >
+              Salvos ({s.progress.savedFlashcards.length})
+            </button>
+            <select
+              aria-label="Filtrar por matéria"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="input-ds ml-auto w-auto min-h-11 py-1.5 text-xs font-semibold lg:ml-0 lg:w-full"
+            >
+              {subjects.map((x) => (
+                <option key={x}>{x}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
-        {!card ? (
-          <EmptyState text="Nenhum flashcard nessa seleção." />
-        ) : (
-          <>
-            <div className="flex items-center justify-between">
-              <div className="text-xs font-semibold text-nevoa">
-                Cartão {(posicao % fila.length) + 1} de {fila.length}
+        <div className="desk-main mt-4 space-y-4 lg:mt-0">
+          {!card ? (
+            <EmptyState text="Nenhum flashcard nessa seleção." />
+          ) : (
+            <>
+              <div className="flex items-center justify-between">
+                <div className="text-xs font-semibold text-nevoa">
+                  Cartão {(posicao % fila.length) + 1} de {fila.length}
+                </div>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setState((st) => {
+                      const list =
+                        st.progress.savedFlashcards ?? (st.progress.savedFlashcards = []);
+                      const has = list.includes(card.id);
+                      st.progress.savedFlashcards = has
+                        ? list.filter((x) => x !== card.id)
+                        : [...list, card.id];
+                      return st;
+                    })
+                  }
+                  className="chip"
+                >
+                  {card.saved ? (
+                    <>
+                      <BookmarkCheck size={14} /> Salvo
+                    </>
+                  ) : (
+                    <>
+                      <Bookmark size={14} /> Salvar
+                    </>
+                  )}
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={() =>
-                  setState((st) => {
-                    const list = st.progress.savedFlashcards ?? (st.progress.savedFlashcards = []);
-                    const has = list.includes(card.id);
-                    st.progress.savedFlashcards = has
-                      ? list.filter((x) => x !== card.id)
-                      : [...list, card.id];
-                    return st;
-                  })
-                }
-                className="chip"
-              >
-                {card.saved ? (
-                  <>
-                    <BookmarkCheck size={14} /> Salvo
-                  </>
-                ) : (
-                  <>
-                    <Bookmark size={14} /> Salvar
-                  </>
-                )}
-              </button>
-            </div>
 
-            <div className="[perspective:1000px]">
-              <button
-                type="button"
-                onClick={() => setFlip((f) => !f)}
-                aria-label="Virar cartão"
-                className="relative block min-h-[260px] w-full text-left"
-                style={{
-                  transformStyle: "preserve-3d",
-                  transition: "transform 200ms",
-                  transform: flip ? "rotateY(180deg)" : "rotateY(0deg)",
-                }}
-              >
-                <div
-                  className="card-soft absolute inset-0 flex flex-col justify-between p-6"
-                  style={{ backfaceVisibility: "hidden" }}
+              <div className="[perspective:1000px]">
+                <button
+                  type="button"
+                  onClick={() => setFlip((f) => !f)}
+                  aria-label="Virar cartão"
+                  className="relative block min-h-[260px] w-full text-left lg:min-h-[340px]"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transition: "transform 200ms",
+                    transform: flip ? "rotateY(180deg)" : "rotateY(0deg)",
+                  }}
                 >
-                  <p className="ds-label">
-                    {card.subject} · {card.topic}
-                  </p>
-                  <p className="my-6 font-display text-xl font-bold text-abismo">{card.front}</p>
-                  <p className="flex items-center gap-2 text-xs font-semibold text-nevoa">
-                    <RotateCw size={12} /> Toque para virar
-                  </p>
-                </div>
-                <div
-                  className="card-soft absolute inset-0 flex flex-col justify-between p-6"
-                  style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
-                >
-                  <p className="ds-label">
-                    {card.subject} · {card.topic}
-                  </p>
-                  <p className="my-6 font-display text-xl font-bold text-abismo">{card.back}</p>
-                  <p className="flex items-center gap-2 text-xs font-semibold text-nevoa">
-                    <RotateCw size={12} /> Toque para virar
-                  </p>
-                </div>
-              </button>
-            </div>
+                  <div
+                    className="card-soft absolute inset-0 flex flex-col justify-between p-6"
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
+                    <p className="ds-label">
+                      {card.subject} · {card.topic}
+                    </p>
+                    <p className="my-6 font-display text-xl font-bold text-abismo">{card.front}</p>
+                    <p className="flex items-center gap-2 text-xs font-semibold text-nevoa">
+                      <RotateCw size={12} /> Toque para virar
+                    </p>
+                  </div>
+                  <div
+                    className="card-soft absolute inset-0 flex flex-col justify-between p-6"
+                    style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+                  >
+                    <p className="ds-label">
+                      {card.subject} · {card.topic}
+                    </p>
+                    <p className="my-6 font-display text-xl font-bold text-abismo">{card.back}</p>
+                    <p className="flex items-center gap-2 text-xs font-semibold text-nevoa">
+                      <RotateCw size={12} /> Toque para virar
+                    </p>
+                  </div>
+                </button>
+              </div>
 
-            {!flip ? (
-              <p className="text-center text-xs font-semibold text-nevoa">
-                Toque no cartão para virar antes de avaliar.
-              </p>
-            ) : (
-              <>
-                <div className="grid grid-cols-2 gap-2">
-                  <button type="button" onClick={() => grade("hard")} className="btn-outline">
-                    <Minus size={14} /> Difícil
-                  </button>
-                  <button type="button" onClick={() => grade("easy")} className="btn-outline">
-                    <CheckCheck size={14} /> Fácil
-                  </button>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <button type="button" onClick={() => grade("again")} className="btn-outline">
-                    <X size={14} /> Não lembrei
-                  </button>
-                  <button type="button" onClick={() => grade("good")} className="btn-outline">
-                    <Check size={14} /> Lembrei
-                  </button>
-                </div>
-              </>
-            )}
-          </>
-        )}
+              {!flip ? (
+                <p className="text-center text-xs font-semibold text-nevoa">
+                  Toque no cartão para virar antes de avaliar.
+                </p>
+              ) : (
+                <>
+                  {/* Celular: 2 × 2. Desktop: uma linha, do "não lembrei" ao "fácil". */}
+                  <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+                    <button
+                      type="button"
+                      onClick={() => grade("again")}
+                      className="btn-outline lg:order-1"
+                    >
+                      <X size={14} /> Não lembrei
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => grade("hard")}
+                      className="btn-outline lg:order-2"
+                    >
+                      <Minus size={14} /> Difícil
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => grade("good")}
+                      className="btn-outline lg:order-3"
+                    >
+                      <Check size={14} /> Lembrei
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => grade("easy")}
+                      className="btn-outline lg:order-4"
+                    >
+                      <CheckCheck size={14} /> Fácil
+                    </button>
+                  </div>
+                </>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </AppShell>
   );

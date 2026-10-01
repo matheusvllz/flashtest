@@ -55,9 +55,25 @@ export const COPY = {
       "Me dá outra parecida",
     ],
     sugestoesAjuda: ["Me dá uma dica", "O que devo observar no enunciado?", "Explica de forma mais simples"],
-    sugestoesGeral: ["Quais são minhas lacunas?", "Como estou indo?", "O que eu estudo agora?"],
+    sugestoesGeral: ["Por onde eu começo?", "Como estou indo?", "O que eu estudo agora?"],
     /** Nível 3 da explicação em camadas (docs/30 §17, Fase 7) — mensagem auto-enviada quando o aluno pede pra IA ensinar do zero em vez de só apontar o erro. */
     ensinarDoZero: "Me ensina isso do começo.",
+    /** Estados do pedido (spec 48 T-48.2.7). */
+    avisoIA: "A Foca IA é uma inteligência artificial e pode errar. Confira com a explicação da questão.",
+    restantes: (n: number) => (n === 0 ? "Essa foi a última mensagem de hoje." : n === 1 ? "Resta 1 mensagem hoje." : `Restam ${n} mensagens hoje.`),
+    limite: "Você usou as mensagens de hoje com a Foca IA. Amanhã elas voltam. As questões e as explicações continuam liberadas.",
+    indisponivel: "A Foca IA está indisponível agora. Seu estudo segue normal, com a explicação de cada questão.",
+    consentimento:
+      "Aos 17 anos, a Foca IA precisa da autorização de um responsável, e esse pedido ainda não está disponível no app. As explicações de cada questão continuam aqui.",
+    desligado: "Você desligou a Foca IA. Para usar de novo, ligue em Perfil.",
+    recusado: "Não consigo ajudar com isso. Pergunta sobre a questão ou sobre seus estudos.",
+    semSessao: "Entre na sua conta para falar com a Foca IA.",
+    fotoInvalida: "Não consegui ler essa foto. Envie uma imagem JPEG, PNG ou WebP.",
+    fotoGrande: "Essa foto é grande demais. Escolha uma imagem de até 15 MB.",
+    tentarDeNovo: "Tentar de novo",
+    /** Protocolo de autocuidado (46 §E.7.5): não segue a conversa e não passa pela IA. Texto também usado no servidor. */
+    autocuidado:
+      "Parece que você está passando por um momento muito difícil, e isso importa mais que qualquer questão agora. Você não precisa lidar com isso sozinho: ligue 188 (CVV, gratuito, 24 horas) ou converse pelo chat em cvv.org.br. Se estiver em perigo agora, ligue 192 (SAMU).",
   },
   /** Player de lição passo a passo (docs/25 §12.2/§18 T-10). */
   licao: {
@@ -187,8 +203,25 @@ export const COPY = {
     demoCorpo: "Por enquanto, seu progresso fica salvo só neste aparelho.",
     demoBotao: "Entrar e estudar",
     syncDemonstracao: "Por enquanto, seu progresso fica salvo só neste aparelho.",
-    syncEmDia: "Seu estudo está salvo na conta.",
-    syncPendente: "Parte do seu estudo ainda está só neste aparelho. Ela vai para a conta quando a conexão voltar.",
+    /** Preferência da Foca IA (spec 48 T-48.2.6). */
+    focaIA: (ligada: boolean) => (ligada ? "Foca IA ligada" : "Foca IA desligada"),
+    focaIAExplica: "Desligada, o botão da Foca IA some e ela não responde. Você pode ligar de novo aqui.",
+    /** Seus dados (spec 48 T-48.3.1/T-48.3.2): exportar e excluir. Exclusão: tom sério, consequência no botão. */
+    /** Configuração de acesso não carregou (servidor fora ou com erro). */
+    acessoIndisponivel: "Não deu para carregar a entrada agora. Confira a internet e tente de novo em instantes.",
+    tentarDeNovo: "Tentar de novo",
+    dadosTitulo: "Seus dados",
+    exportar: "Baixar meus dados",
+    exportando: "Preparando…",
+    exportarLimite: "Você já baixou seus dados há pouco. Tente de novo daqui a uma hora.",
+    excluir: "Excluir conta",
+    excluirTitulo: "Excluir sua conta?",
+    excluirCorpo: "Isso apaga sua conta e todo o estudo salvo nela, sem volta. O que está só neste aparelho também sai.",
+    excluirSenhaRotulo: "Senha",
+    excluirSenhaDica: "Se você entrou com o Google, deixe em branco.",
+    excluirConfirmar: "Excluir minha conta",
+    excluindo: "Excluindo…",
+    excluirSenhaErrada: "Senha incorreta. Confira e tente de novo.",
     sairPendente: "Parte do seu estudo ainda não chegou à conta. Se sair agora, essa parte se perde neste aparelho.",
     sairMesmoAssim: "Sair mesmo assim",
     ficar: "Continuar na conta",
@@ -283,6 +316,83 @@ export const COPY = {
    * `prioridade-aluno`, `checkpoint`, `confirmar-fundamento`) são novos,
    * seguindo o mesmo tom.
    */
+  /** `/topics` (spec 48 T-48.4.1, D48-10): as escolhas mudam o plano; a tela diz como. */
+  topicos: {
+    titulo: "Assuntos por matéria",
+    prioritariasTitulo: "Matérias prioritárias",
+    prioritariasCorpo: "Marque as matérias em que você tem mais dificuldade. Elas pesam mais na hora de montar suas próximas atividades.",
+    modoTitulo: "Como você quer estudar?",
+    modoCorpo: "Escolha assuntos específicos ou deixe a Foca recomendar.",
+    modos: {
+      chose: "Quero escolher os assuntos",
+      recommend: "Prefiro que a Foca recomende",
+      skip: "Pular por enquanto",
+    },
+    efeito: {
+      chose:
+        "Os assuntos marcados aparecem mais cedo nas aulas e práticas novas. Revisões no prazo continuam vindo antes, para você não esquecer o que já aprendeu.",
+      recommend: "A Foca escolhe pelo que você já sabe, pelo que está para revisar e pelo que mais cai no ENEM.",
+      skip: "Sem preferência de assunto por enquanto. A trilha segue o que você já sabe e o que está para revisar.",
+    },
+    andamento: "A atividade que você já começou continua igual. A mudança vale a partir da próxima.",
+    semPrioritarias: "Marque uma matéria prioritária acima para escolher os assuntos dela.",
+    selecionarTodos: "Selecionar todos",
+    removerTodos: "Remover todos",
+    escolhidos: (n: number) => (n === 0 ? "Nenhum assunto marcado" : n === 1 ? "1 assunto marcado" : `${n} assuntos marcados`),
+  },
+  /**
+   * Sequência e proteção (spec 48 T-48.6.1, D48-14). Só descreve a regra R-GAM-3 que já existe: sem culpa, sem ameaça,
+   * sem contagem regressiva. Termo do produto: "sequência" (nunca "streak" na tela, R-VOZ-8).
+   */
+  sequencia: {
+    titulo: "Sua sequência",
+    dias: (n: number) => (n === 0 ? "A sequência começa no próximo estudo" : n === 1 ? "1 dia seguido" : `${n} dias seguidos`),
+    hojeFeito: "Hoje já tem estudo.",
+    hojeAinda: "Hoje ainda não teve estudo.",
+    voltando: (recorde: number) => `Bom te ver de volta. Seu recorde é de ${recorde} dias, e dá para chegar lá de novo.`,
+    protecoes: (n: number, max: number) => `Proteções guardadas: ${n} de ${max}`,
+    protecaoUsada: (data: string) => `Uma proteção cobriu o dia ${data}.`,
+    comoFunciona:
+      "A cada 7 dias com estudo você ganha uma proteção, até 2. Se ficar um dia sem estudar, uma proteção cobre esse dia sozinha e a sequência continua.",
+    fonte: {
+      confirmada: "Confirmado com a sua conta.",
+      atualizando: "Atualizando com a sua conta.",
+      aparelho: "Contado neste aparelho.",
+    },
+    botaoAria: (dias: number, hoje: boolean, protecoes: number) =>
+      `Sequência de ${dias} ${dias === 1 ? "dia" : "dias"}. ${hoje ? "Hoje já tem estudo" : "Hoje ainda não teve estudo"}. ${protecoes === 1 ? "1 proteção guardada" : `${protecoes} proteções guardadas`}. Ver detalhes`,
+  },
+  /** Onde está o estudo (spec 48 T-48.8.2, D48-15): nunca diz "na conta" antes de o servidor confirmar. */
+  salvamento: {
+    aparelho: "Salvo neste aparelho.",
+    aguardando: "Salvo neste aparelho, aguardando sincronização com a conta.",
+    "sem-conexao": "Sem conexão. Seu estudo está salvo neste aparelho e vai para a conta quando a conexão voltar.",
+    sincronizado: "Sincronizado com a conta.",
+    falhou: "Não deu para sincronizar agora. Seu estudo continua salvo neste aparelho.",
+    tentarAgora: "Tentar agora",
+    tentando: "Tentando…",
+  },
+  /** `/plan` (spec 48 T-48.4.2, D48-11): visão do plano do motor, sem tarefa fixa. */
+  plano: {
+    titulo: "Meu plano",
+    hoje: "Agora",
+    metaHoje: (feitos: number, meta: number) => `Meta de hoje: ${feitos} de ${meta}`,
+    vazio: "Seu plano aparece aqui depois que a trilha monta as primeiras atividades.",
+    irParaTrilha: "Abrir a trilha",
+    depois: "Depois",
+    depoisExplica: "A ordem muda conforme você estuda: o que você acerta e erra decide o que vem a seguir.",
+    feitoHoje: "Feito hoje",
+    nadaHoje: "Nada concluído hoje ainda.",
+    ritmoTitulo: "Meta do dia",
+    ritmoCorpo: "Quantas atividades por dia? Cada lição, prática ou revisão concluída conta uma.",
+    semanaTitulo: "Esta semana",
+    semanaMeta: (dias: number) => (dias === 1 ? "Meta: 1 dia" : `Meta: ${dias} dias`),
+    diaAria: (iso: string, feito: boolean) => `${iso}: ${feito ? "estudou" : "sem estudo"}`,
+    prioridadesTitulo: "Prioridades",
+    semPrioridades: "Nenhuma matéria prioritária. A trilha segue o que você já sabe e o que está para revisar.",
+    assuntos: (lista: string) => `Assuntos escolhidos: ${lista}`,
+    ajustarPrioridades: "Ajustar prioridades",
+  },
   jornada: {
     motivos: {
       "revisao-devida": "Porcentagem foi bem semana passada. Hoje é um bom dia pra conferir se ficou.",
@@ -306,7 +416,7 @@ export const COPY = {
       pratica: "Prática",
       revisao: "Revisão",
       desafio: "Desafio",
-      checkpoint: "Checkpoint",
+      checkpoint: "Checagem",
       legado: "Prática",
       reforco: "Reforço",
     },
@@ -319,8 +429,8 @@ export const COPY = {
     verMapa: "Ver mapa das matérias",
     voltarJornada: "Voltar pra jornada",
     semNada: "Você passou por tudo que está disponível agora. Revisões voltam conforme as datas.",
-    checkpointConcluido: "Checkpoint concluído",
-    checkpointPendente: "Checkpoint",
+    checkpointConcluido: "Checagem concluída",
+    checkpointPendente: "Checagem",
     recap: "Por agora é isso — seu progresso já está salvo.",
     /** Variante sem promessa (docs/36 RF-14): usada quando a gravação local não está ok. */
     recapSemSalvo: "Por agora é isso.",
@@ -418,14 +528,51 @@ export const COPY = {
     continuarNivelamento: "Continuar nivelamento",
     cardTrilhaTitulo: "Quer ajustar a trilha ao seu nível?",
     cardTrilhaDispensar: "Agora não",
+    /** Resultado visual (spec 48 T-48.5.2, B-070): estados distintos por texto e forma. */
+    naoMedida: "Não medida",
+    faixaAConfirmar: (faixa: string) => `${faixa} (a confirmar)`,
+    legendaFaixas: (faixas: string[]) => `Faixas, da esquerda para a direita: ${faixas.join(" · ")}.`,
+  },
+  /**
+   * Diagnóstico de partida em `/aha` (spec 48 T-48.4.3, D48-12; B-068): mostra o que foi MEDIDO no nivelamento e o
+   * que o aluno DISSE no perfil, sem confundir os dois e sem selo de severidade inventado.
+   */
+  diagnostico: {
+    rotulo: "Ponto de partida",
+    titulo: (nome: string) => (nome ? `Seu ponto de partida, ${nome}.` : "Seu ponto de partida."),
+    semMedicao:
+      "Você pulou o nivelamento, então ainda não medimos o que você sabe. A trilha começa pelo que você contou no perfil e se ajusta a cada resposta.",
+    comMedicao: "Isso é o que o nivelamento mediu. É um ponto de partida, não uma nota.",
+    medidoTitulo: "Medido no nivelamento",
+    declaradoTitulo: "O que você contou",
+    dificuldades: (lista: string) => `Mais dificuldade em: ${lista}.`,
+    facilidades: (lista: string) => `Vai bem em: ${lista}.`,
+    nadaDeclarado: "Você não marcou matérias com mais ou menos facilidade.",
+    declaradoNota: "Isso é o que você disse, não uma medição. Serve para a trilha decidir por onde começar.",
+    alvo: (curso: string, faculdade: string) =>
+      curso && faculdade ? `Objetivo: ${curso} em ${faculdade}.` : curso ? `Objetivo: ${curso}.` : faculdade ? `Objetivo: ${faculdade}.` : "",
+    medirAgora: "Fazer o nivelamento agora",
+    medirExplica: "Umas 20 questões, sem dica. Mostra em que faixa você está em cada área.",
+    entrar: "Entrar no meu plano",
+    xpInicial: "XP inicial",
   },
   /** Checkpoint periódico da trilha (docs/30 §13, Fase 14 F14.4/F14.5). */
   checkpoint: {
-    tituloRota: "Checkpoint",
-    introTitulo: "Checkpoint",
+    tituloRota: "Checagem",
+    introTitulo: "Checagem",
     introCorpo: "Questões misturadas, sem dica. Serve pra ajustar o que vem a seguir na sua trilha.",
     comecar: "Começar",
     agoraNao: "Agora não",
+    /** Resultado (30 §13.5; spec 48 T-48.5.1, D48-13): por habilidade, sem número. */
+    resultadoTitulo: "Checagem feita",
+    resultadoCorpo: "Comparado com antes da checagem, em cada assunto que caiu:",
+    rotulos: { subiu: "Subiu", firme: "Firme", revisar: "Vale revisar" },
+    revisaoAmanha: (habilidade: string) => `A revisão de ${habilidade} vem amanhã.`,
+    desafioLiberado: (habilidade: string) => `Um desafio de ${habilidade} fica liberado.`,
+    nadaMuda: "Sua trilha segue no mesmo ritmo.",
+    semRespostas: "Você saiu antes de responder. Nada mudou na sua trilha.",
+    xp: (n: number) => `+${n} XP`,
+    continuar: "Continuar",
   },
 } as const;
 

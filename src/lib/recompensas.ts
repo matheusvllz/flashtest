@@ -58,6 +58,14 @@ export interface EstadoSequencia {
   diasDesdeUltimoCongelamento: number;
   /** Último dia com atividade, `AAAA-MM-DD`, ou `null` se nunca houve. */
   ultimoDia: string | null;
+  /** Último dia parado que uma proteção cobriu (spec 48 D48-14). Ausente se nenhuma foi usada. */
+  diaProtegido?: string;
+}
+
+/** Dia anterior a `dia` (`AAAA-MM-DD`, calendário). */
+export function diaAnterior(dia: string): string {
+  const d = new Date(Date.UTC(+dia.slice(0, 4), +dia.slice(5, 7) - 1, +dia.slice(8, 10)) - 86_400_000);
+  return d.toISOString().slice(0, 10);
 }
 
 export const SEQUENCIA_INICIAL: EstadoSequencia = {
@@ -90,11 +98,13 @@ export function avancarSequencia(e: EstadoSequencia, dia: string): EstadoSequenc
     diasDesdeUltimoCongelamento = 0;
   }
   const intervalo = e.ultimoDia === null ? null : diasEntre(e.ultimoDia, dia);
+  let diaProtegido = e.diaProtegido;
   if (intervalo === null) sequencia = 1;
   else if (intervalo === 1) sequencia += 1;
   else if (intervalo === 2 && congelamentos > 0) {
     congelamentos -= 1;
     sequencia += 1;
+    diaProtegido = diaAnterior(dia);
   } else sequencia = 1;
   return {
     sequencia,
@@ -102,6 +112,7 @@ export function avancarSequencia(e: EstadoSequencia, dia: string): EstadoSequenc
     congelamentos,
     diasDesdeUltimoCongelamento,
     ultimoDia: dia,
+    ...(diaProtegido ? { diaProtegido } : {}),
   };
 }
 

@@ -13,5 +13,6 @@ Cada iniciativa vive numa pasta `NN-tema/` com `spec.md` (obrigatório), `tarefa
 | ID | Iniciativa | Estado | Spec | Registro |
 |---|---|---|---|---|
 | 46 | Do protótipo ao produto: SDD reorganizado, backend real, autenticação, segurança, documentos legais | em-execucao | [spec.md](46-producao/spec.md) | [registro.md](46-producao/registro.md) |
+| 48 | Backend integrado ao Neon, Foca IA em produção e funções que hoje são cosméticas (vinculada à 46) | em-execucao | [spec.md](48-integracao-e-evolucao/spec.md) | [registro.md](48-integracao-e-evolucao/registro.md) |
 
-**Próximo número livre:** 48.
+**Próximo número livre:** 49.

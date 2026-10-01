@@ -69,6 +69,8 @@ export type Prefs = {
   /** Schema v4 (docs/20 §15.2) — sem UI própria ainda; a Fase 8 (dicas de vestibular) é quem lê isto. */
   examTargets: ExamTarget[];
   showExamTips: boolean;
+  /** Espelho da preferência "Usar a Foca IA" (spec 48 T-48.2.6): `true` esconde o botão do tutor. A regra vale no servidor. */
+  focaIADesligada?: boolean;
   /** Schema v5 (docs/25 §7.6) — matéria selecionada nos chips da trilha; `null` = nenhuma ainda. */
   trailSubjectId: string | null;
   /** Schema v6 (docs/30 §15) — foco PERMANENTE (não confundir com `learning.focusSession`, temporário). */
@@ -130,6 +132,10 @@ export type Progress = {
   bestStreak: number;
   /** Congelamentos automáticos acumuláveis até 2 (docs/16 §6). */
   streakFreezes: number;
+  /** Último dia parado que uma proteção cobriu, `AAAA-MM-DD` (spec 48 D48-14). Mesma regra de `recompensas.ts`. */
+  diaProtegido?: string | null;
+  /** Quando a sequência mostrada foi confirmada pelo servidor (ISO). Ausente = só deste aparelho. */
+  sequenciaConfirmadaEm?: string;
   /**
    * Schema v4 (docs/20 §15.2/§12) — contador explícito, independente do
    * histórico de `activityDays` (que só guarda 60 dias). Ainda não é lido por
@@ -318,8 +324,32 @@ let bootstrapAgendado = false;
  * vez. Falha (rede/parse) nunca quebra a sessão: o modelo só fica vazio até
  * a próxima carga da página tentar de novo.
  */
+/**
+ * Nada a reprocessar: sem tentativas, sem modelo e sem acertos legados por matéria. Nesse caso `bootstrapModel`
+ * devolve `{}` (teste em `adaptive-bootstrap.test.ts`), então não vale baixar itens e conteúdo para descobrir isso
+ * (spec 48 T-48.9.2: no quiz, o aluno novo baixava ~180 KB de lições só por causa disto).
+ */
+export function semNadaParaReprocessar(s: Pick<AppState, "learning" | "progress">): boolean {
+  return (
+    s.learning.recentAttempts.length === 0 &&
+    Object.keys(s.learning.skillModel ?? {}).length === 0 &&
+    Object.values(s.progress.bySubject ?? {}).every((v) => !v || v.answered === 0)
+  );
+}
+
 function agendarBootstrapAdaptativo(iso: string): void {
   if (bootstrapAgendado) return;
+  if (semNadaParaReprocessar(state)) {
+    // Fora da renderização (load() roda dentro de hydrate()).
+    queueMicrotask(() =>
+      setState((s) => {
+        if (FEATURES.masteryModel === "off" || s.learning.modelMeta.algoVersion >= ALGO_VERSION || !semNadaParaReprocessar(s)) return s;
+        s.learning.modelMeta = { algoVersion: ALGO_VERSION, bootstrappedAt: iso };
+        return s;
+      }),
+    );
+    return;
+  }
   bootstrapAgendado = true;
   void (async () => {
     try {
@@ -358,8 +388,12 @@ export type PersistStatus = "ok" | "falhou" | "versao-futura";
 interface RuntimeStatus {
   persist: PersistStatus;
   recuperouCorrompido: boolean;
+  /** Última tentativa do motor de sincronização (spec 48 T-48.8.2): status de execução, não estado do aluno. */
+  sync: "ocioso" | "enviando" | "falhou";
+  /** Quando o servidor confirmou pela última vez (ms), nesta página. */
+  syncConfirmadoEm: number;
 }
-let runtime: RuntimeStatus = { persist: "ok", recuperouCorrompido: false };
+let runtime: RuntimeStatus = { persist: "ok", recuperouCorrompido: false, sync: "ocioso", syncConfirmadoEm: 0 };
 const runtimeListeners = new Set<() => void>();
 /** Prefixo da cópia do JSON ilegível (`foca.state.corrupt.<ISO>`). */
 export const CORRUPT_KEY_PREFIX = "foca.state.corrupt.";
@@ -385,9 +419,53 @@ let versaoFuturaAtiva = false;
 
 function setRuntime(patch: Partial<RuntimeStatus>) {
   const next = { ...runtime, ...patch };
-  if (next.persist === runtime.persist && next.recuperouCorrompido === runtime.recuperouCorrompido) return;
+  if ((Object.keys(next) as (keyof RuntimeStatus)[]).every((k) => next[k] === runtime[k])) return;
   runtime = next;
   runtimeListeners.forEach((l) => l());
+}
+
+/** O motor de sincronização informa o que aconteceu na última tentativa (spec 48 T-48.8.2). */
+export function marcarSync(patch: Pick<Partial<RuntimeStatus>, "sync" | "syncConfirmadoEm">): void {
+  setRuntime(patch);
+}
+
+export type EstadoDeSalvamento = "aparelho" | "aguardando" | "sem-conexao" | "sincronizado" | "falhou";
+
+/**
+ * Estado de salvamento mostrado ao aluno (spec 48 D48-15, RF-18), derivado do store e do motor — nunca afirma
+ * "sincronizado" sem confirmação do servidor:
+ * - `aparelho`: sem conta vinculada (ou modo de demonstração);
+ * - `falhou`: a última tentativa deu erro (fila de eventos **ou** documento de planejamento — revisão da 48);
+ * - `sem-conexao`: há fila e o aparelho está sem rede;
+ * - `aguardando`: há fila, ou nada foi confirmado ainda nesta conta;
+ * - `sincronizado`: fila vazia e o servidor confirmou **nesta página** (uma confirmação guardada de antes não vale depois
+ *   de recarregar — revisão da 48).
+ */
+export function estadoDeSalvamento(s: AppState, r: Pick<RuntimeStatus, "sync" | "syncConfirmadoEm">, online: boolean): EstadoDeSalvamento {
+  if (!s.account?.userId) return "aparelho";
+  const fila = s.account.outbox.length;
+  if (r.sync === "falhou") return "falhou";
+  if (fila > 0 && !online) return "sem-conexao";
+  if (fila > 0) return "aguardando";
+  return r.syncConfirmadoEm > 0 ? "sincronizado" : "aguardando";
+}
+
+function assinarOnline(cb: () => void): () => void {
+  if (typeof window === "undefined") return () => undefined;
+  window.addEventListener("online", cb);
+  window.addEventListener("offline", cb);
+  return () => {
+    window.removeEventListener("online", cb);
+    window.removeEventListener("offline", cb);
+  };
+}
+
+export function useEstadoDeSalvamento(): EstadoDeSalvamento {
+  const s = useAppState();
+  const sync = useSyncExternalStore(subscribeRuntime, () => runtime.sync, () => "ocioso" as const);
+  const confirmado = useSyncExternalStore(subscribeRuntime, () => runtime.syncConfirmadoEm, () => 0);
+  const online = useSyncExternalStore(assinarOnline, () => navigator.onLine, () => true);
+  return estadoDeSalvamento(s, { sync, syncConfirmadoEm: confirmado }, online);
 }
 
 /**
@@ -434,8 +512,7 @@ function montarEstado(
     // estado de UI não.
     tutor: {
       ...defaultState.tutor,
-      messages: ((parsed.tutor as { messages?: TutorMessage[] } | undefined)?.messages ??
-        []) as TutorMessage[],
+      messages: normalizarMensagensDoTutor((parsed.tutor as { messages?: unknown } | undefined)?.messages),
     },
     // (open/focus sempre voltam ao default: são estado de UI. Um `autoPrompt`
     // de storage antigo, pré-docs/20, cai fora daqui sem ser executado.)
@@ -756,6 +833,7 @@ function registrarAtividade(
     } else if (gap === 2 && s.progress.streakFreezes > 0) {
       s.progress.streakFreezes -= 1; // perdeu 1 dia, mas tinha congelamento
       s.progress.streak += 1;
+      s.progress.diaProtegido = hojeISO(new Date(agora.getTime() - 86_400_000)); // o dia parado que a proteção cobriu
     } else {
       s.progress.streak = 1; // quebrou de verdade
     }
@@ -1723,6 +1801,19 @@ export function invalidateJourneyPlan() {
  * A SELEÇÃO de itens de atividade dinâmica é da rota `/atividade/$activityId`
  * (único proprietário) — quem só navega (aula/legado) chama esta ação SEM itens.
  */
+/**
+ * Retrato do Domínio antes da checagem (spec 48 T-48.5.1). Grava só na atividade em andamento com esse id e só uma
+ * vez: recarregar e tocar "Começar" de novo não troca o retrato (senão o "Subiu" compararia com o meio da checagem).
+ */
+export function guardarDominioAntesDaChecagem(activityId: string, retrato: Record<string, number>): void {
+  setState((s) => {
+    const ativa = s.learning.journey.activeActivity;
+    if (!ativa || ativa.id !== activityId || ativa.masteryAntes) return s;
+    s.learning.journey.activeActivity = { ...ativa, masteryAntes: retrato };
+    return s;
+  });
+}
+
 export function startJourneyActivity(activity: PlannedActivity): PlannedActivity {
   let gravada: PlannedActivity = activity;
   setState((s) => {
@@ -1999,9 +2090,38 @@ export function syncJourneyWithCompletions() {
   });
 }
 
+/**
+ * Quantas mensagens do tutor o aparelho guarda (spec 48 D48-09, B-102). Igual a `TUTOR_MENSAGENS_GUARDADAS` de
+ * `tutor-contrato.ts` (não importado aqui para o store não puxar o zod; um teste confere que são iguais).
+ */
+export const TUTOR_MENSAGENS_GUARDADAS_NO_APARELHO = 40;
+
+/** Histórico lido do aparelho: só mensagens bem formadas, as mais recentes. */
+export function normalizarMensagensDoTutor(bruto: unknown): TutorMessage[] {
+  if (!Array.isArray(bruto)) return [];
+  return bruto
+    .filter(
+      (m): m is TutorMessage =>
+        !!m && typeof m === "object" && ((m as TutorMessage).role === "user" || (m as TutorMessage).role === "assistant") && typeof (m as TutorMessage).content === "string",
+    )
+    .slice(-TUTOR_MENSAGENS_GUARDADAS_NO_APARELHO);
+}
+
+/** Espelho local da preferência da Foca IA (a decisão é do servidor). */
+export function definirFocaIADesligadaLocal(desligada: boolean) {
+  setState((s) => {
+    s.prefs.focaIADesligada = desligada;
+    if (desligada) s.tutor.open = false;
+    return s;
+  });
+}
+
 export function pushTutorMessage(message: TutorMessage) {
   setState((s) => {
     s.tutor.messages.push(message);
+    if (s.tutor.messages.length > TUTOR_MENSAGENS_GUARDADAS_NO_APARELHO) {
+      s.tutor.messages = s.tutor.messages.slice(-TUTOR_MENSAGENS_GUARDADAS_NO_APARELHO);
+    }
     return s;
   });
 }
@@ -2182,6 +2302,8 @@ export function aplicarAgregadoDoServidor(a: Agregado): void {
     s.progress.bestStreak = a.melhorSequencia;
     s.progress.streakFreezes = a.congelamentos;
     s.progress.lastStudyDate = a.ultimoDia ? new Date(`${a.ultimoDia}T12:00:00`).toDateString() : null;
+    if (a.diaProtegido !== undefined) s.progress.diaProtegido = a.diaProtegido;
+    s.progress.sequenciaConfirmadaEm = new Date().toISOString();
     return s;
   });
 }
@@ -2199,8 +2321,17 @@ function assinar(texto: string): string {
  */
 function montarDocumento(s: AppState): Record<string, unknown> {
   const { name, email: _email, ...prefs } = s.prefs;
-  const { xp: _xp, streak: _st, bestStreak: _bs, streakFreezes: _sf, lastStudyDate: _ld, today: _t, ...progress } =
-    s.progress;
+  const {
+    xp: _xp,
+    streak: _st,
+    bestStreak: _bs,
+    streakFreezes: _sf,
+    lastStudyDate: _ld,
+    today: _t,
+    diaProtegido: _dp,
+    sequenciaConfirmadaEm: _sc,
+    ...progress
+  } = s.progress;
   return {
     onboarded: s.onboarded,
     prefs: { ...prefs, name },

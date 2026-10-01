@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
+import { DadosDaConta } from "@/components/conta/DadosDaConta";
 import { SecaoConta } from "@/components/conta/SecaoConta";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
@@ -316,6 +317,7 @@ function Profile() {
         </div>
 
         <SecaoConta />
+        <DadosDaConta />
       </div>
       <BottomSheet open={cursoSheetOpen} onClose={() => setCursoSheetOpen(false)} title={COPY.cursos.perfilSheetTitulo}>
         <div className="max-h-[70vh] overflow-y-auto pb-1">

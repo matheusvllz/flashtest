@@ -34,9 +34,12 @@ function Cadastro() {
   const [enviando, setEnviando] = useState(false);
   const [abaixoDaIdade, setAbaixoDaIdade] = useState(false);
 
-  useEffect(() => {
-    configAcesso().then(setAcesso, () => setAcesso({ emailHabilitado: true, googleHabilitado: false, idadeMinima: 17 }));
-  }, []);
+  const [indisponivel, setIndisponivel] = useState(false);
+  function carregar() {
+    setIndisponivel(false);
+    configAcesso().then(setAcesso, () => setIndisponivel(true));
+  }
+  useEffect(carregar, []);
 
   const idadeMinima = acesso?.idadeMinima ?? 17;
   const depois = `/cadastro/completar${volta ? `?volta=${encodeURIComponent(volta)}` : ""}`;
@@ -86,6 +89,18 @@ function Cadastro() {
   }
 
   // Contas desligadas no servidor (D-15): entrada local, sem formulário.
+  // Sem a configuração de acesso (servidor fora ou com erro), nenhum formulário funcionaria: diz isso e deixa tentar
+  // de novo, em vez de mostrar um e-mail e senha que sempre falham (achado em produção, 30/09/2026).
+  if (indisponivel) {
+    return (
+      <TelaDeAcesso titulo={COPY.conta.criarTitulo} subtitulo={COPY.conta.acessoIndisponivel} voltarPara="/">
+        <button type="button" className="btn-primary mt-8 w-full" onClick={carregar}>
+          {COPY.conta.tentarDeNovo}
+        </button>
+      </TelaDeAcesso>
+    );
+  }
+
   if (acesso?.contasAtivas === false) return <EntradaDemonstracao volta={volta} />;
 
   if (abaixoDaIdade) {

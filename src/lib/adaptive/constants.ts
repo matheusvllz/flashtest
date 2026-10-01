@@ -127,6 +127,12 @@ export const ITEM_SEGUNDOS_PADRAO = 60;
 
 /** Peso de matéria declarada — objetivo do aluno (§11.4). */
 export const PESO_MATERIA = { prioritaria: 1.5, normal: 1.0, vaiBem: 0.8 } as const;
+/**
+ * Assunto escolhido em `/topics` (spec 48 D48-10): multiplica a pontuação de aula, prática, desafio e legado das
+ * habilidades daquele assunto. Preferência, não filtro: revisão devida, reforço e checagem não mudam, e pré-requisito
+ * fraco continua bloqueando (a evidência de aprendizagem vence a preferência).
+ */
+export const PESO_TOPICO_ESCOLHIDO = 1.3;
 
 /** Limiares de classificação de habilidade (§11.2). */
 export const REFORCO_ERROS_DISTINTOS_MIN = 2;

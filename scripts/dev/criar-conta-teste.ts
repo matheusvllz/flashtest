@@ -4,15 +4,16 @@
  *
  *   bun run dev                                 # em outro terminal
  *   bun scripts/dev/criar-conta-teste.ts        # usa http://localhost:8080
+ *   CONTA_EMAIL=outra@foca.dev CONTA_SENHA=outra-senha-123 bun scripts/dev/criar-conta-teste.ts   # outra conta
  *
- * Credenciais fixas (só valem no banco local, `.data/pglite`): TESTE_EMAIL / TESTE_SENHA abaixo.
+ * Credenciais (só valem no banco local, `.data/pglite`): padrão TESTE_EMAIL / TESTE_SENHA abaixo.
  */
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { LEGAL } from "../../src/lib/legal";
 
-export const TESTE_EMAIL = "teste@foca.dev";
-export const TESTE_SENHA = "foca-teste-123";
+export const TESTE_EMAIL = process.env.CONTA_EMAIL?.trim() || "teste@foca.dev";
+export const TESTE_SENHA = process.env.CONTA_SENHA?.trim() || "foca-teste-123";
 const ORIGEM = process.env.FOCA_URL ?? "http://localhost:8080";
 const PASTA_EMAILS = join(process.cwd(), ".data", "emails");
 

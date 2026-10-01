@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "bun install --frozen-lockfile",
   "buildCommand": "bun run build",
+  "regions": ["gru1"],
+  "crons": [{ "path": "/api/cron/retencao", "schedule": "0 7 * * *" }],
   "headers": [
     {
       "source": "/fonts/(.*)",

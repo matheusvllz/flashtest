@@ -1,52 +1,57 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { Flame } from "lucide-react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { FocaSays } from "@/components/brand/FocaSays";
-import { ProgressBar } from "@/components/ds/ProgressBar";
-import { StatTile } from "@/components/ds/StatTile";
 import { XpChip } from "@/components/ds/XpChip";
-import { useAppState } from "@/lib/store";
-import { HOME_ROUTE } from "@/lib/features";
+import { AreaCard, LegendaDasFaixas } from "@/components/learning/PlacementResult";
+import { AREA_NAMES } from "@/content/taxonomy/areas";
+import { faixaDaAreaPlacement, precisaoDaArea } from "@/lib/adaptive/display";
+import { COPY } from "@/lib/copy";
 import { irParaEstudo } from "@/lib/conta/entrada";
+import { FEATURES, HOME_ROUTE } from "@/lib/features";
+import { useAppState } from "@/lib/store";
+import type { EnemArea } from "@/content/taxonomy";
 
 export const Route = createFileRoute("/aha")({ component: Aha, ssr: false });
 
-/** Badge de severidade sem vermelho — erro é só feedback de resposta (docs/18 §13.4). */
-const SEVERITY: Record<string, { label: string; badgeClass: string; fill: number }> = {
-  alta: { label: "Lacuna alta", badgeClass: "bg-mar/12 text-mar-fundo", fill: 82 },
-  média: { label: "Lacuna média", badgeClass: "bg-gelo text-abismo", fill: 55 },
-  baixa: { label: "A confirmar", badgeClass: "bg-alert/15 text-abismo", fill: 30 },
-};
+const NAO_DECIDIU = "Ainda não decidi";
 
 /**
- * Aha moment — a tela que fecha o quiz (SDD 12, Development 1, entregável 4).
- * Mostra que o app já entendeu o aluno: 3 lacunas nomeadas, amarradas à faculdade-alvo,
- * mais XP e streak dia 1. As lacunas vêm da heurística em lib/gaps.ts nesta fase.
+ * Ponto de partida (spec 48 T-48.4.3, D48-12; B-068). Substitui as "3 lacunas" com selo de severidade, que vinham de
+ * heurística sobre o perfil e eram apresentadas como medição.
+ *
+ * - **Medido:** se o nivelamento foi aplicado, a faixa por área (o mesmo cartão do resultado do nivelamento, C-NIV-8).
+ * - **Declarado:** o que o aluno disse no perfil (matérias com mais e menos facilidade), rotulado como declaração.
+ * - **Sem nivelamento** (quem pulou): diz que nada foi medido e oferece medir agora; a trilha começa pelo perfil e se
+ *   ajusta a cada resposta. Diagnóstico, plano e trilha usam a mesma fonte (o modelo do motor e as preferências).
  */
 function Aha() {
   const s = useAppState();
   const navigate = useNavigate();
-  const firstName = (s.prefs.name || "estudante").split(" ")[0];
-  const chosen = s.prefs.targetInstitution;
-  const hasTarget = !!chosen && chosen !== "Ainda não decidi";
-  const target = hasTarget ? chosen : "a faculdade que você escolher";
-  const gaps = s.quiz.gaps;
-  const [revealed, setRevealed] = useState(0);
-
-  // Revela as lacunas uma a uma — é o que dá o peso de "diagnóstico" à tela.
-  useEffect(() => {
-    if (revealed >= gaps.length) return;
-    const t = setTimeout(() => setRevealed((r) => r + 1), 420 + revealed * 180);
-    return () => clearTimeout(t);
-  }, [revealed, gaps.length]);
+  const nome = (s.prefs.name || "").trim().split(" ")[0] ?? "";
+  const placement = s.learning.placement;
+  const medido = Boolean(placement?.appliedAt);
+  const areas = medido
+    ? (Object.keys(placement?.areas ?? {}) as EnemArea[]).map((area) => {
+        const estado = placement?.areas[area];
+        return {
+          area,
+          faixa: faixaDaAreaPlacement(estado?.theta ?? null),
+          precisao: precisaoDaArea(estado?.se ?? null),
+          respondidas: estado?.itemIds.length ?? 0,
+        };
+      })
+    : [];
+  const curso = s.prefs.targetCourse && s.prefs.targetCourse !== NAO_DECIDIU ? s.prefs.targetCourse : "";
+  const faculdade = s.prefs.targetInstitution && s.prefs.targetInstitution !== NAO_DECIDIU ? s.prefs.targetInstitution : "";
+  const alvo = COPY.diagnostico.alvo(curso, faculdade);
+  const dificeis = s.prefs.difficultSubjects;
+  const faceis = s.prefs.easySubjects ?? [];
 
   return (
     <PhoneFrame variant="reading">
       <div className="relative min-h-screen overflow-hidden bg-neve px-6 pt-14 pb-32">
-        {/* Marca d'água por tema (docs/36 T-08.6, §G.8): contorno escuro no claro, contorno claro no escuro
-            (o escuro sobre fundo escuro sumia). O wrapper esconde; o <img> não leva display por classe. */}
+        {/* Marca d'água por tema (docs/36 T-08.6, §G.8): contorno escuro no claro, contorno claro no escuro. */}
         <div className="pointer-events-none absolute -right-16 -top-16 opacity-[0.06]" data-aha-marca>
           <div className="dark:hidden" data-marca-tema="claro">
             <FocaMark variant="line-dark" size={280} decorative />
@@ -57,88 +62,75 @@ function Aha() {
         </div>
 
         <div className="relative">
-          <FocaSays slot="aha" expression="surpresa" size={64} />
+          <FocaSays slot="aha" expression="neutra" size={64} />
 
-          <div className="ds-label mt-6">Diagnóstico pronto</div>
-          <h1 className="mt-3 font-display text-[32px] font-bold leading-[1.1] tracking-tight text-abismo">
-            Já entendi você, {firstName}.
+          <div className="ds-label mt-6">{COPY.diagnostico.rotulo}</div>
+          <h1 className="mt-3 font-display text-[28px] font-bold leading-[1.1] tracking-tight text-abismo">
+            {COPY.diagnostico.titulo(nome)}
           </h1>
-          <p className="mt-3 text-[15px] leading-relaxed text-nevoa">
-            Pra{" "}
-            {s.prefs.targetCourse && s.prefs.targetCourse !== "Ainda não decidi" ? (
-              <>
-                <span className="font-semibold text-abismo">{s.prefs.targetCourse}</span> em{" "}
-              </>
-            ) : null}
-            <span className="font-semibold text-abismo">{target}</span>, estas são as 3 lacunas que
-            mais custam pontos hoje. É por elas que suas aulas de 60s começam.
+          <p className="mt-3 text-[15px] leading-relaxed text-nevoa" data-testid="diagnostico-corpo">
+            {medido ? COPY.diagnostico.comMedicao : COPY.diagnostico.semMedicao}
           </p>
+          {alvo && <p className="mt-2 text-sm font-semibold text-abismo">{alvo}</p>}
 
-          <div className="mt-7 flex flex-col gap-3">
-            {gaps.map((g, i) => {
-              const sev = SEVERITY[g.severity] ?? SEVERITY.baixa;
-              const show = i < revealed;
-              return (
-                <div
-                  key={g.topic}
-                  className="card-soft p-4 transition-all duration-500"
-                  style={{
-                    opacity: show ? 1 : 0,
-                    transform: show ? "translateY(0)" : "translateY(12px)",
-                  }}
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono text-2xl font-bold text-mar-fundo">{i + 1}</span>
-                        <span className="font-display text-[17px] font-bold leading-tight text-abismo">
-                          {g.topic}
-                        </span>
-                      </div>
-                      <p className="mt-1 text-xs font-semibold text-nevoa">{g.subjectName}</p>
-                    </div>
-                    <span
-                      className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${sev.badgeClass}`}
-                    >
-                      {sev.label}
-                    </span>
-                  </div>
-                  <div className="mt-3">
-                    <ProgressBar
-                      value={show ? sev.fill : 0}
-                      tone="caneta"
-                      label={`Severidade de ${g.topic}`}
-                    />
-                  </div>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-nevoa">{g.reason}</p>
-                </div>
-              );
-            })}
-          </div>
+          {medido && (
+            <section className="mt-6" aria-labelledby="diag-medido">
+              <h2 id="diag-medido" className="font-display text-base font-bold text-abismo">
+                {COPY.diagnostico.medidoTitulo}
+              </h2>
+              <div className="mt-2">
+                <LegendaDasFaixas />
+              </div>
+              <div className="mt-3 flex flex-col gap-3">
+                {areas.map((a) => (
+                  <AreaCard key={a.area} nome={AREA_NAMES[a.area]} faixa={a.faixa} precisao={a.precisao} respondidas={a.respondidas} />
+                ))}
+              </div>
+            </section>
+          )}
 
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            <div className="card-soft p-4">
+          <section className="mt-6 card-soft p-4" aria-labelledby="diag-declarado" data-testid="diagnostico-declarado">
+            <h2 id="diag-declarado" className="font-display text-base font-bold text-abismo">
+              {COPY.diagnostico.declaradoTitulo}
+            </h2>
+            {dificeis.length === 0 && faceis.length === 0 ? (
+              <p className="mt-2 text-sm text-abismo">{COPY.diagnostico.nadaDeclarado}</p>
+            ) : (
+              <div className="mt-2 space-y-1 text-sm text-abismo">
+                {dificeis.length > 0 && <p>{COPY.diagnostico.dificuldades(dificeis.join(", "))}</p>}
+                {faceis.length > 0 && <p>{COPY.diagnostico.facilidades(faceis.join(", "))}</p>}
+              </div>
+            )}
+            <p className="mt-2 text-xs text-nevoa">{COPY.diagnostico.declaradoNota}</p>
+          </section>
+
+          {!medido && FEATURES.nivelamento && (
+            <section className="mt-4 card-soft p-4" aria-labelledby="diag-medir">
+              <p id="diag-medir" className="text-sm text-abismo">
+                {COPY.diagnostico.medirExplica}
+              </p>
+              <Link to="/nivelamento" className="btn-outline mt-3 w-full">
+                {COPY.diagnostico.medirAgora}
+              </Link>
+            </section>
+          )}
+
+          {s.progress.xp > 0 && (
+            <div className="mt-4 card-soft p-4">
               <div className="flex items-center gap-1.5">
                 <FocaMark size={16} decorative />
-                <span className="text-[11px] font-bold uppercase tracking-wider text-nevoa">
-                  XP inicial
-                </span>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-nevoa">{COPY.diagnostico.xpInicial}</span>
               </div>
               <div className="mt-2">
                 <XpChip amount={s.progress.xp} />
               </div>
             </div>
-            <StatTile
-              icon={<Flame size={18} />}
-              label="Sequência"
-              value={`Dia ${s.progress.streak || 1}`}
-            />
-          </div>
+          )}
         </div>
 
         <footer className="fixed bottom-0 left-1/2 col-max-w -translate-x-1/2 border-t-2 border-gelo bg-neve/95 px-6 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] backdrop-blur">
           <button type="button" onClick={() => void irParaEstudo(navigate, HOME_ROUTE)} className="btn-primary w-full">
-            Entrar no meu plano
+            {COPY.diagnostico.entrar}
           </button>
         </footer>
       </div>

@@ -34,7 +34,24 @@ const ROTULO_PRECISAO: Record<PrecisaoArea, string> = {
   poucas: COPY.nivelamento.precisaoPoucas,
 };
 
-function AreaCard({
+/** Listras na cor da marca: "evidência insuficiente" se distingue por FORMA, não só por cor (spec 48 T-48.5.2). */
+const LISTRADO = { backgroundImage: "repeating-linear-gradient(135deg, var(--mar) 0 3px, transparent 3px 6px)" } as const;
+
+/** Legenda das faixas, uma vez por tela: o indicador lê da esquerda (construção) para a direita (firme). */
+export function LegendaDasFaixas() {
+  return (
+    <p className="text-xs text-nevoa" data-testid="placement-legenda">
+      {COPY.nivelamento.legendaFaixas(FAIXAS.map((f) => ROTULO_FAIXA[f]))}
+    </p>
+  );
+}
+
+/**
+ * Uma área do nivelamento (docs/36 §F.5; spec 48 T-48.5.2, RF-14; B-070). Três estados distintos por texto E forma:
+ * medida (segmento cheio), medida com poucas questões (segmento listrado + "a confirmar") e não medida (contorno
+ * tracejado, sem faixa). Nunca número, porcentagem nem nota.
+ */
+export function AreaCard({
   nome,
   faixa,
   precisao,
@@ -46,11 +63,21 @@ function AreaCard({
   respondidas: number;
 }) {
   if (!faixa) {
-    // Área não medida (pool insuficiente, fora do foco ou abandonada antes): sem indicador.
+    // Área não medida (pool insuficiente, fora do foco ou abandonada antes): sem faixa.
     return (
-      <div className="card-soft px-4 py-3.5 text-left">
-        <p className="text-sm font-bold text-abismo">{nome}</p>
-        <p className="mt-1 text-xs font-semibold text-nevoa">{COPY.nivelamento.areaNaoMedida(nome)}</p>
+      <div className="card-soft px-4 py-3.5 text-left" data-testid="placement-area" data-estado="nao-medida">
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-sm font-bold text-abismo">{nome}</p>
+          <span className="shrink-0 whitespace-nowrap rounded-full border-2 border-dashed border-gelo px-2 py-0.5 text-[11px] font-bold text-nevoa">
+            {COPY.nivelamento.naoMedida}
+          </span>
+        </div>
+        <div className="mt-2 flex gap-1" aria-hidden="true">
+          {FAIXAS.map((f) => (
+            <div key={f} className="h-2 flex-1 rounded-[6px] border-2 border-dashed border-gelo" />
+          ))}
+        </div>
+        <p className="mt-1.5 text-xs font-semibold text-nevoa">{COPY.nivelamento.areaNaoMedida(nome)}</p>
       </div>
     );
   }
@@ -58,9 +85,10 @@ function AreaCard({
   const rotuloFaixa = ROTULO_FAIXA[faixa];
   const rotuloPrecisao = ROTULO_PRECISAO[precisao ?? "poucas"];
   const ativo = FAIXAS.indexOf(faixa);
+  const insuficiente = (precisao ?? "poucas") === "poucas";
 
   return (
-    <div className="card-soft px-4 py-3.5 text-left" data-testid="placement-area">
+    <div className="card-soft px-4 py-3.5 text-left" data-testid="placement-area" data-estado={insuficiente ? "insuficiente" : "medida"}>
       <p className="text-sm font-bold text-abismo">{nome}</p>
       <div
         role="img"
@@ -69,16 +97,20 @@ function AreaCard({
       >
         <div className="flex flex-1 gap-1" aria-hidden="true">
           {FAIXAS.map((f, i) => (
-            <div key={f} className={`h-2 flex-1 rounded-[6px] ${i === ativo ? "bg-mar" : "bg-gelo"}`} />
+            <div
+              key={f}
+              className={`h-2 flex-1 rounded-[6px] ${i === ativo ? (insuficiente ? "border border-mar" : "bg-mar") : "bg-gelo"}`}
+              style={i === ativo && insuficiente ? LISTRADO : undefined}
+            />
           ))}
         </div>
         <span className="shrink-0 text-xs font-bold text-abismo" aria-hidden="true">
-          {rotuloFaixa}
+          {insuficiente ? COPY.nivelamento.faixaAConfirmar(rotuloFaixa) : rotuloFaixa}
         </span>
       </div>
       <p className="mt-1.5 text-xs font-semibold text-nevoa">
         {rotuloPrecisao}
-        {precisao === "poucas" && ` ${COPY.nivelamento.questoesRespondidas(respondidas)}`}
+        {insuficiente && ` (${COPY.nivelamento.questoesRespondidas(respondidas)})`}
       </p>
     </div>
   );
@@ -115,7 +147,13 @@ export function PlacementResult({
           {algumaMedida ? COPY.nivelamento.resultadoCorpo : COPY.nivelamento.resultadoSemDados}
         </p>
 
-        <div className="mt-6 flex flex-col gap-3">
+        {algumaMedida && (
+          <div className="mt-4">
+            <LegendaDasFaixas />
+          </div>
+        )}
+
+        <div className="mt-3 flex flex-col gap-3">
           {areas.map((a) => (
             <AreaCard
               key={a.area}

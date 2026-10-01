@@ -107,3 +107,22 @@ describe("setTutorFocus — zera pedagogy pra não vazar contexto de outra quest
     expect(getState().tutor.focus?.questionId).toBe("q2");
   });
 });
+
+describe("histórico guardado no aparelho (spec 48 D48-09, B-102)", () => {
+  test("passado o limite, só as 40 mensagens mais recentes ficam", async () => {
+    const { pushTutorMessage, TUTOR_MENSAGENS_GUARDADAS_NO_APARELHO } = await import("@/lib/store");
+    for (let i = 0; i < 300; i++) pushTutorMessage({ role: i % 2 ? "assistant" : "user", content: `m${i}` });
+    const msgs = getState().tutor.messages;
+    expect(msgs).toHaveLength(TUTOR_MENSAGENS_GUARDADAS_NO_APARELHO);
+    expect(msgs[msgs.length - 1].content).toBe("m299");
+  });
+
+  test("histórico antigo enorme ou malformado no localStorage é aparado na leitura", async () => {
+    const { normalizarMensagensDoTutor } = await import("@/lib/store");
+    const bruto = [...Array.from({ length: 300 }, (_, i) => ({ role: "user", content: `m${i}` })), { role: "system", content: "x" }, null, 7];
+    const lidas = normalizarMensagensDoTutor(bruto);
+    expect(lidas).toHaveLength(40);
+    expect(lidas.every((m) => m.role === "user")).toBe(true);
+    expect(normalizarMensagensDoTutor("lixo")).toEqual([]);
+  });
+});

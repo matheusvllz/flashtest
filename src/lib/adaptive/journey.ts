@@ -43,6 +43,22 @@ function estaIniciada(a: PlannedActivity, s: Pick<AppState, "learning">): boolea
  * depende da posição no plano (`atv-<data>-<hash da posição>`), então a mesma
  * aula/prática volta com outro `id` em outra posição. `checkpoint` é uma só na fila (não tem habilidade nem aula).
  */
+/**
+ * Assinatura do que muda o plano por preferência (docs/36 RF-9; spec 48 D48-10): foco permanente, "só hoje" e os
+ * assuntos escolhidos em `/topics`. Quando muda, a fila não iniciada é refeita (a atividade em andamento fica).
+ */
+export function assinaturaDoFoco(s: Pick<AppState, "prefs" | "learning">): string {
+  const f = s.prefs.studyFocus;
+  const base = `${f.mode}:${f.subjectIds.join(",")}:${f.areas.join(",")}|${s.learning.focusSession ? s.learning.focusSession.subjectIds.join(",") : ""}`;
+  if (s.prefs.topicMode !== "chose") return base;
+  const topicos = Object.entries(s.prefs.selectedTopics ?? {})
+    .filter(([, ids]) => ids.length > 0)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([m, ids]) => `${m}=${[...ids].sort().join("+")}`)
+    .join(";");
+  return topicos ? `${base}|t:${topicos}` : base;
+}
+
 export function identidadeDaAtividade(a: PlannedActivity): string {
   if (a.kind === "checkpoint") return "checkpoint";
   if (a.lessonId) return `${a.kind}:L:${a.lessonId}`;

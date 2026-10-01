@@ -302,6 +302,11 @@ Pedido do proprietário: publicar na `main` com "um login falso por enquanto". A
 - **Regressão depois da D-15:** `bunx tsc --noEmit` ✅ · `bun test tests/unit` **1312 pass, 0 fail** · `bun run lint:ci` 0 erros · `bun run build` ✅ · `VERCEL=1 bun run build` ✅ · `bunx playwright test` **484 passed, 0 failed, 73 skipped** (servidor de desenvolvimento, contas ligadas).
 - **Publicação:** `main` avançada (fast-forward) até este commit e enviada ao GitHub a pedido do proprietário ("pode publicar na main"), o que dispara o deploy de produção na Vercel. Estado: **publicado** em modo de demonstração; contas reais **não** validadas em ambiente integrado.
 
+## Retomada documental — divergência do checkpoint (30/09/2026)
+
+- Na conferência exigida pelo `AGENTS.md`, `git status --short` estava limpo, a branch era `producao-46` e o HEAD `2b0584b` (D-16), precedido de `fd1d4da` (D-15). O `ESTADO.md` ainda identificava F05–F07 como último commit e última validação.
+- Divergência registrada antes de prosseguir. Reconciliação documental com as evidências de D-15/D-16 deste registro, sem executar novamente nem declarar verdes os testes completos da D-16. Nenhuma implementação iniciada nesta retomada.
+
 ## D-16 — Conta só depois das perguntas; "Já tem uma conta? Entrar" no quiz (30/09/2026)
 
 Pedido do proprietário: "a criação de contas viesse somente depois das perguntas do quiz, para ficar melhor pro público, e em cima, no quiz, ter um botãozinho com 'já tem uma conta? entrar'"; e "uma conta de login teste".
@@ -312,3 +317,20 @@ Pedido do proprietário: "a criação de contas viesse somente depois das pergun
 - **Conta de teste:** `bun run conta:teste` (`scripts/dev/criar-conta-teste.ts`) cria `teste@foca.dev` / `foca-teste-123` no banco **local**, pela API real; recusa qualquer endereço que não seja `localhost`. Rodado: criou a conta, a segunda execução confirmou o login, e `FOCA_URL=https://exemplo.com` foi recusado. Em produção (modo de demonstração) não há conta: "Entrar e estudar" basta.
 - **Testes:** `conta.spec.ts` + 2 (link do quiz leva ao login; quiz → diagnóstico sem conta → "Entrar no meu plano" → `/cadastro?volta=%2Ftrilha`). `conta` + `onboarding` + `placement`: 37/37.
 - **Regressão:** `bun test tests/unit` 1312 pass / 0 fail · `bun run lint:ci` 0 erros · `bun run build` ✅ · `bunx tsc --noEmit` ✅ · `bunx playwright test` **483 passed, 3 failed, 73 skipped**. As 3 falhas: `brand.spec.ts:55` procurava "Entrar no meu plano" como **link** (agora é botão, porque confere a sessão antes de seguir) → teste ajustado, `brand.spec.ts` 8/8; `marketing/motion.spec.ts` (lp-tablet `:41`, lp-wide `:74`) passaram isoladas (22/22), a mesma instabilidade de carga da landing já vista antes.
+
+## D-19 — Preservar o bordão e preparar a próxima seleção de escopo (30/09/2026)
+
+- Pedido explícito: manter "60 segundos" como bordão e atualizar o SDD; receber recomendações antes do prompt para o Opus planejar e executar.
+- Decisão aplicada na spec (§0 e T-10.2), no B-051 e nos guias COPY, copy/01 e copy/06. O aceite deixou de exigir ausência da expressão. Promessas funcionais falsas continuam no escopo de revisão; nenhuma string do app foi alterada.
+- ESTADO reconciliado com o Git e as evidências já registradas; preparação do prompt anotada. Projeto Neon informado: billowing-bread-71576526, branch solicitada production. Nenhum login, instalação, migração ou deploy executado nesta tarefa. A compatibilidade de Neon Auth gerenciado com a ADR 0005 deve ser resolvida no plano; as melhorias adicionais aguardam seleção do proprietário.
+- Validação documental: `bun run docs:check` → "nenhum link ou caminho quebrado"; `git diff --check` sem erro de whitespace. Revisão do diff: bordão preservado na decisão e no aceite, backlog coerente, histórico de testes distinguido da revisão atual. Sem mudança de código, não foram reexecutados tipos, unitários, E2E ou build. Estado: documentação atualizada localmente; sem commit, push ou publicação.
+
+## D-20 — Landing começa pelo quiz (30/09/2026)
+
+- Pedido do proprietário: o link da landing estava levando ao login; deve começar pelo quiz e pedir conta somente no final. Critérios registrados na spec antes de alterar o código.
+- Causa reproduzida: `authed: true` e `onboarded: true` antigos no localStorage faziam `useContaNoAparelho` trocar todos os CTAs por "Continuar estudando" → `/app`; sem sessão, `/app` levava ao login. E2E novo antes da correção: expected `/quiz`, received `/app`.
+- Correção: CTAs de começar sempre `/quiz`; link separado "Entrar" permanece `/login`. Removidos o hook de leitura do storage e o rótulo condicional. `/app` mantém o comportamento de entrada do PWA. Contrato C-WEB-1 e inventário de copy atualizados. D-16 preservada (nivelamento/diagnóstico antes do cadastro).
+- E2E: `bunx playwright test tests/e2e/marketing/landing.spec.ts tests/e2e/marketing/demo.spec.ts tests/e2e/conta.spec.ts tests/e2e/onboarding.spec.ts tests/e2e/placement.spec.ts --project=lp-narrow --project=lp-mobile --project=lp-desktop --project=chromium --workers=2` → **87 passed, 0 failed, 1 skipped** (3,5 min; caso de barra mobile não aplicável no desktop). Cliques reais com aparelho novo/flags legadas em 320/390/1280; landing → quiz → diagnóstico → cadastro; nivelamento e conta reais locais. Há aviso React durante testes de nivelamento, fora do código alterado; nenhuma falha nesses testes. Não é uma execução de toda a suíte E2E do repositório.
+- Gates: `bunx tsc --noEmit` ✅; `bun run build` ✅; `bun run lint:ci` **0 erros, 17 avisos**; `bun run docs:check` ✅. Baseline unitária 1312/0; primeira execução após a mudança 1311/1 por expectativa antiga de `/app` em `marketing/app-url.test.ts`, atualizada para D-20. **Rodada final `bun test tests/unit`: 1312 pass, 0 fail, 9127 expect() calls, 102 arquivos (64,19 s).**
+- Revisão L1 e web-design-guidelines sobre o diff: navegação continua por Link, sem novo estado, dependência, dado pessoal, segredo ou alteração de conteúdo pedagógico; raiz e routeTree gerado intactos, landing sem store/AppShell. `spec-verifier` confirmou critérios D-20 e preservação do code splitting; resultado final do fluxo até cadastro confirmado pelo log E2E após a revisão.
+- Estado: validado localmente, sem commit, push ou deploy. Nenhuma integração Neon/produção validada nesta correção. A seleção das melhorias e o prompt para o Opus continuam pendentes da escolha do proprietário.

@@ -1,6 +1,7 @@
 import { createFileRoute, lazyRouteComponent, useNavigate } from "@tanstack/react-router";
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
+import { EstadoSalvamento } from "@/components/conta/EstadoSalvamento";
 import { ChapterCompleteSheet } from "@/components/learning/ChapterCompleteSheet";
 import { LearningPath } from "@/components/learning/LearningPath";
 import { FocusLine } from "@/components/learning/journey/FocusLine";
@@ -14,7 +15,7 @@ import { IDS_AULAS_GERADAS, MATERIAS_COM_AULA_GERADA, sectionOfChapter } from "@
 import { ensureSubjects, isSubjectLoaded } from "@/lib/content/repository";
 import { TrailPathSkeleton } from "@/components/learning/path/TrailSkeleton";
 import { phaseById } from "@/content/microlicoes";
-import { ensurePlan } from "@/lib/adaptive/journey";
+import { useJornadaEmDia } from "@/hooks/useJornadaEmDia";
 import { usePlacementReconciliation } from "@/hooks/usePlacementReconciliation";
 import { dispatchClosingFeedback } from "@/lib/feedback/dispatch-feedback";
 import { COPY } from "@/lib/copy";
@@ -205,43 +206,8 @@ function TrilhaRoute() {
   // vista secundária, sem perder o replanejamento em segundo plano. Flag
   // desligada: nada abaixo deste bloco roda (`/trilha` idêntica a hoje).
   const [focusSheetOpen, setFocusSheetOpen] = useState(false);
-  const focusSignature = `${s.prefs.studyFocus.mode}:${s.prefs.studyFocus.subjectIds.join(",")}:${s.prefs.studyFocus.areas.join(",")}|${s.learning.focusSession ? s.learning.focusSession.subjectIds.join(",") : ""}`;
-
-  useEffect(() => {
-    if (!FEATURES.jornadaAdaptativa) return;
-    if (aplicando) return;
-    const hoje = hojeISO();
-    // "Só hoje" vencido some sem recarregar o app (docs/36 RF-9). Ao limpar, o
-    // estado muda e este efeito roda de novo com o foco já sem a sessão.
-    if (clearExpiredFocusSession(hoje)) return;
-    // Estado MAIS RECENTE (não a fotografia do render): o efeito de sincronização (e) acima
-    // roda antes e já pode ter movido/tirado a atividade concluída de `committed`.
-    const atual = getState();
-    // Mudança de foco força replano mesmo com `committed` cheio (docs/30 §15:
-    // "comprometidas fora do novo foco são descartadas") — `ensurePlan` sozinho só
-    // replaneja por `committed` curto/`planVersion` velha. Compara com a assinatura
-    // PERSISTIDA no último plano (docs/36 RF-9), não com um ref desta montagem: o
-    // foco mudado em `/profile` também é visto aqui. Sem assinatura persistida
-    // (conta antiga) grava sem forçar.
-    const persistida = atual.learning.journey.focusSignature;
-    const focusMudou = persistida !== undefined && persistida !== focusSignature;
-    const result = ensurePlan(atual, hoje, hoje, { forceReplan: focusMudou });
-    if (result) commitPlan(result.committed, result.upcoming, focusSignature);
-    else if (persistida !== focusSignature) {
-      // Nada a trocar na fila, mas a assinatura precisa ser registrada (senão o replano forçado repetiria a cada mudança de estado).
-      commitPlan(atual.learning.journey.committed, atual.learning.journey.upcoming, focusSignature);
-    }
-  }, [s, focusSignature, aplicando]);
-
-  // Volta ao app depois da meia-noite (aba em segundo plano): o "só hoje" de ontem some (docs/36 RF-9).
-  useEffect(() => {
-    if (!FEATURES.jornadaAdaptativa) return;
-    const aoVoltar = () => {
-      if (document.visibilityState === "visible") clearExpiredFocusSession(hojeISO());
-    };
-    document.addEventListener("visibilitychange", aoVoltar);
-    return () => document.removeEventListener("visibilitychange", aoVoltar);
-  }, []);
+  // Plano da jornada em dia (o mesmo hook do /plan, spec 48 T-48.4.2).
+  useJornadaEmDia(s, aplicando);
 
   // Aviso de uma linha quando a atividade foi descartada (docs/36 RF-3/RU-1): some ao fechar ou em 6 s.
   const avisoPulada = search.pulada === "1";
@@ -302,6 +268,10 @@ function TrilhaRoute() {
       <aside aria-label={COPY.trilha.painelContexto} className="desk-aside lg:space-y-4">
       <div className="bg-neve px-5 pb-3 pt-6 lg:card-soft lg:p-5">
         <TrailHeader s={s} />
+        {/* Só aparece se a sincronização falhou ou se está sem conexão (spec 48 T-48.8.2): nada de aviso no caminho do estudo. */}
+        <div className="mt-2 empty:hidden">
+          <EstadoSalvamento discreto />
+        </div>
       </div>
 
       {mostrarCardNivelamento && (

@@ -128,7 +128,13 @@ test("sair com estudo ainda não enviado pede confirmação antes de apagar", as
   await responderUmaQuestao(page);
 
   await page.getByRole("link", { name: "Perfil" }).first().click();
-  await expect(page.getByText("Parte do seu estudo ainda está só neste aparelho.")).toBeVisible({ timeout: 20_000 });
+  // Spec 48 T-48.8.2: com o servidor fora, o estado diz que está salvo no aparelho e oferece tentar de novo; nunca "na conta".
+  const salvamento = page.getByTestId("estado-salvamento");
+  await expect(salvamento).toHaveAttribute("data-estado", /falhou|aguardando|sem-conexao/, { timeout: 20_000 });
+  await expect(salvamento).toContainText("salvo neste aparelho");
+  await expect(salvamento).not.toContainText("Sincronizado com a conta");
+  await expect(salvamento).toHaveAttribute("data-estado", "falhou", { timeout: 20_000 });
+  await expect(salvamento.getByRole("button", { name: "Tentar agora" })).toBeVisible();
   await page.getByRole("button", { name: "Sair", exact: true }).click();
   await expect(page.getByText("Parte do seu estudo ainda não chegou à conta.")).toBeVisible({ timeout: 20_000 });
   await page.getByRole("button", { name: "Continuar na conta" }).click();
@@ -177,10 +183,14 @@ async function semearSemConta(page: Page) {
 }
 
 test("estudo de antes da conta: levar para a conta (o servidor recorrige e recalcula o XP)", async ({ context, page }) => {
+  // Regressão DV48-04 (spec 48): o redirecionamento para a importação não pode entrar em laço.
+  const errosDePagina: string[] = [];
+  page.on("pageerror", (e) => errosDePagina.push(e.message));
   await semearSemConta(page);
   await contaComSessao(context);
   await page.goto("/trilha");
   await expect(page).toHaveURL(/\/importar-progresso/, { timeout: 20_000 });
+  expect(page.url()).not.toContain("importar-progresso%3F");
   await expect(page.getByText("1 resposta · 0 lições concluídas")).toBeVisible();
   const axe = await new AxeBuilder({ page }).analyze();
   expect(axe.violations.filter((v) => v.impact === "serious" || v.impact === "critical").map((v) => v.id)).toEqual([]);
@@ -189,6 +199,7 @@ test("estudo de antes da conta: levar para a conta (o servidor recorrige e recal
   const s = await esperarSincronizar(page);
   expect(s.progress.xp).toBe(15);
   expect(s.learning.recentAttempts).toHaveLength(1);
+  expect(errosDePagina.filter((m) => m.includes("Maximum update depth"))).toEqual([]);
 });
 
 test("estudo de antes da conta: começar do zero apaga só depois de confirmar", async ({ context, page }) => {

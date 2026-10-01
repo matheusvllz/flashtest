@@ -42,89 +42,95 @@ function Redacao() {
   const trilhas = TRILHAS.filter((t) => t.eixo === eixo);
 
   return (
-    <AppShell>
-      <div className="bg-neve px-5 pt-8 pb-6">
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <PenLine size={18} className="text-mar-fundo" />
-            <p className="ds-label">Micro-treino de redação</p>
-          </div>
-          {/* Este mapa é o legado (docs/25 §11) — a trilha unificada (T-15/T-18)
-              é o novo lugar-padrão; este link é a saída pra lá sem remover o mapa. */}
-          <Link to="/trilha" className="btn-ghost shrink-0">
-            Ver na trilha
-          </Link>
-        </div>
-        <h1 className="mt-2 font-display text-2xl font-bold leading-tight text-abismo">
-          A nota 1000 sai de mil <br /> exercícios de 1 minuto
-        </h1>
-
-        <div className="mt-4 flex items-center gap-3">
-          <ProgressBar
-            value={doneCount}
-            max={TOTAL_LICOES}
-            tone="caneta"
-            label="Progresso geral da trilha"
-            className="flex-1"
-          />
-          <span className="font-mono text-xs font-bold text-nevoa">
-            {doneCount}/{TOTAL_LICOES}
-          </span>
-        </div>
-
-        {next && (
-          <Link
-            to="/redacao/$licaoId"
-            params={{ licaoId: next.lesson.id }}
-            className="card-soft mt-5 block p-4"
-            style={{ borderColor: "var(--mar)" }}
-          >
-            <div className="flex items-start justify-between gap-3">
-              <div className="min-w-0">
-                <p className="ds-label">
-                  {doneCount === 0 ? "Comece por aqui" : "Continuar de onde parou"}
-                </p>
-                <p className="mt-1.5 font-display text-base font-bold leading-tight text-abismo">
-                  {next.lesson.titulo}
-                </p>
-                <p className="mt-0.5 text-[11px] font-semibold text-nevoa">
-                  {next.trilha.nome} · {next.lesson.exercicios.length} exercícios
-                </p>
-              </div>
-              <FocaMark size={22} decorative />
+    <AppShell layout="wide">
+      {/* Desktop (spec 48 T-48.7.1, B-074): resumo e "continuar" num painel fixo à direita; as trilhas em duas
+          colunas. No celular, a ordem de sempre. */}
+      <div className="desk-split">
+        <div className="desk-aside bg-neve px-5 pt-8 pb-6">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <PenLine size={18} className="text-mar-fundo" />
+              <p className="ds-label">Micro-treino de redação</p>
             </div>
-            <span className="btn-primary mt-3 w-full">Praticar</span>
-          </Link>
-        )}
-      </div>
+            {/* Este mapa é o legado (docs/25 §11) — a trilha unificada (T-15/T-18)
+              é o novo lugar-padrão; este link é a saída pra lá sem remover o mapa. */}
+            <Link to="/trilha" className="btn-ghost shrink-0">
+              Ver na trilha
+            </Link>
+          </div>
+          <h1 className="mt-2 font-display text-2xl font-bold leading-tight text-abismo">
+            A nota 1000 sai de mil <br /> exercícios de 1 minuto
+          </h1>
 
-      {/* Eixos: a redação em si e a base de português que sustenta a nota. */}
-      <div className="sticky top-0 z-10 flex gap-2 border-b-2 border-gelo bg-neve/95 px-5 py-3 backdrop-blur">
-        <button
-          type="button"
-          onClick={() => setEixo("redacao")}
-          className={cn("chip", eixo === "redacao" && "chip-on")}
-        >
-          Redação
-        </button>
-        <button
-          type="button"
-          onClick={() => setEixo("base")}
-          className={cn("chip", eixo === "base" && "chip-on")}
-        >
-          Base de português
-        </button>
-      </div>
+          <div className="mt-4 flex items-center gap-3">
+            <ProgressBar
+              value={doneCount}
+              max={TOTAL_LICOES}
+              tone="caneta"
+              label="Progresso geral da trilha"
+              className="flex-1"
+            />
+            <span className="font-mono text-xs font-bold text-nevoa">
+              {doneCount}/{TOTAL_LICOES}
+            </span>
+          </div>
 
-      <div className="space-y-5 bg-neve px-5 py-5">
-        {trilhas.map((trilha) => (
-          <TrilhaCard
-            key={trilha.id}
-            trilha={trilha}
-            state={s}
-            houveDesbloqueio={houveDesbloqueio}
-          />
-        ))}
+          {next && (
+            <Link
+              to="/redacao/$licaoId"
+              params={{ licaoId: next.lesson.id }}
+              className="card-soft mt-5 block p-4"
+              style={{ borderColor: "var(--mar)" }}
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="ds-label">
+                    {doneCount === 0 ? "Comece por aqui" : "Continuar de onde parou"}
+                  </p>
+                  <p className="mt-1.5 font-display text-base font-bold leading-tight text-abismo">
+                    {next.lesson.titulo}
+                  </p>
+                  <p className="mt-0.5 text-[11px] font-semibold text-nevoa">
+                    {next.trilha.nome} · {next.lesson.exercicios.length} exercícios
+                  </p>
+                </div>
+                <FocaMark size={22} decorative />
+              </div>
+              <span className="btn-primary mt-3 w-full">Praticar</span>
+            </Link>
+          )}
+        </div>
+
+        <div className="desk-main">
+          {/* Eixos: a redação em si e a base de português que sustenta a nota. */}
+          <div className="sticky top-0 z-10 flex gap-2 border-b-2 border-gelo bg-neve/95 px-5 py-3 backdrop-blur">
+            <button
+              type="button"
+              onClick={() => setEixo("redacao")}
+              className={cn("chip", eixo === "redacao" && "chip-on")}
+            >
+              Redação
+            </button>
+            <button
+              type="button"
+              onClick={() => setEixo("base")}
+              className={cn("chip", eixo === "base" && "chip-on")}
+            >
+              Base de português
+            </button>
+          </div>
+
+          <div className="desk-grid space-y-5 bg-neve px-5 py-5 lg:space-y-0">
+            {trilhas.map((trilha) => (
+              <TrilhaCard
+                key={trilha.id}
+                trilha={trilha}
+                state={s}
+                houveDesbloqueio={houveDesbloqueio}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </AppShell>
   );

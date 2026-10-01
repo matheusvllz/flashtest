@@ -30,6 +30,7 @@ import {
   JANELA_MIX,
   MAX_MESMA_MATERIA_SEGUIDAS,
   MIX_ALVO,
+  PESO_TOPICO_ESCOLHIDO,
   PLANO_N,
   REVISAO_ATRASO_DIAS,
   REVISAO_MAX_ATRASO,
@@ -82,6 +83,14 @@ export function materiasPermitidas(s: Pick<AppState, "prefs" | "learning">, toda
   }
   return materias;
 }
+
+/** O aluno escolheu o assunto desta habilidade em `/topics` (modo "Quero escolher os assuntos")? */
+export function topicoEscolhido(sk: { subjectId: string; topicId: string }, s: Pick<AppState, "prefs">): boolean {
+  if (s.prefs.topicMode !== "chose") return false;
+  return (s.prefs.selectedTopics?.[sk.subjectId] ?? []).includes(sk.topicId);
+}
+
+const KINDS_COM_PREFERENCIA_DE_TOPICO = new Set<ActivityKind>(["aula", "pratica", "desafio", "legado"]);
 
 function pesoMateriaDe(subjectId: string, s: Pick<AppState, "prefs">): MateriaPeso {
   const nome = SUBJECT_MAP[subjectId]?.name ?? subjectId;
@@ -258,7 +267,8 @@ export function planNext(
           materiaPenultima,
         });
 
-        let scoreFinal = score;
+        // Assunto escolhido em /topics pesa mais em conteúdo novo; revisão, reforço e checagem não mudam (D48-10).
+        let scoreFinal = KINDS_COM_PREFERENCIA_DE_TOPICO.has(cand.kind) && topicoEscolhido(sk, s) ? score * PESO_TOPICO_ESCOLHIDO : score;
         // Bônus de déficit de proporção (§11.5).
         const b = bucket(cand.kind);
         if (b) {

@@ -218,7 +218,8 @@ Nomes de variável mantidos do projeto (`--color-abismo`, `--color-mar`…), val
 | **Accent forte** | `--color-mar-fundo` | `#1E4FCC` | `#9FC0FF` | Aresta do botão primário, link em texto, `ds-label` sobre claro |
 | **Accent claro** | `--color-coral-claro` | `#8FB0FF` | `#B9CEFF` | Trilho de barra em fundo escuro, badge leve |
 | **Recompensa** ⚑ | `--color-recompensa` (novo, alias → `--color-alert`) | `#D9A017` | `#E8B23D` | **Só como fundo** de chip/anel/marca-texto com texto `abismo`; nunca texto amarelo sobre branco |
-| **Alerta / severidade baixa** | `--color-alert` | `#D9A017` | `#E8B23D` | Badge "a confirmar" do aha, ícone de atenção |
+| **Alerta / severidade baixa** | `--color-alert` | `#D9A017` | `#E8B23D` | Ícone de atenção |
+| **Brasa** (novo, spec 48 D48-14) | `--color-brasa` (base `--brasa`) | `#D9480F` (3,9:1 sobre `--neve`) | `#FF8A3D` (≥ 6,2:1 no escuro) | **Só ícone**: o fogo da sequência (`IndicadorSequencia`). Nunca texto, nunca fundo, nunca animado |
 | **Background** (papel) | `--color-neve` | `#F6F5F1` | `#1C1B18` | `html, body`, `PhoneFrame`, telas de entrada |
 | **Surface** (cartão) | `--color-cards` (novo) | `#FFFFFF` | `#262523` | `card-soft`, header, nav, inputs, folhas |
 | **Surface secondary** | `--color-gelo` | `#E1DFDA` | `#38352F` | Chip inativo, trilho de barra, skeleton, borda de cartão, pauta |

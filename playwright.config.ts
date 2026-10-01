@@ -60,7 +60,8 @@ export default defineConfig({
       name: "desktop",
       use: { ...devices["Desktop Chrome"], viewport: { width: 1280, height: 800 }, storageState: SESSAO_ALUNO },
       ...comConta,
-      testMatch: ["**/layout.spec.ts"],
+      // Spec 48 T-48.1.3: conta e sincronização também em 1280 (46 T-05.4, T-07.4).
+      testMatch: ["**/layout.spec.ts", "**/conta.spec.ts", "**/sync.spec.ts", "**/plano-topicos.spec.ts"],
     },
     // Largura mínima real da matriz (docs/25 §12/§21, §18 T-27, G12) — só
     // roda os specs que a tarefa aponta como críticos de layout na trilha e
@@ -70,7 +71,8 @@ export default defineConfig({
       name: "narrow",
       use: { ...devices["Desktop Chrome"], viewport: { width: 320, height: 700 }, storageState: SESSAO_ALUNO },
       ...comConta,
-      testMatch: ["**/trail-home.spec.ts", "**/lesson-v2.spec.ts", "**/trail-path.spec.ts", "**/layout.spec.ts"],
+      // Spec 48 T-48.1.3: conta e sincronização também em 320 (46 T-05.4, T-07.4).
+      testMatch: ["**/trail-home.spec.ts", "**/lesson-v2.spec.ts", "**/trail-path.spec.ts", "**/layout.spec.ts", "**/conta.spec.ts", "**/sync.spec.ts", "**/plano-topicos.spec.ts"],
     },
   ],
   webServer: {

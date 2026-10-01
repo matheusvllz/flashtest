@@ -6,14 +6,17 @@
 import { useNavigate } from "@tanstack/react-router";
 import { LogOut } from "lucide-react";
 import { useEffect, useState } from "react";
+import { EstadoSalvamento } from "@/components/conta/EstadoSalvamento";
 import { AvisoErro } from "@/components/conta/TelaDeAcesso";
 import { authClient } from "@/lib/auth-client";
 import { COPY } from "@/lib/copy";
 import { esquecerUsuarioDaSessao } from "@/lib/conta/usuario-da-sessao";
 import { esquecerSessao, sessao } from "@/lib/sessao";
 import { sairDaDemonstracao } from "@/lib/conta/demonstracao";
-import { logout, sairDaEntradaLocal, useAppState } from "@/lib/store";
+import { definirFocaIADesligadaLocal, logout, sairDaEntradaLocal, useAppState } from "@/lib/store";
 import { sincronizarAgora } from "@/lib/sync/motor";
+import { definirFocaIA, preferenciaFocaIA } from "@/lib/api/conta";
+import { cn } from "@/lib/utils";
 
 export function SecaoConta() {
   const nav = useNavigate();
@@ -22,17 +25,41 @@ export function SecaoConta() {
   const [saindo, setSaindo] = useState(false);
   const [erro, setErro] = useState<string>();
   const [pendente, setPendente] = useState<null | { deTodos: boolean }>(null);
-  const naFila = useAppState().account?.outbox.length ?? 0;
+  const [focaIA, setFocaIA] = useState<boolean | null>(null);
 
   useEffect(() => {
     sessao().then(
       (s) => {
         setEmail(s.email);
         setDemonstracao(s.modo === "demonstracao");
+        if (s.modo !== "demonstracao" && s.email) {
+          preferenciaFocaIA().then(
+            (r) => {
+              if (!r.ok) return;
+              setFocaIA(r.ligada);
+              definirFocaIADesligadaLocal(!r.ligada);
+            },
+            () => undefined,
+          );
+        }
       },
       () => undefined,
     );
   }, []);
+
+  async function alternarFocaIA() {
+    if (focaIA === null) return;
+    const ligada = !focaIA;
+    setErro(undefined);
+    try {
+      const r = await definirFocaIA({ data: { ligada } });
+      if (!r.ok) throw new Error(r.codigo);
+      setFocaIA(ligada);
+      definirFocaIADesligadaLocal(!ligada);
+    } catch {
+      setErro(COPY.conta.erros.rede);
+    }
+  }
 
   async function sair(deTodos: boolean, confirmado = false) {
     // Modo de demonstração (D-15): não há conta nem fila; sair só encerra a entrada local e mantém o progresso.
@@ -73,9 +100,29 @@ export function SecaoConta() {
         {COPY.conta.contaTitulo}
       </h2>
       {email && <p className="break-all text-sm text-abismo">{email}</p>}
-      <p role="status" className="text-sm text-nevoa">
-        {demonstracao ? COPY.conta.syncDemonstracao : naFila > 0 ? COPY.conta.syncPendente : COPY.conta.syncEmDia}
-      </p>
+      {demonstracao ? (
+        <p role="status" className="text-sm text-nevoa">
+          {COPY.conta.syncDemonstracao}
+        </p>
+      ) : (
+        <EstadoSalvamento />
+      )}
+      {focaIA !== null && (
+        <div className="flex flex-col gap-1.5">
+          <button
+            type="button"
+            onClick={alternarFocaIA}
+            aria-pressed={focaIA}
+            aria-describedby="foca-ia-explica"
+            className={cn("chip min-h-11 justify-center", focaIA && "chip-on")}
+          >
+            {COPY.conta.focaIA(focaIA)}
+          </button>
+          <p id="foca-ia-explica" className="text-xs text-nevoa">
+            {COPY.conta.focaIAExplica}
+          </p>
+        </div>
+      )}
       <AvisoErro>{erro}</AvisoErro>
       {pendente ? (
         <div role="alertdialog" aria-labelledby="sair-pendente" className="flex flex-col gap-3">

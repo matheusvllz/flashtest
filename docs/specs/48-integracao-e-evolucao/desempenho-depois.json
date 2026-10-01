@@ -1,0 +1,37 @@
+{
+  "base": "http://localhost:3200",
+  "runs": 3,
+  "cenario": "390x844, CPU 4x, 4G lenta (150 ms, 1,6 Mbit/s)",
+  "medidoEm": "2026-10-01T01:33:46.668Z",
+  "resultado": {
+    "landing": {
+      "fcp": 1348,
+      "lcp": 1968,
+      "jsKB": 174,
+      "totalKB": 330,
+      "tarefasLongasMs": 850
+    },
+    "quiz": {
+      "fcp": 2640,
+      "lcp": 2640,
+      "jsKB": 208,
+      "totalKB": 290,
+      "tarefasLongasMs": 81
+    },
+    "trilha": {
+      "fcp": 3364,
+      "lcp": 3364,
+      "jsKB": 423,
+      "totalKB": 521,
+      "tarefasLongasMs": 250
+    },
+    "atividade (aula de 60s)": {
+      "fcp": 3524,
+      "lcp": 3524,
+      "jsKB": 414,
+      "totalKB": 506,
+      "tarefasLongasMs": 263,
+      "interacaoMs": 207
+    }
+  }
+}

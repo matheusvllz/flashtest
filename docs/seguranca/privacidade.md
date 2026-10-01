@@ -33,10 +33,10 @@ substituido-por: null
 | Primeiro nome, UF, etapa escolar, instituição e curso-alvo, provas e datas | `prefs` | Vindos do onboarding (`/quiz`) |
 | E-mail | `prefs.email` | Só do login simulado; sai do cliente no 46 |
 | Progresso, respostas, domínio estimado, XP, streak | `progress`, `learning` | — |
-| Conversa com a Foca IA (texto; foto não é guardada) | `tutor.messages` | Sem limite de tamanho hoje (46 T-08.2) |
+| Conversa com a Foca IA (texto; foto não é guardada) | `tutor.messages` | As 40 mensagens mais recentes (48 D48-09); não sincronizada com a conta |
 | Cópias de backup brutas (com nome e e-mail) | `foca.state.backup.*` | Nunca apagadas hoje; apagadas após a importação (46 T-07.2) |
 
-Enviado a terceiros hoje: à OpenAI, quando o aluno usa a Foca IA — primeiro nome, instituição e curso-alvo, etapa, lacunas, fatos de desempenho, a questão com gabarito e a escolha, o histórico da conversa e a foto (`src/components/TutorBubble.tsx:181-201`).
+Enviado a terceiros: à OpenAI, só quando o aluno envia uma mensagem à Foca IA (48 F2, montado no servidor em `src/server/tutor/contexto.ts`): instituição e curso-alvo, etapa, contagens de desempenho dos últimos 30 dias, sequência, o contexto pedagógico da habilidade (números do motor), a questão com gabarito e a escolha, as últimas 20 mensagens e a foto comprimida. **O primeiro nome não vai** (46 D-18). A mensagem e a foto também passam pela moderação da OpenAI (`omni-moderation-latest`). Em modo de demonstração ou sem chave, nada é enviado.
 
 ### 3.2 Depois do 46 (servidor — Neon, São Paulo)
 
@@ -47,7 +47,9 @@ Enviado a terceiros hoje: à OpenAI, quando o aluno usa a Foca IA — primeiro n
 | Faixa etária | ano de nascimento | Aplicar as regras de proteção | Obrigação legal / melhor interesse | Até a exclusão |
 | Desempenho | respostas, conclusões, domínio estimado | Adaptar a próxima questão | Execução de contrato; melhor interesse | Até a exclusão |
 | Aceites e consentimentos | versão dos termos e data; consentimento do responsável | Provar aceite e consentimento | Execução de contrato / consentimento | Até a exclusão (+ prazo legal a confirmar) |
-| Uso de IA | contadores e custo (sem conteúdo) | Cota e custo | Legítimo interesse (a avaliar) | 90 dias |
+| Uso de IA | contadores e custo (sem conteúdo): `ai_usage`, `ai_budget`; eventos `ia_cota_excedida` e `ia_autocuidado` (sem conteúdo) em `audit_event` | Cota, custo e segurança | Legítimo interesse (a avaliar) | 90 dias (`audit_event`: 6 meses) |
+| Dia coberto por proteção da sequência | `progress.diaProtegido` (aparelho) e agregado da sincronização; **derivado** dos dias de estudo, não é coleta nova | Mostrar a regra da sequência ao aluno (48 D48-14) | Execução de contrato | Recalculado; some com a conta |
+| Preferência da Foca IA | `profile.tutor_desligado` | Respeitar a escolha de não usar a IA | Execução de contrato | Até a exclusão |
 | Conteúdo enviado à IA | mensagens, foto | Responder à dúvida | Execução de contrato + consentimento do responsável aos 17 | **Não guardado por nós**; OpenAI até 30 dias (monitoramento de abuso) |
 | Segurança | eventos de login, IP truncado (/24 ou /48) | Prevenir abuso | Legítimo interesse | 6 meses (boa prática; o art. 15 do Marco Civil obriga pessoa jurídica) |
 | Cookie de sessão | token de sessão | Manter o login | Essencial ao serviço | 30 dias com renovação |
@@ -71,10 +73,12 @@ Cláusulas-padrão da ANPD (Res. 19/2024) com cada operador: **não verificado**
 
 | Direito (LGPD art. 18) | Como | Tarefa |
 |---|---|---|
-| Acesso e portabilidade | "Baixar meus dados" em `/conta` (JSON) | 46 T-09.1 |
+| Acesso e portabilidade | "Baixar meus dados" em Perfil → Seus dados (JSON; 1 por hora) — **implementado** | 46 T-09.1; 48 T-48.3.1 |
 | Correção | Edição do perfil em `/conta` | 46 T-05.5 |
-| Eliminação | "Excluir conta" em `/conta` (imediata; backups expiram no prazo de restauração do Neon) | 46 T-09.2 |
-| Revogação de consentimento | Em `/conta` | 46 T-11.4 |
+| Eliminação | "Excluir conta" em Perfil → Seus dados (senha; imediata, em cascata; e-mail de confirmação; auditoria só com o hash do id; o histórico do Neon expira em 6 h no plano atual) — **implementado** | 46 T-09.2; 48 T-48.3.2 |
+| Retenção automática | Rotina diária (Vercel Cron, `/api/cron/retencao`): contas nunca verificadas em 7 dias, `audit_event` em 6 meses, uso de IA em 90 dias — **implementado, roda após o deploy com `CRON_SECRET`** | 46 T-09.3; 48 T-48.3.3 |
+| Revogação de consentimento | Em `/conta` (pendente: fluxo do responsável) | 46 T-11.4 |
+| Oposição ao uso da IA | "Foca IA ligada/desligada" na seção Conta | 48 T-48.2.6 |
 | Informação | Política de privacidade | 46 F11 |
 
 ## 6. Checklist para quem mexe em dado pessoal

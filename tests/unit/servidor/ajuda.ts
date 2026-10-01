@@ -20,10 +20,11 @@ export interface Ambiente {
   get: (url: string, extra?: Record<string, string>) => Promise<Response>;
 }
 
-export async function ambiente(): Promise<Ambiente> {
+/** `url`: outro Postgres em vez do PGlite em memória (suíte `tests/neon`). */
+export async function ambiente(url?: string): Promise<Ambiente> {
   redefinirEnv();
   limparCaixaDeSaida();
-  const db = await bancoDeTeste();
+  const db = await bancoDeTeste(url);
   definirBanco(db);
   const auth = authDeTeste(db);
   const cabecalhos = (extra: Record<string, string> = {}) =>

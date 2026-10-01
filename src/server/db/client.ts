@@ -48,9 +48,12 @@ export function banco(): Promise<Banco> {
   return conexao;
 }
 
-/** Só para testes: abre um banco novo, isolado (PGlite em memória, migrado). */
-export async function bancoDeTeste(): Promise<Banco> {
-  return abrir("pglite:memoria");
+/**
+ * Só para testes: abre um banco novo, isolado (PGlite em memória, migrado). Com `url` (suíte `tests/neon`, spec 48
+ * T-48.0.4), abre aquele Postgres — uma branch temporária do Neon, já migrada pelo `scripts/db/neon.ts testar`.
+ */
+export async function bancoDeTeste(url = "pglite:memoria"): Promise<Banco> {
+  return abrir(url);
 }
 
 /** Só para testes: troca a conexão do processo (ex.: por um `bancoDeTeste()`). */

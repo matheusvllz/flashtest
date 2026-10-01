@@ -38,9 +38,10 @@ export const VOZ: Record<VozSlot, string[]> = {
     "Sem sermão. Só 60 segundos.",
   ],
   meta: ["Meta fechada. Pode ir.", "Feito. Eu volto pra minha pedra.", "Hoje tá pago."],
+  // Spec 48 D48-12 (B-068): a fala não afirma medição. Sem nivelamento, nada foi medido ainda.
   aha: [
-    "Já te entendi. Assustadoramente rápido.",
-    "Três lacunas. Achei em 40 segundos. Imagina em um mês.",
+    "Ponto de partida anotado. O resto eu aprendo com cada resposta sua.",
+    "Ainda não medi nada. A gente descobre estudando.",
   ],
   acertou: [
     "Certa. Anotei aqui na pedra.",

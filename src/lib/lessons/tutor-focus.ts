@@ -125,5 +125,7 @@ export function focusFromExercise(
     wasCorrect,
     explanation: ex.explicacao,
     hint: ex.explicacao,
+    resposta: answer,
+    exibidos: shownBlocks,
   };
 }

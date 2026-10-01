@@ -16,8 +16,9 @@ import { LEGAL, idadePeloAno } from "@/lib/legal";
 import { banco, type Banco } from "../db/client";
 import * as schema from "../db/schema";
 import { enviarEmail } from "../email";
-import { emailRedefinicaoSenha, emailVerificacao } from "../email/modelos";
-import { env } from "../env";
+import { emailContaExcluida, emailRedefinicaoSenha, emailVerificacao } from "../email/modelos";
+import { registrarExclusao } from "../conta/exclusao";
+import { env, origensConfiaveis } from "../env";
 
 const HORA = 60 * 60;
 const DIA = 24 * HORA;
@@ -29,16 +30,11 @@ function criar(db: Banco) {
     e.GOOGLE_CLIENT_ID && e.GOOGLE_CLIENT_SECRET
       ? { google: { clientId: e.GOOGLE_CLIENT_ID, clientSecret: e.GOOGLE_CLIENT_SECRET, prompt: "select_account" as const } }
       : {};
-  const origensExtras = (e.AUTH_TRUSTED_ORIGINS ?? "")
-    .split(",")
-    .map((o) => o.trim())
-    .filter(Boolean);
-
   return betterAuth({
     appName: "Foca",
     baseURL: e.BETTER_AUTH_URL,
     secret: e.BETTER_AUTH_SECRET,
-    trustedOrigins: [e.BETTER_AUTH_URL, ...origensExtras],
+    trustedOrigins: origensConfiaveis(e),
     database: drizzleAdapter(db, { provider: "pg", schema }),
     user: {
       additionalFields: {
@@ -46,7 +42,15 @@ function criar(db: Banco) {
         termsVersion: { type: "string", required: false, input: true },
         privacyVersion: { type: "string", required: false, input: true },
       },
-      deleteUser: { enabled: true },
+      // Exclusão (46 T-09.2; spec 48 T-48.3.2): cascata no banco; depois, auditoria sem o id em claro e e-mail.
+      deleteUser: {
+        enabled: true,
+        afterDelete: async (u) => {
+          await registrarExclusao(db, u.id);
+          // Retenção de histórico do Neon no plano atual: 6 h (ADR 0007) — "em até 1 dia" no e-mail.
+          await enviarEmail(emailContaExcluida({ para: u.email, diasBackup: 1, urlPrivacidade: `${e.BETTER_AUTH_URL}/privacidade` }));
+        },
+      },
     },
     emailAndPassword: {
       enabled: e.AUTH_EMAIL_HABILITADO,

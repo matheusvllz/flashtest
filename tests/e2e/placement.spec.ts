@@ -325,9 +325,12 @@ test("resultado (F.5): faixas por área medida, precisão pela SE, área não me
   await expect(
     page.getByRole("img", { name: "Ciências da Natureza e suas Tecnologias: No caminho. Estimativa inicial." }),
   ).toBeVisible();
-  await expect(page.getByTestId("placement-area")).toHaveCount(3);
+  // Spec 48 T-48.5.2: as 4 áreas têm cartão; a não medida tem estado próprio (texto + contorno tracejado).
+  await expect(page.getByTestId("placement-area")).toHaveCount(4);
+  await expect(page.locator('[data-estado="nao-medida"]')).toHaveCount(1);
+  await expect(page.locator('[data-estado="insuficiente"]')).toContainText("(a confirmar)");
   // A quantidade de questões só aparece quando a estimativa tem poucas.
-  await expect(page.getByText("Poucas questões. Vamos confirmar estudando. 2 questões")).toBeVisible();
+  await expect(page.getByText("Poucas questões. Vamos confirmar estudando. (2 questões)")).toBeVisible();
   // Rótulo visível (cor nunca é o único sinal) ao lado do indicador.
   await expect(page.getByTestId("placement-area").filter({ hasText: "Base firme" })).toHaveCount(1);
   // Área não medida: sem indicador, com o texto próprio.
@@ -366,7 +369,8 @@ test("resultado (F.5): nenhuma área medida troca o corpo, sem indicadores", asy
   ).toBeVisible();
   await expect(page.getByText("Isso é um ponto de partida, não uma nota. Muda conforme você estuda.")).toHaveCount(0);
   await expect(page.getByRole("img")).toHaveCount(0);
-  await expect(page.getByTestId("placement-area")).toHaveCount(0);
+  await expect(page.locator('[data-estado="medida"], [data-estado="insuficiente"]')).toHaveCount(0);
+  await expect(page.locator('[data-estado="nao-medida"]')).toHaveCount(4);
   // Nunca inventa faixa: as 4 áreas aparecem como não medidas.
   await expect(page.getByText(/Ainda não temos questões suficientes de/)).toHaveCount(4);
 });

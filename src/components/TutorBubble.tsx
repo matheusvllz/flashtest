@@ -3,30 +3,52 @@ import { ImagePlus, Image as ImageIcon, Send, X } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { useDialogA11y } from "@/hooks/useDialogA11y";
 import { COPY } from "@/lib/copy";
-import {
-  clearTutorAutoSend,
-  closeTutor,
-  openTutor,
-  performanceFacts,
-  pushTutorMessage,
-  useAppState,
-} from "@/lib/store";
-import { askTutor, type TutorImage } from "@/lib/tutor";
-import type { TutorContext } from "@/lib/tutor-prompt";
+import { clearTutorAutoSend, closeTutor, openTutor, pushTutorMessage, useAppState } from "@/lib/store";
+import { askTutor, type PedidoTutor, type RespostaTutor } from "@/lib/tutor";
+import { mensagensParaEnviar } from "@/lib/tutor-contrato";
+import { comprimirFoto } from "@/lib/tutor-foto";
+import type { TutorMessage } from "@/lib/tutor-prompt";
 
 /** Ritmo da revelação. Palavra a palavra, com respiro depois de pontuação forte. */
 const MS_POR_PALAVRA = 22;
 const MS_APOS_PONTUACAO = 150;
 
-/**
- * Mesmo limite do servidor (`tutor-core.ts#validateTutorRequest`, docs/20
- * §14.2) — checado aqui ANTES de ler o arquivo, pra não gastar FileReader
- * nem rodada de rede com algo que o servidor rejeitaria de qualquer jeito.
- * Duplicado, não importado de `tutor-core.ts`: aquele módulo é server-only
- * por design (CLAUDE.md) e não deve ser puxado pro bundle do cliente.
- */
-const TIPOS_IMAGEM_PERMITIDOS = new Set(["image/png", "image/jpeg", "image/webp"]);
-const IMAGEM_MAX_BYTES = 5 * 1024 * 1024;
+type Foto = NonNullable<PedidoTutor["foto"]>;
+type Aviso = { tipo: Exclude<RespostaTutor, { ok: true }>["tipo"]; podeTentar: boolean };
+
+/** Texto de cada estado que não é resposta (spec 48 T-48.2.7). */
+function textoDoAviso(tipo: Aviso["tipo"]): string {
+  switch (tipo) {
+    case "limite":
+      return COPY.tutor.limite;
+    case "indisponivel":
+      return COPY.tutor.indisponivel;
+    case "consentimento":
+      return COPY.tutor.consentimento;
+    case "desligado":
+      return COPY.tutor.desligado;
+    case "recusado":
+      return COPY.tutor.recusado;
+    case "sem-sessao":
+      return COPY.tutor.semSessao;
+    case "foto-invalida":
+      return COPY.tutor.fotoInvalida;
+    default:
+      return COPY.tutor.falhaResposta;
+  }
+}
+
+/** O foco do balão vira o pedido: só id, resposta crua e ordem exibida (o servidor monta o resto). */
+function focoDoPedido(focus: ReturnType<typeof useAppState>["tutor"]["focus"]): PedidoTutor["foco"] {
+  const itemId = focus?.itemId ?? focus?.questionId;
+  if (!focus || !itemId) return null;
+  return {
+    itemId,
+    respondeu: focus.answered,
+    resposta: focus.resposta ?? null,
+    ...(focus.exibidos ? { exibidos: focus.exibidos.slice(0, 20) } : {}),
+  };
+}
 
 /**
  * Quebra o texto em "palavra + espaço que a segue", e não em tokens soltos:
@@ -108,8 +130,12 @@ export function TutorBubble() {
   const { open, messages, focus, pedagogy, autoSend } = s.tutor;
   const [draft, setDraft] = useState("");
   const [pending, setPending] = useState(false);
-  const [image, setImage] = useState<{ preview: string; payload: TutorImage } | null>(null);
+  const [image, setImage] = useState<{ preview: string; payload: Foto } | null>(null);
   const [imageError, setImageError] = useState<string | null>(null);
+  const [aviso, setAviso] = useState<Aviso | null>(null);
+  const [restantes, setRestantes] = useState<number | null>(null);
+  /** Foto do último pedido, para "Tentar de novo" reenviar igual. */
+  const ultimaFotoRef = useRef<Foto | null>(null);
   /**
    * Índice da mensagem que está sendo revelada agora. Só a resposta recém-chegada
    * anima: ao reabrir o balão, o histórico aparece pronto (ninguém quer ver a
@@ -166,73 +192,68 @@ export function TutorBubble() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, autoSend]);
 
+  /**
+   * Pede a resposta para o histórico dado (que termina na pergunta do aluno). Só as últimas 20 mensagens vão no
+   * pedido (B-102); o aparelho guarda 40. Estados que não são resposta aparecem num aviso, fora do histórico.
+   */
+  async function pedir(historico: TutorMessage[], foto: Foto | null) {
+    setPending(true);
+    setAviso(null);
+    ultimaFotoRef.current = foto;
+    const indiceDaResposta = historico.length;
+    let r: RespostaTutor;
+    try {
+      r = await askTutor({
+        data: {
+          mensagens: mensagensParaEnviar(historico.map((m) => ({ role: m.role, content: m.content }))),
+          foco: focoDoPedido(focus),
+          modo: pedagogy?.mode ?? "duvida",
+          foto,
+        },
+      });
+    } catch {
+      r = { ok: false, tipo: "erro" };
+    }
+    if (r.ok) {
+      pushTutorMessage({ role: "assistant", content: r.texto });
+      setRestantes(r.restantes);
+      setRevelando(indiceDaResposta);
+    } else if (r.tipo === "autocuidado") {
+      // Protocolo de autocuidado: a mensagem fica visível no histórico, sem animação.
+      pushTutorMessage({ role: "assistant", content: r.texto ?? COPY.tutor.autocuidado });
+    } else {
+      setAviso({ tipo: r.tipo, podeTentar: r.tipo === "erro" || r.tipo === "indisponivel" || r.tipo === "invalido" });
+    }
+    setPending(false);
+  }
+
   async function send(text: string) {
     if (pending) return;
     const attached = image;
     // Só a foto, sem texto, já é um pedido válido — é o "1 toque de wow" do SDD.
-    const prompt = text.trim() || (attached ? COPY.tutor.fotoSemTexto : "");
+    const prompt = (text.trim() || (attached ? COPY.tutor.fotoSemTexto : "")).slice(0, 4000);
     if (!prompt) return;
 
     setDraft("");
     setImage(null);
-    pushTutorMessage({ role: "user", content: prompt, hasImage: !!attached });
-    setPending(true);
-
-    const context: TutorContext = {
-      firstName: (s.prefs.name || "estudante").split(" ")[0],
-      targetInstitution: s.prefs.targetInstitution,
-      targetCourse: s.prefs.targetCourse,
-      level: s.prefs.level,
-      gaps: s.quiz.gaps.map((g) => ({ subjectName: g.subjectName, topic: g.topic })),
-      performance: performanceFacts(s),
-      focus,
-      pedagogy,
-    };
-
-    // A resposta entra logo depois da pergunta que acabamos de empilhar.
-    const indiceDaResposta = messages.length + 1;
-
-    try {
-      const reply = await askTutor({
-        data: {
-          messages: [...messages, { role: "user", content: prompt }],
-          context,
-          image: attached?.payload ?? null,
-        },
-      });
-      pushTutorMessage({ role: "assistant", content: reply.text });
-    } catch {
-      pushTutorMessage({
-        role: "assistant",
-        content: COPY.tutor.falhaResposta,
-      });
-    } finally {
-      setPending(false);
-      setRevelando(indiceDaResposta);
-    }
+    const pergunta: TutorMessage = { role: "user", content: prompt, hasImage: !!attached };
+    pushTutorMessage(pergunta);
+    await pedir([...messages, pergunta], attached?.payload ?? null);
   }
 
-  function attach(file: File) {
+  function tentarDeNovo() {
+    if (pending || messages[messages.length - 1]?.role !== "user") return;
+    void pedir(messages, ultimaFotoRef.current);
+  }
+
+  async function attach(file: File) {
     setImageError(null);
-    // Checa ANTES de ler o arquivo — mesmos limites do servidor (docs/20
-    // §14.2, Fase 7 item 8), pra não gastar FileReader com algo que a
-    // validação de runtime do servidor rejeitaria de qualquer forma.
-    if (!TIPOS_IMAGEM_PERMITIDOS.has(file.type)) {
-      setImageError("Formato não suportado. Envie PNG, JPEG ou WebP.");
+    const r = await comprimirFoto(file);
+    if (!r.ok) {
+      setImageError(r.erro === "grande" ? COPY.tutor.fotoGrande : COPY.tutor.fotoInvalida);
       return;
     }
-    if (file.size > IMAGEM_MAX_BYTES) {
-      setImageError("Imagem maior que 5 MiB. Tente uma foto menor.");
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = () => {
-      const url = String(reader.result);
-      const base64 = url.split(",")[1];
-      if (!base64) return;
-      setImage({ preview: url, payload: { mediaType: file.type, data: base64 } });
-    };
-    reader.readAsDataURL(file);
+    setImage({ preview: r.preview, payload: { tipo: r.tipo, base64: r.base64 } });
   }
 
   // Desktop (docs/44 §5): com o painel aberto, a coluna abre espaço à direita (CSS em styles.css, `html[data-tutor]`).
@@ -252,6 +273,10 @@ export function TutorBubble() {
       ? COPY.tutor.sugestoesErro
       : COPY.tutor.sugestoesAjuda
     : COPY.tutor.sugestoesGeral;
+
+  // O aluno desligou a Foca IA no perfil (spec 48 T-48.2.6): sem botão. Se uma tela abrir o painel mesmo assim,
+  // o servidor responde "desligado" e o aviso explica como ligar.
+  if (!open && s.prefs.focaIADesligada) return null;
 
   if (!open) {
     return (
@@ -299,6 +324,8 @@ export function TutorBubble() {
         </button>
       </header>
 
+      <p className="mx-5 mb-2 text-xs text-nevoa">{COPY.tutor.avisoIA}</p>
+
       {focus && (
         <p className="chip mx-5 mb-2 self-start">
           {COPY.tutor.falandoSobre(focus.topic, focus.subjectName)}
@@ -342,6 +369,27 @@ export function TutorBubble() {
               )}
             </div>
           ),
+        )}
+
+        {aviso && !pending && (
+          <div
+            role="status"
+            data-tutor-aviso={aviso.tipo}
+            className="rounded-lg border-2 border-gelo bg-cards px-4 py-3 text-sm leading-relaxed text-abismo"
+          >
+            <p>{textoDoAviso(aviso.tipo)}</p>
+            {aviso.podeTentar && (
+              <button type="button" onClick={tentarDeNovo} className="btn-outline mt-2 min-h-11 px-4 text-sm">
+                {COPY.tutor.tentarDeNovo}
+              </button>
+            )}
+          </div>
+        )}
+
+        {restantes !== null && restantes <= 1 && !pending && !aviso && (
+          <p className="text-center text-xs text-nevoa" aria-live="polite">
+            {COPY.tutor.restantes(restantes)}
+          </p>
         )}
 
         {pending && (
@@ -393,11 +441,11 @@ export function TutorBubble() {
           <input
             ref={fileRef}
             type="file"
-            accept="image/png,image/jpeg,image/webp"
+            accept="image/*"
             className="hidden"
             onChange={(e) => {
               const f = e.target.files?.[0];
-              if (f) attach(f);
+              if (f) void attach(f);
               e.target.value = "";
             }}
           />

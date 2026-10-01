@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useAtalhosDeQuestao } from "@/hooks/useAtalhosDeQuestao";
 import { useNavigate } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
@@ -52,11 +52,14 @@ export function MicroLessonPlayer({
   lesson,
   mode,
   onComplete,
+  conclusao,
 }: {
   lesson: MicroLesson;
   /** Repassado a `useLearningSession` (docs/30 §14.4, Fase 12) — ausente = lição de conteúdo, comportamento de sempre. */
   mode?: UseLearningSessionOptions["mode"];
   onComplete?: (correct: number, total: number) => CompleteStrategyResult;
+  /** Tela final própria (ex.: resultado da checagem, spec 48 T-48.5.1). Ausente = a celebração de sempre. */
+  conclusao?: (info: { xpGanho: number }) => ReactNode;
 }) {
   const [playKey, setPlayKey] = useState(0);
   return (
@@ -65,6 +68,7 @@ export function MicroLessonPlayer({
       lesson={lesson}
       mode={mode}
       onComplete={onComplete}
+      conclusao={conclusao}
       onReplay={() => setPlayKey((k) => k + 1)}
     />
   );
@@ -74,11 +78,13 @@ function MicroLessonPlayerInner({
   lesson,
   mode,
   onComplete,
+  conclusao,
   onReplay,
 }: {
   lesson: MicroLesson;
   mode?: UseLearningSessionOptions["mode"];
   onComplete?: (correct: number, total: number) => CompleteStrategyResult;
+  conclusao?: (info: { xpGanho: number }) => ReactNode;
   onReplay: () => void;
 }) {
   // Desktop: 1–5 / A–E escolhem, Enter confirma (docs/44 §5).
@@ -144,9 +150,14 @@ function MicroLessonPlayerInner({
         subjectName: SUBJECT_MAP[lesson.subjectId].name,
         topic: chapter ? `${chapter.title} · ${lesson.title}` : lesson.title,
         questionId: session.step.exerciseId,
+        itemId: session.step.exerciseId,
       },
       { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null },
     );
+  }
+
+  if (session.completion && conclusao) {
+    return <PhoneFrame variant="reading">{conclusao({ xpGanho: session.xpAwarded })}</PhoneFrame>;
   }
 
   if (session.completion) {

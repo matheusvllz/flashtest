@@ -45,6 +45,7 @@ import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
 import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.completar'
 import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
 import { Route as ApiSaudeRouteImport } from './routes/api/saude'
+import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const WelcomeRoute = WelcomeRouteImport.update({
@@ -227,6 +228,11 @@ const ApiSaudeRoute = ApiSaudeRouteImport.update({
   path: '/api/saude',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCronRetencaoRoute = ApiCronRetencaoRouteImport.update({
+  id: '/api/cron/retencao',
+  path: '/api/cron/retencao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -271,6 +277,7 @@ export interface FileRoutesByFullPath {
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/retencao': typeof ApiCronRetencaoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -310,6 +317,7 @@ export interface FileRoutesByTo {
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/retencao': typeof ApiCronRetencaoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -350,6 +358,7 @@ export interface FileRoutesById {
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/retencao': typeof ApiCronRetencaoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -391,6 +400,7 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
+    | '/api/cron/retencao'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -430,6 +440,7 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao'
     | '/api/auth/$'
+    | '/api/cron/retencao'
   id:
     | '__root__'
     | '/'
@@ -469,6 +480,7 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
+    | '/api/cron/retencao'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -509,6 +521,7 @@ export interface RootRouteChildren {
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -765,6 +778,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSaudeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/cron/retencao': {
+      id: '/api/cron/retencao'
+      path: '/api/cron/retencao'
+      fullPath: '/api/cron/retencao'
+      preLoaderRoute: typeof ApiCronRetencaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -813,6 +833,7 @@ const rootRouteChildren: RootRouteChildren = {
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiCronRetencaoRoute: ApiCronRetencaoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

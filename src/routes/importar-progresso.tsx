@@ -30,7 +30,9 @@ export const Route = createFileRoute("/importar-progresso")({
 function ImportarProgresso() {
   const navigate = useNavigate();
   const { volta } = Route.useSearch();
-  const destino = destinoSeguro(volta, HOME_ROUTE);
+  // Nunca volta para a própria tela de importação (DV48-04).
+  const destinoBruto = destinoSeguro(volta, HOME_ROUTE);
+  const destino = destinoBruto.startsWith("/importar-progresso") ? HOME_ROUTE : destinoBruto;
   const [enviando, setEnviando] = useState(false);
   const [confirmandoDescarte, setConfirmandoDescarte] = useState(false);
   const [erro, setErro] = useState<string>();

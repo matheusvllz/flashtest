@@ -104,13 +104,13 @@ Componentes de interface: shadcn/ui em `src/components/ui/` (46 arquivos, Radix 
 
 ## 7. Servidor
 
-Hoje o único código de servidor é o tutor (46 §A.2):
+Tutor (Foca IA; 48 F2):
 
-- `src/lib/tutor.ts`: só o transporte, `askTutor = createServerFn({ method: "POST" })` com `.inputValidator(validateTutorRequest)` (`tutor.ts:15-17`).
-- `src/lib/tutor-core.ts`: a lógica, sem importar nada do TanStack (testável fora do transporte): validação (até 40 mensagens de até 4.000 caracteres; imagem PNG, JPEG ou WebP até 5 MiB), chamada `fetch` à API de chat da OpenAI com o modelo `gpt-5.4-mini`, timeout de 12 s e queda para o fallback local (`tutor-core.ts:22-67, 162, 210`).
+- `src/lib/tutor.ts`: só o transporte, `askTutor = createServerFn({ method: "POST" })`, validado por `pedidoTutor` (`src/lib/tutor-contrato.ts`), com origem, sessão e limite por aluno.
+- `src/server/tutor/`: `responder.ts` (ordem das checagens), `contexto.ts` (contexto montado no servidor), `cota.ts` (cota por plano e teto global), `imagem.ts` (tipo pelos bytes, 2 MiB), `moderacao.ts` (autocuidado e moderação), `ia.ts` (`fetch` à OpenAI, `gpt-5.4-mini`, timeout de 12 s, devolve o `usage`).
 - `src/lib/tutor-prompt.ts`: `buildSystemPrompt` (persona e regra anti-LaTeX) e `localFallback`.
 - `src/lib/tutor-context.ts`: `buildPedagogicalContext`, o contexto pedagógico que o cliente monta; não é importado por `store.ts` nem por `TutorBubble.tsx`.
-- Defeitos conhecidos (endpoint sem autenticação nem limite, contexto do cliente sem validação no prompt, histórico que passa de 40 mensagens): 46 §A.4 (IA-1 a IA-5).
+- Os defeitos IA-1 a IA-4 da 46 §A.4 (endpoint aberto, contexto do cliente no prompt, histórico sem teto, foto sem compressão) foram corrigidos na 48 F2.
 - `src/server.ts` e `src/start.ts` só tratam erro de SSR (§4).
 
 ## 8. Pacotes de conteúdo

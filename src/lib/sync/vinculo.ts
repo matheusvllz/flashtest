@@ -32,6 +32,7 @@ function importacaoAdiada(): boolean {
 export function useContaNoAparelho(): void {
   const navigate = useNavigate();
   const href = useRouterState({ select: (s) => s.location.href });
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
     hydrate();
@@ -39,9 +40,12 @@ export function useContaNoAparelho(): void {
   }, []);
 
   useEffect(() => {
+    // Já na tela de importação (o AppShell da tela anterior ainda está montado durante a transição): não redireciona
+    // de novo. Sem esta guarda, cada mudança de endereço aninhava outro `volta=/importar-progresso…` (spec 48 DV48-04).
+    if (pathname === "/importar-progresso") return;
     hydrate();
     if (precisaDecidirImportacao() && !importacaoAdiada()) {
       navigate({ to: "/importar-progresso", search: { volta: href }, replace: true });
     }
-  }, [href, navigate]);
+  }, [href, pathname, navigate]);
 }

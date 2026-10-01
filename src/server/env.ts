@@ -3,9 +3,12 @@
  * docs/operacao/ambientes-e-deploy.md §3). Só o servidor importa este módulo — `src/server/**`
  * é bloqueado no bundle do navegador pelo `importProtection` do `vite.config.ts`.
  *
- * Regras: nada secreto com prefixo `VITE_`; em produção, falta de variável obrigatória derruba a
- * inicialização com uma mensagem clara (nunca com o valor); em desenvolvimento e teste há padrões
- * seguros (banco PGlite local, segredo de desenvolvimento, e-mail em caixa de saída local).
+ * Regras: nada secreto com prefixo `VITE_`; em desenvolvimento e teste há padrões seguros (banco PGlite local,
+ * segredo de desenvolvimento, e-mail em caixa de saída local).
+ *
+ * Num ambiente implantado (build de produção ou Vercel) a leitura **nunca derruba o app** (spec 48 D48-08): valor
+ * vazio conta como ausente; variável opcional inválida é ignorada com aviso (só o nome, nunca o valor); variável de
+ * conta ausente ou inválida desliga as contas (modo de demonstração, D-15). Em desenvolvimento, inválida é erro.
  */
 import { z } from "zod";
 
@@ -48,6 +51,13 @@ const esquema = z.object({
   AI_COTA_PRO_MENSAGENS: z.coerce.number().int().min(0).max(500).default(20),
   AI_COTA_PRO_FOTOS: z.coerce.number().int().min(0).max(100).default(5),
   AI_TETO_DIARIO_USD: z.coerce.number().min(0).max(1000).default(1),
+  /**
+   * Preço do modelo em US$ por milhão de tokens, para o teto de custo (spec 48 T-48.2.4). Os padrões são
+   * **conservadores e provisórios** (acima do esperado para um modelo "mini", para o disjuntor desarmar cedo, nunca
+   * tarde); o proprietário confirma na página de preços da OpenAI antes de ligar a chave.
+   */
+  AI_PRECO_ENTRADA_USD_MTOK: z.coerce.number().min(0).max(1000).default(1),
+  AI_PRECO_SAIDA_USD_MTOK: z.coerce.number().min(0).max(1000).default(8),
 
   /** Segredo das rotinas agendadas (Vercel Cron manda `Authorization: Bearer <CRON_SECRET>`). */
   CRON_SECRET: z.string().min(16).optional(),
@@ -67,29 +77,57 @@ export type Env = z.infer<typeof esquema> & {
   contasAtivas: boolean;
   /** O que falta em produção para ligar as contas (nomes das variáveis, nunca valores). */
   faltandoParaContas: string[];
+  /** Variáveis presentes mas inválidas, ignoradas num ambiente implantado (nomes, nunca valores). */
+  variaveisInvalidas: string[];
 };
+
+const CONTA = ["DATABASE_URL", "BETTER_AUTH_SECRET", "BETTER_AUTH_URL"] as const;
+
+/** Entrada do esquema: só as chaves dele, com espaços removidos e vazio como ausente. */
+function entrada(fonte: NodeJS.ProcessEnv): Record<string, string | undefined> {
+  const out: Record<string, string | undefined> = {};
+  for (const k of Object.keys(esquema.shape)) {
+    const v = fonte[k]?.trim();
+    out[k] = v ? v : undefined;
+  }
+  return out;
+}
 
 let cache: Env | undefined;
 
 /** Lê e valida o ambiente uma vez por processo. Em teste, `redefinirEnv()` limpa o cache. */
 export function env(): Env {
   if (cache) return cache;
-  const lido = esquema.safeParse(process.env);
+  const bruto = entrada(process.env);
+  // Implantado = build de produção ou qualquer ambiente da Vercel (inclusive preview): aí não há PGlite em disco nem
+  // segredo de desenvolvimento.
+  const implantado = bruto.NODE_ENV === "production" || bruto.VERCEL_ENV !== undefined;
+  const invalidas: string[] = [];
+  let lido = esquema.safeParse(bruto);
   if (!lido.success) {
-    const campos = lido.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
-    throw new Error(`[env] variáveis de ambiente inválidas — ${campos}`);
+    if (!implantado) {
+      const detalhe = lido.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
+      throw new Error(`[env] variáveis de ambiente inválidas — ${detalhe}`);
+    }
+    // Implantado: descarta só o que é inválido e segue. Uma variável de conta descartada desliga as contas abaixo.
+    const campos = new Set(lido.error.issues.map((i) => String(i.path[0])));
+    for (const k of Object.keys(esquema.shape)) {
+      if (!campos.has(k)) continue;
+      invalidas.push(k);
+      bruto[k] = undefined;
+    }
+    console.warn(`[env] variáveis inválidas ignoradas: ${invalidas.join(", ")}`);
+    lido = esquema.safeParse(bruto);
+    if (!lido.success) throw new Error("[env] ambiente ilegível"); // inalcançável: todo campo é opcional ou tem padrão
   }
   const e = lido.data;
-  const producao = e.NODE_ENV === "production" && e.VERCEL_ENV !== "preview" && e.VERCEL_ENV !== "development";
+  // Produção = build de produção fora de preview, ou a Vercel dizendo "production" (mesmo com NODE_ENV inválido e
+  // descartado acima — revisão L2: senão rate limit e checagem de origem afrouxariam em silêncio).
+  const producao = (e.NODE_ENV === "production" || e.VERCEL_ENV === "production") && e.VERCEL_ENV !== "preview" && e.VERCEL_ENV !== "development";
   const teste = e.NODE_ENV === "test";
 
-  // Implantado = build de produção ou qualquer ambiente da Vercel (inclusive preview): aí não há PGlite em disco nem
-  // segredo de desenvolvimento. Sem as três variáveis, as contas ficam desligadas (modo de demonstração, D-15).
-  const implantado = e.NODE_ENV === "production" || e.VERCEL_ENV !== undefined;
-  const faltando: string[] = [];
-  if (implantado && !e.DATABASE_URL) faltando.push("DATABASE_URL");
-  if (implantado && !e.BETTER_AUTH_SECRET) faltando.push("BETTER_AUTH_SECRET");
-  if (implantado && !e.BETTER_AUTH_URL) faltando.push("BETTER_AUTH_URL");
+  // Sem as três variáveis de conta (ou com alguma inválida), as contas ficam desligadas (modo de demonstração, D-15).
+  const faltando: string[] = implantado ? CONTA.filter((k) => !e[k]) : [];
   const contasAtivas = faltando.length === 0;
   if (!contasAtivas) {
     console.warn(`[env] contas desligadas (modo de demonstração): faltam ${faltando.join(", ")}`);
@@ -101,12 +139,13 @@ export function env(): Env {
     teste,
     contasAtivas,
     faltandoParaContas: faltando,
+    variaveisInvalidas: invalidas,
     // Desenvolvimento e teste: banco PGlite local (arquivo em .data/, ou memória nos testes). Produção sem banco:
     // nenhum (as contas ficam desligadas e `banco()` recusa).
     DATABASE_URL: e.DATABASE_URL ?? (implantado ? "desligado:" : teste ? "pglite:memoria" : "pglite:.data/pglite"),
     // Segredo fixo só fora de produção (produção exige o seu, acima).
     BETTER_AUTH_SECRET: e.BETTER_AUTH_SECRET ?? "segredo-de-desenvolvimento-nao-usar-em-producao-0000",
-    BETTER_AUTH_URL: e.BETTER_AUTH_URL ?? "http://localhost:8080",
+    BETTER_AUTH_URL: (e.BETTER_AUTH_URL ?? "http://localhost:8080").replace(/\/+$/, ""),
     // Sem domínio não há e-mail em produção (D-10): desligado por padrão lá, ligado no resto.
     AUTH_EMAIL_HABILITADO: e.AUTH_EMAIL_HABILITADO ?? !producao,
   };
@@ -116,4 +155,27 @@ export function env(): Env {
 /** Só para testes: força reler `process.env`. */
 export function redefinirEnv(): void {
   cache = undefined;
+}
+
+/**
+ * Origens aceitas pela autenticação (spec 48 D48-05): a de `BETTER_AUTH_URL`, a mesma com ou sem `www.` (o domínio
+ * é um só; a Vercel redireciona um para o outro) e as de `AUTH_TRUSTED_ORIGINS`. Valor inválido na lista é ignorado.
+ */
+export function origensConfiaveis(e: Pick<Env, "BETTER_AUTH_URL" | "AUTH_TRUSTED_ORIGINS">): string[] {
+  const origens = new Set<string>();
+  const base = new URL(e.BETTER_AUTH_URL);
+  origens.add(base.origin);
+  if (base.protocol === "https:" && base.hostname.split(".").length >= 2) {
+    const irma = new URL(base.origin);
+    irma.hostname = base.hostname.startsWith("www.") ? base.hostname.slice(4) : `www.${base.hostname}`;
+    if (irma.hostname.includes(".")) origens.add(irma.origin);
+  }
+  for (const o of (e.AUTH_TRUSTED_ORIGINS ?? "").split(",")) {
+    try {
+      if (o.trim()) origens.add(new URL(o.trim()).origin);
+    } catch {
+      /* origem malformada: ignorada */
+    }
+  }
+  return [...origens];
 }

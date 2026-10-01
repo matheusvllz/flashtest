@@ -81,3 +81,28 @@ describe("sequência", () => {
     expect(a).toEqual(b);
   });
 });
+
+describe("dia coberto por proteção (spec 48 D48-14)", () => {
+  test("a proteção gasta registra o dia parado; sem uso, nada é registrado", async () => {
+    const { sequenciaDosDias } = await import("@/lib/recompensas");
+    const semPausa = sequenciaDosDias(["2026-09-01", "2026-09-02", "2026-09-03"]);
+    expect(semPausa.diaProtegido).toBeUndefined();
+    const comPausa = sequenciaDosDias(["2026-09-01", "2026-09-02", "2026-09-04"]);
+    expect(comPausa).toMatchObject({ sequencia: 3, congelamentos: 0, diaProtegido: "2026-09-03" });
+    // O registro fica depois dos dias seguintes (é o último uso, não só o de ontem).
+    expect(sequenciaDosDias(["2026-09-01", "2026-09-02", "2026-09-04", "2026-09-05"]).diaProtegido).toBe("2026-09-03");
+  });
+
+  test("dois dias parados quebram a sequência e não registram proteção", async () => {
+    const { sequenciaDosDias } = await import("@/lib/recompensas");
+    const r = sequenciaDosDias(["2026-09-01", "2026-09-02", "2026-09-05"]);
+    expect(r.sequencia).toBe(1);
+    expect(r.diaProtegido).toBeUndefined();
+  });
+
+  test("virada de mês e de ano no dia anterior", async () => {
+    const { diaAnterior } = await import("@/lib/recompensas");
+    expect(diaAnterior("2026-10-01")).toBe("2026-09-30");
+    expect(diaAnterior("2027-01-01")).toBe("2026-12-31");
+  });
+});

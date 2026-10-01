@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { seedOnce, USUARIO_ONBOARDED } from "./helpers/estado";
 
 /**
  * Critério A2 (docs/20 §20) + regressão do B2 (§3): errar não pode abrir o
@@ -81,10 +82,16 @@ test("RF-18 — sem rede: errar não abre o tutor, 'Explicar melhor' mostra o av
   await expect(page.getByText("Não consegui responder agora. Tente de novo.")).toHaveCount(1, { timeout: 10_000 });
   expect(tentativasApi.length).toBeGreaterThanOrEqual(1);
 
+  // Spec 48 T-48.2.7: a falha é um aviso (fora do histórico) com "Tentar de novo", que tenta outra vez.
+  const tentativasAntes = tentativasApi.length;
+  await page.getByRole("button", { name: "Tentar de novo" }).click();
+  await expect.poll(() => tentativasApi.length).toBeGreaterThan(tentativasAntes);
+  await expect(page.getByText("Não consegui responder agora. Tente de novo.")).toHaveCount(1, { timeout: 10_000 });
+
   // O balão continua usável: uma pergunta manual também falha com o mesmo aviso, sem travar.
   await page.getByPlaceholder("Pergunta qualquer coisa...").fill("Pode explicar de outro jeito?");
   await page.getByRole("button", { name: "Enviar" }).click();
-  await expect(page.getByText("Não consegui responder agora. Tente de novo.")).toHaveCount(2, { timeout: 10_000 });
+  await expect(page.getByText("Não consegui responder agora. Tente de novo.")).toHaveCount(1, { timeout: 10_000 });
 
   // A correção e o estudo seguem: fecha o balão, a folha de feedback continua, "Continuar" avança
   // pro próximo passo e a lição chega na questão seguinte.
@@ -93,4 +100,30 @@ test("RF-18 — sem rede: errar não abre o tutor, 'Explicar melhor' mostra o av
   await page.getByRole("button", { name: "Continuar" }).click(); // teach: "Exemplo: 15% de 500"
   await page.getByRole("button", { name: "Verificar" }).waitFor({ timeout: 10_000 });
   await expect(page.locator('[role="radio"]').first()).toBeVisible();
+});
+
+/**
+ * B-102 (spec 48 T-48.2.1): com um histórico enorme salvo no aparelho, o tutor continuava mandando tudo e o
+ * servidor recusava a partir de 40 mensagens — a Foca IA parava de responder naquele aparelho para sempre.
+ */
+test("B-102 — histórico de 300 mensagens no aparelho: o tutor responde e o aparelho guarda só 40", async ({ page }) => {
+  const historico = Array.from({ length: 300 }, (_, i) => ({ role: i % 2 ? "assistant" : "user", content: `mensagem antiga ${i}` }));
+  await seedOnce(page, { ...USUARIO_ONBOARDED, tutor: { open: false, messages: historico, focus: null } });
+  const corpos: string[] = [];
+  page.on("request", (req) => {
+    if (req.method() === "POST" && req.url().includes("_serverFn")) corpos.push(req.postData() ?? "");
+  });
+
+  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  await page.locator("[data-tutor-fab]").click();
+  await page.getByPlaceholder("Pergunta qualquer coisa...").fill("Como eu começo a estudar hoje?");
+  await page.getByRole("button", { name: "Enviar" }).click();
+
+  // Responde (fallback local sem chave, ou a IA): nenhum aviso de falha.
+  await expect(page.locator(".bg-mar.px-4.py-2\\.5").last()).toContainText("Como eu começo a estudar hoje?");
+  await expect(page.locator("[data-tutor-aviso]")).toHaveCount(0, { timeout: 10_000 });
+  await expect.poll(() => page.locator('[data-tutor-painel] .border-gelo.bg-neve').count(), { timeout: 10_000 }).toBeGreaterThan(0);
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("foca.state.v3") ?? "{}").tutor?.messages?.length)).toBe(40);
+  // O pedido não leva o histórico inteiro (procura uma mensagem antiga do começo da conversa).
+  expect(corpos.some((c) => c.includes("mensagem antiga 0\""))).toBe(false);
 });

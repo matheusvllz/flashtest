@@ -211,5 +211,6 @@ export async function agregadoDoAluno(db: Banco, userId: string): Promise<Agrega
     congelamentos: s.congelamentos,
     ultimoDia: s.ultimoDia,
     diasComAtividade: dias.length,
+    diaProtegido: s.diaProtegido ?? null,
   };
 }

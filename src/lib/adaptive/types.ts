@@ -39,6 +39,11 @@ export interface PlannedActivity {
    * (a sincronização mantém a regra antiga, por mera existência do registro).
    */
   startedAt?: string;
+  /**
+   * Checagem (spec 48 T-48.5.1): Domínio (0–100) de cada habilidade da checagem no momento em que o aluno tocou
+   * "Começar", antes da primeira resposta. Gravado uma vez (recarregar não troca); base do "Subiu / Firme / Vale revisar".
+   */
+  masteryAntes?: Record<string, number>;
   targetP?: number;
   estimatedMinutes: number;
   reasons: ReasonCode[];

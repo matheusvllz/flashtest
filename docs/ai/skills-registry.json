@@ -1032,6 +1032,45 @@
       "canonicalDir": ".agents/skills"
     },
     {
+      "id": "neon",
+      "source": "https://github.com/neondatabase/agent-skills",
+      "type": "local-skill",
+      "installMethod": "NO_UPDATE_NOTIFIER=1 neon@7.0.1 skills -s neon -s neon-postgres -s neon-postgres-branches --agent claude-code --agent codex -y (instala em .agents/skills e cria symlinks em .claude/skills; os symlinks foram trocados por cópia com bun scripts/agents/sincronizar-skills.ts). Atualizar: neon skills update -y e sincronizar de novo. Hash por skill em skills-lock.json",
+      "scope": "project",
+      "enabledByDefault": true,
+      "commit": "b8250e6f902076c52645c4cd6f88a9e57f28854e",
+      "location": ".claude/skills",
+      "skills": [
+        "neon",
+        "neon-postgres",
+        "neon-postgres-branches"
+      ],
+      "category": "backend",
+      "role": "secondary",
+      "alwaysOnTokens": 150,
+      "triggers": [
+        "Neon",
+        "Lakebase Postgres",
+        "branch do banco",
+        "DATABASE_URL",
+        "neon CLI",
+        "migração no Neon"
+      ],
+      "doNotUse": [
+        "trocar o Better Auth pelo Neon Auth (auth: true) — ADR 0005 mantém o Better Auth próprio",
+        "Functions, Object Storage e AI Gateway (fora da região sa-east-1 e fora da arquitetura aprovada)",
+        "Data API/PostgREST no navegador"
+      ],
+      "overlaps": [
+        "foca-backend (convenções do Foca vencem)"
+      ],
+      "agents": [
+        "claude",
+        "codex"
+      ],
+      "canonicalDir": ".agents/skills"
+    },
+    {
       "id": "foca-social",
       "source": "local (this repo)",
       "type": "local-skill",
@@ -1090,6 +1129,33 @@
       "overlaps": [],
       "agents": [
         "claude"
+      ]
+    },
+    {
+      "id": "neon-mcp",
+      "source": "https://mcp.neon.tech/mcp",
+      "type": "mcp-server",
+      "installMethod": "NO_UPDATE_NOTIFIER=1 neon@7.0.1 mcp --oauth --project --agent claude-code --agent codex --project-id billowing-bread-71576526 -y (só a URL; o login Neon acontece no cliente MCP no primeiro uso; nenhuma chave gravada)",
+      "scope": "project",
+      "enabledByDefault": true,
+      "location": ".mcp.json + .codex/config.toml",
+      "skills": [],
+      "category": "backend",
+      "role": "reference",
+      "alwaysOnTokens": 0,
+      "triggers": [
+        "consultar o projeto Neon billowing-bread-71576526 quando a CLI neon não estiver disponível ou autenticada"
+      ],
+      "doNotUse": [
+        "preferir a CLI neon (skill neon §Getting Started)",
+        "escrever em production (branch production) sem tarefa aprovada; testes e contas de teste nunca em production"
+      ],
+      "overlaps": [
+        "neon CLI"
+      ],
+      "agents": [
+        "claude",
+        "codex"
       ]
     }
   ],

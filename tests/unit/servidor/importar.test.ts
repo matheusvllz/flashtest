@@ -113,3 +113,49 @@ describe("importação", () => {
     expect(() => pedido({ respostas: muitas as PedidoImportacao["respostas"] })).toThrow();
   });
 });
+
+describe("importação interrompida (spec 48 T-48.1.2; 46 T-07.1)", () => {
+  test("queda no meio da transação não grava nada; repetir depois aplica tudo, uma vez", async () => {
+    const { userId } = await alunoVerificado(amb, "queda@teste.dev");
+    const p = pedido({
+      bonusDeEntrada: true,
+      respostas: [
+        { id: id(), itemId: "q1", resposta: certa, fonte: "questao-geral", ocorreuEm: "2026-09-20T10:00:00-03:00", dataLocal: "2026-09-20" },
+        { id: id(), itemId: "q1", resposta: certa, fonte: "questao-geral", ocorreuEm: "2026-09-21T10:00:00-03:00", dataLocal: "2026-09-21" },
+      ],
+      diasComAtividade: ["2026-09-20", "2026-09-21"],
+    });
+    // Banco que derruba a transação na 4ª escrita (depois de já ter gravado respostas dentro dela).
+    let escritas = 0;
+    const comQueda = new Proxy(amb.db, {
+      get(alvo, chave, rec) {
+        if (chave !== "transaction") return Reflect.get(alvo, chave, rec);
+        return (fn: (tx: unknown) => Promise<unknown>) =>
+          alvo.transaction((tx) =>
+            fn(
+              new Proxy(tx, {
+                get(t, k, r) {
+                  const v = Reflect.get(t, k, r);
+                  if (k !== "insert") return typeof v === "function" ? v.bind(t) : v;
+                  return (...args: unknown[]) => {
+                    if (++escritas === 4) throw new Error("queda simulada");
+                    return (v as (...a: unknown[]) => unknown).apply(t, args);
+                  };
+                },
+              }),
+            ),
+          );
+      },
+    });
+    await expect(importarEstado(comQueda as typeof amb.db, userId, p, AGORA)).rejects.toThrow("queda simulada");
+    expect(escritas).toBeGreaterThanOrEqual(4);
+    const depoisDaQueda = await agregadoDoAluno(amb.db, userId);
+    expect(depoisDaQueda).toMatchObject({ xp: 0, diasComAtividade: 0 });
+
+    const ok = await importarEstado(amb.db, userId, p, AGORA);
+    expect(ok.resumo).toMatchObject({ respostas: 2, repetida: false });
+    const de_novo = await importarEstado(amb.db, userId, p, AGORA);
+    expect(de_novo.resumo.repetida).toBe(true);
+    expect(de_novo.agregado.xp).toBe(ok.agregado.xp);
+  });
+});
