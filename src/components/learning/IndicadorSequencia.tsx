@@ -1,6 +1,7 @@
-import { Check, Flame, Shield } from "lucide-react";
-import { useState } from "react";
+import { Check, Shield } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { BottomSheet } from "@/components/ds/BottomSheet";
+import { ChamaSequencia } from "@/components/learning/ChamaSequencia";
 import { COPY } from "@/lib/copy";
 import { CONGELAMENTOS_MAXIMO } from "@/lib/recompensas";
 import { estadoDaSequencia } from "@/lib/sequencia";
@@ -14,7 +15,8 @@ function dataCurta(iso: string): string {
 /**
  * Sequência com foguinho (spec 48 T-48.6.1, D48-14, RF-15). Mostra o que a regra R-GAM-3 já faz — dias seguidos,
  * se estudou hoje, proteções guardadas, dia coberto por proteção, recorde como meta depois de uma pausa — sem regra
- * nova, sem contagem regressiva, sem ameaça e sem animação constante (o ícone é estático; nada pisca).
+ * nova, sem contagem regressiva, sem ameaça e sem animação constante. Desde D48-18 o número fica dentro da chama
+ * (laranja com estudo hoje, cinza sem), e a chama dá um único pulo quando acende durante a sessão.
  *
  * Fonte: o store. Com conta, os números são os do servidor (`aplicarAgregadoDoServidor`) quando a fila está vazia;
  * com fila pendente, mostra os do aparelho e diz que está atualizando. Sem conta (modo de demonstração), diz que é
@@ -23,6 +25,13 @@ function dataCurta(iso: string): string {
 export function IndicadorSequencia({ s }: { s: AppState }) {
   const [aberto, setAberto] = useState(false);
   const e = estadoDaSequencia(s);
+  // Um pulo só, quando a chama acende com a tela aberta (concluiu o primeiro estudo do dia). Nada em loop.
+  const acesaAntes = useRef(e.estudouHoje);
+  const [acendeu, setAcendeu] = useState(false);
+  useEffect(() => {
+    if (e.estudouHoje && !acesaAntes.current) setAcendeu(true);
+    acesaAntes.current = e.estudouHoje;
+  }, [e.estudouHoje]);
 
   return (
     <>
@@ -30,16 +39,19 @@ export function IndicadorSequencia({ s }: { s: AppState }) {
         type="button"
         onClick={() => setAberto(true)}
         aria-label={COPY.sequencia.botaoAria(e.dias, e.estudouHoje, e.protecoes)}
-        className="flex shrink-0 items-center gap-1 rounded-full py-1 pr-1.5 font-mono text-sm font-bold text-abismo min-h-11"
+        className="relative -my-1 flex shrink-0 items-center rounded-2xl p-0.5 min-h-11 active:scale-95 transition-transform"
         data-testid="indicador-sequencia"
       >
-        <Flame size={18} strokeWidth={2.5} className="text-brasa" fill={e.estudouHoje ? "currentColor" : "none"} aria-hidden />
-        <span>
-          <span className="mark-texto">{e.dias}</span> {e.dias === 1 ? "dia" : "dias"}
+        <span className={acendeu ? "animate-[ft-bump_0.5s_ease-out_1]" : undefined} onAnimationEnd={() => setAcendeu(false)}>
+          <ChamaSequencia dias={e.dias} acesa={e.estudouHoje} />
         </span>
         {e.protecoes > 0 && (
-          <span className="flex items-center text-[11px] font-bold text-nevoa" aria-hidden>
-            <Shield size={12} strokeWidth={2.5} />
+          <span
+            className="absolute -right-2 top-0 flex items-center gap-px rounded-full border-2 border-cards bg-gelo px-1 py-px text-[11px] font-bold leading-none text-abismo"
+            aria-hidden
+            data-testid="sequencia-protecoes"
+          >
+            <Shield size={11} strokeWidth={2.75} />
             {e.protecoes}
           </span>
         )}
@@ -47,8 +59,8 @@ export function IndicadorSequencia({ s }: { s: AppState }) {
 
       <BottomSheet open={aberto} onClose={() => setAberto(false)} title={COPY.sequencia.titulo}>
         <div className="space-y-3 text-sm text-abismo" data-testid="sequencia-detalhe">
-          <p className="flex items-center gap-2 font-display text-lg font-bold">
-            <Flame size={22} strokeWidth={2.5} className="text-brasa" fill="currentColor" aria-hidden />
+          <p className="flex items-center gap-3 font-display text-lg font-bold">
+            <ChamaSequencia dias={e.dias} acesa={e.estudouHoje} tamanho={64} />
             {COPY.sequencia.dias(e.dias)}
           </p>
           <p className="flex items-center gap-2">

@@ -50,7 +50,9 @@ test("header com meta, card de continuar e persistência da matéria selecionada
 
   // (a) Header com "onde estou": nível e streak, acima da dobra (G1).
   await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
-  await expect(page.getByText(/\d+ dias?$/).first()).toBeVisible();
+  // A sequência é o número dentro da chama (spec 48 D48-18); os dias por extenso ficam no rótulo acessível.
+  await expect(page.getByTestId("indicador-sequencia").locator("[data-chama]")).toBeVisible();
+  await expect(page.getByTestId("indicador-sequencia")).toHaveAttribute("aria-label", /Sequência de \d+ dias?/);
 
   // (b) Card "Continuar" aponta pra `porcentagem-valor` — 1ª vez (nenhuma
   // lição concluída no storage limpo deste teste), então o rótulo pequeno é

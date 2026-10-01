@@ -27,6 +27,9 @@ test("indicador: fogo, dias, estudo de hoje, proteções, dia protegido e de ond
   const botao = page.getByTestId("indicador-sequencia");
   await expect(botao).toBeVisible({ timeout: 15_000 });
   await expect(botao).toHaveAttribute("aria-label", /Sequência de 5 dias\. Hoje já tem estudo\. 1 proteção guardada/);
+  // D48-18: o número fica dentro da chama, acesa porque hoje já tem estudo.
+  await expect(botao.locator('[data-chama="acesa"]')).toContainText("5");
+  await expect(botao.getByTestId("sequencia-protecoes")).toHaveText("1");
   await botao.click();
   const detalhe = page.getByTestId("sequencia-detalhe");
   await expect(detalhe).toContainText("5 dias seguidos");
@@ -50,4 +53,24 @@ test("depois de uma pausa: acolhe e mostra o recorde como meta", async ({ page }
   await page.goto("/trilha", { waitUntil: "domcontentloaded" });
   await page.getByTestId("indicador-sequencia").click();
   await expect(page.getByTestId("sequencia-detalhe")).toContainText("Bom te ver de volta. Seu recorde é de 9 dias");
+});
+
+test("sem estudo hoje: a chama fica cinza e o número continua lá (D48-18)", async ({ page }) => {
+  await seedOnce(page, {
+    ...USUARIO_ONBOARDED,
+    prefs: { ...USUARIO_ONBOARDED.prefs, onboardingVersion: 2 },
+    progress: {
+      ...USUARIO_ONBOARDED.progress,
+      streak: 12,
+      bestStreak: 12,
+      streakFreezes: 0,
+      activityDays: [hojeLocal(-1)],
+      lastStudyDate: new Date(Date.now() - 86_400_000).toDateString(),
+    },
+  });
+  await page.goto("/trilha", { waitUntil: "domcontentloaded" });
+  const botao = page.getByTestId("indicador-sequencia");
+  await expect(botao.locator('[data-chama="apagada"]')).toContainText("12");
+  await expect(botao.getByTestId("sequencia-protecoes")).toHaveCount(0);
+  await expect(botao).toHaveAttribute("aria-label", /Hoje ainda não teve estudo/);
 });

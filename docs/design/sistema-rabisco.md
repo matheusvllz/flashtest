@@ -219,7 +219,8 @@ Nomes de variável mantidos do projeto (`--color-abismo`, `--color-mar`…), val
 | **Accent claro** | `--color-coral-claro` | `#8FB0FF` | `#B9CEFF` | Trilho de barra em fundo escuro, badge leve |
 | **Recompensa** ⚑ | `--color-recompensa` (novo, alias → `--color-alert`) | `#D9A017` | `#E8B23D` | **Só como fundo** de chip/anel/marca-texto com texto `abismo`; nunca texto amarelo sobre branco |
 | **Alerta / severidade baixa** | `--color-alert` | `#D9A017` | `#E8B23D` | Ícone de atenção |
-| **Brasa** (novo, spec 48 D48-14) | `--color-brasa` (base `--brasa`) | `#D9480F` (3,9:1 sobre `--neve`) | `#FF8A3D` (≥ 6,2:1 no escuro) | **Só ícone**: o fogo da sequência (`IndicadorSequencia`). Nunca texto, nunca fundo, nunca animado |
+| **Brasa** (spec 48 D48-14, D48-18) | `--color-brasa` (base `--brasa`) | `#D9480F` (4,3:1 sobre o cartão) | `#FF8A3D` (6,5:1 no escuro) | **Só o corpo da chama da sequência** (`ChamaSequencia`). Nunca texto nem fundo de outra coisa. Um pulo único ao acender; nada em loop |
+| **Chama** (novo, spec 48 D48-18) | `--chama-miolo`, `--chama-numero`, `--chama-aresta`; apagada: `--chama-apagada`, `--chama-apagada-miolo`, `--chama-apagada-numero`, `--chama-apagada-aresta` | miolo `#FFC94D` + número `#5C1D00` (8,4:1); apagada `#A9A6A0`/miolo `#E9E7E2` + número `#4F4C52` (6,8:1), aresta `#7D7A80` | miolo `#FFD66B` + número `#3D1500` (11,5:1); apagada `#4D4B46`/miolo `#6B6862` + número `#F3F1EC` (4,9:1), aresta `#8A867E` | Só a chama da sequência: número dentro do miolo; acesa com estudo hoje, cinza sem |
 | **Background** (papel) | `--color-neve` | `#F6F5F1` | `#1C1B18` | `html, body`, `PhoneFrame`, telas de entrada |
 | **Surface** (cartão) | `--color-cards` (novo) | `#FFFFFF` | `#262523` | `card-soft`, header, nav, inputs, folhas |
 | **Surface secondary** | `--color-gelo` | `#E1DFDA` | `#38352F` | Chip inativo, trilho de barra, skeleton, borda de cartão, pauta |
