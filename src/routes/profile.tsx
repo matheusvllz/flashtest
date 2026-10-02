@@ -310,6 +310,9 @@ function Profile() {
         <div className="card-soft divide-y divide-gelo">
           <Row label="Refazer meu diagnóstico" onClick={() => nav({ to: "/quiz" })} />
           <Row label="Meu plano" onClick={() => nav({ to: "/plan" })} />
+          {conta?.comConta && <Row label={COPY.caderno.link} onClick={() => nav({ to: "/caderno" })} />}
+          {/* Ranking 18+ (spec 49 §5.6): entrar, ver e sair ficam na própria tela. */}
+          {conta?.comConta && <Row label={COPY.ranking.titulo} onClick={() => nav({ to: "/ranking" })} />}
           <Row label="Meta diária" value={`${p.dailyLessons} aulas de 60s`} />
           <Row label="Faculdade-alvo" value={p.targetInstitution || "—"} />
           <div className="flex min-h-[52px] items-center justify-between gap-3 px-4 py-3">

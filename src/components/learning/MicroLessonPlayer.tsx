@@ -29,10 +29,12 @@ import {
   nivelDeXp,
   openTutorWithContext,
   podeResponderComVidas,
+  useAppState,
   setActiveLearningSession,
   usePersistStatus,
 } from "@/lib/store";
 import { cn } from "@/lib/utils";
+import { useMinhasFuncoes } from "@/hooks/useMinhasFuncoes";
 import { AnuncioNaConclusao, FolhaSemVidas, IndicadorVidas } from "@/components/vidas/Vidas";
 
 /**
@@ -94,6 +96,8 @@ function MicroLessonPlayerInner({
   const navigate = useNavigate();
   const session = useLearningSession(lesson, { mode, onComplete });
   const [confirmExit, setConfirmExit] = useState(false);
+  // Funções pagas abertas vêm do servidor (plano + chave de desligamento); a cota da Foca IA também é do servidor.
+  const funcoes = useMinhasFuncoes(!!useAppState().account?.userId && mode !== "checkpoint");
   // Vidas do Free (spec 49 D49-03): lição e prática custam; a checagem não. Sem vida, pausa antes da próxima resposta.
   const custaVidas = mode !== "checkpoint";
   const [semVidas, setSemVidas] = useState(false);
@@ -137,7 +141,7 @@ function MicroLessonPlayerInner({
    * conceito do zero e a mensagem já sai enviada. `false` (padrão, "Pedir
    * dica"/dúvida livre): o aluno digita, sem auto-envio.
    */
-  function askTutor(ensinarDoZero = false) {
+  function askTutor(ensinarDoZero = false, pedido: string | null = null) {
     if (session.step.kind !== "question") return;
     const exercise = resolveExercise(session.step.exerciseId);
     const chapterTitle = chapter?.title ?? lesson.title;
@@ -164,7 +168,7 @@ function MicroLessonPlayerInner({
         questionId: session.step.exerciseId,
         itemId: session.step.exerciseId,
       },
-      { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null },
+      { pedagogy, autoSend: pedido ?? (nivel3 ? COPY.tutor.ensinarDoZero : null) },
     );
   }
 
@@ -239,6 +243,11 @@ function MicroLessonPlayerInner({
               onVerify={comVida(() => session.answer !== null && session.submit(session.answer))}
               onContinue={session.advance}
               onAskTutor={() => askTutor(true)}
+              onOutroJeito={
+                mode !== "checkpoint" && funcoes.has("explicaOutroJeito")
+                  ? (m) => askTutor(false, COPY.feedback.outroJeito.pedidos[m])
+                  : undefined
+              }
               onDontKnow={
                 FEATURES.botaoNaoSei && itemMetaOf(step.exerciseId).dontKnowAllowed !== false
                   ? comVida(session.dontKnow)

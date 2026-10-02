@@ -1,4 +1,4 @@
-import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
+import { FeedbackSheet, type ModoOutroJeito } from "@/components/lessons/FeedbackSheet";
 import { DontKnowButton } from "@/components/learning/DontKnowButton";
 import { ExplanationLayers, hasExplanationLayers } from "@/components/learning/ExplanationLayers";
 import { COPY } from "@/lib/copy";
@@ -24,6 +24,8 @@ export function QuestionStepView({
   onVerify,
   onContinue,
   onAskTutor,
+  /** "Explica de outro jeito" (spec 49, Pro) — `undefined` = sem os botões; quem chama decide pelo plano. */
+  onOutroJeito,
   /** `undefined` = não mostra o botão (flag desligada ou item incompatível — docs/30 §16.1). Decisão de quem chama, não deste componente. */
   onDontKnow,
   isLast,
@@ -46,6 +48,7 @@ export function QuestionStepView({
   onVerify: () => void;
   onContinue: () => void;
   onAskTutor: () => void;
+  onOutroJeito?: (modo: ModoOutroJeito) => void;
   onDontKnow?: () => void;
   isLast: boolean;
   questionNumber: number;
@@ -110,6 +113,7 @@ export function QuestionStepView({
             isLast={isLast}
             onContinue={onContinue}
             onAskTutor={onAskTutor}
+            onOutroJeito={onOutroJeito}
             fonte={fonteOficial}
           >
             {hasExplanationLayers(explanationLayers) ? <ExplanationLayers layers={explanationLayers} /> : undefined}

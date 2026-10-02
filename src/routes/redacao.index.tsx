@@ -7,6 +7,7 @@ import { ProgressBar } from "@/components/ds/ProgressBar";
 import { TRILHAS, TOTAL_LICOES, allLessonsInOrder } from "@/content/trilhas";
 import { useAppState, isLessonUnlocked } from "@/lib/store";
 import type { Trilha } from "@/lib/lessons/types";
+import { COPY } from "@/lib/copy";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/redacao/")({ component: Redacao, ssr: false });
@@ -98,6 +99,18 @@ function Redacao() {
               </div>
               <span className="btn-primary mt-3 w-full">Praticar</span>
             </Link>
+          )}
+
+          {/* Corretor e treino por partes (spec 49 §5.9): Pro; quem não tem o plano vê o convite na própria tela. */}
+          {s.account?.userId && (
+            <div className="mt-4 grid grid-cols-2 gap-2" data-testid="redacao-ia-links">
+              <Link to="/redacao/treino" className="card-soft flex min-h-12 items-center justify-center p-3 text-center text-sm font-bold text-abismo">
+                {COPY.redacaoIa.treinoTitulo}
+              </Link>
+              <Link to="/redacao/corretor" className="card-soft flex min-h-12 items-center justify-center p-3 text-center text-sm font-bold text-abismo">
+                {COPY.redacaoIa.corretorTitulo}
+              </Link>
+            </div>
           )}
         </div>
 

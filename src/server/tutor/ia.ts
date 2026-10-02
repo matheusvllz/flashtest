@@ -27,6 +27,10 @@ export interface ChamadaIA {
   sistema: string;
   mensagens: TutorMessage[];
   foto: { tipo: string; base64: string } | null;
+  /** Teto de tokens da resposta; padrão o do tutor. O corretor de redação precisa de mais (spec 49 §5.9). */
+  maxTokens?: number;
+  /** Teto de espera; padrão o do tutor. */
+  timeoutMs?: number;
 }
 
 /**
@@ -41,7 +45,7 @@ export interface RespostaIA {
 
 type ChatContent = string | Array<Record<string, unknown>>;
 
-async function chamarOpenAI({ sistema, mensagens, foto }: ChamadaIA): Promise<RespostaIA | null> {
+async function chamarOpenAI({ sistema, mensagens, foto, maxTokens, timeoutMs }: ChamadaIA): Promise<RespostaIA | null> {
   const apiKey = process.env.OPENAI_API_KEY?.trim();
   if (!apiKey) return null;
 
@@ -63,12 +67,12 @@ async function chamarOpenAI({ sistema, mensagens, foto }: ChamadaIA): Promise<Re
   ];
 
   const abort = new AbortController();
-  const timer = setTimeout(() => abort.abort(), TIMEOUT_MS);
+  const timer = setTimeout(() => abort.abort(), timeoutMs ?? TIMEOUT_MS);
   try {
     const response = await fetch(ENDPOINT, {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model: TUTOR_MODELO, messages: chatMessages, max_completion_tokens: MAX_TOKENS }),
+      body: JSON.stringify({ model: TUTOR_MODELO, messages: chatMessages, max_completion_tokens: maxTokens ?? MAX_TOKENS }),
       signal: abort.signal,
     });
     if (!response.ok) {

@@ -83,6 +83,13 @@ const esquema = z.object({
   GAM_UNIDADE_RETANGULO: z.string().regex(UNIDADE_GAM).optional(),
   /** Ranking semanal de maiores de 18 (spec 49 D49-06), desligado por padrão (E3). */
   RANKING_HABILITADO: booleano.optional(),
+  /**
+   * Funções pagas (spec 49 §5.9, RF-12): cada uma pode ser desligada sem deploy, separadas por vírgula
+   * (`caderno,cronograma,explica,offline,treino`). Vazio = todas seguem o plano do aluno.
+   */
+  FUNCOES_DESLIGADAS: z.string().max(200).optional(),
+  /** Corretor de redação (spec 49 §5.9, B-040): desligado até a rubrica ser revisada por professor externo. */
+  CORRETOR_HABILITADO: booleano.optional(),
 
   /** Segredo das rotinas agendadas (Vercel Cron manda `Authorization: Bearer <CRON_SECRET>`). */
   CRON_SECRET: z.string().min(16).optional(),

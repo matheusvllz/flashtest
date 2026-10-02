@@ -27,12 +27,16 @@ import { cn } from "@/lib/utils";
  * === "dont-know"` — neutra: sem verde nem vermelho, sem ícone de certo/
  * errado, sem julgamento no tom (`voz.ts`, slot `naosei`).
  */
+export type ModoOutroJeito = "passo" | "exemplo" | "pedido";
+const MODOS_OUTRO_JEITO: readonly ModoOutroJeito[] = ["passo", "exemplo", "pedido"];
+
 export function FeedbackSheet({
   feedback,
   children,
   isLast,
   onContinue,
   onAskTutor,
+  onOutroJeito,
   fonte,
   acimaDaNav = false,
 }: {
@@ -43,6 +47,8 @@ export function FeedbackSheet({
   /** Chamado ao clicar "Continuar" — o guard contra clique duplo mora em `useExerciseSession().advance`, não aqui. */
   onContinue: () => void;
   onAskTutor?: () => void;
+  /** "Explica de outro jeito" (spec 49 §5.9 item 4, Pro): ausente = não mostra. Só abre a Foca IA no toque (regra dura 7). */
+  onOutroJeito?: (modo: ModoOutroJeito) => void;
   /**
    * Atribuição de item OFICIAL ("ENEM 2023"; docs/34, docs/36 RP-10) — vem de `atribuicaoOficial(meta.source)`,
    * nunca de texto de apoio (`exercise.fonte` também guarda a fonte de um texto de interpretação).
@@ -129,6 +135,19 @@ export function FeedbackSheet({
       {xpAwarded !== undefined && xpAwarded > 0 && (
         <div className="mt-3 flex justify-center">
           <XpChip amount={xpAwarded} animate />
+        </div>
+      )}
+
+      {onOutroJeito && (
+        <div className="mt-3" data-testid="outro-jeito">
+          <p className="text-xs font-bold text-nevoa">{COPY.feedback.outroJeito.titulo}</p>
+          <div className="mt-1.5 flex flex-wrap gap-2">
+            {MODOS_OUTRO_JEITO.map((m) => (
+              <button key={m} type="button" onClick={() => onOutroJeito(m)} className="chip tap-area">
+                {COPY.feedback.outroJeito[m]}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 

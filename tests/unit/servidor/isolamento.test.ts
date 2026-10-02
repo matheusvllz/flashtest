@@ -52,6 +52,20 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/recompensas.ts#configAnuncios": "configDeAnuncios(db, s.userId) — só o plano e o ano do próprio aluno",
   "src/lib/api/recompensas.ts#decidirCookiesDeAnuncio": "registrarConsentimentoDeCookies(db, s.userId) — consentimento do próprio aluno",
   "src/lib/api/recompensas.ts#ganharVidaPorAnuncio": "ganharVidaPorAnuncio(db, s.userId, dia) — prova: 'anúncio dá +1 uma vez por dia'",
+  "src/lib/api/ranking.ts#meuRanking": "meuRanking(db, s.userId) — prova: 'menor de 18 nunca entra nem vê o ranking'",
+  "src/lib/api/ranking.ts#entrarNoRanking": "entrarNoRanking(db, s.userId) — idade pelo ano do próprio cadastro",
+  "src/lib/api/ranking.ts#sairDoRanking": "sairDoRanking(db, s.userId)",
+  "src/lib/api/ranking.ts#denunciar": "denunciarApelido(db, s.userId) — só apelido do próprio grupo",
+  "src/lib/api/funcoes.ts#minhasFuncoes": "planoDoAluno(db, s.userId) — plano só do servidor",
+  "src/lib/api/funcoes.ts#meuCaderno": "itensDoCaderno(db, s.userId) — prova: 'caderno é do próprio aluno'",
+  "src/lib/api/funcoes.ts#meuCronograma": "lerCronograma(db, s.userId)",
+  "src/lib/api/funcoes.ts#salvarCronograma": "salvar(db, s.userId, data) — chave primária é o userId da sessão",
+  "src/lib/api/redacao.ts#meuCorretor": "estadoDoCorretor(db, s.userId)",
+  "src/lib/api/redacao.ts#corrigirRedacao": "corrigir(db, s.userId, data) — limite do mês pelo userId da sessão",
+  "src/lib/api/redacao.ts#verCorrecao": "ver(db, s.userId, id) — prova: 'aluno B não lê a correção de A'",
+  "src/lib/api/redacao.ts#apagarRedacao": "apagar(db, s.userId, id) — prova: 'aluno B não apaga o texto de A'",
+  "src/lib/api/redacao.ts#meuTreino": "estadoDoTreino(db, s.userId)",
+  "src/lib/api/redacao.ts#enviarParte": "comentarParte(db, s.userId, data)",
 };
 
 function arquivos(dir: string): string[] {

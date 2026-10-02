@@ -30,6 +30,8 @@ import { BENEFICIOS } from "@/lib/planos";
 import { custaVida } from "@/lib/vidas";
 import { planoDoAluno } from "../planos/plano";
 import { creditosDeProtetor } from "../planos/protetores";
+import { alunoTemFuncao } from "../planos/funcoes";
+import { registrarNoCaderno } from "./caderno";
 import { alunoTemVidas, perderVida, vidasDoDia, vidasLigadasPara } from "../vidas/vidas";
 
 /** Teto diário de atividades da trilha que pagam XP (a chave de atividade é por tentativa, sem teto natural). */
@@ -83,6 +85,8 @@ export async function aplicarEventos(
   const rejeitados: Array<{ id: string; motivo: MotivoRejeicao }> = [];
   // Vidas do Free (spec 49 D49-03): decidido uma vez por lote, fora da transação.
   const comVidas = await alunoTemVidas(db, userId, agora);
+  // Caderno de erros (spec 49 §5.9 item 2): só grava para quem tem a função (Basic e Pro), como diz privacidade.md.
+  const comCaderno = await alunoTemFuncao(db, userId, "cadernoDeErros", agora);
 
   await db.transaction(async (tx) => {
     await tx.insert(profile).values({ userId }).onConflictDoNothing();
@@ -128,6 +132,8 @@ export async function aplicarEventos(
           }
           // A resposta nunca é recusada por falta de vida (o estudo feito sem conexão não é apagado): só o saldo baixa.
           if (comVidas && custaVida(ev.fonte, correta, ev.resposta === null)) await perderVida(tx, userId, ev.dataLocal);
+          // Caderno de erros (spec 49 T-49.9.1): registrado para todos; ver é Basic e Pro.
+          if (comCaderno) await registrarNoCaderno(tx, userId, ev.itemId, ev.fonte, correta, ev.dataLocal);
           aplicados.push(ev.id);
           break;
         }

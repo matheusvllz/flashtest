@@ -5,7 +5,27 @@
  */
 import { and, eq } from "drizzle-orm";
 import type { Banco } from "../db/client";
-import { aiUsage, attempt, completion, consent, learningDoc, legalAcceptance, profile, studyDay, user, xpLedger } from "../db/schema";
+import {
+  aiUsage,
+  assinatura,
+  attempt,
+  cadernoItem,
+  cobranca,
+  completion,
+  compra,
+  consent,
+  cronograma,
+  learningDoc,
+  legalAcceptance,
+  profile,
+  protetorCredito,
+  rankingParticipante,
+  redacao,
+  studyDay,
+  user,
+  vidasDia,
+  xpLedger,
+} from "../db/schema";
 
 /** Exportação dos dados do aluno. Não inclui hash de senha, tokens, sessões nem dados de outros alunos. */
 export async function exportarDadosDoAluno(db: Banco, userId: string, agora = new Date()) {
@@ -26,6 +46,28 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
     diasDeEstudo: await db.select({ dia: studyDay.localDate }).from(studyDay).where(doAluno(studyDay)),
     planejamento: (await db.select({ doc: learningDoc.doc }).from(learningDoc).where(doAluno(learningDoc)))[0]?.doc ?? null,
     usoDaFocaIA: await db.select({ dia: aiUsage.day, mensagens: aiUsage.messages, fotos: aiUsage.images }).from(aiUsage).where(and(doAluno(aiUsage))),
+    // Spec 49: planos, compras, vidas, protetores, ranking e funções pagas (sem ids internos do provedor de pagamento).
+    assinaturas: await db
+      .select({ plano: assinatura.plano, produto: assinatura.produto, estado: assinatura.estado, inicio: assinatura.inicio, validoAte: assinatura.validoAte, canceladaEm: assinatura.canceladaEm })
+      .from(assinatura)
+      .where(doAluno(assinatura)),
+    compras: await db.select({ produto: compra.produto, estado: compra.estado, criadaEm: compra.criadaEm, pagaEm: compra.pagaEm }).from(compra).where(doAluno(compra)),
+    cobrancas: await db
+      .select({ valorCentavos: cobranca.valorCentavos, metodo: cobranca.metodo, estado: cobranca.estado, pagaEm: cobranca.pagaEm, reembolsadaEm: cobranca.reembolsadaEm })
+      .from(cobranca)
+      .where(doAluno(cobranca)),
+    vidas: await db.select({ dia: vidasDia.localDate, perdidas: vidasDia.perdidas, ganhasAnuncio: vidasDia.ganhasAnuncio }).from(vidasDia).where(doAluno(vidasDia)),
+    protetores: await db.select({ quantidade: protetorCredito.quantidade, motivo: protetorCredito.motivo, dia: protetorCredito.localDate }).from(protetorCredito).where(doAluno(protetorCredito)),
+    ranking: await db
+      .select({ apelido: rankingParticipante.apelido, entrouEm: rankingParticipante.entrouEm, saiuEm: rankingParticipante.saiuEm })
+      .from(rankingParticipante)
+      .where(doAluno(rankingParticipante)),
+    cadernoDeErros: await db
+      .select({ item: cadernoItem.itemId, proximaRevisao: cadernoItem.proximaRevisao, estado: cadernoItem.estado })
+      .from(cadernoItem)
+      .where(doAluno(cadernoItem)),
+    cronograma: (await db.select({ diasSemana: cronograma.diasSemana, minutosDia: cronograma.minutosDia, dataProva: cronograma.dataProva }).from(cronograma).where(doAluno(cronograma)))[0] ?? null,
+    redacoes: await db.select({ tipo: redacao.tipo, tema: redacao.tema, texto: redacao.texto, resultado: redacao.resultado, em: redacao.criadaEm }).from(redacao).where(doAluno(redacao)),
   };
 }
 

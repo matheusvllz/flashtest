@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { AppShell } from "@/components/AppShell";
+import { SecaoCronograma } from "@/components/cronograma/SecaoCronograma";
 import { SKILL_MAP } from "@/content/taxonomy";
 import { SUBJECT_MAP, SUBJECTS } from "@/data/subjects";
 import { useJornadaEmDia } from "@/hooks/useJornadaEmDia";
@@ -75,6 +76,7 @@ function Plan() {
   const meta = s.prefs.dailyLessons;
   const blocosHoje = atividadeHoje(s).completedBlockIds.length;
   const semana = semanaAtualISO();
+  const feitasNaSemana = history.filter((h) => semana.includes(h.localDate ?? h.completedAt.slice(0, 10))).length;
   const prioritarias = s.prefs.difficultSubjects;
   const assuntos =
     s.prefs.topicMode === "chose"
@@ -177,6 +179,15 @@ function Plan() {
         </div>
 
         <aside className="desk-aside mt-4 space-y-4 lg:mt-0">
+          <SecaoCronograma hoje={hoje} feitosSemana={feitasNaSemana} />
+
+          {s.account?.userId && (
+            <Link to="/caderno" className="card-soft flex min-h-12 items-center justify-between p-4 font-display font-bold text-abismo" data-testid="link-caderno">
+              {COPY.caderno.link}
+              <span aria-hidden>›</span>
+            </Link>
+          )}
+
           <section className="card-soft p-4" aria-labelledby="plano-ritmo">
             <h3 id="plano-ritmo" className="font-display font-bold text-abismo">
               {COPY.plano.ritmoTitulo}

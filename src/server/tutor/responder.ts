@@ -55,7 +55,7 @@ async function respostaLocal(pedido: PedidoTutor): Promise<RespostaTutor> {
   return { ok: true, tipo: "local", texto: localFallback(ultima, foco), restantes: null };
 }
 
-async function temConsentimento(db: Banco, userId: string): Promise<boolean> {
+export async function temConsentimento(db: Banco, userId: string): Promise<boolean> {
   const [c] = await db
     .select({ id: consent.id })
     .from(consent)

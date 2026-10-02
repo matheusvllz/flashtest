@@ -46,7 +46,7 @@ function limitesDoPlano(plano: Plano, limites: Limites): LimitesDoPlano {
   return { pago: true, mensagensDia: b.iaMensagensDia, fotosDia: b.iaFotosDia, usoJustoMes: b.iaUsoJustoMes };
 }
 
-async function tetoEstourado(db: Banco, dia: string, pago: boolean, limites: Limites): Promise<boolean> {
+export async function tetoEstourado(db: Banco, dia: string, pago: boolean, limites: Limites): Promise<boolean> {
   const tabela = pago ? aiBudgetPagos : aiBudget;
   const teto = pago ? limites.AI_TETO_DIARIO_PAGOS_USD : limites.AI_TETO_DIARIO_USD;
   const [gasto] = await db.select({ c: tabela.costMicros }).from(tabela).where(eq(tabela.day, dia));

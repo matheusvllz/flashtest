@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AhaRouteImport } from './routes/aha'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as CadastroRouteImport } from './routes/cadastro'
+import { Route as CadernoRouteImport } from './routes/caderno'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DebugRouteImport } from './routes/debug'
 import { Route as EsqueciASenhaRouteImport } from './routes/esqueci-a-senha'
@@ -46,6 +47,8 @@ import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
 import { Route as PlanosRetornoRouteImport } from './routes/planos_.retorno'
 import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
+import { Route as RedacaoCorretorRouteImport } from './routes/redacao.corretor'
+import { Route as RedacaoTreinoRouteImport } from './routes/redacao.treino'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
@@ -69,6 +72,11 @@ const AppRoute = AppRouteImport.update({
 const CadastroRoute = CadastroRouteImport.update({
   id: '/cadastro',
   path: '/cadastro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CadernoRoute = CadernoRouteImport.update({
+  id: '/caderno',
+  path: '/caderno',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -236,6 +244,16 @@ const RedacaoLicaoIdRoute = RedacaoLicaoIdRouteImport.update({
   path: '/redacao/$licaoId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RedacaoCorretorRoute = RedacaoCorretorRouteImport.update({
+  id: '/redacao/corretor',
+  path: '/redacao/corretor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedacaoTreinoRoute = RedacaoTreinoRouteImport.update({
+  id: '/redacao/treino',
+  path: '/redacao/treino',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VideoIdRoute = VideoIdRouteImport.update({
   id: '/video/$id',
   path: '/video/$id',
@@ -262,6 +280,7 @@ export interface FileRoutesByFullPath {
   '/aha': typeof AhaRoute
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
+  '/caderno': typeof CadernoRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/esqueci-a-senha': typeof EsqueciASenhaRoute
@@ -294,6 +313,8 @@ export interface FileRoutesByFullPath {
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos/retorno': typeof PlanosRetornoRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
+  '/redacao/corretor': typeof RedacaoCorretorRoute
+  '/redacao/treino': typeof RedacaoTreinoRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -305,6 +326,7 @@ export interface FileRoutesByTo {
   '/aha': typeof AhaRoute
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
+  '/caderno': typeof CadernoRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/esqueci-a-senha': typeof EsqueciASenhaRoute
@@ -337,6 +359,8 @@ export interface FileRoutesByTo {
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos/retorno': typeof PlanosRetornoRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
+  '/redacao/corretor': typeof RedacaoCorretorRoute
+  '/redacao/treino': typeof RedacaoTreinoRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -349,6 +373,7 @@ export interface FileRoutesById {
   '/aha': typeof AhaRoute
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
+  '/caderno': typeof CadernoRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/esqueci-a-senha': typeof EsqueciASenhaRoute
@@ -381,6 +406,8 @@ export interface FileRoutesById {
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos_/retorno': typeof PlanosRetornoRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
+  '/redacao/corretor': typeof RedacaoCorretorRoute
+  '/redacao/treino': typeof RedacaoTreinoRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -394,6 +421,7 @@ export interface FileRouteTypes {
     | '/aha'
     | '/app'
     | '/cadastro'
+    | '/caderno'
     | '/dashboard'
     | '/debug'
     | '/esqueci-a-senha'
@@ -426,6 +454,8 @@ export interface FileRouteTypes {
     | '/learn/$lessonId'
     | '/planos/retorno'
     | '/redacao/$licaoId'
+    | '/redacao/corretor'
+    | '/redacao/treino'
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
@@ -437,6 +467,7 @@ export interface FileRouteTypes {
     | '/aha'
     | '/app'
     | '/cadastro'
+    | '/caderno'
     | '/dashboard'
     | '/debug'
     | '/esqueci-a-senha'
@@ -469,6 +500,8 @@ export interface FileRouteTypes {
     | '/learn/$lessonId'
     | '/planos/retorno'
     | '/redacao/$licaoId'
+    | '/redacao/corretor'
+    | '/redacao/treino'
     | '/video/$id'
     | '/redacao'
     | '/api/auth/$'
@@ -480,6 +513,7 @@ export interface FileRouteTypes {
     | '/aha'
     | '/app'
     | '/cadastro'
+    | '/caderno'
     | '/dashboard'
     | '/debug'
     | '/esqueci-a-senha'
@@ -512,6 +546,8 @@ export interface FileRouteTypes {
     | '/learn/$lessonId'
     | '/planos_/retorno'
     | '/redacao/$licaoId'
+    | '/redacao/corretor'
+    | '/redacao/treino'
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
@@ -524,6 +560,7 @@ export interface RootRouteChildren {
   AhaRoute: typeof AhaRoute
   AppRoute: typeof AppRoute
   CadastroRoute: typeof CadastroRoute
+  CadernoRoute: typeof CadernoRoute
   DashboardRoute: typeof DashboardRoute
   DebugRoute: typeof DebugRoute
   EsqueciASenhaRoute: typeof EsqueciASenhaRoute
@@ -556,6 +593,8 @@ export interface RootRouteChildren {
   LearnLessonIdRoute: typeof LearnLessonIdRoute
   PlanosRetornoRoute: typeof PlanosRetornoRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
+  RedacaoCorretorRoute: typeof RedacaoCorretorRoute
+  RedacaoTreinoRoute: typeof RedacaoTreinoRoute
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
@@ -591,6 +630,13 @@ declare module '@tanstack/react-router' {
       path: '/cadastro'
       fullPath: '/cadastro'
       preLoaderRoute: typeof CadastroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/caderno': {
+      id: '/caderno'
+      path: '/caderno'
+      fullPath: '/caderno'
+      preLoaderRoute: typeof CadernoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {
@@ -824,6 +870,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RedacaoLicaoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/redacao/corretor': {
+      id: '/redacao/corretor'
+      path: '/redacao/corretor'
+      fullPath: '/redacao/corretor'
+      preLoaderRoute: typeof RedacaoCorretorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redacao/treino': {
+      id: '/redacao/treino'
+      path: '/redacao/treino'
+      fullPath: '/redacao/treino'
+      preLoaderRoute: typeof RedacaoTreinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/video/$id': {
       id: '/video/$id'
       path: '/video/$id'
@@ -860,6 +920,7 @@ const rootRouteChildren: RootRouteChildren = {
   AhaRoute: AhaRoute,
   AppRoute: AppRoute,
   CadastroRoute: CadastroRoute,
+  CadernoRoute: CadernoRoute,
   DashboardRoute: DashboardRoute,
   DebugRoute: DebugRoute,
   EsqueciASenhaRoute: EsqueciASenhaRoute,
@@ -892,6 +953,8 @@ const rootRouteChildren: RootRouteChildren = {
   LearnLessonIdRoute: LearnLessonIdRoute,
   PlanosRetornoRoute: PlanosRetornoRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
+  RedacaoCorretorRoute: RedacaoCorretorRoute,
+  RedacaoTreinoRoute: RedacaoTreinoRoute,
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,

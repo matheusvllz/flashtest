@@ -5,7 +5,7 @@ import { beforeEach, describe, expect, test } from "bun:test";
 import { randomUUID } from "node:crypto";
 import { eq } from "drizzle-orm";
 import { aplicarRetencao } from "../../../src/server/conta/retencao";
-import { aiBudget, aiUsage, auditEvent, rateLimit, user } from "../../../src/server/db/schema";
+import { aiBudget, aiUsage, auditEvent, rankingGrupo, rankingParticipante, rateLimit, user } from "../../../src/server/db/schema";
 import { ambiente, alunoVerificado, cadastroValido, type Ambiente } from "./ajuda";
 
 let amb: Ambiente;
@@ -47,5 +47,25 @@ describe("retenção", () => {
     expect((await amb.db.select().from(aiUsage)).map((u) => u.day)).toEqual(["2026-09-30"]);
     expect((await amb.db.select().from(aiBudget)).map((u) => u.day)).toEqual(["2026-09-30"]);
     expect(await amb.db.select().from(rateLimit).where(eq(rateLimit.key, "foca:teste"))).toHaveLength(0);
+  });
+
+  test("ranking (spec 49 §9): quem saiu há mais de 30 dias e grupos antigos saem; quem participa fica", async () => {
+    const agora = new Date("2026-10-15T12:00:00-03:00");
+    const saiu = await alunoVerificado(amb, "saiu@teste.dev");
+    const fica = await alunoVerificado(amb, "fica@teste.dev");
+    const recente = await alunoVerificado(amb, "recente@teste.dev");
+    await amb.db.insert(rankingParticipante).values([
+      { userId: saiu.userId, apelido: "Saiu", maiorDesde: agora, saiuEm: new Date(agora.getTime() - 40 * DIA) },
+      { userId: fica.userId, apelido: "Fica", maiorDesde: agora },
+      { userId: recente.userId, apelido: "Recente", maiorDesde: agora, saiuEm: new Date(agora.getTime() - 5 * DIA) },
+    ]);
+    await amb.db.insert(rankingGrupo).values([
+      { semana: "2026-08-31", userId: fica.userId, grupo: 0 },
+      { semana: "2026-10-12", userId: fica.userId, grupo: 0 },
+    ]);
+    const r = await aplicarRetencao(amb.db, agora);
+    expect(r.ranking).toBe(1);
+    expect((await amb.db.select().from(rankingParticipante)).map((p) => p.apelido).sort()).toEqual(["Fica", "Recente"]);
+    expect((await amb.db.select().from(rankingGrupo)).map((g) => g.semana)).toEqual(["2026-10-12"]);
   });
 });

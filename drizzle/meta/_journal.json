@@ -22,6 +22,13 @@
       "when": 1790915903546,
       "tag": "0002_vidas_protetores",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790917815070,
+      "tag": "0003_funcoes_e3",
+      "breakpoints": true
     }
   ]
 }

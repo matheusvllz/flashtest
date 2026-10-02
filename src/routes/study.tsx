@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { CelebracaoAula } from "@/components/lessons/CelebracaoAula";
 import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
+import { useMinhasFuncoes } from "@/hooks/useMinhasFuncoes";
 import { DontKnowButton } from "@/components/learning/DontKnowButton";
 import { FolhaSemVidas } from "@/components/vidas/Vidas";
 import { ProgressBar } from "@/components/ds/ProgressBar";
@@ -49,6 +50,7 @@ function Study() {
   useAtalhosDeQuestao();
   const nav = useNavigate();
   const s = useAppState();
+  const funcoes = useMinhasFuncoes(!!s.account?.userId);
   const [questions] = useState<Question[]>(() => {
     const adaptativa = FEATURES.jornadaAdaptativa ? pickQuestionsAdaptive(s) : null;
     return adaptativa ?? pickQuestions(s.quiz.gaps, s.prefs.difficultSubjects, s.progress.completedQuestions);
@@ -133,13 +135,13 @@ function Study() {
   }
 
   /** `ensinarDoZero` (docs/30 §17.2, Fase 7): nível 3 pós-feedback — mesmo padrão de `MicroLessonPlayer.tsx`/`LessonPlayer.tsx`. */
-  function askTutorFromCurrent(ensinarDoZero = false) {
+  function askTutorFromCurrent(ensinarDoZero = false, pedido: string | null = null) {
     const nivel3 = ensinarDoZero && FEATURES.explicacaoEmCamadas;
     const mode = nivel3 ? "ensinar-do-zero" : "duvida";
     const pedagogy = FEATURES.contextoPedagogicoIA
       ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, q.id, mode, hojeISO())
       : null;
-    openTutorWithContext(focusFromCurrent(), { pedagogy, autoSend: nivel3 ? COPY.tutor.ensinarDoZero : null });
+    openTutorWithContext(focusFromCurrent(), { pedagogy, autoSend: pedido ?? (nivel3 ? COPY.tutor.ensinarDoZero : null) });
   }
 
   // Mantém o balão global apontado para a questão da vez: é isso que faz a IA
@@ -391,6 +393,11 @@ function Study() {
                 isLast={idx + 1 >= questions.length}
                 onContinue={nextQ}
                 onAskTutor={!session.feedback.correct ? () => askTutorFromCurrent(true) : undefined}
+                onOutroJeito={
+                  funcoes.has("explicaOutroJeito")
+                    ? (m) => askTutorFromCurrent(false, COPY.feedback.outroJeito.pedidos[m])
+                    : undefined
+                }
                 acimaDaNav
               >
                 <div className="card-soft space-y-3 p-4">
