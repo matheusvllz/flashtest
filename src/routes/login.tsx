@@ -7,6 +7,7 @@ import { configAcesso } from "@/lib/api/conta";
 import { authClient } from "@/lib/auth-client";
 import { COPY } from "@/lib/copy";
 import { esquecerSessao } from "@/lib/sessao";
+import { useAppState } from "@/lib/store";
 
 /** Login real (docs/specs/46-producao T-05.4). Depois de entrar, o cadastro se completa em /cadastro/completar. */
 export const Route = createFileRoute("/login")({
@@ -27,6 +28,9 @@ function Login() {
   const [erros, setErros] = useState<{ email?: string; senha?: string; geral?: string }>({});
   const [naoVerificado, setNaoVerificado] = useState(false);
   const [enviando, setEnviando] = useState(false);
+  // Reativo ao estado do aparelho (ler uma vez só pegava o store antes de carregar e mandava ao quiz quem já o fez):
+  // sem quiz feito aqui, "Criar conta" leva ao quiz.
+  const fezQuiz = useAppState().onboarded;
 
   const [indisponivel, setIndisponivel] = useState(false);
   function carregar() {
@@ -136,9 +140,16 @@ function Login() {
 
       <p className="mt-auto pt-8 text-center text-sm text-nevoa">
         {COPY.conta.semConta}{" "}
-        <Link to="/cadastro" search={volta ? { volta } : {}} className="tap-area font-bold text-mar-fundo underline">
-          {COPY.conta.criarConta}
-        </Link>
+        {/* Conta nova passa pelo quiz antes (spec 49 D49-12): o cadastro direto é só para quem já fez o quiz aqui. */}
+        {fezQuiz ? (
+          <Link to="/cadastro" search={volta ? { volta } : {}} className="tap-area font-bold text-mar-fundo underline">
+            {COPY.conta.criarConta}
+          </Link>
+        ) : (
+          <Link to="/quiz" className="tap-area font-bold text-mar-fundo underline" data-testid="criar-conta-quiz">
+            {COPY.conta.criarConta}
+          </Link>
+        )}
       </p>
     </TelaDeAcesso>
   );

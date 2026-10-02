@@ -257,6 +257,17 @@ export const COPY = {
       generico: "Não deu certo agora. Tente de novo em instantes.",
     },
   },
+  /** Cabeçalho do perfil com conta (spec 49 D49-13): nome e e-mail vêm da conta. */
+  perfil: {
+    semNome: "Sem nome",
+    editarNome: "Editar nome",
+    nomeRotulo: "Seu nome",
+    nomeAjuda: "É como o Foca vai te chamar.",
+    salvar: "Salvar",
+    salvando: "Salvando…",
+    nomeErro: "Não deu para salvar o nome agora. Tente de novo.",
+    nomeCurto: "Escreva pelo menos 2 letras.",
+  },
   trilha: {
     /** aria-label do painel de contexto da trilha no desktop (docs/44 §5). */
     painelContexto: "Seu dia",
@@ -474,7 +485,7 @@ export const COPY = {
     focoTitulo: "Quer focar em alguma matéria?",
     escolherMaterias: "Escolher matérias",
     ofertaTitulo: "Quer começar no seu nível?",
-    ofertaCorpo: "São umas 20 questões, cerca de 10 minutos. Com isso a trilha já começa mais perto do que você precisa.",
+    ofertaCorpo: "São 30 questões, cerca de 25 minutos, e dá para pausar no meio. Com isso a trilha já começa mais perto do que você precisa.",
     ofertaCtaPrimario: "Fazer o nivelamento",
     ofertaCtaSecundario: "Começar sem nivelamento",
     ofertaRodape: "Dá pra fazer depois, pelo Perfil.",
@@ -498,6 +509,13 @@ export const COPY = {
   nivelamento: {
     tituloRota: "Nivelamento",
     duranteHint: "Sem dica nesta parte. Se não souber, toque em Não sei. Isso também ajuda a ajustar a trilha.",
+    /** Abertura antes da 1ª questão (spec 49 D49-11): o número é sempre o total real das cotas. */
+    introTitulo: (n: number) => `São ${n} questões`,
+    introCorpo: (minutos: number) =>
+      `Leva cerca de ${minutos} minutos. Elas mostram o seu nível em cada área, para a trilha começar no lugar certo. Dá para pausar e continuar depois.`,
+    introNaoSei: "Sem dica nesta parte. Se não souber, toque em Não sei: isso também ajuda a acertar o nível.",
+    introCta: "Começar nivelamento",
+    progresso: (n: number, total: number) => `Questão ${n} de ${total}`,
     naoSei: "Não sei",
     pausarEContinuar: "Pausar e continuar depois",
     /** Resultado (docs/36 §F.5, RU-10) — o "Pronto." inicial é o que os E2E esperam. */
@@ -552,7 +570,7 @@ export const COPY = {
     alvo: (curso: string, faculdade: string) =>
       curso && faculdade ? `Objetivo: ${curso} em ${faculdade}.` : curso ? `Objetivo: ${curso}.` : faculdade ? `Objetivo: ${faculdade}.` : "",
     medirAgora: "Fazer o nivelamento agora",
-    medirExplica: "Umas 20 questões, sem dica. Mostra em que faixa você está em cada área.",
+    medirExplica: "São 30 questões, sem dica. Mostra em que faixa você está em cada área.",
     entrar: "Entrar no meu plano",
     xpInicial: "XP inicial",
   },

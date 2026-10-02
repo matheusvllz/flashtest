@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
 import { DadosDaConta } from "@/components/conta/DadosDaConta";
 import { SecaoConta } from "@/components/conta/SecaoConta";
@@ -9,12 +9,15 @@ import { CourseStep } from "@/components/onboarding/CourseStep";
 import { FocusSheet } from "@/components/learning/journey/FocusSheet";
 import { activeFocusNames } from "@/components/learning/journey/FocusLine";
 import { setAudioEnabled, unlockAudioFromGesture } from "@/lib/audio/engine";
+import { authClient } from "@/lib/auth-client";
 import { COPY } from "@/lib/copy";
+import { sessao } from "@/lib/sessao";
 import { EXAM_MAP, EXAMS } from "@/data/exams";
 import { FEATURES } from "@/lib/features";
 import {
   useAppState,
   beginPlacement,
+  getState,
   logout,
   reset,
   setDailyMinutes,
@@ -42,7 +45,34 @@ function Profile() {
   const [focusSheetOpen, setFocusSheetOpen] = useState(false);
   const [cursoSheetOpen, setCursoSheetOpen] = useState(false);
   const nivel = nivelDeXp(s.progress.xp);
-  const initials = (p.name || "F T")
+  // Com conta, nome e e-mail vêm da conta, não do aparelho (spec 49 D49-13): quem entrou pelo Google nunca preencheu
+  // `prefs.name` e via "Sem nome". `null` = ainda carregando.
+  const [conta, setConta] = useState<{ comConta: boolean; nome: string | null; email: string | null } | null>(null);
+  const [nomeAberto, setNomeAberto] = useState(false);
+  useEffect(() => {
+    let vivo = true;
+    sessao().then(
+      (x) => {
+        if (!vivo) return;
+        const comConta = x.autenticado && x.modo === "contas";
+        setConta({ comConta, nome: x.nome, email: x.email });
+        // Saudações e Foca usam `prefs.name`: com conta e sem nome no aparelho, usa o primeiro nome da conta.
+        if (comConta && x.nome && !getState().prefs.name) {
+          const primeiro = x.nome.trim().split(/\s+/)[0];
+          setState((ss) => {
+            ss.prefs.name = primeiro;
+            return ss;
+          });
+        }
+      },
+      () => vivo && setConta({ comConta: false, nome: null, email: null }),
+    );
+    return () => {
+      vivo = false;
+    };
+  }, []);
+  const nomeExibido = (conta?.comConta ? conta.nome : null) || p.name || "";
+  const initials = (nomeExibido || "F T")
     .split(" ")
     .map((x) => x[0])
     .slice(0, 2)
@@ -58,8 +88,25 @@ function Profile() {
               {initials}
             </div>
             <div className="min-w-0">
-              <p className="font-display font-bold text-abismo truncate">{p.name || "Sem nome"}</p>
-              <p className="truncate text-xs text-nevoa">{p.email || "—"}</p>
+              {conta?.comConta ? (
+                <button
+                  type="button"
+                  onClick={() => setNomeAberto(true)}
+                  aria-label={`${COPY.perfil.editarNome}: ${nomeExibido || COPY.perfil.semNome}`}
+                  className="tap-area block max-w-full text-left font-display font-bold text-abismo underline decoration-gelo decoration-2 underline-offset-4"
+                  data-testid="perfil-nome"
+                >
+                  {/* O corte do texto fica no span: `truncate` no botão esconderia a área de toque ampliada (tap-area). */}
+                  <span className="block truncate">{nomeExibido || COPY.perfil.semNome}</span>
+                </button>
+              ) : (
+                <p className="font-display font-bold text-abismo truncate" data-testid="perfil-nome">
+                  {nomeExibido || COPY.perfil.semNome}
+                </p>
+              )}
+              <p className="truncate text-xs text-nevoa" data-testid="perfil-email">
+                {(conta?.comConta ? conta.email : null) || p.email || "—"}
+              </p>
             </div>
           </div>
           <div className="mt-4 flex items-center gap-4">
@@ -303,22 +350,37 @@ function Profile() {
           <Row label={COPY.conta.privacidade} onClick={() => nav({ to: "/privacidade" })} />
         </div>
 
-        <div className="flex flex-col gap-2">
-          <button
-            type="button"
-            onClick={() => {
-              reset();
-              nav({ to: "/" });
-            }}
-            className="btn-ghost w-full text-sm"
-          >
-            <RotateCcw size={14} /> Resetar demonstração
-          </button>
-        </div>
+        {conta && !conta.comConta && (
+          <div className="flex flex-col gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                reset();
+                nav({ to: "/" });
+              }}
+              className="btn-ghost w-full text-sm"
+            >
+              <RotateCcw size={14} /> Resetar demonstração
+            </button>
+          </div>
+        )}
 
         <SecaoConta />
         <DadosDaConta />
       </div>
+      <BottomSheet open={nomeAberto} onClose={() => setNomeAberto(false)} title={COPY.perfil.editarNome}>
+        <EditarNome
+          inicial={nomeExibido}
+          onSalvo={(nome) => {
+            setConta((c) => (c ? { ...c, nome } : c));
+            setState((ss) => {
+              ss.prefs.name = nome.split(/\s+/)[0];
+              return ss;
+            });
+            setNomeAberto(false);
+          }}
+        />
+      </BottomSheet>
       <BottomSheet open={cursoSheetOpen} onClose={() => setCursoSheetOpen(false)} title={COPY.cursos.perfilSheetTitulo}>
         <div className="max-h-[70vh] overflow-y-auto pb-1">
           <CourseStep
@@ -363,5 +425,61 @@ function Row({
         <ChevronRight size={14} />
       </span>
     </button>
+  );
+}
+
+/** Edita o nome da conta (spec 49 D49-13): grava no servidor pelo Better Auth; ano e aceite continuam protegidos (DV49-01). */
+function EditarNome({ inicial, onSalvo }: { inicial: string; onSalvo: (nome: string) => void }) {
+  const [nome, setNome] = useState(inicial);
+  const [estado, setEstado] = useState<"livre" | "salvando" | "erro" | "curto">("livre");
+  async function salvar() {
+    const limpo = nome.trim().replace(/\s+/g, " ").slice(0, 60);
+    if (limpo.length < 2) {
+      setEstado("curto");
+      return;
+    }
+    setEstado("salvando");
+    try {
+      const { error } = await authClient.updateUser({ name: limpo });
+      if (error) throw new Error(error.message);
+      await sessao(true).catch(() => undefined);
+      setEstado("livre");
+      onSalvo(limpo);
+    } catch {
+      setEstado("erro");
+    }
+  }
+  return (
+    <form
+      className="space-y-3"
+      onSubmit={(e) => {
+        e.preventDefault();
+        void salvar();
+      }}
+    >
+      <label className="block text-sm font-semibold text-abismo" htmlFor="perfil-nome-input">
+        {COPY.perfil.nomeRotulo}
+      </label>
+      <input
+        id="perfil-nome-input"
+        className="input-ds"
+        value={nome}
+        maxLength={60}
+        autoComplete="name"
+        onChange={(e) => setNome(e.target.value)}
+        aria-describedby="perfil-nome-ajuda"
+      />
+      <p id="perfil-nome-ajuda" className="text-xs text-nevoa">
+        {COPY.perfil.nomeAjuda}
+      </p>
+      {(estado === "erro" || estado === "curto") && (
+        <p role="alert" className="text-sm text-error">
+          {estado === "erro" ? COPY.perfil.nomeErro : COPY.perfil.nomeCurto}
+        </p>
+      )}
+      <button type="submit" className="btn-primary w-full" disabled={estado === "salvando"}>
+        {estado === "salvando" ? COPY.perfil.salvando : COPY.perfil.salvar}
+      </button>
+    </form>
   );
 }

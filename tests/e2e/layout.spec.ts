@@ -308,6 +308,11 @@ test.describe("alvos de toque ≥ 44 px (docs/36 RA-2, T-08.8)", () => {
 
   test("/nivelamento: 'Pausar e continuar depois' tem ≥ 44 px", async ({ page }) => {
     await page.goto("/nivelamento", { waitUntil: "domcontentloaded" });
+    // Abertura com o número de questões (spec 49 D49-11): o CTA também precisa de alvo ≥ 44 px.
+    const abrir = page.getByRole("button", { name: "Começar nivelamento" });
+    await expect(abrir).toBeVisible({ timeout: 20_000 });
+    await conferirAlvos(page, "/nivelamento abertura");
+    await abrir.click();
     const pausar = page.getByRole("button", { name: "Pausar e continuar depois" });
     await expect(pausar).toBeVisible({ timeout: 20_000 });
     await conferirAlvos(page, "/nivelamento pausar");

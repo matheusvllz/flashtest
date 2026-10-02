@@ -8,7 +8,7 @@ import { perfilDoAparelho } from "@/lib/conta/perfil-local";
 import { COPY } from "@/lib/copy";
 import { LEGAL, idadePeloAno } from "@/lib/legal";
 import { destinoSeguro, esquecerSessao, sessao } from "@/lib/sessao";
-import { marcarContaAtiva } from "@/lib/store";
+import { getState, marcarContaAtiva } from "@/lib/store";
 import { HOME_ROUTE } from "@/lib/features";
 
 /**
@@ -34,12 +34,13 @@ function Completar() {
   const [enviando, setEnviando] = useState(false);
   const [recusado, setRecusado] = useState(false);
 
-  async function seguir() {
+  /** `novaConta`: acabou de completar o cadastro aqui. Sem quiz neste aparelho, vai para o quiz (spec 49 D49-12). */
+  async function seguir(novaConta = false) {
     // O perfil do onboarding (se houver neste aparelho) vai para a conta; falha aqui não trava o estudo.
     await salvarPerfil({ data: perfilDoAparelho() }).catch(() => undefined);
     marcarContaAtiva();
     esquecerSessao();
-    navigate({ href: destino, replace: true });
+    navigate({ href: novaConta && !getState().onboarded ? "/quiz" : destino, replace: true });
   }
 
   useEffect(() => {
@@ -129,7 +130,7 @@ function Completar() {
         setErros({ geral: COPY.conta.erros.generico });
         return;
       }
-      await seguir();
+      await seguir(true);
     } catch {
       setErros({ geral: COPY.conta.erros.rede });
     } finally {
