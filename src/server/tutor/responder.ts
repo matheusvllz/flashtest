@@ -35,9 +35,8 @@ export interface Dependencias {
     | "contasAtivas"
     | "TUTOR_IDADE_SEM_CONSENTIMENTO"
     | "AI_COTA_GRATIS_MENSAGENS"
-    | "AI_COTA_PRO_MENSAGENS"
-    | "AI_COTA_PRO_FOTOS"
     | "AI_TETO_DIARIO_USD"
+    | "AI_TETO_DIARIO_PAGOS_USD"
     | "AI_PRECO_ENTRADA_USD_MTOK"
     | "AI_PRECO_SAIDA_USD_MTOK"
   >;
@@ -130,8 +129,9 @@ export async function responderTutor(dep: Dependencias, entrada: PedidoTutor): P
   }
 
   let restantes: number;
+  let pago: boolean;
   try {
-    ({ restantes } = await reservarMensagem(db, userId, !!foto, dep.agora, dep.env));
+    ({ restantes, pago } = await reservarMensagem(db, userId, !!foto, dep.agora, dep.env));
   } catch (e) {
     if (e instanceof ErroApp && e.codigo === "COTA_ESGOTADA") {
       await auditar(db, userId, "ia_cota_excedida");
@@ -159,7 +159,7 @@ export async function responderTutor(dep: Dependencias, entrada: PedidoTutor): P
 
   if (ia?.texto) {
     const micros = custoMicros(ia.usage ?? { entrada: 0, saida: 0 }, preco);
-    await registrarCusto(db, userId, dep.agora, ia.usage ?? { entrada: 0, saida: 0 }, micros);
+    await registrarCusto(db, userId, dep.agora, ia.usage ?? { entrada: 0, saida: 0 }, micros, pago);
     log("info", "tutor.resposta", { ms: Date.now() - inicio, entrada: ia.usage?.entrada ?? 0, saida: ia.usage?.saida ?? 0, micros, foto: !!foto });
     return { ok: true, tipo: "ia", texto: ia.texto, restantes };
   }
@@ -171,9 +171,9 @@ export async function responderTutor(dep: Dependencias, entrada: PedidoTutor): P
   let devolveu = false;
   if (ia?.usage) {
     // A API cobrou (resposta vazia): conta como uso do aluno e do teto.
-    await registrarCusto(db, userId, dep.agora, usage, micros);
+    await registrarCusto(db, userId, dep.agora, usage, micros, pago);
   } else {
-    await registrarCustoGlobal(db, dep.agora, micros);
+    await registrarCustoGlobal(db, dep.agora, micros, pago);
     try {
       await limitar(db, `tutor-devolucao:${userId}`, 86_400, DEVOLUCOES_POR_DIA);
       await devolverMensagem(db, userId, !!foto, dep.agora);

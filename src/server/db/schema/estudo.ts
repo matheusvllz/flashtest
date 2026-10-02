@@ -33,7 +33,7 @@ export const profile = pgTable(
   "profile",
   {
     userId: idUsuario().primaryKey(),
-    /** Plano da Foca IA (D-12). Só o servidor altera; todo aluno começa no grátis. */
+    /** Cópia do plano derivado das assinaturas (spec 49 D49-08). Só o servidor altera; a fonte é `assinatura`. */
     plano: text("plano").notNull().default("gratis"),
     firstName: text("first_name"),
     level: text("level"),
@@ -51,7 +51,7 @@ export const profile = pgTable(
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
-    check("profile_plano_ck", sql`${t.plano} in ('gratis', 'pro')`),
+    check("profile_plano_ck", sql`${t.plano} in ('gratis', 'basic', 'pro')`),
     check("profile_uf_ck", sql`${t.residenceState} is null or ${t.residenceState} ~ '^[A-Z]{2}$'`),
     check("profile_nome_ck", sql`${t.firstName} is null or char_length(${t.firstName}) <= 40`),
   ],

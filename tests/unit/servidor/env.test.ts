@@ -115,3 +115,24 @@ describe("origens confiáveis da autenticação", () => {
     expect(origensConfiaveis({ BETTER_AUTH_URL: "http://localhost:8080", AUTH_TRUSTED_ORIGINS: undefined })).toEqual(["http://localhost:8080"]);
   });
 });
+
+describe("venda (spec 49 §13)", () => {
+  const CONTAS = { DATABASE_URL: BANCO, BETTER_AUTH_SECRET: SEGREDO, BETTER_AUTH_URL: "https://www.focaedu.com" };
+  const ASAAS = { ASAAS_API_URL: "https://api-sandbox.asaas.com/v3", ASAAS_API_KEY: "chave-de-teste", ASAAS_WEBHOOK_TOKEN: "token-de-teste-com-16" };
+
+  test("desligada por padrão, mesmo com as credenciais do Asaas", () => {
+    implantado({ ...CONTAS, ...ASAAS });
+    expect(env().pagamentosAtivos).toBe(false);
+  });
+  test("ligada só com a flag e as três variáveis do Asaas", () => {
+    implantado({ ...CONTAS, ...ASAAS, PAGAMENTOS_HABILITADO: "true" });
+    expect(env().pagamentosAtivos).toBe(true);
+    process.env = { ...original }; // sem o token
+    implantado({ ...CONTAS, ASAAS_API_URL: ASAAS.ASAAS_API_URL, ASAAS_API_KEY: "x", PAGAMENTOS_HABILITADO: "true" });
+    expect(env().pagamentosAtivos).toBe(false);
+  });
+  test("sem contas (modo de demonstração) a venda nunca liga", () => {
+    implantado({ ...ASAAS, PAGAMENTOS_HABILITADO: "true" });
+    expect(env().pagamentosAtivos).toBe(false);
+  });
+});

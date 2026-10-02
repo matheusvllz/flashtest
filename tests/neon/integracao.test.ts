@@ -8,7 +8,9 @@
  */
 import { beforeAll, describe, expect, test } from "bun:test";
 import { randomUUID } from "node:crypto";
-import { sql } from "drizzle-orm";
+import { getTableName, is, sql } from "drizzle-orm";
+import { PgTable } from "drizzle-orm/pg-core";
+import * as schema from "../../src/server/db/schema";
 import { eventoEstudo, type EventoEstudo } from "../../src/lib/sync/contrato";
 import { pedidoImportacao } from "../../src/lib/sync/importacao";
 import { exercicioDoItem } from "../../src/server/estudo/conteudo";
@@ -42,10 +44,12 @@ describe.skipIf(!URL)("Neon (branch temporária)", () => {
     certa = ex.correta;
   }, T);
 
-  test("as 17 tabelas do esquema existem e o driver responde", async () => {
-    const r = await amb.db.execute(sql`select count(*)::int as n from information_schema.tables where table_schema = 'public'`);
-    const linhas = (r as unknown as { rows: { n: number }[] }).rows;
-    expect(linhas[0].n).toBe(17);
+  test("todas as tabelas do esquema existem e o driver responde", async () => {
+    // O total vem do próprio esquema (22 depois da 49 `0001_planos`), para não quebrar a cada migração.
+    const esperadas = Object.values(schema).filter((t) => is(t, PgTable)).map((t) => getTableName(t as PgTable)).sort();
+    const r = await amb.db.execute(sql`select table_name from information_schema.tables where table_schema = 'public' order by table_name`);
+    const linhas = (r as unknown as { rows: { table_name: string }[] }).rows.map((x) => x.table_name);
+    expect(linhas).toEqual(esperadas);
   }, T);
 
   test("cadastro → verificação → login → sessão, com o Better Auth sobre o Neon", async () => {
@@ -109,7 +113,7 @@ describe.skipIf(!URL)("Neon (branch temporária)", () => {
   }, T);
   test("cota da Foca IA com conexões reais: 8 reservas simultâneas, cota 3 → exatamente 3", async () => {
     const { userId } = await alunoVerificado(amb, email("cota"));
-    const limites = { AI_COTA_GRATIS_MENSAGENS: 3, AI_COTA_PRO_MENSAGENS: 20, AI_COTA_PRO_FOTOS: 5, AI_TETO_DIARIO_USD: 1 };
+    const limites = { AI_COTA_GRATIS_MENSAGENS: 3, AI_TETO_DIARIO_USD: 1, AI_TETO_DIARIO_PAGOS_USD: 5 };
     const rs = await Promise.allSettled(Array.from({ length: 8 }, () => reservarMensagem(amb.db, userId, false, AGORA, limites)));
     expect(rs.filter((r) => r.status === "fulfilled").length).toBe(3);
   }, T);

@@ -48,9 +48,9 @@ const esquema = z.object({
 
   OPENAI_API_KEY: z.string().min(1).optional(),
   AI_COTA_GRATIS_MENSAGENS: z.coerce.number().int().min(0).max(100).default(3),
-  AI_COTA_PRO_MENSAGENS: z.coerce.number().int().min(0).max(500).default(20),
-  AI_COTA_PRO_FOTOS: z.coerce.number().int().min(0).max(100).default(5),
   AI_TETO_DIARIO_USD: z.coerce.number().min(0).max(1000).default(1),
+  /** Teto diário de quem paga (spec 49 D49-10), separado do Free. As cotas do Basic e do Pro vêm do catálogo (`src/lib/planos.ts`). */
+  AI_TETO_DIARIO_PAGOS_USD: z.coerce.number().min(0).max(5000).default(5),
   /**
    * Preço do modelo em US$ por milhão de tokens, para o teto de custo (spec 48 T-48.2.4). Os padrões são
    * **conservadores e provisórios** (acima do esperado para um modelo "mini", para o disjuntor desarmar cedo, nunca
@@ -58,6 +58,25 @@ const esquema = z.object({
    */
   AI_PRECO_ENTRADA_USD_MTOK: z.coerce.number().min(0).max(1000).default(1),
   AI_PRECO_SAIDA_USD_MTOK: z.coerce.number().min(0).max(1000).default(8),
+
+  /**
+   * Venda (spec 49 D49-08, §13): desligada por padrão. Em produção só liga com pedido explícito do proprietário;
+   * no preview, com o sandbox do Asaas. Assinaturas que já existem continuam valendo com a venda desligada.
+   */
+  PAGAMENTOS_HABILITADO: booleano.optional(),
+  /** `https://api-sandbox.asaas.com/v3` no teste; `https://api.asaas.com/v3` na produção. */
+  ASAAS_API_URL: z.string().url().optional(),
+  /** Chave de API do Asaas (segredo; nunca em log nem em `VITE_*`). */
+  ASAAS_API_KEY: z.string().min(1).optional(),
+  /** Token que o Asaas manda no cabeçalho `asaas-access-token` do webhook (segredo). */
+  ASAAS_WEBHOOK_TOKEN: z.string().min(16).optional(),
+  /** Vidas do Free (spec 49 D49-03), desligadas por padrão; ligam junto com a venda (E2). */
+  VIDAS_HABILITADO: booleano.optional(),
+  /** Anúncios do Free (spec 49 D49-02), desligados por padrão; `falso` em desenvolvimento e E2E. */
+  ANUNCIOS_HABILITADO: booleano.optional(),
+  ANUNCIOS_PROVEDOR: z.enum(["falso", "gam"]).optional(),
+  /** Ranking semanal de maiores de 18 (spec 49 D49-06), desligado por padrão (E3). */
+  RANKING_HABILITADO: booleano.optional(),
 
   /** Segredo das rotinas agendadas (Vercel Cron manda `Authorization: Bearer <CRON_SECRET>`). */
   CRON_SECRET: z.string().min(16).optional(),
@@ -75,6 +94,8 @@ export type Env = z.infer<typeof esquema> & {
    * demonstração (entrada local, progresso só no aparelho, sem sincronização) — decisão D-15, temporária.
    */
   contasAtivas: boolean;
+  /** Venda ligada de fato: contas ativas, `PAGAMENTOS_HABILITADO` e as três variáveis do Asaas (spec 49 §13). */
+  pagamentosAtivos: boolean;
   /** O que falta em produção para ligar as contas (nomes das variáveis, nunca valores). */
   faltandoParaContas: string[];
   /** Variáveis presentes mas inválidas, ignoradas num ambiente implantado (nomes, nunca valores). */
@@ -138,6 +159,7 @@ export function env(): Env {
     producao,
     teste,
     contasAtivas,
+    pagamentosAtivos: contasAtivas && e.PAGAMENTOS_HABILITADO === true && !!e.ASAAS_API_URL && !!e.ASAAS_API_KEY && !!e.ASAAS_WEBHOOK_TOKEN,
     faltandoParaContas: faltando,
     variaveisInvalidas: invalidas,
     // Desenvolvimento e teste: banco PGlite local (arquivo em .data/, ou memória nos testes). Produção sem banco:
