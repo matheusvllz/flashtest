@@ -313,6 +313,18 @@ Escrito direto contra o [COPY.md](../COPY.md) e o [03](03-ux-writing.md) §2 (se
 | `COPY.lembrete.*` | "Um aviso por dia, no horário que você escolher, só nos dias em que você ainda não estudou." · "Horário de Brasília, aproximado: pode chegar até uma hora depois." · "Pausamos o lembrete. Quer ligar de novo?" · guia do iPhone em 4 passos | Seção "Lembrete do dia" no Perfil | `tests/e2e/lembretes.spec.ts` |
 | `voz.lembrete` (6 frases) | "Sua lição de hoje está pronta." · "Hoje tem lição nova na trilha." … | Corpo da notificação; ícone institucional, sem expressão da Foca (`mascote.md` §2) | `tests/unit/lembretes.test.ts` |
 
+### 2.18 "Pular para cá" (docs/specs/50-gamificacao-e-pratica E7, 02/10/2026)
+
+Escrito pelo subagente da E7 contra o [COPY.md](../COPY.md) (sem skill de escrita). Sem texto de fracasso: quem não passa vê "Comece por <lição>" e "Vale revisar". A Foca fica `orgulhosa` ao passar e `acolhedora` ao não passar (nunca `desapontada` nem `cobrando`). **Revisão humana de tom pendente.**
+
+| Chave | Texto (amostra) | Uso | Revisão |
+|---|---|---|---|
+| `COPY.pulo.botao` / `pulada` | "Pular para cá" · "Pulada" | Nó do capítulo-alvo e lição pulada no mapa da matéria | `tests/e2e/pulo.spec.ts` |
+| `COPY.pulo.regra` / `semAjuda` / `limites(n, max)` | "Para pular, acerte pelo menos 8 de cada 10 de primeira, com acerto em todos os assuntos." · "Sem vidas, sem dica e sem a Foca IA durante o teste. Se não souber, toque em Não sei." · "Uma tentativa por capítulo por dia e até {max} testes por dia." | Tela de entrada do teste | idem |
+| `COPY.pulo.passouTitulo` / `passouCorpo` / `revisaoAgendada` | "Capítulo liberado" · "{n} lições ficaram como puladas. Você pode fazê-las quando quiser." · "Os assuntos pulados que não caíram no teste voltam numa revisão nos próximos dias." | Resultado ao passar | idem |
+| `COPY.pulo.comecePor` / `comecePorCorpo` / `valeRevisar` | "Comece por {lição}" · "O teste mostrou o que vale ver antes de seguir. As lições do caminho continuam abertas." · "Vale revisar" | Resultado ao não passar | idem |
+| `COPY.pulo.motivos.*` | "Você já fez o teste deste capítulo hoje. Amanhã dá para tentar de novo." · "Você já fez os testes de hoje. Amanhã tem mais." | Limites do servidor | `tests/unit/servidor/pulo.test.ts` |
+
 ## 3. Pendente — inventariado, não revisado
 
 Levantamento por arquivo (não por string individual — a granularidade da seção 2 é o padrão a aplicar quando cada um destes for revisado). Nenhum destes foi confirmado livre de tom incompatível; tratar como não verificado.

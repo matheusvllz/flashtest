@@ -52,6 +52,8 @@ Ainda não medida: nenhum código mudou nesta etapa. A linha de base é a T-50.0
 | DV50-25 | §5.9.3 (alt e descrição longa) | Alt honesto e descrição longa nas imagens oficiais | As 415 figuras importadas têm alt de espera ("descrição em revisão") e 136 têm descrição longa | Publicado assim com o alt marcado como automático; escrever os alts é o B-174 (P1) |
 | DV50-26 | §5.4.1 (missão de flashcards) | Missão "flashcards" no sorteio | Os flashcards devidos ficam só no aparelho; o servidor não sabe quantos há | A missão "flashcards" não é sorteada; flashcards contam para a missão "fazer" |
 | DV50-27 | Revisão L2 (achados 5, 6, 8, 9) | — | Simulado vazio pagava XP; respostas simultâneas podiam se perder; gabarito do simulado está nos pacotes públicos; leituras sem limite | Simulado só paga com 5 respostas e no máximo 3 com XP por dia; linha travada ao responder e ao concluir; gabarito público aceito como risco (nenhuma recompensa do simulado depende de acerto); limite nas leituras fica para depois |
+| DV50-28 | §5.7.1 ("primeiro capítulo ainda bloqueado à frente") | O botão aparece no capítulo bloqueado | No conteúdo publicado nenhum capítulo é bloqueado (`prerequisiteChapterIds` sempre vazio) | Alvo = primeiro capítulo depois da posição (primeiro não concluído) sem nenhuma lição feita; um alvo por matéria; nunca na redação. O botão fica no mapa da matéria, não na jornada mista |
+| DV50-29 | §5.7.1 ("não passa: nada é marcado") × §5.3.2 (o teste é 1 bloco) | — | — | Não passar não marca lição nem paga XP, mas o teste terminado conta como 1 bloco (dia, Pérolas no teto, missão "fazer"), como a tabela de Pérolas lista; as respostas viram evidência e os erros vão ao caderno de quem tem |
 
 ## Por tarefa
 

@@ -157,6 +157,9 @@ describe("passar", () => {
     // O servidor passa a contar as lições como feitas: o alvo anda para o capítulo seguinte.
     expect([...(await licoesConcluidasNoServidor(amb.db, u))].sort()).toEqual([...POR[0].lessonIds].sort());
     expect((await previaDoPulo(amb.db, u, POR[2].id, AGORA)).disponivel).toBe(true);
+    // A exportação leva o teste (privacidade.md §3.2).
+    const { exportarDadosDoAluno } = await import("../../../src/server/conta/dados");
+    expect((await exportarDadosDoAluno(amb.db, u, AGORA)).testesDePulo).toEqual([expect.objectContaining({ capitulo: POR[1].id, resultado: "passou" })]);
   });
 
   test("lição pulada feita depois paga o XP normal da primeira conclusão", async () => {

@@ -33,6 +33,7 @@ import {
   legalAcceptance,
   profile,
   protetorCredito,
+  puloTentativa,
   pushAssinatura,
   rankingParticipante,
   redacao,
@@ -78,6 +79,10 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
       .select({ tipo: simulado.tipo, rotulo: simulado.rotulo, itens: simulado.itens, respostas: simulado.respostas, resultado: simulado.resultado, iniciadoEm: simulado.iniciadoEm, concluidoEm: simulado.concluidoEm })
       .from(simulado)
       .where(doAluno(simulado)),
+    testesDePulo: await db
+      .select({ capitulo: puloTentativa.capituloId, dia: puloTentativa.localDate, resultado: puloTentativa.resultado, acertos: puloTentativa.acertos, itens: puloTentativa.itens, licoes: puloTentativa.licoes })
+      .from(puloTentativa)
+      .where(doAluno(puloTentativa)),
     reportesDeQuestao: await db.select({ item: questaoReporte.itemId, motivo: questaoReporte.motivo, em: questaoReporte.criadoEm }).from(questaoReporte).where(doAluno(questaoReporte)),
     ranking: await db
       .select({ apelido: rankingParticipante.apelido, entrouEm: rankingParticipante.entrouEm, saiuEm: rankingParticipante.saiuEm })
