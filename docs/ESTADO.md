@@ -16,8 +16,9 @@ canonico-de: [estado atual, próxima tarefa]
 - Registro: [specs/49-planos-e-monetizacao/registro.md](specs/49-planos-e-monetizacao/registro.md)
 - **Feito:** T-49.0.1 (aprovação) e T-49.0.2 (notas nas regras revistas; o texto novo entra por entrega publicada). Preparação: Asaas sandbox e credenciais em `.env.asaas-sandbox`, bypass da Vercel, webhook do Asaas e URI do Google para o preview, `ads.txt` publicado (`df46bc6`).
 - **Bloqueios do proprietário:** conta do AdSense em análise (o Ad Manager só abre depois); e-mail de suporte (passo 7); publicar o login com Google (passo 4.1); teste da rolagem no Instagram (passo 10, depois do diagnóstico da F1).
-- **Próximo passo:** com o pedido do proprietário, criar o preview (T-49.0.3: branch `spec-49` enviada ao GitHub e variáveis só em Preview) e começar a E1 pelas tarefas sem dependência externa: F1 (diagnóstico da rolagem, entrada pelo quiz, perfil) e T-49.4.1 (contar o banco do nivelamento). **Nada de código começou.** Pedido do proprietário em 01/10: implementar só depois da preparação manual — F1 e F4 não dependem dela.
-- **Produção:** `main` = `df46bc6` (48 inteira + D48-17/D48-18 + ads.txt), contas com Google e e-mail, Foca IA em fallback local (sem chave da OpenAI).
+- **Feito na E1:** preview (T-49.0.3), T-49.1.1 (diagnóstico; o teste em aparelho é do proprietário), T-49.1.3, T-49.1.4, T-49.4.1, T-49.4.2, T-49.2.1. **Bloqueada:** T-49.1.2 (correção da rolagem) até os diagnósticos do iPhone e do Android.
+- **Próximo passo:** F2 (migração `0001_planos`, plano decidido no servidor, cota da Foca IA e teto por plano) e F3 (checkout, webhook e assinatura no sandbox do Asaas). Proprietário: chave Pix no sandbox (tutorial 1.4) e o teste da rolagem no Instagram (Passo 10, link `https://www.focaedu.com/?diagnostico-rolagem=1`).
+- **Produção:** `main` = `9337ce4` (02/10): correção de segurança DV49-01, nivelamento de 30, perfil com dados da conta, "Criar conta" pelo quiz, painel `?diagnostico-rolagem=1` e catálogo de planos (inerte). Contas com Google e e-mail; Foca IA em fallback local.
 
 ### Iniciativa anterior
 
