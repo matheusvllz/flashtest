@@ -271,3 +271,9 @@ Pedidos do proprietário: "Fiz tudo do resend, agora faça tudo que tem que faze
 - **E2E completo:** **543 passed / 1 failed / 73 skipped** (13,3 min). A falha (`landing.spec.ts:78`, lp-mobile, erro de console) passou **3/3** isolada — provável recarga do servidor de desenvolvimento enquanto o `conteudo.ts` antigo era restaurado para provar que o teste novo `bundle-servidor.test.ts` falha sem a correção (falhou: 1 pass / 1 fail; com a correção, 2 pass).
 - **Monetização:** `docs/negocio/monetizacao.md` (aguardando aprovação; planos, gateway Asaas/Mercado Pago, passo a passo, o que falta, anúncios). Achado: `AI_TETO_DIARIO_USD=1` cobre ~120 mensagens/dia somando todos os alunos — redimensionar antes de vender e antes de cadastrar a chave da OpenAI.
 - **Publicação:** nada publicado; aguarda pedido do proprietário.
+
+## 01/10/2026 (madrugada) — Publicação da D48-17/D48-18 na `main`
+
+- **Primeira tentativa bloqueada** pelo classificador do modo automático do Claude Code ("Out-of-Place Publication": envio da branch `producao-46` para a `main` remota). Não foi o Git nem o GitHub. Nenhuma tentativa de contorno.
+- **Segunda tentativa, com pedido explícito do proprietário** ("tente enviar as alterações para a main… Não use force push"): avanço direto conferido (`origin/main` ancestral de `HEAD`), `git push origin producao-46:main` → `382a359..4d56f7d`. Sem force push, nada apagado.
+- **Validação:** `origin/main` = `4d56f7d`; status da Vercel no commit = **success**; deploy `foca-gmzekh2t2` Ready; `/api/saude` `banco: ok`; `/login` com e-mail e Google ("Entrar", "Esqueci minha senha", "Continuar com o Google"); logs de produção sem `ENOENT` desde o deploy. A sincronização em produção ainda não teve envio real depois do deploy: a prova final é o primeiro estudo logado do proprietário. Estado: **publicado**.

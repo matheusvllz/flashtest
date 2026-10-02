@@ -54,7 +54,7 @@ Enviado a terceiros: à OpenAI, só quando o aluno envia uma mensagem à Foca IA
 | Segurança | eventos de login, IP truncado (/24 ou /48) | Prevenir abuso | Legítimo interesse | 6 meses (boa prática; o art. 15 do Marco Civil obriga pessoa jurídica) |
 | Cookie de sessão | token de sessão | Manter o login | Essencial ao serviço | 30 dias com renovação |
 
-**Não coletamos:** data completa de nascimento, escola, cidade, telefone, foto de perfil, localização, contatos. **Não há** analytics, publicidade nem venda de dados.
+**Não coletamos:** data completa de nascimento, escola, cidade, telefone, foto de perfil, localização, contatos. **Não há** analytics, publicidade nem venda de dados. **Revista pela 49 (aprovada em 02/10/2026):** publicidade não personalizada no plano Free, CPF do pagador só no Asaas, apelido do ranking e redações entram como linhas novas na T-49.3.8, quando a entrega correspondente for publicada ([spec 49](../specs/49-planos-e-monetizacao/spec.md) §9).
 
 ## 4. Operadores e transferência internacional
 

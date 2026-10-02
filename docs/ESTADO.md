@@ -1,6 +1,6 @@
 ---
 estado: em-execucao
-atualizado: 2026-10-01
+atualizado: 2026-10-02
 canonico-de: [estado atual, próxima tarefa]
 ---
 
@@ -10,15 +10,18 @@ canonico-de: [estado atual, próxima tarefa]
 
 ## Iniciativa ativa
 
-**48 — Backend integrado ao Neon, Foca IA em produção e funções que hoje são cosméticas** (vinculada à 46). Aprovada em 30/09/2026 pelo proprietário; commit e deploy da 48 inteira autorizados em 01/10.
-- Spec: [specs/48-integracao-e-evolucao/spec.md](specs/48-integracao-e-evolucao/spec.md) — decisões D48-01…D48-16, tarefas T-48.0.1…T-48.10.1
-- Registro: [specs/48-integracao-e-evolucao/registro.md](specs/48-integracao-e-evolucao/registro.md)
-- **Implementado e validado localmente (30/09, working tree, sem commit):** F0 (Neon: CLI, skills, MCP, branch `dev`, ADR 0007, ambiente que não derruba o app, migração e `test:neon`, domínio/URLs), F1 (isolamento de todas as funções, importação interrompida, conta/sync em 320 e 1280), **F2 Foca IA completa** (B-102, sessão/idade/consentimento, contexto no servidor, cotas e teto, foto, moderação e autocuidado, desligar no perfil, estados), F3 (exportar, excluir conta, retenção, runbooks), F4 (tópicos e plano funcionais, diagnóstico honesto), F5 (resultado da checagem, resultado visual do nivelamento), F6 (sequência com foguinho e proteção), F7 (telas secundárias no desktop), F8 (retomada, laço de navegação DV48-04, estados de salvamento), F9 (medição e uma correção de desempenho).
-- **Validado em ambiente integrado:** Neon `dev` (branch temporária: 7 testes, inclusive concorrência de cota e de recompensa entre conexões reais) e esquema aplicado na `production` (1/1, 17 tabelas, sem dados).
-- **Publicado (01/10):** a 48 inteira na `main` (`382a359`, deploy `foca-88os7m6b3` Ready), com a correção D48-08 e o TanStack 1.168.60 (DV48-08, bloqueio de XSS da Vercel). Neon Auth avaliado de novo e não adotado (DV48-07).
-- **Produção hoje:** contas reais com login pelo Google **e por e-mail** (Resend, 01/10); sincronização corrigida (D48-17) e chama da sequência nova (D48-18), publicadas na `main` em 01/10 com autorização do proprietário; banco Neon `production` respondendo; `/trilha` protegida; Foca IA no fallback local (sem chave da OpenAI). Verificado em produção até o redirecionamento ao Google, sem criar conta.
-- **Monetização:** [negocio/monetizacao.md](negocio/monetizacao.md) (aguardando aprovação). Em 01/10 o proprietário pediu **três planos** (Free com 5–10 lições/dia, Basic, Pro com todas as funções e corretor de redação por IA) — tensão com a [estratégia §11](produto/estrategia.md) e a [persona §9](produto/persona-joao.md) (o free entrega o loop inteiro; o pago não é "mais conteúdo"): um teto acima da meta diária (3 lições) preserva o loop. Decidir na spec 49.
-- **Próximo passo:** spec 49 (pagamentos e planos) depois das decisões do proprietário; chave da OpenAI (T-48.2.8) com o teto global redimensionado; rotação dos segredos do Google e da Resend.
+**49 — Planos, assinaturas, vidas, anúncios, ranking 18+, funções pagas e correções de entrada.** **Aprovada em 02/10/2026** pelo proprietário ("aprovo a spec"), com todas as propostas como escritas.
+- Spec: [specs/49-planos-e-monetizacao/spec.md](specs/49-planos-e-monetizacao/spec.md) — decisões D49-01…D49-16, entregas E1 → E2 → E3, tarefas T-49.0.1…T-49.10.1
+- Tutorial do proprietário: [specs/49-planos-e-monetizacao/preparacao.md](specs/49-planos-e-monetizacao/preparacao.md)
+- Registro: [specs/49-planos-e-monetizacao/registro.md](specs/49-planos-e-monetizacao/registro.md)
+- **Feito:** T-49.0.1 (aprovação) e T-49.0.2 (notas nas regras revistas; o texto novo entra por entrega publicada). Preparação: Asaas sandbox e credenciais em `.env.asaas-sandbox`, bypass da Vercel, webhook do Asaas e URI do Google para o preview, `ads.txt` publicado (`df46bc6`).
+- **Bloqueios do proprietário:** conta do AdSense em análise (o Ad Manager só abre depois); e-mail de suporte (passo 7); publicar o login com Google (passo 4.1); teste da rolagem no Instagram (passo 10, depois do diagnóstico da F1).
+- **Próximo passo:** com o pedido do proprietário, criar o preview (T-49.0.3: branch `spec-49` enviada ao GitHub e variáveis só em Preview) e começar a E1 pelas tarefas sem dependência externa: F1 (diagnóstico da rolagem, entrada pelo quiz, perfil) e T-49.4.1 (contar o banco do nivelamento). **Nada de código começou.** Pedido do proprietário em 01/10: implementar só depois da preparação manual — F1 e F4 não dependem dela.
+- **Produção:** `main` = `df46bc6` (48 inteira + D48-17/D48-18 + ads.txt), contas com Google e e-mail, Foca IA em fallback local (sem chave da OpenAI).
+
+### Iniciativa anterior
+
+**48 — Backend integrado ao Neon, Foca IA em produção e funções que eram cosméticas** — publicada (registro: [specs/48-integracao-e-evolucao/registro.md](specs/48-integracao-e-evolucao/registro.md)). Pendentes: chave da OpenAI (T-48.2.8) com o teto global redimensionado (agora pela 49 D49-10), previews com banco próprio (T-48.0.7, agora pela T-49.0.3).
 
 ### Iniciativa base
 

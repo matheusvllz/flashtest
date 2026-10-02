@@ -8,6 +8,8 @@ substituido-por: null
 
 # Monetização — planos, preços, pagamento e o que falta para vender
 
+> **01/10/2026:** as decisões do proprietário sobre planos (Free com anúncios e vidas, Basic R$ 24,90, Pro R$ 39,90), anúncios, protetores avulsos e ranking 18+ estão na [spec 49](../specs/49-planos-e-monetizacao/spec.md) §0, que **substitui** os §2.2, §2.5, §2.6 (divisão por plano) e as decisões 1, 5 e 6 do §8 deste documento. A pesquisa (concorrência, gateways, fiscal, consumidor, menores, lojas) continua valendo como base.
+
 > **Documento de decisão. Não autoriza implementar nada.** Cobrança real, anúncios, SDK novo e dependência nova só entram com uma spec aprovada (proposta: `docs/specs/49-pagamentos/`, a criar). As regras de negócio que já valem estão em [../produto/estrategia.md](../produto/estrategia.md) (§11), [../produto/regras.md](../produto/regras.md) e [../produto/lancamento.md](../produto/lancamento.md). Este arquivo junta pesquisa de mercado e um guia prático. Os números externos foram consultados em **01/10/2026**, com a fonte ao lado. Quando um número não pôde ser confirmado na página oficial, isso está dito.
 
 ## 0. Resumo em uma tela

@@ -15,7 +15,7 @@ substituido-por: null
 - O Foca otimiza **frequência**, não duração. A métrica é dias seguidos, não minutos por dia; a sessão termina e o app deixa a pessoa ir (16 §0, §2).
 - XP mede atividade e recompensa, **não** conhecimento nem nota prevista (20 §12).
 - Recompensa previsível e proporcional; nada de recompensa variável (16 §0, §9).
-- Não existem, e não entram sem spec própria: moedas, vidas, multiplicadores aleatórios, compra de progresso, ranking competitivo real, conquistas/badges (20 §12; 16 §7). O ranking `/ranking` é mock e a tela diz "Turma de demonstração" (46 §A.2).
+- Não existem, e não entram sem spec própria: moedas, vidas, multiplicadores aleatórios, compra de progresso, ranking competitivo real, conquistas/badges (20 §12; 16 §7). O ranking `/ranking` é mock e a tela diz "Turma de demonstração" (46 §A.2). **Revista pela 49 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 49](../specs/49-planos-e-monetizacao/spec.md) que a implementa for publicada; ver 49 §5.11 e T-49.0.2.
 
 ## 2. As linhas que não se cruzam (16 §9)
 
@@ -23,7 +23,7 @@ Lista inegociável. Cada item funciona para engajamento e mesmo assim não entra
 
 1. Nada de rolagem infinita. Aula tem fim.
 2. Nada de recompensa aleatória (loot box, baú surpresa, XP variável).
-3. Nada de bloquear estudo como punição (vidas, corações).
+3. Nada de bloquear estudo como punição (vidas, corações). **Revista pela 49 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 49](../specs/49-planos-e-monetizacao/spec.md) que a implementa for publicada; ver 49 §5.11 e T-49.0.2.
 4. Nada de ansiedade monetizada: não se vende recuperação de sequência.
 5. Nada de comparação humilhante. Ranking mostra a turma, nunca "você é o pior".
 6. Nada de notificação fora de hora: janela 08h–21h, no máximo 1 por dia. (Hoje não há notificações, 46 §A.2.)
