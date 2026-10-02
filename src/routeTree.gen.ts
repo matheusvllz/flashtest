@@ -56,6 +56,7 @@ import { Route as RedacaoCorretorRouteImport } from './routes/redacao.corretor'
 import { Route as RedacaoTreinoRouteImport } from './routes/redacao.treino'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiCronLembretesRouteImport } from './routes/api/cron/lembretes'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
 import { Route as ApiPagamentosWebhookRouteImport } from './routes/api/pagamentos/webhook'
 
@@ -294,6 +295,11 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCronLembretesRoute = ApiCronLembretesRouteImport.update({
+  id: '/api/cron/lembretes',
+  path: '/api/cron/lembretes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiCronRetencaoRoute = ApiCronRetencaoRouteImport.update({
   id: '/api/cron/retencao',
   path: '/api/cron/retencao',
@@ -353,6 +359,7 @@ export interface FileRoutesByFullPath {
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/lembretes': typeof ApiCronLembretesRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
@@ -404,6 +411,7 @@ export interface FileRoutesByTo {
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/lembretes': typeof ApiCronLembretesRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
@@ -456,6 +464,7 @@ export interface FileRoutesById {
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/lembretes': typeof ApiCronLembretesRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
@@ -509,6 +518,7 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
+    | '/api/cron/lembretes'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
   fileRoutesByTo: FileRoutesByTo
@@ -560,6 +570,7 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao'
     | '/api/auth/$'
+    | '/api/cron/lembretes'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
   id:
@@ -611,6 +622,7 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
+    | '/api/cron/lembretes'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
   fileRoutesById: FileRoutesById
@@ -663,6 +675,7 @@ export interface RootRouteChildren {
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiCronLembretesRoute: typeof ApiCronLembretesRoute
   ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
   ApiPagamentosWebhookRoute: typeof ApiPagamentosWebhookRoute
 }
@@ -998,6 +1011,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/cron/lembretes': {
+      id: '/api/cron/lembretes'
+      path: '/api/cron/lembretes'
+      fullPath: '/api/cron/lembretes'
+      preLoaderRoute: typeof ApiCronLembretesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/cron/retencao': {
       id: '/api/cron/retencao'
       path: '/api/cron/retencao'
@@ -1063,6 +1083,7 @@ const rootRouteChildren: RootRouteChildren = {
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiCronLembretesRoute: ApiCronLembretesRoute,
   ApiCronRetencaoRoute: ApiCronRetencaoRoute,
   ApiPagamentosWebhookRoute: ApiPagamentosWebhookRoute,
 }

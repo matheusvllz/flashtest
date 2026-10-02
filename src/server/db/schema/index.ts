@@ -1,6 +1,7 @@
 /** Esquema completo do banco (docs/arquitetura/dados.md). Migrações em `drizzle/`, geradas por `bun run db:generate`. */
 export * from "./auth";
 export * from "./estudo";
+export * from "./lembretes";
 export * from "./pagamentos";
 export * from "./recompensas";
 export * from "./funcoes";

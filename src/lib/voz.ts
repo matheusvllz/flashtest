@@ -24,7 +24,8 @@ export type VozSlot =
   | "marco"
   | "nivel"
   | "vazio"
-  | "404";
+  | "404"
+  | "lembrete";
 
 export const VOZ: Record<VozSlot, string[]> = {
   bomdia: [
@@ -83,6 +84,20 @@ export const VOZ: Record<VozSlot, string[]> = {
   "404": [
     "Essa página não existe. Eu também quase não existo, tô só deitada.",
     "Aqui não tem nada. Volta pro caderno.",
+  ],
+  /**
+   * Lembrete diário por push (spec 50 §5.2.5; Decreto 12.880 art. 10: sem pressão emocional nem urgência fabricada).
+   * Texto da notificação, escolhido no servidor: neutro, sem ofensiva em risco, sem culpa, sem "seu amigo", sem
+   * urgência, sem emoji e sem o nome do aluno (a tela de bloqueio é vista por outras pessoas). Teste em
+   * `tests/unit/lembretes.test.ts`.
+   */
+  lembrete: [
+    "Sua lição de hoje está pronta.",
+    "A lição do dia já está na trilha.",
+    "Tem uma lição curta pronta para hoje.",
+    "Quando der, a lição de hoje já está separada.",
+    "A próxima lição da trilha já está pronta.",
+    "Hoje tem lição nova na trilha.",
   ],
 };
 
