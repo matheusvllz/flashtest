@@ -1,6 +1,6 @@
 ---
 estado: aprovado
-atualizado: 2026-09-29
+atualizado: 2026-10-02
 canonico-de: [mascote, expressoes da Foca, icone da marca]
 substitui: []
 substituido-por: null
@@ -103,15 +103,71 @@ Conferência de 29/09/2026: `desapontada` só é usada em `src/routes/__root.tsx
 | `size` | Lado em px; até 48 px usa o derivado de 96, acima usa o de 320 (`foca-expressions.ts:92-96`) |
 | `motion` | `pop`, `float`, `breathe` ou `none` (padrão). Nunca rotação **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2. |
 | `decorative` | `true` tira a imagem da árvore de acessibilidade (quando o texto ao lado já diz o que ela diz) |
+| `forma` | `cabeca` (padrão: tudo acima, sem mudança) ou `corpo` (a Foca de corpo inteiro, §6.1; spec 50 §5.8.2) |
+| `pose` | Só no corpo: `parada`, `aceno`, `pulo`, `palmas`, `cauda`, `dormindo` (§6.1) |
+| `roupa` | Só no corpo: `bone`, `oculos`, `cachecol`, `fone`, `mochila`, `coroa-conchas`. A cabeça, a logo e o ícone **nunca** recebem roupa |
 
 Comportamentos garantidos pelo componente:
 
 - Sempre quadrada; nunca esticada nem rotacionada (`FocaMark.tsx:3`).
 - WebP com PNG de reserva via `<picture>` (`FocaMark.tsx:131-136`).
 - Se a imagem falhar, a `<img>` fica `visibility: hidden` e mantém a caixa: o layout não pula e não aparece ícone quebrado; a checagem roda também depois da hidratação (`FocaMark.tsx:98-106`) (36 T-08.6).
-- **Troca de expressão com a Foca na tela: "piscar".** A cabeça achata no eixo Y, a arte troca no fundo do movimento e volta com `--ease-bounce`. Nunca crossfade entre duas cabeças, nunca rotação. Com `prefers-reduced-motion`, a troca é direta (15 §5; 44 §6). No código: a arte troca aos 90 ms (`MEIO_PISCAR`, `FocaMark.tsx:43`); a animação `.foca-piscar` dura 220 ms e achata para `scale(1.03, 0.9)`, ou seja 10 % no eixo Y (`src/styles.css:1008-1027`). A landing usa a mesma troca (`lp-piscar`/`piscar()` do GSAP) (45 §7).
+- **Troca de expressão com a Foca na tela: "piscar".** A cabeça achata no eixo Y, a arte troca no fundo do movimento e volta com `--ease-bounce`. Nunca crossfade entre duas cabeças, nunca rotação. Com `prefers-reduced-motion`, a troca é direta (15 §5; 44 §6). No código: a arte troca aos 90 ms (`MEIO_PISCAR`, `FocaMark.tsx:43`); a animação `.foca-piscar` dura 220 ms e achata para `scale(1.03, 0.9)`, ou seja 10 % no eixo Y (`src/styles.css`, `@keyframes foca-piscar` e `.foca-piscar`, linhas 1072–1091 em 02/10/2026; citar pelo seletor, o número de linha muda). A landing usa a mesma troca (`lp-piscar`/`piscar()` do GSAP) (45 §7).
 
 Para a Foca com fala ao lado, usar `FocaSays` (`src/components/brand/FocaSays.tsx`), que recebe `slot` de `voz.ts` e `expression`.
+
+### 6.1 Forma corpo: a Foca de corpo inteiro (spec 50 §5.8)
+
+**Estado (02/10/2026):** implementada (T-50.3.1, T-50.3.3, T-50.3.5) e **aguardando a aprovação do dono** da pose estática (portão T-50.3.2). Os momentos da §5.8.4 (T-50.3.4) ainda não estão ligados em nenhuma tela; até lá, nenhum fluxo usa `forma="corpo"`.
+
+**Como chega à tela.** Sempre por `<FocaMark forma="corpo" />` (R-MASC-3: o `FocaMark` continua o único ponto que desenha a Foca). O corpo mora em `src/components/brand/FocaCorpo.tsx` e é carregado sob demanda (`import()`, chunk próprio de ≈ 4 KB gzip no build de 02/10), com uma reserva do mesmo tamanho enquanto chega: o layout não pula. A raiz e a landing nunca o importam (regra dura 9; teste em `tests/unit/foca-corpo.test.ts`). Regras puras (expressões, poses, roupas, aparelho fraco) em `src/lib/brand/foca-corpo.ts`.
+
+**Desenho.** SVG vetorial redesenhado a partir da arte original (`src/assets/branding/foca/corpo/foca-corpo-original.jpg`), no mesmo sistema de coordenadas dela, em formas chapadas e cores dos tokens `--foca-pele`, `--foca-pele-escura`, `--foca-barriga`, `--foca-tinta`, `--foca-lingua`, `--foca-branco` (iguais no claro e no escuro: a mascote não muda de cor com o tema). Prancha de comparação: [`brand/foca-corpo-prancha.html`](brand/foca-corpo-prancha.html) (original × SVG em 64/120/200 px, claro e escuro, expressões, poses e roupas), gerada por `bun scripts/design/prancha-foca.ts`, com prévias PNG em `brand/previas/`.
+
+**Partes articuladas** (`data-parte` no SVG; "direita" é a de quem olha a tela):
+
+| Parte | Mexe? | Articulação |
+|---|---|---|
+| `figura` (o grupo inteiro) | Respira (escala 1 → 1,02) e pula (sobe e achata). **Nunca gira** | base, no centro |
+| `nadadeira-esq`, `nadadeira-dir` | Giram (aceno, palmas) | o ombro, onde a nadadeira entra no corpo; a raiz fica sob o corpo |
+| `cauda` | Gira (abanar) | a base da cauda, colada no corpo |
+| `olho-esq`, `olho-dir` | Piscam (`scaleY`) | o centro do olho |
+| `corpo`, `barriga`, `cabeca`, `manchas`, `focinho`, `boca`, `lingua` | Não (trocam com a expressão) | — |
+
+**Rostos.** O corpo tem as 5 expressões de momento (`neutra`, `acolhedora`, `orgulhosa`, `empolgada`, `surpresa`), desenhadas como as da cabeça (§3), e o estado **`dormindo`** (olhos fechados em arco, boca pequena, "z" subindo). **Não existem no corpo** `desapontada`, `cobrando` nem `entediada`: o `FocaMark` manda essas para `neutra`. A pose `dormindo` fecha os olhos seja qual for a expressão. A `empolgada` é a arte original com um segundo brilho nos olhos.
+
+**Poses e movimento** (§5.8.3; CSS em `src/styles/foca-corpo.css`, importado no fim de `src/styles.css`):
+
+| Pose | Movimento | Duração | Easing |
+|---|---|---|---|
+| `parada` | Respiração: escala 1 → 1,02 | ciclo 3,2 s, só visível | `ease-in-out` |
+| (todas com olhos abertos) | Piscar: olhos `scaleY` 1 → 0,1 → 1, intervalo aleatório 4–7 s | 180 ms | `ease-in`, volta com `--ease-bounce` |
+| `aceno` | Nadadeira direita até 25°, 2 vezes | 2 × 900 ms | `ease-out` |
+| `pulo` | Antecipa achatando, sobe 12 px, achata na queda `scale(1.04, 0.94)` | 600 ms | `--ease-bounce` |
+| `palmas` | As duas nadadeiras sobem juntas (28°), 2 vezes | 2 × 300 ms | `ease-in-out` |
+| `cauda` | Cauda até 20°, 3 vezes | 3 × 800 ms | `ease-in-out` |
+| `dormindo` | Respiração lenta e três "z" subindo e sumindo | ciclo 4 s | `linear` |
+
+Regras garantidas pelo componente e pelo CSS: só `transform` e `opacity`; a Foca inteira nunca gira, só as partes; nada anima antes de hidratar nem fora da tela (IntersectionObserver) nem com a aba oculta; **no máximo uma Foca animada por vez** (a segunda que montar fica parada); aparelho fraco (`navigator.deviceMemory` ≤ 2 ou `hardwareConcurrency` ≤ 4) e `prefers-reduced-motion` mostram só a pose final, parada, e trocam a expressão direto. A troca de expressão com o corpo na tela é a mesma do §6: pisca e troca o rosto no fundo da piscada. O "z" usa o grafite da interface (`--abismo`), que acompanha o tema.
+
+**Roupas** (T-50.3.5; catálogo em `FOCA_ROUPAS`, sem preço — a economia é da loja): `bone` (Boné), `oculos` (Óculos), `cachecol` (Cachecol), `fone` (Fone), `mochila` (Mochila), `coroa-conchas` (Coroa de conchas). Camadas SVG em `src/components/brand/roupas/RoupaFoca.tsx`, ancoradas na cabeça ou no pescoço (a mochila tem também a bolsa atrás do corpo). Cores: `--foca-roupa-azul`, `--foca-roupa-ouro`, `--foca-tinta`, `--foca-branco` e, na coroa e no emblema do boné, `--perola`/`--perola-brilho`. Uma roupa por vez; id desconhecido não quebra (a Foca sai sem roupa).
+
+**Momentos** (spec 50 §5.8.4, **proposta**, ligados na T-50.3.4):
+
+| Momento | Forma e pose | Expressão |
+|---|---|---|
+| Fim de lição | corpo, `palmas` | `orgulhosa` |
+| Lição perfeita | corpo, `pulo` + `palmas` | `empolgada` |
+| Combo 5 e 10 (no feedback) | **cabeça** 48 px, `pop` | `empolgada` / `orgulhosa` |
+| Acender a ofensiva | corpo, `cauda` | `empolgada` |
+| Marco de ofensiva e baú | corpo, `pulo` | `empolgada` |
+| Subir de nível | corpo, `aceno` | `orgulhosa` |
+| Volta depois de pausa (R-VOZ-4) | corpo, `aceno` | `acolhedora` |
+| Nada para revisar hoje (estado vazio) | corpo, `dormindo` | — |
+| Loja (provador de roupas) | corpo, `parada` | `neutra` |
+| Retrospectiva e cartões de compartilhar | corpo, `parada` | `orgulhosa` |
+
+O que não muda (§5.8.5): erro nunca mostra `desapontada` nem `cobrando`; "Não sei" é `neutra`; a Foca continua **ausente antes da resposta**, na checagem e no simulado; nenhuma fala nova fora de `voz.ts`.
 
 ## 7. Assets e gerador
 
@@ -121,6 +177,8 @@ Para a Foca com fala ao lado, usar `FocaSays` (`src/components/brand/FocaSays.ts
 | Originais das expressões | `src/assets/branding/foca/expressoes/<nome>.png` (8 arquivos, 1254 px) |
 | Derivados das expressões | `public/branding/foca/expressoes/<nome>-{96,320}.{webp,png}` (32 arquivos) |
 | Derivados da logo e ícones | `public/branding/foca/` |
+| Original do corpo inteiro (02/10/2026) | `src/assets/branding/foca/corpo/foca-corpo-original.jpg` (referência; o app usa o SVG de `FocaCorpo.tsx`, sem PNG) |
+| Prancha do corpo e prévias | `docs/design/brand/foca-corpo-prancha.html`, `docs/design/brand/previas/foca-corpo-*.png` (`bun scripts/design/prancha-foca.ts`) |
 | Gerador único | `bun scripts/gerar-marca.ts` (bun + sharp), rodado da raiz |
 
 Regras do gerador (`scripts/gerar-marca.ts:1-8`):

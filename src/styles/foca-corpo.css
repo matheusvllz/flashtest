@@ -1,0 +1,199 @@
+/* ------------------------------------------------------------------
+   spec 50 — Foca corpo (§5.8.3; T-50.3.3). Movimento da Foca de corpo inteiro (`FocaCorpo.tsx`).
+
+   Regras: só transform e opacity; a Foca INTEIRA nunca gira (o raiz `.foca-corpo`, o `.fc-svg` e o
+   `.fc-respira` só sobem, descem e escalam; quem gira são as partes: nadadeiras e cauda, cada uma em
+   torno da própria articulação). Laços só tocam com `data-ativa` (Foca visível e aba aberta, ligado pelo
+   componente); aparelho fraco (`data-leve`) e movimento reduzido ficam na pose final, parados.
+   Teste: tests/unit/foca-corpo.test.ts lê este arquivo.
+   ------------------------------------------------------------------ */
+
+/* Articulações. `fill-box` = a origem é relativa à caixa da própria parte (percentuais medidos na arte). */
+.foca-corpo .fc-respira,
+.foca-corpo [data-parte="nadadeira-esq"],
+.foca-corpo [data-parte="nadadeira-dir"],
+.foca-corpo [data-parte="cauda"],
+.foca-corpo [data-parte="olho-esq"],
+.foca-corpo [data-parte="olho-dir"],
+.foca-corpo [data-parte="z"] {
+  transform-box: fill-box;
+}
+.foca-corpo .fc-svg {
+  transform-origin: 50% 100%;
+}
+.foca-corpo .fc-respira {
+  transform-origin: 50% 100%;
+}
+.foca-corpo [data-parte="nadadeira-esq"] {
+  transform-origin: 85.5% 43.7%; /* ombro esquerdo (372, 805 na arte), onde a nadadeira entra no corpo */
+}
+.foca-corpo [data-parte="nadadeira-dir"] {
+  transform-origin: 14.5% 43.7%; /* ombro direito (866, 805) */
+}
+.foca-corpo [data-parte="cauda"] {
+  transform-origin: 12% 68.8%; /* base da cauda (898, 1050), colada no corpo */
+}
+.foca-corpo [data-parte="olho-esq"],
+.foca-corpo [data-parte="olho-dir"] {
+  transform-origin: 50% 50%;
+}
+
+/* Respiração (pose parada e durante as outras): escala do corpo 1 → 1,02, ciclo 3,2 s. */
+@keyframes fc-respirar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+.foca-corpo .fc-respira {
+  animation: fc-respirar 3200ms ease-in-out infinite;
+}
+
+/* Piscar: olhos achatam no eixo Y e voltam com a mola da marca (180 ms; intervalo 4–7 s no componente). */
+@keyframes fc-piscar {
+  0% {
+    transform: scaleY(1);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scaleY(0.1);
+    animation-timing-function: var(--ease-bounce);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.foca-corpo[data-piscando] [data-parte="olho-esq"],
+.foca-corpo[data-piscando] [data-parte="olho-dir"] {
+  animation: fc-piscar 180ms both;
+}
+
+/* Aceno: a nadadeira direita sobe até 25° em torno do ombro, 2 vezes (900 ms cada). */
+@keyframes fc-acenar {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-25deg);
+  }
+  70% {
+    transform: rotate(-14deg);
+  }
+}
+.foca-corpo[data-pose="aceno"] [data-parte="nadadeira-dir"] {
+  animation: fc-acenar 900ms ease-out 2 both;
+}
+
+/* Pulo: antecipa achatando, sobe 12 px, achata na queda (scale 1,04 × 0,94) e assenta. */
+@keyframes fc-pular {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  18% {
+    transform: translateY(0) scale(1.04, 0.94);
+  }
+  48% {
+    transform: translateY(-12px) scale(0.98, 1.03);
+  }
+  76% {
+    transform: translateY(0) scale(1.04, 0.94);
+  }
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+.foca-corpo[data-pose="pulo"] .fc-svg {
+  animation: fc-pular 600ms var(--ease-bounce) both;
+}
+
+/* Palmas: as duas nadadeiras sobem juntas para o centro, 2 × 300 ms. */
+@keyframes fc-palma-esq {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(28deg);
+  }
+}
+@keyframes fc-palma-dir {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-28deg);
+  }
+}
+.foca-corpo[data-pose="palmas"] [data-parte="nadadeira-esq"] {
+  animation: fc-palma-esq 300ms ease-in-out 2 both;
+}
+.foca-corpo[data-pose="palmas"] [data-parte="nadadeira-dir"] {
+  animation: fc-palma-dir 300ms ease-in-out 2 both;
+}
+
+/* Cauda: abana até 20°, 3 vezes (800 ms cada). */
+@keyframes fc-abanar {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+.foca-corpo[data-pose="cauda"] [data-parte="cauda"] {
+  animation: fc-abanar 800ms ease-in-out 3 both;
+}
+
+/* Dormindo: respiração lenta e "z" subindo e sumindo, ciclo de 4 s. */
+.foca-corpo[data-pose="dormindo"] .fc-respira {
+  animation: fc-respirar 4000ms ease-in-out infinite;
+}
+@keyframes fc-z {
+  0% {
+    opacity: 0;
+    transform: translate(0, 60px);
+  }
+  25%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30px, -120px);
+  }
+}
+.foca-corpo [data-parte="z"] {
+  animation: fc-z 4000ms linear infinite both;
+}
+.foca-corpo [data-parte="z"][data-ordem="2"] {
+  animation-delay: 1333ms;
+}
+.foca-corpo [data-parte="z"][data-ordem="3"] {
+  animation-delay: 2666ms;
+}
+
+/* Fora da tela, aba oculta ou antes de hidratar: tudo parado no primeiro quadro. */
+.foca-corpo:not([data-ativa]) .fc-svg,
+.foca-corpo:not([data-ativa]) .fc-svg * {
+  animation-play-state: paused;
+}
+
+/* Aparelho fraco: só a pose final, sem laço. */
+.foca-corpo[data-leve] .fc-svg,
+.foca-corpo[data-leve] .fc-svg * {
+  animation: none;
+}
+
+/* Movimento reduzido: pose final parada, troca de expressão direta, sem laços. */
+@media (prefers-reduced-motion: reduce) {
+  .foca-corpo .fc-svg,
+  .foca-corpo .fc-svg * {
+    animation: none !important;
+  }
+}

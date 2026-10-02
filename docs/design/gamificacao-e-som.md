@@ -140,7 +140,7 @@ Degrada em silêncio onde `navigator.vibrate` não existe (iOS Safari); falha nu
 ## 7. Movimento e `prefers-reduced-motion`
 
 - Toda recompensa funciona sem animação: com `prefers-reduced-motion`, a cor, o som e o número continuam (16 §5).
-- Regra global em `src/styles.css:695-703` (animações e transições reduzidas a 0,01 ms) e regras locais (ex.: o "piscar" da Foca, `styles.css:1023-1027`; `FocaMark`, `TutorBubble`, `LessonNode`, `usePathFocusScroll`).
+- Regra global em `src/styles.css` (o `@media (prefers-reduced-motion: reduce)` com `*`, linhas 759–767 em 02/10/2026: animações e transições reduzidas a 0,01 ms) e regras locais (ex.: o "piscar" da Foca, `.foca-piscar`, linhas 1087–1091; a Foca de corpo inteiro, `src/styles/foca-corpo.css`; `FocaMark`, `TutorBubble`, `LessonNode`, `usePathFocusScroll`). Citar a regra pelo seletor: o número de linha muda a cada token novo.
 - Erro: tremor curto de baixa amplitude; tremor longo humilha (16 §5).
 - A landing tem regras próprias de movimento (42/43); o app usa só CSS funcional, sem scrollytelling (44 §8).
 

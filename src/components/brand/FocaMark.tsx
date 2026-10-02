@@ -12,17 +12,30 @@
  *
  * Troca de expressão com a Foca na tela: "piscar" (achata no eixo Y, troca a arte no fundo do piscar, volta com
  * `--ease-bounce`). Sem movimento reduzido; com ele, a troca é direta. Nunca crossfade entre duas cabeças.
+ *
+ * `forma="corpo"` (spec 50 §5.8.2): a Foca de corpo inteiro, vetorial, com `pose` e `roupa`. O módulo do corpo
+ * é carregado sob demanda (`import()`, chunk próprio), com reserva do mesmo tamanho enquanto chega (o layout
+ * não pula). A cabeça (padrão) não muda e nunca recebe roupa. No corpo, `desapontada`, `cobrando` e
+ * `entediada` viram `neutra` (o corpo não tem essas expressões).
  */
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import {
   focaExpression,
   focaExpressionSrc,
   focaLogoSrc,
   type FocaExpression,
 } from "@/lib/brand/foca-expressions";
+import { focaCorpoExpressao, type FocaPose, type FocaRoupaId } from "@/lib/brand/foca-corpo";
 
 export type { FocaExpression } from "@/lib/brand/foca-expressions";
+export type { FocaPose, FocaRoupaId } from "@/lib/brand/foca-corpo";
 export type FocaVariant = "color" | "line-light" | "line-dark";
+export type FocaForma = "cabeca" | "corpo";
+
+/** O corpo só baixa quando alguém pede `forma="corpo"` (nunca na landing nem no caminho da questão). */
+const FocaCorpoSobDemanda = lazy(() =>
+  import("./FocaCorpo").then((m) => ({ default: m.FocaCorpo })),
+);
 
 const LINHA: Record<"line-light" | "line-dark", string> = {
   "line-light": "/branding/foca/foca-line-light-720.png",
@@ -43,7 +56,9 @@ const MOTION_CLASS: Record<FocaMotion, string> = {
 const MEIO_PISCAR = 90;
 
 function querMenosMovimento() {
-  return typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  return (
+    typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+  );
 }
 
 /** Guarda a expressão exibida e anima a troca ("piscar") quando a pedida muda com o componente montado. */
@@ -69,24 +84,75 @@ function useExpressaoComPiscar(pedida: FocaExpression | undefined) {
   return { exibida, piscando };
 }
 
-export function FocaMark({
+export interface FocaMarkProps {
+  size?: number;
+  /** Só na cabeça. */
+  variant?: FocaVariant;
+  /** Na cabeça, só tem efeito com `variant="color"`; sem ela, a logo oficial. No corpo, sem ela, `neutra`. */
+  expression?: FocaExpression;
+  motion?: FocaMotion;
+  /** true = puramente visual (ao lado de texto que já diz o que ela diz): sai da árvore de acessibilidade. */
+  decorative?: boolean;
+  className?: string;
+  /** `cabeca` (padrão): a logo e as 8 expressões. `corpo`: a Foca de corpo inteiro (spec 50 §5.8). */
+  forma?: FocaForma;
+  /** Só no corpo (§5.8.3). */
+  pose?: FocaPose;
+  /** Só no corpo; a cabeça nunca recebe roupa (§5.8.2). */
+  roupa?: FocaRoupaId;
+}
+
+export function FocaMark({ forma = "cabeca", pose, roupa, ...props }: FocaMarkProps) {
+  if (forma === "corpo") return <FocaMarkCorpo {...props} pose={pose} roupa={roupa} />;
+  return <FocaMarkCabeca {...props} />;
+}
+
+/** Corpo inteiro: módulo sob demanda, reserva do mesmo tamanho enquanto chega. */
+function FocaMarkCorpo({
+  size = 32,
+  expression,
+  motion = "none",
+  decorative = false,
+  className,
+  pose,
+  roupa,
+}: Omit<FocaMarkProps, "forma" | "variant">) {
+  const classe = [className, MOTION_CLASS[motion]].filter(Boolean).join(" ") || undefined;
+  const reserva = (
+    <span
+      className={classe}
+      role={decorative ? undefined : "img"}
+      aria-label={decorative ? undefined : "Foca"}
+      aria-hidden={decorative ? true : undefined}
+      style={{ display: "inline-block", width: size, height: size, flexShrink: 0 }}
+    />
+  );
+  return (
+    <Suspense fallback={reserva}>
+      <FocaCorpoSobDemanda
+        size={size}
+        expressao={focaCorpoExpressao(expression)}
+        pose={pose}
+        roupa={roupa}
+        decorative={decorative}
+        className={classe}
+      />
+    </Suspense>
+  );
+}
+
+/** A cabeça: comportamento de sempre (logo, 8 expressões, contorno). */
+function FocaMarkCabeca({
   size = 32,
   variant = "color",
   expression,
   motion = "none",
   decorative = false,
   className,
-}: {
-  size?: number;
-  variant?: FocaVariant;
-  /** Só tem efeito com `variant="color"`. Sem ela, a logo oficial. */
-  expression?: FocaExpression;
-  motion?: FocaMotion;
-  /** true = puramente visual (ao lado de texto que já diz o que ela diz): sai da árvore de acessibilidade. */
-  decorative?: boolean;
-  className?: string;
-}) {
-  const { exibida, piscando } = useExpressaoComPiscar(expression === undefined ? undefined : focaExpression(expression));
+}: Omit<FocaMarkProps, "forma" | "pose" | "roupa">) {
+  const { exibida, piscando } = useExpressaoComPiscar(
+    expression === undefined ? undefined : focaExpression(expression),
+  );
   const fonte =
     variant === "color"
       ? exibida === undefined
@@ -116,7 +182,10 @@ export function FocaMark({
       height={size}
       draggable={false}
       decoding="async"
-      className={[className, motionClass, piscando ? "foca-piscar" : ""].filter(Boolean).join(" ") || undefined}
+      className={
+        [className, motionClass, piscando ? "foca-piscar" : ""].filter(Boolean).join(" ") ||
+        undefined
+      }
       style={{
         width: size,
         height: size,
