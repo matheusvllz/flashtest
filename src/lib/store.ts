@@ -200,7 +200,38 @@ export type AppState = {
    * schema (mesmo padrão do 36): ausente = aparelho sem conta vinculada. Ver `ContaNoAparelho`.
    */
   account?: ContaNoAparelho;
+  /**
+   * Rascunhos das tarefas de escrita (spec 50 §5.10.1): salvos neste aparelho a cada 5 s e apagados ao enviar.
+   * Opcional e aditivo (como `today.combo`, DV50-12): sem subir o schema; ausente = nenhum rascunho. Lido por
+   * `normalizarRascunhos`, que descarta lixo. Some com `limparAparelho` (sair da conta).
+   */
+  rascunhosDeEscrita?: Record<string, RascunhoDeEscrita>;
 };
+
+export interface RascunhoDeEscrita {
+  texto: string;
+  /** ISO. */
+  salvoEm: string;
+}
+
+/** Teto de rascunhos guardados (há 12 tarefas; folga para catálogos maiores) e de caracteres por rascunho. */
+export const LIMITE_RASCUNHOS = 40;
+export const LIMITE_TEXTO_RASCUNHO = 5000;
+const ID_DE_RASCUNHO = /^[a-z0-9-]{3,64}$/;
+
+/** Lê `rascunhosDeEscrita` do storage sem confiar no formato: só id válido, texto string e no máximo os mais recentes. */
+export function normalizarRascunhos(bruto: unknown): Record<string, RascunhoDeEscrita> | undefined {
+  if (!bruto || typeof bruto !== "object" || Array.isArray(bruto)) return undefined;
+  const validos = Object.entries(bruto as Record<string, unknown>)
+    .filter(([id, r]) => ID_DE_RASCUNHO.test(id) && !!r && typeof r === "object" && typeof (r as RascunhoDeEscrita).texto === "string")
+    .map(([id, r]) => {
+      const x = r as RascunhoDeEscrita;
+      return [id, { texto: x.texto.slice(0, LIMITE_TEXTO_RASCUNHO), salvoEm: typeof x.salvoEm === "string" ? x.salvoEm : "" }] as const;
+    })
+    .sort((a, b) => b[1].salvoEm.localeCompare(a[1].salvoEm))
+    .slice(0, LIMITE_RASCUNHOS);
+  return validos.length ? Object.fromEntries(validos) : undefined;
+}
 
 /**
  * O que o aparelho sabe da conta: a quem este estado local pertence (`userId` — estado de outra conta nunca é mostrado
@@ -545,6 +576,7 @@ function montarEstado(
     },
     offline: { ...defaultState.offline, ...((parsed.offline as Partial<AppState["offline"]>) || {}) },
     account: normalizarConta(parsed.account),
+    rascunhosDeEscrita: normalizarRascunhos(parsed.rascunhosDeEscrita),
   } as AppState;
 }
 
@@ -2239,6 +2271,35 @@ export function marcarContaAtiva() {
 export function sairDaEntradaLocal() {
   setState((s) => {
     s.authed = false;
+    return s;
+  });
+}
+
+/**
+ * Rascunho de uma tarefa de escrita (spec 50 §5.10.1): a tela chama a cada 5 s enquanto o texto muda. Texto vazio apaga.
+ * Não grava se nada mudou (evita reescrever o storage à toa).
+ */
+export function salvarRascunhoDeEscrita(tarefaId: string, texto: string, agora: Date = new Date()): void {
+  if (!ID_DE_RASCUNHO.test(tarefaId)) return;
+  const atual = state.rascunhosDeEscrita?.[tarefaId]?.texto ?? "";
+  const novo = texto.slice(0, LIMITE_TEXTO_RASCUNHO);
+  if (novo === atual) return;
+  setState((s) => {
+    const todos = { ...(s.rascunhosDeEscrita ?? {}) };
+    if (novo.trim()) todos[tarefaId] = { texto: novo, salvoEm: agora.toISOString() };
+    else delete todos[tarefaId];
+    s.rascunhosDeEscrita = normalizarRascunhos(todos);
+    return s;
+  });
+}
+
+/** Depois de enviar, o rascunho sai do aparelho (o texto passa a estar no servidor). */
+export function apagarRascunhoDeEscrita(tarefaId: string): void {
+  if (!state.rascunhosDeEscrita?.[tarefaId]) return;
+  setState((s) => {
+    const todos = { ...(s.rascunhosDeEscrita ?? {}) };
+    delete todos[tarefaId];
+    s.rascunhosDeEscrita = normalizarRascunhos(todos);
     return s;
   });
 }

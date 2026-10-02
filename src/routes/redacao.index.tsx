@@ -9,6 +9,9 @@ import { useAppState, isLessonUnlocked } from "@/lib/store";
 import type { Trilha } from "@/lib/lessons/types";
 import { COPY } from "@/lib/copy";
 import { cn } from "@/lib/utils";
+import { tarefasDepoisDe } from "@/content/tarefas-escrita";
+import { minhasTarefasDeEscrita } from "@/lib/api/redacao";
+import type { WritingTask } from "@/lib/lessons/types";
 
 export const Route = createFileRoute("/redacao/")({ component: Redacao, ssr: false });
 
@@ -38,6 +41,22 @@ function Redacao() {
       // idem.
     }
   }, [doneCount]);
+
+  // Tarefas de escrita já enviadas (spec 50 §5.10.1): só para o selo "Enviada" nos nós "Escreva"; sem rede, sem selo.
+  const temConta = !!s.account?.userId;
+  const [tarefasEnviadas, setTarefasEnviadas] = useState<ReadonlySet<string>>(() => new Set());
+  useEffect(() => {
+    if (!temConta) return;
+    let vivo = true;
+    minhasTarefasDeEscrita()
+      .then((r) => {
+        if (vivo && r.ok) setTarefasEnviadas(new Set(r.tarefas.map((x) => x.tarefaId)));
+      })
+      .catch(() => undefined);
+    return () => {
+      vivo = false;
+    };
+  }, [temConta]);
 
   const [eixo, setEixo] = useState<"redacao" | "base">("redacao");
   const trilhas = TRILHAS.filter((t) => t.eixo === eixo);
@@ -140,6 +159,7 @@ function Redacao() {
                 trilha={trilha}
                 state={s}
                 houveDesbloqueio={houveDesbloqueio}
+                tarefasEnviadas={tarefasEnviadas}
               />
             ))}
           </div>
@@ -153,10 +173,12 @@ function TrilhaCard({
   trilha,
   state,
   houveDesbloqueio,
+  tarefasEnviadas,
 }: {
   trilha: Trilha;
   state: ReturnType<typeof useAppState>;
   houveDesbloqueio: boolean;
+  tarefasEnviadas: ReadonlySet<string>;
 }) {
   const done = state.progress.lessons;
   const concluidas = trilha.licoes.filter((l) => done[l.id]).length;
@@ -251,7 +273,7 @@ function TrilhaCard({
             </div>
           );
 
-          return (
+          return [
             <li key={licao.id}>
               {unlocked ? (
                 <Link to="/redacao/$licaoId" params={{ licaoId: licao.id }} className="block">
@@ -260,10 +282,47 @@ function TrilhaCard({
               ) : (
                 <div className="cursor-not-allowed opacity-60">{content}</div>
               )}
-            </li>
-          );
+            </li>,
+            // Nós "Escreva" (spec 50 §5.10.1): depois da lição do assunto; abrem quando ela está concluída.
+            ...tarefasDepoisDe(licao.id).map((tarefa) => (
+              <li key={tarefa.id}>
+                <NoEscreva tarefa={tarefa} aberto={!!prog} enviada={tarefasEnviadas.has(tarefa.id)} />
+              </li>
+            )),
+          ];
         })}
       </ul>
     </section>
+  );
+}
+
+function NoEscreva({ tarefa, aberto, enviada }: { tarefa: WritingTask; aberto: boolean; enviada: boolean }) {
+  const t = COPY.escrita;
+  const content = (
+    <div className="flex items-center gap-3 px-4 py-3">
+      <div
+        className={cn(
+          "grid h-11 w-11 shrink-0 place-items-center rounded-full",
+          enviada ? "bg-mar text-on-mar" : aberto ? "border-2 border-dashed border-abismo text-abismo" : "bg-gelo text-nevoa",
+        )}
+      >
+        {enviada ? <Check size={18} strokeWidth={3} /> : aberto ? <PenLine size={16} /> : <Lock size={14} />}
+      </div>
+      <div className="min-w-0 flex-1">
+        <p className="ds-label">{tarefa.modo === "completo" ? t.noCompleto : t.noTrecho}</p>
+        <p className={cn("font-display text-[14px] font-bold leading-tight", aberto ? "text-abismo" : "text-nevoa")}>{tarefa.titulo}</p>
+        {!aberto && <p className="mt-0.5 text-[11px] text-nevoa">{t.noBloqueado}</p>}
+      </div>
+      {enviada && <span className="chip shrink-0">{t.enviadaChip}</span>}
+    </div>
+  );
+  return aberto ? (
+    <Link to="/redacao/escreva/$tarefaId" params={{ tarefaId: tarefa.id }} className="block" data-testid={`no-escreva-${tarefa.id}`}>
+      {content}
+    </Link>
+  ) : (
+    <div className="cursor-not-allowed opacity-60" data-testid={`no-escreva-${tarefa.id}`}>
+      {content}
+    </div>
   );
 }

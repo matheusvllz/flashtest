@@ -1,5 +1,6 @@
 /**
- * Corretor e treino de redação (spec 49 §5.9, T-49.9.7 e T-49.9.8). Plano, limites e IA decididos no servidor.
+ * Corretor e treino de redação (spec 49 §5.9, T-49.9.7 e T-49.9.8) e tarefas de escrita (spec 50 §5.10). Plano,
+ * limites, recompensas e IA decididos no servidor, sempre pelo `userId` da sessão.
  */
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
@@ -9,6 +10,7 @@ import { checarOrigem, exigirSessao, respostaDeErro } from "@/server/http";
 import { limitar } from "@/server/limite";
 import {
   apagarRedacao as apagar,
+  avaliarEstimativa as avaliar,
   comentarParte,
   corrigirRedacao as corrigir,
   estadoDoCorretor,
@@ -19,6 +21,12 @@ import {
   type ResultadoCorrecao,
   type ResultadoParte,
 } from "@/server/redacao/redacao";
+import {
+  enviarEscrita as enviar,
+  minhasTarefasDeEscrita as minhasTarefas,
+  type MinhasTarefasDeEscrita,
+  type ResultadoDaEscrita,
+} from "@/server/redacao/escrita";
 
 type Erro = { ok: false; codigo: string };
 
@@ -99,6 +107,55 @@ export const enviarParte = createServerFn({ method: "POST" })
       const db = await banco();
       await limitar(db, `redacao-treino:${s.userId}`, 600, 20);
       return await comentarParte(db, s.userId, { parte: data.parte as (typeof PARTES_DO_TREINO)[number], texto: data.texto }, new Date());
+    } catch (e) {
+      return respostaDeErro(e);
+    }
+  });
+
+/* ------------------------------------------------- tarefas de escrita (spec 50 §5.10) --- */
+
+export const minhasTarefasDeEscrita = createServerFn({ method: "GET" }).handler(async (): Promise<({ ok: true } & MinhasTarefasDeEscrita) | Erro> => {
+  try {
+    const s = await exigirSessao();
+    return { ok: true, ...(await minhasTarefas(await banco(), s.userId)) };
+  } catch (e) {
+    return respostaDeErro(e);
+  }
+});
+
+// Trecho 20–1.500 e texto completo 400–5.000 (§5.10.1); o limite exato de cada tarefa é conferido no servidor.
+const pedidoEscrita = z.object({
+  tarefaId: z.string().regex(/^[a-z0-9-]{3,64}$/),
+  texto: z.string().trim().min(PARTE_MIN).max(TEXTO_MAX),
+});
+
+export const enviarEscrita = createServerFn({ method: "POST" })
+  .validator((d: unknown) => pedidoEscrita.parse(d))
+  .handler(async ({ data }): Promise<ResultadoDaEscrita | Erro> => {
+    try {
+      checarOrigem();
+      const s = await exigirSessao();
+      const db = await banco();
+      // Envio de escrita: 30 por hora (spec 50 §10).
+      await limitar(db, `escrita-envio:${s.userId}`, 3600, 30);
+      return await enviar(db, s.userId, data, new Date());
+    } catch (e) {
+      return respostaDeErro(e);
+    }
+  });
+
+const pedidoAvaliacao = z.object({ id: z.string().uuid(), avaliacao: z.enum(["ajudou", "estranha"]) });
+
+/** "Ajudou" / "Achei estranha" numa estimativa (spec 50 §5.10.5): só a escolha, sem texto. */
+export const avaliarEstimativa = createServerFn({ method: "POST" })
+  .validator((d: unknown) => pedidoAvaliacao.parse(d))
+  .handler(async ({ data }): Promise<{ ok: true; gravada: boolean } | Erro> => {
+    try {
+      checarOrigem();
+      const s = await exigirSessao();
+      const db = await banco();
+      await limitar(db, `redacao-avaliacao:${s.userId}`, 3600, 60);
+      return { ok: true, gravada: await avaliar(db, s.userId, data.id, data.avaliacao, new Date()) };
     } catch (e) {
       return respostaDeErro(e);
     }

@@ -1,19 +1,22 @@
 /**
- * Corretor de redação (spec 49 §5.9, T-49.9.7): Pro, 10 por mês. Texto digitado; a foto fica para depois (DV49-08).
- * Estimativa por competência com o rótulo fixo "não é a nota oficial"; nunca "sua nota no ENEM".
+ * Corretor de redação (spec 49 §5.9, T-49.9.7; spec 50 §5.10.3–5.10.5, T-50.11.5 e T-50.11.7): Pro, 10 por mês.
+ * Texto digitado; a foto fica para depois (DV49-08). Rótulo fixo acima do resultado, "Estimativa da Foca IA, não é a
+ * nota oficial", com "Como estimamos" e os limites; nunca "sua nota no ENEM". "Sem estimativa" diz o motivo e o que
+ * mudar, e não conta no mês. Cada estimativa tem "Ajudou" / "Achei estranha" (só a escolha).
  */
 import { useCallback, useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { CartaoBloqueio } from "@/components/redacao/Bloqueio";
 import { textoDoBloqueio } from "@/lib/redacao-bloqueio";
-import { apagarRedacao, corrigirRedacao, meuCorretor, verCorrecao } from "@/lib/api/redacao";
+import { apagarRedacao, avaliarEstimativa, corrigirRedacao, meuCorretor, verCorrecao } from "@/lib/api/redacao";
 import { COPY } from "@/lib/copy";
 import { TEMA_MAX, TEXTO_MAX, TEXTO_MIN, type Correcao } from "@/lib/redacao-ia";
 import { useAppState } from "@/lib/store";
 import type { EstadoDoCorretor } from "@/server/redacao/redacao";
 
 type Estado = { tipo: "carregando" } | { tipo: "erro" } | { tipo: "sem-conta" } | ({ tipo: "pronto" } & EstadoDoCorretor);
-type Vista = { tipo: "form" } | { tipo: "resultado"; tema: string; correcao: Correcao };
+type Avaliacao = "ajudou" | "estranha" | null;
+type Vista = { tipo: "form" } | { tipo: "resultado"; id: string | null; tema: string; correcao: Correcao; avaliacao: Avaliacao };
 
 export function TelaDoCorretor() {
   const temConta = !!useAppState().account?.userId;
@@ -36,7 +39,7 @@ export function TelaDoCorretor() {
 
   async function abrir(id: string) {
     const r = await verCorrecao({ data: { id } }).catch(() => null);
-    if (r?.ok && r.correcao) setVista({ tipo: "resultado", tema: r.tema, correcao: r.correcao });
+    if (r?.ok && r.correcao) setVista({ tipo: "resultado", id, tema: r.tema, correcao: r.correcao, avaliacao: r.avaliacao });
   }
 
   return (
@@ -49,13 +52,15 @@ export function TelaDoCorretor() {
         {estado.tipo === "pronto" && !estado.bloqueio && vista.tipo === "form" && (
           <Formulario
             restantes={estado.restantesMes}
-            onCorrigido={(tema, correcao) => {
-              setVista({ tipo: "resultado", tema, correcao });
+            onCorrigido={(id, tema, correcao) => {
+              setVista({ tipo: "resultado", id, tema, correcao, avaliacao: null });
               void carregar();
             }}
           />
         )}
-        {vista.tipo === "resultado" && <Resultado tema={vista.tema} correcao={vista.correcao} onNova={() => setVista({ tipo: "form" })} />}
+        {vista.tipo === "resultado" && (
+          <Resultado id={vista.id} tema={vista.tema} correcao={vista.correcao} avaliacao={vista.avaliacao} onNova={() => setVista({ tipo: "form" })} />
+        )}
         {estado.tipo === "pronto" && estado.historico.length > 0 && vista.tipo === "form" && (
           <section className="card-soft p-4" aria-labelledby="corretor-historico">
             <h2 id="corretor-historico" className="font-display font-bold text-abismo">
@@ -87,7 +92,7 @@ export function TelaDoCorretor() {
   );
 }
 
-function Formulario({ restantes, onCorrigido }: { restantes: number; onCorrigido: (tema: string, c: Correcao) => void }) {
+function Formulario({ restantes, onCorrigido }: { restantes: number; onCorrigido: (id: string | null, tema: string, c: Correcao) => void }) {
   const t = COPY.redacaoIa;
   const [tema, setTema] = useState("");
   const [texto, setTexto] = useState("");
@@ -100,7 +105,7 @@ function Formulario({ restantes, onCorrigido }: { restantes: number; onCorrigido
     setIndo(true);
     try {
       const r = await corrigirRedacao({ data: { tema: tema.trim(), texto: texto.trim() } });
-      if ("correcao" in r && r.ok) onCorrigido(tema.trim(), r.correcao);
+      if ("correcao" in r && r.ok) onCorrigido(r.id, tema.trim(), r.correcao);
       else if ("motivo" in r) setAviso(r.motivo === "autocuidado" && r.texto ? r.texto : textoDoBloqueio(r.motivo === "autocuidado" ? "recusado" : r.motivo));
       else setAviso(t.erro);
     } catch {
@@ -148,28 +153,77 @@ function Formulario({ restantes, onCorrigido }: { restantes: number; onCorrigido
   );
 }
 
-function Resultado({ tema, correcao, onNova }: { tema: string; correcao: Correcao; onNova: () => void }) {
-  const t = COPY.redacaoIa;
+/** Rótulo fixo e "Como estimamos" com os limites (§5.10.4), sempre acima do resultado. */
+function RotuloDaEstimativa() {
+  const c = COPY.escrita.corretor;
   return (
-    <section className="space-y-3" aria-labelledby="corretor-resultado" data-testid="corretor-resultado">
-      <div className="card-soft border-mar p-5">
+    <div className="space-y-1" data-testid="corretor-rotulo">
+      <p className="text-xs font-bold text-abismo">{c.rotulo}</p>
+      <details className="text-xs text-nevoa">
+        <summary className="tap-area cursor-pointer font-bold text-mar-fundo underline">{c.comoEstimamos}</summary>
+        <ul className="mt-1 list-disc space-y-1 pl-5">
+          {c.limites.map((l) => (
+            <li key={l}>{l}</li>
+          ))}
+        </ul>
+      </details>
+    </div>
+  );
+}
+
+function Resultado({ id, tema, correcao, avaliacao, onNova }: { id: string | null; tema: string; correcao: Correcao; avaliacao: Avaliacao; onNova: () => void }) {
+  const t = COPY.redacaoIa;
+  const c = COPY.escrita.corretor;
+  if (correcao.situacao === "sem-estimativa") {
+    return (
+      <section className="space-y-3" aria-labelledby="corretor-resultado" data-testid="corretor-resultado" data-situacao="sem-estimativa">
+        <div className="card-soft border-mar space-y-2 p-5 text-sm text-abismo">
+          <RotuloDaEstimativa />
+          <p className="ds-label">{tema}</p>
+          <h2 id="corretor-resultado" className="font-display text-lg font-bold leading-snug">
+            {c.semEstimativa(c.motivos[correcao.motivo ?? "nao-dissertativo"])}
+          </h2>
+          {correcao.comentario && <p className="leading-relaxed">{correcao.comentario}</p>}
+          {correcao.oQueMudar && (
+            <>
+              <p className="font-display font-bold">{c.oQueMudar}</p>
+              <p className="leading-relaxed">{correcao.oQueMudar}</p>
+            </>
+          )}
+          <p className="text-xs text-nevoa">{c.naoContou}</p>
+        </div>
+        <button type="button" className="btn-outline w-full" onClick={onNova}>
+          {t.novaCorrecao}
+        </button>
+      </section>
+    );
+  }
+  return (
+    <section className="space-y-3" aria-labelledby="corretor-resultado" data-testid="corretor-resultado" data-situacao="estimada">
+      <div className="card-soft border-mar space-y-2 p-5">
+        <RotuloDaEstimativa />
         <p className="ds-label">{tema}</p>
-        <h2 id="corretor-resultado" className="mt-1 font-display text-xl font-bold text-abismo">
-          {t.total(correcao.total)}
+        <h2 id="corretor-resultado" className="font-display text-xl font-bold text-abismo">
+          {t.total(correcao.total ?? 0)}
         </h2>
-        <p className="mt-1 text-xs font-semibold text-nevoa">{t.rotulo}</p>
+        {correcao.direitosHumanosViolados && <p className="text-sm text-abismo">{c.direitosHumanos}</p>}
       </div>
       <ol className="space-y-2">
-        {correcao.competencias.map((c) => (
-          <li key={c.c} className="card-soft p-4 text-sm text-abismo">
+        {correcao.competencias.map((comp) => (
+          <li key={comp.c} className="card-soft p-4 text-sm text-abismo">
             <div className="flex items-center justify-between gap-2">
-              <p className="font-display font-bold">{t.competencia(c.c)}</p>
-              <span className="chip">{t.nota(c.nota)}</span>
+              <p className="font-display font-bold">{t.competencia(comp.c)}</p>
+              <span className="chip">{t.nota(comp.nota)}</span>
             </div>
-            <p className="mt-1.5 leading-relaxed">{c.justificativa}</p>
-            {c.trecho && (
+            <p className="mt-1.5 leading-relaxed">{comp.justificativa}</p>
+            {comp.trecho && (
               <p className="mt-2 border-l-2 border-gelo pl-3 text-xs text-nevoa">
-                {t.trecho} “{c.trecho}”
+                {t.trecho} “{comp.trecho}”
+              </p>
+            )}
+            {comp.paraSubir && (
+              <p className="mt-2 leading-relaxed">
+                <span className="font-bold">{c.paraSubir}</span> {comp.paraSubir}
               </p>
             )}
           </li>
@@ -181,9 +235,41 @@ function Resultado({ tema, correcao, onNova }: { tema: string; correcao: Correca
           <p className="mt-1 leading-relaxed">{correcao.comentario}</p>
         </div>
       )}
+      {id && <AvaliarEstimativa id={id} inicial={avaliacao} />}
       <button type="button" className="btn-outline w-full" onClick={onNova}>
         {t.novaCorrecao}
       </button>
     </section>
+  );
+}
+
+/** "Ajudou" / "Achei estranha" (§5.10.5): só a escolha, gravada no servidor; pode trocar. */
+function AvaliarEstimativa({ id, inicial }: { id: string; inicial: Avaliacao }) {
+  const c = COPY.escrita.corretor;
+  const [escolha, setEscolha] = useState<Avaliacao>(inicial);
+  async function escolher(a: "ajudou" | "estranha") {
+    const antes = escolha;
+    setEscolha(a);
+    const r = await avaliarEstimativa({ data: { id, avaliacao: a } }).catch(() => null);
+    if (!r?.ok || !r.gravada) setEscolha(antes);
+  }
+  return (
+    <div className="card-soft space-y-2 p-4 text-sm text-abismo" data-testid="corretor-avaliar">
+      <p className="font-display font-bold" id={`avaliar-${id}`}>
+        {c.avaliarPergunta}
+      </p>
+      <div className="grid grid-cols-2 gap-2" role="group" aria-labelledby={`avaliar-${id}`}>
+        {(["ajudou", "estranha"] as const).map((a) => (
+          <button key={a} type="button" className={escolha === a ? "btn-primary" : "btn-outline"} aria-pressed={escolha === a} onClick={() => void escolher(a)}>
+            {a === "ajudou" ? c.ajudou : c.estranha}
+          </button>
+        ))}
+      </div>
+      {escolha && (
+        <p className="text-xs text-nevoa" role="status">
+          {c.avaliado}
+        </p>
+      )}
+    </div>
   );
 }

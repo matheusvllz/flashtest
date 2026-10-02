@@ -25,7 +25,8 @@ export type VozSlot =
   | "nivel"
   | "vazio"
   | "404"
-  | "lembrete";
+  | "lembrete"
+  | "escrita";
 
 export const VOZ: Record<VozSlot, string[]> = {
   bomdia: [
@@ -98,6 +99,15 @@ export const VOZ: Record<VozSlot, string[]> = {
     "Quando der, a lição de hoje já está separada.",
     "A próxima lição da trilha já está pronta.",
     "Hoje tem lição nova na trilha.",
+  ],
+  /**
+   * Tarefa de escrita enviada (spec 50 §5.10): reconhece o esforço de escrever, sem elogiar a qualidade do texto (quem
+   * avalia é a checagem e o modelo, não a Foca) e sem cobrança.
+   */
+  escrita: [
+    "Texto enviado. Agora compara com o modelo.",
+    "Escreveu. Eu nem consigo segurar a caneta.",
+    "Pronto. Escrever é o treino que a prova cobra.",
   ],
 };
 

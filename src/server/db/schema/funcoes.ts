@@ -132,7 +132,10 @@ export const questaoRetirada = pgTable("questao_retirada", {
   retiradaEm: quando("retirada_em").notNull().defaultNow(),
 });
 
-/** Redações corrigidas e treinos por partes (Pro). Texto apagável pelo aluno. */
+/**
+ * Redações corrigidas e treinos por partes (Pro) e tarefas de escrita da trilha (todos; spec 50 §5.10). Texto apagável
+ * pelo aluno. `tarefa_id` só no tipo `tarefa`; `avaliacao` ("Ajudou"/"Achei estranha", só a escolha) só na correção.
+ */
 export const redacao = pgTable(
   "redacao",
   {
@@ -144,6 +147,15 @@ export const redacao = pgTable(
     resultado: jsonb("resultado").$type<JsonObjeto>(),
     versaoRubrica: smallint("versao_rubrica").notNull().default(1),
     criadaEm: quando("criada_em").notNull().defaultNow(),
+    tarefaId: text("tarefa_id"),
+    avaliacao: text("avaliacao"),
+    avaliadaEm: quando("avaliada_em"),
   },
-  (t) => [index("redacao_user_idx").on(t.userId, t.criadaEm), check("redacao_tipo_ck", sql`${t.tipo} in ('correcao', 'treino')`)],
+  (t) => [
+    index("redacao_user_idx").on(t.userId, t.criadaEm),
+    index("redacao_tarefa_idx").on(t.userId, t.tarefaId),
+    check("redacao_tipo_ck", sql`${t.tipo} in ('correcao', 'treino', 'tarefa')`),
+    check("redacao_tarefa_ck", sql`(${t.tipo} = 'tarefa') = (${t.tarefaId} is not null)`),
+    check("redacao_avaliacao_ck", sql`${t.avaliacao} is null or (${t.tipo} = 'correcao' and ${t.avaliacao} in ('ajudou', 'estranha'))`),
+  ],
 );

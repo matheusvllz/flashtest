@@ -71,6 +71,13 @@
       "when": 1790977795189,
       "tag": "0009_pulo",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790979136868,
+      "tag": "0010_escrita",
+      "breakpoints": true
     }
   ]
 }
