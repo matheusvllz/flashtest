@@ -3,7 +3,10 @@
   "installCommand": "bun install --frozen-lockfile",
   "buildCommand": "bun run build",
   "regions": ["gru1"],
-  "crons": [{ "path": "/api/cron/retencao", "schedule": "0 7 * * *" }],
+  "crons": [
+    { "path": "/api/cron/retencao", "schedule": "0 7 * * *" },
+    { "path": "/api/cron/ligas", "schedule": "10 3 * * *" }
+  ],
   "headers": [
     {
       "source": "/sw-offline.js",

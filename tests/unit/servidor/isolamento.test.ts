@@ -75,6 +75,18 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/economia.ts#encerrarMetaOfensiva": "encerrar(db, s.userId)",
   "src/lib/api/economia.ts#calendarioDaOfensiva": "calendario(db, s.userId, mes)",
   "src/lib/api/missoes.ts#minhasMissoes": "ler(db, s.userId, dia) — missões sorteadas pelo próprio userId",
+  // Spec 50 E8 — ofensiva com amigos (18+): só o userId da sessão; ids de dupla e refs de bloqueio conferidos contra o
+  // próprio aluno. Provas em tests/unit/servidor/amigos.test.ts ('B não lê nem altera as duplas de A com C').
+  "src/lib/api/amigos.ts#minhasDuplas": "minhas(db, s.userId) — só as duplas do próprio aluno, com filtro de idade",
+  "src/lib/api/amigos.ts#definirApelidoSocial": "gravarApelido(db, s.userId) — idade pelo cadastro do próprio aluno",
+  "src/lib/api/amigos.ts#criarConvite": "criar(db, s.userId) — convite do próprio aluno",
+  "src/lib/api/amigos.ts#abrirConvite": "abrir(db, s.userId, codigo) — resposta genérica sem dado de quem convidou",
+  "src/lib/api/amigos.ts#pedirDupla": "pedir(db, s.userId, codigo) — o pedido nasce com pedida_por = sessão",
+  "src/lib/api/amigos.ts#responderPedido": "responder(db, s.userId, id) — prova: 'B não lê nem altera as duplas de A com C'",
+  "src/lib/api/amigos.ts#encerrarDupla": "encerrar(db, s.userId, id) — prova: 'B não lê nem altera as duplas de A com C'",
+  "src/lib/api/amigos.ts#bloquear": "bloq(db, s.userId, id) — prova: 'B não lê nem altera as duplas de A com C'",
+  "src/lib/api/amigos.ts#desbloquear": "desbloq(db, s.userId, ref) — só apaga bloqueio com user_id = sessão",
+  "src/lib/api/amigos.ts#denunciar": "denunciarNoServidor(db, s.userId, data) — prova: 'B não lê nem altera as duplas de A com C'",
   "src/lib/api/retrospectiva.ts#minhaRetrospectiva": "ler(db, s.userId, hoje) — só contagens do próprio aluno",
 };
 

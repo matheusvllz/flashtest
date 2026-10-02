@@ -2,11 +2,17 @@
  * Ranking semanal de maiores de 18 no servidor (spec 49 D49-06, T-49.8.1; segurança L3).
  * Menor nunca entra, nunca vê o ranking e nunca aparece numa consulta: o filtro de idade roda em toda leitura, pelo
  * ano de nascimento atual do cadastro (se o suporte corrigir o ano para menos de 18, o aluno some na hora).
+ *
+ * Spec 50 §5.5: com `LIGAS_HABILITADO`, o mesmo ranking vira a "Liga da semana" (divisões, grupos de 20, fechamento
+ * semanal em `ligas.ts`). Sem a flag, tudo continua como na 49. A linha de `ranking_participante` é também a
+ * identidade social dos amigos (§5.6): apelido, maioridade confirmada e suspensão por denúncia.
  */
 import { and, count, eq, inArray, isNull, sql } from "drizzle-orm";
+import { randomUUID } from "node:crypto";
 import {
   APELIDOS_RESERVADOS,
   MAX_POR_GRUPO,
+  adultoPeloCadastro,
   diaEmSaoPaulo,
   diasDaSemana,
   elegibilidade,
@@ -17,11 +23,12 @@ import {
   type ProblemaDoApelido,
 } from "@/lib/ranking";
 import type { Banco } from "../db/client";
-import { profile, rankingGrupo, rankingParticipante, studyDay, user } from "../db/schema";
+import { denuncia, profile, rankingGrupo, rankingParticipante, studyDay, user } from "../db/schema";
 import { env } from "../env";
 import { dataNoFuso } from "../estudo/sincronizar";
 import { ErroApp } from "../http";
 import { ehLocal } from "../pagamentos/provedor";
+import { grupoDaLiga, ligasLigadas, type InfoDaLiga } from "./ligas";
 
 /** Ligado? Implantado: `RANKING_HABILITADO`. Local: sempre (E2E). */
 export function rankingLigado(): boolean {
@@ -48,8 +55,11 @@ export interface LinhaDoRanking {
 export type MeuRanking =
   | { estado: "desligado" }
   | { estado: "menor" }
+  | { estado: "suspenso" }
   | { estado: "fora"; confirmarNascimento: boolean }
-  | { estado: "participando"; apelido: string; semana: string; grupo: LinhaDoRanking[] };
+  | { estado: "participando"; apelido: string; semana: string; grupo: LinhaDoRanking[]; liga?: InfoDaLiga }
+  /** Liga: semana anterior sem pontos; volta à mesma divisão quando estudar. */
+  | { estado: "pausado"; apelido: string; liga: InfoDaLiga };
 
 export async function meuRanking(db: Banco, userId: string, agora: Date): Promise<MeuRanking> {
   if (!rankingLigado()) return { estado: "desligado" };
@@ -59,7 +69,9 @@ export async function meuRanking(db: Banco, userId: string, agora: Date): Promis
   // Participante que confirmou o aniversário neste ano continua maior; menor pelo ano atual sai.
   const confirmouEsteAno = !!p && p.maiorDesde.getUTCFullYear() === agora.getUTCFullYear() && p.maiorDesde <= agora;
   if (e === "menor" || (e === "confirmar" && !confirmouEsteAno)) return e === "menor" ? { estado: "menor" } : { estado: "fora", confirmarNascimento: true };
+  if (p?.socialSuspensoEm) return { estado: "suspenso" };
   if (!p || p.saiuEm) return { estado: "fora", confirmarNascimento: e === "confirmar" };
+  if (ligasLigadas()) return grupoDaLiga(db, userId, p, agora);
 
   const semana = semanaDe(hojeSP(agora));
   const grupo = await garantirGrupo(db, userId, semana);
@@ -69,6 +81,7 @@ export async function meuRanking(db: Banco, userId: string, agora: Date): Promis
       apelido: rankingParticipante.apelido,
       oculto: rankingParticipante.ocultoPorDenuncia,
       maiorDesde: rankingParticipante.maiorDesde,
+      suspenso: rankingParticipante.socialSuspensoEm,
       ano: user.birthYear,
     })
     .from(rankingGrupo)
@@ -77,10 +90,7 @@ export async function meuRanking(db: Banco, userId: string, agora: Date): Promis
     .where(and(eq(rankingGrupo.semana, semana), eq(rankingGrupo.grupo, grupo), isNull(rankingParticipante.saiuEm)));
   // Filtro de idade em toda leitura: no ano limítrofe só fica quem confirmou o aniversário NESTE ano (maior_desde é a
   // data do aniversário confirmado). Ano mudado pelo suporte para o limítrofe tira o participante até confirmar de novo.
-  const adultos = membros.filter((m) => {
-    const e = elegibilidade(m.ano, agora);
-    return e === "maior" || (e === "confirmar" && m.maiorDesde.getUTCFullYear() === agora.getUTCFullYear() && m.maiorDesde <= agora);
-  });
+  const adultos = membros.filter((m) => !m.suspenso && adultoPeloCadastro(m.ano, m.maiorDesde, agora));
   const dias = diasDaSemana(semana);
   const linhas = await Promise.all(
     adultos.map(async (m) => {
@@ -111,16 +121,24 @@ async function garantirGrupo(db: Banco, userId: string, semana: string): Promise
   return r?.g ?? grupo;
 }
 
-export async function entrarNoRanking(
+export type ResultadoDoApelido = { ok: true } | { ok: false; problema: ProblemaDoApelido | "repetido" };
+
+/**
+ * Grava o apelido social (liga e amigos). `naLiga`: entra (ou volta) na liga; senão só define o apelido — usado pelos
+ * amigos, sem entrar na liga (a linha nasce com `saiu_em` preenchido). Idade sempre pelo cadastro do próprio aluno.
+ */
+export async function gravarApelido(
   db: Banco,
   userId: string,
   pedido: { apelido: string; nascimento?: { dia: number; mes: number } },
   agora: Date,
-): Promise<{ ok: true } | { ok: false; problema: ProblemaDoApelido | "repetido" }> {
-  if (!rankingLigado()) throw new ErroApp(409, "RANKING_DESLIGADO");
+  naLiga: boolean,
+): Promise<ResultadoDoApelido> {
   const ano = await anoDe(db, userId);
   const e = elegibilidade(ano, agora, pedido.nascimento);
   if (e !== "maior") throw new ErroApp(403, e === "confirmar" ? "CONFIRMAR_NASCIMENTO" : "MENOR_DE_IDADE");
+  const [atual] = await db.select({ s: rankingParticipante.socialSuspensoEm }).from(rankingParticipante).where(eq(rankingParticipante.userId, userId)).limit(1);
+  if (atual?.s) throw new ErroApp(403, "SOCIAL_SUSPENSO");
   const v = validarApelido(pedido.apelido);
   if (!v.ok) return { ok: false, problema: v.problema };
   if (APELIDOS_RESERVADOS.includes(semAcento(v.apelido))) return { ok: false, problema: "repetido" };
@@ -137,11 +155,24 @@ export async function entrarNoRanking(
   if (igual && igual.u !== userId) return { ok: false, problema: "repetido" };
   await db
     .insert(rankingParticipante)
-    .values({ userId, apelido: v.apelido, maiorDesde })
+    .values({ userId, apelido: v.apelido, maiorDesde, saiuEm: naLiga ? null : agora })
     // A denúncia não some ao sair e entrar de novo: o apelido continua oculto até a revisão do suporte.
-    .onConflictDoUpdate({ target: rankingParticipante.userId, set: { apelido: v.apelido, saiuEm: null, maiorDesde } });
+    .onConflictDoUpdate({
+      target: rankingParticipante.userId,
+      set: naLiga ? { apelido: v.apelido, saiuEm: null, maiorDesde } : { apelido: v.apelido, maiorDesde },
+    });
   await db.insert(profile).values({ userId }).onConflictDoNothing();
   return { ok: true };
+}
+
+export async function entrarNoRanking(
+  db: Banco,
+  userId: string,
+  pedido: { apelido: string; nascimento?: { dia: number; mes: number } },
+  agora: Date,
+): Promise<ResultadoDoApelido> {
+  if (!rankingLigado()) throw new ErroApp(409, "RANKING_DESLIGADO");
+  return gravarApelido(db, userId, pedido, agora, true);
 }
 
 export async function sairDoRanking(db: Banco, userId: string, agora: Date): Promise<void> {
@@ -149,10 +180,21 @@ export async function sairDoRanking(db: Banco, userId: string, agora: Date): Pro
   await db.delete(rankingGrupo).where(eq(rankingGrupo.userId, userId));
 }
 
-/** Denúncia de apelido do mesmo grupo: oculta até revisão (o texto some na hora). */
+/**
+ * Denúncia de apelido do mesmo grupo: oculta até revisão (o texto some na hora). Spec 50 §5.6.5: também entra na
+ * fila de revisão do suporte (`denuncia`, contexto `liga`, motivo `apelido`).
+ */
 export async function denunciarApelido(db: Banco, userId: string, apelido: string, agora: Date): Promise<void> {
   const r = await meuRanking(db, userId, agora);
   if (r.estado !== "participando") throw new ErroApp(403, "FORA_DO_RANKING");
   if (!r.grupo.some((l) => l.apelido === apelido && !l.voce)) throw new ErroApp(404, "APELIDO_INEXISTENTE");
-  await db.update(rankingParticipante).set({ ocultoPorDenuncia: true }).where(sql`lower(${rankingParticipante.apelido}) = lower(${apelido})`);
+  const alvos = await db
+    .update(rankingParticipante)
+    .set({ ocultoPorDenuncia: true })
+    .where(sql`lower(${rankingParticipante.apelido}) = lower(${apelido})`)
+    .returning({ u: rankingParticipante.userId });
+  for (const a of alvos) {
+    if (a.u === userId) continue;
+    await db.insert(denuncia).values({ id: randomUUID(), autorId: userId, alvoId: a.u, contexto: "liga", motivo: "apelido", criadaEm: agora });
+  }
 }

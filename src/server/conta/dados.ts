@@ -3,12 +3,16 @@
  * com duas contas): exportação (LGPD art. 18; privacidade.md §5) e a preferência da Foca IA (48 T-48.2.6).
  * Toda consulta filtra pelo `userId` da sessão, passado por quem chama.
  */
-import { and, eq } from "drizzle-orm";
+import { and, eq, or } from "drizzle-orm";
 import type { Banco } from "../db/client";
 import {
   aiUsage,
+  amizade,
   assinatura,
   attempt,
+  bloqueio,
+  denuncia,
+  ligaResultado,
   cadernoItem,
   cobranca,
   completion,
@@ -94,6 +98,24 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
       .where(doAluno(missaoDia)),
     desafios: await db.select({ mes: desafioMes.mes, progresso: desafioMes.progresso, concluidoEm: desafioMes.concluidoEm }).from(desafioMes).where(doAluno(desafioMes)),
     conquistas: await db.select({ id: conquista.conquistaId, em: conquista.obtidaEm }).from(conquista).where(doAluno(conquista)),
+    // Spec 50 §9: liga e amigos (18+). Só o que é do próprio aluno: nenhum id, e-mail ou apelido de outra conta; a
+    // denúncia sai sem o alvo.
+    resultadosDaLiga: await db
+      .select({ semana: ligaResultado.semana, divisao: ligaResultado.divisao, posicao: ligaResultado.posicao, pontos: ligaResultado.pontos, movimento: ligaResultado.movimento })
+      .from(ligaResultado)
+      .where(doAluno(ligaResultado)),
+    divisaoDaLiga: (await db.select({ divisao: rankingParticipante.divisao, pausado: rankingParticipante.pausado }).from(rankingParticipante).where(doAluno(rankingParticipante)))[0] ?? null,
+    duplas: (
+      await db
+        .select({ estado: amizade.estado, pedidaPor: amizade.pedidaPor, criadaEm: amizade.criadaEm, aceitaEm: amizade.aceitaEm, encerradaEm: amizade.encerradaEm })
+        .from(amizade)
+        .where(or(eq(amizade.userA, userId), eq(amizade.userB, userId)))
+    ).map(({ pedidaPor, ...d }) => ({ ...d, pedidaPorVoce: pedidaPor === userId })),
+    bloqueios: await db.select({ em: bloqueio.criadoEm }).from(bloqueio).where(doAluno(bloqueio)),
+    denunciasFeitas: await db
+      .select({ contexto: denuncia.contexto, motivo: denuncia.motivo, em: denuncia.criadaEm, resolvidaEm: denuncia.resolvidaEm })
+      .from(denuncia)
+      .where(eq(denuncia.autorId, userId)),
   };
 }
 

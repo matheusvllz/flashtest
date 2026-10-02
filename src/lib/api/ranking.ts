@@ -7,16 +7,18 @@ import { z } from "zod";
 import { banco } from "@/server/db/client";
 import { checarOrigem, exigirSessao, respostaDeErro } from "@/server/http";
 import { limitar } from "@/server/limite";
+import { ligasLigadas } from "@/server/ranking/ligas";
 import { denunciarApelido, entrarNoRanking as entrar, meuRanking as meu, sairDoRanking as sair, type MeuRanking } from "@/server/ranking/ranking";
 
 type Erro = { ok: false; codigo: string };
 
-export const meuRanking = createServerFn({ method: "GET" }).handler(async (): Promise<({ ok: true } & MeuRanking) | Erro> => {
+/** `modo`: "liga" com as divisões da spec 50 §5.5 (`LIGAS_HABILITADO`); "ranking" = o ranking semanal da 49. */
+export const meuRanking = createServerFn({ method: "GET" }).handler(async (): Promise<({ ok: true; modo: "liga" | "ranking" } & MeuRanking) | Erro> => {
   try {
     const s = await exigirSessao();
     const db = await banco();
     await limitar(db, `ranking-ver:${s.userId}`, 60, 60);
-    return { ok: true, ...(await meu(db, s.userId, new Date())) };
+    return { ok: true, modo: ligasLigadas() ? "liga" : "ranking", ...(await meu(db, s.userId, new Date())) };
   } catch (e) {
     return respostaDeErro(e);
   }

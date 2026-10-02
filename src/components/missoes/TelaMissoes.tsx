@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { IconePerola } from "@/components/economia/IconePerola";
+import { minhasDuplas } from "@/lib/api/amigos";
 import { minhasMissoes } from "@/lib/api/missoes";
 import { meuRanking } from "@/lib/api/ranking";
 import { COPY } from "@/lib/copy";
@@ -25,7 +26,7 @@ function nomeDoMes(mes: string): string {
 export function TelaMissoes() {
   const temConta = !!useAppState().account?.userId;
   const [estado, setEstado] = useState<Estado>({ tipo: "carregando" });
-  const [social, setSocial] = useState(false);
+  const [social, setSocial] = useState<{ liga: boolean; amigos: boolean }>({ liga: false, amigos: false });
   const t = COPY.missoes;
 
   useEffect(() => {
@@ -39,7 +40,11 @@ export function TelaMissoes() {
       .catch(() => vivo && setEstado({ tipo: "erro" }));
     // Liga e amigos: só aparecem quando o servidor confirma que o aluno pode (18+) e a função está ligada.
     meuRanking()
-      .then((r) => vivo && setSocial(r.ok && r.estado !== "menor" && r.estado !== "desligado"))
+      .then((r) => vivo && setSocial((s) => ({ ...s, liga: r.ok && r.estado !== "menor" && r.estado !== "desligado" && r.estado !== "suspenso" })))
+      .catch(() => {});
+    // Menor recebe MENOR_DE_IDADE (ok: false): o link não aparece.
+    minhasDuplas()
+      .then((r) => vivo && setSocial((s) => ({ ...s, amigos: r.ok && r.estado !== "desligado" && r.estado !== "suspenso" })))
       .catch(() => {});
     return () => {
       vivo = false;
@@ -150,13 +155,22 @@ export function TelaMissoes() {
           </section>
         )}
 
-        {social && (
+        {(social.liga || social.amigos) && (
           <section aria-label={t.social} className="space-y-2" data-testid="missoes-social">
-            <Link to="/ranking" className="card-soft flex items-center gap-3 p-4">
-              <Users size={20} className="text-mar" aria-hidden />
-              <span className="flex-1 font-semibold text-abismo">{t.social}</span>
-              <ChevronRight size={18} className="text-nevoa" aria-hidden />
-            </Link>
+            {social.liga && (
+              <Link to="/ranking" className="card-soft flex items-center gap-3 p-4" data-testid="missoes-liga">
+                <Trophy size={20} className="text-mar" aria-hidden />
+                <span className="flex-1 font-semibold text-abismo">{COPY.liga.titulo}</span>
+                <ChevronRight size={18} className="text-nevoa" aria-hidden />
+              </Link>
+            )}
+            {social.amigos && (
+              <Link to="/amigos" className="card-soft flex items-center gap-3 p-4" data-testid="missoes-amigos">
+                <Users size={20} className="text-mar" aria-hidden />
+                <span className="flex-1 font-semibold text-abismo">{COPY.amigos.titulo}</span>
+                <ChevronRight size={18} className="text-nevoa" aria-hidden />
+              </Link>
+            )}
           </section>
         )}
       </div>
