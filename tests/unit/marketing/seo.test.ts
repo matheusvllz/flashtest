@@ -68,6 +68,10 @@ describe("arquivos públicos", () => {
     expect(robots).toContain("Allow: /");
     expect(robots).not.toContain("Disallow: /\n");
   });
+  test("ads.txt declara só a conta do AdSense do Foca, no formato do IAB (spec 49, preparação passo 8)", () => {
+    const linhas = readFileSync(resolve(RAIZ, "public/ads.txt"), "utf8").trim().split(/\r?\n/);
+    expect(linhas).toEqual(["google.com, pub-4700587583292412, DIRECT, f08c47fec0942fa0"]);
+  });
   test("a imagem de compartilhamento da landing existe", () => {
     expect(existsSync(resolve(RAIZ, "public", OG_IMAGE_PATH.slice(1)))).toBe(true);
   });
