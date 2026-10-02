@@ -178,4 +178,6 @@ export interface LessonProgress {
   /** Melhor % de acerto (0-100). */
   bestPct: number;
   completedAt: string;
+  /** Spec 50 §5.7.1: "Pulada" pelo teste "pular para cá" (sem XP, sem estrelas). Aditivo. */
+  pulo?: true;
 }

@@ -12,6 +12,7 @@ import type { Trilha } from "@/lib/lessons/types";
 import { isLessonUnlocked, type AppState } from "@/lib/store";
 import { reviewLessonId } from "./chapter-review";
 import { recommendNext, type Recommendation, type RecommendationReason } from "./recommend";
+import { alvoDoPulo } from "./pulo";
 import { microLessonNodeState } from "./selectors";
 import { nodeKindOf, questionSteps, stepsOf } from "./steps";
 import type { MicroLesson } from "./types";
@@ -64,6 +65,8 @@ export interface TrailNode {
   stars?: 1 | 2 | 3;
   reviewDue: boolean;
   href: TrailHref;
+  /** Spec 50 §5.7.1: concluída pelo teste "pular para cá" ("Pulada", sem estrelas). */
+  pulada?: boolean;
 }
 
 export interface TrailChapter {
@@ -76,6 +79,8 @@ export interface TrailChapter {
   totalCount: number;
   status: "locked" | "available" | "in-progress" | "completed";
   containsCurrent: boolean;
+  /** Spec 50 §5.7.1: o capítulo-alvo do "pular para cá" nesta matéria (no máximo um por matéria). */
+  puloAqui?: boolean;
 }
 
 export interface TrailSection {
@@ -269,7 +274,7 @@ function buildMicroNode(lessonId: string, s: AppState, currentLessonId: string |
     status,
     title: lesson.title,
     questionCount: questionSteps(stepsOf(lesson)).length,
-    stars: s.learning.completedLessons[lessonId]?.stars,
+    ...(s.learning.completedLessons[lessonId]?.pulo ? { pulada: true } : { stars: s.learning.completedLessons[lessonId]?.stars }),
     reviewDue: nodeState.review === "due",
     href: { to: "/learn/$lessonId", params: { lessonId } },
   };
@@ -297,7 +302,7 @@ function buildLegacyNode(
     status,
     title: lesson.titulo,
     questionCount: lesson.exercicios.length,
-    stars: s.progress.lessons[lesson.id]?.stars,
+    ...(s.progress.lessons[lesson.id]?.pulo ? { pulada: true } : { stars: s.progress.lessons[lesson.id]?.stars }),
     reviewDue: false,
     href: { to: "/redacao/$licaoId", params: { licaoId: lesson.id } },
   };
@@ -370,6 +375,11 @@ function buildSection(
 
 function buildSubject(subject: CurriculumSubject, s: AppState, currentLessonId: string | null): TrailSubject {
   const sections = subject.sections.map((sec, i) => buildSection(sec, i + 1, s, currentLessonId));
+  // "Pular para cá" (spec 50 §5.7.1): a mesma regra que o servidor confere ao começar o teste.
+  const alvo = alvoDoPulo(subject, (id) => Boolean(s.learning.completedLessons[id] || s.progress.lessons[id]));
+  if (alvo) {
+    for (const sec of sections) for (const c of sec.chapters) if (c.id === alvo.capituloId) c.puloAqui = true;
+  }
   const completedCount = sections.reduce((n, sec) => n + sec.completedCount, 0);
   const totalCount = sections.reduce((n, sec) => n + sec.totalCount, 0);
   return { id: subject.id, name: subject.name, sections, completedCount, totalCount };

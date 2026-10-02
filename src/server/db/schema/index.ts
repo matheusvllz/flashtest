@@ -8,3 +8,4 @@ export * from "./recompensas";
 export * from "./funcoes";
 export * from "./economia";
 export * from "./gamificacao";
+export * from "./trilha";

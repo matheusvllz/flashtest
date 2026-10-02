@@ -28,6 +28,8 @@ export interface PathNodeData {
   stars?: 1 | 2 | 3;
   reviewDue?: boolean;
   href: PathNodeHref;
+  /** Spec 50 §5.7.1: concluída pelo teste "pular para cá" — texto "Pulada", sem estrelas. */
+  pulada?: boolean;
 }
 
 const KIND_ICON: Record<PathNodeKind, typeof BookOpen> = {
@@ -42,8 +44,9 @@ const KIND_ICON: Record<PathNodeKind, typeof BookOpen> = {
 };
 
 /** Mesmo texto de estado do LessonNode (contrato dos E2E: "Disponível", "Bloqueada", "Continuar daqui"…). */
-export function estadoLabel(node: Pick<PathNodeData, "status" | "reviewDue">): string {
+export function estadoLabel(node: Pick<PathNodeData, "status" | "reviewDue" | "pulada">): string {
   if (node.status === "locked") return COPY.trilha.estados.locked;
+  if (node.status === "completed" && node.pulada) return COPY.pulo.pulada;
   if (node.status === "completed") {
     return node.reviewDue ? COPY.trilha.estados["completed-review"] : COPY.trilha.estados.completed;
   }
@@ -189,6 +192,7 @@ export const PathNode = memo(
     a.node.status === b.node.status &&
     a.node.stars === b.node.stars &&
     a.node.reviewDue === b.node.reviewDue &&
+    a.node.pulada === b.node.pulada &&
     a.node.title === b.node.title &&
     a.subjectLabel === b.subjectLabel &&
     a.planned === b.planned &&

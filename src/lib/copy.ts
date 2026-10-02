@@ -1082,6 +1082,53 @@ export const COPY = {
     emBreve: "Em breve",
     noPlano: (plano: string) => `No plano ${plano}`,
   },
+  /**
+   * "Pular para cá" (spec 50 §5.7.1): teste para pular as lições do caminho até um capítulo. Sem nota, sem texto de
+   * fracasso: quem não passa vê por onde começar. Limites ditos antes de começar.
+   */
+  pulo: {
+    botao: "Pular para cá",
+    botaoAria: (capitulo: string) => `Pular para cá: ${capitulo}`,
+    pulada: "Pulada",
+    rotulo: "Pular para cá",
+    introTitulo: (capitulo: string) => `Pular para ${capitulo}`,
+    introCorpo: (n: number) => `São ${n} questões sobre o que vem antes deste capítulo e sobre ele.`,
+    regra: "Para pular, acerte pelo menos 8 de cada 10 de primeira, com acerto em todos os assuntos.",
+    semAjuda: "Sem vidas, sem dica e sem a Foca IA durante o teste. Se não souber, toque em Não sei.",
+    ficamPuladas: "Se você passar, estas lições ficam como puladas:",
+    depois: "Dá para fazer essas lições depois, normalmente, e aí elas valem XP como qualquer lição.",
+    limites: (feitos: number, max: number) =>
+      `Uma tentativa por capítulo por dia e até ${max} testes por dia. Hoje: ${feitos} de ${max}.`,
+    comecar: "Começar o teste",
+    continuar: "Continuar o teste",
+    voltar: "Voltar para a trilha",
+    carregando: "Carregando…",
+    motivos: {
+      CAPITULO_HOJE: "Você já fez o teste deste capítulo hoje. Amanhã dá para tentar de novo.",
+      LIMITE_DO_DIA: "Você já fez os testes de hoje. Amanhã tem mais.",
+      FORA_DO_ALCANCE: "Este capítulo não é o próximo da sua trilha agora. Volte para a trilha para ver onde o teste está.",
+      SEM_QUESTOES: "Ainda não temos questões novas suficientes para este teste.",
+      DESLIGADO: "O teste para pular está fora do ar agora.",
+    } as Record<string, string>,
+    erro: "Não deu para carregar o teste agora. Tente de novo.",
+    erroEnvio: "Não deu para enviar suas respostas agora. Elas continuam aqui: tente de novo.",
+    tentarDeNovo: "Tentar de novo",
+    progresso: (n: number, total: number) => `Questão ${n} de ${total}`,
+    duranteHint: "Sem dica nesta parte. Se não souber, toque em Não sei.",
+    sair: "Sair do teste",
+    enviando: "Conferindo suas respostas…",
+    passouTitulo: "Capítulo liberado",
+    passouCorpo: (n: number) =>
+      n === 1 ? "1 lição ficou como pulada. Você pode fazê-la quando quiser." : `${n} lições ficaram como puladas. Você pode fazê-las quando quiser.`,
+    revisaoAgendada: "Os assuntos pulados que não caíram no teste voltam numa revisão nos próximos dias.",
+    xp: (n: number) => `+${n} XP`,
+    irParaTrilha: "Ir para a trilha",
+    comecePor: (licao: string) => `Comece por ${licao}`,
+    comecePorCorpo: "O teste mostrou o que vale ver antes de seguir. As lições do caminho continuam abertas.",
+    valeRevisar: "Vale revisar",
+    amanha: "Amanhã dá para tentar o teste deste capítulo de novo.",
+    abrirLicao: "Abrir a lição",
+  },
   /** Simulado (spec 50 §5.9.4): nunca nota, TRI ou previsão; cronômetro opcional que nunca encerra sozinho. */
   simulado: {
     titulo: "Simulados",

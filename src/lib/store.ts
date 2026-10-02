@@ -955,7 +955,9 @@ export function completeLesson(
 ): CompleteLessonResult {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   const stars = starsForPct(pct);
-  const prev = getState().progress.lessons[lessonId];
+  // Lição "Pulada" (spec 50 §5.7.1) feita agora: é a primeira conclusão de verdade (XP normal, estrelas novas).
+  const registrada = getState().progress.lessons[lessonId];
+  const prev = registrada?.pulo ? undefined : registrada;
   // Idempotência por tentativa (docs/36 G-3): se a conclusão registrada é POSTERIOR ao início desta
   // tentativa, ela já foi contada — nada de novo bloco do dia, contagem de lições nem XP.
   if (prev && conclusaoJaContada(prev.completedAt, opts.sessionStartedAt)) {
@@ -1016,7 +1018,9 @@ export function completeMicroLesson(
 ): CompleteMicroLessonResult {
   const pct = totalPractice > 0 ? Math.round((correctPractice / totalPractice) * 100) : 0;
   const stars = starsForPct(pct);
-  const prev = getState().learning.completedLessons[lessonId];
+  // Lição "Pulada" (spec 50 §5.7.1) feita agora: é a primeira conclusão de verdade (XP normal, estrelas novas).
+  const registrada = getState().learning.completedLessons[lessonId];
+  const prev = registrada?.pulo ? undefined : registrada;
   // Idempotência por tentativa (docs/36 G-3), igual à de `completeLesson`.
   if (prev && conclusaoJaContada(prev.completedAt, opts.sessionStartedAt)) {
     return { xpAwarded: 0, alreadyCompleted: true, stars: prev.stars };
@@ -1939,6 +1943,61 @@ export function applyCheckpointRecalibration(o: { antecipar: string[]; desafio: 
   return true;
 }
 
+/**
+ * Teste "pular para cá" terminado (spec 50 §5.7.1) — reflexo, no aparelho, do que o SERVIDOR decidiu (`concluirPulo`).
+ * Nada aqui vai para a outbox: o servidor já gravou as respostas, as lições puladas, o XP e o bloco.
+ * - Lições puladas: registro com `pulo: true` (conta como concluída para pré-requisito; sem XP, sem estrelas na
+ *   trilha). Lição já feita de verdade não é tocada.
+ * - Habilidades puladas sem questão no teste: o domínio não muda; ganham uma revisão em até `checarEmDias` dias (só
+ *   antecipa, nunca adia uma que já vence antes), que o planejador agenda (R-PROD-7).
+ * - O teste conta como 1 bloco do dia; o XP do servidor entra já (o agregado confirma depois).
+ * - A fila da jornada é refeita (como no nivelamento): as aulas do caminho saíram do plano.
+ * As respostas entram no modelo pelo `recordLearningAttempt` com `source: "pulo"`, chamado pela tela do teste.
+ * Idempotente pelo id do teste (`learning.rewardLedger["pulo:<id>"]`): aplicar de novo (resposta repetida, resultado
+ * recuperado depois de recarregar) não muda nada. Devolve `false` quando já tinha sido aplicado.
+ */
+export function aplicarPuloNoAparelho(r: {
+  id: string;
+  passou: boolean;
+  licoesPuladas: { id: string; tipo: "micro" | "redacao" }[];
+  /** Versão de cada microlição pulada (de quem resolve o conteúdo); ausente = 1. */
+  versoes?: Record<string, number>;
+  semQuestao: string[];
+  xp: number;
+  hoje: string;
+  checarEmDias: 1 | 3 | 7;
+}): boolean {
+  const chave = `pulo:${r.id}`;
+  if (getState().learning.rewardLedger[chave]) return false;
+  setState((s) => {
+    if (s.learning.rewardLedger[chave]) return s;
+    const agora = new Date().toISOString();
+    s.learning.rewardLedger[chave] = { key: chave, awardedAt: agora, xp: Math.max(0, r.xp) };
+    if (r.passou) {
+      for (const l of r.licoesPuladas) {
+        if (l.tipo === "redacao") {
+          if (!s.progress.lessons[l.id]) s.progress.lessons[l.id] = { lessonId: l.id, stars: 1, bestPct: 0, completedAt: agora, pulo: true };
+        } else if (!s.learning.completedLessons[l.id]) {
+          s.learning.completedLessons[l.id] = { version: r.versoes?.[l.id] ?? 1, completedAt: agora, stars: 1, bestPct: 0, pulo: true };
+        }
+      }
+      const ate = somaDiasLocal(r.hoje, r.checarEmDias);
+      for (const skillId of r.semQuestao) {
+        const atual = s.learning.reviewSchedule[skillId];
+        if (!atual) s.learning.reviewSchedule[skillId] = { skillId, intervalDays: r.checarEmDias, dueDate: ate, lastResult: null };
+        else if (atual.dueDate > ate) s.learning.reviewSchedule[skillId] = { ...atual, dueDate: ate };
+      }
+      const ativa = s.learning.journey.activeActivity;
+      s.learning.journey.committed = ativa ? [ativa] : [];
+      s.learning.journey.upcoming = [];
+    }
+    s.progress.xp += Math.max(0, r.xp);
+    registrarAtividade(s, "lesson", true);
+    return s;
+  });
+  return true;
+}
+
 /** XP por faixa de acerto (docs/30 §14.4): prática/desafio/reforço 10/20/30 (`starsForPct`); revisão 5 fixo; checkpoint 20 fixo. */
 function xpAlvoDaAtividade(kind: PlannedActivity["kind"], correct: number, total: number): number {
   if (kind === "revisao") return 5;
@@ -2069,9 +2128,10 @@ export function syncJourneyWithCompletions() {
     const j = s.learning.journey;
     const ativa = j.activeActivity;
     if (!ativa || !ativa.lessonId) return s;
-    const registro: { completedAt?: string } | undefined =
+    const registro: { completedAt?: string; pulo?: true } | undefined =
       ativa.kind === "legado" ? s.progress.lessons[ativa.lessonId] : s.learning.completedLessons[ativa.lessonId];
-    if (!registro) return s;
+    // Lição "Pulada" (spec 50 §5.7.1) não é a atividade feita: ela continua na fila.
+    if (!registro || registro.pulo) return s;
     if (ativa.startedAt && !(typeof registro.completedAt === "string" && registro.completedAt >= ativa.startedAt)) return s;
 
     const attemptKey = attemptKeyOf(ativa);
@@ -2284,7 +2344,8 @@ function enfileirar(s: AppState, ev: EventoEstudo): void {
   if (s.account.outbox.length > LIMITE_OUTBOX) s.account.outbox.splice(0, s.account.outbox.length - LIMITE_OUTBOX);
 }
 
-const FONTE_POR_ORIGEM: Record<NonNullable<Attempt["source"]>, FonteResposta> = {
+/** `pulo` fica fora: as respostas do teste "pular para cá" já foram gravadas pelo servidor ao terminar (spec 50 §5.7.1). */
+const FONTE_POR_ORIGEM: Record<Exclude<NonNullable<Attempt["source"]>, "pulo">, FonteResposta> = {
   estudo: "questao-geral",
   microlicao: "licao",
   legado: "redacao",
@@ -2308,6 +2369,7 @@ function respostaDoAttempt(a: Attempt): number | number[] | null {
 
 /** A resposta vira evento (o servidor recorrige pelo gabarito e decide o XP). */
 function enfileirarResposta(s: AppState, a: Attempt, opts: { revisao?: boolean } = {}): void {
+  if (a.source === "pulo") return;
   const fonte = FONTE_POR_ORIGEM[a.source ?? "microlicao"];
   const ativa = s.learning.journey.activeActivity;
   // Revisão de erros (spec 50 §5.1.4): nunca ligada à tentativa (não muda a nota da atividade) e nunca custa vida.
@@ -2690,7 +2752,8 @@ export function montarPedidoImportacao(): PedidoImportacao {
   };
   const respostas = s.learning.recentAttempts.slice(-500).flatMap((a) => {
     const ocorreuEm = iso(a.submittedAt);
-    if (!ocorreuEm || !/^\d{4}-\d{2}-\d{2}$/.test(a.localDate)) return [];
+    // Tentativa do "pular para cá" já está no servidor (spec 50 §5.7.1).
+    if (a.source === "pulo" || !ocorreuEm || !/^\d{4}-\d{2}-\d{2}$/.test(a.localDate)) return [];
     return [
       {
         id: idDeEvento(a.id),
@@ -2703,9 +2766,14 @@ export function montarPedidoImportacao(): PedidoImportacao {
       },
     ];
   });
+  // Lição "Pulada" (spec 50 §5.7.1) não é conclusão: importá-la pagaria o XP da lição.
   const licoes = [
-    ...Object.values(s.progress.lessons).map((l) => ({ licaoId: l.lessonId, tipoLicao: "redacao" as const, pct: l.bestPct, em: l.completedAt })),
-    ...Object.entries(s.learning.completedLessons).map(([licaoId, l]) => ({ licaoId, tipoLicao: "micro" as const, pct: l.bestPct, em: l.completedAt })),
+    ...Object.values(s.progress.lessons)
+      .filter((l) => !l.pulo)
+      .map((l) => ({ licaoId: l.lessonId, tipoLicao: "redacao" as const, pct: l.bestPct, em: l.completedAt })),
+    ...Object.entries(s.learning.completedLessons)
+      .filter(([, l]) => !l.pulo)
+      .map(([licaoId, l]) => ({ licaoId, tipoLicao: "micro" as const, pct: l.bestPct, em: l.completedAt })),
   ]
     .flatMap(({ em, pct, ...l }) => {
       const concluidaEm = iso(em);

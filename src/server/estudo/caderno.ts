@@ -10,7 +10,7 @@ import { cadernoItem } from "../db/schema";
 export const INTERVALOS_DIAS = [1, 3, 7, 14] as const;
 export const ACERTOS_PARA_RESOLVER = 2;
 // Spec 50 §5.9.4: os erros do simulado também entram no caderno de quem tem a função.
-const FONTES_DO_CADERNO = new Set(["questao-geral", "atividade", "licao", "checagem", "simulado"]);
+const FONTES_DO_CADERNO = new Set(["questao-geral", "atividade", "licao", "checagem", "simulado", "pulo"]);
 
 type Executor = Pick<Banco, "select" | "insert" | "update">;
 

@@ -67,7 +67,7 @@ export interface Attempt {
   /** Probabilidade prevista pelo modelo ANTES da resposta — só para diagnóstico de calibração (docs/30 §27). */
   predictedP?: number;
   /** De onde veio a tentativa (docs/30 §21.1) — ausente (tentativa antiga) é equivalente a `"microlicao"`. */
-  source?: "microlicao" | "estudo" | "legado" | "atividade" | "nivelamento" | "checkpoint";
+  source?: "microlicao" | "estudo" | "legado" | "atividade" | "nivelamento" | "checkpoint" | "pulo";
 }
 
 export type LearningSessionKind =
@@ -146,6 +146,11 @@ export interface MicroLessonCompletion {
   completedAt: string;
   stars: 1 | 2 | 3;
   bestPct: number;
+  /**
+   * Spec 50 §5.7.1: lição "Pulada" pelo teste "pular para cá" — conta como concluída para pré-requisito, sem XP e sem
+   * estrelas (`stars`/`bestPct` são só preenchimento). Fazer a lição depois troca o registro por um normal. Aditivo.
+   */
+  pulo?: true;
 }
 
 export interface LearningState {
