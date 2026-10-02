@@ -1,10 +1,11 @@
 /**
  * Ranking de maiores de 18 (spec 49 D49-06, T-49.8.1; RF-11). Regras puras + servidor com PGlite real.
  */
-import { beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import { eq } from "drizzle-orm";
 import { elegibilidade, pontosDaSemana, semanaDe, validarApelido } from "../../../src/lib/ranking";
 import { studyDay, user } from "../../../src/server/db/schema";
+import { redefinirEnv } from "../../../src/server/env";
 import { denunciarApelido, entrarNoRanking, meuRanking, sairDoRanking } from "../../../src/server/ranking/ranking";
 import { alunoVerificado, ambiente, type Ambiente } from "./ajuda";
 
@@ -38,8 +39,15 @@ describe("regras puras", () => {
 
 describe("servidor", () => {
   let amb: Ambiente;
+  // Ranking da 49 (sem divisões): com `LIGAS_HABILITADO` desligado tudo continua igual (spec 50 §13.2). No ambiente
+  // local as ligas vêm ligadas por padrão; as ligas têm os próprios testes em ligas.test.ts.
   beforeEach(async () => {
+    process.env.LIGAS_HABILITADO = "false";
     amb = await ambiente();
+  });
+  afterEach(() => {
+    delete process.env.LIGAS_HABILITADO;
+    redefinirEnv();
   });
 
   async function aluno(email: string, ano: number) {

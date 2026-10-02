@@ -33,6 +33,15 @@ export function elegibilidade(
   return hoje >= aniversario ? "maior" : "menor";
 }
 
+/**
+ * Adulto pelo cadastro atual (filtro de toda leitura do ranking, da liga e dos amigos): pelo ano ou, no ano
+ * limítrofe, só quem confirmou o aniversário NESTE ano (`maior_desde` é a data do aniversário confirmado).
+ */
+export function adultoPeloCadastro(anoNascimento: number | null, maiorDesde: Date, agora: Date): boolean {
+  const e = elegibilidade(anoNascimento, agora);
+  return e === "maior" || (e === "confirmar" && maiorDesde.getUTCFullYear() === agora.getUTCFullYear() && maiorDesde <= agora);
+}
+
 /** [ano, mês (1–12), dia] de `agora` no fuso de São Paulo. */
 export function diaEmSaoPaulo(agora: Date): [number, number, number] {
   const s = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit", day: "2-digit" }).format(agora);

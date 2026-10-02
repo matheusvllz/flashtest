@@ -7,11 +7,29 @@
  * - `verification` vencida e `rate_limit` parado há mais de 1 dia;
  * - ranking (spec 49 §9): quem saiu há mais de 30 dias e os grupos de semanas com mais de 30 dias; `ai_budget_pagos`
  *   com mais de 90 dias.
+ * - spec 50 §9: resultados da liga saem com o participante; dupla encerrada há mais de 30 dias; convite com mais de 7;
+ *   denúncia resolvida há mais de 90. Bloqueio fica enquanto as duas contas existirem.
  * Nada aqui toca conta verificada, tentativa, conclusão, XP ou documento de estudo.
  */
-import { and, eq, isNotNull, lt } from "drizzle-orm";
+import { and, eq, isNotNull, isNull, lt, sql } from "drizzle-orm";
 import type { Banco } from "../db/client";
-import { aiBudget, aiBudgetPagos, aiUsage, auditEvent, comboDia, missaoDia, rankingGrupo, rankingParticipante, rateLimit, user, verification } from "../db/schema";
+import {
+  aiBudget,
+  aiBudgetPagos,
+  aiUsage,
+  amizade,
+  auditEvent,
+  comboDia,
+  conviteAmizade,
+  denuncia,
+  ligaResultado,
+  missaoDia,
+  rankingGrupo,
+  rankingParticipante,
+  rateLimit,
+  user,
+  verification,
+} from "../db/schema";
 
 const DIA = 86_400_000;
 
@@ -29,6 +47,8 @@ export interface ResultadoRetencao {
   ranking: number;
   /** Spec 50 §9: combo do dia (30 dias) e missões (90 dias). */
   gamificacao: number;
+  /** Spec 50 §9: resultados da liga de quem saiu, duplas encerradas (30 dias), convites (7) e denúncias resolvidas (90). */
+  social: number;
 }
 
 export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<ResultadoRetencao> {
@@ -46,10 +66,33 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
   const teto = await db.delete(aiBudget).where(lt(aiBudget.day, limiteIA)).returning({ d: aiBudget.day });
   const tetoPagos = await db.delete(aiBudgetPagos).where(lt(aiBudgetPagos.day, limiteIA)).returning({ d: aiBudgetPagos.day });
   const trintaDias = new Date(agora.getTime() - 30 * DIA);
-  const saiu = await db
-    .delete(rankingParticipante)
-    .where(and(isNotNull(rankingParticipante.saiuEm), lt(rankingParticipante.saiuEm, trintaDias)))
-    .returning({ id: rankingParticipante.userId });
+  // Spec 50 §9: a linha do participante é também o apelido dos amigos e guarda a suspensão por denúncia. Quem saiu da
+  // liga há mais de 30 dias sai junto com os resultados da liga — salvo se ainda tem dupla ou pedido aberto, ou está
+  // suspenso aguardando revisão.
+  const podeSair = and(
+    isNotNull(rankingParticipante.saiuEm),
+    lt(rankingParticipante.saiuEm, trintaDias),
+    isNull(rankingParticipante.socialSuspensoEm),
+    sql`not exists (select 1 from ${amizade} where ${amizade.estado} in ('pedido', 'ativa') and (${amizade.userA} = ${rankingParticipante.userId} or ${amizade.userB} = ${rankingParticipante.userId}))`,
+  );
+  const resultadosLiga = await db
+    .delete(ligaResultado)
+    .where(sql`${ligaResultado.userId} in (select ${rankingParticipante.userId} from ${rankingParticipante} where ${podeSair})`)
+    .returning({ u: ligaResultado.userId });
+  const saiu = await db.delete(rankingParticipante).where(podeSair).returning({ id: rankingParticipante.userId });
+  // Amigos (spec 50 §5.6.5): dupla encerrada sai em 30 dias; convite em 7; denúncia 90 dias depois de resolvida.
+  const duplas = await db
+    .delete(amizade)
+    .where(and(eq(amizade.estado, "encerrada"), lt(amizade.encerradaEm, trintaDias)))
+    .returning({ id: amizade.id });
+  const convites = await db
+    .delete(conviteAmizade)
+    .where(lt(conviteAmizade.criadoEm, new Date(agora.getTime() - 7 * DIA)))
+    .returning({ h: conviteAmizade.codigoHash });
+  const denuncias = await db
+    .delete(denuncia)
+    .where(and(isNotNull(denuncia.resolvidaEm), lt(denuncia.resolvidaEm, new Date(agora.getTime() - 90 * DIA))))
+    .returning({ id: denuncia.id });
   await db.delete(rankingGrupo).where(lt(rankingGrupo.semana, dia(trintaDias)));
   const combos = await db.delete(comboDia).where(lt(comboDia.localDate, dia(trintaDias))).returning({ d: comboDia.localDate });
   const missoes = await db.delete(missaoDia).where(lt(missaoDia.localDate, limiteIA)).returning({ d: missaoDia.localDate });
@@ -67,5 +110,6 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
     limites: n(limites),
     ranking: n(saiu),
     gamificacao: n(combos) + n(missoes),
+    social: n(resultadosLiga) + n(duplas) + n(convites) + n(denuncias),
   };
 }

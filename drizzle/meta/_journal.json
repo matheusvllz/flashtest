@@ -50,6 +50,13 @@
       "when": 1790973133726,
       "tag": "0006_simulado",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1790974280149,
+      "tag": "0007_ligas_amigos",
+      "breakpoints": true
     }
   ]
 }

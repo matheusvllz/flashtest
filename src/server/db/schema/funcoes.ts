@@ -24,17 +24,30 @@ export const rankingParticipante = pgTable(
     entrouEm: quando("entrou_em").notNull().defaultNow(),
     saiuEm: quando("saiu_em"),
     ocultoPorDenuncia: boolean("oculto_por_denuncia").notNull().default(false),
+    /** Liga (spec 50 §5.5): divisão atual, de 1 (Areia) a 5 (Abismo). */
+    divisao: smallint("divisao").notNull().default(1),
+    /** Liga: semana inteira sem pontos; volta à mesma divisão quando estudar. */
+    pausado: boolean("pausado").notNull().default(false),
+    /**
+     * Funções sociais (liga e amigos) suspensas até a revisão do suporte (denúncia "parece menor de 18", spec 50
+     * §5.6.5). Fica aqui porque esta linha é a identidade social do aluno: o apelido da liga é o mesmo dos amigos.
+     */
+    socialSuspensoEm: quando("social_suspenso_em"),
   },
-  (t) => [uniqueIndex("ranking_apelido_uq").on(sql`lower(${t.apelido})`)],
+  (t) => [uniqueIndex("ranking_apelido_uq").on(sql`lower(${t.apelido})`), check("ranking_divisao_ck", sql`${t.divisao} between 1 and 5`)],
 );
 
-/** Grupo da semana (até 30), formado na primeira entrada do aluno na semana. */
+/**
+ * Grupo da semana. Ranking da 49: até 30, na ordem de entrada. Liga (spec 50 §5.5): até 20 por divisão, numerados
+ * dentro da divisão.
+ */
 export const rankingGrupo = pgTable(
   "ranking_grupo",
   {
     semana: text("semana").notNull(),
     userId: idUsuario(),
     grupo: integer("grupo").notNull(),
+    divisao: smallint("divisao").notNull().default(1),
   },
   (t) => [primaryKey({ columns: [t.semana, t.userId] }), index("ranking_grupo_idx").on(t.semana, t.grupo)],
 );

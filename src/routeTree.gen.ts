@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AhaRouteImport } from './routes/aha'
+import { Route as AmigosRouteImport } from './routes/amigos'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as CadastroRouteImport } from './routes/cadastro'
 import { Route as CadernoRouteImport } from './routes/caderno'
@@ -58,7 +59,9 @@ import { Route as RedacaoTreinoRouteImport } from './routes/redacao.treino'
 import { Route as SimuladoIndexRouteImport } from './routes/simulado.index'
 import { Route as SimuladoIdRouteImport } from './routes/simulado.$id'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
+import { Route as AmigosConviteCodigoRouteImport } from './routes/amigos_.convite.$codigo'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiCronLigasRouteImport } from './routes/api/cron/ligas'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
 import { Route as ApiPagamentosWebhookRouteImport } from './routes/api/pagamentos/webhook'
 
@@ -70,6 +73,11 @@ const IndexRoute = IndexRouteImport.update({
 const AhaRoute = AhaRouteImport.update({
   id: '/aha',
   path: '/aha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AmigosRoute = AmigosRouteImport.update({
+  id: '/amigos',
+  path: '/amigos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppRoute = AppRouteImport.update({
@@ -307,9 +315,19 @@ const VideoIdRoute = VideoIdRouteImport.update({
   path: '/video/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AmigosConviteCodigoRoute = AmigosConviteCodigoRouteImport.update({
+  id: '/amigos_/convite/$codigo',
+  path: '/amigos/convite/$codigo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCronLigasRoute = ApiCronLigasRouteImport.update({
+  id: '/api/cron/ligas',
+  path: '/api/cron/ligas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiCronRetencaoRoute = ApiCronRetencaoRouteImport.update({
@@ -326,6 +344,7 @@ const ApiPagamentosWebhookRoute = ApiPagamentosWebhookRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
+  '/amigos': typeof AmigosRoute
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
   '/caderno': typeof CadernoRoute
@@ -373,13 +392,16 @@ export interface FileRoutesByFullPath {
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/simulado/': typeof SimuladoIndexRoute
+  '/amigos/convite/$codigo': typeof AmigosConviteCodigoRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
+  '/amigos': typeof AmigosRoute
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
   '/caderno': typeof CadernoRoute
@@ -427,7 +449,9 @@ export interface FileRoutesByTo {
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
   '/simulado': typeof SimuladoIndexRoute
+  '/amigos/convite/$codigo': typeof AmigosConviteCodigoRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
@@ -435,6 +459,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aha': typeof AhaRoute
+  '/amigos': typeof AmigosRoute
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
   '/caderno': typeof CadernoRoute
@@ -482,7 +507,9 @@ export interface FileRoutesById {
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/simulado/': typeof SimuladoIndexRoute
+  '/amigos_/convite/$codigo': typeof AmigosConviteCodigoRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
@@ -491,6 +518,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aha'
+    | '/amigos'
     | '/app'
     | '/cadastro'
     | '/caderno'
@@ -538,13 +566,16 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao/'
     | '/simulado/'
+    | '/amigos/convite/$codigo'
     | '/api/auth/$'
+    | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/aha'
+    | '/amigos'
     | '/app'
     | '/cadastro'
     | '/caderno'
@@ -592,13 +623,16 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao'
     | '/simulado'
+    | '/amigos/convite/$codigo'
     | '/api/auth/$'
+    | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
   id:
     | '__root__'
     | '/'
     | '/aha'
+    | '/amigos'
     | '/app'
     | '/cadastro'
     | '/caderno'
@@ -646,7 +680,9 @@ export interface FileRouteTypes {
     | '/video/$id'
     | '/redacao/'
     | '/simulado/'
+    | '/amigos_/convite/$codigo'
     | '/api/auth/$'
+    | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
   fileRoutesById: FileRoutesById
@@ -654,6 +690,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AhaRoute: typeof AhaRoute
+  AmigosRoute: typeof AmigosRoute
   AppRoute: typeof AppRoute
   CadastroRoute: typeof CadastroRoute
   CadernoRoute: typeof CadernoRoute
@@ -701,7 +738,9 @@ export interface RootRouteChildren {
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
   SimuladoIndexRoute: typeof SimuladoIndexRoute
+  AmigosConviteCodigoRoute: typeof AmigosConviteCodigoRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiCronLigasRoute: typeof ApiCronLigasRoute
   ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
   ApiPagamentosWebhookRoute: typeof ApiPagamentosWebhookRoute
 }
@@ -720,6 +759,13 @@ declare module '@tanstack/react-router' {
       path: '/aha'
       fullPath: '/aha'
       preLoaderRoute: typeof AhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/amigos': {
+      id: '/amigos'
+      path: '/amigos'
+      fullPath: '/amigos'
+      preLoaderRoute: typeof AmigosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/app': {
@@ -1051,11 +1097,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VideoIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/amigos_/convite/$codigo': {
+      id: '/amigos_/convite/$codigo'
+      path: '/amigos/convite/$codigo'
+      fullPath: '/amigos/convite/$codigo'
+      preLoaderRoute: typeof AmigosConviteCodigoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
       fullPath: '/api/auth/$'
       preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/cron/ligas': {
+      id: '/api/cron/ligas'
+      path: '/api/cron/ligas'
+      fullPath: '/api/cron/ligas'
+      preLoaderRoute: typeof ApiCronLigasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/cron/retencao': {
@@ -1078,6 +1138,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AhaRoute: AhaRoute,
+  AmigosRoute: AmigosRoute,
   AppRoute: AppRoute,
   CadastroRoute: CadastroRoute,
   CadernoRoute: CadernoRoute,
@@ -1125,7 +1186,9 @@ const rootRouteChildren: RootRouteChildren = {
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
   SimuladoIndexRoute: SimuladoIndexRoute,
+  AmigosConviteCodigoRoute: AmigosConviteCodigoRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiCronLigasRoute: ApiCronLigasRoute,
   ApiCronRetencaoRoute: ApiCronRetencaoRoute,
   ApiPagamentosWebhookRoute: ApiPagamentosWebhookRoute,
 }
