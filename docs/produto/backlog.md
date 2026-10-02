@@ -119,7 +119,7 @@ Pendências reais do Foca, consolidadas dos registros de execução e dos achado
 | B-166 | Tarefas longas na landing (~850 ms somados com CPU 4×) na hidratação | 48 `desempenho.md` | P2 | técnico | — | agente | aberto |
 | B-167 | Itens do caderno de erros entrarem na jornada como revisão escolhida pelo motor (hoje a revisão é uma sessão própria em `/caderno`) — pede contrato em `contratos.md` | 49 DV49-10 | P2 | produto | — | agente (com spec) | aberto |
 | B-168 | Simulado cronometrado do Pro: liberar quando houver itens revisados suficientes por área (45 por área, 90 por dia de prova) | 49 DV49-09, T-49.9.5 | P1 | conteúdo | B-040, B-041 | revisão externa + agente | aberto |
-| B-169 | Corretor de redação: rubrica revisada por professor externo antes de ligar `CORRETOR_HABILITADO`; depois, foto com transcrição conferida | 49 DV49-08, T-49.9.7 | P1 | conteúdo | B-040 | proprietário (contratação) + agente | aberto |
+| B-169 | Corretor de redação: rubrica revisada por professor externo antes de ligar `CORRETOR_HABILITADO`; depois, foto com transcrição conferida | 49 DV49-08, T-49.9.7 | P1 | conteúdo | B-040 | proprietário (contratação) + agente | aberto **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2. |
 | B-170 | Teste real do estudo sem internet no preview (aparelho em modo avião depois de "Baixar a semana") | 49 DV49-11, T-49.9.3 | P2 | produto | — | proprietário | aberto |
 
 ## Segurança e IA

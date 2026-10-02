@@ -156,4 +156,4 @@ O plano `46` §H.1 registra que a Lei 15.211/2025 está em vigor desde 17/03/202
 | Revisão e desligamento de IA não essencial (art. 17 §4 VIII) | Foca IA só sob demanda (20 §4.2) | Opção de desligar (prevista em 46 §E.7) |
 | Comparação social | Ranking mock, identificado como demonstração | Se o ranking deve sair ou ficar desligado para menores |
 
-Notificações, loja, moeda e recompensa aleatória não existem hoje (§1–§2); qualquer proposta de adicioná-las passa por esta avaliação antes.
+Notificações, loja, moeda e recompensa aleatória não existem hoje (§1–§2); qualquer proposta de adicioná-las passa por esta avaliação antes. **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2 e §0.3.

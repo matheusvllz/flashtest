@@ -3,7 +3,7 @@ estado: aprovado
 atualizado: 2026-09-29
 id: 34
 decidido-por: proprietário (23/09/2026)
-substituido-por: null
+substituido-por: "parcialmente pela 0008 (imagens, outras bancas, APIs comunitárias)"
 ---
 
 > **Decisão 0002 (antigo documento 34).** Mantida com o texto original abaixo. Contexto da iniciativa: [../historico/iniciativas/30-31-32-aprendizagem-adaptativa/resumo.md](../historico/iniciativas/30-31-32-aprendizagem-adaptativa/resumo.md).
@@ -28,7 +28,7 @@ Essa é uma **decisão de negócio do dono do produto**, não um parecer jurídi
 | Texto de apoio de terceiros DENTRO de uma questão do ENEM (ex.: trecho de reportagem citado no enunciado) | **Aprovado como citação**, com a fonte original citada quando o Inep a informa no material oficial. |
 | Imagem, charge, gráfico ou mapa de terceiro (mesmo dentro de uma questão do ENEM) | **Não aprovado.** Continua fora — nenhuma imagem de terceiro entra no app, nem em item oficial. Um item cuja resolução dependa de imagem/charge/gráfico fica de fora da importação, registrado como "requer imagem — não importado". |
 | Provas de outros vestibulares (Fuvest, Unicamp, Cebraspe/PAS, etc.) | **Não aprovado.** A decisão do usuário cobriu só o ENEM — não se estende a bancas/fundações que não têm o mesmo argumento de ato oficial. Itens desses vestibulares continuam sendo só autorais "no estilo", sem alegar origem. |
-| APIs comunitárias de questões (ex.: enem.dev) | Fora de escopo desta decisão — licença/disponibilidade incertas, não usar como fonte. |
+| APIs comunitárias de questões (ex.: enem.dev) | Fora de escopo desta decisão — licença/disponibilidade incertas, não usar como fonte. **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2. |
 
 ## Requisito não-negociável: atribuição visível
 

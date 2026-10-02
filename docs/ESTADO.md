@@ -23,7 +23,14 @@ canonico-de: [estado atual, próxima tarefa]
 - **Bloqueios do proprietário:** T-49.1.2 (correção da rolagem) espera o teste no Instagram (iPhone e Android, link `https://www.focaedu.com/?diagnostico-rolagem=1`); pagamento de teste na página do Asaas (reCAPTCHA) e chave Pix no sandbox (tutorial 1.4); AdSense em análise (o Ad Manager só abre depois); chave da OpenAI; revisão jurídica das cláusulas (`docs/legal/rascunho-clausulas-49.md`); rubrica do corretor (B-169); CNPJ e Vercel Pro antes de vender de verdade; e-mail de suporte (passo 7); publicar o login com Google (passo 4.1).
 - **Publicado em 02/10 (`main` = `9c96afa`):** E1–E3, com as migrações 0001–0003 aplicadas em produção antes do deploy. Em produção as funções novas estão **desligadas por configuração** (nenhuma variável de venda, vidas, anúncios, ranking ou corretor): ninguém assina e nada novo é coletado.
 - **Próximo passo:** ligar a venda e as funções em produção, uma por vez e só com pedido do proprietário, depois dos bloqueios abaixo; trocar os textos legais com a revisão jurídica; T-49.1.2 quando chegarem os diagnósticos da rolagem.
-- **Produção:** `main` = `9c96afa` (02/10): spec 49 E1–E3 com as funções novas desligadas por configuração. Contas com Google e e-mail; Foca IA em fallback local.
+- **Produção:** `origin/main` = `ac9bf85` (02/10; o código publicado é o de `9c96afa`, o último commit é só documentação): spec 49 E1–E3 com as funções novas desligadas por configuração. (Trechos acima com "nada disso está na `main`" e "`main` = `9c96afa`" são de momentos anteriores: DV50-01.) Contas com Google e e-mail; Foca IA em fallback local.
+
+### Em execução (nova)
+
+**50 — Lição viva, Pérolas, ofensiva, missões, Foca animada, simulado, redação por tarefas, social 18+, lembretes, navegação e som no celular.** **Aprovada em 02/10/2026** ("Aprovo a Spec"; "Pode fazer todas as entregas"), com §21 respondido (imagens: risco aceito; rótulo "Foca IA"; vestibulares: só INEP por enquanto). Em execução na branch local `spec-50` (sem commit, push ou deploy sem pedido).
+- Spec: [specs/50-gamificacao-e-pratica/spec.md](specs/50-gamificacao-e-pratica/spec.md) — decisões D50-01…16, entregas E1–E9, matriz de cobertura dos 31 itens (§22), decisões que ainda dependem do dono (§21)
+- Tarefas: [specs/50-gamificacao-e-pratica/tarefas.md](specs/50-gamificacao-e-pratica/tarefas.md) · Registro: [specs/50-gamificacao-e-pratica/registro.md](specs/50-gamificacao-e-pratica/registro.md) (divergências DV50-01…10)
+- **Próximo passo:** T-50.0.2…T-50.0.5 e a E1 (som e lição), na ordem de `tarefas.md`.
 
 ### Iniciativa anterior
 

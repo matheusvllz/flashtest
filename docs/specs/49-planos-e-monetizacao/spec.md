@@ -204,6 +204,8 @@ Tom: errar continua **sem punição de tom** (R-MASC-2 segue valendo): a Foca em
 
 ### 5.6 Ranking (só maiores de 18)
 
+> **Revista pela 50 (aprovada em 02/10/2026):** ver [50 §0.2](../50-gamificacao-e-pratica/spec.md) — ligas com divisões e ofensiva com amigos (18+), simulado com questões oficiais do INEP e corretor liberado por validação proporcional; vale quando a entrega da 50 que a implementa for publicada.
+
 | Regra | Definição |
 |---|---|
 | Quem entra | Conta com idade ≥ 18 pelo ano de nascimento **travado** (mudar só pelo suporte). Quem faz 18 neste ano confirma dia e mês na entrada; o servidor grava só `maior_desde` (data em que a maioridade foi confirmada), nunca a data de nascimento |
@@ -264,6 +266,8 @@ Base externa: a lei não exige verificação forte de idade para um ranking (ECA
 - **Pré-condição de conteúdo:** cada área precisa de pelo menos 12 itens elegíveis e revisados no banco de nivelamento (`placement-pool.ts`). A T-49.4.1 conta o banco antes; se faltar, a tarefa para e registra a lacuna (B-040/B-045), sem inventar questão nem usar item não revisado.
 
 ### 5.9 Funções pagas (D49-07)
+
+> **Revista pela 50 (aprovada em 02/10/2026):** ver [50 §0.2](../50-gamificacao-e-pratica/spec.md) — ligas com divisões e ofensiva com amigos (18+), simulado com questões oficiais do INEP e corretor liberado por validação proporcional; vale quando a entrega da 50 que a implementa for publicada.
 
 | # | Função | Plano | Comportamento | Custo de IA |
 |---|---|---|---|---|

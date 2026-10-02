@@ -27,3 +27,7 @@ Quando a marca aparece **só como ícone** (favicon, ícone de app, PWA, atalho,
 Os 8 PNGs oficiais (1254×1254, fundo transparente), com os nomes oficiais: `acolhedora`, `entediada`, `surpresa`, `desapontada`, `empolgada`, `orgulhosa`, `cobrando`, `neutra`. Registro tipado em `src/lib/brand/foca-expressions.ts` (fallback `neutra`); quando usar cada uma: `docs/historico/fundacao/15-mascote-e-voz.md` §5. Derivados: `public/branding/foca/expressoes/<nome>-{96,320}.{webp,png}`.
 
 Recorte quadrado: calculado pelo gerador **por arquivo**, a partir da caixa de alfa. Regras: nunca esticar, rotacionar ou recolorir (`docs/design/sistema-rabisco.md` §8.2).
+
+## Corpo inteiro (`corpo/`)
+
+`foca-corpo-original.jpg` — Foca de corpo inteiro, de frente, colorida (1254×1254, JPEG sem transparência, fundo preto). Anexada pelo proprietário na conversa de 02/10/2026 e salva sem alteração (SHA-256 `5a3c337b5a5412fc619339cb4ade3cf2583bc80a54bf9497301b35c8ca29323a`). É a **referência** para a versão vetorial em camadas usada pelo `FocaMark` com `forma="corpo"` (spec 50 §5.8, T-50.3.1); nunca é servida diretamente. A cabeça, o logo e o ícone institucional continuam vindo dos arquivos acima.
