@@ -77,6 +77,18 @@
   --color-on-success: var(--on-success);
   --color-on-error: var(--on-error);
   --color-on-alert: var(--on-alert);
+  /* Pérolas, a moeda da loja (spec 50 §5.3.6): corpo e brilho do ícone `IconePerola`. */
+  --color-perola: var(--perola);
+  --color-perola-brilho: var(--perola-brilho);
+  /* Foca de corpo inteiro (spec 50 §5.8): cores da arte original, iguais nos dois temas. */
+  --color-foca-pele: var(--foca-pele);
+  --color-foca-pele-escura: var(--foca-pele-escura);
+  --color-foca-barriga: var(--foca-barriga);
+  --color-foca-tinta: var(--foca-tinta);
+  --color-foca-lingua: var(--foca-lingua);
+  --color-foca-branco: var(--foca-branco);
+  --color-foca-roupa-azul: var(--foca-roupa-azul);
+  --color-foca-roupa-ouro: var(--foca-roupa-ouro);
 
   --radius-sm: 10px;
   --radius-md: 6px;
@@ -162,6 +174,20 @@
   --on-success: #ffffff; /* sobre --success-texto (o verde de texto), não sobre --success (3,4:1) */
   --on-error: #ffffff;
   --on-alert: #3a3a3c; /* = --abismo do claro */
+  /* Pérola (spec 50 §5.3.6): lilás-pérola, 3,7:1 sobre --neve e 4,1:1 sobre --cards (ícone ≥ 3:1).
+     O brilho fica dentro da pérola (4,1:1 sobre ela). */
+  --perola: #7f72c9;
+  --perola-brilho: #ffffff;
+  /* Foca de corpo inteiro (spec 50 §5.8): cores tiradas da arte original (foca-corpo-original.jpg).
+     Mesmos valores no .dark: a mascote não muda de cor com o tema (a pele dá 6:1 sobre o fundo escuro). */
+  --foca-pele: #94959a;
+  --foca-pele-escura: #5f5e5c;
+  --foca-barriga: #c7c7c9;
+  --foca-tinta: #27231f;
+  --foca-lingua: #fa3838;
+  --foca-branco: #fdfdfd;
+  --foca-roupa-azul: #2e6bff; /* = caneta do claro, fixo: roupa não muda com o tema */
+  --foca-roupa-ouro: #d9a017; /* = marca-texto do claro: roupa é recompensa */
 
   --background: #f6f5f1;
   --foreground: #26262a;
@@ -254,6 +280,18 @@
   --on-success: #1c1b18;
   --on-error: #1c1b18;
   --on-alert: #1c1b18;
+  /* Pérola no escuro: 8,0:1 sobre o fundo, 7,2:1 sobre o cartão. */
+  --perola: #b3a8f0;
+  --perola-brilho: #ffffff;
+  /* Foca de corpo inteiro: mesmas cores do claro (decisão da spec 50 §5.8; sem contorno extra). */
+  --foca-pele: #94959a;
+  --foca-pele-escura: #5f5e5c;
+  --foca-barriga: #c7c7c9;
+  --foca-tinta: #27231f;
+  --foca-lingua: #fa3838;
+  --foca-branco: #fdfdfd;
+  --foca-roupa-azul: #2e6bff;
+  --foca-roupa-ouro: #d9a017;
 
   --background: #1c1b18;
   --foreground: #f3f1ec;
@@ -1112,3 +1150,6 @@
     }
   }
 }
+
+/* spec 50 — Foca corpo: movimento da Foca de corpo inteiro (§5.8.3). */
+@import "./styles/foca-corpo.css";

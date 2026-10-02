@@ -94,6 +94,9 @@ const PARES: Par[] = [
   { nome: "success / cards", onde: "ícone de acerto", fg: (t) => t.success, bg: (t) => t.cards, min: G },
   { nome: "error / cards (ícone)", onde: "ícone de erro", fg: (t) => t.error, bg: (t) => t.cards, min: G },
   { nome: "nevoa / gelo", onde: "ícone de nó bloqueado", fg: (t) => t.nevoa, bg: (t) => t.gelo, min: G },
+  // ---- Pérolas (spec 50 §5.3.6, T-50.4.5): o corpo do ícone ≥ 3:1 sobre a página e o cartão, nos dois temas
+  { nome: "perola / neve", onde: "ícone das Pérolas sobre a página", fg: (t) => t.perola, bg: (t) => t.neve, min: G },
+  { nome: "perola / cards", onde: "ícone das Pérolas sobre card e barra superior", fg: (t) => t.perola, bg: (t) => t.cards, min: G },
 ];
 
 describe("extração dos tokens de styles.css", () => {
