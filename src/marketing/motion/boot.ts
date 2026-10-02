@@ -32,6 +32,15 @@ export function bootMotion(): () => void {
   else window.addEventListener("load", ligarFontes, { once: true });
 
   window.__lpMotionReady = true;
+  // Diagnóstico da rolagem (spec 49 T-49.1.1, DV49-02): só com o parâmetro, num módulo fora de src/marketing (é ferramenta
+  // de depuração: ouve a rolagem e usa estilo próprio, o que as regras do código da landing proíbem de propósito). Vale também no domínio
+  // de produção: o teste é no navegador do Instagram, e o preview exigiria mandar o segredo da Vercel pelo app.
+  let pararDiagnostico: (() => void) | null = null;
+  if (new URLSearchParams(location.search).has("diagnostico-rolagem")) {
+    void import("@/lib/diagnostico-rolagem").then((m) => {
+      if (vivo) pararDiagnostico = m.iniciarDiagnostico();
+    });
+  }
   if (html.classList.contains("lp-motion")) {
     startRevealFallback();
     const carregar = () => {
@@ -57,6 +66,7 @@ export function bootMotion(): () => void {
 
   return () => {
     vivo = false;
+    pararDiagnostico?.();
     window.removeEventListener("load", ligarFontes);
     stopRevealFallback();
     dispose?.();

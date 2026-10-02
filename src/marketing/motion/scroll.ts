@@ -45,9 +45,15 @@ function piscar(tl: gsap.core.Timeline, troca: HTMLElement | null, pos: number, 
 }
 const $$ = <T extends Element = HTMLElement>(sel: string, raiz: ParentNode = document) => Array.from(raiz.querySelectorAll<T>(sel));
 
+// Avisos para o diagnóstico de rolagem (spec 49 T-49.1.1): cada recálculo vira um evento da janela, sem custo fora dele.
+const avisarRefresh = () => window.dispatchEvent(new Event("lp:st-refresh"));
+const avisarRefreshInit = () => window.dispatchEvent(new Event("lp:st-refresh-init"));
+
 export function initScroll(): void {
   if (mm) return;
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.addEventListener("refresh", avisarRefresh);
+  ScrollTrigger.addEventListener("refreshInit", avisarRefreshInit);
   // A barra de endereço do celular muda a altura da tela a cada gesto: não recalcular por isso.
   ScrollTrigger.config({ ignoreMobileResize: true });
   stopRevealFallback(); // daqui em diante o ScrollTrigger cuida das revelações
@@ -323,6 +329,8 @@ function recomeco(): void {
 
 /** Desliga tudo (usado nos testes e em hot reload). */
 export function disposeScroll(): void {
+  ScrollTrigger.removeEventListener("refresh", avisarRefresh);
+  ScrollTrigger.removeEventListener("refreshInit", avisarRefreshInit);
   mm?.revert();
   mm = null;
 }
