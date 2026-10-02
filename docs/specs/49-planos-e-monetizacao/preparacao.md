@@ -76,7 +76,13 @@ O webhook é o Asaas avisando o Foca que um pagamento foi aprovado. O token prov
 2. Você vai precisar desse token no Passo 5. Para vê-lo nessa hora: `notepad .env.asaas-sandbox`.
 3. **Nunca use a chave de API como token.**
 
-**O que entregar ao agente:** só a frase "arquivo do Asaas pronto".
+### 1.4 Criar uma chave Pix no sandbox
+Sem uma chave Pix cadastrada, o Asaas recusa qualquer cobrança por Pix ("Para gerar cobranças com Pix é necessário criar uma chave Pix no Asaas", visto em 02/10/2026).
+1. No sandbox, menu **Pix** → **Minhas chaves** (ou "Chaves Pix") → **Cadastrar chave**.
+2. Escolha **Chave aleatória** (não expõe CPF, e-mail nem telefone) e confirme.
+3. Pronto: não precisa entregar nada ao agente.
+
+**O que entregar ao agente:** só a frase "arquivo do Asaas pronto" (e "chave Pix criada" depois do 1.4).
 **Como saber que deu certo:** o arquivo tem três linhas: `ASAAS_API_URL`, `ASAAS_API_KEY` e `ASAAS_WEBHOOK_TOKEN`.
 **Se der errado:** se o cadastro pedir algo que você não tem (como CNPJ), pare e avise o agente; não invente dado.
 

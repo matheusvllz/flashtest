@@ -413,7 +413,7 @@ Store: migração aditiva em `src/lib/state-migrations.ts` (cache de `plano`, `v
 - **NOVO** `src/lib/anuncios/` (adaptador `gam` e `falso`, carregamento sob demanda do GPT).
 - `src/lib/store.ts`: cache de `plano`, `vidas` e consentimento (aplicados do agregado do servidor), bloqueio local de resposta sem vida, nivelamento de 30.
 - **NOVO** `public/sw.js` + registro em `src/lib/offline/` (só Basic e Pro).
-- Landing: `src/marketing/motion/scroll.ts`, `marketing.css`, `boot.ts` conforme a correção que os dados apontarem (F1); **NOVO** `src/marketing/motion/diagnostico.ts` (só com o parâmetro, só em preview).
+- Landing: `src/marketing/motion/scroll.ts`, `marketing.css`, `boot.ts` conforme a correção que os dados apontarem (F1); **NOVO** `src/lib/diagnostico-rolagem.ts` (só com o parâmetro, só em preview).
 
 ## 12. Modelo de dados / migração
 
