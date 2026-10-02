@@ -325,6 +325,19 @@ Escrito pelo subagente da E7 contra o [COPY.md](../COPY.md) (sem skill de escrit
 | `COPY.pulo.comecePor` / `comecePorCorpo` / `valeRevisar` | "Comece por {lição}" · "O teste mostrou o que vale ver antes de seguir. As lições do caminho continuam abertas." · "Vale revisar" | Resultado ao não passar | idem |
 | `COPY.pulo.motivos.*` | "Você já fez o teste deste capítulo hoje. Amanhã dá para tentar de novo." · "Você já fez os testes de hoje. Amanhã tem mais." | Limites do servidor | `tests/unit/servidor/pulo.test.ts` |
 
+### 2.19 Tarefas de escrita e corretor v2 (docs/specs/50-gamificacao-e-pratica E6, 02/10/2026)
+
+Escrito pelo subagente da E6 contra o [COPY.md](../COPY.md) e o [02](02-voz-e-tom.md) (sem skill de escrita). Os trechos dados, os textos-modelo e os temas das tarefas são **conteúdo pedagógico autoral** (fora das skills de copy, [05](05-conteudo-pedagogico.md)) e esperam a revisão factual do dono. Rótulo fixo do corretor: "Estimativa da Foca IA, não é a nota oficial" (§21). **Revisão humana de tom pendente.**
+
+| Chave | Texto (amostra) | Uso | Revisão |
+|---|---|---|---|
+| `COPY.escrita.no*` / `enviadaChip` | "Escreva" · "Enviada" | Nós "Escreva" no hub de Redação | `tests/e2e/escrita.spec.ts` |
+| `COPY.escrita.*` (tela) | "Seu texto" · "Rascunho salvo neste aparelho." · "Enviar" · "Sem conexão: seu rascunho continua salvo. Envie quando a internet voltar." | `/redacao/escreva/$tarefaId` | idem |
+| `COPY.escrita.checagem.*` (17) | "Checagem automática: olha a estrutura, não dá nota" e os achados (tamanho, parágrafos, linhas estimadas, conectivos, repetição, 5 elementos da proposta) | Resultado do envio, todos os planos | `tests/unit/escrita.test.ts` |
+| `COPY.escrita.modelo*` / `comentarioIa*` / `iaNoPro` | Texto-modelo comentado; comentário da Foca IA só no Pro | Depois de enviar | `tests/unit/servidor/escrita.test.ts` |
+| `COPY.escrita.corretor.*` | "Estimativa da Foca IA, não é a nota oficial" · "Como estimamos" · 4 limites · "Sem estimativa: o texto parece {motivo}. No ENEM, isso pode zerar a redação." · "Ajudou" · "Achei estranha" | Tela do corretor (desligado em produção) | `tests/unit/redacao-ia.test.ts` |
+| `voz.escrita` (3 falas) | — | Fala da Foca ao enviar | `tests/unit/brand-voice.test.ts` |
+
 ## 3. Pendente — inventariado, não revisado
 
 Levantamento por arquivo (não por string individual — a granularidade da seção 2 é o padrão a aplicar quando cada um destes for revisado). Nenhum destes foi confirmado livre de tom incompatível; tratar como não verificado.

@@ -571,7 +571,7 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 ## Fase 11 — Redação por tarefas e corretor (E6)
 
 ### T-50.11.1 — Tipo `escrita` e nós "Escreva" (M)
-- **Estado:** em andamento (subagente)
+- **Estado:** concluida (02/10/2026; evidência no registro)
 - **Resultado:** tipo novo (R-ESC-9), validador, nós nas três trilhas, rota `/redacao/escreva/$tarefaId`, rascunho no store, envio.
 - **Depende:** T-50.2.8
 - **Arquivos:** `src/lib/lessons/types.ts`, `src/content/trilhas/`, `src/routes/redacao.escreva.$tarefaId.tsx` (**NOVO**), `src/components/redacao/TelaDaTarefa.tsx` (**NOVO**), `src/server/redacao/redacao.ts`, `drizzle/0007_*.sql`
@@ -580,14 +580,14 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 - **Verificação:** `bun test tests/unit; bunx playwright test redacao`
 
 ### T-50.11.2 — Trechos e temas autorais (M)
-- **Estado:** em andamento (subagente)
+- **Estado:** concluida (02/10/2026; revisão factual e pedagógica do dono pendente, DV50-31)
 - **Resultado:** 12 tarefas com trechos dados e 20 temas de treino pelo `content-pipeline/`, rotulados.
 - **Depende:** T-50.11.1
 - **Skills:** nenhuma de copy (conteúdo pedagógico)
 - **Aceite:** revisão factual; rótulo "não é tema oficial".
 
 ### T-50.11.3 — Checagem automática ampliada e texto-modelo (M)
-- **Estado:** em andamento (subagente)
+- **Estado:** concluida (02/10/2026; evidência no registro)
 - **Resultado:** `comentarioLocal` para trecho e completo (§5.10.2), texto-modelo comentado por tarefa.
 - **Depende:** T-50.11.2
 - **Arquivos:** `src/lib/redacao-ia.ts`, `src/lib/copy.ts`
@@ -596,7 +596,7 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 - **Verificação:** `bun test tests/unit`
 
 ### T-50.11.4 — Comentário IA no trecho (Pro) (P)
-- **Estado:** em andamento (subagente)
+- **Estado:** concluida (02/10/2026; evidência no registro)
 - **Resultado:** reusa o treino (1 mensagem da cota), para os nós "Escreva".
 - **Depende:** T-50.11.3
 - **Skills:** revisão L2 (prompt)
@@ -604,7 +604,7 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 - **Verificação:** `bun test tests/unit/servidor`
 
 ### T-50.11.5 — Rubrica v2 e "sem estimativa" (M)
-- **Estado:** em andamento (subagente)
+- **Estado:** concluida (02/10/2026; evidência no registro)
 - **Resultado:** `SISTEMA_CORRETOR` v2 com níveis, saída com "o que fazer para subir" e `situacao`; checagem local de 7 linhas antes da IA; teste de injeção.
 - **Depende:** T-50.11.3
 - **Arquivos:** `src/lib/redacao-ia.ts`, `src/server/redacao/redacao.ts`, `src/components/redacao/TelaDoCorretor.tsx`
@@ -613,7 +613,7 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 - **Verificação:** `bun test tests/unit`
 
 ### T-50.11.6 — Avaliação técnica do corretor (M)
-- **Estado:** em andamento (subagente)
+- **Estado:** bloqueada (ferramenta pronta; falta a chave da OpenAI e os conjuntos A/B/C)
 - **Resultado:** `scripts/redacao/avaliar-corretor.ts` e os conjuntos A/B/C; relatório com as metas de §5.10.5 no registro.
 - **Depende:** T-50.11.5
 - **Externo:** chave da OpenAI; textos do conjunto C pelo dono
@@ -621,7 +621,7 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 - **Verificação:** `bun scripts/redacao/avaliar-corretor.ts --rodadas 3`
 
 ### T-50.11.7 — Revisão do dono, botões e liberação (P)
-- **Estado:** em andamento (subagente)
+- **Estado:** bloqueada (botões prontos; falta a revisão do dono das 10 estimativas e o pedido para ligar)
 - **Resultado:** checklist das 10 estimativas registrada; "Ajudou"/"Achei estranha"; rótulo final (§21 item 1); corretor sai de "em breve" quando ligado.
 - **Depende:** T-50.11.6
 - **Externo:** proprietário; ligar em produção só com pedido
@@ -633,16 +633,16 @@ Skills (pela [matriz](../../ai/SKILL-ROUTING.md) §2): backend → `foca-backend
 ## Fase 12 — Pular para cá (E7)
 
 ### T-50.12.1 — Regra e composição do teste (M)
-- **Estado:** em andamento (subagente) · **Depende:** T-50.2.8 · **Arquivos:** `src/server/trilha/pulo.ts` (**NOVO**), `src/lib/learning/selectors.ts` · **Skills:** `foca-backend`, `superpowers:test-driven-development` · **Aceite:** 1 item por habilidade, inéditos, 6–10 · **Verificação:** `bun test tests/unit`
+- **Estado:** concluida (02/10/2026; evidência no registro) · **Depende:** T-50.2.8 · **Arquivos:** `src/server/trilha/pulo.ts` (**NOVO**), `src/lib/learning/selectors.ts` · **Skills:** `foca-backend`, `superpowers:test-driven-development` · **Aceite:** 1 item por habilidade, inéditos, 6–10 · **Verificação:** `bun test tests/unit`
 
 ### T-50.12.2 — Efeitos ao passar e ao não passar (M)
-- **Estado:** em andamento (subagente) · **Depende:** T-50.12.1 · **Resultado:** conclusão `pulo`, domínio só por evidência, checagem agendada, XP 20 uma vez, bloco; migração 0008 · **Aceite:** RF-17 · **Verificação:** `bun test tests/unit/servidor; bun run test:neon`
+- **Estado:** concluida (02/10/2026; evidência no registro) · **Depende:** T-50.12.1 · **Resultado:** conclusão `pulo`, domínio só por evidência, checagem agendada, XP 20 uma vez, bloco; migração 0008 · **Aceite:** RF-17 · **Verificação:** `bun test tests/unit/servidor; bun run test:neon`
 
 ### T-50.12.3 — UI no nó e resultado (M)
-- **Estado:** em andamento (subagente) · **Depende:** T-50.12.2 · **Skills:** `frontend-design`, `better-writing` · **Aceite:** sem texto de fracasso; limites de 1/capítulo/dia e 3/dia · **Verificação:** `bunx playwright test trilha`
+- **Estado:** concluida (02/10/2026; evidência no registro) · **Depende:** T-50.12.2 · **Skills:** `frontend-design`, `better-writing` · **Aceite:** sem texto de fracasso; limites de 1/capítulo/dia e 3/dia · **Verificação:** `bunx playwright test trilha`
 
 ### T-50.12.4 — Fechamento da E7 (P)
-- **Estado:** em andamento (subagente) · **Depende:** T-50.12.3 · **Resultado:** contrato novo em `contratos.md` (C-XP e trilha), gates, `spec-verifier` · **Verificação:** gate de fechamento de entrega
+- **Estado:** concluida (02/10/2026; evidência no registro) · **Depende:** T-50.12.3 · **Resultado:** contrato novo em `contratos.md` (C-XP e trilha), gates, `spec-verifier` · **Verificação:** gate de fechamento de entrega
 
 ---
 
