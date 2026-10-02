@@ -9,7 +9,8 @@ import { ProgressBar } from "@/components/ds/ProgressBar";
 import { CourseStep } from "@/components/onboarding/CourseStep";
 import { FocusSheet } from "@/components/learning/journey/FocusSheet";
 import { activeFocusNames } from "@/components/learning/journey/FocusLine";
-import { setAudioEnabled, unlockAudioFromGesture } from "@/lib/audio/engine";
+import { setAudioEnabled, setSomNoSilencioso, unlockAudioFromGesture } from "@/lib/audio/engine";
+import { ehIOS } from "@/lib/plataforma";
 import { authClient } from "@/lib/auth-client";
 import { COPY } from "@/lib/copy";
 import { sessao } from "@/lib/sessao";
@@ -45,6 +46,9 @@ function Profile() {
   const p = s.prefs;
   const [focusSheetOpen, setFocusSheetOpen] = useState(false);
   const [cursoSheetOpen, setCursoSheetOpen] = useState(false);
+  // Só depois de montar (no servidor não há `navigator`): evita diferença entre o HTML do servidor e o do aparelho.
+  const [iphone, setIphone] = useState(false);
+  useEffect(() => setIphone(ehIOS()), []);
   const nivel = nivelDeXp(s.progress.xp);
   // Com conta, nome e e-mail vêm da conta, não do aparelho (spec 49 D49-13): quem entrou pelo Google nunca preencheu
   // `prefs.name` e via "Sem nome". `null` = ainda carregando.
@@ -160,6 +164,25 @@ function Profile() {
               Vibração {p.haptics ? "ligada" : "desligada"}
             </button>
           </div>
+          {iphone && (
+            <div className="mt-2.5">
+              <button
+                type="button"
+                onClick={() => {
+                  const ligar = !p.somNoSilencioso;
+                  setPrefs({ somNoSilencioso: ligar });
+                  setSomNoSilencioso(ligar);
+                  unlockAudioFromGesture("preferencia");
+                }}
+                aria-pressed={p.somNoSilencioso === true}
+                className={cn("chip w-full justify-center", p.somNoSilencioso && "chip-on")}
+                data-testid="som-no-silencioso"
+              >
+                {COPY.perfil.somNoSilencioso}
+              </button>
+              <p className="mt-1.5 text-xs text-nevoa">{COPY.perfil.somNoSilenciosoAjuda}</p>
+            </div>
+          )}
           <p className="mt-3 ds-label">Tema</p>
           <div className="mt-2.5 grid grid-cols-3 gap-2">
             {(

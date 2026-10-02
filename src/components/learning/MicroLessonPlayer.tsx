@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { useAtalhosDeQuestao } from "@/hooks/useAtalhosDeQuestao";
 import { useNavigate } from "@tanstack/react-router";
 import { PhoneFrame } from "@/components/AppShell";
@@ -19,6 +19,7 @@ import { atribuicaoOficial, itemMetaOf } from "@/content/items";
 import { focusFromExercise } from "@/lib/lessons/tutor-focus";
 import { buildPedagogicalContext } from "@/lib/tutor-context";
 import { useLearningSession } from "@/hooks/useLearningSession";
+import { isAnswerComplete } from "@/lib/learning/session-logic";
 import type { CompleteStrategyResult, UseLearningSessionOptions } from "@/hooks/useLearningSession";
 import { COPY, textoSePersistiu } from "@/lib/copy";
 import { FEATURES } from "@/lib/features";
@@ -36,6 +37,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useMinhasFuncoes } from "@/hooks/useMinhasFuncoes";
 import { AnuncioNaConclusao, FolhaSemVidas, IndicadorVidas } from "@/components/vidas/Vidas";
+import { OfertaDeRevisao } from "@/components/learning/OfertaDeRevisao";
 
 /**
  * Player de microlição, passo a passo (docs/20 §8.1 + docs/25 §9/§12.2/§18
@@ -96,8 +98,16 @@ function MicroLessonPlayerInner({
   const navigate = useNavigate();
   const session = useLearningSession(lesson, { mode, onComplete });
   const [confirmExit, setConfirmExit] = useState(false);
+  const estado = useAppState();
+  // Foca IA aberta com a questão ainda sem resposta (spec 50 §5.1.1): a tentativa vira assistida.
+  const tutorAberto = estado.tutor.open;
+  const marcarAjuda = session.marcarAjuda;
+  useEffect(() => {
+    if (tutorAberto) marcarAjuda();
+  }, [tutorAberto, marcarAjuda]);
+  const comboDoDia = estado.progress.today.date === hojeISO() ? (estado.progress.today.combo?.atual ?? 0) : 0;
   // Funções pagas abertas vêm do servidor (plano + chave de desligamento); a cota da Foca IA também é do servidor.
-  const funcoes = useMinhasFuncoes(!!useAppState().account?.userId && mode !== "checkpoint");
+  const funcoes = useMinhasFuncoes(!!estado.account?.userId && mode !== "checkpoint");
   // Vidas do Free (spec 49 D49-03): lição e prática custam; a checagem não. Sem vida, pausa antes da próxima resposta.
   const custaVidas = mode !== "checkpoint";
   const [semVidas, setSemVidas] = useState(false);
@@ -142,31 +152,34 @@ function MicroLessonPlayerInner({
    * dica"/dúvida livre): o aluno digita, sem auto-envio.
    */
   function askTutor(ensinarDoZero = false, pedido: string | null = null) {
-    if (session.step.kind !== "question") return;
-    const exercise = resolveExercise(session.step.exerciseId);
+    // Na revisão de erros do fim, a questão em foco é a da revisão (spec 50 §5.1.4).
+    const emRevisao = session.step.kind !== "question" && session.passoDaRevisao !== null;
+    const passo = session.step.kind === "question" ? session.step : session.passoDaRevisao;
+    if (!passo) return;
+    const exercise = resolveExercise(passo.exerciseId);
     const chapterTitle = chapter?.title ?? lesson.title;
     const focus = focusFromExercise(
       exercise,
-      session.answer,
+      emRevisao ? session.respostaRevisao : session.answer,
       lesson.id,
       lesson.title,
       chapterTitle,
       session.stepIndex,
-      session.presentedOrder,
-      session.feedback?.correct ?? false,
+      emRevisao ? session.ordemDaRevisao : session.presentedOrder,
+      (emRevisao ? session.feedbackDaRevisao?.correct : session.feedback?.correct) ?? false,
     );
     const nivel3 = ensinarDoZero && FEATURES.explicacaoEmCamadas;
     const mode = nivel3 ? "ensinar-do-zero" : "duvida";
     const pedagogy = FEATURES.contextoPedagogicoIA
-      ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, session.step.exerciseId, mode, hojeISO())
+      ? buildPedagogicalContext(getState().learning, getState().prefs.examTargets, passo.exerciseId, mode, hojeISO())
       : null;
     openTutorWithContext(
       {
         ...focus,
         subjectName: SUBJECT_MAP[lesson.subjectId].name,
         topic: chapter ? `${chapter.title} · ${lesson.title}` : lesson.title,
-        questionId: session.step.exerciseId,
-        itemId: session.step.exerciseId,
+        questionId: passo.exerciseId,
+        itemId: passo.exerciseId,
       },
       { pedagogy, autoSend: pedido ?? (nivel3 ? COPY.tutor.ensinarDoZero : null) },
     );
@@ -202,6 +215,7 @@ function MicroLessonPlayerInner({
           primario={{ label: "Continuar", to: "/trilha", search }}
           secundario={{ label: COPY.licao.refazer, onClick: replay }}
           rodape={<AnuncioNaConclusao />}
+          resumo={session.resumo ?? undefined}
         />
       </PhoneFrame>
     );
@@ -217,11 +231,14 @@ function MicroLessonPlayerInner({
       <div className="flex min-h-screen flex-col bg-neve">
         <LessonHeader
           onExit={() => setConfirmExit(true)}
-          value={session.stepIndex}
-          max={Math.max(1, session.steps.length - 1)}
+          // Spec 50 §5.1.5: a barra conta questões pontuadas, não passos (sem pontuadas, volta aos passos).
+          value={session.pontuadasTotal > 0 ? session.pontuadasRespondidas : session.stepIndex}
+          max={session.pontuadasTotal > 0 ? session.pontuadasTotal : Math.max(1, session.steps.length - 1)}
           counter={counter}
           breadcrumb={breadcrumb}
           extra={custaVidas ? <IndicadorVidas /> : undefined}
+          combo={FEATURES.comboNaLicao && mode !== "checkpoint" ? comboDoDia : 0}
+          raio={session.comboAtual?.marco ? { marco: session.comboAtual.marco, chave: session.stepIndex } : null}
         />
 
         <div
@@ -259,9 +276,45 @@ function MicroLessonPlayerInner({
               explanationLayers={itemMetaOf(step.exerciseId).explanationLayers}
               fonteOficial={atribuicaoOficial(itemMetaOf(step.exerciseId).source)}
               silent={mode === "checkpoint"}
+              combo={session.comboAtual}
             />
           )}
-          {step.kind === "recap" && <RecapStepView lesson={lesson} onComplete={completar} />}
+          {step.kind === "recap" && session.revisao?.fase === "oferta" && (
+            <OfertaDeRevisao
+              quantidade={session.revisao.itens.length}
+              onRever={session.iniciarRevisao}
+              onPular={session.pularRevisao}
+            />
+          )}
+          {step.kind === "recap" && session.revisao?.fase === "revendo" && session.passoDaRevisao && (
+            <QuestionStepView
+              key={`revisao-${session.revisao.indice}`}
+              step={session.passoDaRevisao}
+              exercise={resolveExercise(session.passoDaRevisao.exerciseId)}
+              answer={session.respostaRevisao}
+              onAnswer={session.setRespostaRevisao}
+              presentedOrder={session.ordemDaRevisao}
+              feedback={session.feedbackDaRevisao}
+              canVerify={
+                session.feedbackDaRevisao === null &&
+                session.respostaRevisao !== null &&
+                isAnswerComplete(resolveExercise(session.passoDaRevisao.exerciseId), session.respostaRevisao)
+              }
+              // Revisão não custa vida (spec 50 §5.1.4): sem `comVida`.
+              onVerify={() => session.respostaRevisao !== null && session.responderRevisao(session.respostaRevisao)}
+              onContinue={session.avancarRevisao}
+              onAskTutor={() => askTutor(true)}
+              isLast={session.revisao.indice === session.revisao.itens.length - 1}
+              questionNumber={session.revisao.indice + 1}
+              questionTotal={session.revisao.itens.length}
+              explanationLayers={itemMetaOf(session.passoDaRevisao.exerciseId).explanationLayers}
+              fonteOficial={atribuicaoOficial(itemMetaOf(session.passoDaRevisao.exerciseId).source)}
+              rotulo={COPY.licao.revisaoErros.contador(session.revisao.indice + 1, session.revisao.itens.length)}
+            />
+          )}
+          {step.kind === "recap" && (!session.revisao || session.revisao.fase === "feita" || session.revisao.fase === "pulada") && (
+            <RecapStepView lesson={lesson} onComplete={completar} />
+          )}
         </div>
       </div>
 

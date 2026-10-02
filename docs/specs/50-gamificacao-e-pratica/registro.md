@@ -35,6 +35,10 @@ Ainda não medida: nenhum código mudou nesta etapa. A linha de base é a T-50.0
 | DV50-08 | C-SOM-6 ("primeiro uso com aviso de como desligar") | Contrato | Não conferido no código nesta etapa | Conferir na T-50.1.4 |
 | DV50-09 | R-GAM-4 × `store.ts` (DV-1 conhecida) | Meta inicial de 1 bloco | Padrão `dailyLessons: 3` | Missão "fazer" usa a meta configurada do aluno (§5.4.1); a divergência continua no backlog |
 | DV50-10 | `git status` | — | Alterações locais de outros trabalhos em `.agents/skills/foca-social/`, `.claude/agents/foca-social.md`, `.claude/skills/foca-social/` e `automacao-instagram/` | Preservadas; nada desta etapa as toca |
+| DV50-11 | §5.1.2 (Foca do combo) | Foca cabeça 48 px "no canto da folha" nos marcos 5 e 10 | A folha de feedback já mostrava a Foca (40 px) depois de toda resposta | Nos marcos 5 e 10 a mesma Foca fica `empolgada` e com 48 px; nada de segunda Foca na folha |
+| DV50-12 | §9 / T-50.2.2 (store) | Schema 6 → 7 | `today.combo` e `prefs.somNoSilencioso` são opcionais e entram pela fusão aditiva de `montarEstado` (o balde do dia já zera na virada) | Sem subir `CURRENT_SCHEMA_VERSION`; nada a migrar |
+| DV50-13 | §13.2 (flags) | `PEROLAS_HABILITADO`, `MISSOES_HABILITADO` desligados até o dono ligar | O dono pediu para ver tudo publicado ("quero ver como ficou") | Recursos para todos (Pérolas, missões, mini-simulado, escrita, retrospectiva, pular) **ligados por padrão** e desligáveis sem deploy por `FUNCOES_DESLIGADAS` (`recursoLigado`); ligas, amigos, lembretes e corretor continuam atrás de variável própria, desligados até a revisão jurídica, VAPID e chave da OpenAI |
+| DV50-14 | T-50.3.2, T-50.4.5 (aprovação visual) | Aprovação do dono antes de publicar a Foca de corpo e o ícone | O dono está fora e autorizou publicar ao terminar | Publicados atrás de chave (`focaCorpo`) e registrados como **aguardando avaliação do dono**; ajuste depois, sem bloquear as entregas |
 
 ## Por tarefa
 
@@ -60,3 +64,33 @@ Ainda não medida: nenhum código mudou nesta etapa. A linha de base é a T-50.0
 - Linha de base de testes não medida: nenhum código mudou; fica para a T-50.0.5.
 - Decisão 0008 não escrita: depende da aprovação (T-50.0.3).
 - Arte de corpo inteiro não salva: depende da aprovação (T-50.0.4).
+
+### 02/10/2026 — Aprovação, preparação (F0) e E1 (som no celular e lição viva)
+
+- **T-50.0.1 (aprovação):** "Aprovo a Spec" e "Pode fazer todas as entregas" (02/10). §21: imagens de terceiros — risco aceito; rótulo "Foca IA"; vestibulares — o dono autorizou aceitar o risco ou seguir só com o INEP, e o agente escolheu **só INEP por enquanto** (T-50.9.9 adiada). Depois, o dono autorizou **commit e publicação na `main` ao terminar** ("não vou estar em casa e quero ver como ficou"). Trabalho na branch local `spec-50`.
+- **T-50.0.2:** notas "Revista pela 50" em `regras.md` (R-ESC-6, R-ESC-7, R-ESC-9, R-GAM-2, R-GAM-5, R-PED-2, R-CONT-3, R-CONT-4, R-MASC-1, R-MASC-3), `contratos.md` (C-SOM-1, C-SOM-2, C-SOM-6, C-XP-3, C-XP-4), `mascote.md`, `gamificacao-e-som.md` §8, decisão 0002, backlog B-169 e spec 49 §5.6/§5.9. Nenhum texto vigente apagado.
+- **T-50.0.3:** decisão [0008](../../decisoes/0008-questoes-com-imagem-e-fontes.md) escrita e indexada; 0002 marcada como revista em parte.
+- **T-50.0.4:** a arte anexada na conversa foi extraída da transcrição da sessão e salva sem alteração em `src/assets/branding/foca/corpo/foca-corpo-original.jpg` (1254×1254, SHA-256 `5a3c337b…323a`); README da pasta atualizado.
+- **T-50.0.5 (linha de base no `HEAD` `d84e330`, código igual ao publicado):** tipos ✅ · unitários **1471 pass / 0 fail** · `bun run lint` falha em 41 mil linhas só por CRLF do Windows (condição antiga da máquina); o gate usado é `bun run lint:ci` (como na 49) → **0 erros** · build ✅. O E2E completo foi interrompido em 111/643 (lento por dois subagentes compilando em paralelo); a referência é a última suíte completa verde da 49 no mesmo código (561 passed / 0 failed). Commit local `d84e330` com a spec aprovada e os documentos da F0.
+- **Execução em paralelo:** dois subagentes em git worktrees isolados (`.claude/worktrees/`): (1) Foca de corpo inteiro e ícone das Pérolas (E2, T-50.3.1/3.3/3.5, T-50.4.5); (2) modelo de imagem/tabela, componentes de questão com imagem, `/creditos` e importador do INEP (E5, T-50.9.1–9.6). O orquestrador integra os commits deles.
+
+#### E1 — som no celular (F1)
+
+- **T-50.1.1:** `getAudioDiagnostics()` e registro interno (200 eventos) no motor; painel `src/lib/audio/diagnostico.ts` só com `?diagnostico-audio=1` (import dinâmico na raiz; sem rede; "Testar som", "Copiar diagnóstico").
+- **T-50.1.3:** destravamento em `pointerdown`, `pointerup`, `touchend`, `click`, `keydown`; `resume()` para `suspended` e `interrupted`; retomada em `visibilitychange`/`focus`; prazo de 900 ms só para o primeiro som; `preaquecerAudio()`. Testes `tests/unit/audio-engine.test.ts` (5, com `AudioContext` falso): `interrupted` → toca; primeiro som de ~600 ms toca e o segundo lento é descartado com o motivo; destravar no gesto aquece os 12 sons sem tocar; voltar ao app retoma.
+- **T-50.1.4:** `Cache-Control: public, max-age=31536000, immutable` para `/sfx/v2/(.*)`; preferência "Tocar no modo silencioso" no Perfil, só no iPhone (`src/lib/plataforma.ts#ehIOS`), desligada por padrão (D50-15). O aviso de primeiro uso de C-SOM-6 não foi conferido (DV50-08 segue aberta).
+- **T-50.1.2 (teste em aparelho): bloqueada** — o dono está fora; o painel vai junto na publicação (`https://www.focaedu.com/trilha?diagnostico-audio=1`).
+- **T-50.1.5:** C-SOM-8 em `contratos.md`.
+- **Prioridade dos sons (C-SOM-2, §5.12.3):** `PRIORIDADE_FECHAMENTO` com o marco de ofensiva logo abaixo do especial; `tests/unit/audio.test.ts` atualizado; `tests/e2e/audio-assets.spec.ts` "carregamento atrasado" passa a atrasar 1,2 s (acima do prazo novo do primeiro som).
+
+#### E1 — lição viva (F2)
+
+- **T-50.2.1:** contrato aditivo: `resposta.tentativa` ("primeira"|"revisao"), `resposta.assistida`, `licao-concluida.attemptKey`. Servidor: revisão não liga à tentativa da atividade, não custa vida, não paga XP de questão geral e não entra no caderno. Cliente: `firstSubmission` real (revisão = `false`), `tutorUsed` quando a Foca IA abriu antes de responder (`marcarAjuda`, observando `tutor.open`), `attemptKey` = id da sessão nas respostas e na conclusão da microlição. `tests/unit/servidor/licao-viva.test.ts` **4 pass**.
+- **T-50.2.2:** `src/lib/combo.ts` (regra pura, usada no aparelho e no servidor) + `tests/unit/combo.test.ts` **9 pass**; `today.combo` no store (opcional, zera com o balde do dia — sem subir a versão do schema, DV50-12); barra das microlições conta questões pontuadas.
+- **T-50.2.3:** raio (`RaioDoCombo`, SVG com stroke-dash; some com movimento reduzido), borda da barra com combo ≥ 3, selo "N seguidas" na folha de feedback (dentro do `role="status"`), som `acerto-consecutivo` no lugar do de acerto e háptico `combo` nos marcos 5/10. A Foca **já** aparecia na folha depois de toda resposta: nos marcos 5 e 10 ela fica `empolgada` e maior (48 px) em vez de entrar uma segunda Foca (DV50-11). Combo também na aula rápida (`/study`) e na trilha de redação (`LessonPlayer`).
+- **T-50.2.4:** "Rever o que errou (n)" (até 3, as últimas erradas ou "Não sei") antes do resumo; sem vida (sem `comVida`), sem XP, sem domínio (`registrarRevisaoDeErro` só envia o evento), Foca IA disponível; "Ver resultado" pula.
+- **T-50.2.5/2.6/2.7:** lição perfeita (≥ 4 pontuadas certas de primeira, sem "Não sei", sem ajuda antes); cartões XP · de primeira · tempo ativo (pausa > 2 min fora não conta) · maior combo; `src/lib/celebracao.ts` escolhe UM momento principal e o som dele, o resto vira selo; marcos de ofensiva passam a 7, 14, 30, 50, 100, 150, 200, 365 e a cada 100 (`isStreakMilestone` usa `ehMarcoDeOfensiva`). `tests/unit/celebracao-perolas.test.ts` (inclui a ordem dos sons).
+- **Flags de cliente:** `comboNaLicao`, `revisaoDeErros`, `focaCorpo`, `navegacaoV3` (ligadas).
+- **E2E:** `tests/e2e/licao-viva.spec.ts` **3 passed** (selo e raio no 3º acerto; sem revisão quando não há erro; cartões "4 de 4"; um momento principal; revisão com "Revisão 1 de 1" e "Na revisão: 1 de 1"; "Ver resultado" pula). Regressão de lição, trilha, jornada, vidas, sincronização, layout, áudio e funções pagas (chromium + narrow): **174 passed / 3 failed / 15 skipped**; as 3 falhas eram o helper de "Não sei" sem saber da oferta de revisão — `tests/e2e/helpers/jornada.ts` atualizado e `journey.spec.ts` passou a usar o helper compartilhado → `journey-start` + `journey` + `state-migration` **48 passed**, `journey` **8 passed**.
+- **Unitários:** **1495 pass / 0 fail** (antes da E3). Uma falha intermediária: o teste do motor de áudio trocava o `fetch` global sem devolver e quebrava os testes do pipeline; corrigido.
+- **Estado de validação:** implementado e validado localmente. Não publicado.

@@ -37,6 +37,10 @@ export function QuestionStepView({
   silent = false,
   /** Atribuição de item oficial na folha de feedback (docs/36 RP-10) — `atribuicaoOficial(meta.source)` de quem chama. */
   fonteOficial,
+  /** Combo desta resposta (spec 50 §5.1.2) — repassado à folha de feedback. */
+  combo,
+  /** Rótulo no lugar do papel da questão (ex.: "Revisão 1 de 2" na revisão de erros). */
+  rotulo,
 }: {
   step: QuestionStep;
   exercise: Exercise;
@@ -56,13 +60,15 @@ export function QuestionStepView({
   explanationLayers?: ItemExplanationLayers;
   silent?: boolean;
   fonteOficial?: string;
+  combo?: { n: number; marco: 3 | 5 | 10 | null; vida?: boolean } | null;
+  rotulo?: string;
 }) {
   const View = exerciseViewFor(exercise.type);
   const checked = feedback !== null;
 
   return (
     <div className="space-y-4" aria-label={`Questão ${questionNumber} de ${questionTotal}`}>
-      <p className="ds-label">{COPY.licao.roles[step.role]}</p>
+      <p className="ds-label">{rotulo ?? COPY.licao.roles[step.role]}</p>
 
       {exercise.imagem && (
         <figure>
@@ -115,6 +121,7 @@ export function QuestionStepView({
             onAskTutor={onAskTutor}
             onOutroJeito={onOutroJeito}
             fonte={fonteOficial}
+            combo={combo}
           >
             {hasExplanationLayers(explanationLayers) ? <ExplanationLayers layers={explanationLayers} /> : undefined}
           </FeedbackSheet>

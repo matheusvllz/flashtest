@@ -36,20 +36,8 @@ async function desligarJornada(page: import("@playwright/test").Page) {
   await definirFlags(page, { jornadaAdaptativa: false });
 }
 
-async function responderComNaoSeiAteConcluir(page: import("@playwright/test").Page) {
-  for (let i = 0; i < 10; i++) {
-    const concluir = page.getByRole("button", { name: "Concluir lição" });
-    if (await concluir.isVisible().catch(() => false)) {
-      await concluir.click();
-      return;
-    }
-    await page.getByRole("button", { name: "Não sei" }).waitFor({ timeout: 15000 });
-    await page.getByRole("button", { name: "Não sei" }).click();
-    await page.locator('[role="status"]').waitFor();
-    await page.getByRole("button", { name: /^(Continuar|Ver resultado)$/ }).click();
-  }
-  throw new Error("lição não concluiu depois de 10 questões — loop de segurança estourou");
-}
+// Mesmo percurso do helper compartilhado (que também pula a oferta de revisão de erros da spec 50 §5.1.4).
+import { responderComNaoSeiAteConcluir } from "./helpers/jornada";
 
 test.describe("flag desligada — /trilha idêntica a hoje (AC-12.5)", () => {
   test("sem 'Sessão de hoje': mapa por matéria de sempre", async ({ page }) => {

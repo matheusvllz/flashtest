@@ -41,6 +41,13 @@ export const eventoResposta = z.object({
   ocorreuEm: quando,
   dataLocal: dia,
   duracaoMs: z.number().int().min(0).max(3_600_000).optional(),
+  /**
+   * Spec 50 §5.1.4: "revisao" = a mesma questão respondida de novo na revisão de erros do fim da lição. Não custa
+   * vida, não entra no caderno, não conta para combo nem para a nota da atividade. Ausente = "primeira" (cliente antigo).
+   */
+  tentativa: z.enum(["primeira", "revisao"]).optional(),
+  /** A Foca IA foi aberta ANTES de responder (spec 50 §5.1.1): o acerto não soma no combo nem na lição perfeita. */
+  assistida: z.boolean().optional(),
 });
 
 export const eventoLicaoConcluida = z.object({
@@ -51,6 +58,8 @@ export const eventoLicaoConcluida = z.object({
   versao: z.number().int().min(0).max(1000).optional(),
   acertos: z.number().int().min(0).max(100),
   total: z.number().int().min(1).max(100),
+  /** Tentativa da lição (spec 50 §5.1.6): liga a conclusão às respostas dela (lição perfeita, bônus do combo). Aditivo. */
+  attemptKey: z.string().min(1).max(200).optional(),
   ocorreuEm: quando,
   dataLocal: dia,
 });

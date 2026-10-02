@@ -145,7 +145,7 @@ describe("completeLesson (redação legada) — idempotente por tentativa (G-3)"
 describe("os chamadores passam o início da tentativa (guarda estática)", () => {
   test("useLearningSession (aula/microlição) passa o startedAt da sessão persistida", () => {
     const fonte = readFileSync("src/hooks/useLearningSession.ts", "utf-8");
-    expect(fonte).toMatch(/completeMicroLesson\([^)]*\{ sessionStartedAt: startedAt \}\)/);
+    expect(fonte).toMatch(/completeMicroLesson\([^)]*\{ sessionStartedAt: startedAt(, attemptKey: sessionId)? \}\)/);
   });
   test("LessonPlayer (redação legada) passa o início da tentativa e o renova em 'Refazer'", () => {
     const fonte = readFileSync("src/components/lessons/LessonPlayer.tsx", "utf-8");

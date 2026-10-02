@@ -36,13 +36,16 @@ describe("identity — assets aprovados", () => {
 
 describe("selectHighestPrioritySound — docs/20 §5, regra 5", () => {
   test("escolhe o mais alto da hierarquia entre vários eventos coincidentes", () => {
-    // Ordem exata do docs/20 §5: "especial → level up → capítulo → meta diária → marco de streak → lição".
+    // Ordem revista pela spec 50 §5.12.3: o marco de ofensiva vem logo abaixo do especial, acima do nível e da meta.
     const escolhido = selectHighestPrioritySound([
       "conclusao-licao",
       "marco-streak",
       "meta-diaria",
     ]);
-    expect(escolhido).toBe("meta-diaria");
+    expect(escolhido).toBe("marco-streak");
+    expect(selectHighestPrioritySound(["conclusao-licao", "meta-diaria", "capitulo-desbloqueado"])).toBe(
+      "capitulo-desbloqueado",
+    );
   });
 
   test("level-up bate meta-diaria (nível > meta na hierarquia)", () => {

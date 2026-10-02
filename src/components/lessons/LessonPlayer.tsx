@@ -34,6 +34,7 @@ import {
   nivelDeXp,
   openTutorWithContext,
   recordLearningAttempt,
+  registrarComboLocal,
   useAppState,
   usePersistStatus,
   type CompleteLessonResult,
@@ -57,6 +58,8 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
   const persist = usePersistStatus();
   const total = lesson.exercicios.length;
   const [idx, setIdx] = useState(0);
+  /** Combo da resposta atual (spec 50 §5.1.1–5.1.2): a trilha de redação também conta. */
+  const [comboDaResposta, setComboDaResposta] = useState<{ n: number; marco: 3 | 5 | 10 | null } | null>(null);
   const [answer, setAnswer] = useState<ExerciseAnswer | null>(null);
   // Máquina de resposta compartilhada com a aula de 60s (docs/20 §5, Fase 2).
   const session = useExerciseSession();
@@ -145,7 +148,14 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
         setWrongNotes((w) => (w.includes(exercise.explicacao) ? w : [...w, exercise.explicacao]));
       }
       registrarSinal("answered", correct, answer);
-      return { exerciseId: `${lesson.id}:${idx}`, correct, explanation: exercise.explicacao };
+      const combo = registrarComboLocal({ resultado: correct ? "certa" : "errada", conta: true });
+      setComboDaResposta(FEATURES.comboNaLicao && combo.estado.atual >= 3 ? { n: combo.estado.atual, marco: combo.marco } : null);
+      return {
+        exerciseId: `${lesson.id}:${idx}`,
+        correct,
+        explanation: exercise.explicacao,
+        marcoDoCombo: FEATURES.comboNaLicao ? combo.marco : null,
+      };
     });
   }
 
@@ -153,6 +163,8 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
   function dontKnowClick() {
     session.submit(() => {
       registrarSinal("dont-know", false, null);
+      registrarComboLocal({ resultado: "nao-sei", conta: true });
+      setComboDaResposta(null);
       return { exerciseId: `${lesson.id}:${idx}`, correct: false, explanation: exercise.explicacao, dontKnow: true };
     });
   }
@@ -331,6 +343,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
             isLast={idx + 1 >= total}
             onContinue={next}
             onAskTutor={() => askTutor(true)}
+            combo={comboDaResposta}
           >
             {hasExplanationLayers(explanationLayers) ? <ExplanationLayers layers={explanationLayers} /> : undefined}
           </FeedbackSheet>

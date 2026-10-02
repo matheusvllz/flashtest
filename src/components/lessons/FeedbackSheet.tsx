@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { CheckCircle2, ChevronDown, HelpCircle, Sparkles, XCircle } from "lucide-react";
+import { CheckCircle2, ChevronDown, Heart, HelpCircle, Sparkles, XCircle, Zap } from "lucide-react";
 import { FocaMark } from "@/components/brand/FocaMark";
 import { XpChip } from "@/components/ds/XpChip";
 import { COPY } from "@/lib/copy";
@@ -39,6 +39,7 @@ export function FeedbackSheet({
   onOutroJeito,
   fonte,
   acimaDaNav = false,
+  combo,
 }: {
   feedback: AnswerFeedback;
   /** Resolução detalhada, colapsável — passo a passo, salvar flashcard, videoaula. */
@@ -61,10 +62,17 @@ export function FeedbackSheet({
    * (achado do docs/36 T-08.10, B1). A nav some em ≥ 1024 px (vira NavRail), então lá volta a colar em 0.
    */
   acimaDaNav?: boolean;
+  /**
+   * Combo desta resposta (spec 50 §5.1.2, D50-05): selo "N seguidas" a partir de 3; nos marcos 5 e 10 a Foca da folha
+   * fica empolgada e maior. Nunca no erro nem no "Não sei" (quem chama só passa no acerto).
+   */
+  combo?: { n: number; marco: 3 | 5 | 10 | null; vida?: boolean } | null;
 }) {
   const [aberto, setAberto] = useState(false);
   const { correct, kind, messageText, explanation, xpAwarded } = feedback;
   const dontKnow = kind === "dont-know";
+  const comboVisivel = correct && !dontKnow && combo && combo.n >= 3 ? combo : null;
+  const fotoDoCombo = comboVisivel && (comboVisivel.marco === 5 || comboVisivel.marco === 10);
 
   return (
     <div
@@ -97,10 +105,11 @@ export function FeedbackSheet({
     >
       <div className="flex items-start gap-3">
         <FocaMark
-          size={40}
+          size={fotoDoCombo ? 48 : 40}
           decorative
-          expression={correct ? "orgulhosa" : dontKnow ? "neutra" : "acolhedora"} /* errar nunca é decepção (docs/44 I-5) */
+          expression={fotoDoCombo ? "empolgada" : correct ? "orgulhosa" : dontKnow ? "neutra" : "acolhedora"} /* errar nunca é decepção (docs/44 I-5) */
           motion="pop"
+          key={fotoDoCombo ? `combo-${comboVisivel?.n}` : "foca"}
         />
         <div className="min-w-0 flex-1">
           <p className="flex items-center gap-1.5 font-display text-base font-bold text-abismo">
@@ -113,6 +122,18 @@ export function FeedbackSheet({
             )}
             {messageText}
           </p>
+          {comboVisivel && (
+            <p className="mt-1 flex flex-wrap items-center gap-1.5" data-testid="selo-combo" data-marco={comboVisivel.marco ?? ""}>
+              <span className="chip chip-on inline-flex items-center gap-1 px-2 py-0.5 text-[12px] font-bold">
+                <Zap size={13} className="text-recompensa" aria-hidden /> {COPY.licao.combo.seguidas(comboVisivel.n)}
+              </span>
+              {comboVisivel.vida && (
+                <span className="chip inline-flex items-center gap-1 px-2 py-0.5 text-[12px] font-bold">
+                  <Heart size={13} className="text-error" aria-hidden /> {COPY.licao.combo.vidaDeVolta}
+                </span>
+              )}
+            </p>
+          )}
           {fonte && <p className="mt-0.5 text-[11px] text-nevoa">{COPY.feedback.fonteOficial(fonte)}</p>}
           <p className="mt-0.5 text-[13px] leading-relaxed text-abismo">{explanation}</p>
         </div>

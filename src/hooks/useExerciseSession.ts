@@ -29,12 +29,14 @@ export function useExerciseSession() {
     xpAwarded?: number;
     /** Botão "Não sei" (docs/30 §16.1, Fase 6) — repassado direto pra `createFeedback`. */
     dontKnow?: boolean;
+    /** Marco do combo desta resposta (spec 50 §5.1.2): troca o som do acerto pelo de combo. */
+    marcoDoCombo?: 3 | 5 | 10 | null;
   }) {
     if (answeringRef.current || phase !== "answering") return;
     answeringRef.current = true;
-    const result = evaluate();
+    const { marcoDoCombo, ...result } = evaluate();
     const fb = createFeedback(result);
-    dispatchAnswerFeedback(fb);
+    dispatchAnswerFeedback(fb, { marcoDoCombo });
     setFeedback(fb);
     setPhase("feedback");
   }

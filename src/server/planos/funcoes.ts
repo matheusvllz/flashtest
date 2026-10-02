@@ -32,3 +32,15 @@ export function funcaoLigada(f: Funcao): boolean {
 export async function alunoTemFuncao(db: Banco, userId: string, f: Funcao, agora: Date): Promise<boolean> {
   return funcaoLigada(f) && temFuncao(await planoDoAluno(db, userId, agora), f);
 }
+
+/**
+ * Recursos da spec 50 que valem para TODOS os planos (não são funções pagas): ligados por padrão e desligáveis sem
+ * deploy pela mesma `FUNCOES_DESLIGADAS` (D50-14 / DV50: o dono quer ver o resultado em produção). Os recursos
+ * sociais (ligas, amigos) e os lembretes NÃO entram aqui: dependem de variável própria ligada de propósito.
+ */
+export type Recurso50 = "perolas" | "missoes" | "miniSimulado" | "escrita" | "retrospectiva" | "pulo";
+
+export function recursoLigado(r: Recurso50): boolean {
+  const desligadas = new Set((env().FUNCOES_DESLIGADAS ?? "").split(",").map((x) => x.trim()).filter(Boolean));
+  return !desligadas.has(r);
+}

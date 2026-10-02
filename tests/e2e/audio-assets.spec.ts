@@ -65,8 +65,9 @@ test("WAVs reais: cache, prioridade, mute, expiração e cancelamento", async ({
 });
 
 test("carregamento atrasado não toca ao terminar", async ({ page }) => {
+  // O primeiro som da sessão espera até 900 ms (spec 50 §5.12.1); acima disso, é descartado e nunca toca atrasado.
   await page.route("**/sfx/v2/*.wav", async (route) => {
-    await new Promise((resolve) => setTimeout(resolve, 700));
+    await new Promise((resolve) => setTimeout(resolve, 1200));
     await route.continue();
   });
   await page.goto("/study");
@@ -81,7 +82,7 @@ test("carregamento atrasado não toca ao terminar", async ({ page }) => {
   });
   await page.locator("div.mt-5.flex.flex-col.gap-3 > button").first().click();
   await page.getByRole("button", { name: "Responder" }).click();
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(1600);
   expect(
     await page.evaluate(() => (window as unknown as { audioStarts: number }).audioStarts),
   ).toBe(0);

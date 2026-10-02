@@ -53,6 +53,14 @@ export interface FeatureFlags {
   nivelamento: boolean;
   /** Fase 14: checkpoints periódicos inseridos no plano da jornada. */
   checkpointsTrilha: boolean;
+  /** Spec 50 §5.1.1–5.1.2: combo com raio, selos e a Foca nos marcos. Desligada: sem combo na tela (o servidor segue). */
+  comboNaLicao: boolean;
+  /** Spec 50 §5.1.4: "Rever o que errou" no fim da lição, sem custo de vida. */
+  revisaoDeErros: boolean;
+  /** Spec 50 §5.8: Foca de corpo inteiro nos momentos. Desligada: só a cabeça. */
+  focaCorpo: boolean;
+  /** Spec 50 §5.11: 5 abas (Trilha, Praticar, Redação, Missões, Perfil) e barra superior. Desligada: 4 abas antigas. */
+  navegacaoV3: boolean;
 }
 
 const BASE_FEATURES: FeatureFlags = {
@@ -97,6 +105,11 @@ const BASE_FEATURES: FeatureFlags = {
   // (praticadas/antigas/firmes) pra montar um checkpoint — aluno sem
   // nenhum sinal ainda não vê checkpoint, comportamento correto (docs/32).
   checkpointsTrilha: true,
+  // Spec 50 (aprovada em 02/10/2026): ligadas por padrão; desligar volta a UI anterior sem perder dado.
+  comboNaLicao: true,
+  revisaoDeErros: true,
+  focaCorpo: true,
+  navegacaoV3: true,
 };
 
 /**

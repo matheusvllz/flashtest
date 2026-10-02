@@ -23,12 +23,17 @@ function somHabilitado(): boolean {
  * nem o de acerto (não seria honesto) nem o de erro (não é punição): silêncio
  * de propósito, o feedback visual neutro já basta.
  */
-export function dispatchAnswerFeedback(feedback: AnswerFeedback): void {
+export function dispatchAnswerFeedback(
+  feedback: AnswerFeedback,
+  opts: { marcoDoCombo?: 3 | 5 | 10 | null } = {},
+): void {
   if (feedback.kind === "dont-know") return;
+  // Marco do combo (spec 50 §5.1.2): `acerto-consecutivo` NO LUGAR do som de acerto — nunca dois sons juntos (C-SOM-4).
+  const marco = feedback.correct ? (opts.marcoDoCombo ?? null) : null;
   if (somHabilitado()) {
-    void playFeedbackSound(feedback.correct ? "resposta-correta" : "resposta-incorreta");
+    void playFeedbackSound(marco ? "acerto-consecutivo" : feedback.correct ? "resposta-correta" : "resposta-incorreta");
   }
-  vibrar(feedback.correct ? "acerto" : "erro");
+  vibrar(marco === 5 || marco === 10 ? "combo" : feedback.correct ? "acerto" : "erro");
 }
 
 /**
@@ -38,12 +43,12 @@ export function dispatchAnswerFeedback(feedback: AnswerFeedback): void {
  * prioridade"). Chamar uma única vez por conclusão — o chamador garante isso
  * com guarda própria (mesmo princípio de `submittingRef`/`verifyingRef`).
  */
-export function dispatchClosingFeedback(eventos: SoundEvent[]): void {
+export function dispatchClosingFeedback(eventos: SoundEvent[], opts: { marco?: boolean } = {}): void {
   // Toda conclusão tem um som de base ("conclusao-licao"); os eventos extras
   // só sobem a prioridade quando presentes — nunca fica em silêncio.
   const todos: SoundEvent[] = [...eventos, "conclusao-licao"];
   if (somHabilitado()) void playClosingSound(todos);
   const padraoHaptico: PadraoHaptico =
-    eventos.includes("level-up") || eventos.includes("marco-streak") ? "marco" : "fim";
+    opts.marco || eventos.includes("level-up") || eventos.includes("marco-streak") ? "marco" : "fim";
   vibrar(padraoHaptico);
 }

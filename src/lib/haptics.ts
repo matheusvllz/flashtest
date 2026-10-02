@@ -7,13 +7,15 @@ import { getState } from "@/lib/store";
  * try/catch barulhento. Toggle próprio (`prefs.haptics`) — tem gente que
  * quer vibração sem som exatamente por estar em aula.
  */
-export type PadraoHaptico = "acerto" | "erro" | "fim" | "marco";
+export type PadraoHaptico = "acerto" | "erro" | "fim" | "marco" | "combo";
 
 const PADRAO: Record<PadraoHaptico, number | number[]> = {
   acerto: 30,
   erro: [25, 40, 25],
   fim: 60,
   marco: [30, 50, 40, 50, 60],
+  /** Marcos 5 e 10 do combo (spec 50 §5.1.2): curto, sem competir com o marco de ofensiva. */
+  combo: [30, 40, 50],
 };
 
 export function vibrar(padrao: PadraoHaptico) {

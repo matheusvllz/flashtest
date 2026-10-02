@@ -24,6 +24,8 @@ import {
 import type { PlannedActivity } from "@/lib/adaptive/types";
 import type { Agregado, EventoEstudo } from "@/lib/sync/contrato";
 import { custaVida, vidasDeHoje, type VidasDoDia } from "@/lib/vidas";
+import { aplicarAoCombo, type EstadoCombo, type ResultadoDoCombo, type RespostaParaCombo } from "@/lib/combo";
+import { ehMarcoDeOfensiva } from "@/lib/perolas";
 import { VIDAS_POR_DIA } from "@/lib/planos";
 import type { PedidoImportacao } from "@/lib/sync/importacao";
 import { aoMudarUsuarioDaSessao, usuarioDaSessao } from "@/lib/conta/usuario-da-sessao";
@@ -66,6 +68,8 @@ export type Prefs = {
   /** Toggles sensoriais (docs/design/sistema-rabisco.md §10, docs/historico/fundacao/16-gamificacao-e-dopamina.md §3/§4). */
   sound: boolean;
   haptics: boolean;
+  /** Só no iPhone: tocar os sons mesmo com a chave de silencioso (spec 50 D50-15; padrão: respeitar a chave). */
+  somNoSilencioso?: boolean;
   /** "auto" segue o sistema (docs/18 §12.4, D4). */
   theme: "auto" | "light" | "dark";
   /** Schema v4 (docs/20 §15.2) — sem UI própria ainda; a Fase 8 (dicas de vestibular) é quem lê isto. */
@@ -155,6 +159,11 @@ export type Progress = {
     celebrouMeta: boolean;
     /** Schema v4 — unidade "bloco" da Fase 11; vazio até ela popular. */
     completedBlockIds: string[];
+    /**
+     * Combo do dia neste aparelho (spec 50 §5.1.1): só para mostrar na hora; as recompensas do combo são decididas no
+     * servidor. Opcional (aditivo): o balde de hoje já zera na virada do dia.
+     */
+    combo?: EstadoCombo;
   };
 };
 
@@ -997,7 +1006,7 @@ export function completeMicroLesson(
   version: number,
   correctPractice: number,
   totalPractice: number,
-  opts: { sessionStartedAt?: string } = {},
+  opts: { sessionStartedAt?: string; attemptKey?: string } = {},
 ): CompleteMicroLessonResult {
   const pct = totalPractice > 0 ? Math.round((correctPractice / totalPractice) * 100) : 0;
   const stars = starsForPct(pct);
@@ -1025,6 +1034,7 @@ export function completeMicroLesson(
       versao: version,
       acertos: Math.min(correctPractice, 100),
       total: Math.min(Math.max(totalPractice, 1), 100),
+      ...(opts.attemptKey ? { attemptKey: opts.attemptKey.slice(0, 200) } : {}),
       ...quandoAgora(),
     });
     registrarAtividade(s, "lesson", true);
@@ -1162,7 +1172,7 @@ export function nivelDeXp(xp: number): {
   return { nivel, atual, proximo, pct: Math.min(100, Math.round((atual / proximo) * 100)) };
 }
 
-export function setPrefs(partial: Partial<Pick<Prefs, "sound" | "haptics" | "theme">>) {
+export function setPrefs(partial: Partial<Pick<Prefs, "sound" | "haptics" | "theme" | "somNoSilencioso">>) {
   setState((s) => {
     Object.assign(s.prefs, partial);
     return s;
@@ -1184,8 +1194,9 @@ export function diasSemAtividade(s: AppState): number {
 }
 
 /** Marcos de sequência que merecem celebração maior (expressão + som), não todo dia (docs/16 §6). */
+/** Marcos de ofensiva (spec 50 §5.2.4): 7, 14, 30, 50, 100, 150, 200, 365 e depois a cada 100. */
 export function isStreakMilestone(streak: number): boolean {
-  return streak > 0 && [7, 30, 100].includes(streak);
+  return streak > 0 && ehMarcoDeOfensiva(streak);
 }
 
 /** Leitura honesta do balde de hoje — nunca ler `s.progress.today` direto: ele fica estale até a próxima atividade virar o dia. */
@@ -2292,10 +2303,31 @@ function respostaDoAttempt(a: Attempt): number | number[] | null {
 }
 
 /** A resposta vira evento (o servidor recorrige pelo gabarito e decide o XP). */
-function enfileirarResposta(s: AppState, a: Attempt): void {
+function enfileirarResposta(s: AppState, a: Attempt, opts: { revisao?: boolean } = {}): void {
   const fonte = FONTE_POR_ORIGEM[a.source ?? "microlicao"];
   const ativa = s.learning.journey.activeActivity;
-  const attemptKey = (fonte === "atividade" || fonte === "checagem") && ativa ? attemptKeyOf(ativa) : undefined;
+  // Revisão de erros (spec 50 §5.1.4): nunca ligada à tentativa (não muda a nota da atividade) e nunca custa vida.
+  const attemptKey = opts.revisao
+    ? undefined
+    : (fonte === "atividade" || fonte === "checagem") && ativa
+      ? attemptKeyOf(ativa)
+      : fonte === "licao" && a.sessionId
+        ? a.sessionId.slice(0, 200)
+        : undefined;
+  if (opts.revisao) {
+    enfileirar(s, {
+      tipo: "resposta",
+      id: idDeEvento(a.id),
+      itemId: a.exerciseId.slice(0, 200),
+      resposta: respostaDoAttempt(a),
+      ...(a.presentedOrder?.length ? { exibidos: a.presentedOrder.slice(0, 20).map((x) => String(x).slice(0, 500)) } : {}),
+      fonte,
+      tentativa: "revisao",
+      ocorreuEm: new Date(a.submittedAt).toISOString(),
+      dataLocal: a.localDate,
+    });
+    return;
+  }
   // Vida baixa na hora (o servidor confirma no agregado); dia novo começa com o máximo.
   if (s.account?.vidas && custaVida(fonte, a.correct, a.response === "dont-know")) {
     const hoje = hojeISO();
@@ -2313,7 +2345,39 @@ function enfileirarResposta(s: AppState, a: Attempt): void {
     ocorreuEm: new Date(a.submittedAt).toISOString(),
     dataLocal: a.localDate,
     ...(Number.isInteger(a.durationMs) && a.durationMs >= 0 && a.durationMs <= 3_600_000 ? { duracaoMs: a.durationMs } : {}),
+    ...(a.assisted ? { assistida: true } : {}),
   });
+}
+
+/**
+ * Resposta da revisão de erros do fim da lição (spec 50 §5.1.4): vai ao servidor marcada como "revisao" e não mexe
+ * no modelo do aluno (R-PED-2: repetir o mesmo enunciado em seguida não é evidência nova), nas vidas, no caderno nem
+ * no combo.
+ */
+export function registrarRevisaoDeErro(attempt: Attempt): void {
+  setState((s) => {
+    enfileirarResposta(s, attempt, { revisao: true });
+    return s;
+  });
+}
+
+/**
+ * Combo deste aparelho (spec 50 §5.1.1): conta na hora para mostrar o raio e os selos. As recompensas do combo (vida
+ * de volta, bônus de XP) são decididas no servidor a partir das mesmas respostas.
+ */
+export function registrarComboLocal(r: Omit<RespostaParaCombo, "dia" | "em"> & { em?: number }): ResultadoDoCombo {
+  const dia = hojeISO();
+  const atual = getState();
+  const hoje = atual.progress.today.date === dia ? atual.progress.today.combo : undefined;
+  const resultado = aplicarAoCombo(hoje, { ...r, dia, em: r.em ?? Date.now() });
+  if (resultado.estado !== hoje) {
+    setState((s) => {
+      if (s.progress.today.date !== dia) s.progress.today = todayBucketVazio(dia);
+      s.progress.today.combo = resultado.estado;
+      return s;
+    });
+  }
+  return resultado;
 }
 
 export function assinarMudancas(cb: () => void): () => void {

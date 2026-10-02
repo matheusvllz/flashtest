@@ -28,6 +28,7 @@ import {
   podeResponderComVidas,
   recordLearningAttempt,
   registrarAulaConcluida,
+  registrarComboLocal,
   registrarResposta,
   setPrefs,
   setState,
@@ -65,6 +66,8 @@ function Study() {
   // Fase 2) — guardas de envio/avanço e snapshot de feedback moram aqui.
   const session = useExerciseSession();
   const [acertosAula, setAcertosAula] = useState(0);
+  /** Combo da resposta atual (spec 50 §5.1.2), para o selo na folha de feedback. */
+  const [comboDaResposta, setComboDaResposta] = useState<{ n: number; marco: 3 | 5 | 10 | null } | null>(null);
   const [xpInicio] = useState(() => s.progress.xp);
   const [antesFechamento, setAntesFechamento] = useState<{
     streak: number;
@@ -171,7 +174,10 @@ function Study() {
       registrarSinal("answered", correct);
       if (correct) setAcertosAula((n) => n + 1);
       setShowHint(false);
-      return { exerciseId: q.id, correct, explanation: q.explanation, xpAwarded };
+      // Combo do dia (spec 50 §5.1.1): a aula rápida também conta; ajuda antes de responder não soma.
+      const combo = registrarComboLocal({ resultado: correct ? "certa" : "errada", conta: true, assistida: tutorUsedRef.current });
+      if (FEATURES.comboNaLicao && combo.estado.atual >= 3) setComboDaResposta({ n: combo.estado.atual, marco: combo.marco });
+      return { exerciseId: q.id, correct, explanation: q.explanation, xpAwarded, marcoDoCombo: FEATURES.comboNaLicao ? combo.marco : null };
       // O tutor NÃO abre sozinho ao errar (docs/20 §3 B2, §4.2): só o CTA
       // explícito "Explicar melhor" abre o balão, e só o envio abre a API.
     });
@@ -186,6 +192,7 @@ function Study() {
     session.submit(() => {
       const xpAwarded = registrarResposta(q, false);
       registrarSinal("dont-know", false);
+      registrarComboLocal({ resultado: "nao-sei", conta: true });
       setShowHint(false);
       return { exerciseId: q.id, correct: false, explanation: q.explanation, xpAwarded, dontKnow: true };
     });
@@ -195,6 +202,7 @@ function Study() {
     session.advance(() => {
       setSelected(null);
       setShowHint(false);
+      setComboDaResposta(null);
       if (idx + 1 < questions.length) {
         setIdx(idx + 1);
         session.reset();
@@ -392,6 +400,7 @@ function Study() {
                 feedback={session.feedback}
                 isLast={idx + 1 >= questions.length}
                 onContinue={nextQ}
+                combo={comboDaResposta}
                 onAskTutor={!session.feedback.correct ? () => askTutorFromCurrent(true) : undefined}
                 onOutroJeito={
                   funcoes.has("explicaOutroJeito")

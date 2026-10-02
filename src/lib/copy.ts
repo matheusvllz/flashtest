@@ -109,6 +109,44 @@ export const COPY = {
     sairMesmo: "Sair mesmo assim",
     voceAprendeu: "Você aprendeu",
     refazer: "Refazer lição",
+    /** Combo (spec 50 §5.1.2): selo depois da resposta certa. Zerar nunca tem texto. */
+    combo: {
+      seguidas: (n: number) => `${n} seguidas`,
+      vidaDeVolta: "+1 vida",
+    },
+    /** Revisão de erros no fim (spec 50 §5.1.4). */
+    revisaoErros: {
+      titulo: (n: number) => `Rever o que errou (${n})`,
+      corpo: "Não custa vida e não muda sua nota. A explicação aparece depois de cada resposta.",
+      rever: "Rever",
+      verResultado: "Ver resultado",
+      contador: (i: number, n: number) => `Revisão ${i} de ${n}`,
+    },
+    /** Cartões do fim da lição (spec 50 §5.1.7). Precisão sem porcentagem (R-VOZ-7). */
+    cartoes: {
+      xp: "XP",
+      bonusCombo: (n: number) => `+${n} do combo`,
+      deprimeira: "De primeira",
+      deprimeiraValor: (a: number, total: number) => `${a} de ${total}`,
+      tempo: "Tempo",
+      maiorCombo: "Maior combo",
+      naRevisao: (a: number, n: number) => `Na revisão: ${a} de ${n}`,
+    },
+    /** Momento principal do fim (spec 50 §5.12.3) e selos dos outros acontecimentos. */
+    momentos: {
+      especial: "Marco especial",
+      marco: (dias: number) => `${dias} dias seguidos`,
+      nivel: (n: number) => `Nível ${n}`,
+      conquista: "Conquista nova",
+      "meta-ofensiva": "Meta de ofensiva cumprida",
+      perfeita: "Lição perfeita",
+      capitulo: "Capítulo concluído",
+      "meta-dia": "Meta do dia feita",
+      missoes: "Missões do dia feitas",
+      "ofensiva-acesa": "Ofensiva acesa",
+      licao: "Lição concluída",
+      tambem: "Também",
+    },
     /** Modo silencioso — nivelamento (Fase 13) e checkpoint (Fase 14): sem cor de certo/errado, sem explicação, só confirma que a resposta contou. */
     respostaRegistrada: "Resposta registrada.",
     roles: {
@@ -577,6 +615,9 @@ export const COPY = {
     salvando: "Salvando…",
     nomeErro: "Não deu para salvar o nome agora. Tente de novo.",
     nomeCurto: "Escreva pelo menos 2 letras.",
+    /** Som no iPhone (spec 50 D50-15). */
+    somNoSilencioso: "Tocar no modo silencioso",
+    somNoSilenciosoAjuda: "No iPhone, o modo silencioso desliga os sons do app. Ligue aqui para ouvir mesmo assim.",
   },
   trilha: {
     /** aria-label do painel de contexto da trilha no desktop (docs/44 §5). */

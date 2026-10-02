@@ -115,6 +115,8 @@ export async function aplicarEventos(
             break;
           }
           const correta = ev.resposta === null ? false : checkAnswer(exercicio, ev.resposta, ev.exibidos);
+          // Revisão de erros do fim da lição (spec 50 §5.1.4): fica gravada, mas sem atividade, sem vida e sem caderno.
+          const revisao = ev.tentativa === "revisao";
           await tx.insert(attempt).values({
             userId,
             id: ev.id,
@@ -125,15 +127,15 @@ export async function aplicarEventos(
             durationMs: ev.duracaoMs,
             answeredAt: new Date(ev.ocorreuEm),
             localDate: ev.dataLocal,
-            activityAttemptKey: ev.attemptKey,
+            activityAttemptKey: revisao ? null : ev.attemptKey,
           });
-          if (ev.fonte === "questao-geral") {
+          if (ev.fonte === "questao-geral" && !revisao) {
             await pagarXp(tx, userId, `questao-geral:${ev.itemId}`, xpAlvoDaQuestaoGeral(correta), "questao-geral", ev.dataLocal);
           }
           // A resposta nunca é recusada por falta de vida (o estudo feito sem conexão não é apagado): só o saldo baixa.
-          if (comVidas && custaVida(ev.fonte, correta, ev.resposta === null)) await perderVida(tx, userId, ev.dataLocal);
+          if (comVidas && !revisao && custaVida(ev.fonte, correta, ev.resposta === null)) await perderVida(tx, userId, ev.dataLocal);
           // Caderno de erros (spec 49 T-49.9.1): registrado para todos; ver é Basic e Pro.
-          if (comCaderno) await registrarNoCaderno(tx, userId, ev.itemId, ev.fonte, correta, ev.dataLocal);
+          if (comCaderno && !revisao) await registrarNoCaderno(tx, userId, ev.itemId, ev.fonte, correta, ev.dataLocal);
           aplicados.push(ev.id);
           break;
         }

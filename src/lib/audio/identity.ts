@@ -15,14 +15,18 @@ export const SOUND_ASSETS = {
 } as const;
 export type SoundEvent = keyof typeof SOUND_ASSETS;
 
-/** Daily streak beats plain completion, never a milestone. */
+/**
+ * Ordem do som de fechamento (C-SOM-2): só o mais alto toca. Revista pela spec 50 §5.12.3: o marco de ofensiva sobe
+ * para logo abaixo do especial (um marco de 30 dias vale mais que a meta do dia). A sequência diária continua acima
+ * da conclusão simples.
+ */
 export const PRIORIDADE_FECHAMENTO: SoundEvent[] = [
   "recompensa-especial",
+  "marco-streak",
   "level-up",
   "conquista",
   "capitulo-desbloqueado",
   "meta-diaria",
-  "marco-streak",
   "streak-diario",
   "conclusao-licao",
 ];

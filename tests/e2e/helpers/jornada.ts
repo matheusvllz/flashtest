@@ -31,7 +31,19 @@ export async function responderComNaoSeiAteConcluir(page: Page): Promise<void> {
       await concluir.click();
       return;
     }
-    await page.getByRole("button", { name: "Não sei" }).waitFor({ timeout: 15_000 });
+    // Spec 50 §5.1.4: com erros (ou "Não sei"), o fim oferece "Rever o que errou"; aqui só queremos fechar.
+    const oferta = page.getByTestId("oferta-revisao");
+    if (await oferta.isVisible().catch(() => false)) {
+      await oferta.getByRole("button", { name: "Ver resultado" }).click();
+      continue;
+    }
+    await page
+      .getByRole("button", { name: "Não sei" })
+      .or(page.getByTestId("oferta-revisao"))
+      .or(page.getByRole("button", { name: "Concluir lição" }))
+      .first()
+      .waitFor({ timeout: 15_000 });
+    if (!(await page.getByRole("button", { name: "Não sei" }).isVisible().catch(() => false))) continue;
     await page.getByRole("button", { name: "Não sei" }).click();
     await page.locator('[role="status"]').waitFor();
     await page.getByRole("button", { name: /^(Continuar|Ver resultado)$/ }).click();

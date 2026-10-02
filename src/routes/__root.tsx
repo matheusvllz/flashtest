@@ -19,7 +19,9 @@ import { BRAND, PALETTE } from "../lib/brand";
 import { FocaMark } from "../components/brand/FocaMark";
 import { fala } from "../lib/voz";
 import {
+  retomarAudioSeInterrompido,
   setAudioEnabled,
+  setSomNoSilencioso,
   stopAllFeedbackSounds,
   unlockAudioFromGesture,
 } from "../lib/audio/engine";
@@ -36,16 +38,19 @@ function ColunaSimples({ children }: { children: ReactNode }) {
   return <div className="frame-border mx-auto min-h-screen w-full max-w-[var(--app-col)] bg-neve [--frame-col:var(--app-col)]">{children}</div>;
 }
 
-/** Som ligado? Lido direto do estado salvo (a mesma chave do store), sem carregar o store na raiz. */
-function somLigado(): boolean {
+/** Preferências de som lidas direto do estado salvo (a mesma chave do store), sem carregar o store na raiz. */
+function prefsDeSom(): { ligado: boolean; noSilencioso: boolean } {
   try {
     const bruto = localStorage.getItem("foca.state.v3");
-    const prefs = bruto ? (JSON.parse(bruto) as { prefs?: { sound?: boolean } }).prefs : undefined;
-    return prefs?.sound !== false;
+    const prefs = bruto ? (JSON.parse(bruto) as { prefs?: { sound?: boolean; somNoSilencioso?: boolean } }).prefs : undefined;
+    return { ligado: prefs?.sound !== false, noSilencioso: prefs?.somNoSilencioso === true };
   } catch {
-    return true;
+    return { ligado: true, noSilencioso: false };
   }
 }
+
+/** No toque, só pointerup/touchend/click contam como gesto para o áudio (spec 50 §5.12.1); pointerdown e keydown ficam. */
+const GESTOS_DE_AUDIO = ["pointerdown", "pointerup", "touchend", "click", "keydown"] as const;
 
 function NotFoundComponent() {
   // Uma vez por montagem, não a cada render (docs/20 §3 B1, §4.1).
@@ -214,20 +219,32 @@ function RootComponent() {
   const naLanding = useRouterState({ select: (s) => s.location.pathname === "/" });
 
   useEffect(() => {
-    const unlock = () => {
+    const unlock = (e: Event) => {
       // A landing (`/`) não tem som: destravar o áudio ali baixaria os efeitos do produto para quem só está lendo
       // a página (docs/44 §9). O destravamento acontece no primeiro gesto dentro do produto.
       if (router.state.location.pathname === "/") return;
-      const enabled = somLigado();
-      setAudioEnabled(enabled);
-      if (enabled) unlockAudioFromGesture();
+      const { ligado, noSilencioso } = prefsDeSom();
+      setAudioEnabled(ligado);
+      setSomNoSilencioso(noSilencioso);
+      if (ligado) unlockAudioFromGesture(e.type);
     };
-    document.addEventListener("pointerdown", unlock, true);
-    document.addEventListener("keydown", unlock, true);
+    // iOS: ligação, tela bloqueada ou outro app deixam o áudio "interrupted"; ao voltar, tenta retomar.
+    const aoVoltar = () => {
+      if (document.visibilityState === "visible") retomarAudioSeInterrompido("visivel");
+    };
+    const aoFocar = () => retomarAudioSeInterrompido("foco");
+    for (const g of GESTOS_DE_AUDIO) document.addEventListener(g, unlock, true);
+    document.addEventListener("visibilitychange", aoVoltar);
+    window.addEventListener("focus", aoFocar);
+    // Painel de diagnóstico do som (spec 50 T-50.1.1): só com o parâmetro; nada é baixado sem ele.
+    if (new URLSearchParams(window.location.search).has("diagnostico-audio")) {
+      void import("../lib/audio/diagnostico").then((m) => m.iniciarDiagnosticoDeAudio());
+    }
     const unsubscribe = router.subscribe("onBeforeNavigate", stopAllFeedbackSounds);
     return () => {
-      document.removeEventListener("pointerdown", unlock, true);
-      document.removeEventListener("keydown", unlock, true);
+      for (const g of GESTOS_DE_AUDIO) document.removeEventListener(g, unlock, true);
+      document.removeEventListener("visibilitychange", aoVoltar);
+      window.removeEventListener("focus", aoFocar);
       unsubscribe();
       stopAllFeedbackSounds();
     };
