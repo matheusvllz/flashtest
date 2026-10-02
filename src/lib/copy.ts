@@ -338,6 +338,45 @@ export const COPY = {
       erro: "Não deu para concluir agora. Tente de novo.",
     },
   },
+  /** Protetores avulsos (spec 49 D49-05, §5.5): só na folha da sequência e na tela de planos; nunca com urgência. */
+  protetores: {
+    comprar: "Comprar protetores",
+    titulo: "Protetores de sequência",
+    explica: (max: number) => `Cada protetor cobre um dia parado, sozinho. Seu plano guarda até ${max}.`,
+    pacote: (n: number, preco: string) => (n === 1 ? `1 protetor por ${preco}` : `${n} protetores por ${preco}`),
+    naoCabe: "Não cabe no seu estoque agora.",
+    estoqueCheio: "Seu estoque está cheio.",
+    limiteMenor: "Este mês já teve as compras avulsas permitidas para a sua conta.",
+    vendaDesligada: "A compra de protetores ainda não está disponível.",
+    retornoPronto: "Pronto, os protetores entraram no seu estoque.",
+  },
+  /** Vidas do Free (spec 49 D49-03, §5.3). Sem culpa: nada de "você perdeu", "cuidado" ou contagem regressiva. */
+  vidas: {
+    aria: (n: number) => (n === 1 ? "1 vida hoje. Ver como funciona" : `${n} vidas hoje. Ver como funciona`),
+    titulo: "Vidas",
+    regra: "No plano Free, errar uma questão de lição custa 1 vida. Não sei, nivelamento, checagem e flashcards não custam. As vidas voltam amanhã.",
+    ilimitadas: "Nos planos Basic e Pro, as vidas são ilimitadas.",
+    semVidasTitulo: "Suas vidas de hoje acabaram",
+    semVidasCorpo: "Elas voltam amanhã. O que você já estudou está salvo.",
+    assistir: "Assistir e ganhar 1 vida",
+    anuncioIndisponivel: "Anúncio indisponível agora.",
+    ganhou: "Pronto, você ganhou 1 vida.",
+    verPlanos: "Ver planos",
+    flashcards: "Revisar flashcards",
+    voltarAmanha: "Voltar amanhã",
+  },
+  /** Anúncios do Free (spec 49 §5.4) e o consentimento de cookies (Guia de cookies da ANPD): dois botões do mesmo peso. */
+  anuncios: {
+    rotulo: "Publicidade",
+    cookiesTitulo: "Cookies de anúncios",
+    cookiesCorpo:
+      "No plano Free aparecem anúncios. Eles nunca usam o que você estuda. Você aceita cookies de anúncios? Se recusar, os anúncios aparecem sem cookies e nada muda no seu estudo.",
+    aceitar: "Aceitar",
+    recusar: "Recusar",
+    preferencia: "Cookies de anúncios",
+    preferenciaAceito: "Aceitos",
+    preferenciaRecusado: "Recusados",
+  },
   /** Cabeçalho do perfil com conta (spec 49 D49-13): nome e e-mail vêm da conta. */
   perfil: {
     semNome: "Sem nome",

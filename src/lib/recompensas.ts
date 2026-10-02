@@ -85,24 +85,25 @@ export function diasEntre(de: string, ate: string): number {
 
 /**
  * Registra atividade no dia `dia` (`AAAA-MM-DD`). Mesma regra de `registrarAtividade` do store:
- * primeiro o prêmio de congelamento pelo dia novo; depois a sequência — ontem soma 1; um dia
- * perdido com congelamento disponível gasta o congelamento e soma 1; mais que isso recomeça em 1.
- * O mesmo dia repetido não muda nada. Dias fora de ordem (anteriores ao último) são ignorados.
+ * primeiro o prêmio de congelamento pelo dia novo; depois a sequência — ontem soma 1; dias perdidos com
+ * congelamentos suficientes (um por dia parado, R-GAM-3; spec 49 D49-05) gastam os congelamentos e somam 1; sem
+ * congelamentos suficientes, recomeça em 1. O mesmo dia repetido não muda nada. Dias fora de ordem são ignorados.
+ * `estoqueMax`: teto do plano (Free 2, Basic 4, Pro 7); o ganho a cada 7 dias não passa dele.
  */
-export function avancarSequencia(e: EstadoSequencia, dia: string): EstadoSequencia {
+export function avancarSequencia(e: EstadoSequencia, dia: string, estoqueMax: number = CONGELAMENTOS_MAXIMO): EstadoSequencia {
   if (e.ultimoDia !== null && diasEntre(e.ultimoDia, dia) <= 0) return e;
   let { congelamentos, diasDesdeUltimoCongelamento, sequencia } = e;
   diasDesdeUltimoCongelamento += 1;
   if (diasDesdeUltimoCongelamento >= DIAS_POR_CONGELAMENTO) {
-    congelamentos = Math.min(CONGELAMENTOS_MAXIMO, congelamentos + 1);
+    congelamentos = Math.max(congelamentos, Math.min(estoqueMax, congelamentos + 1));
     diasDesdeUltimoCongelamento = 0;
   }
   const intervalo = e.ultimoDia === null ? null : diasEntre(e.ultimoDia, dia);
   let diaProtegido = e.diaProtegido;
   if (intervalo === null) sequencia = 1;
   else if (intervalo === 1) sequencia += 1;
-  else if (intervalo === 2 && congelamentos > 0) {
-    congelamentos -= 1;
+  else if (intervalo >= 2 && congelamentos >= intervalo - 1) {
+    congelamentos -= intervalo - 1;
     sequencia += 1;
     diaProtegido = diaAnterior(dia);
   } else sequencia = 1;
@@ -116,7 +117,44 @@ export function avancarSequencia(e: EstadoSequencia, dia: string): EstadoSequenc
   };
 }
 
-/** Recalcula a sequência a partir de todos os dias com atividade (servidor, importação). */
-export function sequenciaDosDias(dias: Iterable<string>, inicial: EstadoSequencia = SEQUENCIA_INICIAL): EstadoSequencia {
-  return [...new Set(dias)].sort().reduce(avancarSequencia, inicial);
+/** Crédito de protetor (compra, bônus do plano ou estorno), aplicado no dia em que entrou. */
+export interface CreditoDeProtetor {
+  dia: string;
+  quantidade: number;
+}
+
+export interface OpcoesDaSequencia {
+  creditos?: readonly CreditoDeProtetor[];
+  /** Teto do plano vigente (spec 49 D49-05). Ganhos e bônus não passam dele; o estoque acima dele (de um plano
+   *  anterior) fica guardado até ser usado. */
+  estoqueMax?: number;
+}
+
+function aplicarCredito(congelamentos: number, quantidade: number, estoqueMax: number): number {
+  if (quantidade < 0) return Math.max(0, congelamentos + quantidade);
+  return Math.max(congelamentos, Math.min(estoqueMax, congelamentos + quantidade));
+}
+
+/**
+ * Recalcula a sequência a partir de todos os dias com atividade (servidor, importação). Créditos entram antes do
+ * dia de atividade em que já valiam; os posteriores ao último dia entram no fim (estoque de hoje).
+ */
+export function sequenciaDosDias(
+  dias: Iterable<string>,
+  inicial: EstadoSequencia = SEQUENCIA_INICIAL,
+  opcoes: OpcoesDaSequencia = {},
+): EstadoSequencia {
+  const estoqueMax = opcoes.estoqueMax ?? CONGELAMENTOS_MAXIMO;
+  const creditos = [...(opcoes.creditos ?? [])].sort((a, b) => (a.dia < b.dia ? -1 : a.dia > b.dia ? 1 : 0));
+  let i = 0;
+  let e = inicial;
+  for (const dia of [...new Set(dias)].sort()) {
+    while (i < creditos.length && creditos[i].dia <= dia) {
+      e = { ...e, congelamentos: aplicarCredito(e.congelamentos, creditos[i].quantidade, estoqueMax) };
+      i++;
+    }
+    e = avancarSequencia(e, dia, estoqueMax);
+  }
+  for (; i < creditos.length; i++) e = { ...e, congelamentos: aplicarCredito(e.congelamentos, creditos[i].quantidade, estoqueMax) };
+  return e;
 }

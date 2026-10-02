@@ -23,6 +23,8 @@ import {
 } from "@/lib/learning/types";
 import type { PlannedActivity } from "@/lib/adaptive/types";
 import type { Agregado, EventoEstudo } from "@/lib/sync/contrato";
+import { custaVida, vidasDeHoje, type VidasDoDia } from "@/lib/vidas";
+import { VIDAS_POR_DIA } from "@/lib/planos";
 import type { PedidoImportacao } from "@/lib/sync/importacao";
 import { aoMudarUsuarioDaSessao, usuarioDaSessao } from "@/lib/conta/usuario-da-sessao";
 import { recordAttemptForSkill } from "@/lib/learning/review";
@@ -202,6 +204,12 @@ export interface ContaNoAparelho {
   docAssinatura: string | null;
   /** Id aleatório deste aparelho (importação idempotente). */
   aparelhoId: string;
+  /** Plano decidido no servidor (spec 49), copiado do agregado. Ausente = ainda não confirmado (trata como Free). */
+  plano?: "gratis" | "basic" | "pro";
+  /** Teto de protetores do plano (spec 49 D49-05), do agregado. */
+  protetoresMax?: number;
+  /** Vidas de hoje (spec 49 D49-03); `null` = sem vidas (plano pago ou desligado). Ausente = servidor antigo. */
+  vidas?: VidasDoDia | null;
 }
 
 // v3: rebranding para Foca (docs/17 Fase 8). O formato é o mesmo da v2; a chave
@@ -819,7 +827,9 @@ function registrarAtividade(
     // que parava de conceder congelamento depois do array truncar).
     s.progress.activityDaysSinceFreezeAward += 1;
     if (s.progress.activityDaysSinceFreezeAward >= 7) {
-      s.progress.streakFreezes = Math.min(2, s.progress.streakFreezes + 1);
+      // Teto do plano (spec 49 D49-05); estoque acima dele (de um plano anterior) não é tirado.
+      const teto = s.account?.protetoresMax ?? 2;
+      s.progress.streakFreezes = Math.max(s.progress.streakFreezes, Math.min(teto, s.progress.streakFreezes + 1));
       s.progress.activityDaysSinceFreezeAward = 0;
     }
   }
@@ -830,8 +840,8 @@ function registrarAtividade(
       s.progress.streak = 1; // primeira atividade de sempre
     } else if (gap === 1) {
       s.progress.streak += 1; // veio ontem — sequência viva
-    } else if (gap === 2 && s.progress.streakFreezes > 0) {
-      s.progress.streakFreezes -= 1; // perdeu 1 dia, mas tinha congelamento
+    } else if (gap >= 2 && s.progress.streakFreezes >= gap - 1) {
+      s.progress.streakFreezes -= gap - 1; // um protetor por dia parado (R-GAM-3; spec 49 D49-05), mesma regra de recompensas.ts
       s.progress.streak += 1;
       s.progress.diaProtegido = hojeISO(new Date(agora.getTime() - 86_400_000)); // o dia parado que a proteção cobriu
     } else {
@@ -2221,7 +2231,30 @@ function normalizarConta(bruto: unknown): ContaNoAparelho | undefined {
     docAssinatura: typeof c.docAssinatura === "string" ? c.docAssinatura : null,
     aparelhoId:
       typeof c.aparelhoId === "string" && /^[A-Za-z0-9_-]{8,64}$/.test(c.aparelhoId) ? c.aparelhoId : novoId(),
+    // Cópias do agregado do servidor (spec 49): validadas; lixo vira "ausente" e o próximo agregado repõe.
+    ...(c.plano === "gratis" || c.plano === "basic" || c.plano === "pro" ? { plano: c.plano } : {}),
+    ...(Number.isInteger(c.protetoresMax) && (c.protetoresMax as number) >= 0 && (c.protetoresMax as number) <= 50
+      ? { protetoresMax: c.protetoresMax }
+      : {}),
+    ...(c.vidas === null
+      ? { vidas: null }
+      : vidasValidas(c.vidas)
+        ? { vidas: { dia: c.vidas.dia, restantes: c.vidas.restantes, anuncioUsado: c.vidas.anuncioUsado } }
+        : {}),
   };
+}
+
+function vidasValidas(v: unknown): v is VidasDoDia {
+  if (!v || typeof v !== "object") return false;
+  const x = v as Partial<VidasDoDia>;
+  return (
+    typeof x.dia === "string" &&
+    /^\d{4}-\d{2}-\d{2}$/.test(x.dia) &&
+    Number.isInteger(x.restantes) &&
+    (x.restantes as number) >= 0 &&
+    (x.restantes as number) <= 50 &&
+    typeof x.anuncioUsado === "boolean"
+  );
 }
 
 function quandoAgora(d: Date = new Date()): { ocorreuEm: string; dataLocal: string } {
@@ -2241,7 +2274,8 @@ const FONTE_POR_ORIGEM: Record<NonNullable<Attempt["source"]>, FonteResposta> = 
   microlicao: "licao",
   legado: "redacao",
   atividade: "atividade",
-  checkpoint: "atividade",
+  // Checagem tem fonte própria (spec 49 D49-03: não custa vida); o servidor reconta pela `attemptKey`.
+  checkpoint: "checagem",
   nivelamento: "nivelamento",
 };
 
@@ -2261,7 +2295,13 @@ function respostaDoAttempt(a: Attempt): number | number[] | null {
 function enfileirarResposta(s: AppState, a: Attempt): void {
   const fonte = FONTE_POR_ORIGEM[a.source ?? "microlicao"];
   const ativa = s.learning.journey.activeActivity;
-  const attemptKey = fonte === "atividade" && ativa ? attemptKeyOf(ativa) : undefined;
+  const attemptKey = (fonte === "atividade" || fonte === "checagem") && ativa ? attemptKeyOf(ativa) : undefined;
+  // Vida baixa na hora (o servidor confirma no agregado); dia novo começa com o máximo.
+  if (s.account?.vidas && custaVida(fonte, a.correct, a.response === "dont-know")) {
+    const hoje = hojeISO();
+    const atual = s.account.vidas.dia === hoje ? s.account.vidas.restantes : VIDAS_POR_DIA;
+    s.account.vidas = { dia: hoje, restantes: Math.max(0, atual - 1), anuncioUsado: s.account.vidas.dia === hoje ? s.account.vidas.anuncioUsado : false };
+  }
   enfileirar(s, {
     tipo: "resposta",
     id: idDeEvento(a.id),
@@ -2304,6 +2344,33 @@ export function aplicarAgregadoDoServidor(a: Agregado): void {
     s.progress.lastStudyDate = a.ultimoDia ? new Date(`${a.ultimoDia}T12:00:00`).toDateString() : null;
     if (a.diaProtegido !== undefined) s.progress.diaProtegido = a.diaProtegido;
     s.progress.sequenciaConfirmadaEm = new Date().toISOString();
+    if (s.account) {
+      if (a.plano !== undefined) s.account.plano = a.plano;
+      if (a.protetoresMax !== undefined) s.account.protetoresMax = a.protetoresMax;
+      if (a.vidas !== undefined) s.account.vidas = a.vidas;
+    }
+    return s;
+  });
+}
+
+/**
+ * Vidas que o aluno tem agora (spec 49 D49-03): `null` = ilimitadas (plano pago, vidas desligadas ou sem conta).
+ * Dia novo renova sozinho, sem esperar o servidor.
+ */
+export function vidasAgora(s: AppState = state): number | null {
+  return vidasDeHoje(s.account?.vidas ?? null, hojeISO());
+}
+
+/** Pode responder uma questão que custa vida? (sem vidas, a lição pausa antes da próxima resposta). */
+export function podeResponderComVidas(s: AppState = state): boolean {
+  const v = vidasAgora(s);
+  return v === null || v > 0;
+}
+
+/** Aplica as vidas devolvidas pelo servidor (ex.: depois do anúncio recompensado). */
+export function aplicarVidasDoServidor(v: VidasDoDia | null): void {
+  setState((s) => {
+    if (s.account) s.account.vidas = v;
     return s;
   });
 }

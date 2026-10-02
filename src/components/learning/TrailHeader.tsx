@@ -1,6 +1,7 @@
 import type { FocaExpression } from "@/components/brand/FocaMark";
 import { GoalRing } from "@/components/ds/GoalRing";
 import { IndicadorSequencia } from "@/components/learning/IndicadorSequencia";
+import { IndicadorVidas } from "@/components/vidas/Vidas";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { COPY } from "@/lib/copy";
 import { atividadeHoje, diasSemAtividade, nivelDeXp, type AppState } from "@/lib/store";
@@ -32,6 +33,8 @@ export function TrailHeader({ s }: { s: AppState }) {
     <div className="flex items-center gap-3">
       {/* Sequência com foguinho e proteção (spec 48 T-48.6.1); toca para ver como funciona. */}
       <IndicadorSequencia s={s} />
+      {/* Vidas do Free (spec 49 D49-03): só aparece com vidas ligadas e plano Free. */}
+      <IndicadorVidas />
       <span className="flex shrink-0 items-center gap-1.5">
         <GoalRing value={doneToday} max={goal} size={40} />
         <span className="hidden font-mono text-xs font-bold text-nevoa min-[360px]:inline">

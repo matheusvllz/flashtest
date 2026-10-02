@@ -17,6 +17,7 @@ import {
   XP_POR_ESTRELAS,
   estrelasPorPct,
   pctDe,
+  SEQUENCIA_INICIAL,
   sequenciaDosDias,
   xpAlvoDaAtividade,
   xpAlvoDaQuestaoGeral,
@@ -25,6 +26,11 @@ import type { Agregado, EventoEstudo, MotivoRejeicao, RespostaEnvio } from "@/li
 import type { Banco } from "../db/client";
 import { attempt, completion, profile, studyDay, xpLedger } from "../db/schema";
 import { exercicioDoItem, licaoExiste } from "./conteudo";
+import { BENEFICIOS } from "@/lib/planos";
+import { custaVida } from "@/lib/vidas";
+import { planoDoAluno } from "../planos/plano";
+import { creditosDeProtetor } from "../planos/protetores";
+import { alunoTemVidas, perderVida, vidasDoDia, vidasLigadasPara } from "../vidas/vidas";
 
 /** Teto diário de atividades da trilha que pagam XP (a chave de atividade é por tentativa, sem teto natural). */
 export const ATIVIDADES_PAGAS_POR_DIA = 60;
@@ -75,6 +81,8 @@ export async function aplicarEventos(
 ): Promise<RespostaEnvio> {
   const aplicados: string[] = [];
   const rejeitados: Array<{ id: string; motivo: MotivoRejeicao }> = [];
+  // Vidas do Free (spec 49 D49-03): decidido uma vez por lote, fora da transação.
+  const comVidas = await alunoTemVidas(db, userId, agora);
 
   await db.transaction(async (tx) => {
     await tx.insert(profile).values({ userId }).onConflictDoNothing();
@@ -118,6 +126,8 @@ export async function aplicarEventos(
           if (ev.fonte === "questao-geral") {
             await pagarXp(tx, userId, `questao-geral:${ev.itemId}`, xpAlvoDaQuestaoGeral(correta), "questao-geral", ev.dataLocal);
           }
+          // A resposta nunca é recusada por falta de vida (o estudo feito sem conexão não é apagado): só o saldo baixa.
+          if (comVidas && custaVida(ev.fonte, correta, ev.resposta === null)) await perderVida(tx, userId, ev.dataLocal);
           aplicados.push(ev.id);
           break;
         }
@@ -196,14 +206,23 @@ export async function aplicarEventos(
     }
   });
 
-  return { ok: true, aplicados, rejeitados, agregado: await agregadoDoAluno(db, userId) };
+  return { ok: true, aplicados, rejeitados, agregado: await agregadoDoAluno(db, userId, agora) };
 }
 
 /** XP, sequência e dias — a verdade do servidor sobre recompensas. */
-export async function agregadoDoAluno(db: Banco, userId: string): Promise<Agregado> {
+export async function agregadoDoAluno(db: Banco, userId: string, agora: Date = new Date()): Promise<Agregado> {
   const [x] = await db.select({ xp: sum(xpLedger.xp) }).from(xpLedger).where(eq(xpLedger.userId, userId));
   const dias = await db.select({ d: studyDay.localDate }).from(studyDay).where(eq(studyDay.userId, userId));
-  const s = sequenciaDosDias(dias.map((r) => r.d));
+  const plano = await planoDoAluno(db, userId, agora);
+  const protetoresMax = BENEFICIOS[plano].protetoresEstoqueMax;
+  const s = sequenciaDosDias(
+    dias.map((r) => r.d),
+    SEQUENCIA_INICIAL,
+    { creditos: await creditosDeProtetor(db, userId, agora), estoqueMax: protetoresMax },
+  );
+  const [perfil] = await db.select({ tz: profile.timezone }).from(profile).where(eq(profile.userId, userId)).limit(1);
+  const hoje = dataNoFuso(agora, perfil?.tz ?? "America/Sao_Paulo");
+  const vidas = plano === "gratis" && (await vidasLigadasPara(db, userId)) ? await vidasDoDia(db, userId, hoje) : null;
   return {
     xp: Number(x?.xp ?? 0),
     sequencia: s.sequencia,
@@ -212,5 +231,8 @@ export async function agregadoDoAluno(db: Banco, userId: string): Promise<Agrega
     ultimoDia: s.ultimoDia,
     diasComAtividade: dias.length,
     diaProtegido: s.diaProtegido ?? null,
+    plano,
+    protetoresMax,
+    vidas,
   };
 }

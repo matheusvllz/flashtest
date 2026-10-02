@@ -12,6 +12,9 @@
  */
 import { z } from "zod";
 
+/** Caminho de bloco do Ad Manager: `/<rede>/<bloco>`. */
+const UNIDADE_GAM = /^\/\d+\/[\w./-]+$/;
+
 const booleano = z
   .enum(["true", "false", "1", "0"])
   .transform((v) => v === "true" || v === "1");
@@ -75,6 +78,9 @@ const esquema = z.object({
   /** Anúncios do Free (spec 49 D49-02), desligados por padrão; `falso` em desenvolvimento e E2E. */
   ANUNCIOS_HABILITADO: booleano.optional(),
   ANUNCIOS_PROVEDOR: z.enum(["falso", "gam"]).optional(),
+  /** Blocos do Google Ad Manager (públicos por natureza; vêm do servidor para não espalhar `VITE_*`). */
+  GAM_UNIDADE_RECOMPENSADO: z.string().regex(UNIDADE_GAM).optional(),
+  GAM_UNIDADE_RETANGULO: z.string().regex(UNIDADE_GAM).optional(),
   /** Ranking semanal de maiores de 18 (spec 49 D49-06), desligado por padrão (E3). */
   RANKING_HABILITADO: booleano.optional(),
 

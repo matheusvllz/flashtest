@@ -49,6 +49,9 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/planos.ts#cancelarAssinatura": "cancelarAssinatura(db, p, s.userId) — só a assinatura vigente do próprio aluno",
   "src/lib/api/planos.ts#pedirReembolso": "pedirReembolso(db, p, s.userId) — só a assinatura e as cobranças do próprio aluno",
   "src/lib/api/planos.ts#simularPagamentoLocal": "só local (404 implantado); confere estadoDaCompra(db, s.userId) antes de simular",
+  "src/lib/api/recompensas.ts#configAnuncios": "configDeAnuncios(db, s.userId) — só o plano e o ano do próprio aluno",
+  "src/lib/api/recompensas.ts#decidirCookiesDeAnuncio": "registrarConsentimentoDeCookies(db, s.userId) — consentimento do próprio aluno",
+  "src/lib/api/recompensas.ts#ganharVidaPorAnuncio": "ganharVidaPorAnuncio(db, s.userId, dia) — prova: 'anúncio dá +1 uma vez por dia'",
 };
 
 function arquivos(dir: string): string[] {

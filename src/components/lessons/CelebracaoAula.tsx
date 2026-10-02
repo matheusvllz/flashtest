@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Flame, Star, Target, Timer } from "lucide-react";
@@ -44,6 +45,7 @@ export function CelebracaoAula({
   aprendizado,
   primario,
   secundario,
+  rodape,
 }: {
   acertos: number;
   total: number;
@@ -63,6 +65,8 @@ export function CelebracaoAula({
   aprendizado?: string;
   primario: CelebracaoAcao;
   secundario?: CelebracaoAcao;
+  /** Depois das ações (ex.: o retângulo de anúncio do Free, spec 49 §5.4). */
+  rodape?: ReactNode;
 }) {
   const pct = total > 0 ? Math.round((acertos / total) * 100) : 0;
   const marco = isStreakMilestone(streakAtual);
@@ -180,6 +184,7 @@ export function CelebracaoAula({
         <Acao {...primario} className="btn-primary w-full" />
         {secundario && <Acao {...secundario} className="btn-ghost w-full" />}
       </div>
+      {rodape}
     </div>
   );
 }

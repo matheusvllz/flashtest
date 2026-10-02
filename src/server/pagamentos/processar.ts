@@ -19,6 +19,7 @@ import { emailRecibo } from "../email/modelos";
 import { env } from "../env";
 import { log } from "../http";
 import { sincronizarPlanoNoPerfil } from "../planos/plano";
+import { creditarCompraDeProtetores, estornarCompraDeProtetores } from "../planos/protetores";
 import type { CobrancaExterna, EventoDePagamento, Provedor } from "./tipos";
 
 const DIA_MS = 86_400_000;
@@ -37,6 +38,10 @@ export type ResultadoDoEvento =
 
 type Compra = typeof compra.$inferSelect;
 type Assinatura = typeof assinatura.$inferSelect;
+
+function diaEmSaoPaulo(d: Date): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+}
 
 function fimDoPeriodo(base: Date, periodo: "mensal" | "anual"): Date {
   const d = new Date(base.getTime());
@@ -124,11 +129,13 @@ export async function processarCobranca(db: Banco, p: Provedor, cob: CobrancaExt
 
   if (produto.tipo === "assinatura") {
     await aplicarNaAssinatura(db, p, c, produto, cob, agora);
-  } else if (cob.status === "paga" && c.estado === "aberta") {
-    // Protetores: o crédito entra na F7 (T-49.7.3); aqui a compra só fica registrada como paga.
-    await db.update(compra).set({ estado: "paga", pagaEm: cob.pagaEm ?? agora }).where(eq(compra.id, c.id));
+  } else if (cob.status === "paga") {
+    // Protetores avulsos (T-49.7.3): crédito idempotente pela compra; no dia (São Paulo) do pagamento.
+    if (c.estado === "aberta") await db.update(compra).set({ estado: "paga", pagaEm: cob.pagaEm ?? agora }).where(eq(compra.id, c.id));
+    if (c.estado !== "reembolsada") await creditarCompraDeProtetores(db, c.userId, c.id, produto.quantidade, diaEmSaoPaulo(cob.pagaEm ?? agora));
   } else if (cob.status === "reembolsada" || cob.status === "estornada") {
     await db.update(compra).set({ estado: "reembolsada" }).where(eq(compra.id, c.id));
+    await estornarCompraDeProtetores(db, c.userId, c.id, produto.quantidade, diaEmSaoPaulo(agora));
   }
 
   await sincronizarPlanoNoPerfil(db, c.userId, agora);

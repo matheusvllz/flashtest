@@ -188,7 +188,8 @@ describe("ações do aluno", () => {
   test("checkout: só assinatura, Pix só no anual, sem assinar o mesmo plano duas vezes", async () => {
     const { iniciarCheckout } = await acoes();
     const { userId } = await alunoVerificado(amb, "acao-checkout@foca.dev");
-    await expect(iniciarCheckout(amb.db, provedorFalso, userId, { produto: "protetor_3", metodo: "pix" }, BASE, AGORA)).rejects.toMatchObject({ codigo: "PRODUTO_INDISPONIVEL" });
+    // Free: 1 protetor inicial + 3 passaria do teto de 2 (bloqueado antes do pagamento).
+    await expect(iniciarCheckout(amb.db, provedorFalso, userId, { produto: "protetor_3", metodo: "pix" }, BASE, AGORA)).rejects.toMatchObject({ codigo: "ESTOQUE_CHEIO" });
     await expect(iniciarCheckout(amb.db, provedorFalso, userId, { produto: "basic_mensal", metodo: "pix" }, BASE, AGORA)).rejects.toMatchObject({ codigo: "METODO_INDISPONIVEL" });
     const r = await iniciarCheckout(amb.db, provedorFalso, userId, { produto: "basic_mensal", metodo: "cartao" }, BASE, AGORA);
     expect(r.link).toContain(`compra=${r.compraId}`);
@@ -247,5 +248,37 @@ describe("ações do aluno", () => {
     const { compraId } = await iniciarCheckout(amb.db, provedorFalso, ana.userId, { produto: "pro_mensal", metodo: "cartao" }, BASE, AGORA);
     expect((await estadoDaCompra(amb.db, ana.userId, compraId, AGORA)).estado).toBe("aberta");
     await expect(estadoDaCompra(amb.db, bia.userId, compraId, AGORA)).rejects.toMatchObject({ codigo: "COMPRA_INEXISTENTE" });
+  });
+});
+
+describe("protetores avulsos (T-49.7.3)", () => {
+  const BASE = "http://localhost:8080";
+  test("Pro compra 3: pago entra no estoque; reembolso tira", async () => {
+    const { iniciarCheckout } = await import("../../../src/server/pagamentos/acoes");
+    const { agregadoDoAluno } = await import("../../../src/server/estudo/sincronizar");
+    const { userId } = await alunoVerificado(amb, "prot-pro@foca.dev");
+    await amb.db.insert(assinatura).values({ id: randomUUID(), userId, provedor: "teste", origem: "web", idExterno: randomUUID(), produto: "pro_mensal", plano: "pro", estado: "ativa", validoAte: new Date(AGORA.getTime() + 20 * DIA) });
+    const antes = (await agregadoDoAluno(amb.db, userId, AGORA)).congelamentos;
+    const { compraId } = await iniciarCheckout(amb.db, provedorFalso, userId, { produto: "protetor_3", metodo: "pix" }, BASE, AGORA);
+    const sim = simularPagamento(compraId, "aprovado", AGORA)!;
+    await registrarEProcessar(amb.db, provedorFalso, evento(sim.cobrancaId, "PAYMENT_RECEIVED"), AGORA);
+    await registrarEProcessar(amb.db, provedorFalso, evento(sim.cobrancaId, "PAYMENT_RECEIVED"), AGORA);
+    expect((await agregadoDoAluno(amb.db, userId, AGORA)).congelamentos).toBe(antes + 3);
+    alterarCobrancaFalsa(sim.cobrancaId, { status: "reembolsada" });
+    await processarEvento(amb.db, provedorFalso, evento(sim.cobrancaId, "PAYMENT_REFUNDED"), AGORA);
+    expect((await agregadoDoAluno(amb.db, userId, AGORA)).congelamentos).toBe(antes);
+  });
+
+  test("conta de menor: no máximo 2 compras avulsas no mês", async () => {
+    const { iniciarCheckout } = await import("../../../src/server/pagamentos/acoes");
+    const { user } = await import("../../../src/server/db/schema");
+    const { userId } = await alunoVerificado(amb, "prot-menor@foca.dev");
+    await amb.db.update(user).set({ birthYear: 2009 }).where(eq(user.id, userId));
+    await amb.db.insert(assinatura).values({ id: randomUUID(), userId, provedor: "teste", origem: "web", idExterno: randomUUID(), produto: "pro_mensal", plano: "pro", estado: "ativa", validoAte: new Date(AGORA.getTime() + 20 * DIA) });
+    for (let i = 0; i < 2; i++) {
+      const { compraId } = await iniciarCheckout(amb.db, provedorFalso, userId, { produto: "protetor_1", metodo: "pix" }, BASE, AGORA);
+      await registrarEProcessar(amb.db, provedorFalso, evento(simularPagamento(compraId, "aprovado", AGORA)!.cobrancaId), AGORA);
+    }
+    await expect(iniciarCheckout(amb.db, provedorFalso, userId, { produto: "protetor_1", metodo: "pix" }, BASE, AGORA)).rejects.toMatchObject({ codigo: "LIMITE_MENOR" });
   });
 });

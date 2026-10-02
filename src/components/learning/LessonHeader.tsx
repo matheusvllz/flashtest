@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { X } from "lucide-react";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 
@@ -13,6 +14,7 @@ export function LessonHeader({
   max,
   counter,
   breadcrumb,
+  extra,
 }: {
   onExit: () => void;
   value: number;
@@ -20,6 +22,8 @@ export function LessonHeader({
   /** "{n}/{total}" — só passado quando o passo atual é uma questão (docs/25 §12.2). */
   counter?: string;
   breadcrumb: string;
+  /** Ao lado do contador (ex.: as vidas do Free, spec 49 D49-03). */
+  extra?: ReactNode;
 }) {
   return (
     <div className="sticky top-0 z-10 border-b-2 border-gelo bg-neve/95 px-5 pt-4 pb-3 backdrop-blur">
@@ -38,6 +42,7 @@ export function LessonHeader({
         {counter && (
           <span className="shrink-0 font-mono text-xs font-bold tabular-nums text-nevoa">{counter}</span>
         )}
+        {extra}
       </div>
       <p className="ds-label mt-1.5 truncate">{breadcrumb}</p>
     </div>

@@ -10,10 +10,14 @@ import { assinatura, cobranca, compra, user } from "../db/schema";
 import { enviarEmail } from "../email";
 import { emailCancelamento, emailReembolso } from "../email/modelos";
 import { ErroApp } from "../http";
+import { idadePeloAno } from "@/lib/legal";
+import { agregadoDoAluno } from "../estudo/sincronizar";
 import { planoDoAluno, sincronizarPlanoNoPerfil } from "../planos/plano";
 import type { Provedor } from "./tipos";
 
 const DIA_MS = 86_400_000;
+/** Conta de menor de 18: no máximo 2 compras avulsas de protetor por mês (spec 49 §5.5; ECA Digital art. 18, II). */
+const COMPRAS_AVULSAS_MES_MENOR = 2;
 /** Reembolso automático: uma vez por plano a cada 90 dias; depois, pelo suporte (abuso de "compra e reembolsa"). */
 const JANELA_REEMBOLSO_DIAS = 90;
 const ESTADOS_QUE_VALEM = ["ativa", "atrasada", "cancelada"];
@@ -67,12 +71,25 @@ export async function iniciarCheckout(
   agora: Date,
 ): Promise<{ compraId: string; link: string }> {
   const produto = PRODUTOS[pedido.produto];
-  // Protetores avulsos entram na F7 (T-49.7.3), junto com o crédito no estoque.
-  if (produto.tipo !== "assinatura") throw new ErroApp(400, "PRODUTO_INDISPONIVEL");
-  // Pix só no anual (pagamento único); o mensal no Pix exigiria Pix Automático (PJ) ou cobrança manual todo mês.
-  if (pedido.metodo === "pix" && produto.periodo !== "anual") throw new ErroApp(400, "METODO_INDISPONIVEL");
-  const atual = await planoDoAluno(db, userId, agora);
-  if (atual === produto.plano || atual === "pro") throw new ErroApp(409, "JA_ASSINANTE");
+  if (produto.tipo === "protetor") {
+    // Nunca se paga por protetor que não cabe no estoque (§5.5): bloqueado antes do pagamento.
+    const ag = await agregadoDoAluno(db, userId, agora);
+    if (ag.congelamentos + produto.quantidade > (ag.protetoresMax ?? 2)) throw new ErroApp(409, "ESTOQUE_CHEIO");
+    const [u] = await db.select({ ano: user.birthYear }).from(user).where(eq(user.id, userId)).limit(1);
+    if (!u?.ano || idadePeloAno(u.ano, agora) < 18) {
+      const inicioDoMes = new Date(Date.UTC(agora.getUTCFullYear(), agora.getUTCMonth(), 1));
+      const doMes = await db
+        .select({ id: compra.id, produto: compra.produto })
+        .from(compra)
+        .where(and(eq(compra.userId, userId), eq(compra.estado, "paga"), gt(compra.pagaEm, inicioDoMes)));
+      if (doMes.filter((c) => c.produto.startsWith("protetor_")).length >= COMPRAS_AVULSAS_MES_MENOR) throw new ErroApp(409, "LIMITE_MENOR");
+    }
+  } else {
+    // Pix só no anual (pagamento único); o mensal no Pix exigiria Pix Automático (PJ) ou cobrança manual todo mês.
+    if (pedido.metodo === "pix" && produto.periodo !== "anual") throw new ErroApp(400, "METODO_INDISPONIVEL");
+    const atual = await planoDoAluno(db, userId, agora);
+    if (atual === produto.plano || atual === "pro") throw new ErroApp(409, "JA_ASSINANTE");
+  }
 
   const compraId = randomUUID();
   await db.insert(compra).values({ id: compraId, userId, produto: pedido.produto, provedor: p.nome, declarouMaioridadeEm: agora });
@@ -88,10 +105,15 @@ export async function iniciarCheckout(
 }
 
 /** Estado de uma compra do PRÓPRIO aluno (para a tela de retorno do checkout). */
-export async function estadoDaCompra(db: Banco, userId: string, compraId: string, agora: Date): Promise<{ estado: string; plano: Plano }> {
-  const [c] = await db.select({ estado: compra.estado }).from(compra).where(and(eq(compra.id, compraId), eq(compra.userId, userId))).limit(1);
+export async function estadoDaCompra(
+  db: Banco,
+  userId: string,
+  compraId: string,
+  agora: Date,
+): Promise<{ estado: string; plano: Plano; tipo: "assinatura" | "protetor" }> {
+  const [c] = await db.select({ estado: compra.estado, produto: compra.produto }).from(compra).where(and(eq(compra.id, compraId), eq(compra.userId, userId))).limit(1);
   if (!c) throw new ErroApp(404, "COMPRA_INEXISTENTE");
-  return { estado: c.estado, plano: await planoDoAluno(db, userId, agora) };
+  return { estado: c.estado, plano: await planoDoAluno(db, userId, agora), tipo: c.produto.startsWith("protetor_") ? "protetor" : "assinatura" };
 }
 
 async function emailDoAluno(db: Banco, userId: string): Promise<string | null> {

@@ -5,6 +5,7 @@ import { AppShell } from "@/components/AppShell";
 import { CelebracaoAula } from "@/components/lessons/CelebracaoAula";
 import { FeedbackSheet } from "@/components/lessons/FeedbackSheet";
 import { DontKnowButton } from "@/components/learning/DontKnowButton";
+import { FolhaSemVidas } from "@/components/vidas/Vidas";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { marcadorClasses, choiceClasses } from "@/components/lessons/exercises/shared";
 import { QUESTIONS, type Question } from "@/data/questions";
@@ -23,6 +24,7 @@ import {
   isStreakMilestone,
   nivelDeXp,
   openTutorWithContext,
+  podeResponderComVidas,
   recordLearningAttempt,
   registrarAulaConcluida,
   registrarResposta,
@@ -55,6 +57,8 @@ function Study() {
   const [selected, setSelected] = useState<string | null>(null);
   const [lessonDone, setLessonDone] = useState(false);
   const [showHint, setShowHint] = useState(false);
+  // Vidas do Free (spec 49 D49-03): sem vida, a próxima resposta abre a folha em vez de responder.
+  const [semVidas, setSemVidas] = useState(false);
   // Máquina de resposta compartilhada com o player de redação (docs/20 §5,
   // Fase 2) — guardas de envio/avanço e snapshot de feedback moram aqui.
   const session = useExerciseSession();
@@ -153,6 +157,10 @@ function Study() {
 
   function submit() {
     if (!selected) return;
+    if (!podeResponderComVidas()) {
+      setSemVidas(true);
+      return;
+    }
     session.submit(() => {
       const correct = selected === q.correct;
       // XP real pós-teto (docs/20 §12, Fase 11) — não mais um 15/5 fixo
@@ -169,6 +177,10 @@ function Study() {
 
   /** Botão "Não sei" (docs/30 §16.1, Fase 6) — XP como errada, mas é um sinal próprio (`response: "dont-know"`), não um chute. */
   function dontKnow() {
+    if (!podeResponderComVidas()) {
+      setSemVidas(true);
+      return;
+    }
     session.submit(() => {
       const xpAwarded = registrarResposta(q, false);
       registrarSinal("dont-know", false);
@@ -406,6 +418,7 @@ function Study() {
           </div>
         )}
       </div>
+      <FolhaSemVidas open={semVidas} onClose={() => setSemVidas(false)} />
     </AppShell>
   );
 }

@@ -28,10 +28,12 @@ import {
   hojeISO,
   nivelDeXp,
   openTutorWithContext,
+  podeResponderComVidas,
   setActiveLearningSession,
   usePersistStatus,
 } from "@/lib/store";
 import { cn } from "@/lib/utils";
+import { AnuncioNaConclusao, FolhaSemVidas, IndicadorVidas } from "@/components/vidas/Vidas";
 
 /**
  * Player de microlição, passo a passo (docs/20 §8.1 + docs/25 §9/§12.2/§18
@@ -92,6 +94,16 @@ function MicroLessonPlayerInner({
   const navigate = useNavigate();
   const session = useLearningSession(lesson, { mode, onComplete });
   const [confirmExit, setConfirmExit] = useState(false);
+  // Vidas do Free (spec 49 D49-03): lição e prática custam; a checagem não. Sem vida, pausa antes da próxima resposta.
+  const custaVidas = mode !== "checkpoint";
+  const [semVidas, setSemVidas] = useState(false);
+  const comVida = (acao: () => void) => () => {
+    if (custaVidas && !podeResponderComVidas()) {
+      setSemVidas(true);
+      return;
+    }
+    acao();
+  };
   // Sem promessa de "salvo" quando a gravação local não está ok (docs/36 RF-14).
   const persist = usePersistStatus();
   // Streak/nível ANTES do fechamento — capturados no player bem antes de
@@ -185,6 +197,7 @@ function MicroLessonPlayerInner({
           aprendizado={lesson.objective}
           primario={{ label: "Continuar", to: "/trilha", search }}
           secundario={{ label: COPY.licao.refazer, onClick: replay }}
+          rodape={<AnuncioNaConclusao />}
         />
       </PhoneFrame>
     );
@@ -204,6 +217,7 @@ function MicroLessonPlayerInner({
           max={Math.max(1, session.steps.length - 1)}
           counter={counter}
           breadcrumb={breadcrumb}
+          extra={custaVidas ? <IndicadorVidas /> : undefined}
         />
 
         <div
@@ -222,12 +236,12 @@ function MicroLessonPlayerInner({
               presentedOrder={session.presentedOrder}
               feedback={session.feedback}
               canVerify={session.canVerify}
-              onVerify={() => session.answer !== null && session.submit(session.answer)}
+              onVerify={comVida(() => session.answer !== null && session.submit(session.answer))}
               onContinue={session.advance}
               onAskTutor={() => askTutor(true)}
               onDontKnow={
                 FEATURES.botaoNaoSei && itemMetaOf(step.exerciseId).dontKnowAllowed !== false
-                  ? session.dontKnow
+                  ? comVida(session.dontKnow)
                   : undefined
               }
               isLast={session.isLastScoredQuestion}
@@ -248,6 +262,7 @@ function MicroLessonPlayerInner({
           `LessonPlayer.tsx`). Checkpoint é sem tutor de propósito (docs/30
           §13.3) — nem o botão flutuante fica disponível durante ele. */}
       {mode !== "checkpoint" && <TutorBubble />}
+      <FolhaSemVidas open={semVidas} onClose={() => setSemVidas(false)} />
 
       <BottomSheet
         open={confirmExit}

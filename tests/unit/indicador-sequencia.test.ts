@@ -41,10 +41,13 @@ describe("estadoDaSequencia", () => {
     expect(estadoDaSequencia(s({ diaProtegido: "2026-09-01" }), HOJE).protecaoRecente).toBeNull();
   });
 
-  test("volta depois de pausa: recorde como meta; proteções limitadas a 0–2", () => {
+  test("volta depois de pausa: recorde como meta; estoque mostrado como está e o teto vem do plano (spec 49 D49-05)", () => {
     const e = estadoDaSequencia(s({ streak: 1, bestStreak: 9, streakFreezes: 5 }), HOJE);
     expect(e.voltando).toBe(true);
-    expect(e.protecoes).toBe(2);
+    // Estoque de um plano anterior (ou comprado) aparece inteiro; sem conta, o teto é o do Free (2).
+    expect(e.protecoes).toBe(5);
+    expect(e.protecoesMax).toBe(2);
+    expect(estadoDaSequencia(s({ streakFreezes: -1 }), HOJE).protecoes).toBe(0);
     expect(estadoDaSequencia(s({ activityDays: [] }), HOJE).estudouHoje).toBe(false);
   });
 });

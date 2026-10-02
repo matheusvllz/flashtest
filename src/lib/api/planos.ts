@@ -62,7 +62,7 @@ export const iniciarCheckout = createServerFn({ method: "POST" })
 
 export const estadoDaCompra = createServerFn({ method: "GET" })
   .validator((d: unknown) => z.object({ compraId: z.string().uuid() }).parse(d))
-  .handler(async ({ data }): Promise<{ ok: true; estado: string; plano: Plano } | Erro> => {
+  .handler(async ({ data }): Promise<{ ok: true; estado: string; plano: Plano; tipo: "assinatura" | "protetor" } | Erro> => {
     try {
       const s = await exigirSessao();
       const db = await banco();

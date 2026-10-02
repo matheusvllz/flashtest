@@ -19,6 +19,7 @@ type Estado = "confirmando" | "pronto" | "recusado" | "cancelado" | "expirado" |
 export function RetornoDoPagamento({ compra, r, teste }: { compra: string; r?: string; teste: boolean }) {
   const [estado, setEstado] = useState<Estado>(r === "cancelado" ? "cancelado" : r === "expirado" ? "expirado" : "confirmando");
   const [plano, setPlano] = useState<Plano>("gratis");
+  const [tipo, setTipo] = useState<"assinatura" | "protetor">("assinatura");
   const inicio = useRef(Date.now());
   const [simulou, setSimulou] = useState(false);
 
@@ -29,8 +30,9 @@ export function RetornoDoPagamento({ compra, r, teste }: { compra: string; r?: s
       try {
         const x = await estadoDaCompra({ data: { compraId: compra } });
         if (!vivo) return;
-        if (x.ok && x.estado === "paga" && x.plano !== "gratis") {
+        if (x.ok && x.estado === "paga" && (x.tipo === "protetor" || x.plano !== "gratis")) {
           setPlano(x.plano);
+          setTipo(x.tipo);
           setEstado("pronto");
           return;
         }
@@ -65,7 +67,7 @@ export function RetornoDoPagamento({ compra, r, teste }: { compra: string; r?: s
       <div className="px-5 pt-8 space-y-4" data-testid="retorno-pagamento">
         <p role="status" aria-live="polite" className="font-display text-xl font-bold text-abismo">
           {estado === "confirmando" && t.confirmando}
-          {estado === "pronto" && t.pronto(NOME[plano])}
+          {estado === "pronto" && (tipo === "protetor" ? COPY.protetores.retornoPronto : t.pronto(NOME[plano]))}
           {estado === "recusado" && t.recusado}
           {estado === "cancelado" && t.cancelado}
           {estado === "expirado" && t.expirado}

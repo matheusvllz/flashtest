@@ -10,7 +10,9 @@ export function estadoDaSequencia(s: AppState, hoje = hojeISO()) {
   return {
     dias: s.progress.streak,
     recorde: s.progress.bestStreak,
-    protecoes: Math.max(0, Math.min(CONGELAMENTOS_MAXIMO, s.progress.streakFreezes)),
+    // Teto do plano (spec 49 D49-05): Free 2, Basic 4, Pro 7; o estoque acima dele (de um plano anterior) aparece.
+    protecoesMax: s.account?.protetoresMax ?? CONGELAMENTOS_MAXIMO,
+    protecoes: Math.max(0, s.progress.streakFreezes),
     estudouHoje,
     protecaoRecente,
     voltando,

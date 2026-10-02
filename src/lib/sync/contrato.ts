@@ -24,6 +24,8 @@ export const FONTES_DE_RESPOSTA = [
   "redacao",
   "nivelamento",
   "flashcard",
+  /** Checagem da trilha (spec 49 D49-03: não custa vida). Antes ia como "atividade". */
+  "checagem",
 ] as const;
 
 export const eventoResposta = z.object({
@@ -106,6 +108,12 @@ export interface Agregado {
   diasComAtividade: number;
   /** Último dia parado coberto por proteção (spec 48 D48-14), ou `null`. Aditivo: servidor antigo não manda. */
   diaProtegido?: string | null;
+  /** Plano decidido no servidor (spec 49 D49-08). Aditivo. */
+  plano?: "gratis" | "basic" | "pro";
+  /** Teto de protetores do plano (spec 49 D49-05). Aditivo. */
+  protetoresMax?: number;
+  /** Vidas de hoje (spec 49 D49-03); `null` = sem vidas (plano pago ou desligado). Aditivo. */
+  vidas?: { dia: string; restantes: number; anuncioUsado: boolean } | null;
 }
 
 export type MotivoRejeicao =

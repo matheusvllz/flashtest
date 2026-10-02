@@ -2,6 +2,7 @@ import { Check, Shield } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ChamaSequencia } from "@/components/learning/ChamaSequencia";
+import { CompraDeProtetores } from "@/components/planos/CompraDeProtetores";
 import { COPY } from "@/lib/copy";
 import { CONGELAMENTOS_MAXIMO } from "@/lib/recompensas";
 import { estadoDaSequencia } from "@/lib/sequencia";
@@ -24,6 +25,7 @@ function dataCurta(iso: string): string {
  */
 export function IndicadorSequencia({ s }: { s: AppState }) {
   const [aberto, setAberto] = useState(false);
+  const [comprando, setComprando] = useState(false);
   const e = estadoDaSequencia(s);
   // Um pulo só, quando a chama acende com a tela aberta (concluiu o primeiro estudo do dia). Nada em loop.
   const acesaAntes = useRef(e.estudouHoje);
@@ -70,13 +72,22 @@ export function IndicadorSequencia({ s }: { s: AppState }) {
           {e.voltando && <p>{COPY.sequencia.voltando(e.recorde)}</p>}
           <p className="flex items-center gap-2">
             <Shield size={16} strokeWidth={2.5} className="text-nevoa" aria-hidden />
-            {COPY.sequencia.protecoes(e.protecoes, CONGELAMENTOS_MAXIMO)}
+            {COPY.sequencia.protecoes(e.protecoes, e.protecoesMax)}
           </p>
           {e.protecaoRecente && <p>{COPY.sequencia.protecaoUsada(dataCurta(e.protecaoRecente))}</p>}
           <p className="text-nevoa">{COPY.sequencia.comoFunciona}</p>
           <p className="text-xs text-nevoa" data-testid="sequencia-fonte">
             {COPY.sequencia.fonte[e.conta]}
           </p>
+          {/* Compra avulsa (spec 49 D49-05): só com conta, aqui e na tela de planos; nunca como aviso de sequência em risco. */}
+          {e.conta !== "aparelho" &&
+            (comprando ? (
+              <CompraDeProtetores estoque={e.protecoes} maximo={e.protecoesMax} />
+            ) : (
+              <button type="button" onClick={() => setComprando(true)} className="btn-outline w-full" data-testid="comprar-protetores">
+                {COPY.protetores.comprar}
+              </button>
+            ))}
         </div>
       </BottomSheet>
     </>
