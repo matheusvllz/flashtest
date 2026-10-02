@@ -1,0 +1,164 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "oficial:2022:d045c8a5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os caixeiros do comércio a retalho do Rio de Janeiro estiveram entre as primeiras categorias de trabalhadores a se organizar em associações e a exigir a intervenção dos poderes públicos na mediação de suas lutas por direitos. Na década de 1880, os caixeiros participaram da arena política e ganharam as ruas com vários outros, como os republicanos e os abolicionistas.\n\nPOPINIGIS, F. “Todas as liberdades são irmãs”: os caixeiros e as lutas dos trabalhadores por direitos entre o Império e a República. Estudos Históricos, n. 59, set.-dez. 2016 (adaptado).\n\nA atuação dos trabalhadores mencionados no texto representou, na capital do Império, um momento de",
+        "opcoes": [
+          "manutenção das regras patronais.",
+          "desprendimento das ideias liberais.",
+          "fortalecimento dos contratos laborais.",
+          "consolidação das estruturas sindicais.",
+          "contestação dos princípios monárquicos."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:d045c8a5",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 54"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.872Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:b88a9f9d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ainda que a fome ocorrida na Itália em 536 tenha origem nos eventos climáticos, suas implicações são tanto políticas quanto econômicas. Nos primeiros séculos da Idade Média, o auxílio aos famintos se inscreve no domínio da gestão pública, mesmo quando a ação de seus agentes é apresentada sob o ângulo da piedade e da caridade individuais, como é o caso da Gália merovíngia. Assim, o fato de que as respostas à fome são mostradas, na Gália, como o fruto de iniciativas pessoais fundadas no imperativo da caridade deriva da natureza das fontes do século VI.\n\nNa conjuntura histórica destacada no texto, o dever de agir em face da situação de crise apresentada pertencia à jurisdição",
+        "opcoes": [
+          "da nobreza, proveniente da obrigação de proteção ao campesinato livre.",
+          "da realeza, decorrente do conceito de governo subjacente à monarquia cristã.",
+          "dos mosteiros, resultante do caráter fraternal afirmado nas regras monásticas.",
+          "dos bispados, consequente da participação dos clérigos nos assuntos comunitários.",
+          "das corporações, procedente do padrão assistencialista previsto nas normas estatutárias."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:b88a9f9d",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 63"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.968Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:19c2b9c0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para os Impérios Coloniais, o problema das doenças que atingiam os escravos era algo com que cotidianamente deparavam os senhores. Em vista disso, uma série de obras dedicadas à administração de escravos foi publicada com vista a implementar uma moderna gestão da mão de obra escravista em convergência com o Iluminismo. Nesse contexto, o saber médico adquiria um papel extremamente relevante. Este era encarado como um instrumento fundamental ao desenvolvimento colonial, dada a percepção do impacto que as doenças tropicais causavam na população branca e nos povos escravizados.\n\nABREU, J. L. N. A Colônia enferma e a saúde dos povos: a medicina das “luzes” e as\ninformações sobre as enfermidades da América portuguesa. História, Ciências,\nSaúde – Manguinhos, n. 3, jul.-set. 2007 (adaptado).\n\nDe acordo com o texto, a importância da medicina se justifica no âmbito dos objetivos",
+        "opcoes": [
+          "econômicos das elites.",
+          "naturalistas dos viajantes.",
+          "abolicionistas dos letrados.",
+          "tradicionalistas dos nativos.",
+          "emancipadores das metrópoles."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:19c2b9c0",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 77"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.243Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

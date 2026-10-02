@@ -1,0 +1,323 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "oficial:2022:37d6717c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Sempre que a relevância do discurso entra em jogo, a questão torna-se política por definição, pois é o discurso que faz do homem um ser político. E tudo que os homens fazem, sabem ou experimentam só tem sentido na medida em que pode ser discutido. Haverá, talvez, verdades que ficam além da linguagem e que podem ser de grande relevância para o homem no singular, isto é, para o homem que, seja o que for, não é um ser político. Mas homens no plural, isto é, os homens que vivem e se movem e agem neste mundo, só podem experimentar o significado das coisas por poderem falar e ser inteligíveis entre si e consigo mesmos.\n\nARENDT, H. A condição humana. Rio de Janeiro: Forense Universitária, 2004.\n\nNo trecho, a filósofa Hannah Arendt mostra a importância da linguagem no processo de",
+        "opcoes": [
+          "entendimento da cultura.",
+          "aumento da criatividade.",
+          "percepção da individualidade.",
+          "melhoria da técnica.",
+          "construção da sociabilidade."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:37d6717c",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 47"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.869Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:4b4c47f9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma nova economia surgiu em escala global no último quartel do século XX. Chamo-a de informacional, global e em rede para identificar suas características fundamentais e diferenciadas e enfatizar sua interligação. É informacional porque depende basicamente de sua capacidade de gerar, processar e aplicar de forma eficiente a informação baseada em conhecimentos. É global porque seus componentes estão organizados em escala global, diretamente ou mediante uma rede de conexões entre agentes econômicos. É rede porque é feita em uma rede global de interação entre redes empresariais.\n\nCASTELLS, M. A sociedade em rede — a era da informação: economia,\nsociedade e cultura. São Paulo: Paz e Terra, 1999 (adaptado).\n\nQual mudança estrutural é resultado da forma de organização econômica descrita no texto?",
+        "opcoes": [
+          "Fabricação em série.",
+          "Ampliação de estoques.",
+          "Fragilização dos cartéis.",
+          "Padronização de mercadorias.",
+          "Desterritorialização da produção."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:4b4c47f9",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 51"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.870Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:6d51097d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nA primeira grande lei educacional do Brasil, de 1827, determinava que, nas “escolas de primeiras letras” do Império, meninos e meninas estudassem separados e tivessem currículos diferentes. No Senado, o Visconde de Cayru foi um dos defensores de que o currículo de matemática das garotas fosse o mais enxuto possível. Nas palavras dele, o “belo sexo” não tinha capacidade intelectual para ir muito longe: — Sobre as contas, são bastantes [para as meninas] as quatro espécies, que não estão fora do seu alcance e lhes podem ser de constante uso na vida.\n\nTEXTO II\n\nNo Senado, o único a defender publicamente que as meninas tivessem, em matemática, um currículo idêntico ao dos meninos foi o Marquês de Santo Amaro (RJ). Ele argumentou: — Não me parece conforme, às luzes do tempo em que vivemos, deixarmos de facilitar às brasileiras a aquisição desses conhecimentos [mais aprofundados de matemática]. A oposição que se manifesta não pode nascer senão do arraigado e péssimo costume em que estavam os antigos, os quais nem queriam que suas filhas aprendessem a ler.\n\nWESTIN, R. Senado Notícias. Disponível em: www12.senado.leg.br.\n\nAcesso em: 20 out. 2021 (adaptado).\n\nOs discursos expressam pontos de vista divergentes respectivamente pela oposição entre",
+        "opcoes": [
+          "liberdade de gênero e controle social.",
+          "equidade de escolha e imposição cultural.",
+          "dominação de corpos e igualdade humana.",
+          "geração de oportunidade e restrição profissional.",
+          "exclusão de competências e participação política."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:6d51097d",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 66"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.970Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:092327f5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Colegas, na mente e no coração do povo, a Crimeia sempre foi uma porção inseparável da Rússia. Essa firme convicção se baseia na verdade e na justiça e foi passada de geração em geração, ao longo do tempo, sob quaisquer circunstâncias, apesar de todas as drásticas mudanças que nosso país atravessou durante todo o século XX.\n\nDisponível em: http://g1.globo.com. Acesso em: 28 jul. 2014.\n\nConsiderando a dinâmica geopolítica subjacente ao texto, a justificativa utilizada por Vladimir Putin, em 2014, para anexação dessa península apela para o argumento de que",
+        "opcoes": [
+          "as populações com idioma comum devem estar submetidas à mesma autoridade estatal.",
+          "o imperialismo soviético havia se acomodado às pretensões das potências vizinhas.",
+          "os organismos transnacionais são incapazes de solucionar disputas territoriais.",
+          "a integração regional supõe a livre circulação de pessoas e mercadorias.",
+          "a expulsão das forças navais ocidentais garantiria a soberania nacional."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:092327f5",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 69"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.058Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:db7ce827",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nUma filosofia da percepção que queira reaprender a ver o mundo restituirá à pintura e às artes em geral seu lugar verdadeiro.\n\nMERLEAU-PONTY, M. Conversas: 1948. São Paulo: Martins Fontes, 2004.\n\nTEXTO II\n\nOs grandes autores de cinema nos pareceram confrontáveis não apenas com pintores, arquitetos, músicos, mas também com pensadores. Eles pensam com imagens, em vez de conceitos.\n\nDELEUZE, G. Cinema 1: a imagem-movimento. São Paulo: Brasiliense, 1983 (adaptado).\n\nDe que modo os textos sustentam a existência de um saber ancorado na sensibilidade?",
+        "opcoes": [
+          "Admitindo o belo como fenômeno transcendental.",
+          "Reafirmando a vivência estética como juízo de gosto.",
+          "Considerando o olhar como experiência de conhecimento.",
+          "Apontando as formas de expressão como auxiliares da razão.",
+          "Estabelecendo a inteligência como implicação das representações."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:db7ce827",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 84"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.360Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:30f5fd02",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quando os espanhóis chegaram à América, estava em seu apogeu o império teocrático dos Incas, que estendia seu poder sobre o que hoje chamamos Peru, Bolívia e Equador, abarcava parte da Colômbia e do Chile e alcançava até o norte argentino e a selva brasileira; a confederação dos Astecas tinha conquistado um alto nível de eficiência no vale do México, e no Yucatán, na América Central, a esplêndida civilização dos Maias persistia nos povos herdeiros, organizados para o trabalho e para a guerra. Os Maias tinham sido grandes astrônomos, mediram o tempo e o espaço com assombrosa precisão, e tinham descoberto o valor do número zero antes de qualquer povo da história. No museu de Lima, podem ser vistos centenas de crânios que receberam placas de ouro e prata por parte dos cirurgiões Incas.\n\nGALEANO, E. As veias abertas da América Latina. Porto Alegre: L&PM, 2012.\n\nAs sociedades mencionadas deixaram como legado uma diversidade de",
+        "opcoes": [
+          "bens religiosos inspirados na matriz cristã.",
+          "materiais bélicos pilhados em batalhas coloniais.",
+          "heranças culturais constituídas em saberes próprios.",
+          "costumes laborais moldados em estilos estrangeiros.",
+          "práticas medicinais alicerçadas no conhecimento científico."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:30f5fd02",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 89"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.364Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

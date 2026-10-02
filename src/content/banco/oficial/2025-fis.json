@@ -1,0 +1,694 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "oficial:2025:03e826ac",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Réguas elétricas são dispositivos que permitem a ligação segura e simultânea de dois ou mais aparelhos eletroeletrônicos à rede elétrica. Uma estudante comprou uma régua com seis tomadas, conforme a figura. Essa régua suporta uma intensidade máxima de corrente elétrica igual a 20 A. Acima desse valor, o fusível de segurança da régua se rompe, inutilizando-a até que um novo fusível seja instalado. Considere as potências nominais de alguns aparelhos eletroeletrônicos apresentadas no quadro.\n\n[[imagem:0]]\n\nEm um dia quente, a estudante mantém o computador e o condicionador de ar portátil ligados à régua permanentemente. Nessa situação, ela tenta realizar algumas atividades, uma de cada vez, utilizando a mesma régua, na seguinte ordem:\n\n1º – imprimir um trabalho escolar;\n2º – fazer um café com a cafeteira;\n3º – ligar a luminária;\n4º – secar os cabelos.\nSabe-se que a régua foi ligada à tensão elétrica de 110 V, adequada para o funcionamento desses aparelhos.\n\nConsiderando a ordem das tentativas, quantas atividades a estudante conseguiu realizar sem queimar o fusível?",
+        "opcoes": [
+          "4",
+          "3",
+          "2",
+          "1",
+          "0"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q094-1.webp",
+            "alt": "Imagem da questão 94 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Aparelho Potência (watt)\nLuminária de LED 5\nComputador 250\nImpressora a laser 660\nSecador de cabelos 750\nCafeteira 900\nCondicionador\n1 100\nde ar portátil",
+            "largura": 996,
+            "altura": 528
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:03e826ac",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 94"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.863Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:79803cb7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nAs mariposas\n\nAs mariposa, quando chega o frio\nFica dando volta em volta da lâmpida pra se esquentá. [sic]\n\nBARBOSA, A. Reviva: Adoniran Barbosa. São Paulo: Som Livre, 2002 (fragmento).\n\nTEXTO II\n\nAs mariposas se aproximam das lâmpadas atraídas pela luz, pois, sendo basicamente criaturas noturnas, estão adaptadas a seguir o brilho da lua, em um processo conhecido como orientação transversal. Assim, o que o sambista Adoniran Barbosa, no Texto I, descreve não é a causa, mas sim uma das consequências possíveis dessa aproximação. De fato, o calor gerado pelas lâmpadas, sobretudo as incandescentes, pode aquecer as mariposas.\n\nHERTZBERG, R. Por que as mariposas são tão atraídas por luzes fortes?\n\nNational Geographic, nov. 2020 (adaptado).\n\nNesse contexto, o processo de transferência de calor para as mariposas que independe da presença de fluidos é a",
+        "opcoes": [
+          "reflexão.",
+          "refração.",
+          "irradiação.",
+          "dispersão.",
+          "convecção."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:79803cb7",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 95"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.864Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:429ff809",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para transportar uma caixa do primeiro para o segundo piso de uma construção, um trabalhador precisará arrasta-lá sobre um plano inclinado. O trabalhador começa a arrastar a caixa no primeiro piso, exercendo sobre ela uma força de grande intensidade, paralela ao seu deslocamento. Na medida em que a caixa sobe o plano inclinado, ele decide reduzir a força sobre ela, arrastando-a lentamente até chegar ao segundo piso. Considere que a caixa permanece em movimento nos encontros dos pisos com o plano inclinado, e que a rugosidade entre as superfícies permanece a mesma durante todo o percurso.\n\nO comportamento da força de atrito entre a caixa e o chão no plano inclinado é representado em:",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2025/d2-q108-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 108 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 968,
+            "altura": 420
+          },
+          {
+            "url": "/content/img/2025/d2-q108-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 108 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 968,
+            "altura": 420
+          },
+          {
+            "url": "/content/img/2025/d2-q108-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 108 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 968,
+            "altura": 416
+          },
+          {
+            "url": "/content/img/2025/d2-q108-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 108 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 968,
+            "altura": 420
+          },
+          {
+            "url": "/content/img/2025/d2-q108-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 108 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 968,
+            "altura": 416
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:429ff809",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 108"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.579Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:25d04065",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A química nuclear é uma importante ferramenta na produção de substâncias utilizadas na área da saúde humana. A radiação emitida pelo cobalto-60 é utilizada na medicina como ferramenta de diagnóstico e no tratamento do câncer. No entanto, esse radioisótopo tem um tempo de armazenamento limitado, pois seu tempo de meia-vida é de 5,3 anos. Considere um frasco com uma amostra contendo 2,00 mg de cobalto-60, armazenado durante um período de 26,5 anos.\n\nA massa de cobalto-60, em miligrama, que restará ao final desse tempo é mais próxima de\n\nA 2,00 mg.\nB 1,00 mg.\nC 0,40 mg.\nD 0,13 mg.\nE 0,06 mg.\n\nDisponível em: www.engquimicasantossp.com.br.\n\nAcesso em: 11 fev. 2015 (adaptado).\n\nDar destino sustentável às sobras, conforme apresentado na etapa 4, ajuda a evitar a",
+        "opcoes": [
+          "bioacumulação de toxinas em plantas.",
+          "eutrofização dos corpos de água.",
+          "destruição da camada de ozônio.",
+          "ocorrência de inversão térmica.",
+          "produção de chuva ácida."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:25d04065",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 110"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.579Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:94b8f3f7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A tirinha ilustra um processo físico em que uma onda sonora, produzida pela Mônica, causa a quebra das taças de cristal. O fenômeno ondulatório que provoca a quebra das taças só é possível em razão de uma característica da voz produzida pela Mônica naquele momento, que, diferentemente do que sugere a tirinha, não está relacionada à sua intensidade.\n\n[[imagem:0]]\n\nEsse fenômeno e a característica associada à voz da Mônica são, respectivamente,",
+        "opcoes": [
+          "reflexão e comprimento de onda.",
+          "ressonância e frequência.",
+          "interferência e velocidade.",
+          "ressonância e timbre.",
+          "reflexão e amplitude."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q114-1.webp",
+            "alt": "Imagem da questão 114 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Disponível em: https://artedafisicapibid.blogspot.com.\nAcesso em: 23 nov. 2021 (adaptado).",
+            "largura": 1009,
+            "altura": 393
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:94b8f3f7",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 114"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.736Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:13733c92",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A laje de um depósito de bebidas tem 50 m² de área útil de armazenamento e foi projetada para suportar pressões de até 10⁴ Pa. O gerente do estabelecimento pretende armazenar um produto cuja densidade é 1 250 kg/m³. Considere a aceleração da gravidade igual a 10 m/s².\n\nA altura máxima, em metro, de empilhamento do produto que essa laje é capaz de suportar é",
+        "opcoes": [
+          "0,16 m.",
+          "0,50 m.",
+          "0,80 m.",
+          "1,60 m.",
+          "8,00 m."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:13733c92",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 118"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.791Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:2c17ac5c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O aquecimento em fogões por indução utiliza bobinas para produzir um campo magnético variável. Essa bobina se localiza abaixo do vidro cerâmico sobre o qual a panela se apoia. O mecanismo aquece apenas a panela que se encontra na zona de cozimento, o que é uma das principais vantagens em relação ao uso do fogão a gás ou de resistência elétrica.\n\n[[imagem:0]]\n\nNesse sistema, o menor tempo de resposta, em milissegundo, que garante a detecção de um possível invasor é mais próximo de",
+        "opcoes": [
+          "30 ms.",
+          "70 ms.",
+          "300 ms.",
+          "400 ms.",
+          "700 ms."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q122-1.webp",
+            "alt": "Imagem da questão 122 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: menor porção do corpo de um invasor é a sua posição de perfil,\ncuja espessura típica é 20 cm. São indicados cinco possíveis\nmovimentos de um invasor e suas velocidades típicas, que devem\nser observadas para a escolha do tempo de resposta.\nPEREIRA, A. B. et al. Fogões de indução : montagem e testes de um circuito\nManual de referência e instalação : sensor de barreira ativo. disponível. Disponível em: https://publicacoes.fatecsertaozinho.edu.br.\nDisponível em: cs.ind.br. Acesso em: 2 dez. 2021 (adaptado). Acesso em: 21 maio 2025 (adaptado).",
+            "largura": 1200,
+            "altura": 528
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:2c17ac5c",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 122"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:31:14.461Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:ba61041f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Segundo o princípio da independência dos movimentos, de Galileu, sempre que a velocidade resultante de um corpo puder ser decomposta em duas ou mais componentes perpendiculares entre si, cada um desses movimentos poderá ser analisado separadamente como se os outros não existissem. Esse princípio é muito útil para a simplificação de alguns problemas reais, em três dimensões.\n\nConsidere um avião que, ao decolar, é instruído pela torre a atingir, em 6 minutos, uma posição de 20 km a Leste, 20 km a Norte e 1 km de altitude em relação ao ponto de decolagem, conforme a figura (fora de escala). No entanto, no instante da decolagem, começa a soprar um vento cujo vetor velocidade tem componentes 30 km/h para Leste, 20 km/h para Sul e 1 km/h de cima para baixo.\n\n[[imagem:0]]\n\nDurante a ação do vento, a velocidade v que o piloto deve estabelecer em relação ao ar para que o avião chegue à posição esperada no tempo indicado tem as componentes",
+        "opcoes": [
+          "230 km/h para Leste, 180 km/h para Sul e 9 km/h para baixo.",
+          "230 km/h para Leste, 180 km/h para Norte e 9 km/h para cima.",
+          "200 km/h para Oeste, 200 km/h para Norte e 10 km/h para cima.",
+          "170 km/h para Leste, 220 km/h para Norte e 11 km/h para cima.",
+          "170 km/h para Leste, 180 km/h para Norte e 11 km/h para cima."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q126-1.webp",
+            "alt": "Imagem da questão 126 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 996,
+            "altura": 604
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:ba61041f",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 126"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.118Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3ceb8534",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nos processos de transformação e reciclagem de recursos naturais, as velocidades das reações químicas são estudadas pela\n\ncinética química. Uma reação A → B é realizada na presença\n\ne na ausência de uma enzima, com todas as demais condições permanecendo inalteradas. Considere que, no gráfico da variação de energia ao longo dessa reação, a linha contínua representa o avanço da reação na ausência da enzima, e a linha pontilhada, na presença da enzima.\n\nO gráfico que representa a situação descrita é:",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2025/d2-q127-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 127 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 568,
+            "altura": 400
+          },
+          {
+            "url": "/content/img/2025/d2-q127-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 127 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 568,
+            "altura": 400
+          },
+          {
+            "url": "/content/img/2025/d2-q127-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 127 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 568,
+            "altura": 400
+          },
+          {
+            "url": "/content/img/2025/d2-q127-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 127 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 568,
+            "altura": 404
+          },
+          {
+            "url": "/content/img/2025/d2-q127-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 127 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 568,
+            "altura": 400
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:3ceb8534",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 127"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.303Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:26e22864",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em sua maioria, os equipamentos eletrônicos domésticos demandam baixa potência elétrica em corrente contínua. Para alimentá-los, uma fonte externa ou embutida transforma a corrente alternada em corrente contínua de baixa tensão. Entretanto, cada equipamento tem suas especificidades, e muitas vezes não é possível simplesmente trocar essas fontes sem levar em conta a tensão, a corrente ou a potência elétrica de saída.\n\nConsidere um equipamento de resistência elétrica RC que funciona corretamente apenas em um dado valor de tensão. Porém, a única fonte de alimentação disponível fornece uma tensão 20% superior à tensão recomendada. Para adaptar essa\n\n[[imagem:0]]\n\nde potência adequada, se faz necessária.\nA configuração adequada do circuito e o valor do resistor de proteção, em relação ao valor da resistência do equipamento, são:",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q130-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 130 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1013,
+            "altura": 48
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2025/d2-q130-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 130 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 488,
+            "altura": 296
+          },
+          {
+            "url": "/content/img/2025/d2-q130-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 130 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 492,
+            "altura": 304
+          },
+          {
+            "url": "/content/img/2025/d2-q130-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 130 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 484,
+            "altura": 296
+          },
+          {
+            "url": "/content/img/2025/d2-q130-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 130 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 488,
+            "altura": 296
+          },
+          {
+            "url": "/content/img/2025/d2-q130-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 130 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 484,
+            "altura": 296
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:26e22864",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 130"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.534Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

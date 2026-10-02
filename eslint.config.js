@@ -19,6 +19,8 @@ export default tseslint.config(
       "public/content",
       // Cópias isoladas de subagentes (git worktrees): não são código do app.
       ".claude/worktrees",
+      // PDFs e rascunhos locais do importador do INEP (gitignored).
+      "content-pipeline/oficial/cache",
       "automacao-instagram",
       "edição Videos",
       "Claude outputs",

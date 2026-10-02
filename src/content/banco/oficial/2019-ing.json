@@ -1,0 +1,280 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "oficial:2019:b7ec8437",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "5 Ways Pets Can Improve Your Health\n\nA pet is certainly a great friend. After a difficult day, pet owners quite literally feel the love.\n\nIn fact, for nearly 25 years, research has shown that living with pets provides certain health benefits. Pets help lower blood pressure and lessen anxiety. They boost our immunity. They can even help you get dates.\n\nAllergy Fighters: A growing number of studies have suggested that kids growing up in a home with “furred animals” will have less risk of allergies and asthma.\n\nDate Magnets: Dogs are great for making love connections. Forget Internet matchmaking — a dog is a natural conversation starter.\n\nDogs for the Aged: Walking a dog or just caring for a pet — for elderly people who are able — can provide exercise and companionship.\n\nGood for Mind and Soul: Like any enjoyable activity, playing with a dog can elevate levels of serotonin and dopamine — nerve transmitters that are known to have pleasurable and calming properties.\n\nGood for the Heart: Heart attack patients who have pets survive longer than those without, according to several studies.\n\nDAVIS, J. L. Disponível em: www.webmd.com.\n\nAcesso em: 21 abr. 2013 (adaptado).\n\nAo discutir sobre a influência de animais de estimação no bem-estar do ser humano, a autora, a fim de fortalecer seus argumentos, utiliza palavras e expressões como research, a growing number of research e several studies com o objetivo de",
+        "opcoes": [
+          "mostrar que animais de estimação ajudam na cura de doenças como alergias e asma.",
+          "convencer sobre os benefícios da adoção de animais de estimação para a saúde.",
+          "fornecer dados sobre os impactos de animais de estimação nas relações amorosas.",
+          "explicar como o contato com animais de estimação pode prevenir ataques cardíacos.",
+          "esclarecer sobre o modo como idosos devem se relacionar com animais de estimação."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:b7ec8437",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 1 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:41.347Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:b52180fb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "LETTER TO THE EDITOR: Sugar fear-mongering unhelpful\n\nBy The Washington Times Tuesday, June 25, 2013\n\nIn his recent piece “Is obesity a disease?” (Web, June 19), Dr. Peter Lind refers to high-fructose corn syrup and other “manufactured sugars” as “poison” that will “guarantee storage of fat in the body.” Current scientific research strongly indicates that obesity results from excessive calorie intake combined with a sedentary lifestyle. The fact is Americans are consuming more total calories now than ever before. According to the U.S. Department of Agriculture, our total per-capita daily caloric intake increased by 22 percent from 2,076 calories per day in 1970 to 2,534 calories per day in 2010 — an additional 458 calories, only 34 of which come from increased added sugar intake. A vast majority of these calories come from increased fats and flour/ cereals. Surprisingly, the amount of caloric sweeteners (i.e. sugar, high-fructose, corn syrup, honey, etc.). Americans consume has actually decreased over the past decade. We need to continue to study the obesity epidemic to see what more can be done, but demonizing one specific ingredient accomplishes nothing and raises unnecessary fears that get in the way of real solutions.\n\nJAMES M. RIPPE\nShrewsbury, Mass.\n\nDisponível em: www.washingtontimes.com.\n\nAcesso em: 29 jul. 2013 (adaptado).\n\nAo abordar o assunto “obesidade”, em uma seção de jornal, o autor",
+        "opcoes": [
+          "defende o consumo liberado de açúcar.",
+          "aponta a gordura como o grande vilão da saúde.",
+          "demonstra acreditar que a obesidade não é preocupante.",
+          "indica a necessidade de mais pesquisas sobre o assunto.",
+          "enfatiza a redução de ingestão de calorias pelos americanos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:b52180fb",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 2 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:41.348Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:1b69f47c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "In this life\n\nSitting on a park bench\nThinking about a friend of mine\nHe was only twenty-three\nGone before he had his time.\nIt came without a warning\nDidnꞌt want his friends to see him cry\nHe knew the day was dawning\nAnd I didnꞌt have a chance to say goodbye.\n\nMADONNA. Erotica. Estados Unidos: Maverick, 1992.\n\nA canção, muitas vezes, é uma forma de manifestar\nsentimentos e emoções da vida cotidiana. Por exemplo,\no sofrimento retratado nessa canção foi causado",
+        "opcoes": [
+          "pela morte precoce de um amigo jovem.",
+          "pelo término de um relacionamento amoroso.",
+          "pela mudança de um amigo para outro país.",
+          "pelo fim de uma amizade de mais de vinte anos.",
+          "pela traição por parte de pessoa próxima."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:1b69f47c",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 3 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:41.349Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:66bd8a26",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "If children live with criticism, they learn to condemn.\nIf children live with fear, they learn to be apprehensive. If children live with pity, they learn to feel sorry for themselves. If children live with ridicule, they learn to feel shy.\nIf children live with tolerance, they learn patience.\nIf children live with praise, they learn appreciation.\nIf children live with acceptance, they learn to love.\nIf children live with approval, they learn to like themselves. If children live with recognition, they learn it is good to have a goal.\nIf children live with sharing, they learn generosity.\nIf children live with fairness, they learn justice.\nIf children live with kindness and consideration, they learn respect.\nIf children live with friendliness, they learn the world is a nice place in which to live.\n\nNOLTE, D. L. Disponível em: www.americanfamilytraditions.com.\n\nAcesso em: 30 jul. 2012.\n\nValores culturais de um povo revelam sua forma de ser, agir e pensar. Na concepção da autora, as diferentes formas de educar crianças nos Estados Unidos confirmam que as crianças",
+        "opcoes": [
+          "temem quem as amedronta.",
+          "aprendem com o que vivem.",
+          "amam aqueles que as aceitam.",
+          "são gentis quando respeitadas.",
+          "ridicularizam quem as intimida."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:66bd8a26",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 4 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:41.350Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:36941c7d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nNo cartum, o estudante faz uma pergunta usando turn this thing on por",
+        "opcoes": [
+          "suspeitar que o colega está com seu material por engano.",
+          "duvidar que o colega possa se tornar um bom aluno.",
+          "desconfiar que o livro levado é de outra matéria.",
+          "entender como desligada a postura do colega.",
+          "desconhecer como usar um livro impresso."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q005-ing-1.webp",
+            "alt": "Imagem da questão 5 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "KEEFER, M. Disponível em: www.nj.com. Acesso em: 3 dez. 2018.",
+            "largura": 1040,
+            "altura": 644
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:36941c7d",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 5 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:41.559Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

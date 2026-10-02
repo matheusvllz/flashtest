@@ -1,0 +1,1304 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "oficial:2024:b278529d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Células a combustível microbianas (CCM) são capazes de gerar eletricidade a partir de águas residuárias urbanas e agroindustriais. As CCM são compostas de duas câmaras. Numa delas, onde ocorre o tratamento da matéria orgânica, as bactérias eletrogênicas crescem formando um biofilme e se alimentam dos poluentes presentes no efluente. Ao se alimentarem, essas bactérias geram uma corrente elétrica que percorre o material sobre o qual elas formaram o biofilme. Um fio condutor externo possibilita a migração dessa corrente para uma segunda câmara, promovendo uma reação química. A figura esquematiza uma CCM e as reações envolvidas.\n\n[[imagem:0]]\n\nCH₃COO⁻ (aq) + 2 H₂O (I) → 2 CO₂(g) + 7 H⁺ (aq) + 8 e⁻\n4 H⁺ (aq) + O₂(g) + 4 e⁻ → 2 H₂O (I)\n\nQUINTO, A. C. Biobaterias geram eletricidade a partir de\nesgoto sanitário e efluentes agroindustriais. Disponível em:\n\nhttps://jornal.usp.br. Acesso em: 1 dez. 2021 (adaptado).\n\nQual das equações representa a reação global que ocorre durante o funcionamento dessa CCM?",
+        "opcoes": [
+          "CH₃COO⁻(aq) + O₂(g) → 2 CO₂(g) + 3 H⁺(aq)",
+          "CO₂(g) + O₂(g) + H⁺(aq) → H₂O (l) + CH₃COO⁻(aq)",
+          "CH₃COO⁻(aq) + H⁺(aq) + 2 O₂(g) → 2 CO₂(g) + 2 H₂O (l)",
+          "CH₃COO⁻(aq) + 6 H₂O (l) → 2 CO₂(g) + 2 O₂(g) + 15 H⁺(aq)",
+          "2 CO₂(g) + 11 H⁺(aq) + O₂(g) → CH₃COO⁻(aq) + 4 H₂O (l)"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q092-1.webp",
+            "alt": "Imagem da questão 92 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 992,
+            "altura": 544
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:b278529d",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 92"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:05.906Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:1b54c8c8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A nimesulida é um fármaco pouco solúvel em água, utilizado como anti-inflamatório, analgésico e antitérmico. Essa substância pode ser convertida em uma espécie eletricamente carregada, de maior solubilidade em água, mediante o tratamento com uma base de Brönsted-Lowry, isto é, uma espécie química capaz de capturar um próton (H⁺). Na figura são apresentados os grupamentos presentes na estrutura química da nimesulida.\n\n[[imagem:0]]\n\nNimesulida\n\nGONÇALVES, A. A. et al. Contextualizando reações ácido-base\nde acordo com a teoria protônica de Brönsted-Lowry\nusando comprimidos de propranolol e nimesulida.\n\nQuímica Nova, n. 3, 2013 (adaptado).\n\nNa estrutura desse fármaco, o grupamento capaz de reagir com a base de Brönsted-Lowry é o grupo",
+        "opcoes": [
+          "sulfonamida.",
+          "metila.",
+          "fenila.",
+          "nitro.",
+          "éter."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q094-1.webp",
+            "alt": "Imagem da questão 94 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 672,
+            "altura": 684
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:1b54c8c8",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 94"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:05.960Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f95e064c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O desenvolvimento da biotecnologia e da clonagem gênica em procariotos fez com que a produção de proteínas se tornasse mais intensa, rápida e econômica. Para a produção de hormônios, enzimas e proteínas de resistência a drogas, uma variação da técnica de reação em cadeia pela polimerase (PCR, na sigla em inglês) utiliza a enzima transcriptase reversa (RT-PCR), que sintetiza moléculas de DNA complementares a partir de fitas de RNA.\n\nNesse contexto, essa técnica é importante para detectar genes",
+        "opcoes": [
+          "expressos.",
+          "plasmidiais.",
+          "bacterianos.",
+          "dominantes.",
+          "autossômicos."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:f95e064c",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 95"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:05.960Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:7033b093",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Apesar de os animais representados no cladograma compartilharem um mesmo ancestral, eles se caracterizam por distintos padrões de reprodução ou de nutrição dos embriões e descendentes.\n\n[[imagem:0]]\n\nAo longo do processo evolutivo, percebem-se, entre esses animais, perdas e ganhos nos padrões citados que envolvem o(a)",
+        "opcoes": [
+          "aumento no número de descendentes por ninhada.",
+          "mudança no tipo de fecundação de externa para interna.",
+          "redução da versatilidade de reprodução, que se torna unicamente sexuada.",
+          "desenvolvimento embrionário, que passa do meio aquático para o terrestre.",
+          "diminuição da vesícula vitelínica, associada ao desenvolvimento da lactação."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q098-1.webp",
+            "alt": "Imagem da questão 98 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "DIXSON, A. F. Mammalian Sexuality: The Act of Mating and the Evolution of Reproduction. Disponível em: www.cambridge.org. Acesso em: 2 jul. 2024 (adaptado).",
+            "largura": 972,
+            "altura": 740
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:7033b093",
+        "version": 1,
+        "skillIds": [
+          "bio:evolucao-selecao-natural"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 98"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.090Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:8554bccc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Mirascópio 3D: produtor de ilusão instantânea\n\nO equipamento ilustrado na figura, de dimensões apresentadas no esquema, é composto por dois espelhos côncavos E₁ e E₂, apoiados um sobre o outro por suas bordas, de tal forma que o vértice de E₁ coincide com o foco de E₂ e vice-versa. Na abertura circular de E₂, é formada uma imagem tridimensional de um objeto posicionado sobre o vértice de E₁. Essa imagem é formada a partir dos raios procedentes do objeto, refletidos por E₂ e E₁, respectivamente, conforme o esquema. Os observadores julgam visualizar o objeto quando estão, de fato, visualizando sua imagem. O efeito só é possível porque as superfícies de ambos os espelhos são de extrema qualidade.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nA natureza da imagem formada e a distância vertical entre cada ponto objeto e seu correspondente ponto imagem são",
+        "opcoes": [
+          "real e 5 cm.",
+          "real e 3,8 cm.",
+          "real e 7,6 cm.",
+          "virtual e 7,6 cm.",
+          "virtual e 3,8 cm."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q100-1.webp",
+            "alt": "Imagem da questão 100 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 880,
+            "altura": 444
+          },
+          {
+            "url": "/content/img/2024/d2-q100-2.webp",
+            "alt": "Imagem 2 da questão 100 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "SALZMANN, W. Disponível em: https://wissenstexte.de. Acesso em: 27 jun. 2024 (adaptado).",
+            "largura": 968,
+            "altura": 544
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:8554bccc",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 100"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.205Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:fbb213e0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A saúde do professor: acústica arquitetônica\n\nDentre os parâmetros acústicos que afetam a inteligibilidade dos sons emitidos em ambientes fechados, destacam-se o ruído de fundo do ambiente e o decréscimo do nível sonoro com a distância da fonte emissora. Assim, sentar-se no fundo da sala de aula pode prejudicar a aprendizagem dos estudantes, por impedir que eles distingam, com precisão, os sons emitidos, diminuindo a inteligibilidade da fala de seus professores. Considere a situação exemplificada pelo infográfico: à distância de 1 metro, o nível sonoro da fala de um professor é de 60 dB e diminui com a distância. Considere, ainda, que o ruído de fundo nessa sala de aula pode chegar a 45 dB e que, para ser compreendida, o nível sonoro da fala do professor deve estar 5 dB acima desse ruído.\n\n[[imagem:0]]\n\nPara um valor máximo do ruído de fundo, a maior distância que um estudante pode estar do professor para que ainda consiga compreender sua fala é mais próxima de",
+        "opcoes": [
+          "3,0 m.",
+          "4,5 m.",
+          "6,5 m.",
+          "8,0 m.",
+          "9,5 m."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q101-1.webp",
+            "alt": "Imagem da questão 101 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.ufrrj.br. Acesso em: 2 dez. 2021 (adaptado).",
+            "largura": 968,
+            "altura": 520
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:fbb213e0",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 101"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.273Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:7b979a97",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As autoridades sanitárias brasileiras têm se preocupado muito nos últimos anos com o aumento da ocorrência de doenças transmitidas por mosquitos, principalmente arboviroses como chikungunya e zika, que se tornaram epidêmicas ou endêmicas em áreas urbanas. Parte de uma análise da relação entre a urbanização e a incidência dessas doenças está representada no fluxograma.\n\n[[imagem:0]]\n\nNesse contexto, como a urbanização está causando riscos à saúde humana?",
+        "opcoes": [
+          "Disseminando verminoses.",
+          "Causando a eutrofização de lagoas.",
+          "Aumentando a chance de contato com coliformes.",
+          "Diminuindo a população de predadores aquáticos.",
+          "Aproximando as pessoas das áreas de ocorrência de mosquitos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q104-1.webp",
+            "alt": "Imagem da questão 104 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "ALMEIDA, L. S.; COTA, A. L. S.; RODRIGUES, D. F. Saneamento, arboviroses e determinantes ambientais: impactos na saúde urbana. Ciência & Saúde Coletiva, v. 25, n. 10, 2020 (adaptado).",
+            "largura": 1004,
+            "altura": 348
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:7b979a97",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 104"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.391Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d4361b1f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em aeroportos, por razões de segurança, os passageiros devem ter suas bagagens de mão examinadas antes do embarque, passando-as em esteiras para sua inspeção por aparelhos de raios X. Nessas inspeções, os passageiros são orientados a retirar seus computadores portáteis (notebooks ou laptops) de malas, mochilas ou bolsas para passá-los isoladamente pela esteira.\n\nQue explicação física justifica esse procedimento?",
+        "opcoes": [
+          "Os raios X não interagem com os componentes metálicos do computador, o que impede a formação de imagens.",
+          "Os raios X desmagnetizam o disco rígido do computador, quando refratados pelos componentes metálicos das bagagens de mão.",
+          "Os raios X aquecem os materiais metálicos encontrados em bagagens de mão, quando refletidos pelos componentes do computador.",
+          "Os raios X não atravessam os componentes densos do computador, o que impede a visualização de objetos que estão à frente ou atrás deles.",
+          "Os raios X ionizam os materiais metálicos normalmente encontrados em bagagens de mão, quando difratados pelos componentes do computador."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:d4361b1f",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 106"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.392Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:521b08e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com base em testes realizados em ratos, concluiu-se que os compostos nitrosos são substâncias mutagênicas, ou seja, produzem mutações nas células e possivelmente câncer. Esses compostos podem ser obtidos pela reação entre o nitrito de sódio, que é um conservante adicionado às carnes, e o ácido clorídrico. O ácido nitroso produzido irá reagir com compostos nitrogenados, como as aminas, dando origem aos compostos nitrosos.\n\nEm qual órgão esse processo será iniciado?",
+        "opcoes": [
+          "Rim.",
+          "Fígado.",
+          "Intestino.",
+          "Pâncreas.",
+          "Estômago."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:521b08e4",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 107"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.392Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:9d4a2cb2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Sistemas agroflorestais (SAFs)\n\nOs sistemas agroflorestais alinham os interesses econômicos aos ecológicos. Esses sistemas podem ser usados na recuperação ambiental de áreas degradadas que se tornaram pouco produtivas, como as utilizadas por muito tempo para pastagem. Para isso, num primeiro momento, as árvores nativas são plantadas em conjunto com culturas agrícolas anuais, como feijão, mandioca, milho e abóbora, que geram renda para os proprietários da terra e incentivam a manutenção do sistema. Em um segundo momento, são introduzidas outras espécies, como trepadeiras e arbustos, de acordo com um arranjo espacial e temporal preestabelecido. Nesse processo, ocorrerão mudanças graduais na estrutura e composição das comunidades vegetais ao longo do tempo, que culminarão no aumento da diversidade do ambiente.\n\nDisponível em: www.embrapa.br. Acesso em: 9 dez. 2021 (adaptado).\n\nO conjunto dessas mudanças graduais é análogo ao processo natural denominado",
+        "opcoes": [
+          "rotação de culturas.",
+          "sucessão ecológica.",
+          "coevolução específica.",
+          "adaptação por seleção.",
+          "convergência adaptativa."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:9d4a2cb2",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 108"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.392Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:ebf5c100",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As fibras musculares esqueléticas não são todas iguais. As fibras lentas, também conhecidas como fibras vermelhas, apresentam muitas mitocôndrias e são bem supridas por vasos sanguíneos. Já as fibras rápidas, ou fibras brancas, apresentam poucas mitocôndrias e recebem menor suprimento sanguíneo. Dessa forma, a distribuição das fibras nos músculos esqueléticos do corpo auxilia de forma diferenciada no desempenho físico de um atleta.\n\nSADAVA, D. et al. Vida: a ciência da biologia — volume III:\n\nplantas e animais. Porto Alegre: Artmed, 2009 (adaptado).\n\nUm atleta que sonha em disputar os Jogos Olímpicos e tem uma maior proporção de fibras brancas que fibras vermelhas teria mais vantagens na realização da prova de:",
+        "opcoes": [
+          "Triatlo.",
+          "Salto em altura.",
+          "Marcha atlética.",
+          "Maratona aquática.",
+          "Ciclismo em estrada."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:ebf5c100",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 109"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.393Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:33fc8e73",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Cerrado e a Amazônia abrigam grande número de serpentes popularmente conhecidas como cobras-corais. Na Amazônia predominam as corais-verdadeiras, que são peçonhentas, enquanto no Cerrado prevalecem as falsas-corais, que não possuem peçonha. Essas espécies apresentam um padrão de coloração muito semelhante. Essa similaridade traz uma vantagem tanto para as corais falsas como para as verdadeiras.\n\nFRANÇA, F. G. R. [...] serpentes corais em ambientes campestres, savânicos e florestais da América do Sul.\n\nBrasília: UnB, 2008 (adaptado).\n\nNas fotografias, são apresentados exemplos dessas serpentes: uma coral-verdadeira e uma falsa-coral.\n\n[[imagem:0]]\n\nQual é a vantagem dessa similaridade para as falsas-corais?",
+        "opcoes": [
+          "Facilita a captura de presas.",
+          "Diminui a competição por recursos.",
+          "Possibilita a geração de indivíduos híbridos.",
+          "Reduz a possibilidade de sofrerem predação.",
+          "Otimiza o encontro de parceiros reprodutivos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q110-1.webp",
+            "alt": "Imagem da questão 110 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "SILVA, L. C.; COTTA, G. A.; RESENDE, F. C. Cobra-coral: aplicativo educativo para reconhecimento das cobras-corais do estado de Minas Gerais, Brasil. Herpetologia Brasileira, n. 1, 2021 (adaptado).",
+            "largura": 984,
+            "altura": 448
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:33fc8e73",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 110"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.592Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:9bc8457c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O exoesqueleto dos crustáceos é formado por quitina e impregnações de sais calcários e, por isso, é mais duro quando comparado com o exoesqueleto de outros artrópodes. Esse revestimento externo confere proteção, mas, por ser duro, limita o crescimento desses animais.\n\nPara superar essa limitação, o exoesqueleto deve ser",
+        "opcoes": [
+          "formado somente na fase adulta do animal.",
+          "fragmentado para expansão nas áreas de articulação.",
+          "modelado continuamente para ajuste ao tamanho do corpo.",
+          "substituído por meio de mudas que ocorrem periodicamente.",
+          "impregnado por pequena quantidade de sais para sua distensão."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:9bc8457c",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 111"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.593Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f754023f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um dos exemplos mais conhecidos de herança recessiva ligada ao cromossomo X é o daltonismo. Como em qualquer distúrbio recessivo ligado ao cromossomo X, existem muito mais homens apresentando o fenótipo com esse tipo de daltonismo do que mulheres. Um casal formado por um homem não daltônico e por uma mulher gestante também não daltônica, mas portadora do gene recessivo para esse tipo de daltonismo, está esperando um bebê. Em uma das consultas de pré-natal, o casal recebeu um heredograma que contém todas as possibilidades de genótipo para esse bebê.\n\nConsidere a legenda:\n\nMulher heterozigota portadora\n\n[[imagem:0]]\n\ndo gene para daltonismo\nMulher não daltônica\nMulher daltônica\nHomem não daltônico\nHomem daltônico\n\nGRIFFITHS, A. et al. Introdução à genética. Rio de Janeiro:\n\nGuanabara Koogan, 2016 (adaptado).\n\nQual heredograma foi recebido pelo casal?",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q112-1.webp",
+            "alt": "Imagem da questão 112 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 80,
+            "altura": 452
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2024/d2-q112-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 112 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 460,
+            "altura": 264
+          },
+          {
+            "url": "/content/img/2024/d2-q112-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 112 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 460,
+            "altura": 264
+          },
+          {
+            "url": "/content/img/2024/d2-q112-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 112 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 460,
+            "altura": 260
+          },
+          {
+            "url": "/content/img/2024/d2-q112-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 112 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 460,
+            "altura": 260
+          },
+          {
+            "url": "/content/img/2024/d2-q112-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 112 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 460,
+            "altura": 264
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:f754023f",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 112"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.786Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:4d2ad0fb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O magnésio metálico utilizado em ligas leves é produzido em um processo que envolve várias etapas e utiliza água do mar como matéria-prima. A primeira etapa desse processo consiste na reação entre o íon Mg²⁺ e hidróxido de cálcio, Ca(OH)₂, obtendo uma mistura que contém hidróxido de magnésio, pouco solúvel, e íons Ca²⁺, de acordo com a equação química:\n\nMg²⁺ (aq) + Ca(OH)₂(aq) → Mg(OH)₂(s) + Ca²⁺ (aq)\n\nO método adequado para separar o Mg(OH)₂dessa mistura é a",
+        "opcoes": [
+          "filtração.",
+          "catação.",
+          "destilação.",
+          "dissolução.",
+          "evaporação."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:4d2ad0fb",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 116"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.899Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:8ba1c21e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Moradores do Brooklin, bairro de São Paulo, perdem o sono com um som alto, constante e estridente. O barulho é causado por anfíbios anuros trazidos do Caribe, da espécie Eleutherodactylus jahnstonei, que têm tamanho um pouco maior que o de um grão de feijão e que encontraram na capital um ambiente favorável. Cientistas foram até o local e encontraram esses animais nos jardins das casas.\n\nPererecas-assobiadoras tiram o sono de moradores do\nBrooklin. Disponível em: http://g1.globo.com.\n\nAcesso em: 26 mar. 2015 (adaptado).\n\nAo emitirem o som estridente, esses anfíbios",
+        "opcoes": [
+          "indicam que estão fora de seu hábitat natural.",
+          "alertam para a presença de poluição urbana.",
+          "sinalizam a existência de superpopulação.",
+          "direcionam insetos para sua alimentação.",
+          "atraem fêmeas para o acasalamento."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:8ba1c21e",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 117"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.899Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:b3f67926",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A hidroxiapatita, Ca₅(PO₄)₃OH, é um mineral constituinte do esmalte dos dentes. Entre as diversas reações que ocorrem no meio bucal, encontram-se em equilíbrio as reações de desmineralização e mineralização da hidroxiapatita em meio aquoso, ilustradas a seguir. A desmineralização está associada à fragilização do esmalte do dente e à formação de cáries.\n\n[[imagem:0]]\n\nO uso de creme dental pode minimizar a perda da hidroxiapatita. O quadro apresenta o agente de polimento e o pH de alguns cremes dentais comerciais.\n\n[[tabela:0]]\n\nSTORGATTO, G. A.; BRAIBANTE, M. E. F.; BRAIBANTE, H. T. S. A química na odontologia. Química Nova na Escola, v. 39, fev. 2017 (adaptado).\n\nConsiderando o equilíbrio químico envolvido, qual creme dental promove a maior desmineralização do esmalte do dente?",
+        "opcoes": [
+          "I",
+          "II",
+          "III",
+          "IV",
+          "V"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q118-1.webp",
+            "alt": "Imagem da questão 118 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 5 Ca 2 + (aq)\nCa (PO ) OH (s) Desmineralização +\n5 4 3\n3 PO 3 − (aq)\n+ 4\n+ +\nH (aq) Mineralização\nH O (l)\n2",
+            "largura": 988,
+            "altura": 292
+          }
+        ],
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Creme dental",
+              "Agente de polimento",
+              "pH"
+            ],
+            "linhas": [
+              [
+                "I",
+                "Bicarbonato de sódio",
+                "9,5"
+              ],
+              [
+                "II",
+                "Carbonato de cálcio",
+                "11,0"
+              ],
+              [
+                "III",
+                "Citrato de potássio",
+                "7,7"
+              ],
+              [
+                "IV",
+                "Dióxido de silício",
+                "6,9"
+              ],
+              [
+                "V",
+                "Fosfato de cálcio",
+                "7,3"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:b3f67926",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 118"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:49.459Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f23b3553",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O vírus linfotrópico de células T humanas tipo 1 (HTLV-1) é um retrovírus do mesmo grupo do vírus da imunodeficiência humana (HIV). Ambos são transmitidos da mesma forma e infectam as mesmas células de defesa do organismo, os linfócitos T. A diferença entre eles é que o HTLV-1 estimula o aumento da produção desses linfócitos, enquanto o HIV causa destruição dessas células.\n\nROMANELLI, L. C. F.; CARAMELLI, P.; PROIETTI, A. B. F. C. O vírus\nlinfotrópico de células T humanas tipo 1 (HTLV-1): quando\nsuspeitar da infecção? Revista da Associação\nMédica Brasileira, v. 56, 2010 (adaptado).\n\nUma possível consequência da infecção por HTLV-1 é o desenvolvimento de",
+        "opcoes": [
+          "aids.",
+          "câncer.",
+          "diabetes.",
+          "hepatite B.",
+          "hemorragia."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:f23b3553",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 120"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:07.095Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:0293e6f9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Utilizando-se um mesmo meio nutritivo, três gêneros bacterianos diferentes foram submetidos ao cultivo em tubos de ensaio. Após certo período de crescimento da cultura bacteriana em condições físico-químicas ideais, observou-se que o padrão de distribuição das células (representadas por pontos na figura) ao longo dos tubos era diferente em cada um dos casos.\n\n[[imagem:0]]\n\nEm relação ao metabolismo energético, os microrganismos presentes nos tubos 1, 2 e 3 são classificados, respectivamente, como",
+        "opcoes": [
+          "anaeróbio facultativo, anaeróbio estrito e aeróbio estrito.",
+          "anaeróbio facultativo, aeróbio estrito e anaeróbio estrito.",
+          "aeróbio estrito, anaeróbio estrito e anaeróbio facultativo.",
+          "anaeróbio estrito, aeróbio estrito e anaeróbio facultativo.",
+          "aeróbio estrito, anaeróbio facultativo e anaeróbio estrito."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q124-1.webp",
+            "alt": "Imagem da questão 124 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 444,
+            "altura": 440
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:0293e6f9",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 124"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:07.419Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:ac5b65fa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Indústrias farmacêuticas e instituições científicas têm trabalhado no desenvolvimento de diferentes vacinas contra a covid-19. Em algumas dessas vacinas, a principal estrutura antigênica é uma proteína de superfície viral chamada espícula (spike, em inglês). Essa proteína só existe em coronavírus, incluindo o SARS-CoV-2. Ela se liga a receptores de membrana específicos das células humanas por um mecanismo do tipo “chave-fechadura”. Dessa forma, os vírus entram nas células, podendo se multiplicar e acarretar a doença.\n\nO que são vacinas? Disponível em: www.cienciaviva.pt.\n\nAcesso em: 30 nov. 2021 (adaptado).\n\nNessas vacinas, essa proteína viral induz a",
+        "opcoes": [
+          "produção de anticorpos específicos contra os vírus.",
+          "imunidade passiva contra o desenvolvimento da doença.",
+          "alteração genômica para formação da memória imunológica.",
+          "neutralização direta dos vírus presentes na circulação sanguínea.",
+          "modificação dos receptores de membrana específicos para o vírus."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:ac5b65fa",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 126"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:07.462Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:3001c7c8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A fitorremediação é uma técnica que utiliza plantas para a remediação de ambientes contaminados. A descontaminação de solos pode ocorrer por descarte, absorção e metabolização, imobilização, extração ou volatilização do poluente, conforme representado na figura.\n\n[[imagem:0]]\n\nO método que retira o mercúrio de uma área contaminada, impedindo sua entrada na cadeia alimentar, é a",
+        "opcoes": [
+          "fitoestabilização, ficando o mercúrio disponível sob a superfície das raízes das plantas.",
+          "fitovolatilização, permitindo a retirada do mercúrio por plantas e a sua transferência para uma forma volátil.",
+          "fitodegradação, com a degradação do mercúrio promovida por enzimas, contidas nas raízes, formando espécies",
+          "fitoestimulação, com a remoção do mercúrio pela ação de microrganismos presentes nas raízes que absorvem e",
+          "fitoextração, em que as plantas que acumulam o mercúrio são cultivadas nesses locais, e a biomassa rica no metal"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q134-1.webp",
+            "alt": "Imagem da questão 134 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "LUIZ, E. P. Avaliação dos métodos de fitorremediação [...] na remoção de chumbo, cobre e zinco. São Paulo: UFABC, 2016 (adaptado).",
+            "largura": 1200,
+            "altura": 683
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:3001c7c8",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 134"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:08.021Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

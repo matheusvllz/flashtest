@@ -14,6 +14,7 @@ import { Route as AhaRouteImport } from './routes/aha'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as CadastroRouteImport } from './routes/cadastro'
 import { Route as CadernoRouteImport } from './routes/caderno'
+import { Route as CreditosRouteImport } from './routes/creditos'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DebugRouteImport } from './routes/debug'
 import { Route as EsqueciASenhaRouteImport } from './routes/esqueci-a-senha'
@@ -82,6 +83,11 @@ const CadastroRoute = CadastroRouteImport.update({
 const CadernoRoute = CadernoRouteImport.update({
   id: '/caderno',
   path: '/caderno',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreditosRoute = CreditosRouteImport.update({
+  id: '/creditos',
+  path: '/creditos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -311,6 +317,7 @@ export interface FileRoutesByFullPath {
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
   '/caderno': typeof CadernoRoute
+  '/creditos': typeof CreditosRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/esqueci-a-senha': typeof EsqueciASenhaRoute
@@ -362,6 +369,7 @@ export interface FileRoutesByTo {
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
   '/caderno': typeof CadernoRoute
+  '/creditos': typeof CreditosRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/esqueci-a-senha': typeof EsqueciASenhaRoute
@@ -414,6 +422,7 @@ export interface FileRoutesById {
   '/app': typeof AppRoute
   '/cadastro': typeof CadastroRoute
   '/caderno': typeof CadernoRoute
+  '/creditos': typeof CreditosRoute
   '/dashboard': typeof DashboardRoute
   '/debug': typeof DebugRoute
   '/esqueci-a-senha': typeof EsqueciASenhaRoute
@@ -467,6 +476,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/cadastro'
     | '/caderno'
+    | '/creditos'
     | '/dashboard'
     | '/debug'
     | '/esqueci-a-senha'
@@ -518,6 +528,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/cadastro'
     | '/caderno'
+    | '/creditos'
     | '/dashboard'
     | '/debug'
     | '/esqueci-a-senha'
@@ -569,6 +580,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/cadastro'
     | '/caderno'
+    | '/creditos'
     | '/dashboard'
     | '/debug'
     | '/esqueci-a-senha'
@@ -621,6 +633,7 @@ export interface RootRouteChildren {
   AppRoute: typeof AppRoute
   CadastroRoute: typeof CadastroRoute
   CadernoRoute: typeof CadernoRoute
+  CreditosRoute: typeof CreditosRoute
   DashboardRoute: typeof DashboardRoute
   DebugRoute: typeof DebugRoute
   EsqueciASenhaRoute: typeof EsqueciASenhaRoute
@@ -702,6 +715,13 @@ declare module '@tanstack/react-router' {
       path: '/caderno'
       fullPath: '/caderno'
       preLoaderRoute: typeof CadernoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creditos': {
+      id: '/creditos'
+      path: '/creditos'
+      fullPath: '/creditos'
+      preLoaderRoute: typeof CreditosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {
@@ -1021,6 +1041,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRoute,
   CadastroRoute: CadastroRoute,
   CadernoRoute: CadernoRoute,
+  CreditosRoute: CreditosRoute,
   DashboardRoute: DashboardRoute,
   DebugRoute: DebugRoute,
   EsqueciASenhaRoute: EsqueciASenhaRoute,

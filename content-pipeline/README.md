@@ -99,6 +99,22 @@ bun scripts/content/aulas.ts publicar --dir=content-pipeline/lotes/aulas   # gra
 - **Rodada editorial de 28/09/2026 (T-07.3/T-07.4).** Quatro revisores por grupo de matérias (`ia-delegada:sonnet`, delegação do docs/32 L349; **não é revisão humana** e `reviewKind` continua `ia-delegada`) deram decisão registrada por id em 665 itens (estratos 1–3 de `docs/36` §G.6, com expansão a 100 % onde a taxa de ação passou de 20 %): 3 itens `retired` (2 gerados e o oficial `oficial:2023:273a7d48`, cuja explicação escrita pelo Foca tinha uma equação errada — decisão do usuário pendente sobre editar só a explicação), 8 itens de história/geografia com dificuldade reclassificada (e o `irt` recalculado por `irtFromDifficulty`) e 4 itens de `por:interpretacao-ideia-principal` que passaram de d4 para d3 (`b` 0,8 → 0; merece conferência, é a maior mudança no modelo desta rodada). Nenhuma alternativa foi reordenada e nenhum gabarito mudou. Propostas não aplicadas (~27 reclassificações em matemática, 12 em biologia, 3 trocas de habilidade em itens diagnósticos) estão nos `resumo-*.md`.
 - `bun scripts/content/build-packs.ts --root <dir>` constrói tudo dentro de `<dir>` (`banco/` de entrada; saídas em `public-content/`, `aulas-geradas.ts`, `itens-gerados.ts`) sem tocar o banco real — é o que `tests/unit/build-packs.test.ts` usa. `publish.ts` preserva as `lessons` do arquivo de banco ao republicar itens.
 
+## Importador do INEP (spec 50 §5.9.2, decisão 0008)
+
+```bash
+bun run content:importar-inep -- --ano 2023 --seco        # só extrai e valida; não grava nada no banco
+bun run content:importar-inep -- --ano 2023 --relatorio   # grava itens e imagens + relatório com a amostra
+bun run content:importar-inep -- --ano 2019,2020 --dia 2   # anos separados por vírgula; sem --ano roda 2019–2025
+```
+
+- **Fonte:** `oficial/inep/provas.json` (lista versionada de URLs públicas do INEP, um caderno por dia; o sha256 de cada PDF é gravado ali na primeira baixada e um PDF que mude depois é recusado). PDFs em `oficial/cache/` (gitignored).
+- **Ferramenta de PDF:** `pdfjs-dist` (Apache-2.0, versão fixada, devDependency). Texto extraído no bun (build legacy, sem canvas); páginas desenhadas a 4× no Chromium do Playwright (`oficial/inep/render.ts`), que já é instalado pelos E2E — o desenho em Node pediria o binário nativo `@napi-rs/canvas`.
+- **Etapas:** `inep/pdf.ts` (texto por página) → `inep/figuras.ts` (faixa útil, calha entre colunas, figuras = tinta que não é texto, recorte WebP ≤ 80 KB até 1200 px, sem retoque) → `inep/parser.ts` (ordem de leitura, questões, enunciado, alternativas A–E, créditos, trechos de fórmula como recorte) → `inep/gabarito.ts` → `inep/classificar.ts` (habilidade por palavras-chave; só id ativo da taxonomia; confiança no relatório) → `importar-inep.ts` (validação, gravação, relatório).
+- **Validação automática por questão** (falhou → "não importada" com o motivo, no relatório): 5 alternativas; gabarito presente e não anulado; texto legível (fonte sem mapa Unicode é recusada); nenhum caractere inválido; similaridade ≥ 0,97 entre o texto montado e o texto da página; símbolo desenhado, índice sem forma Unicode ou fração em dois andares nas alternativas; imagens dentro do contrato (`validarMidia`). No enunciado, a linha com fórmula vira recorte da página (imagem do trecho).
+- **Saída:** `src/content/banco/oficial/<ano>-<materia>.json` e `src/content/banco/oficial/img/<ano>/`. Itens que não foram feitos pelo importador (as 18 transcritas de 2023) nunca são reescritos; o importador só compara o texto no relatório. Reimportar troca só os itens `reviewer: "importador-inep"` dos dias processados.
+- **Relatório:** `oficial/relatorios/<ano>-d<dia>.json` (versionado: contagens, não importadas com motivo, classificação, comparação com os itens antigos, amostra) e `.html` com 10% das questões sorteadas, recorte da página ao lado do item (recortes em `relatorios/<ano>-d<dia>/`, gitignored, regenerados por `--relatorio`).
+- **Espanhol** fica fora (não há habilidade de espanhol na taxonomia). **2021** fica fora: os PDFs de todos os cadernos têm fonte sem mapa Unicode e o texto só sairia com OCR, que não temos.
+
 ## Segurança
 
 - Chaves só em `.env` local, nunca versionadas.

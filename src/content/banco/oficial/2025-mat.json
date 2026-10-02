@@ -1,0 +1,2154 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "oficial:2025:493d7a61",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa pretende instalar um kit de gás natural veicular (GNV) em seu carro. Na loja que escolheu para realizar a compra e instalação desse kit, havia cinco modelos de cilindro para armazenamento do gás, cujas capacidades, em metro cúbico, eram, respectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à sua capacidade. Esse carro rodará 30 km diariamente, 7 dias por semana, e o consumo do GNV é de 1 m³ a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor preço e que garanta apenas um abastecimento semanal.\n\nNessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?",
+        "opcoes": [
+          "10",
+          "14",
+          "17",
+          "21",
+          "25"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:493d7a61",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 136"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.729Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:ac06bf64",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um jogo de computador, um cubo se encontra inicialmente posicionado conforme indicado na figura.\n\n[[imagem:0]]\n\nCada deslocamento efetuado por esse cubo se dá sempre em uma das direções definidas pelos três eixos coordenados. Ao se movimentar a partir da posição inicial, esse cubo se aproximou 3 unidades do plano yz, se afastou 5 unidades do plano xz e se aproximou 4 unidades do plano xy.\n\nA figura que apresenta as projeções ortogonais desse cubo sobre os três planos coordenados, após efetuar as movimentações descritas, é",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q138-1.webp",
+            "alt": "Imagem da questão 138 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 724,
+            "altura": 580
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2025/d2-q138-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 138 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 656,
+            "altura": 524
+          },
+          {
+            "url": "/content/img/2025/d2-q138-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 138 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 656,
+            "altura": 524
+          },
+          {
+            "url": "/content/img/2025/d2-q138-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 138 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 656,
+            "altura": 524
+          },
+          {
+            "url": "/content/img/2025/d2-q138-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 138 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 656,
+            "altura": 524
+          },
+          {
+            "url": "/content/img/2025/d2-q138-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 138 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 656,
+            "altura": 524
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:ac06bf64",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 138"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.046Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:5bce86e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No entorno de uma lagoa circular, cujo raio mede 1 km, há um uma ciclovia. Devido aos frequentes roubos de bicicleta, a prefeitura planeja alocar policiais em posições estratégicas para patrulhar essa ciclovia, de forma a torná-la totalmente protegida. Um ponto da ciclovia é considerado protegido se houver pelo menos um policial a, no máximo, 200 m de distância daquele ponto, posicionado sobre a ciclovia. A figura ilustra um ponto P sobre a ciclovia, que estará protegido se houver pelo menos um policial posicionado sobre a região de cor cinza escuro.\n\nDesconsidere a largura da pista da ciclovia e utilize 3 como aproximação para p.\n\n[[imagem:0]]\n\nNessas condições, a quantidade mínima necessária de policiais a serem alocados ao longo dessa ciclovia para torná-la protegida é",
+        "opcoes": [
+          "4.",
+          "8.",
+          "15.",
+          "30.",
+          "60."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q139-1.webp",
+            "alt": "Imagem da questão 139 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 644,
+            "altura": 564
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:5bce86e4",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 139"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.090Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:9b90e645",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um laboratório, um recipiente contém 10 litros de\n\n[[imagem:0]]",
+        "opcoes": [
+          "0,0050",
+          "0,0100",
+          "0,5000",
+          "4,9775",
+          "5,0000"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q140-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 140 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1014,
+            "altura": 269
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:9b90e645",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 140"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:19.775Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:f7e53f52",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma distribuidora de combustível possui caminhões-tanque com capacidade de 30 000 litros cada. Em qualquer transporte realizado por esses caminhões, um mesmo volume de combustível é descartado, pois fica com muitas impurezas. Esse volume descartado independe da quantidade transportada.\n\nUm posto de combustível encomendou 10 000 litros de gasolina dessa distribuidora, que enviou 10 200 litros, considerando o volume descartado no transporte. Mesmo assim, a quantidade de gasolina entregue ao posto foi de 9 900 litros.\n\nEm um novo pedido, esse posto solicitou que fosse entregue exatamente o dobro do volume de gasolina encomendado no pedido anterior.\n\nUtilizando o mesmo caminhão da entrega anterior, qual é o volume mínimo de gasolina, em litro, que a distribuidora deverá enviar para garantir a entrega da quantidade encomendada nesse novo pedido?",
+        "opcoes": [
+          "20 100",
+          "20 200",
+          "20 300",
+          "20 400",
+          "20 600"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:f7e53f52",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 141"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.090Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:20c3c23c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa de tecnologia vai padronizar a velocidade de conexão de internet que oferece a seus clientes em dez cidades. A direção da empresa decide que seu novo padrão de velocidade de referência será a mediana dos valores das velocidades de referência de conexões nessas dez cidades. Esses valores, em megabyte por segundo (MB/s), são apresentados no quadro.\n\n[[imagem:0]]\n\nA velocidade de referência, em megabyte por segundo, a ser adotada por essa empresa é",
+        "opcoes": [
+          "360.",
+          "370.",
+          "380.",
+          "390.",
+          "400."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q142-1.webp",
+            "alt": "Imagem da questão 142 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Cidades Velocidade de referência (MB/s)\nC1 390\nC2 380\nC3 320\nC4 390\nC5 340\nC6 380\nC7 390\nC8 400\nC9 350\nC10 360",
+            "largura": 1020,
+            "altura": 728
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:20c3c23c",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 142"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.165Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e1c945af",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na cantina de uma escola, há cinco alimentos vendidos em pacotes com diferentes quantidades de porções.\n\nAs informações nutricionais contidas nos rótulos desses produtos estão indicadas nas imagens.\n\n[[imagem:0]]\n\nUma estudante opta sempre pelo alimento com a menor quantidade total de sódio por pacote.\nQual desses produtos deve ser o escolhido pela estudante?",
+        "opcoes": [
+          "Batata chips.",
+          "Palitos salgados.",
+          "Biscoito multigrãos.",
+          "Biscoito de polvilho.",
+          "Biscoito de água e sal."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q143-1.webp",
+            "alt": "Imagem da questão 143 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1024,
+            "altura": 764
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:e1c945af",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 143"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:19.938Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:6d778f98",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma fábrica utilizou uma impressora 3D para produzir o protótipo de uma peça. O protótipo tem forma de um poliedro convexo, obtido pela justaposição de dois sólidos distintos, um com a forma de um prisma hexagonal regular reto e o outro com a forma de um tronco de pirâmide hexagonal reta. A base maior do tronco de pirâmide coincide com uma das bases do prisma.\n\nApós a impressão do protótipo, ele foi encaminhado ao setor de customização para realização da pintura de sua superfície. O critério definido para realização da pintura considera que faces congruentes entre si devem ser pintadas com uma mesma cor, e faces não congruentes entre si devem apresentar cores distintas.\n\nQual é a quantidade de cores utilizadas para pintar o protótipo?",
+        "opcoes": [
+          "9",
+          "8",
+          "6",
+          "4",
+          "3"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:6d778f98",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 144"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.252Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:76b1e7df",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pesquisas na área de neurobiologia confirmam que a prática meditativa é responsável por diminuir consideravelmente a frequência respiratória para praticantes avançados, que, após iniciarem a meditação, têm suas frequências respiratórias reduzidas até se estabilizarem em um nível mais baixo. O gráfico apresenta a relação da frequência respiratória, em incursões de respirações por minuto (rpm), em relação ao tempo, em minuto, de um praticante avançado, em que (f1) representa a frequência no instante t1, no qual se inicia a prática meditativa; e (f2), a frequência no instante t2, a partir do qual esta se estabiliza durante a meditação.\n\n[[imagem:0]]\n\nA partir do instante t1, em que se inicia a prática meditativa, o comportamento da frequência respiratória, em relação ao tempo,",
+        "opcoes": [
+          "mantém-se constante.",
+          "é diretamente proporcional ao tempo.",
+          "é inversamente proporcional ao tempo.",
+          "diminui até o instante t2, a partir do qual se torna constante.",
+          "diminui de forma proporcional ao tempo, tanto entre t1 e t2 quanto após t₂."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q145-1.webp",
+            "alt": "Imagem da questão 145 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.redepsi.com.br. Acesso em: 3 dez. 2018 (adaptado).",
+            "largura": 944,
+            "altura": 652
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:76b1e7df",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 145"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.313Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3079e193",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No atletismo, um grande desafio da prova de 100 metros rasos é a sua conclusão num tempo abaixo da marca de referência dos 10,00 segundos. Vários atletas já alcançaram esse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o recorde mundial masculino dessa prova, com o tempo de 9,58 segundos.\n\nQual é a diferença, em segundo, entre a marca de referência e a marca estabelecida por Usain Bolt em 2009?",
+        "opcoes": [
+          "0,02",
+          "0,42",
+          "0,52",
+          "1,02",
+          "1,42"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:3079e193",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 146"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.313Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:b4295b72",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma escola de idiomas oferece cursos de inglês, espanhol, francês e alemão. Os gráficos apresentam a distribuição percentual das matrículas, por idioma, em 2023, e a distribuição da quantidade de matrículas, por idioma, em 2024.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\n[[imagem:2]]\n\nPara planejar as atividades de 2025, o gerente da escola estimou que o total de matrículas será o mesmo de 2024, e a distribuição percentual das matrículas, por idioma, será igual à registrada em 2023.\nSegundo essa estimativa, o número de matrículas no curso de francês para o ano de 2025 será",
+        "opcoes": [
+          "2.",
+          "12.",
+          "20.",
+          "22.",
+          "40."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q147-1.webp",
+            "alt": "Imagem da questão 147 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 468,
+            "altura": 104
+          },
+          {
+            "url": "/content/img/2025/d2-q147-2.webp",
+            "alt": "Imagem 2 da questão 147 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 444,
+            "altura": 104
+          },
+          {
+            "url": "/content/img/2025/d2-q147-3.webp",
+            "alt": "Imagem 3 da questão 147 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 463
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:b4295b72",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 147"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:20.167Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3a7df3f3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O controle remoto de um carrinho de brinquedo vem equipado com uma tela que ajusta automaticamente a escala empregada na exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a escala utilizada na geração dessa imagem e o comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela do controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.\n\n[[imagem:0]]\n\nA opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é",
+        "opcoes": [
+          "I.",
+          "II.",
+          "III.",
+          "IV.",
+          "V."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q148-1.webp",
+            "alt": "Imagem da questão 148 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 208
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:3a7df3f3",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 148"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.527Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:a8bb2cae",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A cúpula pentagonal giralongada é um poliedro de Johnson, cujas faces são polígonos regulares, mas que não é um poliedro de Platão, de Arquimedes, prisma ou antiprisma.\n\nAs figuras apresentam esse poliedro em duas posições e uma de suas planificações.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nQuantos vértices tem esse poliedro?",
+        "opcoes": [
+          "21",
+          "25",
+          "55",
+          "80",
+          "110"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q149-1.webp",
+            "alt": "Imagem da questão 149 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 688,
+            "altura": 472
+          },
+          {
+            "url": "/content/img/2025/d2-q149-2.webp",
+            "alt": "Imagem 2 da questão 149 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 712,
+            "altura": 588
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:a8bb2cae",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 149"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.623Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:7ec5f454",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma fábrica de tijolos ecológicos com 3 funcionários, cada um trabalhando 6 horas diárias, produz 720 unidades por dia. Para atender ao crescimento da demanda por esse tipo de tijolo, essa fábrica passou a ter 5 funcionários, cada um trabalhando 9 horas por dia, aumentando, assim, sua capacidade de produção. Todos os funcionários produzem igual quantidade de tijolos a cada hora, independentemente de trabalharem 6 ou 9 horas diárias.\n\nO número de tijolos fabricados diariamente após o aumento da capacidade de produção é",
+        "opcoes": [
+          "800.",
+          "1 080.",
+          "1 200.",
+          "1 800.",
+          "2 520."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:7ec5f454",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 150"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.624Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:2fd20c9d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para acompanhar o fluxo de visitantes em seu prédio, uma empresa estabeleceu um código de identificação para a visitação. De acordo com a regra estabelecida, cada visitante será identificado com um código sequencial numérico com 7 dígitos, determinado, da esquerda para a direita, da seguinte forma:\n\n• o primeiro dígito indica o andar ao qual o visitante se\ndirige, que é um número de 1 a 4;\n• os dois próximos dígitos correspondem ao número do\nsetor da empresa ao qual o visitante se destina. Esse número varia de 01 a 20;\n• os três dígitos seguintes correspondem ao número do\nfuncionário da empresa com quem o visitante irá se reunir. Esse número varia de 001 a 135;\n• o último dígito indica se o visitante chegou à empresa\npela manhã, dígito 0, ou à tarde, dígito 1.\n\nUm visitante chegou à empresa às 10 horas da manhã para se reunir com o funcionário identificado pelo número 109, que trabalha no setor 08 da empresa, localizado no 2º andar.\n\nO código de identificação desse visitante é",
+        "opcoes": [
+          "0109082.",
+          "0281090.",
+          "1010982.",
+          "2081090.",
+          "2810910."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:2fd20c9d",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 151"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.624Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3c49e32e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um jogo digital, há três personagens: um herói e dois vilões. A programação é feita de tal forma que o herói sempre será atacado pelo vilão que estiver mais próximo dele. Uma das maneiras de “confundir” os vilões é movimentar o herói por trajetórias que o mantenha equidistante dos vilões, gerando indefinição entre eles e, com isso, não sendo atacado.\n\nPara a programação de uma das etapas desse jogo, o programador considerou, no plano cartesiano, o quadrado STUV como a região de movimentação dos personagens, onde V e T representam as posições fixas dos vilões, e S, a posição inicial do herói, como apresentado na figura.\n\n[[imagem:0]]\n\nQual é a equação da trajetória em que o herói poderá se movimentar sem ser atacado?",
+        "opcoes": [
+          "y = −3x + 20",
+          "y = −3x + 16",
+          "y = −3x − 20",
+          "y = 3x + 16",
+          "y = 3x − 16"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q153-1.webp",
+            "alt": "Imagem da questão 153 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 976,
+            "altura": 908
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:3c49e32e",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 153"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.692Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e2813568",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma livraria comercializa livros dos seguintes gêneros literários: ficção científica, autoajuda, romance e biografia. O gráfico apresenta o estoque dos livros que essa livraria tem, por gênero literário e por nacionalidade do autor, bem como a demanda por gênero literário, obtida por meio de uma enquete feita com seus clientes habituais.\n\nEstoque e demanda por livros\n\n[[imagem:0]]\n\nO gerente da livraria fará a encomenda de novos exemplares somente do gênero cuja quantidade em estoque seja insuficiente para atender a demanda constatada pela enquete.\n\nO gênero de livro do qual o gerente deverá encomendar mais exemplares é",
+        "opcoes": [
+          "ficção, pois é o que apresenta maior demanda.",
+          "biografia, pois é o gênero que tem a menor demanda.",
+          "autoajuda, pois a quantidade em estoque é inferior à demanda.",
+          "biografia, pois é o gênero que tem a menor quantidade de livros em estoque.",
+          "romance, pois é o que apresenta o menor estoque de livros de autores brasileiros."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q154-1.webp",
+            "alt": "Imagem da questão 154 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1016,
+            "altura": 740
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:e2813568",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 154"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.769Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:11a101a3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dez casais fundaram um grupo de dança e decidiram constituir uma diretoria com três cargos: presidente, secretário e tesoureiro. Para maior representatividade, decidiu-se que no máximo uma pessoa por casal poderá ocupar um cargo nessa diretoria.\n\nQuantas diretorias diferentes podem ser constituídas por esses 10 casais?",
+        "opcoes": [
+          "10 × 9 × 8",
+          "20 × 18 × 16",
+          "20 × 19 × 18",
+          "10 × 9 × 8 × 2",
+          "20 × 18 × 16 × 2"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:11a101a3",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 155"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.769Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:5b30ecbf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um artista, que costuma fazer desenhos com areia na praia, pediu a um banhista que fizesse um pequeno desenho, que serviria de esboço para uma grande obra de arte a ser feita na areia. Esse desenho está representado na figura.\n\n[[imagem:0]]\n\nApós a conclusão, a obra de arte obtida manteve as mesmas proporções do desenho feito pelo banhista, sendo que as medidas indicadas na figura foram ampliadas para 30 m.\n\nEm qual escala esse desenho representa a obra de arte?",
+        "opcoes": [
+          "1 : 1,5",
+          "1 : 2,25",
+          "1 : 10",
+          "1 : 100",
+          "1 : 150"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q156-1.webp",
+            "alt": "Imagem da questão 156 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 836,
+            "altura": 752
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:5b30ecbf",
+        "version": 1,
+        "skillIds": [
+          "mat:razao-proporcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 156"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.834Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:1fba0985",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estacionamento possui 120 vagas para veículos, e todas essas vagas estão ocupadas. Cada cliente paga uma mensalidade para utilizar uma vaga, que é calculada com base nas despesas mensais do estacionamento e no lucro pretendido. As despesas mensais do estacionamento são: R$ 14 240,00 com manutenção mais R$ 36,00 de seguro por veículo. O lucro do estacionamento é determinado pela diferença do valor arrecadado com as mensalidades pelas despesas efetuadas. A partir do mês seguinte, o valor do seguro por veículo aumentará em 20%, e as despesas com manutenção permanecerão sem alterações. Com isso, o dono do estacionamento reajustará as mensalidades para obter um lucro mensal de R$ 10 000,00. Apesar desse reajuste, todas as vagas continuarão ocupadas.\n\nO valor, em real, da mensalidade reajustada será",
+        "opcoes": [
+          "185,60.",
+          "226,09.",
+          "245,20.",
+          "268,93.",
+          "285,60."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:1fba0985",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 158"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.834Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:826944d2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O dono de uma sorveteria armazena sorvete em potes de 20 000 cm³. Ele serve o sorvete em taças, em porções de 250 mL.\n\nA quantidade de taças que ele consegue servir a partir de um pote cheio de sorvete é",
+        "opcoes": [
+          "5.",
+          "8.",
+          "50.",
+          "80.",
+          "800."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:826944d2",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 159"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.834Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:c0dd39ce",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma empresa produziu, em um determinado mês, 110 toneladas de plástico a partir de derivados de petróleo e 80 toneladas a partir de plásticos reciclados. O custo para reciclar uma tonelada de plástico é de R$ 500,00, que equivale a 5% do custo para produzir a mesma quantidade de plástico a partir de derivados de petróleo. Para o mês seguinte, a meta dessa empresa é produzir a mesma quantidade de plástico que foi produzida nesse mês, mas com redução de, pelo menos, 50% no custo de produção.\n\nPara que no mês seguinte a empresa atinja a meta, a quantidade mínima de toneladas de plástico que devem ser produzidas a partir de reciclagem deverá ser",
+        "opcoes": [
+          "135.",
+          "140.",
+          "155.",
+          "160.",
+          "175."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:c0dd39ce",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 162"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:31:16.217Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:905d13c7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma escola, todos os estudantes do ensino médio praticam uma das três modalidades esportivas oferecidas como atividade física, e cada um deles pratica somente uma dessas atividades. Os gráficos trazem alguns dados relativos aos quantitativos de estudantes que praticam essas modalidades esportivas nessa escola, apesar de algumas quantidades não terem sido informadas.\n\n[[imagem:0]]\n\nQual é a quantidade de estudantes no ensino médio dessa escola?",
+        "opcoes": [
+          "720",
+          "360",
+          "320",
+          "288",
+          "240"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q163-1.webp",
+            "alt": "Imagem da questão 163 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 828,
+            "altura": 1644
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:905d13c7",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 163"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:39.958Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:1f886972",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O dono de uma embarcação deve partir do ponto P e chegar ao ponto R por meio de dois deslocamentos lineares e navegando a uma velocidade constante. Essa viagem será feita durante a noite, e como ele dispõe somente de uma bússola e de um relógio, planejou sua rota da seguinte forma:\n\n1º – partir do ponto P na direção 110 e navegar por 4 horas, alcançando um ponto Q;\n\n2º – partir do ponto Q na direção 90 e navegar por 2 horas, alcançando o ponto de destino R.\n\nNo entanto, ao direcionar o barco para o primeiro deslocamento, o fez na direção 340, em vez de 110. Com isso, realizou os seguintes deslocamentos:\n\n1º – partiu do ponto P na direção 340 e navegou por 4 horas, alcançando um ponto S;\n\n2º – partiu do ponto S na direção 90 e navegou por 2 horas, alcançando o ponto T.\n\nA figura apresenta a bússola, a rota planejada e a rota executada.\n\n[[imagem:0]]\n\nO dono da embarcação só percebeu o equívoco ao chegar ao ponto T. Com isso, agora ele precisa definir a direção e o tempo de navegação que lhe permita, partindo do ponto T, chegar ao ponto de destino R por meio de uma rota retilínea.\n\nConsidere 0,64 como aproximação para cos 50°.\n\nA direção e o tempo aproximado de navegação que o dono da embarcação deve utilizar são, respectivamente,",
+        "opcoes": [
+          "135 e 7 horas e 15 minutos.",
+          "45 e 7 horas e 15 minutos.",
+          "135 e 12 horas.",
+          "135 e 6 horas.",
+          "45 e 6 horas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q164-1.webp",
+            "alt": "Imagem da questão 164 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 556,
+            "altura": 992
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:1f886972",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 164"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.024Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:7487d040",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um estudo clínico, 55 mulheres foram distribuídas, aleatoriamente, em 5 grupos de 11 pessoas. Para testar uma nova medicação, será escolhido um grupo no qual a maioria das mulheres tenham idades entre 20 e 30 anos. Os demais grupos tomarão placebo ou medicações já existentes no mercado. O quadro, parcialmente preenchido, informa alguns dados relativos às idades das mulheres desses grupos.\n\n[[imagem:0]]\n\nMesmo com o quadro incompleto, foi possível selecionar um desses grupos porque, apenas com os dados apresentados no quadro, foi identificado um grupo que, certamente, atendia ao critério de escolha.\nO grupo escolhido foi o",
+        "opcoes": [
+          "1.",
+          "2.",
+          "3.",
+          "4.",
+          "5."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q165-1.webp",
+            "alt": "Imagem da questão 165 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Grupos Menor idade Maior idade Média Mediana Moda Desvio padrão\n1 25 10\n2 25 9\n3 25\n4 25 1\n5 20 35",
+            "largura": 1200,
+            "altura": 245
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:7487d040",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 165"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:21.012Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:bf470ab1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pace é um termo usado por um corredor para denominar o seu ritmo médio em uma corrida. Representa o tempo médio, em segundo, que esse corredor leva para percorrer 1 km.\n\nO esquema apresenta o tempo, em segundo, que um corredor levou para cruzar as marcas que definem os quatro primeiros trechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada trecho de 1 km.\n\n[[imagem:0]]\n\nO melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.\nPara que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos menor do que o que ele gastou para percorrer o 4º trecho?",
+        "opcoes": [
+          "1",
+          "2",
+          "8",
+          "9",
+          "15"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q166-1.webp",
+            "alt": "Imagem da questão 166 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 320
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:bf470ab1",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 166"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:21.102Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:f5fbec57",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa tem um carro bicombustível, que funciona a gás natural veicular (GNV) e a gasolina. O rendimento do carro, medido em km/m³, no caso do gás, ou medido em km/L, no caso da gasolina, depende, entre outros fatores, da velocidade, em km/h, em que o carro trafega. Essa relação está em conformidade com estes gráficos.\n\n[[imagem:0]]\n\nDurante um feriado, essa pessoa realizou uma viagem de 240 km. Para obter uma estimativa de gasto de combustível, assuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Considere que, durante metade do caminho, foi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina correspondeu, respectivamente, a R$ 2,00 e a R$ 3,00.\n\nQual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?",
+        "opcoes": [
+          "4",
+          "8",
+          "14",
+          "21",
+          "30"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q167-1.webp",
+            "alt": "Imagem da questão 167 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 565
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:f5fbec57",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 167"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.228Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:29666d08",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um país, a primeira etapa para obtenção da carteira de motorista é a contratação de três produtos:\n\n• pacote com 20 aulas teóricas;\n• pacote com 10 aulas práticas;\n• aluguel do veículo para realização das aulas práticas.\n\nUma pessoa que pretende obter a carteira de motorista pesquisou o valor do aluguel do veículo e os valores de cada aula\nteórica e de cada aula prática em três autoescolas. O quadro apresenta esses valores.\n\n[[tabela:0]]\n\nEla contratará os três produtos numa mesma autoescola de modo que o custo total nessa primeira etapa seja o menor possível. A autoescola que será contratada é a",
+        "opcoes": [
+          "I, com o custo total de R$ 1 400,00.",
+          "II, com o custo total de R$ 280,00.",
+          "II, com o custo total de R$ 1 300,00.",
+          "III, com o custo total de R$ 460,00.",
+          "III, com o custo total de R$ 1 200,00."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Autoescola",
+              "Valor de cada aula teórica (R$)",
+              "Valor de cada aula prática (R$)",
+              "Aluguel do veículo (R$)"
+            ],
+            "linhas": [
+              [
+                "I",
+                "10",
+                "80",
+                "400"
+              ],
+              [
+                "II",
+                "30",
+                "50",
+                "200"
+              ],
+              [
+                "III",
+                "20",
+                "40",
+                "400"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:29666d08",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 168"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:31:16.627Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e7647987",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa de descarga, acoplada a um vaso sanitário, tem a forma de paralelepípedo reto retângulo cujas dimensões internas da base são 2,5 dm e 1,5 dm. Nessa caixa há uma boia que interrompe o abastecimento quando a altura da coluna de água atinge 2 dm, conforme a figura.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nA cada acionamento da descarga, todo o volume de água contida na caixa é despejado no vaso. Para reduzir o volume de água despejado a cada acionamento, uma pessoa colocará, no interior dessa caixa, garrafas de 300 mL, cheias de areia e tampadas, de modo a ficarem submersas quando o abastecimento for interrompido.\n\nPara garantir o funcionamento eficiente, o mínimo de água despejada a cada acionamento deve ser de 5 L.\n\nA quantidade máxima de garrafas que serão colocadas nessa caixa, garantindo um funcionamento eficiente, é igual a",
+        "opcoes": [
+          "10.",
+          "8.",
+          "4.",
+          "3.",
+          "2."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q170-1.webp",
+            "alt": "Imagem da questão 170 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 852,
+            "altura": 688
+          },
+          {
+            "url": "/content/img/2025/d2-q170-2.webp",
+            "alt": "Imagem 2 da questão 170 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 972,
+            "altura": 688
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:e7647987",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 170"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.402Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:dd1286e0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um confeiteiro passou a produzir tortas em formato de cilindro circular reto, com raio da base variando entre 12 cm e 16 cm e altura de 6 cm. Essas tortas deverão ser embaladas em caixas com formato de prisma reto de base quadrada, de modo que seja possível acomodar a torta em seu interior e ainda restar pelo menos 1 cm de distância entre a torta e as superfícies internas da caixa, lateral e superior. Ele dispõe, originalmente, de caixas no formato pretendido, cujas dimensões internas são 14 cm de comprimento do lado da base e 7 cm de altura, que não atendem às suas necessidades. Portanto, ele comprará novas caixas, com o mesmo formato das caixas originais, mas com comprimento do lado da base maior, que sejam adequadas para embalar todos os tipos de torta que produz.\n\nA aresta da base das novas caixas deve ser, no mínimo, quantos centímetros maior do que a das caixas originais?",
+        "opcoes": [
+          "4",
+          "12",
+          "16",
+          "18",
+          "20"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:dd1286e0",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 171"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.402Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e96bb6d2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma cidade, será construído um túnel que atravessa uma montanha para facilitar o trânsito de automóveis e bicicletas. Dois projetos foram elaborados e os esquemas com as vistas frontais desses projetos são apresentados na figura.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nO Projeto 1 conta com dois túneis, um exclusivo para bicicletas e o outro, para automóveis. O Projeto 2 conta com um único túnel, com espaços reservados para o trânsito exclusivo de bicicletas e automóveis. Nos dois projetos, os túneis têm o formato de semicilindro reto de mesma extensão, com vias de ida e volta para os dois tipos de veículos, separados por muretas.\n\nO projeto a ser aprovado será aquele que apresentar a menor área da seção transversal, pois implicará menor volume de material retirado da montanha.\n\nConsidere 3 como aproximação para p e desconsidere as espessuras das muretas.\n\nO projeto a ser aprovado é",
+        "opcoes": [
+          "o 1, pois apresenta área de seção transversal medindo 67,5 m².",
+          "o 2, pois apresenta área de seção transversal medindo 121,5 m².",
+          "o 1, pois apresenta área de seção transversal medindo 135 m².",
+          "o 2, pois apresenta área de seção transversal medindo 243 m².",
+          "qualquer um dos dois, pois apresentam áreas de suas seções transversais com medidas iguais."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q173-1.webp",
+            "alt": "Imagem da questão 173 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 952,
+            "altura": 576
+          },
+          {
+            "url": "/content/img/2025/d2-q173-2.webp",
+            "alt": "Imagem 2 da questão 173 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 952,
+            "altura": 580
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:e96bb6d2",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 173"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.513Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:498db67b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pai comprou oito presentes diferentes (dentre os quais, uma bicicleta e um celular) para dar a seus três filhos. Ele pretende distribuir os presentes de modo que o filho mais velho e o mais novo recebam três presentes cada um, e o do meio receba os dois presentes restantes. O mais velho ganhará, entre seus presentes, ou uma bicicleta ou um celular, mas não ambos.\n\nDe quantas maneiras distintas a distribuição dos presentes pode ser feita?",
+        "opcoes": [
+          "36",
+          "53",
+          "300",
+          "360",
+          "560"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:498db67b",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 175"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.513Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:4773b16e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A final de um campeonato de futebol foi disputada em 2 tempos regulamentares, de 45 minutos cada, sem acréscimos, com uma prorrogação de 30 minutos, também sem acréscimos. Um jogador entrou no início do segundo tempo, com um equipamento para medir a distância percorrida durante sua participação no jogo. Ao final do segundo tempo regulamentar, esse jogador havia percorrido 4,5 km. Ele manteve na prorrogação a mesma velocidade média que havia mantido no segundo tempo regulamentar.\n\nA distância percorrida por esse jogador durante sua participação na partida, em quilômetro, foi",
+        "opcoes": [
+          "4,5.",
+          "6,0.",
+          "7,5.",
+          "9,0.",
+          "12,0."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:4773b16e",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 176"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.514Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:a309d98b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A figura ilustra o projeto visual para confecção de uma medalha comemorativa, com a forma de um cilindro circular reto, de diâmetro 6 cm e espessura 3 mm.\n\n[[imagem:0]]\n\nA figura ABCD tem a forma de um quadrado e é a base de um prisma que atravessa toda a medalha. A região da medalha externa a esse prisma será cunhada em ouro. Pretende-se cunhar 100 dessas medalhas.\n\nConsidere 3,1 como valor aproximado para p.\n\nQual é o volume de ouro, em centímetro cúbico, necessário para a confecção dessas medalhas?",
+        "opcoes": [
+          "288",
+          "297",
+          "567",
+          "990",
+          "1 134"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q177-1.webp",
+            "alt": "Imagem da questão 177 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1048,
+            "altura": 444
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:a309d98b",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 177"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.556Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:056cbf87",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quatro amigos, cada um com 100 moedas, criaram um jogo, no qual cada um assume uma das quatro posições, 1, 2, 3 ou 4, indicadas na figura, e nela permanece até o final.\n\n[[imagem:0]]\n\nO desenvolvimento do jogo se dá em rodadas e, em todas elas, cada jogador transfere e recebe uma quantidade de moedas, da seguinte maneira:\n\n• o jogador na posição 1 transfere 1 moeda para o jogador\nna posição 2;\n• o jogador na posição 2 transfere 2 moedas para o jogador\nna posição 3;\n• o jogador na posição 3 transfere 3 moedas para o jogador\nna posição 4;\n• o jogador na posição 4 transfere 4 moedas para o jogador\nna posição 1, completando a rodada.\n\nAo final da rodada n, qual é a expressão algébrica que representa o número de moedas do jogador na posição 1?",
+        "opcoes": [
+          "103 + 4n",
+          "103 + 3n",
+          "100 + 4n",
+          "100 + 3n",
+          "99 + 4n"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q180-1.webp",
+            "alt": "Imagem da questão 180 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 460,
+            "altura": 460
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:056cbf87",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 180"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:40.592Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

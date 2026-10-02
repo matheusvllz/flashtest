@@ -25,6 +25,7 @@ const ROTAS_PUBLICAS = new Set([
   "/redefinir-senha",
   "/termos",
   "/privacidade",
+  "/creditos",
 ]);
 
 /** Exigem sessão, mas não cadastro completo (é onde ele se completa). */

@@ -1,0 +1,482 @@
+{
+  "subjectId": "lit",
+  "items": [
+    {
+      "id": "oficial:2023:9a91458b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Mais iluminada que outras\n\nTenho dois seios, estas duas coxas, duas mãos que me são muito úteis, olhos escuros, estas duas sobrancelhas que preencho com maquiagem comprada por dezenove e noventa e orelhas que não aceitam bijuterias. Este corpo é um corpo faminto, dentado, cruel, capaz e violento. Movo os braços e multidões correm desesperadas. Caminho no escuro com o rosto para baixo, pois cada parte isolada de mim tem sua própria vida e não quero domá-las. Animal da caatinga. Forte demais. Engolidora de espadas e espinhos.\n\nDizem e eu ouvi, mas depois também li, que o estado do Ceará aboliu a escravidão quatro anos antes do restante do país. Todos aqueles corpos que eram trazidos com seus dedos contados, seus calcanhares prontos e seus umbigos em fogo, todos eles foram interrompidos no porto. Um homem — dizem e eu ouvi e depois também li — liderou o levante. E todos esses corpos foram buscar outros incômodos. Foram ser incomodados.\n\nARRAES, J. Redemoinho em dia quente. São Paulo: Alfaguara, 2019.\n\nNesse texto, os recursos expressivos usados pela narradora",
+        "opcoes": [
+          "revelam as marcas da violência de raça e de gênero na construção da identidade.",
+          "questionam o pioneirismo do estado do Ceará no enfrentamento à escravidão.",
+          "reproduzem padrões estéticos em busca da valorização da autoestima feminina.",
+          "sugerem uma atmosfera onírica alinhada ao desejo de resgate da espiritualidade.",
+          "mimetizam, na paisagem, os corpos transformados pela violência da escravidão."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:9a91458b",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 7"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.416Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:23182f8b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De quem é esta língua?\n\nUma pequena editora brasileira, a Urutau, acaba de lançar em Lisboa uma “antologia antirracista de poetas estrangeiros em Portugal”, com o título Volta para a tua terra.\n\nO livro denuncia as diversas formas de racismo a que os imigrantes estão sujeitos. Alguns dos poetas brasileiros antologiados queixam-se do desdém com que um grande número de portugueses acolhe o português brasileiro. É uma queixa frequente.\n\n“Aqui em Portugal eles dizem / — eles dizem — / que nosso português é errado, que nós não falamos português”, escreve a poetisa paulista Maria Giulia Pinheiro, para concluir: “Se a sua linguagem, a lusitana, / ainda conserva a palavra da opressão / ela não é a mais bonita do mundo./ Ela é uma das mais violentas”.\n\nAGUALUSA, J. E. Disponível em: https://oglobo.globo.com.\n\nAcesso em: 22 nov. 2021 (adaptado).\n\nO texto de Agualusa tematiza o preconceito em relação ao português brasileiro. Com base no trecho citado pelo autor, infere-se que esse preconceito se deve",
+        "opcoes": [
+          "à dificuldade de consolidação da literatura brasileira em outros países.",
+          "aos diferentes graus de instrução formal entre os falantes de língua portuguesa.",
+          "à existência de uma língua ideal que alguns falantes lusitanos creem ser a falada em Portugal.",
+          "ao intercâmbio cultural que ocorre entre os povos dos diferentes países de língua portuguesa.",
+          "à distância territorial entre os falantes do português que vivem em Portugal e no Brasil."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:23182f8b",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 8"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.417Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:63cf50b3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ainda daquela vez pude constatar a bizarrice dos costumes que constituíam as leis mais ou menos constantes do seu mundo: ao me aproximar, verifiquei que o Sr. Timóteo, gordo e suado, trajava um vestido de franjas e lantejoulas que pertencera a sua mãe. O corpete descia-lhe excessivamente justo na cintura, e aqui e ali rebentava através da costura um pouco da carne aprisionada, esgarçando a fazenda e tornando o prazer de vestir-se daquele modo uma autêntica espécie de suplício. Movia-se ele com lentidão, meneando todas as suas franjas e abanando-se vigorosamente com um desses leques de madeira de sândalo, o que o envolvia numa enjoativa onda de perfume. Não sei direito o que colocara sobre a cabeça, assemelhava-se mais a um turbante ou a um chapéu sem abas de onde saíam vigorosas mechas de cabelos alourados. Como era costume seu também, trazia o rosto pintado — e para isto, bem como para suas vestimentas, apoderara-se de todo o guarda-roupa deixado por sua mãe, também em sua época famosa pela extravagância com que se vestia — o que sem dúvida fazia sobressair-lhe o nariz enorme, tão característico da família Meneses.\n\nCARDOSO, L. Crônica da casa assassinada. São Paulo: Círculo do Livro, s.d.\n\nPela voz de uma empregada da casa, a descrição de um dos membros da família exemplifica a renovação da ficção urbana nos anos 1950, aqui observada na",
+        "opcoes": [
+          "opção por termos e expressões de sentido ambíguo.",
+          "crítica social inspirada pelo convívio com os patrões.",
+          "descrição impressionista do fetiche do personagem.",
+          "presença de um foco narrativo de caráter impreciso.",
+          "ambiência de mistério das relações entre familiares."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:63cf50b3",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 12"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.423Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:4bf53af5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dão Lalalão\n\nDo povoado do Ão, ou dos sítios perto, alguém precisava urgente de querer vir por escutar a novela do rádio. Ouvia-a, aprendia-a, guardava na ideia, e, retornado ao Ão, no dia seguinte, a repetia a outros.\n\nAssim estavam jantando, vinham os do povoado receber a nova parte da novela do rádio. Ouvir já tinham ouvido tudo, de uma vez, fugia da regra: falhara ali no Ão, na véspera, o caminhão de um comprador de galinhas e ovos, seo Abrãozinho Buristém, que carregava um rádio pequeno, de pilhas, armara um fio no arame da cerca... Mas queriam escutar outra vez, por confirmação. — “A estória é estável de boa, mal que acompridada: taca e não rende...” — explicava o Zuz ao Dalberto.\n\nSoropita começou a recontar o capítulo da novela. Sem trabalho, se recordava das palavras, até com clareza — disso se admirava. Contava com prazer de demorar, encher a sala com o poder de outros altos personagens. Tomar a atenção de todos, pudesse contar aquilo noite adiante. Era preciso trazer luz, nem uns enxergavam mais os outros; quando alguém ria, ria de muito longe. O capítulo da novela estava terminando.\n\nROSA, J. G. Noites do sertão (Corpo de baile). São Paulo: Global, 2021.\n\nNesse trecho do conto, o gosto dos moradores do povoado por ouvir a novela de rádio recontada por Soropita deve-se ao(à)",
+        "opcoes": [
+          "qualidade do som do rádio.",
+          "estabilidade do enredo contado.",
+          "ineditismo do capítulo da novela.",
+          "jeito singular de falar aos ouvintes.",
+          "dificuldade de compreensão da história."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:4bf53af5",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 14"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.424Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:e2f2d143",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Passado muito tempo, resolvi tentar falar, porque estava sozinha me embrenhando na mesma vereda que Donana costumava entrar. Ainda recordo da palavra que escolhi: arado. Me deleitava vendo meu pai conduzindo o arado velho da fazenda carregado pelo boi, rasgando a terra para depois lançar grãos de arroz em torrões marrons e vermelhos revolvidos. Gostava do som redondo, fácil e ruidoso que tinha ao ser enunciado. “Vou trabalhar no arado.” “Vou arar a terra.” “Seria bom ter um arado novo, esse arado tá troncho e velho.” O som que deixou minha boca era uma aberração, uma desordem, como se no lugar do pedaço perdido da língua tivesse um ovo quente. Era um arado torto, deformado, que penetrava a terra de tal forma a deixá-la infértil, destruída, dilacerada.\n\nVIEIRA JR., I. Torto arado. São Paulo: Todavia, 2019.\n\nCom a perda de parte da língua na infância, a narradora tenta voltar a falar. Essa tentativa revela uma experiência que",
+        "opcoes": [
+          "reflete o olhar do pai sobre as etapas do plantio.",
+          "metaforiza a linguagem como ferramenta de lavoura.",
+          "explicita, na busca pela palavra, o medo da solidão.",
+          "confirma a frustração da narradora com relação à terra.",
+          "sugere, na ausência da linguagem, a estagnação do tempo."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:e2f2d143",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 25"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.665Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:8cec76e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A garganta é a gruta que guarda o som\nA garganta está entre a mente e o coração\nVem coisa de cima, vem coisa de baixo e de\n[repente um nó (e o que eu quero dizer?)\nÀs vezes, acontece um negócio esquisito\nQuando eu quero falar eu grito, quando eu quero\n[gritar eu falo, o resultado\nCalo.\n\nESTRELA D’ALVA, R. Disponível em: https://claudia.abril.com.br.\n\nAcesso em: 23 nov. 2021 (fragmento).\n\nA função emotiva presente no poema cumpre o propósito\ndo eu lírico de",
+        "opcoes": [
+          "revelar as desilusões amorosas.",
+          "refletir sobre a censura à sua voz.",
+          "expressar a dificuldade de comunicação.",
+          "ressaltar a existência de pressões externas.",
+          "manifestar as dores do processo de criação."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8cec76e4",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 28"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:24.372Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:8338a8ed",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Era um gato preto, como convinha a um cultor das boas letras, que já lera Poe traduzido por Baudelaire. Preto e gordo. E lerdo. Tão gordo e lerdo que a certa altura observei que ia perdendo inteiramente as qualidades características da raça, que são em suma o ódio de morte aos ratos. Já nem os afugentava! Os ratos de Ouro Preto são também dignos e solenes — não ria — tradicionalistas... descendentes de outros ratos que naqueles mesmos casarões presenciaram acontecimentos importantes da nossa história... No sobrado do desembargador Tomás Antônio Gonzaga, imagine o senhor uma reunião dos sonhadores inconfidentes, com os antepassados daqueles ratos a passearem pelo sótão ou mesmo pelo assoalho por entre as pernas dos homens absortos na esperança da independência nacional! E depois, os ancestres daqueles roedores que eu via agora deslizar sutilmente no meu quarto podiam ter subido pelo poste da ignomínia colonial, onde estava exposta a cabeça do Tiradentes! E quando as órbitas se descarnaram ignominiosamente, podiam até ter penetrado no recesso daquele crânio onde verdadeiramente ardera a literatura, com a simplicidade do heroísmo, a febre nacionalista...\n\nALPHONSUS, J. Contos e novelas. Rio de Janeiro: Imago; Brasília: INL, 1976.\n\nDescrevendo seu gato, o narrador remete ao contexto e a protagonistas da Inconfidência para criar um efeito desconcertante centrado no",
+        "opcoes": [
+          "desenho imaginativo do casario colonial de Ouro Preto.",
+          "efeito de apagamento de limites entre ficção e realidade.",
+          "vínculo estabelecido entre animais urbanos e literatura.",
+          "questionamento sutil quanto à sanidade dos inconfidentes.",
+          "contraste entre austeridade pomposa e imagem repugnante."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8338a8ed",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 29"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.669Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b6ccde7f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Migalhas\nEntre a toalha branca e um bule de café\nseria inapropriado dizer\neu não te amo mais.\nEra necessário algo mais solene,\num jardim japonês\npara as perdas pensadas,\num noturno de tempestade\npara arrebentar de dor,\numa praia de pedras para chorar\nem silêncio, uma cama alta\npara o incenso da despedida,\numa janela\ndando para o abismo.\nNo entanto você abaixa os olhos\ne recolhe lentamente as migalhas de pão\nsobre a mesa posta para dois.\n\nMARQUES, A. M. A vida submarina. São Paulo: Cia. das Letras, 2021.\n\nNesse poema, a representação do sentimento amoroso\nrecupera a tradição lírica, mas se ajusta à visão\ncontemporânea ao",
+        "opcoes": [
+          "invocar o interlocutor para uma tomada de posição.",
+          "questionar a validade do envolvimento romântico.",
+          "diluir em banalidade a comoção de um amor frustrado.",
+          "transformar em paz as emoções conflituosas do casal.",
+          "condicionar a existência da paixão a espaços idealizados."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b6ccde7f",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 31"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:24.374Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:22c7774a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O uso das redes sociais como forma de ampliar universos foi uma descoberta recente para o artista Wolney Fernandes, que começou a criar quando o ambiente em Goiás era mais árido em relação às artes visuais. “Hoje, ser diferente é uma potência e quem sabe o que quer com a própria arte encontra espaço”, diz. As colagens artísticas do goiano aparecem em capas de obras literárias pelo Brasil e exterior.\n\nDisponível em: https://opopular.com.br. Acesso em: 15 nov. 2021 (adaptado).\n\nO artista goiano Wolney Fernandes busca expor seu trabalho por meio de plataformas virtuais com o objetivo de",
+        "opcoes": [
+          "dar suporte à técnica de colagem em Artes Visuais, contornando dificuldades práticas.",
+          "aproximar-se da estética visual própria da editoração de obras artísticas, como capas de livros.",
+          "oferecer uma vitrine internacional para sua produção artística, a fim de dar mais visibilidade a suas obras.",
+          "enfatizar o caráter original e inovador de suas criações artísticas, diferenciando-se das artes tradicionais.",
+          "trazer um sentido tecnológico às suas colagens, uma vez que as imagens artísticas são recorrentes nas redes sociais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:22c7774a",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 37"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.022Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

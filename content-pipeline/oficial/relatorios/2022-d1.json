@@ -1,0 +1,815 @@
+{
+  "prova": "ENEM 2022 · 1º dia · caderno 1 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 95,
+  "extraidas": 95,
+  "importadas": 80,
+  "mantidasDeAntes": [],
+  "comImagem": 11,
+  "comAlternativaImagem": 0,
+  "comTabela": 0,
+  "naoImportadas": [
+    {
+      "numero": 1,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 2,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 3,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 4,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 5,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 7,
+      "motivo": "recorte incompleto: texto \"EI...\" encostado na figura, fora do recorte; texto solto \"EI...\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 32,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 49,
+      "motivo": "alternativa A vazia"
+    },
+    {
+      "numero": 53,
+      "motivo": "o texto cita uma figura, mas nenhuma figura foi achada na página"
+    },
+    {
+      "numero": 65,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 78,
+      "motivo": "enunciado vazio"
+    },
+    {
+      "numero": 79,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 80,
+      "motivo": "enunciado vazio"
+    },
+    {
+      "numero": 81,
+      "motivo": "texto solto \"A\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 82,
+      "motivo": "recorte incompleto: texto \"15°Ssaber ancorado n\" encostado na figura, fora do recorte; texto solto \"15°S\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    }
+  ],
+  "classificacao": [
+    {
+      "numero": 1,
+      "id": "oficial:2022:fd2a2e01",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 2,
+      "id": "oficial:2022:b15a0fa5",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 3,
+      "id": "oficial:2022:56982a63",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 4,
+      "id": "oficial:2022:39f54cef",
+      "skillId": "ing:vocabulario-contexto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 5,
+      "id": "oficial:2022:b429336c",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 6,
+      "id": "oficial:2022:340c7c76",
+      "skillId": "por:sentido-figuras-linguagem",
+      "confianca": "alta",
+      "pistas": [
+        "metáfora",
+        "hipérbole"
+      ]
+    },
+    {
+      "numero": 8,
+      "id": "oficial:2022:6cd05128",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "personagem"
+      ]
+    },
+    {
+      "numero": 9,
+      "id": "oficial:2022:9ba2e323",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 10,
+      "id": "oficial:2022:cf7ad0d8",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 11,
+      "id": "oficial:2022:9ca4898c",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 12,
+      "id": "oficial:2022:7556d126",
+      "skillId": "por:classes-gramaticais-identificacao",
+      "confianca": "media",
+      "pistas": [
+        "pronome"
+      ]
+    },
+    {
+      "numero": 13,
+      "id": "oficial:2022:0df23897",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 14,
+      "id": "oficial:2022:0607f873",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 15,
+      "id": "oficial:2022:88a9a22f",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 16,
+      "id": "oficial:2022:5a0b3502",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 17,
+      "id": "oficial:2022:e66616cc",
+      "skillId": "por:classes-gramaticais-identificacao",
+      "confianca": "alta",
+      "pistas": [
+        "pronome",
+        "advérbio",
+        "adjetivo",
+        "substantivo"
+      ]
+    },
+    {
+      "numero": 18,
+      "id": "oficial:2022:9612c963",
+      "skillId": "por:classes-gramaticais-identificacao",
+      "confianca": "alta",
+      "pistas": [
+        "adjetivo",
+        "substantivo"
+      ]
+    },
+    {
+      "numero": 19,
+      "id": "oficial:2022:be0dd6e4",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 20,
+      "id": "oficial:2022:1cf7ab80",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 21,
+      "id": "oficial:2022:e4ad1b0d",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "conto"
+      ]
+    },
+    {
+      "numero": 22,
+      "id": "oficial:2022:76c35f7d",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 23,
+      "id": "oficial:2022:6cb09b01",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "narrador",
+        "personagem"
+      ]
+    },
+    {
+      "numero": 24,
+      "id": "oficial:2022:7791dfd3",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 25,
+      "id": "oficial:2022:785a12a8",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 26,
+      "id": "oficial:2022:f98ba7c7",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "verso"
+      ]
+    },
+    {
+      "numero": 27,
+      "id": "oficial:2022:ee78f014",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 28,
+      "id": "oficial:2022:7b0b739e",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 29,
+      "id": "oficial:2022:53ae1db5",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "narrador",
+        "personagem"
+      ]
+    },
+    {
+      "numero": 30,
+      "id": "oficial:2022:234e6c98",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "romance",
+        "narrador"
+      ]
+    },
+    {
+      "numero": 31,
+      "id": "oficial:2022:43995a85",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "romance",
+        "narrador"
+      ]
+    },
+    {
+      "numero": 33,
+      "id": "oficial:2022:35ec8dec",
+      "skillId": "por:tempos-verbais-emprego",
+      "confianca": "media",
+      "pistas": [
+        "pretérito"
+      ]
+    },
+    {
+      "numero": 34,
+      "id": "oficial:2022:f6a542aa",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 35,
+      "id": "oficial:2022:04b60dac",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "romance",
+        "conto",
+        "crônica"
+      ]
+    },
+    {
+      "numero": 36,
+      "id": "oficial:2022:ada20e71",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 37,
+      "id": "oficial:2022:7c4df097",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 38,
+      "id": "oficial:2022:0e2ac63c",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 39,
+      "id": "oficial:2022:0cd230e7",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 40,
+      "id": "oficial:2022:b00031ac",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "verso",
+        "conto"
+      ]
+    },
+    {
+      "numero": 41,
+      "id": "oficial:2022:313e31e8",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "personagem"
+      ]
+    },
+    {
+      "numero": 42,
+      "id": "oficial:2022:79007193",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 43,
+      "id": "oficial:2022:d3cd6dbd",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "narrador",
+        "literári"
+      ]
+    },
+    {
+      "numero": 44,
+      "id": "oficial:2022:89ca5527",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 45,
+      "id": "oficial:2022:568dd01a",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 46,
+      "id": "oficial:2022:c80f9392",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "alta",
+      "pistas": [
+        "chuva",
+        "solo"
+      ]
+    },
+    {
+      "numero": 47,
+      "id": "oficial:2022:37d6717c",
+      "skillId": "fil:politica-poder-estado",
+      "confianca": "media",
+      "pistas": [
+        "Hannah Arendt"
+      ]
+    },
+    {
+      "numero": 48,
+      "id": "oficial:2022:178455e1",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "renda"
+      ]
+    },
+    {
+      "numero": 50,
+      "id": "oficial:2022:b49aea4a",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "trabalhador"
+      ]
+    },
+    {
+      "numero": 51,
+      "id": "oficial:2022:4b4c47f9",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 52,
+      "id": "oficial:2022:273ae842",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "rio"
+      ]
+    },
+    {
+      "numero": 54,
+      "id": "oficial:2022:d045c8a5",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "império",
+        "república"
+      ]
+    },
+    {
+      "numero": 55,
+      "id": "oficial:2022:742b65c8",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "alta",
+      "pistas": [
+        "chuva",
+        "relevo",
+        "solo"
+      ]
+    },
+    {
+      "numero": 56,
+      "id": "oficial:2022:fe17f9e4",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 57,
+      "id": "oficial:2022:7097887f",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 58,
+      "id": "oficial:2022:c9b86816",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "alta",
+      "pistas": [
+        "território",
+        "fronteira"
+      ]
+    },
+    {
+      "numero": 59,
+      "id": "oficial:2022:93ee66f2",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "indígena",
+        "quilombola"
+      ]
+    },
+    {
+      "numero": 60,
+      "id": "oficial:2022:ab2b1a49",
+      "skillId": "geo:meio-ambiente-impactos",
+      "confianca": "media",
+      "pistas": [
+        "impacto"
+      ]
+    },
+    {
+      "numero": 61,
+      "id": "oficial:2022:75f30a58",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 62,
+      "id": "oficial:2022:5e0c9472",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "media",
+      "pistas": [
+        "Mercosul"
+      ]
+    },
+    {
+      "numero": 63,
+      "id": "oficial:2022:b88a9f9d",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "monarquia",
+        "Idade Média"
+      ]
+    },
+    {
+      "numero": 64,
+      "id": "oficial:2022:c67ba7a2",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "alta",
+      "pistas": [
+        "atmosfer",
+        "relevo",
+        "erosão",
+        "solo"
+      ]
+    },
+    {
+      "numero": 66,
+      "id": "oficial:2022:6d51097d",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 67,
+      "id": "oficial:2022:63952f91",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "movimento social"
+      ]
+    },
+    {
+      "numero": 68,
+      "id": "oficial:2022:f77773a0",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 69,
+      "id": "oficial:2022:092327f5",
+      "skillId": "fil:politica-poder-estado",
+      "confianca": "media",
+      "pistas": [
+        "soberan"
+      ]
+    },
+    {
+      "numero": 70,
+      "id": "oficial:2022:3cb842f5",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "alta",
+      "pistas": [
+        "desigualdade",
+        "pobreza"
+      ]
+    },
+    {
+      "numero": 71,
+      "id": "oficial:2022:ba0130b3",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "renda"
+      ]
+    },
+    {
+      "numero": 72,
+      "id": "oficial:2022:878adc6d",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "trabalhador"
+      ]
+    },
+    {
+      "numero": 73,
+      "id": "oficial:2022:34996727",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "identidade"
+      ]
+    },
+    {
+      "numero": 74,
+      "id": "oficial:2022:2d737405",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "relevo"
+      ]
+    },
+    {
+      "numero": 75,
+      "id": "oficial:2022:1c7da9b8",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "indígena",
+        "patrimônio"
+      ]
+    },
+    {
+      "numero": 76,
+      "id": "oficial:2022:91c2b1c4",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "trabalhador"
+      ]
+    },
+    {
+      "numero": 77,
+      "id": "oficial:2022:19c2b9c0",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "colônia",
+        "colonial",
+        "escravi",
+        "metrópole"
+      ]
+    },
+    {
+      "numero": 83,
+      "id": "oficial:2022:c0d7879a",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 84,
+      "id": "oficial:2022:db7ce827",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 85,
+      "id": "oficial:2022:b60d2d3a",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 86,
+      "id": "oficial:2022:a6e98cec",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 87,
+      "id": "oficial:2022:ea775a02",
+      "skillId": "geo:urbanizacao-processos",
+      "confianca": "alta",
+      "pistas": [
+        "cidade",
+        "metrópole",
+        "êxodo"
+      ]
+    },
+    {
+      "numero": 88,
+      "id": "oficial:2022:38cb6069",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 89,
+      "id": "oficial:2022:30f5fd02",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 90,
+      "id": "oficial:2022:d8c97429",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "indígena",
+        "etnia"
+      ]
+    }
+  ],
+  "amostra": [
+    {
+      "numero": 18,
+      "id": "oficial:2022:9612c963"
+    },
+    {
+      "numero": 2,
+      "id": "oficial:2022:b15a0fa5"
+    },
+    {
+      "numero": 86,
+      "id": "oficial:2022:a6e98cec"
+    },
+    {
+      "numero": 50,
+      "id": "oficial:2022:b49aea4a"
+    },
+    {
+      "numero": 17,
+      "id": "oficial:2022:e66616cc"
+    },
+    {
+      "numero": 21,
+      "id": "oficial:2022:e4ad1b0d"
+    },
+    {
+      "numero": 58,
+      "id": "oficial:2022:c9b86816"
+    },
+    {
+      "numero": 55,
+      "id": "oficial:2022:742b65c8"
+    }
+  ]
+}

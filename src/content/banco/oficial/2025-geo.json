@@ -1,0 +1,879 @@
+{
+  "subjectId": "geo",
+  "items": [
+    {
+      "id": "oficial:2025:e41f7f4b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\nA dispersão espacial do problema ambiental representado na imagem de satélite é explicada pela seguinte característica geográfica:",
+        "opcoes": [
+          "Amplitude das temperaturas médias.",
+          "Homogeneidade da insolação anual.",
+          "Ocorrência de chuvas de relevo.",
+          "Circulação de massas de ar.",
+          "Ausência de frentes frias."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q047-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 47 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 42
+          },
+          {
+            "url": "/content/img/2025/d1-q047-2.webp",
+            "alt": "Imagem 2 da questão 47 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: https://noticias.uol.com.br. Acesso em: 10 out. 2019 (adaptado).",
+            "largura": 1016,
+            "altura": 572
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:e41f7f4b",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 47"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:01.879Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:9bd45f10",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O direito não é a justiça. O direito é o elemento do cálculo, é justo que haja um direito, mas a justiça é incalculável, ela exige que se calcule o incalculável; e as experiências aporéticas são experiências tão improváveis quanto necessárias da justiça, isto é, são momentos em que a decisão entre o justo e o injusto nunca é garantida por uma regra.\n\nDERRIDA, J. Força de lei. São Paulo: Martins Fontes, 2010 (adaptado).\n\nDe acordo com o texto, ainda que estejam em desconformidade com o ordenamento jurídico, são exemplos de ação justa:",
+        "opcoes": [
+          "Casos de desobediência civil.",
+          "Repressões do aparato estatal.",
+          "Conflitos de natureza intercontinental.",
+          "Manifestações do movimento sindical.",
+          "Mobilizações de agremiações estudantis."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:9bd45f10",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 50"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.268Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:193ec41b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Sinal fechado\n\nOlá, como vai?\nEu vou indo e você, tudo bem?\nTudo bem, eu vou indo, correndo\nPegar meu lugar no futuro, e você?\nTudo bem, eu vou indo em busca\nDe um sono tranquilo, quem sabe?\nQuanto tempo...\nPois é, quanto tempo...\nMe perdoe a pressa\nÉ a alma dos nossos negócios...\nOh, não tem de que\nEu também só ando a cem\nQuando é que você telefona?\nPrecisamos nos ver por aí\nPra semana, prometo,\nTalvez nos vejamos, quem sabe?\nQuanto tempo...\n\nPois é, quanto tempo...\nTanta coisa que eu tinha a dizer\nMas eu sumi na poeira das ruas\nEu também tenho algo a dizer\nMas me foge a lembrança\nPor favor, telefone, eu preciso beber\nAlguma coisa rapidamente\nPra semana...\nO sinal...\nEu procuro você...\nVai abrir! Vai abrir!\nPrometo, não esqueço\nPor favor, não esqueça\nNão esqueço, não esqueço\nAdeus...\n\nPAULINHO DA VIOLA. Foi um rio que passou em minha vida.\n\nRio de Janeiro: Odeon, 1970.\n\nA letra da canção apresenta a permanência de uma situação da\nvida cotidiana ao destacar a",
+        "opcoes": [
+          "diminuição do comportamento competitivo.",
+          "importância da memória coletiva.",
+          "redução da mobilidade urbana.",
+          "efemeridade dos vínculos de afetividade.",
+          "obsolescência dos meios de comunicação."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:193ec41b",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 51"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.269Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:23452340",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A ideia de êxodo urbano assume ares caricaturais. Pega a mais reduzida parte da pirâmide social e projeta para todos seus desejos defensivos. Se o êxodo urbano for compreendido como aquisição de uma segunda residência, então não estamos, de fato, falando de êxodo, mas da reversão de um excedente de renda de uma pequena fração da elite para as franjas metropolitanas. Se o êxodo urbano for compreendido como retorno aos municípios menos povoados, então não estamos, de fato, falando de êxodo urbano, mas de um movimento de migração de pessoas cuja estabilidade no emprego e a elevada renda lhes permitem simular, nas ilhas urbanas do interior agropecuário, a vida urbana metropolitana.\n\nARRAIS, T. A. O distópico êxodo urbano. Revista e, n. 11, maio 2021 (adaptado).\n\nA crítica apresentada no texto evidencia uma dinâmica socioespacial marcada pela",
+        "opcoes": [
+          "valorização de tradições rurais.",
+          "redução de plantações agrícolas.",
+          "estagnação de atividades comerciais.",
+          "precariedade de infraestruturas rodoviárias.",
+          "seletividade de deslocamentos populacionais."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:23452340",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 54"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.271Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:ac192df3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A “invenção” dessa nova anatomia política não deve ser entendida como uma descoberta súbita. Mas como uma multiplicidade de processos muitas vezes mínimos, de origens diferentes, de localizações esparsas, que se recordam, que se repetem, ou se imitam, apoiam-se uns sobre os outros e esboçam aos poucos a fachada de um método geral. Encontramo-los em funcionamento nos colégios, muito cedo; mais tarde, nas escolas primárias, no espaço hospitalar e na organização militar.\n\nFOUCAULT, M. Vigiar e punir. Petrópolis: Vozes, 2011.\n\nO texto indica o seguinte aspecto da disciplina como ferramenta política:",
+        "opcoes": [
+          "Expansão das técnicas de suplício.",
+          "Judicialização das relações de poder.",
+          "Dissolução das distinções de nobreza.",
+          "Capilarização das práticas de controle.",
+          "Espetacularização das medidas de penitência."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:ac192df3",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 55"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.271Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:46ce7458",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Por séculos, o Rio Reno tem sido uma rota de navegação confiável, ajudando a criar gigantes fabris ao longo de suas margens. No entanto, esses dias parecem estar no fim, pois o nível da água tem diminuído regularmente, o que impede a navegação fluvial do final do verão até o outono. Isso mostra como a crise climática atinge as economias dos países ricos.\n\nDisponível em: www.estadao.com.br. Acesso em: 10 ago. 2023 (adaptado).\n\nQual é o efeito econômico do problema ambiental apresentado no texto?",
+        "opcoes": [
+          "Supressão da extração de minério.",
+          "Intensificação da atividade de pesca.",
+          "Encarecimento da logística de transporte.",
+          "Inviabilização da agricultura de subsistência.",
+          "Sucateamento da indústria de transformação."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:46ce7458",
+        "version": 1,
+        "skillIds": [
+          "geo:meio-ambiente-impactos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 56"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.272Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:8b558289",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pela falta de chuvas, a geração de energia eólica, solar e térmica atingiu níveis recordes em agosto de 2021, quando as hidrelétricas ficaram com cerca de 50% do total. Para um professor da Universidade Federal da Bahia, essa queda não é uma surpresa. “Não aconteceu de uma hora para outra. Se olharmos o mapa do Brasil, um dos grandes provedores de água é a Floresta Amazônica. Se você diminui a floresta, diminui a quantidade de água que vai para a atmosfera”, explica.\n\nBORGES, T. O fantasma do apagão. Disponível em:\n\nwww.correio24horas.com.br. Acesso em:\n\n9 out. 2021 (adaptado).\n\nDe acordo com o texto, a dificuldade na produção de energia é causada pela alteração da(s)",
+        "opcoes": [
+          "variável em pesquisas meteorológicas.",
+          "paisagem em locais estratégicos.",
+          "demandas em regiões industriais.",
+          "metas em acordos climáticos.",
+          "geologia em áreas naturais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:8b558289",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 59"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.273Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3fa05f7b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para que a utopia nasça, é preciso duas condições. A primeira é a forte sensação de que o mundo não está funcionando adequadamente e deve ter seus fundamentos revistos para que se reajuste. A segunda condição é a existência de uma confiança no potencial humano à altura da tarefa de reformar o mundo, a crença de que nós, seres humanos, podemos fazê-lo, sendo capazes de perceber o que está errado com o mundo, o que precisa ser modificado, quais são os pontos problemáticos, e ter força e coragem para extirpá-los.\n\nBAUMAN, Z. apud OLIVEIRA, D. Bauman: para que a utopia renasça, é preciso confiar no potencial humano. Revista Cult, jan. 2017.\n\nDe acordo com o autor, qual é a função da utopia no contexto das transformações sociais?",
+        "opcoes": [
+          "Habilitar memórias afetivas.",
+          "Apontar alternativas possíveis.",
+          "Legitimar experiências pretéritas.",
+          "Perpetuar paradigmas científicos.",
+          "Empreender soluções conclusivas."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:3fa05f7b",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 62"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.274Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:bf2c6394",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Produção e exportações brasileiras no ranking mundial em 2019\n\n[[imagem:0]]\n\nFonte: USDA, 2020. Elaboração CNA.\n*Fatia de participação na produção mundial.\n\nDisponível em: www.cnabrasil.org.br. Acesso em: 15 out. 2021.\n\nQual condição favoreceu o cenário produtivo exposto na figura?",
+        "opcoes": [
+          "Redução do poder de compra da população brasileira.",
+          "Ampliação da entrada do capital agroindustrial no campo.",
+          "Diminuição do uso de trabalho especializado na agropecuária.",
+          "Valorização da moeda nacional em relação ao dólar americano.",
+          "Inclusão de pequenas propriedades em cultivos de subsistência."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q063-1.webp",
+            "alt": "Imagem da questão 63 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 406
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:bf2c6394",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 63"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.363Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:692e19d2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nos Estados Unidos, um hotel perto de um parque foi engolido por uma enorme cratera. E não é a primeira vez que esse tipo de incidente acontece na Flórida. Em minutos, uma ala inteira do hotel era engolida pela cratera de 30 metros de diâmetro e cinco de profundidade. O diretor do resort em Clermont, perto dos parques temáticos da Flórida, diz que o prédio tinha 15 anos, e que até então o solo nunca havia apresentado problemas. Os afundamentos são um fenômeno comum na Flórida por causa das formações de calcário e argila no subsolo, mas às vezes chuvas fortes, ou a drenagem do solo para construção, acabam contribuindo para o surgimento desses buracos.\n\nDisponível em: http://g1.globo.com. Acesso em: 10 dez. 2024 (adaptado).\n\nAsituaçãodedesmoronamentodosolodescritanotextoorigina-seda",
+        "opcoes": [
+          "cristalização da estrutura geológica.",
+          "ação do intemperismo químico.",
+          "recomposição da mata ciliar.",
+          "acumulação de sedimentos orgânicos.",
+          "impermeabilização da superfície ocupada."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:692e19d2",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 70"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.181Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:d9a52192",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Entre esses preconceitos estava o canibalismo. A prática não era, porém, uma mentira, uma invenção europeia, mas um ritual controlado por regras. Entre os tupis, por exemplo, os guerreiros se sentiam honrados quando morriam em um banquete canibal. Para os europeus, no entanto, comer carne humana era abominável, pois nem mesmo os leões ingeriam seus semelhantes. Portanto, para os conquistadores, o canibalismo era sinônimo de barbarismo e da incapacidade de se autogovernar.\n\nRAMINELLI, R. Canibalismo para alemão ver. In: FIGUEIREDO, L. (Org.).\n\nHistória do Brasil para ocupados. Rio de Janeiro:\n\nCasa da Palavra, 2013 (adaptado).\n\nNo texto, europeus e ameríndios atribuíram à prática relatada, respectivamente, o significado de",
+        "opcoes": [
+          "selvageria — empoderamento.",
+          "impetuosidade — resistência.",
+          "fanatismo — humilhação.",
+          "intolerância — violência.",
+          "repressão — justiça."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:d9a52192",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 73"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.182Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e983cc3b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A partir do século XIX e, principalmente, no século XX, iniciou-se o uso de produtos sintéticos na agricultura. No Brasil, a partir da década de 1960 e, posteriormente, nos anos 1970, os inseticidas ampliam sua fatia no mercado dos defensivos agrícolas.\n\nTROPPMAIR, H. Biogeografia e meio ambiente.\n\nRio de Janeiro: TB, 2012 (adaptado).\n\nNos espaços agrícolas, a mudança técnica descrita provocou a diminuição da",
+        "opcoes": [
+          "desagregação de camadas pedológicas.",
+          "diversidade de polinizadores naturais.",
+          "contaminação de lençóis freáticos.",
+          "produtividade da terra cultivada.",
+          "ocorrência da erosão laminar."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:e983cc3b",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 75"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.183Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:7885c596",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Cidade sustentável é o assentamento humano constituído por uma sociedade com consciência de seu papel de agente transformador dos espaços e cuja relação não se dá pela razão natureza-objeto, e sim por uma ação sinérgica entre prudência ecológica, eficiência energética e equidade socioespacial.\n\nROMERO, M. Frentes do urbano para a construção de indicadores de\nsustentabilidade intraurbana. Paranoá, n. 4, nov. 2007.\n\nUma medida pública que contradiz o modelo de cidade exposto no texto é a",
+        "opcoes": [
+          "coleta seletiva de lixo.",
+          "reutilização das águas pluviais.",
+          "canalização dos cursos hídricos.",
+          "arborização das avenidas centrais.",
+          "educação ambiental da comunidade."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:7885c596",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 80"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.270Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:223cff5a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com o objetivo de auxiliar a prevenção e o combate a incêndios no Cerrado, o Centro de Sensoriamento Remoto da Universidade Federal de Minas Gerais (UFMG) desenvolveu um modelo computacional capaz de prever o comportamento do fogo. Essa tecnologia integra o projeto Monitoramento do Cerrado, do qual também participa o Instituto Nacional de Pesquisas Espaciais (Inpe). O instituto produz e processa dados de satélite sobre focos de calor para determinar a localização de incêndios no bioma. Esses focos são o ponto de ignição para o modelo desenvolvido na UFMG: com base em outros dados, como relevo, ventos, umidade e biomassa seca, a ferramenta estima as áreas com maior risco de incêndio e prevê a intensidade e a direção de propagação do fogo no Cerrado brasileiro.\n\nLAGES, L. Tecnologia antiqueimada. Revista Minas Faz Ciência,\nn. 84, dez. 2020 – jan.-fev. 2021 (adaptado).\n\nEm relação à causa ambiental, o uso da tecnologia mencionada indica a",
+        "opcoes": [
+          "influência da produção orgânica.",
+          "relevância da infraestrutura viária.",
+          "significância da cosmologia nativa.",
+          "importância de pesquisas acadêmicas.",
+          "interferência de interesses estrangeiros."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:223cff5a",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 84"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.272Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:d1447655",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pesquisa pioneira no Brasil propõe o uso de\nenergia do solo para climatizar edifícios\n\nPela primeira vez na história, o Brasil terá um prédio que usa energia do solo para climatizar seus ambientes. Uma pesquisa inovadora avaliou o uso das fundações de edifícios como meio para a troca de energia térmica entre o prédio e o subsolo. A energia geotérmica é aquela encontrada dentro da crosta terrestre, seja no solo, nas rochas ou mesmo na água, sendo identificada pela temperatura. Essa energia pode ser transferida para a superfície por processos de troca térmica a partir das fundações da edificação.\n\nDisponível em: https://jornal.usp.br. Acesso em: 7 nov. 2021 (adaptado).\n\nPara o sistema elétrico brasileiro, a expansão de tecnologias como a descrita no texto representa uma tendência de",
+        "opcoes": [
+          "homogeneização da oferta da matriz produtiva.",
+          "ampliação do consumo em unidades residenciais.",
+          "redução da pressão sobre as usinas hidrelétricas.",
+          "estagnação do consumo em unidades industriais.",
+          "superação da necessidade de recursos renováveis."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:d1447655",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 86"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.274Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:0419f45a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante a realeza, e nos primeiros anos republicanos, as leis eram transmitidas oralmente de uma geração para outra. A ausência de uma legislação escrita permitia aos patrícios manipular a justiça conforme seus interesses.\n\nCOULANGES, F. A cidade antiga. São Paulo: Martins Fontes, 2000.\n\nA conjuntura sociopolítica da Roma Antiga, conforme apresentada no texto, foi contestada pelos",
+        "opcoes": [
+          "monarcas, que queriam expandir o código jurídico.",
+          "plebeus, que almejavam participar da vida política.",
+          "nobres, que desejavam superar a relação de dependência.",
+          "camponeses, que aspiravam diminuir a jornada de trabalho.",
+          "estrangeiros, que ambicionavam acessar os espaços públicos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:0419f45a",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 87"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.274Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

@@ -6,7 +6,8 @@
  * Aulas usam `validateLessonSteps`/`validateCurriculumTree` já existentes
  * (docs/25 §6.5) — não reimplementados aqui.
  */
-import type { Exercise } from "@/lib/lessons/types";
+import type { Exercise, ExerciseImage } from "@/lib/lessons/types";
+import { marcadoresDe, semMarcadores } from "@/lib/lessons/marcadores";
 import { rotulaAfirmacoes } from "./verify";
 import {
   avisoQuaseDuplicata,
@@ -74,9 +75,9 @@ function opcoesDoExercicio(ex: Exercise): { opcoes: string[]; correta: number } 
 function enunciadoDoExercicio(ex: Exercise): { texto: string; limiteMax: number } {
   switch (ex.type) {
     case "multipla-escolha":
-      return { texto: ex.pergunta, limiteMax: 120 };
+      return { texto: semMarcadores(ex.pergunta), limiteMax: 120 };
     case "interpretacao":
-      return { texto: `${ex.texto} ${ex.pergunta}`, limiteMax: 250 };
+      return { texto: `${semMarcadores(ex.texto)} ${semMarcadores(ex.pergunta)}`, limiteMax: 250 };
     case "complete-lacuna":
       return { texto: ex.frase, limiteMax: 120 };
     case "encontre-o-erro":
@@ -129,6 +130,88 @@ function jaccard(a: Set<string>, b: Set<string>): number {
 }
 
 export const LIMIAR_DUPLICATA = 0.6;
+
+/** Pasta pública das imagens de questão (spec 50 §5.9.3): `build-packs` copia `src/content/banco/oficial/img/`. */
+export const PREFIXO_IMAGEM_LOCAL = "/content/img/";
+
+export interface OpcoesMidia {
+  /** Item oficial: `largura`/`altura` passam a ser obrigatórias (sem pulo de layout). */
+  oficial?: boolean;
+}
+
+function checarImagem(img: ExerciseImage, onde: string, opts: OpcoesMidia): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  if (typeof img?.url !== "string" || !img.url.startsWith("/")) {
+    issues.push({ rule: "sem-imagem-externa", message: `${onde}.url não é um caminho controlado: "${img?.url}"` });
+  } else if (!img.url.startsWith(PREFIXO_IMAGEM_LOCAL)) {
+    issues.push({ rule: "imagem-local", message: `${onde}.url fora de ${PREFIXO_IMAGEM_LOCAL}: "${img.url}"` });
+  }
+  if (typeof img?.alt !== "string" || img.alt.trim().length < 5) {
+    issues.push({ rule: "imagem-alt", message: `${onde} sem texto alternativo (alt obrigatório, 5+ caracteres)` });
+  }
+  const dimensaoOk = (n: unknown) => typeof n === "number" && Number.isInteger(n) && n > 0;
+  if (opts.oficial && (!dimensaoOk(img?.largura) || !dimensaoOk(img?.altura))) {
+    issues.push({ rule: "imagem-dimensoes", message: `${onde} sem largura/altura inteiras (obrigatórias em item oficial)` });
+  } else if ((img?.largura !== undefined || img?.altura !== undefined) && (!dimensaoOk(img.largura) || !dimensaoOk(img.altura))) {
+    issues.push({ rule: "imagem-dimensoes", message: `${onde} com largura/altura inválidas` });
+  }
+  return issues;
+}
+
+/**
+ * Mídia do exercício (spec 50 §5.9.3): imagens com alt e caminho local, dimensões em item oficial, tabelas
+ * retangulares, marcadores `[[imagem:N]]`/`[[tabela:N]]` em linha própria apontando para índices que existem
+ * (cada um citado no máximo uma vez) e `opcoesImagem` do mesmo tamanho de `opcoes`.
+ */
+export function validarMidia(ex: Exercise, opts: OpcoesMidia = {}): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  const imagens = ex.imagens ?? [];
+  const tabelas = ex.tabelas ?? [];
+  if (ex.imagens !== undefined && !Array.isArray(ex.imagens)) issues.push({ rule: "imagens-lista", message: "imagens não é uma lista" });
+  if (ex.tabelas !== undefined && !Array.isArray(ex.tabelas)) issues.push({ rule: "tabelas-lista", message: "tabelas não é uma lista" });
+  imagens.forEach((img, i) => issues.push(...checarImagem(img, `imagens[${i}]`, opts)));
+  if (ex.imagem && opts.oficial) issues.push(...checarImagem(ex.imagem, "imagem", opts));
+
+  tabelas.forEach((t, i) => {
+    if (!Array.isArray(t?.cabecalho) || t.cabecalho.length === 0 || !Array.isArray(t.linhas) || t.linhas.length === 0) {
+      issues.push({ rule: "tabela-forma", message: `tabelas[${i}] sem cabeçalho ou sem linhas` });
+      return;
+    }
+    t.linhas.forEach((linha, j) => {
+      if (!Array.isArray(linha) || linha.length !== t.cabecalho.length) {
+        issues.push({ rule: "tabela-forma", message: `tabelas[${i}].linhas[${j}] com ${linha?.length} células (cabeçalho tem ${t.cabecalho.length})` });
+      }
+    });
+  });
+
+  const textos: string[] = [];
+  if (ex.type === "multipla-escolha") textos.push(ex.pergunta);
+  if (ex.type === "interpretacao") textos.push(ex.texto, ex.pergunta);
+  const vistos = new Set<string>();
+  for (const texto of textos) {
+    for (const m of marcadoresDe(texto ?? "")) {
+      const chave = `${m.tipo}:${m.indice}`;
+      const total = m.tipo === "imagem" ? imagens.length : tabelas.length;
+      if (!m.linhaPropria) issues.push({ rule: "marcador-linha", message: `[[${chave}]] precisa ficar numa linha só dele` });
+      if (m.indice >= total) issues.push({ rule: "marcador-indice", message: `[[${chave}]] aponta para ${m.tipo} inexistente (há ${total})` });
+      if (vistos.has(chave)) issues.push({ rule: "marcador-repetido", message: `[[${chave}]] aparece mais de uma vez` });
+      vistos.add(chave);
+    }
+  }
+
+  if (ex.type === "multipla-escolha" && ex.opcoesImagem !== undefined) {
+    if (!Array.isArray(ex.opcoesImagem) || ex.opcoesImagem.length !== ex.opcoes.length) {
+      issues.push({ rule: "opcoes-imagem-tamanho", message: `opcoesImagem tem ${ex.opcoesImagem?.length} posições (opcoes tem ${ex.opcoes.length})` });
+    } else {
+      ex.opcoesImagem.forEach((img, i) => {
+        if (img === null) return;
+        issues.push(...checarImagem(img, `opcoesImagem[${i}]`, opts));
+        if (!ex.opcoes[i]?.trim()) issues.push({ rule: "opcoes-imagem-rotulo", message: `opcoes[${i}] vazia: alternativa-imagem precisa do rótulo "Alternativa X (imagem)"` });
+      });
+    }
+  }
+  return issues;
+}
 
 export function validateExercise(ex: Exercise, skillId: string, ctx: ValidateContext): ValidationResult {
   const issues: ValidationIssue[] = [];
@@ -195,6 +278,9 @@ export function validateExercise(ex: Exercise, skillId: string, ctx: ValidateCon
   if (ex.imagem && !ex.imagem.url.startsWith("/")) {
     issues.push({ rule: "sem-imagem-externa", message: `imagem.url não é um caminho controlado: "${ex.imagem.url}"` });
   }
+
+  // Imagens, tabelas, marcadores e alternativas-imagem (spec 50 §5.9.3).
+  issues.push(...validarMidia(ex));
 
   // Dificuldade coerente com a solução (heurística — só alerta).
   if (ctx.solutionSteps !== undefined && ctx.solutionSteps <= 2) {

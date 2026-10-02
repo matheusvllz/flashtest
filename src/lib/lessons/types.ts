@@ -20,14 +20,44 @@ export interface ExerciseImage {
   alt: string;
   /** Fonte/autoria, exibida abaixo da imagem (ex: "ENEM 2019"). */
   credito?: string;
+  /**
+   * Dimensões intrínsecas em px (spec 50 §5.9.3): reservam o espaço antes de a imagem chegar, sem pulo de
+   * layout. Obrigatórias em item oficial (validador).
+   */
+  largura?: number;
+  altura?: number;
+  /** Descrição longa ("Ver descrição"), para gráfico, mapa e imagem com texto. Nunca entrega a resposta. */
+  descricao?: string;
+  /** `true` quando `alt`/`descricao` foram gerados pelo pipeline e ainda não foram revistos. */
+  altAutomatico?: boolean;
 }
 
-/** Base comum: toda questão explica a resposta. Estática, zero IA. */
+/**
+ * Tabela de apoio com texto extraível (spec 50 §5.9.3): desenhada como `<table>` com `<caption>`, cabeçalho e
+ * rolagem horizontal. `linhas[i]` tem o mesmo número de células que `cabecalho`.
+ */
+export interface ExerciseTable {
+  legenda?: string;
+  cabecalho: string[];
+  linhas: string[][];
+}
+
+/**
+ * Base comum: toda questão explica a resposta. Estática, zero IA.
+ *
+ * Posição de imagens e tabelas (spec 50 §5.9.3): `pergunta` e/ou `texto` podem ter, em linha própria, os
+ * marcadores `[[imagem:N]]` e `[[tabela:N]]` (N = índice em `imagens`/`tabelas`), que marcam a posição no
+ * original. Imagem ou tabela sem marcador é desenhada acima do enunciado.
+ */
 interface ExerciseBase {
   /** Mostrada na barra de feedback após verificar (acerto ou erro). */
   explicacao: string;
-  /** Imagem de apoio opcional, renderizada pelo player acima do enunciado. */
+  /** Imagem de apoio opcional, renderizada pelo player acima do enunciado. Mantida por compatibilidade. */
   imagem?: ExerciseImage;
+  /** Imagens do enunciado, na ordem do original (spec 50 §5.9.3). */
+  imagens?: ExerciseImage[];
+  /** Tabelas do enunciado, na ordem do original. */
+  tabelas?: ExerciseTable[];
   /**
    * Atribuição exibida abaixo do enunciado (docs/30 §12.4/§18.4, Fase 10
    * F10.5) — item oficial do ENEM sempre grava `"ENEM <ano>"` aqui, nunca
@@ -43,6 +73,11 @@ export interface MultipleChoiceExercise extends ExerciseBase {
   opcoes: string[];
   /** Índice da opção correta em `opcoes`. */
   correta: number;
+  /**
+   * Alternativas que são imagem (spec 50 §5.9.3): mesmo tamanho de `opcoes`, `null` onde a alternativa é só
+   * texto. Alternativa só-imagem tem `opcoes[i]` = "Alternativa X (imagem)", lido por leitores de tela.
+   */
+  opcoesImagem?: (ExerciseImage | null)[];
 }
 
 export interface FindErrorExercise extends ExerciseBase {

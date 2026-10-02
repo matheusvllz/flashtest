@@ -1,0 +1,341 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "oficial:2019:f2e0c9ea",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O processamento da mandioca era uma atividade já realizada pelos nativos que viviam no Brasil antes da chegada de portugueses e africanos. Entretanto, ao longo do processo de colonização portuguesa, a produção de farinha foi aperfeiçoada e ampliada, tornando-se lugar-comum em todo o território da colônia portuguesa na América. Com a consolidação do comércio atlântico em suas diferentes conexões, a farinha atravessou os mares e chegou aos mercados africanos.\n\nBEZERRA, N. R. Escravidão, farinha e tráfico atlântico: um novo olhar sobre as relações entre o Rio de Janeiro e\nBenguela (1790-1830). Disponível em: www.bn.br.\n\nAcesso em: 20 ago. 2014 (adaptado).\n\nConsiderando a formação do espaço atlântico, esse produto exemplifica historicamente a",
+        "opcoes": [
+          "difusão de hábitos alimentares.",
+          "disseminação de rituais festivos.",
+          "ampliação dos saberes autóctones.",
+          "apropriação de costumes guerreiros.",
+          "diversificação de oferendas religiosas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:f2e0c9ea",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 52"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.210Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:6e2b3059",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A cidade medieval é, antes de mais nada, uma sociedade da abundância, concentrada num pequeno espaço em meio a vastas regiões pouco povoadas. Em seguida, é um lugar de produção e de trocas, onde se articulam o artesanato e o comércio, sustentados por uma economia monetária. É também o centro de um sistema de valores particular, do qual emerge a prática laboriosa e criativa do trabalho, o gosto pelo negócio e pelo dinheiro, a inclinação para o luxo, o senso da beleza. É ainda um sistema de organização de um espaço fechado com muralhas, onde se penetra por portas e se caminha por ruas e praças e que é guarnecido por torres.\n\nLE GOFF, J.; SCHMITT, J.-C. Dicionário temático do Ocidente Medieval. Bauru: Edusc, 2006.\n\nNo texto, o espaço descrito se caracteriza pela associação entre a ampliação das atividades urbanas e a",
+        "opcoes": [
+          "emancipação do poder hegemônico da realeza.",
+          "aceitação das práticas usurárias dos religiosos.",
+          "independência da produção alimentar dos campos.",
+          "superação do ordenamento corporativo dos ofícios.",
+          "permanência dos elementos arquitetônicos de proteção."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:6e2b3059",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 60"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.392Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:0ed9fd31",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nA centralização econômica, o protecionismo e\n\n[[imagem:0]]\n\nTEXTO II\n\n[[imagem:1]]\n\nEntre os séculos XVI e XIX, diferentes concepções sobre as relações entre Estado e economia foram formuladas. Tais concepções, associadas a cada um dos textos, confrontam-se, respectivamente, na oposição entre as práticas de",
+        "opcoes": [
+          "valorização do pacto colonial — combate à livre- -iniciativa.",
+          "defesa dos monopólios régios — apoio à livre concorrência.",
+          "formação do sistema metropolitano — crítica à livre navegação.",
+          "abandono da acumulação metalista — estímulo ao livre-comércio.",
+          "eliminação das tarifas alfandegárias — incentivo ao livre-cambismo."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q063-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 63 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "ANDERSON, P. In: DEYON, P. O mercantilismo. Lisboa: Gradiva,1989 (adaptado).",
+            "largura": 1027,
+            "altura": 90
+          },
+          {
+            "url": "/content/img/2019/d1-q063-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 63 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "SMITH, A. A riqueza das Nações. São Paulo: Abril Cultural, 1983 (adaptado).",
+            "largura": 1027,
+            "altura": 137
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:0ed9fd31",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 63"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.580Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:7828626c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O cristianismo incorporou antigas práticas relativas ao fogo para criar uma festa sincrética. A igreja retomou a distância de seis meses entre os nascimentos de Jesus Cristo e João Batista e instituiu a data de comemoração a este último de tal maneira que as festas do solstício de verão europeu com suas tradicionais fogueiras se tornaram “fogueiras de São João”. A festa do fogo e da luz no entanto não foi imediatamente associada a São João Batista. Na Baixa Idade Média, algumas práticas tradicionais da festa (como banhos, danças e cantos) foram perseguidas por monges e bispos. A partir do Concílio de Trento (1545-1563), a Igreja resolveu adotar celebrações em torno do fogo e associá-las à doutrina cristã.\n\nCHIANCA, L. Devoção e diversão: expressões contemporâneas de\nfestas e santos católicos. Revista Anthropológicas,\nn. 18, 2007 (adaptado).\n\nCom o objetivo de se fortalecer, a instituição mencionada no texto adotou as práticas descritas, que consistem em",
+        "opcoes": [
+          "promoção de atos ecumênicos.",
+          "fomento de orientações bíblicas.",
+          "apropriação de cerimônias seculares.",
+          "retomada de ensinamentos apostólicos.",
+          "ressignificação de rituais fundamentalistas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:7828626c",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 73"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.586Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:0b481471",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A partir da segunda metade do século XVIII, o número de escravos recém-chegados cresce no Rio e se estabiliza na Bahia. Nenhum lugar servia tão bem à recepção de escravos quanto o Rio de Janeiro.\n\nFRANÇA, R. O tamanho real da escravidão. O Globo,\n5 abr. 2015 (adaptado).\n\nNa matéria, o jornalista informa uma mudança na dinâmica do tráfico atlântico que está relacionada à seguinte atividade:",
+        "opcoes": [
+          "Coleta de drogas do sertão.",
+          "Extração de metais preciosos.",
+          "Adoção da pecuária extensiva.",
+          "Retirada de madeira do litoral.",
+          "Exploração da lavoura de tabaco."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:0b481471",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 81"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.826Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:ce2a9d38",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A ocasião fez o ladrão: Francis Drake travava sua guerra de pirataria contra a Espanha papista quando roubou as tropas de mulas que levavam o ouro do Peru para o Panamá. Graças à cumplicidade da rainha Elizabeth I, ele reincide e saqueia as costas do Chile e do Peru antes de regressar pelo Oceano Pacífico, e depois pelo Índico. Ora, em Ternate ele oferece sua proteção a um sultão revoltado com os portugueses; assim nasce o primeiro entreposto inglês ultramarino.\n\nFERRO, M. História das colonizações. Das colonizações\nàs independências. Séculos XIII a XX.\n\nSão Paulo: Cia. das Letras, 1996.\n\nA tática adotada pela Inglaterra do século XVI, conforme citada no texto, foi o meio encontrado para",
+        "opcoes": [
+          "restabelecer o crescimento da economia mercantil.",
+          "conquistar as riquezas dos territórios americanos.",
+          "legalizar a ocupação de possessões ibéricas.",
+          "ganhar a adesão das potências europeias.",
+          "fortalecer as rotas do comércio marítimo."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:ce2a9d38",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 86"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.945Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

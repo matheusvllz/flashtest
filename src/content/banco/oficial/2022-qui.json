@@ -1,0 +1,322 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "oficial:2022:a1090e37",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O urânio é empregado como fonte de energia em reatores nucleares. Para tanto, o seu mineral deve ser refinado, convertido a hexafluoreto de urânio e posteriormente enriquecido, para aumentar de 0,7% a 3% a abundância de um isótopo específico — o urânio-235. Uma das formas de enriquecimento utiliza a pequena diferença de massa entre os hexafluoretos de urânio-235 e de urânio-238 para separá-los por efusão, precedida pela vaporização. Esses vapores devem efundir repetidamente milhares de vezes através de barreiras porosas formadas por telas com grande número de pequenos orifícios. No entanto, devido à complexidade e à grande quantidade de energia envolvida, cientistas e engenheiros continuam a pesquisar procedimentos alternativos de enriquecimento.\n\nATKINS, P.; JONES, L. Princípios de química: questionando a vida moderna e\no meio ambiente. Porto Alegre: Bookman, 2006 (adaptado).\n\nConsiderando a diferença de massa mencionada entre os dois isótopos, que tipo de procedimento alternativo ao da efusão pode ser empregado para tal finalidade?",
+        "opcoes": [
+          "Peneiração.",
+          "Centrifugação.",
+          "Extração por solvente.",
+          "Destilação fracionada.",
+          "Separação magnética."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:a1090e37",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 97"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.355Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:fde411c1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de um vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L⁻¹, consumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela equação química:\n\n[[imagem:0]]\n\n[[imagem:1]]\n\n[[imagem:2]]\n\nÁcido tartárico\n\n[[imagem:3]]\n\nA concentração de ácido tartárico no vinho analisado é mais próxima de:",
+        "opcoes": [
+          "1,8 g L⁻¹",
+          "2,4 g L⁻¹",
+          "3,6 g L⁻¹",
+          "4,8 g L⁻¹",
+          "9,6 g L⁻¹"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d2-q108-1.webp",
+            "alt": "Imagem da questão 108 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O OH\nONa\nNaO\nOH O",
+            "largura": 504,
+            "altura": 244
+          },
+          {
+            "url": "/content/img/2022/d2-q108-2.webp",
+            "alt": "Imagem 2 da questão 108 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O OH\nOH\nH O\nOH O",
+            "largura": 421,
+            "altura": 244
+          },
+          {
+            "url": "/content/img/2022/d2-q108-3.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 108 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1090,
+            "altura": 45
+          },
+          {
+            "url": "/content/img/2022/d2-q108-4.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 108 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 462,
+            "altura": 45
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:fde411c1",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 108"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.519Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:080370f0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O elemento iodo (I) tem função biológica e é acumulado na tireoide. Nos acidentes nucleares de Chernobyl e Fukushima, ocorreu a liberação para a atmosfera do radioisótopo ¹³¹I, responsável por enfermidades nas pessoas que foram expostas a ele. O decaimento de uma massa de 12 microgramas do isótopo ¹³¹I foi monitorado por 14 dias, conforme o quadro.\n\n[[imagem:0]]\n\nApós o período de 40 dias, a massa residual desse isótopo é mais próxima de",
+        "opcoes": [
+          "2,4 μg.",
+          "1,5 μg.",
+          "0,8 μg.",
+          "0,4 μg.",
+          "0,2 μg."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d2-q109-1.webp",
+            "alt": "Imagem da questão 109 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Tempo (dia) Massa residual de 131 I (μg)\n0 12,0\n2 10,1\n4 8,5\n5 7,8\n6 7,2\n8 6,0\n14 3,6",
+            "largura": 796,
+            "altura": 524
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:080370f0",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 109"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:35:29.637Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:5bfd7795",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma aula prática de bioquímica, para medir a atividade catalítica da enzima catalase, foram realizados seis ensaios independentes, nas mesmas condições, variando-se apenas a temperatura. A catalase decompõe o peróxido de hidrogênio (H₂O₂), produzindo água e oxigênio. Os resultados dos ensaios estão apresentados no quadro.\n\n[[imagem:0]]\n\nOs diferentes resultados dos ensaios justificam-se pelo(a)",
+        "opcoes": [
+          "variação do pH do meio.",
+          "aumento da energia de ativação.",
+          "consumo da enzima durante o ensaio.",
+          "diminuição da concentração do substrato.",
+          "modificação da estrutura tridimensional da enzima."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d2-q120-1.webp",
+            "alt": "Imagem da questão 120 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Resultado\nEnsaio Temperatura (°C)\nDecomposição de H O\n2 2\n1 10 8,0\n2 15 10,5\n3 20 9,5\n4 25 5,0\n5 30 3,6\n6 35 3,1\n\u001f 12\n\u001e 10 mol \u001b\n\u001c \u0019\n\u001d min \u001a",
+            "largura": 1200,
+            "altura": 455
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:5bfd7795",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 120"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.033Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:c54764ff",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante o ano de 2020, impulsionado pela necessidade de respostas rápidas e eficientes para desinfectar ambientes de possíveis contaminações com o SARS-CoV-2, causador da covid-19, diversas alternativas foram buscadas para os procedimentos de descontaminação de materiais e ambientes. Entre elas, o uso de ozônio em meio aquoso como agente sanitizante para pulverização em humanos e equipamentos de proteção em câmaras ou túneis, higienização de automóveis e de ambientes fechados e descontaminação de trajes. No entanto, pouca atenção foi dada à toxicidade do ozônio, à formação de subprodutos, ao nível de concentração segura e às precauções necessárias.\n\nLIMA, M. J. A.; FELIX, E. P.; CARDOSO, A. A. Aplicações e implicações do ozônio na\nindústria, ambiente e saúde. Química Nova, n. 9, 2021 (adaptado).\n\nO grande risco envolvido no emprego indiscriminado dessa substância deve-se à sua ação química como",
+        "opcoes": [
+          "catalisador.",
+          "oxidante.",
+          "redutor.",
+          "ácido.",
+          "base."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:c54764ff",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 124"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.103Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

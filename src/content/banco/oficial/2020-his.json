@@ -1,0 +1,323 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "oficial:2020:fd234ae8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois grandes eventos históricos tornaram possível um caso como o de Menocchio: a invenção da imprensa e a Reforma. A imprensa lhe permitiu confrontar os livros com a tradição oral em que havia crescido e lhe forneceu as palavras para organizar o amontoado de ideias e fantasias que nele conviviam. A Reforma lhe deu audácia para comunicar o que pensava ao padre do vilarejo, conterrâneos, inquisidores — mesmo não tendo conseguido dizer tudo diante do papa, dos cardeais e dos príncipes, como queria.\n\nGINZBURG, C. O queijo e os vermes: o cotidiano e as ideias de um moleiro perseguido\npela Inquisição. São Paulo: Cia. das Letras, 2006.\n\nOs acontecimentos históricos citados ajudaram esse indivíduo, no século XVI, a repensar a visão católica do mundo ao possibilitarem a",
+        "opcoes": [
+          "consulta pública das bibliotecas reais.",
+          "sofisticação barroca do ritual litúrgico.",
+          "aceitação popular da educação secular.",
+          "interpretação autônoma dos textos bíblicos.",
+          "correção doutrinária das heresias medievais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:fd234ae8",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 52"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.975Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:8aabcfcd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Desde o mundo antigo e sua filosofia, que o trabalho tem sido compreendido como expressão de vida e degradação, criação e infelicidade, atividade vital e escravidão, felicidade social e servidão. Trabalho e fadiga. Na Modernidade, sob o comando do mundo da mercadoria e do dinheiro, a prevalência do negócio (negar o ócio) veio sepultar o império do repouso, da folga e da preguiça, criando uma ética positiva do trabalho.\n\nANTUNES, R. O século XX e a era da degradação do trabalho. In: SILVA, J. P. (Org.).\n\nPor uma sociologia do século XX. São Paulo: Annablume, 2007 (adaptado).\n\nO processo de ressignificação do trabalho nas sociedades modernas teve início a partir do surgimento de uma nova mentalidade, influenciada pela",
+        "opcoes": [
+          "reforma higienista, que combateu o caráter excessivo e insalubre do trabalho fabril.",
+          "Reforma Protestante, que expressou a importância das atividades laborais no mundo secularizado.",
+          "força do sindicalismo, que emergiu no esteio do anarquismo reivindicando direitos trabalhistas.",
+          "participação das mulheres em movimentos sociais, defendendo o direito ao trabalho.",
+          "visão do catolicismo, que, desde a Idade Média, defendia a dignidade do trabalho e do lucro."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:8aabcfcd",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 63"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.980Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:12edbf08",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A sociedade como um sistema justo de cooperação social consiste em uma das ideias familiares fundamentais, que dá estrutura e organização à justiça como equidade. A cooperação social guia-se por regras e procedimentos publicamente reconhecidos e aceitos por aqueles que cooperam como sendo apropriados para regular a sua conduta. Diz-se que a cooperação é justa porque seus termos são tais que todos os participantes podem razoavelmente aceitar, desde que todos os demais também o aceitem.\n\nFERES JR., J.; POGREBINSCHI, T. Teoria política contemporânea: uma introdução.\n\nRio de Janeiro: Elsevier, 2010.\n\nNo contexto do pensamento político, a ideia apresentada mostra-se consoante o(a)",
+        "opcoes": [
+          "ideal republicano de governo.",
+          "corrente tripartite dos poderes.",
+          "posicionamento crítico do socialismo.",
+          "legitimidade do absolutismo monárquico.",
+          "entendimento do contratualismo moderno."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:12edbf08",
+        "version": 1,
+        "skillIds": [
+          "his:guerra-fria-bipolaridade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 69"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.227Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:f45e2e2c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com efeito, até a destruição de Cartago, o povo e o Senado romano governavam a República em harmonia e sem paixão, e não havia entre os cidadãos luta por glória ou dominação; o medo do inimigo mantinha a cidade no cumprimento do dever. Mas, assim que o medo desapareceu dos espíritos, introduziram-se os males pelos quais a prosperidade tem predileção, isto é, a libertinagem e o orgulho.\n\nSALÚSTIO. A conjuração de Catilina/A guerra de Jugurta. Petrópolis:\n\nVozes, 1990 (adaptado).\n\nO acontecimento histórico mencionado no texto de Salústio, datado de I a.C., manteve correspondência com o processo de",
+        "opcoes": [
+          "demarcação de terras públicas.",
+          "imposição da escravidão por dívidas.",
+          "restrição da cidadania por parentesco.",
+          "restauração de instituições ancestrais.",
+          "expansão das fronteiras extrapeninsulares."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:f45e2e2c",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 70"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.228Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:7eb63aac",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Porque todos confessamos não se poder viver sem alguns escravos, que busquem a lenha e a água, e façam cada dia o pão que se come, e outros serviços que não são possíveis poderem-se fazer pelos Irmãos Jesuítas, máxime sendo tão poucos, que seria necessário deixar as confissões e tudo mais. Pareceme que a Companhia de Jesus deve ter e adquirir escravos, justamente, por meios que as Constituições permitem, quando puder para nossos colégios e casas de meninos.\n\nLEITE, S. História da Companhia de Jesus no Brasil. Rio de Janeiro:\n\nCivilização Brasileira, 1938 (adaptado).\n\nO texto explicita premissas da expansão ultramarina portuguesa ao buscar justificar a",
+        "opcoes": [
+          "propagação do ideário cristão.",
+          "valorização do trabalho braçal.",
+          "adoção do cativeiro na Colônia.",
+          "adesão ao ascetismo contemplativo.",
+          "alfabetização dos indígenas nas Missões."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:7eb63aac",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 81"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.234Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:26e310ce",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O movimento sedicioso ocorrido na capitania de Pernambuco, no ano 1817, foi analisado de formas diferentes por dois meios de comunicação daquela época. O Correio Braziliense apontou para o fato de ser “a comoção no Brasil motivada por um descontentamento geral, e não por maquinações de alguns indivíduos”. Já a Gazeta do Rio de Janeiro considerou o movimento como um “pontual desvio de norma, apenas uma ‘mancha’ nas ‘páginas da História Portuguesa’, tão distinta pelos testemunhos de amor e respeito que os vassalos desta nação consagram ao seu soberano”.\n\nJANCSÓ, I.; PIMENTA, J. P. Peças de um mosaico. In: MOTA, C. G. (Org.). Viagem Incompleta:\n\na experiência brasileira (1500-2000). São Paulo: Senac, 2000 (adaptado).\n\nOs fragmentos das matérias jornalísticas sobre o acontecimento, embora com percepções diversas, relacionam-se a um aspecto do processo de independência da colônia luso-americana expresso em dissensões entre",
+        "opcoes": [
+          "quadros dirigentes em torno da abolição da ordem escravocrata.",
+          "grupos regionais acerca da configuração político- -territorial.",
+          "intelectuais laicos acerca da revogação do domínio eclesiástico.",
+          "homens livres em torno da extensão do direito de voto.",
+          "elites locais acerca da ordenação do monopólio fundiário."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:26e310ce",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 85"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.237Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

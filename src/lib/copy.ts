@@ -169,6 +169,66 @@ export const COPY = {
   questao: {
     naoSei: "Não sei",
     naoSeiAria: "Não sei a resposta desta questão",
+    /**
+     * Imagens e tabelas do enunciado (spec 50 §5.9.3, T-50.9.2). "Gire o celular para ver melhor" é o texto
+     * literal da spec. Nenhum nome acessível aqui contém "Verificar", "Continuar" ou "responder" (o Playwright
+     * casa por substring).
+     */
+    ampliarImagem: "Ampliar imagem",
+    /** Nome do botão que envolve a imagem: o `alt` vem junto, para o leitor de tela saber o que vai ampliar. */
+    ampliarImagemDe: (alt: string) => `Ampliar imagem: ${alt}`,
+    verDescricao: "Ver descrição",
+    esconderDescricao: "Esconder descrição",
+    descricaoAutomatica: "Descrição gerada automaticamente.",
+    gireOCelular: "Gire o celular para ver melhor",
+    tabelaSemLegenda: "Tabela da questão",
+    tabelaRolar: "Role para o lado para ver a tabela inteira.",
+    visualizadorTitulo: "Imagem da questão",
+    visualizadorDica: "Use + e − para ampliar ou reduzir, 0 para voltar ao tamanho normal e as setas para mover a imagem.",
+    fechar: "Fechar",
+    diminuirZoom: "Diminuir zoom",
+    aumentarZoom: "Aumentar zoom",
+    zoomAtual: (nivel: string) => `Zoom ${nivel}`,
+  },
+  /**
+   * Página `/creditos` (spec 50 §5.9.2 "Créditos", decisão 0008, T-50.9.7). Texto de interface, não jurídico:
+   * diz de onde vêm as questões, a licença do INEP com a citação literal do rodapé oficial e como pedir retirada.
+   */
+  creditos: {
+    tituloPagina: "Créditos e fontes — Foca",
+    descricaoPagina: "De onde vêm as questões do Foca, a licença das provas do INEP e como pedir a retirada de uma questão.",
+    voltar: "← Voltar",
+    titulo: "Créditos e fontes",
+    resumo: "De onde vêm as questões do Foca e como cada fonte aparece no app.",
+    inep: {
+      titulo: "Questões do ENEM, ENEM PPL e ENCCEJA",
+      origem:
+        "Essas questões são do INEP, o instituto do Ministério da Educação que aplica as provas. O Foca reproduz cada uma como está na prova, sem adaptar enunciado, alternativas, imagens ou gabarito.",
+      credito: "Cada questão mostra a prova e o ano, como “ENEM 2022”.",
+      licencaAntes: "A página oficial de provas e gabaritos do INEP informa:",
+      licencaCitacao:
+        "Todo o conteúdo deste site está publicado sob a licença Creative Commons Atribuição-SemDerivações 3.0 Não Adaptada",
+      licencaDepois:
+        "Essa licença, a CC BY-ND 3.0, permite reproduzir com crédito à fonte e não permite adaptar. Por isso o texto das provas fica igual ao original.",
+      terceiros:
+        "Textos, imagens e gráficos de outros autores que aparecem dentro das provas mantêm o crédito impresso no original, como “Disponível em…”.",
+      linkProvas: "Provas e gabaritos no site do INEP",
+      urlProvas: "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos",
+      linkLicenca: "Licença CC BY-ND 3.0",
+      urlLicenca: "https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR",
+    },
+    foca: {
+      titulo: "Questões do Foca",
+      texto:
+        "As demais questões são autorais: o Foca escreve com ajuda de inteligência artificial, e a revisão também é feita por inteligência artificial.",
+    },
+    retirada: {
+      titulo: "Pedir a retirada de uma questão",
+      texto:
+        "Achou um erro numa questão ou é autor de um material usado nela? O caminho vai ser o botão “Reportar problema nesta questão”, que aparece depois que você responde.",
+      emBreve: "Esse botão chega numa próxima versão do app.",
+    },
+    novaAba: "(abre em outra aba)",
   },
   /** Trilha/home e nó/capítulo/seção (docs/25 §12.1/§18 T-16 — copy centralizada aqui desde T-10). */
   /** Painel da marca nas telas de entrada no desktop (docs/44 §5, `EntryShell`). Mesma promessa da landing (F-1). */

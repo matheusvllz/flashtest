@@ -1,0 +1,429 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "oficial:2020:35d99ee5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A propriedade compreende, em seu conteúdo e alcance, além do tradicional direito de uso, gozo e disposição por parte de seu titular, a obrigatoriedade do atendimento de sua função social, cuja definição é inseparável do requisito obrigatório do uso racional da propriedade e dos recursos ambientais que lhe são integrantes. O proprietário, como membro integrante da comunidade, se sujeita a obrigações crescentes que, ultrapassando os limites do direito de vizinhança, no âmbito do direito privado, abrangem o campo dos direitos da coletividade, visando o bem-estar geral, no âmbito do direito público.\n\nJELINEK, R. O princípio da função social da propriedade e sua repercussão sobre o\nsistema do Código Civil. Disponível em: www.mp.rs.gov.br. Acesso em: 20 fev. 2013.\n\nOs movimentos em prol da reforma agrária, que atuam com base no conceito de direito à propriedade apresentado no texto, propõem-se a",
+        "opcoes": [
+          "reverter o processo de privatização fundiária.",
+          "ressaltar a inviabilidade da produção latifundiária.",
+          "defender a desapropriação dos espaços improdutivos.",
+          "impedir a produção exportadora nas terras agricultáveis.",
+          "coibir o funcionamento de empresas agroindustriais no campo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:35d99ee5",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 49"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.482Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:e7cf5d53",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Sexto rei sumério (governante entre os séculos XVIII e XVII a.C.) e nascido em Babel, “Khammu-rabi” (pronúncia em babilônio) foi fundador do I Império Babilônico (correspondente ao atual Iraque), unificando amplamente o mundo mesopotâmico, unindo os semitas e os sumérios e levando a Babilônia ao máximo esplendor. O nome de Hamurabi permanece indissociavelmente ligado ao código jurídico tido como o mais remoto já descoberto: o Código de Hamurabi. O legislador babilônico consolidou a tradição jurídica, harmonizou os costumes e estendeu o direito e a lei a todos os súditos.\n\nDisponível em: www.direitoshumanos.usp.br. Acesso em: 12 fev. 2013 (adaptado).\n\nNesse contexto de organização da vida social, as leis contidas no Código citado tinham o sentido de",
+        "opcoes": [
+          "assegurar garantias individuais aos cidadãos livres.",
+          "tipificar regras referentes aos atos dignos de punição.",
+          "conceder benefícios de indulto aos prisioneiros de guerra.",
+          "promover distribuição de terras aos desempregados urbanos.",
+          "conferir prerrogativas políticas aos descendentes de estrangeiros."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:e7cf5d53",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 62"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.980Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:061df14a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "É difícil imaginar que nos anos 1990, num país com setores da população na pobreza absoluta e sem uma rede de benefícios sociais em que se apoiar, um governo possa abandonar o papel de promotor de programas de geração de emprego, de assistência social, de desenvolvimento da infraestrutura e de promoção de regiões excluídas, na expectativa de que o mercado venha algum dia a dar uma resposta adequada a tudo isso.\n\nSORJ, B. A nova sociedade brasileira. Rio de Janeiro: Jorge Zahar, 2000 (adaptado).\n\nNesse contexto, a criticada postura dos governos frente à situação social do país coincidiu com a priorização de que medidas?",
+        "opcoes": [
+          "Expansão dos investimentos nas empresas públicas e nos bancos estatais.",
+          "Democratização do crédito habitacional e da aquisição de moradias populares.",
+          "Enxugamento da carga fiscal individual e da contribuição tributária empresarial.",
+          "Reformulação do acesso ao ensino superior e do financiamento científico nacional.",
+          "Reforma das políticas macroeconômicas e dos mecanismos de controle inflacionário."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:061df14a",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 64"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.981Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:7fe9d54e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A reabilitação da biografia histórica integrou as aquisições da história social e cultural, oferecendo aos diferentes atores históricos uma importância diferenciada, distinta, individual. Mas não se tratava mais de fazer, simplesmente, a história dos grandes nomes, em formato hagiográfico — quase uma vida de santo —, sem problemas, nem máculas. Mas de examinar os atores (ou o ator) célebres ou não, como testemunhas, como reflexos, como reveladores de uma época.\n\nDEL PRIORE, M. Biografia: quando o indivíduo encontra a história.\n\nTopoi, n. 19, jul.-dez. 2009.\n\nDe acordo com o texto, novos estudos têm valorizado a história do indivíduo por se constituir como possibilidade de",
+        "opcoes": [
+          "adesão ao método positivista.",
+          "expressão do papel das elites.",
+          "resgate das narrativas heroicas.",
+          "acesso ao cotidiano das comunidades.",
+          "interpretação das manifestações do divino."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:7fe9d54e",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 68"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.227Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:e74d9c46",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O cântico da terra\n\nEu sou a terra, eu sou a vida.\nA ti, ó lavrador, tudo quanto é meu.\nTeu arado, tua foice, teu machado.\nO berço pequenino de teu filho.\nO algodão de tua veste\ne o pão de tua casa.\nE um dia bem distante\na mim tu voltarás.\nE no canteiro materno de meu seio\ntranquilo dormirás.\nPlantemos a roça.\nLavremos a gleba.\n\nCORALINA, C. Textos e contextos: poemas dos becos de Goiás e estórias mais.\n\nSão Paulo: Global, 1997 (fragmento).\n\nNo contexto das distintas formas de apropriação da terra,\no poema de Cora Coralina valoriza a relação entre",
+        "opcoes": [
+          "grileiros e controle territorial.",
+          "meeiros e divisão do trabalho.",
+          "camponeses e uso da natureza.",
+          "indígenas e manejo agroecológico.",
+          "latifundiários e fertilização do solo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:e74d9c46",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 71"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.228Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:056b1665",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A principal característica da situação social dos anglo-americanos é seu caráter eminentemente democrático. Afirmei anteriormente que reinava uma igualdade muito grande entre os emigrantes que foram se estabelecer na Nova Inglaterra. Para isso contribuiu a influência das leis de sucessão. Estabelecidas de uma maneira, as leis de sucessão reúnem, concentram e agrupam em um só a propriedade e o poder. Estabelecidas por outros princípios, produzem o oposto: dividem, partilham e disseminam os bens e o poder.\n\nTOCQUEVILLE, A. A democracia na América. Belo Horizonte: Itatiaia;\n\nSão Paulo: Edusp, 1977 (adaptado).\n\nO texto tematiza o papel desempenhado por uma norma na criação de um ambiente propício ao(à)",
+        "opcoes": [
+          "emprego do trabalho escravo.",
+          "consolidação dos valores burgueses.",
+          "banimento das dissidências religiosas.",
+          "contenção da identificação nacionalista.",
+          "hierarquização dos agentes econômicos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:056b1665",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 76"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.231Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:262d7527",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os seringueiros amazônicos eram invisíveis no cenário nacional nos anos 1970. Começaram a se articular como um movimento agrário no início dos anos 1980, e na década seguinte conseguiram reconhecimento nacional, obtendo a implantação das primeiras reservas extrativas após o assassinato de Chico Mendes. Assim, em vinte anos, os camponeses da floresta passaram da invisibilidade à posição de paradigma de desenvolvimento sustentável com participação popular.\n\nALMEIDA, M. W. B. Direitos à floresta e ambientalismo: seringueiros e suas lutas.\n\nRevista Brasileira de Ciências Sociais, n. 55, 2004.\n\nDe acordo com o texto, a visibilidade dos seringueiros amazônicos foi estabelecida pela relação entre",
+        "opcoes": [
+          "crescimento econômico e migração de trabalhadores.",
+          "produção de borracha e escassez de recursos naturais.",
+          "reivindicação de terra e preservação de mata nativa.",
+          "incentivo governamental e conservação de territórios.",
+          "modernização de plantio e comércio de látex."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:262d7527",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 80"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.234Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:eb548a15",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Declaração de Direitos do Homem e do Cidadão – 1789\n\nOs representantes do povo francês, tendo em vista que a ignorância, o esquecimento ou o desprezo dos direitos do homem são as únicas causas dos males públicos e da corrupção dos governos, resolveram declarar solenemente os direitos naturais, inalienáveis e sagrados do homem, a fim de que esta declaração, sempre presente em todos os membros do corpo social, lhes lembre permanentemente seus direitos e seus deveres; a fim de que as reivindicações dos cidadãos, fundadas em princípios simples e incontestáveis, se dirijam sempre à conservação da Constituição e à felicidade geral.\n\nDisponível em: www.direitoshumanosusp.br. Acesso em: 7 jun. 2018 (adaptado).\n\nEsse documento, elaborado no contexto da Revolução Francesa, reflete uma profunda mudança social ao estabelecer a",
+        "opcoes": [
+          "manutenção das terras comunais.",
+          "supressão do poder constituinte.",
+          "falência da sociedade burguesa.",
+          "paridade do tratamento jurídico.",
+          "abolição dos partidos políticos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:eb548a15",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 86"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.238Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

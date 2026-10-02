@@ -1,0 +1,281 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "oficial:2022:fd2a2e01",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As my official bio reads, I was made in Cuba, assembled in Spain, and imported to the United States — meaning my mother, seven months pregnant, and the rest of my family arrived as exiles from Cuba to Madrid, where I was born. Less than two months later, we emigrated once more and settled in New York City, then eventually in Miami, where I was raised and educated. Although technically we lived in the United States, the Cuban community was culturally insular in Miami during the 1970s, bonded together by the trauma of exile. What’s more, it seemed that practically everyone was Cuban: my teachers, my classmates, the mechanic, the bus driver. I didn’t grow up feeling different or treated as a minority. The few kids who got picked on in my grade school were the ones with freckles and funny last names like Dawson and O’Neil.\n\nBLANCO, R. Disponível em: http://edition.cnn.com. Acesso em: 9 dez. 2017 (adaptado).\n\nAo relatar suas vivências, o autor destaca o(a)",
+        "opcoes": [
+          "qualidade da educação formal em Miami.",
+          "prestígio da cultura cubana nos Estados Unidos.",
+          "oportunidade de qualificação profissional em Miami.",
+          "cenário da integração de cubanos nos Estados Unidos.",
+          "fortalecimento do elo familiar em comunidades estadunidenses."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:fd2a2e01",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 1 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:54.968Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:b15a0fa5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Two hundred years ago, Jane Austen lived in a world where single men boasted vast estates; single ladies were expected to speak several languages, sing and play the piano. In both cases, it was, of course, advantageous if you looked good too. So, how much has — or hasn’t — changed? Dating apps opaquely outline the demands of today’s relationship market; users ruminate long and hard over their choice of pictures and what they write in their biographies to hook in potential lovers, and that’s just your own profile. What do you look for in a future partner’s profile — potential signifiers of a popular personality, a good job, a nice car? These apps are a poignant reminder of the often classist attitudes we still adopt, as well as the financial and aesthetic expectations we demand from potential partners.\n\nGALER, S. Disponível em: www.bbc.com. Acesso em: 8 dez. 2017 (adaptado).\n\nO texto aborda relações interpessoais com o objetivo de",
+        "opcoes": [
+          "problematizar o papel de gênero em casamentos modernos.",
+          "apontar a relevância da educação formal na escolha de parceiros.",
+          "comparar a expectativa de parceiros amorosos em épocas distintas.",
+          "discutir o uso de aplicativos para proporcionar encontros românticos.",
+          "valorizar a importância da aparência física na seleção de pretendentes."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:b15a0fa5",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 2 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:54.968Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:56982a63",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nNessa tirinha, o comportamento da mulher expressa",
+        "opcoes": [
+          "revolta com a falta de sorte.",
+          "gosto pela prática da leitura.",
+          "receio pelo futuro do casamento.",
+          "entusiasmo com os livros de terror.",
+          "rejeição ao novo tipo de residência."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d1-q003-ing-1.webp",
+            "alt": "Imagem da questão 3 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: BEYOND THE CASTLE IS\nNOW THAT YOU ARE MY\nA HIGH WALL WITH NO\nBRIDE, YOU WILL NEVER\nGATE, AND BEYOND THAT\nLEAVE THIS CASTLE!\nIS A DEEP, DARK FOREST\nWITH NO PATH.\nWOW! YOUR\nLIBRARY IS I SUPPOSE IT´ S\nAMAZING! MY LIBRARY TOO,\nNOW WE‛ RE\nMARRIED.\n1 2\nTHE FOREST IS CRAWLING WHEN THE SUN SETS,\nWITH RAVENOUS WOLVES, I TRANSFORM INTO A WILD\nMALIGNANT BIRDS AND BEAST AND SOAR INTO\nTHE SPIRITS OF LONG- THE NIGHT, SEIZED BY\nDEAD TRAVELLERS. A TERRIBLE BLOODLUST!\nOK. I´LL STAY\nSO MANY BOOKS!\nHERE AND READ.\nI CAN´T BELIEVE\nSEE YOU IN THE\nMY LUCK! MORNING.\n3 4",
+            "credito": "GAULD, T. Disponível em: www.tomgauld.com. Acesso em: 25 out. 2021.",
+            "largura": 513,
+            "altura": 868
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:56982a63",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 3 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:58.452Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:39f54cef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Teen’s View of Social Media\n\nInstagram is made up of all photos and videos. There is the home page that showcases the posts from people you follow, an explore tab which offers posts from accounts all over the world, and your own page, with a notification tab to show who likes and comments on your posts.\n\nIt has some downsides though. It is known to make many people feel insecure or down about themselves because the platform showcases the highlights of everyone’s lives, while rarely showing the negatives. This can make one feel like their life is not going as well as others, contributing to the growing rates of anxiety or depression in many teens today. There is an underlying desire for acceptance through the number of likes or followers one has.\n\nDisponível em: https://cyberbullying.org. Acesso em: 29 out. 2021.\n\nO termo “downsides” introduz a ideia de que o Instagram é responsável por",
+        "opcoes": [
+          "oferecer recursos de fotografia.",
+          "divulgar problemas dos usuários.",
+          "estimular aceitação dos seguidores.",
+          "provocar ansiedade nos adolescentes.",
+          "aproximar pessoas ao redor do mundo."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:39f54cef",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 4 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:58.453Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:b429336c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "I tend the mobile now\nlike an injured bird\n\nWe text, text, text\nour significant words.\n\nI re-read your first,\nyour second, your third,\n\nLook for your small xx,\nfeeling absurd.\n\nThe codes we send\narrive with a broken chord.\n\nI try to picture your hands,\ntheir image is blurred.\n\nNothing my thumbs press\nwill ever be heard.\n\nDUFFY, C. Disponível em: www.independent.co.uk. Acesso em: 27 out. 2021.\n\nNesse poema, o eu lírico evidencia um sentimento de",
+        "opcoes": [
+          "contentamento com a interação virtual.",
+          "zelo com o envio de mensagens.",
+          "preocupação com a composição de textos.",
+          "mágoa com o comportamento de alguém.",
+          "insatisfação com uma forma de comunicação."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:b429336c",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 5 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:58.453Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

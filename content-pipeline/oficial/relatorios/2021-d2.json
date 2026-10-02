@@ -1,0 +1,375 @@
+{
+  "prova": "ENEM 2021 · 2º dia · caderno 7 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 90,
+  "extraidas": 90,
+  "importadas": 0,
+  "mantidasDeAntes": [],
+  "comImagem": 0,
+  "comAlternativaImagem": 0,
+  "comTabela": 0,
+  "naoImportadas": [
+    {
+      "numero": 91,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 92,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 93,
+      "motivo": "enunciado vazio"
+    },
+    {
+      "numero": 94,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 95,
+      "motivo": "enunciado vazio"
+    },
+    {
+      "numero": 96,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 97,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 98,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 99,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 100,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 101,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 102,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 103,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 104,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 105,
+      "motivo": "recorte incompleto: texto \"ᠨ\" encostado na figura, fora do recorte; texto solto \"ᠨ\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 106,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 107,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 108,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 109,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 110,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 111,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 112,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 113,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 114,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 115,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 116,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 117,
+      "motivo": "recorte incompleto: texto \"\u0002% \u0007\u0010\u000e\u0002\u000f\u000e# \u0007 \u000e\u0006\u001e\b\u0007\u0002\b\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0002\u0007G\u000f \u0004 \u0002\u001e\u0004\u0010\u0004\u0002\u0010\b x\u0007\u000e\b\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 118,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 119,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 120,
+      "motivo": "recorte incompleto: texto \"\u0002\b\u0002\b\u0005 \u0004\u001e\u000e\b\u0005\u000e\u0005\b$\u0002\u000f \u0002 \" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 121,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 122,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 123,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 124,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 125,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 126,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); figura entre as alternativas sem alternativa dona; linhas encavaladas (fração ou fórmula em dois andares); enunciado vazio"
+    },
+    {
+      "numero": 127,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 128,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 129,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 130,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 131,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 132,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 133,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 134,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 135,
+      "motivo": "uma figura cobre as alternativas A, B"
+    },
+    {
+      "numero": 136,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 137,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 138,
+      "motivo": "anulada no gabarito oficial"
+    },
+    {
+      "numero": 139,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 140,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 141,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 142,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 143,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 144,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 145,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 146,
+      "motivo": "recorte incompleto: texto \"\u0019\u0010\u0002 _\u0004\u0004\u001e\u0005\u000e\b\u0002 %\u0007\u0005\u000f \u0002\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0019\u0010\u0002 _\u0004\u0004\u001e\u0005\u000e\b\u0002 %\u0007\u0005\u000f \u0002\" encostado na figura, fora do recorte; recorte incompleto: texto \"\b\u0007\u0002\u0002\u0010\b\u0002 \u0005\u0004#\b\u0002 \u0007\b'\u001d\u0004\u0002\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u000e2\u000e_\b\u0005\u000f\u0004\u0002 \b\b2\u0010 \u0005(\u0002 \u0012\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0010\u0002 \u000f#\u000e\u0004\u0002 %\b\u000f\u0007\u001d\u0004\u0002 \u000f \u0002\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 147,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 148,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 149,
+      "motivo": "recorte incompleto: texto \"\u0005 \b\u0002 \b \u0002 \u0007 \u001e \u000e \b \u0002\u0002\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0005 \b\u0002 \b \u0002 \u0007 \u001e \u000e \b \u0002\u0002\" encostado na figura, fora do recorte; recorte incompleto: texto \"janeirofevereiro mar\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0012\u0002%\u0007 #\u000e \u001d\u0004\u0002%\b\u0007\b\u0002\u0004 \u0002%\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 150,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 151,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 152,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); recorte incompleto: texto \"\u001f\b\u0007\b\u0002 \b\u0002 \u001e\u0004\u0010 \u0005\u000e\u001e\b'\u001d\u0004\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0007\u000e`\u0005J 2\u0004\u0002²\u0002\u0002\u0007 2\b\u0002$\u0002\u000f\" encostado na figura, fora do recorte; texto solto \"b = 1.\" junto de uma figura (pedaço de fórmula fora do recorte); linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 153,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 154,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 155,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 156,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); recorte incompleto: texto \"de equilíbrio\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 157,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 158,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 159,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 160,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 161,
+      "motivo": "recorte incompleto: texto \"\u0017\u0002\b\u000f\u0010\u000e\u0005\u000e\u0007\b\u000f\u0004\u0007\u0002\u000f \u0002 \u0010\u0002\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0002\u0004 \u0002\u000f\u0004\u0005\u0004 \u0002\u000f\u0004\u0002\b \u0007\u0004\u0002 B\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0004\b \u0002\b \u0010 \u0005 \b#\b\u0002 \u0010\u0002(\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u0002\u0004 \u0002\u000f\u0004\u0005\u0004 \u0002\u000f\u0004\u0002\b \u0007\u0004\u0002 B\" encostado na figura, fora do recorte; recorte incompleto: texto \"\u000f \u0002\u000f\u000e %\u0004\u0005\u000e!\u000e2\u000e_\b\u0007\u0002 \u0007\" encostado na figura, fora do recorte; linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 162,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 163,
+      "motivo": "sobrescrito sem forma em texto: \"}㐷\"; sobrescrito sem forma em texto: \"}]\"; sobrescrito sem forma em texto: \"}X\"; sobrescrito sem forma em texto: \"}&\"; recorte incompleto: texto \"\u0012\u0002\u0007 2\b'\u001d\u0004\u0002\u000f \u0002\u0016 ¦ \u0004\u0005/\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 164,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 165,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 166,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 167,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    },
+    {
+      "numero": 168,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 169,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 170,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 171,
+      "motivo": "recorte incompleto: texto \"\u0002 \u000e# \u0007\u0002\u0010\b\u000e\u0004\u0007\u0002?\u0007 \b\u0002\u000f \" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 172,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 173,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 174,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 175,
+      "motivo": "recorte incompleto: texto \"\u0005 \b\u000f\u0004\u0002\u0005\b\u0002\u0006J \u0007\b(\u0002\u0012 \u0002+\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 176,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 177,
+      "motivo": "texto solto \"100\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 178,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 179,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 180,
+      "motivo": "caderno com texto ilegível em 56 questões; a prova inteira fica fora por segurança"
+    }
+  ],
+  "classificacao": [],
+  "amostra": []
+}

@@ -159,6 +159,40 @@ describe("scripts/content/build-packs.ts", () => {
     expect(existsSync(REAL_MANIFEST) ? readFileSync(REAL_MANIFEST, "utf-8") : null).toBe(manifestAntes);
     expect(existsSync("src/content/banco/__teste_build_packs__")).toBe(false);
   });
+
+  test("imagens de questão: copiadas com hash no nome e url reescrita no pacote (spec 50 §5.9.3)", async () => {
+    const imgDir = join(root, "banco", "oficial", "img", "2019");
+    mkdirSync(imgDir, { recursive: true });
+    writeFileSync(join(imgDir, "d1-q001-1.webp"), Buffer.from("imagem-sintetica"));
+    const comImagem = item("oficial:2019:abc", {
+      exercise: {
+        type: "multipla-escolha",
+        pergunta: "Texto.\n[[imagem:0]]",
+        opcoes: ["a", "b", "c", "d", "e"],
+        correta: 0,
+        explicacao: "x",
+        imagens: [{ url: "/content/img/2019/d1-q001-1.webp", alt: "Imagem sintética", largura: 10, altura: 10 }],
+      },
+    });
+    writeFileSync(join(fixtureDir, "fixture.json"), JSON.stringify({ subjectId: "__teste__", items: [comImagem] }));
+    const { exitCode } = await rodarBuildPacks();
+    expect(exitCode).toBe(0);
+    const manifest = JSON.parse(readFileSync(join(outDir, "manifest.json"), "utf-8"));
+    const pacote = JSON.parse(readFileSync(join(root, manifest.subjects.__teste__.path.replace("/content/v1/", "public-content/")), "utf-8"));
+    const url: string = pacote.items[0].exercise.imagens[0].url;
+    expect(url).toMatch(/^\/content\/img\/2019\/d1-q001-1\.[0-9a-f]{10}\.webp$/);
+    expect(existsSync(join(root, "img", url.replace("/content/img/", "")))).toBe(true);
+  });
+
+  test("imagem citada que não existe faz o build falhar", async () => {
+    const semArquivo = item("oficial:2019:def", {
+      exercise: { type: "multipla-escolha", pergunta: "T", opcoes: ["a", "b"], correta: 0, explicacao: "x", imagens: [{ url: "/content/img/2019/nao-existe.webp", alt: "Imagem" }] },
+    });
+    writeFileSync(join(fixtureDir, "fixture.json"), JSON.stringify({ subjectId: "__teste__", items: [semArquivo] }));
+    const { exitCode, stderr } = await rodarBuildPacks();
+    expect(exitCode).not.toBe(0);
+    expect(stderr).toContain("nao-existe.webp");
+  });
 });
 
 describe("itemRefOf", () => {

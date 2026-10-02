@@ -1,0 +1,787 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "oficial:2020:fc176c0c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A fragmentação dos hábitats é caracterizada pela formação de ilhas da paisagem original, circundadas por áreas transformadas. Esse tipo de interferência no ambiente ameaça a biodiversidade. Imagine que uma população de onças foi isolada em uma mata pequena. Elas se extinguiriam mesmo sem terem sido abatidas. Diversos componentes da ilha de hábitat, como o tamanho, a heterogeneidade, o seu entorno, a sua conectividade e o efeito de borda são determinantes para a persistência ou não das espécies originais.\n\nUma medida que auxilia na conservação da biodiversidade nas ilhas mencionadas no texto compreende a",
+        "opcoes": [
+          "formação de micro-hábitats.",
+          "ampliação do efeito de borda.",
+          "construção de corredores ecológicos.",
+          "promoção da sucessão ecológica.",
+          "introdução de novas espécies de animais e vegetais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:fc176c0c",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 95"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:20.964Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:2d244b71",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Grandes reservatórios de óleo leve de melhor qualidade e que produz petróleo mais fino foram descobertos no litoral brasileiro numa camada denominada pré-sal, formada há 150 milhões de anos.\n\nA utilização desse recurso energético acarreta para o ambiente um desequilíbrio no ciclo do",
+        "opcoes": [
+          "nitrogênio, devido à nitrificação ambiental transformando amônia em nitrito.",
+          "nitrogênio, devido ao aumento dos compostos nitrogenados no ambiente terrestre.",
+          "carbono, devido ao aumento dos carbonatos dissolvidos no ambiente marinho.",
+          "carbono, devido à liberação das cadeias carbônicas aprisionadas abaixo dos sedimentos.",
+          "fósforo, devido à liberação dos fosfatos acumulados no ambiente marinho."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:2d244b71",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 97"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:20.964Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:38d5c72e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nos dias atuais, o amplo uso de objetos de plástico gera bastante lixo, que muitas vezes é eliminado pela população por meio da queima. Esse procedimento é prejudicial ao meio ambiente por lançar substâncias poluentes. Para constatar esse problema, um estudante analisou a decomposição térmica do policloreto de vinila (PVC), um tipo de plástico, cuja estrutura é representada na figura.\n\n[[imagem:0]]\n\nPolicloreto de vinila (PVC)\n\nPara realizar esse experimento, o estudante colocou uma amostra de filme de PVC em um tubo de ensaio e o aqueceu, promovendo a decomposição térmica. Houve a liberação majoritária de um gás diatômico heteronuclear que foi recolhido em um recipiente acoplado ao tubo de ensaio. Esse gás, quando borbulhado em solução alcalina diluída contendo indicador ácido-base, alterou a cor da solução. Além disso, em contato com uma solução aquosa de carbonato de sódio (Na₂CO₃), liberou gás carbônico.\n\nQual foi o gás liberado majoritariamente na decomposição térmica desse tipo de plástico?",
+        "opcoes": [
+          "H₂",
+          "Cl₂",
+          "CO",
+          "CO₂",
+          "HCl"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q100-1.webp",
+            "alt": "Imagem da questão 100 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 316,
+            "altura": 292
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:38d5c72e",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 100"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.013Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:4d7fb2ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O dióxido de carbono passa para o estado sólido (gelo seco) a −78 °C e retorna ao estado gasoso à temperatura ambiente. O gás é facilmente solubilizado em água, capaz de absorver radiação infravermelha da superfície da terra e não conduz eletricidade. Ele é utilizado como matéria-prima para a fotossíntese até o limite de saturação. Após a fixação pelos organismos autotróficos, o gás retorna ao meio ambiente pela respiração aeróbica, fermentação, decomposição ou por resíduos industriais, queima de combustíveis fósseis e queimadas. Apesar da sua importância ecológica, seu excesso causa perturbações no equilíbrio ambiental.\n\nConsiderando as propriedades descritas, o aumento atmosférico da substância afetará os organismos aquáticos em razão da",
+        "opcoes": [
+          "redução do potencial hidrogeniônico da água.",
+          "restrição da aerobiose pelo excesso de poluentes.",
+          "diminuição da emissão de oxigênio pelos autótrofos.",
+          "limitação de transferência de energia entre os seres vivos.",
+          "retração dos oceanos pelo congelamento do gás nos polos."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:4d7fb2ab",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 103"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.106Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:a76eac04",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As panelas de pressão reduzem o tempo de cozimento dos alimentos por elevar a temperatura de ebulição da água. Os usuários conhecedores do utensílio normalmente abaixam a intensidade do fogo em panelas de pressão após estas iniciarem a saída dos vapores.\n\nAo abaixar o fogo, reduz-se a chama, pois assim evita-se o(a)",
+        "opcoes": [
+          "aumento da pressão interna e os riscos de explosão.",
+          "dilatação da panela e a desconexão com sua tampa.",
+          "perda da qualidade nutritiva do alimento.",
+          "deformação da borracha de vedação.",
+          "consumo de gás desnecessário."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:a76eac04",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 109"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.339Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:74c1d80b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os fones de ouvido tradicionais transmitem a música diretamente para os nossos ouvidos. Já os modelos dotados de tecnologia redutora de ruído — Cancelamento de Ruído (CR) — além de transmitirem música, também reduzem todo ruído inconsistente à nossa volta, como o barulho de turbinas de avião e aspiradores de pó. Os fones de ouvido CR não reduzem realmente barulhos irregulares como discursos e choros de bebês. Mesmo assim, a supressão do ronco das turbinas do avião contribui para reduzir a “fadiga de ruído”, um cansaço persistente provocado pela exposição a um barulho alto por horas a fio. Esses aparelhos também permitem que nós ouçamos músicas ou assistamos a vídeos no trem ou no avião a um volume muito menor (e mais seguro).\n\nDisponível em: http://tecnologia.uol.com.br. Acesso em: 21 abr. 2015 (adaptado).\n\nA tecnologia redutora de ruído CR utilizada na produção de fones de ouvido baseia-se em qual fenômeno ondulatório?",
+        "opcoes": [
+          "Absorção.",
+          "Interferência.",
+          "Polarização.",
+          "Reflexão.",
+          "Difração."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:74c1d80b",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 111"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.340Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:df43d386",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Instituições acadêmicas e de pesquisa no mundo estão inserindo genes em genomas de plantas que possam codificar produtos de interesse farmacológico. No Brasil, está sendo desenvolvida uma variedade de soja com um viricida ou microbicida capaz de prevenir a contaminação pelo vírus causador da aids. Essa leguminosa está sendo induzida a produzir a enzima cianovirina-N, que tem eficiência comprovada contra o vírus.\n\nOLIVEIRA, M. Remédio na planta. Pesquisa Fapesp, n. 206, abr. 2013.\n\nA técnica para gerar essa leguminosa é um exemplo de",
+        "opcoes": [
+          "hibridismo.",
+          "transgenia.",
+          "conjugação.",
+          "terapia gênica.",
+          "melhoramento genético."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:df43d386",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 115"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.530Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:a053f861",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pesquisadores dos Estados Unidos desenvolveram uma nova técnica, que utiliza raios de luz infravermelha (invisíveis a olho nu) para destruir tumores. Primeiramente, o paciente recebe uma injeção com versões modificadas de anticorpos que têm a capacidade de “grudar” apenas nas células cancerosas. Sozinhos, eles não fazem nada contra o tumor. Entretanto, esses anticorpos estão ligados a uma molécula, denominada IR700, que funcionará como uma “microbomba”, que irá destruir o câncer. Em seguida, o paciente recebe raios infravermelhos. Esses raios penetram no corpo e chegam até a molécula IR700, que é ativada e libera uma substância que ataca a célula cancerosa.\n\nDisponível em: http://super.abril.com.br. Acesso em: 13 dez. 2012 (adaptado).\n\nCom base nas etapas de desenvolvimento, o nome apropriado para a técnica descrita é:",
+        "opcoes": [
+          "Radioterapia.",
+          "Cromoterapia.",
+          "Quimioterapia.",
+          "Fotoimunoterapia.",
+          "Terapia magnética."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:a053f861",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 117"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.584Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:65b9ee8c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Aranhas, escorpiões, carrapatos e ácaros são representantes da classe dos Aracnídeos. Esses animais são terrestres em sua grande maioria e ocupam os mais variados hábitats, tais como montanhas altas, pântanos, desertos e solos arenosos. Podem ter sido os primeiros representantes do filo Arthropoda a habitar a terra seca.\n\nA característica que justifica o sucesso adaptativo desse grupo na ocupação do ambiente terrestre é a presença de",
+        "opcoes": [
+          "quelíceras e pedipalpos que coordenam o movimento corporal.",
+          "excreção de ácido úrico que confere estabilidade ao pH corporal.",
+          "exoesqueleto constituído de quitina que auxilia no controle hídrico corporal.",
+          "circulação sanguínea aberta que impede a desidratação dos tecidos corporais.",
+          "sistema nervoso ganglionar que promove a coordenação central do movimento corporal."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:65b9ee8c",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 118"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.585Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:a6f19dbf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O exame parasitológico de fezes é utilizado para detectar ovos de parasitos. Um dos métodos utilizados, denominado de centrífugo-flutuação, considera a densidade dos ovos em relação a uma solução de densidade 1,15 g mL⁻¹. Assim, ovos que flutuam na superfície dessa solução são detectados. Os dados de densidade dos ovos de alguns parasitos estão apresentados na tabela.\n\n[[imagem:0]]\n\nConsiderando-se a densidade dos ovos e da solução, ovos de quais parasitos podem ser detectados por esse método?",
+        "opcoes": [
+          "A. lumbricoides, A. suum e S. mansoni.",
+          "S. mansoni, T. saginata e Ancylostoma.",
+          "Ancylostoma, A. lumbricoides e A. suum.",
+          "T. saginata, S. mansoni e A. lumbricoides.",
+          "A. lumbricoides, A. suum e T. saginata."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q122-1.webp",
+            "alt": "Imagem da questão 122 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Parasito Densidade (g mL - 1 )\nAncylostoma 1,06\nAscaris lumbricoides 1,11\nAscaris suum 1,13\nSchistosoma mansoni 1,18\nTaenia saginata 1,30",
+            "credito": "ZERBINI, A. M. Identificação e análise de viabilidade de ovos de helmintos em um sistema de tratamento de esgotos domésticos constituídos de reatores anaeróbios e rampas de escoamento superficial. Belo Horizonte: Prosab, 2001 (adaptado).",
+            "largura": 1028,
+            "altura": 392
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:a6f19dbf",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 122"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:34:43.487Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:8dbd26bb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma população encontra-se em equilíbrio genético quanto ao sistema ABO, em que 25% dos indivíduos pertencem ao grupo O e 16%, ao grupo A homozigotos. Considerando que: p = frequência de Iᴬ; q = frequência de Iᴮ; e r = frequência de i, espera-se encontrar:\n\n[[imagem:0]]\n\nA porcentagem de doadores compatíveis para alguém do grupo B nessa população deve ser de",
+        "opcoes": [
+          "11%.",
+          "19%.",
+          "26%.",
+          "36%.",
+          "60%."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q125-1.webp",
+            "alt": "Imagem da questão 125 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Grupo Genótipos Frequências\nA I A I A e I A i p 2 + 2pr\nB I B I B e I B i q 2 + 2qr\nAB I A I B 2pq\nO ii r 2",
+            "largura": 940,
+            "altura": 332
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:8dbd26bb",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 125"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:34:43.531Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:4aa96055",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Plantas pioneiras são as que iniciam o processo natural de cicatrização de uma área desprovida de vegetação. Em geral, têm pequeno porte e crescem muito rápido, desenvolvem-se a pleno sol e são pouco exigentes quanto às condições do solo. Produzem grande quantidade de sementes e possuem ciclo de vida curto.\n\nBLUM, C. T. Lista preliminar de espécies vegetais pioneiras nativas do Paraná – versão\n2008. Disponível em: www.chaua.org.br. Acesso em: 10 fev. 2015.\n\nEssas plantas são importantes em um projeto de restauração ambiental, pois promovem, no solo,",
+        "opcoes": [
+          "aumento da incidência de luz solar.",
+          "diminuição da absorção de água.",
+          "estabilização da umidade.",
+          "elevação de temperatura.",
+          "liberação de oxigênio."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:4aa96055",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 127"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.747Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:8aa94985",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma pesquisa estão sendo testados cinco quimioterápicos quanto à sua capacidade antitumoral. No entanto, para o tratamento de pacientes, sabe-se que é necessário verificar também o quanto cada composto agride células normais. Para o experimento, partiu-se de cultivos de células tumorais (colunas escuras na figura) e células normais (colunas claras) com o mesmo número de células iniciais. Dois grupos-controle não receberam quimioterápicos: controle de células tumorais (CT) e de células normais (CN). As colunas I, II, III, IV e V correspondem aos grupos tratados com os cinco compostos. O número de células viáveis após os tratamentos está representado pelas colunas.\n\n[[imagem:0]]\n\nQual quimioterápico deve ser escolhido para tratamento desse tipo de tumor?",
+        "opcoes": [
+          "I",
+          "II",
+          "III",
+          "IV",
+          "V"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q129-1.webp",
+            "alt": "Imagem da questão 129 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 60\n50\n40\n30\n20\n10\n0\nCT I II III IV V CN I II III IV V",
+            "largura": 909,
+            "altura": 649
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:8aa94985",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 129"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.805Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:3b0e906f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Megaespetáculos com queima de grande quantidade de fogos de artifício em festas de final de ano são muito comuns no Brasil. Após a queima, grande quantidade de material particulado permanece suspensa no ar. Entre os resíduos, encontram-se compostos de sódio, potássio, bário, cálcio, chumbo, antimônio, cromo, além de percloratos e gases, como os dióxidos de nitrogênio e enxofre.\n\nBRUNNING, A. The Chemistry of Firework Pollution. Disponível em:\n\nwww.compoundchem.com. Acesso em: 1 dez. 2017 (adaptado).\n\nEsses espetáculos promovem riscos ambientais, porque",
+        "opcoes": [
+          "as substâncias resultantes da queima de fogos de artifício são inflamáveis.",
+          "os resíduos produzidos na queima de fogos de artifício ainda são explosivos.",
+          "o sódio e o potássio são os principais responsáveis pela toxicidade do produto da queima.",
+          "os produtos da queima contêm metais pesados e gases tóxicos que resultam em poluição atmosférica.",
+          "o material particulado gerado se deposita na superfície das folhas das plantas impedindo os processos de respiração celular."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:3b0e906f",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 132"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.880Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

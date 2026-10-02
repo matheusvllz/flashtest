@@ -1,0 +1,694 @@
+{
+  "subjectId": "lit",
+  "items": [
+    {
+      "id": "oficial:2019:4abdda88",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Meu caro Sherlock Holmes, algo horrível aconteceu às três da manhã no Jardim Lauriston. Nosso homem que estava na vigia viu uma luz às duas da manhã saindo de uma casa vazia. Quando se aproximou, encontrou a porta aberta e, na sala da frente, o corpo de um cavalheiro bem vestido. Os cartões que estavam em seu bolso tinham o nome de Enoch J. Drebber, Cleveland, Ohio, EUA. Não houve assalto e nosso homem não conseguiu encontrar algo que indicasse como ele morreu. Não havia marcas de sangue, nem feridas nele. Não sabemos como ele entrou na casa vazia. Na verdade, todo assunto é um quebra-cabeça sem fim. Se puder vir até a casa seria ótimo, se não, eu lhe conto os detalhes e gostaria muito de saber sua opinião. Atenciosamente, Tobias Gregson.\n\nDOYLE, A. C. Um estudo em vermelho. Cotia: Pé de Letra, 2017.\n\nConsiderando o objetivo da carta de Tobias Gregson, a sequência de enunciados negativos presente nesse texto tem a função de",
+        "opcoes": [
+          "restringir a investigação, deixando-a sob a responsabilidade do autor da carta.",
+          "refutar possíveis causas da morte do cavalheiro, auxiliando na investigação.",
+          "identificar o local da cena do crime, localizando-o no Jardim Lauriston.",
+          "introduzir o destinatário da carta, caracterizando sua personalidade.",
+          "apresentar o vigia, incluindo-o entre os suspeitos do assassinato."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:4abdda88",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 8"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:42.797Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:0443dd0f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "HELOÍSA: Faz versos?\nPINOTE: Sendo preciso... Quadrinhas... Acrósticos... Sonetos... Reclames.\n\nHELOÍSA: Futuristas?\nPINOTE: Não senhora! Eu já fui futurista. Cheguei a acreditar na independência... Mas foi uma tragédia! Começaram a me tratar de maluco. A me olhar de esguelha. A não me receber mais. As crianças choravam em casa. Tenho três filhos. No jornal também não pagavam, devido à crise. Precisei viver de bicos. Ah! Reneguei tudo. Arranjei aquele instrumento (Mostra a faca) e fiquei passadista.\n\nANDRADE, O. O rei da vela. São Paulo: Globo, 2003.\n\nO fragmento da peça teatral de Oswald de Andrade ironiza a reação da sociedade brasileira dos anos 1930 diante de determinada vanguarda europeia. Nessa visão, atribui-se ao público leitor uma postura",
+        "opcoes": [
+          "preconceituosa, ao evitar formas poéticas simplificadas.",
+          "conservadora, ao optar por modelos consagrados.",
+          "preciosista, ao preferir modelos literários eruditos.",
+          "nacionalista, ao negar modelos estrangeiros.",
+          "eclética, ao aceitar diversos estilos poéticos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:0443dd0f",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 13"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.236Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:91d9c05b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A viagem\n\nQue coisas devo levar\nnesta viagem em que partes?\nAs cartas de navegação só servem\na quem fica.\nCom que mapas desvendar\num continente\nque falta?\nEstrangeira do teu corpo\ntão comum\nquantas línguas aprender\npara calar-me?\nTambém quem fica\nprocura\num oriente.\nTambém\na quem fica\ncabe uma paisagem nova\ne a travessia insone do desconhecido\ne a alegria difícil da descoberta.\nO que levas do que fica,\no que, do que levas, retiro?\n\nMARQUES, A. M. In: SANT’ANNA, A. (Org.). Rua Aribau.\n\nPorto Alegre: Tag, 2018.\n\nA viagem e a ausência remetem a um repertório poético\ntradicional. No poema, a voz lírica dialoga com essa\ntradição, repercutindo a",
+        "opcoes": [
+          "saudade como experiência de apatia.",
+          "presença da fragmentação da identidade.",
+          "negação do desejo como expressão de culpa.",
+          "persistência da memória na valorização do passado.",
+          "revelação de rumos projetada pela vivência da solidão."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:91d9c05b",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 14"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.236Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:6ae9a450",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ed Mort só vai\n\nMort. Ed Mort. Detetive particular. Está na plaqueta. Tenho um escritório numa galeria de Copacabana entre um fliperama e uma loja de carimbos. Dá só para o essencial, um telefone mudo e um cinzeiro. Mas insisto numa mesa e numa cadeira. Apesar do protesto das baratas. Elas não vencerão. Comprei um jogo de máscaras. No meu trabalho o disfarce é essencial. Para escapar dos credores. Outro dia entrei na sala e vi a cara do King Kong andando pelo chão. As baratas estavam roubando as máscaras. Espisoteei meia dúzia. As outras atacaram a mesa. Consegui salvar a minha Bic e o jornal. O jornal era novo, tinha só uma semana. Mas elas levaram a agenda. Saí ganhando. A agenda estava em branco. Meu último caso fora com a funcionária do Erótica, a primeira ótica da cidade com balconista topless. Acabara mal. Mort. Ed Mort. Está na plaqueta.\n\nVERISSIMO, L. F. Ed Mort: todas as histórias.\n\nPorto Alegre: L&PM, 1997 (adaptado).\n\nNessa crônica, o efeito de humor é basicamente construído por uma",
+        "opcoes": [
+          "segmentação de enunciados baseada na descrição dos hábitos do personagem.",
+          "ordenação dos constituintes oracionais na qual se destaca o núcleo verbal.",
+          "estrutura composicional caracterizada pelo arranjo singular dos períodos.",
+          "sequenciação narrativa na qual se articulam eventos absurdos.",
+          "seleção lexical na qual predominam informações redundantes."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:6ae9a450",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 16"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.237Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:bd2cf7e6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma ouriça\n\nSe o de longe esboça lhe chegar perto,\nse fecha (convexo integral de esfera),\nse eriça (bélica e multiespinhenta):\ne, esfera e espinho, se ouriça à espera.\nMas não passiva (como ouriço na loca);\nnem só defensiva (como se eriça o gato);\nsim agressiva (como jamais o ouriço),\ndo agressivo capaz de bote, de salto\n(não do salto para trás, como o gato):\ndaquele capaz de salto para o assalto.\n\nSe o de longe lhe chega em (de longe),\nde esfera aos espinhos, ela se desouriça.\nReconverte: o metal hermético e armado\nna carne de antes (côncava e propícia),\ne as molas felinas (para o assalto),\nnas molas em espiral (para o abraço).\n\nMELO NETO, J. C. A educação pela pedra. Rio de Janeiro:\n\nNova Fronteira, 1997.\n\nCom apuro formal, o poema tece um conjunto semântico\nque metaforiza a atitude feminina de",
+        "opcoes": [
+          "tenacidade transformada em brandura.",
+          "obstinação traduzida em isolamento.",
+          "inércia provocada pelo desejo platônico.",
+          "irreverência cultivada de forma cautelosa.",
+          "desconfiança consumada pela intolerância."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:bd2cf7e6",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 22"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.440Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:87af19e3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Blues da piedade\n\nVamos pedir piedade\nSenhor, piedade\nPra essa gente careta e covarde\nVamos pedir piedade\nSenhor, piedade\nLhes dê grandeza e um pouco de coragem\n\nCAZUZA. Cazuza: o poeta não morreu. Rio de Janeiro:\n\nUniversal Music, 2000 (fragmento).\n\nTodo gênero apresenta elementos constitutivos que\ncondicionam seu uso em sociedade. A letra de canção\nidentifica-se com o gênero ladainha, essencialmente,\npela utilização da sequência textual",
+        "opcoes": [
+          "expositiva, por discorrer sobre um dado tema.",
+          "narrativa, por apresentar uma cadeia de ações.",
+          "injuntiva, por chamar o interlocutor à participação.",
+          "descritiva, por enumerar características de um personagem.",
+          "argumentativa, por incitar o leitor a uma tomada de atitude."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:87af19e3",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 24"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.670Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:45cc6624",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os subúrbios do Rio de Janeiro foram a primeira coisa a aparecer no mundo, antes mesmo dos vulcões e dos cachalotes, antes de Portugal invadir, antes do Getúlio Vargas mandar construir casas populares. O bairro do Queím, onde nasci e cresci, é um deles. Aconchegado entre o Engenho Novo e Andaraí, foi feito daquela argila primordial, que se aglutinou em diversos formatos: cães soltos, moscas e morros, uma estação de trem, amendoeiras e barracos e sobrados, botecos e arsenais de guerra, armarinhos e bancas de jogo do bicho e um terreno enorme reservado para o cemitério. Mas tudo ainda estava vazio: faltava gente.\n\nNão demorou. As ruas juntaram tanta poeira que o homem não teve escolha a não ser passar a existir, para varrê-las. À tardinha, sentar na varanda das casas e reclamar da pobreza, falar mal dos outros e olhar para as calçadas encardidas de sol, os ônibus da volta do trabalho sujando tudo de novo.\n\nHERINGER, V. O amor dos homens avulsos.\n\nSão Paulo: Cia. das Letras, 2016.\n\nTraçando a gênese simbólica de sua cidade, o narrador imprime ao texto um sentido estético fundamentado na",
+        "opcoes": [
+          "excentricidade dos bairros cariocas de sua infância.",
+          "perspectiva caricata da paisagem de traços deteriorados.",
+          "importância dos fatos relacionados à história dos subúrbios.",
+          "diversidade dos tipos humanos identificados por seus hábitos.",
+          "experiência do cotidiano marcado pelas necessidades e urgências."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:45cc6624",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 28"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.755Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:af3da755",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "“O computador, dando prioridade à busca pela própria felicidade, parou de trabalhar para os humanos”. É assim que termina o conto O dia em que um computador escreveu um conto, escrito por uma inteligência artificial com a ajuda de cientistas humanos.\n\nOs cientistas selecionaram palavras e frases que seriam usadas na narrativa, e definiram um roteiro geral da história, que serviria como guia para a inteligência artificial. A partir daí, o computador criou o texto combinando as frases e seguindo as diretrizes que os cientistas impuseram. Os juízes não sabem quais textos são escritos por humanos e quais são feitos por computadores, o que mostra que o conto estava bem escrito. O dia só não passou para as próximas etapas porque, de acordo com os juízes, os personagens não foram muito bem descritos, embora o texto estivesse estruturalmente impecável.\n\nA ideia dos cientistas é continuar desenvolvendo a criatividade da IA para que ela se pareça cada vez mais com a humana. Simular esse tipo de resposta é difícil, porque o computador precisa ter, primeiro, um banco de dados vasto vinculado a uma programação específica para cada tipo de projeto — escrita, pintura, música, desenho e por aí vai.\n\nD’ANGELO, H. Disponível em: https://super.abril.com.br.\n\nAcesso em: 5 dez. 2018.\n\nO êxito e as limitações da tecnologia utilizada na composição do conto evidenciam a",
+        "opcoes": [
+          "indistinção entre personagens produzidos por máquinas e seres humanos.",
+          "necessidade de reformulação da base de dados elaborada por cientistas.",
+          "autonomia de programas computacionais no desenvolvimento ficcional.",
+          "diferença entre a estrutura e a criatividade da linguagem humana.",
+          "qualidade artística de textos produzidos por computadores."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:af3da755",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 38"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.991Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:e3f41d3f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Essa lua enlutada, esse desassossego\nA convulsão de dentro, ilharga\nDentro da solidão, corpo morrendo\nTudo isso te devo. E eram tão vastas\nAs coisas planejadas, navios,\nMuralhas de marfim, palavras largas\nConsentimento sempre. E seria dezembro.\nUm cavalo de jade sob as águas\nDupla transparência, fio suspenso\nTodas essas coisas na ponta dos teus dedos\nE tudo se desfez no pórtico do tempo\nEm lívido silêncio. Umas manhãs de vidro\nVento, a alma esvaziada, um sol que não vejo\n\nTambém isso te devo.\n\nHILST, H. Júbilo, memória, noviciado da paixão.\n\nSão Paulo: Cia. das Letras, 2018.\n\nNo poema, o eu lírico faz um inventário de estados\npassados espelhados no presente. Nesse processo,\naflora o",
+        "opcoes": [
+          "cuidado em apagar da memória os restos do amor.",
+          "amadurecimento revestido de ironia e desapego.",
+          "mosaico de alegrias formado seletivamente.",
+          "desejo reprimido convertido em delírio.",
+          "arrependimento dos erros cometidos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:e3f41d3f",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 39"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.991Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:f5fcb1f4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "1. Nós queremos cantar o amor ao perigo, o hábito da energia e da temeridade.\n\n2. A coragem, a audácia, a rebelião serão elementos essenciais de nossa poesia.\n\n3. A literatura exaltou até hoje a imobilidade pensativa, o êxtase, o sono. Nós queremos exaltar o movimento agressivo, a insônia febril, o passo de corrida, o salto mortal, o bofetão e o soco.\n\n4. Nós afirmamos que a magnificência do mundo enriqueceu-se de uma beleza nova: a beleza da velocidade. Um automóvel de corrida com seu cofre enfeitado com tubos grossos, semelhantes a serpentes de hálito explosivo... um automóvel rugidor, que parece correr sobre a metralha, é mais bonito que a Vitória de Samotrácia.\n\n5. Nós queremos entoar hinos ao homem que segura o volante, cuja haste ideal atravessa a Terra, lançada também numa corrida sobre o circuito da sua órbita.\n\n6. É preciso que o poeta prodigalize com ardor, fausto e munificiência, para aumentar o entusiástico fervor dos elementos primordiais.\n\nMARINETTI, F. T. Manifesto futurista. In: TELES, G. M. Vanguardas\neuropeias e Modernismo brasileiro. Petrópolis: Vozes, 1985.\n\nO documento de Marinetti, de 1909, propõe os referenciais estéticos do Futurismo, que valorizam a",
+        "opcoes": [
+          "composição estática.",
+          "inovação tecnológica.",
+          "suspensão do tempo.",
+          "retomada do helenismo.",
+          "manutenção das tradições."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:f5fcb1f4",
+        "version": 1,
+        "skillIds": [
+          "lit:modernismo-fases-brasil"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 40"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.992Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:eee17cb1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ela nasceu lesma, vivia no meio das lesmas, mas não estava satisfeita com sua condição. Não passamos de criaturas desprezadas, queixava-se. Só somos conhecidas por nossa lentidão. O rastro que deixaremos na História será tão desprezível quanto a gosma que marca nossa passagem pelos pavimentos.\n\nA esta frustração correspondia um sonho: a lesma queria ser como aquele parente distante, o escargot. O simples nome já a deixava fascinada: um termo francês, elegante, sofisticado, um termo que as pessoas pronunciavam com respeito e até com admiração. Mas, lembravam as outras lesmas, os escargots são comidos, enquanto nós pelo menos temos chance de sobreviver. Este argumento não convencia a insatisfeita lesma, ao contrário: preferiria exatamente terminar sua vida desta maneira, numa mesa de toalha adamascada, entre talheres de prata e cálices de cristal. Assim como o mar é o único túmulo digno de um almirante batavo, respondia, a travessa de porcelana é a única lápide digna dos meus sonhos.\n\nSCLIAR, M. Sonho de lesma. In: ABREU, C. F. et al.\n\nA prosa do mundo. São Paulo: Global, 2009.\n\nIncorporando o devaneio da personagem, o narrador compõe uma alegoria que representa o anseio de",
+        "opcoes": [
+          "rejeitar metas de superação de desafios.",
+          "restaurar o estado de felicidade pregressa.",
+          "materializar expectativas de natureza utópica.",
+          "rivalizar com indivíduos de condição privilegiada.",
+          "valorizar as experiências hedonistas do presente."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:eee17cb1",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 41"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.992Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:46d78d48",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Toca a sirene na fábrica,\ne o apito como um chicote\nbate na manhã nascente\ne bate na tua cama\nno sono da madrugada.\nTernuras da áspera lona\npelo corpo adolescente.\nÉ o trabalho que te chama.\nÀs pressas tomas o banho, tomas teu café com pão,\ntomas teu lugar no bote\nno cais do Capibaribe.\nDeixas chorando na esteira\nteu filho de mãe solteira.\nLevas ao lado a marmita,\ncontendo a mesma ração\ndo meio de todo o dia,\na carne-seca e o feijão.\nDe tudo quanto ele pede\ndás só bom-dia ao patrão,\ne recomeças a luta\nna engrenagem da fiação.\n\nMOTA, M. Canto ao meio. Rio de Janeiro: Civilização Brasileira, 1964.\n\nNesse texto, a mobilização do uso padrão das formas\nverbais e pronominais",
+        "opcoes": [
+          "ajuda a localizar o enredo num ambiente estático.",
+          "auxilia na caracterização física do personagem principal.",
+          "acrescenta informações modificadoras às ações dos personagens.",
+          "alterna os tempos da narrativa, fazendo progredir as ideias do texto.",
+          "está a serviço do projeto poético, auxiliando na distinção dos referentes."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:46d78d48",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 44"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.123Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:798ebcaa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Irerê, meu passarinho do sertão do Cariri,\nIrerê, meu companheiro,\nCadê viola? Cadê meu bem? Cadê Maria?\nAi triste sorte a do violeiro cantadô!\nAh! Sem a viola em que cantava o seu amô,\nAh! Seu assobio é tua flauta de irerê:\nQue tua flauta do sertão quando assobia,\nAh! A gente sofre sem querê!\nAh! Teu canto chega lá no fundo do sertão,\nAh! Como uma brisa amolecendo o coração,\nAh! Ah!\nIrerê, solta teu canto!\nCanta mais! Canta mais!\nPrá alembrá o Cariri!\n\nVILLA-LOBOS, H. Bachianas Brasileiras n. 5 para soprano e oito\nvioloncelos (1938-1945). Disponível em: http://euterpe.blog.br.\n\nAcesso em: 23 abr. 2019.\n\nNesses versos, há uma exaltação ao sertão do Cariri em\numa ambientação linguisticamente apoiada no(a)",
+        "opcoes": [
+          "uso recorrente de pronomes.",
+          "variedade popular da língua portuguesa.",
+          "referência ao conjunto da fauna nordestina.",
+          "exploração de instrumentos musicais eruditos.",
+          "predomínio de regionalismos lexicais nordestinos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:798ebcaa",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 45"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.124Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

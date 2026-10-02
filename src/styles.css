@@ -59,6 +59,7 @@
   --color-pelo-sombra: var(--pelo-sombra); /* severidade baixa, sombra do mascote */
   --color-nevoa: var(--nevoa); /* texto secundário sobre claro, placeholders */
   --color-cards: var(--cards); /* fundo de cards e superfícies elevadas */
+  --color-papel-figura: var(--papel-figura); /* fundo próprio das imagens de questão (spec 50 §5.9.3): claro nos dois temas */
   --color-success: var(--success);
   --color-success-texto: var(--success-texto); /* título "Acertou" sobre cards — 2e9e5b/branco reprova texto (3.4:1) */
   --color-alert: var(--alert); /* atenção / severidade baixa */
@@ -159,6 +160,8 @@
      mínimo de texto. Escurecido dentro da mesma família (cinza-violeta): 4,81:1 sobre o papel. */
   --nevoa: #6e6b71;
   --cards: #ffffff;
+  /* Imagem de questão: o original foi feito para papel branco (spec 50 §5.9.3). Nunca inverter. */
+  --papel-figura: #ffffff;
   --success: #2e9e5b;
   --success-texto: #1f7a45;
   --alert: #d9a017;
@@ -268,6 +271,8 @@
   --pelo-sombra: #a6a29a;
   --nevoa: #a6a29a;
   --cards: #262523;
+  /* Continua claro no escuro (o papel do original), um tom abaixo do branco para não ofuscar. */
+  --papel-figura: #f6f5f1;
   --success: #45b876;
   --success-texto: #45b876;
   --alert: #e8b23d;

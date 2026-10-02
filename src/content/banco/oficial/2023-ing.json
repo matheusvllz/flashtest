@@ -1,0 +1,291 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "oficial:2023:20c5c7ad",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEsse cartaz de campanha sugere que",
+        "opcoes": [
+          "os lixões precisam de ampliação.",
+          "o desperdício degrada o ambiente.",
+          "os mercados doam alimentos perecíveis.",
+          "a desnutrição compromete o raciocínio.",
+          "as residências carecem de refrigeradores."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d1-q001-ing-1.webp",
+            "alt": "Imagem da questão 1 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: The average american tosses 300 pounds of food\neach year, making food the number one contributor to\nAmerica’s landfills. Eat your leftovers and keep your\nperishables in the fridge – the Earth is counting on it.",
+            "credito": "Disponível em: https://mir-s3-cdn-cf.behance.net. Acesso em: 29 out. 2021 (adaptado).",
+            "largura": 853,
+            "altura": 683
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:20c5c7ad",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 1 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.133Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:ff394b20",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No man is an island,\nEntire of itself;\nEvery man is a piece of the continent,\nA part of the main.\n[...]\nAny man’s death diminishes me,\nBecause I am involved in mankind.\n\nDONNE, J. The Works of John Donne. Londres: John W. Parker, 1839 (fragmento).\n\nNesse poema, a expressão “No man is an island” ressalta o(a)",
+        "opcoes": [
+          "medo da morte.",
+          "ideia de conexão.",
+          "conceito de solidão.",
+          "risco de devastação.",
+          "necessidade de empatia."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:ff394b20",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 2 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:23.844Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:03aefb66",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Things We Carry on the Sea\nWe carry tears in our eyes: good-bye father, good-bye\n[mother\nWe carry soil in small bags: may home never fade in our\n[hearts\nWe carry carnage of mining, droughts, floods, genocides\nWe carry dust of our families and neighbors incinerated\n[in mushroom clouds\nWe carry our islands sinking under the sea\nWe carry our hands, feet, bones, hearts and best minds\n[for a new life\nWe carry diplomas: medicine, engineer, nurse,\n[education, math, poetry, even if they mean\n[nothing to the other shore\nWe carry railroads, plantations, laundromats,\n[bodegas, taco trucks, farms, factories, nursing\n[homes, hospitals, schools, temples... built on\n[our ancestors’ backs\nWe carry old homes along the spine, new dreams in our\n[chests\nWe carry yesterday, today and tomorrow\nWe’re orphans of the wars forced upon us\nWe’re refugees of the sea rising from industrial wastes\nAnd we carry our mother tongues\n[...]\nAs we drift... in our rubber boats... from shore... to shore...\n\n[to shore...\n\nPING, W. Disponível em: https://poets.org. Acesso em: 1 jun. 2023 (fragmento).\n\nAo retratar a trajetória de refugiados, o poema recorre à\nimagem de viagem marítima para destacar o(a)",
+        "opcoes": [
+          "risco de choques culturais.",
+          "impacto do ensino de história.",
+          "importância da luta ambiental.",
+          "existência de experiências plurais.",
+          "necessidade de capacitação profissional."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:03aefb66",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 3 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.135Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:e53c110a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Spanglish\n\npues estoy creando Spanglish\nbi-cultural systems\nscientific lexicographical\ninter-textual integrations\ntwo expressions\nexistentially wired\ntwo dominant languages\ncontinentally abrazándose\nin colloquial combate\nimperio spanglish emerges\nsobre territorio bi-lingual\nlas novelas mexicanas\nmixing with radiorocknroll\nimmigrant/migrant\nnasal mispronouncements\nhip-hop, street salsa, spanish pop\nstandard english classroom\nwith computer technicalities\nspanglish is literally perfect\n\nLAVIERA, T. Benedición: The Complete Poetry of Tato Laviera.\n\nHouston: Arte Público Press, 2014 (fragmento).\n\nNesse poema de Tato Laviera, o eu lírico destaca uma",
+        "opcoes": [
+          "convergência linguístico-cultural.",
+          "característica histórico-cultural.",
+          "tendência estilístico-literária.",
+          "discriminação cultural.",
+          "censura musical."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:e53c110a",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 4 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:23.845Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:29d1ddbe",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nAo retratar o ambiente de trabalho em um escritório, esse cartum tem por objetivo",
+        "opcoes": [
+          "criticar um padrão de vestimenta.",
+          "destacar a falta de diversidade.",
+          "indicar um modo de interação.",
+          "elogiar um modelo de organização.",
+          "salientar o espírito de cooperação."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d1-q005-ing-1.webp",
+            "alt": "Imagem da questão 5 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: “Oh, you’ll love working here. Nobody treats you any\ndifferently just because of your age, race, or gender.”\nDisponível em: www.cartoonstock.com. Acesso em: 25 out. 2021.",
+            "largura": 1004,
+            "altura": 1150
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:29d1ddbe",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 5 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.408Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

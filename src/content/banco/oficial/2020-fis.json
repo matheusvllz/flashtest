@@ -1,0 +1,752 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "oficial:2020:31ca25b4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma usina geradora de energia elétrica, seja através de uma queda-d’água ou através de vapor sob pressão, as pás do gerador são postas a girar. O movimento relativo de um ímã em relação a um conjunto de bobinas produz um fluxo magnético variável através delas, gerando uma diferença de potencial em seus terminais. Durante o funcionamento de um dos geradores, o operador da usina percebeu que houve um aumento inesperado da diferença de potencial elétrico nos terminais das bobinas.\n\nNessa situação, o aumento do módulo da diferença de potencial obtida nos terminais das bobinas resulta do aumento do(a)",
+        "opcoes": [
+          "intervalo de tempo em que as bobinas ficam imersas no campo magnético externo, por meio de uma diminuição de velocidade no eixo de rotação do gerador.",
+          "fluxo magnético através das bobinas, por meio de um aumento em sua área interna exposta ao campo magnético aplicado.",
+          "intensidade do campo magnético no qual as bobinas estão imersas, por meio de aplicação de campos magnéticos mais intensos.",
+          "rapidez com que o fluxo magnético varia através das bobinas, por meio de um aumento em sua velocidade angular.",
+          "resistência interna do condutor que constitui as bobinas, por meio de um aumento na espessura dos terminais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:31ca25b4",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 98"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:20.965Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:1bcd5315",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Você foi contratado para sincronizar os quatro semáforos de uma avenida, indicados pelas letras O, A, B e C, conforme a figura.\n\n[[imagem:0]]\n\nOs semáforos estão separados por uma distância de 500 m. Segundo os dados estatísticos da companhia controladora de trânsito, um veículo, que está inicialmente parado no semáforo O, tipicamente parte com aceleração constante de 1 m s⁻² até atingir a velocidade de 72 km h⁻¹e, a partir daí, prossegue com velocidade constante. Você deve ajustar os semáforos A, B e C de modo que eles mudem para a cor verde quando o veículo estiver a 100 m de cruzá-los, para que ele não tenha que reduzir a velocidade em nenhum momento.\n\nConsiderando essas condições, aproximadamente quanto tempo depois da abertura do semáforo O os semáforos A, B e C devem abrir, respectivamente?",
+        "opcoes": [
+          "20 s, 45 s e 70 s.",
+          "25 s, 50 s e 75 s.",
+          "28 s, 42 s e 53 s.",
+          "30 s, 55 s e 80 s.",
+          "35 s, 60 s e 85 s."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q099-1.webp",
+            "alt": "Imagem da questão 99 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O A B C",
+            "largura": 981,
+            "altura": 147
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:1bcd5315",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 99"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:20.983Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:0f322580",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Grupos de proteção ao meio ambiente conseguem resgatar muitas aves aquáticas vítimas de vazamentos de petróleo. Essas aves são lavadas com água e detergente neutro para a retirada completa do óleo de seu corpo e, posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.\n\nPara flutuar, essas aves precisam",
+        "opcoes": [
+          "recuperar o tônus muscular.",
+          "restaurar a massa corporal.",
+          "substituir as penas danificadas.",
+          "restabelecer a capacidade de homeotermia.",
+          "refazer a camada de cera impermeabilizante das penas."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:0f322580",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 104"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.106Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:af8158a6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os manuais de refrigerador apresentam a recomendação de que o equipamento não deve ser instalado próximo a fontes de calor, como fogão e aquecedores, ou em local onde incida diretamente a luz do sol. A instalação em local inadequado prejudica o funcionamento do refrigerador e aumenta o consumo de energia.\n\nO não atendimento dessa recomendação resulta em aumento do consumo de energia porque",
+        "opcoes": [
+          "o fluxo de calor por condução no condensador sofre considerável redução.",
+          "a temperatura da substância refrigerante no condensador diminui mais rapidamente.",
+          "o fluxo de calor promove significativa elevação da temperatura no interior do refrigerador.",
+          "a liquefação da substância refrigerante no condensador exige mais trabalho do compressor.",
+          "as correntes de convecção nas proximidades do condensador ocorrem com maior dificuldade."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:af8158a6",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 105"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.106Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:ba42e9e3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um mergulhador fica preso ao explorar uma caverna no oceano. Dentro da caverna formou-se um bolsão de ar, como mostrado na figura, onde o mergulhador se abrigou.\n\n[[imagem:0]]\n\nDurante o resgate, para evitar danos a seu organismo, foi necessário que o mergulhador passasse por um processo de descompressão antes de retornar à superfície para que seu corpo ficasse novamente sob pressão atmosférica. O gráfico mostra a relação entre os tempos de descompressão recomendados para indivíduos nessa situação e a variação de pressão.\n\n[[imagem:1]]\n\nConsidere que a aceleração da gravidade seja igual a 10 m s⁻²e que a densidade da água seja de ρ = 1 000 kg m⁻³.\n\nEm minutos, qual é o tempo de descompressão a que o mergulhador deverá ser submetido?",
+        "opcoes": [
+          "100",
+          "80",
+          "60",
+          "40",
+          "20"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q106-1.webp",
+            "alt": "Imagem da questão 106 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 868,
+            "altura": 496
+          },
+          {
+            "url": "/content/img/2020/d2-q106-2.webp",
+            "alt": "Imagem 2 da questão 106 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 100\n80\n60\n40\nTempo de 20\n100 200 300 400 500 600 700\ndescompressão (min)\nVariação de pressão (kPa)",
+            "largura": 895,
+            "altura": 425
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:ba42e9e3",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 106"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:17.000Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:8f003700",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Torre Eiffel, com seus 324 metros de altura, feita com treliças de ferro, pesava 7 300 toneladas quando terminou de ser construída em 1889. Um arquiteto resolve construir um protótipo dessa torre em escala 1:100, usando os mesmos materiais (cada dimensão linear em escala de 1:100 do monumento real).\n\nConsidere que a torre real tenha uma massa Mₜₒᵣᵣₑ e exerça na fundação sobre a qual foi erguida uma\n\npressão Pₜₒᵣᵣₑ. O modelo construído pelo arquiteto terá\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nComo a pressão exercida pela torre se compara com a pressão exercida pelo protótipo? Ou seja, qual é a razão\n\n[[imagem:2]]",
+        "opcoes": [
+          "10⁰",
+          "10¹",
+          "10²",
+          "10⁴",
+          "10⁶"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q107-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 107 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 951,
+            "altura": 47
+          },
+          {
+            "url": "/content/img/2020/d2-q107-2.webp",
+            "alt": "Imagem 2 da questão 107 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 620,
+            "altura": 1028
+          },
+          {
+            "url": "/content/img/2020/d2-q107-3.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 107 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 626,
+            "altura": 47
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:8f003700",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 107"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.339Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:2cf06764",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A nanotecnologia pode ser caracterizada quando os compostos estão na ordem de milionésimos de milímetros, como na utilização de nanomateriais catalíticos nos processos industriais. O uso desses materiais aumenta a eficiência da produção, consome menos energia e gera menores quantidades de resíduos. O sucesso dessa aplicação tecnológica muitas vezes está relacionado ao aumento da velocidade da reação química envolvida.\n\nO êxito da aplicação dessa tecnologia é por causa da realização de reações químicas que ocorrem em condições de",
+        "opcoes": [
+          "alta pressão.",
+          "alta temperatura.",
+          "excesso de reagentes.",
+          "maior superfície de contato.",
+          "elevada energia de ativação."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:2cf06764",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 110"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.340Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:111a2fb4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nos desenhos animados, com frequência se vê um personagem correndo na direção de um abismo, mas, ao invés de cair, ele continua andando no vazio e só quando percebe que não há nada sob seus pés é que ele para de andar e cai verticalmente. No entanto, para observar uma trajetória de queda num experimento real, pode-se lançar uma bolinha, com velocidade constante (V₀), sobre a superfície de uma mesa e verificar o seu movimento de queda até o chão.\n\nQual figura melhor representa a trajetória de queda da bolinha?",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2020/d2-q113-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 113 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: V\n0\nMesa\nSolo",
+            "largura": 484,
+            "altura": 394
+          },
+          {
+            "url": "/content/img/2020/d2-q113-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 113 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: V\n0\nMesa\nSolo",
+            "largura": 484,
+            "altura": 394
+          },
+          {
+            "url": "/content/img/2020/d2-q113-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 113 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: V\n0\nMesa\nSolo",
+            "largura": 484,
+            "altura": 395
+          },
+          {
+            "url": "/content/img/2020/d2-q113-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 113 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 484,
+            "altura": 395
+          },
+          {
+            "url": "/content/img/2020/d2-q113-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 113 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: V\n0\nMesa\nSolo",
+            "largura": 484,
+            "altura": 396
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:111a2fb4",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 113"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.529Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:ef728a1f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dois engenheiros estão verificando se uma cavidade perfurada no solo está de acordo com o planejamento de uma obra, cuja profundidade requerida é de 30 m. O teste é feito por um dispositivo denominado oscilador de áudio de frequência variável, que permite relacionar a profundidade com os valores da frequência de duas ressonâncias consecutivas, assim como em um tubo sonoro fechado. A menor frequência de ressonância que o aparelho mediu foi 135 Hz. Considere que a velocidade do som dentro da cavidade perfurada é de 360 m s⁻¹.\n\nSe a profundidade estiver de acordo com o projeto, qual será o valor da próxima frequência de ressonância que será medida?",
+        "opcoes": [
+          "137 Hz.",
+          "138 Hz.",
+          "141 Hz.",
+          "144 Hz.",
+          "159 Hz."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:ef728a1f",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 114"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.530Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:6ae16f10",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um estudante tem uma fonte de tensão com corrente contínua que opera em tensão fixa de 12 V. Como precisa alimentar equipamentos que operam em tensões menores, ele emprega quatro resistores de 100 Ω para construir um divisor de tensão. Obtém-se este divisor associando os resistores, como exibido na figura. Os aparelhos podem ser ligados entre os pontos A, B, C, D e E, dependendo da tensão especificada.\n\n[[imagem:0]]\n\nA B C D E\n\nEle tem um equipamento que opera em 9,0 V com uma resistência interna de 10 kΩ.\n\nEntre quais pontos do divisor de tensão esse equipamento deve ser ligado para funcionar corretamente e qual será o valor da intensidade da corrente nele estabelecida?",
+        "opcoes": [
+          "Entre A e C; 30 mA.",
+          "Entre B e E; 30 mA.",
+          "Entre A e D; 1,2 mA.",
+          "Entre B e E; 0,9 mA.",
+          "Entre A e E; 0,9 mA."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q116-1.webp",
+            "alt": "Imagem da questão 116 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Fonte CC\n+ −\n12 V\n100 Ω 100 Ω 100 Ω 100 Ω",
+            "largura": 988,
+            "altura": 531
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:6ae16f10",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 116"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.583Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:df0c6684",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em seu laboratório, um técnico em química foi incumbido de tratar um resíduo, evitando seu descarte direto no meio ambiente. Ao encontrar o frasco, observou a seguinte informação: “Resíduo: mistura de acetato de etila e água”.\n\nConsidere os dados do acetato de etila:\n• Baixa solubilidade em água;\n• Massa específica = 0,9 g cm⁻³;\n• Temperatura de fusão = −83 °C;\n• Pressão de vapor maior que a da água.\nA fim de tratar o resíduo, recuperando o acetato de etila, o técnico deve",
+        "opcoes": [
+          "evaporar o acetato de etila sem alterar o conteúdo de água.",
+          "filtrar a mistura utilizando um funil comum e um papel de filtro.",
+          "realizar uma destilação simples para separar a água do acetato de etila.",
+          "proceder a uma centrifugação da mistura para remover o acetato de etila.",
+          "decantar a mistura separando os dois componentes em um funil adequado."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:df0c6684",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 123"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.703Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:c00b4199",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Herschel, em 1880, começou a escrever sobre a condensação da luz solar no foco de uma lente e queria verificar de que maneira os raios coloridos contribuem para o aquecimento. Para isso, ele projetou sobre um anteparo o espectro solar obtido com um prisma, colocou termômetros nas diversas faixas de cores e verificou nos dados obtidos que um dos termômetros iluminados indicou um aumento de temperatura maior para uma determinada faixa de frequências.\n\nSAYURI, M.; GASPAR, M. B. Infravermelho na sala de aula. Disponível em: www.cienciamao.usp.br. Acesso em: 15 ago. 2016 (adaptado).\n\nPara verificar a hipótese de Herschel, um estudante montou o dispositivo apresentado na figura. Nesse aparato, cinco recipientes contendo água, à mesma temperatura inicial, e separados por um material isolante térmico e refletor são posicionados lado a lado (A, B, C, D e E) no interior de uma caixa de material isolante térmico e opaco. A luz solar, ao entrar na caixa, atravessa o prisma e incide sobre os recipientes. O estudante aguarda até que ocorra o aumento da temperatura e a afere em cada recipiente.\n\n[[imagem:0]]\n\nEm qual dos recipientes a água terá maior temperatura ao final do experimento?",
+        "opcoes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q130-1.webp",
+            "alt": "Imagem da questão 130 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Incidência de luz\nsolar\nPRISMA\nCaixa isolada e\nopaca\nLuz\nsolar\ndecomposta\nVermelho Violeta\nEspectro\nvisível\nA B C D E\nRecipientes",
+            "largura": 812,
+            "altura": 1040
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:c00b4199",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 130"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.880Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

@@ -55,38 +55,46 @@
       }
     },
     {
-      "id": "oficial:2023:3bb5b31f",
+      "id": "oficial:2023:92f7b252",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\nSetor Produção: 75 funcionários, salário R$ 2 000,00.\nSetor Administração: 25 funcionários, salário R$ 7 000,00.\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+        "pergunta": "A figura representa uma escada com três degraus, construída em concreto maciço, com suas medidas especificadas.\n\n[[imagem:0]]\n\nNessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.\nA área a ser revestida em cerâmica, em metro quadrado, mede",
         "opcoes": [
-          "2 000,00.",
-          "2 500,00.",
-          "3 250,00.",
-          "4 500,00.",
-          "9 000,00."
+          "1,20.",
+          "1,35.",
+          "1,65.",
+          "1,80.",
+          "1,95."
         ],
-        "correta": 2,
-        "explicacao": "Média ponderada: (75 × 2000 + 25 × 7000) / 100 = (150000 + 175000) / 100 = 325000/100 = R$ 3 250,00.",
-        "fonte": "ENEM 2023"
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q139-1.webp",
+            "alt": "Imagem da questão 139 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1116,
+            "altura": 792
+          }
+        ]
       },
       "meta": {
-        "id": "oficial:2023:3bb5b31f",
+        "id": "oficial:2023:92f7b252",
         "version": 1,
         "skillIds": [
-          "mat:media-mediana-moda"
+          "mat:area-perimetro-figuras-planas"
         ],
-        "difficulty": 2,
+        "difficulty": 3,
         "irt": {
           "a": 1,
-          "b": -0.8,
+          "b": 0,
           "c": 0.2,
           "source": "estimado"
         },
         "roles": [
           "pratica",
-          "revisao",
-          "diagnostico"
+          "revisao"
         ],
         "estimatedSeconds": 90,
         "dontKnowAllowed": true,
@@ -94,17 +102,259 @@
           "kind": "oficial",
           "exam": "ENEM",
           "year": 2023,
-          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 151"
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 139"
         },
         "validation": {
           "status": "oficial-conferida",
-          "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente",
+          "reviewedAt": "2026-10-02T19:42:10.428Z",
+          "reviewer": "importador-inep",
           "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:2eb77f77",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar o atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila.\n\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila.\n\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila.\n\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila.\n\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila.\n\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
+        "opcoes": [
+          "I.",
+          "II.",
+          "III.",
+          "IV.",
+          "V."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:2eb77f77",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 140"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.901Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:9245baa3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As figuras pintadas no quadro da sala de estar de uma residência representam as silhuetas de parte das torres de um castelo e, ao fundo, a de uma lua cheia. A lua foi pintada na forma de um círculo, e o telhado da torre mais alta, na forma de triângulo equilátero, foi pintado sobrepondo parte da lua. O centro da lua coincide com um dos vértices do telhado da torre mais alta.\n\n[[imagem:0]]\n\nNesse quadro, a parte da lua escondida atrás da torre mais alta do castelo pode ser representada por um",
+        "opcoes": [
+          "cone.",
+          "setor circular.",
+          "segmento circular.",
+          "triângulo isósceles.",
+          "arco de circunferência."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q141-1.webp",
+            "alt": "Imagem da questão 141 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 652,
+            "altura": 608
+          }
         ]
+      },
+      "meta": {
+        "id": "oficial:2023:9245baa3",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 141"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.954Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:1624921d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na planta baixa de um clube, a piscina é representada por um quadrado cuja área real mede 400 m². Ao redor dessa piscina, será construída uma calçada, de largura constante igual a 5 m.\n\n[[imagem:0]]\n\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
+        "opcoes": [
+          "1 000",
+          "900",
+          "600",
+          "500",
+          "400"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q142-1.webp",
+            "alt": "Imagem da questão 142 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 5 m\nCalçada\n5 m\nPiscina\n5 m\n5 m",
+            "largura": 987,
+            "altura": 724
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:1624921d",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 142"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:20.571Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:ceafdee8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa caminha por 30 minutos e utiliza um aplicativo instalado em seu celular para monitorar a variação da intensidade do sinal de internet recebido pelo aparelho durante o deslocamento. Chegando ao seu destino, o aplicativo forneceu este gráfico:\n\n[[imagem:0]]\n\nPor quantos minutos, durante essa caminhada, o celular dessa pessoa ficou sem receber sinal de internet?",
+        "opcoes": [
+          "6",
+          "8",
+          "10",
+          "14",
+          "24"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q143-1.webp",
+            "alt": "Imagem da questão 143 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Intensidade do sinal de internet\n0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30\nTempo (min)",
+            "largura": 1007,
+            "altura": 615
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:ceafdee8",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 143"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:46.085Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     },
     {
@@ -163,6 +413,947 @@
       "retired": true
     },
     {
+      "id": "oficial:2023:dd09b4a1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R$ 500,00 e que o metro cúbico do concreto bombeado é de R$ 250,00.\n\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
+        "opcoes": [
+          "y = 250x",
+          "y = 500x",
+          "y = 750x",
+          "y = 250x + 500",
+          "y = 500x + 250"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:dd09b4a1",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 145"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.897Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:eb62ee68",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Estudantes trabalhando com robótica criaram uma “torneira inteligente” que automatiza sua abertura e seu fechamento durante a limpeza das mãos. A tecnologia funciona da seguinte forma: ao se colocarem as mãos sob a torneira, ela libera água durante 3 segundos para que a pessoa possa molhá-las. Em seguida, interrompe o fornecimento de água por 5 segundos, enquanto a pessoa ensaboa suas mãos, e finaliza o ciclo liberando água para o enxágue por mais 3 segundos. Considere o tempo (t ), em segundo, contado a partir do instante em que se inicia o ciclo. A vazão de água nessa torneira é constante.\n\nUm esboço de gráfico que descreve o volume de água acumulado, em litro, liberado por essa torneira durante um ciclo de lavagem das mãos, em função do tempo ( t ), em segundo, é",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2023/d2-q147-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 147 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Volume de água (L)\n0 1 2 3 4 5 6 7 8 9 10 11 12\nt (s)",
+            "largura": 697,
+            "altura": 388
+          },
+          {
+            "url": "/content/img/2023/d2-q147-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 147 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 697,
+            "altura": 393
+          },
+          {
+            "url": "/content/img/2023/d2-q147-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 147 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Volume de água (L)\n0 1 2 3 4 5 6 7 8 9 10 11 12\nt (s)",
+            "largura": 697,
+            "altura": 387
+          },
+          {
+            "url": "/content/img/2023/d2-q147-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 147 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Volume de água (L)\n0 1 2 3 4 5 6 7 8 9 10 11 12\nt (s)",
+            "largura": 697,
+            "altura": 382
+          },
+          {
+            "url": "/content/img/2023/d2-q147-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 147 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Volume de água (L)\n0 1 2 3 4 5 6 7 8 9 10 11 12\nt (s)",
+            "largura": 699,
+            "altura": 387
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:eb62ee68",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 147"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:38.130Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:00807be1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As características culturais variam de povo para povo. Há notícias de um povo que possuía formas de contar diferentes das nossas, como indicado no quadrinho a seguir.\n\n[[imagem:0]]\n\nSegundo o padrão de contagem indicado na figura, as representações dos numerais cinco e sete, nessa cultura, devem ser, respectivamente,",
+        "opcoes": [
+          "okosa urapum urapum urapum e okosa okosa urapum urapum urapum.",
+          "okosa okosa urapum e okosa okosa okosa okosa urapum.",
+          "okosa okosa urapum e okosa okosa okosa urapum.",
+          "okosa urapum urapum e okosa urapum okosa urapum urapum.",
+          "okosa okosa urapum e okosa okosa okosa okosa."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q148-1.webp",
+            "alt": "Imagem da questão 148 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 920,
+            "altura": 680
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:00807be1",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 148"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:46.481Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:59df3beb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados:\n\n• outubro/2020: ImPC = 250 mm;\n• novembro/2020: ImPC = 150 mm;\n• dezembro/2020: ImPC = 200 mm;\n• janeiro/2021: ImPC = 450 mm;\n• fevereiro/2021: ImPC = 100 mm;\n• março/2021: ImPC = 200 mm.\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.\n\nNo início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+        "opcoes": [
+          "Outubro.",
+          "Novembro.",
+          "Dezembro.",
+          "Janeiro.",
+          "Fevereiro."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:59df3beb",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 149"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:38.309Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:26736852",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um artista plástico esculpe uma escultura a partir de um bloco de madeira de lei, em etapas. Inicialmente, esculpe um cone reto com 36 cm de altura e diâmetro da base medindo 18 cm. Em seguida, remove desse cone um cone menor, cujo diâmetro da base mede 6 cm, obtendo, assim, um tronco de cone, conforme ilustrado na figura.\n\n[[imagem:0]]\n\nEm seguida, perfura esse tronco de cone, removendo um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o mesmo do cone original. Dessa forma, ao final, a escultura tem a forma de um tronco de cone com uma perfuração cilíndrica de base a base.\n\nO tipo de madeira utilizada para produzir essa escultura tem massa igual a 0,6 g por centímetro cúbico de volume.\n\nUtilize 3 como aproximação para π.\n\nQual é a massa, em grama, dessa escultura?",
+        "opcoes": [
+          "1 198,8",
+          "1 296,0",
+          "1 360,8",
+          "4 665,6",
+          "4 860,0"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q150-1.webp",
+            "alt": "Imagem da questão 150 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 6 cm\n36 cm\n18 cm",
+            "largura": 1028,
+            "altura": 763
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:26736852",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 150"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:38.375Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:3bb5b31f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\nSetor Produção: 75 funcionários, salário R$ 2 000,00.\nSetor Administração: 25 funcionários, salário R$ 7 000,00.\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+        "opcoes": [
+          "2 000,00.",
+          "2 500,00.",
+          "3 250,00.",
+          "4 500,00.",
+          "9 000,00."
+        ],
+        "correta": 2,
+        "explicacao": "Média ponderada: (75 × 2000 + 25 × 7000) / 100 = (150000 + 175000) / 100 = 325000/100 = R$ 3 250,00.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:3bb5b31f",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": -0.8,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 151"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:823a7153",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20% e a probabilidade de se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna.\n\nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.\n\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+        "opcoes": [
+          "20",
+          "60",
+          "64",
+          "68",
+          "80"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:823a7153",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 152"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:46.482Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:49f882bc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas.\n\nDisponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+        "opcoes": [
+          "C = 0,9q",
+          "C = 0,1q",
+          "C = 1 − 0,1q",
+          "C = 1 − 0,9q",
+          "C = q − 10"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:49f882bc",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 153"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:46.483Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:84e98509",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A exposição a alguns níveis sonoros pode causar lesões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o funcionário opera e o nível N de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo N = log₁₀I¹⁰ − log₁₀I₀¹⁰ , I a intensidade do som e I₀ = 10⁻¹² W/m².\n\nDisponível em: www.sofisica.com.br. Acesso em: 8 jul. 2015 (adaptado).\n\nQuando o som é considerado baixo, ou seja, N = 48 dB ou menos, deve ser utilizada a medida preventiva I. No caso de o som ser moderado, quando N está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva II. Quando o som é moderado alto, que equivale a N no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a III. Se N estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve ser utilizada a medida preventiva IV. E se o som é considerado muito alto, com N maior que 115 dB, deve-se utilizar a medida preventiva V.\n\nUma nova máquina, com I = 8 × 10⁻⁸ W/m², foi adquirida e será classificada de acordo com o nível de ruído que produz.\n\nConsidere 0,3 como aproximação para log₁₀2.\n\nO funcionário que operará a nova máquina deverá adotar a medida preventiva",
+        "opcoes": [
+          "I.",
+          "II.",
+          "III.",
+          "IV.",
+          "V."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:84e98509",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 155"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:21.105Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:44f2b06f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Analisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real,\n\n[[imagem:0]]\n\nem que os valores de x representam os dias do mês, variando de 1 a 30.\n\nUm dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário V₀ arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir, em que as quantidades estão expressas em milhar de real.\n\n• Ótimo: V₀ ≥ 24\n• Bom: 20 ≤ V₀ < 24\n• Normal: 10 ≤ V₀ < 20\n• Ruim: 4 ≤ V₀ < 10\n• Péssimo: V₀ < 4\nNo caso analisado, qual seria a classificação do desempenho da empresa?",
+        "opcoes": [
+          "Ótimo.",
+          "Bom.",
+          "Normal.",
+          "Ruim.",
+          "Péssimo."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q158-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 158 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 995,
+            "altura": 94
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:44f2b06f",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 158"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:46.573Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:3ffee3e9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um professor, para promover a aprendizagem dos estudantes em estatística, propôs uma atividade. O objetivo era verificar o percentual de estudantes com massa corporal abaixo da média e altura acima da média de um grupo de estudantes. Para isso, usando uma balança e uma fita métrica, avaliou uma amostra de dez estudantes, anotando as medidas observadas. O gráfico apresenta a massa corporal, em quilograma, e a altura, em metro, obtidas na atividade.\n\nMassa corporal e altura de estudantes\n\n[[imagem:0]]\n\nApós a coleta dos dados, os estudantes calcularam a média dos valores obtidos, referentes à massa corporal e à altura, obtendo, respectivamente, 80 kg e 1,65 m.\n\nQual é o percentual de estudantes dessa amostra com massa corporal abaixo da média e altura acima da média?",
+        "opcoes": [
+          "10",
+          "20",
+          "30",
+          "50",
+          "70"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q159-1.webp",
+            "alt": "Imagem da questão 159 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Altura (m)\n1,8\n1,75\n1,7\n1,65\n1,6\n1,55\n1,5\n1,45\n0 20 40 60 80 100 120 140\nMassa corporal (kg)",
+            "largura": 898,
+            "altura": 488
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:3ffee3e9",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 159"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:38.509Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:6f47f1aa",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pescador tem um custo fixo diário de R$ 900,00 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,00 por dia. Sozinho, ele consegue, ao final de um dia de trabalho, pescar 180 kg de peixe, o que é suficiente apenas para cobrir o custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R$ 250,00 por dia de trabalho. Além desse valor, 4% da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho.\n\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+        "opcoes": [
+          "1.",
+          "2.",
+          "3.",
+          "4.",
+          "5."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:6f47f1aa",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 160"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:38.509Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:6972c179",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.\n\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+        "opcoes": [
+          "2",
+          "4",
+          "6",
+          "12",
+          "18"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:6972c179",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 161"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:46.617Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:c14eabfc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ao realizar o cadastro em um aplicativo de investimentos,\nfoi solicitado ao usuário que criasse uma senha, sendo\npermitido o uso somente dos seguintes caracteres:\n\n• algarismos de 0 a 9;\n• 26 letras minúsculas do alfabeto;\n• 26 letras maiúsculas do alfabeto;\n\n[[imagem:0]]\n\nTrês tipos de estruturas para senha foram apresentadas ao usuário:\n\n• tipo I: formada por quaisquer quatro caracteres\ndistintos, escolhidos dentre os permitidos;\n\n• tipo II: formada por cinco caracteres distintos,\niniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial;\n\n• tipo III: formada por seis caracteres distintos, iniciando\npor duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais.\n\nConsidere p₁, p₂ e p₃ as probabilidades de se descobrirem ao acaso, na primeira tentativa, as senhas dos tipos I, II e III, respectivamente.\n\nNessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na primeira tentativa, é o",
+        "opcoes": [
+          "tipo I, pois p₁ < p₂ < p₃.",
+          "tipo I, pois tem menor quantidade de caracteres.",
+          "tipo II, pois tem maior quantidade de letras.",
+          "tipo III, pois p₃ < p₂ < p₁.",
+          "tipo III, pois tem maior quantidade de caracteres."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q162-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 162 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 705,
+            "altura": 47
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:c14eabfc",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 162"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:21.193Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:170f131e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A figura ilustra uma roda-gigante no exato instante em que a cadeira onde se encontra a pessoa P está no ponto mais alto dessa roda-gigante.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\ngira, com velocidade angular constante e no sentido horário, a altura da cadeira onde se encontra a pessoa P, em relação ao solo, vai se alterando.\n\nO gráfico que melhor representa a variação dessa altura, em função do tempo, contado a partir do instante em que a cadeira da pessoa P se encontra na posição mais alta da roda-gigante, é",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q164-1.webp",
+            "alt": "Imagem da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: P\nSolo",
+            "largura": 706,
+            "altura": 760
+          },
+          {
+            "url": "/content/img/2023/d2-q164-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 927,
+            "altura": 116
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2023/d2-q164-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 846,
+            "altura": 315
+          },
+          {
+            "url": "/content/img/2023/d2-q164-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Altura em\nrelação ao solo\n0 Tempo",
+            "largura": 846,
+            "altura": 314
+          },
+          {
+            "url": "/content/img/2023/d2-q164-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Altura em\nrelação ao solo\n0 Tempo",
+            "largura": 846,
+            "altura": 314
+          },
+          {
+            "url": "/content/img/2023/d2-q164-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Altura em\nrelação ao solo\n0 Tempo",
+            "largura": 846,
+            "altura": 316
+          },
+          {
+            "url": "/content/img/2023/d2-q164-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 164 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Altura em\nrelação ao solo\n0 Tempo",
+            "largura": 846,
+            "altura": 314
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:170f131e",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 164"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:47.016Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
       "id": "oficial:2023:8862844c",
       "exercise": {
         "type": "multipla-escolha",
@@ -213,6 +1404,515 @@
         "examProfiles": [
           "enem"
         ]
+      }
+    },
+    {
+      "id": "oficial:2023:7090adb9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\n\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água\n\ndurante os 10 dias seguintes. Considere 3 como aproximação para π.\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+        "opcoes": [
+          "50",
+          "60",
+          "80",
+          "140",
+          "150"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:7090adb9",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 166"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:47.017Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b6169899",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+        "opcoes": [
+          "10.",
+          "11.",
+          "13.",
+          "30.",
+          "33."
+        ],
+        "correta": 1,
+        "explicacao": "Lista de espera deste ano: 400 × 1,1 = 440. Meta do próximo ano: 440 × 0,75 = 330. Sem novas salas, a lista do próximo ano seria igual à deste ano (440, dado do enunciado), então é preciso reduzir em 440 − 330 = 110 nomes, o que exige atender 110 crianças a mais — ou seja, 11 novas salas de 10 vagas cada.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b6169899",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-fator-multiplicativo"
+        ],
+        "difficulty": 5,
+        "irt": {
+          "a": 1,
+          "b": 1.6,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 167"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:1b58c366",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base, foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro.\n\n[[tabela:0]]\n\n[[imagem:0]]\n\nQual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
+        "opcoes": [
+          "0,3",
+          "0,5",
+          "0,9",
+          "1,8",
+          "2,7"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q168-1.webp",
+            "alt": "Imagem da questão 168 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Disponível em: www.paraibamix.com. Acesso em: 3 dez. 2012.",
+            "largura": 1004,
+            "altura": 716
+          }
+        ],
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Horário (h)",
+              "Nível da água (m)"
+            ],
+            "linhas": [
+              [
+                "6:00",
+                "0,5"
+              ],
+              [
+                "8:00",
+                "1,1"
+              ],
+              [
+                "12:00",
+                "2,3"
+              ],
+              [
+                "15:00",
+                "3,2"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:1b58c366",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 168"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:21.640Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:3514715b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Num certo momento de um jogo digital, a tela apresenta a imagem representada na figura. O ponto Q₁ representa a posição de um jogador que está com a bola, os pontos Q₂, Q₃, Q₄, Q₅e Q₆também indicam posições de jogadores da mesma equipe, e os pontos A e B indicam os dois pés da trave mais próxima deles. No momento da partida retratado, o jogador Q₁tem a posse da bola, que será passada para um dos outros jogadores das posições\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nQual é o jogador que receberá a bola?",
+        "opcoes": [
+          "Q₂",
+          "Q₃",
+          "Q₄",
+          "Q₅",
+          "Q₆"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q169-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 169 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 995,
+            "altura": 104
+          },
+          {
+            "url": "/content/img/2023/d2-q169-2.webp",
+            "alt": "Imagem 2 da questão 169 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Q 3\nA\nQ 4 Q 2\nB α Q 5\nQ 1\nQ 6",
+            "largura": 975,
+            "altura": 524
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:3514715b",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 169"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:47.354Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:52b322a6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O triângulo da figura é denominado triângulo mágico. Nos círculos, escrevem-se os números de 1 a 6, sem repetição, com um número em cada círculo. O objetivo é distribuir os números de forma que as somas dos números em cada lado do triângulo sejam iguais.\n\n[[imagem:0]]\n\nConsidere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2.\n\nNas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo?",
+        "opcoes": [
+          "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 7.",
+          "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 9.",
+          "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 7 e outra em que as somas são iguais a 9.",
+          "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 9 e outra em que as somas são iguais a 12.",
+          "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 10 e outra em que as somas são iguais a 11."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q170-1.webp",
+            "alt": "Imagem da questão 170 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 436,
+            "altura": 420
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:52b322a6",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 170"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:47.393Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:92469ee0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O gerente de uma fábrica pretende comparar a evolução das vendas de dois produtos similares (I e II). Para isso, passou a verificar o número de unidades vendidas de cada um desses produtos em cada mês. Os resultados dessa verificação, para os meses de abril a junho, são apresentados na tabela.\n\n[[imagem:0]]\n\nO gerente estava decidido a cessar a produção do produto II no mês seguinte àquele em que as vendas do produto I superassem as do produto II.\n\nSuponha que a variação na quantidade de unidades vendidas dos produtos I e II se manteve, mês a mês, como no período representado na tabela.\nEm qual mês o produto II parou de ser produzido?",
+        "opcoes": [
+          "Junho.",
+          "Julho.",
+          "Agosto.",
+          "Setembro.",
+          "Outubro."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q171-1.webp",
+            "alt": "Imagem da questão 171 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Vendas Vendas Vendas\nProduto em abril em maio em junho\n(unidade) (unidade) (unidade)\nl 80 90 100\nll 190 170 150",
+            "largura": 1004,
+            "altura": 364
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:92469ee0",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 171"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:47.434Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:4578d9c9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte de seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que apresenta o número de horas diárias por atividade.\n\n[[tabela:0]]\n\nEla deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) são os seguintes:\n\n[[tabela:1]]\n\nO dia da semana em que será comemorado o aniversário é",
+        "opcoes": [
+          "segunda-feira.",
+          "terça-feira.",
+          "quarta-feira.",
+          "quinta-feira.",
+          "sexta-feira."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Dias da semana",
+              "Caminhar",
+              "Correr",
+              "Andar de bicicleta",
+              "Jogar futebol"
+            ],
+            "linhas": [
+              [
+                "Segunda-feira",
+                "1,0",
+                "0,5",
+                "0,0",
+                "2,0"
+              ],
+              [
+                "Terça-feira",
+                "0,5",
+                "1,0",
+                "0,5",
+                "1,0"
+              ],
+              [
+                "Quarta-feira",
+                "0,0",
+                "1,5",
+                "1,0",
+                "0,5"
+              ],
+              [
+                "Quinta-feira",
+                "0,0",
+                "2,0",
+                "0,0",
+                "0,0"
+              ],
+              [
+                "Sexta-feira",
+                "0,0",
+                "0,5",
+                "0,0",
+                "2,5"
+              ]
+            ]
+          },
+          {
+            "cabecalho": [
+              "Atividade física",
+              "Caminhar",
+              "Correr",
+              "Andar de bicicleta",
+              "Jogar futebol"
+            ],
+            "linhas": [
+              [
+                "Gasto calórico (cal/h)",
+                "248",
+                "764",
+                "356",
+                "492"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:4578d9c9",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 173"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:21.795Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     },
     {
@@ -269,38 +1969,37 @@
       }
     },
     {
-      "id": "oficial:2023:b6169899",
+      "id": "oficial:2023:85f75ac7",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+        "pergunta": "Alguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada.\n\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o\ndesempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado).\n\nUm casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos.\n\nA quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
         "opcoes": [
-          "10.",
-          "11.",
-          "13.",
-          "30.",
-          "33."
+          "1.",
+          "4.",
+          "6.",
+          "7.",
+          "8."
         ],
-        "correta": 1,
-        "explicacao": "Lista de espera deste ano: 400 × 1,1 = 440. Meta do próximo ano: 440 × 0,75 = 330. Sem novas salas, a lista do próximo ano seria igual à deste ano (440, dado do enunciado), então é preciso reduzir em 440 − 330 = 110 nomes, o que exige atender 110 crianças a mais — ou seja, 11 novas salas de 10 vagas cada.",
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
         "fonte": "ENEM 2023"
       },
       "meta": {
-        "id": "oficial:2023:b6169899",
+        "id": "oficial:2023:85f75ac7",
         "version": 1,
         "skillIds": [
-          "mat:porcentagem-fator-multiplicativo"
+          "mat:operacoes-fundamentais"
         ],
-        "difficulty": 5,
+        "difficulty": 3,
         "irt": {
           "a": 1,
-          "b": 1.6,
+          "b": 0,
           "c": 0.2,
           "source": "estimado"
         },
         "roles": [
           "pratica",
-          "revisao",
-          "diagnostico"
+          "revisao"
         ],
         "estimatedSeconds": 90,
         "dontKnowAllowed": true,
@@ -308,17 +2007,71 @@
           "kind": "oficial",
           "exam": "ENEM",
           "year": 2023,
-          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 167"
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 175"
         },
         "validation": {
           "status": "oficial-conferida",
-          "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente",
+          "reviewedAt": "2026-10-02T19:30:21.796Z",
+          "reviewer": "importador-inep",
           "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
-        ]
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:bdca292c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso, e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab.\n\nDisponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\n\nDe acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+        "opcoes": [
+          "741",
+          "1 040",
+          "1 460",
+          "2 100",
+          "5 200"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:bdca292c",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 178"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:47.582Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     }
   ]

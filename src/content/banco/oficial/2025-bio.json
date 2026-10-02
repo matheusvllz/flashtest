@@ -1,0 +1,1152 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "oficial:2025:92f4bc99",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A maioria dos seres vivos tem um relógio biológico (ciclo circadiano), que regula as mudanças metabólicas e comportamentais de acordo com o ciclo de 24 horas de rotação da Terra. Em 2015, um artigo publicado na revista Science Advantage mostrou ser possível a transferência dos genes do relógio circadiano da cianobactéria Synechococcus elongatus para o genoma da bactéria Escherichia coli, um organismo não circadiano.\n\nCHEN, A. H. et al. Transplantability of a Circardian Lock\nto Noncircardian Organism. Science Advantage,\nn. 1, 2015 (adaptado).\n\nEstarão presentes no organismo geneticamente modificado os genes do",
+        "opcoes": [
+          "metabolismo de E. coli, apenas.",
+          "ciclo circadiano de E. coli, apenas.",
+          "metabolismo de S. elongatus e do ciclo circadiano de E. coli.",
+          "ciclo circadiano de S. elongatus e do metabolismo de E. coli.",
+          "ciclo circadiano de S. elongatus e do ciclo circadiano de E. coli."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:92f4bc99",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 92"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.795Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:006669c8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os funcionários de um zoológico observaram um aumento na taxa de mortalidade de aves aquáticas por afogamento. Um grupo de biólogos analisou o comportamento das aves por várias semanas e observou que elas apresentavam dificuldade de flutuação, por causa do encharcamento das penas com água.\n\nO aumento na taxa de mortalidade dessas aves estava associado a uma redução na",
+        "opcoes": [
+          "dilatação do papo.",
+          "reposição de penas das asas.",
+          "secreção da glândula uropigial.",
+          "formação da membrana natatória.",
+          "largura das cavidades de ossos pneumáticos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:006669c8",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 93"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.795Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:07c84926",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os sapinhos-ponta-de-flecha constituem um grupo de espécies encontradas na América Central e do Sul. Seus venenos são obtidos por meio do consumo de algumas formigas e cupins que se alimentam de plantas que contêm esses venenos. Esses anfíbios são usados para envenenar as flechas das zarabatanas dos caçadores nativos. Quando capturados e criados em condições artificiais, ou quando nascidos em cativeiro, não são tóxicos.\n\nBADIO, B. et al. Epibatidine: Discovery and Definition as a Potent\nAnalgesic and Nicotinic Agonist. Med. Chem. Res.,\nn. 4, 1994 (adaptado).\n\nA perda da capacidade de se obter a toxina nos nascidos em cativeiro é causada pela",
+        "opcoes": [
+          "diferença de umidade entre os ambientes.",
+          "ausência de alimentação natural.",
+          "adaptação ao novo ambiente.",
+          "mudança de comportamento.",
+          "variabilidade genética."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:07c84926",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 96"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.864Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:bb857afb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A produção de vacinas exige uma sequência de procedimentos, além do cumprimento estrito de verificações de segurança. No esquema, estão demonstradas as etapas básicas realizadas para a fabricação de uma vacina utilizando a tecnologia tradicional e o efeito dela no organismo.\n\n[[imagem:0]]\n\nO antígeno utilizado na vacina causa um efeito protetor contra o vírus porque",
+        "opcoes": [
+          "mata o vírus pela ligação.",
+          "aglutina o vírus por associação.",
+          "contém imunoglobulinas de defesa.",
+          "induz a produção de proteínas neutralizadoras.",
+          "mantém a quantidade de anticorpos preexistentes."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q097-1.webp",
+            "alt": "Imagem da questão 97 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 988,
+            "altura": 780
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:bb857afb",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 97"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.944Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:5cf66e7d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O bioma Cerrado é caracterizado por apresentar ampla e natural diversidade de espécies vegetais. Nos últimos tempos, o homem vem modificando esse cenário pela inserção de plantas exóticas nesse ambiente. Exemplo disso é o cultivo do capim-gordura, nativo do continente africano e utilizado nesse tipo de ecossistema como forma de pastagem. É importante ressaltar que essa espécie vegetal é capaz de se espalhar por grandes áreas, devido à sua agressividade e poder competitivo.\n\nCARLOS JR., L. A.; BARBOSA, N. P. U.; FERNANDES, G. W.\n\nO capim-gordura e as invasões no Cerrado brasileiro.\n\nJornal do Biólogo, mar.-jun. 2008 (adaptado).\n\nEm longo prazo, essa ação do homem pode gerar qual consequência?",
+        "opcoes": [
+          "Diversificar nichos ecológicos.",
+          "Assorear as nascentes do bioma.",
+          "Dificultar a infiltração de água na terra.",
+          "Diminuir as espécies nativas do bioma.",
+          "Contribuir com a redução das queimadas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:5cf66e7d",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 98"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.944Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e69984e6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O monstro de gila, um lagarto encontrado em um deserto dos Estados Unidos, apresenta adaptações à falta de alimento nesse ambiente. Esse lagarto possui um hormônio que controla os níveis de açúcar em seu próprio sangue. Foi observado que esse hormônio tambémcontrolaosníveisdeaçúcarnosanguedepessoas diabéticas.\n\nRUSSELL, C. Ozempic e outros remédios inspirados em veneno de animais.\n\nDisponível em: www.bbc.com. Acesso em: 6 dez. 2024 (adaptado).\n\nConsiderando que animais de um mesmo grupo taxonômico podem apresentar características adaptativas semelhantes em ambientes similares, onde seria mais provável encontrar lagartos com essas características no território brasileiro?",
+        "opcoes": [
+          "Cerrado.",
+          "Pampas.",
+          "Caatinga.",
+          "Restinga.",
+          "Pantanal."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:e69984e6",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 99"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.944Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e5d2fa3a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Existe um processo de purificação de água em que são removidos os sais dissolvidos. A água que passa por esse processo é muito utilizada em laboratórios de química, em indústrias (como solvente), em baterias de carros etc. Entretanto, esse tipo de água não é adequado para ingestão, pois pode causar problemas de saúde, como carência iônica e diarreia.\n\nEssa água é chamada de",
+        "opcoes": [
+          "dura.",
+          "pesada.",
+          "sanitária.",
+          "destilada.",
+          "oxigenada."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:e5d2fa3a",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 100"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.945Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:05372968",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Por que os olhos ficam vermelhos\nem algumas fotografias?\n\nEm fotos tiradas com câmeras fotográficas antigas, por vezes as pessoas aparecem com os olhos vermelhos. Isso ocorre porque a luz do flash da câmera incide diretamente no globo ocular, sendo refletida por uma região repleta de vasos sanguíneos.\n\nDisponível em: www.uol.com.br. Acesso em: 14 jun. 2017 (adaptado).\n\nEsse efeito é mais comum à noite ou em lugares pouco iluminados porque, com a pupila",
+        "opcoes": [
+          "dilatada, chega mais luz à retina.",
+          "retraída, chega mais luz vermelha à retina.",
+          "retraída, chega mais luz vermelha aos bastonetes.",
+          "retraída, chegam menos luzes azul e verde aos cones.",
+          "dilatada, chegam menos luzes azul e verde aos bastonetes."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:05372968",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 101"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.945Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3c20e19b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O sashimi (filé de peixe cru) de baiacu é uma iguaria muito apreciada no Japão. Entretanto, sua ingestão pode causar a morte por parada respiratória, pois esse peixe contém uma potente neurotoxina termoestável, a tetrodotoxina, que é produzida e armazenada nas gônadas e vísceras.\n\nQue ação poderia evitar essa intoxicação?",
+        "opcoes": [
+          "Criar os peixes em cativeiro.",
+          "Realizar a pesca com redes.",
+          "Consumir peixes cozidos ou fritos.",
+          "Preparar o peixe em condições adequadas de higiene.",
+          "Manusear o peixe sem provocar o rompimento dos órgãos internos."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:3c20e19b",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 102"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.945Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:66b3265f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A deficiência da enzima lipase ácida causa uma doença em que o portador apresenta células que não degradam colesterol esterificado nem triglicerídeos, resultando no depósito desses compostos em diversos órgãos, principalmente no fígado.\n\nANDERSON, R. A. et al. In Situ Localization of the\nGenetic Locus Encoding [...]. Genomics,\nn. 1, jan. 1993 (adaptado).\n\nEssa doença resulta da insuficiência funcional de qual estrutura celular?",
+        "opcoes": [
+          "Lisossomos.",
+          "Ribossomos.",
+          "Mitocôndrias.",
+          "Peroxissomos.",
+          "Retículo endoplasmático liso."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:66b3265f",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 103"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.945Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:5a54f85f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n50%, e a temperatura está agora cerca de 1,2 °C mais quente em comparação ao século XIX. O ritmo de aumento da temperatura precisa diminuir se quisermos evitar as piores consequências das mudanças climáticas. Cientistas afirmam que o aquecimento global precisa ser mantido em 1,5 °C até o ano 2100. No entanto, a menos que outras ações sejam tomadas, o planeta ainda pode aquecer mais de 2 °C até o final deste século. Na prática, os países precisam enfrentar as mudanças climáticas com ações mitigadoras, que\n\n[[imagem:1]]\n\nUm guia rápido para entender as mudanças climáticas. Disponível em: www.bbc.com. Acesso em: 6 dez. 2021 (adaptado).\n\nQual ação mitigadora auxilia na remoção desse gás presente na atmosfera, reduzindo seus níveis?",
+        "opcoes": [
+          "Plantar mais árvores.",
+          "Instalar mais usinas eólicas.",
+          "Ampliar o uso de energia solar.",
+          "Manter os combustíveis fósseis no solo.",
+          "Produzir menos resíduos sólidos urbanos."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q104-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 104 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 945,
+            "altura": 48
+          },
+          {
+            "url": "/content/img/2025/d2-q104-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 104 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1007,
+            "altura": 48
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:5a54f85f",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 104"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:16.910Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:6c9fcd62",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As usinas termonucleares são aquelas que produzem energia elétrica a partir da geração de energia térmica proveniente das reações nucleares. Normalmente, essas usinas funcionam por meio de dois circuitos, denominados circuito primário (vaso de pressão, pressurizador e bomba) e circuito secundário (gerador de vapor, turbina, condensador, tanque de alimentação e bombas), além de um sistema de água de refrigeração, formado por uma bomba ligada a uma fonte hídrica natural.\n\n[[imagem:0]]\n\nDurante a operação da usina, se o sistema de água de refrigeração funcionar de forma ineficiente pode causar poluição térmica, comprometendo a vida no ecossistema aquático.\n\nDisponível em: www.eletronuclear.gov.br. Acesso em: 29 nov. 2021 (adaptado).\n\nPara o ecossistema aquático, a ineficiência do sistema de água de refrigeração tem como consequência a",
+        "opcoes": [
+          "diminuição do pH.",
+          "liberação de gases poluentes.",
+          "contaminação por combustíveis.",
+          "liberação de elementos radioativos.",
+          "diminuição da solubilidade do gás oxigênio."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q105-1.webp",
+            "alt": "Imagem da questão 105 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 479
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:6c9fcd62",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 105"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.036Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:36c375af",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No início do século XX, as fórmulas das substâncias eram representadas de modo diferente do atual. A figura apresenta uma fotografia bem antiga (1909) que registra uma aula de química ministrada em um colégio em Santos (SP). Um olhar mais atento permite identificar como os compostos químicos eram representados.\n\n[[imagem:0]]\n\nO nitrogênio era chamado de azoto e representado pelo símbolo Az. Vê-se na lousa a equação representativa da adição do oxigênio atômico (O) ao monóxido de nitrogênio (AzO) com a formação de dióxido de nitrogênio (AzO²). Analogamente, o nitrato de sódio era representado por NaAzO³.\n\nDisponível em: www.novomilenio.inf.br. Acesso em: 29 ago. 2014 (adaptado).\n\nEm 1909, as representações das substâncias ácido nítrico e cloreto de cálcio, tendo por base essas informações e seguindo a mesma lógica, seriam, respectivamente:",
+        "opcoes": [
+          "HAzO³ e CaCl²",
+          "HAz³O e Ca²Cl",
+          "H³AzO⁴ e CaCl",
+          "HAz³O e KCl²",
+          "HAzO² e KCl"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q106-1.webp",
+            "alt": "Imagem da questão 106 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 321
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:36c375af",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 106"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.112Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:36a254ca",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A figura apresenta a herança genética de uma característica a partir do cruzamento de insetos de uma mesma espécie.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nQual alternativa representa a proporção fenotípica da prole resultante do cruzamento entre indivíduos da primeira geração?",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q107-1.webp",
+            "alt": "Imagem da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 580,
+            "altura": 304
+          },
+          {
+            "url": "/content/img/2025/d2-q107-2.webp",
+            "alt": "Imagem 2 da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 492,
+            "altura": 372
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2025/d2-q107-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 700,
+            "altura": 248
+          },
+          {
+            "url": "/content/img/2025/d2-q107-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 700,
+            "altura": 248
+          },
+          {
+            "url": "/content/img/2025/d2-q107-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 700,
+            "altura": 248
+          },
+          {
+            "url": "/content/img/2025/d2-q107-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 700,
+            "altura": 248
+          },
+          {
+            "url": "/content/img/2025/d2-q107-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 107 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 700,
+            "altura": 248
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:36a254ca",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 107"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.353Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:5321dc14",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Golden Rice, ou arroz dourado, é uma variedade de arroz enriquecida em betacaroteno, precursor da vitamina A. Foi desenvolvida para ajudar a combater a doença decorrente da deficiência dessa vitamina. Para a obtenção dessa variedade de arroz, foram utilizados métodos de engenharia genética.\n\nBORÉM, A.; SANTOS, F. R. entendendo a biotecnologia.\n\nViçosa: UFV, 2008 (adaptado).\n\nEsse alimento contribui para diminuir a carência associada a qual doença?",
+        "opcoes": [
+          "Hemofilia.",
+          "Escorbuto.",
+          "Raquitismo.",
+          "Cegueira noturna.",
+          "Anemia perniciosa."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:5321dc14",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 112"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.579Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:cf9e0e8d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As cangas são ambientes resultantes da atuação, ao longo de milhões de anos, de chuvas, enxurradas, calor e ventos em rochas ricas em ferro. São compostas por até 90% de óxidos de ferro e contêm solos muito ácidos, rasos, com reduzidos índices de fertilidade e temperaturas que atingem quase 70 °C na superfície. Ao contrário do que se imagina, esse tipo de ambiente abriga comunidades de plantas e animais com elevado número de espécies e distribuição restrita.\n\nCARMO, F. F. et al. Ilhas de ferro estratégicas para a conservação.\n\nDisponível em: http://cienciahoje.org.br.\n\nAcesso em: 2 dez. 2018 (adaptado).\n\nA seleção adaptativa nesses ambientes favorece a ocorrência de espécies",
+        "opcoes": [
+          "exóticas.",
+          "migratórias.",
+          "endêmicas.",
+          "dominantes.",
+          "generalistas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:cf9e0e8d",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 116"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.767Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:956b775c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Objetos de prata escurecem em contato com compostos contendo enxofre por causa da formação de uma fina camada de sulfeto de prata. Um método simples para clarear o objeto consiste em forrar um recipiente com papel alumínio, adicionar ao recipiente uma solução aquosa de cloreto de sódio e, enfim, mergulhar o objeto de prata enegrecido. Em cerca de três minutos, a prata volta à coloração original. As seguintes semirreações e os respectivos potenciais-padrão de redução são úteis para a compreensão dos fenômenos ocorridos.\n\n[[imagem:0]]\n\nOs valores das diferenças de potencial-padrão das reações que representam o escurecimento e o clareamento do objeto de prata são, respectivamente:",
+        "opcoes": [
+          "+0,54 V e +2,37 V.",
+          "+1,92 V e +0,99 V.",
+          "−0,15 V e +5,43 V.",
+          "+2,61 V e +1,29 V.",
+          "+0,15 V e −1,29 V."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q124-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 124 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "SARTORI, E. R.; BATISTA, E. F.; FATIBELLO-FILHO, O. Escurecimento e limpeza de objetos de prata: um experimento simples e de fácil execução envolvendo reações de oxidação-redução. Química Nova na Escola, n. 30, 2008 (adaptado).",
+            "largura": 830,
+            "altura": 199
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:956b775c",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 124"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:18.397Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:8526aa51",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O ácido úsnico é retirado de liquens e foi testado contra diversas espécies, conforme o quadro.\n\n[[imagem:0]]\n\nO ácido úsnico mostrou-se mais indicado para o controle da",
+        "opcoes": [
+          "esquistossomose.",
+          "febre amarela.",
+          "coqueluche.",
+          "tuberculose.",
+          "dengue."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q129-1.webp",
+            "alt": "Imagem da questão 129 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Teste Resultado\nAedes aegypti (larvas) Baixa eficiência\nBacilo de Koch Média eficiência\nMoluscos aquáticos (adultos) Alta eficiência\nPernilongo (larvas) Média eficiência\nVermes platelmintos Ineficiente",
+            "largura": 1012,
+            "altura": 420
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:8526aa51",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 129"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.361Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:0b2cabe6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Alguns hormônios sexuais têm ganhado notável atenção nos últimos anos por suas concentrações cada vez maiores no solo e na água em todo o mundo. O motivo da preocupação é porque, em níveis poluentes, eles têm sido associados ao câncer de mama e ao câncer de próstata, além de perturbarem a fisiologia dos peixes, podendo, ainda, afetarem o desenvolvimento reprodutivo de animais domésticos e selvagens. Assim, o descarte inadequado desses hormônios representa uma séria ameaça ao solo, plantas, recursos hídricos e humanos. De baixa polaridade, eles apresentam uma solubilidade pequena e variável em água, dependendo dos grupos presentes em suas estruturas, representando um grande risco para os ambientes aquáticos. As figuras a seguir apresentam as estruturas de alguns desses hormônios.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\n[[imagem:2]]\n\nDo ponto de vista das interações químicas, qual desses hormônios apresenta maior solubilidade em ambientes aquáticos?",
+        "opcoes": [
+          "Estradiol.",
+          "Estriol.",
+          "Estrona.",
+          "Novestrol.",
+          "Noretindrona."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q134-1.webp",
+            "alt": "Imagem da questão 134 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 952,
+            "altura": 316
+          },
+          {
+            "url": "/content/img/2025/d2-q134-2.webp",
+            "alt": "Imagem 2 da questão 134 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 984,
+            "altura": 320
+          },
+          {
+            "url": "/content/img/2025/d2-q134-3.webp",
+            "alt": "Imagem 3 da questão 134 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "MUHAMMAD, A. et al. Environmental Impact of Estrogens on Human, Animal and Plant Life: a Critical Review. Environment International, n. 99, 2017 (adaptado).",
+            "largura": 512,
+            "altura": 320
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:0b2cabe6",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 134"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.728Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

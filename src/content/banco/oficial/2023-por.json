@@ -55,38 +55,37 @@
       }
     },
     {
-      "id": "oficial:2023:2c2ba620",
+      "id": "oficial:2023:e68883ec",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de \"casamento\" no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como \"união legítima entre homem e mulher\" e \"união legal entre homem e mulher, para constituir família\".\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a \"pessoas\".\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a \"eficiência da mobilização\". \"Em dois dias, mudou-se uma definição que permanecia a mesma há décadas\", afirma. E conclui: \"A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.\".\n\n(SENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.)\n\nA notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
+        "pergunta": "Na Idade Média, as notícias se propagavam com surpreendente eficácia. Segundo uma emérita professora de Sorbonne, um cavalo era capaz de percorrer 30 quilômetros por dia, mas o tempo podia se acelerar dependendo do interesse da notícia. As ordens mendicantes tinham um papel importante na disseminação de informações, assim como os jograis, os peregrinos e os vagabundos, porque todos eles percorriam grandes distâncias. As cidades também tinham correios organizados e selos para lacrar mensagens e tentar certificar a veracidade das correspondências. Graças a tudo isso, a circulação de boatos era intensa e politicamente relevante. Um exemplo clássico de fake news da era medieval é a história do rei que desaparece na batalha e reaparece muito depois, idoso e transformado.\n\nDisponível em: www.elpais.com.br. Acesso em: 18 jun. 2018 (adaptado).\n\nA propagação sistemática de informações é um fenômeno recorrente na história e no desenvolvimento das sociedades. No texto, a eficácia dessa propagação está diretamente relacionada ao(à)",
         "opcoes": [
-          "inclusão de informações no verbete.",
-          "relevância social da instituição casamento.",
-          "utilização pública da petição pelos cidadãos.",
-          "rapidez na disseminação digital do verbete.",
-          "divulgação de plataformas para a criação de petição."
+          "velocidade de circulação das notícias.",
+          "nível de letramento da população marginalizada.",
+          "poder de censura por parte dos serviços públicos.",
+          "legitimidade da voz dos representantes da nobreza.",
+          "diversidade dos meios disponíveis em uma época histórica."
         ],
-        "correta": 2,
-        "explicacao": "O próprio texto atribui a mudança à \"eficiência da mobilização\" gerada pela petição assinada pelos cidadãos — é o uso público da petição, não a velocidade de disseminação do verbete em si ou a divulgação da plataforma, que a notícia aponta como causa.",
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
         "fonte": "ENEM 2023"
       },
       "meta": {
-        "id": "oficial:2023:2c2ba620",
+        "id": "oficial:2023:e68883ec",
         "version": 1,
         "skillIds": [
           "por:interpretacao-ideia-principal"
         ],
-        "difficulty": 2,
+        "difficulty": 3,
         "irt": {
           "a": 1,
-          "b": -0.8,
+          "b": 0,
           "c": 0.2,
           "source": "estimado"
         },
         "roles": [
           "pratica",
-          "revisao",
-          "diagnostico"
+          "revisao"
         ],
         "estimatedSeconds": 90,
         "dontKnowAllowed": true,
@@ -94,17 +93,124 @@
           "kind": "oficial",
           "exam": "ENEM",
           "year": 2023,
-          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 39"
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 9"
         },
         "validation": {
           "status": "oficial-conferida",
-          "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente",
+          "reviewedAt": "2026-10-02T19:06:32.420Z",
+          "reviewer": "importador-inep",
           "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
-        ]
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:13ab89d3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Se a interferência de contas falsas em discussões políticas nas redes sociais já representava um perigo para os sistemas democráticos, sua sofisticação e maior semelhança com pessoas reais têm agravado o problema pelo mundo.\n\nO perigo cresceu porque a tecnologia e os métodos evoluíram dos robôs, os “bots” — softwares com tarefas on-line automatizadas —, para os “ciborgues” ou “trolls”, contas controladas diretamente por humanos com ajuda de um pouco de automação.\n\nMas pesquisadores começam agora a observar outros padrões de comportamento: quando mensagens não são programadas, sua publicação se concentra só em horários de trabalho, já que é controlada por pessoas cuja profissão é exatamente essa, administrar um perfil falso durante o dia.\n\nOutra pista: a pobreza vocabular das mensagens publicadas por esses perfis. Um funcionário de uma empresa que supostamente produzia e vendia perfis falsos explica que às vezes “faltava criatividade” para criar mensagens distintas controlando tantos perfis falsos ao mesmo tempo.\n\nGRAGNANI, J. Disponível em: www.bbc.com. Acesso em: 16 dez. 2017.\n\nDe acordo com o texto, a análise de características da linguagem empregada por perfis automatizados contribui para o(a)",
+        "opcoes": [
+          "controle da atuação dos profissionais de TI.",
+          "desenvolvimento de tecnologias como os “trolls”.",
+          "flexibilização dos turnos de trabalho dos controladores.",
+          "necessidade de regulamentação do funcionamento dos “bots”.",
+          "identificação de padrões de disseminação de informações inverídicas."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:13ab89d3",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 10"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.421Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:abb284b2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Maio foi colorido de amarelo, e o foi porque mundialmente amarelo é a cor convencionada para as advertências. No trânsito, essas advertências têm sido fatais. A estimativa, caso nada seja feito, é a de que se atinjam assustadoras 2,4 milhões de mortes no trânsito em 2030 em todo o mundo.\n\nA pressa constante, o sentimento de invencibilidade, a certeza de invulnerabilidade, a necessidade de poder, a falta de civilidade, a certeza de impunidade, a ausência de solidariedade, a inexistência de compaixão e o desrespeito por si próprio são circunstâncias reais que, não raro, concorrem para o comportamento violento no trânsito.\n\nO Maio Amarelo, que preconiza a atenção pela vida, é uma das iniciativas nesse sentido. E é precisamente a atenção pela vida que está esquecida. Essa atenção, por certo, requer menos pressa, mais civilidade, limites assegurados, consciência de vulnerabilidade, solidariedade, compaixão e respeito por si e pelo outro. Reafirmar e praticar esses princípios e valores talvez seja um caminho mais seguro e menos violento, que garanta a vida e não celebre a morte.\n\nDisponível em: http://portaldotransito.com.br. Acesso em: 11 dez. 2018 (adaptado).\n\nConsiderando os procedimentos argumentativos utilizados, infere-se que o objetivo desse texto é",
+        "opcoes": [
+          "enumerar as causas determinantes da violência no trânsito.",
+          "contextualizar a campanha de advertência no cenário mundial.",
+          "divulgar dados numéricos alarmantes sobre acidentes de trânsito.",
+          "sensibilizar o público para a importância de uma direção responsável.",
+          "restringir os problemas da violência no trânsito a aspectos emocionais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:abb284b2",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 11"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.422Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     },
     {
@@ -161,6 +267,218 @@
       }
     },
     {
+      "id": "oficial:2023:5b4005c7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As cinzas do Museu Nacional, no Rio de Janeiro, consumido pelas chamas no mês de setembro de 2018, são mais do que restos de fósseis, cerâmicas e espécimes raros. O museu abrigava, entre mais de 20 milhões de peças, os esqueletos com as respostas para perguntas que ainda não haviam sido respondidas — ou sequer feitas — por pesquisadores brasileiros. E o incêndio pode ter calado para sempre palavras e cantos indígenas ancestrais, de línguas que não existem mais no mundo.\n\nO acervo do local continha gravações de conversas, cantos e rituais de dezenas de sociedades indígenas, muitas feitas durante a década de 1960 com antigos gravadores de rolo e que ainda não haviam sido digitalizadas. Alguns dos registros abordavam línguas já extintas, sem falantes originais ainda vivos. “A esperança é que outras instituições tenham registros dessas línguas”, diz a linguista Marilia Facó Soares. A pesquisadora, que trabalha com os índios Tikuna, o maior grupo da Amazônia brasileira, crê ter perdido parte de seu material. “Terei que fazer novas viagens de campo para recompor meus arquivos. Mas obviamente não dá para recuperar a fala de nativos já falecidos, geralmente os mais idosos”, lamenta.\n\nDisponível em: https://brasil.elpais.com. Acesso em: 10 dez. 2018 (adaptado).\n\nA perda dos registros linguísticos no incêndio do Museu Nacional tem impacto potencializado, uma vez que",
+        "opcoes": [
+          "exige a retomada das pesquisas por especialistas de diferentes áreas.",
+          "representa danos irreparáveis à memória e à identidade nacionais.",
+          "impossibilita o surgimento de novas pesquisas na área.",
+          "resulta na extinção da cultura de povos originários.",
+          "inviabiliza o estudo da língua do povo Tikuna."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:5b4005c7",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 15"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.425Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:8646fe10",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Mandioca, macaxeira, aipim e castelinha são nomes diferentes da mesma planta. Semáforo, sinaleiro e farol também significam a mesma coisa. O que muda é só o hábito cultural de cada região. A mesma coisa acontece com a Língua Brasileira de Sinais (Libras). Embora ela seja a comunicação oficial da comunidade surda no Brasil, existem sinais que variam em relação à região, à idade e até ao gênero de quem se comunica. A cor verde, por exemplo, possui sinais diferentes no Rio de Janeiro, Paraná e São Paulo. São os regionalismos na língua de sinais.\n\nEssas variações são um dos temas da disciplina Linguística na língua de sinais, oferecida pela Universidade Estadual Paulista (Unesp) ao longo do segundo semestre. “Muitas pessoas pensam que a língua de sinais é universal, o que não é verdade”, explica a professora e chefe do Departamento de Linguística, Literatura e Letras Clássicas da Unesp. “Mesmo dentro de um mesmo país, ela sofre variação em relação à localização geográfica, à faixa etária e até ao gênero dos usuários”, completa a especialista.\n\nOs surdos podem criar sinais diferentes para identificar lugares, objetos e conceitos. Em São Paulo, o sinal de “cerveja” é feito com um giro do punho como uma meia-volta. Em Minas, a bebida é citada quando os dedos indicador e médio batem no lado do rosto. Também ocorrem mudanças históricas. Um sinal pode sofrer alterações decorrentes dos costumes da geração que o utiliza.\n\nDisponível em: www.educacao.sp.gov.br. Acesso em: 1 nov. 2021 (adaptado).\n\nNesse texto, a Língua Brasileira de Sinais (Libras)",
+        "opcoes": [
+          "passa por fenômenos de variação linguística como qualquer outra língua.",
+          "apresenta variações regionais, assumindo novo sentido para algumas palavras.",
+          "sofre mudança estrutural motivada pelo uso de sinais diferentes para algumas palavras.",
+          "diferencia-se em todo o Brasil, desenvolvendo cada região a sua própria língua de sinais.",
+          "é ininteligível para parte dos usuários em razão das mudanças de sinais motivadas geograficamente."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8646fe10",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 16"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.426Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:ab23093c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Como é bom reencontrar os leitores da Revista da Cultura por meio de uma publicação com outro visual, conteúdo de qualidade e interesses ampliados! ]cultura[, este nome simples, e eu diria mesmo familiar, nasce entre dois colchetes voltados para fora. E não é por acaso: são sinais abertos, receptivos, propícios à circulação de ideias. O DNA da publicação se mantém o mesmo, afinal, por longos anos montamos nossas edições com assuntos saídos das estantes de uma grande livraria — e assim continuará sendo. Literatura, sociologia, filosofia, artes... nunca será difícil montar a pauta da revista porque os livros nos ensinam que monotonia é só para quem não lê.\n\nHERZ, P. ]cultura[, n. 1, jun. 2018 (adaptado).\n\nO uso não padrão dos colchetes para nomear a revista atribui-lhes uma nova função e está correlacionado ao(à)",
+        "opcoes": [
+          "perfil de público-alvo, constituído por leitores exigentes e especializados em leitura acadêmica.",
+          "propósito do editor, chamando a atenção para o rigor normativo nos textos da revista.",
+          "exclusividade na seleção temática, direcionada para a área das ciências humanas.",
+          "identidade da revista, voltada para a recepção e a promoção de ideias circulantes em livros.",
+          "padrão editorial dos artigos, organizados em torno de uma proposta de design inovador."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:ab23093c",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 17"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.427Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b303348b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nAlegria, alegria\nO sol nas bancas de revista\nMe enche de alegria e preguiça\nQuem lê tanta notícia\nEu vou\nPor entre fotos e nomes\nOs olhos cheios de cores\nO peito cheio de amores vãos\nEu vou\nPor que não, por que não?\n\nVELOSO, C. Alegria, alegria. Rio de Janeiro: Polygram, 1990 (fragmento).\n\nTEXTO II\nAnjos tronchos\nUns anjos tronchos do Vale do Silício\nDesses que vivem no escuro em plena luz\nDisseram vai ser virtuoso no vício\nDas telas dos azuis mais do que azuis\n\nAgora a minha história é um denso algoritmo\nQue vende venda a vendedores reais\nNeurônios meus ganharam novo outro ritmo\nE mais, e mais, e mais, e mais, e mais\n\nVELOSO, C. Meu coco. Rio de Janeiro: Sony, 2021 (fragmento).\n\nEmbora oriundas de momentos históricos diferentes,\nessas letras de canção têm em comum a",
+        "opcoes": [
+          "referência às cores como elemento de crítica a hábitos contemporâneos.",
+          "percepção da profusão de informações gerada pela tecnologia.",
+          "contraposição entre os vícios e as virtudes da vida moderna.",
+          "busca constante pela liberdade de expressão individual.",
+          "crítica à finalidade comercial das notícias."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b303348b",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 18"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.428Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
       "id": "oficial:2023:4d1a63bc",
       "exercise": {
         "type": "multipla-escolha",
@@ -211,6 +529,1159 @@
         "examProfiles": [
           "enem"
         ]
+      }
+    },
+    {
+      "id": "oficial:2023:39db2b5a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No princípio era o verbo. A frase que abre o primeiro capítulo do Evangelho de João e remete à criação do mundo, assim como também faz o Gênesis, é a mais famosa da Bíblia. A ideia de que o mundo é criado pela palavra, porém, é tão estruturante que está presente em outras religiões, para muito além das fundadas no cristianismo. Como humanos, a linguagem é o mundo que habitamos. Basta tentar imaginar um mundo em que não podemos usar palavras para dizer de nós e dos outros para compreender o que isso significa. Ou um mundo em que aquilo que você diz não é entendido pelo outro, e o que o outro diz não é entendido por você.\n\nO que acontece então quando a palavra é destruída e, com ela, a linguagem?\n\nDurante séculos, em diferentes sociedades e línguas, é importante lembrar, a linguagem serviu — e ainda serve — para manter privilégios de grupos de poder e deixar todos os outros de fora. Quem entende linguagem de advogados, juízes e promotores, linguagem de médicos, linguagem de burocratas, linguagem de cientistas? A maior parte da população foi submetida à violência de propositalmente ser impedida de compreender a linguagem daqueles que determinam seus destinos.\n\nSe o princípio é o verbo, o fim pode ser o silenciamento. Mesmo que ele seja cheio de gritos entre aqueles que já não têm linguagem comum para compreender uns aos outros.\n\nBRUM, E. Disponível em: https://brasil.elpais.com. Acesso em: 5 nov. 2021.\n\nNesse texto, a estratégia usada para convencer o leitor de que uma grande parcela da população não compreende a linguagem daqueles que detêm o poder foi",
+        "opcoes": [
+          "revelar a origem religiosa da linguagem.",
+          "questionar o temor sobre o futuro da linguagem.",
+          "descrever a relação entre sociedade e linguagem.",
+          "apresentar as consequências do esfacelamento da linguagem.",
+          "criticar o obstáculo promovido pelos usos especializados da linguagem."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:39db2b5a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 20"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.429Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:a5fdda2b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um grupo de pesquisadores da Universidade Federal do Ceará desenvolveu um dicionário para traduzir sintomas de doenças da linguagem popular para os termos médicos. Defruço, chanha e piloura, por exemplo, podem ser termos conhecidos para muitos, mas, durante uma consulta médica, o desconhecimento pode significar um diagnóstico errado.\n\n“Isso é um registro histórico e pode ser muito útil para estudos dessas comunidades, na abordagem médica delas. É de certa forma pioneiro no Brasil e, sem dúvida, um instrumento de trabalho importante, porque a comunicação é fundamental na relação médico-paciente”, avalia o reitor da instituição.\n\nDisponível em: https://g1.globo.com. Acesso em: 1 nov. 2021 (adaptado).\n\nAo registrarem usos regionais de termos da área médica, pesquisadores",
+        "opcoes": [
+          "apontaram erros motivados pelo desconhecimento da variedade linguística local.",
+          "explicaram problemas provocados pela incapacidade de comunicação.",
+          "descobriram novos sintomas de doenças existentes na comunidade.",
+          "propiciaram melhor compreensão dos sintomas dos pacientes.",
+          "divulgaram um novo rol de doenças características da localidade."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:a5fdda2b",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 21"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.430Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:56051a53",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Alguém muito recentemente cortara o mato, que na época das chuvas crescia e rodeava a casa da mãe de Ponciá Vicêncio e de Luandi. Havia também vestígios de que a terra fora revolvida, como se ali fosse plantar uma pequena roça. Luandi sorriu. A mãe devia estar bastante forte, pois ainda labutava a terra. Cantou alto uma cantiga que aprendera com o pai, quando eles trabalhavam na terra dos brancos. Era uma canção que os negros mais velhos ensinavam aos mais novos. Eles diziam ser uma cantiga de voltar, que os homens, lá na África, entoavam sempre, quando estavam regressando da pesca, da caça ou de algum lugar. O pai de Luandi, no dia em que queria agradar à mulher, costumava entoar aquela cantiga ao se aproximar de casa. Luandi não entendia as palavras do canto; sabia, porém, que era uma língua que alguns negros falavam ainda, principalmente os velhos. Era uma cantiga alegre. Luandi, além de cantar, acompanhava o ritmo batendo com as palmas das mãos em um atabaque imaginário. Estava de regresso à terra. Voltava em casa. Chegava cantando, dançando a doce e vitoriosa cantiga de regressar.\n\nEVARISTO, C. Ponciá Vicêncio. Rio de Janeiro: Pallas, 2018.\n\nA leitura do texto permite reconhecer a “cantiga de voltar” como patrimônio linguístico que",
+        "opcoes": [
+          "representa a memória de uma língua africana extinta.",
+          "exalta a rotina executada por jovens afrodescendentes.",
+          "preserva a ancestralidade africana por meio da tradição oral.",
+          "resgata a musicalidade africana por meio de palavras inteligíveis.",
+          "remonta à tristeza dos negros mais velhos com saudade da África."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:56051a53",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 22"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.430Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:8d0d1cb5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nZapeei os canais, como há dezenas de anos faço, e pá: parei num que exibia um episódio daquela velha família do futuro, Os Jetsons.\n\nNesse episódio em particular, a Jane Jetson, esposa do George, tratava de dirigir aquele veículo voador deles. Meu queixo foi caindo à medida que as piadinhas machistas sobre mulheres dirigirem foram se acumulando. Impressionante! Que futuro careta aqueles roteiristas imaginavam! Seriam incapazes de projetar algo melhor, e não apenas em termos de tecnologias, robôs e carros voadores? Será que nossa máxima visão de futuro só atinge as coisas, e jamais as pessoas? Como a Jane, uma mulher de 33 anos no desenho, poderia ser o que foram as minhas bisavós?\n\nO futuro, naquele desenho, se esqueceu de ser melhor nas relações entre as pessoas. Aliás... tão parecido com a vida.\n\nFiquei de cara, como dizemos aqui, ou como dizíamos na minha adolescência, pobre adolescência, aprendendo, sem querer e sem muita defesa, um futuro tão besta quanto o passado.\n\nRIBEIRO, A. E. Disponível em: www.rascunho.com br. Acesso em: 21 out. 2021 (adaptado).\n\nTEXTO II\n\nMasculino e feminino são campos escorregadios que só se definem por oposição, sempre incompleta, um do outro. São formações imaginárias que buscam produzir uma diferença radical e complementar onde só existem, de fato, mínimas diferenças. O resto é questão de estilo. Até pelo menos a segunda metade do século 19, o divisor de águas era claro: os homens ocupavam o espaço público. As mulheres tratavam da vida privada. Privada de quê? De visibilidade, diria Hannah Arendt. De visibilidade pública. Do que as mulheres estiveram privadas até o século 20 foi de presença pública manifesta não em imagem, mas em palavra. A palavra feminina, reservada ao espaço doméstico, não produzia diferença na vida social.\n\nKHEL, M. R. Disponível em: https://alias.estadao.com.br.\n\nAcesso em: 19 out. 2021 (adaptado).\n\nA representação da mulher apresentada no Texto I pode ser explicada pelo Texto II no que diz respeito à(às)",
+        "opcoes": [
+          "censura a formas de expressão femininas.",
+          "ausência da figura feminina na vida pública.",
+          "construções imaginárias cristalizadas na sociedade.",
+          "limitações inerentes às figuras femininas e masculinas.",
+          "dificuldade na atribuição de papéis masculinos e femininos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8d0d1cb5",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 23"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:24.138Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:a5c37f8a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEsse anúncio publicitário, veiculado durante o contexto da pandemia de covid-19, tem por finalidade",
+        "opcoes": [
+          "divulgar o canal telefônico de atendimento a casos de violência contra a mulher.",
+          "informar sobre a atuação de uma entidade defensora da mulher vítima de violência.",
+          "evidenciar o trabalho da Defensoria Pública em relação ao problema do abuso contra a mulher.",
+          "alertar a sociedade sobre o aumento da violência contra a mulher em decorrência do coronavírus.",
+          "incentivar o público feminino a denunciar crimes de violência contra a mulher durante o período de isolamento."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d1-q024-1.webp",
+            "alt": "Imagem da questão 24 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: #JuntasSomosMaisFortes\nA Defensoria não para!\nDisque 180\nEm tempos de isolamento\nsocial por conta da pandemia de\ncovid-19, a Defensoria Pública\nalerta para o aumento da\nviolência contra a mulher!\nNão se cale! Denuncie!\nDisponível em: www.defensoriapublica.mt.gov.br. Acesso em: 29 out. 2021 (adaptado).",
+            "largura": 1004,
+            "altura": 633
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:a5c37f8a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 24"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.664Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:6497f0ad",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A escravidão\n\nEsses meninos que aí andam jogando peteca não viram nunca um escravo... Quando crescerem, saberão que já houve no Brasil uma raça triste, votada à escravidão e ao desespero; e verão nos museus a coleção hedionda dos troncos, dos vira-mundos e dos bacalhaus; e terão notícias dos trágicos horrores de uma época maldita: filhos arrancados ao seio das mães, virgens violadas em pranto, homens assados lentamente em fornos de cal, mulheres nuas recebendo na sua mísera nudez desvalida o duplo ultraje das chicotadas e dos olhares do feitor bestial. [...]\n\nMas a sua indignação nunca poderá ser tão grande como a daqueles que nasceram e cresceram em pleno horror, no meio desse horrível drama de sangue e lodo, sentindo dentro do ouvido e da alma, numa arrastada e contínua melopeia, o longo gemer da raça mártir — orquestração satânica de todos os soluços, de todas as impressões, de todos os lamentos que a tortura e a injustiça podem arrancar a gargantas humanas.\n\nBILAC, O. Disponível em: www.escritas.org. Acesso em: 29 out. 2021.\n\nPublicado em 1902, o texto de Olavo Bilac enfatiza as mazelas da escravidão no Brasil ao",
+        "opcoes": [
+          "descrever de modo impessoal as consequências da exploração racial sobre as gerações futuras.",
+          "contrapor a infância privilegiada das crianças da época à infância violentada das crianças escravizadas.",
+          "antecipar o futuro apagamento das marcas da escravidão no contexto social.",
+          "criticar a atenuação da violência contra os povos escravizados nas memórias retratadas pelos museus.",
+          "im aginar a reação de indiferença de seus contemporâneos com os escravizados libertos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:6497f0ad",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 26"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:24.371Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b1f78823",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "E assim as coisas continuaram acontecendo entre os dois, em quase sustos, um grande por acaso com cacoetes de gestos definitivos. Com o Nunca Mais se oferecendo o tempo todo, bastaria dizer foi um prazer ter te conhecido, bastaria não trocar telefones nem e-mails e enterrar a casualidade com a cal da sabedoria — nada poderia ser definitivo, os encontros duravam duas horas ou duas décadas ou duas vezes isso, mas em algum momento necessariamente seria o fim. De todos os grandes amores. De todos os pequenos. De todas as juras, das promessas, de todos os na-alegria-e-na-tristeza. De todos os não amores, os desamores, os casamentos para sempre, os rancores para sempre, de todas as paralelas que só se viabilizam na abstração da geometria, de todas as pequenas paixões e de todas as grandes paixões, de tudo que para na antessala da paixão, de todos os vínculos não experimentados, de todos.\n\nLISBOA, A. Rakushisha. Rio de Janeiro: Objetiva, 2014.\n\nO recurso que promove a progressão textual, contribuindo para a construção da ideia de que as relações amorosas têm um enredo comum, é a",
+        "opcoes": [
+          "repetição do pronome indefinido “todos”.",
+          "utilização do travessão na marcação do aposto.",
+          "retomada do antecedente pelo pronome “isso”.",
+          "contraposição de ideias marcada pela conjunção “mas”.",
+          "substantivação de expressões pela anteposição do artigo."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b1f78823",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 27"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.667Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:4426b772",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Enquanto estivemos entretidos com os urubus outras coisas andaram acontecendo na cidade. A Companhia baixou novas proibições, umas inteiramente bobocas, só pelo prazer de proibir (ninguém podia cuspir pra cima, nem carregar água em jacá, nem tapar o sol com peneira, como se todo mundo estivesse abusando dessas esquisitices); mas outras bem irritantes, como a de pular muro pra cortar caminho, tática que quase todo mundo que não sofria de reumatismo vinha adotando ultimamente, principalmente os meninos. E não confiando na proibição só, nem na força dos castigos, que eram rigorosos, a Companhia ainda mandou fincar cacos de garrafa nos muros. Achei isso um exagero, e comentei o assunto com mamãe. Meu pai ouviu lá do quarto e veio explicar. Disse que em épocas normais bastava uma coisa ou outra; mas agora a Companhia não podia admitir nenhuma brecha em suas ordens; se alguém desobedecesse à proibição podia se cortar nos cacos; se alguém conseguisse pular um muro quebrando o corte de alguns cacos, ou jogando um couro por cima, era apanhado pela proibição, nhoc — e fez o gesto de quem torce o pescoço de um frango.\n\nVEIGA, J. J. Sombras de reis barbudos. Rio de Janeiro: Civilização Brasileira, 1978.\n\nSob a perspectiva do menino que narra, os fatos ficcionais oferecem um esboço do momento político vigente na década de 1970, aqui representado pelo",
+        "opcoes": [
+          "culto ao medo, infiltrado em situações do cotidiano.",
+          "sentimento de dúvida quanto à veracidade das informações.",
+          "ambiente de sonho, delineado por imagens perturbadoras.",
+          "incentivo ao desenvolvimento econômico com a iniciativa privada.",
+          "espaço urbano marcado por uma política de isolamento das crianças."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:4426b772",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 30"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.670Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:db427e07",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O sol começa a descer por trás da vegetação da Ilha da Restinga, na outra margem do rio Paraíba, colorindo o céu de amarelo, laranja e lilás. Então se ouvem as primeiras notas do Bolero, do compositor francês Maurice Ravel, executadas pelo saxofonista Jurandy. É assim o pôr do sol da praia do Jacaré, em Cabedelo (Grande João Pessoa). Depois do Bolero, Jurandy toca Asa branca, de Luiz Gonzaga, e Meu sublime torrão, de Genival Macedo, espécie de hino não oficial da Paraíba.\n\nPINHEIRO, A. Sol se põe embalado pelo Bolero de Ravel. Disponível em:\n\nhttp://tools.folha.com.br. Acesso em: 16 set. 2012 (adaptado).\n\nA interpretação musical de Jurandy do Sax, codinome de José Jurandy Félix, apresenta um repertório caracterizado pela",
+        "opcoes": [
+          "inter-relação de referenciais estéticos aparentemente distanciados.",
+          "valorização de músicas que revelam mensagens de serenidade.",
+          "consagração do repertório erudito como cultura dominante.",
+          "iniciativa de estímulo à vocação turística da cidade.",
+          "divisão hierárquica entre gêneros e estilos musicais."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:db427e07",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 32"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:32.671Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:96fb1d46",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nTEXTO II\n\nEm 1933, a obra Eternos caminhantes ingressou em uma das primeiras edições das exposições de Arte Degenerada, promovida por membros do partido nazista alemão. Nos anos seguintes, ela voltaria a ser exibida na mostra denominada Exposição da Vergonha, promovida por pequenos grupos abastados. Em 1937, essa obra foi confiscada pelo Ministério da Propaganda daquele país, na grande ação nacional-socialista contra a “Arte Degenerada”.\n\nSCHWARTZ, J. Perseguição à Arte Moderna em tempos de\nguerra. São Paulo: Museu Lasar Segall, 2018 (adaptado).\n\nQuase cinquenta obras de Lasar Segall foram confiscadas pelo regime totalitário alemão na primeira metade do século XX, entre elas a obra Eternos caminhantes, considerada degenerada por",
+        "opcoes": [
+          "representar uma estética tida como inconveniente para o ideário político vigente.",
+          "manifestar um posicionamento político-cultural concebido por grupos de oposição.",
+          "expressar a cultura artística por meio da representação parcial do corpo humano.",
+          "apresentar uma composição que antecipa o imaginário artístico germânico.",
+          "estimular discussões sobre o papel da arte na construção coletiva de cultura."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d1-q033-1.webp",
+            "alt": "Imagem da questão 33 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: SEGALL, L. Eternos caminhantes . Óleo sobre tela, 138 x 184 cm.\nMuseu Lasar Segall, IbramMinc, São Paulo, 1919.",
+            "largura": 989,
+            "altura": 794
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:96fb1d46",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 33"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:11.160Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:95da6a43",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nLogo no início de Gira, um grupo de sete bailarinas ocupa o centro da cena. Mãos cruzadas sobre a lateral esquerda do quadril, olhos fechados, troncos que pendulam sobre si mesmos em vaguíssimas órbitas, tudo nelas sugere o transe. Está estabelecido o caráter volátil do que se passará no palco dali para frente. Mas engana-se quem pensa que vai assistir a uma representação mimética dos cultos afro-brasileiros.\n\nTEXTO II\n\n[[imagem:0]]\n\nNo diálogo que estabelece com religiões afro-brasileiras, sintetizado na descrição e na imagem do espetáculo, a dança exprime uma",
+        "opcoes": [
+          "crítica aos movimentos padronizados do balé clássico.",
+          "representação contemporânea de rituais ancestrais extintos.",
+          "reelaboração estética erudita de práticas religiosas populares.",
+          "releitura irônica da atmosfera mística presente no culto a entidades.",
+          "oposição entre o resgate de tradições e a efemeridade da vida humana."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d1-q034-1.webp",
+            "alt": "Imagem da questão 34 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.grupocorpo.com.br. Acesso em: 2 jul. 2019.",
+            "largura": 932,
+            "altura": 688
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:95da6a43",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 34"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:11.243Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:d9ae6549",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A indústria do esporte eletrônico é um mercado que está crescendo em um ritmo mais rápido do que a economia mundial. Sua popularidade cresceu muito e no Brasil não é diferente. De acordo com os dados de uma pesquisa, mais de 64% dos brasileiros que jogam videogame já ouviram falar de esporte eletrônico. No entanto, o que chama a atenção é o crescimento superior a 10% do público praticante comparado ao ano anterior, que subiu de 44,7% para 55,4%. Trata-se de um percentual expressivo, já que o Brasil está no top 3 dentre os países que têm maior número de espectadores de esporte eletrônico do mundo. Comparado ao ano anterior, em 2020, o Brasil teve um marco de crescimento de 20% na audiência. Mundo afora, a árdua dedicação de grandes gamers contribuiu para o reconhecimento do Comitê Olímpico Internacional, aliado a outras cinco federações esportivas e suas desenvolvedoras de jogos, que direcionaram um olhar mais atento ao assunto, permitindo dar o primeiro passo para concretizar, pela primeira vez na história dos jogos eletrônicos, um evento olímpico oficial.\n\nDisponível em: https://chicoterra.com. Acesso em: 19 nov. 2021 (adaptado).\n\nO contexto em que o esporte eletrônico é apresentado no texto demonstra o(a)",
+        "opcoes": [
+          "condição favorável à expansão dessa modalidade.",
+          "promoção dessa prática por jogadores profissionais.",
+          "impulsionamento de um processo de marketing.",
+          "favorecimento de fabricantes dos jogos.",
+          "modificação da audiência televisiva."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:d9ae6549",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 35"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.020Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:8775fb1b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Marabaixo é uma expressão artístico-cultural formada nas tradições e na identificação cultural entre as comunidades negras do Amapá. O nome remonta às mortes de escravizados em navios negreiros que eram jogados na água. Em sua homenagem, hinos de lamento eram cantados mar abaixo, mar acima. Posteriormente, o Marabaixo se integrou à vivência das comunidades negras em um ciclo de danças, cantorias com tambores e festas religiosas, recebendo, em 2018, o título de Patrimônio Cultural do Brasil.\n\nDisponível em: http://portal.iphan.gov.br. Acesso em: 15 nov. 2021 (adaptado).\n\nA manifestação do Marabaixo se constituiu em expressão de arte e cultura, exercendo função de",
+        "opcoes": [
+          "ressignificar episódios dramáticos em novas práticas culturais.",
+          "adaptar coreografias como imitação dos movimentos do mar.",
+          "lembrar dos mortos no passado escravista como forma de lamento.",
+          "perpetuar uma narrativa de apagamento dos fatos históricos traumáticos.",
+          "ritualizar a passagem de atos fúnebres nas produções coletivas com espírito festivo."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:8775fb1b",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 36"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.021Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:fd80f1f8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O mais antigo grupo de rap indígena do país, Brô MCs, surgiu em 2009, na aldeia Jaguapiru, em Dourados, Mato Grosso do Sul. Os integrantes conheceram o rap pelo rádio, ouvindo um programa que apresentava cantores e grupos brasileiros desse gênero musical. O Brô MCs conseguiu influenciar outros a fazerem rap e a lutarem pelas causas indígenas. Um dos nomes do movimento, Kunumí MC, é um jovem de 16 anos, da aldeia Krukutu, em São Paulo. O adolescente enxerga o rap como uma cultura da defesa e começou a fazer rimas quando percebeu que a poesia, pela qual sempre se interessou, podia virar música. Nas letras que cria, inspiradas tanto pelo rap quanto pelos ritmos indígenas, tenta incluir sempre assuntos aos quais acha importante dar voz, principalmente, a questão da demarcação de terras.\n\nDisponível em: www.correiobraziliense.com.br. Acesso em: 13 nov. 2021 (adaptado).\n\nO movimento rap dos povos originários do Brasil revela o(a)",
+        "opcoes": [
+          "fusão de manifestações ar tísticas urbanas contemporâneas com a cultura indígena.",
+          "contraposição das temáticas socioambientais indígenas às questões urbanas.",
+          "rejeição da indústria radiofônica às músicas indígenas.",
+          "distanciamento da realidade social indígena.",
+          "estímulo ao estudo da poesia indígena."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:fd80f1f8",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 38"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.024Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:2c2ba620",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A petição on-line criada por um cidadão paulista surtiu efeito: casado há três anos com seu companheiro, ele pedia a alteração da definição de \"casamento\" no tradicional dicionário Michaelis em português. Na definição anterior, casamento aparecia como \"união legítima entre homem e mulher\" e \"união legal entre homem e mulher, para constituir família\".\n\nO novo verbete não traz em nenhum momento as palavras homem ou mulher — agora a definição de casamento se refere a \"pessoas\".\n\nPara o diretor de comunicação do site onde a petição foi publicada, a iniciativa mostra a \"eficiência da mobilização\". \"Em dois dias, mudou-se uma definição que permanecia a mesma há décadas\", afirma. E conclui: \"A plataforma serve para todos os tipos de causas, para as mudanças que importam para as pessoas.\".\n\n(SENRA, R. Disponível em: www.bbc.com. Acesso em: 29 out. 2015.)\n\nA notícia trata da mudança ocorrida em um dicionário da língua portuguesa. Segundo o texto, essa mudança foi impulsionada pela",
+        "opcoes": [
+          "inclusão de informações no verbete.",
+          "relevância social da instituição casamento.",
+          "utilização pública da petição pelos cidadãos.",
+          "rapidez na disseminação digital do verbete.",
+          "divulgação de plataformas para a criação de petição."
+        ],
+        "correta": 2,
+        "explicacao": "O próprio texto atribui a mudança à \"eficiência da mobilização\" gerada pela petição assinada pelos cidadãos — é o uso público da petição, não a velocidade de disseminação do verbete em si ou a divulgação da plataforma, que a notícia aponta como causa.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:2c2ba620",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": -0.8,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 39"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:bd5d16df",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A neozelandesa Laurel Hubbard fez história nos Jogos Olímpicos. Apesar de ter ficado de fora da disputa por medalhas, a levantadora de peso deixou sua marca na edição de Tóquio por ser a primeira mulher abertamente transgênero a participar de uma competição olímpica. No início da carreira, na década de 1990, a neozelandesa par ticipava de disputas na categoria masculina. Em 2001, aos 23 anos, ela se afastou da atividade. “A pressão de tentar me encaixar em um mundo que talvez não tenha sido feito para pessoas como eu se tornou um fardo muito grande para suportar.” Em 2012, Laurel começou sua transição de gênero por meio de terapias hormonais e, em 2013, declarou abertamente ser uma mulher trans. Para o Comitê Olímpico Internacional, a participação de mulheres trans nos Jogos é permitida caso o nível de testosterona, hormônio que aumenta a massa muscular, esteja abaixo de 10 nanomols por litro por pelo menos 12 meses.\n\nDisponível em: https://revistagalileu.globo.com. Acesso em: 18 nov. 2021 (adaptado).\n\nNo texto, os limites do potencial inclusivo do esporte são dados pela",
+        "opcoes": [
+          "dificuldade de conseguir bons resultados esportivos.",
+          "dependência de características biológicas padronizadas.",
+          "inexistência de uma categoria para pessoas transgênero.",
+          "necessidade de afastamento temporário das competições.",
+          "impossibilidade de uso controlado de substâncias exógenas."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:bd5d16df",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 40"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.025Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:7c68c700",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "“Ganhei 25 medalhas em mundiais, sete em Jogos Olímpicos, e sou uma sobrevivente de abuso sexual.” Foi assim que Simone Biles se apresentou ao comitê do Senado norte-americano que investiga as supostas falhas do FBI no caso Larry Nassar. Biles e outras três atletas, vítimas dos abusos do ex-médico da equipe de ginástica feminina dos EUA, exigiram que os agentes da investigação sejam processados por falta de ação prévia contra Nassar, agora preso. Biles esclareceu que culpa Larry Nassar e “todo o sistema que o permitiu e o perpetrou”, acusando a Federação de Ginástica e o Comitê Olímpico dos Estados Unidos de saberem “muito antes” que ela havia sofrido abusos. A melhor ginasta do mundo é um ícone. Nos Jogos Olímpicos de Tóquio, uma lesão psicológica a impediu de competir como previa. No entanto, ela chegou ao topo como uma líder no trabalho de acabar com o preconceito com os problemas de saúde mental. “Não quero que nenhum outro atleta olímpico sofra o horror que eu e outras centenas suportamos e continuamos suportando até hoje”, afirmou.\n\nDisponível em: https://brasil.elpais.com. Acesso em: 31 out. 2021 (adaptado).\n\nO fato relatado na notícia chama a atenção acerca da necessidade de reflexão sobre a relação entre o esporte e",
+        "opcoes": [
+          "o desempenho atlético internacional.",
+          "a dimensão emocional dos atletas.",
+          "os comitês olímpicos nacionais.",
+          "as instituições de inteligência.",
+          "as federações esportivas."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:7c68c700",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 41"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.026Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:04dafacd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O acesso às Práticas Corporais/Atividades Físicas (PC/AF) é desigual no Brasil, à semelhança de outros indicadores sociais e de saúde. Em geral, PC/AF prazerosas, diversificadas, mais afeitas ao período de lazer estão concentradas nas populações mais abastadas. As atividades físicas de deslocamento, trajetos a pé ou de bicicleta para estudar ou trabalhar, por exemplo, são mais frequentes na classe social menos favorecida. Aqui, há uma relação inversa e perversa entre variáveis socioeconômicas de acesso às PC/AF. As maiores prevalências de inatividade física foram em mulheres, pessoas com 60 anos ou mais, negros, pessoas com autoavaliação de saúde ruim ou muito ruim, com renda familiar de até quatro salários mínimos por pessoa, pessoas que desconhecem programas públicos de PC/AF e residentes em áreas sem locais públicos para a prática.\n\nKNUTH, A. G.; ANTUNES, P. C. Saúde e Sociedade, n. 2, 2021 (adaptado).\n\nO fator central que impacta a realização de práticas corporais/atividades físicas no tempo de lazer no Brasil é a",
+        "opcoes": [
+          "diferença entre homens e mulheres.",
+          "inexistência de políticas públicas.",
+          "diversidade de faixa etária.",
+          "variação de condição étnica.",
+          "desigualdade entre classes sociais."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:04dafacd",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 42"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.027Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:39dfafe0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Mestre e companheiro, disse eu que nos íamos despedir. Mas disse mal. A morte não extingue: transforma; não aniquila: renova; não divorcia: aproxima. Um dia supuseste “morta e separada” a consorte dos teus sonhos e das tuas agonias, que te soubera “pôr um mundo inteiro no recanto” do teu ninho; e, todavia, nunca ela te esteve mais presente, no íntimo de ti mesmo e na expressão do teu canto, no fundo do teu ser e na face de tuas ações. Esses catorze versos inimitáveis, em que o enlevo dos teus discípulos resume o valor de toda uma literatura, eram a aliança de ouro do teu segundo noivado, um anel de outras núpcias, para a vida nova do teu renascimento e da tua glorificação, com a sócia sem nódoa dos teus anos de mocidade e madureza, da florescência e frutificação de tua alma. Para os eleitos do mundo das ideias a miséria está na decadência, e não na morte. A nobreza de uma nos preserva das ruínas da outra. Quando eles atravessavam essa passagem do invisível, que os conduz à região da verdade sem mescla, então é que entramos a sentir o começo do seu reino, o reino dos mortos sobre os vivos.\n\nBARBOSA, R. O adeus da Academia a Machado de Assis. Rio de Janeiro: Agir, 1962.\n\nEsse é um trecho do discurso de Rui Barbosa na Academia Brasileira de Letras em homenagem a Machado de Assis por ocasião de sua morte. Uma das características desse discurso de homenagem é a presença de",
+        "opcoes": [
+          "metáforas relacionadas à trajetória pessoal e criadora do homenageado.",
+          "recursos fonológicos empregados para a valorização do ritmo do texto.",
+          "frases curtas e diretas no relato da vida e da morte do homenageado.",
+          "contraposição de ideias presentes na obra do homenageado.",
+          "seleção vocabular representativa do sentimento de nostalgia."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:39dfafe0",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 43"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.028Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b9a2f295",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEssa campanha publicitária do Ministério da Saúde visa",
+        "opcoes": [
+          "divulgar um conjunto de benefícios proporcionados pela amamentação.",
+          "apresentar tratamentos para infecções respiratórias em bebês.",
+          "defender o direito das mulheres de amamentar em público.",
+          "orientar sobre os exercícios para uma boa amamentação.",
+          "informar sobre o aumento de anticorpos nas mães."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d1-q044-1.webp",
+            "alt": "Imagem da questão 44 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Disponível em: www.facebook.com/minsaude. Acesso em: 13 jun. 2018.",
+            "largura": 980,
+            "altura": 866
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:b9a2f295",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 44"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.601Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:c1afc784",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Carta aberta à população brasileira\n\nPrezados Cidadãos e Cidadãs,\n\nO envelhecimento populacional é um fenômeno mundial. Infelizmente, nosso país ainda não está preparado para atender às demandas dessa população.\n\nEste é o retrato da saúde pública no Brasil, que, apesar dos indiscutíveis avanços, apresenta um cenário de deficiências e falta de integração em todos os níveis de atenção à saúde: primária (atendimento deficiente nas unidades de saúde da atenção básica), secundária (carência de centros de referência com atendimento por especialistas) e terciária (atendimento hospitalar com abordagem ao idoso centrada na doença), ou seja, não há, na prática, uma rede de atenção à saúde do idoso.\n\nDiante desse cenário, a Sociedade Brasileira de Geriatria e Gerontologia (SBGG) vem a público manifestar suas preocupações com o presente e o futuro dos idosos no Brasil. É preciso garantir a saúde como direito universal.\n\nEsperamos que tanto nossos atuais quanto os futuros governantes e legisladores reflitam sobre a necessidade de investir na saúde e na qualidade de vida associada ao envelhecimento.\n\nDignidade à saúde do idoso!\nRio de Janeiro, 15 de setembro de 2014.\n\nDisponível em: www.sbgg.org.br. Acesso em: 20 out. 2021 (adaptado).\n\nO objetivo desse texto é",
+        "opcoes": [
+          "sensibilizar o idoso a respeito dos cuidados com a saúde.",
+          "alertar os governantes sobre os cuidados requeridos pelo idoso.",
+          "divulgar o trabalho da Sociedade Brasileira de Geriatria e Gerontologia.",
+          "informar o setor público sobre o retrocesso da legislação destinada à população idosa.",
+          "chamar a atenção da população sobre a qualidade dos serviços de saúde pública para o idoso."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:c1afc784",
+        "version": 1,
+        "skillIds": [
+          "por:tempos-verbais-emprego"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 45"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:25.489Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     }
   ]

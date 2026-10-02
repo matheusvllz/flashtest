@@ -82,4 +82,9 @@ export interface ItemMeta {
   source: ItemSource;
   validation: ItemValidation;
   examProfiles: string[];
+  /**
+   * `true` quando a explicação é só a frase fixa do importador ("Gabarito oficial: alternativa X. Peça para a
+   * Foca IA explicar o raciocínio."), à espera da explicação gerada e marcada como IA (spec 50 §5.9.2).
+   */
+  explicacaoPendente?: boolean;
 }

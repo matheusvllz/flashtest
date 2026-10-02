@@ -1,6 +1,7 @@
 import { FeedbackSheet, type ModoOutroJeito } from "@/components/lessons/FeedbackSheet";
 import { DontKnowButton } from "@/components/learning/DontKnowButton";
 import { ExplanationLayers, hasExplanationLayers } from "@/components/learning/ExplanationLayers";
+import { FiguraDaQuestao } from "@/components/questao/FiguraDaQuestao";
 import { COPY } from "@/lib/copy";
 import type { AnswerFeedback } from "@/lib/feedback/types";
 import { exerciseViewFor } from "@/lib/lessons/registry";
@@ -70,21 +71,7 @@ export function QuestionStepView({
     <div className="space-y-4" aria-label={`Questão ${questionNumber} de ${questionTotal}`}>
       <p className="ds-label">{rotulo ?? COPY.licao.roles[step.role]}</p>
 
-      {exercise.imagem && (
-        <figure>
-          <img
-            src={exercise.imagem.url}
-            alt={exercise.imagem.alt}
-            loading="lazy"
-            className="mx-auto max-h-64 w-auto rounded-xl border-2 border-gelo bg-cards"
-          />
-          {exercise.imagem.credito && (
-            <figcaption className="mt-1.5 text-center text-[11px] text-nevoa">
-              {exercise.imagem.credito}
-            </figcaption>
-          )}
-        </figure>
-      )}
+      {exercise.imagem && <FiguraDaQuestao imagem={exercise.imagem} />}
 
       <View
         exercise={exercise}

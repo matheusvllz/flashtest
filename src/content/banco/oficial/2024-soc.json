@@ -1,0 +1,1128 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "oficial:2024:8c8de850",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O rompimento da barragem de Fundão levou muito consigo. A lama soterrou sonhos e modificou de forma permanente centenas de vidas nascidas e criadas em Bento Rodrigues e Paracatu, em Mariana (MG). Mas não somente. Ao se estender ao longo do rio, outras famílias e histórias foram atingidas de formas diferentes. Ao fugirem dos rejeitos que rapidamente tomaram as localidades, deixaram para trás os resquícios da vida que tiveram até o 5 de novembro de 2015. Nada jamais seria igual.\n\nSANTOS, P. Histórias soterradas. Curinga,\nn. 19, nov. 2016 (adaptado).\n\nConforme o texto, o evento gerou o seguinte impacto na relação entre as pessoas e o seu espaço vivido:",
+        "opcoes": [
+          "Flexibilização de parâmetros ambientais.",
+          "Consolidação de identidades regionais.",
+          "Fragilização de vínculos afetivos.",
+          "Supressão de práticas exploratórias.",
+          "Recuperação de tradições ancestrais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:8c8de850",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 48"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.983Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:bb88ee3c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Black Lives Matter vai para além do nacionalismo estreito que pode prevalecer no seio das comunidades negras, que se limita a apelar aos negros a amar os negros, viver como os negros e comprar produtos dos negros, e mantém à frente do movimento homens negros heterossexuais. Black Lives Matter estima as vidas dos negros e negras homossexuais e transexuais, pessoas incapacitadas, negros sem documentos ou com antecedentes criminais, mulheres e as vidas de todos os negros de todo o espectro de gêneros.\n\nLA BOTZ, D. O movimento Black Lives Matter organiza-se e procura\ndefinir-se politicamente. Disponível em: www.ufes.br.\n\nAcesso em: 4 out. 2021 (adaptado).\n\nA reivindicação do movimento norte-americano apresentada no texto consiste na necessidade de",
+        "opcoes": [
+          "manter a conquista de direitos sociais.",
+          "integrar a diversidade do grupo identitário.",
+          "priorizar a preservação de culturas africanas.",
+          "defender a adoção de valores supremacistas.",
+          "permitir a permanência do modelo androcêntrico."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:bb88ee3c",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 52"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.984Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:8770a24f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os grupos dominantes são beneficiados em termos de credibilidade e podem, com isso, controlar falas de membros de outros grupos, descredibilizando seus testemunhos com base em concepções compartilhadas de preconceito de identidade (gênero e raça). Algumas formas de preconceito tornam as declarações das pessoas menos importantes devido ao seu pertencimento a determinado grupo social. Assim, um falante recebe menos credibilidade devido ao preconceito do ouvinte.\n\nKUHNEN, T. Resenha de The Power and Ethics of Knowing,\nde Miranda Fricker. Revista Princípios, n. 33, 2013.\n\nCom base na reflexão suscitada no texto, o preconceito de identidade é responsável por um tipo de injustiça",
+        "opcoes": [
+          "estética, que normatiza os padrões corporais.",
+          "sensorial, que privilegia as habilidades visuais.",
+          "afetiva, que impede as expressões emocionais.",
+          "epistêmica, que prejudica as trocas informacionais.",
+          "econômica, que perpetua as desigualdades materiais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:8770a24f",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 54"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.048Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f9650844",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No primeiro dia, foi colocada uma panela de barro no centro do barracão, a qual representava o espírito do morto presente na sala. Aqueles que dançavam depositavam moedas ao passarem junto dela e, ao seu redor, milho branco, mel, água, acaçás, cachaça. No segundo dia, os ogãs, antes de iniciar a cerimônia, caminharam pelo corredor formado pelas casas, batendo com longas varas de bambus nos seus beirais, até alcançarem o portão de entrada. No terceiro dia, quatro pessoas, as mais influentes do culto, carregaram um lençol, que aparentemente continha um corpo em seu interior. No entanto, esse corpo era formado por folhas verdes de plantas, que foram derramadas sobre uma pessoa.\n\nMANZOCHI, H. M. Axexe, um rito de passagem. Revista do Museu\nde Arqueologia e Etnologia, n. 5, 1995 (adaptado).\n\nO ritual brasileiro apresentado no texto representa, para seus adeptos, a",
+        "opcoes": [
+          "manutenção de uma memória coletiva.",
+          "contestação de uma identidade étnica.",
+          "imolação de uma divindade africana.",
+          "legitimação de uma prática pagã.",
+          "promissão de uma revolta social."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:f9650844",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 56"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.049Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:e21572d6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Espaços públicos não são produtos dados e acabados, uma instituição que, uma vez estabelecida, traria a paz da consensualidade e a perfeita igualdade. São os lugares em que os problemas aparecem e se transformam em debates, em diálogo e em possibilidade de ajuste e compromissos. Por isso, não anulam os conflitos, ao contrário, são canais de comunicação e de visibilidade de oposições.\n\nGOMES, P. C. C. Espaço público, espaços públicos.\n\nGeographia, n. 44, set.-dez. 2018 (adaptado).\n\nAs características descritas no texto exibem a importância dos espaços públicos para a",
+        "opcoes": [
+          "prática do lazer.",
+          "vigilância da sociedade.",
+          "erradicação da violência.",
+          "construção da democracia.",
+          "diversificação do trabalho."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:e21572d6",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 57"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.049Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:03434675",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Há experiências de lutas sociais de reapropriação cultural da natureza que são movimentos emblemáticos, como a dos seringueiros no Brasil, que da luta sindical para a comercialização da borracha chegaram a inventar o conceito de reserva extrativista e estão avançando para um novo modo de produção, uma nova racionalidade produtiva, mostrando que é possível viver bem, e não apenas sobreviver, em harmonia com a natureza que habitam. O novo planeta que podemos imaginar é feito desses territórios produtivos que não são apenas economias de autossubsistência mas economias que potencializam a produtividade ecológica de seus territórios.\n\nLEFF, E. Discursos sustentáveis. São Paulo: Cortez, 2010 (adaptado).\n\nO texto expõe a possibilidade de uma nova racionalidade produtiva por meio de uma gestão territorial que se baseia na",
+        "opcoes": [
+          "integração de mercados regidos por pressões regionais.",
+          "conexão de valores fundamentados por decisões locais.",
+          "unificação de preços delimitados por demandas nacionais.",
+          "normatização de regras construídas por instituições mundiais.",
+          "valorização de tradições orientadas por determinações globais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:03434675",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 60"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.051Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:7783b66a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma das principais atividades provocadas pela arte, a reflexão, é abandonada pela indústria cultural. A indústria cultural seria como uma isca que ilude os indivíduos, com o sonho de que eles são livres, originais, únicos e especiais quando, na verdade, os trata como servos e partes de uma massa homogênea.\n\nFONTES, B.; MAGALHÃES, R. O que é indústria cultural? In: BODART, C. N. (Org.). Conceitos e categorias do ensino de\nsociologia. Maceió: Café com Sociologia, 2021 (adaptado).\n\nAo analisar as consequências da dinâmica apresentada no texto, as autoras destacam a importância do conceito como:",
+        "opcoes": [
+          "Ferramenta de luta coletiva.",
+          "Mecanismo de controle social.",
+          "Instituição de interesse público.",
+          "Organização da iniciativa privada.",
+          "Instrumento de manipulação estatal."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:7783b66a",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 63"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.053Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:b0d101a1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nNeta de Tomásia, uma escravizada alforriada, Chiquinha Gonzaga foi uma das primeiras mulheres a se destacar na música popular brasileira. Entre suas obras mais famosas estão a marcha Ó abre alas, sucesso nos blocos de Carnaval até hoje, e o tango Gaúcho, além de inúmeras peças musicais para teatro e óperas. Chiquinha também teve uma atuação em defesa dos direitos das mulheres e pelo fim da escravatura.\n\nDisponível em: www.uol.com.br. Acesso em: 7 out. 2023 (adaptado).\n\nTEXTO II\n\nDepois da estreia de sua peça Gonzaga, em 1867, que tem como um de seus núcleos dramáticos dois escravizados, pai e filha, separados há muitos anos, Castro Alves escreve talvez o maior conjunto de poemas antiescravistas do Romantismo brasileiro, publicados em 1883 no livro Os escravos, doze anos após a sua morte. Os textos Vozes d’África e Navio negreiro, por exemplo, publicados em folhetos, já em 1878, tiveram enorme repercussão desde a sua circulação, a ponto de Afrânio Coutinho (um importante crítico brasileiro) afirmar ter sido Castro Alves, no que diz respeito à poesia antiescravista, um dos primeiros que o Brasil ouviu.\n\nDisponível em: www.uol.com.br. Acesso em: 8 out. 2023 (adaptado).\n\nOs textos indicam a participação de artistas e intelectuais brasileiros em defesa do(a)",
+        "opcoes": [
+          "ação integralista.",
+          "literatura realista.",
+          "movimento abolicionista.",
+          "política indigenista.",
+          "nacionalismo desenvolvimentista."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:b0d101a1",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 64"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.053Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:52dcdbe0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Como conclusão provisória, parece então que a globalização tem, sim, o efeito de contestar e deslocar as identidades centradas e “fechadas” de uma cultura nacional. Ela tem um efeito pluralizante sobre as identidades, produzindo uma variedade de possibilidades e novas posições de identificação, e tornando as identidades mais posicionais, mais políticas, mais plurais e diversas; menos fixas, unificadas ou trans-históricas.\n\nHALL, S. A identidade cultural na pós-modernidade.\n\nRio de Janeiro: DP&A, 2011.\n\nDe acordo com o texto, o processo apresentado contribuiu para",
+        "opcoes": [
+          "elevar a renda da população.",
+          "abandonar os valores morais.",
+          "estabelecer a igualdade racial.",
+          "fortalecer as pautas das minorias.",
+          "inverter os fluxos das migrações."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:52dcdbe0",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 65"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.054Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:1f89aa6f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A internet fortalece o engajamento e a visibilidade de populações tradicionais e indígenas por meio de redes sociais, rádios e veículos de mídia digital. Ela também promove a criação e o fortalecimento de mercados e a inovação nos sistemas de financiamento, integrando pequenos agricultores e produtores da comunidade florestal a cadeias de abastecimento maiores.\n\nGROTTERA, C.; CASTRO, L. M.; BRITO, M. C. Como a tecnologia\npode ser uma aliada na conservação ambiental.\n\nNexo Jornal, 14 ago. 2021.\n\nA adoção da tecnologia mencionada amplia a rentabilidade das comunidades citadas, ao possibilitar o(a):",
+        "opcoes": [
+          "Valorização da economia local.",
+          "Elaboração de projetos culturais.",
+          "Estabelecimento de regras comerciais.",
+          "Incremento da infraestrutura educacional.",
+          "Homogeneização da qualificação profissional."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:1f89aa6f",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 67"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.055Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:e6ca0cc7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Cada objeto é, em si mesmo, um sistema funcionando sistemicamente. Um grande supermercado ou shopping center seria incapaz de existir se não fossem servidos por vias rápidas, estacionamentos adequados e acessíveis, sistemas de transportes públicos com horários regulares e conhecidos e se, no seu próprio interior, as atividades não estivessem subordinadas a uma coordenação. Esse é o caso dos armazéns, dos silos etc. Os portos, a rede rodoviária de um país e, sobretudo, a rede ferroviária são exemplos de objetos complexos e sistêmicos.\n\nSANTOS, M. A natureza do espaço: técnica, tempo, razão e emoção.\n\nSão Paulo: Hucitec, 1996 (adaptado).\n\nDe acordo com o texto, o território torna-se cada vez mais dotado de objetos com a finalidade de intensificar a",
+        "opcoes": [
+          "desindustrialização da economia.",
+          "desregulamentação do mercado.",
+          "concentração da produção.",
+          "distribuição de renda.",
+          "dinamização dos fluxos."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:e6ca0cc7",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 70"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.056Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d8108b30",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As capas dos folhetos de cordel, já então ilustradas por postais fotográficos, desenhos ou fotogramas de filmes, demoravam mais de uma semana para serem transformadas em clichês em Recife ou Fortaleza, o que levou a que santeiros e artesãos locais fossem requisitados para cortar na umburana — madeira preferida para o taco xilográfico pela facilidade do talhe e abundância — princesas, dragões, cangaceiros.\n\nCARVALHO, G. Xilogravura: os percursos da criação popular.\n\nRevista do Instituto de Estudos Brasileiros,\nn. 39, 1986 (adaptado).\n\nNo início do século XX, a incorporação da técnica de produção descrita no texto promoveu uma renovação da",
+        "opcoes": [
+          "manifestação jornalística.",
+          "narrativa literária.",
+          "indústria regional.",
+          "estética editorial.",
+          "cultura erudita."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:d8108b30",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 73"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.058Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d51020d5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Círio de Nazaré é uma festa que ocorre, anualmente, na cidade de Belém do Pará, no segundo domingo do mês de outubro. Sua estrutura ritualística tem origem no catolicismo devocional que surge em Portugal por volta do século XV. Até 1789, a festa em louvor a Nossa Senhora de Nazaré, em Belém, era marcada pelas ladainhas e novenas. Em 1790, a Igreja Católica autorizou a realização de festa em homenagem à Virgem. A primeira procissão ocorreu em 1793. Existindo há mais de duzentos anos, a Festa congrega um extenso mosaico de elementos integrados em diferentes planos e graus de intensidade.\n\nALMEIDA, I. M. A. Revisitando o Círio de Nazaré a partir da lente\nsociológica de Eidorfe Moreira. Boletim do Museu Paraense\nEmílio Goeldi, n. 3, set.-dez. 2015 (adaptado).\n\nO reconhecimento da festa descrita no texto, como patrimônio histórico, encontra sustentação no(a)",
+        "opcoes": [
+          "instituição de políticas públicas de âmbito local.",
+          "registro de bens culturais de natureza imaterial.",
+          "tombamento de sítios arqueológicos de propriedade privada.",
+          "salvaguarda de elementos sacros de expressão regional.",
+          "categorização de manifestações cristãs de caráter oficial."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:d51020d5",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 74"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.059Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:dced0c10",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Resumamos os principais caracteres de um rizoma: diferentemente das árvores ou de suas raízes, o rizoma conecta um ponto qualquer com outro ponto qualquer e cada um de seus traços não remete necessariamente a traços de mesma natureza. Contra os sistemas centrados (e mesmo policentrados), de comunicação hierárquica e ligações preestabelecidas, o rizoma é um sistema a-centrado não hierárquico e não significante, sem general, sem memória organizadora ou autômato central, unicamente definido por uma circulação de estados.\n\nDELEUZE, G.; GUATTARI, F. Mil platôs.\n\nSão Paulo: Editora 34, 1995 (adaptado).\n\nQual elemento da cultura contemporânea se relaciona às características do conceito de rizoma, conforme descrito no texto?",
+        "opcoes": [
+          "Estrutura fixa.",
+          "Lógica binária.",
+          "Controle homogêneo.",
+          "Uniformidade de opiniões.",
+          "Pluralidade de interações."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:dced0c10",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 76"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.060Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:57746696",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nO que as capas da revista Travel in Brazil, publicadas entre 1941 e 1944 pelo Departamento de Imprensa e Propaganda (DIP), evidenciam?",
+        "opcoes": [
+          "Estereótipos da cultura nacional.",
+          "Exploração da população pobre.",
+          "Preconceitos de ordem racial.",
+          "Política de censura midiática.",
+          "Projeto de país industrial."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d1-q077-1.webp",
+            "alt": "Imagem da questão 77 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "VIEIRA, A. P. L. O Departamento de Imprensa e Propaganda e a política editorial do Estado Novo (1937-1945). Rio de Janeiro: Unirio, 2019.",
+            "largura": 1200,
+            "altura": 493
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:57746696",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 77"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.168Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:fe3f320c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O que alicerça, portanto, o acolhimento de refugiados pelos Estados gira em torno da fronteira erguida entre inclusão e exclusão, admissão e rejeição, desejáveis e indesejáveis; ao mesmo tempo, enseja vulnerabilidade, indefinição e incerteza a esses migrantes internacionais forçados.\n\nMOREIRA, J. B. Refugiados no Brasil. REMHU, n. 43, jul.-dez. 2014.\n\nA eliminação, para os refugiados, do tipo de fronteira descrita no texto necessita de políticas públicas de",
+        "opcoes": [
+          "planejamento familiar.",
+          "segregação territorial.",
+          "homogeneização cultural.",
+          "diferenciação étnico-racial.",
+          "integração socioeconômica."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:fe3f320c",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 79"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.169Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d5b38fe5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n“As novelas brasileiras foram as primeiras a aparecer na TV russa ainda na época de Gorbachov, nos anos 1980. Elas causaram sensação. Houve casos anedóticos, como quando o Parlamento da Federação Russa terminou a sessão mais cedo para ver o último capítulo de Escrava Isaura”, conta o russo Anatoli Sostanov, consultor na área de TV internacional e ex-diretor da emissora estatal russa Canal.\n\nDisponível em: www.bbc.com. Acesso em: 16 out. 2021.\n\nTEXTO II\n\nAs novelas de maior impacto em Angola foram as produções brasileiras. Fizeram tanto sucesso que um mercado popular, na época era o maior a céu aberto na África, chegou a receber o nome de Roque Santeiro, novela brasileira exibida naquele país na década de 1980. A influência das produções brasileiras fez com que os angolanos conhecessem o Brasil por meio das novelas. Além de entreter, os folhetins brasileiros até hoje ditam a moda em Angola. Figurinos e acessórios de personagens se transformam em uma verdadeira febre e influenciam o comportamento.\n\nDisponível em: https://tvbrasil.ebc.com.br.\n\nAcesso em: 16 out. 2021 (adaptado).\n\nEmbora situados em continentes diferentes com práticas sociais distintas, Rússia e Angola se aproximam, conforme os textos I e II, no aspecto",
+        "opcoes": [
+          "cultural, ao subjetivarem costumes da teledramaturgia estrangeira.",
+          "econômico, ao importarem confecções de estilistas famosos.",
+          "geográfico, ao encurtarem distâncias de caráter ideológico.",
+          "antropológico, ao adaptarem valores de povos tradicionais.",
+          "político, ao adotarem sistemas de governos democráticos."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:d5b38fe5",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 80"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.170Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f63f60a3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No Brasil, os remanescentes de antigos quilombos, “mocambos”, “comunidades negras rurais”, “quilombos contemporâneos”, “comunidades quilombolas” ou “terras de preto” referem-se a um mesmo patrimônio territorial e cultural inestimável, que só recentemente passaram a ter atenção do Estado e ser do interesse de algumas autoridades e organismos oficiais.\n\nANJOS, R. S. A. Cartografia e quilombos: territórios étnicos\nafricanos no Brasil. Africana Studia, n. 9, 2007.\n\nNa esfera de ação do Estado, com a Constituição de 1988, os espaços mencionados tornaram-se objeto de",
+        "opcoes": [
+          "iniciativas de planejamento familiar.",
+          "projetos de reorientação religiosa.",
+          "programas de moradias sustentáveis.",
+          "políticas de inserção social.",
+          "medidas de homogeneização educacional."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:f63f60a3",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 81"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.170Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:b744f730",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A finalidade mais marcante em toda a história dos mapas, desde o seu início, teria sido a de estarem sempre voltados à prática, principalmente a serviço da dominação, do poder. Sempre registraram o que mais interessava a uma minoria, fato este que acabou estimulando o incessante aperfeiçoamento deles.\n\nMARTINELLI, M. Mapas da geografia e cartografia temática.\n\nSão Paulo: Contexto, 2011 (adaptado).\n\nNo texto, a cartografia é apresentada como um instrumento usado essencialmente para a",
+        "opcoes": [
+          "preservação de espaços naturais.",
+          "emancipação de sujeitos marginais.",
+          "revalorização de culturas reprimidas.",
+          "inversão de hierarquias estabelecidas.",
+          "sustentação de hegemonias territoriais."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:b744f730",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 83"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.171Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:baf6ceeb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nO bufarinheiro, conhecido nas cidades por teque-teque, chama-se, nos recônditos da Amazônia, “regatão”. Em lugar de transportar nas costas o mundo de miudezas, transporta-o no bojo de uma gaiola que desloca duas, três, quatro toneladas, divididas em seções de secos e molhados e é movido por remo de faia. Cortando comunidades e matas da Amazônia por rios, dentro dessas gaiolas, riscadas de prateleiras, encontram-se os artigos mais díspares, que vão da agulha à espingarda, do lenço ao cobertor, da chita à escova de dentes.\n\nMORAES, R. Na Planície Amazônica. São Paulo:\n\nEditora Nacional, 1936 (adaptado).\n\nTEXTO II\n\nNo século XIX, o comércio dos regatões era feito, então, com base em relações tecidas com quilombolas, pequenos produtores, comerciantes locais e indígenas, constituindo relação comercial alternativa ao abastecimento da população.\n\nHENRIQUE, M. C.; MORAIS, L. T. Estradas líquidas, comércio sólido:\n\níndios e regatões na Amazônia (século XIX). Rev. Hist.,\nn. 171, jul.-dez. 2014 (adaptado).\n\nComo parte do patrimônio cultural da Amazônia, o regatão foi fundamental, no século XIX, para a",
+        "opcoes": [
+          "organização de rotas de fuga na floresta tropical.",
+          "criação de postos de trabalho nos seringais nortistas.",
+          "divulgação de receitas de fármacos nas zonas ribeirinhas.",
+          "construção de redes de sociabilidade no interior brasileiro.",
+          "ampliação de ambientes de lazer nos territórios autóctones."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:baf6ceeb",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 84"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.172Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:b0243801",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Era uma vez um país, uma cidade, uma praça, algumas mães... Las Madres de Plaza de Mayo! Silenciosas, com lenços brancos na cabeça, rondavam a Praça de Maio. Incansáveis, caminharam por dias, meses, anos. Foram chamadas de loucas. Em silêncio, criaram um fato político, escancararam as entranhas da repressão, desafiaram o aparato militar e suas dores ecoaram pelo mundo. Como observou Oliveira, “à luz do dia, sob as janelas do ditador, sob chuva, sob sol, no silêncio entrecortado de gritos, faziam ouvir como que a alucinação de uma litania, que ecoou no país, na América Latina e além-mar”. Era impossível ignorá-las, estavam lá, sempre em silêncio, mas estavam lá.\n\nGONÇALVES, R. De antigas e novas loucas: Madres e Mães de Maio\ncontra a violência de Estado. Lutas Sociais, n. 29, jul.-dez. 2012.\n\nQual problema de âmbito nacional argentino o movimento social mencionado expôs ao mundo?",
+        "opcoes": [
+          "Violação dos direitos humanos.",
+          "Insegurança da juventude periférica.",
+          "Naturalização da violência doméstica.",
+          "Ampliação das desigualdades sociais.",
+          "Relativização dos princípios democráticos."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:b0243801",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 85"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.173Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

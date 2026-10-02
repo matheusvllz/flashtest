@@ -7,7 +7,8 @@ import { expect, type APIRequestContext } from "@playwright/test";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-export const ORIGEM = "http://localhost:8080";
+/** `E2E_ORIGEM` roda os E2E noutra porta (ver `playwright.config.ts`); padrão, a 8080. */
+export const ORIGEM = process.env.E2E_ORIGEM ?? "http://localhost:8080";
 export const SENHA = "senha-bem-forte-123";
 const PASTA_EMAILS = join(process.cwd(), ".data", "emails");
 

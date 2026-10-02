@@ -16,9 +16,10 @@
  * `<dir>/itens-gerados.ts` — sem tocar `src/content/banco` nem `public/content`. É o que os testes
  * usam (fixture em diretório temporário); sem a flag, o comportamento é o de sempre.
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { dirname, extname, join } from "node:path";
 import { createHash } from "node:crypto";
+import type { Exercise, ExerciseImage } from "@/lib/lessons/types";
 import type {
   ContentManifest,
   ContentPackage,
@@ -91,8 +92,59 @@ function findJsonFiles(dir: string): string[] {
   return out;
 }
 
-function hashOf(content: string): string {
+function hashOf(content: string | Buffer): string {
   return createHash("sha256").update(content).digest("hex").slice(0, 10);
+}
+
+/** Prefixo das imagens de questão nos itens (spec 50 §5.9.3). */
+const PREFIXO_IMG = "/content/img/";
+
+/**
+ * Copia as imagens de questão (`<banco>/oficial/img/**`) para `<public>/content/img/`, com o hash do conteúdo no
+ * nome (`d1-q012-1.<hash>.webp`), e devolve o mapa url original → url publicada. Nome com hash permite o
+ * `Cache-Control: immutable` do `vercel.json`: imagem nova = url nova.
+ */
+export function copiarImagens(bancoDir: string, imgOutDir: string): Map<string, string> {
+  const origem = join(bancoDir, "oficial", "img");
+  const mapa = new Map<string, string>();
+  rmSync(imgOutDir, { recursive: true, force: true });
+  if (!existsSync(origem)) return mapa;
+  const andar = (dir: string, rel: string) => {
+    for (const entry of readdirSync(dir).sort()) {
+      const full = join(dir, entry);
+      const relativo = rel ? `${rel}/${entry}` : entry;
+      if (statSync(full).isDirectory()) andar(full, relativo);
+      else if (/\.(webp|png|jpe?g|svg)$/i.test(entry)) {
+        const buf = readFileSync(full);
+        const ext = extname(entry);
+        const publicado = `${relativo.slice(0, -ext.length)}.${hashOf(buf)}${ext}`;
+        mkdirSync(dirname(join(imgOutDir, publicado)), { recursive: true });
+        writeFileSync(join(imgOutDir, publicado), buf);
+        mapa.set(`${PREFIXO_IMG}${relativo}`, `${PREFIXO_IMG}${publicado}`);
+      }
+    }
+  };
+  andar(origem, "");
+  return mapa;
+}
+
+/** Troca as urls de imagem do item pelas publicadas (com hash). Url local sem arquivo = erro de build. */
+export function reescreverImagens(item: ContentPackageItem, mapa: Map<string, string>): ContentPackageItem {
+  const ex = item.exercise as Exercise;
+  const troca = (img: ExerciseImage): ExerciseImage => {
+    if (!img.url.startsWith(PREFIXO_IMG)) return img;
+    const nova = mapa.get(img.url);
+    if (!nova) throw new Error(`[build-packs] item "${item.id}" cita imagem que não existe: "${img.url}"`);
+    return { ...img, url: nova };
+  };
+  if (!ex.imagem && !ex.imagens && !(ex.type === "multipla-escolha" && ex.opcoesImagem)) return item;
+  const novo: Exercise = { ...ex };
+  if (ex.imagem) novo.imagem = troca(ex.imagem);
+  if (ex.imagens) novo.imagens = ex.imagens.map(troca);
+  if (ex.type === "multipla-escolha" && ex.opcoesImagem && novo.type === "multipla-escolha") {
+    novo.opcoesImagem = ex.opcoesImagem.map((o) => (o ? troca(o) : null));
+  }
+  return { ...item, exercise: novo };
 }
 
 function mergePackages(subjectId: string, parts: Partial<ContentPackage>[]): ContentPackage {
@@ -140,6 +192,8 @@ export function build(paths: BuildPaths = DEFAULT_PATHS): void {
   }
 
   mkdirSync(OUT_DIR, { recursive: true });
+  // `public/content/v1` → `public/content/img` (com `--root`: `<root>/img`).
+  const imagens = copiarImagens(BANCO_DIR, join(dirname(OUT_DIR), "img"));
   mkdirSync(dirname(AULAS_GERADAS_PATH), { recursive: true });
   mkdirSync(dirname(ITENS_GERADOS_PATH), { recursive: true });
 
@@ -149,6 +203,7 @@ export function build(paths: BuildPaths = DEFAULT_PATHS): void {
 
   for (const [subjectId, parts] of [...bySubject].sort(([a], [b]) => a.localeCompare(b))) {
     const pkg = mergePackages(subjectId, parts);
+    pkg.items = pkg.items.map((item) => reescreverImagens(item, imagens));
     for (const item of pkg.items) itensGerados.push(itemRefOf(subjectId, item));
     const json = JSON.stringify(pkg);
     const hash = hashOf(json);

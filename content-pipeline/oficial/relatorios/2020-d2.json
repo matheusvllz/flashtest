@@ -1,0 +1,704 @@
+{
+  "prova": "ENEM 2020 · 2º dia · caderno 7 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 90,
+  "extraidas": 89,
+  "importadas": 59,
+  "mantidasDeAntes": [],
+  "comImagem": 26,
+  "comAlternativaImagem": 4,
+  "comTabela": 2,
+  "naoImportadas": [
+    {
+      "numero": 93,
+      "motivo": "recorte incompleto: texto \"(1)(1)\" encostado na figura, fora do recorte; texto solto \"A D\" junto de uma figura (pedaço de fórmula fora do recorte); linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 94,
+      "motivo": "marcador \"QUESTÃO\" não encontrado na extração"
+    },
+    {
+      "numero": 96,
+      "motivo": "texto montado difere do texto da página (similaridade 0.962)"
+    },
+    {
+      "numero": 101,
+      "motivo": "recorte incompleto: texto \"C\" encostado na figura, fora do recorte; texto solto \"B C\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 102,
+      "motivo": "recorte incompleto: texto \"Seleção dos grãos\" encostado na figura, fora do recorte; recorte incompleto: texto \"O que ocorre\" encostado na figura, fora do recorte; recorte incompleto: texto \"Separação das sujida\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 112,
+      "motivo": "texto solto \"∆H < 0\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 119,
+      "motivo": "texto solto \"∗\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 121,
+      "motivo": "alternativa C vazia"
+    },
+    {
+      "numero": 128,
+      "motivo": "alternativa D vazia"
+    },
+    {
+      "numero": 131,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 133,
+      "motivo": "alternativa E vazia"
+    },
+    {
+      "numero": 134,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 135,
+      "motivo": "anulada no gabarito oficial"
+    },
+    {
+      "numero": 137,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 139,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 142,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 143,
+      "motivo": "recorte incompleto: texto \"Ano da Pesquisa\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 146,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 147,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 149,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 150,
+      "motivo": "texto solto \"t\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 155,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 156,
+      "motivo": "recorte incompleto: texto \"200\" encostado na figura, fora do recorte; recorte incompleto: texto \"Perfume II\" encostado na figura, fora do recorte; texto solto \"200\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 157,
+      "motivo": "anulada no gabarito oficial"
+    },
+    {
+      "numero": 160,
+      "motivo": "o texto cita uma figura, mas nenhuma figura foi achada na página"
+    },
+    {
+      "numero": 161,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 163,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 170,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 172,
+      "motivo": "recorte incompleto: texto \"h = 3 m\" encostado na figura, fora do recorte; texto solto \"h = 3 m\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 174,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 175,
+      "motivo": "recorte incompleto: texto \"30Quantidade de\" encostado na figura, fora do recorte; recorte incompleto: texto \"30Quantidade de\" encostado na figura, fora do recorte; recorte incompleto: texto \"30Quantidade de\" encostado na figura, fora do recorte; recorte incompleto: texto \"30Quantidade de\" encostado na figura, fora do recorte; linhas encavaladas (fração ou fórmula em dois andares)"
+    }
+  ],
+  "classificacao": [
+    {
+      "numero": 91,
+      "id": "oficial:2020:6ef38296",
+      "skillId": "qui:estrutura-atomica-modelos",
+      "confianca": "alta",
+      "pistas": [
+        "átomo",
+        "elétron",
+        "próton"
+      ]
+    },
+    {
+      "numero": 92,
+      "id": "oficial:2020:8cfc37cf",
+      "skillId": "qui:quimica-organica-funcoes",
+      "confianca": "media",
+      "pistas": [
+        "polímero"
+      ]
+    },
+    {
+      "numero": 95,
+      "id": "oficial:2020:fc176c0c",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "alta",
+      "pistas": [
+        "população",
+        "espécie",
+        "ecológic"
+      ]
+    },
+    {
+      "numero": 97,
+      "id": "oficial:2020:2d244b71",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 98,
+      "id": "oficial:2020:31ca25b4",
+      "skillId": "fis:eletricidade-circuitos-basicos",
+      "confianca": "media",
+      "pistas": [
+        "resistência"
+      ]
+    },
+    {
+      "numero": 99,
+      "id": "oficial:2020:1bcd5315",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "aceleração"
+      ]
+    },
+    {
+      "numero": 100,
+      "id": "oficial:2020:38d5c72e",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "população"
+      ]
+    },
+    {
+      "numero": 103,
+      "id": "oficial:2020:4d7fb2ab",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "ecológic"
+      ]
+    },
+    {
+      "numero": 104,
+      "id": "oficial:2020:0f322580",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "massa"
+      ]
+    },
+    {
+      "numero": 105,
+      "id": "oficial:2020:af8158a6",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "alta",
+      "pistas": [
+        "trabalho",
+        "calor"
+      ]
+    },
+    {
+      "numero": 106,
+      "id": "oficial:2020:ba42e9e3",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "aceleração"
+      ]
+    },
+    {
+      "numero": 107,
+      "id": "oficial:2020:8f003700",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "massa"
+      ]
+    },
+    {
+      "numero": 108,
+      "id": "oficial:2020:7a27cfe1",
+      "skillId": "qui:quimica-organica-funcoes",
+      "confianca": "media",
+      "pistas": [
+        "polímero"
+      ]
+    },
+    {
+      "numero": 109,
+      "id": "oficial:2020:a76eac04",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 110,
+      "id": "oficial:2020:2cf06764",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "media",
+      "pistas": [
+        "velocidade"
+      ]
+    },
+    {
+      "numero": 111,
+      "id": "oficial:2020:74c1d80b",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 113,
+      "id": "oficial:2020:111a2fb4",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "alta",
+      "pistas": [
+        "velocidade",
+        "trajetória"
+      ]
+    },
+    {
+      "numero": 114,
+      "id": "oficial:2020:ef728a1f",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "media",
+      "pistas": [
+        "velocidade"
+      ]
+    },
+    {
+      "numero": 115,
+      "id": "oficial:2020:df43d386",
+      "skillId": "bio:genetica-leis-mendel",
+      "confianca": "alta",
+      "pistas": [
+        "gene",
+        "genétic"
+      ]
+    },
+    {
+      "numero": 116,
+      "id": "oficial:2020:6ae16f10",
+      "skillId": "fis:eletricidade-circuitos-basicos",
+      "confianca": "alta",
+      "pistas": [
+        "resistor",
+        "resistência",
+        "tensão"
+      ]
+    },
+    {
+      "numero": 117,
+      "id": "oficial:2020:a053f861",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "media",
+      "pistas": [
+        "célula"
+      ]
+    },
+    {
+      "numero": 118,
+      "id": "oficial:2020:65b9ee8c",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "media",
+      "pistas": [
+        "sistema nervoso"
+      ]
+    },
+    {
+      "numero": 120,
+      "id": "oficial:2020:4f0bec97",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "alta",
+      "pistas": [
+        "mol",
+        "massa molar"
+      ]
+    },
+    {
+      "numero": 122,
+      "id": "oficial:2020:a6f19dbf",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "parasit"
+      ]
+    },
+    {
+      "numero": 123,
+      "id": "oficial:2020:df0c6684",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "massa"
+      ]
+    },
+    {
+      "numero": 124,
+      "id": "oficial:2020:0d2c5a43",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "mol"
+      ]
+    },
+    {
+      "numero": 125,
+      "id": "oficial:2020:8dbd26bb",
+      "skillId": "bio:genetica-leis-mendel",
+      "confianca": "media",
+      "pistas": [
+        "genétic"
+      ]
+    },
+    {
+      "numero": 126,
+      "id": "oficial:2020:d5bc78c0",
+      "skillId": "qui:estrutura-atomica-modelos",
+      "confianca": "alta",
+      "pistas": [
+        "elétron",
+        "próton",
+        "nêutron",
+        "radioativ"
+      ]
+    },
+    {
+      "numero": 127,
+      "id": "oficial:2020:4aa96055",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 129,
+      "id": "oficial:2020:8aa94985",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "media",
+      "pistas": [
+        "célula"
+      ]
+    },
+    {
+      "numero": 130,
+      "id": "oficial:2020:c00b4199",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "media",
+      "pistas": [
+        "térmic"
+      ]
+    },
+    {
+      "numero": 132,
+      "id": "oficial:2020:3b0e906f",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "media",
+      "pistas": [
+        "respiração"
+      ]
+    },
+    {
+      "numero": 136,
+      "id": "oficial:2020:4f583cd1",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "quadrado",
+        "círculo"
+      ]
+    },
+    {
+      "numero": 138,
+      "id": "oficial:2020:4b99f204",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "paralelepípedo",
+        "litro"
+      ]
+    },
+    {
+      "numero": 140,
+      "id": "oficial:2020:5272023d",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "media",
+      "pistas": [
+        "quadrado"
+      ]
+    },
+    {
+      "numero": 141,
+      "id": "oficial:2020:8b2f52f3",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 144,
+      "id": "oficial:2020:c2991e65",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 145,
+      "id": "oficial:2020:c1f53ed4",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "esfera",
+        "paralelepípedo"
+      ]
+    },
+    {
+      "numero": 148,
+      "id": "oficial:2020:1974fb90",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "media",
+      "pistas": [
+        "%"
+      ]
+    },
+    {
+      "numero": 151,
+      "id": "oficial:2020:f5640382",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "retângulo",
+        "quadrado"
+      ]
+    },
+    {
+      "numero": 152,
+      "id": "oficial:2020:f30453c1",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "prisma"
+      ]
+    },
+    {
+      "numero": 153,
+      "id": "oficial:2020:f42cb0e4",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 154,
+      "id": "oficial:2020:01eb6bd4",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 158,
+      "id": "oficial:2020:103ae9a9",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 159,
+      "id": "oficial:2020:f6740632",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "quadro"
+      ]
+    },
+    {
+      "numero": 162,
+      "id": "oficial:2020:465189e6",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "m²"
+      ]
+    },
+    {
+      "numero": 164,
+      "id": "oficial:2020:3a7809fc",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "gráfico"
+      ]
+    },
+    {
+      "numero": 165,
+      "id": "oficial:2020:dc7b2d20",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 166,
+      "id": "oficial:2020:0a51b31c",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "gráfico"
+      ]
+    },
+    {
+      "numero": 167,
+      "id": "oficial:2020:b4e3d65a",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "alta",
+      "pistas": [
+        "%",
+        "porcentagem"
+      ]
+    },
+    {
+      "numero": 168,
+      "id": "oficial:2020:bba5656b",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "paralelepípedo",
+        "cm³"
+      ]
+    },
+    {
+      "numero": 169,
+      "id": "oficial:2020:6e1f849f",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 171,
+      "id": "oficial:2020:7d0433df",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "retângulo",
+        "quadrado"
+      ]
+    },
+    {
+      "numero": 173,
+      "id": "oficial:2020:9400ae2e",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 176,
+      "id": "oficial:2020:2786150e",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "media",
+      "pistas": [
+        "cubo"
+      ]
+    },
+    {
+      "numero": 177,
+      "id": "oficial:2020:6511d6ba",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 178,
+      "id": "oficial:2020:83558ebc",
+      "skillId": "mat:probabilidade-evento-simples",
+      "confianca": "media",
+      "pistas": [
+        "probabilidade"
+      ]
+    },
+    {
+      "numero": 179,
+      "id": "oficial:2020:9b78c52c",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "quadrado"
+      ]
+    },
+    {
+      "numero": 180,
+      "id": "oficial:2020:5a9eea6c",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    }
+  ],
+  "amostra": [
+    {
+      "numero": 173,
+      "id": "oficial:2020:9400ae2e"
+    },
+    {
+      "numero": 177,
+      "id": "oficial:2020:6511d6ba"
+    },
+    {
+      "numero": 126,
+      "id": "oficial:2020:d5bc78c0"
+    },
+    {
+      "numero": 104,
+      "id": "oficial:2020:0f322580"
+    },
+    {
+      "numero": 168,
+      "id": "oficial:2020:bba5656b"
+    },
+    {
+      "numero": 113,
+      "id": "oficial:2020:111a2fb4"
+    }
+  ]
+}

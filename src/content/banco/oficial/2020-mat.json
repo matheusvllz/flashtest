@@ -1,0 +1,1790 @@
+{
+  "subjectId": "mat",
+  "items": [
+    {
+      "id": "oficial:2020:4f583cd1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A fabricação da Bandeira Nacional deve obedecer ao descrito na Lei n. 5.700, de 1º de setembro de 1971, que trata dos Símbolos Nacionais. No artigo que se refere às dimensões da Bandeira, observa-se:\n\n“Para cálculos das dimensões, será tomada por base a largura, dividindo-a em 14 (quatorze) partes iguais, sendo que cada uma das partes será considerada uma medida ou módulo (M). Os demais requisitos dimensionais seguem o critério abaixo:\n\nI. Comprimento será de vinte módulos (20 M);\n\nII. A distância dos vértices do losango amarelo ao\nquadro externo será de um módulo e sete décimos (1,7 M);\n\nIII. O raio do círculo azul no meio do losango\namarelo será de três módulos e meio (3,5 M).”\n\nBRASIL. Lei n. 5.700, de 1º de setembro de 1971.Disponível em: www.planalto.gov.br.\n\nAcesso em: 15 set. 2015.\n\nA figura indica as cores da bandeira do Brasil e localiza o quadro externo a que se refere a Lei n. 5.700.\n\n[[imagem:0]]\n\nUm torcedor, preparando-se para a Copa do Mundo e dispondo de cortes de tecidos verde (180 cm x 150 cm) e amarelo (o quanto baste), deseja confeccionar a maior Bandeira Nacional possível a partir das medidas do tecido verde.\nQual a medida, em centímetro, do lado do menor quadrado de tecido azul que deverá ser comprado para confecção do círculo da bandeira desejada?",
+        "opcoes": [
+          "27",
+          "32",
+          "53",
+          "63",
+          "90"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q136-1.webp",
+            "alt": "Imagem da questão 136 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Largura do quadro externo\nComprimento do quadro externo",
+            "largura": 968,
+            "altura": 623
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:4f583cd1",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 136"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.950Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:4b99f204",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A caixa-d’água de um edifício terá a forma de um paralelepípedo retângulo reto com volume igual a 28 080 litros. Em uma maquete que representa o edifício, a caixa-d’água tem dimensões 2 cm × 3,51 cm × 4 cm.\n\nDado: 1 dm³ = 1 L.\n\nA escala usada pelo arquiteto foi",
+        "opcoes": [
+          "1 : 10",
+          "1 : 100",
+          "1 : 1 000",
+          "1 : 10 000",
+          "1 : 100 000"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:4b99f204",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 138"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.950Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:5272023d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O proprietário de um apartamento decidiu instalar porcelanato no piso da sala. Essa sala tem formato retangular com 3,2 m de largura e 3,6 m de comprimento. As peças do porcelanato têm formato de um quadrado com lado medindo 80 cm. Esse porcelanato é vendido em dois tipos de caixas, com os preços indicados a seguir.\n\n• Caixas do tipo A: 4 unidades de piso, R$ 35,00;\n\n• Caixas do tipo B: 3 unidades de piso, R$ 27,00.\n\nNa instalação do porcelanato, as peças podem ser recortadas e devem ser assentadas sem espaçamento entre elas, aproveitando-se ao máximo os recortes feitos.\nA compra que atende às necessidades do proprietário, proporciona a menor sobra de pisos e resulta no menor preço é",
+        "opcoes": [
+          "5 caixas do tipo A.",
+          "1 caixa do tipo A e 4 caixas do tipo B.",
+          "3 caixas do tipo A e 2 caixas do tipo B.",
+          "5 caixas do tipo A e 1 caixa do tipo B.",
+          "6 caixas do tipo B."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:5272023d",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 140"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.951Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:8b2f52f3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um hotel de 3 andares está sendo construído. Cada andar terá 100 quartos. Os quartos serão numerados de 100 a 399 e cada um terá seu número afixado à porta. Cada número será composto por peças individuais, cada uma simbolizando um único algarismo.\n\nQual a quantidade mínima de peças, simbolizando o algarismo 2, necessárias para identificar o número de todos os quartos?",
+        "opcoes": [
+          "160",
+          "157",
+          "130",
+          "120",
+          "60"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:8b2f52f3",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 141"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.951Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:c2991e65",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma torneira está gotejando água em um balde com capacidade de 18 litros. No instante atual, o balde se encontra com ocupação de 50% de sua capacidade. A cada segundo caem 5 gotas de água da torneira, e uma gota é formada, em média, por 5 × 10⁻² mL de água.\n\nQuanto tempo, em hora, será necessário para encher completamente o balde, partindo do instante atual?",
+        "opcoes": [
+          "2 × 10 ¹",
+          "1 × 10 ¹",
+          "2 × 10 ⁻²",
+          "1 × 10 ⁻²",
+          "1 × 10 ⁻³"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:c2991e65",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 144"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.022Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:c1f53ed4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um clube deseja produzir miniaturas em escala do troféu que ganhou no último campeonato. O troféu está representado na Figura 1 e é composto por uma base em formato de um paralelepípedo reto-retângulo de madeira, sobre a qual estão fixadas três hastes verticais que sustentam uma esfera de 30 cm de diâmetro, que fica centralizada sobre a base de madeira. O troféu tem 100 cm de altura, incluída sua base.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nFigura 1\nFigura 2\n\nA miniatura desse troféu deverá ser instalada no interior de uma caixa de vidro, em formato de paralelepípedo reto-retângulo, cujas dimensões internas de sua base estão indicadas na Figura 2, de modo que a base do troféu seja colada na base da caixa e distante das paredes laterais da caixa de vidro em pelo menos 1 cm. Deve ainda haver uma distância de exatos 2 cm entre o topo da esfera e a tampa dessa caixa de vidro. Nessas condições deseja-se fazer a maior miniatura possível.\n\nA medida da altura, em centímetro, dessa caixa de vidro deverá ser igual a",
+        "opcoes": [
+          "12.",
+          "14.",
+          "16.",
+          "18.",
+          "20."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q145-1.webp",
+            "alt": "Imagem da questão 145 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 50 cm\n50 cm",
+            "largura": 385,
+            "altura": 496
+          },
+          {
+            "url": "/content/img/2020/d2-q145-2.webp",
+            "alt": "Imagem 2 da questão 145 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: ?\n8 cm\n10 cm",
+            "largura": 476,
+            "altura": 416
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:c1f53ed4",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 145"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.078Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:1974fb90",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Pesquisa Nacional por Amostra de Domicílios (Pnad) é uma pesquisa feita anualmente pelo IBGE, exceto nos anos em que há Censo. Em um ano, foram entrevistados 363 mil jovens para fazer um levantamento sobre suas atividades profissionais e/ou acadêmicas. Os resultados da pesquisa estão indicados no gráfico.\n\nJovens em atividade entre 15 e 29 anos (%)\n\n[[imagem:0]]\n\nDe acordo com as informações dadas, o número de jovens entrevistados que trabalha é",
+        "opcoes": [
+          "114 708.",
+          "164 076.",
+          "213 444.",
+          "284 592.",
+          "291 582."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q148-1.webp",
+            "alt": "Imagem da questão 148 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 45,2\n21,6\n19,6\n13,6\nSomente estuda Trabalha e estuda Somente Não trabalha\ntrabalha nem estuda",
+            "credito": "Disponível em: http://noticias.uol.com.br. Acesso em: 20 ago. 2014.",
+            "largura": 1032,
+            "altura": 407
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:1974fb90",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 148"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.116Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:f5640382",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma das Sete Maravilhas do Mundo Moderno é o Templo de Kukulkán, localizado na cidade de Chichén Itzá, no México. Geometricamente, esse templo pode ser representado por um tronco reto de pirâmide de base quadrada.\n\nAs quantidades de cada tipo de figura plana que formam esse tronco de pirâmide são",
+        "opcoes": [
+          "2 quadrados e 4 retângulos.",
+          "1 retângulo e 4 triângulos isósceles.",
+          "2 quadrados e 4 trapézios isósceles.",
+          "1 quadrado, 3 retângulos e 2 trapézios retângulos.",
+          "2 retângulos, 2 quadrados e 2 trapézios retângulos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:f5640382",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 151"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.213Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:f30453c1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um processo de aeração, que consiste na introdução de ar num líquido, acontece do seguinte modo: uma bomba B retira o líquido de um tanque T1 e o faz passar pelo aerador A1, que aumenta o volume do líquido em 15%, e em seguida pelo aerador A2, ganhando novo aumento de volume de 10%. Ao final, ele fica armazenado num tanque T2, de acordo com a figura.\n\n[[imagem:0]]\n\nOs tanques T1 e T2 são prismas retos de bases retangulares, sendo que a base de T1 tem comprimento c e\n\n[[imagem:1]]\n\nPara finalizar o processo de aeração sem derramamento do líquido em T2, o responsável deve saber a relação entre a altura da coluna de líquido que já saiu de T1, denotada por X, e a altura da coluna de líquido que chegou a T2, denotada por y.\n\nDisponível em: www.dec.ufcg.edu.br. Acesso em: 21 abr. 2015.\n\nA equação que relaciona as medidas das alturas y e x é dada por",
+        "opcoes": [
+          "y = 1,265x",
+          "y = 1,250x",
+          "y = 1,150x",
+          "y = 1,125x",
+          "y = x"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q152-1.webp",
+            "alt": "Imagem da questão 152 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: A1 A2\nT1\nT2\nB",
+            "largura": 996,
+            "altura": 412
+          },
+          {
+            "url": "/content/img/2020/d2-q152-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 152 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 976,
+            "altura": 107
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:f30453c1",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 152"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.276Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:f42cb0e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para chegar à universidade, um estudante utiliza um metrô e, depois, tem duas opções:\n\n• seguir num ônibus, percorrendo 2,0 km;\n• alugar uma bicicleta, ao lado da estação do metrô,\nseguindo 3,0 km pela ciclovia.\nO quadro fornece as velocidades médias do ônibus e da bicicleta, em km/h, no trajeto metrô−universidade.\n\n[[imagem:0]]\n\nA fim de poupar tempo no deslocamento para a universidade, em quais dias o aluno deve seguir pela ciclovia?",
+        "opcoes": [
+          "Às segundas, quintas e sextas-feiras.",
+          "Às terças e quintas-feiras e aos sábados.",
+          "Às segundas, quartas e sextas-feiras.",
+          "Às terças, quartas e sextas-feiras.",
+          "Às terças e quartas-feiras e aos sábados."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q153-1.webp",
+            "alt": "Imagem da questão 153 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Velocidade média\nDia da semana\nÔnibus (km/h) Bicicleta (km/h)\nSegunda-feira 9 15\nTerça-feira 20 22\nQuarta-feira 15 24\nQuinta-feira 12 15\nSexta-feira 10 18\nSábado 30 16",
+            "largura": 1008,
+            "altura": 508
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:f42cb0e4",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 153"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.324Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:01eb6bd4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pesquisadores da Universidade de Tecnologia de Viena, na Áustria, produziram miniaturas de objetos em impressoras 3D de alta precisão. Ao serem ativadas, tais impressoras lançam feixes de laser sobre um tipo de resina, esculpindo o objeto desejado. O produto final da impressão é uma escultura microscópica de três dimensões, como visto na imagem ampliada.\n\n[[imagem:0]]\n\nA escultura apresentada é uma miniatura de um carro de Fórmula 1, com 100 micrômetros de comprimento. Um micrômetro é a milionésima parte de um metro.\n\nUsando notação científica, qual é a representação do comprimento dessa miniatura, em metro?",
+        "opcoes": [
+          "1,0 × 10 ⁻¹",
+          "1,0 × 10 ⁻³",
+          "1,0 × 10 ⁻⁴",
+          "1,0 × 10 ⁻⁶",
+          "1,0 × 10 ⁻⁷"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q154-1.webp",
+            "alt": "Imagem da questão 154 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1004,
+            "altura": 640
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:01eb6bd4",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 154"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.429Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:103ae9a9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Três amigos, André, Bernardo e Carlos, moram em um condomínio fechado de uma cidade. O quadriculado representa a localização das ruas paralelas e perpendiculares, delimitando quadras de mesmo tamanho nesse condomínio, em que nos pontos A, B e C estão localizadas as casas de André, Bernardo e Carlos, respectivamente.\n\n[[imagem:0]]\n\nAndré deseja deslocar-se da sua casa até a casa de Bernardo, sem passar pela casa de Carlos, seguindo ao longo das ruas do condomínio, fazendo sempre deslocamentos para a direita ( → ) ou para cima ( ↑ ), segundo o esquema da figura.\n\nO número de diferentes caminhos que André poderá utilizar para realizar o deslocamento nas condições propostas é",
+        "opcoes": [
+          "4.",
+          "14.",
+          "17.",
+          "35.",
+          "48."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q158-1.webp",
+            "alt": "Imagem da questão 158 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: B\nC\nA",
+            "largura": 444,
+            "altura": 368
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:103ae9a9",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 158"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.573Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:f6740632",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma pessoa precisa comprar 15 sacos de cimento para uma reforma em sua casa. Faz pesquisa de preço em cinco depósitos que vendem o cimento de sua preferência e cobram frete para entrega do material, conforme a distância do depósito à sua casa. As informações sobre preço do cimento, valor do frete e distância do depósito até a casa dessa pessoa estão apresentadas no quadro.\n\n[[tabela:0]]\n\nA pessoa escolherá um desses depósitos para realizar sua compra, considerando os preços do cimento e do frete oferecidos em cada opção.\n\nSe a pessoa decidir pela opção mais econômica, o depósito escolhido para a realização dessa compra será o",
+        "opcoes": [
+          "A.",
+          "B.",
+          "C.",
+          "D.",
+          "E."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Depósito",
+              "Valor do saco de cimento (R$)",
+              "Valor do frete para cada quilômetro (R$)",
+              "Distância entre a casa e o depósito (km)"
+            ],
+            "linhas": [
+              [
+                "A",
+                "23,00",
+                "1,00",
+                "10"
+              ],
+              [
+                "B",
+                "21,50",
+                "3,00",
+                "12"
+              ],
+              [
+                "C",
+                "22,00",
+                "1,50",
+                "14"
+              ],
+              [
+                "D",
+                "21,00",
+                "3,50",
+                "18"
+              ],
+              [
+                "E",
+                "24,00",
+                "2,50",
+                "2"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:f6740632",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 159"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:17.857Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:465189e6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A lei municipal para a edificação de casas em lotes de uma cidade determina que sejam obedecidos os seguintes critérios:\n\n• afastamento mínimo de 4 m da rua;\n\n• afastamento mínimo de 1 m da divisa com outro lote;\n\n• área total construída da casa entre 40% e 50% da\nárea total do lote.\n\nUm construtor submeteu para aprovação na prefeitura dessa cidade uma planta com propostas para a construção de casas em seus 5 lotes. Cada lote tem área medindo 200 m².\n\nA imagem apresenta um esquema, sem escala, no qual estão representados os lotes, as ruas e os afastamentos considerados nos projetos entre as casas e as divisas dos lotes. As medidas indicadas no esquema estão expressas em metro.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nA prefeitura aprovará apenas a planta da casa",
+        "opcoes": [
+          "1.",
+          "2.",
+          "3.",
+          "4.",
+          "5."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q162-1.webp",
+            "alt": "Imagem da questão 162 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 1 1\n4 1 1 1\nCasa 1 Casa 2 Lote\n20\n4 4\n10 10 Rua",
+            "largura": 792,
+            "altura": 247
+          },
+          {
+            "url": "/content/img/2020/d2-q162-2.webp",
+            "alt": "Imagem 2 da questão 162 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 10 10\n4 2\n4 1 2 2 Lote\nCasa 3 Casa 4\n20\n4 2\n1\n4 1\nCasa 5 Lote\n20\n1\nLote",
+            "largura": 792,
+            "altura": 615
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:465189e6",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 162"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:17.947Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:3a7809fc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A exposição a barulhos excessivos, como os que percebemos em geral em trânsitos intensos, casas noturnas e espetáculos musicais, podem provocar insônia, estresse, infarto, perda de audição, entre outras enfermidades. De acordo com a Organização Mundial da Saúde, todo e qualquer som que ultrapasse os 55 decibéis (unidade de intensidade do som) já pode ser considerado nocivo para a saúde. O gráfico foi elaborado a partir da medição do ruído produzido, durante um dia, em um canteiro de obras.\n\n[[imagem:0]]\n\nNesse dia, durante quantas horas o ruído esteve acima de 55 decibéis?",
+        "opcoes": [
+          "5",
+          "8",
+          "10",
+          "11",
+          "13"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q164-1.webp",
+            "alt": "Imagem da questão 164 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Decibel\n55\n0\nHora\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24",
+            "credito": "Disponível em: www.revistaencontro.com.br. Acesso em: 12 ago. 2020 (adaptado).",
+            "largura": 990,
+            "altura": 420
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:3a7809fc",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 164"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.754Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:dc7b2d20",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O técnico de um time de basquete pretende aumentar a estatura média de sua equipe de 1,93 m para, no mínimo, 1,99 m. Para tanto, dentre os 15 jogadores que fazem parte de sua equipe, irá substituir os quatro mais baixos, de estaturas: 1,78 m, 1,82 m, 1,84 m e 1,86 m. Para isso, o técnico contratou um novo jogador de 2,02 m. Os outros três jogadores que ele ainda precisa contratar devem satisfazer à sua necessidade de aumentar a média das estaturas da equipe. Ele fixará a média das estaturas para os três jogadores que ainda precisa contratar dentro do critério inicialmente estabelecido.\n\nQual deverá ser a média mínima das estaturas, em metro, que ele deverá fixar para o grupo de três novos jogadores que ainda irá contratar?",
+        "opcoes": [
+          "1,96",
+          "1,98",
+          "2,05",
+          "2,06",
+          "2,08"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:dc7b2d20",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 165"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:18.003Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:0a51b31c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O consumo de espumantes no Brasil tem aumentado nos últimos anos. Uma das etapas do seu processo de produção consiste no envasamento da bebida em garrafas semelhantes às da imagem. Nesse processo, a vazão do líquido no interior da garrafa é constante e cessa quando atinge o nível de envasamento.\n\n[[imagem:0]]\n\nNível de envasamento da garrafa Qual esboço de gráfico melhor representa a variação da altura do líquido em função do tempo, na garrafa indicada na imagem?",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q166-1.webp",
+            "alt": "Imagem da questão 166 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 260,
+            "altura": 868
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2020/d2-q166-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 166 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: altura\n0\ntempo",
+            "largura": 394,
+            "altura": 309
+          },
+          {
+            "url": "/content/img/2020/d2-q166-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 166 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 393,
+            "altura": 311
+          },
+          {
+            "url": "/content/img/2020/d2-q166-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 166 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: altura\n0\ntempo",
+            "largura": 393,
+            "altura": 313
+          },
+          {
+            "url": "/content/img/2020/d2-q166-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 166 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: altura\n0 tempo",
+            "largura": 390,
+            "altura": 307
+          },
+          {
+            "url": "/content/img/2020/d2-q166-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 166 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: altura\n0\ntempo",
+            "largura": 385,
+            "altura": 301
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:0a51b31c",
+        "version": 1,
+        "skillIds": [
+          "mat:leitura-grafico-tabela"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 166"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.901Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:b4e3d65a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O quadro representa os gastos mensais, em real, de uma família com internet, mensalidade escolar e mesada do filho.\n\n[[tabela:0]]\n\nNo início do ano, a internet e a mensalidade escolar tiveram acréscimos, respectivamente, de 20% e 10%. Necessitando manter o valor da despesa mensal total com os itens citados, a família reduzirá a mesada do filho.\n\nQual será a porcentagem da redução da mesada?",
+        "opcoes": [
+          "15,0",
+          "23,5",
+          "30,0",
+          "70,0",
+          "76,5"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Internet",
+              "Mensalidade escolar",
+              "Mesada do filho"
+            ],
+            "linhas": [
+              [
+                "120",
+                "700",
+                "400"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:b4e3d65a",
+        "version": 1,
+        "skillIds": [
+          "mat:porcentagem-valor"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 167"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:18.146Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:bba5656b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Num recipiente com a forma de paralelepípedo reto-retângulo, colocou-se água até a altura de 8 cm e um objeto, que ficou flutuando na superfície da água.\n\nPara retirar o objeto de dentro do recipiente, a altura da coluna de água deve ser de, pelo menos, 15 cm. Para a coluna de água chegar até essa altura, é necessário colocar dentro do recipiente bolinhas de volume igual a 6 cm³ cada, que ficarão totalmente submersas.\n\n[[imagem:0]]\n\nO número mínimo de bolinhas necessárias para que se possa retirar o objeto que flutua na água, seguindo as instruções dadas, é de",
+        "opcoes": [
+          "14.",
+          "16.",
+          "18.",
+          "30.",
+          "34."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q168-1.webp",
+            "alt": "Imagem da questão 168 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 17 cm\n8 cm\n3 cm\n4 cm",
+            "largura": 427,
+            "altura": 575
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:bba5656b",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 168"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.964Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:6e1f849f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um grupo sanguíneo, ou tipo sanguíneo, baseia-se na presença ou ausência de dois antígenos, A e B, na superfície das células vermelhas do sangue. Como dois antígenos estão envolvidos, os quatro tipos sanguíneos distintos são:\n\n• Tipo A: apenas o antígeno A está presente;\n• Tipo B: apenas o antígeno B está presente;\n• Tipo AB: ambos os antígenos estão presentes;\n• Tipo O: nenhum dos antígenos está presente.\n\nDisponível em: http://saude.hsw.uol.com.br. Acesso em: 15 abr. 2012 (adaptado).\n\nForam coletadas amostras de sangue de 200 pessoas e, após análise laboratorial, foi identificado que em 100 amostras está presente o antígeno A, em 110 amostras há presença do antígeno B e em 20 amostras nenhum dos antígenos está presente.\n\nDessas pessoas que foram submetidas à coleta de sangue, o número das que possuem o tipo sanguíneo A é igual a",
+        "opcoes": [
+          "30.",
+          "60.",
+          "70.",
+          "90.",
+          "100."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:6e1f849f",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 169"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:22.964Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:7d0433df",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Azulejo designa peça de cerâmica vitrificada e/ou esmaltada usada, sobretudo, no revestimento de paredes. A origem das técnicas de fabricação de azulejos é oriental, mas sua expansão pela Europa traz consigo uma diversificação de estilos, padrões e usos, que podem ser decorativos, utilitários e arquitetônicos.\n\nDisponível em: www.itaucultural.org.br. Acesso em: 31 jul. 2012.\n\nAzulejos no formato de octógonos regulares serão utilizados para cobrir um painel retangular conforme ilustrado na figura.\n\n[[imagem:0]]\n\nEntre os octógonos e na borda lateral dessa área, será necessária a colocação de 15 azulejos de outros formatos para preencher os 15 espaços em branco do painel. Uma loja oferece azulejos nos seguintes formatos: 1 – Triângulo retângulo isósceles;\n2 – Triângulo equilátero;\n3 – Quadrado.\nOs azulejos necessários para o devido preenchimento das áreas em branco desse painel são os de formato",
+        "opcoes": [
+          "1.",
+          "3.",
+          "1 e 2.",
+          "1 e 3.",
+          "2 e 3."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q171-1.webp",
+            "alt": "Imagem da questão 171 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 660,
+            "altura": 324
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:7d0433df",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 171"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:23.002Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:9400ae2e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pergolado é o nome que se dá a um tipo de cobertura projetada por arquitetos, comumente em praças e jardins, para criar um ambiente para pessoas ou plantas, no qual há uma quebra da quantidade de luz, dependendo da posição do sol. É feito como um estrado de vigas iguais, postas paralelas e perfeitamente em fila, como ilustra a figura.\n\n[[imagem:0]]\n\nUm arquiteto projeta um pergolado com vãos de 30 cm de distância entre suas vigas, de modo que, no solstício de verão, a trajetória do sol durante o dia seja realizada num plano perpendicular à direção das vigas, e que o sol da tarde, no momento em que seus raios fizerem 30° com a posição a pino, gere a metade da luz que passa no pergolado ao meio-dia.\n\nPara atender à proposta do projeto elaborado pelo arquiteto, as vigas do pergolado devem ser construídas de maneira que a altura, em centímetro, seja a mais próxima possível de",
+        "opcoes": [
+          "9.",
+          "15.",
+          "26.",
+          "52.",
+          "60."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q173-1.webp",
+            "alt": "Imagem da questão 173 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 30 cm\n30 cm",
+            "largura": 980,
+            "altura": 760
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:9400ae2e",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 173"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:18.280Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:2786150e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em um jogo desenvolvido para uso no computador, objetos tridimensionais vão descendo do alto da tela até alcançarem o plano da base. O usuário pode mover ou girar cada objeto durante sua descida para posicioná-lo convenientemente no plano horizontal. Um desses objetos é formado pela justaposição de quatro cubos idênticos, formando assim um sólido rígido, como ilustrado na figura.\n\n[[imagem:0]]\n\nPara facilitar a movimentação do objeto pelo usuário, o programa projeta ortogonalmente esse sólido em três planos quadriculados perpendiculares entre si, durante sua descida.\n\nA figura que apresenta uma possível posição desse sólido, com suas respectivas projeções ortogonais sobre os três planos citados, durante sua descida é",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q176-1.webp",
+            "alt": "Imagem da questão 176 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 340,
+            "altura": 368
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2020/d2-q176-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 176 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 496,
+            "altura": 508
+          },
+          {
+            "url": "/content/img/2020/d2-q176-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 176 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 492,
+            "altura": 508
+          },
+          {
+            "url": "/content/img/2020/d2-q176-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 176 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 492,
+            "altura": 508
+          },
+          {
+            "url": "/content/img/2020/d2-q176-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 176 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 492,
+            "altura": 508
+          },
+          {
+            "url": "/content/img/2020/d2-q176-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 176 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 492,
+            "altura": 508
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:2786150e",
+        "version": 1,
+        "skillIds": [
+          "mat:volume-solidos-geometricos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 176"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:23.374Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:6511d6ba",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Figura 1 apresenta uma casa e a planta do seu telhado, em que as setas indicam o sentido do escoamento da água de chuva. Um pedreiro precisa fazer a planta do escoamento da água de chuva de um telhado que tem três caídas de água, como apresentado na Figura 2.\n\n[[imagem:0]]\n\nFigura 1\nFigura 2\n\nA figura que representa a planta do telhado da Figura 2 com o escoamento da água de chuva que o pedreiro precisa fazer é",
+        "opcoes": [
+          "Alternativa A (imagem)",
+          "Alternativa B (imagem)",
+          "Alternativa C (imagem)",
+          "Alternativa D (imagem)",
+          "Alternativa E (imagem)"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q177-1.webp",
+            "alt": "Imagem da questão 177 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: (a) Casa (b) Planta do telhado",
+            "largura": 952,
+            "altura": 228
+          }
+        ],
+        "opcoesImagem": [
+          {
+            "url": "/content/img/2020/d2-q177-alt-a.webp",
+            "alt": "Imagem da alternativa A da questão 177 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 324,
+            "altura": 240
+          },
+          {
+            "url": "/content/img/2020/d2-q177-alt-b.webp",
+            "alt": "Imagem da alternativa B da questão 177 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 324,
+            "altura": 240
+          },
+          {
+            "url": "/content/img/2020/d2-q177-alt-c.webp",
+            "alt": "Imagem da alternativa C da questão 177 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 324,
+            "altura": 240
+          },
+          {
+            "url": "/content/img/2020/d2-q177-alt-d.webp",
+            "alt": "Imagem da alternativa D da questão 177 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 316,
+            "altura": 236
+          },
+          {
+            "url": "/content/img/2020/d2-q177-alt-e.webp",
+            "alt": "Imagem da alternativa E da questão 177 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 316,
+            "altura": 208
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:6511d6ba",
+        "version": 1,
+        "skillIds": [
+          "mat:operacoes-fundamentais"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 177"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:23.511Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:83558ebc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Suponha que uma equipe de corrida de automóveis disponha de cinco tipos de pneu (I, II, III, IV, V), em que o fator de eficiência climática EC (índice que fornece o comportamento do pneu em uso, dependendo do clima) é apresentado:\n\n• EC do pneu I: com chuva 6, sem chuva 3;\n• EC do pneu II: com chuva 7, sem chuva −4;\n• EC do pneu III: com chuva −2, sem chuva 10;\n• EC do pneu IV: com chuva 2, sem chuva 8;\n• EC do pneu V: com chuva −6, sem chuva 7.\n\nO coeficiente de rendimento climático (CRC) de um pneu é calculado como a soma dos produtos dos fatores de EC, com ou sem chuva, pelas correspondentes probabilidades de se ter tais condições climáticas: ele é utilizado para determinar qual pneu deve ser selecionado para uma dada corrida, escolhendo-se o pneu que apresentar o maior CRC naquele dia. No dia de certa corrida, a probabilidade de chover era de 70% e o chefe da equipe calculou o CRC de cada um dos cinco tipos de pneu.\n\nO pneu escolhido foi",
+        "opcoes": [
+          "I.",
+          "II.",
+          "III.",
+          "IV.",
+          "V."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:83558ebc",
+        "version": 1,
+        "skillIds": [
+          "mat:probabilidade-evento-simples"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 178"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:23.511Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:9b78c52c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um pé de eucalipto em idade adequada para o corte rende, em média, 20 mil folhas de papel A4. A densidade superficial do papel A4, medida pela razão da massa de uma folha desse papel por sua área, é de 75 gramas por metro quadrado, e a área de uma folha de A4 é 0,062 metro quadrado.\n\nDisponível em: http://revistagalileu.globo.com. Acesso em: 28 fev. 2013 (adaptado).\n\nNessas condições, quantos quilogramas de papel rende, em média, um pé de eucalipto?",
+        "opcoes": [
+          "4 301",
+          "1 500",
+          "930",
+          "267",
+          "93"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:9b78c52c",
+        "version": 1,
+        "skillIds": [
+          "mat:area-perimetro-figuras-planas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 179"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:23.511Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:5a9eea6c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com o objetivo de contratar uma empresa responsável pelo serviço de atendimento ao público, os executivos de uma agência bancária realizaram uma pesquisa de satisfação envolvendo cinco empresas especializadas nesse segmento. Os procedimentos analisados (com pesos que medem sua importância para a agência) e as respectivas notas que cada empresa recebeu estão organizados no quadro.\n\n[[imagem:0]]\n\nA agência bancária contratará a empresa com a maior média ponderada das notas obtidas nos procedimentos analisados.\n\nApós a análise dos resultados da pesquisa de satisfação, os executivos da agência bancária contrataram a empresa",
+        "opcoes": [
+          "X.",
+          "Y.",
+          "Z.",
+          "W.",
+          "T."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q180-1.webp",
+            "alt": "Imagem da questão 180 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Notas da empresa\nProcedimento Peso\nX Y Z W T\nRapidez no\n3 5 1 4 3 4\natendimento\nClareza nas\ninformações\n5 1 4 3 3 2\npassadas aos\nclientes\nCortesia no\n2 2 2 2 3 4\natendimento",
+            "largura": 996,
+            "altura": 560
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:5a9eea6c",
+        "version": 1,
+        "skillIds": [
+          "mat:media-mediana-moda"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 180"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:23.578Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

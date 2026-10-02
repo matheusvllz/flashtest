@@ -42,8 +42,10 @@ const TODOS: ItemJson[] = jsonDoBanco().flatMap(
 );
 
 describe("catálogo de pacotes — irt por dificuldade (RP-2, G-7)", () => {
-  test("o acervo é o esperado (755 itens de pacote, todos de múltipla escolha)", () => {
-    expect(TODOS.length).toBe(755);
+  test("o acervo é o esperado (737 gerados + oficiais do importador do INEP, todos de múltipla escolha)", () => {
+    const oficiais = TODOS.filter((i) => i.id.startsWith("oficial:")).length;
+    expect(TODOS.length - oficiais).toBe(737);
+    expect(oficiais).toBeGreaterThanOrEqual(18);
     expect(TODOS.every((i) => i.exercise.type === "multipla-escolha")).toBe(true);
   });
 

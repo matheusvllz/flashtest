@@ -43,12 +43,25 @@ function entrada(overrides: Partial<ItemOficialEntrada> = {}): ItemOficialEntrad
 }
 
 describe("validarFormaOficial", () => {
-  test("item com imagem é sempre rejeitado — regra dura, sem exceção", () => {
+  test("imagem fora do contrato (sem dimensões, fora de /content/img/) é rejeitada", () => {
     const comImagem = entrada({
-      exercise: { ...exercicioSintetico(), imagem: { url: "/x.png", alt: "gráfico" } },
+      exercise: { ...exercicioSintetico(), imagens: [{ url: "/x.png", alt: "gráfico de barras" }] },
     });
     const problemas = validarFormaOficial(comImagem);
-    expect(problemas.some((p) => p.includes("imagem"))).toBe(true);
+    expect(problemas.some((p) => p.includes("imagem-dimensoes"))).toBe(true);
+    expect(problemas.some((p) => p.includes("imagem-local"))).toBe(true);
+  });
+
+  test("imagem no contrato da decisão 0008 (local, alt, largura e altura, marcador válido) é aceita", () => {
+    const ex = exercicioSintetico();
+    const comImagem = entrada({
+      exercise: {
+        ...ex,
+        pergunta: `${ex.pergunta}\n[[imagem:0]]\nComando da questão sintética?`,
+        imagens: [{ url: "/content/img/2019/q1-a.webp", alt: "Gráfico de barras sintético", largura: 1200, altura: 800 }],
+      },
+    });
+    expect(validarFormaOficial(comImagem)).toEqual([]);
   });
 
   test("item sem `ref` é rejeitado (atribuição obrigatória)", () => {
@@ -119,12 +132,29 @@ describe("itens oficiais publicados (docs/36 T-07.5, RP-9/RP-10)", () => {
     .filter((f) => f.endsWith(".json"))
     .flatMap((f) => (JSON.parse(readFileSync(`${DIR}/${f}`, "utf-8")) as { items: Array<{ id: string; exercise: { fonte?: string }; meta: { source: { kind: string; exam?: string; year?: number }; validation: { status: string; reviewKind?: string } } }> }).items);
 
-  test("os 18 têm reviewKind 'gabarito-oficial', status 'oficial-conferida' e origem 'oficial'", () => {
-    expect(itens).toHaveLength(18);
+  test("todos têm reviewKind 'gabarito-oficial', status 'oficial-conferida' e origem 'oficial'", () => {
+    expect(itens.length).toBeGreaterThanOrEqual(18);
     for (const it of itens) {
       expect(it.meta.validation.reviewKind, it.id).toBe("gabarito-oficial");
       expect(it.meta.validation.status, it.id).toBe("oficial-conferida");
       expect(it.meta.source.kind, it.id).toBe("oficial");
+    }
+  });
+
+  test("as 18 transcritas de 2023 continuam com o mesmo id (o importador do INEP não as reescreve)", () => {
+    const ids = ["93c2ba3f", "8e0f4f5f", "4d1a63bc", "2c2ba620", "16a24cc9", "fe606f85", "28e93b86", "843adf61", "015ab1af",
+      "09e00433", "406ba302", "4c8f312e", "03b666ec", "273a7d48", "3bb5b31f", "8862844c", "b6169899", "686fb94a"].map((h) => `oficial:2023:${h}`);
+    const presentes = new Set(itens.map((i) => i.id));
+    for (const id of ids) expect(presentes.has(id), id).toBe(true);
+    const transcritas = itens.filter((i) => (i.meta.validation as { reviewer?: string }).reviewer === "solucionador-independente");
+    expect(transcritas.map((i) => i.id).sort()).toEqual([...ids].sort());
+  });
+
+  test("itens do importador têm explicação pendente marcada (frase fixa, sem explicação inventada)", () => {
+    const importados = itens.filter((i) => (i.meta.validation as { reviewer?: string }).reviewer === "importador-inep");
+    for (const it of importados) {
+      expect((it.meta as { explicacaoPendente?: boolean }).explicacaoPendente, it.id).toBe(true);
+      expect((it.exercise as { explicacao?: string }).explicacao, it.id).toMatch(/^Gabarito oficial: alternativa [A-E]\. Peça para a Foca IA explicar o raciocínio\.$/);
     }
   });
 
@@ -133,14 +163,16 @@ describe("itens oficiais publicados (docs/36 T-07.5, RP-9/RP-10)", () => {
       const meta = itemMetaOf(it.id);
       expect(meta.source.kind, it.id).toBe("oficial");
       expect(meta.source.exam, it.id).toBe("ENEM");
-      expect(meta.source.year, it.id).toBe(2023);
+      expect(meta.source.year, it.id).toBe(it.meta.source.year);
+      expect(it.meta.source.year, it.id).toBeGreaterThanOrEqual(2019);
     }
   });
 
   test("atribuição (ano + prova) da meta resolvida é a mesma gravada no exercício", () => {
     for (const it of itens) {
-      expect(atribuicaoOficial(itemMetaOf(it.id).source), it.id).toBe("ENEM 2023");
-      expect(it.exercise.fonte, it.id).toBe("ENEM 2023");
+      const esperado = `ENEM ${it.meta.source.year}`;
+      expect(atribuicaoOficial(itemMetaOf(it.id).source), it.id).toBe(esperado);
+      expect(it.exercise.fonte, it.id).toBe(esperado);
     }
   });
 });

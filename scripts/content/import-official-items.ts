@@ -3,11 +3,10 @@
  * Importa questões oficiais do ENEM já TRANSCRITAS (docs/30 §12.4/§18.4,
  * Fase 10 do docs/31 F10.5) — este script não lê PDF nem extrai texto de
  * prova sozinho: recebe um JSON já preparado por um humano (transcrição de
- * `download.inep.gov.br/enem/provas_e_gabaritos/...`, só itens 100% texto,
- * sem imagem/charge/gráfico de terceiro — a ESCOLHA de quais itens entram e
- * a transcrição em si são trabalho editorial, não mecânico, como o `31`
- * §14 já registra). O que este script FAZ mecanicamente: valida a forma,
- * rejeita item com imagem, confere o gabarito por uma segunda fonte
+ * `download.inep.gov.br/enem/provas_e_gabaritos/...`). A extração automática
+ * dos PDFs, com imagens e tabelas, é do `content-pipeline/oficial/importar-inep.ts`
+ * (spec 50 §5.9.2). O que este script FAZ mecanicamente: valida a forma
+ * (inclusive a mídia, no contrato de `validarMidia`), confere o gabarito por uma segunda fonte
  * independente (um solucionador que resolve sem ver o gabarito oficial —
  * mesmo mecanismo do verificador da Fase 9, `verify.ts`) e publica só o que
  * bate, com a atribuição (ano + "ENEM") sempre presente.
@@ -20,13 +19,14 @@
  *   "exercise": { "type": "multipla-escolha", "pergunta": "...", "opcoes": ["...","...","...","...","..."], "correta": 0, "explicacao": "..." }
  * }]
  * ```
- * `exercise.imagem` presente => item rejeitado (regra dura do `31`, sem exceção).
+ * Imagem só no contrato da decisão 0008: `imagens[]` com url `/content/img/…`, alt, largura e altura.
  */
 import { createHash } from "node:crypto";
 import type { MultipleChoiceExercise } from "@/lib/lessons/types";
 import type { ItemMeta } from "@/content/items/types";
 import { irtFromDifficulty } from "@/content/items/irt";
 import { respostasIguais } from "./verify-utils";
+import { validarMidia } from "./validate";
 import { callStage } from "./run-stage";
 
 export interface ItemOficialEntrada {
@@ -44,11 +44,15 @@ export interface ConferenciaResult {
   divergencia?: string;
 }
 
-/** Só a FORMA — item com imagem, sem os 4 campos certos, ou fora de LC/MT/CN/CH nunca chega a ser importado (docs/31 §14, regra dura). */
+/**
+ * Só a FORMA — sem os campos certos ou fora de LC/MT/CN/CH nunca chega a ser importado. Imagem e tabela são
+ * aceitas desde a decisão 0008 (spec 50 §5.9.3), no contrato de `validarMidia`: caminho local
+ * `/content/img/…`, alt, largura e altura obrigatórias, marcadores e `opcoesImagem` coerentes.
+ */
 export function validarFormaOficial(entrada: ItemOficialEntrada): string[] {
   const problemas: string[] = [];
-  if (entrada.exercise.imagem)
-    problemas.push("item tem imagem/gráfico — nunca importado (regra do docs/31 §14, F10.5)");
+  for (const issue of validarMidia(entrada.exercise, { oficial: true }))
+    problemas.push(`mídia (${issue.rule}): ${issue.message}`);
   if (!["LC", "MT", "CN", "CH"].includes(entrada.area))
     problemas.push(`área "${entrada.area}" fora de LC/MT/CN/CH`);
   if (!entrada.ref?.trim())

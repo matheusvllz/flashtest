@@ -31,6 +31,9 @@ dist-ssr
 # e pacotes gerados de conteúdo (dados, regenerados por scripts/content/build-packs.ts).
 content-pipeline/lotes/
 public/content/
+# Importador do INEP (spec 50 §5.9.2): PDFs baixados e recortes da amostra do relatório (regeneráveis).
+content-pipeline/oficial/cache/
+content-pipeline/oficial/relatorios/*/
 
 # Playwright (Fase 0, docs/20 §19) — relatório e artefatos de execução local.
 test-results/
