@@ -136,3 +136,21 @@ export function resumoDoAnual(plano: Exclude<Plano, "gratis">): { totalCentavos:
   const descontoPct = Math.round((1 - anual.centavos / (mensal.centavos * 12)) * 1000) / 10;
   return { totalCentavos: anual.centavos, porMesCentavos, descontoPct };
 }
+
+/** Nome do produto para telas e e-mails ("plano Basic mensal"). */
+export const NOME_DO_PRODUTO: Readonly<Record<CodigoProduto, string>> = {
+  basic_mensal: "plano Basic mensal",
+  basic_anual: "plano Basic anual",
+  pro_mensal: "plano Pro mensal",
+  pro_anual: "plano Pro anual",
+  protetor_1: "1 protetor de sequência",
+  protetor_3: "pacote de 3 protetores de sequência",
+  protetor_7: "pacote de 7 protetores de sequência",
+};
+
+/**
+ * Entregas da spec 49 já publicadas (§13). Benefício de entrega não publicada aparece como "em breve" na tela de
+ * planos: vender função que ainda não existe seria propaganda enganosa (CDC art. 37). Atualizar a cada entrega.
+ */
+export type Entrega = "E1" | "E2" | "E3";
+export const ENTREGAS_PUBLICADAS: ReadonlySet<Entrega> = new Set<Entrega>(["E1"]);

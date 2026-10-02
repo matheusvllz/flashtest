@@ -89,3 +89,49 @@ export function emailConsentimentoResponsavel(p: {
     ),
   };
 }
+
+/** Data por extenso curta para e-mails de cobrança ("15 de novembro de 2026"). */
+function dataLonga(d: Date): string {
+  return d.toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric", timeZone: "America/Sao_Paulo" });
+}
+
+/** Recibo de uma cobrança paga (spec 49 T-49.3.6). Nomes e valores vêm do catálogo; sem dado do pagador. */
+export function emailRecibo(p: { para: string; produto: string; valor: string; validoAte: Date | null; renova: boolean; urlConta: string }): Mensagem {
+  const corpo = `Recebemos o pagamento de ${p.valor} do ${p.produto}.`;
+  const prazo = p.validoAte
+    ? p.renova
+      ? `O plano renova sozinho em ${dataLonga(p.validoAte)}. Dá para cancelar quando quiser em Conta, sem perder o que você estudou.`
+      : `O plano vale até ${dataLonga(p.validoAte)} e não renova sozinho.`
+    : "";
+  const rodape = "Nos primeiros 7 dias depois da primeira cobrança, o reembolso é integral, pedido em Conta.";
+  return {
+    para: p.para,
+    assunto: `Pagamento confirmado: ${p.produto}`,
+    texto: [corpo, prazo, rodape, `Sua conta: ${p.urlConta}`].filter(Boolean).join("\n\n"),
+    html: html([corpo, prazo].filter(Boolean).map(escapar), { rotulo: "Ver minha assinatura", url: p.urlConta }, rodape),
+  };
+}
+
+/** Confirmação de cancelamento (o plano vale até o fim do período pago). */
+export function emailCancelamento(p: { para: string; produto: string; validoAte: Date | null; urlConta: string }): Mensagem {
+  const corpo = `O ${p.produto} foi cancelado e não vai renovar.`;
+  const prazo = p.validoAte ? `Você continua com ele até ${dataLonga(p.validoAte)}. Depois, a conta volta ao Free com tudo o que você estudou.` : "";
+  return {
+    para: p.para,
+    assunto: "Assinatura cancelada",
+    texto: [corpo, prazo, `Sua conta: ${p.urlConta}`].filter(Boolean).join("\n\n"),
+    html: html([corpo, prazo].filter(Boolean).map(escapar), { rotulo: "Ver minha conta", url: p.urlConta }, "Se não foi você, fale com o suporte."),
+  };
+}
+
+/** Confirmação do pedido de reembolso (arrependimento de 7 dias). */
+export function emailReembolso(p: { para: string; produto: string; valor: string; urlConta: string }): Mensagem {
+  const corpo = `Pedimos o reembolso de ${p.valor} do ${p.produto}. O valor volta pelo mesmo meio de pagamento; no cartão, pode levar até duas faturas para aparecer.`;
+  const conta = "A conta voltou ao Free e o que você estudou continua lá.";
+  return {
+    para: p.para,
+    assunto: "Reembolso pedido",
+    texto: [corpo, conta, `Sua conta: ${p.urlConta}`].join("\n\n"),
+    html: html([corpo, conta].map(escapar), { rotulo: "Ver minha conta", url: p.urlConta }, "Se não foi você, fale com o suporte."),
+  };
+}

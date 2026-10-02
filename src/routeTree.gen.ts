@@ -24,6 +24,7 @@ import { Route as NivelamentoRouteImport } from './routes/nivelamento'
 import { Route as OfflineRouteImport } from './routes/offline'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as PlanRouteImport } from './routes/plan'
+import { Route as PlanosRouteImport } from './routes/planos'
 import { Route as PremiumRouteImport } from './routes/premium'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ProfileRouteImport } from './routes/profile'
@@ -42,11 +43,13 @@ import { Route as ApiSaudeRouteImport } from './routes/api/saude'
 import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$activityId'
 import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.completar'
 import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
+import { Route as PlanosRetornoRouteImport } from './routes/planos_.retorno'
 import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
+import { Route as ApiPagamentosWebhookRouteImport } from './routes/api/pagamentos/webhook'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -121,6 +124,11 @@ const OnboardingRoute = OnboardingRouteImport.update({
 const PlanRoute = PlanRouteImport.update({
   id: '/plan',
   path: '/plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanosRoute = PlanosRouteImport.update({
+  id: '/planos',
+  path: '/planos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PremiumRoute = PremiumRouteImport.update({
@@ -213,6 +221,11 @@ const LearnLessonIdRoute = LearnLessonIdRouteImport.update({
   path: '/learn/$lessonId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlanosRetornoRoute = PlanosRetornoRouteImport.update({
+  id: '/planos_/retorno',
+  path: '/planos/retorno',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RedacaoIndexRoute = RedacaoIndexRouteImport.update({
   id: '/redacao/',
   path: '/redacao/',
@@ -238,6 +251,11 @@ const ApiCronRetencaoRoute = ApiCronRetencaoRouteImport.update({
   path: '/api/cron/retencao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPagamentosWebhookRoute = ApiPagamentosWebhookRouteImport.update({
+  id: '/api/pagamentos/webhook',
+  path: '/api/pagamentos/webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -255,6 +273,7 @@ export interface FileRoutesByFullPath {
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
+  '/planos': typeof PlanosRoute
   '/premium': typeof PremiumRoute
   '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
@@ -273,11 +292,13 @@ export interface FileRoutesByFullPath {
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/cadastro/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
+  '/planos/retorno': typeof PlanosRetornoRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
+  '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -295,6 +316,7 @@ export interface FileRoutesByTo {
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
+  '/planos': typeof PlanosRoute
   '/premium': typeof PremiumRoute
   '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
@@ -313,11 +335,13 @@ export interface FileRoutesByTo {
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/cadastro/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
+  '/planos/retorno': typeof PlanosRetornoRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
+  '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -336,6 +360,7 @@ export interface FileRoutesById {
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
+  '/planos': typeof PlanosRoute
   '/premium': typeof PremiumRoute
   '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
@@ -354,11 +379,13 @@ export interface FileRoutesById {
   '/atividade/$activityId': typeof AtividadeActivityIdRoute
   '/cadastro_/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
+  '/planos_/retorno': typeof PlanosRetornoRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
+  '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -378,6 +405,7 @@ export interface FileRouteTypes {
     | '/offline'
     | '/onboarding'
     | '/plan'
+    | '/planos'
     | '/premium'
     | '/privacidade'
     | '/profile'
@@ -396,11 +424,13 @@ export interface FileRouteTypes {
     | '/atividade/$activityId'
     | '/cadastro/completar'
     | '/learn/$lessonId'
+    | '/planos/retorno'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
     | '/api/cron/retencao'
+    | '/api/pagamentos/webhook'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -418,6 +448,7 @@ export interface FileRouteTypes {
     | '/offline'
     | '/onboarding'
     | '/plan'
+    | '/planos'
     | '/premium'
     | '/privacidade'
     | '/profile'
@@ -436,11 +467,13 @@ export interface FileRouteTypes {
     | '/atividade/$activityId'
     | '/cadastro/completar'
     | '/learn/$lessonId'
+    | '/planos/retorno'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao'
     | '/api/auth/$'
     | '/api/cron/retencao'
+    | '/api/pagamentos/webhook'
   id:
     | '__root__'
     | '/'
@@ -458,6 +491,7 @@ export interface FileRouteTypes {
     | '/offline'
     | '/onboarding'
     | '/plan'
+    | '/planos'
     | '/premium'
     | '/privacidade'
     | '/profile'
@@ -476,11 +510,13 @@ export interface FileRouteTypes {
     | '/atividade/$activityId'
     | '/cadastro_/completar'
     | '/learn/$lessonId'
+    | '/planos_/retorno'
     | '/redacao/$licaoId'
     | '/video/$id'
     | '/redacao/'
     | '/api/auth/$'
     | '/api/cron/retencao'
+    | '/api/pagamentos/webhook'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -499,6 +535,7 @@ export interface RootRouteChildren {
   OfflineRoute: typeof OfflineRoute
   OnboardingRoute: typeof OnboardingRoute
   PlanRoute: typeof PlanRoute
+  PlanosRoute: typeof PlanosRoute
   PremiumRoute: typeof PremiumRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   ProfileRoute: typeof ProfileRoute
@@ -517,11 +554,13 @@ export interface RootRouteChildren {
   AtividadeActivityIdRoute: typeof AtividadeActivityIdRoute
   CadastroCompletarRoute: typeof CadastroCompletarRoute
   LearnLessonIdRoute: typeof LearnLessonIdRoute
+  PlanosRetornoRoute: typeof PlanosRetornoRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
+  ApiPagamentosWebhookRoute: typeof ApiPagamentosWebhookRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -629,6 +668,13 @@ declare module '@tanstack/react-router' {
       path: '/plan'
       fullPath: '/plan'
       preLoaderRoute: typeof PlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/planos': {
+      id: '/planos'
+      path: '/planos'
+      fullPath: '/planos'
+      preLoaderRoute: typeof PlanosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/premium': {
@@ -757,6 +803,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearnLessonIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/planos_/retorno': {
+      id: '/planos_/retorno'
+      path: '/planos/retorno'
+      fullPath: '/planos/retorno'
+      preLoaderRoute: typeof PlanosRetornoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/redacao/': {
       id: '/redacao/'
       path: '/redacao'
@@ -792,6 +845,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiCronRetencaoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/pagamentos/webhook': {
+      id: '/api/pagamentos/webhook'
+      path: '/api/pagamentos/webhook'
+      fullPath: '/api/pagamentos/webhook'
+      preLoaderRoute: typeof ApiPagamentosWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -811,6 +871,7 @@ const rootRouteChildren: RootRouteChildren = {
   OfflineRoute: OfflineRoute,
   OnboardingRoute: OnboardingRoute,
   PlanRoute: PlanRoute,
+  PlanosRoute: PlanosRoute,
   PremiumRoute: PremiumRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   ProfileRoute: ProfileRoute,
@@ -829,11 +890,13 @@ const rootRouteChildren: RootRouteChildren = {
   AtividadeActivityIdRoute: AtividadeActivityIdRoute,
   CadastroCompletarRoute: CadastroCompletarRoute,
   LearnLessonIdRoute: LearnLessonIdRoute,
+  PlanosRetornoRoute: PlanosRetornoRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiCronRetencaoRoute: ApiCronRetencaoRoute,
+  ApiPagamentosWebhookRoute: ApiPagamentosWebhookRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

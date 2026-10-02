@@ -9,6 +9,7 @@ import { allLessonsInOrder, TOTAL_LICOES } from "@/content/trilhas";
 import { MICROLICOES } from "@/content/microlicoes";
 import { recommendNext } from "@/lib/learning/recommend";
 import { FEATURES } from "@/lib/features";
+import { COPY } from "@/lib/copy";
 
 export const Route = createFileRoute("/dashboard")({
   component: Dashboard,
@@ -211,17 +212,10 @@ function Dashboard() {
           <ChevronRight size={18} className="text-nevoa" />
         </Link>
 
-        <div
-          className="card-soft p-4"
-          style={{
-            background: "color-mix(in srgb, var(--alert) 20%, var(--cards))",
-            borderColor: "var(--alert)",
-          }}
-        >
-          <p className="ds-label">Teste premium</p>
-          <p className="mt-1 font-display font-bold text-abismo">1 dia grátis com IA sem limite</p>
-          <Link to="/premium" className="btn-outline mt-3 inline-flex">
-            Conhecer
+        <div className="card-soft p-4">
+          <p className="ds-label">{COPY.planos.titulo}</p>
+          <Link to="/planos" className="btn-outline mt-3 inline-flex">
+            {COPY.planos.assinatura.verPlanos}
           </Link>
         </div>
       </div>

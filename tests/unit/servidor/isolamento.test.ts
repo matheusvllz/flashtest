@@ -42,6 +42,13 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/estudo.ts#salvarDocumento": "salvarDocumentoDoAluno(db, s.userId) — prova: 'documento'",
   "src/lib/api/estudo.ts#importarEstadoLocal": "importarEstado(db, s.userId) — prova: 'importação'",
   "src/lib/tutor.ts#askTutor": "responderTutor({ sessao }) — prova: 'Foca IA' e tests/unit/servidor/tutor.test.ts",
+  // Spec 49 (planos e pagamentos): provas em tests/unit/servidor/pagamentos.test.ts e planos-cota.test.ts.
+  "src/lib/api/planos.ts#meuPlano": "meuPlano(db, s.userId) — prova: 'compra de um aluno nunca vira plano de outro'",
+  "src/lib/api/planos.ts#iniciarCheckout": "iniciarCheckout(db, p, s.userId) — compra gravada com o userId da sessão; preço do catálogo",
+  "src/lib/api/planos.ts#estadoDaCompra": "estadoDaCompra(db, s.userId, compraId) filtra por userId — prova: 'estado de compra de outro aluno: 404'",
+  "src/lib/api/planos.ts#cancelarAssinatura": "cancelarAssinatura(db, p, s.userId) — só a assinatura vigente do próprio aluno",
+  "src/lib/api/planos.ts#pedirReembolso": "pedirReembolso(db, p, s.userId) — só a assinatura e as cobranças do próprio aluno",
+  "src/lib/api/planos.ts#simularPagamentoLocal": "só local (404 implantado); confere estadoDaCompra(db, s.userId) antes de simular",
 };
 
 function arquivos(dir: string): string[] {
@@ -177,7 +184,7 @@ describe("duas contas", () => {
       for (let i = 0; i < 5; i++) await aplicarEventos(amb.db, b.userId, [resposta()], AGORA);
       await responderTutor(
         {
-          env: { contasAtivas: true, TUTOR_IDADE_SEM_CONSENTIMENTO: 18, AI_COTA_GRATIS_MENSAGENS: 3, AI_COTA_PRO_MENSAGENS: 20, AI_COTA_PRO_FOTOS: 5, AI_TETO_DIARIO_USD: 1, AI_PRECO_ENTRADA_USD_MTOK: 1, AI_PRECO_SAIDA_USD_MTOK: 8 },
+          env: { contasAtivas: true, TUTOR_IDADE_SEM_CONSENTIMENTO: 18, AI_COTA_GRATIS_MENSAGENS: 3, AI_TETO_DIARIO_USD: 1, AI_TETO_DIARIO_PAGOS_USD: 5, AI_PRECO_ENTRADA_USD_MTOK: 1, AI_PRECO_SAIDA_USD_MTOK: 8 },
           sessao: { userId: a.userId, email: "ana@teste.dev", emailVerificado: true, nome: "Ana", anoNascimento: 2000, termosVersao: null, privacidadeVersao: null },
           db: amb.db,
           agora: AGORA,

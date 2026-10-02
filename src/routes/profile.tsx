@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
 import { DadosDaConta } from "@/components/conta/DadosDaConta";
 import { SecaoConta } from "@/components/conta/SecaoConta";
+import { SecaoAssinatura } from "@/components/planos/SecaoAssinatura";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { CourseStep } from "@/components/onboarding/CourseStep";
@@ -304,21 +305,7 @@ function Profile() {
           </div>
         )}
 
-        <div
-          className="card-soft p-4"
-          style={{
-            background: "color-mix(in srgb, var(--alert) 20%, var(--cards))",
-            borderColor: "var(--alert)",
-          }}
-        >
-          <p className="ds-label">Plano atual</p>
-          <p className="mt-1 font-display text-lg font-bold text-abismo">
-            {s.premiumTrial.active ? "Premium (teste)" : "Gratuito"}
-          </p>
-          <Link to="/premium" className="btn-outline mt-3 inline-flex">
-            <Sparkles size={14} /> Conhecer premium
-          </Link>
-        </div>
+        <SecaoAssinatura />
 
         <div className="card-soft divide-y divide-gelo">
           <Row label="Refazer meu diagnóstico" onClick={() => nav({ to: "/quiz" })} />
