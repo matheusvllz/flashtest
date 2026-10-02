@@ -141,6 +141,50 @@ export type Exercise =
 export type ExerciseType = Exercise["type"];
 
 /**
+ * Tipo `escrita` (spec 50 §5.10.1, R-ESC-9): resposta aberta, **sem gabarito e sem nota automática**. Fica fora da
+ * união `Exercise` de propósito: o player de lição corrige por gabarito (`checkAnswer`) e este tipo não tem o que
+ * corrigir. Quem o mostra é a tela da tarefa (`/redacao/escreva/$tarefaId`); quem o valida é
+ * `validarTarefaDeEscrita` (`src/lib/escrita.ts`).
+ */
+export interface WritingExercise {
+  type: "escrita";
+  /** O pedido, em uma ou duas frases ("Escreva a introdução…"). */
+  enunciado: string;
+  /** Tema de treino (de `TEMAS_DE_TREINO`): nunca tema oficial nem previsão de prova. */
+  tema: string;
+  /** Como fazer, passo a passo curto. */
+  instrucao: string;
+  /** Trecho dado para completar ou reescrever (conteúdo autoral do Foca). */
+  textoDeApoio?: { rotulo: string; texto: string };
+  /** Limites de tamanho em caracteres (trecho 20–1.500; texto completo 400–5.000). */
+  limites: { min: number; max: number };
+}
+
+/** Texto-modelo comentado, mostrado só depois de enviar (autoral). */
+export interface WritingModel {
+  texto: string;
+  /** Comentários curtos: o que o modelo faz e por que funciona. */
+  comentarios: string[];
+}
+
+/** Nó "Escreva" de uma trilha de redação (spec 50 §5.10.1). */
+export interface WritingTask {
+  /** `[a-z0-9-]`, estável: vira chave de XP (`escrita:<id>`) e de rascunho. */
+  id: string;
+  trilhaId: "redacao-estrutura" | "redacao-argumentacao" | "redacao-competencias";
+  /** Lição depois da qual o nó aparece (e que o destrava). */
+  depoisDe: string;
+  titulo: string;
+  modo: "trecho" | "completo";
+  /** Liga a checagem dos 5 elementos da proposta num trecho (conclusão). O texto completo sempre checa. */
+  checaProposta?: boolean;
+  /** Todo texto dado, modelo e tema destas tarefas foi escrito pelo Foca (rótulo na tela). */
+  autoria: "foca";
+  exercicio: WritingExercise;
+  modelo: WritingModel;
+}
+
+/**
  * Resposta do aluno, por tipo:
  * - índice único: escolha/lacuna/erro/interpretação (e 1|0 no verdadeiro-falso);
  * - sequência de índices exibidos: ordenar (ordem montada) e parear

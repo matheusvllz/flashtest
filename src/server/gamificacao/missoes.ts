@@ -3,7 +3,7 @@
  * o progresso vem só dos fatos que o servidor já confere (respostas recorrigidas, conclusões, combo do servidor).
  * Pérolas: 10 por missão, +10 pelas 3, 150 pelo desafio do mês; conquistas pelo catálogo. Idempotente pelas chaves.
  */
-import { and, count, desc, eq, gte, lte, max, sql } from "drizzle-orm";
+import { and, count, desc, eq, gte, like, lte, max, or, sql } from "drizzle-orm";
 import { CONQUISTAS, novasConquistas, type Estatisticas } from "@/lib/conquistas";
 import { MISSOES_DO_DESAFIO, mesDe, sortearMissoes, type ContextoDasMissoes, type IdDeMissao } from "@/lib/missoes";
 import { chavePerola, PEROLAS_DESAFIO_DO_MES, PEROLAS_MISSOES_COMPLETAS, PEROLAS_POR_MISSAO } from "@/lib/perolas";
@@ -31,6 +31,7 @@ import {
 import type { Tx } from "../estudo/sincronizar";
 import { creditar } from "../economia/perolas";
 import { itensOficiais } from "../estudo/conteudo";
+import { TAREFAS_DE_ESCRITA } from "@/content/tarefas-escrita";
 import { alunoTemFuncao, recursoLigado } from "../planos/funcoes";
 
 type Leitor = Banco | Tx;
@@ -44,6 +45,17 @@ async function miniFeito(db: Leitor, userId: string, dia: string): Promise<boole
     .where(eq(simulado.id, `mini:${userId}:${semanaDe(dia)}`))
     .limit(1);
   return !!s?.fim;
+}
+
+/** Alguma lição de redação que abre um nó "Escreva" já foi concluída (na trilha ou importada). */
+export async function temTarefaDeEscritaAberta(db: Leitor, userId: string): Promise<boolean> {
+  const licoes = [...new Set(TAREFAS_DE_ESCRITA.map((t) => t.depoisDe))];
+  if (!licoes.length) return false;
+  const [r] = await db
+    .select({ n: count() })
+    .from(completion)
+    .where(and(eq(completion.userId, userId), or(...licoes.map((l) => like(completion.key, `licao:redacao:${l}#%`)))));
+  return Number(r?.n ?? 0) > 0;
 }
 
 async function contextoDasMissoes(db: Leitor, userId: string, dia: string, agora: Date): Promise<ContextoDasMissoes> {
@@ -79,7 +91,9 @@ async function contextoDasMissoes(db: Leitor, userId: string, dia: string, agora
     revisaoDevida,
     areaComLacuna: comLacuna,
     cadernoParaHoje,
-    temEscrita: recursoLigado("escrita"),
+    // Tarefas de escrita no ar (E6), para todos os planos e sem gastar vida: só sorteia a missão para quem já tem um nó
+    // "Escreva" aberto (concluiu a lição de redação que vem antes dele).
+    temEscrita: recursoLigado("escrita") && (await temTarefaDeEscritaAberta(db, userId)),
     // A missão do mini só entra se ele está aberto e o aluno ainda não fez o desta semana.
     miniDisponivel: recursoLigado("miniSimulado") && itensOficiais().length >= MINIMO_PARA_MINI && !(await miniFeito(db, userId, dia)),
     flashcardsDevidos: 0,
@@ -213,11 +227,21 @@ export async function estatisticasDoAluno(db: Leitor, userId: string, hoje: stri
     .select({ n: count() })
     .from(simulado)
     .where(and(eq(simulado.userId, userId), sql`${simulado.concluidoEm} is not null`, eq(simulado.tipo, "dia")));
-  const [escr] = await db.select({ n: count() }).from(redacao).where(and(eq(redacao.userId, userId), sql`${redacao.tipo} in ('treino', 'tarefa')`));
+  // Tarefas de escrita contam uma vez por tarefa (reenviar a mesma não soma); cada parte do treino conta uma vez.
+  const [escr] = await db
+    .select({ n: sql<number>`count(distinct coalesce(${redacao.tarefaId}, ${redacao.id}))::int` })
+    .from(redacao)
+    .where(and(eq(redacao.userId, userId), sql`${redacao.tipo} in ('treino', 'tarefa')`));
   const [est] = await db
     .select({ n: count() })
     .from(redacao)
-    .where(and(eq(redacao.userId, userId), eq(redacao.tipo, "correcao"), sql`${redacao.resultado} is not null`));
+    .where(
+      and(
+        eq(redacao.userId, userId),
+        eq(redacao.tipo, "correcao"),
+        sql`${redacao.resultado} is not null and coalesce(${redacao.resultado}->>'situacao', 'estimada') <> 'sem-estimativa'`,
+      ),
+    );
   const [cad] = await db.select({ n: count() }).from(cadernoItem).where(and(eq(cadernoItem.userId, userId), eq(cadernoItem.estado, "resolvido")));
   const [xp] = await db.select({ s: sql<number>`coalesce(sum(${xpLedger.xp}), 0)` }).from(xpLedger).where(eq(xpLedger.userId, userId));
   const areas = await db

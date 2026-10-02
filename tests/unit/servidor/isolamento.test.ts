@@ -66,6 +66,10 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/redacao.ts#apagarRedacao": "apagar(db, s.userId, id) — prova: 'aluno B não apaga o texto de A'",
   "src/lib/api/redacao.ts#meuTreino": "estadoDoTreino(db, s.userId)",
   "src/lib/api/redacao.ts#enviarParte": "comentarParte(db, s.userId, data)",
+  // Spec 50 E6 — tarefas de escrita e avaliação da estimativa; provas em tests/unit/servidor/escrita.test.ts.
+  "src/lib/api/redacao.ts#minhasTarefasDeEscrita": "minhasTarefas(db, s.userId) — prova: 'B não vê, não apaga e não avalia o que é de A'",
+  "src/lib/api/redacao.ts#enviarEscrita": "enviar(db, s.userId, data) — texto, XP e Pérolas gravados no userId da sessão",
+  "src/lib/api/redacao.ts#avaliarEstimativa": "avaliar(db, s.userId, id) — prova: 'B não vê, não apaga e não avalia o que é de A'",
   // Spec 50 E9 — lembrete por push: assinatura pelo userId da sessão; provas em tests/unit/servidor/lembretes.test.ts.
   "src/lib/api/lembretes.ts#chavePublicaDoLembrete": "chavePublica() — só a chave pública VAPID, igual para todos; exige sessão",
   "src/lib/api/lembretes.ts#meuLembrete": "estadoDoLembrete(db, s.userId, endpoint) — prova: 'B com o endereço de A não vê A ligado'",

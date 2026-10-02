@@ -65,6 +65,7 @@ import { Route as ApiCronLembretesRouteImport } from './routes/api/cron/lembrete
 import { Route as ApiCronLigasRouteImport } from './routes/api/cron/ligas'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
 import { Route as ApiPagamentosWebhookRouteImport } from './routes/api/pagamentos/webhook'
+import { Route as RedacaoEscrevaTarefaIdRouteImport } from './routes/redacao.escreva.$tarefaId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -346,6 +347,11 @@ const ApiPagamentosWebhookRoute = ApiPagamentosWebhookRouteImport.update({
   path: '/api/pagamentos/webhook',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RedacaoEscrevaTarefaIdRoute = RedacaoEscrevaTarefaIdRouteImport.update({
+  id: '/redacao/escreva/$tarefaId',
+  path: '/redacao/escreva/$tarefaId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -404,6 +410,7 @@ export interface FileRoutesByFullPath {
   '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
+  '/redacao/escreva/$tarefaId': typeof RedacaoEscrevaTarefaIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -462,6 +469,7 @@ export interface FileRoutesByTo {
   '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
+  '/redacao/escreva/$tarefaId': typeof RedacaoEscrevaTarefaIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -521,6 +529,7 @@ export interface FileRoutesById {
   '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
+  '/redacao/escreva/$tarefaId': typeof RedacaoEscrevaTarefaIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -581,6 +590,7 @@ export interface FileRouteTypes {
     | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
+    | '/redacao/escreva/$tarefaId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -639,6 +649,7 @@ export interface FileRouteTypes {
     | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
+    | '/redacao/escreva/$tarefaId'
   id:
     | '__root__'
     | '/'
@@ -697,6 +708,7 @@ export interface FileRouteTypes {
     | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
+    | '/redacao/escreva/$tarefaId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -756,6 +768,7 @@ export interface RootRouteChildren {
   ApiCronLigasRoute: typeof ApiCronLigasRoute
   ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
   ApiPagamentosWebhookRoute: typeof ApiPagamentosWebhookRoute
+  RedacaoEscrevaTarefaIdRoute: typeof RedacaoEscrevaTarefaIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1152,6 +1165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPagamentosWebhookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/redacao/escreva/$tarefaId': {
+      id: '/redacao/escreva/$tarefaId'
+      path: '/redacao/escreva/$tarefaId'
+      fullPath: '/redacao/escreva/$tarefaId'
+      preLoaderRoute: typeof RedacaoEscrevaTarefaIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -1212,6 +1232,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiCronLigasRoute: ApiCronLigasRoute,
   ApiCronRetencaoRoute: ApiCronRetencaoRoute,
   ApiPagamentosWebhookRoute: ApiPagamentosWebhookRoute,
+  RedacaoEscrevaTarefaIdRoute: RedacaoEscrevaTarefaIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

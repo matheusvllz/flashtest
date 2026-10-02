@@ -80,7 +80,19 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
       .from(cadernoItem)
       .where(doAluno(cadernoItem)),
     cronograma: (await db.select({ diasSemana: cronograma.diasSemana, minutosDia: cronograma.minutosDia, dataProva: cronograma.dataProva }).from(cronograma).where(doAluno(cronograma)))[0] ?? null,
-    redacoes: await db.select({ tipo: redacao.tipo, tema: redacao.tema, texto: redacao.texto, resultado: redacao.resultado, em: redacao.criadaEm }).from(redacao).where(doAluno(redacao)),
+    // Correções, treino e tarefas de escrita (spec 50 §9), com a avaliação "Ajudou"/"Achei estranha" da estimativa.
+    redacoes: await db
+      .select({
+        tipo: redacao.tipo,
+        tarefa: redacao.tarefaId,
+        tema: redacao.tema,
+        texto: redacao.texto,
+        resultado: redacao.resultado,
+        avaliacao: redacao.avaliacao,
+        em: redacao.criadaEm,
+      })
+      .from(redacao)
+      .where(doAluno(redacao)),
     // Spec 50 §9: economia e gamificação.
     perolas: await db
       .select({ quantidade: perolaMovimento.quantidade, motivo: perolaMovimento.motivo, ref: perolaMovimento.ref, dia: perolaMovimento.localDate })

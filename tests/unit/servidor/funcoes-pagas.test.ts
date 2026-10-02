@@ -54,11 +54,15 @@ async function aluno(email: string, plano?: "basic" | "pro"): Promise<string> {
   return a.userId;
 }
 
-const TEXTO = `${"A leitura entre jovens no Brasil ainda enfrenta barreiras. ".repeat(6)}Por isso, o Ministério da Educação deve ampliar bibliotecas escolares, por meio de verbas específicas, a fim de formar leitores.`;
+// Mais de 7 linhas estimadas (spec 50 §5.10.4): texto curto sai "sem estimativa" antes da IA.
+const TEXTO = `${"A leitura entre jovens no Brasil ainda enfrenta barreiras. ".repeat(9)}Por isso, o Ministério da Educação deve ampliar bibliotecas escolares, por meio de verbas específicas, a fim de formar leitores.`;
 
+/** Resposta da IA no formato da rubrica v2 (spec 50 §5.10.3). */
 function respostaDaIA(trecho: string, nota = 150): string {
   return JSON.stringify({
-    competencias: [1, 2, 3, 4, 5].map((c) => ({ c, nota, justificativa: `Justificativa ${c}.`, trecho: c === 1 ? trecho : null })),
+    situacao: "estimada",
+    direitosHumanos: "respeitados",
+    competencias: [1, 2, 3, 4, 5].map((c) => ({ c, nota, justificativa: `Justificativa ${c}.`, trecho: c === 1 ? trecho : null, paraSubir: `Ação ${c}.` })),
     comentario: "Continue assim.",
   });
 }
