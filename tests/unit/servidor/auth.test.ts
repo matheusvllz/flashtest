@@ -4,6 +4,7 @@
  */
 import { beforeEach, describe, expect, test } from "bun:test";
 import { eq } from "drizzle-orm";
+import { LEGAL } from "../../../src/lib/legal";
 import { user } from "../../../src/server/db/schema";
 import { caixaDeSaida } from "../../../src/server/email";
 import { ambiente, alunoVerificado, cadastroValido, cookieDe, ultimoLink, type Ambiente } from "./ajuda";
@@ -156,5 +157,29 @@ describe("configuração de produção", () => {
       const { redefinirEnv } = await import("../../../src/server/env");
       redefinirEnv();
     }
+  });
+});
+
+describe("campos protegidos do usuário (spec 49 DV49-01)", () => {
+  test("update-user recusa mudar ano de nascimento ou versões aceitas; nada muda", async () => {
+    const amb = await ambiente();
+    const { userId, cookie } = await alunoVerificado(amb, "trava-ano@foca.dev");
+    for (const corpo of [{ birthYear: 1990 }, { name: "Ana Nova", birthYear: 1990 }, { termsVersion: "x" }, { privacyVersion: "y" }]) {
+      const r = await amb.post("/update-user", corpo, { cookie });
+      expect(r.status).toBe(400);
+    }
+    const [u] = await amb.db
+      .select({ nome: user.name, ano: user.birthYear, termos: user.termsVersion, privacidade: user.privacyVersion })
+      .from(user)
+      .where(eq(user.id, userId));
+    expect(u).toEqual({ nome: "Ana", ano: 2006, termos: LEGAL.termos.versao, privacidade: LEGAL.privacidade.versao });
+  });
+
+  test("update-user só com o nome continua funcionando", async () => {
+    const amb = await ambiente();
+    const { userId, cookie } = await alunoVerificado(amb, "troca-nome@foca.dev");
+    expect((await amb.post("/update-user", { name: "Ana Nova" }, { cookie })).status).toBe(200);
+    const [u] = await amb.db.select({ nome: user.name }).from(user).where(eq(user.id, userId));
+    expect(u.nome).toBe("Ana Nova");
   });
 });

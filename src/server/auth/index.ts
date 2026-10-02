@@ -97,6 +97,21 @@ function criar(db: Banco) {
     },
     databaseHooks: {
       user: {
+        // Ano de nascimento e versões aceitas só mudam pelo servidor (cadastro, /cadastro/completar, suporte), nunca pela
+        // rota pública `update-user` do Better Auth: os campos precisam de `input: true` para o cadastro por e-mail, e
+        // isso também os abriria para edição pelo aluno (idade mínima, aceite sem registro, ranking 18+ — spec 49 DV49-01).
+        // O /cadastro/completar grava direto pelo Drizzle, então este gancho não o afeta.
+        // O Better Auth mescla o retorno do gancho com os dados originais, então apagar os campos não basta: a
+        // atualização que tenta mexer neles é recusada inteira.
+        update: {
+          before: async (dados) => {
+            const d = dados as Record<string, unknown>;
+            if (["birthYear", "termsVersion", "privacyVersion"].some((k) => d[k] !== undefined)) {
+              throw new APIError("BAD_REQUEST", { message: "Campo protegido.", code: "CAMPO_PROTEGIDO" });
+            }
+            return { data: dados };
+          },
+        },
         create: {
           before: async (dados) => {
             const ano = (dados as { birthYear?: number | null }).birthYear;
