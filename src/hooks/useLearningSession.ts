@@ -57,6 +57,8 @@ export interface CompleteStrategyResult {
 export interface ComboDaResposta {
   n: number;
   marco: MarcoDoCombo | null;
+  /** O combo devolveu uma vida (Free com vidas; o servidor confirma). */
+  vida?: boolean;
 }
 
 export type FaseDaRevisao = "oferta" | "revendo" | "feita" | "pulada";
@@ -91,8 +93,11 @@ export interface UseLearningSessionOptions {
    * lição de conteúdo.
    */
   onComplete?: (correct: number, total: number) => CompleteStrategyResult;
-  /** Repassado pra quem renderiza (docs/30 §14.4) — não muda a lógica desta hook. */
-  mode?: "licao" | "atividade" | "checkpoint";
+  /**
+   * Repassado pra quem renderiza (docs/30 §14.4). "revisaoLivre" (spec 50 §5.7.2, "Rever erros recentes"): as
+   * respostas vão como revisão — sem vida, sem combo, sem XP, sem mexer no domínio (R-PED-2).
+   */
+  mode?: "licao" | "atividade" | "checkpoint" | "revisaoLivre";
 }
 
 /**
@@ -237,10 +242,10 @@ export function useLearningSession(lesson: MicroLesson, opts: UseLearningSession
 
   // Ao chegar ao resumo com erros, oferece a revisão (uma vez). Nunca na checagem.
   useEffect(() => {
-    if (step.kind !== "recap" || revisao !== null || ehChecagem || !FEATURES.revisaoDeErros) return;
+    if (step.kind !== "recap" || revisao !== null || ehChecagem || opts.mode === "revisaoLivre" || !FEATURES.revisaoDeErros) return;
     if (errosParaRever.length === 0) return;
     setRevisao({ fase: "oferta", itens: errosParaRever, indice: 0, feedbacks: {}, acertos: 0 });
-  }, [step.kind, revisao, ehChecagem, errosParaRever]);
+  }, [step.kind, revisao, ehChecagem, errosParaRever, opts.mode]);
 
   /** Gera (e memoriza) a ordem apresentada de um passo-questão, se ainda não existir — nunca sobrescreve uma já gravada (retomada fiel, docs/25 §9). */
   function gerarOrdemSeNecessario(
@@ -358,17 +363,21 @@ export function useLearningSession(lesson: MicroLesson, opts: UseLearningSession
     ordem: string[] | undefined,
   ) {
     const meta = itemMetaOf(questionStep.exerciseId);
+    if (opts.mode === "revisaoLivre") {
+      registrarRevisaoDeErro(montarTentativa(questionStep, resposta, response, correct, ordem, true, stepIndex));
+      return;
+    }
     const attempt = montarTentativa(questionStep, resposta, response, correct, ordem, false, stepIndex);
     recordLearningAttempt(attempt, { irt: meta.irt, difficulty: meta.difficulty });
   }
 
   /** Combo desta resposta (spec 50 §5.1.1): checagem e questões não pontuadas não contam nem zeram. */
   function contarCombo(questionStep: QuestionStep, resultado: "certa" | "errada" | "nao-sei"): ComboDaResposta | null {
-    const conta = !ehChecagem && questionStep.role !== "checkpoint";
+    const conta = !ehChecagem && opts.mode !== "revisaoLivre" && questionStep.role !== "checkpoint";
     const r = registrarComboLocal({ resultado, conta, assistida: Boolean(ajudadas[String(stepIndex)]) });
     if (!conta || !FEATURES.comboNaLicao) return null;
     if (r.estado.atual > maiorCombo) setMaiorCombo(r.estado.atual);
-    return { n: r.estado.atual, marco: r.marco };
+    return { n: r.estado.atual, marco: r.marco, vida: r.vidaDeVolta };
   }
 
   function submit(a: ExerciseAnswer) {

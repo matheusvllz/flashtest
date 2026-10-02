@@ -48,6 +48,8 @@ export const eventoResposta = z.object({
   tentativa: z.enum(["primeira", "revisao"]).optional(),
   /** A Foca IA foi aberta ANTES de responder (spec 50 §5.1.1): o acerto não soma no combo nem na lição perfeita. */
   assistida: z.boolean().optional(),
+  /** `false` = questão de checagem dentro da lição (não pontuada): não conta nem zera o combo. Ausente = pontuada. */
+  pontuada: z.boolean().optional(),
 });
 
 export const eventoLicaoConcluida = z.object({
@@ -122,7 +124,27 @@ export interface Agregado {
   /** Teto de protetores do plano (spec 49 D49-05). Aditivo. */
   protetoresMax?: number;
   /** Vidas de hoje (spec 49 D49-03); `null` = sem vidas (plano pago ou desligado). Aditivo. */
-  vidas?: { dia: string; restantes: number; anuncioUsado: boolean } | null;
+  vidas?: { dia: string; restantes: number; anuncioUsado: boolean; recargaUsada?: boolean; doCombo?: number } | null;
+  /** Spec 50 §5.3.4: saldo de Pérolas (verdade do servidor). Aditivo; ausente quando as Pérolas estão desligadas. */
+  perolas?: number;
+  /** Spec 50 §5.3.3: roupa da Foca e tema da trilha em uso. Aditivo. */
+  cosmeticos?: { roupa: string | null; tema: string | null };
+  /** Spec 50 §5.1.1: combo do dia no servidor. Aditivo. */
+  combo?: { dia: string; atual: number; maximo: number } | null;
+  /** Spec 50: acontecimentos deste envio que o app celebra (uma vez). Aditivo. */
+  novidades?: NovidadesDoServidor;
+}
+
+/** O que aconteceu neste envio e merece um momento na tela (spec 50 §5.12.3). Só informa; quem decide é o servidor. */
+export interface NovidadesDoServidor {
+  perolasGanhas: number;
+  vidasDoCombo: number;
+  metaCumprida: { alvo: number; perolas: number } | null;
+  marco: { dias: number; perolas: number; item: string | null } | null;
+  perfeitas: number;
+  conquistas: string[];
+  missoesConcluidas: string[];
+  desafioDoMes: boolean;
 }
 
 export type MotivoRejeicao =

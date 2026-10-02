@@ -90,6 +90,8 @@ Revisão dos exemplos "Canônico hoje" e "Anti-padrão" da tabela acima, no form
 
 ## 3. Glossário de produto
 
+**Termos novos da spec 50 (02/10/2026):** **Pérolas** (a moeda; sempre com P maiúsculo, nunca "gemas" nem "moedas"; ganha-se aprendendo, nunca se compra) · **combo** só no código; na tela, **"N seguidas"** · **missão** / **missões de hoje** · **desafio do mês** · **conquista** · **medalha** (do desafio do mês) · **meta de ofensiva** · **marco** e **baú do marco** (conteúdo sempre mostrado antes de abrir) · **loja**, **trocar** (não "comprar": nada ali custa dinheiro) · **lição perfeita** · **de primeira** (acerto na primeira tentativa) · **rever o que errou** · **Praticar** (aba) · **Missões** (aba).
+
 Cada termo tem um nome visível canônico, o que se evita, uma definição de uma linha e o **status**. Regras: **nunca renomear id no código** (`MicroLesson`, `ActivityKind`, `LessonStep`, chaves de `COPY`, rotas); só o rótulo visível muda. Termo novo entra aqui **antes** da string.
 
 "Ocorrências" é a contagem aproximada de linhas com o termo em texto de interface (`routes`, `components`, `copy.ts`, `voz.ts`, `brand.ts`) em 28/09/2026. Inclui alguns literais que não chegam à tela.

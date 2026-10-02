@@ -21,11 +21,14 @@ import { Route as FlashcardsRouteImport } from './routes/flashcards'
 import { Route as ForgotRouteImport } from './routes/forgot'
 import { Route as ImportarProgressoRouteImport } from './routes/importar-progresso'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as LojaRouteImport } from './routes/loja'
+import { Route as MissoesRouteImport } from './routes/missoes'
 import { Route as NivelamentoRouteImport } from './routes/nivelamento'
 import { Route as OfflineRouteImport } from './routes/offline'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as PlanRouteImport } from './routes/plan'
 import { Route as PlanosRouteImport } from './routes/planos'
+import { Route as PraticarRouteImport } from './routes/praticar'
 import { Route as PremiumRouteImport } from './routes/premium'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ProfileRouteImport } from './routes/profile'
@@ -33,6 +36,7 @@ import { Route as ProgressRouteImport } from './routes/progress'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as RankingRouteImport } from './routes/ranking'
 import { Route as RedefinirSenhaRouteImport } from './routes/redefinir-senha'
+import { Route as RetrospectivaRouteImport } from './routes/retrospectiva'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as StudyRouteImport } from './routes/study'
 import { Route as TermosRouteImport } from './routes/termos'
@@ -45,6 +49,7 @@ import { Route as AtividadeActivityIdRouteImport } from './routes/atividade.$act
 import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.completar'
 import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
 import { Route as PlanosRetornoRouteImport } from './routes/planos_.retorno'
+import { Route as PraticarErrosRouteImport } from './routes/praticar_.erros'
 import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as RedacaoCorretorRouteImport } from './routes/redacao.corretor'
@@ -114,6 +119,16 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LojaRoute = LojaRouteImport.update({
+  id: '/loja',
+  path: '/loja',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissoesRoute = MissoesRouteImport.update({
+  id: '/missoes',
+  path: '/missoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NivelamentoRoute = NivelamentoRouteImport.update({
   id: '/nivelamento',
   path: '/nivelamento',
@@ -137,6 +152,11 @@ const PlanRoute = PlanRouteImport.update({
 const PlanosRoute = PlanosRouteImport.update({
   id: '/planos',
   path: '/planos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PraticarRoute = PraticarRouteImport.update({
+  id: '/praticar',
+  path: '/praticar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PremiumRoute = PremiumRouteImport.update({
@@ -172,6 +192,11 @@ const RankingRoute = RankingRouteImport.update({
 const RedefinirSenhaRoute = RedefinirSenhaRouteImport.update({
   id: '/redefinir-senha',
   path: '/redefinir-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetrospectivaRoute = RetrospectivaRouteImport.update({
+  id: '/retrospectiva',
+  path: '/retrospectiva',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SignupRoute = SignupRouteImport.update({
@@ -234,6 +259,11 @@ const PlanosRetornoRoute = PlanosRetornoRouteImport.update({
   path: '/planos/retorno',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PraticarErrosRoute = PraticarErrosRouteImport.update({
+  id: '/praticar_/erros',
+  path: '/praticar/erros',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RedacaoIndexRoute = RedacaoIndexRouteImport.update({
   id: '/redacao/',
   path: '/redacao/',
@@ -288,11 +318,14 @@ export interface FileRoutesByFullPath {
   '/forgot': typeof ForgotRoute
   '/importar-progresso': typeof ImportarProgressoRoute
   '/login': typeof LoginRoute
+  '/loja': typeof LojaRoute
+  '/missoes': typeof MissoesRoute
   '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
   '/planos': typeof PlanosRoute
+  '/praticar': typeof PraticarRoute
   '/premium': typeof PremiumRoute
   '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
@@ -300,6 +333,7 @@ export interface FileRoutesByFullPath {
   '/quiz': typeof QuizRoute
   '/ranking': typeof RankingRoute
   '/redefinir-senha': typeof RedefinirSenhaRoute
+  '/retrospectiva': typeof RetrospectivaRoute
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
   '/termos': typeof TermosRoute
@@ -312,6 +346,7 @@ export interface FileRoutesByFullPath {
   '/cadastro/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos/retorno': typeof PlanosRetornoRoute
+  '/praticar/erros': typeof PraticarErrosRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
@@ -334,11 +369,14 @@ export interface FileRoutesByTo {
   '/forgot': typeof ForgotRoute
   '/importar-progresso': typeof ImportarProgressoRoute
   '/login': typeof LoginRoute
+  '/loja': typeof LojaRoute
+  '/missoes': typeof MissoesRoute
   '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
   '/planos': typeof PlanosRoute
+  '/praticar': typeof PraticarRoute
   '/premium': typeof PremiumRoute
   '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
@@ -346,6 +384,7 @@ export interface FileRoutesByTo {
   '/quiz': typeof QuizRoute
   '/ranking': typeof RankingRoute
   '/redefinir-senha': typeof RedefinirSenhaRoute
+  '/retrospectiva': typeof RetrospectivaRoute
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
   '/termos': typeof TermosRoute
@@ -358,6 +397,7 @@ export interface FileRoutesByTo {
   '/cadastro/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos/retorno': typeof PlanosRetornoRoute
+  '/praticar/erros': typeof PraticarErrosRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
@@ -381,11 +421,14 @@ export interface FileRoutesById {
   '/forgot': typeof ForgotRoute
   '/importar-progresso': typeof ImportarProgressoRoute
   '/login': typeof LoginRoute
+  '/loja': typeof LojaRoute
+  '/missoes': typeof MissoesRoute
   '/nivelamento': typeof NivelamentoRoute
   '/offline': typeof OfflineRoute
   '/onboarding': typeof OnboardingRoute
   '/plan': typeof PlanRoute
   '/planos': typeof PlanosRoute
+  '/praticar': typeof PraticarRoute
   '/premium': typeof PremiumRoute
   '/privacidade': typeof PrivacidadeRoute
   '/profile': typeof ProfileRoute
@@ -393,6 +436,7 @@ export interface FileRoutesById {
   '/quiz': typeof QuizRoute
   '/ranking': typeof RankingRoute
   '/redefinir-senha': typeof RedefinirSenhaRoute
+  '/retrospectiva': typeof RetrospectivaRoute
   '/signup': typeof SignupRoute
   '/study': typeof StudyRoute
   '/termos': typeof TermosRoute
@@ -405,6 +449,7 @@ export interface FileRoutesById {
   '/cadastro_/completar': typeof CadastroCompletarRoute
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos_/retorno': typeof PlanosRetornoRoute
+  '/praticar_/erros': typeof PraticarErrosRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
@@ -429,11 +474,14 @@ export interface FileRouteTypes {
     | '/forgot'
     | '/importar-progresso'
     | '/login'
+    | '/loja'
+    | '/missoes'
     | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
     | '/planos'
+    | '/praticar'
     | '/premium'
     | '/privacidade'
     | '/profile'
@@ -441,6 +489,7 @@ export interface FileRouteTypes {
     | '/quiz'
     | '/ranking'
     | '/redefinir-senha'
+    | '/retrospectiva'
     | '/signup'
     | '/study'
     | '/termos'
@@ -453,6 +502,7 @@ export interface FileRouteTypes {
     | '/cadastro/completar'
     | '/learn/$lessonId'
     | '/planos/retorno'
+    | '/praticar/erros'
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
@@ -475,11 +525,14 @@ export interface FileRouteTypes {
     | '/forgot'
     | '/importar-progresso'
     | '/login'
+    | '/loja'
+    | '/missoes'
     | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
     | '/planos'
+    | '/praticar'
     | '/premium'
     | '/privacidade'
     | '/profile'
@@ -487,6 +540,7 @@ export interface FileRouteTypes {
     | '/quiz'
     | '/ranking'
     | '/redefinir-senha'
+    | '/retrospectiva'
     | '/signup'
     | '/study'
     | '/termos'
@@ -499,6 +553,7 @@ export interface FileRouteTypes {
     | '/cadastro/completar'
     | '/learn/$lessonId'
     | '/planos/retorno'
+    | '/praticar/erros'
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
@@ -521,11 +576,14 @@ export interface FileRouteTypes {
     | '/forgot'
     | '/importar-progresso'
     | '/login'
+    | '/loja'
+    | '/missoes'
     | '/nivelamento'
     | '/offline'
     | '/onboarding'
     | '/plan'
     | '/planos'
+    | '/praticar'
     | '/premium'
     | '/privacidade'
     | '/profile'
@@ -533,6 +591,7 @@ export interface FileRouteTypes {
     | '/quiz'
     | '/ranking'
     | '/redefinir-senha'
+    | '/retrospectiva'
     | '/signup'
     | '/study'
     | '/termos'
@@ -545,6 +604,7 @@ export interface FileRouteTypes {
     | '/cadastro_/completar'
     | '/learn/$lessonId'
     | '/planos_/retorno'
+    | '/praticar_/erros'
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
@@ -568,11 +628,14 @@ export interface RootRouteChildren {
   ForgotRoute: typeof ForgotRoute
   ImportarProgressoRoute: typeof ImportarProgressoRoute
   LoginRoute: typeof LoginRoute
+  LojaRoute: typeof LojaRoute
+  MissoesRoute: typeof MissoesRoute
   NivelamentoRoute: typeof NivelamentoRoute
   OfflineRoute: typeof OfflineRoute
   OnboardingRoute: typeof OnboardingRoute
   PlanRoute: typeof PlanRoute
   PlanosRoute: typeof PlanosRoute
+  PraticarRoute: typeof PraticarRoute
   PremiumRoute: typeof PremiumRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   ProfileRoute: typeof ProfileRoute
@@ -580,6 +643,7 @@ export interface RootRouteChildren {
   QuizRoute: typeof QuizRoute
   RankingRoute: typeof RankingRoute
   RedefinirSenhaRoute: typeof RedefinirSenhaRoute
+  RetrospectivaRoute: typeof RetrospectivaRoute
   SignupRoute: typeof SignupRoute
   StudyRoute: typeof StudyRoute
   TermosRoute: typeof TermosRoute
@@ -592,6 +656,7 @@ export interface RootRouteChildren {
   CadastroCompletarRoute: typeof CadastroCompletarRoute
   LearnLessonIdRoute: typeof LearnLessonIdRoute
   PlanosRetornoRoute: typeof PlanosRetornoRoute
+  PraticarErrosRoute: typeof PraticarErrosRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   RedacaoCorretorRoute: typeof RedacaoCorretorRoute
   RedacaoTreinoRoute: typeof RedacaoTreinoRoute
@@ -688,6 +753,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/loja': {
+      id: '/loja'
+      path: '/loja'
+      fullPath: '/loja'
+      preLoaderRoute: typeof LojaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/missoes': {
+      id: '/missoes'
+      path: '/missoes'
+      fullPath: '/missoes'
+      preLoaderRoute: typeof MissoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nivelamento': {
       id: '/nivelamento'
       path: '/nivelamento'
@@ -721,6 +800,13 @@ declare module '@tanstack/react-router' {
       path: '/planos'
       fullPath: '/planos'
       preLoaderRoute: typeof PlanosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/praticar': {
+      id: '/praticar'
+      path: '/praticar'
+      fullPath: '/praticar'
+      preLoaderRoute: typeof PraticarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/premium': {
@@ -770,6 +856,13 @@ declare module '@tanstack/react-router' {
       path: '/redefinir-senha'
       fullPath: '/redefinir-senha'
       preLoaderRoute: typeof RedefinirSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retrospectiva': {
+      id: '/retrospectiva'
+      path: '/retrospectiva'
+      fullPath: '/retrospectiva'
+      preLoaderRoute: typeof RetrospectivaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/signup': {
@@ -856,6 +949,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlanosRetornoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/praticar_/erros': {
+      id: '/praticar_/erros'
+      path: '/praticar/erros'
+      fullPath: '/praticar/erros'
+      preLoaderRoute: typeof PraticarErrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/redacao/': {
       id: '/redacao/'
       path: '/redacao'
@@ -928,11 +1028,14 @@ const rootRouteChildren: RootRouteChildren = {
   ForgotRoute: ForgotRoute,
   ImportarProgressoRoute: ImportarProgressoRoute,
   LoginRoute: LoginRoute,
+  LojaRoute: LojaRoute,
+  MissoesRoute: MissoesRoute,
   NivelamentoRoute: NivelamentoRoute,
   OfflineRoute: OfflineRoute,
   OnboardingRoute: OnboardingRoute,
   PlanRoute: PlanRoute,
   PlanosRoute: PlanosRoute,
+  PraticarRoute: PraticarRoute,
   PremiumRoute: PremiumRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   ProfileRoute: ProfileRoute,
@@ -940,6 +1043,7 @@ const rootRouteChildren: RootRouteChildren = {
   QuizRoute: QuizRoute,
   RankingRoute: RankingRoute,
   RedefinirSenhaRoute: RedefinirSenhaRoute,
+  RetrospectivaRoute: RetrospectivaRoute,
   SignupRoute: SignupRoute,
   StudyRoute: StudyRoute,
   TermosRoute: TermosRoute,
@@ -952,6 +1056,7 @@ const rootRouteChildren: RootRouteChildren = {
   CadastroCompletarRoute: CadastroCompletarRoute,
   LearnLessonIdRoute: LearnLessonIdRoute,
   PlanosRetornoRoute: PlanosRetornoRoute,
+  PraticarErrosRoute: PraticarErrosRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   RedacaoCorretorRoute: RedacaoCorretorRoute,
   RedacaoTreinoRoute: RedacaoTreinoRoute,

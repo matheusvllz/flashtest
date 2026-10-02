@@ -21,9 +21,12 @@ test("bottom nav mostra os itens certos pro estado atual da flag, com aria-curre
   const nav = page.getByRole("navigation");
   await nav.waitFor({ timeout: 15000 });
 
-  const expectedHrefs = FEATURES.trilhaComoHome
-    ? ["/trilha", "/study", "/progress", "/profile"]
-    : ["/dashboard", "/study", "/redacao", "/progress", "/profile"];
+  // Spec 50 §5.11: com `navegacaoV3`, cinco abas (Trilha, Praticar, Redação, Missões, Perfil).
+  const expectedHrefs = FEATURES.navegacaoV3
+    ? ["/trilha", "/praticar", "/redacao", "/missoes", "/profile"]
+    : FEATURES.trilhaComoHome
+      ? ["/trilha", "/study", "/progress", "/profile"]
+      : ["/dashboard", "/study", "/redacao", "/progress", "/profile"];
 
   await expect(nav.getByRole("link")).toHaveCount(expectedHrefs.length);
   for (const href of expectedHrefs) {
@@ -40,7 +43,7 @@ test("bottom nav mostra os itens certos pro estado atual da flag, com aria-curre
   // próprio item "Redação" que acende — G11 só exige o comportamento v2, mas
   // testamos o que está de fato ativo hoje.
   await page.goto("/redacao", { waitUntil: "domcontentloaded" });
-  const redacaoActiveHref = FEATURES.trilhaComoHome ? "/trilha" : "/redacao";
+  const redacaoActiveHref = FEATURES.navegacaoV3 ? "/redacao" : FEATURES.trilhaComoHome ? "/trilha" : "/redacao";
   await expect(page.locator(`nav:visible a[href="${redacaoActiveHref}"]`)).toHaveAttribute(
     "aria-current",
     "page",

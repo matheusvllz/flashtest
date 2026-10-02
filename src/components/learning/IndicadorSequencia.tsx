@@ -1,5 +1,5 @@
 import { Check, Shield } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ChamaSequencia } from "@/components/learning/ChamaSequencia";
 import { CompraDeProtetores } from "@/components/planos/CompraDeProtetores";
@@ -7,6 +7,9 @@ import { COPY } from "@/lib/copy";
 import { CONGELAMENTOS_MAXIMO } from "@/lib/recompensas";
 import { estadoDaSequencia } from "@/lib/sequencia";
 import type { AppState } from "@/lib/store";
+
+/** Meta e calendário (spec 50 §5.2.2–5.2.3): sob demanda, só quando a folha abre e há conta. */
+const OfensivaNaFolha = lazy(() => import("@/components/ofensiva/OfensivaNaFolha").then((m) => ({ default: m.OfensivaNaFolha })));
 
 function dataCurta(iso: string): string {
   const [a, m, d] = iso.split("-").map(Number);
@@ -76,6 +79,11 @@ export function IndicadorSequencia({ s }: { s: AppState }) {
           </p>
           {e.protecaoRecente && <p>{COPY.sequencia.protecaoUsada(dataCurta(e.protecaoRecente))}</p>}
           <p className="text-nevoa">{COPY.sequencia.comoFunciona}</p>
+          {aberto && e.conta !== "aparelho" && (
+            <Suspense fallback={null}>
+              <OfensivaNaFolha />
+            </Suspense>
+          )}
           <p className="text-xs text-nevoa" data-testid="sequencia-fonte">
             {COPY.sequencia.fonte[e.conta]}
           </p>

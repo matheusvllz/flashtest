@@ -25,25 +25,38 @@ export function itensRevisaveis(ids: string[]): string[] {
 }
 
 export function licaoDoCaderno(ids: string[], dia: string): MicroLessonV2 {
+  return licaoDeRevisao(ids, {
+    id: `caderno--${dia}`,
+    titulo: COPY.caderno.revisaoTitulo,
+    intro: COPY.caderno.revisaoIntro,
+    recap: COPY.caderno.revisaoRecap,
+  });
+}
+
+/**
+ * Sessão de revisão com questões já respondidas (caderno, erros recentes do Praticar — spec 50 §5.7.2). Mesmo
+ * formato de lição; quem chama decide se paga XP e se a resposta conta como revisão.
+ */
+export function licaoDeRevisao(ids: string[], o: { id: string; titulo: string; intro: string; recap: string }): MicroLessonV2 {
   const itens = itensRevisaveis(ids).slice(0, MAX_POR_REVISAO);
-  if (itens.length === 0) throw new Error("[caderno] nenhuma questão disponível para revisar");
+  if (itens.length === 0) throw new Error("[revisão] nenhuma questão disponível para revisar");
   const perguntas: QuestionStep[] = itens.map((id) => ({ kind: "question", exerciseId: id, role: "revisao", difficulty: 2 }));
   const skillIds = [...new Set(itens.flatMap((id) => itemMetaOf(id).skillIds.slice(0, 1)))];
   const subjectId = SKILL_MAP[skillIds[0] ?? ""]?.subjectId ?? "caderno";
   const steps: LessonStep[] = [
-    { kind: "intro", title: COPY.caderno.revisaoTitulo, body: COPY.caderno.revisaoIntro },
+    { kind: "intro", title: o.titulo, body: o.intro },
     ...perguntas,
-    { kind: "recap", body: COPY.caderno.revisaoRecap },
+    { kind: "recap", body: o.recap },
   ];
   return {
-    id: `caderno--${dia}`,
+    id: o.id,
     version: 1,
     format: 2,
     subjectId,
     topicId: subjectId,
-    chapterId: `caderno--${subjectId}`,
-    title: COPY.caderno.revisaoTitulo,
-    objective: COPY.caderno.revisaoTitulo,
+    chapterId: `${o.id.split("--")[0]}--${subjectId}`,
+    title: o.titulo,
+    objective: o.titulo,
     skillIds,
     prerequisiteLessonIds: [],
     examProfileIds: [],
@@ -51,7 +64,7 @@ export function licaoDoCaderno(ids: string[], dia: string): MicroLessonV2 {
     estimatedTeachingSeconds: 0,
     estimatedPracticeSeconds: itens.length * 60,
     reviewExerciseIds: [],
-    recap: COPY.caderno.revisaoRecap,
+    recap: o.recap,
     sources: [],
     reviewedAt: null,
     steps,

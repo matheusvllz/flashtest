@@ -3,6 +3,7 @@
  * Banco real (PGlite), conteúdo real (banco geral e pacotes), regras de `src/lib/recompensas.ts`.
  */
 import { beforeEach, describe, expect, test } from "bun:test";
+import { XP_BONUS_COMBO_TETO_DIA } from "../../../src/lib/combo";
 import { randomUUID } from "node:crypto";
 import type { EventoEstudo } from "../../../src/lib/sync/contrato";
 import { eventoEstudo } from "../../../src/lib/sync/contrato";
@@ -98,7 +99,8 @@ describe("atividades da trilha", () => {
       eventos.push(eventoEstudo.parse({ tipo: "atividade-concluida", id: id(), attemptKey: chave, atividadeId: `r${i}`, kind: "revisao", ocorreuEm: AGORA.toISOString(), dataLocal: HOJE }));
     }
     const r = await aplicarEventos(amb.db, userId, eventos, AGORA);
-    expect(r.agregado.xp).toBe(ATIVIDADES_PAGAS_POR_DIA * 5);
+    // Todas certas e seguidas: o combo do dia também dá o bônus fixo (spec 50 §5.1.3), limitado a 20 XP por dia.
+    expect(r.agregado.xp).toBe(ATIVIDADES_PAGAS_POR_DIA * 5 + XP_BONUS_COMBO_TETO_DIA);
   });
 });
 

@@ -11,7 +11,7 @@
  */
 import { and, eq, isNotNull, lt } from "drizzle-orm";
 import type { Banco } from "../db/client";
-import { aiBudget, aiBudgetPagos, aiUsage, auditEvent, rankingGrupo, rankingParticipante, rateLimit, user, verification } from "../db/schema";
+import { aiBudget, aiBudgetPagos, aiUsage, auditEvent, comboDia, missaoDia, rankingGrupo, rankingParticipante, rateLimit, user, verification } from "../db/schema";
 
 const DIA = 86_400_000;
 
@@ -27,6 +27,8 @@ export interface ResultadoRetencao {
   verificacoes: number;
   limites: number;
   ranking: number;
+  /** Spec 50 §9: combo do dia (30 dias) e missões (90 dias). */
+  gamificacao: number;
 }
 
 export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<ResultadoRetencao> {
@@ -49,6 +51,8 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
     .where(and(isNotNull(rankingParticipante.saiuEm), lt(rankingParticipante.saiuEm, trintaDias)))
     .returning({ id: rankingParticipante.userId });
   await db.delete(rankingGrupo).where(lt(rankingGrupo.semana, dia(trintaDias)));
+  const combos = await db.delete(comboDia).where(lt(comboDia.localDate, dia(trintaDias))).returning({ d: comboDia.localDate });
+  const missoes = await db.delete(missaoDia).where(lt(missaoDia.localDate, limiteIA)).returning({ d: missaoDia.localDate });
   const verif = await db.delete(verification).where(lt(verification.expiresAt, agora)).returning({ id: verification.id });
   const limites = await db
     .delete(rateLimit)
@@ -62,5 +66,6 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
     verificacoes: n(verif),
     limites: n(limites),
     ranking: n(saiu),
+    gamificacao: n(combos) + n(missoes),
   };
 }

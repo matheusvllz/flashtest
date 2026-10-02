@@ -112,6 +112,14 @@ export const attempt = pgTable(
     localDate: text("local_date").notNull(),
     activityAttemptKey: text("activity_attempt_key"),
     origin: text("origin").notNull().default("live"),
+    /** Spec 50 §5.1: "primeira" ou "revisao" (revisão de erros do fim da lição). */
+    tentativa: text("tentativa").notNull().default("primeira"),
+    /** A Foca IA foi aberta antes de responder. */
+    assistida: boolean("assistida").notNull().default(false),
+    /** Combo depois desta resposta (só nas que contam), para o bônus de XP da conclusão. */
+    combo: integer("combo"),
+    /** `false` = checagem dentro da lição (não pontuada): fora do combo e da lição perfeita. */
+    pontuada: boolean("pontuada").notNull().default(true),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [

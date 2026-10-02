@@ -268,6 +268,23 @@ Escrito direto contra o [COPY.md](../COPY.md), sem skill de escrita (plugins nã
 | `COPY.redacaoIa.*` | "Estimativa da Foca IA, não é a nota oficial." · "Tema escrito pelo Foca para treinar. Não é tema oficial nem previsão de prova." · comentários automáticos do treino | `/redacao/corretor`, `/redacao/treino` | §5.9: nunca "sua nota no ENEM"; nada de citação inventada |
 | `COPY.offline.*` | "Baixar a semana" · "{n} respostas esperando a internet." | `/offline` | Substitui o marcador demonstrativo (item "offline.tsx" da seção 3 resolvido) |
 
+### 2.15 Lição viva, Pérolas, ofensiva, missões, navegação e retrospectiva (docs/specs/50-gamificacao-e-pratica E1–E4, 02/10/2026)
+
+Escrito direto contra o [COPY.md](../COPY.md) (skills de escrita não carregadas nesta sessão; anotado no registro da 50): sem contagem regressiva, sem "vai perder", sem urgência, sem culpa no erro; Pérolas nunca "compradas" (o verbo da loja é "trocar"); precisão sem porcentagem (R-VOZ-7); nenhuma nota ou previsão. Nenhum conteúdo pedagógico alterado. **Revisão humana de tom pendente.**
+
+| Chave | Exemplo | Uso | Regra que cumpre |
+|---|---|---|---|
+| `COPY.licao.combo.*` | "3 seguidas" · "+1 vida" | Folha de feedback | Zerar nunca tem texto (§5.1.1) |
+| `COPY.licao.revisaoErros.*` | "Rever o que errou (2)" · "Não custa vida e não muda sua nota." · "Revisão 1 de 2" | Fim da lição | R-PED-2; sem custo |
+| `COPY.licao.cartoes.*` / `.momentos.*` | "De primeira" · "4 de 6" · "Maior combo" · "Lição perfeita" · "Também:" | Tela de fim | Um momento principal; tempo só informativo |
+| `COPY.perfil.somNoSilencioso*` | "Tocar no modo silencioso" | Perfil (iPhone) | D50-15 |
+| `COPY.ofensiva.*` | "Quer uma meta de ofensiva?" · "+50 Pérolas" · "Dia 3: coberto por protetor" · "Baú do marco" · "Dentro do baú:" | Folha da sequência, fim de lição | Sem aposta, sem perda; baú com conteúdo conhecido |
+| `COPY.perolas.*` / `COPY.loja.*` | "Elas não se compram com dinheiro." · "Trocar" · "Seus protetores já estão no máximo do seu plano." | Barra superior, folha, `/loja` | D50-01; nada de aprendizagem à venda |
+| `COPY.missoes.*` / `COPY.conquistas.*` | "Missões de hoje" · "Acerte 3 seguidas" · "Conclua 20 missões neste mês…" · critérios das conquistas | `/missoes` | Sem "termina em", sem missão por tempo |
+| `COPY.praticar.*` | "Rever erros recentes" · "Nenhum erro nos últimos 7 dias." | `/praticar`, `/praticar/erros` | §5.7.2 |
+| `COPY.retrospectiva.*` | "Seu ano no Foca 2026" · "O resultado do ENEM sai pelo INEP; este resumo é só do seu caminho até lá." | `/retrospectiva` | R-PROD-11: sem nota nem comparação |
+| `COPY.abas.*`, `COPY.perfilAtalhos.*` | "Trilha · Praticar · Redação · Missões · Perfil" · "Seu progresso" | Navegação | §5.11 |
+
 ## 3. Pendente — inventariado, não revisado
 
 Levantamento por arquivo (não por string individual — a granularidade da seção 2 é o padrão a aplicar quando cada um destes for revisado). Nenhum destes foi confirmado livre de tom incompatível; tratar como não verificado.

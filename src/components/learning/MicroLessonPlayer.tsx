@@ -109,7 +109,7 @@ function MicroLessonPlayerInner({
   // Funções pagas abertas vêm do servidor (plano + chave de desligamento); a cota da Foca IA também é do servidor.
   const funcoes = useMinhasFuncoes(!!estado.account?.userId && mode !== "checkpoint");
   // Vidas do Free (spec 49 D49-03): lição e prática custam; a checagem não. Sem vida, pausa antes da próxima resposta.
-  const custaVidas = mode !== "checkpoint";
+  const custaVidas = mode !== "checkpoint" && mode !== "revisaoLivre";
   const [semVidas, setSemVidas] = useState(false);
   const comVida = (acao: () => void) => () => {
     if (custaVidas && !podeResponderComVidas()) {

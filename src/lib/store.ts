@@ -24,7 +24,7 @@ import {
 import type { PlannedActivity } from "@/lib/adaptive/types";
 import type { Agregado, EventoEstudo } from "@/lib/sync/contrato";
 import { custaVida, vidasDeHoje, type VidasDoDia } from "@/lib/vidas";
-import { aplicarAoCombo, type EstadoCombo, type ResultadoDoCombo, type RespostaParaCombo } from "@/lib/combo";
+import { aplicarAoCombo, VIDAS_DE_COMBO_POR_DIA, type EstadoCombo, type ResultadoDoCombo, type RespostaParaCombo } from "@/lib/combo";
 import { ehMarcoDeOfensiva } from "@/lib/perolas";
 import { VIDAS_POR_DIA } from "@/lib/planos";
 import type { PedidoImportacao } from "@/lib/sync/importacao";
@@ -150,6 +150,8 @@ export type Progress = {
    * pra ela não precisar de outra migração de schema quando chegar.
    */
   activityDaysSinceFreezeAward: number;
+  /** Marcos de ofensiva já celebrados com baú neste aparelho (spec 50 §5.2.4). As Pérolas do baú vêm do servidor. */
+  marcosVistos?: number[];
   /** O dia de hoje. Ler sempre via `atividadeHoje()`, nunca direto — vira estale à meia-noite. */
   today: {
     date: string;
@@ -219,6 +221,10 @@ export interface ContaNoAparelho {
   protetoresMax?: number;
   /** Vidas de hoje (spec 49 D49-03); `null` = sem vidas (plano pago ou desligado). Ausente = servidor antigo. */
   vidas?: VidasDoDia | null;
+  /** Saldo de Pérolas confirmado pelo servidor (spec 50 §5.3.4). Ausente = ainda não confirmado. */
+  perolas?: number;
+  /** Roupa da Foca e tema da trilha em uso (spec 50 §5.3.3), do agregado. */
+  cosmeticos?: { roupa: string | null; tema: string | null };
 }
 
 // v3: rebranding para Foca (docs/17 Fase 8). O formato é o mesmo da v2; a chave
@@ -1151,26 +1157,7 @@ export function registrarLoteFlashcardsConcluido() {
 
 /* --------------------------------------------------------- nível e prefs --- */
 
-/** 10 patamares fixos, derivados de XP (docs/18 §9). Não confundir com `prefs.level` (nível escolar). */
-const NIVEL_TABELA = [0, 100, 250, 450, 700, 1000, 1400, 1900, 2500, 3200];
-
-export function nivelDeXp(xp: number): {
-  nivel: number;
-  atual: number;
-  proximo: number;
-  pct: number;
-} {
-  let nivel = 1;
-  for (let i = 1; i < NIVEL_TABELA.length; i++) {
-    if (xp >= NIVEL_TABELA[i]) nivel = i + 1;
-  }
-  const base = NIVEL_TABELA[nivel - 1];
-  const proximoBase = NIVEL_TABELA[nivel];
-  if (proximoBase === undefined) return { nivel, atual: xp - base, proximo: 0, pct: 100 };
-  const atual = xp - base;
-  const proximo = proximoBase - base;
-  return { nivel, atual, proximo, pct: Math.min(100, Math.round((atual / proximo) * 100)) };
-}
+export { nivelDeXp } from "@/lib/niveis";
 
 export function setPrefs(partial: Partial<Pick<Prefs, "sound" | "haptics" | "theme" | "somNoSilencioso">>) {
   setState((s) => {
@@ -2250,8 +2237,25 @@ function normalizarConta(bruto: unknown): ContaNoAparelho | undefined {
     ...(c.vidas === null
       ? { vidas: null }
       : vidasValidas(c.vidas)
-        ? { vidas: { dia: c.vidas.dia, restantes: c.vidas.restantes, anuncioUsado: c.vidas.anuncioUsado } }
+        ? {
+            vidas: {
+              dia: c.vidas.dia,
+              restantes: c.vidas.restantes,
+              anuncioUsado: c.vidas.anuncioUsado,
+              ...(typeof c.vidas.recargaUsada === "boolean" ? { recargaUsada: c.vidas.recargaUsada } : {}),
+              ...(Number.isInteger(c.vidas.doCombo) ? { doCombo: c.vidas.doCombo } : {}),
+            },
+          }
         : {}),
+    ...(Number.isInteger(c.perolas) && (c.perolas as number) >= 0 ? { perolas: c.perolas } : {}),
+    ...(c.cosmeticos && typeof c.cosmeticos === "object"
+      ? {
+          cosmeticos: {
+            roupa: typeof c.cosmeticos.roupa === "string" ? c.cosmeticos.roupa.slice(0, 40) : null,
+            tema: typeof c.cosmeticos.tema === "string" ? c.cosmeticos.tema.slice(0, 40) : null,
+          },
+        }
+      : {}),
   };
 }
 
@@ -2346,6 +2350,8 @@ function enfileirarResposta(s: AppState, a: Attempt, opts: { revisao?: boolean }
     dataLocal: a.localDate,
     ...(Number.isInteger(a.durationMs) && a.durationMs >= 0 && a.durationMs <= 3_600_000 ? { duracaoMs: a.durationMs } : {}),
     ...(a.assisted ? { assistida: true } : {}),
+    // Questão de checagem dentro da lição (não pontuada): fora do combo e da lição perfeita (spec 50 §5.1.1).
+    ...(a.role === "checkpoint" && fonte === "licao" ? { pontuada: false } : {}),
   });
 }
 
@@ -2365,19 +2371,34 @@ export function registrarRevisaoDeErro(attempt: Attempt): void {
  * Combo deste aparelho (spec 50 §5.1.1): conta na hora para mostrar o raio e os selos. As recompensas do combo (vida
  * de volta, bônus de XP) são decididas no servidor a partir das mesmas respostas.
  */
-export function registrarComboLocal(r: Omit<RespostaParaCombo, "dia" | "em"> & { em?: number }): ResultadoDoCombo {
+export function registrarComboLocal(r: Omit<RespostaParaCombo, "dia" | "em"> & { em?: number }): ResultadoDoCombo & { vidaDeVolta: boolean } {
   const dia = hojeISO();
   const atual = getState();
   const hoje = atual.progress.today.date === dia ? atual.progress.today.combo : undefined;
   const resultado = aplicarAoCombo(hoje, { ...r, dia, em: r.em ?? Date.now() });
-  if (resultado.estado !== hoje) {
+  // Vida de volta (spec 50 §5.1.3): o servidor decide; o aparelho só antecipa quando com certeza cabe.
+  const v = atual.account?.vidas;
+  const vidasHoje = v ? (v.dia === dia ? v.restantes : VIDAS_POR_DIA) : null;
+  const vidaDeVolta =
+    resultado.vida && vidasHoje !== null && vidasHoje < VIDAS_POR_DIA && (v?.dia === dia ? (v.doCombo ?? 0) : 0) < VIDAS_DE_COMBO_POR_DIA;
+  if (resultado.estado !== hoje || vidaDeVolta) {
     setState((s) => {
       if (s.progress.today.date !== dia) s.progress.today = todayBucketVazio(dia);
       s.progress.today.combo = resultado.estado;
+      if (vidaDeVolta && s.account?.vidas) {
+        const doDia = s.account.vidas.dia === dia;
+        s.account.vidas = {
+          ...s.account.vidas,
+          dia,
+          restantes: (doDia ? s.account.vidas.restantes : VIDAS_POR_DIA) + 1,
+          anuncioUsado: doDia ? s.account.vidas.anuncioUsado : false,
+          doCombo: (doDia ? (s.account.vidas.doCombo ?? 0) : 0) + 1,
+        };
+      }
       return s;
     });
   }
-  return resultado;
+  return { ...resultado, vidaDeVolta };
 }
 
 export function assinarMudancas(cb: () => void): () => void {
@@ -2412,6 +2433,15 @@ export function aplicarAgregadoDoServidor(a: Agregado): void {
       if (a.plano !== undefined) s.account.plano = a.plano;
       if (a.protetoresMax !== undefined) s.account.protetoresMax = a.protetoresMax;
       if (a.vidas !== undefined) s.account.vidas = a.vidas;
+      if (a.perolas !== undefined) s.account.perolas = a.perolas;
+      if (a.cosmeticos !== undefined) s.account.cosmeticos = a.cosmeticos;
+    }
+    // Combo do dia (spec 50 §5.1.1): o servidor decide; o aparelho só corrige o número (o horário da última resposta
+    // continua o local, que é o que conta a janela de 30 min na tela).
+    if (a.combo && a.combo.dia === hojeISO()) {
+      if (s.progress.today.date !== a.combo.dia) s.progress.today = todayBucketVazio(a.combo.dia);
+      const local = s.progress.today.combo;
+      s.progress.today.combo = { dia: a.combo.dia, atual: a.combo.atual, maximo: a.combo.maximo, ultimaEm: local?.ultimaEm ?? null };
     }
     return s;
   });
@@ -2435,6 +2465,38 @@ export function podeResponderComVidas(s: AppState = state): boolean {
 export function aplicarVidasDoServidor(v: VidasDoDia | null): void {
   setState((s) => {
     if (s.account) s.account.vidas = v;
+    return s;
+  });
+}
+
+/**
+ * Depois de uma compra confirmada pelo servidor (spec 50 §5.3.3): o aparelho mostra o efeito na hora (saldo,
+ * protetor, vidas) até o próximo agregado confirmar. Nada aqui decide preço ou estoque.
+ */
+export function aplicarCompraConfirmada(item: string, saldo: number): void {
+  setState((s) => {
+    if (s.account) s.account.perolas = saldo;
+    if (item === "protetor") s.progress.streakFreezes += 1;
+    if (item === "recarga-vidas" && s.account?.vidas) {
+      s.account.vidas = { ...s.account.vidas, dia: hojeISO(), restantes: Math.max(s.account.vidas.restantes, VIDAS_POR_DIA), recargaUsada: true };
+    }
+    return s;
+  });
+}
+
+/** Primeira vez que este aparelho celebra o marco? Registra e devolve `true` só na primeira (spec 50 §5.2.4). */
+export function marcarMarcoVisto(dias: number): boolean {
+  if ((state.progress.marcosVistos ?? []).includes(dias)) return false;
+  setState((s) => {
+    s.progress.marcosVistos = [...(s.progress.marcosVistos ?? []), dias].slice(-50);
+    return s;
+  });
+  return true;
+}
+
+export function aplicarSaldoDePerolas(saldo: number): void {
+  setState((s) => {
+    if (s.account) s.account.perolas = saldo;
     return s;
   });
 }

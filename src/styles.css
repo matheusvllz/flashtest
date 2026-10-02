@@ -147,6 +147,10 @@
   --mar: #2e6bff;
   --mar-fundo: #1e4fcc;
   --gelo: #e1dfda;
+  /* Temas da trilha (spec 50 §5.3.3): só o fundo do caminho muda; a marca não muda. */
+  --tema-coral: #fdeee9;
+  --tema-recife: #e7f4f1;
+  --tema-noite-no-mar: #e8ecf7;
   --neve: #f6f5f1;
   --coral-claro: #8fb0ff;
   --pelo: #d6d6d4;
@@ -255,6 +259,9 @@
   --mar: #5c8cff;
   --mar-fundo: #9fc0ff;
   --gelo: #38352f;
+  --tema-coral: #3a2a26;
+  --tema-recife: #1f3330;
+  --tema-noite-no-mar: #1d2333;
   --neve: #1c1b18;
   --coral-claro: #b9ceff;
   --pelo: #55534e;
@@ -769,6 +776,10 @@
 /* ── Spec 50 — lição viva (§5.1.2, §5.1.7, §5.12.3) ─────────────────────────────────────────────────────────────
    Só transform/opacity/stroke-dashoffset. Com movimento reduzido, o raio some e o resto fica parado (a regra global
    acima já zera as durações; aqui só o que precisa de estado final diferente). */
+[data-tema="tema:coral"] { --tema-fundo: var(--tema-coral); }
+[data-tema="tema:recife"] { --tema-fundo: var(--tema-recife); }
+[data-tema="tema:noite-no-mar"] { --tema-fundo: var(--tema-noite-no-mar); }
+.fundo-do-tema { background-color: var(--tema-fundo, transparent); }
 @keyframes ft-raio {
   0% { stroke-dashoffset: 1; opacity: 0; }
   12% { opacity: 1; }

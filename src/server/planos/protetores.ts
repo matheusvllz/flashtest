@@ -40,7 +40,7 @@ export function bonusDasAssinaturas(
   return creditos;
 }
 
-export async function creditosDeProtetor(db: Banco, userId: string, agora: Date): Promise<CreditoDeProtetor[]> {
+export async function creditosDeProtetor(db: Pick<Banco, "select">, userId: string, agora: Date): Promise<CreditoDeProtetor[]> {
   const compras = await db
     .select({ dia: protetorCredito.localDate, quantidade: protetorCredito.quantidade })
     .from(protetorCredito)

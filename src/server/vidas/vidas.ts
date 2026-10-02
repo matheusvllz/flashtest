@@ -42,11 +42,23 @@ export async function perderVida(tx: Executor, userId: string, dia: string): Pro
 
 export async function vidasDoDia(db: Pick<Banco, "select">, userId: string, dia: string): Promise<VidasDoDia> {
   const [v] = await db
-    .select({ perdidas: vidasDia.perdidas, ganhas: vidasDia.ganhasAnuncio })
+    .select({
+      perdidas: vidasDia.perdidas,
+      ganhas: vidasDia.ganhasAnuncio,
+      combo: vidasDia.ganhasCombo,
+      recarga: vidasDia.ganhasRecarga,
+      recargas: vidasDia.recargas,
+    })
     .from(vidasDia)
     .where(and(eq(vidasDia.userId, userId), eq(vidasDia.localDate, dia)))
     .limit(1);
-  return { dia, restantes: saldoDeVidas(v?.perdidas ?? 0, v?.ganhas ?? 0), anuncioUsado: (v?.ganhas ?? 0) >= 1 };
+  return {
+    dia,
+    restantes: saldoDeVidas(v?.perdidas ?? 0, v?.ganhas ?? 0, (v?.combo ?? 0) + (v?.recarga ?? 0)),
+    anuncioUsado: (v?.ganhas ?? 0) >= 1,
+    recargaUsada: (v?.recargas ?? 0) >= 1,
+    doCombo: v?.combo ?? 0,
+  };
 }
 
 /**

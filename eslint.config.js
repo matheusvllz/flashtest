@@ -17,6 +17,8 @@ export default tseslint.config(
       ".nitro",
       ".tanstack",
       "public/content",
+      // Cópias isoladas de subagentes (git worktrees): não são código do app.
+      ".claude/worktrees",
       "automacao-instagram",
       "edição Videos",
       "Claude outputs",

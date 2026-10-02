@@ -37,14 +37,14 @@ class ContextoFalso {
     };
   }
   createBufferSource() {
-    const ctx = this;
+    const iniciados = this.iniciados;
     return {
       buffer: null as unknown,
       onended: null as null | (() => void),
       connect: (x: { connect?: unknown }) => x,
       disconnect() {},
       start(t: number) {
-        ctx.iniciados.push(t);
+        iniciados.push(t);
       },
       stop() {},
     };

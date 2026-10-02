@@ -10,7 +10,7 @@
  * Datas: `dataLocal` precisa estar entre 7 dias atrás e amanhã no fuso do aluno (estudo offline
  * sincronizado depois ainda conta; datas inventadas longe de hoje, não).
  */
-import { and, count, eq, sql, sum } from "drizzle-orm";
+import { and, count, eq, isNotNull, max, ne, sql, sum } from "drizzle-orm";
 import { checkAnswer } from "@/lib/lessons/define";
 import {
   XP_BONUS_ENTRADA,
@@ -22,7 +22,25 @@ import {
   xpAlvoDaAtividade,
   xpAlvoDaQuestaoGeral,
 } from "@/lib/recompensas";
-import type { Agregado, EventoEstudo, MotivoRejeicao, RespostaEnvio } from "@/lib/sync/contrato";
+import type { Agregado, EventoEstudo, MotivoRejeicao, NovidadesDoServidor, RespostaEnvio } from "@/lib/sync/contrato";
+import { XP_BONUS_COMBO_TETO_DIA, xpBonusDoCombo } from "@/lib/combo";
+import {
+  BLOCOS_PAGOS_POR_DIA,
+  PEROLAS_LICAO_PERFEITA,
+  PEROLAS_POR_BLOCO,
+  PEROLAS_POR_NIVEL,
+  PERFEITAS_PAGAS_POR_DIA,
+  chavePerola,
+} from "@/lib/perolas";
+import { nivelDeXp } from "@/lib/niveis";
+import { aplicarComboNoServidor, concederVidaDoCombo, FONTES_DO_COMBO } from "../economia/combo";
+import { creditar, movimentosNoDia, saldoDePerolas } from "../economia/perolas";
+import { avaliarOfensiva, historicoDoAluno } from "../gamificacao/ofensiva";
+import { avaliarConquistas, progredirMissoes, type FatoDeMissao } from "../gamificacao/missoes";
+import { areaDoItem } from "./conteudo";
+import { cadernoItem } from "../db/schema";
+import { recursoLigado } from "../planos/funcoes";
+import { comboDia, cosmeticoEquipado } from "../db/schema";
 import type { Banco } from "../db/client";
 import { attempt, completion, profile, studyDay, xpLedger } from "../db/schema";
 import { exercicioDoItem, licaoExiste } from "./conteudo";
@@ -69,6 +87,54 @@ export async function marcarDia(tx: Tx, userId: string, dataLocal: string) {
     .onConflictDoUpdate({ target: [studyDay.userId, studyDay.localDate], set: { blocks: sql`${studyDay.blocks} + 1` } });
 }
 
+/** Pérolas por bloco concluído (spec 50 §5.3.2): 5 por bloco, até 5 blocos pagos por dia. */
+async function pagarPerolasDoBloco(tx: Tx, userId: string, conclusao: string, dataLocal: string, nov: NovidadesDoServidor) {
+  if ((await movimentosNoDia(tx, userId, "bloco", dataLocal)) >= BLOCOS_PAGOS_POR_DIA) return;
+  if (await creditar(tx, userId, chavePerola.bloco(conclusao), PEROLAS_POR_BLOCO, "bloco", dataLocal)) nov.perolasGanhas += PEROLAS_POR_BLOCO;
+}
+
+/**
+ * Fim de uma tentativa com chave (lição ou atividade): bônus fixo de XP pelo maior combo (até 20 XP/dia) e lição
+ * perfeita (≥ 4 pontuadas certas de primeira, sem ajuda; até 3 por dia). Spec 50 §5.1.3, §5.1.6.
+ */
+async function fecharTentativa(
+  tx: Tx,
+  userId: string,
+  attemptKey: string,
+  dataLocal: string,
+  opts: { pagaBonus: boolean; podeSerPerfeita: boolean; comPerolas: boolean },
+  nov: NovidadesDoServidor,
+) {
+  const onde = and(eq(attempt.userId, userId), eq(attempt.activityAttemptKey, attemptKey));
+  if (opts.pagaBonus) {
+    const [m] = await tx.select({ m: max(attempt.combo) }).from(attempt).where(and(onde, isNotNull(attempt.combo)));
+    const bonus = xpBonusDoCombo(Number(m?.m ?? 0));
+    if (bonus > 0) {
+      const [usado] = await tx
+        .select({ s: sum(xpLedger.xp) })
+        .from(xpLedger)
+        .where(and(eq(xpLedger.userId, userId), eq(xpLedger.localDate, dataLocal), sql`${xpLedger.key} like 'combo:%'`));
+      const cabe = Math.min(bonus, XP_BONUS_COMBO_TETO_DIA - Number(usado?.s ?? 0));
+      if (cabe > 0) await pagarXp(tx, userId, `combo:${attemptKey}`, cabe, "combo", dataLocal);
+    }
+  }
+  if (!opts.podeSerPerfeita || !opts.comPerolas) return;
+  const [p] = await tx
+    .select({
+      total: count(),
+      certas: sum(sql<number>`case when ${attempt.correct} and not ${attempt.assistida} then 1 else 0 end`),
+    })
+    .from(attempt)
+    .where(and(onde, eq(attempt.pontuada, true), eq(attempt.tentativa, "primeira")));
+  const total = Number(p?.total ?? 0);
+  if (total < 4 || Number(p?.certas ?? 0) !== total) return;
+  if ((await movimentosNoDia(tx, userId, "perfeita", dataLocal)) >= PERFEITAS_PAGAS_POR_DIA) return;
+  if (await creditar(tx, userId, chavePerola.perfeita(attemptKey), PEROLAS_LICAO_PERFEITA, "perfeita", dataLocal)) {
+    nov.perolasGanhas += PEROLAS_LICAO_PERFEITA;
+    nov.perfeitas += 1;
+  }
+}
+
 async function jaConcluido(tx: Tx, userId: string, chave: string): Promise<boolean> {
   const r = await tx.select({ k: completion.key }).from(completion).where(and(eq(completion.userId, userId), eq(completion.key, chave))).limit(1);
   return r.length > 0;
@@ -87,11 +153,32 @@ export async function aplicarEventos(
   const comVidas = await alunoTemVidas(db, userId, agora);
   // Caderno de erros (spec 49 §5.9 item 2): só grava para quem tem a função (Basic e Pro), como diz privacidade.md.
   const comCaderno = await alunoTemFuncao(db, userId, "cadernoDeErros", agora);
+  // Pérolas (spec 50 §5.3): ligadas para todos por padrão; `FUNCOES_DESLIGADAS=perolas` para de conceder.
+  const comPerolas = recursoLigado("perolas");
+  const novidades: NovidadesDoServidor = {
+    perolasGanhas: 0,
+    vidasDoCombo: 0,
+    metaCumprida: null,
+    marco: null,
+    perfeitas: 0,
+    conquistas: [],
+    missoesConcluidas: [],
+    desafioDoMes: false,
+  };
+  let estudouNoEnvio = false;
+  // Fatos que fazem as missões andarem (spec 50 §5.4.1), por dia local do evento.
+  const fatos = new Map<string, FatoDeMissao[]>();
+  const fato = (dia: string, f: FatoDeMissao) => {
+    const lista = fatos.get(dia) ?? [];
+    lista.push(f);
+    fatos.set(dia, lista);
+  };
 
   await db.transaction(async (tx) => {
     await tx.insert(profile).values({ userId }).onConflictDoNothing();
     const [perfil] = await tx.select({ tz: profile.timezone }).from(profile).where(eq(profile.userId, userId)).for("update");
     const hoje = dataNoFuso(agora, perfil?.tz ?? "America/Sao_Paulo");
+    const xpAntes = await xpDoAluno(tx, userId);
 
     for (const ev of eventos) {
       if (!diaValido(ev.dataLocal, hoje) || Date.parse(ev.ocorreuEm) > agora.getTime() + 5 * 60_000) {
@@ -128,7 +215,38 @@ export async function aplicarEventos(
             answeredAt: new Date(ev.ocorreuEm),
             localDate: ev.dataLocal,
             activityAttemptKey: revisao ? null : ev.attemptKey,
+            tentativa: revisao ? "revisao" : "primeira",
+            assistida: ev.assistida === true,
+            pontuada: ev.pontuada !== false,
           });
+          // Combo (spec 50 §5.1.1): decidido aqui, na ordem das respostas; revisão e fontes fora da lista não contam.
+          if (!revisao && FONTES_DO_COMBO.has(ev.fonte)) {
+            const conta = ev.pontuada !== false;
+            const combo = await aplicarComboNoServidor(tx, userId, {
+              dataLocal: ev.dataLocal,
+              ocorreuEm: new Date(ev.ocorreuEm),
+              resultado: ev.resposta === null ? "nao-sei" : correta ? "certa" : "errada",
+              conta,
+              assistida: ev.assistida === true,
+            });
+            if (conta) {
+              await tx.update(attempt).set({ combo: combo.estado.atual }).where(and(eq(attempt.userId, userId), eq(attempt.id, ev.id)));
+            }
+            if (combo.vida && comVidas && (await concederVidaDoCombo(tx, userId, ev.dataLocal))) novidades.vidasDoCombo += 1;
+            if (conta) fato(ev.dataLocal, { tipo: "combo", atual: combo.estado.atual });
+          }
+          if (!revisao && ev.pontuada !== false && ev.fonte !== "nivelamento") {
+            const area = await areaDoItem(ev.itemId);
+            if (area) fato(ev.dataLocal, { tipo: "resposta-area", area });
+          }
+          if (!revisao && comCaderno) {
+            const [noCaderno] = await tx
+              .select({ e: cadernoItem.estado })
+              .from(cadernoItem)
+              .where(and(eq(cadernoItem.userId, userId), eq(cadernoItem.itemId, ev.itemId)))
+              .limit(1);
+            if (noCaderno?.e === "ativo") fato(ev.dataLocal, { tipo: "caderno" });
+          }
           if (ev.fonte === "questao-geral" && !revisao) {
             await pagarXp(tx, userId, `questao-geral:${ev.itemId}`, xpAlvoDaQuestaoGeral(correta), "questao-geral", ev.dataLocal);
           }
@@ -149,6 +267,12 @@ export async function aplicarEventos(
           const acertos = Math.min(ev.acertos, ev.total);
           const pct = pctDe(acertos, ev.total);
           const chave = `licao:${ev.tipoLicao}:${ev.licaoId}`;
+          // Replay de lição já feita não paga bônus de combo (spec 50 §5.1.3).
+          const [anterior] = await tx
+            .select({ k: completion.key })
+            .from(completion)
+            .where(and(eq(completion.userId, userId), sql`${completion.key} like ${`${chave}#%`}`, ne(completion.key, `${chave}#${ev.id}`)))
+            .limit(1);
           const r = await tx
             .insert(completion)
             .values({ userId, key: `${chave}#${ev.id}`, kind: `licao-${ev.tipoLicao}`, scorePct: pct, completedAt: new Date(ev.ocorreuEm) })
@@ -157,6 +281,14 @@ export async function aplicarEventos(
           if (r.length) {
             await pagarXp(tx, userId, chave, XP_POR_ESTRELAS[estrelasPorPct(pct)], `licao-${ev.tipoLicao}`, ev.dataLocal);
             await marcarDia(tx, userId, ev.dataLocal);
+            estudouNoEnvio = true;
+            fato(ev.dataLocal, { tipo: "bloco", flashcards: false });
+            if (comPerolas) await pagarPerolasDoBloco(tx, userId, `${chave}#${ev.id}`, ev.dataLocal, novidades);
+            if (ev.attemptKey) {
+              const antes = novidades.perfeitas;
+              await fecharTentativa(tx, userId, ev.attemptKey, ev.dataLocal, { pagaBonus: !anterior, podeSerPerfeita: true, comPerolas }, novidades);
+              if (novidades.perfeitas > antes) fato(ev.dataLocal, { tipo: "perfeita" });
+            }
           }
           aplicados.push(ev.id);
           break;
@@ -188,10 +320,20 @@ export async function aplicarEventos(
             scorePct: pctDe(acertos, total),
             completedAt: new Date(ev.ocorreuEm),
           });
-          if (Number(pagasHoje?.n ?? 0) < ATIVIDADES_PAGAS_POR_DIA) {
+          const pagaHoje = Number(pagasHoje?.n ?? 0) < ATIVIDADES_PAGAS_POR_DIA;
+          if (pagaHoje) {
             await pagarXp(tx, userId, chave, xpAlvoDaAtividade(ev.kind, acertos, total), `atividade-${ev.kind}`, ev.dataLocal);
           }
           await marcarDia(tx, userId, ev.dataLocal);
+          estudouNoEnvio = true;
+          fato(ev.dataLocal, { tipo: "bloco", flashcards: false });
+          if (ev.kind === "revisao") fato(ev.dataLocal, { tipo: "revisao-trilha" });
+          if (comPerolas) await pagarPerolasDoBloco(tx, userId, chave, ev.dataLocal, novidades);
+          // A checagem não é lição: sem bônus de combo e sem "perfeita" (spec 50 §5.1.1).
+          const ehChecagem = ev.kind === "checkpoint" || ev.kind === "checagem";
+          const perfeitasAntes = novidades.perfeitas;
+          await fecharTentativa(tx, userId, ev.attemptKey, ev.dataLocal, { pagaBonus: pagaHoje && !ehChecagem, podeSerPerfeita: !ehChecagem, comPerolas }, novidades);
+          if (novidades.perfeitas > perfeitasAntes) fato(ev.dataLocal, { tipo: "perfeita" });
           aplicados.push(ev.id);
           break;
         }
@@ -201,7 +343,12 @@ export async function aplicarEventos(
             .values({ userId, key: `bloco:${ev.id}`, kind: ev.bloco, completedAt: new Date(ev.ocorreuEm) })
             .onConflictDoNothing()
             .returning({ k: completion.key });
-          if (r.length) await marcarDia(tx, userId, ev.dataLocal);
+          if (r.length) {
+            await marcarDia(tx, userId, ev.dataLocal);
+            estudouNoEnvio = true;
+            fato(ev.dataLocal, { tipo: "bloco", flashcards: ev.bloco === "flashcards" });
+            if (comPerolas) await pagarPerolasDoBloco(tx, userId, `bloco:${ev.id}`, ev.dataLocal, novidades);
+          }
           aplicados.push(ev.id);
           break;
         }
@@ -212,9 +359,46 @@ export async function aplicarEventos(
         }
       }
     }
+
+    let melhorDaOfensiva: number | null = null;
+    // Missões do dia (spec 50 §5.4.1): os fatos deste envio, no dia de cada evento.
+    for (const [dia, lista] of fatos) await progredirMissoes(tx, userId, dia, lista, agora, novidades);
+
+    if (comPerolas) {
+      // Pérolas por nível (spec 50 §5.1.8): +20 por nível alcançado, uma vez cada (idempotente pela chave).
+      const nivel = nivelDeXp(await xpDoAluno(tx, userId)).nivel;
+      if (nivel > nivelDeXp(xpAntes).nivel || nivel > 1) {
+        for (let n = 2; n <= nivel; n++) {
+          if (await creditar(tx, userId, chavePerola.nivel(n), PEROLAS_POR_NIVEL, "nivel", hoje, String(n))) novidades.perolasGanhas += PEROLAS_POR_NIVEL;
+        }
+      }
+      // Meta de ofensiva e marcos (spec 50 §5.2.2, §5.2.4): só quando o envio teve estudo.
+      if (estudouNoEnvio) {
+        const ofensiva = await avaliarOfensiva(tx, userId, hoje, agora);
+        melhorDaOfensiva = ofensiva.melhor;
+        if (ofensiva.metaCumprida) {
+          novidades.metaCumprida = ofensiva.metaCumprida;
+          novidades.perolasGanhas += ofensiva.metaCumprida.perolas;
+        }
+        if (ofensiva.marco) {
+          novidades.marco = ofensiva.marco;
+          novidades.perolasGanhas += ofensiva.marco.perolas;
+        }
+      }
+    }
+    // Conquistas (spec 50 §5.4.3): só quando o envio teve estudo.
+    if (estudouNoEnvio) {
+      const melhor = melhorDaOfensiva ?? (await historicoDoAluno(tx, userId, agora)).estado.melhorSequencia;
+      await avaliarConquistas(tx, userId, hoje, melhor, novidades);
+    }
   });
 
-  return { ok: true, aplicados, rejeitados, agregado: await agregadoDoAluno(db, userId, agora) };
+  return { ok: true, aplicados, rejeitados, agregado: { ...(await agregadoDoAluno(db, userId, agora)), novidades } };
+}
+
+async function xpDoAluno(db: Pick<Banco, "select">, userId: string): Promise<number> {
+  const [x] = await db.select({ xp: sum(xpLedger.xp) }).from(xpLedger).where(eq(xpLedger.userId, userId));
+  return Number(x?.xp ?? 0);
 }
 
 /** XP, sequência e dias — a verdade do servidor sobre recompensas. */
@@ -231,6 +415,11 @@ export async function agregadoDoAluno(db: Banco, userId: string, agora: Date = n
   const [perfil] = await db.select({ tz: profile.timezone }).from(profile).where(eq(profile.userId, userId)).limit(1);
   const hoje = dataNoFuso(agora, perfil?.tz ?? "America/Sao_Paulo");
   const vidas = plano === "gratis" && (await vidasLigadasPara(db, userId)) ? await vidasDoDia(db, userId, hoje) : null;
+  const [combo] = await db
+    .select({ atual: comboDia.atual, maximo: comboDia.maximo })
+    .from(comboDia)
+    .where(and(eq(comboDia.userId, userId), eq(comboDia.localDate, hoje)))
+    .limit(1);
   return {
     xp: Number(x?.xp ?? 0),
     sequencia: s.sequencia,
@@ -242,5 +431,11 @@ export async function agregadoDoAluno(db: Banco, userId: string, agora: Date = n
     plano,
     protetoresMax,
     vidas,
+    perolas: await saldoDePerolas(db, userId),
+    combo: combo ? { dia: hoje, atual: combo.atual, maximo: combo.maximo } : null,
+    cosmeticos: await (async () => {
+      const [c] = await db.select({ roupa: cosmeticoEquipado.roupa, tema: cosmeticoEquipado.tema }).from(cosmeticoEquipado).where(eq(cosmeticoEquipado.userId, userId)).limit(1);
+      return { roupa: c?.roupa ?? null, tema: c?.tema ?? null };
+    })(),
   };
 }

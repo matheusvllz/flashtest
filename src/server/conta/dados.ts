@@ -13,8 +13,16 @@ import {
   cobranca,
   completion,
   compra,
+  conquista,
   consent,
+  cosmeticoEquipado,
   cronograma,
+  desafioMes,
+  inventario,
+  marcoOfensiva,
+  metaOfensiva,
+  missaoDia,
+  perolaMovimento,
   learningDoc,
   legalAcceptance,
   profile,
@@ -68,6 +76,24 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
       .where(doAluno(cadernoItem)),
     cronograma: (await db.select({ diasSemana: cronograma.diasSemana, minutosDia: cronograma.minutosDia, dataProva: cronograma.dataProva }).from(cronograma).where(doAluno(cronograma)))[0] ?? null,
     redacoes: await db.select({ tipo: redacao.tipo, tema: redacao.tema, texto: redacao.texto, resultado: redacao.resultado, em: redacao.criadaEm }).from(redacao).where(doAluno(redacao)),
+    // Spec 50 §9: economia e gamificação.
+    perolas: await db
+      .select({ quantidade: perolaMovimento.quantidade, motivo: perolaMovimento.motivo, ref: perolaMovimento.ref, dia: perolaMovimento.localDate })
+      .from(perolaMovimento)
+      .where(doAluno(perolaMovimento)),
+    inventario: await db.select({ item: inventario.itemId, em: inventario.obtidoEm }).from(inventario).where(doAluno(inventario)),
+    cosmeticos: (await db.select({ roupa: cosmeticoEquipado.roupa, tema: cosmeticoEquipado.tema }).from(cosmeticoEquipado).where(doAluno(cosmeticoEquipado)))[0] ?? null,
+    metasDeOfensiva: await db
+      .select({ alvo: metaOfensiva.alvo, inicio: metaOfensiva.inicio, concluidaEm: metaOfensiva.concluidaEm, encerradaEm: metaOfensiva.encerradaEm })
+      .from(metaOfensiva)
+      .where(doAluno(metaOfensiva)),
+    marcosDeOfensiva: await db.select({ dias: marcoOfensiva.dias, em: marcoOfensiva.alcancadoEm }).from(marcoOfensiva).where(doAluno(marcoOfensiva)),
+    missoes: await db
+      .select({ dia: missaoDia.localDate, missao: missaoDia.missaoId, progresso: missaoDia.progresso, alvo: missaoDia.alvo, concluidaEm: missaoDia.concluidaEm })
+      .from(missaoDia)
+      .where(doAluno(missaoDia)),
+    desafios: await db.select({ mes: desafioMes.mes, progresso: desafioMes.progresso, concluidoEm: desafioMes.concluidoEm }).from(desafioMes).where(doAluno(desafioMes)),
+    conquistas: await db.select({ id: conquista.conquistaId, em: conquista.obtidaEm }).from(conquista).where(doAluno(conquista)),
   };
 }
 

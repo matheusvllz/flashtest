@@ -66,6 +66,16 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/redacao.ts#apagarRedacao": "apagar(db, s.userId, id) — prova: 'aluno B não apaga o texto de A'",
   "src/lib/api/redacao.ts#meuTreino": "estadoDoTreino(db, s.userId)",
   "src/lib/api/redacao.ts#enviarParte": "comentarParte(db, s.userId, data)",
+  // Spec 50 E3 — economia e ofensiva: tudo pelo userId da sessão; saldo, preço e estoque só do servidor.
+  "src/lib/api/economia.ts#minhaEconomia": "saldoDePerolas/minhaOfensiva(db, s.userId)",
+  "src/lib/api/economia.ts#meuHistoricoDePerolas": "historicoDePerolas(db, s.userId)",
+  "src/lib/api/economia.ts#comprarNaLoja": "comprar(db, s.userId, itemId, pedidoId) — prova: 'duas compras ao mesmo tempo com saldo para uma'",
+  "src/lib/api/economia.ts#equiparCosmetico": "equipar(db, s.userId, …) — prova: 'equipar só o que tem'",
+  "src/lib/api/economia.ts#definirMetaOfensiva": "definir(db, s.userId, alvo)",
+  "src/lib/api/economia.ts#encerrarMetaOfensiva": "encerrar(db, s.userId)",
+  "src/lib/api/economia.ts#calendarioDaOfensiva": "calendario(db, s.userId, mes)",
+  "src/lib/api/missoes.ts#minhasMissoes": "ler(db, s.userId, dia) — missões sorteadas pelo próprio userId",
+  "src/lib/api/retrospectiva.ts#minhaRetrospectiva": "ler(db, s.userId, hoje) — só contagens do próprio aluno",
 };
 
 function arquivos(dir: string): string[] {

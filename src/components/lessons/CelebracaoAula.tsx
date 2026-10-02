@@ -1,15 +1,30 @@
-import type { ReactNode } from "react";
-import { useState } from "react";
+import { lazy, Suspense, useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { CheckCheck, Flame, Star, Target, Timer, Zap } from "lucide-react";
 import { FocaMark, type FocaExpression } from "@/components/brand/FocaMark";
 import { StatTile } from "@/components/ds/StatTile";
 import { XpChip } from "@/components/ds/XpChip";
 import { COPY } from "@/lib/copy";
-import { isStreakMilestone } from "@/lib/store";
+import { isStreakMilestone, useAppState } from "@/lib/store";
+import { focaRoupa } from "@/lib/brand/foca-corpo";
 import { fala } from "@/lib/voz";
 import type { ResumoDaLicao } from "@/hooks/useLearningSession";
 import type { Momento } from "@/lib/celebracao";
+import type { FocaPose } from "@/lib/brand/foca-corpo";
+import { FEATURES } from "@/lib/features";
+
+const MomentoMarco = lazy(() => import("@/components/ofensiva/MomentoMarco").then((m) => ({ default: m.MomentoMarco })));
+
+/** Pose da Foca de corpo inteiro por momento (spec 50 §5.8.4). */
+const POSE_DO_MOMENTO: Partial<Record<Momento, FocaPose>> = {
+  perfeita: "pulo",
+  marco: "pulo",
+  especial: "pulo",
+  nivel: "aceno",
+  "ofensiva-acesa": "cauda",
+  "meta-ofensiva": "pulo",
+  conquista: "palmas",
+};
 
 export type CelebracaoAcao = {
   label: string;
@@ -80,6 +95,8 @@ export function CelebracaoAula({
   const marco = isStreakMilestone(streakAtual);
   const bom = pct >= 70;
   const principal = resumo?.celebracao.principal;
+  // Roupa da Foca comprada na loja (spec 50 §5.3.3): só no corpo inteiro.
+  const roupa = focaRoupa(useAppState().account?.cosmeticos?.roupa?.replace("roupa:", ""));
   const expression: FocaExpression =
     principal === "perfeita" || principal === "marco" || principal === "especial" || pct === 100 || marco
       ? "empolgada"
@@ -118,7 +135,18 @@ export function CelebracaoAula({
 
   return (
     <div className="surface-pauta flex min-h-screen flex-col items-center gap-5 bg-neve px-6 py-10 text-center">
-      <FocaMark size={120} decorative expression={expression} motion="float" />
+      {resumo && FEATURES.focaCorpo ? (
+        <FocaMark
+          forma="corpo"
+          size={140}
+          decorative
+          expression={expression}
+          pose={POSE_DO_MOMENTO[principal ?? "licao"] ?? "palmas"}
+          roupa={roupa}
+        />
+      ) : (
+        <FocaMark size={120} decorative expression={expression} motion="float" />
+      )}
 
       {resumo && principal && principal !== "licao" && (
         <p
@@ -129,6 +157,11 @@ export function CelebracaoAula({
           {principal === "ofensiva-acesa" && <Flame size={18} className="anim-acender mr-1 inline text-brasa" aria-hidden />}
           {rotuloDoMomento(principal)}
         </p>
+      )}
+      {resumo && (principal === "marco" || principal === "especial") && streakAtual > 0 && (
+        <Suspense fallback={null}>
+          <MomentoMarco dias={streakAtual} />
+        </Suspense>
       )}
 
       {estrelas !== undefined && (

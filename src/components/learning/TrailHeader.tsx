@@ -4,6 +4,7 @@ import { IndicadorSequencia } from "@/components/learning/IndicadorSequencia";
 import { IndicadorVidas } from "@/components/vidas/Vidas";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { COPY } from "@/lib/copy";
+import { FEATURES } from "@/lib/features";
 import { atividadeHoje, diasSemAtividade, nivelDeXp, type AppState } from "@/lib/store";
 import type { VozSlot } from "@/lib/voz";
 
@@ -31,10 +32,15 @@ export function TrailHeader({ s }: { s: AppState }) {
 
   return (
     <div className="flex items-center gap-3">
-      {/* Sequência com foguinho e proteção (spec 48 T-48.6.1); toca para ver como funciona. */}
-      <IndicadorSequencia s={s} />
-      {/* Vidas do Free (spec 49 D49-03): só aparece com vidas ligadas e plano Free. */}
-      <IndicadorVidas />
+      {/* Com a navegação de 5 abas (spec 50 §5.11.1), sequência e vidas moram na barra superior. */}
+      {!FEATURES.navegacaoV3 && (
+        <>
+          {/* Sequência com foguinho e proteção (spec 48 T-48.6.1); toca para ver como funciona. */}
+          <IndicadorSequencia s={s} />
+          {/* Vidas do Free (spec 49 D49-03): só aparece com vidas ligadas e plano Free. */}
+          <IndicadorVidas />
+        </>
+      )}
       <span className="flex shrink-0 items-center gap-1.5">
         <GoalRing value={doneToday} max={goal} size={40} />
         <span className="hidden font-mono text-xs font-bold text-nevoa min-[360px]:inline">

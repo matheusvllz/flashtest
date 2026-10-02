@@ -264,7 +264,8 @@ function TrilhaRoute() {
     <AppShell layout="wide">
       {/* Desktop (docs/44 §5): o caminho no centro e o contexto do dia num painel à direita, preso ao rolar.
           Um DOM só: no celular o painel vem primeiro, como sempre (cabeçalho, convite ao nivelamento, sessão). */}
-      <div className="desk-split lg:px-8 lg:pt-8">
+      {/* Tema da trilha comprado na loja (spec 50 §5.3.3): só o fundo muda. */}
+      <div className="desk-split fundo-do-tema lg:px-8 lg:pt-8" data-tema={s.account?.cosmeticos?.tema ?? undefined}>
       <aside aria-label={COPY.trilha.painelContexto} className="desk-aside lg:space-y-4">
       <div className="bg-neve px-5 pb-3 pt-6 lg:card-soft lg:p-5">
         <TrailHeader s={s} />

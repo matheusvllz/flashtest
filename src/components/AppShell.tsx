@@ -1,6 +1,6 @@
 import { Link, useNavigate, useRouter, useRouterState } from "@tanstack/react-router";
-import { ChevronLeft, Home, BookOpen, PenLine, TrendingUp, User, Zap } from "lucide-react";
-import type { ReactNode } from "react";
+import { ChevronLeft, Home, BookOpen, PenLine, Target, TrendingUp, User, Zap } from "lucide-react";
+import { lazy, Suspense, type ReactNode } from "react";
 import { NavRail } from "@/components/NavRail";
 import { TutorBubble } from "@/components/TutorBubble";
 import { FocaMark } from "@/components/brand/FocaMark";
@@ -69,9 +69,35 @@ export const NAV_ITEMS_V2 = [
   { to: "/profile", label: "Perfil", icon: User },
 ];
 
-const NAV_ITEMS = FEATURES.trilhaComoHome ? NAV_ITEMS_V2 : NAV_ITEMS_V1;
+// Nav v3 (spec 50 §5.11): cinco abas. Toda rota antiga continua válida; o destino de cada uma está em §5.11.2.
+const NAV_ITEMS_V3 = [
+  { to: "/trilha", label: "Trilha", icon: BookOpen },
+  { to: "/praticar", label: "Praticar", icon: Zap },
+  { to: "/redacao", label: "Redação", icon: PenLine },
+  { to: "/missoes", label: "Missões", icon: Target },
+  { to: "/profile", label: "Perfil", icon: User },
+];
+
+const NAV_ITEMS = FEATURES.navegacaoV3 ? NAV_ITEMS_V3 : FEATURES.trilhaComoHome ? NAV_ITEMS_V2 : NAV_ITEMS_V1;
+
+/** Spec 50 §5.11.2: a que aba pertence cada área (para acender o item certo). */
+const GRUPOS_V3: Record<string, readonly string[]> = {
+  "/trilha": ["/trilha", "/learn", "/atividade"],
+  "/praticar": ["/praticar", "/study", "/caderno", "/flashcards", "/topics", "/simulado", "/video"],
+  "/redacao": ["/redacao"],
+  "/missoes": ["/missoes", "/ranking", "/amigos"],
+  "/profile": ["/profile", "/progress", "/plan", "/planos", "/loja", "/offline", "/creditos", "/retrospectiva"],
+};
+
+/** Abas-raiz (spec 50 §5.11.1): só nelas aparece a barra superior; nelas não há botão de voltar. */
+function ehAbaRaiz(pathname: string): boolean {
+  return FEATURES.navegacaoV3 && NAV_ITEMS_V3.some((i) => i.to === pathname.replace(/\/$/, ""));
+}
+
+const BarraSuperior = lazy(() => import("@/components/economia/BarraSuperior").then((m) => ({ default: m.BarraSuperior })));
 
 function isNavActive(pathname: string, to: string) {
+  if (FEATURES.navegacaoV3) return (GRUPOS_V3[to] ?? [to]).some((p) => pathname === p || pathname.startsWith(`${p}/`));
   // Caso especial só sob nav v2: redação é o mesmo pilar de "Aprender"
   // (a trilha), então `/redacao` e `/redacao/*` acendem "/trilha" — não
   // altera o comportamento da nav v1, que não tem esse item.
@@ -97,7 +123,8 @@ export function AppShell({
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const router = useRouter();
   const navigate = useNavigate();
-  const isNavRoute = NAV_ITEMS.some((item) => isNavActive(pathname, item.to));
+  const isNavRoute = FEATURES.navegacaoV3 ? ehAbaRaiz(pathname) : NAV_ITEMS.some((item) => isNavActive(pathname, item.to));
+  const comBarra = ehAbaRaiz(pathname);
   // Sincronização com a conta e a oferta de importação (docs/specs/46-producao T-06.4/T-07.2).
   useContaNoAparelho();
 
@@ -112,8 +139,21 @@ export function AppShell({
     // fixos ancorados à coluna (`--frame-rail`, lido por `anchor-col-*`).
     <div className="[--frame-rail:var(--nav-rail)] lg:pl-[var(--nav-rail)]">
     <PhoneFrame variant={layout}>
+      {comBarra && (
+        <div className="sticky top-0 z-30 border-b-2 border-gelo bg-neve/95 px-3 py-1.5 backdrop-blur lg:px-6">
+          <Suspense fallback={<div className="h-11" />}>
+            <BarraSuperior />
+          </Suspense>
+        </div>
+      )}
       {title && (
-        <header className="sticky top-0 z-20 flex items-center gap-2 bg-neve/90 px-3 py-3 backdrop-blur lg:px-6 lg:pt-6">
+        <header
+          className={cn(
+            "z-20 flex items-center gap-2 bg-neve/90 px-3 py-3 backdrop-blur lg:px-6 lg:pt-6",
+            // Nas abas, a barra superior é que fica grudada no topo (spec 50 §5.11.1).
+            comBarra ? "relative" : "sticky top-0",
+          )}
+        >
           {!isNavRoute && (
             <button
               type="button"
@@ -148,7 +188,7 @@ function BottomNav() {
       aria-label="Principal"
       className="fixed bottom-0 left-1/2 z-30 w-full max-w-[var(--app-col)] -translate-x-1/2 border-t-2 border-gelo bg-cards/95 backdrop-blur pb-[env(safe-area-inset-bottom)] lg:hidden"
     >
-      <ul className={`grid ${NAV_ITEMS.length === 4 ? "grid-cols-4" : "grid-cols-5"}`}>
+      <ul className={`grid ${NAV_ITEMS.length === 4 ? "grid-cols-4" : "grid-cols-5"}`} data-nav={FEATURES.navegacaoV3 ? "v3" : "v2"}>
         {NAV_ITEMS.map(({ to, label, icon: Icon }) => {
           const active = isNavActive(pathname, to);
           return (

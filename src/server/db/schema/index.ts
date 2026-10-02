@@ -4,3 +4,5 @@ export * from "./estudo";
 export * from "./pagamentos";
 export * from "./recompensas";
 export * from "./funcoes";
+export * from "./economia";
+export * from "./gamificacao";

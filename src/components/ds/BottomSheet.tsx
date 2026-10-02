@@ -55,7 +55,7 @@ export function BottomSheet({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="sheet anim-slide-up col-max-w relative overscroll-contain p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]"
+        className="sheet anim-slide-up col-max-w relative max-h-[90dvh] overflow-y-auto overscroll-contain p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]"
       >
         <div className="flex items-center gap-3">
           {icon}

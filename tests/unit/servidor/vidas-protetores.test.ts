@@ -41,7 +41,7 @@ describe("vidas (Free)", () => {
     const { userId } = await alunoVerificado(amb, "e2e-vidas-a@foca.dev");
     const errada = (certa + 1) % 4;
     let r = await aplicarEventos(amb.db, userId, [resposta(null, "licao"), resposta(errada, "nivelamento"), resposta(errada, "checagem"), resposta(certa, "licao")], AGORA);
-    expect(r.agregado.vidas).toEqual({ dia: HOJE, restantes: 5, anuncioUsado: false });
+    expect(r.agregado.vidas).toMatchObject({ dia: HOJE, restantes: 5, anuncioUsado: false });
     r = await aplicarEventos(amb.db, userId, [resposta(errada, "licao"), resposta(errada, "atividade"), resposta(errada, "questao-geral")], AGORA);
     expect(r.agregado.vidas?.restantes).toBe(2);
     r = await aplicarEventos(amb.db, userId, [resposta(errada, "licao"), resposta(errada, "licao"), resposta(errada, "licao")], AGORA);

@@ -29,6 +29,20 @@
       "when": 1790917815070,
       "tag": "0003_funcoes_e3",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790967552443,
+      "tag": "0004_economia",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790968769153,
+      "tag": "0005_missoes",
+      "breakpoints": true
     }
   ]
 }

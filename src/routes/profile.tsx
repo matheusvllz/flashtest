@@ -330,6 +330,16 @@ function Profile() {
 
         <SecaoAssinatura />
 
+        {/* Spec 50 §5.11.2: Progresso saiu das abas e mora aqui; a loja também tem atalho aqui. */}
+        <div className="card-soft divide-y divide-gelo">
+          <Row label={COPY.perfilAtalhos.progresso} onClick={() => nav({ to: "/progress" })} />
+          {conta?.comConta && <Row label={COPY.loja.titulo} onClick={() => nav({ to: "/loja" })} />}
+          {/* Retrospectiva (spec 50 §5.7.3): o atalho aparece de novembro a janeiro; a tela diz se já abriu. */}
+          {conta?.comConta && [10, 11, 0].includes(new Date().getMonth()) && (
+            <Row label={COPY.retrospectiva.link} onClick={() => nav({ to: "/retrospectiva" })} />
+          )}
+        </div>
+
         <div className="card-soft divide-y divide-gelo">
           <Row label="Refazer meu diagnóstico" onClick={() => nav({ to: "/quiz" })} />
           <Row label="Meu plano" onClick={() => nav({ to: "/plan" })} />

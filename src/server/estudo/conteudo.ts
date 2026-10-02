@@ -85,3 +85,26 @@ export function _limparCacheDeConteudo(): void {
   pacotes = undefined;
   licoesDePacote = undefined;
 }
+
+/**
+ * Área do ENEM de um item (spec 50 §5.4.1: missão "Praticar <área>"). Pelo metadado do pacote ou, para os itens
+ * embarcados, pelo índice do app; sem habilidade conhecida, `null`.
+ */
+export async function areaDoItem(itemId: string): Promise<"LC" | "CH" | "CN" | "MT" | null> {
+  const { SKILL_MAP } = await import("@/content/taxonomy");
+  const { areaOfSubject } = await import("@/content/taxonomy/areas");
+  let skillIds = indice().get(itemId)?.meta?.skillIds;
+  if (!skillIds?.length) {
+    try {
+      const { itemMetaOf } = await import("@/content/items");
+      skillIds = itemMetaOf(itemId).skillIds;
+    } catch {
+      skillIds = [];
+    }
+  }
+  for (const s of skillIds ?? []) {
+    const area = areaOfSubject(SKILL_MAP[s]?.subjectId ?? "");
+    if (area === "LC" || area === "CH" || area === "CN" || area === "MT") return area;
+  }
+  return null;
+}

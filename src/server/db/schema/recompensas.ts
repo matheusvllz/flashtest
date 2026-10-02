@@ -20,12 +20,19 @@ export const vidasDia = pgTable(
     localDate: text("local_date").notNull(),
     perdidas: integer("perdidas").notNull().default(0),
     ganhasAnuncio: integer("ganhas_anuncio").notNull().default(0),
+    /** Vidas devolvidas pelo combo (spec 50 §5.1.3): até 2 por dia. */
+    ganhasCombo: integer("ganhas_combo").notNull().default(0),
+    /** Vidas da recarga com Pérolas (spec 50 §5.3.3): o que faltava para 5 no momento da compra. */
+    ganhasRecarga: integer("ganhas_recarga").notNull().default(0),
+    recargas: integer("recargas").notNull().default(0),
     atualizadoEm: timestamp("atualizado_em", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
     primaryKey({ columns: [t.userId, t.localDate] }),
     check("vidas_dia_anuncio_ck", sql`${t.ganhasAnuncio} between 0 and 1`),
     check("vidas_dia_perdidas_ck", sql`${t.perdidas} >= 0`),
+    check("vidas_dia_combo_ck", sql`${t.ganhasCombo} between 0 and 2`),
+    check("vidas_dia_recarga_ck", sql`${t.ganhasRecarga} between 0 and 5 and ${t.recargas} between 0 and 1`),
   ],
 );
 
@@ -40,5 +47,5 @@ export const protetorCredito = pgTable(
     localDate: text("local_date").notNull(),
     criadoEm: timestamp("criado_em", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [primaryKey({ columns: [t.userId, t.chave] }), check("protetor_credito_motivo_ck", sql`${t.motivo} in ('compra', 'estorno')`)],
+  (t) => [primaryKey({ columns: [t.userId, t.chave] }), check("protetor_credito_motivo_ck", sql`${t.motivo} in ('compra', 'estorno', 'perolas')`)],
 );

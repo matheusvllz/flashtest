@@ -88,8 +88,24 @@ const esquema = z.object({
    * (`caderno,cronograma,explica,offline,treino`). Vazio = todas seguem o plano do aluno.
    */
   FUNCOES_DESLIGADAS: z.string().max(200).optional(),
-  /** Corretor de redação (spec 49 §5.9, B-040): desligado até a rubrica ser revisada por professor externo. */
+  /**
+   * Corretor de redação (spec 49 §5.9). Spec 50 D50-04: liga depois da validação técnica e da leitura do dono
+   * (§5.10.5), não mais depois de professor externo obrigatório.
+   */
   CORRETOR_HABILITADO: booleano.optional(),
+  /** Spec 50: `FUNCOES_DESLIGADAS` também aceita `perolas,missoes,miniSimulado,escrita,retrospectiva,pulo` (ligados por padrão). */
+  /** Primeiro dia da retrospectiva do ano (AAAA-MM-DD; spec 50 §5.7.3). Ausente = segundo domingo de novembro. */
+  RETROSPECTIVA_INICIO: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  /** Ligas 18+ com divisões (spec 50 §5.5); sem ela, o ranking semanal da 49. Precisa de `RANKING_HABILITADO`. */
+  LIGAS_HABILITADO: booleano.optional(),
+  /** Ofensiva com amigos 18+ (spec 50 §5.6). */
+  AMIGOS_HABILITADO: booleano.optional(),
+  /** Lembrete diário por push (spec 50 §5.2.5); precisa das chaves VAPID. */
+  LEMBRETES_HABILITADO: booleano.optional(),
+  VAPID_PUBLIC_KEY: z.string().min(40).max(200).optional(),
+  VAPID_PRIVATE_KEY: z.string().min(20).max(200).optional(),
+  /** Contato do remetente das notificações (URL do site; nada de e-mail inventado). */
+  VAPID_SUBJECT: z.string().url().optional(),
 
   /** Segredo das rotinas agendadas (Vercel Cron manda `Authorization: Bearer <CRON_SECRET>`). */
   CRON_SECRET: z.string().min(16).optional(),
