@@ -61,6 +61,15 @@ export function dataNoFuso(quando: Date, tz: string): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(quando);
 }
 
+/** Dia de hoje ou de ontem: só eles pagam recompensa nova de bloco sem tentativa (Pérolas, missões, meta e marcos). */
+function diaRecente(dataLocal: string, hoje: string): boolean {
+  const diff = Math.round((Date.parse(`${hoje}T00:00:00Z`) - Date.parse(`${dataLocal}T00:00:00Z`)) / 86_400_000);
+  return diff >= -1 && diff <= 1;
+}
+
+/** A aula de 60 s responde 2 questões do banco geral: sem elas no dia, o bloco não paga recompensa da 50. */
+const RESPOSTAS_POR_AULA = 2;
+
 function diaValido(dataLocal: string, hoje: string): boolean {
   const d = Date.parse(`${dataLocal}T00:00:00Z`);
   const h = Date.parse(`${hoje}T00:00:00Z`);
@@ -344,10 +353,24 @@ export async function aplicarEventos(
             .onConflictDoNothing()
             .returning({ k: completion.key });
           if (r.length) {
+            // O dia conta para a sequência como antes da 50 (sincronização atrasada de até 7 dias).
             await marcarDia(tx, userId, ev.dataLocal);
-            estudouNoEnvio = true;
-            fato(ev.dataLocal, { tipo: "bloco", flashcards: ev.bloco === "flashcards" });
-            if (comPerolas) await pagarPerolasDoBloco(tx, userId, `bloco:${ev.id}`, ev.dataLocal, novidades);
+            // Recompensas novas (Pérolas, missões, meta e marcos) pedem evidência (achado da revisão L2): bloco de hoje
+            // ou de ontem e, na aula de 60 s, as respostas dela no servidor. Flashcards não deixam tentativa; ficam
+            // limitados pelo teto diário de blocos pagos (DV50-20).
+            let comEvidencia = diaRecente(ev.dataLocal, hoje);
+            if (comEvidencia && ev.bloco === "aula-60s") {
+              const [n] = await tx
+                .select({ n: count() })
+                .from(attempt)
+                .where(and(eq(attempt.userId, userId), eq(attempt.localDate, ev.dataLocal), eq(attempt.source, "questao-geral")));
+              comEvidencia = Number(n?.n ?? 0) >= RESPOSTAS_POR_AULA;
+            }
+            if (comEvidencia) {
+              estudouNoEnvio = true;
+              fato(ev.dataLocal, { tipo: "bloco", flashcards: ev.bloco === "flashcards" });
+              if (comPerolas) await pagarPerolasDoBloco(tx, userId, `bloco:${ev.id}`, ev.dataLocal, novidades);
+            }
           }
           aplicados.push(ev.id);
           break;

@@ -79,11 +79,15 @@ describe("mini-simulado da semana (todos os planos)", () => {
     expect(meio.tempoMs).toBe(90_000);
     expect(meio.gabarito).toBeNull();
     expect(await erro(responderSimulado(amb.db, u, id, "oficial:fora", 1, undefined, 0, AGORA))).toBe("ITEM_FORA");
+    // Mais 4 respostas ao mesmo tempo (a linha travada não perde nenhuma) para chegar ao mínimo que paga recompensa.
+    const resto = ini.itens.slice(2, 6);
+    await Promise.all(resto.map((i) => responderSimulado(amb.db, u, id, i, 4, undefined, 95_000, AGORA)));
+    expect(Object.keys((await estadoDoSimulado(amb.db, u, id)).respostas).length).toBe(6);
 
     const r = await concluirSimulado(amb.db, u, id, 120_000, AGORA);
     expect(r.total).toBe(15);
-    expect(r.respondidas).toBe(1);
-    expect(r.acertos).toBe(1);
+    expect(r.respondidas).toBe(5);
+    expect(r.acertos).toBeGreaterThanOrEqual(1);
     expect(await concluirSimulado(amb.db, u, id, 999_999, AGORA)).toEqual(r);
     const fim = await estadoDoSimulado(amb.db, u, id);
     expect(fim.concluido).toBe(true);
@@ -91,9 +95,26 @@ describe("mini-simulado da semana (todos os planos)", () => {
     expect(await erro(responderSimulado(amb.db, u, id, b!, 1, undefined, 0, AGORA))).toBe("JA_CONCLUIDO");
 
     const tentativas = await amb.db.select().from(attempt).where(and(eq(attempt.userId, u), eq(attempt.source, "simulado")));
-    expect(tentativas.length).toBe(1);
+    expect(tentativas.length).toBe(5);
     const xp = await amb.db.select().from(xpLedger).where(eq(xpLedger.userId, u));
     expect(xp.filter((l) => l.key === `simulado:${id}`).map((l) => l.xp)).toEqual([10]);
+  });
+
+  test("simulado vazio não paga XP nem marca o dia; o 4º simulado do dia não paga XP", async () => {
+    const u = await aluno("sim-vazio@foca.dev", true);
+    const vazio = await iniciarSimulado(amb.db, u, { tipo: "nivel", area: "CH" }, false, AGORA);
+    const rv = await concluirSimulado(amb.db, u, vazio.id, 0, AGORA);
+    expect(rv.respondidas).toBe(0);
+    const ids: string[] = [];
+    for (let n = 0; n < 4; n++) {
+      const { id } = await iniciarSimulado(amb.db, u, { tipo: "nivel", area: "MT" }, false, AGORA);
+      const itens = (await estadoDoSimulado(amb.db, u, id)).itens.slice(0, 5);
+      for (const i of itens) await responderSimulado(amb.db, u, id, i, 0, undefined, 1000, AGORA);
+      await concluirSimulado(amb.db, u, id, 1000, AGORA);
+      ids.push(id);
+    }
+    const xp = (await amb.db.select().from(xpLedger).where(eq(xpLedger.userId, u))).filter((l) => l.key.startsWith("simulado:"));
+    expect(xp.map((l) => l.key).sort()).toEqual(ids.slice(0, 3).map((i) => `simulado:${i}`).sort());
   });
 
   test("isolamento: outro aluno não vê, não responde e não conclui o simulado alheio", async () => {
@@ -135,6 +156,12 @@ test("reporte: duas pessoas com o mesmo motivo retiram a questão dos simulados;
   const b = await aluno("rep-b@foca.dev");
   const { id } = await iniciarSimulado(amb.db, a, { tipo: "mini" }, false, AGORA);
   const item = (await estadoDoSimulado(amb.db, a, id)).itens[0]!;
+  // Só reporta quem respondeu a questão; questão que não é oficial é recusada.
+  expect(await erro(reportarQuestao(amb.db, a, item, "gabarito"))).toBe("QUESTAO_NAO_RESPONDIDA");
+  expect(await erro(reportarQuestao(amb.db, a, "q1", "gabarito"))).toBe("ITEM_FORA");
+  await responderSimulado(amb.db, a, id, item, 0, undefined, 0, AGORA);
+  const doB = await iniciarSimulado(amb.db, b, { tipo: "mini" }, false, AGORA);
+  await responderSimulado(amb.db, b, doB.id, item, 1, undefined, 0, AGORA);
   expect((await reportarQuestao(amb.db, a, item, "gabarito")).retirada).toBe(false);
   expect((await reportarQuestao(amb.db, a, item, "gabarito")).retirada).toBe(false);
   expect((await reportarQuestao(amb.db, b, item, "imagem")).retirada).toBe(false);
@@ -142,7 +169,9 @@ test("reporte: duas pessoas com o mesmo motivo retiram a questão dos simulados;
   const exportA = await exportarDadosDoAluno(amb.db, a, AGORA);
   expect(exportA.simulados.length).toBe(1);
   expect(exportA.reportesDeQuestao).toEqual([expect.objectContaining({ item, motivo: "gabarito" })]);
-  expect((await exportarDadosDoAluno(amb.db, b, AGORA)).simulados).toEqual([]);
+  expect((await exportarDadosDoAluno(amb.db, b, AGORA)).simulados.length).toBe(1);
+  const forasteiro = await aluno("rep-x@foca.dev");
+  expect((await exportarDadosDoAluno(amb.db, forasteiro, AGORA)).simulados).toEqual([]);
   const c = await aluno("rep-c@foca.dev", true);
   const prova = (await opcoesDeSimulado(amb.db, c, AGORA)).completo.provas;
   for (const p of prova.slice(0, 8)) {

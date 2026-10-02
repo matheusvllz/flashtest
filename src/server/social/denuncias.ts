@@ -4,11 +4,13 @@
  * - Denunciar (apelido inadequado · parece menor de 18 · outro): oculta o apelido na hora (como na 49) e põe na fila
  *   de revisão do suporte (`denuncia`, motivo fixo, sem texto livre). "Parece menor" também suspende as funções
  *   sociais do denunciado até a revisão — medida proporcional (§0.3 A): ele some das ligas e das duplas dos outros e
- *   não convida nem pede, mas pode sair e bloquear.
+ *   não convida nem pede, mas pode sair e bloquear. Para a denúncia não virar arma (um pedido de dupla a partir de um
+ *   convite público bastaria), a suspensão só vem de quem tem dupla **ativa** com o denunciado ou de 2 pessoas
+ *   diferentes; antes disso, só o apelido fica oculto.
  * - `aoCorrigirIdadeParaMenor`: ponto único que o suporte chama ao corrigir o ano de nascimento para menos de 18.
  *   Encerra duplas e pedidos, invalida convites e tira da liga na hora; o resto sai pela retenção em 30 dias.
  */
-import { and, eq, inArray, or, sql } from "drizzle-orm";
+import { and, eq, inArray, isNull, or, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
 import type { MotivoDeDenuncia } from "@/lib/amigos";
 import type { Banco } from "../db/client";
@@ -42,11 +44,22 @@ export async function denunciar(
       motivo: pedido.motivo,
       criadaEm: agora,
     });
+  let suspender = false;
+  if (pedido.motivo === "menor") {
+    if (a.estado === "ativa") suspender = true;
+    else {
+      const [n] = await db
+        .select({ n: sql<number>`count(distinct ${denuncia.autorId})` })
+        .from(denuncia)
+        .where(and(eq(denuncia.alvoId, alvo), eq(denuncia.motivo, "menor"), isNull(denuncia.resolvidaEm)));
+      suspender = Number(n?.n ?? 0) >= 2;
+    }
+  }
   await db
     .update(rankingParticipante)
     .set({
       ocultoPorDenuncia: true,
-      ...(pedido.motivo === "menor"
+      ...(suspender
         ? {
             socialSuspensoEm: sql`coalesce(${rankingParticipante.socialSuspensoEm}, ${agora.toISOString()}::timestamptz)`,
           }

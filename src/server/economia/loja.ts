@@ -23,7 +23,6 @@ export async function comprarNaLoja(db: Banco, userId: string, itemId: string, p
   const item = itemDaLoja(itemId);
   const plano = await planoDoAluno(db, userId, agora);
   const vidasLigadas = plano === "gratis" && (await vidasLigadasPara(db, userId));
-  const creditos = await creditosDeProtetor(db, userId, agora);
 
   return db.transaction(async (tx) => {
     await tx.insert(profile).values({ userId }).onConflictDoNothing();
@@ -40,6 +39,8 @@ export async function comprarNaLoja(db: Banco, userId: string, itemId: string, p
     if (jaFeito) return { ok: true as const, item: (jaFeito.ref ?? itemId) as ItemDaLoja["id"], saldo: await saldoDePerolas(tx, userId), repetido: true };
 
     const saldo = await saldoDePerolas(tx, userId);
+    // Estoque de protetores lido depois da trava: compras simultâneas não passam do teto com um estoque velho.
+    const creditos = await creditosDeProtetor(tx, userId, agora);
     const dias = (await tx.select({ d: studyDay.localDate }).from(studyDay).where(eq(studyDay.userId, userId))).map((r) => r.d);
     const protetoresMax = BENEFICIOS[plano].protetoresEstoqueMax;
     const ofensiva = historicoDaOfensiva(dias, { creditos, estoqueMax: protetoresMax });

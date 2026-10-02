@@ -85,6 +85,23 @@ describe("combo no servidor (spec 50 §5.1.3)", () => {
 });
 
 describe("Pérolas (spec 50 §5.3)", () => {
+  test("bloco sem evidência não paga (revisão L2): aula de 60 s sem respostas e bloco de dias atrás só marcam o dia", async () => {
+    const { userId } = await alunoVerificado(amb, "perolas-evidencia@foca.dev");
+    const pagas = async () =>
+      (await amb.db.select().from(perolaMovimento).where(and(eq(perolaMovimento.userId, userId), eq(perolaMovimento.motivo, "bloco")))).length;
+    const aula = (dataLocal = HOJE) => eventoEstudo.parse({ tipo: "bloco-concluido", id: id(), bloco: "aula-60s", ocorreuEm: AGORA.toISOString(), dataLocal });
+    await aplicarEventos(amb.db, userId, [aula()], AGORA);
+    expect(await pagas()).toBe(0);
+    const antigo = eventoEstudo.parse({ tipo: "bloco-concluido", id: id(), bloco: "flashcards", ocorreuEm: AGORA.toISOString(), dataLocal: "2026-10-10" });
+    await aplicarEventos(amb.db, userId, [antigo], AGORA);
+    expect(await pagas()).toBe(0);
+    const dias = (await amb.db.select().from(studyDay).where(eq(studyDay.userId, userId))).map((d) => d.localDate).sort();
+    expect(dias).toEqual(["2026-10-10", HOJE]);
+    // Com as 2 respostas da aula no dia, paga.
+    await aplicarEventos(amb.db, userId, [resposta(certa, { fonte: "questao-geral" }), resposta(certa, { fonte: "questao-geral", itemId: "q2" }), aula()], AGORA);
+    expect(await pagas()).toBe(1);
+  });
+
   test("5 por bloco, até 5 blocos por dia; reenvio não paga de novo", async () => {
     const { userId } = await alunoVerificado(amb, "perolas-bloco@foca.dev");
     const evs = Array.from({ length: 7 }, bloco);

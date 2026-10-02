@@ -268,6 +268,25 @@ describe("sair, bloquear, denunciar e correção de idade", () => {
     await encerrarDupla(amb.db, bia, id, AGORA);
   });
 
+  test("'parece menor' a partir de um simples pedido só oculta o apelido; a suspensão exige 2 pessoas", async () => {
+    const alvo = await conta("Alvo");
+    const x = await conta("Xavier");
+    const y = await conta("Yara");
+    // O alvo divulgou o convite; dois estranhos pedem dupla e denunciam sem aceite.
+    const { codigo } = await criarConvite(amb.db, alvo, AGORA);
+    await pedirDupla(amb.db, x, codigo, AGORA);
+    const doX = await minhasDuplas(amb.db, x, AGORA);
+    if (doX.estado !== "pronto") throw new Error(doX.estado);
+    await denunciar(amb.db, x, { id: doX.enviados[0].id, motivo: "menor" }, AGORA);
+    expect((await minhasDuplas(amb.db, alvo, AGORA)).estado).toBe("pronto");
+    const outro = await criarConvite(amb.db, alvo, AGORA);
+    await pedirDupla(amb.db, y, outro.codigo, AGORA);
+    const doY = await minhasDuplas(amb.db, y, AGORA);
+    if (doY.estado !== "pronto") throw new Error(doY.estado);
+    await denunciar(amb.db, y, { id: doY.enviados[0].id, motivo: "menor" }, AGORA);
+    expect(await minhasDuplas(amb.db, alvo, AGORA)).toEqual({ estado: "suspenso" });
+  });
+
   test("correção de idade para menor: encerra duplas, pedidos e convites e tira da liga na hora", async () => {
     const ana = await conta("Ana");
     const bia = await conta("Bia");

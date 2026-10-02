@@ -8,7 +8,7 @@
  * - ranking (spec 49 §9): quem saiu há mais de 30 dias e os grupos de semanas com mais de 30 dias; `ai_budget_pagos`
  *   com mais de 90 dias.
  * - spec 50 §9: resultados da liga saem com o participante; dupla encerrada há mais de 30 dias; convite com mais de 7;
- *   denúncia resolvida há mais de 90. Bloqueio fica enquanto as duas contas existirem.
+ *   denúncia resolvida há mais de 90. Bloqueio fica enquanto as duas contas existirem. Reporte de questão: 90 dias.
  * - lembrete por push (spec 50 §5.2.5, §9): assinatura sem poder entregar há 30 dias — pausada há mais de 30 dias,
  *   ou com falha pendente e sem nenhuma entrega nos últimos 30 dias. (Quem estuda todo dia não recebe lembrete e
  *   continua com a assinatura: "sem entrega" aqui é não conseguir entregar, não não precisar.)
@@ -28,6 +28,7 @@ import {
   ligaResultado,
   missaoDia,
   pushAssinatura,
+  questaoReporte,
   rankingGrupo,
   rankingParticipante,
   rateLimit,
@@ -73,13 +74,14 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
   const tetoPagos = await db.delete(aiBudgetPagos).where(lt(aiBudgetPagos.day, limiteIA)).returning({ d: aiBudgetPagos.day });
   const trintaDias = new Date(agora.getTime() - 30 * DIA);
   // Spec 50 §9: a linha do participante é também o apelido dos amigos e guarda a suspensão por denúncia. Quem saiu da
-  // liga há mais de 30 dias sai junto com os resultados da liga — salvo se ainda tem dupla ou pedido aberto, ou está
-  // suspenso aguardando revisão.
+  // liga há mais de 30 dias sai junto com os resultados da liga — salvo se ainda tem dupla ou pedido aberto, está
+  // suspenso aguardando revisão ou tem denúncia aberta (a ocultação do apelido não pode sumir pela retenção).
   const podeSair = and(
     isNotNull(rankingParticipante.saiuEm),
     lt(rankingParticipante.saiuEm, trintaDias),
     isNull(rankingParticipante.socialSuspensoEm),
     sql`not exists (select 1 from ${amizade} where ${amizade.estado} in ('pedido', 'ativa') and (${amizade.userA} = ${rankingParticipante.userId} or ${amizade.userB} = ${rankingParticipante.userId}))`,
+    sql`not exists (select 1 from ${denuncia} where ${denuncia.alvoId} = ${rankingParticipante.userId} and ${denuncia.resolvidaEm} is null)`,
   );
   const resultadosLiga = await db
     .delete(ligaResultado)
@@ -102,6 +104,11 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
   await db.delete(rankingGrupo).where(lt(rankingGrupo.semana, dia(trintaDias)));
   const combos = await db.delete(comboDia).where(lt(comboDia.localDate, dia(trintaDias))).returning({ d: comboDia.localDate });
   const missoes = await db.delete(missaoDia).where(lt(missaoDia.localDate, limiteIA)).returning({ d: missaoDia.localDate });
+  // Spec 50 §9: reporte de questão em 90 dias (a retirada da questão, que não guarda quem reportou, fica).
+  const reportes = await db
+    .delete(questaoReporte)
+    .where(lt(questaoReporte.criadoEm, new Date(agora.getTime() - 90 * DIA)))
+    .returning({ i: questaoReporte.itemId });
   const lembretes = await db
     .delete(pushAssinatura)
     .where(
@@ -128,7 +135,7 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
     verificacoes: n(verif),
     limites: n(limites),
     ranking: n(saiu),
-    gamificacao: n(combos) + n(missoes),
+    gamificacao: n(combos) + n(missoes) + n(reportes),
     social: n(resultadosLiga) + n(duplas) + n(convites) + n(denuncias),
     lembretes: n(lembretes),
   };

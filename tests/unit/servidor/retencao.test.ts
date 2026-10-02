@@ -5,7 +5,7 @@ import { beforeEach, describe, expect, test } from "bun:test";
 import { randomUUID } from "node:crypto";
 import { eq } from "drizzle-orm";
 import { aplicarRetencao } from "../../../src/server/conta/retencao";
-import { aiBudget, aiUsage, auditEvent, rankingGrupo, rankingParticipante, rateLimit, user } from "../../../src/server/db/schema";
+import { aiBudget, aiUsage, auditEvent, comboDia, denuncia, missaoDia, questaoReporte, rankingGrupo, rankingParticipante, rateLimit, user } from "../../../src/server/db/schema";
 import { ambiente, alunoVerificado, cadastroValido, type Ambiente } from "./ajuda";
 
 let amb: Ambiente;
@@ -67,5 +67,37 @@ describe("retenção", () => {
     expect(r.ranking).toBe(1);
     expect((await amb.db.select().from(rankingParticipante)).map((p) => p.apelido).sort()).toEqual(["Fica", "Recente"]);
     expect((await amb.db.select().from(rankingGrupo)).map((g) => g.semana)).toEqual(["2026-10-12"]);
+  });
+
+  test("spec 50 §9: combo do dia em 30 dias, missões em 90, reportes de questão em 90; denúncia aberta segura o participante", async () => {
+    const agora = new Date("2026-10-15T12:00:00-03:00");
+    const a = await alunoVerificado(amb, "gam@teste.dev");
+    const denunciado = await alunoVerificado(amb, "denunciado@teste.dev");
+    await amb.db.insert(comboDia).values([
+      { userId: a.userId, localDate: "2026-09-01", atual: 1, maximo: 3 },
+      { userId: a.userId, localDate: "2026-10-14", atual: 1, maximo: 3 },
+    ]);
+    await amb.db.insert(missaoDia).values([
+      { userId: a.userId, localDate: "2026-07-01", missaoId: "fazer-1", ordem: 0, alvo: 1 },
+      { userId: a.userId, localDate: "2026-10-01", missaoId: "fazer-1", ordem: 0, alvo: 1 },
+    ]);
+    await amb.db.insert(questaoReporte).values([
+      { userId: a.userId, itemId: "oficial:velho", motivo: "texto", criadoEm: new Date(agora.getTime() - 100 * DIA) },
+      { userId: a.userId, itemId: "oficial:novo", motivo: "texto", criadoEm: new Date(agora.getTime() - 10 * DIA) },
+    ]);
+    await amb.db.insert(rankingParticipante).values({
+      userId: denunciado.userId,
+      apelido: "Oculto",
+      maiorDesde: agora,
+      saiuEm: new Date(agora.getTime() - 40 * DIA),
+      ocultoPorDenuncia: true,
+    });
+    await amb.db.insert(denuncia).values({ id: randomUUID(), autorId: a.userId, alvoId: denunciado.userId, contexto: "amigos", motivo: "apelido", criadaEm: agora });
+    await aplicarRetencao(amb.db, agora);
+    expect((await amb.db.select().from(comboDia)).map((c) => c.localDate)).toEqual(["2026-10-14"]);
+    expect((await amb.db.select().from(missaoDia)).map((m) => m.localDate)).toEqual(["2026-10-01"]);
+    expect((await amb.db.select().from(questaoReporte)).map((q) => q.itemId)).toEqual(["oficial:novo"]);
+    // Com a denúncia aberta, a ocultação do apelido não some pela retenção.
+    expect((await amb.db.select().from(rankingParticipante).where(eq(rankingParticipante.userId, denunciado.userId))).length).toBe(1);
   });
 });

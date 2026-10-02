@@ -3,7 +3,8 @@
  * (gabarito oficial). Mini-simulado da semana para todos (`miniSimulado`), simulado completo e prova oficial no Pro
  * (`simulado`). Sem vida, sem combo, sem Foca durante a prova; cronômetro opcional e que nunca encerra sozinho.
  */
-import { and, desc, eq, gte, inArray, sql } from "drizzle-orm";
+import { randomUUID } from "node:crypto";
+import { and, desc, eq, gte, inArray, like, sql } from "drizzle-orm";
 import { checkAnswer } from "@/lib/lessons/define";
 import { chavePerola, PEROLAS_POR_BLOCO, BLOCOS_PAGOS_POR_DIA, PEROLAS_SIMULADO } from "@/lib/perolas";
 import {
@@ -21,7 +22,7 @@ import {
 import type { NovidadesDoServidor } from "@/lib/sync/contrato";
 import type { JsonObjeto } from "@/lib/json";
 import type { Banco } from "../db/client";
-import { attempt, profile, questaoReporte, questaoRetirada, simulado } from "../db/schema";
+import { attempt, auditEvent, profile, questaoReporte, questaoRetirada, simulado, xpLedger } from "../db/schema";
 import { exercicioDoItem, itensOficiais } from "../estudo/conteudo";
 import { registrarNoCaderno } from "../estudo/caderno";
 import { dataNoFuso, marcarDia, pagarXp } from "../estudo/sincronizar";
@@ -216,42 +217,53 @@ export async function responderSimulado(
   tempoMs: number,
   agora: Date,
 ): Promise<{ ok: true }> {
-  const s = await doAluno(db, userId, id);
-  if (s.concluidoEm) throw new ErroApp(409, "JA_CONCLUIDO");
-  if (!(s.itens as string[]).includes(itemId)) throw new ErroApp(400, "ITEM_FORA");
-  const respostas = { ...((s.respostas ?? {}) as Record<string, number | null>), [itemId]: resposta };
-  let marcadas = (s.marcadas ?? []) as string[];
-  if (marcada !== undefined) marcadas = marcada ? [...new Set([...marcadas, itemId])] : marcadas.filter((m) => m !== itemId);
-  await db
-    .update(simulado)
-    .set({ respostas: respostas as unknown as JsonObjeto, marcadas, tempoMs: Math.max(s.tempoMs, Math.min(tempoMs, 12 * 3_600_000)), ultimaAtividadeEm: agora })
-    .where(and(eq(simulado.id, id), eq(simulado.userId, userId)));
+  await db.transaction(async (tx) => {
+    // Trava a linha: dois envios ao mesmo tempo (dois aparelhos, toques rápidos) não perdem resposta.
+    const [s] = await tx.select().from(simulado).where(and(eq(simulado.id, id), eq(simulado.userId, userId))).for("update");
+    if (!s) throw new ErroApp(404, "NAO_ENCONTRADO");
+    if (s.concluidoEm) throw new ErroApp(409, "JA_CONCLUIDO");
+    if (!(s.itens as string[]).includes(itemId)) throw new ErroApp(400, "ITEM_FORA");
+    const respostas = { ...((s.respostas ?? {}) as Record<string, number | null>), [itemId]: resposta };
+    let marcadas = (s.marcadas ?? []) as string[];
+    if (marcada !== undefined) marcadas = marcada ? [...new Set([...marcadas, itemId])] : marcadas.filter((m) => m !== itemId);
+    await tx
+      .update(simulado)
+      .set({ respostas: respostas as unknown as JsonObjeto, marcadas, tempoMs: Math.max(s.tempoMs, Math.min(tempoMs, 12 * 3_600_000)), ultimaAtividadeEm: agora })
+      .where(and(eq(simulado.id, id), eq(simulado.userId, userId)));
+  });
   return { ok: true };
 }
 
+/** Recompensa (XP, dia de estudo, Pérolas, missões) só com respostas de verdade: um simulado vazio não paga nada. */
+export const MINIMO_RESPOSTAS_PARA_RECOMPENSA = 5;
+/** Teto diário de simulados que pagam XP (os demais contam como estudo, sem XP). */
+export const SIMULADOS_COM_XP_POR_DIA = 3;
+
 export async function concluirSimulado(db: Banco, userId: string, id: string, tempoMs: number, agora: Date): Promise<ResultadoDoSimulado> {
-  const s = await doAluno(db, userId, id);
-  if (s.concluidoEm && s.resultado) return s.resultado as unknown as ResultadoDoSimulado;
+  const antes = await doAluno(db, userId, id);
+  if (antes.concluidoEm && antes.resultado) return antes.resultado as unknown as ResultadoDoSimulado;
   const hoje = await hojeDoAluno(db, userId, agora);
-  const respostas = (s.respostas ?? {}) as Record<string, number | null>;
   const oficiais = new Map(itensOficiais().map((i) => [i.id, i]));
   const comCaderno = await alunoTemFuncao(db, userId, "cadernoDeErros", agora);
-  const linhas: { id: string; area: AreaEnem; skillId: string | null; correta: boolean; respondida: boolean }[] = [];
-  for (const it of s.itens as string[]) {
-    const ex = await exercicioDoItem(it);
-    const r = respostas[it];
-    const respondida = typeof r === "number";
-    const correta = !!ex && respondida && checkAnswer(ex, r as number);
-    const o = oficiais.get(it);
-    linhas.push({ id: it, area: o?.area ?? "LC", skillId: o?.skillIds[0] ?? null, correta, respondida });
-  }
-  const resultado = montarResultado(linhas, Math.max(s.tempoMs, Math.min(tempoMs, 12 * 3_600_000)));
   const novidades: NovidadesDoServidor = { perolasGanhas: 0, vidasDoCombo: 0, metaCumprida: null, marco: null, perfeitas: 0, conquistas: [], missoesConcluidas: [], desafioDoMes: false };
-  await db.transaction(async (tx) => {
+  return db.transaction(async (tx) => {
     await tx.insert(profile).values({ userId }).onConflictDoNothing();
     await tx.select({ u: profile.userId }).from(profile).where(eq(profile.userId, userId)).for("update");
-    const [ja] = await tx.select({ c: simulado.concluidoEm }).from(simulado).where(eq(simulado.id, id)).limit(1);
-    if (ja?.c) return;
+    // As respostas são lidas depois da trava: nenhuma resposta enviada antes de terminar fica de fora.
+    const [s] = await tx.select().from(simulado).where(and(eq(simulado.id, id), eq(simulado.userId, userId))).for("update");
+    if (!s) throw new ErroApp(404, "NAO_ENCONTRADO");
+    if (s.concluidoEm && s.resultado) return s.resultado as unknown as ResultadoDoSimulado;
+    const respostas = (s.respostas ?? {}) as Record<string, number | null>;
+    const linhas: { id: string; area: AreaEnem; skillId: string | null; correta: boolean; respondida: boolean }[] = [];
+    for (const it of s.itens as string[]) {
+      const ex = await exercicioDoItem(it);
+      const r = respostas[it];
+      const respondida = typeof r === "number";
+      const correta = !!ex && respondida && checkAnswer(ex, r as number);
+      const o = oficiais.get(it);
+      linhas.push({ id: it, area: o?.area ?? "LC", skillId: o?.skillIds[0] ?? null, correta, respondida });
+    }
+    const resultado = montarResultado(linhas, Math.max(s.tempoMs, Math.min(tempoMs, 12 * 3_600_000)));
     await tx
       .update(simulado)
       .set({ concluidoEm: agora, resultado: resultado as unknown as JsonObjeto, tempoMs: resultado.tempoMs })
@@ -274,8 +286,14 @@ export async function concluirSimulado(db: Banco, userId: string, id: string, te
         .onConflictDoNothing();
       if (comCaderno) await registrarNoCaderno(tx, userId, l.id, "simulado", l.correta, hoje);
     }
+    // Simulado vazio (ou quase) só registra o resultado: não paga XP, dia, Pérolas nem missão.
+    if (resultado.respondidas < Math.min(MINIMO_RESPOSTAS_PARA_RECOMPENSA, linhas.length)) return resultado;
     const mini = s.tipo === "mini";
-    await pagarXp(tx, userId, `simulado:${id}`, mini ? XP_MINI : XP_SIMULADO, "simulado", hoje);
+    const [comXp] = await tx
+      .select({ n: sql<number>`count(*)` })
+      .from(xpLedger)
+      .where(and(eq(xpLedger.userId, userId), eq(xpLedger.localDate, hoje), like(xpLedger.key, "simulado:%")));
+    if (Number(comXp?.n ?? 0) < SIMULADOS_COM_XP_POR_DIA) await pagarXp(tx, userId, `simulado:${id}`, mini ? XP_MINI : XP_SIMULADO, "simulado", hoje);
     await marcarDia(tx, userId, hoje);
     if (recursoLigado("perolas")) {
       if (mini) {
@@ -288,18 +306,39 @@ export async function concluirSimulado(db: Banco, userId: string, id: string, te
     }
     await progredirMissoes(tx, userId, hoje, mini ? [{ tipo: "mini" }, { tipo: "bloco", flashcards: false }] : [{ tipo: "bloco", flashcards: false }], agora, novidades);
     await avaliarConquistas(tx, userId, hoje, (await historicoDoAluno(tx, userId, agora)).estado.melhorSequencia, novidades);
+    return resultado;
   });
-  return resultado;
 }
 
-/** Reporte de problema numa questão (spec 50 §5.9.2): duas pessoas com o mesmo motivo retiram o item. */
+/**
+ * Reporte de problema numa questão (spec 50 §5.9.2): duas pessoas com o mesmo motivo retiram o item dos simulados.
+ * Só vale para questão oficial que o próprio aluno já respondeu (numa tentativa ou num simulado dele): ninguém
+ * retira em massa questões que nunca viu. A retirada vai para `audit_event` para o suporte conferir e reverter.
+ */
 export async function reportarQuestao(db: Banco, userId: string, itemId: string, motivo: "texto" | "imagem" | "gabarito" | "outro"): Promise<{ ok: true; retirada: boolean }> {
+  if (!itensOficiais().some((i) => i.id === itemId)) throw new ErroApp(400, "ITEM_FORA");
+  const [tentou] = await db
+    .select({ u: attempt.userId })
+    .from(attempt)
+    .where(and(eq(attempt.userId, userId), eq(attempt.itemId, itemId)))
+    .limit(1);
+  const [viu] = tentou
+    ? [tentou]
+    : await db
+        .select({ u: simulado.userId })
+        .from(simulado)
+        .where(and(eq(simulado.userId, userId), sql`${simulado.respostas} ? ${itemId}`))
+        .limit(1);
+  if (!viu) throw new ErroApp(403, "QUESTAO_NAO_RESPONDIDA");
   await db.insert(questaoReporte).values({ userId, itemId, motivo }).onConflictDoNothing();
   const [n] = await db
     .select({ n: sql<number>`count(*)` })
     .from(questaoReporte)
     .where(and(eq(questaoReporte.itemId, itemId), eq(questaoReporte.motivo, motivo)));
   const retirada = Number(n?.n ?? 0) >= 2;
-  if (retirada) await db.insert(questaoRetirada).values({ itemId, motivo }).onConflictDoNothing();
+  if (retirada) {
+    const nova = await db.insert(questaoRetirada).values({ itemId, motivo }).onConflictDoNothing().returning({ id: questaoRetirada.itemId });
+    if (nova.length) await db.insert(auditEvent).values({ id: randomUUID(), userId: null, type: `questao_retirada:${motivo}` }).catch(() => {});
+  }
   return { ok: true, retirada };
 }
