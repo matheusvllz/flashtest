@@ -1,6 +1,6 @@
 ---
 estado: em-execucao
-atualizado: 2026-09-29
+atualizado: 2026-10-02
 canonico-de: [versões e pendências dos documentos legais]
 substitui: []
 substituido-por: null
@@ -9,6 +9,10 @@ substituido-por: null
 # Documentos legais — versões e pendências
 
 > O texto canônico dos termos de uso e da política de privacidade vai viver em `src/content/legal/` (a criar, 46 T-11.2/T-11.3), versionado e renderizado em `/termos` e `/privacidade`. Esta página registra as versões publicadas, as pendências jurídicas e o histórico de mudanças. **Nenhum texto é publicado como final enquanto houver pendência abaixo.** Base legal consultada: 46 §H.1. Inventário de dados: [../seguranca/privacidade.md](../seguranca/privacidade.md).
+
+## Rascunhos em revisão
+
+- [rascunho-clausulas-49.md](rascunho-clausulas-49.md) — cláusulas da spec 49 (planos, pagamento, arrependimento, vidas, anúncios, protetores, ranking 18+, funções pagas) e "Pontos para o advogado". Rascunho para revisão jurídica (B-033), redigido na T-49.3.8 em 02/10/2026; ainda não entrou em `src/content/legal/`.
 
 ## Versões publicadas
 
@@ -28,6 +32,8 @@ Nenhuma.
 | 8 | Avaliação de impacto (ECA Digital art. 16; Decreto art. 47) e relatório de impacto (LGPD) | Pendente (46 T-11.2 prepara o insumo) |
 | 9 | Revisão jurídica dos dois textos | Pendente (contratação do proprietário) |
 | 10 | URLs finais | Dependem do domínio |
+| 11 | Fornecedor identificado para a venda (razão social, CNPJ, endereço, canal de atendimento; Decreto 7.962/2013 art. 2º) | Pendente; bloqueia a venda real (spec 49) |
+| 12 | Revisão das cláusulas da spec 49 e dos pontos listados em [rascunho-clausulas-49.md](rascunho-clausulas-49.md) §15 | Pendente; antes de ligar pagamento ou anúncio reais (49 D49-16) |
 
 ## Histórico de mudanças
 

@@ -1,6 +1,6 @@
 ---
 estado: aprovado
-atualizado: 2026-09-29
+atualizado: 2026-10-02
 canonico-de: [inventário de dados pessoais, finalidades, retenção, menores]
 substitui: []
 substituido-por: null
@@ -53,8 +53,16 @@ Enviado a terceiros: à OpenAI, só quando o aluno envia uma mensagem à Foca IA
 | Conteúdo enviado à IA | mensagens, foto | Responder à dúvida | Execução de contrato + consentimento do responsável aos 17 | **Não guardado por nós**; OpenAI até 30 dias (monitoramento de abuso) |
 | Segurança | eventos de login, IP truncado (/24 ou /48) | Prevenir abuso | Legítimo interesse | 6 meses (boa prática; o art. 15 do Marco Civil obriga pessoa jurídica) |
 | Cookie de sessão | token de sessão | Manter o login | Essencial ao serviço | 30 dias com renovação |
+| Pagador **(spec 49 — vale quando a entrega for publicada; E1)** | nome, CPF, e-mail, endereço e telefone (quando o Asaas exige) e cartão: **só no Asaas** (operador), nunca no banco nem no log do Foca. No Foca: id do cliente no Asaas e data da declaração de maioridade (`cliente_pagamento`, sem CPF) | Cobrança e nota fiscal | Execução de contrato; obrigação legal (fiscal) | Asaas: prazo fiscal (a confirmar com o contador, normalmente 5 anos). Foca: enquanto houver assinatura ou compra + prazo fiscal |
+| Assinaturas, cobranças e compras **(spec 49 — vale quando a entrega for publicada; E1)** | `assinatura`, `cobranca`, `compra`, `evento_pagamento` (sem o corpo do evento), `protetor_credito` | Liberar o plano, reembolso, suporte | Execução de contrato | Prazo fiscal; a exclusão de conta guarda só o mínimo fiscal, sem vínculo com o estudo |
+| Vidas do dia **(spec 49 — vale quando a entrega for publicada; E2)** | `vidas_dia` (perdidas, ganha por anúncio) | Regra do plano Free | Execução de contrato | 30 dias |
+| Consentimento de cookies de anúncio **(spec 49 — vale quando a entrega for publicada; E2)** | escolha e data em `consent` | Provar o consentimento | Consentimento | Enquanto a conta existir |
+| Dados enviados ao Google Ad Manager **(spec 49 — vale quando a entrega for publicada; E2)** | o que o script do Google lê no navegador (lista exata a confirmar no spike, 49 T-49.6.1), pedido não personalizado e marcação de menor de 18. **Nunca:** nome, e-mail, idade exata, desempenho, conversa com a Foca IA, páginas de conta, segmentação com dado do aluno | Exibir anúncio não personalizado no Free | Consentimento (cookies) / legítimo interesse sem cookies (limited ads): **a revisão jurídica decide** | Política do Google. Papel do Google (operador ou controlador conjunto): a confirmar na revisão jurídica |
+| Ranking **(spec 49 — vale quando a entrega for publicada; E3)** | apelido, `maior_desde`, participação e grupo da semana (`ranking_participante`, `ranking_grupo`); só maiores de 18 | Ranking semanal opcional | Consentimento (opt-in) | Até sair do ranking + 30 dias |
+| Redação **(spec 49 — vale quando a entrega for publicada; E3)** | texto, tema e correção (`redacao`); o texto vai à OpenAI (já operadora) | Corretor e treino de redação | Execução de contrato | Enquanto a conta existir; apagável pelo aluno. OpenAI: até 30 dias |
+| Funções pagas **(spec 49 — vale quando a entrega for publicada; E3)** | caderno de erros, cronograma, simulados (`caderno_item`, `cronograma`, `simulado`) | Funções do Basic e do Pro | Execução de contrato | Enquanto a conta existir; preservados ao voltar ao Free |
 
-**Não coletamos:** data completa de nascimento, escola, cidade, telefone, foto de perfil, localização, contatos. **Não há** analytics, publicidade nem venda de dados. **Revista pela 49 (aprovada em 02/10/2026):** publicidade não personalizada no plano Free, CPF do pagador só no Asaas, apelido do ranking e redações entram como linhas novas na T-49.3.8, quando a entrega correspondente for publicada ([spec 49](../specs/49-planos-e-monetizacao/spec.md) §9).
+**Não coletamos:** data completa de nascimento, escola, cidade, telefone, foto de perfil, localização, contatos. **Não há** analytics, publicidade nem venda de dados. **Revista pela 49 (aprovada em 02/10/2026):** a publicidade não personalizada do plano Free entra com a entrega **E2** da 49 e só vale quando ela for publicada; analytics de terceiros e venda de dados continuam fora. As demais linhas marcadas "spec 49" acima (pagador só no Asaas, ranking, redações) seguem a mesma regra ([spec 49](../specs/49-planos-e-monetizacao/spec.md) §9; cláusulas em [rascunho-clausulas-49.md](../legal/rascunho-clausulas-49.md)). O telefone e o endereço do pagador, quando pedidos, são coletados pelo Asaas, não pelo Foca.
 
 ## 4. Operadores e transferência internacional
 
@@ -66,6 +74,8 @@ Enviado a terceiros: à OpenAI, só quando o aluno envia uma mensagem à Foca IA
 | Google | Login | Global | Sim |
 | OpenAI | Foca IA | EUA (sem região na América do Sul) | Sim |
 | YouTube | Vídeos incorporados | Global | Sim (política própria do Google) |
+| Asaas **(spec 49 — vale quando a entrega for publicada; E1)** | Pagamentos (cliente, cobrança, nota fiscal) | Brasil | A confirmar |
+| Google Ad Manager **(spec 49 — vale quando a entrega for publicada; E2)** | Anúncios não personalizados no Free | Global | Sim; papel do Google (operador ou controlador conjunto) a confirmar na revisão jurídica |
 
 Cláusulas-padrão da ANPD (Res. 19/2024) com cada operador: **não verificado**; pendência jurídica (46 §H.5).
 
