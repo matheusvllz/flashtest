@@ -299,6 +299,20 @@ Escrito direto contra o [COPY.md](../COPY.md) e o [03](03-ux-writing.md) §2 (r�
 | `COPY.questao.fechar` / `diminuirZoom` / `aumentarZoom` / `zoomAtual(n)` | "Fechar" · "Diminuir zoom" · "Aumentar zoom" · "Zoom {n}" | Controles do visualizador; `zoomAtual` em `aria-live="polite"` | idem |
 | `COPY.creditos.*` | "Créditos e fontes" · "Questões do ENEM, ENEM PPL e ENCCEJA" · citação literal do rodapé do INEP · "Questões do Foca" · "Pedir a retirada de uma questão" · "Esse botão chega numa próxima versão do app." | Página `/creditos` e linha no Perfil | idem; sem juridiquês, sem prometer e-mail ou formulário que não existem |
 
+### 2.17 Simulado, reporte, liga, amigos e lembrete (docs/specs/50-gamificacao-e-pratica F10, E8, E9, 02/10/2026)
+
+Escrito direto contra o [COPY.md](../COPY.md) e o [03](03-ux-writing.md) §2 (sem skill de escrita: plugins não carregados nas sessões; alternativa da matriz). Regras checadas: nenhuma nota, TRI ou previsão no simulado (R-PROD-11); "Prova do ENEM" só para a prova de um ano, o resto "nível ENEM" (D50-03); nada de destaque para quem desce na liga; lembrete sem culpa e sem cobrança (R-GAM-2 item 6, R-VOZ-4). Nenhum nome acessível novo contém "Verificar" ou "Continuar" fora do contexto de uso (§2.4). **Revisão humana de tom pendente.**
+
+| Chave | Texto (amostra) | Uso | Revisão |
+|---|---|---|---|
+| `COPY.simulado.*` | "Mini-simulado da semana" · "Questões do ENEM de vários anos que você ainda não viu. Não é uma prova oficial." · "Rever depois" · "Terminar o simulado?" · "{n} questões estão em branco." · "O tempo de referência acabou. Continue no seu ritmo ou termine quando quiser." · "Isto é o seu desempenho neste simulado, não a sua nota no ENEM." · "O que revisar" | `/simulado` e `/simulado/$id` | `tests/e2e/simulado.spec.ts` |
+| `COPY.simulado.reportar.*` | "Reportar problema nesta questão" · "O que está errado?" · "Obrigado. Vamos conferir esta questão." | Questão oficial respondida (simulado e trilha) | idem |
+| `COPY.planos.beneficios.simulados` | "Simulados e provas do ENEM" (era "Simulados cronometrados (em breve)") | Cartão do Pro | `tests/e2e/planos.spec.ts` |
+| `COPY.liga.*` | "Liga da semana" · "Cada dia com estudo vale 100 pontos e cada bloco concluído vale 10, até 5 blocos por dia." · "Zona de subida" · "Sua liga está se formando…" | `/ranking` com ligas ligadas (18+) | `tests/e2e/ranking.spec.ts` |
+| `COPY.amigos.*` | "O link vale por 3 dias e só para uma pessoa. O Foca não lê seus contatos." · "A ofensiva com amigos é para maiores de 18. O resto do Foca continua igual para você." · "Convite indisponível." · "Recebemos o aviso. O apelido fica oculto até a revisão." | `/amigos` e `/amigos/convite/$codigo` | `tests/e2e/amigos.spec.ts` |
+| `COPY.lembrete.*` | "Um aviso por dia, no horário que você escolher, só nos dias em que você ainda não estudou." · "Horário de Brasília, aproximado: pode chegar até uma hora depois." · "Pausamos o lembrete. Quer ligar de novo?" · guia do iPhone em 4 passos | Seção "Lembrete do dia" no Perfil | `tests/e2e/lembretes.spec.ts` |
+| `voz.lembrete` (6 frases) | "Sua lição de hoje está pronta." · "Hoje tem lição nova na trilha." … | Corpo da notificação; ícone institucional, sem expressão da Foca (`mascote.md` §2) | `tests/unit/lembretes.test.ts` |
+
 ## 3. Pendente — inventariado, não revisado
 
 Levantamento por arquivo (não por string individual — a granularidade da seção 2 é o padrão a aplicar quando cada um destes for revisado). Nenhum destes foi confirmado livre de tom incompatível; tratar como não verificado.

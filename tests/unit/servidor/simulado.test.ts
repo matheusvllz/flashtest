@@ -6,6 +6,7 @@ import { beforeEach, describe, expect, test } from "bun:test";
 import { randomUUID } from "node:crypto";
 import { and, eq } from "drizzle-orm";
 import { assinatura, attempt, xpLedger } from "../../../src/server/db/schema";
+import { exportarDadosDoAluno } from "../../../src/server/conta/dados";
 import { exercicioDoItem } from "../../../src/server/estudo/conteudo";
 import {
   concluirSimulado,
@@ -138,6 +139,10 @@ test("reporte: duas pessoas com o mesmo motivo retiram a questão dos simulados;
   expect((await reportarQuestao(amb.db, a, item, "gabarito")).retirada).toBe(false);
   expect((await reportarQuestao(amb.db, b, item, "imagem")).retirada).toBe(false);
   expect((await reportarQuestao(amb.db, b, item, "gabarito")).retirada).toBe(true);
+  const exportA = await exportarDadosDoAluno(amb.db, a, AGORA);
+  expect(exportA.simulados.length).toBe(1);
+  expect(exportA.reportesDeQuestao).toEqual([expect.objectContaining({ item, motivo: "gabarito" })]);
+  expect((await exportarDadosDoAluno(amb.db, b, AGORA)).simulados).toEqual([]);
   const c = await aluno("rep-c@foca.dev", true);
   const prova = (await opcoesDeSimulado(amb.db, c, AGORA)).completo.provas;
   for (const p of prova.slice(0, 8)) {

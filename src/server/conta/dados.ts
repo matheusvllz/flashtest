@@ -21,6 +21,8 @@ import {
   consent,
   cosmeticoEquipado,
   cronograma,
+  questaoReporte,
+  simulado,
   desafioMes,
   inventario,
   marcoOfensiva,
@@ -71,6 +73,12 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
       .where(doAluno(cobranca)),
     vidas: await db.select({ dia: vidasDia.localDate, perdidas: vidasDia.perdidas, ganhasAnuncio: vidasDia.ganhasAnuncio }).from(vidasDia).where(doAluno(vidasDia)),
     protetores: await db.select({ quantidade: protetorCredito.quantidade, motivo: protetorCredito.motivo, dia: protetorCredito.localDate }).from(protetorCredito).where(doAluno(protetorCredito)),
+    // Spec 50 §5.9: simulados (itens, respostas, resultado) e reportes de questão feitos pelo aluno.
+    simulados: await db
+      .select({ tipo: simulado.tipo, rotulo: simulado.rotulo, itens: simulado.itens, respostas: simulado.respostas, resultado: simulado.resultado, iniciadoEm: simulado.iniciadoEm, concluidoEm: simulado.concluidoEm })
+      .from(simulado)
+      .where(doAluno(simulado)),
+    reportesDeQuestao: await db.select({ item: questaoReporte.itemId, motivo: questaoReporte.motivo, em: questaoReporte.criadoEm }).from(questaoReporte).where(doAluno(questaoReporte)),
     ranking: await db
       .select({ apelido: rankingParticipante.apelido, entrouEm: rankingParticipante.entrouEm, saiuEm: rankingParticipante.saiuEm })
       .from(rankingParticipante)

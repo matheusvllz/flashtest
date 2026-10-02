@@ -118,9 +118,17 @@ Pendências reais do Foca, consolidadas dos registros de execução e dos achado
 | B-165 | Separar metadados das lições de redação (ids, títulos, contagem, habilidades por exercício) do texto dos exercícios: `trilhas-*.js` tem 158 KB comprimidos no caminho da trilha | 48 `desempenho.md` | P1 | técnico | — | agente | aberto (precisa de tarefa com testes do motor) |
 | B-166 | Tarefas longas na landing (~850 ms somados com CPU 4×) na hidratação | 48 `desempenho.md` | P2 | técnico | — | agente | aberto |
 | B-167 | Itens do caderno de erros entrarem na jornada como revisão escolhida pelo motor (hoje a revisão é uma sessão própria em `/caderno`) — pede contrato em `contratos.md` | 49 DV49-10 | P2 | produto | — | agente (com spec) | aberto |
-| B-168 | Simulado cronometrado do Pro: liberar quando houver itens revisados suficientes por área (45 por área, 90 por dia de prova) | 49 DV49-09, T-49.9.5 | P1 | conteúdo | B-040, B-041 | revisão externa + agente | aberto |
+| B-168 | Simulado cronometrado do Pro: liberar quando houver itens revisados suficientes por área (45 por área, 90 por dia de prova) | 49 DV49-09, T-49.9.5 | P1 | conteúdo | B-040, B-041 | revisão externa + agente | **feito (02/10/2026)**: spec 50 F10 com as questões oficiais do INEP (gabarito oficial contam como revisadas, 50 §0.2) |
 | B-169 | Corretor de redação: rubrica revisada por professor externo antes de ligar `CORRETOR_HABILITADO`; depois, foto com transcrição conferida | 49 DV49-08, T-49.9.7 | P1 | conteúdo | B-040 | proprietário (contratação) + agente | aberto **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2. |
 | B-170 | Teste real do estudo sem internet no preview (aparelho em modo avião depois de "Baixar a semana") | 49 DV49-11, T-49.9.3 | P2 | produto | — | proprietário | aberto |
+| B-171 | "Dar um toque" na ofensiva em dupla (aviso ao amigo que ainda não estudou), decidido à parte pelo dono | 50 §5.6.6, T-50.16.1 | P2 | produto | revisão jurídica (B-033) | proprietário | aberto |
+| B-172 | Painel de responsável (ECA arts. 17–18): acompanhar uso e configurações de quem tem menos de 18 | 50 T-50.16.1 | P1 | produto | revisão jurídica (B-033) | proprietário + agente | aberto |
+| B-173 | Importar ENEM 2021 (PDFs sem mapa Unicode: pede OCR conferido), as questões de espanhol e o lote 2009–2018, PPL e ENCCEJA | 50 T-50.9.8, registro E5 | P2 | conteúdo | — | agente | aberto |
+| B-174 | Explicações das 906 questões oficiais importadas (`explicacaoPendente`) e revisão humana dos alt automáticos | 50 T-50.9.5 | P1 | conteúdo | B-040 | agente + revisão | aberto |
+| B-175 | Lembrete em horário livre (hoje 4 janelas fixas; o cron do Vercel Hobby dispara em algum momento da hora) | 50 T-50.16.1, registro E9 | P3 | técnico | Vercel Pro | proprietário | aberto |
+| B-176 | Antifraude da liga pela mediana de tempo entre respostas (o servidor ainda não mede esse tempo) | 50 DV50-16 | P2 | técnico | — | agente | aberto |
+| B-177 | Ferramenta do suporte para resolver denúncias e corrigir idade (`aoCorrigirIdadeParaMenor` existe, sem tela nem script) | 50 registro E8 | P1 | técnico | — | agente | aberto |
+| B-178 | `pushsubscriptionchange` no worker (hoje a assinatura trocada pelo navegador morre com 410 e o aluno religa no Perfil) e aviso "Pausamos o lembrete" fora do Perfil | 50 registro E9, DV50-18 | P3 | técnico | — | agente | aberto |
 
 ## Segurança e IA
 

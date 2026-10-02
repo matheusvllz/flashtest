@@ -36,11 +36,11 @@ Regra de ouro: **a Foca aparece em transições emocionais, não como decoraçã
 | Foca IA (botão e cabeçalho do painel) | Pequena, `neutra` | 45 §5; `src/components/TutorBubble.tsx:265,282` |
 | Painel da marca no onboarding e no login (≥ 1024 px) | `acolhedora` | 44 §5; `src/components/EntryShell.tsx:28` |
 | **Cabeçalho de tela comum** | **Ausente** | 15 §4 |
-| **Durante a questão** | **Ausente**: nada compete com o enunciado | 15 §4 **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2. |
+| **Durante a questão** | **Ausente**: nada compete com o enunciado | 15 §4 **Em vigor pela 50 (publicada em 02/10/2026; [spec 50](../specs/50-gamificacao-e-pratica/spec.md) §0.2):** ausente **antes** da resposta; depois dela, só nos marcos de combo 5 e 10, na folha de feedback, `empolgada` (spec 50 §5.1.2). |
 
 Na landing, as telas do app refeitas em HTML usam a mesma expressão do app (motivo e tutor `neutra`, folha de erro `acolhedora`), e a demo segue o resultado (acerto `orgulhosa`, erro `acolhedora`, "Não sei" `neutra`) (45 §5; `src/marketing/components/app/screens.tsx`, `src/marketing/sections/TryOne.tsx:125`).
 
-Notificações não existem hoje (46 §A.2). Se um dia existirem, valem as regras do §1 e as de `design/gamificacao-e-som.md` §7. **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2 e §5.8.
+Notificações não existem hoje (46 §A.2). Se um dia existirem, valem as regras do §1 e as de `design/gamificacao-e-som.md` §7. **Em vigor pela 50 (publicada em 02/10/2026; [spec 50](../specs/50-gamificacao-e-pratica/spec.md) §0.2):** existe um lembrete diário opt-in por push. Ele usa o **ícone institucional** (I-4), nunca expressão nem frase emocional da Foca; o texto vem do slot `lembrete` de `src/lib/voz.ts`, sem culpa e sem cobrança (spec 50 §5.2.5).
 
 ## 3. As 8 expressões oficiais
 
@@ -101,7 +101,7 @@ Conferência de 29/09/2026: `desapontada` só é usada em `src/routes/__root.tsx
 | `expression` | Uma das 8 expressões (`focaExpressionSrc`); só vale com `variant="color"` |
 | `variant` | `color` (padrão), `line-light`, `line-dark` (contorno para marca d'água, um por tema) |
 | `size` | Lado em px; até 48 px usa o derivado de 96, acima usa o de 320 (`foca-expressions.ts:92-96`) |
-| `motion` | `pop`, `float`, `breathe` ou `none` (padrão). Nunca rotação **Revista pela 50 (aprovada em 02/10/2026):** o texto novo entra em vigor quando a entrega da [spec 50](../specs/50-gamificacao-e-pratica/spec.md) que a implementa for publicada; ver 50 §0.2. |
+| `motion` | `pop`, `float`, `breathe` ou `none` (padrão). Nunca rotação **Em vigor pela 50 (publicada em 02/10/2026; [spec 50](../specs/50-gamificacao-e-pratica/spec.md) §0.2):** a Foca inteira continua sem rotação; partes articuladas do corpo (nadadeiras, cauda) giram até 25° em torno da articulação (spec 50 §5.8). |
 | `decorative` | `true` tira a imagem da árvore de acessibilidade (quando o texto ao lado já diz o que ela diz) |
 | `forma` | `cabeca` (padrão: tudo acima, sem mudança) ou `corpo` (a Foca de corpo inteiro, §6.1; spec 50 §5.8.2) |
 | `pose` | Só no corpo: `parada`, `aceno`, `pulo`, `palmas`, `cauda`, `dormindo` (§6.1) |
