@@ -1,0 +1,535 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "oficial:2019:290dd34e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dizem que Humboldt, naturalista do século XIX, maravilhado pela geografia, flora e fauna da região sul-americana, via seus habitantes como se fossem mendigos sentados sobre um saco de ouro, referindo-se a suas incomensuráveis riquezas naturais não exploradas. De alguma maneira, o cientista ratificou nosso papel de exportadores de natureza no que seria o mundo depois da colonização ibérica: enxergou-nos como territórios condenados a aproveitar os recursos naturais existentes.\n\nACOSTA, A. Bem viver: uma oportunidade para imaginar outros mundos.\n\nSão Paulo: Elefante, 2016 (adaptado).\n\nA relação entre ser humano e natureza ressaltada no texto refletia a permanência da seguinte corrente filosófica:",
+        "opcoes": [
+          "Relativismo cognitivo.",
+          "Materialismo dialético.",
+          "Racionalismo cartesiano.",
+          "Pluralismo epistemológico.",
+          "Existencialismo fenomenológico."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:290dd34e",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 48"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.207Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:5e584a32",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A hospitalidade pura consiste em acolher aquele que chega antes de lhe impor condições, antes de saber e indagar o que quer que seja, ainda que seja um nome ou um “documento” de identidade. Mas ela também supõe que se dirija a ele, de maneira singular, chamando-o portanto e reconhecendo-lhe um nome próprio: “Como você se chama?” A hospitalidade consiste em fazer tudo para se dirigir ao outro, em lhe conceder, até mesmo perguntar seu nome, evitando que essa pergunta se torne uma “condição”, um inquérito policial, um fichamento ou um simples controle das fronteiras. Uma arte e uma poética, mas também toda uma política dependem disso, toda uma ética se decide aí.\n\nDERRIDA, J. Papel-máquina. São Paulo:\n\nEstação Liberdade, 2004 (adaptado).\n\nAssociado ao contexto migratório contemporâneo, o conceito de hospitalidade proposto pelo autor impõe a necessidade de",
+        "opcoes": [
+          "anulação da diferença.",
+          "cristalização da biografia.",
+          "incorporação da alteridade.",
+          "supressão da comunicação.",
+          "verificação da proveniência."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:5e584a32",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 50"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.209Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:a995b22e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De fato, não é porque o homem pode usar a vontade livre para pecar que se deve supor que Deus a concedeu para isso. Há, portanto, uma razão pela qual Deus deu ao homem esta característica, pois sem ela não poderia viver e agir corretamente. Pode-se compreender, então, que ela foi concedida ao homem para esse fim, considerando-se que se um homem a usa para pecar, recairão sobre ele as punições divinas. Ora, isso seria injusto se a vontade livre tivesse sido dada ao homem não apenas para agir corretamente, mas também para pecar. Na verdade, por que deveria ser punido aquele que usasse sua vontade para o fim para o qual ela lhe foi dada?\n\nAGOSTINHO. O livre-arbítrio. In: MARCONDES, D. Textos básicos\nde ética. Rio de Janeiro: Jorge Zahar, 2008.\n\nNesse texto, o filósofo cristão Agostinho de Hipona sustenta que a punição divina tem como fundamento o(a)",
+        "opcoes": [
+          "desvio da postura celibatária.",
+          "insuficiência da autonomia moral.",
+          "afastamento das ações de desapego.",
+          "distanciamento das práticas de sacrifício.",
+          "violação dos preceitos do Velho Testamento."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:a995b22e",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 58"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.273Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:73800a70",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para Maquiavel, quando um homem decide dizer a verdade pondo em risco a própria integridade física, tal resolução diz respeito apenas a sua pessoa. Mas se esse mesmo homem é um chefe de Estado, os critérios pessoais não são mais adequados para decidir sobre ações cujas consequências se tornam tão amplas, já que o prejuízo não será apenas individual, mas coletivo. Nesse caso, conforme as circunstâncias e os fins a serem atingidos, pode-se decidir que o melhor para o bem comum seja mentir.\n\nARANHA, M. L. Maquiavel: a lógica da força.\n\nSão Paulo: Moderna, 2006 (adaptado).\n\nO texto aponta uma inovação na teoria política na época moderna expressa na distinção entre",
+        "opcoes": [
+          "idealidade e efetividade da moral.",
+          "nulidade e preservabilidade da liberdade.",
+          "ilegalidade e legitimidade do governante.",
+          "verificabilidade e possibilidade da verdade.",
+          "objetividade e subjetividade do conhecimento."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:73800a70",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 65"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.581Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:6febd3d4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nConsidero apropriado deter-me algum tempo na contemplação deste Deus todo perfeito, ponderar totalmente à vontade seus maravilhosos atributos, considerar, admirar e adorar a incomparável beleza dessa imensa luz.\n\nDESCARTES, R. Meditações. São Paulo: Abril Cultural, 1980.\n\nTEXTO II\n\nQual será a forma mais razoável de entender como é o mundo? Existirá alguma boa razão para acreditar que o mundo foi criado por uma divindade todo-poderosa? Não podemos dizer que a crença em Deus é “apenas” uma questão de fé.\n\nRACHELS, J. Problemas da filosofia. Lisboa: Gradiva, 2009.\n\nOs textos abordam um questionamento da construção da modernidade que defende um modelo",
+        "opcoes": [
+          "centrado na razão humana.",
+          "baseado na explicação mitológica.",
+          "fundamentado na ordenação imanentista.",
+          "focado na legitimação contratualista.",
+          "configurado na percepção etnocêntrica."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:6febd3d4",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 67"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.582Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:b035e841",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Art. 90. As nomeações dos deputados e senadores para a Assembleia Geral, e dos membros dos Conselhos Gerais das províncias, serão feitas por eleições, elegendo a massa dos cidadãos ativos em assembleias paroquiais, os eleitores de província, e estes, os representantes da nação e província.\n\nArt. 92. São excluídos de votar nas assembleias paroquiais:\n\nI. Os menores de vinte e cinco anos, nos quais\nse não compreendem os casados, os oficiais militares, que forem maiores de vinte e um anos, os bacharéis formados e os clérigos de ordens sacras. II. Os filhos de famílias, que estiverem na\ncompanhia de seus pais, salvo se servirem a ofícios públicos.\nIII. Os criados de servir, em cuja classe não entram\nos guarda-livros, e primeiros caixeiros das casas de comércio, os criados da Casa Imperial, que não forem de galão branco, e os administradores das fazendas rurais e fábricas. IV. Os religiosos e quaisquer que vivam em\ncomunidade claustral.\nV. Os que não tiverem de renda líquida anual cem\nmil réis por bens de raiz, indústria, comércio, ou emprego.\n\nBRASIL. Constituição de 1824. Disponível em: www.planalto.gov.br.\n\nAcesso em: 4 abr. 2015 (adaptado).\n\nDe acordo com os artigos do dispositivo legal apresentado, o sistema eleitoral instituído no início do Império é marcado pelo(a)",
+        "opcoes": [
+          "representação popular e sigilo individual.",
+          "voto indireto e perfil censitário.",
+          "liberdade pública e abertura política.",
+          "ética partidária e supervisão estatal.",
+          "caráter liberal e sistema parlamentar."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:b035e841",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 72"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.585Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:8625cb54",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Penso que não há um sujeito soberano, fundador, uma forma universal de sujeito que poderíamos encontrar em todos os lugares. Penso, pelo contrário, que o sujeito se constitui através das práticas de sujeição ou, de maneira mais autônoma, através de práticas de liberação, de liberdade, como na Antiguidade — a partir, obviamente, de um certo número de regras, de estilos, que podemos encontrar no meio cultural.\n\nFOUCAULT, M. Ditos e escritos V: ética, sexualidade, política.\n\nRio de Janeiro: Forense Universitária, 2004.\n\nO texto aponta que a subjetivação se efetiva numa dimensão",
+        "opcoes": [
+          "legal, pautada em preceitos jurídicos.",
+          "racional, baseada em pressupostos lógicos.",
+          "contingencial, processada em interações sociais.",
+          "transcendental, efetivada em princípios religiosos.",
+          "essencial, fundamentada em parâmetros substancialistas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:8625cb54",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 74"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.586Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:36cc1657",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nOs segredos da natureza se revelam mais sob a tortura dos experimentos do que no seu curso natural.\n\nBACON, F. Novum Organum, 1620. In: HADOT, P. O véu de Ísis:\n\nensaio sobre a história da ideia de natureza.\n\nSão Paulo: Loyola, 2006.\n\nTEXTO II\n\nO ser humano, totalmente desintegrado do todo, não percebe mais as relações de equilíbrio da natureza. Age de forma totalmente desarmônica sobre o ambiente, causando grandes desequilíbrios ambientais.\n\nGUIMARÃES, M. A dimensão ambiental na educação.\n\nCampinas: Papirus, 1995.\n\nOs textos indicam uma relação da sociedade diante da natureza caracterizada pela",
+        "opcoes": [
+          "objetificação do espaço físico.",
+          "retomada do modelo criacionista.",
+          "recuperação do legado ancestral.",
+          "infalibilidade do método científico.",
+          "formação da cosmovisão holística."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:36cc1657",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 75"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.587Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:40548e09",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nDuas coisas enchem o ânimo de admiração e veneração sempre crescentes: o céu estrelado sobre mim e a lei moral em mim.\n\nKANT, I. Crítica da razão prática. Lisboa: Edições 70, s/d (adaptado).\n\nTEXTO II\nDuas coisas admiro: a dura lei cobrindo-me e o estrelado céu dentro de mim.\n\nFONTELA, O. Kant (relido). In: Poesia completa.\n\nSão Paulo: Hedra, 2015.\n\nA releitura realizada pela poeta inverte as seguintes ideias centrais do pensamento kantiano:",
+        "opcoes": [
+          "Possibilidade da liberdade e obrigação da ação.",
+          "Aprioridade do juízo e importância da natureza.",
+          "Necessidade da boa vontade e crítica da metafísica.",
+          "Prescindibilidade do empírico e autoridade da razão.",
+          "Interioridade da norma e fenomenalidade do mundo."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:40548e09",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 78"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.825Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:02100774",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Declaração Universal dos Direitos Humanos, adotada e proclamada pela Assembleia Geral da ONU na Resolução 217-A, de 10 de dezembro de 1948, foi um acontecimento histórico de grande relevância. Ao afirmar, pela primeira vez em escala planetária, o papel dos direitos humanos na convivência coletiva, pode ser considerada um evento inaugural de uma nova concepção de vida internacional.\n\nLAFER, C. Declaração Universal dos Direitos Humanos (1948). In: MAGNOLI, D. (Org.). História da paz. São Paulo: Contexto, 2008.\n\nA declaração citada no texto introduziu uma nova concepção nas relações internacionais ao possibilitar a",
+        "opcoes": [
+          "superação da soberania estatal.",
+          "defesa dos grupos vulneráveis.",
+          "redução da truculência belicista.",
+          "impunidade dos atos criminosos.",
+          "inibição dos choques civilizacionais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:02100774",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 84"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.827Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "oficial:2020:04fffd73",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nas últimas décadas, uma acentuada feminização no mundo do trabalho vem ocorrendo. Se a participação masculina pouco cresceu no período pós-1970, a intensificação da inserção das mulheres foi o traço marcante. Entretanto, essa presença feminina se dá mais no espaço dos empregos precários, onde a exploração, em grande medida, se encontra mais acentuada.\n\nNOGUEIRA, C. M. As trabalhadoras do telemarketing: uma nova divisão sexual do trabalho?\n\nIn: ANTUNES, R. et al. Infoproletários: degradação real do trabalho virtual.\n\nSão Paulo: Boitempo, 2009.\n\nA transformação descrita no texto tem sido insuficiente para o estabelecimento de uma condição de igualdade de oportunidade em virtude da(s)",
+        "opcoes": [
+          "estagnação de direitos adquiridos e do anacronismo da legislação vigente.",
+          "manutenção do status quo gerencial e dos padrões de socialização familiar.",
+          "desestruturação da herança patriarcal e das mudanças do perfil ocupacional.",
+          "disputas na composição sindical e da presença na esfera político-partidária.",
+          "exigências de aperfeiçoamento profissional e de habilidades na competência diretiva."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:04fffd73",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 48"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.481Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:1ae7878c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "“Devo estar chegando perto do centro da Terra. Deixe ver: deve ter sido mais de seis mil quilômetros, por aí...” (como se vê, Alice tinha aprendido uma porção de coisas desse tipo na escola, e embora essa não fosse uma oportunidade lá muito boa de demonstrar conhecimentos, já que não havia ninguém por perto para escutá-la, em todo caso era bom praticar um pouco) “... sim, deve ser mais ou menos essa a distância... mas então qual seria a latitude ou longitude em que estou?” (Alice não tinha a menor ideia do que fosse latitude ou longitude, mas achou que eram palavras muito imponentes).\n\nCARROLL, L. Aventuras de Alice: no País das Maravilhas, Através do espelho e outros textos.\n\nSão Paulo: Summus, 1980.\n\nO texto descreve uma confusão da personagem em relação",
+        "opcoes": [
+          "ao tipo de projeção cartográfica.",
+          "aos contornos dos fusos horários.",
+          "à localização do norte magnético.",
+          "aos referenciais de posição relativa.",
+          "às distorções das formas continentais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:1ae7878c",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 53"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.975Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:ea75585b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em A morte de Ivan Ilitch, Tolstoi descreve com detalhes repulsivos o terror de encarar a morte iminente. Ilitch adoece depois de um pequeno acidente e logo compreende que se encaminha para o fim de modo impossível de parar. “Nas profundezas de seu coração, ele sabia estar morrendo, mas em vez de se acostumar com a ideia, simplesmente não o fazia e não conseguia compreendê-la”.\n\nKAZEZ, J. O peso das coisas: filosofia para o bem-viver. Rio de Janeiro: Tinta Negra, 2004.\n\nO texto descreve a experiência do personagem de Tolstoi diante de um aspecto incontornável de nossas vidas. Esse aspecto foi um tema central na tradição filosófica",
+        "opcoes": [
+          "marxista, no contexto do materialismo histórico.",
+          "logicista, no propósito de entendimento dos fatos.",
+          "utilitarista, no sentido da racionalidade das ações.",
+          "pós-modernista, na discussão da fluidez das relações.",
+          "existencialista, na questão do reconhecimento de si."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:ea75585b",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 60"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.979Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:64fff452",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Montaigne deu o nome para um novo gênero literário; foi dos primeiros a instituir na literatura moderna um espaço privado, o espaço do “eu”, do texto íntimo. Ele cria um novo processo de escrita filosófica, no qual hesitações, autocríticas, correções entram no próprio texto.\n\nCOELHO, M. Montaigne. São Paulo: Publifolha, 2001 (adaptado).\n\nO novo gênero de escrita aludido no texto é o(a)",
+        "opcoes": [
+          "confissão, que relata experiências de transformação.",
+          "ensaio, que expõe concepções subjetivas de um tema.",
+          "carta, que comunica informações para um conhecido.",
+          "meditação, que propõe preparações para o conhecimento.",
+          "diálogo, que discute assuntos com diferentes interlocutores."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:64fff452",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 72"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.228Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:29da6f22",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nOs meus pensamentos são todos sensações.\nPenso com os olhos e com os ouvidos\nE com as mãos e os pés\nE com o nariz e a boca.\n\nPESSOA, F. O guardador de rebanhos – IX. In: GALHOZ, M. A. (Org.). Obras poéticas.\n\nRio de Janeiro: Nova Aguilar, 1999 (fragmento).\n\nTEXTO II\n\nTudo aquilo que sei do mundo, mesmo por ciência, eu o sei a partir de uma visão minha ou de uma experiência do mundo sem a qual os símbolos da ciência não poderiam dizer nada.\n\nMERLEAU-PONTY, M. Fenomenologia da percepção. São Paulo:\n\nMartins Fontes, 1999 (adaptado).\n\nOs textos mostram-se alinhados a um entendimento acerca da ideia de conhecimento, numa perspectiva que ampara a",
+        "opcoes": [
+          "anterioridade da razão no domínio cognitivo.",
+          "confirmação da existência de saberes inatos.",
+          "valorização do corpo na apreensão da realidade.",
+          "verificabilidade de proposições no campo da lógica.",
+          "possibilidade de contemplação de verdades atemporais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:29da6f22",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 74"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.230Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:e86c69db",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Vemos que toda cidade é uma espécie de comunidade, e toda comunidade se forma com vistas a algum bem, pois todas as ações de todos os homens são praticadas com vistas ao que lhe parece um bem; se todas as comunidades visam algum bem, é evidente que a mais importante de todas elas e que inclui todas as outras tem mais que todas este objetivo e visa ao mais importante de todos os bens.\n\nARISTÓTELES. Política. Brasília: UnB,1988.\n\nNo fragmento, Aristóteles promove uma reflexão que associa dois elementos essenciais à discussão sobre a vida em comunidade, a saber:",
+        "opcoes": [
+          "Ética e política, pois conduzem à eudaimonia.",
+          "Retórica e linguagem, pois cuidam dos discursos na ágora.",
+          "Metafísica e ontologia, pois tratam da filosofia primeira.",
+          "Democracia e sociedade, pois se referem a relações sociais.",
+          "Geração e corrupção, pois abarcam o campo da physis."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:e86c69db",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 77"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.232Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:6aee560b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O fenômeno histórico conhecido como “tráfico de coolies” esteve associado diretamente ao período que vai do final da década de 1840 até o ano de 1874, quando milhares de chineses foram encaminhados principalmente para Cuba e Peru e muitos abusos no recrutamento de mão de obra foram identificados. O tráfico de coolies ou, em outros termos, o transporte por meios coativos de mão de obra de um lugar para outro, foi comparado ao tráfico africano de escravos por muitos periodistas e analistas do século XIX.\n\nSANTOS, M. A. Migrações e trabalho sob contrato no século XIX. História, n. 12, 2017.\n\nA comparação mencionada no texto foi possível em razão da seguinte característica:",
+        "opcoes": [
+          "Oferta de contrato formal.",
+          "Origem étnica dos grupos de trabalhadores.",
+          "Conhecimento das tarefas desenvolvidas.",
+          "Controle opressivo das vidas dos indivíduos.",
+          "Investimento requerido dos empregadores."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:6aee560b",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 79"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.233Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:e5ff30a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ao abrigo do teto, sua jornada de fé começava na sala de jantar. Na pequena célula cristã, dividia-se a refeição e durante elas os crentes conversavam, rezavam e liam cartas de correligionários residentes em locais diferentes do Império Romano (século II da Era Cristã). Esse ambiente garantia peculiar apoio emocional às experiências intensamente individuais que abrigava.\n\nSENNET, R. Carne e pedra. Rio de Janeiro: Record, 2008.\n\nUm motivo que explica a ambientação da prática descrita no texto encontra-se no(a)",
+        "opcoes": [
+          "regra judaica, que pregava a superioridade espiritual dos cultos das sinagogas.",
+          "moralismo da legislação, que dificultava as reuniões abertas da juventude livre.",
+          "adesão do patriciado, que subvertia o conceito original dos valores estrangeiros.",
+          "decisão política, que censurava as manifestações públicas da doutrina dissidente.",
+          "violência senhorial, que impunha a desestruturação forçada das famílias escravas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:e5ff30a2",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 83"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.236Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:42745622",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Adão, ainda que supuséssemos que suas faculdades racionais fossem inteiramente perfeitas desde o início, não poderia ter inferido da fluidez e transparência da água que ela o sufocaria, nem da luminosidade e calor do fogo que este poderia consumi-lo. Nenhum objeto jamais revela, pelas qualidades que aparecem aos sentidos, nem as causas que o produziram, nem os efeitos que dele provirão; e tampouco nossa razão é capaz de extrair, sem auxílio da experiência, qualquer conclusão referente à existência efetiva de coisas ou questões de fato.\n\nHUME, D. Uma investigação sobre o entendimento humano. São Paulo: Unesp, 2003.\n\nSegundo o autor, qual é a origem do conhecimento humano?",
+        "opcoes": [
+          "A potência inata da mente.",
+          "A revelação da inspiração divina.",
+          "O estudo das tradições filosóficas.",
+          "A vivência dos fenômenos do mundo.",
+          "O desenvolvimento do raciocínio abstrato."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:42745622",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 89"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.559Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

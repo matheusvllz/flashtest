@@ -1,0 +1,270 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "oficial:2024:718e1d67",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com a proximidade do final do século XIX, amplificam-se as expectativas com relação ao século seguinte. Se muitas eram as utopias, talvez uma das mais evidentes tenha se concentrado nas potencialidades da nova ciência, com suas invenções e projetos. Não é por mera coincidência que a agenda do país tenha sido tomada pela introdução de uma série de inventos. De forma acelerada, entraram no Brasil a luz elétrica e, com ela, o telégrafo, o telefone, o cinematógrafo. Na área dos transportes, o trem a vapor é substituído pelo elétrico, que assiste à entrada do automóvel e até do aeroplano.\n\nCOSTA, A. M.; SCHWARCZ, L. M. 1890-1914, no tempo das certezas.\n\nSão Paulo: Cia. das Letras, 2000 (adaptado).\n\nNo Brasil, os eventos descritos ganharam conotação política ao serem vinculados à",
+        "opcoes": [
+          "expansão estratégica do imperialismo.",
+          "ascensão gradual do mercantilismo.",
+          "laicidade da educação.",
+          "retomada do absolutismo.",
+          "visão republicana de nação."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:718e1d67",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 49"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.983Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:499d3463",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O bispo Bartolomeu de Las Casas é o homem mais odiado da América, o anti-Cristo dos senhores, o açoite destas terras. Por sua culpa, o imperador promulgou novas leis que despojam de escravos índios os filhos dos conquistadores. O que será deles sem os braços que os sustentam nas minas e nas lavouras? As novas leis estão arrancando a comida de suas bocas. Las Casas é o homem mais amado da América. Voz dos mudos, teimoso defensor dos que recebem pior tratamento que o esterco das praças, denunciador de quem por cobiça converte Jesus Cristo no mais cruel dos deuses e o rei em lobo faminto de carne humana.\n\nGALEANO, E. Os nascimentos. Porto Alegre:\n\nL&PM, 2011 (adaptado).\n\nOs diferentes pontos de vista presentes no texto expressam que o bispo era, ao mesmo tempo,",
+        "opcoes": [
+          "execrado pelos reis e reverenciado pelos religiosos do local.",
+          "detestado pelos colonizadores e respeitado pelos povos do lugar.",
+          "menosprezado pela colônia e idolatrado pelos governantes da região.",
+          "desrespeitado pela metrópole e adorado pelos invasores da Espanha.",
+          "desacatado pelos excluídos e valorizado pelos negociantes de negros."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:499d3463",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 50"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.983Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:a1a42e43",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A valsa vienense é a mais antiga das danças de salão tradicional. É dançada desde a Idade Média, quando os pares davam voltas pelo salão realizando giros em torno de si mesmos em postura fechada. Pelo fato de ser dançada aos pares em contato íntimo, a valsa encantava a sociedade medieval, como também sofria proibições por infringir os “bons costumes”. Originária das danças campestres e folclóricas, no século XVI, a aristocracia francesa abandonou a valsa por sua estreita relação com a cultura plebeia, retomando-a posteriormente.\n\nFRANCO, N.; FERREIRA, N. Evolução da dança no contexto histórico: aproximações iniciais com o tema. Repertório, n. 26, 2016 (adaptado).\n\nA expressão cultural descrita no texto foi rejeitada no início da Idade Moderna por congregar",
+        "opcoes": [
+          "traços advindos da feitiçaria nórdica.",
+          "práticas inspiradas em rituais pagãos.",
+          "regras decorrentes do período renascentista.",
+          "compassos produzidos em territórios colonizados.",
+          "elementos provenientes de segmentos populares."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:a1a42e43",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 51"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.984Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:85b8f658",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As instituições que a Idade Média nos legou são de um valor maior e mais imperecível do que suas catedrais. E a universidade é nitidamente uma instituição medieval — tanto quanto a monarquia constitucional, ou os parlamentos, ou o julgamento por meio do júri. As universidades e os produtos imediatos das suas atividades constituem a grande realização da Idade Média na esfera intelectual.\n\nRASHDALL, H. apud OLIVEIRA, T. Origem e memória das universidades medievais. Varia História, n. 37, jan.-jun. 2007.\n\nDe acordo com o texto, o legado das universidades medievais torna-se um relevante patrimônio histórico-cultural por",
+        "opcoes": [
+          "adotar currículo e método padronizado.",
+          "rejeitar ideologias e costumes orientais.",
+          "possuir organização e função mercantil.",
+          "transmitir técnicas e valores ecumênicos.",
+          "agregar tradição e conhecimento científico."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:85b8f658",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 59"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.051Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f0937ee0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Atribuo a causa desse florescimento estéril a um sistema de educação falso, extraído de livros sobre o assunto escrito por homens que, ao considerar as mulheres mais como fêmeas do que como criaturas humanas, estão mais ansiosos em torná-las damas sedutoras do que esposas afetuosas e mães racionais. O entendimento do sexo feminino tem sido tão distorcido por essa homenagem ilusória de que as mulheres civilizadas de nosso século, com raras exceções, anseiam apenas inspirar amor, quando deveriam nutrir uma ambição mais nobre e exigir respeito por suas capacidades e virtudes.\n\nWOLLSTONECRAFT, M. Reivindicação dos direitos da mulher.\n\nSão Paulo: Boitempo, 2016.\n\nNesse texto, escrito no século XVIII, a autora reivindica para as mulheres a",
+        "opcoes": [
+          "recuperação de sua participação política.",
+          "equiparação de ganhos salariais.",
+          "valorização de seu papel social.",
+          "distinção de padrões biológicos.",
+          "ocupação de cargos públicos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:f0937ee0",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 69"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.056Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

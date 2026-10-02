@@ -1,0 +1,662 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "oficial:2024:fd08659a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Muitas pessoas ainda se espantam com o fato de um passageiro sair ileso de um acidente de carro enquanto o veículo onde estava teve perda total. Essas pessoas talvez considerem, equivocadamente, que os carros mais seguros são os que têm as estruturas mais rígidas, ou seja, estruturas, que durante uma colisão, apresentam menor deformação. Na verdade, o que ocorre é o contrário. Por isso, a partir de 1958, passaram a ser produzidos carros com partes que se deformam facilmente.\n\nDAY, C. Crumple Zones. Disponível em: https://pubs.aip.org.\n\nAcesso em: 2 jul. 2024 (adaptado).\n\nAssim, além dos cintos de segurança e dos airbags, os carros modernos passaram a contar com o dispositivo de segurança conhecido como crumple zone (região deformável, em inglês), conforme a figura.\n\n[[imagem:0]]\n\nMomentum and Car safety. GCSE Physics Revision.\n\nDisponível em: www.shalom-education.com.\n\nAcesso em: 5 jul. 2024 (adaptado).\n\nConsiderando o carro, seus ocupantes e o muro da figura como um sistema isolado, o crumple zone aumenta a segurança dos passageiros porque, durante uma colisão, a deformação da estrutura do carro",
+        "opcoes": [
+          "aciona os airbags do veículo.",
+          "absorve a energia cinética do sistema.",
+          "consome a quantidade de movimento do sistema.",
+          "cria uma barreira de proteção para seus ocupantes.",
+          "diminui a velocidade do centro de massa do sistema."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q091-1.webp",
+            "alt": "Imagem da questão 91 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 964,
+            "altura": 564
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:fd08659a",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 91"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:05.849Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d6d18e91",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Nos automóveis, é importante garantir que o centro de massa (CM) de cada conjunto roda/pneu coincida com o seu centro geométrico. Esse processo é realizado em uma máquina de balanceamento, na qual o conjunto roda e pneu é colocado para girar a uma velocidade de valor constante. Com base nas oscilações medidas, a máquina indica a posição do centro de massa do conjunto, e pequenas peças de chumbo são fixadas em lugares específicos da roda até que as vibrações diminuam. Durante o treinamento de sua equipe, a fim de corrigir a posição do centro de massa indicada pela máquina, um mecânico apresenta o esquema a seguir, com cinco possíveis pontos da roda para posicionar uma peça de chumbo.\n\n[[imagem:0]]\n\nEm qual ponto deve ser fixada a peça de chumbo para corrigir a posição do centro de massa desse conjunto roda/pneu?",
+        "opcoes": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q096-1.webp",
+            "alt": "Imagem da questão 96 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 644,
+            "altura": 644
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:d6d18e91",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 96"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.014Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:5877b730",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma ambulância em alta velocidade com a sirene ligada desloca-se em direção a um radar operado por uma pessoa. O radar emite ondas de rádio com frequência f₀ que são refletidas pela dianteira da ambulância, retornando para o detector com frequência fᵣ . A percepção do operador do radar, em relação ao som emitido pela sirene, é de que este se altera à medida que a ambulância se aproxima ou se afasta.\n\nDurante a aproximação, como o operador percebe o som da sirene e qual é a relação entre as frequências fᵣe f₀ medidas pelo radar?",
+        "opcoes": [
+          "Mais grave do que o som emitido e fᵣ < f₀ .",
+          "Mais agudo do que o som emitido e fᵣ < f₀ .",
+          "Mais agudo do que o som emitido e fᵣ = f₀ .",
+          "Mais agudo do que o som emitido e fᵣ > f₀ .",
+          "Mais grave do que o som emitido e fᵣ > f₀ ."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:5877b730",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 99"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:48.645Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:2dcfbb7f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma agricultora, com a intenção de comercializar o milho recém-colhido, testou uma forma de preservar o sabor adocicado do seu produto. O melhor resultado foi obtido quando ela imergiu as espigas em água fervente durante alguns minutos e, em seguida, em água gelada. Com esse procedimento, parte da glicose do milho não foi transformada em amido, mantendo o seu sabor adocicado.\n\nUtilizando esse procedimento, o sabor foi conservado porque houve",
+        "opcoes": [
+          "desnaturação enzimática pela alta temperatura.",
+          "conversão de nutrientes pela redução de temperatura.",
+          "degradação das reservas nutritivas pelo choque térmico.",
+          "impedimento da entrada de oxigênio pela fervura da água.",
+          "desidratação dos grãos por causa da alteração da temperatura."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:2dcfbb7f",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 102"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.273Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:93df74ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Aquecedores solares são equipamentos utilizados para o aquecimento de água pelo calor do Sol. São compostos por coletores solares, nos quais ocorre o aquecimento da água, e por um reservatório térmico, em que é armazenada a água quente para ser utilizada posteriormente. A figura ilustra esquematicamente como funciona esse equipamento.\n\n[[imagem:0]]\n\nO processo pelo qual ocorre transferência de calor dos coletores solares para o reservatório térmico é a",
+        "opcoes": [
+          "difusão.",
+          "absorção.",
+          "condução.",
+          "irradiação.",
+          "convecção."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q103-1.webp",
+            "alt": "Imagem da questão 103 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "5 dicas de instalação de aquecedor solar. Disponível em: https://instaline.com.br. Acesso em: 3 nov. 2023 (adaptado).",
+            "largura": 988,
+            "altura": 464
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:93df74ab",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 103"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:06.331Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:652496a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Para os circuitos de maratonas aquáticas realizadas em mares calmos e próximos à praia, é montado um sistema de boias que determinam o trajeto a ser seguido pelos nadadores. Uma das dificuldades desse tipo de circuito é compensar os efeitos da corrente marinha. O diagrama contém o circuito em que deve ser realizada uma volta no\n\n[[imagem:0]]\n\nmódulo é 30 metros por minuto, paralela à praia em toda\n\n[[imagem:1]]\n\nprecisará nadar na direção apontada pelos vetores υₙdos\n\npontos 1 até 2 e de 3 até 4. Considere que a velocidade do nadador é de 50 metros por minuto, em relação à água, durante todo o circuito.\n\n[[imagem:2]]\n\nNessa situação, em quantos minutos o nadador completará a prova?",
+        "opcoes": [
+          "42",
+          "65",
+          "72",
+          "105",
+          "120"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q119-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 119 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 994,
+            "altura": 95
+          },
+          {
+            "url": "/content/img/2024/d2-q119-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 119 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 994,
+            "altura": 47
+          },
+          {
+            "url": "/content/img/2024/d2-q119-3.webp",
+            "alt": "Imagem 3 da questão 119 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 836,
+            "altura": 544
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:652496a2",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 119"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:49.539Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:becd6f6b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A tirinha ilustra esquimós dentro de um iglu, habitação de formato hemisférico construída durante o inverno a partir de neve ou blocos de gelo. Essa estrutura de construção se justifica pelo fato de esse povo habitar as regiões mais setentrionais da Groenlândia, Canadá e Alasca.\n\n[[imagem:0]]\n\nNa tirinha, a geladeira é necessária para fazer gelo porque",
+        "opcoes": [
+          "a temperatura interna do iglu é maior que a de solidificação da água.",
+          "a umidade dentro do iglu dificulta o processo de mudança de fase da água.",
+          "o ar dentro do iglu é isolante térmico, dificultando a perda de calor pela água.",
+          "a temperatura uniforme no interior do iglu impede as correntes de convecção.",
+          "a pressão do ar no interior do iglu é baixa, dificultando a solidificação da água."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q122-1.webp",
+            "alt": "Imagem da questão 122 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "LAERTE. Disponível em: https://artedafisicapibid.blogspot.com. Acesso em: 4 dez. 2021 (adaptado).",
+            "largura": 504,
+            "altura": 1688
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:becd6f6b",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 122"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:07.362Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:f1b57ccf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O diagrama P-V a seguir representa o ciclo de Otto para um motor de combustão interna, como os motores a gasolina ou a etanol, utilizados nos automóveis.\n\n[[imagem:0]]\n\nAs etapas representadas no diagrama estão descritas no quadro.\n\n[[tabela:0]]\n\nDisponível em: www.mspc.eng.br. Acesso em: 24 fev. 2013 (adaptado).\n\nA transformação da energia térmica em energia útil ocorre na etapa",
+        "opcoes": [
+          "II.",
+          "III.",
+          "IV.",
+          "V.",
+          "VI."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q130-1.webp",
+            "alt": "Imagem da questão 130 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 812,
+            "altura": 584
+          }
+        ],
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Etapa",
+              "Processo",
+              "Descrição"
+            ],
+            "linhas": [
+              [
+                "I",
+                "0 a 1",
+                "Admissão isobárica da mistura ar-combustível no cilindro do motor."
+              ],
+              [
+                "II",
+                "1 a 2",
+                "Compressão adiabática da mistura."
+              ],
+              [
+                "III",
+                "2 a 3",
+                "Introdução de energia na forma de calor da combustão."
+              ],
+              [
+                "IV",
+                "3 a 4",
+                "Expansão adiabática."
+              ],
+              [
+                "V",
+                "4 a 1",
+                "Liberação de energia na forma de calor."
+              ],
+              [
+                "VI",
+                "1 a 0",
+                "Liberação dos gases resultantes da combustão."
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:f1b57ccf",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 130"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:50.160Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d7889bfc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma caixa decorativa utiliza duas pequenas lâmpadas, L₁ (6 V – 9 W) e L₂ (12 V – 18 W), ligadas em série a\n\n[[imagem:0]]\n\n48 centímetros, está ligado em paralelo à bateria. Cinco pontos, A, B, C, D e E, dividem o fio QR em seis segmentos de comprimentos iguais. O circuito também tem um amperímetro com dois terminais. Um dos terminais (P) está ligado ao fio entre as duas lâmpadas. O outro terminal (S) está livre e será ligado ao fio QR. Dependendo do ponto em que esse terminal livre for conectado, ocorrerá a mudança na tensão à qual as lâmpadas são submetidas. Os demais fios do circuito têm resistências elétricas desprezíveis. A figura ilustra esse circuito.\n\n[[imagem:1]]\n\nEm qual desses pontos o amperímetro deve ser conectado para que as lâmpadas acendam exatamente segundo as especificações de tensão e potência elétricas fornecidas?",
+        "opcoes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d2-q132-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 132 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 994,
+            "altura": 47
+          },
+          {
+            "url": "/content/img/2024/d2-q132-2.webp",
+            "alt": "Imagem 2 da questão 132 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 820,
+            "altura": 624
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:d7889bfc",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 132"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:07.753Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:08de69d6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Brasil fecha 2020 entre os maiores recicladores de latas de alumínio\n\nA bauxita contém alumina (Al₂O₃), que é a matéria-prima para produção do alumínio (Al). De forma geral, são necessários 50 kg de bauxita para produzir 10 kg de alumínio. O Brasil fechou 2020 como um dos principais líderes mundiais em reciclagem de latas de alumínio. De acordo com levantamento da Associação Brasileira dos Fabricantes de Latas de Alumínio (Abralatas), o país obteve um índice de reciclagem de 97,4%, de um total de 4,0 × 10⁵toneladas de latas vendidas. Considere que a lata é constituída de alumínio puro.\n\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 30 nov. 2021 (adaptado).\n\nLevando em conta apenas a reciclagem de latas, qual é o valor mais próximo da massa de bauxita, em tonelada, que deixou de ser extraída da natureza em 2020 no Brasil?",
+        "opcoes": [
+          "1,0 × 10⁴ton",
+          "3,9 × 10⁵ton",
+          "5,0 × 10⁵ton",
+          "1,9 × 10⁶ton",
+          "2,0 × 10⁷ton"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:08de69d6",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 2º dia · caderno 7 azul · questão 135"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:08.022Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

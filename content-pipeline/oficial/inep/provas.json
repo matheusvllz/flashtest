@@ -1,0 +1,131 @@
+{
+  "_leia": "Lista versionada de PDFs públicos do INEP (só GET). ENEM regular, aplicação principal, um caderno por dia. O importador grava aqui o sha256 na primeira baixada e recusa um PDF que mude depois. 2023 usa o caderno 8 (rosa) no 2º dia porque as 18 questões já transcritas vieram dele.",
+  "provas": [
+    {
+      "ano": 2019,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/caderno_de_questoes_1_dia_caderno_1_azul_aplicacao_regular.pdf",
+      "gabarito": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2019/gabarito_1_dia_caderno_1_azul_aplicacao_regular.pdf",
+      "sha256Prova": "63117da6cc5ccaffda1a44a401a63283b3e152e2d643b2b3a133ad15afa1e352",
+      "sha256Gabarito": "64acd7f272276858a7baa0e5d1194c71964483afe3a258b240f535f9edb2afdc"
+    },
+    {
+      "ano": 2019,
+      "dia": 2,
+      "caderno": 7,
+      "prova": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/caderno_de_questoes_2_dia_caderno_7_azul_aplicacao_regular.pdf",
+      "gabarito": "https://download.inep.gov.br/educacao_basica/enem/gabaritos/2019/gabarito_2_dia_caderno_7_azul_aplicacao_regular.pdf",
+      "sha256Prova": "a476882608be2bf1353af8b26c60838ac187f2d1a3653524c90de62b0372efa6",
+      "sha256Gabarito": "f90f7be81fee2bf1648c4757c7f5361c7423bd4ea623868917ad5c9513d25644"
+    },
+    {
+      "ano": 2020,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_PV_impresso_D1_CD1.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_GB_impresso_D1_CD1.pdf",
+      "sha256Prova": "ab25200a67d34c0c0be86316572d5ca5a93d7836f005fc1a90b1f195f7e5fdd2",
+      "sha256Gabarito": "18a2a04c1eecbec4f4dd77973f9ee32efe10829ebe30ca0dd9b286eb7f8672bb"
+    },
+    {
+      "ano": 2020,
+      "dia": 2,
+      "caderno": 7,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_PV_impresso_D2_CD7.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2020_GB_impresso_D2_CD7.pdf",
+      "sha256Prova": "f9970a82e0ee67a31ec16e2f14c99e620738b88dfe7c68484128964a5d5d69bc",
+      "sha256Gabarito": "9535cba49109a51196de35428d4d4951888b698186117ac2e7c4691b6da6d0f0"
+    },
+    {
+      "ano": 2021,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_PV_impresso_D1_CD1.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_GB_impresso_D1_CD1.pdf",
+      "sha256Prova": "387bfbd3c30074f595b59e404fc11619c5fdf0dec1d712520e9eb931bf348599",
+      "sha256Gabarito": "b9d1a2cca6ba38dbac52e437371af2557173d38bfe0d0cbc948b1060547eead4"
+    },
+    {
+      "ano": 2021,
+      "dia": 2,
+      "caderno": 7,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_PV_impresso_D2_CD7.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2021_GB_impresso_D2_CD7.pdf",
+      "sha256Prova": "887b2a10ebb163f0c40db2ab4f67a5a4b5959ceb74ce7273466a755b8e55f540",
+      "sha256Gabarito": "c78b77767c239fb93350f502f2f9f83bcadc7ae467d77b0a6cd887de8b5f4cc7"
+    },
+    {
+      "ano": 2022,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D1_CD1.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D1_CD1.pdf",
+      "sha256Prova": "4aafd3567873578507f2bd47970c71d701c3db776654188b7d597e7284303adc",
+      "sha256Gabarito": "023dda43b3b4e7b275d7155d9d856451dc14d607f891601c65f9a0fcc3c8ed7e"
+    },
+    {
+      "ano": 2022,
+      "dia": 2,
+      "caderno": 7,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD7.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_GB_impresso_D2_CD7.pdf",
+      "sha256Prova": "ab4cdea89504ab1bfc9435addacea482417cd82e9f220abaa6a317a10bd0b0f9",
+      "sha256Gabarito": "1b4b0cd0978bfc6c862d9631c4f8a5c25091938d09acfd2bd8c8b510764cb118"
+    },
+    {
+      "ano": 2023,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD1.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD1.pdf",
+      "sha256Prova": "8f0f7ff3ae3bdf64754fdc48d7c79bad696b053f80d3083373580dc48b484fc8",
+      "sha256Gabarito": "d01f0ca9e0855b69428cf0942585259d046a2d63706568fa73a1efefb760d5c1"
+    },
+    {
+      "ano": 2023,
+      "dia": 2,
+      "caderno": 8,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD8.pdf",
+      "sha256Prova": "77cea1137da19d031b6bcf3faa3bc156248f588528f4fae4055cfa8863f2ee27",
+      "sha256Gabarito": "e85440fd23603178c8e869df24481c02ccae93e3cf982eff925de05ae464af54"
+    },
+    {
+      "ano": 2024,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D1_CD1.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D1_CD1.pdf",
+      "sha256Prova": "b0adc1dc79a002aba36f725f1ef792cf53e47ff75ee012638ef34a4e6fbb18f5",
+      "sha256Gabarito": "673d3d060156d6ad610ecf96c3dd0b8c61f361e16c57860c4ca5b5fecc8be050"
+    },
+    {
+      "ano": 2024,
+      "dia": 2,
+      "caderno": 7,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD7.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D2_CD7.pdf",
+      "sha256Prova": "0993ae687a93dfbcda8e95ce8708883be9d5a55cabbe1f1a06b81a50c18c6cdc",
+      "sha256Gabarito": "8d27b5a447061e9a1c181d00a916d10f45e1c6c1da68d628b3ae8bdfedbf5c92"
+    },
+    {
+      "ano": 2025,
+      "dia": 1,
+      "caderno": 1,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD1.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D1_CD1.pdf",
+      "sha256Prova": "a0f19f878d4ef3ba94c3e0f5ef9e57c13fb046d4bb362f72651898b473ddb7c8",
+      "sha256Gabarito": "583ac1950cd1927c42c971c270f96c0e33816844084fd5866a13bf94d8e08a81"
+    },
+    {
+      "ano": 2025,
+      "dia": 2,
+      "caderno": 7,
+      "prova": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD7.pdf",
+      "gabarito": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD7.pdf",
+      "sha256Prova": "39af0f0eaf3e30a3cd211bc19db9029204703965a2c76ff232fb3109181fa7c8",
+      "sha256Gabarito": "9e2d470af35378df532173414ec7077c3ce4df38c084a5f1258579fdf9270aef"
+    }
+  ]
+}

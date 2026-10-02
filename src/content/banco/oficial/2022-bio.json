@@ -1,0 +1,995 @@
+{
+  "subjectId": "bio",
+  "items": [
+    {
+      "id": "oficial:2022:4259c264",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De acordo com a Organização Mundial da Saúde, a filariose e a leishmaniose são consideradas doenças tropicais infecciosas e constituem uma preocupação para a saúde pública por ser alto o índice de mortalidade a elas associado.\n\nUma medida profilática comum a essas duas doenças é o(a)",
+        "opcoes": [
+          "incineração do lixo orgânico.",
+          "construção de rede de esgoto.",
+          "uso de vermífugo pela população.",
+          "controle das populações dos vetores.",
+          "consumo de carnes vermelhas bem cozidas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:4259c264",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 92"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:09.748Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:5f42f635",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\n\nANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 4 dez. 2021 (adaptado).\n\nO sucesso dessa terapia advém do fato de que o produto favorecerá a",
+        "opcoes": [
+          "correção do código genético para a tradução da proteína.",
+          "alteração do RNA ribossômico ligado à síntese da proteína.",
+          "produção de mutações benéficas para a correção do problema.",
+          "liberação imediata da proteína normal na região ocular humana.",
+          "expressão do gene responsável pela produção da enzima normal."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:5f42f635",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 98"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.355Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:cc048a70",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.\n\nCasos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+        "opcoes": [
+          "ocupam áreas de vegetação nativa e substituem parcialmente a flora original.",
+          "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras.",
+          "alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente.",
+          "apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente.",
+          "diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:cc048a70",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 99"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.356Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:bfc4bd06",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Entre as diversas técnicas para diagnóstico da covid-19, destaca-se o teste genético. Considerando as diferentes variantes e cargas virais, um exemplo é a PCR, reação efetuada por uma enzima do tipo polimerase. Essa técnica permite identificar, com confiabilidade, o material genético do SARS-CoV-2, um vírus de RNA. Para comprovação da infecção por esse coronavírus, são coletadas amostras de secreções do indivíduo. Uma etapa que antecede a reação de PCR precisa ser realizada para permitir a amplificação do material genético do vírus.\n\nEssa etapa deve ser realizada para",
+        "opcoes": [
+          "concentrar o RNA viral para otimizar a técnica.",
+          "identificar nas amostras anticorpos anti-SARS-CoV-2.",
+          "proliferar o vírus em culturas, aumentando a carga viral.",
+          "purificar ácidos nucleicos virais, facilitando a ação da enzima.",
+          "obter moléculas de cDNA viral por meio da transcrição reversa."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:bfc4bd06",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 102"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.407Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:ff26eb68",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.\n\nEsse tipo de doping está diretamente relacionado ao aumento da",
+        "opcoes": [
+          "frequência cardíaca.",
+          "capacidade pulmonar.",
+          "massa muscular do indivíduo.",
+          "atividade anaeróbica da musculatura.",
+          "taxa de transporte de oxigênio pelo sangue."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:ff26eb68",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 104"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.408Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:ed51c106",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Desde a proposição da teoria de seleção natural por Darwin, os seres vivos nunca mais foram olhados da mesma forma. No que diz respeito à reprodução de anfíbios anuros, os cientistas já descreveram diferentes padrões reprodutivos, como os exemplificados a seguir:\n\nEspécie 1 – As fêmeas produzem cerca de 5 000 gametas, que são fecundados na água, em lagoas temporárias de estação chuvosa. Todo o desenvolvimento embrionário, do ovo à metamorfose, ocorre, nesse ambiente, independente dos pais.\n\nEspécie 2 – As fêmeas produzem aproximadamente 200 gametas, que são depositados em poças próximas a corpos-d’água. Os embriões são vigiados pelos machos durante boa parte do seu desenvolvimento.\n\nEspécie 3 – As fêmeas produzem por volta de 20 gametas, que são fecundados sobre a superfície das folhas de plantas cujos galhos estão dispostos acima da superfície de corpos-d’água e aí se desenvolvem até a eclosão.\n\nEspécie 4 – As fêmeas produzem poucos gametas que, quando fecundados, são “abocanhados” pelos machos. Os embriões se desenvolvem no interior do saco vocal do macho até a metamorfose, quando saem através da boca do pai.\n\nOs padrões descritos evidenciam que",
+        "opcoes": [
+          "as fêmeas influenciam o comportamento dos machos.",
+          "o cuidado parental é necessário para o desenvolvimento.",
+          "o grau de evolução determina o comportamento reprodutivo.",
+          "o sucesso reprodutivo pode ser garantido por estratégias diferentes.",
+          "o ambiente induz modificação na produção do número de gametas femininos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:ed51c106",
+        "version": 1,
+        "skillIds": [
+          "bio:evolucao-selecao-natural"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 110"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.564Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:1c490404",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As células da epiderme da folha da Tradescantia pallida purpurea, uma herbácea popularmente conhecida como trapoeraba-roxa, contém um vacúolo onde se encontra um pigmento que dá a coloração arroxeada a esse tecido. Em um experimento, um corte da epiderme de uma folha da trapoeraba-roxa foi imerso em ambiente hipotônico e, logo em seguida, foi colocado em uma lâmina e observado em microscópio óptico.\n\nDurante a observação desse corte, foi possível identificar o(a)",
+        "opcoes": [
+          "acúmulo do solvente com fragmentação da organela.",
+          "rompimento da membrana celular com liberação do citosol.",
+          "aumento do vacúolo com diluição do pigmento no seu interior.",
+          "quebra da parede celular com extravasamento do pigmento.",
+          "murchamento da célula com expulsão do pigmento do vacúolo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:1c490404",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 114"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.719Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:4e9d7e09",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um grupo de alunos realizou um experimento para observar algumas propriedades dos ácidos, adicionando um pedaço de mármore (CaCO₃) a uma solução aquosa de ácido clorídrico (HCl), observando a liberação de um gás e o aumento da temperatura.\n\n[[imagem:0]]\n\nO gás obtido no experimento é o:",
+        "opcoes": [
+          "H₂",
+          "O₂",
+          "CO₂",
+          "CO",
+          "Cl₂"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d2-q117-1.webp",
+            "alt": "Imagem da questão 117 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Gás\nÁcido\nMármore",
+            "largura": 840,
+            "altura": 426
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:4e9d7e09",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 117"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:10.891Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:3a4c47a9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Antimicrobianos são substâncias naturais ou sintéticas que têm capacidade de matar ou inibir o crescimento de microrganismos. A tabela apresenta uma lista de antimicrobianos hipotéticos, bem como suas ações e efeitos sobre o metabolismo microbiano.\n\n[[tabela:0]]\n\nQual dos antimicrobianos deve ser utilizado para curar uma infecção causada por um fungo sem afetar as bactérias da microbiota normal do organismo?",
+        "opcoes": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Antimicrobiano",
+              "Ação",
+              "Efeito"
+            ],
+            "linhas": [
+              [
+                "1",
+                "Une-se aos ribossomos",
+                "Impede a síntese proteica"
+              ],
+              [
+                "2",
+                "Une-se aos microtúbulos",
+                "Impede a segregação das cromátides"
+              ],
+              [
+                "3",
+                "Une-se aos fosfolipídeos da membrana plasmática",
+                "Reduz a permeabilidade da membrana plasmática"
+              ],
+              [
+                "4",
+                "Interfere na síntese de timina",
+                "Inibe a síntese de DNA"
+              ],
+              [
+                "5",
+                "Interfere na síntese de uracila",
+                "Impede a síntese de RNA"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:3a4c47a9",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 121"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:59.778Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:d1750a1c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O veneno da cascavel pode causar hemorragia com risco de morte a quem é picado pela serpente. No entanto, pesquisadores do Brasil e da Bélgica desenvolveram uma molécula de interesse farmacêutico, a PEG-collineína-1, a partir de uma proteína encontrada no veneno dessa cobra, capaz de modular a coagulação sanguínea. Embora a técnica não seja nova, foi a primeira vez que o método foi usado a partir de uma toxina animal na sua forma recombinante, ou seja, produzida em laboratório por um fungo geneticamente modificado.\n\nJULIÃO, A. Técnica modifica proteína do veneno de cascavel e permite\ncriar fármaco que modula a coagulação sanguínea. Disponível em:\n\nhttps://agencia.fapesp.br. Acesso em: 22 nov. 2021 (adaptado).\n\nEsse novo medicamento apresenta potencial aplicação para",
+        "opcoes": [
+          "impedir a formação de trombos, típicos em alguns casos de acidente vascular cerebral.",
+          "tratar consequências da anemia profunda, em razão da perda de grande volume de sangue.",
+          "evitar a manifestação de urticárias, comumente relacionadas a processos alérgicos.",
+          "reduzir o inchaço dos linfonodos, parte da resposta imunitária de diferentes infecções.",
+          "regular a oscilação da pressão arterial, característica dos quadros de hipertensão."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:d1750a1c",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 122"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.102Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:a244ca73",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.\n\nQual é a etapa de retirada de grande parte desses sólidos?",
+        "opcoes": [
+          "Coagulação.",
+          "Decantação.",
+          "Filtração.",
+          "Desinfecção.",
+          "Fluoretação."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:a244ca73",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 126"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.103Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:d0a0b95d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os ursos, por não apresentarem uma hibernação verdadeira, acordam por causa da presença de termogenina, uma proteína mitocondrial que impede a chegada dos prótons até a ATP sintetase, gerando calor. Esse calor é importante para aquecer o organismo, permitindo seu despertar.\n\nSADAVA, D. et al. Vida: a ciência da biologia. Porto Alegre: Artmed, 2009 (adaptado).\n\nEm qual etapa do metabolismo energético celular a termogenina interfere?",
+        "opcoes": [
+          "Glicólise.",
+          "Fermentação lática.",
+          "Ciclo do ácido cítrico.",
+          "Oxidação do piruvato.",
+          "Fosforilação oxidativa."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:d0a0b95d",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 127"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.104Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:d6600973",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No processo de captação da luz pelo olho para a formação de imagens estão envolvidas duas estruturas celulares: os cones e os bastonetes. Os cones são sensíveis à energia dos fótons, e os bastonetes, à quantidade de fótons incidentes. A energia dos fótons que compõem os raios luminosos está associada à sua frequência, e a intensidade, ao número de fótons incidentes.\n\nUm animal que tem bastonetes mais sensíveis irá",
+        "opcoes": [
+          "apresentar daltonismo.",
+          "perceber cores fora do espectro do visível.",
+          "enxergar bem em ambientes mal iluminados.",
+          "necessitar de mais luminosidade para enxergar.",
+          "fazer uma pequena distinção de cores em ambientes iluminados."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:d6600973",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 130"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.159Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:745acfbd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.\n\nCOSTA, G. Agência Fiocruz de Notícias. Estudo confirma eficácia do Método Wolbachia para dengue. Disponível em: https://portal.fiocruz.br. Acesso em: 3 jun. 2022 (adaptado).\n\nEssa tecnologia utilizada no combate à dengue consiste na",
+        "opcoes": [
+          "predação do vírus pela bactéria.",
+          "esterilização de mosquitos infectados.",
+          "alteração no genótipo do mosquito pela bactéria.",
+          "competição do vírus e da bactéria no hospedeiro.",
+          "inserção de material genético do vírus na bactéria."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:745acfbd",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 132"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.321Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:82514add",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O protozoário Trypanosoma cruzi, causador da doença de Chagas, pode ser a nova arma da medicina contra o câncer. Pesquisadores brasileiros conseguiram criar uma vacina contra a doença usando uma variação do protozoário incapaz de desencadear a patologia (não patogênico). Para isso, realizaram uma modificação genética criando um T. cruzi capaz de produzir também moléculas fabricadas pelas células tumorais. Quando o organismo inicia o combate ao protozoário, entra em contato também com a molécula tumoral, que passa a ser vista também pelo sistema imune como um indicador de células do protozoário. Depois de induzidas as defesas, estas passam a destruir todas as células com a molécula tumoral, como se lutassem apenas contra o protozoário.\n\nDisponível em: www.estadao.com.br. Acesso em: 1 mar. 2012 (adaptado).\n\nQual o mecanismo utilizado no experimento para enganar as células de defesa, fazendo com que ataquem o tumor?",
+        "opcoes": [
+          "Autoimunidade.",
+          "Hipersensibilidade.",
+          "Ativação da resposta inata.",
+          "Apresentação de antígeno específico.",
+          "Desencadeamento de processo anti-inflamatório."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:82514add",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 133"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.322Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:9470a28c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O sinal sonoro oriundo da queda de um grande bloco de gelo de uma geleira é detectado por dois dispositivos situados em um barco, sendo que o detector A está imerso em água e o B, na proa da embarcação. Sabe-se\n\n[[imagem:0]]\n\n[[imagem:1]]\n\nOs gráficos indicam, em tempo real, o sinal sonoro detectado pelos dois dispositivos, os quais foram ligados simultaneamente em um instante anterior à queda do bloco de gelo. Ao comparar pontos correspondentes desse sinal em cada dispositivo, é possível obter informações sobre a onda sonora.\n\n[[imagem:2]]\n\n[[imagem:3]]\n\nA distância L, em metro, entre o barco e a geleira é mais próxima de",
+        "opcoes": [
+          "339 000.",
+          "78 900.",
+          "14 400.",
+          "5 240.",
+          "100."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d2-q134-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 134 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 995,
+            "altura": 238
+          },
+          {
+            "url": "/content/img/2022/d2-q134-2.webp",
+            "alt": "Imagem 2 da questão 134 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: B\nA",
+            "largura": 1000,
+            "altura": 281
+          },
+          {
+            "url": "/content/img/2022/d2-q134-3.webp",
+            "alt": "Imagem 3 da questão 134 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: B\nSinal\n208 220 232 244\nTempo (s)",
+            "largura": 505,
+            "altura": 353
+          },
+          {
+            "url": "/content/img/2022/d2-q134-4.webp",
+            "alt": "Imagem 4 da questão 134 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: A\nSinal\n208 220 232 244\nTempo (s)",
+            "largura": 478,
+            "altura": 345
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:9470a28c",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 134"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.575Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:de186830",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 2002, um mecânico da cidade mineira de Uberaba (MG) teve uma ideia para economizar o consumo de energia elétrica e iluminar a própria casa num dia de sol. Para isso, ele utilizou garrafas plásticas PET com água e cloro, conforme ilustram as figuras. Cada garrafa foi fixada ao telhado de sua casa em um buraco com diâmetro igual ao da garrafa, muito maior que o comprimento de onda da luz. Nos últimos dois anos, sua ideia já alcançou diversas partes do mundo e deve atingir a marca de 1 milhão de casas utilizando a “luz engarrafada”.\n\n[[imagem:0]]\n\nQue fenômeno óptico explica o funcionamento da “luz engarrafada”?",
+        "opcoes": [
+          "Difração.",
+          "Absorção.",
+          "Polarização.",
+          "Reflexão.",
+          "Refração."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d2-q135-1.webp",
+            "alt": "Imagem da questão 135 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "ZOBEL, G. Brasileiro inventor de “luz engarrafada” tem ideia espalhada pelo mundo. Disponível em: www.bbc.com. Acesso em: 23 jun. 2022 (adaptado).",
+            "largura": 1004,
+            "altura": 748
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:de186830",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 2º dia · caderno 7 azul · questão 135"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:11.761Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "subjectId": "his",
+  "items": [
+    {
+      "id": "oficial:2025:84da0365",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A credulidade dos ouvintes aumenta o descaramento do narrador, e o descaramento deste conquista-lhes a credulidade. A eloquência, quando levada a seu patamar mais alto, deixa pouco lugar à razão ou à reflexão, mas, dirigindo-se inteiramente à imaginação e aos afetos, cativa os ouvintes condescendentes e subjuga-lhes o entendimento.\n\nHUME, D. Uma investigação sobre o entendimento humano e sobre os princípios da moral. São Paulo: Edunesp, 2003.\n\nNo contexto do século XVIII, o autor propõe uma reflexão radical acerca da arte da eloquência, restringindo-a ao",
+        "opcoes": [
+          "sistema de crenças, conforme a proposta kantiana de objetividade do conhecimento.",
+          "campo dos absolutos, semelhante ao entendimento medieval dos Universais.",
+          "domínio da lógica, consoante a compreensão aristotélica nos Analíticos.",
+          "paradigma da racionalidade, alinhado ao modelo cartesiano de método.",
+          "âmbito da persuasão, análogo às críticas platônicas aos sofistas."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:84da0365",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 48"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.419Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:d48c38b8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nCARLEVARIS, L. La piazetta (detalhe). Óleo sobre tela, 49 × 41 cm.\n\nAshmolean Museum, Oxford, 1729.\nDisponível em: www.meinsterart.de. Acesso em: 13 dez. 2017.\n\nTEXTO II\n\nAntigo centro da economia mundo-europeia do século XV, no final do século XVII e início do século XVIII, Veneza ainda era uma cidade cosmopolita onde orientais podiam sentir-se em casa.\n\nBRAUDEL, F. O tempo do mundo. São Paulo:\n\nMartins Fontes, 1979 (adaptado).\n\nQual elemento da condição cosmopolita de Veneza na Idade Moderna está explicitado nos textos?",
+        "opcoes": [
+          "Avanço do ensino laico.",
+          "Conquista das terras da América.",
+          "Integração do comércio mediterrâneo.",
+          "Popularização do pensamento humanista.",
+          "Desenvolvimento das corporações de ofício."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q049-1.webp",
+            "alt": "Imagem da questão 49 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 864,
+            "altura": 1044
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:d48c38b8",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 49"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.268Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:92800cf6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O corpo de cidadãos é o poder supremo dos Estados. A supremacia pode residir ou num homem, ou na minoria, ou em todos. Sempre que o Um, ou a Minoria, ou Todos governam, tendo em vista o bem-estar comum, essas constituições são justas; mas se procuram apenas o benefício de uma das partes, seja ela o Um, a Minoria ou Todos, estabelece-se um desvio.\n\nARISTÓTELES. Política. São Paulo: Nova Cultural, 2000.\n\nNo excerto encontra-se a base da teoria clássica das três formas de governo representadas pela",
+        "opcoes": [
+          "tirania, oligarquia e república.",
+          "burocracia, autarquia e império.",
+          "ditadura, autocracia e anarquia.",
+          "plutocracia, tecnocracia e demagogia.",
+          "monarquia, aristocracia e democracia."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:92800cf6",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 61"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.274Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:0f57523c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em toda a sua carreira política, Getúlio Vargas sempre contara com o seu talento pessoal de persuasão e poder de manipulação. Agora, porém, seus amigos começavam a perceber que ele parecia envelhecido e cansado. A principal figura da oposição, concordavam eles, era o belicoso jornalista Carlos Lacerda. Se ao menos pudessem “removê-lo” do cenário político, talvez Vargas se salvasse da situação. Esses seguidores decidiram tomar o assunto em suas próprias mãos com o atentado da Rua Tonelero.\n\nSKDIMORE, T. Brasil: de Getúlio a Castelo. Rio de Janeiro: Paz e Terra, 2003 (adaptado).\n\nNesse contexto, a ação dos aliados de Getúlio Vargas teve como consequência imediata o(a)",
+        "opcoes": [
+          "intensificação dos ataques do grupo udenista.",
+          "intervenção dos sindicatos no conflito partidário.",
+          "mobilização da sociedade na defesa do governo.",
+          "abandono da censura aos meios de comunicação.",
+          "apoio dos parlamentares aos candidatos oposicionistas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:0f57523c",
+        "version": 1,
+        "skillIds": [
+          "his:era-vargas-politica-economia"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 64"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:26.364Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:41ca7483",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nA análise dos elementos presentes na fotografia permite identificar qual característica socioespacial?",
+        "opcoes": [
+          "Estagnação da especulação imobiliária.",
+          "Conservação da arquitetura colonial.",
+          "Implantação de moradias populares.",
+          "Predomínio da atividade comercial.",
+          "Processo de verticalização urbana."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q068-1.webp",
+            "alt": "Imagem da questão 68 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Salvador, capital do estado da Bahia.",
+            "credito": "Disponível em: https://mundoeducacao.uol.com.br. Acesso em: 20 out. 2023.",
+            "largura": 867,
+            "altura": 625
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:41ca7483",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 68"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.180Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:604733f1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A difusão pelos cônegos do ideal apostólico, bem como a influência dos eremitas e dos pregadores errantes que na sua esteira propagavam temas evangélicos, contribuíram para fazer nascer, entre os fiéis, o desejo de se erguerem ao nível espiritual do clero e de obterem a sua salvação, sem que para isso tivessem de renunciar ao seu estado. Pela primeira vez, a Igreja entreabria as portas da graça em benefício da totalidade dos fiéis, colocando, como única condição, a sua partida para o Oriente, a fim de aí lutarem contra os inimigos de Cristo.\n\nVAUCHEZ, A. A espiritualidade da Idade Média Ocidental,\nséc. VIII-XIII. Lisboa: Estampa, 1995.\n\nConforme o texto, no imaginário dos fiéis cristãos do período medieval, a salvação era alcançada por meio das",
+        "opcoes": [
+          "palavras escritas.",
+          "práticas litúrgicas.",
+          "ações voluntárias.",
+          "ideias messiânicas.",
+          "celebrações coletivas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:604733f1",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 69"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.181Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:470db702",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os direitos do homem constituem uma classe variável, como a história destes últimos séculos demonstra suficientemente. O elenco dos direitos do homem se modificou, e continua a se modificar, com a mudança das condições históricas, ou seja, dos carecimentos e dos interesses, das classes no poder, dos meios disponíveis para a realização dos mesmos, das transformações técnicas. Direitos que foram declarados absolutos no final do século XVIII foram submetidos a radicais limitações nas declarações contemporâneas; direitos que as declarações do século XVIII nem sequer mencionavam, como os direitos sociais, são agora proclamados com grande ostentação nas recentes declarações.\n\nBOBBIO, N. A era dos direitos. Rio de Janeiro: Elsevier, 2004.\n\nOs argumentos apresentados no texto sustentam que os direitos humanos são variáveis porque os considera como",
+        "opcoes": [
+          "fenômenos espontâneos.",
+          "conquistas atemporais.",
+          "convenções coletivas.",
+          "resquícios religiosos.",
+          "imposições políticas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:470db702",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 76"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.183Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:1e2270ee",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Carro elétrico, uma miragem ecológica\n\n[[imagem:0]]\n\nA mudança para a eletromobilidade de fato promove uma alteração no consumo de recursos naturais. Hoje, amplamente dependentes do petróleo, nossos modais de transporte poderiam se tornar cada vez mais dependentes de trinta metais raros. Gálio, tântalo, cobalto, platinoides, tungstênio, metais de terras-raras: uma mina contém apenas ínfimas quantidades desses metais dotados de fabulosas propriedades eletrônicas, ópticas e magnéticas.\n\nPITRON, G. Revolução tecnológica, transformação geopolítica. Disponível em:\n\nhttps://diplomatique.org.br. Acesso em: 10 dez. 2018.\n\nNo que se refere ao desenvolvimento sustentável, a charge e o texto indicam uma contradição no uso da tecnologia alternativa derivada do seguinte aspecto:",
+        "opcoes": [
+          "Necessidade de fontes não renováveis.",
+          "Padronização dos modelos produtivos.",
+          "Demanda de mão de obra qualificada.",
+          "Precariedade da legislação industrial.",
+          "Utilização de materiais recicláveis."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q077-1.webp",
+            "alt": "Imagem da questão 77 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 984,
+            "altura": 464
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:1e2270ee",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 77"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.269Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:158728b8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Impressão Régia do Rio de Janeiro foi criada pelo decreto de 13 de maio de 1808 para dar continuidade à nova sede do império português. A nova tipografia é criada em um momento no qual o projeto de reforma do império se transforma em um projeto de construção de um novo império português na América. Frente às tensões políticas que essa nova situação criava, a tipografia atuou na legitimação e sustentação daquele projeto político.\n\nBARRA, S. H. S. A Impressão Régia do Rio de Janeiro e a colonização dos sertões\nna construção do novo império português na América (1808-1822).\n\nTopoi, n. 31, jul.-dez. 2015 (adaptado).\n\nA função política da tecnologia mencionada no texto favoreceu a nova sede do Império português por",
+        "opcoes": [
+          "estabelecer as normativas ideológicas aos periódicos.",
+          "propagar as diretrizes administrativas às capitanias.",
+          "divulgar as conquistas às metrópoles europeias.",
+          "integrar as regiões territoriais ao poder central.",
+          "difundir as publicações às elites lusitanas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:158728b8",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 83"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.272Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:c76dacc2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nEu escolhi Bezalel e lhe dei competência e habilidade para fazer todo tipo de trabalho artístico; para fazer desenhos e trabalhar em ouro, prata e bronze; para lapidar e montar pedras preciosas; para entalhar madeira; e para fazer todo tipo de artesanato.\n\nBÍBLIA. Êxodo 31, 2-5. São Paulo: Paulinas, 2005.\n\nTEXTO II\n\nMoisés foi educado em toda a sabedoria dos egípcios e veio a ser poderoso em palavras e obras.\n\nBÍBLIA. Atos 7, 22. São Paulo: Paulinas, 2005.\n\nTEXTO III\n\nSe conhecêsseis a ciência certa, logo renunciarias à ostentação.\n\nALCORÃO. Sura 102, 5. São Paulo: Tangará, 1975.\n\nEscritos em temporalidades diferentes (Antiguidade e Idade Média), os textos sagrados aproximam-se ao mostrar o papel da ciência para o(a)",
+        "opcoes": [
+          "emergência das universidades e escolas confessionais.",
+          "crescimento religioso e movimentos sectários.",
+          "avanço da intolerância e rivalidades nacionais.",
+          "preservação das tradições e rituais místicos.",
+          "desenvolvimento social e práticas laborais."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:c76dacc2",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 89"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.275Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e78b0523",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 1914, uma expedição estudantil saiu da Rússia em direção à América do Sul, sendo considerada a segunda campanha científica da Rússia no continente depois da longa viagem do barão Langsdorff pelo interior do Brasil na primeira metade do século XIX. O empreendimento foi enviado pelo Museu de Antropologia e Etnografia de São Petersburgo e integrado por cinco jovens cientistas, sendo dois zoólogos, dois etnógrafos e um antropólogo, cujo objetivo era a coleta de material de valor biológico e etnográfico para compor coleções nas instituições que participaram de seu financiamento. A expedição passou por países como Brasil, Paraguai e Argentina, resultando em amplo material manuscrito e algumas publicações, além dos objetos coletados.\n\nCARNEIRO, L. A. F. A Rússia no Brasil do início do século XX.\n\nRio de Janeiro: Casa de Oswaldo Cruz, 2015 (adaptado).\n\nAlém do significado científico, o evento mencionado conectava-se a um projeto nacionalista de caráter",
+        "opcoes": [
+          "imperialista e colonizador.",
+          "militar e disciplinador.",
+          "lúdico e filantrópico.",
+          "mercantil e predatório.",
+          "religioso e humanitário."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:e78b0523",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 90"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:27.276Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

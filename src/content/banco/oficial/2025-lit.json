@@ -1,0 +1,598 @@
+{
+  "subjectId": "lit",
+  "items": [
+    {
+      "id": "oficial:2025:37e1bf2f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De próprio punho\nA escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda\nque vai do simples bilhete aos originais de um livro\n\n1 Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia\n2 que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem\n3 burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,\n4 o que importava era a autenticidade da minha caligrafia, que à época ainda era mais\n5 fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,\n6 hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,\n7 mais rotunda e mais cheia de arestas.\n8 É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,\n9 manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso\n10 não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que\n11 eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de\n12 tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou\n13 sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever\n14 neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais\n15 ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias\n16 possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,\n17 são elas que batucam meu teclado de computador ou que tocam suavemente duas ou\n18 três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times\n19 New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus\n20 e o mundo.\n21 A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca\n22 deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até\n23 hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços\n24 e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está\n25 em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na\n26 cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus\n27 coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its\n28 na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico\n29 comigo mesma, a evitar um comportamento esquecido e relapso.\n30 No escritório, costumo ser mais suave comigo mesma, mas também muito mais\n31 lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai\n32 minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados\n33 precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam\n34 como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por\n35 outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais\n36 ainda as adultas) precisa conviver.\n37 As formas de escrever mudam, as necessidades também, e o resultado é um elenco\n38 complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas\n39 ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,\n40 mudando de status, numa ciranda interessante e importante que pode ser vista à luz de\n41 certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta\n42 muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação\n43 por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,\n44 e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma\n45 frase filosoficamente correta. O negócio é mais “o punho e o pixel”.\n\nRIBEIRO, A. E. Disponível em: https://rascunho.com.br.\n\nAcesso em: 16 jan. 2024 (adaptado).\n\nNo que diz respeito ao gênero bilhete, a autora dessa crônica",
+        "opcoes": [
+          "ressalta a formalidade na comunicação com as pessoas de sua convivência.",
+          "critica a ansiedade causada pela velocidade da comunicação.",
+          "expressa a obrigatoriedade de concisão nas anotações.",
+          "questiona a prática da escrita de próprio punho.",
+          "apresenta a diversidade de usos no cotidiano."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:37e1bf2f",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 6"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.474Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:83b9b494",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De próprio punho\nA escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda\nque vai do simples bilhete aos originais de um livro\n\n1 Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia\n2 que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem\n3 burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,\n4 o que importava era a autenticidade da minha caligrafia, que à época ainda era mais\n5 fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,\n6 hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,\n7 mais rotunda e mais cheia de arestas.\n8 É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,\n9 manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso\n10 não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que\n11 eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de\n12 tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou\n13 sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever\n14 neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais\n15 ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias\n16 possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,\n17 são elas que batucam meu teclado de computador ou que tocam suavemente duas ou\n18 três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times\n19 New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus\n20 e o mundo.\n21 A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca\n22 deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até\n23 hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços\n24 e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está\n25 em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na\n26 cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus\n27 coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its\n28 na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico\n29 comigo mesma, a evitar um comportamento esquecido e relapso.\n30 No escritório, costumo ser mais suave comigo mesma, mas também muito mais\n31 lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai\n32 minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados\n33 precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam\n34 como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por\n35 outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais\n36 ainda as adultas) precisa conviver.\n37 As formas de escrever mudam, as necessidades também, e o resultado é um elenco\n38 complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas\n39 ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,\n40 mudando de status, numa ciranda interessante e importante que pode ser vista à luz de\n41 certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta\n42 muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação\n43 por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,\n44 e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma\n45 frase filosoficamente correta. O negócio é mais “o punho e o pixel”.\n\nRIBEIRO, A. E. Disponível em: https://rascunho.com.br.\n\nAcesso em: 16 jan. 2024 (adaptado).\n\nO elemento que caracteriza esse texto como uma crônica é a",
+        "opcoes": [
+          "defesa das opiniões da autora sobre um tema de interesse coletivo.",
+          "exposição sobre o uso de tecnologias nas práticas de escrita atuais.",
+          "abordagem de fatos do contexto pessoal em uma perspectiva reflexiva.",
+          "utilização de recursos linguísticos para a interlocução direta com o leitor.",
+          "apresentação de acontecimentos segundo a ordem de sucessão no tempo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:83b9b494",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 7"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.476Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:9bb09ec0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nNesse cartaz publicitário, os recursos verbais e não verbais constroem um argumento que objetiva",
+        "opcoes": [
+          "divulgar a obra de Fernando Pessoa no Brasil.",
+          "valorizar a realização de eventos literários no país.",
+          "ressaltar o impacto da leitura na vida das pessoas.",
+          "fomentar o turismo cultural na cidade de São Paulo.",
+          "evidenciar a influência de Pessoa na literatura brasileira."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q014-1.webp",
+            "alt": "Imagem da questão 14 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.publishnews.com.br. Acesso em: 19 set. 2024.",
+            "largura": 1016,
+            "altura": 948
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:9bb09ec0",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 14"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.610Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3ef2ec31",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Símbolos\n\nEu e tu, ante a noite e o amplo desdobramento\ndo mar, fero, a estourar de encontro à rocha nua...\nUm símbolo descubro aqui, neste momento\nesta rocha, este mar... a minha vida e a tua.\n\nO mar vem, o mar vai, nele há o gesto violento\nde quem maltrata e, após, se arrepende e recua.\nComo compreendo bem da rocha o sentimento!\nSão muito iguais, por certo, a minha mágoa e a sua.\n\nContemplo neste quadro a nossa triste vida;\ntu és dúbio mar que, na sua inconsciência,\ntem carinhos de amor e fúrias de demência!\n\nEu sou a dor estanque, a dor empedernida,\nsou rocha a emergir de um côncavo de areia,\nimóvel, muda, isenta e alheia ao mar, alheia.\n\nMACHADO, G. Poesia completa. Rio de Janeiro:\n\nCátedra/MEC, 1978.\n\nNesse soneto, os traços da estética simbolista são resgatados pelo eu lírico ao",
+        "opcoes": [
+          "rejeitar as emoções de “amor” e “mágoa”.",
+          "expressar a dubiedade do olhar sobre o outro.",
+          "representar o “eu” e o “tu” como sujeitos volúveis.",
+          "associar a sua inconsciência a elementos da natureza.",
+          "metaforizar o conflito amoroso nas imagens de “mar” e “rocha”."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:3ef2ec31",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 16"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.849Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:7d858e45",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Antes do inverno chegar.\nEla tinha olhinhos brilhantes. Os mesmos de antes. Antes da fome. Antes das 17 mudanças de cidade. Dos sete filhos e dos muitos anos de trabalho dentro e fora de casa.\n\nEla fazia ambrosia, bolo de fubá e pedacinhos de queijo. Antes do inverno, ela plantava flores novas e diferentes para nos esperar nas próximas férias de verão.\n\nEla tinha o jeito de menina. Menina sapeca, correndo na grama seca do cerrado. O mesmo jeito de antes. Antes do marido (e mesmo com o marido). Antes do cansaço dos anos. Antes da dureza do trato com a terra.\n\nEla tinha histórias. Compridas, curtas, divertidas e verdadeiras. Mas isso foi antes. Antes das lembranças se bagunçarem feito bolas coloridas de Natal esperando para serem montadas na árvore.\n\nEu era sua neta. Antes do Alzheimer chegar, eu era sua neta. Mas ela é e sempre será minha avó.\n\nPERSON, C. R. Borboletas no estômago: porque às vezes o título precisa\nser adolescente e clichê, já que a vida exige sermos tão adultos.\n\nSão Paulo: Ed. das Autoras, 2021.\n\nA narradora, ao resgatar memórias da história de vida da avó, faz uso recorrente da locução “antes de”. Esse termo colabora para a progressão temática na medida em que",
+        "opcoes": [
+          "relaciona eventos ocorridos simultaneamente.",
+          "estabelece uma comparação entre as lembranças.",
+          "ressalta fatos que ressignificam o momento presente.",
+          "sinaliza uma sequência que denota ações consecutivas.",
+          "apresenta uma explicação para as memórias resgatadas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:7d858e45",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 17"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.849Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:960b97c5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O meu medo é entrar na faculdade e tirar zero eu que nunca fui bom de matemática fraco no inglês eu que nunca gostei de química geografia e português o que é que eu faço agora hein mãe não sei. [...]\nO meu medo é a vida piorar e eu não conseguir arranjar emprego nem de faxineiro nem de porteiro nem de ajudante de pedreiro e o pessoal dizer que o governo já fez o que pôde já pôde o que fez já deu a sua cota de participação hein mãe não sei.\n\nO meu medo é que mesmo com diploma debaixo do braço andando por aí desiludido e desempregado o policial me olhe de cara feia e eu acabe fazendo uma burrice sei lá uma besteira será que eu vou ter direito a uma cela especial hein mãe não sei.\n\nFREIRE, M. Contos negreiros. Rio de Janeiro: Record, 2005.\n\nNesse texto, a reiteração dos medos e das angústias do narrador exprime",
+        "opcoes": [
+          "inseguranças sobre o futuro familiar.",
+          "dilemas resultantes de seu fracasso escolar.",
+          "incertezas centradas em sua condição social.",
+          "hesitações em relação à sua formação profissional.",
+          "preocupações com as políticas públicas assistenciais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:960b97c5",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 21"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.852Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:aadc16ac",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Pequenino morto\n\nTange o sino, tange, numa voz de choro,\nNuma voz de choro... tão desconsolado...\nNo caixão dourado, como em berço de ouro,\nPequenino, levam-te dormindo... Acorda!\nOlha que te levam para o mesmo lado\nDe onde o sino tange numa voz de choro...\nPequenino, acorda!\n\nQue caminho triste, e que viagem! Alas\nDe ciprestes negros a gemer no vento;\nTanta boca aberta de famintas valas\nA pedir que as fartem, a esperar que as encham...\nPequenino, acorda! Recupera o alento,\nFoge da cobiça dessas fundas valas\nA pedir que as encham.\n\nCARVALHO, V. Poemas e canções. Rio de Janeiro:\n\nSaraiva, 1962 (fragmento).\n\nNesse fragmento do poema, o sentimento de luto adquire\ncontornos expressivos e é intensificado pela",
+        "opcoes": [
+          "descrição da paisagem de um cemitério.",
+          "recusa do eu lírico à irreversibilidade da morte.",
+          "sonoridade dos versos produzida pela pontuação.",
+          "religiosidade evocada como forma de fortalecimento.",
+          "impressão de sonho na construção da estrutura poética."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:aadc16ac",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 28"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.128Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:c57d7349",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Só entende os corações desse lugar quem mergulha nesse mar a perder de vista e recoberto de cana caiana, cana fita, cana roxa, cana-de-macaco, açúcar, melado, rapadura, aguardente, fumo, mandioca, quiabos, pimentas, moendas, frutas, fruta-pão, sobrados, senzalas, tachos, casa de purgar. Um reino dentro de outro, com tudo o que se tem direito: reis, rainhas, príncipes e princesas, bobos da corte, cortesãos, conselheiros e escravos, muitos escravos. […]\nA corte do massapé, como qualquer outra na história da humanidade, fazia tudo para não deixar escapar nenhum mísero grão dos seus domínios para quem estivesse de fora do seu apertado círculo. Os nomes se repetiam de pai para filho, para sobrinho, para netos e bisnetos, de forma concêntrica e repetitiva, para que não pairasse nenhuma dúvida de que são todos da mesma parentela. As farinhas todas num mesmo saco brasonado.\n\nCRUZ, E. A. Água de barrela. Rio de Janeiro: Malê, 2018.\n\nNesse fragmento, o narrador enumera o resultado do trabalho com a terra, o qual, no contexto em que aparece,",
+        "opcoes": [
+          "espelha a permanência dos privilégios de classe.",
+          "oferece um panorama da população do campo.",
+          "mostra os benefícios da fartura na agricultura.",
+          "defende a importância da atividade coletiva.",
+          "valoriza o trabalho ao longo das gerações."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:c57d7349",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 29"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.129Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:aef68f60",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Muitos pensam que narrativa curta é sinônimo de conto, perdendo de vista gêneros que, por tradição ruim, continuam à margem da nobreza. Acontece que o conto tem uma densidade específica, centrando-se na exemplaridade de um instante da condição humana, sem que essa exemplaridade se refira à valoração moral, já que uma grande mazela pode muito bem exemplificar uma das nossas faces. A crônica não tem essa característica. Conservou a marcadoregistrocircunstancialfeitopornarrador-repórterquerelata um fato para muitos leitores que formam um público determinado.\n\nMasquepúblicoéesse?Sendoacrônicaumasomadejornalismo e literatura (daí a imagem do narrador-repórter), dirige-se a uma classe que tem preferência pelo jornal em que ela é publicada, o que significa uma espécie de censura ou, pelo menos, de limitação: a ideologiado veículocorrespondeao interessedos seus consumidores, direcionados pelos proprietários dos periódicos e/ou pelos editores- -chefes da redação. Ocorre ainda o limite de espaço, uma vez que a página comporta várias matérias, o que impõe a cada uma delas um número restrito de laudas, obrigando o redator a explorar, da maneira mais econômica possível, o pequeno espaço de que dispõe. É dessa economia que nasce sua riqueza estrutural.\n\nSÁ, J. A crônica. São Paulo: Ática, 1987 (adaptado).\n\nDe acordo com esse texto, o aspecto tecnológico que influencia a composição do gênero crônica advém da",
+        "opcoes": [
+          "conexão ideológica.",
+          "densidade temática.",
+          "ênfase no público leitor.",
+          "apresentação de uma moral.",
+          "restrição espacial do suporte."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:aef68f60",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 32"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.266Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:e3ab966f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nOs Doze Trabalhos de Hércules\n\nHércules é uma figura lendária da mitologia greco-romana. Ele é frequentemente retratado como um herói de força sobre-humana e coragem, filho de Zeus, o rei dos deuses, e Alcmena, uma mulher mortal. O episódio mais conhecido de Hércules é a realização dos Doze Trabalhos.\n\nEsses trabalhos são impostos a ele como uma forma de expiação pelos crimes cometidos durante um acesso de loucura, causado pela deusa Hera, esposa de Zeus. Os Doze Trabalhos são: matar o Leão de Nemeia; matar a Hidra de Lerna; capturar a corça de Cerineia; capturar o javali de Erimanto; limpar os estábulos de Áugias; matar as aves do lago Estínfalo; matar o touro de Creta; capturar os cavalos de Diomedes; roubar o cinturão de Hipólita, a rainha das Amazonas; capturar o gado de Gerião; capturar os pomos de ouro do Jardim das Hespérides; capturar o cão de Hades, Cérbero.\n\nHERTEL, R. Mitologia. Disponível em: https://osmelhoreslivros.com.br.\n\nAcesso em: 4 jun. 2025 (adaptado).\n\nTEXTO II\n\nOs Doze Trabalhos\n\nO que lhe faltava de estudo lhe sobrava de boa vontade e inteligência. No escritório improvisado na salinha da casa, anunciava seus serviços de bombeiro hidráulico e eletricista. Nas horas vagas entregava panfletos e lavava carros. Quando a cidade fervia com alguma festa, postava-se à entrada vendendo cerveja. Se fosse algum show infantil, cocadas. Aos sábados, era pedreiro e, aos domingos, conservava um jardim de uma mansão, além de tratar da piscina e dos cachorros. Nas férias, abrigava-se na fazenda dos donos da mansão, onde trabalhava como caseiro e motorista. Seu nome: João Antonio da Silva. Mas pode chamar de Hércules.\n\nFERREIRA, G. V. Os doze trabalhos. Disponível em: www.minicontos.com.br.\n\nAcesso em: 15 jul. 2015 (adaptado).\n\nA comparação entre os textos I e II indica que o(a)",
+        "opcoes": [
+          "intertextualidade com o mito apresentado no Texto I é um recurso presente no Texto II.",
+          "narração de fatos do Texto II sintetiza os acontecimentos retratados no Texto I.",
+          "vocabulário empregado no Texto II é ancorado em conhecimento literário.",
+          "tema do trabalho como reparação é abordado em ambos os textos.",
+          "marcação temporal no passado predomina em ambos os textos."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:e3ab966f",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 37"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.096Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:1a671cb4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Desenvolvendo-se nesse meio, é natural que Celina, filha mais velha de D. Adozinda, tivesse seus pequenos flirts com alguns desses rapazes, muito íntimos da casa e trazendo-lhe da cidade presentes de doces, de balas de ovo, de jornais ilustrados ou de frutas.\n\nAs irmãs mais novas iam ao colégio; ela ficava, enchendo o tempo com uns crochês vagarosos, costuras leves, a leitura dos folhetins dos jornais; e o Gilberto, que raramente saía, andava sempre ao seu lado, muito caído por esse tipo um pouco mórbido de menina anêmica [...].\n\nO Gilberto não valia nada, mas quem sabe se apareceria outro, simplório e sincero como ele? E a filha, com os seus dezessete anos, começava a embaraçá-la um pouco, nesse difícil papel de virgem numa casa de pensão, cheia de rapazes. Ora, o melhor era esperar, dar tempo ao tempo... E o Gilberto e a Celina continuaram a namorar-se, ele cândido, ela dúbia; enquanto o Coronel Juvenato, que deixara a mulher em Sobral para tratar de uma concessão rendosa com os políticos do Rio, ia agora monopolizando, como protetor mais importante, as alegres visitas matinais da viúva, que já lhe levava sempre o café — mas sem flores colhidas no jardim, ainda rociadas de orvalho, porque o cearense não dava para essas coisas de poesia. Era rápido, prático, e não admitia bobagens. Por isso, todos os sábados à noite, ele dizia a D. Adozinda com um tremor lúbrico nas banhas moles da face, os olhinhos vivos pestanejando:\n\n— A senhora não se esqueça que amanhã é domingo... Leve-me cedo o café, hein?... que eu tenho de ir à missa...\n— Pois não, pois não, Coronel! fique descansado — respondia a viúva do Ferreira, muito atenciosamente, tirando-lhe umas caspas da gola do paletó, com a mão repolhuda.\n\nOs outros hóspedes riam-se à socapa; e no domingo o café não faltava, bem cedinho...\n\nDOLORES, C. A luta. Rio de Janeiro: Ímã, s.d.\n\nNesse trecho, ao explorar a descrição como recurso que demarca impressões e pontos de vista, o narrador cria uma ambiência sugestiva do(a)",
+        "opcoes": [
+          "escárnio relacionado à degradação moral dos indivíduos.",
+          "cenário urbano marcado por condições de insalubridade.",
+          "persistência do sentimentalismo explorado pelos folhetins.",
+          "prática do enriquecimento ilícito visto nas grandes cidades.",
+          "desigualdade de gênero acentuada pela baixa escolarização."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:1a671cb4",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 40"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.100Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

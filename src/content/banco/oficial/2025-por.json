@@ -1,0 +1,1538 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "oficial:2025:951dc690",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De próprio punho\nA escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda\nque vai do simples bilhete aos originais de um livro\n\n1 Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia\n2 que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem\n3 burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,\n4 o que importava era a autenticidade da minha caligrafia, que à época ainda era mais\n5 fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,\n6 hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,\n7 mais rotunda e mais cheia de arestas.\n8 É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,\n9 manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso\n10 não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que\n11 eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de\n12 tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou\n13 sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever\n14 neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais\n15 ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias\n16 possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,\n17 são elas que batucam meu teclado de computador ou que tocam suavemente duas ou\n18 três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times\n19 New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus\n20 e o mundo.\n21 A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca\n22 deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até\n23 hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços\n24 e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está\n25 em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na\n26 cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus\n27 coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its\n28 na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico\n29 comigo mesma, a evitar um comportamento esquecido e relapso.\n30 No escritório, costumo ser mais suave comigo mesma, mas também muito mais\n31 lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai\n32 minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados\n33 precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam\n34 como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por\n35 outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais\n36 ainda as adultas) precisa conviver.\n37 As formas de escrever mudam, as necessidades também, e o resultado é um elenco\n38 complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas\n39 ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,\n40 mudando de status, numa ciranda interessante e importante que pode ser vista à luz de\n41 certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta\n42 muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação\n43 por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,\n44 e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma\n45 frase filosoficamente correta. O negócio é mais “o punho e o pixel”.\n\nRIBEIRO, A. E. Disponível em: https://rascunho.com.br.\n\nAcesso em: 16 jan. 2024 (adaptado).\n\nNesse texto, o que caracteriza a escrita “de próprio punho” é a letra manuscrita, enquanto a escrita digital é ilustrada pelo(a)",
+        "opcoes": [
+          "utilização de tecnologias diversificadas.",
+          "desenvolvimento de novos recursos de escrita.",
+          "possibilidade de interações mediadas por telas.",
+          "diversidade de fontes tipográficas que estão disponíveis.",
+          "delimitação dos espaços onde a produção textual ocorre."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:951dc690",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 8"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.477Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:5ca22164",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De próprio punho\nA escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda\nque vai do simples bilhete aos originais de um livro\n\n1 Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia\n2 que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem\n3 burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,\n4 o que importava era a autenticidade da minha caligrafia, que à época ainda era mais\n5 fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,\n6 hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,\n7 mais rotunda e mais cheia de arestas.\n8 É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,\n9 manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso\n10 não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que\n11 eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de\n12 tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou\n13 sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever\n14 neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais\n15 ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias\n16 possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,\n17 são elas que batucam meu teclado de computador ou que tocam suavemente duas ou\n18 três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times\n19 New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus\n20 e o mundo.\n21 A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca\n22 deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até\n23 hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços\n24 e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está\n25 em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na\n26 cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus\n27 coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its\n28 na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico\n29 comigo mesma, a evitar um comportamento esquecido e relapso.\n30 No escritório, costumo ser mais suave comigo mesma, mas também muito mais\n31 lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai\n32 minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados\n33 precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam\n34 como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por\n35 outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais\n36 ainda as adultas) precisa conviver.\n37 As formas de escrever mudam, as necessidades também, e o resultado é um elenco\n38 complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas\n39 ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,\n40 mudando de status, numa ciranda interessante e importante que pode ser vista à luz de\n41 certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta\n42 muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação\n43 por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,\n44 e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma\n45 frase filosoficamente correta. O negócio é mais “o punho e o pixel”.\n\nRIBEIRO, A. E. Disponível em: https://rascunho.com.br.\n\nAcesso em: 16 jan. 2024 (adaptado).\n\nA autora conclui que as novas tecnologias de escrita",
+        "opcoes": [
+          "evoluem para facilitar a vida cotidiana.",
+          "alcançam diferentes realidades sociais.",
+          "coexistem com outras já estabelecidas.",
+          "promovem maior agilidade na comunicação.",
+          "surgem nos contextos em que são necessárias."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:5ca22164",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 9"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.479Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:d7117a93",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De próprio punho\nA escrita e suas tecnologias sofrem interessantes metamorfoses, numa ciranda\nque vai do simples bilhete aos originais de um livro\n\n1 Estranhei muito na primeira vez que escutei a expressão “de próprio punho”. Parecia\n2 que eu ia bater em alguém. Não era bem o caso. Foi numa situação bancária, dessas bem\n3 burocráticas, e eu devia escrever algo bem breve, mas com minhas mãos. Na verdade,\n4 o que importava era a autenticidade da minha caligrafia, que à época ainda era mais\n5 fluente e firme. Depois dos teclados de computador, ela rateia bastante. Minha letra,\n6 hoje, tem uma espécie de alternância: dia sim, dia não, trêmula e firme, forte e fraca,\n7 mais rotunda e mais cheia de arestas.\n8 É claro que já escrevi muito mais de próprio punho ou, numa palavra mais bonita,\n9 manuscrevi (prefiro a mão ao punho, embora ele também seja usado na tarefa). Mas isso\n10 não é um feito individual. Em larga medida, é social. Muita gente sente o mesmo que\n11 eu, isto é, escreve bem menos usando as mãos, ou melhor, empregando algum tipo de\n12 tecnologia (lápis, caneta etc.) para escrever com grafite ou tinta ou giz ou carvão ou\n13 sangue e o que mais. É importante lembrar que ainda há gente que não sabe escrever\n14 neste país, neste planeta, mas muita gente sabe e tem um combo de tecnologias mais\n15 ou menos à disposição para isso. Sou dessas pessoas privilegiadas que têm várias\n16 possibilidades, e uma delas nunca deixou de ser o uso das minhas mãos. Ainda hoje,\n17 são elas que batucam meu teclado de computador ou que tocam suavemente duas ou\n18 três telas sensíveis. Mas não expressam mais a minha letra. No lugar, aparecem Times\n19 New Roman, Arial, Calibri e mais uma centena de “letras” à minha escolha. Eu e Deus\n20 e o mundo.\n21 A despeito desse rol de chances e ferramentas para escrever, o manuscrito nunca\n22 deixou de pintar aqui e ali, muitas vezes como obrigação. Na escola, por exemplo, até\n23 hoje ele é soberano. No Enem também. Curioso, não? Fico pensando em que espaços\n24 e ocasiões ainda uso minha letra. Olhando ao redor, na minha casa, minha letra está\n25 em espaços muito delimitados e específicos: bilhetes. Eles estão principalmente na\n26 cozinha, em especial na porta da geladeira, a fim de manter a comunicação com meus\n27 coabitantes, sempre muito esquecidos ou relapsos. Mas também há bilhetes em post its\n28 na minha mesa do escritório, textinhos em garranchos por meio dos quais me comunico\n29 comigo mesma, a evitar um comportamento esquecido e relapso.\n30 No escritório, costumo ser mais suave comigo mesma, mas também muito mais\n31 lacônica, a ponto de nem eu me entender, se passar o tempo. Em todos os casos vai\n32 minha letra, menos e mais redonda, a lápis e a tinta azul, em post its rosa-choque, colados\n33 precariamente, e todos com destino à lixeira, em breve. Justo porque eles funcionam\n34 como lembretes de tarefas e coisas que devem ser vencidas e, claro, substituídas por\n35 outras, num fluxo infinito, às vezes ansiogênico, com que a maioria dos adultos (e mais\n36 ainda as adultas) precisa conviver.\n37 As formas de escrever mudam, as necessidades também, e o resultado é um elenco\n38 complexo, em que nada dispensa nada, a depender da tarefa ou da importância das coisas\n39 ou de suas funções, claro. A escrita e suas tecnologias incríveis vão se reposicionando,\n40 mudando de status, numa ciranda interessante e importante que pode ser vista à luz de\n41 certa diversidade que encontra suas oportunidades e seus efeitos, aqui e ali. Não adianta\n42 muito pensar sempre como se tudo fosse excludente. Estão aí minha farta comunicação\n43 por bilhetes, minha gaveta alegre de post its de toda cor, esperando para serem usados,\n44 e o cheque do cartório, em que quase tudo já é digital. “Do punho ao pixel” não é uma\n45 frase filosoficamente correta. O negócio é mais “o punho e o pixel”.\n\nRIBEIRO, A. E. Disponível em: https://rascunho.com.br.\n\nAcesso em: 16 jan. 2024 (adaptado).\n\nO recurso linguístico usado para marcar a síntese da opinião da autora sobre a temática desenvolvida foi o(a)",
+        "opcoes": [
+          "emprego da primeira pessoa em “Estranhei muito na primeira vez que escutei a expressão ‘de próprio punho’”. (l. 1)",
+          "utilização de locução adverbial em “Na verdade, o que importava era a autenticidade da minha caligrafia”. (l. 3-4)",
+          "uso de pronome possessivo em “Minha letra, hoje, tem uma espécie de alternância”. (l. 5-6)",
+          "adoção de termo autorreflexivo em “No escritório, costumo ser mais suave comigo mesma”. (l. 30)",
+          "substituição da expressão “Do punho ao pixel” (l. 44) pela expressão “o punho e o pixel”. (l. 45)"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:d7117a93",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 10"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.481Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:19e0c029",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "— Vejo, disse ele com algum acanhamento, que o doutor não é nenhum pé-rapado, mas nunca é bom facilitar... Minha filha Nocência fez 18 anos pelo Natal, e é rapariga que pela feição parece moça de cidade, muito ariscazinha de modos, mas bonita e boa deveras... Coitada, foi criada sem mãe, e aqui nestes fundões. [...]\n— Ora muito que bem, continuou Pereira caindo aos poucos na habitual garrulice, quando vi a menina tomar corpo, tratei logo de casá-la.\n\n— Ah! é casada? perguntou Cirino.\n— Isto é, é e não é. A coisa está apalavrada. Por aqui costuma labutar no costeio do gado para São Paulo um homem de mãocheia, que talvez o sr. conheça... o Manecão Doca...\n\n— Não, respondeu Cirino abanando a cabeça.\n— Pois isso é um homem às direitas, desempenado e trabucador como ele só... fura estes sertões todos e vem tangendo pontes de gado que metem pasmo. Também dizem que tem bichado muito e ajuntado cobre grosso, o que é possível, porque não é gastador nem dado a mulheres. Uma feita que estava aqui de pousada... olhe, mesmo neste lugar onde estava mecê inda agorinha, falei-lhe em casamento... isto é, dei-lhe uns toques... porque os pais devem tomar isso a si para bem de suas famílias; não acha?\n\n— Boa dúvida, aprovou Cirino, dou-lhe toda a razão; era do seu dever.\n\nTAUNAY, A. d’E. Inocência. Disponível em: www.dominiopublico.gov.br.\n\nAcesso em: 29 fev. 2024.\n\nNesse trecho, ao se referir à sua filha, o pai de Inocência reproduz os ideais românticos, presentes na",
+        "opcoes": [
+          "valorização do ambiente rural na formação moral da mulher.",
+          "figura decorativa da mulher ante o protagonismo masculino.",
+          "equivalência de origem social para a harmonia do casal.",
+          "importância do dote como condição para o casamento.",
+          "aura de mistério sobre a identidade da jovem."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:19e0c029",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 11"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.482Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:a4dba2ba",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Ministério do Esporte no Brasil lançou o programa Maré Inclusiva, em 2024, ano dos Jogos Paralímpicos de Paris. Esse programa visa ampliar as oportunidades para pessoas com deficiência que desejam praticar o surf. O parasurf é a prática do surf adaptada para permitir que pessoas com deficiência pratiquem o esporte em todas as suas categorias, modalidades e manifestações. Para a Secretaria Nacional do Paradesporto, a iniciativa é mais do que um programa de esporte, é uma iniciativa que busca transformar vidas e promover a inclusão por meio do parasurf, criando um legado de igualdade e respeito.\n\nDisponível em: www.gov.br/esporte. Acesso em: 6 set. 2024 (adaptado).\n\nDe acordo com esse texto, o programa voltado ao estímulo da prática do parasurf evidencia a",
+        "opcoes": [
+          "adesão de diferentes países a programas inclusivos.",
+          "preocupação política em atender a demandas paralímpicas.",
+          "importância de uma política pública esportiva para a inclusão.",
+          "eficiência das iniciativas de inclusão em megaeventos esportivos.",
+          "escassez de investimento em práticas corporais de aventura na natureza."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:a4dba2ba",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 12"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.482Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:6d40289d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Art. 26-A. Nos estabelecimentos de ensino fundamental e médio, oficiais e particulares, torna-se obrigatório o ensino sobre História e Cultura Afro-Brasileira.\n\n§ 1º O conteúdo programático a que se refere o caput deste artigo incluirá o estudo da História da África e dos Africanos, a luta dos negros no Brasil, a cultura negra brasileira e o negro na formação da sociedade nacional, resgatando a contribuição do povo negro nas áreas social, econômica e política pertinentes à História do Brasil.\n\n§ 2º Os conteúdos referentes à História e Cultura Afro- -Brasileira serão ministrados no âmbito de todo o currículo escolar, em especial nas áreas de Educação Artística e de Literatura e História Brasileiras.\n\nBRASIL. Lei n. 10 639/2003. Disponível em: www.gov.br/planalto.\n\nAcesso em: 5 maio 2024.\n\nO emprego da norma-padrão é justificado nesse texto",
+        "opcoes": [
+          "pela especialização de seu público-alvo.",
+          "pela relevância cultural de seu conteúdo.",
+          "pelos contextos pedagógicos em que circula.",
+          "pela importância para os grupos étnico-raciais.",
+          "pelas características do gênero a que pertence."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:6d40289d",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 13"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.483Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:6842a3be",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O retrato como gênero da pintura ocidental ficou vinculado às elites, tornando invisíveis as populações que não faziam parte do círculo dominante. Num país de tradição escravocrata e colonizado por europeus como o Brasil, pouquíssimas pessoas negras e indígenas foram retratadas em pintura, e menos ainda identificadas com seus nomes nos retratos. Daí a importância, para a história da arte e para a história brasileira, dos retratos de Dalton Paula.\n\n[[imagem:0]]\n\nAo dar protagonismo a Zeferina e a João de Deus Nascimento, o artista Dalton Paula evidencia que a(s)",
+        "opcoes": [
+          "arte pode promover formas de afirmação de identidade social.",
+          "comunidades periféricas passam a adquirir o gênero retrato.",
+          "personagens retratadas simbolizam a sociedade brasileira.",
+          "pintura funciona como instrumento de ascensão social.",
+          "imagens tradicionais preservam memórias afetivas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q015-1.webp",
+            "alt": "Imagem da questão 15 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.masp.org.br. Acesso em: 5 maio 2024 (adaptado).",
+            "largura": 1048,
+            "altura": 836
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:6842a3be",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 15"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:31:00.976Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:dea6fd55",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com 20 anos de experiência no futebol de alto rendimento, Marina, ex-jogadora da seleção brasileira de futebol, salienta que, por trás do espetáculo apresentado nas mídias, com mensagens de motivação e superação, o esporte não é tão inclusivo assim. “É esta análise que devemos fazer: aqueles atletas que estão ali estão trazendo uma alta performance a partir dos seus limites”, explica. Para a profissional, é preciso analisar com cautela “a ideia romântica que a mídia passa para os telespectadores”. A realidade é muito mais dura do que as imagens espetaculosas que principalmente a televisão busca transmitir para a audiência. “Por trás existe um ser humano, a gente não pode nunca esquecer isso. Aquela pessoa treinou insistentemente para estar ali, durante meses, semanas e temporadas. Duas vezes ao dia, de duas a quatro horas”, pondera Marina. Atualmente, as crianças e os jovens vislumbram o sucesso profissional e a boa-vida financeira de poucos atletas que se destacam e estampam os meios de comunicação. Tudo parece ser muito mais fácil do que realmente é quando apenas as conquistas são mostradas.\n\nROSOLEN, N. Disponível em: www.uninter.com.\n\nAcesso em: 10 maio 2024 (adaptado).\n\nNesse texto, a visão crítica de uma ex-atleta de futebol revela que",
+        "opcoes": [
+          "os meios de comunicação invisibilizam as dificuldades presentes no esporte.",
+          "o treinamento atlético de alto nível é desestimulante para os indivíduos.",
+          "o trabalho contínuo é desvalorizado no contexto esportivo profissional.",
+          "as ações de incentivo financeiro a jovens atletas são precárias.",
+          "as publicações da mídia esportiva rotulam atletas iniciantes."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:dea6fd55",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 18"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.850Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:ea1a82ce",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No predomínio das mulheres pretas brasileiras nos Jogos Olímpicos de 2024, uma coisa chamou a atenção no pódio: elas valorizam a parte psicológica. As duas medalhistas de ouro, a judoca Beatriz Souza e a ginasta Rebeca Andrade, ressaltam, em várias entrevistas, a importância da saúde mental. Em uma dessas entrevistas, Rebeca sinaliza: “Acho que não é só sobre vencer a Simone, é sobre vencer a mim mesma. A minha briga está na minha cabeça, não está com outras pessoas. Para conseguir fazer as minhas apresentações, preciso controlar a minha cabeça, o meu corpo, e essa é a briga”. Na mesma linha, a skatista Rayssa Leal exalta a necessidade da terapia, e a Seleção Brasileira de Futebol de Mulheres tem o suporte psicológico como reforço no treinamento.\n\nDisponível em: https://iclnoticias.com.br.\n\nAcesso em: 18 set. 2024 (adaptado).\n\nNesse texto, as atletas brasileiras defendem o(a)",
+        "opcoes": [
+          "investimento na modernização de equipamentos.",
+          "subordinação do treinamento físico ao mental.",
+          "estímulo à competição entre adversárias.",
+          "aprimoramento da expressão corporal.",
+          "importância da saúde emocional."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:ea1a82ce",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 19"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.851Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:a580ebe1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A característica fundamental no aprendizado das práticas rituais nos candomblés é o processo iniciático e participante. Durante o período de reclusão em terreiros ou rocas, o iniciado passa por uma série de ritos esotéricos (banhos rituais, raspagem da cabeça etc.), ao mesmo tempo em que começa a adquirir um complexo código de símbolos materiais (substâncias, folhas, frutos, raízes etc.) e de gestos associados a um repertório linguístico específico das cerimônias que se desenrolam nos contextos sagrados em geral e em cada terreiro em particular.\n\nEsse repertório linguístico, genericamente chamado de “língua de santo” na Bahia, compreende uma terminologia religiosa operacional, de caráter mágico-semântico e de aparente forma portuguesa, mas que repousa sobre sistemas lexicais de diferentes línguas africanas que provavelmente foram faladas no Brasil escravocrata, vindo a constituir uma língua ritual, que se acredita pertencer à nação do vodum, do orixá ou do inquice, e não a determinada nação africana política atual.\n\nDisponível em: https://periodicos.ufba.br.\n\nAcesso em: 21 jan. 2024 (adaptado).\n\nA “língua de santo” tem sua importância para o patrimônio linguístico brasileiro por",
+        "opcoes": [
+          "apresentar uma carga semântica mítica.",
+          "conservar elementos dos falares dos escravizados.",
+          "resgatar expressões portuguesas do período colonial.",
+          "decodificar o ritual religioso dos nossos antepassados.",
+          "favorecer a compreensão do léxico africano contemporâneo."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:a580ebe1",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 20"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.851Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:0930273a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\nNesse cartaz, a utilização de frases que projetam a vida profissional de duas crianças tem como objetivo",
+        "opcoes": [
+          "sugerir a arrecadação de fundos para o sustento de povos originários no país.",
+          "sensibilizar a sociedade sobre os benefícios decorrentes do combate ao racismo.",
+          "indicar a importância da orientação vocacional na educação de crianças no Brasil.",
+          "chamar a atenção sobre a necessidade de ações voltadas para a educação infantil.",
+          "valorizar o trabalho de agências internacionais na luta contra a discriminação racial."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q024-1.webp",
+            "alt": "Imagem da questão 24 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 615
+          },
+          {
+            "url": "/content/img/2025/d1-q024-2.webp",
+            "alt": "Imagem 2 da questão 24 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.unicef.org.br. Acesso em: 15 jan. 2024 (adaptado).",
+            "largura": 1200,
+            "altura": 491
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:0930273a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 24"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:22.875Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:ee1469ec",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Passando por aqui para lembrar algumas palavras, frases e expressões que nos infernizaram em 2023. Inclusive passando por aqui. Se você for proativo, vai achar que é o novo normal. Estarão na sua zona de conforto. Mas, se for reativo como eu, vai achar que é uma narrativa que precisa ser ressignificada.\n\nÉ uma questão de empatia. É sobre entregar um discurso mais robusto e empoderado. Sei bem que não tenho lugar de fala para harmonizar certos pontos fora da curva e que preciso aplicar toda a minha resiliência para fazer um realinhamento. O nível de fitness está hoje num sarrafo muito alto.\n\nO fato é que acho cringe essas falas fora da caixinha. Aliás, falar cringe já é meio cringe. Preciso usar a superação para me reinventar e entender que resenha não tem mais a ver com futebol, é qualquer papo, desde que latente.\n\nPensando bem, não é tão difícil. Frases feitas são aquelas que entram por um ouvido e saem pelo outro sem um estágio intermediário no cérebro. A boca fala por conta própria, dispensando-nos de pensar. E não tem problema nisso. Ou as ditas frases se incorporam à língua ou morrem e nascem outras. A língua é assim. Simples assim.\n\nCASTRO, R. Disponível em: www1.folha.uol.com.br. Acesso em: 3 fev. 2024 (adaptado).\n\nNesse texto, a estratégia empregada para criticar a constante exposição a palavras, frases e expressões automatizadas é o(a)",
+        "opcoes": [
+          "menção feita à efemeridade de alguns usos linguísticos aleatórios.",
+          "subjetividade marcada pela reflexão que se desenvolve em primeira pessoa.",
+          "efeito estilístico da repetição intencional da palavra “assim” no último parágrafo.",
+          "sedução sugerida pelo envolvimento direto do leitor marcado nos usos de “você” e “sua”.",
+          "humor gerado pelo uso das estruturas linguísticas que são objeto da reflexão desenvolvida."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:ee1469ec",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 25"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:22.877Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:7d8f11a4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEsse texto, que apresenta um prato da culinária brasileira, evidencia",
+        "opcoes": [
+          "valor afetivo nas nomenclaturas.",
+          "variedade linguística entre regiões.",
+          "disputa regional pelo melhor prato.",
+          "modos de preparo de um mesmo alimento.",
+          "paladares diversificados entre diferentes estados."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q026-1.webp",
+            "alt": "Imagem da questão 26 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Revista Língua Portuguesa, n. 31, maio 2008 (adaptado).",
+            "largura": 948,
+            "altura": 1056
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:7d8f11a4",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 26"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.127Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:ee79d41e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A diferença entre briga e luta é a existência de juízes e medalhas? A briga desumaniza o outro e pode até matá-lo. Já na luta, as intenções do outro são consideradas sua proposta combativa e suas habilidades, enfim, sua meta de vencer. Na luta, o desenvolvimento passa pelo contato com a agressividade, a raiva, a frustração, o orgulho, a determinação e a fraqueza. Daí também a luta não ser apenas com o outro, mas consigo mesmo, num combate contra as próprias limitações, sobretudo, contra o próprio orgulho.\n\nBARREIRA, C. A briga desumaniza. A luta, não.\n\nO Estado de S. Paulo, 22 ago. 2010 (adaptado).\n\nEsse texto apresenta as diferenças entre briga e luta, na medida em que aponta o(a)",
+        "opcoes": [
+          "superação pessoal na luta.",
+          "violência evidenciada na luta.",
+          "predomínio de regras na briga.",
+          "desafio externo presente na luta.",
+          "habilidade desenvolvida na briga."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:ee79d41e",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 27"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.127Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:734d4f7c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uruku\nUrucum\nRocou\n(Bixa orellana)\nMoju, dono da água, não gosta do cheiro de urucum. Mani’ojarã, dono da mandioca, e os donos das outras plantas cultivadas também não. Eles não suportam. Por isso, os Wajãpi se untam de urucum, deixam o rosto vermelho e se perfumam com seu aroma agradável. Além disso, os seres agressores, os jarã (donos) e os espíritos terrestres, gostam do cheiro dos fluidos humanos, do sangue, do suor. Então, o urucum os dissimula, protegendo as pessoas que vão caçar, caminhar pela floresta, que estão sendo perturbadas por espíritos em sonhos ou que estão em resguardo, como os doentes. O seu uso é tão cotidiano que os Wajãpi o plantam na aldeia, para ter sempre pertinho. Como o urucum não tem jarã, não tem problema nenhum em arrancar e usar para pintar.\n\nSTRAPPAZZON, A. I.; SIGOLO, R. P. Jardins da história: medicinas indígenas.\n\nRecife: ObservaPICS, 2022.\n\nEsse verbete contribui para a preservação do patrimônio linguístico nacional, pois apresenta uma",
+        "opcoes": [
+          "explicação de um rito medicinal do povo Wajãpi.",
+          "definição de um termo na perspectiva ancestral indígena.",
+          "relação de equivalência entre vocábulos de diferentes línguas indígenas.",
+          "atualização de saberes tradicionais dos povos indígenas brasileiros.",
+          "descrição das propriedades científicas de plantas silvestres."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:734d4f7c",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 30"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.130Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:73078627",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\nNesse texto, a autora aborda diferentes sentidos da palavra “rede” para evidenciar",
+        "opcoes": [
+          "as formas de comunicação em meios digitais.",
+          "a necessidade de atualização das mídias sociais.",
+          "os conflitos de identidade dos usuários da internet.",
+          "o impacto das tecnologias nas interações humanas.",
+          "os desejos de compartilhar vivências com os amigos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q031-1.webp",
+            "alt": "Imagem da questão 31 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 360,
+            "altura": 260
+          },
+          {
+            "url": "/content/img/2025/d1-q031-2.webp",
+            "alt": "Imagem 2 da questão 31 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: MURRAY, R.; KLIGERMAN, E. Teias de afeto e poesia . Disponível em:\nhttps://roseanamurray.com. Acesso em: 5 maio 2024.",
+            "largura": 1009,
+            "altura": 641
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:73078627",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 31"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.265Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:dffd1e35",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEsse texto trata de um problema social com o propósito de",
+        "opcoes": [
+          "divulgar campanha virtual contra casos de feminicídio.",
+          "promover engajamento do setor educacional na luta contra a violência.",
+          "comparar o impacto da violência na qualidade de vida de meninas e meninos.",
+          "ressaltar a importância da segurança dos estudantes no ambiente escolar.",
+          "dar visibilidade a estudos e pesquisas do setor de segurança."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q033-1.webp",
+            "alt": "Imagem da questão 33 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.tjdft.jus.br. Acesso em: 15 out. 2024 (adaptado).",
+            "largura": 1016,
+            "altura": 576
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:dffd1e35",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 33"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:23.362Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:9bb18d3c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nCom base na relação dos elementos não verbais com a frase “VOCÊ (NÃO) ESTÁ SOZINHO”, nessa capa de revista, a função poética fica evidente, pois",
+        "opcoes": [
+          "essa frase informa sobre os riscos de um determinado comportamento social.",
+          "o conteúdo da mensagem expressa a atitude do enunciador sobre o tema.",
+          "a construção dessa frase possibilita mais de uma interpretação.",
+          "essa frase estabelece um diálogo direto com o leitor.",
+          "a linguagem utilizada volta-se para si mesma."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q034-1.webp",
+            "alt": "Imagem da questão 34 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: https://revistagalileu.globo.com. Acesso em: 18 jun. 2024 (adaptado).",
+            "largura": 1016,
+            "altura": 1524
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:9bb18d3c",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 34"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.091Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:f6d38597",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Margot Robbie foi criticada por “não ser bonita o suficiente” para interpretar a Barbie. Recentemente, Paolla Oliveira foi chamada de gorda. Só fico pensando o que serei eu com mais de 50 (também no peso), com a minha aparência comum. O corpo da mulher vive um reality show permanente: é sempre vigiado e fiscalizado, como se fosse domínio público. A mulher que não atender aos estereótipos está sujeita a sofrer penalidades básicas, como distúrbios, obsessões, medo do próprio corpo e, é claro, dietas à base de rúcula. “A dieta é o sedativo político mais potente na história das mulheres”, escreveu Naomi Wolf, em 1991. A regra é não haver singularidade, mascarar a passagem do tempo, imobilizar a beleza (já imaginou como isso seria enfadonho?). O mandamento é obedecer às regras sociais do bom comportamento corporal, “como deve ser”, não nos atos, mas na forma.\n\nKORICH, B. S. Disponível em: www1.folha.uol.com.br.\n\nAcesso em: 22 jan. 2024 (adaptado).\n\nNesse texto, para introduzir a ideia de que a fiscalização permanente sobre o corpo afeta todas as mulheres, a autora",
+        "opcoes": [
+          "faz um comentário sobre sua própria imagem.",
+          "destaca avaliações particulares entre parênteses.",
+          "cita um formato de programa influente no segmento da beleza.",
+          "utiliza declaração de uma jornalista como argumento de autoridade.",
+          "enumera críticas à aparência de mulheres consideradas padrões de beleza."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:f6d38597",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 35"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.092Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:da4748ca",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "I: o nome do filme é roupa suja ... eu assisti na minha casa ... com minha mãe ... tinha um ... o filme era sobre um homem que colocaram ... trocaram as bolsas ... daí o homem levou uma bolsa cheia de dinheiro sem ele saber que na mala dele ... pensando que era dele mas era errada ... quando ele chegou onde ele ia trabalhar ... tinha uma moça tentando abrir a porta pra fazer entrevista com uns cantores lá que tinham ... daí ele perguntou ... “você tá tentando abrir a porta?”... daí ele ... “não ... não” ... daí ele disse ... “ah ... tá ... sim” ... daí ela ... “é ... e quero fazer uma entrevista” ... daí ele disse ... “você quer entrar ... então pode entrar” ... daí entraram ... daí ficaram lá ... quando ela entrou e queria fazer a entrevista um homem num deixou ... daí a mulher pegou ... subiu onde o homem tava trabalhando ... rapaz né ... onde ele tava trabalhando e ficou lá e dando o show ...\n\nCUNHA, M. A. F. Corpus discurso & gramática: a língua falada e\nescrita na cidade de Natal. Disponível em: https://deg.uff.br.\n\nAcesso em: 4 dez. 2024 (adaptado).\n\nNesse texto, a repetição da forma “daí” revela",
+        "opcoes": [
+          "a necessidade de adequação ao interlocutor.",
+          "a origem regional do locutor.",
+          "a escolaridade do falante.",
+          "uma estratégia presente na linguagem oral.",
+          "uma ênfase em determinadas partes do discurso."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:da4748ca",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 36"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.095Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:72bb0ce1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "1 O mais assustador do meteoro que cruzou o céu da Sibéria e explodiu no ar como\n2 várias bombas atômicas é que ele chegou sem ser anunciado. Com todas as atenções\n3 voltadas para o outro asteroide, o que passou de raspão, o asteroide da Sibéria entrou pela\n4 porta dos fundos sem ser detectado. A desculpa é que era pequeno demais para chamar a\n5 atenção e por isso os alarmes não funcionaram. Nossa ilusão, até agora, era que qualquer\n6 detrito espacial que se aproximasse de nós seria identificado e rotulado, e sua trajetória\n7 calculada até o último milímetro com grande antecedência, o que nos daria tempo para\n8 preparar o espírito — ou usar nossos cartões de crédito até o limite — no caso da colisão\n9 com a Terra ser inevitável.\n\nVERISSIMO, L. F. Disponível em: www.estadao.com.br. Acesso em: 1 mar. 2013.\n\nCom base na organização coesiva desse texto, o(a)",
+        "opcoes": [
+          "oração “que passou de raspão” (l. 3) refere-se ao “meteoro que cruzou o céu da Sibéria” (l. 1).",
+          "expressão “sua trajetória” (l. 6) refere-se ao elemento textual “qualquer detrito espacial” (l. 5-6).",
+          "palavra “isso” (l. 5) remete ao segmento textual posterior “os alarmes não funcionaram” (l. 5).",
+          "pronome “o” em “o que nos daria tempo” (l. 7) remete a “ou usar nossos cartões de crédito” (l. 8).",
+          "fragmento “o asteroide da Sibéria” (l. 3) introduz um elemento novo no texto."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:72bb0ce1",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 38"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.097Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:0804e61f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Do rádio ao podcast\n\nDesde a disseminação do rádio no Brasil, entre as décadas de 1920 e 1930, principalmente no governo de Getúlio Vargas, as pessoas passaram a dedicar uma parte de seu dia para escutar notícias, novelas, músicas e eventos esportivos em aparelhos de som. O radiojornalismo, por sua vez, teve seu pontapé inicial durante a Revolução Constitucionalista (1932) e se desenvolveu durante a Segunda Guerra Mundial (1939-1945).\n\nQuando a TV surgiu, esperava-se que o rádio fosse totalmente substituído, porém ele se manteve em alta, pois o sinal de televisão não cobria todos os lugares, diferentemente do rádio. Com o surgimento da internet, dos smartphones e de outros dispositivos móveis, o rádio foi incorporado a essas novas tecnologias até o desenvolvimento da web rádio e do podcast, mostrando-se um meio de comunicação versátil e democrático na área jornalística.\n\nPara um pesquisador da Universidade Federal de Uberlândia (UFU), o rádio não se tornou obsoleto, visto que não deixou de ser consumido e se reinventou com o tempo. “O podcast é uma continuação, uma evolução natural do rádio”, opina.\n\nALVES, A.; ALVES, C. Disponível em: https://comunica.ufu.br. Acesso em: 19 abr. 2024 (adaptado).\n\nAo abordar a trajetória dos meios de comunicação, esse texto propõe uma reflexão sobre a",
+        "opcoes": [
+          "tecnologia digital e seus desdobramentos no desenvolvimento da televisão.",
+          "evolução da tecnologia digital com o predomínio do podcast sobre o rádio.",
+          "permanência do rádio e sua evolução por meio da tecnologia digital.",
+          "influência da televisão sobre os programas de radiojornalismo.",
+          "interferência da tecnologia digital nas interações humanas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:0804e61f",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 39"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.098Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:0d06ba95",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nOrigem, tradição e resistência\n\nFoi sentada em seu banco de quartzo que a avó do universo, moradora da Maloca do Céu, criou os homens, os animais, a terra e as águas. O banco foi entregue aos ancestrais dos atuais Tukano, que passaram a reproduzi-lo em madeira. O mito Tukano — povo do noroeste da Amazônia que ainda hoje fabrica os bancos em seu estilo tradicional — indica o lugar dos bancos entre os objetos sagrados, ao mesmo tempo parte do universo primitivo e fonte do poder de criação. A presença nos mitos de origem de alguns povos atesta a antiguidade da arte de talhar bancos: os primeiros registros do uso desses objetos entre ameríndios das terras baixas da América do Sul, do Caribe e da América Central datam de, pelo menos, 4 mil anos.\n\nASSIS, R.; MENDES JR., L. Bancos indígenas do Brasil. São Paulo: BEI Comunicação, 2013.\n\nTEXTO II\n\n[[imagem:0]]\n\nKAMAYURÁ, Y. Tatu Kamayurá 1. Madeira, 61 × 24 × 20 cm. Xingu (MT), s.d.\n\nDisponível em: www.colecaobei.com.br. Acesso em: 15 out. 2024.\n\nOs textos I e ll demonstram, na confecção dos bancos, uma íntima relação de sacralidade entre o ser humano e a natureza, perceptível por meio da",
+        "opcoes": [
+          "representação realista de animais, mostrando o domínio do homem sobre a natureza.",
+          "manutenção da herança cultural, atribuindo nova função aos elementos da fauna.",
+          "anulação dos traços que permitem reconhecer o animal representado.",
+          "presença de grafismos na forma animal representada no banco.",
+          "criação de figuras fantásticas baseadas em formas animais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q041-1.webp",
+            "alt": "Imagem da questão 41 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 888,
+            "altura": 384
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:0d06ba95",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 41"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.152Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:369a06a9",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TRADUZINDO O JURIDIQUÊS\n“Denego a liminar pleiteada na exordial, inobstante Proposta de emenda à Constituição 269 de 2013. Aplica-se após a oitiva da parte adversa e da dilação probatória aos Governadores e Prefeitos o Regime Geral de Previdência possa lograr alcançar um outro epílogo para o deslinde Social, vedada a concessão graciosa, após o término do da quaestio sub examine.” mandato, de vantagem pecuniária, verba de representação,\n\n[[imagem:0]]\n\ninicial, ainda que possa chegar a uma outra conclusão Torna-se proibido pagar benefícios vitalícios para\napós ouvir a outra parte e avaliar as provas produzidas. ex-prefeitos e ex-governadores.\n\nSuperinteressante, n. 322, ago. 2013 (adaptado).\n\nNesse texto, contribui para a construção da ironia a tradução das passagens escritas em “juridiquês” para uma variedade",
+        "opcoes": [
+          "padrão, que alcança o público em geral.",
+          "histórica, que registra a evolução das leis.",
+          "coloquial, que reproduz as relações sociais cotidianas.",
+          "erudita, que resgata a origem latina da língua portuguesa.",
+          "técnica, que facilita a circulação de informações no sistema judiciário."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q042-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 42 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 138
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:369a06a9",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 42"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.196Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:f3604ec1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 1995, os Jenipapo-Kanindé quebraram a tradição da sucessão masculina e nomearam Maria de Lourdes da Conceição Alves como sua líder. Desde então, a Cacique Pequena guia o povo em grandes batalhas pelo direito a terra, educação, saúde e cidadania. Hoje, a anciã de 73 anos prepara duas filhas para lhe sucederem quando ela “tombar e pai Tupã a levar”.\n\nHoje, 129 famílias do município de Aquiraz são reconhecidas pela Fundação Nacional dos Povos Indígenas (Funai) como indígenas, principal luta de Pequena para o seu povo desde o início. “Em 1995, fui a Brasília e tive a oportunidade de conversar com o presidente da Funai. Pedi que mandasse o povo dele na aldeia para fazer o estudo da nossa mãe-terra e de nós”. Dois anos depois, vieram os antropólogos, que concluíram: “Nós era índio sim!”, diz ela.\n\nHá cerca de oito anos, Pequena adoeceu e ficou entre a vida e a morte. Nesse momento, precisou escolher, entre os 16 filhos, quem assumiria sua missão quando partisse. Reunida, a família decidiu sobre a sucessão. “Disseram que, como eu era a primeira cacique mulher do Ceará, acharam melhor eu colocar duas filhas”.\n\nDisponível em: www.sesc-ce.com.br. Acesso em: 15 set. 2024 (adaptado).\n\nAo abordar a realidade da etnia Jenipapo-Kanindé, essa reportagem cumpre uma função social quando destaca o(a)",
+        "opcoes": [
+          "quantidade de famílias indígenas em Aquiraz.",
+          "força da tradição nas comunidades indígenas.",
+          "estudo sobre a demarcação das terras indígenas.",
+          "protagonismo feminino na linha sucessória desse povo.",
+          "reconhecimento dessa comunidade pelo governo brasileiro."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:f3604ec1",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 43"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.197Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:c9f98c68",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Porque ler para crianças é um ato de amor\n\nParece que, com o avanço da tecnologia, os livros têm enfrentado cada vez mais concorrência. Por isso, é nossa função lembrar a importância da leitura em todas as fases da vida, mas principalmente na primeira infância (entre 0 e 5 anos), quando o desenvolvimento das crianças acontece de forma mais intensa.\n\nO ato de ler com uma criança ou ler para ela vai muito além de apenas aproveitar uma história em conjunto. É um laço de amorosidade, porque oferece a ela ferramentas que vão ajudála a crescer forte e independente.\n\nSe você precisa de uma motivação extra para entrar nessa rede de incentivo, fique ligado nos motivos a seguir. Adotar esse hábito em casa:\n\n1 – cria um laço emocional com a criança;\n2 – ajuda no desenvolvimento das capacidades cognitivas; 3 – ensina sobre o mundo;\n4 – incentiva o processamento de informações e a imaginação.\n\nDisponível em: www.huffpost.com.br.\n\nAcesso em: 22 maio 2018 (adaptado).\n\nPara persuadir o interlocutor sobre a importância de ler para as crianças, esse texto recorre à estratégia de",
+        "opcoes": [
+          "propor uma condição aos pais, pelo emprego da conjunção “se”.",
+          "relativizar a opinião apresentada pelo autor, com o uso de “Parece que”.",
+          "empregar uma linguagem metafórica, com o uso da expressão “laço de amorosidade”.",
+          "enumerar razões pertinentes a esse ato, como no exemplo “ensina sobre o mundo”.",
+          "implicar o autor do texto como corresponsável pela campanha, pelo uso de “é nossa função”."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:c9f98c68",
+        "version": 1,
+        "skillIds": [
+          "por:sintaxe-periodo-composto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 44"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.198Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:431ece47",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A artista Marija Tiurina criou uma série chamada Palavras intraduzíveis, com diversas ilustrações detalhadas que transmitem o sentido desses vocábulos, que nenhuma palavra única em outras línguas pode descrever.\n\n[[imagem:0]]\n\nO uso do texto verbal nesse desenho assume a função de",
+        "opcoes": [
+          "descrever de forma técnica a ilustração.",
+          "destacar os múltiplos sentidos do verbete.",
+          "explicar o significado da expressão ilustrada.",
+          "apresentar termos equivalentes em outras línguas.",
+          "apontar para a dificuldade de compreensão do termo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q045-1.webp",
+            "alt": "Imagem da questão 45 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "ROMANZOTI, N. 9 desenhos que ilustram palavras sem tradução para o português. Disponível em: https://hypescience.com. Acesso em: 10 jun. 2019 (adaptado).",
+            "largura": 1020,
+            "altura": 1020
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:431ece47",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 45"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:24.329Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1459 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "oficial:2019:e05bd000",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nPela análise do conteúdo, constata-se que essa campanha publicitária tem como função social",
+        "opcoes": [
+          "propagar a imagem positiva do Ministério Público.",
+          "conscientizar a população que direitos implicam deveres.",
+          "coibir violações de direitos humanos nos meios de comunicação.",
+          "divulgar políticas sociais que combatem a intolerância e o preconceito.",
+          "instruir as pessoas sobre a forma correta de expressão nas redes sociais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q006-1.webp",
+            "alt": "Imagem da questão 6 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: PALAVRAS\nTÊM PODER\nPalavras informam, libertam, destroem preconceitos.\nPalavras desinformam, aprisionam e criam preconceitos.\nLiberdade de expressão. A escolha é sua.\nA responsabilidade, também.\nA liberdade de expressão é uma conquista\ninquestionável. O que todos precisam saber é\nque liberdade traz responsabilidades. Publicar\ninformações e mensagens sensacionalistas,\nexplorar imagens mórbidas, desrespeitar os\nDireitos Humanos e estimular o preconceito e a\nviolência são atos de desrespeito à lei.\nPara promover a liberdade de expressão com\nresponsabilidade, o Ministério Público de\nPernambuco se une a vários parceiros nesta\nação educativa. Colabore. Caso veja alguma\nmensagem que desrespeite os seus direitos,\ndenuncie.\n0800 281 9455 - Ministério Público de Pernambuco\nDisponível em: http://palavrastempoder.org. Acesso em: 20 abr. 2015.",
+            "largura": 884,
+            "altura": 1113
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:e05bd000",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 6"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:42.795Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:aa0d44b4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um amor desse\nEra 24 horas lado a lado\nUm radar na pele, aquele sentimento alucinado\nCoração batia acelerado\n\nBastava um olhar pra eu entender\nQue era hora de me entregar pra você\nPalavras não faziam falta mais\nAh, só de lembrar do seu perfume\nQue arrepio, que calafrio\nQue o meu corpo sente\nNem que eu queira, eu te apago da minha mente\n\nAh, esse amor\nDeixou marcas no meu corpo\nAh, esse amor\nSó de pensar, eu grito, eu quase morro\n\nAZEVEDO, N.; LEÃO, W.; QUADROS, R. Coração pede socorro.\n\nRio de Janeiro: Som Livre, 2018 (fragmento).\n\nEssa letra de canção foi composta especialmente\npara uma campanha de combate à violência contra\nas mulheres, buscando conscientizá-las acerca do\nlimite entre relacionamento amoroso e relacionamento\nabusivo. Para tanto, a estratégia empregada na letra é a",
+        "opcoes": [
+          "revelação da submissão da mulher à situação de violência, que muitas vezes a leva à morte.",
+          "ênfase na necessidade de se ouvirem os apelos da mulher agredida, que continuamente pede socorro.",
+          "exploração de situação de duplo sentido, que mostra que atos de dominação e violência não configuram amor.",
+          "divulgação da importância de denunciar a violência doméstica, que atinge um grande número de mulheres no país.",
+          "naturalização de situações opressivas, que fazem parte da vida de mulheres que vivem em uma sociedade patriarcal."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:aa0d44b4",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 7"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:42.796Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:3ae6273d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEssa campanha se destaca pela maneira como utiliza a linguagem para conscientizar a sociedade da necessidade de se acabar com o bullying. Tal estratégia está centrada no(a)",
+        "opcoes": [
+          "chamamento de diferentes atores sociais pelo uso recorrente de estruturas injuntivas.",
+          "variedade linguística caracterizadora do português europeu.",
+          "restrição a um grupo específico de vítimas ao apresentar marcas gráficas de identificação de gênero como “o(a)”.",
+          "combinação do significado de palavras escritas em línguas inglesa e portuguesa.",
+          "enunciado de cunho esperançoso “passe à história” no título do cartaz."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q010-1.webp",
+            "alt": "Imagem da questão 10 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.essl.pt. Acesso em: 9 maio 2019 (adaptado).",
+            "largura": 1188,
+            "altura": 1132
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:3ae6273d",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 10"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:43.101Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:dbe9be8a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Esporte e cultura: análise acerca da esportivização de práticas corporais nos jogos indígenas\n\nNos Jogos dos Povos Indígenas, observa-se que as práticas corporais realizadas envolvem elementos tradicionais (como as pinturas e adornos corporais) e modernos (como a regulamentação, a fiscalização e a padronização). O arco e flecha e a lança, por exemplo, são instrumentos tradicionalmente utilizados para a caça e a defesa da comunidade na aldeia. Na ocasião do evento, esses artefatos foram produzidos pela própria etnia, porém sua estruturação como “modalidade esportiva” promoveu uma semelhança entre as técnicas apresentadas, com o sentido único da competição.\n\nALMEIDA, A. J. M.; SUASSUNA, D. M. F. A. Pensar a prática, n. 1, jan.-abr. 2010 (adaptado).\n\nA relação entre os elementos tradicionais e modernos nos Jogos dos Povos Indígenas desencadeou a",
+        "opcoes": [
+          "padronização de pinturas e adornos corporais.",
+          "sobreposição de elementos tradicionais sobre os modernos.",
+          "individuação das técnicas apresentadas em diferentes modalidades.",
+          "legitimação das práticas corporais indígenas como modalidade esportiva.",
+          "preservação dos significados próprios das práticas corporais em cada cultura."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:dbe9be8a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 11"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:43.102Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:0a6d3588",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nA promessa da felicidade\n\n[[imagem:0]]\n\nJU LOYOLA. The promise of happiness.\n\nLOYOLA, J. Disponível em: http://ladyscomics.com.br.\n\nAcesso em: 8 dez. 2018 (adaptado).\n\nTEXTO II\n\nQuadrinista surda faz sucesso na CCXP\ncom narrativas silenciosas\n\nA área de artistas independentes da Comic Con Experience (CCXP) deste ano é a maior da história do evento geek, são mais de 450 quadrinistas e ilustradores no Artistsꞌ Alley.\n\nE a diversidade vai além do estilo das HQ. Em uma das mesas na fila F, senta a quadrinista com deficiência auditiva Ju Loyola, com suas histórias que classifica como “narrativas silenciosas”. São histórias que podem ser compreendidas por crianças e adultos, e pessoas de qualquer nacionalidade, pelo simples motivo de não terem uma única palavra.\n\nA artista não escreve roteiros convencionais para suas obras. Sua experiência de ter que entender a comunicação pelo que vê faz com que ela se identifique muito mais com o que observa do que com o que as pessoas dizem.\n\nE basta folhear suas obras que fica claro que elas não são histórias em quadrinhos que perderam as palavras, mas sim que ganharam uma nova perspectiva.\n\nDisponível em: https://catracalivre.com.br.\n\nAcesso em: 8 dez. 2018 (adaptado).\n\nO Texto I exemplifica a obra de uma artista surda, que promove uma experiência de leitura inovadora, divulgada no Texto II. Independentemente de seus objetivos, ambos os textos",
+        "opcoes": [
+          "incentivam a produção de roteiros compostos por imagens.",
+          "colaboram para a valorização de enredos românticos.",
+          "revelam o sucesso de um evento de cartunistas.",
+          "contribuem com o processo de acessibilidade.",
+          "questionam o padrão tradicional das HQ."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q012-1.webp",
+            "alt": "Imagem da questão 12 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 637,
+            "altura": 1045
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:0a6d3588",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 12"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.235Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:2e4918dc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\n[[imagem:2]]\n\n[[imagem:3]]\n\n[[imagem:4]]\n\n[[imagem:5]]\n\nDe acordo com esse infográfico, as redes sociais estimulam diferentes comportamentos dos usuários que revelam",
+        "opcoes": [
+          "exposição exagerada dos indivíduos.",
+          "comicidade ingênua dos usuários.",
+          "engajamento social das pessoas.",
+          "disfarce do sujeito por meio de avatares.",
+          "autocrítica dos internautas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q017-1.webp",
+            "alt": "Imagem da questão 17 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1036,
+            "altura": 96
+          },
+          {
+            "url": "/content/img/2019/d1-q017-2.webp",
+            "alt": "Imagem 2 da questão 17 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 560,
+            "altura": 212
+          },
+          {
+            "url": "/content/img/2019/d1-q017-3.webp",
+            "alt": "Imagem 3 da questão 17 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 516,
+            "altura": 224
+          },
+          {
+            "url": "/content/img/2019/d1-q017-4.webp",
+            "alt": "Imagem 4 da questão 17 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 532,
+            "altura": 224
+          },
+          {
+            "url": "/content/img/2019/d1-q017-5.webp",
+            "alt": "Imagem 5 da questão 17 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 520,
+            "altura": 200
+          },
+          {
+            "url": "/content/img/2019/d1-q017-6.webp",
+            "alt": "Imagem 6 da questão 17 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: http://epoca.globo.com. Acesso em: 20 mar. 2014.",
+            "largura": 1200,
+            "altura": 510
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:2e4918dc",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 17"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.436Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:3a416317",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O que é software livre\n\nSoftware livre é qualquer programa de computador construído de forma colaborativa, via internet, por uma comunidade internacional de desenvolvedores independentes. São centenas de milhares de hackers, que negam sua associação com os “violadores de segurança”. Esses desenvolvedores de software se recusam a reconhecer o significado pejorativo do termo e continuam usando a palavra hacker para indicar “alguém que ama programar e que gosta de ser hábil e engenhoso”. Além disso, esses programas são entregues à comunidade com o código fonte aberto e disponível, permitindo que a ideia original possa ser aperfeiçoada e devolvida novamente à comunidade. Nos programas convencionais, o código de programação é secreto e de propriedade da empresa que o desenvolveu, sendo quase impossível decifrar a programação.\n\nO que está em jogo é o controle da inovação tecnológica. Software livre é uma questão de liberdade de expressão e não apenas uma relação econômica. Hoje existem milhares de programas alternativos construídos dessa forma e uma comunidade de usuários com milhões de membros no mundo.\n\nBRANCO, M. Software livre e desenvolvimento social e económico. In: CASTELLS, M.; CARDOSO, G. (Org).\n\nA sociedade em rede: do conhecimento à acção política. Lisboa: Imprensa Nacional, 2005 (adaptado).\n\nA criação de softwares livres contribui para a produção do conhecimento na sociedade porque",
+        "opcoes": [
+          "democratiza o acesso a produtos construídos coletivamente.",
+          "complexifica os sistemas operacionais disponíveis no mercado.",
+          "qualifica um maior número de pessoas para o uso de tecnologias.",
+          "possibilita a coleta de dados confidenciais para seus desenvolvedores.",
+          "insere profissionalmente os hackers na área de inovação tecnológica."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:3a416317",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 18"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.437Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:5142bdbd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Expostos na web desde a gravidez\n\nMais da metade das mães e um terço dos pais ouvidos em uma pesquisa sobre compartilhamento paterno em mídias sociais discutem nas redes sociais sobre a educação dos filhos. Muitos são pais e mães de primeira viagem, frutos da geração Y (que nasceu junto com a internet) e usam esses canais para saberem que não estão sozinhos na empreitada de educar uma criança. Há, contudo, um risco no modo como as pessoas estão compartilhando essas experiências. É a chamada exposição parental exagerada, alertam os pesquisadores.\n\nDe acordo com os especialistas no assunto, se você compartilha uma foto ou vídeo do seu filho pequeno fazendo algo ridículo, por achar engraçadinho, quando a criança tiver seus 11, 12 anos, pode se sentir constrangida. A autoconsciência vem com a idade.\n\nA exibição da privacidade dos filhos começa a assumir uma característica de linha do tempo e eles não participaram da aprovação ou recusa quanto à veiculação desses conteúdos. Assim, quando a criança cresce, sua privacidade pode já estar violada.\n\nOTONI, A. C. O Globo, 31 mar. 2015 (adaptado).\n\nSobre o compartilhamento parental excessivo em mídias sociais, o texto destaca como impacto o(a)",
+        "opcoes": [
+          "interferência das novas tecnologias na comunicação entre pais e filhos.",
+          "desatenção dos pais em relação ao comportamento dos filhos na internet.",
+          "distanciamento na relação entre pais e filhos provocado pelo uso das redes sociais.",
+          "fortalecimento das redes de relações decorrente da troca de experiências entre as famílias.",
+          "desrespeito à intimidade das crianças cujas imagens têm sido divulgadas nas redes sociais."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:5142bdbd",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 19"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.438Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:394646f7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O projeto DataViva consiste na oferta de dados oficiais sobre exportações, atividades econômicas, localidades e ocupações profissionais de todo o Brasil. Num primeiro momento, o DataViva construiu uma ferramenta que permitia a análise da economia mineira embasada por essa perspectiva metodológica complexa e diversa. No entanto, diante das possibilidades oferecidas pelas bases de dados trabalhadas, a plataforma evoluiu para um sistema mais completo. De maneira interativa e didática, o usuário é guiado por meio das diversas formas de navegação dos aplicativos. Além de informações sobre os produtos exportados, bem como acerca do volume das exportações em cada um dos estados e municípios do País, em poucos cliques, o interessado pode conhecer melhor o perfil da população, o tipo de atividade desenvolvida, as ocupações formais e a média salarial por categoria.\n\nMANTOVANI, C. A. Guardião de informações. Minas faz Ciência,\nn. 58, jun.-jul.-ago. 2014 (adaptado).\n\nEntre as novas possibilidades promovidas pelo desenvolvimento de novas tecnologias, o texto destaca a",
+        "opcoes": [
+          "auditoria das ações de governo.",
+          "publicidade das entidades públicas.",
+          "obtenção de informações estratégicas.",
+          "disponibilidade de ambientes coletivos.",
+          "comunicação entre órgãos administrativos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:394646f7",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 20"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.438Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:68d135dd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Menina\n\nA máquina de costura avançava decidida sobre o pano. Que bonita que a mãe era, com os alfinetes na boca. Gostava de olhá-la calada, estudando seus gestos, enquanto recortava retalhos de pano com a tesoura. Interrompia às vezes seu trabalho, era quando a mãe precisava da tesoura. Admirava o jeito decidido da mãe ao cortar pano, não hesitava nunca, nem errava. A mãe sabia tanto! Tita chamava-a de ( ) como quem diz ( ). Tentava não pensar as palavras, mas sabia que na mesma hora da tentativa tinha-as pensado. Oh, tudo era tão difícil. A mãe saberia o que ela queria perguntar-lhe intensamente agora quase com fome depressa depressa antes de morrer, tanto que não se conteve e — Mamãe, o que é desquitada? — atirou rápida com uma voz sem timbre. Tudo ficou suspenso, se alguém gritasse o mundo acabava ou Deus aparecia — sentia Ana Lúcia. Era muito forte aquele instante, forte demais para uma menina, a mãe parada com a tesoura no ar, tudo sem solução podendo desabar a qualquer pensamento, a máquina avançando desgovernada sobre o vestido de seda brilhante espalhando luz luz luz.\n\nÂNGELO, I. Menina. In: A face horrível. São Paulo: Lazuli, 2017.\n\nEscrita na década de 1960, a narrativa põe em evidência uma dramaticidade centrada na",
+        "opcoes": [
+          "insinuação da lacuna familiar gerada pela ausência da figura paterna.",
+          "associação entre a angústia da menina e a reação intempestiva da mãe.",
+          "relação conflituosa entre o trabalho doméstico e a emancipação feminina.",
+          "representação de estigmas sociais modulados pela perspectiva da criança.",
+          "expressão de dúvidas existenciais intensificadas pela percepção do abandono."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:68d135dd",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 21"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.439Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:f73517b0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nNesse cartaz, o uso da imagem do calçado aliada ao texto verbal tem o objetivo de",
+        "opcoes": [
+          "criticar as difíceis condições de vida dos refugiados.",
+          "revelar a longa trajetória percorrida pelos refugiados.",
+          "incentivar a campanha de doações para os refugiados.",
+          "denunciar a situação de carência vivida pelos refugiados.",
+          "simbolizar a necessidade de adesão à causa dos refugiados."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q023-1.webp",
+            "alt": "Imagem da questão 23 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.acnur.org. Acesso em: 11 dez. 2018.",
+            "largura": 1032,
+            "altura": 704
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:f73517b0",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 23"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.669Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:b565050a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Com o enredo que homenageou o centenário do Rei do Baião, Luiz Gonzaga, a Unidos da Tijuca foi coroada no Carnaval 2012.\n\nA penúltima escola a entrar na Sapucaí, na segunda noite de desfiles, mergulhou no universo do cantor e compositor brasileiro e trouxe a cultura nordestina com criatividade para a Avenida, com o enredo O dia em que toda a realeza desembarcou na Avenida para coroar o Rei Luiz do Sertão.\n\nDisponível em: www.cultura.rj.gov.br. Acesso em: 15 maio 2012 (adaptado).\n\nA notícia relata um evento cultural que marca a",
+        "opcoes": [
+          "primazia do samba sobre a música nordestina.",
+          "inter-relação entre dois gêneros musicais brasileiros.",
+          "valorização das origens oligárquicas da cultura nordestina.",
+          "proposta de resgate de antigos gêneros musicais brasileiros.",
+          "criatividade em compor um samba-enredo em homenagem a uma pessoa."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:b565050a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 25"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.670Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:325021ef",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nO Estatuto do Idoso completou 15 anos em 2018 e só no primeiro semestre o Disque 100 recebeu 16 mil denúncias de violação de direitos dos idosos em todo o País.\n\nPara especialistas da área, o aumento no número de denúncias pode ser consequência do encorajamento dos mais velhos na busca pelos direitos. Mas também pode refletir uma onda crescente de violência na sociedade e dentro das próprias famílias.\n\nPolíticas públicas mais eficazes no atendimento ao idoso são o mínimo que um país deve estabelecer. O Brasil está ficando para trás e é preciso levar em consideração que o País envelhece (tendência mundial) sem estar preparado para arcar com os desafios, como criar uma rede de proteção, preparar os serviços de saúde pública e dar suporte às famílias que precisam cuidar de seus idosos dependentes.\n\nDisponível em: www.folhadelondrina.com.br. Acesso em: 9 dez. 2018 (adaptado).\n\nTEXTO II\n\n[[imagem:0]]\n\nNa comparação entre os textos, conclui-se que as regras do Estatuto do Idoso",
+        "opcoes": [
+          "apresentam vantagens em relação às de outros países.",
+          "são ignoradas pelas famílias responsáveis por idosos.",
+          "alteram a qualidade de vida das pessoas com mais de 60 anos.",
+          "precisam ser revistas em razão do envelhecimento da população.",
+          "contrastam com as condições de vida proporcionadas pelo País."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q026-1.webp",
+            "alt": "Imagem da questão 26 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.brasil.gov.br. Acesso em: 9 dez. 2018.",
+            "largura": 1200,
+            "altura": 458
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:325021ef",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 26"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.753Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:f2c8fef0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Educação para a saúde mediante programas de educação física escolar\n\nA educação para a saúde deverá ser alcançada mediante interação de ações que possam envolver o próprio homem mediante suas atitudes frente às exigências ambientais representadas pelos hábitos alimentares, estado de estresse, opções de lazer, atividade física, agressões climáticas etc. Dessa forma, parece evidente que o estado de ser saudável não é algo estático. Pelo contrário, torna-se necessário adquiri-lo e construí-lo de forma individualizada constantemente ao longo de toda a vida, apontando para o fato de que saúde é educável e, portanto, deve ser tratada não apenas com base em referenciais de natureza biológica e higienista, mas sobretudo em um contexto didático-pedagógico.\n\nGUEDES, D. P. Motriz, n. 1, 1999.\n\nA educação para a saúde pressupõe a adoção de comportamentos com base na interação de fatores relacionados à",
+        "opcoes": [
+          "adesão a programas de lazer.",
+          "opção por dietas balanceadas.",
+          "constituição de hábitos saudáveis.",
+          "evasão de ambientes estressores.",
+          "realização de atividades físicas regulares."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:f2c8fef0",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 27"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.754Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:c9170fe5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A rede é, antes de tudo, um instrumento de comunicação entre pessoas, um laço virtual em que as comunidades auxiliam seus membros a aprender o que querem saber. Os dados não representam senão a matéria-prima de um processo intelectual e social vivo, altamente elaborado. Enfim, toda inteligência coletiva do mundo jamais dispensará a inteligência pessoal, o esforço individual e o tempo necessário para aprender, pesquisar, avaliar e integrar-se a diversas comunidades, sejam elas virtuais ou não. A rede jamais pensará em seu lugar, fique tranquilo.\n\nLÉVY, P. A máquina universo: criação, cognição e cultura\ninformática. Porto Alegre: Artmed, 1998.\n\nNo contexto das novas tecnologias de informação e comunicação, a circulação de saberes depende da",
+        "opcoes": [
+          "otimização do tempo.",
+          "confiabilidade dos sites.",
+          "contribuição dos usuários.",
+          "quantidade de informação.",
+          "colaboração de intelectuais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:c9170fe5",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 29"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.755Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:36005579",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nEstratos\n\nNa passagem de uma língua para outra, algo sempre permanece, mesmo que não haja ninguém para se lembrar desse algo. Pois um idioma retém em si mais memórias que os seus falantes e, como uma chapa mineral marcada por camadas de uma história mais antiga do que aquela dos seres viventes, inevitavelmente carrega em si a impressão das eras pelas quais passou. Se as “línguas são arquivos da história”, elas carecem de livros de registro e catálogos. Aquilo que contêm pode apenas ser consultado em parte, fornecendo ao pesquisador menos os elementos de uma biografia do que um estudo geológico de uma sedimentação realizada em um período sem começo ou sem fim definido.\n\nHELLER-ROAZEN, D. Ecolalias: sobre o esquecimento das línguas.\n\nCampinas: Unicamp, 2010.\n\nTEXTO II\n\nNa reflexão gramatical dos séculos XVI e XVII, a influência árabe aparece pontualmente, e se reveste sobretudo de item bélico fundamental na atribuição de rudeza aos idiomas português e castelhano por seus respectivos detratores. Parecer com o árabe, assim, é uma acusação de dessemelhança com o latim.\n\nSOUZA, M. P. Linguística histórica.\n\nCampinas: Unicamp, 2006.\n\nRelacionando-se as ideias dos textos a respeito da história e memória das línguas, quanto à formação da língua portuguesa, constata-se que",
+        "opcoes": [
+          "a presença de elementos de outras línguas no português foi historicamente avaliada como um índice de riqueza.",
+          "o estudioso da língua pode identificar com precisão os elementos deixados por outras línguas na transformação da língua portuguesa.",
+          "o português é o resultado da influência de outras línguas no passado e carrega marcas delas em suas múltiplas camadas.",
+          "o árabe e o latim estão na formação escolar e na memória dos falantes brasileiros.",
+          "a influência de outras línguas no português ocorreu de maneira uniforme ao longo da história."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:36005579",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 30"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.756Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:b6df2422",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nPICASSO, P. Cabeça de touro. Bronze, 33,5 cm x 43,5 cm x 19 cm.\n\nMusée Picasso, Paris. França, 1945.\n\nJANSON, H. W. Iniciação à história da arte.\n\nSão Paulo: Martins Fontes, 1988.\n\nNa obra Cabeça de touro, o material descartado torna-se objeto de arte por meio da",
+        "opcoes": [
+          "reciclagem da matéria-prima original.",
+          "complexidade da combinação de formas abstratas.",
+          "perenidade dos elementos que constituem a escultura.",
+          "mudança da funcionalidade pela integração dos objetos.",
+          "fragmentação da imagem no uso de elementos diversificados."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q031-1.webp",
+            "alt": "Imagem da questão 31 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 904,
+            "altura": 688
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:b6df2422",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 31"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.831Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:b18b80e6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Emagrecer sem exercício?\n\nHormônio aumenta a esperança de perder gordura\nsem sair do sofá. A solução viria em cápsulas.\n\nO sonho dos sedentários ganhou novo aliado. Um estudo publicado na revista científica Nature, em janeiro, sugere que é possível modificar a gordura corporal sem fazer exercício. Pesquisadores do Dana-Farber Cancer Institute e da Escola de Medicina de Harvard, nos EUA, isolaram em laboratório a irisina, hormônio naturalmente produzido pelas células musculares durante os exercícios aeróbicos, como caminhada, corrida ou pedalada. A substância foi aplicada em ratos e agiu como se eles tivessem se exercitado, inclusive com efeito protetor contra o diabetes.\n\nO segredo foi a conversão de gordura branca — aquela que estoca energia inerte e estraga nossa silhueta — em marrom. Mais comum em bebês, e praticamente inexistente em adultos, esse tipo de gordura serve para nos aquecer. E, nesse processo, gasta uma energia tremenda. Como efeito colateral, afinaria nossa silhueta.\n\nA expectativa é que, se o hormônio funcionar da mesma forma em humanos, surja em breve um novo medicamento para emagrecer. Mas ele estaria longe de substituir por completo os benefícios da atividade física. “Possivelmente existem muitos outros hormônios musculares liberados durante o exercício e ainda não descobertos”, diz o fisiologista Paul Coen, professor assistente da Universidade de Pittsburgh, nos EUA. A irisina não fortalece os músculos, por exemplo. E para ficar com aquele tríceps de fazer inveja só o levantamento de controle remoto não daria conta.\n\nLIMA, F. Galileu. São Paulo, n. 248, mar. 2012.\n\nPara convencer o leitor de que o exercício físico é importante, o autor usa a estratégia de divulgar que",
+        "opcoes": [
+          "a falta de exercício físico não emagrece e desenvolve doenças.",
+          "se trata de uma forma de transformar a gordura branca em marrom e de emagrecer.",
+          "a irisina é um hormônio que apenas é produzido com o exercício físico.",
+          "o exercício é uma forma de afinar a silhueta por eliminar a gordura branca.",
+          "se produzem outros hormônios e há outros benefícios com o exercício."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:b18b80e6",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 32"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.832Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:98efe520",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Inverno! inverno! inverno!\nTristes nevoeiros, frios negrumes da longa treva boreal, descampados de gelo cujo limite escapa-nos sempre, desesperadamente, para lá do horizonte, perpétua solidão inóspita, onde apenas se ouve a voz do vento que passa uivando como uma legião de lobos, através da cidade de catedrais e túmulos de cristal na planície, fantasmas que a miragem povoam e animam, tudo isto: decepções, obscuridade, solidão, desespero e a hora invisível que passa como o vento, tudo isto é o frio inverno da vida.\n\nHá no espírito o luto profundo daquele céu de bruma dos lugares onde a natureza dorme por meses, à espera do sol avaro que não vem.\n\nPOMPEIA, R. Canções sem metro. Campinas: Unicamp, 2013.\n\nReconhecido pela linguagem impressionista, Raul Pompeia desenvolveu-a na prosa poética, em que se observa a",
+        "opcoes": [
+          "imprecisão no sentido dos vocábulos.",
+          "dramaticidade como elemento expressivo.",
+          "subjetividade em oposição à verossimilhança.",
+          "valorização da imagem com efeito persuasivo.",
+          "plasticidade verbal vinculada à cadência melódica."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:98efe520",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 33"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.833Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:ac14b0bb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Antes de Roma ser fundada, as colinas de Alba eram ocupadas por tribos latinas, que dividiam o ano de acordo com seus deuses. Os romanos adaptaram essa estrutura. No princípio dessa civilização o ano tinha dez meses e começava por Martius (atual março). Os outros dois teriam sido acrescentados por Numa Pompílio, o segundo rei de Roma.\n\nAté Júlio César reformar o calendário local, os meses eram lunares, mas as festas em homenagem aos deuses permaneciam designadas pelas estações. O descompasso de dez dias por ano fazia com que, em todos os triênios, um décimo terceiro mês, o Intercalaris, tivesse que ser enxertado. Com a ajuda de matemáticos do Egito emprestados por Cleópatra, Júlio César acabou com a bagunça ao estabelecer o seguinte calendário solar: Januarius, Februarius, Martius, Aprilis, Maius, Junius, Quinctilis, Sextilis, September, October, November e December. Quase igual ao nosso, com as diferenças de que Quinctilis e Sextilis deram origem aos meses de julho e agosto.\n\nDisponível em: https://aventurasnahistoria.uol.com.br.\n\nAcesso em: 8 dez. 2018.\n\nConsiderando as informações no texto e aspectos históricos da formação da língua, a atual escrita dos meses do ano em português",
+        "opcoes": [
+          "reflete a origem latina de nossa língua.",
+          "decorre de uma língua falada no Egito antigo.",
+          "tem como base um calendário criado por Cleópatra.",
+          "segue a reformulação da norma da língua proposta por Júlio César.",
+          "resulta da padronização do calendário antes da fundação de Roma."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:ac14b0bb",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 34"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.833Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:159d3fc6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No Brasil, a disseminação de uma expectativa de corpo com base na estética da magreza é bastante grande e apresenta uma enorme repercussão, especialmente, se considerada do ponto de vista da realização pessoal. Em pesquisa feita na cidade de São Paulo, aparecem os percentuais de 90% entre as mulheres pesquisadas que se dizem preocupadas com seu peso corporal, sendo que 95% se sentem insatisfeitas com “seu próprio corpo”.\n\nSILVA, A. M. Corpo, ciência e mercado: reflexões acerca da gestação\nde um novo arquétipo da felicidade. Campinas: Autores Associados;\n\nFlorianópolis: UFSC, 2001.\n\nA preocupação excessiva com o “peso” corporal pode provocar o desenvolvimento de distúrbios associados diretamente à imagem do corpo, tais como",
+        "opcoes": [
+          "anorexia e bulimia.",
+          "ortorexia e vigorexia.",
+          "ansiedade e depressão.",
+          "sobrepeso e fobia social.",
+          "sedentarismo e obesidade."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:159d3fc6",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 35"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.834Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:031eef56",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nFotografia de Jackson Pollock pintando em seu ateliê,\nrealizada por Hans Namuth em 1951.\nCHIPP, H. Teorias da arte moderna. São Paulo: Martins Fontes, 1988.\n\nTEXTO II\n\n[[imagem:1]]\n\nMUNIZ, V. Action Photo (segundo Hans Namuth em Pictures\nin Chocolate). Impressão fotográfica, 152,4 cm x 121,92 cm,\nThe Museum of Modern Art, Nova Iorque, 1977.\n\nNEVES, A. História da arte 4. Vitória: Ufes – Nead, 2011.\n\nUtilizando chocolate derretido como matéria-prima, essa obra de Vick Muniz reproduz a célebre fotografia do processo de criação de Jackson Pollock. A originalidade dessa releitura reside na",
+        "opcoes": [
+          "apropriação parodística das técnicas e materiais utilizados.",
+          "reflexão acerca dos sistemas de circulação da arte.",
+          "simplificação dos traços da composição pictórica.",
+          "contraposição de linguagens artísticas distintas.",
+          "crítica ao advento do abstracionismo."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q036-1.webp",
+            "alt": "Imagem da questão 36 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 652,
+            "altura": 708
+          },
+          {
+            "url": "/content/img/2019/d1-q036-2.webp",
+            "alt": "Imagem 2 da questão 36 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 652,
+            "altura": 804
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:031eef56",
+        "version": 1,
+        "skillIds": [
+          "por:formacao-palavras-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 36"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.989Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:6e742b3c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na semana passada, os alunos do colégio do meu filho se mobilizaram, através do Twitter, para não comprarem na cantina da escola naquele dia, pois acharam o preço do pão de queijo abusivo. São adolescentes. Quase senhores das novas tecnologias, transitam nas redes sociais, varrem o mundo através dos teclados dos celulares, iPads e se organizam para fazer um movimento pacífico de não comprar lanches por um dia. Foi parar na TV e em muitas páginas da internet.\n\nGOMES, A. A revolução silenciosa e o impacto na sociedade das\nredes sociais. Disponível em: www.hsm.com.br.\n\nAcesso em: 31 jul. 2012.\n\nO texto aborda a temática das tecnologias da informação e comunicação, especificamente o uso de redes sociais. Muito se debate acerca dos benefícios e malefícios do uso desses recursos e, nesse sentido, o texto",
+        "opcoes": [
+          "aborda a discriminação que as redes sociais sofrem de outros meios de comunicação.",
+          "mostra que as reivindicações feitas nas redes sociais não têm impacto fora da internet.",
+          "expõe a possibilidade de as redes sociais favorecerem comportamentos e manifestações violentos dos adolescentes que nelas se relacionam.",
+          "trata as redes sociais como modo de agregar e empoderar grupos de pessoas, que se unem em prol de causas próprias ou de mudanças sociais.",
+          "evidencia que as redes sociais são usadas inadequadamente pelos adolescentes, que, imaturos, não utilizam a ferramenta como forma de mudança social."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:6e742b3c",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 37"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.990Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:346c2be7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A ciência do Homem-Aranha\n\nMuitos dos superpoderes do querido Homem- -Aranha de fato se assemelham às habilidades biológicas das aranhas e são objeto de estudo para produção de novos materiais.\n\nO “sentido-aranha” adquirido por Peter Parker funciona quase como um sexto sentido, uma espécie de habilidade premonitória e, por isso, soa como um mero elemento ficcional. No entanto, as aranhas realmente têm um sentido mais aguçado. Na verdade, elas têm um dos sistemas sensoriais mais impressionantes da natureza.\n\nOs pelos sensoriais das aranhas, que estão espalhados por todo o corpo, funcionam como uma forma muito boa de perceber o mundo e captar informações do ambiente. Em muitas espécies, esse tato por meio dos pelos tem papel mais importante que a própria visão, uma vez que muitas aranhas conseguem prender e atacar suas presas na completa escuridão. E por que os pelos humanos não são tão eficientes como órgãos sensoriais como os das aranhas? Primeiro, porque um ser humano tem em média 60 fios de pelo em cada cm² do corpo, enquanto algumas espécies de aranha podem chegar a ter 40 mil pelos por cm²; segundo, porque cada pelo das aranhas possui até 3 nervos para fazer a comunicação entre a sensação percebida e o cérebro, enquanto nós, seres humanos, temos apenas 1 nervo por pelo.\n\nDisponível em: http://cienciahoje.org.br.\n\nAcesso em: 11 dez. 2018 (adaptado).\n\nComo estratégia de progressão do texto, o autor simula uma interlocução com o público leitor ao recorrer à",
+        "opcoes": [
+          "revelação do “sentido-aranha” adquirido pelo super- -herói como um sexto sentido.",
+          "caracterização do afeto do público pelo super-herói marcado pela palavra “querido”.",
+          "comparação entre os poderes do super-herói e as habilidades biológicas das aranhas.",
+          "pergunta retórica na introdução das causas da eficiência do sistema sensorial das aranhas.",
+          "comprovação das diferenças entre a constituição física do homem e da aranha por meio de dados numéricos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:346c2be7",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 42"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:45.993Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:f062b94f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nO texto tem o formato de uma carta de jogo e apresenta dados a respeito de Marcelo Gleiser, premiado pesquisador brasileiro da atualidade. Essa apresentação subverte um gênero textual ao",
+        "opcoes": [
+          "vincular áreas distintas do conhecimento.",
+          "evidenciar a formação acadêmica do pesquisador.",
+          "relacionar o universo lúdico a informações biográficas.",
+          "especificar as contribuições mais conhecidas do pesquisador.",
+          "destacar o nome do pesquisador e sua imagem no início do texto."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q043-1.webp",
+            "alt": "Imagem da questão 43 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.tecmundo.com.br. Acesso em: 10 dez. 2018 (adaptado).",
+            "largura": 904,
+            "altura": 1268
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:f062b94f",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 43"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.123Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

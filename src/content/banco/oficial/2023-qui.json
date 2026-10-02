@@ -2,6 +2,132 @@
   "subjectId": "qui",
   "items": [
     {
+      "id": "oficial:2023:a2dd96d0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Aldrin é um inseticida agrícola organoclorado sintético de baixa polaridade, cuja estrutura molecular simétrica, de fórmula C₁₂H₈Cl₆, está representada na figura. Introduzido na agricultura a partir da década de 1950, esse composto apresenta alta persistência no meio ambiente e acumulação nos organismos, sendo danoso para a saúde.\n\n[[imagem:0]]\n\nAldrin\n\nVIEGAS JÚNIOR, C. Terpenos com atividade inseticida: uma alternativa para\no controle químico de insetos. Química Nova, v. 26, n. 3, 2003 (adaptado).\n\nUm pesquisador coletou fluidos biológicos de indivíduos de uma população contaminada por esse inseticida agrícola. Ele analisou amostras de saliva, sangue, lágrima, urina e leite quanto à presença dessa substância.\n\nEm qual dos fluidos o pesquisador provavelmente encontrou a maior concentração dessa substância?",
+        "opcoes": [
+          "Saliva, por consequência da atividade de enzimas.",
+          "Sangue, em função das hemácias e leucócitos.",
+          "Lágrima, em razão da concentração de sais.",
+          "Urina, pela presença de moléculas de ureia.",
+          "Leite, por causa do alto teor de gorduras."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q092-1.webp",
+            "alt": "Imagem da questão 92 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: H\nC\nH\nCl\nCl C Cl\nCl\nCl Cl",
+            "largura": 414,
+            "altura": 493
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:a2dd96d0",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 92"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:43.649Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:ca88c27e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O descarte de detergentes comuns nos esgotos domésticos ocasiona a formação de uma camada de espuma que impede a entrada de oxigênio na água. Os microrganismos que vivem nessas águas não são capazes de quebrar moléculas ramificadas, ocorrendo assim um desequilíbrio ambiental nos rios. A fórmula a seguir representa a estrutura química de um tensoativo presente na composição de um detergente não biodegradável.\n\n[[imagem:0]]\n\nTensoativo não biodegradável\nQual modificação química na estrutura desse tensoativo o tornaria um detergente biodegradável?",
+        "opcoes": [
+          "Retirar a parte polar da molécula.",
+          "Eliminar as insaturações do anel aromático.",
+          "Trocar o grupo aniônico por um grupo neutro.",
+          "Alterar o grupo aniônico por um grupo catiônico.",
+          "Modificar a cadeia carbônica para cadeia normal."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q095-1.webp",
+            "alt": "Imagem da questão 95 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O S O\n– +\nO Na",
+            "largura": 657,
+            "altura": 634
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:ca88c27e",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 95"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:42:08.905Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
       "id": "oficial:2023:09e00433",
       "exercise": {
         "type": "multipla-escolha",
@@ -52,6 +178,280 @@
         "examProfiles": [
           "enem"
         ]
+      }
+    },
+    {
+      "id": "oficial:2023:0f37c5d5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em uma indústria alimentícia, para produção de doce de leite, utiliza-se um tacho de parede oca com uma entrada para vapor de água a 120 °C e uma saída para água líquida em equilíbrio com o vapor a 100 °C. Ao passar pela parte oca do tacho, o vapor de água transforma-se em líquido, liberando energia. A parede transfere essa energia para o interior do tacho, resultando na evaporação de água e consequente concentração do produto.\n\nNo processo de concentração do produto, é utilizada energia proveniente",
+        "opcoes": [
+          "somente do calor latente de vaporização.",
+          "somente do calor latente de condensação.",
+          "do calor sensível e do calor latente de vaporização.",
+          "do calor sensível e do calor latente de condensação.",
+          "do calor latente de condensação e do calor latente de vaporização."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:0f37c5d5",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 105"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.284Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:da77ed29",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "De acordo com a Constituição Federal, é competência dos municípios o gerenciamento dos serviços de limpeza e coleta dos resíduos urbanos (lixo). No entanto, há relatos de que parte desse lixo acaba sendo incinerado, liberando substâncias tóxicas para o ambiente e causando acidentes por explosões, principalmente quando ocorre a incineração de frascos de aerossóis (por exemplo: desodorantes, inseticidas e repelentes). A temperatura elevada provoca a vaporização de todo o conteúdo dentro desse tipo de frasco, aumentando a pressão em seu interior até culminar na explosão da embalagem.\n\nZVEIBIL, V. Z. et al. Cartilha de limpeza urbana. Disponível em:\n\nwww.ibam.org.br. Acesso em: 6 jul. 2015 (adaptado).\n\nSuponha um frasco metálico de um aerossol de capacidade igual a 100 mL, contendo 0,1 mol de produtos gasosos à temperatura de 650 °C, no momento da explosão.\n\n[[imagem:0]]\n\nA pressão, em atm, dentro do frasco, no momento da\nexplosão, é mais próxima de\nA 756.\nB 533.\nC 76.\nD 53.\nE 13.\n\nEm relação à situação em que todas as lâmpadas funcionam, após a queima de L₂, os brilhos das lâmpadas serão",
+        "opcoes": [
+          "os mesmos.",
+          "mais intensos.",
+          "menos intensos.",
+          "menos intenso para L₁ e o mesmo para L₃.",
+          "mais intenso para L₁ e menos intenso para L₃."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q107-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 107 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 518,
+            "altura": 103
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:da77ed29",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 107"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:20.229Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:d2eaf09b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As cetonas fazem parte de famílias olfativas encontradas em muitos alimentos. A molécula de hexan-3-ona é um exemplo desses compostos voláteis responsáveis pelo aroma, podendo ser obtida por processos energéticos realizados em meio ácido, na presença de oxidantes como o permanganato de potássio.\n\nPara se produzir esse composto volátil em laboratório, deve-se oxidar a molécula de",
+        "opcoes": [
+          "hexanal.",
+          "hexan-1-ol.",
+          "hexan-3-ol.",
+          "hex-1-en-1-ol.",
+          "ácido hexanoico."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:d2eaf09b",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 122"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.469Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b9d3f40b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um garoto comprou vários abacates na feira, mas descobriu que eles não estavam maduros o suficiente para serem consumidos. Sua mãe recomendou que ele colocasse os abacates em um recipiente fechado, pois isso aceleraria seu amadurecimento. Com certa dúvida, o garoto realizou esta experiência: colocou alguns abacates no recipiente e deixou os demais em uma fruteira aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente fechado amadureceram mais rapidamente.\n\nA aceleração desse processo é causada por",
+        "opcoes": [
+          "acúmulo de gás etileno.",
+          "redução da umidade do ar.",
+          "aumento da concentração de CO₂.",
+          "diminuição da intensidade luminosa.",
+          "isolamento do contato com O₂atmosférico."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b9d3f40b",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 126"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.564Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:0e53ba0a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Existe no comércio um produto antimofo constituído por uma embalagem com tampa perfurada contendo cloreto de cálcio anidro, CaCl₂. Uma vez aberto o lacre, essa substância absorve a umidade ambiente, transformando-se\n\nem cloreto de cálcio di-hidratado, CaCl₂⋅ 2H₂O.\n\nConsidere a massa molar da água igual a 18 g mol⁻¹, e a massa molar do cloreto de cálcio anidro igual a 111 g mol⁻¹.\n\nNa hidratação da substância presente no antimofo, o ganho percentual, em massa, é mais próximo de",
+        "opcoes": [
+          "14%",
+          "16%",
+          "24%",
+          "32%",
+          "75%"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:0e53ba0a",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 135"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.521Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     }
   ]

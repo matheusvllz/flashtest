@@ -1,0 +1,517 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "oficial:2019:73ea6011",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um teste de laboratório permite identificar alguns cátions metálicos ao introduzir uma pequena quantidade do material de interesse em uma chama de bico de Bunsen para, em seguida, observar a cor da luz emitida.\n\nA cor observada é proveniente da emissão de radiação eletromagnética ao ocorrer a",
+        "opcoes": [
+          "mudança da fase sólida para a fase líquida do elemento metálico.",
+          "combustão dos cátions metálicos provocada pelas moléculas de oxigênio da atmosfera.",
+          "diminuição da energia cinética dos elétrons em uma mesma órbita na eletrosfera atômica.",
+          "transição eletrônica de um nível mais externo para outro mais interno na eletrosfera atômica.",
+          "promoção dos elétrons que se encontram no estado fundamental de energia para níveis mais energéticos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:73ea6011",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 105"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.738Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:d77eff4c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Por terem camada de valência completa, alta energia de ionização e afinidade eletrônica praticamente nula, considerou-se por muito tempo que os gases nobres não formariam compostos químicos. Porém, em 1962, foi realizada com sucesso a reação entre o xenônio (camada de valência 5s²5p⁶) e o hexafluoreto de platina e, desde então, mais compostos novos de gases nobres vêm sendo sintetizados. Tais compostos demonstram que não se pode aceitar acriticamente a regra do octeto, na qual se considera que, numa ligação química, os átomos tendem a adquirir estabilidade assumindo a configuração eletrônica de gás nobre. Dentre os compostos conhecidos, um dos mais estáveis é o difluoreto de xenônio, no qual dois átomos do halogênio flúor (camada de valência 2s²2p⁵) se ligam covalentemente ao átomo de gás nobre para ficarem com oito elétrons de valência.\n\nAo se escrever a fórmula de Lewis do composto de xenônio citado, quantos elétrons na camada de valência haverá no átomo do gás nobre?",
+        "opcoes": [
+          "6",
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:d77eff4c",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 108"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.792Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:9f15cd6c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os hidrocarbonetos são moléculas orgânicas com uma série de aplicações industriais. Por exemplo, eles estão presentes em grande quantidade nas diversas frações do petróleo e normalmente são separados por destilação fracionada, com base em suas temperaturas de ebulição. O quadro apresenta as principais frações obtidas na destilação do petróleo em diferentes faixas de temperaturas.\n\n[[imagem:0]]\n\nNa fração 4, a separação dos compostos ocorre em temperaturas mais elevadas porque",
+        "opcoes": [
+          "suas densidades são maiores.",
+          "o número de ramificações é maior.",
+          "sua solubilidade no petróleo é maior.",
+          "as forças intermoleculares são mais intensas.",
+          "a cadeia carbônica é mais difícil de ser quebrada."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q112-1.webp",
+            "alt": "Imagem da questão 112 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Faixa de Número de átomos de carbono\nFração Exemplos de produto(s)\ntemperatura (°C) (hidrocarboneto de fórmula geral C H )\nn 2n + 2\n1 Até 20 Gás natural e gás de cozinha (GLP) C a C\n1 4\n2 30 a 180 Gasolina C a C\n6 12\n3 170 a 290 Querosene C a C\n11 16\n4 260 a 350 Óleo diesel C a C\n14 18\nSANTA MARIA, L. C. et al. Petróleo: um tema para o ensino de química. Química Nova na Escola , n. 15, maio 2002 (adaptado).",
+            "largura": 1200,
+            "altura": 293
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:9f15cd6c",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 112"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.972Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:973f9cbc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A utilização de corantes na indústria de alimentos é bastante difundida e a escolha por corantes naturais vem sendo mais explorada por diversas razões. A seguir são mostradas três estruturas de corantes naturais.\n\n[[imagem:0]]\n\nHOOC\nCOOCH₃ Bixina (presente no urucum)\n\n[[imagem:1]]\n\nLicopeno (presente no tomate)\n\n[[imagem:2]]\n\nβ-caroteno (presente na cenoura e na laranja)\n\nHAMERSKI, L.; REZENDE, M. J. C.; SILVA, B. V. Usando as cores da natureza para atender aos desejos do consumidor:\n\nsubstâncias naturais como corantes na indústria alimentícia. Revista Virtual de Química, n. 3, 2013.\n\nA propriedade comum às estruturas que confere cor a esses compostos é a presença de",
+        "opcoes": [
+          "cadeia conjugada.",
+          "cadeia ramificada.",
+          "átomos de carbonos terciários.",
+          "ligações duplas de configuração cis.",
+          "átomos de carbonos de hibridação sp³."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q120-1.webp",
+            "alt": "Imagem da questão 120 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 684,
+            "altura": 172
+          },
+          {
+            "url": "/content/img/2019/d2-q120-2.webp",
+            "alt": "Imagem 2 da questão 120 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 132
+          },
+          {
+            "url": "/content/img/2019/d2-q120-3.webp",
+            "alt": "Imagem 3 da questão 120 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 940,
+            "altura": 184
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:973f9cbc",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 120"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:40:23.112Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:49cf7cec",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma das técnicas de reciclagem química do polímero PET [poli(tereftalato de etileno)] gera o tereftalato de metila e o etanodiol, conforme o esquema de reação, e ocorre por meio de uma reação de transesterificação.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\n[[imagem:2]]\n\nO composto A, representado no esquema de reação, é o",
+        "opcoes": [
+          "metano.",
+          "metanol.",
+          "éter metílico.",
+          "ácido etanoico.",
+          "anidrido etanoico."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q124-1.webp",
+            "alt": "Imagem da questão 124 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: COOCH\n3\nCOOCH\n3",
+            "largura": 237,
+            "altura": 319
+          },
+          {
+            "url": "/content/img/2019/d2-q124-2.webp",
+            "alt": "Imagem 2 da questão 124 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O O\nO\nO\nn\nPET",
+            "largura": 633,
+            "altura": 272
+          },
+          {
+            "url": "/content/img/2019/d2-q124-3.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 124 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 136
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:49cf7cec",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 124"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:28:54.449Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:f661d5d6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 1808, Dalton publicou o seu famoso livro intitulado Um novo sistema de filosofia química (do original A New System of Chemical Philosophy), no qual continha os cinco postulados que serviam como alicerce da primeira teoria atômica da matéria fundamentada no método científico. Esses postulados são numerados a seguir:\n\n1. A matéria é constituída de átomos indivisíveis.\n\n2. Todos os átomos de um dado elemento químico são idênticos em massa e em todas as outras propriedades.\n\n3. Diferentes elementos químicos têm diferentes tipos de átomos; em particular, seus átomos têm diferentes massas.\n\n4. Os átomos são indestrutíveis e nas reações químicas mantêm suas identidades.\n\n5. Átomos de elementos combinam com átomos de outros elementos em proporções de números inteiros pequenos para formar compostos.\n\nApós o modelo de Dalton, outros modelos baseados em outros dados experimentais evidenciaram, entre outras coisas, a natureza elétrica da matéria, a composição e organização do átomo e a quantização da energia no modelo atômico.\n\nOXTOBY, D. W.; GILLIS, H. P.; BUTLER, L. J. Principles of Modern\nChemistry. Boston: Cengage Learning, 2012 (adaptado).\n\nCom base no modelo atual que descreve o átomo, qual dos postulados de Dalton ainda é considerado correto?",
+        "opcoes": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:f661d5d6",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 128"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:56.521Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:ce1aa3f8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um dos parâmetros de controle de qualidade de polpas de frutas destinadas ao consumo como bebida é a acidez total expressa em ácido cítrico, que corresponde à massa dessa substância em 100 gramas de polpa de fruta. O ácido cítrico é uma molécula orgânica que apresenta três hidrogênios ionizáveis (ácido triprótico) e massa molar 192 g mol⁻¹. O quadro indica o valor mínimo desse parâmetro de qualidade para polpas comerciais de algumas frutas.\n\n[[tabela:0]]\n\nA acidez total expressa em ácido cítrico de uma amostra comercial de polpa de fruta foi determinada. No procedimento, adicionou-se água destilada a 2,2 g da amostra e, após a solubilização do ácido cítrico, o sólido remanescente foi filtrado. A solução obtida foi titulada com solução de hidróxido de sódio 0,01 mol L⁻¹, em que se consumiram 24 mL da solução básica (titulante).\n\nBRASIL. Ministério da Agricultura e do Abastecimento. Instrução\nnormativa n. 1, de 7 de janeiro de 2000. Disponível em: www.agricultura.gov.br. Acesso em: 9 maio 2019 (adaptado).\n\nEntre as listadas, a amostra analisada pode ser de qual polpa de fruta?",
+        "opcoes": [
+          "Apenas caju.",
+          "Apenas maracujá.",
+          "Caju ou graviola.",
+          "Acerola ou cupuaçu.",
+          "Cupuaçu ou graviola."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Polpa de fruta",
+              "Valor mínimo da acidez total expressa em ácido cítrico (g/100 g)"
+            ],
+            "linhas": [
+              [
+                "Acerola",
+                "0,8"
+              ],
+              [
+                "Caju",
+                "0,3"
+              ],
+              [
+                "Cupuaçu",
+                "1,5"
+              ],
+              [
+                "Graviola",
+                "0,6"
+              ],
+              [
+                "Maracujá",
+                "2,5"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:ce1aa3f8",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 129"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:28:54.492Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:63ccce1f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma cozinheira colocou sal a mais no feijão que estava cozinhando. Para solucionar o problema, ela acrescentou batatas cruas e sem tempero dentro da panela. Quando terminou de cozinhá-lo, as batatas estavam salgadas, porque absorveram parte do caldo com excesso de sal. Finalmente, ela adicionou água para completar o caldo do feijão.\n\nO sal foi absorvido pelas batatas por",
+        "opcoes": [
+          "osmose, por envolver apenas o transporte do solvente.",
+          "fagocitose, porque o sal transportado é uma substância sólida.",
+          "exocitose, uma vez que o sal foi transportado da água para a batata.",
+          "pinocitose, porque o sal estava diluído na água quando foi transportado.",
+          "difusão, porque o transporte ocorreu a favor do gradiente de concentração."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:63ccce1f",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 130"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:56.580Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

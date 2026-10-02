@@ -1,0 +1,781 @@
+{
+  "prova": "ENEM 2019 · 2º dia · caderno 7 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 90,
+  "extraidas": 90,
+  "importadas": 71,
+  "mantidasDeAntes": [],
+  "comImagem": 25,
+  "comAlternativaImagem": 2,
+  "comTabela": 5,
+  "naoImportadas": [
+    {
+      "numero": 113,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 118,
+      "motivo": "alternativa A vazia"
+    },
+    {
+      "numero": 119,
+      "motivo": "subscrito sem forma em texto: \"A\"; subscrito sem forma em texto: \"B\""
+    },
+    {
+      "numero": 122,
+      "motivo": "texto solto \"2\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 125,
+      "motivo": "recorte incompleto: texto \"Gimnospermas\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 134,
+      "motivo": "recorte incompleto: texto \"Copo de vidro\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 137,
+      "motivo": "texto montado difere do texto da página (similaridade 0.963)"
+    },
+    {
+      "numero": 143,
+      "motivo": "recorte incompleto: texto \"30Tempo (min)\" encostado na figura, fora do recorte; texto solto \"30\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 147,
+      "motivo": "texto solto \"d\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 159,
+      "motivo": "texto solto \"2\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 163,
+      "motivo": "texto solto \"1\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 165,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 166,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); recorte incompleto: texto \"12 cm\" encostado na figura, fora do recorte; texto solto \"A B\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 171,
+      "motivo": "uma figura cobre as alternativas A, B, C, D, E"
+    },
+    {
+      "numero": 174,
+      "motivo": "recorte incompleto: texto \"8 000\" encostado na figura, fora do recorte; texto solto \"0 0\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 177,
+      "motivo": "recorte incompleto: texto \"h(0)=0\" encostado na figura, fora do recorte; texto solto \"h(0) = 0\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 178,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 179,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 180,
+      "motivo": "recorte incompleto: texto \"País de destino\" encostado na figura, fora do recorte; recorte incompleto: texto \"País de destino\" encostado na figura, fora do recorte; recorte incompleto: texto \"Moeda local\" encostado na figura, fora do recorte; recorte incompleto: texto \"Taxa de câmbio\" encostado na figura, fora do recorte; recorte incompleto: texto \"Gasto diário\" encostado na figura, fora do recorte"
+    }
+  ],
+  "classificacao": [
+    {
+      "numero": 91,
+      "id": "oficial:2019:94821b5a",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 92,
+      "id": "oficial:2019:16b6f135",
+      "skillId": "fis:eletricidade-circuitos-basicos",
+      "confianca": "alta",
+      "pistas": [
+        "corrente elétrica",
+        "tensão"
+      ]
+    },
+    {
+      "numero": 93,
+      "id": "oficial:2019:bcbe27e5",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "alta",
+      "pistas": [
+        "vacina",
+        "doença"
+      ]
+    },
+    {
+      "numero": 94,
+      "id": "oficial:2019:abf173b4",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "media",
+      "pistas": [
+        "calor"
+      ]
+    },
+    {
+      "numero": 95,
+      "id": "oficial:2019:fb4c92a1",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "media",
+      "pistas": [
+        "célula"
+      ]
+    },
+    {
+      "numero": 96,
+      "id": "oficial:2019:27239a9d",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 97,
+      "id": "oficial:2019:6a9994a3",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "parasit"
+      ]
+    },
+    {
+      "numero": 98,
+      "id": "oficial:2019:12a602f1",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 99,
+      "id": "oficial:2019:5775964c",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 100,
+      "id": "oficial:2019:99d882e9",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "predador"
+      ]
+    },
+    {
+      "numero": 101,
+      "id": "oficial:2019:62536846",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "media",
+      "pistas": [
+        "hormônio"
+      ]
+    },
+    {
+      "numero": 102,
+      "id": "oficial:2019:ff6e7718",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "alta",
+      "pistas": [
+        "calor",
+        "térmic"
+      ]
+    },
+    {
+      "numero": 103,
+      "id": "oficial:2019:1c7aaa04",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "alta",
+      "pistas": [
+        "sangue",
+        "doença"
+      ]
+    },
+    {
+      "numero": 104,
+      "id": "oficial:2019:e33604cf",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "media",
+      "pistas": [
+        "hormônio"
+      ]
+    },
+    {
+      "numero": 105,
+      "id": "oficial:2019:73ea6011",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "mol"
+      ]
+    },
+    {
+      "numero": 106,
+      "id": "oficial:2019:d796f0e4",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "alta",
+      "pistas": [
+        "força",
+        "aceleração",
+        "massa"
+      ]
+    },
+    {
+      "numero": 107,
+      "id": "oficial:2019:bf3bc6b6",
+      "skillId": "fis:eletricidade-circuitos-basicos",
+      "confianca": "media",
+      "pistas": [
+        "lâmpada"
+      ]
+    },
+    {
+      "numero": 108,
+      "id": "oficial:2019:d77eff4c",
+      "skillId": "qui:estrutura-atomica-modelos",
+      "confianca": "alta",
+      "pistas": [
+        "átomo",
+        "elétron"
+      ]
+    },
+    {
+      "numero": 109,
+      "id": "oficial:2019:e452b87d",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "atrito"
+      ]
+    },
+    {
+      "numero": 110,
+      "id": "oficial:2019:8cdbf8cc",
+      "skillId": "bio:genetica-leis-mendel",
+      "confianca": "alta",
+      "pistas": [
+        "gene",
+        "genétic",
+        "cromossom"
+      ]
+    },
+    {
+      "numero": 111,
+      "id": "oficial:2019:d517842b",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "alta",
+      "pistas": [
+        "força",
+        "aceleração",
+        "massa",
+        "peso"
+      ]
+    },
+    {
+      "numero": 112,
+      "id": "oficial:2019:9f15cd6c",
+      "skillId": "qui:quimica-organica-funcoes",
+      "confianca": "alta",
+      "pistas": [
+        "orgânic",
+        "hidrocarboneto"
+      ]
+    },
+    {
+      "numero": 114,
+      "id": "oficial:2019:cac05595",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "alta",
+      "pistas": [
+        "vacina",
+        "doença",
+        "vírus"
+      ]
+    },
+    {
+      "numero": 115,
+      "id": "oficial:2019:17ccf77f",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 116,
+      "id": "oficial:2019:61a329ed",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "media",
+      "pistas": [
+        "celular"
+      ]
+    },
+    {
+      "numero": 117,
+      "id": "oficial:2019:60228673",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 120,
+      "id": "oficial:2019:973f9cbc",
+      "skillId": "qui:estrutura-atomica-modelos",
+      "confianca": "media",
+      "pistas": [
+        "átomo"
+      ]
+    },
+    {
+      "numero": 121,
+      "id": "oficial:2019:7624f891",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "alta",
+      "pistas": [
+        "energia cinética",
+        "energia potencial",
+        "conservação da energia"
+      ]
+    },
+    {
+      "numero": 123,
+      "id": "oficial:2019:d1adcccc",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "cadeia alimentar"
+      ]
+    },
+    {
+      "numero": 124,
+      "id": "oficial:2019:49cf7cec",
+      "skillId": "qui:quimica-organica-funcoes",
+      "confianca": "media",
+      "pistas": [
+        "polímero"
+      ]
+    },
+    {
+      "numero": 126,
+      "id": "oficial:2019:2595d37c",
+      "skillId": "fis:eletricidade-circuitos-basicos",
+      "confianca": "alta",
+      "pistas": [
+        "circuito",
+        "resistência",
+        "tensão",
+        "lâmpada"
+      ]
+    },
+    {
+      "numero": 127,
+      "id": "oficial:2019:def5c2e0",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "alta",
+      "pistas": [
+        "mitocôndria",
+        "celular"
+      ]
+    },
+    {
+      "numero": 128,
+      "id": "oficial:2019:f661d5d6",
+      "skillId": "qui:estrutura-atomica-modelos",
+      "confianca": "alta",
+      "pistas": [
+        "átomo",
+        "modelo atômico"
+      ]
+    },
+    {
+      "numero": 129,
+      "id": "oficial:2019:ce1aa3f8",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "alta",
+      "pistas": [
+        "mol",
+        "massa molar"
+      ]
+    },
+    {
+      "numero": 130,
+      "id": "oficial:2019:63ccce1f",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "concentração"
+      ]
+    },
+    {
+      "numero": 131,
+      "id": "oficial:2019:907524fb",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "media",
+      "pistas": [
+        "velocidade"
+      ]
+    },
+    {
+      "numero": 132,
+      "id": "oficial:2019:5846d071",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 133,
+      "id": "oficial:2019:cb52f15b",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "alta",
+      "pistas": [
+        "órgão",
+        "rim"
+      ]
+    },
+    {
+      "numero": 135,
+      "id": "oficial:2019:97ffef98",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "Newton"
+      ]
+    },
+    {
+      "numero": 136,
+      "id": "oficial:2019:36895cbb",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 138,
+      "id": "oficial:2019:28b2ad36",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "alta",
+      "pistas": [
+        "%",
+        "percentual"
+      ]
+    },
+    {
+      "numero": 139,
+      "id": "oficial:2019:8cd15ca5",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "m³"
+      ]
+    },
+    {
+      "numero": 140,
+      "id": "oficial:2019:2e383fa3",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 141,
+      "id": "oficial:2019:2beec7fc",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "media",
+      "pistas": [
+        "quadrado"
+      ]
+    },
+    {
+      "numero": 142,
+      "id": "oficial:2019:e0a3dd0d",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "círculo",
+        "m²"
+      ]
+    },
+    {
+      "numero": 144,
+      "id": "oficial:2019:8ef6dbb4",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 145,
+      "id": "oficial:2019:ffbd82ce",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "media",
+      "pistas": [
+        "%"
+      ]
+    },
+    {
+      "numero": 146,
+      "id": "oficial:2019:2221cf76",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "media",
+      "pistas": [
+        "%"
+      ]
+    },
+    {
+      "numero": 148,
+      "id": "oficial:2019:f65477ab",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "litro",
+        "m³"
+      ]
+    },
+    {
+      "numero": 149,
+      "id": "oficial:2019:79179ac2",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "quadro"
+      ]
+    },
+    {
+      "numero": 150,
+      "id": "oficial:2019:f88699ca",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "media",
+      "pistas": [
+        "%"
+      ]
+    },
+    {
+      "numero": 151,
+      "id": "oficial:2019:4e125bef",
+      "skillId": "mat:razao-proporcao",
+      "confianca": "media",
+      "pistas": [
+        "proporcional"
+      ]
+    },
+    {
+      "numero": 152,
+      "id": "oficial:2019:c7424375",
+      "skillId": "mat:razao-proporcao",
+      "confianca": "media",
+      "pistas": [
+        "proporcional"
+      ]
+    },
+    {
+      "numero": 153,
+      "id": "oficial:2019:38b4e4b3",
+      "skillId": "mat:porcentagem-fator-multiplicativo",
+      "confianca": "media",
+      "pistas": [
+        "aumento de"
+      ]
+    },
+    {
+      "numero": 154,
+      "id": "oficial:2019:2bed4b7b",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "quadro"
+      ]
+    },
+    {
+      "numero": 155,
+      "id": "oficial:2019:2425ca6c",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 156,
+      "id": "oficial:2019:46e893b2",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 157,
+      "id": "oficial:2019:fbd3ff08",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "media",
+      "pistas": [
+        "hexágono"
+      ]
+    },
+    {
+      "numero": 158,
+      "id": "oficial:2019:d51860b9",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "litro",
+        "cm³"
+      ]
+    },
+    {
+      "numero": 160,
+      "id": "oficial:2019:826928b2",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 161,
+      "id": "oficial:2019:53fe5257",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 162,
+      "id": "oficial:2019:353edd66",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "quadro"
+      ]
+    },
+    {
+      "numero": 164,
+      "id": "oficial:2019:5e639089",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "media",
+      "pistas": [
+        "m³"
+      ]
+    },
+    {
+      "numero": 167,
+      "id": "oficial:2019:be41cfd2",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "alta",
+      "pistas": [
+        "média",
+        "mediana",
+        "moda"
+      ]
+    },
+    {
+      "numero": 168,
+      "id": "oficial:2019:dcb62816",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 169,
+      "id": "oficial:2019:94cb326a",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "gráfico"
+      ]
+    },
+    {
+      "numero": 170,
+      "id": "oficial:2019:75e12ce6",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "cm³"
+      ]
+    },
+    {
+      "numero": 172,
+      "id": "oficial:2019:e841a7b9",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 173,
+      "id": "oficial:2019:9cfd3acb",
+      "skillId": "mat:probabilidade-evento-simples",
+      "confianca": "media",
+      "pistas": [
+        "probabilidade"
+      ]
+    },
+    {
+      "numero": 175,
+      "id": "oficial:2019:d1d7ef28",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "media",
+      "pistas": [
+        "cone"
+      ]
+    },
+    {
+      "numero": 176,
+      "id": "oficial:2019:6e825d83",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "quadrado",
+        "m²"
+      ]
+    }
+  ],
+  "amostra": [
+    {
+      "numero": 161,
+      "id": "oficial:2019:53fe5257"
+    },
+    {
+      "numero": 164,
+      "id": "oficial:2019:5e639089"
+    },
+    {
+      "numero": 175,
+      "id": "oficial:2019:d1d7ef28"
+    },
+    {
+      "numero": 105,
+      "id": "oficial:2019:73ea6011"
+    },
+    {
+      "numero": 156,
+      "id": "oficial:2019:46e893b2"
+    },
+    {
+      "numero": 131,
+      "id": "oficial:2019:907524fb"
+    },
+    {
+      "numero": 127,
+      "id": "oficial:2019:def5c2e0"
+    },
+    {
+      "numero": 126,
+      "id": "oficial:2019:2595d37c"
+    }
+  ]
+}

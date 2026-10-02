@@ -1,0 +1,874 @@
+{
+  "prova": "ENEM 2024 · 1º dia · caderno 1 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 95,
+  "extraidas": 95,
+  "importadas": 90,
+  "mantidasDeAntes": [],
+  "comImagem": 12,
+  "comAlternativaImagem": 0,
+  "comTabela": 0,
+  "naoImportadas": [
+    {
+      "numero": 1,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 2,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 3,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 4,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 5,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    }
+  ],
+  "classificacao": [
+    {
+      "numero": 1,
+      "id": "oficial:2024:4c6c1965",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 2,
+      "id": "oficial:2024:e6030683",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 3,
+      "id": "oficial:2024:d364ea6f",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 4,
+      "id": "oficial:2024:e7b9be7a",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 5,
+      "id": "oficial:2024:395bbf5e",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 6,
+      "id": "oficial:2024:c140e057",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 7,
+      "id": "oficial:2024:1d6854c2",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 8,
+      "id": "oficial:2024:b5017246",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 9,
+      "id": "oficial:2024:a6037835",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 10,
+      "id": "oficial:2024:13996fca",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "literári"
+      ]
+    },
+    {
+      "numero": 11,
+      "id": "oficial:2024:d314431c",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "literári"
+      ]
+    },
+    {
+      "numero": 12,
+      "id": "oficial:2024:8f398a69",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 13,
+      "id": "oficial:2024:5c0c4a93",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 14,
+      "id": "oficial:2024:db08cb0a",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "conto"
+      ]
+    },
+    {
+      "numero": 15,
+      "id": "oficial:2024:b4825687",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 16,
+      "id": "oficial:2024:25bfb79d",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 17,
+      "id": "oficial:2024:3fe0aa7a",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 18,
+      "id": "oficial:2024:ebc3484d",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 19,
+      "id": "oficial:2024:6dc2c095",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "romance",
+        "narrador"
+      ]
+    },
+    {
+      "numero": 20,
+      "id": "oficial:2024:296fbfc3",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "verso",
+        "crônica",
+        "literári"
+      ]
+    },
+    {
+      "numero": 21,
+      "id": "oficial:2024:65a4bf31",
+      "skillId": "por:formacao-palavras-processos",
+      "confianca": "media",
+      "pistas": [
+        "composição"
+      ]
+    },
+    {
+      "numero": 22,
+      "id": "oficial:2024:a0d566c6",
+      "skillId": "por:sentido-figuras-linguagem",
+      "confianca": "media",
+      "pistas": [
+        "metáfora"
+      ]
+    },
+    {
+      "numero": 23,
+      "id": "oficial:2024:69b43394",
+      "skillId": "por:sentido-figuras-linguagem",
+      "confianca": "alta",
+      "pistas": [
+        "eufemismo",
+        "antítese"
+      ]
+    },
+    {
+      "numero": 24,
+      "id": "oficial:2024:97f7d7e8",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "literári"
+      ]
+    },
+    {
+      "numero": 25,
+      "id": "oficial:2024:2a74151b",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 26,
+      "id": "oficial:2024:d8d9a7ac",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 27,
+      "id": "oficial:2024:fdb07db5",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 28,
+      "id": "oficial:2024:76fa2763",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "romance",
+        "narrador",
+        "literári"
+      ]
+    },
+    {
+      "numero": 29,
+      "id": "oficial:2024:88e26f2a",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "narrador"
+      ]
+    },
+    {
+      "numero": 30,
+      "id": "oficial:2024:0582e685",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 31,
+      "id": "oficial:2024:6ac0d0d2",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "narrador"
+      ]
+    },
+    {
+      "numero": 32,
+      "id": "oficial:2024:8dd03595",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "narrador",
+        "personagem"
+      ]
+    },
+    {
+      "numero": 33,
+      "id": "oficial:2024:72ce7a57",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 34,
+      "id": "oficial:2024:f6917655",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 35,
+      "id": "oficial:2024:148d5826",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "conto"
+      ]
+    },
+    {
+      "numero": 36,
+      "id": "oficial:2024:a9802208",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 37,
+      "id": "oficial:2024:856f7d8c",
+      "skillId": "por:sentido-figuras-linguagem",
+      "confianca": "alta",
+      "pistas": [
+        "metáfora",
+        "hipérbole"
+      ]
+    },
+    {
+      "numero": 38,
+      "id": "oficial:2024:e89eb853",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "poema"
+      ]
+    },
+    {
+      "numero": 39,
+      "id": "oficial:2024:c8a4e9a6",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 40,
+      "id": "oficial:2024:147b0d91",
+      "skillId": "por:formacao-palavras-processos",
+      "confianca": "media",
+      "pistas": [
+        "composição"
+      ]
+    },
+    {
+      "numero": 41,
+      "id": "oficial:2024:29e2edee",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 42,
+      "id": "oficial:2024:d6840a17",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "poema",
+        "poeta"
+      ]
+    },
+    {
+      "numero": 43,
+      "id": "oficial:2024:16e37fc7",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 44,
+      "id": "oficial:2024:5e1b4daf",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 45,
+      "id": "oficial:2024:7e6cd78f",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 46,
+      "id": "oficial:2024:fe115020",
+      "skillId": "geo:urbanizacao-processos",
+      "confianca": "media",
+      "pistas": [
+        "cidade"
+      ]
+    },
+    {
+      "numero": 47,
+      "id": "oficial:2024:9bf74b7f",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "moral"
+      ]
+    },
+    {
+      "numero": 48,
+      "id": "oficial:2024:8c8de850",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "identidade"
+      ]
+    },
+    {
+      "numero": 49,
+      "id": "oficial:2024:718e1d67",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "século XIX"
+      ]
+    },
+    {
+      "numero": 50,
+      "id": "oficial:2024:499d3463",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "colônia",
+        "metrópole"
+      ]
+    },
+    {
+      "numero": 51,
+      "id": "oficial:2024:a1a42e43",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "século XVI",
+        "medieval",
+        "Idade Média"
+      ]
+    },
+    {
+      "numero": 52,
+      "id": "oficial:2024:bb88ee3c",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "direitos"
+      ]
+    },
+    {
+      "numero": 53,
+      "id": "oficial:2024:c21f7f15",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "alta",
+      "pistas": [
+        "temperatura",
+        "relevo"
+      ]
+    },
+    {
+      "numero": 54,
+      "id": "oficial:2024:8770a24f",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "desigualdade"
+      ]
+    },
+    {
+      "numero": 55,
+      "id": "oficial:2024:4eb37a83",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 56,
+      "id": "oficial:2024:f9650844",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "identidade"
+      ]
+    },
+    {
+      "numero": 57,
+      "id": "oficial:2024:e21572d6",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "democracia"
+      ]
+    },
+    {
+      "numero": 58,
+      "id": "oficial:2024:d2158741",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "alta",
+      "pistas": [
+        "ética",
+        "moral",
+        "virtude",
+        "Aristóteles"
+      ]
+    },
+    {
+      "numero": 59,
+      "id": "oficial:2024:85b8f658",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "monarquia",
+        "medieval",
+        "Idade Média"
+      ]
+    },
+    {
+      "numero": 60,
+      "id": "oficial:2024:03434675",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 61,
+      "id": "oficial:2024:7bdd32b3",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "ética"
+      ]
+    },
+    {
+      "numero": 62,
+      "id": "oficial:2024:6eb838fc",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "moral"
+      ]
+    },
+    {
+      "numero": 63,
+      "id": "oficial:2024:7783b66a",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 64,
+      "id": "oficial:2024:b0d101a1",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "direitos"
+      ]
+    },
+    {
+      "numero": 65,
+      "id": "oficial:2024:52dcdbe0",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "identidade"
+      ]
+    },
+    {
+      "numero": 66,
+      "id": "oficial:2024:55cffd3f",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "moral"
+      ]
+    },
+    {
+      "numero": 67,
+      "id": "oficial:2024:1f89aa6f",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "indígena"
+      ]
+    },
+    {
+      "numero": 68,
+      "id": "oficial:2024:bc9a2645",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "alta",
+      "pistas": [
+        "chuva",
+        "temperatura",
+        "atmosfer",
+        "solo"
+      ]
+    },
+    {
+      "numero": 69,
+      "id": "oficial:2024:f0937ee0",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "século XVI",
+        "século XVII",
+        "século XVIII"
+      ]
+    },
+    {
+      "numero": 70,
+      "id": "oficial:2024:e6ca0cc7",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "renda"
+      ]
+    },
+    {
+      "numero": 71,
+      "id": "oficial:2024:4f08790c",
+      "skillId": "geo:meio-ambiente-impactos",
+      "confianca": "alta",
+      "pistas": [
+        "impacto",
+        "efeito estufa",
+        "agronegócio"
+      ]
+    },
+    {
+      "numero": 72,
+      "id": "oficial:2024:6fa140ad",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "ética"
+      ]
+    },
+    {
+      "numero": 73,
+      "id": "oficial:2024:d8108b30",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 74,
+      "id": "oficial:2024:d51020d5",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "patrimônio"
+      ]
+    },
+    {
+      "numero": 75,
+      "id": "oficial:2024:c32c8fd5",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "filósof"
+      ]
+    },
+    {
+      "numero": 76,
+      "id": "oficial:2024:dced0c10",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 77,
+      "id": "oficial:2024:57746696",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 78,
+      "id": "oficial:2024:d3f62a8d",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "utilitaris"
+      ]
+    },
+    {
+      "numero": 79,
+      "id": "oficial:2024:fe3f320c",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 80,
+      "id": "oficial:2024:d5b38fe5",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 81,
+      "id": "oficial:2024:f63f60a3",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "quilombola",
+        "patrimônio"
+      ]
+    },
+    {
+      "numero": 82,
+      "id": "oficial:2024:187eb9dc",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 83,
+      "id": "oficial:2024:b744f730",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 84,
+      "id": "oficial:2024:baf6ceeb",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "cultura",
+        "indígena",
+        "quilombola",
+        "patrimônio"
+      ]
+    },
+    {
+      "numero": 85,
+      "id": "oficial:2024:b0243801",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "alta",
+      "pistas": [
+        "movimento social",
+        "direitos"
+      ]
+    },
+    {
+      "numero": 86,
+      "id": "oficial:2024:bd4de529",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "media",
+      "pistas": [
+        "fronteira"
+      ]
+    },
+    {
+      "numero": 87,
+      "id": "oficial:2024:2186ca49",
+      "skillId": "fil:politica-poder-estado",
+      "confianca": "media",
+      "pistas": [
+        "soberan"
+      ]
+    },
+    {
+      "numero": 88,
+      "id": "oficial:2024:7c2224a2",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "clima"
+      ]
+    },
+    {
+      "numero": 89,
+      "id": "oficial:2024:adc1352e",
+      "skillId": "fil:politica-poder-estado",
+      "confianca": "media",
+      "pistas": [
+        "soberan"
+      ]
+    },
+    {
+      "numero": 90,
+      "id": "oficial:2024:7a299ccc",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "rio"
+      ]
+    }
+  ],
+  "amostra": [
+    {
+      "numero": 71,
+      "id": "oficial:2024:4f08790c"
+    },
+    {
+      "numero": 31,
+      "id": "oficial:2024:6ac0d0d2"
+    },
+    {
+      "numero": 68,
+      "id": "oficial:2024:bc9a2645"
+    },
+    {
+      "numero": 75,
+      "id": "oficial:2024:c32c8fd5"
+    },
+    {
+      "numero": 20,
+      "id": "oficial:2024:296fbfc3"
+    },
+    {
+      "numero": 39,
+      "id": "oficial:2024:c8a4e9a6"
+    },
+    {
+      "numero": 29,
+      "id": "oficial:2024:88e26f2a"
+    },
+    {
+      "numero": 18,
+      "id": "oficial:2024:ebc3484d"
+    },
+    {
+      "numero": 85,
+      "id": "oficial:2024:b0243801"
+    }
+  ]
+}

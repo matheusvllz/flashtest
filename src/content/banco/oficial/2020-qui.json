@@ -1,0 +1,332 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "oficial:2020:6ef38296",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nPor qual motivo ocorre a eletrização ilustrada na tirinha?",
+        "opcoes": [
+          "Troca de átomos entre a calça e os pelos do gato.",
+          "Diminuição do número de prótons nos pelos do gato.",
+          "Criação de novas partículas eletrizadas nos pelos do gato.",
+          "Movimentação de elétrons entre a calça e os pelos do gato.",
+          "Repulsão entre partículas elétricas da calça e dos pelos do gato."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d2-q091-1.webp",
+            "alt": "Imagem da questão 91 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1200,
+            "altura": 352
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:6ef38296",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 91"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:20.963Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:8cfc37cf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "DAVIS, J. Disponível em: http://garfield.com. Acesso em: 10 fev. 2015.\n\nA enorme quantidade de resíduos gerados pelo consumo crescente da sociedade traz para a humanidade uma preocupação socioambiental, em especial pela quantidade de lixo produzido. Além da reciclagem e do reúso, pode-se melhorar ainda mais a qualidade de vida, substituindo polímeros convencionais por polímeros biodegradáveis.\nEsses polímeros têm grandes vantagens socioambientais em relação aos convencionais porque",
+        "opcoes": [
+          "não são tóxicos.",
+          "não precisam ser reciclados.",
+          "não causam poluição ambiental quando descartados.",
+          "são degradados em um tempo bastante menor que os convencionais.",
+          "apresentam propriedades mecânicas semelhantes aos convencionais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:8cfc37cf",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 92"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:20.963Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:7a27cfe1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na indústria farmacêutica, é muito comum o emprego de substâncias de revestimento em medicamentos de uso oral, pois trazem uma série de benefícios como alteração de sabor em medicamentos que tenham gosto ruim, melhoria da assimilação do composto, entre outras ações. Alguns compostos poliméricos à base do polissacarídeo celulose são utilizados para garantir que o fármaco somente seja liberado quando em contato com soluções aquosas cujo pH se encontre próximo da faixa da neutralidade.\n\nBORTOLINI, K. et al. Análise de perfil de dissolução de cápsulas gastrorresistentes\nutilizando polímeros industriais com aplicação em farmácias magistrais.\n\nRevista da Unifebe, n. 12, 2013 (adaptado).\n\nQual é a finalidade do uso desse revestimento à base de celulose?",
+        "opcoes": [
+          "Diminuir a absorção do princípio ativo no intestino.",
+          "Impedir que o fármaco seja solubilizado no intestino.",
+          "Garantir que o fármaco não seja afetado pelas secreções gástricas.",
+          "Permitir a liberação do princípio ativo pela ação das amilases salivares.",
+          "Facilitar a liberação do fármaco pela ação dos sais biliares sobre o revestimento."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:7a27cfe1",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 108"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.339Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:4f0bec97",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O crescimento da frota de veículos em circulação no mundo tem levado à busca e desenvolvimento de tecnologias que permitam minimizar emissões de poluentes atmosféricos. O uso de veículos elétricos é uma das propostas mais propagandeadas por serem de emissão zero. Podemos comparar a emissão de carbono na forma de CO₂ (massa molar igual a 44 g mol⁻¹) para os dois tipos de carros (a combustão e elétrico). Considere que os veículos tradicionais a combustão, movidos a etanol (massa molar igual a 46 g mol⁻¹), emitem uma\n\nmédia de 2,6 mol de CO₂ por quilômetro rodado, e os\n\nelétricos emitem o equivalente a 0,45 mol de CO₂por quilômetro rodado (considerando as emissões na geração e transmissão da eletricidade). A reação de combustão do etanol pode ser representada pela equação química:\n\nC₂H₅OH (l) + 3 O₂ (g) → 2 CO₂ (g) + 3 H₂O (g)\n\nForam analisadas as emissões de CO₂envolvidas em dois veículos, um movido a etanol e outro elétrico, em um mesmo trajeto de 1 000 km.\n\nCHIARADIA, C. A. Estudo da viabilidade da implantação de frotas de veículos elétricos e híbridos elétricos no atual cenário econômico, político, energético e ambiental brasileiro.\n\nGuaratinguetá: Unesp, 2015 (adaptado).\n\nA quantidade equivalente de etanol economizada, em quilograma, com o uso do veículo elétrico nesse trajeto, é mais próxima de",
+        "opcoes": [
+          "50.",
+          "60.",
+          "95.",
+          "99.",
+          "120."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:4f0bec97",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 120"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.657Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:0d2c5a43",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 2011, uma falha no processo de perfuração realizado por uma empresa petrolífera ocasionou derramamento de petróleo na bacia hidrográfica de Campos, no Rio de Janeiro.\n\nOs impactos decorrentes desse derramamento ocorrem porque os componentes do petróleo",
+        "opcoes": [
+          "reagem com a água do mar e sofrem degradação, gerando compostos com elevada toxicidade.",
+          "acidificam o meio, promovendo o desgaste das conchas calcárias de moluscos e a morte de corais.",
+          "dissolvem-se na água, causando a mortandade dos seres marinhos por ingestão da água contaminada.",
+          "têm caráter hidrofóbico e baixa densidade, impedindo as trocas gasosas entre o meio aquático e a atmosfera.",
+          "têm cadeia pequena e elevada volatilidade, contaminando a atmosfera local e regional em função dos ventos nas orlas marítimas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:0d2c5a43",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 124"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.703Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:d5bc78c0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Embora a energia nuclear possa ser utilizada para fins pacíficos, recentes conflitos geopolíticos têm trazido preocupações em várias partes do planeta e estimulado discussões visando o combate ao uso de armas de destruição em massa. Além do potencial destrutivo da bomba atômica, uma grande preocupação associada ao emprego desse artefato bélico é a poeira radioativa deixada após a bomba ser detonada.\n\nQual é o processo envolvido na detonação dessa bomba?",
+        "opcoes": [
+          "Fissão nuclear do urânio, provocada por nêutrons.",
+          "Fusão nuclear do hidrogênio, provocada por prótons.",
+          "Desintegração nuclear do plutônio, provocada por elétrons.",
+          "Associação em cadeia de chumbo, provocada por pósitrons.",
+          "Decaimento radioativo do carbono, provocado por partículas beta."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:d5bc78c0",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 2º dia · caderno 7 azul · questão 126"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:21.747Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

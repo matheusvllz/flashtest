@@ -1,0 +1,1304 @@
+{
+  "subjectId": "por",
+  "items": [
+    {
+      "id": "oficial:2020:0576eb45",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nA frase, título do filme, reproduz uma variedade linguística recorrente na fala de muitos brasileiros. Essa estrutura caracteriza-se pelo(a)",
+        "opcoes": [
+          "uso de uma marcação temporal.",
+          "imprecisão do referente de pessoa.",
+          "organização interrogativa da frase.",
+          "utilização de um verbo de ação.",
+          "apagamento de uma preposição."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q007-1.webp",
+            "alt": "Imagem da questão 7 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Disponível em: www.globofilmes.globo.com. Acesso em: 13 dez. 2017 (adaptado).",
+            "largura": 1004,
+            "altura": 1358
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:0576eb45",
+        "version": 1,
+        "skillIds": [
+          "por:classes-gramaticais-identificacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 7"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.495Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:66ea80b5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "É possível afirmar que muitas expressões idiomáticas transmitidas pela cultura regional possuem autores anônimos, no entanto, algumas delas surgiram em consequência de contextos históricos bem curiosos. “Aquele é um cabra da peste” é um bom exemplo dessas construções.\n\nPara compreender essa expressão tão repetida no Nordeste brasileiro, faz-se necessário voltar o olhar para o século 16. “Cabra” remete à forma com que os navegadores portugueses chamavam os índios. Já “peste” estaria ligada à questão da superação e resistência, ou mesmo uma associação com o diabo. Assim, com o passar dos anos, passou-se a utilizar tal expressão para denominar qualquer indivíduo que se mostre corajoso, ou mesmo insolente, já que a expressão pode ter caráter positivo ou negativo. Aliás, quem já não ficou de “nhe-nhe-nhém” por aí? O termo, que normalmente tem significado de conversa interminável, monótona ou resmungo, tem origem no tupi-guarani e “nhém” significa “falar”.\n\nDisponível em: http://leiturasdahistoria.uol.com.br. Acesso em: 13 dez. 2017.\n\nA leitura do texto permite ao leitor entrar em contato com",
+        "opcoes": [
+          "registros do inventário do português brasileiro.",
+          "justificativas da variedade linguística do país.",
+          "influências da fala do nordestino no uso da língua.",
+          "explorações do falar de um grupo social específico.",
+          "representações da mudança linguística do português."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:66ea80b5",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 9"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.497Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:08e1e1b4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O ouro do século 21\n\nCério, gadolínio, lutécio, promécio e érbio; sumário, térbio e disprósio; hólmio, túlio e itérbio. Essa lista de nomes esquisitos e pouco conhecidos pode parecer a escalação de um time de futebol, que ainda teria no banco de reservas lantânio, neodímio, praseodímio, európio, escândio e ítrio. Mas esses 17 metais, chamados de terras-raras, fazem parte da vida de quase todos os humanos do planeta. Chamados por muitos de “ouro do século 21”, “elementos do futuro” ou “vitaminas da indústria”, eles estão nos materiais usados na fabricação de lâmpadas, telas de computadores, tablets e celulares, motores de carros elétricos, baterias e até turbinas eólicas. Apesar de tantas aplicações, o Brasil, dono da segunda maior reserva do mundo desses metais, parou de extraí-los e usá-los em 2002. Agora, volta a pensar em retomar sua exploração.\n\nSILVEIRA, E. Disponível em: www.revistaplaneta.com.br.\n\nAcesso em: 6 dez. 2017 (adaptado).\n\nAs aspas sinalizam expressões metafóricas empregadas intencionalmente pelo autor do texto para",
+        "opcoes": [
+          "imprimir um tom irônico à reportagem.",
+          "incorporar citações de especialistas à reportagem.",
+          "atribuir maior valor aos metais, objeto da reportagem.",
+          "esclarecer termos científicos empregados na reportagem.",
+          "marcar a apropriação de termos de outra ciência pela reportagem."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:08e1e1b4",
+        "version": 1,
+        "skillIds": [
+          "por:pontuacao-virgula-regras"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 10"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.498Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:495f3f0b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Deu vontade de jogar, mas não sabe como reunir\nos amigos...\nMuitas vezes é difícil encontrar grupos para bater uma bola. Em função disso, estão sendo disponibilizados aplicativos que reúnem times e reservam espaços para os adeptos da paixão nacional. Num exemplo dessas iniciativas, é possível organizar uma partida de futebol, se inscrever para participar de um jogo, alugar campos e quadras, convidar jogadores. O aplicativo tem dois tipos de usuários: um que o usa como ferramenta de gestão do grupo, convidando amigos para jogar, vendo quem confirmou e avaliando os jogos. Outro usuário é o que busca partidas perto de onde ele está, caso de pessoas que estão de passagem numa cidade.\n\nBENEDICTO, M.; MARLI, M. Bola na rede. Retratos:\n\na revista do IBGE, n. 2, 2017 (adaptado).\n\nA inter-relação entre tecnologia e sociedade tem estimulado a criação de aplicativos. Nesse texto, isso é percebido pelo desenvolvimento de aplicativos para",
+        "opcoes": [
+          "organização de eventos de competições esportivas.",
+          "agendamento de viagens para eventos de esporte amador.",
+          "mapeamento dos interesses dos praticantes acerca dos esportes.",
+          "identificação da escassez de espaços para a vivência dos esportes.",
+          "formação de grupos em comunidades virtuais para a prática esportiva."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:495f3f0b",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 13"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.499Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:bc4e54e7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nTEXTO II\n\nO grupo Jovens Artistas Britânicos (YABs), que surgiu no final da década de 1980, possui obras diversificadas que incluem fotografias, instalações, pinturas e carcaças desmembradas. O trabalho desses artistas chamou a atenção no final do período da recessão, por utilizar materiais incomuns, como esterco de elefantes, sangue e legumes, o que expressava os detritos da vida e uma atmosfera de niilismo, temperada por um humor mordaz.\n\nDisponível em: http://damienhirst.com. Acesso em: 15 jul. 2015. FARTHING, S. Tudo sobre arte. Rio de Janeiro: Sextante, 2011 (adaptado).\n\nA provocação desse grupo gera um debate em torno da obra de arte pelo(a)",
+        "opcoes": [
+          "recusa a crenças, convicções, valores morais, estéticos e políticos na história moderna.",
+          "frutífero arsenal de materiais e formas que se relacionam com os objetos construídos.",
+          "economia e problemas financeiros gerados pela recessão que tiveram grande impacto no mercado.",
+          "influência desse grupo junto aos estilos pós-modernos que surgiram nos anos 1990.",
+          "interesse em produtos indesejáveis que revela uma consciência sustentável no mercado."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q014-1.webp",
+            "alt": "Imagem da questão 14 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "HIRST, D. Mother and Child. Bezerro dividido em duas partes: 1029 x 1689 x 625mm, 1993 (detalhe). Vidro, aço pintado, silicone, acrílico, monofilamento, aço inoxidável, bezerro e solução de formaldeído.",
+            "largura": 588,
+            "altura": 764
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:bc4e54e7",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 14"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.570Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:3413f800",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O suor para estar em competições nacionais e internacionais de alto nível é o mesmo para homens e mulheres, mas não raramente as remunerações são menores para elas. Se no tênis, um dos esportes mais equânimes em termos de gênero, todos os principais torneios oferecem prêmios idênticos nas disputas femininas e masculinas, no futebol a desigualdade atinge seu ápice. Neymar e Marta são dois expoentes dessa paixão nacional. Ela já foi eleita cinco vezes a melhor jogadora do mundo pela Fifa. Ele conquistou o terceiro lugar na última votação para melhor do mundo. Mas é na conta bancária que a diferença entre os dois se sobressai.\n\n[[imagem:0]]\n\nO esporte é uma manifestação cultural na qual se estabelecem relações sociais. Considerando o texto, o futebol é uma modalidade que",
+        "opcoes": [
+          "apresenta proximidades com o tênis, no que tange às relações de gênero entre homens e mulheres.",
+          "se caracteriza por uma identidade masculina no Brasil, conferindo maior remuneração aos jogadores.",
+          "traz remunerações, aos jogadores e jogadoras, proporcionais aos seus esforços no treinamento esportivo.",
+          "resulta em melhor eficiência para as mulheres e, consequentemente, em remuneração mais alta às jogadoras.",
+          "possui jogadores e jogadoras com a mesma visibilidade, apesar de haver expoentes femininas de destaque, como Marta."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q015-1.webp",
+            "alt": "Imagem da questão 15 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Disponível em: http://apublica.org. Acesso em: 9 ago. 2017 (adaptado).",
+            "largura": 1004,
+            "altura": 1003
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:3413f800",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 15"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.751Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:5956cb37",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma das mais contundentes críticas ao discurso da aptidão física relacionada à saúde está no caráter eminentemente individual de suas propostas, o que serve para obscurecer outros determinantes da saúde. Ou seja, costuma-se apresentar o indivíduo como o problema e a mudança do estilo de vida como a solução. Argumenta-se ainda que o movimento da aptidão física relacionada à saúde considera a existência de uma cultura homogênea na qual todos seriam livres para escolher seus estilos de vida, o que não condiz com a realidade. O fato é que vivemos numa sociedade dividida em classes sociais, na qual nem todas as pessoas têm condições econômicas para adotar um estilo de vida ativo e saudável. Há desigualdades estruturais com raízes políticas, econômicas e sociais que dificultam a adoção desses estilos de vida.\n\nFERREIRA, M. S. Aptidão física e saúde na educação física escolar: ampliando o enfoque.\n\nRBCE, n. 2, jan. 2001 (adaptado).\n\nCom base no texto, a relação entre saúde e estilos de vida",
+        "opcoes": [
+          "constrói a ideia de que a mudança individual de hábitos promove a saúde.",
+          "considera a homogeneidade da escolha de hábitos saudáveis pelos indivíduos.",
+          "reforça a necessidade de solucionar os problemas de saúde da sociedade com a prática de exercícios.",
+          "problematiza a organização social e seu impacto na mudança de hábitos dos indivíduos.",
+          "reproduz a noção de que a melhoria da aptidão física pela prática de exercícios promove a saúde."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:5956cb37",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 17"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.753Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:683664ad",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Senhor Juiz\nO instrumento do “crime” que se arrola\nNesse processo de contravenção\nNão é faca, revólver ou pistola,\nSimplesmente, doutor, é um violão.\n\nSerá crime, afinal, será pecado,\nSerá delito de tão vis horrores,\nPerambular na rua um desgraçado\nDerramando nas praças suas dores?\n\nMande, pois, libertá-lo da agonia\n(a consciência assim nos insinua)\nNão sufoque o cantar que vem da rua,\nQue vem da noite para saudar o dia.\n\nÉ o apelo que aqui lhe dirigimos,\nNa certeza do seu acolhimento\nJuntada desta aos autos nós pedimos\nE pedimos, enfim, deferimento.\n\nDisponível em: www.migalhas.com.br.\nAcesso em: 23 set. 2020 (adaptado).\n\nEssa petição de habeas corpus, ao transgredir o rigor da\nlinguagem jurídica,",
+        "opcoes": [
+          "permite que a narrativa seja objetiva e repleta de sentidos denotativos.",
+          "mostra que o cordel explora termos próprios da esfera do direito.",
+          "demonstra que o jogo de linguagem proposto atenua a gravidade do delito.",
+          "exemplifica como o texto em forma de cordel compromete a solicitação pretendida.",
+          "esclarece que os termos “crime” e “processo de contravenção” são sinônimos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:683664ad",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 19"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.755Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:7baf9050",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Por que a indústria do empreendedorismo de palco\nirá destruir você\n\nSe, antigamente, os livros, enormes e com suas setecentas páginas, cuspiam fórmulas, equações e cálculos que te ensinavam a lidar com o fluxo de caixa da sua empresa, hoje eles dizem: “Você irá chegar lá! Acredite, você irá vencer!”.\n\nMindset, empoderamento, millennials, networking, coworking, deal, business, deadline, salesman com perfil hunter… tudo isso faz parte do seu vocabulário. O pacote de livros é sempre idêntico e as experiências são passadas da mesma forma: você está a um único centímetro da vitória. Não pare!\n\nSe desistir agora, será para sempre. Tome, leia a estratégia do oceano azul. Faça mais uma mentoria, participe de mais uma sessão de coaching. O problema é que o seu mindset não está ajustado. Você precisa ser mais proativo. Vamos fazer mais um powermind ? Eu consigo um precinho bacana para você…\n\nCARVALHO, Í. C. Disponível em: https://medium.com.\n\nAcesso em: 17 ago. 2017 (adaptado).\n\nDe acordo com o texto, é possível identificar o “empreendedor de palco” por",
+        "opcoes": [
+          "livros por ele indicados.",
+          "suas habilidades em língua inglesa.",
+          "experiências por ele compartilhadas.",
+          "padrões de linguagem por ele utilizados.",
+          "preços acessíveis de seus treinamentos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:7baf9050",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 20"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.755Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:acf56ba4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEsse anúncio publicitário propõe soluções para um problema social recorrente, ao",
+        "opcoes": [
+          "promover ações de conscientização para reduzir a violência de gênero em eventos esportivos.",
+          "estimular o compartilhamento de políticas públicas sobre a igualdade de gênero no esporte.",
+          "divulgar para a população as novas regras complementares para as torcidas de futebol.",
+          "informar ao público masculino as consequências de condutas ofensivas.",
+          "regulamentar normas de boa convivência nos estádios."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q022-1.webp",
+            "alt": "Imagem da questão 22 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Disponível em: www.facebook.com/ministeriodoesporte. Acesso em: 7 dez. 2017.",
+            "largura": 959,
+            "altura": 799
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:acf56ba4",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 22"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.866Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:05e6fe51",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "DECRETO N. 28 314, DE 28 DE SETEMBRO DE 2007\nDemite o Gerúndio do Distrito Federal\ne dá outras providências.\n\nO GOVERNADOR DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o artigo 100, incisos VII e XXVI, da Lei Orgânica do Distrito Federal, DECRETA:\n\nArt. 1° Fica demitido o Gerúndio de todos os órgãos do Governo do Distrito Federal.\nArt. 2° Fica proibido, a partir desta data, o uso do gerúndio para desculpa de INEFICIÊNCIA.\nArt. 3° Este Decreto entra em vigor na data de sua publicação.\nArt. 4º Revogam-se as disposições em contrário.\n\nBrasília, 28 de setembro de 2007.\n\n119º da República e 48º de Brasília\n\nDisponível em: www.dodf.gov.br. Acesso em: 11 dez. 2017.\n\nEsse decreto pauta-se na ideia de que o uso do gerúndio, como “desculpa de ineficiência”, indica",
+        "opcoes": [
+          "conclusão de uma ação.",
+          "realização de um evento.",
+          "repetição de uma prática.",
+          "continuidade de um processo.",
+          "transferência de responsabilidade."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:05e6fe51",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 24"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.868Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:cb853f94",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nA obra de Joseph Kosuth data de 1965 e se constitui por uma fotografia de cadeira, uma cadeira exposta e um quadro com o verbete “Cadeira”. Trata-se de um exemplo de arte conceitual que revela o paradoxo entre verdade e imitação, já que a arte",
+        "opcoes": [
+          "não é a realidade, mas uma representação dela.",
+          "fundamenta-se na repetição, construindo variações.",
+          "não se define, pois depende da interpretação do fruidor.",
+          "resiste ao tempo, beneficiada por múltiplas formas de registro.",
+          "redesenha a verdade, aproximando-se das definições lexicais."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q025-1.webp",
+            "alt": "Imagem da questão 25 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "KOSUTH, J. One and Three Chairs. Museu Reina Sofia, Espanha, 1965. Disponível em: www.museoreinasofia.es. Acesso em: 4 jun. 2018 (adaptado).",
+            "largura": 844,
+            "altura": 584
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:cb853f94",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 25"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:09.940Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:4dcd9477",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nA realidade virtual é uma tecnologia de informação que, conforme sugere a imagem, tem como uma de suas principais funções",
+        "opcoes": [
+          "promover a manipulação eficiente de conhecimentos e informações de difícil compreensão no mundo físico.",
+          "conduzir escolhas profissionais da área de ciência da computação, oferecendo um leque de opções de atuação.",
+          "transferir conhecimento da inteligência artificial para as áreas tradicionais, como as das ciências exatas e naturais.",
+          "levar o ser humano a experimentar mentalmente outras realidades, para as quais é transportado sem sair de seu próprio lugar.",
+          "delimitar tecnologias exclusivas de jogos virtuais, a fim de oferecer maior emoção ao jogador por meio de outras realidades."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q026-1.webp",
+            "alt": "Imagem da questão 26 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.iotforall.com. Acesso em: 22 jun. 2018.",
+            "largura": 700,
+            "altura": 428
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:4dcd9477",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 26"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.001Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:deddf0ed",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Caminhando contra o vento,\nSem lenço e sem documento\nNo sol de quase dezembro\nEu vou\n\nO sol se reparte em crimes\nEspaçonaves, guerrilhas\nEm cardinales bonitas\nEu vou\n\nEm caras de presidentes\nEm grandes beijos de amor\nEm dentes, pernas, bandeiras\nBombas e Brigitte Bardot\nO sol nas bancas de revista\nMe enche de alegria e preguiça\nQuem lê tanta notícia\nEu vou\n\nVELOSO, C. Alegria, alegria. In: Caetano Veloso.\n\nSão Paulo: Phillips, 1967 (fragmento).\n\nÉ comum coexistirem sequências tipológicas em um\nmesmo gênero textual. Nesse fragmento, os tipos textuais\nque se destacam na organização temática são",
+        "opcoes": [
+          "descritivo e argumentativo, pois o enunciador detalha cada lugar por onde passa, argumentando contra a violência urbana.",
+          "dissertativo e argumentativo, pois o enunciador apresenta seu ponto de vista sobre as notícias relativas à cidade.",
+          "expositivo e injuntivo, pois o enunciador fala de seus estados físicos e psicológicos e interage com a mulher amada.",
+          "narrativo e descritivo, pois o enunciador conta sobre suas andanças pelas ruas da cidade ao mesmo tempo que a descreve.",
+          "narrativo e injuntivo, pois o enunciador ensina o interlocutor como andar pelas ruas da cidade contando sobre sua própria experiência."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:deddf0ed",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 27"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.002Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:49ab118a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Leandro Aparecido Ferreira, o MC Fioti, compôs em 2017 a música Bum bum tam tam, que gerou, em nove meses, 480 milhões de visualizações no YouTube. É o funk brasileiro mais ouvido na história do site.\n\nA partir de uma gravação da flauta que achou na internet, MC Fioti fez tudo sozinho: compôs, cantou e produziu em uma noite só. “Comecei a pesquisar alguns tipos de flauta, coisas antigas. E nisso eu achei a ‘flautinha do Sebastian Bach’”, conta. A descoberta foi por acaso: Fioti não sabia quem era o músico alemão e não sabe tocar o instrumento.\n\nA “flauta envolvente” da música é um trecho da Partita em Lá menor, escrita pelo alemão Johann Sebastian Bach por volta de 1723.\n\nDisponível em: https://g1.globo.com. Acesso em: 6 jun. 2018 (adaptado).\n\nA incorporação de um trecho da obra para flauta solo de Johann Sebastian Bach na música de MC Fioti demonstra a",
+        "opcoes": [
+          "influência permanente da cultura eurocêntrica nas produções musicais brasileiras.",
+          "homenagem aos referenciais estéticos que deram origem às produções da música popular.",
+          "necessidade de divulgar a música de concerto nos meios populares nas periferias das grandes cidades.",
+          "utilização desintencional de uma música excessivamente distante da realidade cultural dos jovens brasileiros.",
+          "inter-relação de elementos culturais vindos de realidades distintas na construção de uma nova proposta musical."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:49ab118a",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 28"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.003Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:e214230b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nEssa campanha de conscientização sobre o assédio sofrido pelas mulheres nas ruas constrói-se pela combinação da linguagem verbal e não verbal. A imagem da mulher com o nariz e a boca cobertos por um lenço é a representação não verbal do(a)",
+        "opcoes": [
+          "silêncio imposto às mulheres, que não podem denunciar o assédio sofrido.",
+          "metáfora de que as mulheres precisam defender-se do assédio masculino.",
+          "constrangimento pelo qual passam as mulheres e sua tentativa de esconderem-se.",
+          "necessidade que as mulheres têm de passarem despercebidas para evitar o assédio.",
+          "incapacidade de as mulheres protegerem-se da agressão verbal dos assediadores."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q030-1.webp",
+            "alt": "Imagem da questão 30 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.bhaz.com.br. Acesso em: 14 jun. 2018.",
+            "largura": 596,
+            "altura": 840
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:e214230b",
+        "version": 1,
+        "skillIds": [
+          "por:sentido-figuras-linguagem"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 30"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.076Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:e1ba17af",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A vida às vezes é como um jogo brincado na rua: estamos no último minuto de uma brincadeira bem quente e não sabemos que a qualquer momento pode chegar um mais velho a avisar que a brincadeira já acabou e está na hora de jantar. A vida afinal acontece muito de repente — nunca ninguém nos avisou que aquele era mesmo o último Carnaval da Vitória. O Carnaval também chegava sempre de repente. Nós, as crianças, vivíamos num tempo fora do tempo, sem nunca sabermos dos calendários de verdade. [...] O “dia da véspera do Carnaval”, como dizia a avó Nhé, era dia de confusão com roupas e pinturas a serem preparadas, sonhadas e inventadas. Mas quando acontecia era um dia rápido, porque os dias mágicos passam depressa deixando marcas fundas na nossa memória, que alguns chamam também de coração.\n\nONDJAKI. Os da minha rua. Rio de Janeiro: Língua Geral, 2007.\n\nAs significações afetivas engendradas no fragmento pressupõem o reconhecimento da",
+        "opcoes": [
+          "perspectiva infantil assumida pela voz narrativa.",
+          "suspensão da linearidade temporal da narração.",
+          "tentativa de materializar lembranças da infância.",
+          "incidência da memória sobre as imagens narradas.",
+          "alternância entre impressões subjetivas e relatos factuais."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:e1ba17af",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 34"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.367Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:1fad6933",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 2000 tivemos a primeira experiência do futebol feminino em um jogo de videogame, o Mia Hamm Soccer. Doze anos depois, uma petição on-line pedia que a EA Sports incluísse o futebol feminino no Fifa 13. Contudo, só em 2015, com uma nova petição on-line, que arrecadou milhares de assinaturas, tivemos o futebol feminino incluído no Fifa 16. Vendo um nicho de mercado inexplorado, a EA Sports produziu o jogo com 12 seleções femininas e o apresentou como inovação. A empresa sabe que mais de 40% dos praticantes de futebol nos EUA são meninas. Para elas, ver o futebol feminino representado em um jogo de videogame é extremamente importante. Ter o futebol feminino no Fifa 16 é um grande passo para a sua popularização na luta pela igualdade de gênero, num contexto machista, sexista, misógino e homofóbico.\n\nDisponível em: www.ludopedio.com.br. Acesso em: 5 jun. 2018 (adaptado).\n\nOs jogos eletrônicos presentes na cultura juvenil podem desempenhar uma relevante função na abordagem do futebol ao",
+        "opcoes": [
+          "disseminarem uma modalidade, promovendo a igualdade de gênero.",
+          "superarem jogos malsucedidos no mercado, lançados anteriormente.",
+          "inovarem a modalidade com novas ofertas de jogos ao mercado.",
+          "explorarem nichos de mercado antes ignorados, produzindo mais lucro.",
+          "reforçarem estereótipos de gênero masculino ou feminino nos esportes."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:1fad6933",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 35"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.367Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:9cf14a45",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "LUTA: prática corporal imprevisível, caracterizada por determinado estado de contato proposital, que possibilita a duas ou mais pessoas se enfrentarem numa constante troca de ações ofensivas e/ou defensivas, regida por regras, com o objetivo mútuo sobre um alvo móvel personificado no oponente.\n\nGOMES, M. S. P. et al. Ensino das lutas: dos princípios condicionais aos grupos situacionais.\n\nMovimento, n. 2, abr.-jun. 2010 (adaptado).\n\nDe acordo com o texto, podemos identificar uma abordagem das lutas nas aulas de educação física quando o professor realiza uma proposta envolvendo",
+        "opcoes": [
+          "contato corporal intenso entre o aluno e seu oponente.",
+          "contenda entre os alunos que se agridem fisicamente.",
+          "confronto corporal em que os vencedores são previamente identificados.",
+          "combate corporal intencional com ações regulamentadas entre os oponentes.",
+          "conflito resolvido pelos alunos por meio de regras previamente estabelecidas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:9cf14a45",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 36"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.368Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:0cd092d3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Hino à Bandeira\n\nEm teu seio formoso retratas\nEste céu de puríssimo azul,\nA verdura sem par destas matas,\nE o esplendor do Cruzeiro do Sul.\n\nContemplando o teu vulto sagrado,\nCompreendemos o nosso dever,\nE o Brasil por seus filhos amado,\nPoderoso e feliz há de ser!\n\nSobre a imensa Nação Brasileira,\nNos momentos de festa ou de dor,\nPaira sempre sagrada bandeira\nPavilhão da justiça e do amor!\n\nBILAC, O.; BRAGA, F. Disponível em: www2.planalto.gov.br.\n\nAcesso em: 10 dez. 2017 (fragmento).\n\nNo Hino à Bandeira, a descrição é um recurso utilizado\npara exaltar o símbolo nacional na medida em que",
+        "opcoes": [
+          "remete a um momento futuro.",
+          "promove a união dos cidadãos.",
+          "valoriza os seus elementos.",
+          "emprega termos religiosos.",
+          "recorre à sua história."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:0cd092d3",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 39"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.368Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:cec21b13",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Atualmente os jovens estão imersos numa sociedade permeada pela tecnologia. Nesse contexto, os jogos digitais são artefatos muito empregados. Videogames ativos ou exergames foram introduzidos como forma de permitir que o corpo controlasse tais jogos. Como resultado, passaram a ser vistos como uma ferramenta auxiliar na adoção de um estilo de vida menos sedentário, com efeitos positivos sobre a saúde. Tem-se defendido que os exergames podem contribuir para a prática regular de atividade física moderada, bem como promover a interação entre jogadores, reduzindo o sentimento de isolamento social. Por outro lado, argumenta-se que os exergames não podem substituir a experiência real das práticas corporais, pois não motivam a longo prazo a prática permanente de atividades físicas.\n\nFINCO, M. D.; REATEGUI, E. B.; ZARO, M. A. Laboratório de exergames: um espaço\ncomplementar para as aulas de educação física. Movimento, n. 3, 2015 (adaptado).\n\nPela sua interatividade, os exergames apresentam-se como possibilidade para estimular o(a)",
+        "opcoes": [
+          "exercitação física, promovendo a saúde.",
+          "vivência de exercícios físicos sistemáticos.",
+          "envolvimento com atividades físicas ao longo da vida.",
+          "jogo por meio de comandos fornecidos pelo videogame.",
+          "disputa entre jogadores, contribuindo para o individualismo."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:cec21b13",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 42"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.370Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:5fea4087",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quando quis agilizar o processo de seleção de novos alunos, a tradicional faculdade britânica de medicina St. George usou um software para definir quem deveria ser entrevistado. Ao reproduzir a forma como os funcionários faziam essa escolha, o programa eliminou, de cara, 60 de 2 000 candidatos. Só por causa do sexo ou da origem racial, numa dedução baseada em sobrenome e local de nascimento. Um estudo sobre o caso foi publicado em 1988, mas, 25 anos depois, outra pesquisa apontou que esse tipo de discriminação segue firme. O exemplo recente envolve o buscador do Google: ao digitar nomes comuns entre negros dos EUA, a chance de os anúncios automáticos oferecerem checagem de antecedentes criminais pode aumentar 25%. E pode piorar com a pergunta “detido?” logo após a palavra procurada.\n\nDisponível em: https://tab.uol.com.br. Acesso em: 11 ago. 2017 (adaptado).\n\nO texto permite o desnudamento da sociedade ao relacionar as tecnologias de informação e comunicação com o(a)",
+        "opcoes": [
+          "agilidade dos softwares.",
+          "passar dos anos.",
+          "linguagem.",
+          "preconceito.",
+          "educação."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:5fea4087",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 43"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.370Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:d07c2e5f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nNessa campanha publicitária, a imagem da família e o texto verbal unem-se para reforçar a ideia de que",
+        "opcoes": [
+          "a família que adota é mais feliz.",
+          "a adoção tardia é muito positiva.",
+          "as famílias preferem adotar bebês.",
+          "a adoção de adolescentes é mais simples.",
+          "os filhos adotivos são companheiros dos pais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q044-1.webp",
+            "alt": "Imagem da questão 44 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.acontecendoaqui.com.br. Acesso em: 15 jun. 2018.",
+            "largura": 1004,
+            "altura": 592
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:d07c2e5f",
+        "version": 1,
+        "skillIds": [
+          "por:interpretacao-ideia-principal"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 44"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.477Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

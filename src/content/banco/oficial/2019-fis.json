@@ -1,0 +1,660 @@
+{
+  "subjectId": "fis",
+  "items": [
+    {
+      "id": "oficial:2019:16b6f135",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As redes de alta tensão para transmissão de energia elétrica geram campo magnético variável o suficiente para induzir corrente elétrica no arame das cercas. Tanto os animais quanto os funcionários das propriedades rurais ou das concessionárias de energia devem ter muito cuidado ao se aproximarem de uma cerca quando esta estiver próxima a uma rede de alta tensão, pois, se tocarem no arame da cerca, poderão sofrer choque elétrico.\n\nPara minimizar este tipo de problema, deve-se:",
+        "opcoes": [
+          "Fazer o aterramento dos arames da cerca.",
+          "Acrescentar fusível de segurança na cerca.",
+          "Realizar o aterramento da rede de alta tensão.",
+          "Instalar fusível de segurança na rede de alta tensão.",
+          "Utilizar fios encapados com isolante na rede de alta tensão."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:16b6f135",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 92"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.388Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:abf173b4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 1962, um jingle (vinheta musical) criado por Heitor Carillo fez tanto sucesso que extrapolou as fronteiras do rádio e chegou à televisão ilustrado por um desenho animado. Nele, uma pessoa respondia ao fantasma que batia em sua porta, personificando o “frio”, que não o deixaria entrar, pois não abriria a porta e compraria lãs e cobertores para aquecer sua casa. Apesar de memorável, tal comercial televisivo continha incorreções a respeito de conceitos físicos relativos à calorimetria.\n\nDUARTE, M. Jingle é a alma do negócio: livro revela os bastidores das músicas de propagandas.\n\nDisponível em: https://guiadoscuriosos.uol.com.br. Acesso em: 24 abr. 2019 (adaptado).\n\nPara solucionar essas incorreções, deve-se associar à porta e aos cobertores, respectivamente, as funções de:",
+        "opcoes": [
+          "Aquecer a casa e os corpos.",
+          "Evitar a entrada do frio na casa e nos corpos.",
+          "Minimizar a perda de calor pela casa e pelos corpos.",
+          "Diminuir a entrada do frio na casa e aquecer os corpos.",
+          "Aquecer a casa e reduzir a perda de calor pelos corpos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:abf173b4",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 94"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.390Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:ff6e7718",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O objetivo de recipientes isolantes térmicos é minimizar as trocas de calor com o ambiente externo. Essa troca de calor é proporcional à condutividade térmica k e à área interna das faces do recipiente, bem como à diferença de temperatura entre o ambiente externo e o interior do recipiente, além de ser inversamente proporcional à espessura das faces.\n\nA fim de avaliar a qualidade de dois recipientes A (40 cm × 40 cm × 40 cm) e B (60 cm × 40 cm × 40 cm), de faces de mesma espessura, uma estudante compara\n\n[[imagem:0]]\n\ndentro de cada recipiente, blocos idênticos de gelo a 0 °C, de modo que suas superfícies estejam em contato apenas com o ar. Após um intervalo de tempo, ela abre os recipientes enquanto ambos ainda contêm um pouco de gelo e verifica que a massa de gelo que se fundiu no recipiente B foi o dobro da que se fundiu no recipiente A.\n\n[[imagem:1]]",
+        "opcoes": [
+          "0,50.",
+          "0,67.",
+          "0,75.",
+          "1,33.",
+          "2,00."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q102-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 102 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 999,
+            "altura": 48
+          },
+          {
+            "url": "/content/img/2019/d2-q102-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 102 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 538,
+            "altura": 108
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:ff6e7718",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 102"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.615Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:d796f0e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Slackline é um esporte no qual o atleta deve se equilibrar e executar manobras estando sobre uma fita esticada. Para a prática do esporte, as duas extremidades da fita são fixadas de forma que ela fique a alguns centímetros do solo. Quando uma atleta de massa igual a 80 kg está exatamente no meio da fita, essa se desloca verticalmente, formando um ângulo de 10° com a horizontal, como esquematizado na figura. Sabe-se que a aceleração da gravidade é igual a 10 m s⁻², cos(10°) = 0,98 e sen(10°) = 0,17.\n\n[[imagem:0]]\n\nQual é a força que a fita exerce em cada uma das árvores por causa da presença da atleta?",
+        "opcoes": [
+          "4,0 × 10² N",
+          "4,1 × 10² N",
+          "8,0 × 10² N",
+          "2,4 × 10³ N",
+          "4,7 × 10³ N"
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q106-1.webp",
+            "alt": "Imagem da questão 106 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1032,
+            "altura": 488
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:d796f0e4",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 106"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.791Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:bf3bc6b6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na piscicultura, costumam-se usar larvas de Artemia (crustáceo) para alimentar larvas de peixes. Ovos de Artemia são colocados em garrafas com água salgada e, sob condições ótimas de temperatura, luz e oxigênio, eles eclodem, liberando suas larvas, também conhecidas como náuplios. Para recolher os náuplios, coloca-se uma lâmpada branca fluorescente na boca da garrafa e estes começam a subir em direção ao gargalo.\n\nEsse comportamento das artêmias é chamado de",
+        "opcoes": [
+          "geotropismo positivo.",
+          "fototropismo positivo.",
+          "hidrotropismo negativo.",
+          "termotropismo negativo.",
+          "quimiotropismo negativo."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:bf3bc6b6",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 107"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.791Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:e452b87d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na madrugada de 11 de março de 1978, partes de um foguete soviético reentraram na atmosfera acima da cidade do Rio de Janeiro e caíram no Oceano Atlântico. Foi um belo espetáculo, os inúmeros fragmentos entrando em ignição devido ao atrito com a atmosfera brilharam intensamente, enquanto “cortavam o céu”. Mas se a reentrada tivesse acontecido alguns minutos depois, teríamos uma tragédia, pois a queda seria na área urbana do Rio de Janeiro e não no oceano.\n\n[[imagem:0]]\n\nDe acordo com os fatos relatados, a velocidade angular do foguete em relação à Terra no ponto de reentrada era",
+        "opcoes": [
+          "igual à da Terra e no mesmo sentido.",
+          "superior à da Terra e no mesmo sentido.",
+          "inferior à da Terra e no sentido oposto.",
+          "igual à da Terra e no sentido oposto.",
+          "superior à da Terra e no sentido oposto."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q109-1.webp",
+            "alt": "Imagem da questão 109 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "LAS CASAS, R. Lixo espacial. Observatório Astronômico Frei Rosário, ICEx, UFMG. Disponível em: www.observatorio.ufmg.br. Acesso em: 27 set. 2011 (adaptado).",
+            "largura": 972,
+            "altura": 1124
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:e452b87d",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 109"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.897Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:d517842b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em qualquer obra de construção civil é fundamental a utilização de equipamentos de proteção individual, tal como capacetes. Por exemplo, a queda livre de um tijolo de massa 2,5 kg de uma altura de 5 m, cujo impacto contra um capacete pode durar até 0,5 s, resulta em uma força impulsiva média maior do que o peso do tijolo. Suponha que a aceleração gravitacional seja 10 m s⁻² e que o efeito de resistência do ar seja desprezível.\n\nA força impulsiva média gerada por esse impacto equivale ao peso de quantos tijolos iguais?",
+        "opcoes": [
+          "2",
+          "5",
+          "10",
+          "20",
+          "50"
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:d517842b",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 111"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:55.898Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:7624f891",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Numa feira de ciências, um estudante utilizará o disco de Maxwell (ioiô) para demonstrar o princípio da conservação da energia. A apresentação consistirá em duas etapas:\n\nEtapa 1 - a explicação de que, à medida que o disco desce, parte de sua energia potencial gravitacional é transformada em energia cinética de translação e energia cinética de rotação;\n\nEtapa 2 - o cálculo da energia cinética de rotação do disco no ponto mais baixo de sua trajetória, supondo o sistema conservativo.\n\nAo preparar a segunda etapa, ele considera a aceleração da gravidade igual a 10 m s⁻² e a velocidade linear do centro de massa do disco desprezível em comparação com a velocidade angular. Em seguida, mede a altura do topo do disco em relação ao chão no\n\n[[imagem:0]]\n\nAs especificações de tamanho do brinquedo, isto é, de comprimento (C), largura (L) e altura (A), assim como da massa de seu disco de metal, foram encontradas pelo estudante no recorte de manual ilustrado a seguir.\n\n[[imagem:1]]\n\nO resultado do cálculo da etapa 2, em joule, é:",
+        "opcoes": [
+          "4,10 × 10⁻²",
+          "8,20 × 10⁻²",
+          "1,23 × 10⁻¹",
+          "8,20 × 10⁴",
+          "1,23 × 10⁵"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q121-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 121 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 999,
+            "altura": 104
+          },
+          {
+            "url": "/content/img/2019/d2-q121-2.webp",
+            "alt": "Imagem 2 da questão 121 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 2h\nh\n3\nConteúdo: base de metal, hastes metálicas,\nbarra superior, disco de metal.\nTamanho (C × L × A): 300 mm × 100 mm × 410 mm\nMassa do disco de metal: 30 g",
+            "largura": 916,
+            "altura": 968
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:7624f891",
+        "version": 1,
+        "skillIds": [
+          "fis:energia-trabalho-conservacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 121"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:56.260Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:2595d37c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma casa tem um cabo elétrico mal dimensionado, de resistência igual a 10 Ω, que a conecta à rede elétrica de 120 V. Nessa casa, cinco lâmpadas, de resistência igual a 200 Ω, estão conectadas ao mesmo circuito que uma televisão de resistência igual a 50 Ω, conforme ilustrado no esquema. A televisão funciona apenas com tensão entre 90 V e 130 V.\n\n[[imagem:0]]\n\nO número máximo de lâmpadas que podem ser ligadas sem que a televisão pare de funcionar é:",
+        "opcoes": [
+          "1.",
+          "2.",
+          "3.",
+          "4.",
+          "5."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q126-1.webp",
+            "alt": "Imagem da questão 126 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 10 Ω\n120 V\nΩ\nΩ Ω Ω Ω Ω 50\n200 200 200 200 200",
+            "largura": 1033,
+            "altura": 410
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:2595d37c",
+        "version": 1,
+        "skillIds": [
+          "fis:eletricidade-circuitos-basicos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 126"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:56.520Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:907524fb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A agricultura de precisão reúne técnicas agrícolas que consideram particularidades locais do solo ou lavoura a fim de otimizar o uso de recursos. Uma das formas de adquirir informações sobre essas particularidades é a fotografia aérea de baixa altitude realizada por um veículo aéreo não tripulado (vant). Na fase de aquisição é importante determinar o nível de sobreposição entre as fotografias. A figura ilustra como uma sequência de imagens é coletada por um vant e como são formadas as sobreposições frontais.\n\nVant com câmera fotográfica\n\n[[imagem:0]]\n\nO operador do vant recebe uma encomenda na qual as imagens devem ter uma sobreposição frontal de 20% em um terreno plano. Para realizar a aquisição das imagens, seleciona uma altitude H fixa de voo de 1 000 m, a uma velocidade constante de 50 m s⁻¹. A abertura da câmera fotográfica do vant é de 90°. Considere tg(45°) = 1.\n\nNatural Resources Canada. Concepts of Aerial Photography. Disponível em: www.nrcan.gc.ca. Acesso em: 26 abr. 2019 (adaptado).\n\nCom que intervalo de tempo o operador deve adquirir duas imagens consecutivas?",
+        "opcoes": [
+          "40 segundos.",
+          "32 segundos.",
+          "28 segundos.",
+          "16 segundos.",
+          "8 segundos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d2-q131-1.webp",
+            "alt": "Imagem da questão 131 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: 1 2 3\nH\n45° 45°\nSolo\n20% de\n∆ S sobreposição\nfrontal\nImagens\ncoletadas\n1 2 3\n1, 2 e 3",
+            "largura": 931,
+            "altura": 623
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:907524fb",
+        "version": 1,
+        "skillIds": [
+          "fis:cinematica-movimento-uniforme"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 131"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:56.640Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:97ffef98",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quando se considera a extrema velocidade com que a luz se espalha por todos os lados e que, quando vêm de diferentes lugares, mesmo totalmente opostos, [os raios luminosos] se atravessam uns aos outros sem se atrapalharem, compreende-se que, quando vemos um objeto luminoso, isso não poderia ocorrer pelo transporte de uma matéria que venha do objeto até nós, como uma flecha ou bala atravessa o ar; pois certamente isso repugna bastante a essas duas propriedades da luz, principalmente a última.\n\nHUYGENS, C. In: MARTINS, R. A. Tratado sobre a luz, de Cristian Huygens.\n\nCaderno de História e Filosofia da Ciência, supl. 4, 1986.\n\nO texto contesta que concepção acerca do comportamento da luz?",
+        "opcoes": [
+          "O entendimento de que a luz precisa de um meio de propagação, difundido pelos defensores da existência do éter.",
+          "O modelo ondulatório para a luz, o qual considera a possibilidade de interferência entre feixes luminosos.",
+          "O modelo corpuscular defendido por Newton, que descreve a luz como um feixe de partículas.",
+          "A crença na velocidade infinita da luz, defendida pela maioria dos filósofos gregos.",
+          "A ideia defendida pelos gregos de que a luz era produzida pelos olhos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:97ffef98",
+        "version": 1,
+        "skillIds": [
+          "fis:dinamica-leis-newton"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 2º dia · caderno 7 azul · questão 135"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:56.667Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

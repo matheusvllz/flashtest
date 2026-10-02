@@ -1,0 +1,736 @@
+{
+  "prova": "ENEM 2023 · 2º dia · caderno 8 rosa",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 90,
+  "extraidas": 90,
+  "importadas": 58,
+  "mantidasDeAntes": [
+    {
+      "numero": 99,
+      "id": "oficial:2023:015ab1af",
+      "textoIgual": false,
+      "igualSemTipografia": false,
+      "gabaritoIgual": true,
+      "diferenca": "posição 451: «enina sem a síndrome de Down. MORENO, T. Três anos após dar à luz, mãe» × «enina sem a síndrome de Down. (MORENO, T. Três anos após dar à luz, mã»"
+    },
+    {
+      "numero": 100,
+      "id": "oficial:2023:09e00433",
+      "textoIgual": false,
+      "igualSemTipografia": false,
+      "gabaritoIgual": true,
+      "diferenca": "posição 680: «nérica, pela equação química: [[imagem:0]] O aumento da eficiência de » × «nérica, pela equação química: R3N + HCl → (R3NH)+Cl− O aumento da efic»"
+    },
+    {
+      "numero": 110,
+      "id": "oficial:2023:406ba302",
+      "textoIgual": true,
+      "igualSemTipografia": true,
+      "gabaritoIgual": true,
+      "diferenca": "posição 579: «lizados como fonte energética.» × «lizados como fonte energética.»"
+    },
+    {
+      "numero": 121,
+      "id": "oficial:2023:4c8f312e",
+      "textoIgual": false,
+      "igualSemTipografia": false,
+      "gabaritoIgual": true,
+      "diferenca": "posição 433: «nessa fase do ciclo feminino. DIMMOCK, P. W. et al. Efficacy of Select» × «nessa fase do ciclo feminino. (DIMMOCK, P. W. et al. Efficacy of Selec»"
+    },
+    {
+      "numero": 137,
+      "id": "oficial:2023:03b666ec",
+      "textoIgual": true,
+      "igualSemTipografia": true,
+      "gabaritoIgual": true,
+      "diferenca": "posição 521: « | 6,30 | 9,30 | 10,50 | 10,65» × « | 6,30 | 9,30 | 10,50 | 10,65»"
+    },
+    {
+      "numero": 144,
+      "id": "oficial:2023:273a7d48",
+      "textoIgual": false,
+      "igualSemTipografia": false,
+      "gabaritoIgual": true,
+      "diferenca": "posição 445: « valor à vista é R$ 1 500,00. [[imagem:0]] A taxa mensal de juros comp» × « valor à vista é R$ 1 500,00. Utilize 5,29 como aproximação para √28. »"
+    },
+    {
+      "numero": 151,
+      "id": "oficial:2023:3bb5b31f",
+      "textoIgual": false,
+      "igualSemTipografia": false,
+      "gabaritoIgual": true,
+      "diferenca": "posição 255: « e seus respectivos salários. [[tabela:0]] A média dos salários dos 10» × « e seus respectivos salários. Setor Produção: 75 funcionários, salário»"
+    },
+    {
+      "numero": 165,
+      "id": "oficial:2023:8862844c",
+      "textoIgual": false,
+      "igualSemTipografia": false,
+      "gabaritoIgual": true,
+      "diferenca": "alternativa A vazia"
+    },
+    {
+      "numero": 167,
+      "id": "oficial:2023:b6169899",
+      "textoIgual": true,
+      "igualSemTipografia": true,
+      "gabaritoIgual": true,
+      "diferenca": "posição 879: « | 10. | 11. | 13. | 30. | 33.» × « | 10. | 11. | 13. | 30. | 33.»"
+    },
+    {
+      "numero": 174,
+      "id": "oficial:2023:686fb94a",
+      "textoIgual": true,
+      "igualSemTipografia": true,
+      "gabaritoIgual": true,
+      "diferenca": "posição 833: « (19,5 ; 20,5). | (3,5 ; 4,0).» × « (19,5 ; 20,5). | (3,5 ; 4,0).»"
+    }
+  ],
+  "comImagem": 22,
+  "comAlternativaImagem": 2,
+  "comTabela": 3,
+  "naoImportadas": [
+    {
+      "numero": 98,
+      "motivo": "recorte incompleto: texto \"P(Pa)\" encostado na figura, fora do recorte; recorte incompleto: texto \"P(Pa)\" encostado na figura, fora do recorte; recorte incompleto: texto \"P(Pa)\" encostado na figura, fora do recorte; recorte incompleto: texto \"P(Pa)\" encostado na figura, fora do recorte; recorte incompleto: texto \"P(Pa)\" encostado na figura, fora do recorte; linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 101,
+      "motivo": "recorte incompleto: texto \"Transportador\" encostado na figura, fora do recorte; recorte incompleto: texto \"proveniente\" encostado na figura, fora do recorte; recorte incompleto: texto \"Transportador\" encostado na figura, fora do recorte; recorte incompleto: texto \"Transportador\" encostado na figura, fora do recorte; recorte incompleto: texto \"Transportador\" encostado na figura, fora do recorte; texto solto \"1\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 102,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); recorte incompleto: texto \"Na\" encostado na figura, fora do recorte; texto solto \"O⁻ Na⁺\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 106,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 108,
+      "motivo": "recorte incompleto: texto \"II.\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 111,
+      "motivo": "recorte incompleto: texto \"5\" encostado na figura, fora do recorte; texto solto \"5\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 113,
+      "motivo": "recorte incompleto: texto \"(g)\" encostado na figura, fora do recorte; recorte incompleto: texto \"(g)\" encostado na figura, fora do recorte; recorte incompleto: texto \"(g)\" encostado na figura, fora do recorte; recorte incompleto: texto \"(g)\" encostado na figura, fora do recorte; recorte incompleto: texto \"(g)\" encostado na figura, fora do recorte; linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 120,
+      "motivo": "texto solto \"1\" junto de uma figura (pedaço de fórmula fora do recorte); linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 129,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); recorte incompleto: texto \"Sentido\" encostado na figura, fora do recorte; recorte incompleto: texto \"Para cima\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 133,
+      "motivo": "recorte incompleto: texto \"Parâmetro medido\" encostado na figura, fora do recorte; recorte incompleto: texto \"Parâmetro medido\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 136,
+      "motivo": "fórmula química sem índice no texto extraído: \"H1\"; fórmula química sem índice no texto extraído: \"H6\"; fórmula química sem índice no texto extraído: \"I1\"; fórmula química sem índice no texto extraído: \"I6\"; recorte incompleto: texto \"L\" encostado na figura, fora do recorte; texto solto \"L\" junto de uma figura (pedaço de fórmula fora do recorte)"
+    },
+    {
+      "numero": 138,
+      "motivo": "anulada no gabarito oficial"
+    },
+    {
+      "numero": 146,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 154,
+      "motivo": "recorte incompleto: texto \"Criptomoeda A\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 156,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 157,
+      "motivo": "recorte incompleto: texto \"Profundidade\" encostado na figura, fora do recorte; linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 163,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado)"
+    },
+    {
+      "numero": 172,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 176,
+      "motivo": "símbolo ou traço desenhado junto do texto (fórmula, fração ou sublinhado); linhas encavaladas (fração ou fórmula em dois andares)"
+    },
+    {
+      "numero": 177,
+      "motivo": "alternativa A vazia"
+    },
+    {
+      "numero": 179,
+      "motivo": "recorte incompleto: texto \"CírculoC\" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 180,
+      "motivo": "linhas encavaladas (fração ou fórmula em dois andares)"
+    }
+  ],
+  "classificacao": [
+    {
+      "numero": 91,
+      "id": "oficial:2023:ec11ae1d",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "media",
+      "pistas": [
+        "celular"
+      ]
+    },
+    {
+      "numero": 92,
+      "id": "oficial:2023:a2dd96d0",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "alta",
+      "pistas": [
+        "mol",
+        "concentração"
+      ]
+    },
+    {
+      "numero": 93,
+      "id": "oficial:2023:b6a18efa",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "media",
+      "pistas": [
+        "térmic"
+      ]
+    },
+    {
+      "numero": 94,
+      "id": "oficial:2023:6e082ace",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "massa"
+      ]
+    },
+    {
+      "numero": 95,
+      "id": "oficial:2023:ca88c27e",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "mol"
+      ]
+    },
+    {
+      "numero": 96,
+      "id": "oficial:2023:55e90d99",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "alta",
+      "pistas": [
+        "mitocôndria",
+        "ribossomo",
+        "célula",
+        "celular"
+      ]
+    },
+    {
+      "numero": 97,
+      "id": "oficial:2023:753b2096",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "media",
+      "pistas": [
+        "velocidade"
+      ]
+    },
+    {
+      "numero": 103,
+      "id": "oficial:2023:94ee6e89",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "alta",
+      "pistas": [
+        "velocidade",
+        "km\\/h"
+      ]
+    },
+    {
+      "numero": 104,
+      "id": "oficial:2023:2822d790",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 105,
+      "id": "oficial:2023:0f37c5d5",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "concentração"
+      ]
+    },
+    {
+      "numero": 107,
+      "id": "oficial:2023:da77ed29",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "mol"
+      ]
+    },
+    {
+      "numero": 109,
+      "id": "oficial:2023:4ce3f1df",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "alta",
+      "pistas": [
+        "atrito",
+        "Newton",
+        "aceleração",
+        "massa"
+      ]
+    },
+    {
+      "numero": 112,
+      "id": "oficial:2023:ac3573fa",
+      "skillId": "fis:dinamica-leis-newton",
+      "confianca": "media",
+      "pistas": [
+        "massa"
+      ]
+    },
+    {
+      "numero": 114,
+      "id": "oficial:2023:20935416",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "media",
+      "pistas": [
+        "velocidade"
+      ]
+    },
+    {
+      "numero": 115,
+      "id": "oficial:2023:f4377ce0",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 116,
+      "id": "oficial:2023:fac6d59e",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "media",
+      "pistas": [
+        "potência"
+      ]
+    },
+    {
+      "numero": 117,
+      "id": "oficial:2023:747919b4",
+      "skillId": "bio:genetica-leis-mendel",
+      "confianca": "alta",
+      "pistas": [
+        "gene",
+        "genétic",
+        "fenótipo"
+      ]
+    },
+    {
+      "numero": 118,
+      "id": "oficial:2023:cc16a496",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 119,
+      "id": "oficial:2023:365d46c4",
+      "skillId": "fis:eletricidade-circuitos-basicos",
+      "confianca": "media",
+      "pistas": [
+        "corrente elétrica"
+      ]
+    },
+    {
+      "numero": 122,
+      "id": "oficial:2023:d2eaf09b",
+      "skillId": "qui:quimica-organica-funcoes",
+      "confianca": "media",
+      "pistas": [
+        "cetona"
+      ]
+    },
+    {
+      "numero": 123,
+      "id": "oficial:2023:7a2ff054",
+      "skillId": "bio:evolucao-selecao-natural",
+      "confianca": "media",
+      "pistas": [
+        "evolu"
+      ]
+    },
+    {
+      "numero": 124,
+      "id": "oficial:2023:ca2a85ca",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 125,
+      "id": "oficial:2023:e4e0865a",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 126,
+      "id": "oficial:2023:b9d3f40b",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "media",
+      "pistas": [
+        "concentração"
+      ]
+    },
+    {
+      "numero": 127,
+      "id": "oficial:2023:ce51b817",
+      "skillId": "bio:organelas-funcao",
+      "confianca": "alta",
+      "pistas": [
+        "cloroplasto",
+        "célula"
+      ]
+    },
+    {
+      "numero": 128,
+      "id": "oficial:2023:519a47b3",
+      "skillId": "bio:fisiologia-humana-sistemas",
+      "confianca": "alta",
+      "pistas": [
+        "sangue",
+        "doença"
+      ]
+    },
+    {
+      "numero": 130,
+      "id": "oficial:2023:f3b8f070",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "media",
+      "pistas": [
+        "espécie"
+      ]
+    },
+    {
+      "numero": 131,
+      "id": "oficial:2023:bf412cd5",
+      "skillId": "bio:ecologia-relacoes-ecossistema",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 132,
+      "id": "oficial:2023:08fcded5",
+      "skillId": "fis:energia-trabalho-conservacao",
+      "confianca": "media",
+      "pistas": [
+        "calor"
+      ]
+    },
+    {
+      "numero": 134,
+      "id": "oficial:2023:effd2345",
+      "skillId": "fis:cinematica-movimento-uniforme",
+      "confianca": "alta",
+      "pistas": [
+        "velocidade",
+        "deslocamento"
+      ]
+    },
+    {
+      "numero": 135,
+      "id": "oficial:2023:0e53ba0a",
+      "skillId": "qui:estequiometria-calculo-mols",
+      "confianca": "alta",
+      "pistas": [
+        "mol",
+        "massa molar"
+      ]
+    },
+    {
+      "numero": 139,
+      "id": "oficial:2023:92f7b252",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "quadrado"
+      ]
+    },
+    {
+      "numero": 140,
+      "id": "oficial:2023:2eb77f77",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 141,
+      "id": "oficial:2023:9245baa3",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "círculo",
+        "circunferência"
+      ]
+    },
+    {
+      "numero": 142,
+      "id": "oficial:2023:1624921d",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "quadrado",
+        "m²"
+      ]
+    },
+    {
+      "numero": 143,
+      "id": "oficial:2023:ceafdee8",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "gráfico"
+      ]
+    },
+    {
+      "numero": 145,
+      "id": "oficial:2023:dd09b4a1",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "media",
+      "pistas": [
+        "volume"
+      ]
+    },
+    {
+      "numero": 147,
+      "id": "oficial:2023:eb62ee68",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "litro"
+      ]
+    },
+    {
+      "numero": 148,
+      "id": "oficial:2023:00807be1",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 149,
+      "id": "oficial:2023:59df3beb",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 150,
+      "id": "oficial:2023:26736852",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "alta",
+      "pistas": [
+        "volume",
+        "cilindro",
+        "cone"
+      ]
+    },
+    {
+      "numero": 152,
+      "id": "oficial:2023:823a7153",
+      "skillId": "mat:probabilidade-evento-simples",
+      "confianca": "media",
+      "pistas": [
+        "probabilidade"
+      ]
+    },
+    {
+      "numero": 153,
+      "id": "oficial:2023:49f882bc",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "media",
+      "pistas": [
+        "%"
+      ]
+    },
+    {
+      "numero": 155,
+      "id": "oficial:2023:84e98509",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "media",
+      "pistas": [
+        "m²"
+      ]
+    },
+    {
+      "numero": 158,
+      "id": "oficial:2023:44f2b06f",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 159,
+      "id": "oficial:2023:3ffee3e9",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 160,
+      "id": "oficial:2023:6f47f1aa",
+      "skillId": "mat:porcentagem-valor",
+      "confianca": "media",
+      "pistas": [
+        "%"
+      ]
+    },
+    {
+      "numero": 161,
+      "id": "oficial:2023:6972c179",
+      "skillId": "mat:volume-solidos-geometricos",
+      "confianca": "media",
+      "pistas": [
+        "litro"
+      ]
+    },
+    {
+      "numero": 162,
+      "id": "oficial:2023:c14eabfc",
+      "skillId": "mat:probabilidade-evento-simples",
+      "confianca": "media",
+      "pistas": [
+        "probabilidade"
+      ]
+    },
+    {
+      "numero": 164,
+      "id": "oficial:2023:170f131e",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "gráfico"
+      ]
+    },
+    {
+      "numero": 166,
+      "id": "oficial:2023:7090adb9",
+      "skillId": "mat:media-mediana-moda",
+      "confianca": "media",
+      "pistas": [
+        "média"
+      ]
+    },
+    {
+      "numero": 168,
+      "id": "oficial:2023:1b58c366",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "alta",
+      "pistas": [
+        "área",
+        "m²"
+      ]
+    },
+    {
+      "numero": 169,
+      "id": "oficial:2023:3514715b",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 170,
+      "id": "oficial:2023:52b322a6",
+      "skillId": "mat:area-perimetro-figuras-planas",
+      "confianca": "media",
+      "pistas": [
+        "círculo"
+      ]
+    },
+    {
+      "numero": 171,
+      "id": "oficial:2023:92469ee0",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "tabela"
+      ]
+    },
+    {
+      "numero": 173,
+      "id": "oficial:2023:4578d9c9",
+      "skillId": "mat:leitura-grafico-tabela",
+      "confianca": "media",
+      "pistas": [
+        "quadro"
+      ]
+    },
+    {
+      "numero": 175,
+      "id": "oficial:2023:85f75ac7",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 178,
+      "id": "oficial:2023:bdca292c",
+      "skillId": "mat:operacoes-fundamentais",
+      "confianca": "baixa",
+      "pistas": []
+    }
+  ],
+  "amostra": [
+    {
+      "numero": 107,
+      "id": "oficial:2023:da77ed29"
+    },
+    {
+      "numero": 115,
+      "id": "oficial:2023:f4377ce0"
+    },
+    {
+      "numero": 118,
+      "id": "oficial:2023:cc16a496"
+    },
+    {
+      "numero": 171,
+      "id": "oficial:2023:92469ee0"
+    },
+    {
+      "numero": 95,
+      "id": "oficial:2023:ca88c27e"
+    },
+    {
+      "numero": 170,
+      "id": "oficial:2023:52b322a6"
+    }
+  ]
+}

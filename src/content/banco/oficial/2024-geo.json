@@ -1,0 +1,510 @@
+{
+  "subjectId": "geo",
+  "items": [
+    {
+      "id": "oficial:2024:fe115020",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nUm terremoto de magnitude 5,9 atingiu a cidade de Valparaíso, na costa chilena. O terremoto ocorreu a uma profundidade de 112 quilômetros.\n\nTerremoto de magnitude 5,9 atinge Valparaíso, no Chile.\n\nDisponível em: www.cnnbrasil.com.br.\n\nAcesso em: 6 nov. 2021 (adaptado).\n\nTEXTO II\n\nUm tremor de terra de magnitude 4,8 foi registrado no município de Atalaia do Norte, no interior do estado do Amazonas. O abalo é de magnitude considerada mediana para os níveis do Brasil. Os eventos dessa região costumam ser resultado das atividades da placa de Nazca.\n\nTremor de terra de magnitude 4,8 é registrado no interior do\nAmazonas. Disponível em: https://g1.globo.com.\n\nAcesso em: 6 nov. 2021 (adaptado).\n\nTEXTO III\n\nMoradores usaram as redes sociais para relatar tremores de terra no interior de São Paulo. As atividades foram registradas nas cidades de Júlio Mesquita e Guaimbê e tiveram magnitude 3,0 na escala Richter, o que é considerado pequeno e sem previsão de danos.\n\nMoradores do interior de SP relatam tremores de terra.\n\nDisponível em: https://noticias.r7.com.\n\nAcesso em: 6 nov. 2021 (adaptado).\n\nAs diferenças entre os eventos geológicos relatados decorrem de distintas posições geográficas das cidades em relação a:",
+        "opcoes": [
+          "Planícies costeiras.",
+          "Bacias continentais.",
+          "Zonas de subducção.",
+          "Áreas de denudação.",
+          "Vertentes escarpadas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:fe115020",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 46"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.981Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:c21f7f15",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Diferenças entre inundação gradual e brusca\n\n[[imagem:0]]\n\nA desproporção de velocidade e tempo de duração nos tipos de inundação destacados é condicionada pela",
+        "opcoes": [
+          "variabilidade solar anual.",
+          "temperatura média mensal.",
+          "declividade do relevo local.",
+          "dinâmica tectônica regional.",
+          "gradação da turbidez fluvial."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d1-q053-1.webp",
+            "alt": "Imagem da questão 53 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "TOMINAGA, L. K.; SANTORO, J.; AMARAL, R. Desastres naturais: conhecer para prevenir. São Paulo: Instituto Geológico, 2009 (adaptado).",
+            "largura": 932,
+            "altura": 668
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:c21f7f15",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 53"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.048Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:4eb37a83",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A alma funciona no meu corpo de maneira maravilhosa. Nele se aloja, certamente, mas sabe bem dele escapar: escapa para ver as coisas através da janela dos meus olhos, escapa para sonhar quando durmo, para sobreviver quando morro. Minha alma durará muito tempo e mais que muito tempo, quando meu corpo vier a apodrecer. Viva minha alma! É meu corpo luminoso, purificado, virtuoso, ágil, móvel, tépido, viçoso; é meu corpo liso, castrado, arredondado como uma bolha de sabão.\n\nFOUCAULT, M. O corpo utópico, as heterotopias.\n\nSão Paulo: Edições N-1, 2013.\n\nEsse texto reforça uma concepção metafísica clássica que remete a um(a)",
+        "opcoes": [
+          "pressuposto lógico.",
+          "pensamento dicotômico.",
+          "contemplação da natureza.",
+          "raciocínio argumentativo.",
+          "crítica à individualidade."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:4eb37a83",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 55"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.049Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:bc9a2645",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nUma única árvore joga entre 300 e 1 000 litros de água por dia para a atmosfera. Considerando a demanda mínima que uma pessoa consome de água, ou seja, 120 litros por dia, uma única árvore pode ser capaz de produzir água para até oito pessoas.\n\nMAGNO, C. Estudiosos explicam o motivo de chover tanto\nem Belém. Disponível em: www.diarioonline.com.br.\n\nAcesso em: 6 nov. 2021.\n\nTEXTO II\n\nA Amazônia perdeu diariamente uma área de floresta maior do que 4 mil campos de futebol apenas em setembro de 2021. Em todo o mês, foram devastados 1 224 km², o que corresponde ao tamanho da cidade do Rio de Janeiro e é a pior marca para setembro em 10 anos. Os dados são do Sistema de Alerta de Desmatamento (SAD) do Instituto do Homem e Meio Ambiente da Amazônia (Imazon), que monitora a floresta por meio de imagens de satélites.\n\nFREITAS, A. Desmatamento na Amazônia em setembro foi o maior para o período em 10 anos. Disponível em: www.cnnbrasil.com.br.\n\nAcesso em: 6 nov. 2021.\n\nPara a região amazônica, a relação entre as informações dos textos indica uma redução do(a)",
+        "opcoes": [
+          "circulação de ventos alísios.",
+          "aquecimento dos solos locais.",
+          "média de temperatura oceânica.",
+          "índice de refletividade superficial.",
+          "intensidade de chuvas convectivas."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:bc9a2645",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 68"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.055Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:4f08790c",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A 26ª Conferência do Clima das Nações Unidas foi realizada com a perspectiva de que os países tornassem ainda mais ambiciosos os compromissos assumidos no enfrentamento das mudanças climáticas, de modo a evitar que a temperatura global se eleve acima de 1,5 °C, marca que já vinha sendo discutida desde o Acordo de Paris, de 2015.\n\nA pressão do setor empresarial, que se posicionou de maneira contundente nesta COP-26, gerou impacto positivo. O Conselho Empresarial Brasileiro para o Desenvolvimento Sustentável (CEBDS) capitaneou, por meio do movimento Empresários pelo Clima, a adesão de 119 CEOs de importantes empresas e 14 instituições do setor privado, de setores tão diversos como agronegócio, alimentício, aviação, elétrico, farmacêutico, finanças, infraestrutura, logística, papel e celulose, petroquímico, saúde, tecnologia, telefonia e varejo.\n\nO Brasil deixa a conferência com o compromisso de fazer valer sua meta e reduzir 50% dos gases de efeito estufa até 2030 em relação aos níveis de 2005 — anteriormente, a meta de redução era de 43%.\n\nGROSSI, M. A mais plural das COPs e a lição de casa para o Brasil.\n\nDisponível em: www.nexojornal.com.br.\n\nAcesso em: 24 nov. 2021 (adaptado).\n\nConforme o texto, o compromisso assumido pelo Brasil foi resultado dos tensionamentos promovidos por",
+        "opcoes": [
+          "povos ribeirinhos e segmentos culturais.",
+          "blocos econômicos e instituições militares.",
+          "grupos científicos e universidades públicas.",
+          "organismos supranacionais e sociedade civil.",
+          "agentes governamentais e demanda turística."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:4f08790c",
+        "version": 1,
+        "skillIds": [
+          "geo:meio-ambiente-impactos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 71"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.057Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:187eb9dc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Bertrand Russell conta a história de um peru que descobrira, em sua primeira manhã na fazenda de perus, que fora alimentado às 9 da manhã. Contudo, ele não tirou conclusões apressadas. Esperou até recolher um grande número de observações do fato de que era alimentado às 9 da manhã e fez essas observações sob uma ampla variedade de circunstâncias, às quartas e quintas-feiras, em dias quentes e dias frios, em dias chuvosos e dias secos. A cada dia acrescentava uma outra proposição de observação à sua lista. Finalmente, sua consciência ficou satisfeita e ele concluiu. “Eu sou alimentado sempre às 9 da manhã”.\n\nCHALMERS, A. O que é ciência, afinal? São Paulo: Brasiliense, 1993 (adaptado).\n\nQual tipo de raciocínio corresponde ao padrão de pensamento exibido pelo personagem do texto?",
+        "opcoes": [
+          "Prático, porque recolhe evidências e recomenda ações.",
+          "Absoluto, porque busca confirmações e bloqueia refutações.",
+          "Indutivo, porque observa eventos particulares e infere leis universais.",
+          "Demonstrativo, porque encadeia premissas e extrai conclusões indubitáveis.",
+          "Analógico, porque compara diferentes situações e detecta elementos semelhantes."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:187eb9dc",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 82"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.171Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:bd4de529",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nTEXTO II\n\n[[imagem:1]]\n\nA comparação entre as imagens de satélite indica a ocorrência de um processo de",
+        "opcoes": [
+          "conservação de lugares afetivos.",
+          "aumento de áreas desertificadas.",
+          "redefinição de fronteiras nacionais.",
+          "artificialização do espaço geográfico.",
+          "mudança da dinâmica macroclimática."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d1-q086-1.webp",
+            "alt": "Imagem da questão 86 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: https://earth.google.com. Acesso em: 13 out. 2023.",
+            "largura": 1004,
+            "altura": 604
+          },
+          {
+            "url": "/content/img/2024/d1-q086-2.webp",
+            "alt": "Imagem 2 da questão 86 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: https://earth.google.com. Acesso em: 13 out. 2023.",
+            "largura": 1004,
+            "altura": 604
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:bd4de529",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 86"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.350Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:7c2224a2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A mudança do clima nas cidades brasileiras é um desafio de adaptação e equidade. Inundações, alagamentos e ondas de calor são cada vez mais frequentes e intensas. Cidades precisam se adaptar com urgência, a começar pelas áreas e populações mais vulneráveis. Implementar soluções baseadas na natureza de forma sistêmica pode contribuir para a redução de desastres relacionados às mudanças do clima e ainda gerar múltiplos benefícios para a economia, o ambiente e as pessoas.\n\nEVERS, H. et al. Soluções baseadas na natureza para adaptação\nem cidades. Disponível em: www.wribrasil.org.br.\n\nAcesso em: 19 out. 2023 (adaptado).\n\nQual medida atenua os problemas abordados no texto?",
+        "opcoes": [
+          "Criação de faixas sinalizadoras.",
+          "Incineração de resíduos sólidos.",
+          "Implantação de parques públicos.",
+          "Verticalização de espaços centrais.",
+          "Construção de estacionamentos privados."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:7c2224a2",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 88"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.351Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:7a299ccc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Uma fábrica na qual os operários fossem, efetiva e integralmente, simples peças de máquinas executando cegamente as ordens da direção pararia em quinze minutos. O capitalismo só pode funcionar com a contribuição constante da atividade propriamente humana de seus subjugados que, ao mesmo tempo, tenta reduzir e desumanizar o mais possível.\n\nCASTORIADIS, C. A instituição imaginária da sociedade.\n\nRio de Janeiro: Paz e Terra, 1982.\n\nO texto apresenta uma contradição interna do capitalismo caracterizada pela",
+        "opcoes": [
+          "obsolescência associada ao uso da tecnologia.",
+          "orientação voltada à administração de conflitos.",
+          "alienação decorrente da organização do trabalho.",
+          "isonomia remanescente da geração de riquezas.",
+          "produtividade vinculada ao fortalecimento da autonomia."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:7a299ccc",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 90"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.351Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

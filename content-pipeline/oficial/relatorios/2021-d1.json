@@ -1,0 +1,405 @@
+{
+  "prova": "ENEM 2021 · 1º dia · caderno 1 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 95,
+  "extraidas": 92,
+  "importadas": 0,
+  "mantidasDeAntes": [],
+  "comImagem": 0,
+  "comAlternativaImagem": 0,
+  "comTabela": 0,
+  "naoImportadas": [
+    {
+      "numero": 1,
+      "idioma": "ingles",
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 1,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 2,
+      "idioma": "ingles",
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 2,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 3,
+      "idioma": "ingles",
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 3,
+      "idioma": "espanhol",
+      "motivo": "marcador \"QUESTÃO\" não encontrado na extração"
+    },
+    {
+      "numero": 4,
+      "idioma": "ingles",
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 4,
+      "idioma": "espanhol",
+      "motivo": "marcador \"QUESTÃO\" não encontrado na extração"
+    },
+    {
+      "numero": 5,
+      "idioma": "ingles",
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 5,
+      "idioma": "espanhol",
+      "motivo": "marcador \"QUESTÃO\" não encontrado na extração"
+    },
+    {
+      "numero": 6,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 7,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 8,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 9,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 10,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 11,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 12,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 13,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 14,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 15,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 16,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 17,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 18,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 19,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 20,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 21,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 22,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 23,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 24,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 25,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 26,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 27,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 28,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 29,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 30,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 31,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 32,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 33,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 34,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 35,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 36,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 37,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 38,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 39,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 40,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 41,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 42,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 43,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 44,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 45,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 46,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 47,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 48,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 49,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 50,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 51,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 52,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 53,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 54,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 55,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 56,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 57,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 58,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 59,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 60,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 61,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 62,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 63,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 64,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 65,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 66,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 67,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 68,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 69,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 70,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 71,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 72,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 73,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 74,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 75,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 76,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 77,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 78,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 79,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 80,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 81,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 82,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 83,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 84,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 85,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 86,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 87,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 88,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 89,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    },
+    {
+      "numero": 90,
+      "motivo": "texto do PDF ilegível (fonte sem mapa Unicode; só daria com OCR)"
+    }
+  ],
+  "classificacao": [],
+  "amostra": []
+}

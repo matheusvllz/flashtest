@@ -1,0 +1,839 @@
+{
+  "prova": "ENEM 2020 · 1º dia · caderno 1 azul",
+  "geradoEm": "2026-10-02",
+  "questoesNoCaderno": 95,
+  "extraidas": 95,
+  "importadas": 86,
+  "mantidasDeAntes": [],
+  "comImagem": 14,
+  "comAlternativaImagem": 0,
+  "comTabela": 0,
+  "naoImportadas": [
+    {
+      "numero": 1,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 2,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 3,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 4,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 5,
+      "idioma": "espanhol",
+      "motivo": "espanhol: não há habilidade de espanhol na taxonomia"
+    },
+    {
+      "numero": 37,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 38,
+      "motivo": "alternativas A–E não encontradas"
+    },
+    {
+      "numero": 51,
+      "motivo": "recorte incompleto: texto \"PASTOREIO - - - - - \" encostado na figura, fora do recorte"
+    },
+    {
+      "numero": 54,
+      "motivo": "o texto cita uma figura, mas nenhuma figura foi achada na página"
+    }
+  ],
+  "classificacao": [
+    {
+      "numero": 1,
+      "id": "oficial:2020:2b2fc3c3",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 2,
+      "id": "oficial:2020:3b4f2c7d",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 3,
+      "id": "oficial:2020:5b03f966",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 4,
+      "id": "oficial:2020:1ce8e949",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 5,
+      "id": "oficial:2020:5f32a6bc",
+      "skillId": "ing:interpretacao-texto-curto",
+      "confianca": "media",
+      "pistas": [
+        "questão de inglês"
+      ]
+    },
+    {
+      "numero": 6,
+      "id": "oficial:2020:591223b5",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "poema",
+        "poeta"
+      ]
+    },
+    {
+      "numero": 7,
+      "id": "oficial:2020:0576eb45",
+      "skillId": "por:classes-gramaticais-identificacao",
+      "confianca": "media",
+      "pistas": [
+        "preposição"
+      ]
+    },
+    {
+      "numero": 8,
+      "id": "oficial:2020:11fd9d42",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "poema"
+      ]
+    },
+    {
+      "numero": 9,
+      "id": "oficial:2020:66ea80b5",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 10,
+      "id": "oficial:2020:08e1e1b4",
+      "skillId": "por:pontuacao-virgula-regras",
+      "confianca": "media",
+      "pistas": [
+        "aspas"
+      ]
+    },
+    {
+      "numero": 11,
+      "id": "oficial:2020:287efc25",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "narrador",
+        "personagem"
+      ]
+    },
+    {
+      "numero": 12,
+      "id": "oficial:2020:45657e3d",
+      "skillId": "lit:caracteristicas-escolas-literarias",
+      "confianca": "media",
+      "pistas": [
+        "parnasian"
+      ]
+    },
+    {
+      "numero": 13,
+      "id": "oficial:2020:495f3f0b",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 14,
+      "id": "oficial:2020:bc4e54e7",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 15,
+      "id": "oficial:2020:3413f800",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 16,
+      "id": "oficial:2020:4abeca8e",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "conto"
+      ]
+    },
+    {
+      "numero": 17,
+      "id": "oficial:2020:5956cb37",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 18,
+      "id": "oficial:2020:a78b0302",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "poema"
+      ]
+    },
+    {
+      "numero": 19,
+      "id": "oficial:2020:683664ad",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 20,
+      "id": "oficial:2020:7baf9050",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 21,
+      "id": "oficial:2020:498368ab",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "verso"
+      ]
+    },
+    {
+      "numero": 22,
+      "id": "oficial:2020:acf56ba4",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 23,
+      "id": "oficial:2020:be64037a",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "narrador",
+        "conto"
+      ]
+    },
+    {
+      "numero": 24,
+      "id": "oficial:2020:05e6fe51",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 25,
+      "id": "oficial:2020:cb853f94",
+      "skillId": "por:sentido-figuras-linguagem",
+      "confianca": "media",
+      "pistas": [
+        "paradoxo"
+      ]
+    },
+    {
+      "numero": 26,
+      "id": "oficial:2020:4dcd9477",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 27,
+      "id": "oficial:2020:deddf0ed",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 28,
+      "id": "oficial:2020:49ab118a",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 29,
+      "id": "oficial:2020:176568ac",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "verso"
+      ]
+    },
+    {
+      "numero": 30,
+      "id": "oficial:2020:e214230b",
+      "skillId": "por:sentido-figuras-linguagem",
+      "confianca": "media",
+      "pistas": [
+        "metáfora"
+      ]
+    },
+    {
+      "numero": 31,
+      "id": "oficial:2020:1aa881e6",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "conto"
+      ]
+    },
+    {
+      "numero": 32,
+      "id": "oficial:2020:003ddc0a",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "personagem"
+      ]
+    },
+    {
+      "numero": 33,
+      "id": "oficial:2020:ae8f94f3",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "poema"
+      ]
+    },
+    {
+      "numero": 34,
+      "id": "oficial:2020:e1ba17af",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 35,
+      "id": "oficial:2020:1fad6933",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 36,
+      "id": "oficial:2020:9cf14a45",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 39,
+      "id": "oficial:2020:0cd092d3",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 40,
+      "id": "oficial:2020:05f4966c",
+      "skillId": "lit:modernismo-fases-brasil",
+      "confianca": "media",
+      "pistas": [
+        "modernis"
+      ]
+    },
+    {
+      "numero": 41,
+      "id": "oficial:2020:414abb49",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "alta",
+      "pistas": [
+        "romance",
+        "personagem"
+      ]
+    },
+    {
+      "numero": 42,
+      "id": "oficial:2020:cec21b13",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 43,
+      "id": "oficial:2020:5fea4087",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 44,
+      "id": "oficial:2020:d07c2e5f",
+      "skillId": "por:interpretacao-ideia-principal",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 45,
+      "id": "oficial:2020:d64e4c01",
+      "skillId": "lit:interpretacao-texto-literario",
+      "confianca": "media",
+      "pistas": [
+        "narrador"
+      ]
+    },
+    {
+      "numero": 46,
+      "id": "oficial:2020:291d9ac6",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "rio"
+      ]
+    },
+    {
+      "numero": 47,
+      "id": "oficial:2020:c713463a",
+      "skillId": "geo:urbanizacao-processos",
+      "confianca": "alta",
+      "pistas": [
+        "cidade",
+        "migração"
+      ]
+    },
+    {
+      "numero": 48,
+      "id": "oficial:2020:04fffd73",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "virtude"
+      ]
+    },
+    {
+      "numero": 49,
+      "id": "oficial:2020:35d99ee5",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "direitos"
+      ]
+    },
+    {
+      "numero": 50,
+      "id": "oficial:2020:828ed6c1",
+      "skillId": "geo:urbanizacao-processos",
+      "confianca": "alta",
+      "pistas": [
+        "urbaniza",
+        "cidade",
+        "metrópole",
+        "urbano"
+      ]
+    },
+    {
+      "numero": 52,
+      "id": "oficial:2020:fd234ae8",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "século XVI"
+      ]
+    },
+    {
+      "numero": 53,
+      "id": "oficial:2020:1ae7878c",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 55,
+      "id": "oficial:2020:80e8da74",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 56,
+      "id": "oficial:2020:06ecd929",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "solo"
+      ]
+    },
+    {
+      "numero": 57,
+      "id": "oficial:2020:06c6fb60",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "alta",
+      "pistas": [
+        "território",
+        "conflito"
+      ]
+    },
+    {
+      "numero": 58,
+      "id": "oficial:2020:3a8be955",
+      "skillId": "geo:urbanizacao-processos",
+      "confianca": "alta",
+      "pistas": [
+        "cidade",
+        "urbano"
+      ]
+    },
+    {
+      "numero": 59,
+      "id": "oficial:2020:a6fb44cf",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "rocha"
+      ]
+    },
+    {
+      "numero": 60,
+      "id": "oficial:2020:ea75585b",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "alta",
+      "pistas": [
+        "utilitaris",
+        "existencialis"
+      ]
+    },
+    {
+      "numero": 61,
+      "id": "oficial:2020:263de181",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 62,
+      "id": "oficial:2020:e7cf5d53",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "direitos"
+      ]
+    },
+    {
+      "numero": 63,
+      "id": "oficial:2020:8aabcfcd",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "escravi",
+        "império",
+        "Idade Média"
+      ]
+    },
+    {
+      "numero": 64,
+      "id": "oficial:2020:061df14a",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "pobreza"
+      ]
+    },
+    {
+      "numero": 65,
+      "id": "oficial:2020:7713e81f",
+      "skillId": "geo:meio-ambiente-impactos",
+      "confianca": "media",
+      "pistas": [
+        "agronegócio"
+      ]
+    },
+    {
+      "numero": 66,
+      "id": "oficial:2020:79fe3686",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 67,
+      "id": "oficial:2020:1262a28d",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 68,
+      "id": "oficial:2020:7fe9d54e",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "cultura"
+      ]
+    },
+    {
+      "numero": 69,
+      "id": "oficial:2020:12edbf08",
+      "skillId": "his:guerra-fria-bipolaridade",
+      "confianca": "media",
+      "pistas": [
+        "socialis"
+      ]
+    },
+    {
+      "numero": 70,
+      "id": "oficial:2020:f45e2e2c",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "escravi",
+        "república"
+      ]
+    },
+    {
+      "numero": 71,
+      "id": "oficial:2020:e74d9c46",
+      "skillId": "soc:cultura-identidade-sociedade",
+      "confianca": "media",
+      "pistas": [
+        "indígena"
+      ]
+    },
+    {
+      "numero": 72,
+      "id": "oficial:2020:64fff452",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 73,
+      "id": "oficial:2020:438a3967",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 74,
+      "id": "oficial:2020:29da6f22",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 75,
+      "id": "oficial:2020:3147eb07",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "alta",
+      "pistas": [
+        "território",
+        "fronteira"
+      ]
+    },
+    {
+      "numero": 76,
+      "id": "oficial:2020:056b1665",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "democracia"
+      ]
+    },
+    {
+      "numero": 77,
+      "id": "oficial:2020:e86c69db",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "alta",
+      "pistas": [
+        "ética",
+        "Aristóteles"
+      ]
+    },
+    {
+      "numero": 78,
+      "id": "oficial:2020:30218e0e",
+      "skillId": "geo:meio-ambiente-impactos",
+      "confianca": "media",
+      "pistas": [
+        "impacto"
+      ]
+    },
+    {
+      "numero": 79,
+      "id": "oficial:2020:6aee560b",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "media",
+      "pistas": [
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 80,
+      "id": "oficial:2020:262d7527",
+      "skillId": "soc:desigualdade-social-estrutura",
+      "confianca": "media",
+      "pistas": [
+        "trabalhador"
+      ]
+    },
+    {
+      "numero": 81,
+      "id": "oficial:2020:7eb63aac",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "colônia",
+        "jesuíta"
+      ]
+    },
+    {
+      "numero": 82,
+      "id": "oficial:2020:0d598c77",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "alta",
+      "pistas": [
+        "clima",
+        "solo"
+      ]
+    },
+    {
+      "numero": 83,
+      "id": "oficial:2020:e5ff30a2",
+      "skillId": "fil:etica-correntes-filosoficas",
+      "confianca": "media",
+      "pistas": [
+        "moral"
+      ]
+    },
+    {
+      "numero": 84,
+      "id": "oficial:2020:bc29c715",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "rocha"
+      ]
+    },
+    {
+      "numero": 85,
+      "id": "oficial:2020:26e310ce",
+      "skillId": "his:brasil-colonia-economia-sociedade",
+      "confianca": "alta",
+      "pistas": [
+        "colônia",
+        "capitania"
+      ]
+    },
+    {
+      "numero": 86,
+      "id": "oficial:2020:eb548a15",
+      "skillId": "soc:movimentos-sociais-cidadania",
+      "confianca": "media",
+      "pistas": [
+        "direitos"
+      ]
+    },
+    {
+      "numero": 87,
+      "id": "oficial:2020:4edd6cc6",
+      "skillId": "geo:geopolitica-globalizacao",
+      "confianca": "baixa",
+      "pistas": []
+    },
+    {
+      "numero": 88,
+      "id": "oficial:2020:a4215afb",
+      "skillId": "geo:climatologia-fenomenos",
+      "confianca": "media",
+      "pistas": [
+        "rio"
+      ]
+    },
+    {
+      "numero": 89,
+      "id": "oficial:2020:42745622",
+      "skillId": "fil:epistemologia-conhecimento",
+      "confianca": "alta",
+      "pistas": [
+        "Hume",
+        "conhecimento"
+      ]
+    },
+    {
+      "numero": 90,
+      "id": "oficial:2020:1e3dc450",
+      "skillId": "geo:meio-ambiente-impactos",
+      "confianca": "alta",
+      "pistas": [
+        "ambiental",
+        "poluição"
+      ]
+    }
+  ],
+  "amostra": [
+    {
+      "numero": 86,
+      "id": "oficial:2020:eb548a15"
+    },
+    {
+      "numero": 75,
+      "id": "oficial:2020:3147eb07"
+    },
+    {
+      "numero": 87,
+      "id": "oficial:2020:4edd6cc6"
+    },
+    {
+      "numero": 72,
+      "id": "oficial:2020:64fff452"
+    },
+    {
+      "numero": 8,
+      "id": "oficial:2020:11fd9d42"
+    },
+    {
+      "numero": 83,
+      "id": "oficial:2020:e5ff30a2"
+    },
+    {
+      "numero": 78,
+      "id": "oficial:2020:30218e0e"
+    },
+    {
+      "numero": 23,
+      "id": "oficial:2020:be64037a"
+    },
+    {
+      "numero": 77,
+      "id": "oficial:2020:e86c69db"
+    }
+  ]
+}

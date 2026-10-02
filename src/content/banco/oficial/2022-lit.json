@@ -1,0 +1,588 @@
+{
+  "subjectId": "lit",
+  "items": [
+    {
+      "id": "oficial:2022:6cd05128",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "É ruivo? Tem olhos azuis? É homem ou mulher? Usa chapéu? Quem jogou Cara a Cara na infância sabe de cor o roteiro de perguntas para adivinhar quem é o personagem misterioso do seu oponente.\n\nAgora, o jogo está prestes a ganhar uma nova versão. A designer polonesa Zuzia Kozerska-Girard está desenvolvendo uma variação do Guess Who? (nome do Cara a Cara em inglês), em que as personalidades do tabuleiro são, na verdade, mulheres notáveis da história e da atualidade, como a artista Frida Kahlo, a ativista Malala Yousafzai, a astronauta Valentina Tereshkova e a aviadora Amelia Earhart. O Who’s She? (“Quem é ela?”, em português) traz, no total, 28 mulheres que representam diversas profissões, nacionalidades e idades.\n\nA ideia é que, em vez de perguntar sobre a aparência das personagens, as questões sejam direcionadas aos feitos delas: ganhou algum Nobel, fez alguma descoberta? Para cada personagem há um cartão com fatos divertidos e interessantes sobre sua vida. Uma campanha entrou no ar com o objetivo de arrecadar dinheiro para desenvolver o Who’s She?. A meta inicial era reunir 17 mil dólares. Oito dias antes de a campanha acabar, o projeto já angariou quase 350 mil dólares.\n\nA chegada do jogo à casa do comprador varia de acordo com a quantia doada — quanto mais você doou, mais rápido vai poder jogar.\n\nDisponível em: www.super.abril.com.br. Acesso em: 4 dez. 2018 (adaptado).\n\nAo divulgar a adaptação do jogo para questões relativas a ações e habilidades de mulheres notáveis, o texto busca",
+        "opcoes": [
+          "contribuir para a formação cidadã dos jogadores.",
+          "refutar modelos estereotipados de beleza e elegância.",
+          "estimular a competitividade entre potenciais compradores.",
+          "exemplificar estratégias de arrecadação financeira pela internet.",
+          "desenvolver conhecimentos lúdicos específicos dos tempos atuais."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:6cd05128",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 8"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:58.523Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:e4ad1b0d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A escrava\n\n— Admira-me —, disse uma senhora de sentimentos sinceramente abolicionistas —; faz-me até pasmar como se possa sentir, e expressar sentimentos escravocratas, no presente século, no século dezenove! A moral religiosa e a moral cívica aí se erguem, e falam bem alto esmagando a hidra que envenena a família no mais sagrado santuário seu, e desmoraliza, e avilta a nação inteira! Levantai os olhos ao Gólgota, ou percorrei-os em torno da sociedade, e dizei-me:\n\n— Para que se deu em sacrifício o Homem Deus, que ali exalou seu derradeiro alento? Ah! Então não é verdade que seu sangue era o resgate do homem! É então uma mentira abominável ter esse sangue comprado a liberdade!? E depois, olhai a sociedade... Não vedes o abutre que a corrói constantemente!… Não sentis a desmoralização que a enerva, o cancro que a destrói?\n\nPor qualquer modo que encaremos a escravidão, ela é, e será sempre um grande mal. Dela a decadência do comércio; porque o comércio e a lavoura caminham de mãos dadas, e o escravo não pode fazer florescer a lavoura; porque o seu trabalho é forçado.\n\nREIS, M. F. Úrsula e outras obras. Brasília: Câmara dos Deputados, 2018.\n\nInscrito na estética romântica da literatura brasileira, o conto descortina aspectos da realidade nacional no século XIX ao",
+        "opcoes": [
+          "revelar a imposição de crenças religiosas a pessoas escravizadas.",
+          "apontar a hipocrisia do discurso conservador na defesa da escravidão.",
+          "sugerir práticas de violência física e moral em nome do progresso material.",
+          "relacionar o declínio da produção agrícola e comercial a questões raciais.",
+          "ironizar o comportamento dos proprietários de terra na exploração do trabalho."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:e4ad1b0d",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 21"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.431Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:6cb09b01",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Mas seu olhar verde, inconfundível, impressionante, iluminava com sua luz misteriosa as sombrias arcadas superciliares, que pareciam queimadas por ela, dizia logo a sua origem cruzada e decantada através das misérias e dos orgulhos de homens de aventura, contadores de histórias fantásticas, e de mulheres caladas e sofredoras, que acompanhavam os maridos e amantes através das matas intermináveis, expostas às febres, às feras, às cobras do sertão indecifrável, ameaçador e sem fim, que elas percorriam com a ambição única de um “pouso” onde pudessem viver, por alguns dias, a vida ilusória de família e de lar, sempre no encalço dos homens, enfebrados pela procura do ouro e do diamante.\n\nPENNA, C. Fronteira. Rio de Janeiro: Tecnoprint, s/d.\n\nAo descrever os olhos de Maria Santa, o narrador estabelece correlações que refletem a",
+        "opcoes": [
+          "caracterização da personagem como mestiça.",
+          "construção do enredo de conquistas da família.",
+          "relação conflituosa das mulheres e seus maridos.",
+          "nostalgia do desejo de viver como os antepassados.",
+          "marca de antigos sofrimentos no fluxo de consciência."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:6cb09b01",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 23"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.433Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:f98ba7c7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Assentamento\n\nZanza daqui\nZanza pra acolá\nFim de feira, periferia afora\nA cidade não mora mais em mim\nFrancisco, Serafim\nVamos embora\n\nVer o capim\nVer o baobá\nVamos ver a campina quando flora\nA piracema, rios contravim\nBinho, Bel, Bia, Quim\nVamos embora\n\nQuando eu morrer\nCansado de guerra\nMorro de bem\nCom a minha terra:\nCana, caqui\nInhame, abóbora\nOnde só vento se semeava outrora\nAmplidão, nação, sertão sem fim\nÓ Manuel, Miguilim\nVamos embora\n\nBUARQUE, C. As cidades. Rio de Janeiro: RCA, 1998 (fragmento).\n\nNesse texto, predomina a função poética da linguagem.\nEntretanto, a função emotiva pode ser identificada no verso:",
+        "opcoes": [
+          "“Zanza pra acolá”.",
+          "“Fim de feira, periferia afora”.",
+          "“A cidade não mora mais em mim”.",
+          "“Onde só vento se semeava outrora”.",
+          "“Ó Manuel, Miguilim”."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:f98ba7c7",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 26"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.435Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:53ae1db5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Esaú e Jacó\n\nBárbara entrou, enquanto o pai pegou da viola e passou ao patamar de pedra, à porta da esquerda. Era uma criaturinha leve e breve, saia bordada, chinelinha no pé. Não se lhe podia negar um corpo airoso. Os cabelos, apanhados no alto da cabeça por um pedaço de fita enxovalhada, faziam-lhe um solidéu natural, cuja borla era suprida por um raminho de arruda. Já vai nisto um pouco de sacerdotisa. O mistério estava nos olhos. Estes eram opacos, não sempre nem tanto que não fossem também lúcidos e agudos, e neste último estado eram igualmente compridos; tão compridos e tão agudos que entravam pela gente abaixo, revolviam o coração e tornavam cá fora, prontos para nova entrada e outro revolvimento. Não te minto dizendo que as duas sentiram tal ou qual fascinação. Bárbara interrogou-as; Natividade disse ao que vinha e entregou-lhe os retratos dos filhos e os cabelos cortados, por lhe haverem dito que bastava.\n\n— Basta, confirmou Bárbara. Os meninos são seus filhos?\n\n— São.\n\nASSIS, M. Obra completa. Rio de Janeiro: Nova Aguilar, 1994.\n\nNo relato da visita de duas mulheres ricas a uma vidente no Morro do Castelo, a ironia — um dos traços mais representativos da narrativa machadiana — consiste no",
+        "opcoes": [
+          "modo de vestir dos moradores do morro carioca.",
+          "senso prático em relação às oportunidades de renda.",
+          "mistério que cerca as clientes de práticas de vidência.",
+          "misto de singeleza e astúcia dos gestos da personagem.",
+          "interesse do narrador pelas figuras femininas ambíguas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:53ae1db5",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 29"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.523Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:234e6c98",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A senhora manifestava-se por atos, por gestos, e sobretudo por um certo silêncio, que amargava, que esfolava. Porém desmoralizar escancaradamente o marido, não era com ela. [...]\n\nAs negras receberam ordem para meter no serviço a gente do tal compadre Silveira: as cunhadas, ao fuso; os cunhados, ao campo, tratar do gado com os vaqueiros; a mulher e as irmãs, que se ocupassem da ninhada. Margarida não tivera filhos, e como os desejasse com a força de suas vontades, tratava sempre bem aos pequenitos e às mães que os estavam criando. Não era isso uma sentimentalidade cristã, uma ternura, era o egoísta e cru instinto da maternidade, obrando por mera simpatia carnal. Quanto ao pai do lote (referia-se ao Antônio), esse que fosse ajudar ao vaqueiro das bestas.\n\nOrdens dadas, o Quinquim referendava. Cada um moralizava o outro, para moralizar-se.\n\nPAIVA, M. O. Dona Guidinha do Poço. Rio de Janeiro: Tecnoprint, s/d.\n\nNo trecho do romance naturalista, a forma como o narrador julga comportamentos e emoções das personagens femininas revela influência do pensamento",
+        "opcoes": [
+          "capitalista, marcado pela distribuição funcional do trabalho.",
+          "liberal, buscando a igualdade entre pessoas escravizadas e livres.",
+          "científico, considerando o ser humano como um fenômeno biológico.",
+          "religioso, fundamentado na fé e na aceitação dos dogmas do cristianismo.",
+          "afetivo, manifesto na determinação de acolher familiares e no respeito mútuo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:234e6c98",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 30"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.524Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:43995a85",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Era o êxodo da seca de 1898. Uma ressurreição de cemitérios antigos — esqueletos redivivos, com o aspecto terroso e o fedor das covas podres.\n\nOs fantasmas estropiados como que iam dançando, de tão trôpegos e trêmulos, num passo arrastado de quem leva as pernas, em vez de ser levado por elas.\n\nAndavam devagar, olhando para trás, como quem quer voltar. Não tinham pressa em chegar, porque não sabiam aonde iam. Expulsos de seu paraíso por espadas de fogo, iam, ao acaso, em descaminhos, no arrastão dos maus fados.\n\nFugiam do sol e o sol guiava-os nesse forçado nomadismo.\n\nAdelgaçados na magreira cômica, cresciam, como se o vento os levantasse. E os braços afinados desciam-lhes aos joelhos, de mãos abanando.\n\nVinham escoteiros. Menos os hidrópicos — de ascite consecutiva à alimentação tóxica — com os fardos das barrigas alarmantes.\n\nNão tinham sexo, nem idade, nem condição nenhuma. Eram os retirantes. Nada mais.\n\nALMEIDA, J. A. A bagaceira. Rio de Janeiro: J. Olympio, 1978.\n\nOs recursos composicionais que inserem a obra no chamado “Romance de 30” da literatura brasileira manifestam-se aqui no(a)",
+        "opcoes": [
+          "desenho cru da realidade dramática dos retirantes.",
+          "indefinição dos espaços para efeito de generalização.",
+          "análise psicológica da reação dos personagens à seca.",
+          "engajamento político do narrador ante as desigualdades.",
+          "contemplação lírica da paisagem transformada em alegoria."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:43995a85",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 31"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.525Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:04b60dac",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ser cronista\n\nSei que não sou, mas tenho meditado ligeiramente no assunto.\n\nCrônica é um relato? É uma conversa? É um resumo de um estado de espírito? Não sei, pois antes de começar a escrever para o Jornal do Brasil, eu só tinha escrito romances e contos.\n\nE também sem perceber, à medida que escrevia para aqui, ia me tornando pessoal demais, correndo o risco de em breve publicar minha vida passada e presente, o que não pretendo. Outra coisa notei: basta eu saber que estou escrevendo para o jornal, isto é, para algo aberto facilmente por todo o mundo, e não para um livro, que só é aberto por quem realmente quer, para que, sem mesmo sentir, o modo de escrever se transforme. Não é que me desagrade mudar, pelo contrário. Mas queria que fossem mudanças mais profundas e interiores que não viessem a se refletir no escrever. Mas mudar só porque isso é uma coluna ou uma crônica? Ser mais leve só porque o leitor assim o quer? Divertir? Fazer passar uns minutos de leitura? E outra coisa: nos meus livros quero profundamente a comunicação profunda comigo e com o leitor. Aqui no jornal apenas falo com o leitor e agrada-me que ele fique agradado. Vou dizer a verdade: não estou contente.\n\nLISPECTOR, C. In: A descoberta do mundo. Rio de Janeiro: Rocco, 1999.\n\nNo texto, ao refletir sobre a atividade de cronista, a autora questiona características do gênero crônica, como",
+        "opcoes": [
+          "relação distanciada entre os interlocutores.",
+          "articulação de vários núcleos narrativos.",
+          "brevidade no tratamento da temática.",
+          "descrição minuciosa dos personagens.",
+          "público leitor exclusivo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:04b60dac",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 35"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.527Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:b00031ac",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Firmo, o vaqueiro\n\nNo dia seguinte, à hora em que saía o gado, estava eu debruçado à varanda quando vi o cafuzo que preparava o animal viajeiro:\n\n— Raimundinho, como vai ele?...\n\nDe longe apontou a palhoça.\n\n— Sim.\n\nO braço caiu-lhe, olhou-me algum tempo comovido; depois, saltando para o animal, levou o polegar à boca fazendo estalar a unha nos dentes: “Às quatro horas da manhã... Atirei um verso e disse, para bulir com ele: Pega, velho! Não respondeu. Tio Firmo, mesmo velho e doente, não era homem para deixar um verso no chão... Fui ver, coitado!... estava morto”. E deu de esporas para que eu não lhe visse as lágrimas.\n\nNETTO, C. In: MARCHEZAN, L. G. (Org.). O conto regionalista.\n\nSão Paulo: Martins Fontes, 2009.\n\nA passagem registra um momento em que a expressividade lírica é reforçada pela",
+        "opcoes": [
+          "plasticidade da imagem do rebanho reunido.",
+          "sugestão da firmeza do sertanejo ao arrear o cavalo.",
+          "situação de pobreza encontrada nos sertões brasileiros.",
+          "afetividade demonstrada ao noticiar a morte do cantador.",
+          "preocupação do vaqueiro em demonstrar sua virilidade."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:b00031ac",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 40"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.699Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:313e31e8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O bebê de tarlatana rosa\n\n— [...] Na terça desliguei-me do grupo e caí no mar alto da depravação, só, com uma roupa leve por cima da pele e todos os maus instintos fustigados. De resto a cidade inteira estava assim. É o momento em que por trás das máscaras as meninas confessam paixões aos rapazes, é o instante em que as ligações mais secretas transparecem, em que a virgindade é dúbia, e todos nós a achamos inútil, a honra uma caceteação, o bom senso uma fadiga. Nesse momento tudo é possível, os maiores absurdos, os maiores crimes; nesse momento há um riso que galvaniza os sentidos e o beijo se desata naturalmente.\n\nEu estava trepidante, com uma ânsia de acanalhar-me, quase mórbida. Nada de raparigas do galarim perfumadas e por demais conhecidas, nada do contato familiar, mas o deboche anônimo, o deboche ritual de chegar, pegar, acabar, continuar. Era ignóbil. Felizmente muita gente sofre do mesmo mal no carnaval.\n\nRIO, J. Dentro da noite. São Paulo: Antiqua, 2002.\n\nNo texto, o personagem vincula ao carnaval atitudes e reações coletivas diante das quais expressa",
+        "opcoes": [
+          "consagração da alegria do povo.",
+          "atração e asco perante atitudes libertinas.",
+          "espanto com a quantidade de foliões nas ruas.",
+          "intenção de confraternizar com desconhecidos.",
+          "reconhecimento da festa como manifestação cultural."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:313e31e8",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 41"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.700Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:d3cd6dbd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Vanda vinha do interior de Minas Gerais e de dentro de um livro de Charles Dickens. Sem dinheiro para criá-la, sua mãe a dera, com seus sete anos, a uma conhecida. Ao recebê-la, a mulher perguntou o que a garotinha gostava de comer. Anotou tudo num papel. Mal a mãe virou as costas, no entanto, a fulana amassou a lista e, como uma vilã de folhetim, decretou: “A partir de hoje, você não vai mais nem sentir o cheiro dessas comidas!”.\n\nVanda trabalhou lá até os quinze anos, quando recebeu a carta de uma prima com uma nota de cem cruzeiros, saiu de casa com a roupa do corpo e fugiu num ônibus para São Paulo.\n\nTodas as vezes que eu e minha irmã a importunávamos com nossas demandas de criança mimada, ela nos contava histórias da infância de gata-borralheira, fazia-nos apertar seu nariz quebrado por uma das filhas da “patroa” com um rolo de amassar pão e nos expulsava da cozinha: “Sai pra lá, peste, e me deixa acabar essa janta”.\n\nPRATA, A. Nu de botas. São Paulo: Cia. das Letras, 2013 (adaptado).\n\nPela ótica do narrador, a trajetória da empregada de sua casa assume um efeito expressivo decorrente da",
+        "opcoes": [
+          "citação a referências literárias tradicionais.",
+          "alusão à inocência das crianças da época.",
+          "estratégia de questionar a bondade humana.",
+          "descrição detalhada das pessoas do interior.",
+          "representação anedótica de atos de violência."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:d3cd6dbd",
+        "version": 1,
+        "skillIds": [
+          "lit:interpretacao-texto-literario"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 43"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.701Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

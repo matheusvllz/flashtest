@@ -1,0 +1,314 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "oficial:2024:4c6c1965",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\nA relação entre as citações atribuídas ao físico Albert Einstein e ao cantor e compositor Bob Marley reside na crença de que é necessário",
+        "opcoes": [
+          "dar oportunidade a pessoas que parecem necessitadas.",
+          "identificar contextos que podem representar perigo.",
+          "tirar proveito de situações que podem ser adversas.",
+          "evitar dificuldades que parecem ser intransponíveis.",
+          "contestar circunstâncias que parecem ser harmônicas."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d1-q001-ing-1.webp",
+            "alt": "Imagem da questão 1 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 984,
+            "altura": 784
+          },
+          {
+            "url": "/content/img/2024/d1-q001-ing-2.webp",
+            "alt": "Imagem 2 da questão 1 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: http://thumbpress.com. Acesso em: 28 out. 2013.",
+            "largura": 984,
+            "altura": 744
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:4c6c1965",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 1 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:50.732Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:e6030683",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Holy War\n\nOh, so we can hate each other and fear each other\nWe can build these walls between each other\nBaby, blow by blow and brick by brick\nKeep yourself locked in, yourself locked in\n[…]\nOh, maybe we should love somebody\nOh, maybe we could care a little more\nSo maybe we should love somebody\nInstead of polishing the bombs of holy war\n\nKEYS, A. Here. Estados Unidos: RCA Records, 2016.\n\nNessa letra de canção, que aborda um contexto de ódio\ne intolerância, o marcador “instead of ” introduz a ideia de",
+        "opcoes": [
+          "mudança de comportamento.",
+          "panorama de conflitos.",
+          "rotina de isolamento.",
+          "perspectiva bélica.",
+          "cenário religioso."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:e6030683",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 2 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:50.733Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d364ea6f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nO texto estabelece uma relação entre elementos da natureza e comandos de um programa de computador para",
+        "opcoes": [
+          "alertar as pessoas sobre a rápida destruição da natureza.",
+          "conscientizar os indivíduos sobre a passagem acelerada do tempo.",
+          "apresentar aos leitores os avanços tecnológicos na área da agricultura.",
+          "orientar os usuários sobre o emprego sustentável das novas tecnologias.",
+          "informar os interessados sobre o tempo de crescimento de novas árvores."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d1-q003-ing-1.webp",
+            "alt": "Imagem da questão 3 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.hongkiat.com. Acesso em: 18 ago. 2017 (adaptado).",
+            "largura": 996,
+            "altura": 684
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:d364ea6f",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 3 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:50.818Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:e7b9be7a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "I remember being caught speaking Spanish at recess [...] I remember being sent to the corner of the classroom for “talking back” to the Anglo teacher when all I was trying to do was tell her how to pronounce my name. “If you want to be American, speak ‘American’. If you don’t like it, go back to Mexico where you belong”.\n\n“I want you to speak English […]”, my mother would say, mortified that I spoke English like a Mexican. At Pan American University, I and all Chicano students were required to take two speech classes. Their purpose: to get rid of our accents.\n\nANZALDÚA, G. Borderlands/La Frontera: The New Mestiza.\n\nSan Francisco: Aunt Lute Books, 1987.\n\nO problema abordado nesse texto sobre imigrantes residentes nos Estados Unidos diz respeito aos prejuízos gerados pelo(a)",
+        "opcoes": [
+          "repúdio ao sotaque espanhol no uso do inglês.",
+          "resignação diante do apagamento da língua materna.",
+          "escassez de oportunidades de aprendizado do espanhol.",
+          "choque entre falantes de línguas distintas de diferentes gerações.",
+          "concorrência entre as variações linguísticas do inglês e as do espanhol."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:e7b9be7a",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 4 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:50.819Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:395bbf5e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\nA carta da editora Stephanie Allen-Nichols à escritora Alice Walker tem o propósito de",
+        "opcoes": [
+          "problematizar o enredo de sua obra.",
+          "acusar o recebimento de seu manuscrito.",
+          "solicitar a revisão ortográfica de seu texto.",
+          "informar a transferência de seu livro a outra editora.",
+          "comunicar a recusa da publicação de seu romance."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024",
+        "imagens": [
+          {
+            "url": "/content/img/2024/d1-q005-ing-1.webp",
+            "alt": "Imagem da questão 5 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 972,
+            "altura": 352
+          },
+          {
+            "url": "/content/img/2024/d1-q005-ing-2.webp",
+            "alt": "Imagem 2 da questão 5 do ENEM 2024 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.clickhole.com. Acesso em: 26 out. 2015.",
+            "largura": 948,
+            "altura": 756
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2024:395bbf5e",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 5 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:50.980Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

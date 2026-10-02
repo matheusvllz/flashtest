@@ -1,0 +1,535 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "oficial:2024:9bf74b7f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Tal qual num exército, não se compreende um efetivo composto apenas de oficiais. Também na saúde pública, os funcionários técnicos graduados necessitam ser assistidos por auxiliares em número suficiente e com preparo adequado, constituído pelas enfermeiras de saúde pública, educadoras ou visitadoras sanitárias, técnicos de laboratório, inspetores ou guardas etc., para não falarmos no pessoal burocrático, não especializado.\n\nPAULA SOUZA, G. H.; VIEIRA, F. B. Centro de saúde “eixo” de\norganização sanitária. Boletim do Instituto de Higiene\nde São Paulo, n. 59 (adaptado).\n\nO texto dos sanitaristas atuantes nas décadas de 1920 e 1930 veicula uma mensagem caracterizada pela",
+        "opcoes": [
+          "higienização moral.",
+          "imposição eugênica.",
+          "assimilação cultural.",
+          "hegemonização identitária.",
+          "hierarquização profissional."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:9bf74b7f",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 47"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:54.982Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d2158741",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nAristóteles entendia que a felicidade era diretamente ligada ao respeito pela própria natureza e, de certa maneira, a uma vida que tivesse na natureza de si mesma uma referência inabalável. Isso lhe permitiu formular o conceito de excelência. O que seria excelência? Seria, justamente, ao longo da vida, tirar de si mesmo, em forma de performance, de conduta, de comportamento, de disposição, o que a natureza permitiria de melhor.\n\nCOEN, M.; BARROS FILHO, C. A monja e o professor: reflexões\nsobre ética, preceitos e valores. Rio de Janeiro: Best Seller, 2018.\n\nTEXTO II\n\nA noção de eudaimonia é central para a ética aristotélica. A eudaimonia é uma atividade e não um estado psicológico, pois é definida na Ética a Nicômaco como uma atividade da alma com base na virtude moral. A virtude moral é definida em termos de uma disposição diretamente ligada à deliberação, o que o leva a estudar a virtude intelectual que opera em seu interior, isto é, a prudência. A estrutura conceitual da ética aristotélica responde a uma tentativa de elucidar conceitualmente em que consiste isto, agir bem, ou, na linguagem aristotélica, o que significa ser feliz.\n\nZINGANO, M. Eudaimonia, razão e contemplação na ética aristotélica.\n\nAnalytica, n. 1, 2017 (adaptado).\n\nOs textos indicam que a prática de ações virtuosas, sempre efetivada na pólis, ocorre por meio do(a)",
+        "opcoes": [
+          "teoria das formas essenciais.",
+          "identificação dos princípios racionais.",
+          "desenvolvimento das técnicas retóricas.",
+          "aperfeiçoamento das condutas humanas.",
+          "conhecimento das epistemes verdadeiras."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:d2158741",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 58"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.050Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:7bdd32b3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Eu sentia falta do futuro. É claro que eu sabia, muito mesmo antes da recorrência dele, que nunca envelheceria. Era muito provável que eu nunca mais fosse ver o oceano de uma altura de trinta mil pés de novo, uma distância tão grande que não dá nem para distinguir as ondas, nem nenhum barco, de um jeito que faz o oceano parecer um enorme e infinito monólito. Eu poderia imaginá-lo. Eu poderia me lembrar dele. Mas não poderia vê-lo de novo, e me ocorreu que a ambição voraz dos seres humanos nunca é saciada quando os sonhos são realizados, porque há sempre a sensação de que tudo poderia ter sido feito melhor e ser feito outra vez.\n\nGREEN, J. A culpa é das estrelas. Rio de Janeiro: Intrínseca, 2012.\n\nO texto apresenta uma reflexão da personagem acerca de um problema característico da filosofia contemporânea, que trata da(s)",
+        "opcoes": [
+          "implicações éticas.",
+          "finitude humana.",
+          "limitações da linguagem.",
+          "pressuposição existencial.",
+          "objetividade do conhecimento."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:7bdd32b3",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 61"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.052Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:6eb838fc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nO empirismo moderno foi, em grande parte, condicionado por dois dogmas. Um deles é a crença em certa divisão fundamental entre verdades analíticas, ou fundadas em significados independentemente de questões de fato, e verdades sintéticas, ou fundadas em fatos. O outro dogma é o reducionismo: a crença de que todo enunciado significativo é equivalente a algum construto lógico sobre termos que se referem à experiência imediata.\n\nQUINE, W. V. O. Dois dogmas do empirismo. In: RYLE, G. et al.\n\nEnsaios. São Paulo: Abril Cultural, 1975.\n\nTEXTO II\n\nTeses: 1. Somente os enunciados que possuem conteúdo factual são teoricamente significativos; enunciados que não podem, em princípio, estar fundamentados pela experiência são carentes de significado. 2. As ciências empíricas usam somente o conteúdo empírico da realidade. 3. A filosofia usa um conceito não empírico da realidade.\n\nCARNAP, R. Pseudoproblemas na filosofia. In: SCHLICK, M.;\n\nCARNAP, R.; POPPER, K. Coletânea de textos.\n\nSão Paulo: Abril Cultural, 1975.\n\nAo comparar os textos, conclui-se que eles apresentam posicionamentos filosóficos divergentes com relação ao",
+        "opcoes": [
+          "estatuto epistemológico da linguagem.",
+          "alicerce estruturante da moralidade.",
+          "conteúdo essencial da metafísica.",
+          "princípio constitutivo da ontologia.",
+          "domínio reflexivo da estética."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:6eb838fc",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 62"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.052Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:55cffd3f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 1960, a primeira pílula anticoncepcional foi comercializada nos EUA, e, em poucos anos, o método contraceptivo se difundiu pelo mundo, inclusive no Brasil. Em nosso país, a chegada das pílulas anticoncepcionais foi simultânea às discussões neomalthusianas sobre a crise demográfica, à aceleração dos processos de modernização e ao boom da indústria farmacêutica multinacional.\n\nDIAS, T. M. et al. A pílula da oportunidade: discursos sobre as pílulas\nanticoncepcionais em A Gazeta da Farmácia, 1960-1981. História, Ciências, Saúde — Manguinhos, n. 3, jul.-set. 2018 (adaptado).\n\nQual foi o efeito social resultante do avanço tecnológico mencionado no texto?",
+        "opcoes": [
+          "O afastamento da autoridade médica na regulação da fecundidade.",
+          "A superação do discurso da moralidade pela ação da mídia estatal.",
+          "A ampliação do debate público sobre o planejamento familiar.",
+          "A centralização da pesquisa científica pelo sistema privado de saúde.",
+          "O enrijecimento das doutrinas religiosas sobre a organização da vida doméstica."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:55cffd3f",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 66"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.055Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:6fa140ad",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A pessoa com deficiência de qualquer modalidade — seja visual, auditiva, física ou mental — encontra-se em uma posição de grande vulnerabilidade em relação às pessoas sem deficiência, sendo frequentemente marcante a assimetria das relações de poder na interação entre ambas. Tal assimetria de relação hierárquica é multiplicada conforme a severidade de cada caso, sendo ampliada se a pessoa com necessidades especiais pertencer a um outro grupo de risco, por exemplo, se for mulher ou criança.\n\nPASIAN, M. S. A negligência parental e a relação com a deficiência:\n\no que mostra a pesquisa nacional. Revista Educação Especial,\nn. 53, set.-dez. 2015 (adaptado).\n\nA realidade abordada no texto indica a necessidade de se promover uma ética interpessoal centrada no",
+        "opcoes": [
+          "cuidado, proteção e valorização dos indivíduos.",
+          "entendimento, perdão e tolerância dos responsáveis.",
+          "cerceamento, arregimentação e controle de entidades.",
+          "regramento, legislação e responsabilização de culpados.",
+          "ensimesmamento, interiorização e indulgência dos agentes."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:6fa140ad",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 72"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.058Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:c32c8fd5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os salões permitiam aos escritores da época do Iluminismo adentrar no universo dos poderosos. Figuras como as de Voltaire e Duclos exortavam seus “irmãos” a aproveitarem da mobilidade que era oferecida pela ordem social do Antigo Regime, juntando-se à elite. Nos últimos decênios do Ancien Régime, ele foi se tornando cada vez mais o reduto dos filósofos do Alto Iluminismo, que deixavam os cafés para os tipos inferiores de literário. Com efeito, os cafés se constituíram na antítese lógica dos salões. Eles eram abertos a todos, a um passo da rua. Como é possível constatar, salões e cafés constituem interessantes instituições do espaço público literário através das quais é possível vislumbrar as bases sociais nas quais se assentavam o Alto e o Baixo Iluminismo.\n\nHABERMAS, J. Mudança estrutural da esfera pública: investigações quanto a uma categoria da sociedade burguesa.\n\nRio de Janeiro: Tempo Brasileiro, 1984 (adaptado).\n\nNo período iluminista, os espaços sociais mencionados contribuíram para",
+        "opcoes": [
+          "segregar pensadores e aumentar a circulação de ideias.",
+          "apoiar revolucionários e perseguir a nobreza local.",
+          "rejeitar poetisas e proibir a entrada de mulheres.",
+          "censurar cronistas e coibir o patrocínio editorial.",
+          "integrar artistas e ampliar o comércio urbano."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:c32c8fd5",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 75"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.060Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:d3f62a8d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A regra de ouro, popularmente conhecida pelo provérbio “Trate os outros como gostaria de ser tratado”, é um dos princípios morais mais onipresentes. A noção subjacente, que apela para o senso ético mais básico, se expressa de uma forma ou de outra em praticamente todas as tradições religiosas, e poucos filósofos morais deixaram de invocar a regra ou pelo menos de tecer comentários a respeito da relação com seus próprios princípios.\n\nDUPRÉ, B. 50 grandes ideias da humanidade. São Paulo: Planeta do Brasil, 2016.\n\nO princípio ético apresentado no texto, como elemento estruturante da vida em sociedade, se traduz pela seguinte formulação teórica:",
+        "opcoes": [
+          "Doutrina teleológica.",
+          "Imperativo categórico.",
+          "Pensamento utilitarista.",
+          "Secularização inautêntica.",
+          "Raciocínio consequencialista."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:d3f62a8d",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 78"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.168Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:2186ca49",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A democracia responde a esta pergunta: quem deve exercer o poder público? A resposta é: o exercício do poder público corresponde à coletividade dos cidadãos. Contudo, nessa pergunta não se fala sobre qual extensão deva ter o poder público. Trata-se somente de determinar o sujeito a quem o mando compete. A democracia propõe que mandemos todos; quer dizer, que todos intervenham nos fatos sociais.\n\nORTEGA Y GASSET, J. apud MAIA, E. C. Mario Vargas Llosa e o\nindivíduo para além da tribo. Disponível em:\n\nwww.estadodaarte.estadao.com.br. Acesso em: 10 out. 2021 (adaptado).\n\nO que sustenta o exercício do poder, conforme a configuração apresentada no texto escrito na década de 1920?",
+        "opcoes": [
+          "Soberania popular.",
+          "Divisão de classes.",
+          "Acúmulo de capital.",
+          "Defesa da propriedade.",
+          "Centralização administrativa."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:2186ca49",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 87"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.350Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2024:adc1352e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Conselho de Segurança da Organização das Nações Unidas (ONU) é, junto com a Assembleia-Geral, um dos principais órgãos de tomada de decisão dentro da entidade. O Conselho lida com questões de segurança e paz internacionais, além de recomendar a admissão de novos membros à Assembleia-Geral e aprovar mudanças na Carta das Nações Unidas. Cinco dos quinze membros são permanentes e podem vetar resoluções, o que ocorreu 261 vezes até 2020.\n\nGOMES, L.; PRETTO, N. O funcionamento do Conselho de Segurança\ndas Nações Unidas. Disponível em: www.nexojornal.com.br.\n\nAcesso em: 10 nov. 2021 (adaptado).\n\nA composição e o funcionamento do organismo internacional apresentados revelam a seguinte característica das relações internacionais entre os países-membros:",
+        "opcoes": [
+          "Igualdade militar.",
+          "Assimetria política.",
+          "Consenso multipolar.",
+          "Equilíbrio estratégico.",
+          "Soberania compartilhada."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2024"
+      },
+      "meta": {
+        "id": "oficial:2024:adc1352e",
+        "version": 1,
+        "skillIds": [
+          "fil:politica-poder-estado"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2024,
+          "ref": "ENEM 2024 · 1º dia · caderno 1 azul · questão 89"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:55.351Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

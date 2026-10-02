@@ -1,0 +1,280 @@
+{
+  "subjectId": "ing",
+  "items": [
+    {
+      "id": "oficial:2025:a07ba578",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Glory Ames, from the White Earth reservation, is frustrated that despite the presence of several indigenous reservations near Moorhead, local Halloween stores still feature a western section with costumes such as “pow wow princess”.\n\nEven worse, despite a long-running debate about racism and cultural appropriation, often prompted by backlash against celebrities and politicians for donning offensive costumes, people continue to wear such costumes.\n\nLast Halloween, Ames spotted a photo on Instagram of a girl dressed as a Native American with a bullet in her forehead. She immediately reported it to the social media platform and had it removed.\n\n“They blatantly take certain aspects of our culture, race, religion, and use it for their advantage and ignore the people living it”, said Ames.\n\nLIU, M. C. M. Disponível em: www.washingtonpost.com. Acesso em: 12 maio 2024 (adaptado).\n\nAo abordar um aspecto da celebração do Halloween, esse texto tem por objetivo",
+        "opcoes": [
+          "denunciar a violência contra crianças indígenas.",
+          "descrever costumes tradicionais em celebrações indígenas.",
+          "valorizar as vestimentas características dos povos originários.",
+          "criticar a exploração indevida de elementos da identidade indígena.",
+          "sugerir ações de combate ao preconceito contra os povos originários."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:a07ba578",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 1 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.183Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:14de2888",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "My idea of philosophy is that if it is not relevant to human problems, if it does not tell us how we can go about eradicating some of the misery in this world, then it is not worth the name of philosophy. I think Socrates made a very profound statement when he asserted that philosophy is to teach us proper living. In this day and age “proper living” means liberation from the urgent problems of poverty, economic necessity and indoctrination, mental oppression.\n\nDAVIS, A. Lectures on Liberation. Washington: Smithsonian Libraries, 1971 (adaptado).\n\nNesse texto, ao discorrer sobre a relevância da filosofia, a escritora Angela Davis tem por objetivo",
+        "opcoes": [
+          "criticá-la pela restrição temática.",
+          "vinculá-la ao universo acadêmico.",
+          "afastá-la da abordagem socrática.",
+          "aproximá-la dos problemas sociais.",
+          "responsabilizá-la pela pobreza humana."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:14de2888",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 2 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.183Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:58f95fb3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Remember the sky that you were born under,\nknow each of the star’s stories.\nRemember the moon, know who she is.\nRemember the sun’s birth at dawn. [...]\n\nRemember your birth, how your mother struggled\nto give you form and breath [...]\n\nRemember the earth whose skin you are:\nred earth, black earth, yellow earth, white earth\nbrown earth, we are earth.\nRemember the plants, trees, animal life who all have their\ntribes, their families, their histories, too [...]\n\nRemember you are all people and all people are you.\nRemember you are this universe and this universe is you.\n\nRemember all is in motion, is growing, is you.\n\nHARJO, J. She Had Some Horses. Londres: W. Norton & Company, 1983 (fragmento).\n\nNesse poema, de uma autora de ascendência indígena, o eu lírico ressalta a",
+        "opcoes": [
+          "potência dos astros celestes.",
+          "origem das plantas e dos animais.",
+          "importância do apego à terra natal.",
+          "relação entre seres humanos e natureza.",
+          "conexão entre o tempo real e o tempo imaginário."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:58f95fb3",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 3 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.183Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:d3d691d8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "It is true that all children are special, simply because they are children. But most adults are not special, and children end up as adults pretty quickly. Life then can be difficult and even disappointing. The shock of this may account for the emergence of the “snowflake generation” of university students, who are so delicate they can’t handle controversial ideas being put forward in their lectures. The roots of this fragility run deep in modern culture. So, an approach of the world that states: “Life is wonderful, you’re special and, if you are a good boy/girl, life will be amazing forever” is not a message designed to aid bouncing back from failure or confronting catastrophe. Resilience is not about feeding ego — telling your children how wonderful they are — but strengthening it.\n\nLOTT, T. Disponível em: www.theguardian.com. Acesso em: 10 dez. 2017 (adaptado).\n\nNesse texto, a expressão “snowflake generation” é usada para",
+        "opcoes": [
+          "abordar obstáculos impostos a universitários.",
+          "destacar mensagens de incentivo a estudantes.",
+          "estimular ações proativas em situações de emergência.",
+          "retratar relações conflituosas em ambiente universitário.",
+          "apontar posturas de uma juventude avessa a contrariedades."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:d3d691d8",
+        "version": 1,
+        "skillIds": [
+          "ing:vocabulario-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 4 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.184Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:7be2ee64",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nNesse texto, a pergunta “What is sleep?”, em uma das embalagens do produto, está relacionada ao(à)",
+        "opcoes": [
+          "escassez de horas de sono.",
+          "estímulo a um descanso de qualidade.",
+          "gasto com bebidas que combatem a insônia.",
+          "consumo de bebidas que causam dependência.",
+          "necessidade de um produto que provoque o sono."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d1-q005-ing-1.webp",
+            "alt": "Imagem da questão 5 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: https://pt.foursquare.com. Acesso em: 14 maio 2024.",
+            "largura": 868,
+            "altura": 1148
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:7be2ee64",
+        "version": 1,
+        "skillIds": [
+          "ing:interpretacao-texto-curto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 1º dia · caderno 1 azul · questão 5 (inglês)"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:19.472Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

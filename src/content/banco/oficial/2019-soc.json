@@ -1,0 +1,721 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "oficial:2019:e4580691",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Dificilmente passa-se uma noite sem que algum sitiante tenha seu celeiro ou sua pilha de cereais destruídos pelo fogo. Vários trabalhadores não diretamente envolvidos nos ataques pareciam apoiá-los, como se vê neste depoimento ao The Times: “deixa queimar, pena que não foi a casa”; “podemos nos aquecer agora”; “nós só queríamos algumas batatas, há um fogo ótimo para cozinhá-las”.\n\nHOBSBAWM, E.; RUDÉ, G. Capitão Swing. Rio de Janeiro:\n\nFrancisco Alves, 1982 (adaptado).\n\nA revolta descrita no texto, ocorrida na Inglaterra no século XIX, foi uma reação ao seguinte processo socioespacial:",
+        "opcoes": [
+          "Restrição da propriedade privada.",
+          "Expropriação das terras comunais.",
+          "Imposição da estatização fundiária.",
+          "Redução da produção monocultora.",
+          "Proibição das atividades artesanais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:e4580691",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 54"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.211Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:870e15d5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A maior parte das agressões e manifestações discriminatórias contra as religiões de matrizes africanas ocorrem em locais públicos (57%). É na rua, na via pública, que tiveram lugar mais de 2/3 das agressões, geralmente em locais próximos às casas de culto dessas religiões. O transporte público também é apontado como um local em que os adeptos das religiões de matrizes africanas são discriminados, geralmente quando se encontram paramentados por conta dos preceitos religiosos.\n\n[[imagem:0]]\n\nAs práticas descritas no texto são incompatíveis com a dinâmica de uma sociedade laica e democrática porque",
+        "opcoes": [
+          "asseguram as expressões multiculturais.",
+          "promovem a diversidade de etnias.",
+          "falseiam os dogmas teológicos.",
+          "estimulam os rituais sincréticos.",
+          "restringem a liberdade de credo."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q062-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 62 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 760,
+            "altura": 106
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:870e15d5",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 62"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.533Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:238a0450",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A criação do Sistema Único de Saúde (SUS) como uma política para todos constitui-se uma das mais importantes conquistas da sociedade brasileira no século XX. O SUS deve ser valorizado e defendido como um marco para a cidadania e o avanço civilizatório. A democracia envolve um modelo de Estado no qual políticas protegem os cidadãos e reduzem as desigualdades. O SUS é uma diretriz que fortalece a cidadania e contribui para assegurar o exercício de direitos, o pluralismo político e o bem-estar como valores de uma sociedade fraterna, pluralista e sem preconceitos, conforme prevê a Constituição Federal de 1988.\n\nRIZZOTO, M. L. F. et al. Justiça social, democracia com direitos\nsociais e saúde: a luta do Cebes. Revista Saúde em Debate,\nn. 116, jan.-mar. 2018 (adaptado).\n\nSegundo o texto, duas características da concepção da política pública analisada são:",
+        "opcoes": [
+          "Paternalismo e filantropia.",
+          "Liberalismo e meritocracia.",
+          "Universalismo e igualitarismo.",
+          "Nacionalismo e individualismo.",
+          "Revolucionarismo e coparticipação."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:238a0450",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 66"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.581Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:e712a3c8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Localizado a 160 km da cidade de Porto Velho (capital do estado de Rondônia), nos limites da Reserva Extrativista Jaci-Paraná e Terra Indígena Karipunas, o povoado de União Bandeirantes surgiu em 2000 a partir de movimentos de camponeses, madeireiros, pecuaristas e grileiros que, à revelia do ordenamento territorial e diante da passividade governamental, demarcaram e invadiram terras na área rural fundando a vila. Atualmente, constitui-se na região de maior produção agrícola e leiteira do município de Porto Velho, fornecendo, inclusive, alimentos para a Hidrelétrica de Jirau.\n\nSILVA, R. G. C. Amazônia globalizada — o exemplo de Rondônia.\n\nConfins, n. 23, 2015 (adaptado).\n\nA dinâmica de ocupação territorial descrita foi decorrente da",
+        "opcoes": [
+          "mecanização do processo produtivo.",
+          "adoção da colonização dirigida.",
+          "realização de reforma agrária.",
+          "ampliação de franjas urbanas.",
+          "expansão de frentes pioneiras."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:e712a3c8",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 69"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.583Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:8b0f0a05",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No sistema capitalista, as muitas manifestações de crise criam condições que forçam a algum tipo de racionalização. Em geral, essas crises periódicas têm o efeito de expandir a capacidade produtiva e de renovar as condições de acumulação. Podemos conceber cada crise como uma mudança do processo de acumulação para um nível novo e superior.\n\nHARVEY, D. A produção capitalista do espaço.\n\nSão Paulo: Annablume, 2005 (adaptado).\n\nA condição para a inclusão dos trabalhadores no novo processo produtivo descrito no texto é a",
+        "opcoes": [
+          "associação sindical.",
+          "participação eleitoral.",
+          "migração internacional.",
+          "qualificação profissional.",
+          "regulamentação funcional."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:8b0f0a05",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 71"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.584Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:fe060731",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Essa atmosfera de loucura e irrealidade, criada pela aparente ausência de propósitos, é a verdadeira cortina de ferro que esconde dos olhos do mundo todas as formas de campos de concentração. Vistos de fora, os campos e o que neles acontece só podem ser descritos com imagens extraterrenas, como se a vida fosse neles separada das finalidades deste mundo. Mais que o arame farpado, é a irrealidade dos detentos que ele confina que provoca uma crueldade tão incrível que termina levando à aceitação do extermínio como solução perfeitamente normal.\n\nARENDT, H. Origens do totalitarismo. São Paulo:\n\nCia. das Letras, 1989 (adaptado).\n\nA partir da análise da autora, no encontro das temporalidades históricas, evidencia-se uma crítica à naturalização do(a)",
+        "opcoes": [
+          "ideário nacional, que legitima as desigualdades sociais.",
+          "alienação ideológica, que justifica as ações individuais.",
+          "cosmologia religiosa, que sustenta as tradições hierárquicas.",
+          "segregação humana, que fundamenta os projetos biopolíticos.",
+          "enquadramento cultural, que favorece os comportamentos punitivos."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:fe060731",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 76"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.587Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:71dff250",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nFala-se aqui de uma arte criada nas ruas e para as ruas, marcadas antes de tudo pela vida cotidiana, seus conflitos e suas possibilidades, que poderiam envolver técnicas, agentes e temas que não fossem encontrados nas instituições mais tradicionais e formais.\n\nVALVERDE, R. R. H. F. Os limites da inversão: a heterotopia do\nBeco do Batman. Boletim Goiano de Geografia (Online).\n\nGoiânia, v. 37, n. 2, maio/ago. 2017 (adaptado).\n\nA manifestação artística expressa na imagem e apresentada no texto integra um movimento contemporâneo de",
+        "opcoes": [
+          "regulação das relações sociais.",
+          "apropriação dos espaços públicos.",
+          "padronização das culturas urbanas.",
+          "valorização dos formalismos estéticos.",
+          "revitalização dos patrimônios históricos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q077-1.webp",
+            "alt": "Imagem da questão 77 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1036,
+            "altura": 764
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:71dff250",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 77"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.824Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:5a29f4ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A soberania dos cidadãos dotados de plenos direitos era imprescindível para a existência da cidade-estado. Segundo os regimes políticos, a proporção desses cidadãos em relação à população total dos homens livres podia variar muito, sendo bastante pequena nas aristocracias e oligarquias e maior nas democracias.\n\nCARDOSO, C. F. A cidade-estado clássica. São Paulo: Ática, 1985.\n\nNas cidades-estado da Antiguidade Clássica, a proporção de cidadãos descrita no texto é explicada pela adoção do seguinte critério para a participação política:",
+        "opcoes": [
+          "Controle da terra.",
+          "Liberdade de culto.",
+          "Igualdade de gênero.",
+          "Exclusão dos militares.",
+          "Exigência da alfabetização."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:5a29f4ab",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 79"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.825Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:f8fd2b82",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Revolta da Vacina (1904) mostrou claramente o aspecto defensivo, desorganizado, fragmentado da ação popular. Não se negava o Estado, não se reivindicava participação nas decisões políticas; defendiam-se valores e direitos considerados acima da intervenção do Estado.\n\nCARVALHO, J. M. Os bestializados: o Rio de Janeiro e a República\nque não foi. São Paulo: Cia. das Letras, 1987 (adaptado).\n\nA mobilização analisada representou um alerta, na medida em que a ação popular questionava",
+        "opcoes": [
+          "a alta de preços.",
+          "a política clientelista.",
+          "as reformas urbanas.",
+          "o arbítrio governamental.",
+          "as práticas eleitorais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:f8fd2b82",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 80"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.826Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:c33efb8d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Saudado por centenas de militantes de movimentos sociais de quarenta países, o papa Francisco encerrou no dia 09/07/2015 o 2º Encontro Mundial dos Movimentos Populares, em Santa Cruz de La Sierra, na Bolívia. Segundo ele, a “globalização da esperança, que nasce dos povos e cresce entre os pobres, deve substituir esta globalização da exclusão e da indiferença”.\n\nDisponível em: http://cartamaior.com.br.\n\nAcesso em: 15 jul. 2015 (adaptado).\n\nNo texto há uma crítica ao seguinte aspecto do mundo globalizado:",
+        "opcoes": [
+          "Liberdade política.",
+          "Mobilidade humana.",
+          "Conectividade cultural.",
+          "Disparidade econômica.",
+          "Complementaridade comercial."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:c33efb8d",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 83"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.827Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:7d33de19",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n“Nossa cultura não cabe nos seus museus”.\n\nTOLENTINO, A. B. Patrimônio cultural e discursos museológicos.\n\nMidas, n. 6, 2016.\n\nProduzida no Chile, no final da década de 1970, a imagem expressa um conflito entre culturas e sua presença em museus decorrente da",
+        "opcoes": [
+          "valorização do mercado das obras de arte.",
+          "definição dos critérios de criação de acervos.",
+          "ampliação da rede de instituições de memória.",
+          "burocratização do acesso dos espaços expositivos.",
+          "fragmentação dos territórios das comunidades representadas."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019",
+        "imagens": [
+          {
+            "url": "/content/img/2019/d1-q085-1.webp",
+            "alt": "Imagem da questão 85 do ENEM 2019 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1032,
+            "altura": 768
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2019:7d33de19",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 85"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.945Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:d759f932",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Ministério do Trabalho e Emprego (MTE) realizou 248 ações fiscais e resgatou um total de 1 590 trabalhadores da situação análoga à de escravo, em 2014, em todo o país. A análise do enfrentamento do trabalho em condições análogas às de escravo materializa a efetivação de parcerias inéditas no trato da questão, podendo ser referenciadas ações fiscais realizadas com o Ministério da Defesa, Exército Brasileiro, Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama) e Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio).\n\nDisponível em: http://portal.mte.gov.br.\n\nAcesso em: 4 fev. 2015 (adaptado).\n\nA estratégia defendida no texto para reduzir o problema social apontado consiste em:",
+        "opcoes": [
+          "Articular os órgãos públicos.",
+          "Pressionar o Poder Legislativo.",
+          "Ampliar a emissão das multas.",
+          "Limitar a autonomia das empresas.",
+          "Financiar as pesquisas acadêmicas."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:d759f932",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 87"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.946Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2019:697c2d3e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A fome não é um problema técnico, pois ela não se deve à falta de alimentos, isso porque a fome convive hoje com as condições materiais para resolvê-la.\n\nPORTO-GONÇALVES, C. W. Geografia da riqueza, fome e meio ambiente. In: OLIVEIRA, A. U.; MARQUES, M. I. M. (Org.). O campo no século XXI: território de vida, de luta e de construção da justiça\nsocial. São Paulo: Casa Amarela; Paz e Terra, 2004 (adaptado).\n\nO texto demonstra que o problema alimentar apresentado tem uma dimensão política por estar associado ao(à)",
+        "opcoes": [
+          "escala de produtividade regional.",
+          "padrão de distribuição de renda.",
+          "dificuldade de armazenamento de grãos.",
+          "crescimento da população mundial.",
+          "custo de escoamento dos produtos."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2019"
+      },
+      "meta": {
+        "id": "oficial:2019:697c2d3e",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2019,
+          "ref": "ENEM 2019 · 1º dia · caderno 1 azul · questão 90"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:12:46.947Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

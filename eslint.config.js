@@ -17,6 +17,8 @@ export default tseslint.config(
       ".nitro",
       ".tanstack",
       "public/content",
+      // PDFs e rascunhos locais do importador do INEP (gitignored).
+      "content-pipeline/oficial/cache",
       "automacao-instagram",
       "edição Videos",
       "Claude outputs",

@@ -2,6 +2,218 @@
   "subjectId": "his",
   "items": [
     {
+      "id": "oficial:2023:a2092855",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Do século XVI em diante, pelo menos nas classes mais altas, o garfo passou a ser usado como utensílio para comer, chegando através da Itália primeiramente à França e, em seguida, à Inglaterra e à Alemanha, depois de ter servido, durante algum tempo, apenas para retirar alimentos sólidos da travessa. Henrique III introduziu-o na França, trazendo-o provavelmente de Veneza. Seus cortesãos não foram pouco ridicularizados por essa maneira “afetada” de comer e, no princípio, não eram muito hábeis no uso do utensílio: pelo menos se dizia que metade da comida caía do garfo no caminho do prato à boca. Em data tão recente como o século XVII, o garfo era ainda basicamente artigo de luxo, geralmente feito de prata ou ouro.\n\nELIAS, N. O processo civilizador: uma história dos costumes.\n\nRio de Janeiro: Zahar, 1994.\n\nO processo social relatado indica a formação de uma etiqueta que tem como princípio a",
+        "opcoes": [
+          "distinção das classes sociais.",
+          "valorização de hábitos de higiene.",
+          "exaltação da cultura mediterrânea.",
+          "consagração de tradições medievais.",
+          "disseminação de produtos manufaturados."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:a2092855",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 59"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.908Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:0c0ccfcc",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No sul da Bahia, desde o século XVIII, tem-se registros de um tipo de sistema agroflorestal. Até hoje, esse sistema é característica marcante da paisagem da região, conhecido como cabruca, que consiste no cultivo do cacau à sombra do dossel da floresta nativa. Esse sistema de cultivo do cacau (graças à tolerância da espécie à sombra) é considerado amigável para a vida silvestre, pois apresenta superioridade em termos de conservação da biodiversidade quando comparado com outras plantações tropicais (monoculturas de dendê, seringa ou café), agricultura ou pastagens.\n\nSOLLBERG, I.; SCHIAVETTI, A.; MORAES, M. E. B. Manejo agrícola no Refúgio de Vida Silvestre de Una: agroflorestas como uma perspectiva\nde conservação. Revista Árvore, n. 2, 2014 (adaptado).\n\nA prática produtiva apresentada é um exemplo de",
+        "opcoes": [
+          "difusão comercial de lavouras temporárias.",
+          "utilização sustentável dos recursos naturais.",
+          "ampliação tecnológica da pecuária intensiva.",
+          "padronização alimentar dos povos tradicionais.",
+          "modernização logística de plantios convencionais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:0c0ccfcc",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 67"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:25.835Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:53fecb4d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No cemitério, a sociedade religiosa encarregada do funeral, aterrorizada, apressou a cerimônia de tal forma que a mãe de Herzog perdeu o momento em que o caixão do filho começou a ser coberto pela terra. Quatro jornalistas que estavam presos no DOI chegaram para assistir ao sepultamento. Um se afastara, chorando. Dizia: Eles matam, eles matam! Não pergunte nada. Não podemos dizer nada. Eles matam mesmo. Falava-se baixo. Ouviram-se dois curtos discursos. O primeiro, da atriz Ruth Escobar: Até quando vamos suportar tanta violência? Até quando vamos continuar enterrando nossos mortos em silêncio? No segundo, Audálio Dantas recitou o Navio negreiro, de Castro Alves: Senhor Deus dos desgraçados / Dizei-me Vós, Senhor Deus / Se é mentira, se é verdade, / Tanto horror perante os céus.\n\nGASPARI, E. A ditadura encurralada. São Paulo: Cia. das Letras, 2004.\n\nO acontecimento descrito no texto, ocorrido em meados dos anos 1970, atesta a seguinte característica do regime político-institucional vigente:",
+        "opcoes": [
+          "Incorporação da estética popular para justificar o ideal de integração nacional.",
+          "Afirmação da estratégia psicossocial para favorecer o objetivo de propaganda cívica.",
+          "Institucionalização de mecanismos repressivos para eliminar os focos de resistência.",
+          "Adoção de cerimoniais públicos para controlar as manifestações de grupos opositores.",
+          "Estatização de meios de comunicação para selecionar a divulgação de atos governamentais."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:53fecb4d",
+        "version": 1,
+        "skillIds": [
+          "his:ditadura-militar-contexto"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 70"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:34.008Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:03835b4b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os séculos XV e XVI, quando se vão desmoronando as estruturas socioeconômicas da Idade Média perante os novos imperativos da Época moderna, constituem um momento-chave na história florestal de toda a Europa Ocidental. Abre-se, genericamente, um longo período de “crise florestal”, que se manifesta com acuidade nos países onde mais se desenvolvem as atividades industriais e comerciais. As necessidades em produtos lenhosos aumentam drasticamente com o crescimento do consumo nos mercados urbanos e nas regiões onde progridem a metalurgia e a construção naval, além da sua utilização na vida quotidiana de toda a população.\n\nDEVY-VARETA, N. Para uma geografia histórica da floresta portuguesa. Revista da Faculdade de Letras — Geografia, n. 1, 1986 (adaptado).\n\nQual acontecimento do período contribuiu diretamente para o agravamento da situação descrita?",
+        "opcoes": [
+          "O processo de expansão marítima.",
+          "A eclosão do renascimento cultural.",
+          "A concretização da centralização política.",
+          "O movimento de reformas religiosas.",
+          "A manutenção do sistema feudal."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:03835b4b",
+        "version": 1,
+        "skillIds": [
+          "his:brasil-colonia-economia-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 73"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:26.085Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
       "id": "oficial:2023:28e93b86",
       "exercise": {
         "type": "multipla-escolha",
@@ -52,6 +264,59 @@
         "examProfiles": [
           "enem"
         ]
+      }
+    },
+    {
+      "id": "oficial:2023:a4c65835",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A partir da década de 1930, começam a ser discutidos no Brasil os princípios de racionalização do trabalho. As preocupações com a cozinha e o trabalho doméstico foram introduzidas com a medicina sanitária e a oferta de gás e eletricidade para uso doméstico no início do século XX. A organização da cozinha visava atingir uma simplificação das tarefas, com a economia de movimentos, e o barateamento dos equipamentos, a partir da produção em grande escala. A padronização e racionalização da habitação e seus componentes visava uma radical transformação da casa, em especial da cozinha, e apoiava-se tanto no desenvolvimento de novos equipamentos quanto nos estudos de racionalização do trabalho doméstico. A principal preocupação era o desenvolvimento de um novo tipo de habitação, que deveria induzir um novo comportamento social.\n\nSILVA, J. L. M. Transformações no espaço doméstico: o fogão a gás e a cozinha paulistana, 1870-1930. Anais do Museu Paulista, n. 2, jul.-dez. 2007 (adaptado).\n\nNo contexto descrito, as mudanças mencionadas proporcionavam às mulheres o(a)",
+        "opcoes": [
+          "controle do orçamento familiar.",
+          "libertação das tradições religiosas.",
+          "exercício da representatividade política.",
+          "ampliação dos momentos de socialização.",
+          "afastamento das atividades especializadas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:a4c65835",
+        "version": 1,
+        "skillIds": [
+          "his:era-vargas-politica-economia"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 84"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:26.266Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     }
   ]

@@ -1,0 +1,839 @@
+{
+  "subjectId": "soc",
+  "items": [
+    {
+      "id": "oficial:2022:178455e1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Eu estava pagando o sapateiro e conversando com um preto que estava lendo um jornal. Ele estava revoltado com um guarda civil que espancou um preto e amarrou numa árvore. O guarda civil é branco. E há certos brancos que transforma preto em bode expiatório. Quem sabe se guarda civil ignora que já foi extinta a escravidão e ainda estamos no regime da chibata?\n\nJESUS, C. M. Quarto de despejo: diário de uma favelada. São Paulo: Ática, 2014.\n\nO texto, que guarda a grafia original da autora, expõe uma característica da sociedade brasileira, que é o(a):",
+        "opcoes": [
+          "Racismo estrutural.",
+          "Desemprego latente.",
+          "Concentração de renda.",
+          "Exclusão informacional.",
+          "Precariedade da educação."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:178455e1",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 48"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.869Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:b49aea4a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na construção da ferrovia Madeira-Mamoré, o que dizer dos doentes, eternos moribundos a vagar entre delírios febris, doses de quinino e corredores da morte? O Hospital da Candelária era santuário e túmulo, monumento ao progresso científico e preâmbulo da escuridão. Foi ali, com suas instalações moderníssimas, que médicos e sanitaristas dirigiram seu combate aos males tropicais. As maiores vítimas, contudo, permaneceriam na sombra à margem do palco, cobaias sem consolo, credores sem nome de uma sociedade que não lhes concedera tempo algum para ser decifrada.\n\nFOOT HARDMAN, F. Trem fantasma: modernidade na selva.\n\nSão Paulo: Cia. das Letras, 1988 (adaptado).\n\nNo texto, há uma crítica ao modo de ocupação do espaço amazônico pautada na",
+        "opcoes": [
+          "discrepância entre engenharia ambiental e equilíbrio da fauna.",
+          "incoerência entre maquinaria estrangeira e controle da floresta.",
+          "incompatibilidade entre investimento estatal e proteção aos nativos.",
+          "competição entre farmacologia internacional e produtos da fitoterapia.",
+          "contradição entre desenvolvimento nacional e respeito aos trabalhadores."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:b49aea4a",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 50"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.870Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:fe17f9e4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nTEXTO II\n\nÉ como se os problemas fossem criados pela pandemia quando, em verdade, isso só demonstra o quanto eles sofrem uma tentativa de serem naturalizados. Eles estavam lá, empurrados para debaixo de vários tapetes. Diversos levantamentos realizados indicam que parcela significativa dos estudantes não têm acesso à internet em suas casas, não têm computadores; têm celulares, mas com pacotes baratos que não permitem assistir a todas as aulas. E, caso tenham celulares e dados, pergunta-se: É possível elaborar um texto no celular? É possível interagir na aula remota pelo celular?\n\nASSIS, A. E. S. Q. Educação e pandemia. Educação em Revista, n. 37, 2021 (adaptado).\n\nA crítica contida no texto e na figura evidencia o seguinte aspecto da sociedade contemporânea:",
+        "opcoes": [
+          "Exclusão social.",
+          "Expansão digital.",
+          "Manifestação cultural.",
+          "Organização espacial.",
+          "Valorização intelectual."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d1-q056-1.webp",
+            "alt": "Imagem da questão 56 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: TÁ\nESTUDANDO,\nJÚNIOR?\nCALMA,\nTÔ TENTANDO\nACHAR UM SINAL\nDE WI-FI!",
+            "credito": "CAZO. Disponível em: www.humorpolitico.com.br. Acesso em: 21 nov. 2021 (adaptado).",
+            "largura": 972,
+            "altura": 778
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:fe17f9e4",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 56"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.964Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:93ee66f2",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em 2003, teve início o Programa de Aquisição de Alimentos e, com ele, várias mudanças na perspectiva dos mercados institucionais. Trata-se do primeiro programa de compras públicas com uma orientação exclusiva para a agricultura familiar, articulando-a explicitamente com a segurança alimentar e nutricional. O Programa é destinado à aquisição de produtos agropecuários produzidos por agricultores enquadrados no Programa Nacional de Fortalecimento da Agricultura Familiar (Pronaf), incluídas aqui as categorias: assentados da reforma agrária, trabalhadores rurais sem terra, acampados, quilombolas, agroextrativistas, famílias atingidas por barragens e comunidades indígenas.\n\nGRISA, C.; ISOPO, S. P. Dez anos de PAA: As contribuições e os desafios para o desenvolvimento rural. In: GRISA, C.; SCHNEIDER, S. (Org.). Políticas públicas de\ndesenvolvimento rural no Brasil. Porto Alegre: UFRGS, 2015.\n\nA ação governamental descrita constitui-se uma importante conquista para os pequenos produtores em virtude da:",
+        "opcoes": [
+          "Inovação tecnológica.",
+          "Reestruturação fundiária.",
+          "Comercialização garantida.",
+          "Eliminação no custo do frete.",
+          "Negociação na bolsa de valores."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:93ee66f2",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 59"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.965Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:75f30a58",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A dublagem é o novo campo a ser explorado pela inteligência artificial, e há empresas dedicadas a fazer com que as vozes originais de atores sejam transpostas para outros idiomas. A novidade reforça a tendência da automação de postos de trabalho nas mais diversas áreas. Tem potencial para facilitar a vida de estúdios e produtoras e, ao mesmo tempo, tornar mais escassas as oportunidades para dubladores e atores que trabalham com isso.\n\nGAGLIONI, C. Disponível em: www.nexojornal.com.br. Acesso em: 25 out. 2021.\n\nA consequência da mudança tecnológica apresentada no texto é a",
+        "opcoes": [
+          "proteção da economia nacional.",
+          "valorização da cultura tradicional.",
+          "diminuição da formação acadêmica.",
+          "estagnação da manifestação artística.",
+          "ampliação do desemprego estrutural."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:75f30a58",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 61"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.967Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:63952f91",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Após sete anos da ocupação de um terreno abandonado em Santo André, no ABC paulista, os condomínios Novo Pinheirinho e Santos Dias foram inaugurados, com a presença de representantes dos governos federal, estadual e municipal. A ocupação começou em 2012 e, desde então, o movimento vinha reivindicando o direito de usufruir do espaço para a construção de casas. A Carta Magna, em seu art. 6º, garante a todos os brasileiros o direito à moradia.\n\nPUTTI, A. Disponível em: www.cartacapital.com.br. Acesso em: 13 nov. 2021 (adaptado).\n\nO texto apresenta uma estratégia usada pelo movimento social para",
+        "opcoes": [
+          "fragilizar o poder público.",
+          "fomentar a economia solidária.",
+          "controlar a propriedade estatal.",
+          "garantir o preceito constitucional.",
+          "incentivar a especulação imobiliária."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:63952f91",
+        "version": 1,
+        "skillIds": [
+          "soc:movimentos-sociais-cidadania"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 67"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:59.970Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:f77773a0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nA Marinha identifica, na voz de Thomas Barnett, uma ampla região potencialmente insubmissa ou simplesmente irredutível às normas gerais de funcionamento promovidas pelos Estados Unidos e sancionadas pelo Fundo Monetário Internacional, pela Organização Mundial do Comércio e pelo Banco Mundial. E não necessariamente por sua consciência rebelde, mas sim, em muitos casos, pela insubstancialidade de suas instituições estatais.\n\nTEXTO II\n\n[[imagem:0]]\n\nAs preocupações do governo estadunidense expressas no texto e no mapa evidenciam uma estratégia para",
+        "opcoes": [
+          "compartilhamento de inovações tecnológicas.",
+          "promoção de independência financeira.",
+          "incremento de intercâmbios culturais.",
+          "ampliação de influência econômica.",
+          "preservação de recursos naturais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d1-q068-1.webp",
+            "alt": "Imagem da questão 68 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Alta densidade e\nPetróleo e gás\nvariedade germoplásmica\nA “brecha” crítica do “Novo Mapa do Pentágono”",
+            "credito": "CECEÑA, A. E. Hegemonias e emancipações no século XXI. Buenos Aires: Clacso, 2005.",
+            "largura": 908,
+            "altura": 748
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:f77773a0",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 68"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:29:49.822Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:3cb842f5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\nInterseccionalidade: intercruzamento de desigualdades\nque gera padrões complexos de discriminação.\n\nTEXTO II\n\nProporção de pessoas abaixo da linha de pobreza\nPor arranjo domiciliar no Brasil — 2017\n\n[[imagem:0]]\n\nOutros\n\n[[imagem:1]]\n\nConsiderando o conceito apresentado no Texto I e os dados apresentados no Texto II, no Brasil, são fatores que intensificam o fenômeno da discriminação:",
+        "opcoes": [
+          "Raça e gênero.",
+          "Etnia e habitação.",
+          "Idade e nupcialidade.",
+          "Profissão e sexualidade.",
+          "Escolaridade e fecundidade."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022",
+        "imagens": [
+          {
+            "url": "/content/img/2022/d1-q070-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 70 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 956,
+            "altura": 264
+          },
+          {
+            "url": "/content/img/2022/d1-q070-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 70 do ENEM 2022 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "Disponível em: www.agenciadenoticias.ibge.gov.br. Acesso em: 2 dez. 2018.",
+            "largura": 494,
+            "altura": 233
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2022:3cb842f5",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 70"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.116Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:ba0130b3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O princípio básico do Estado de direito é o da eliminação do arbítrio no exercício dos poderes públicos, com a consequente garantia de direitos dos indivíduos perante esses poderes. Estado de direito significa que nenhum indivíduo, presidente ou cidadão comum está acima da lei. Os governos democráticos exercem a autoridade por meio da lei e estão eles próprios sujeitos aos constrangimentos impostos pela lei.\n\nCANOTILHO, J. J. G. Estado de direito. Lisboa: Gradiva, 1999 (adaptado).\n\nNas sociedades contemporâneas, consiste em violação do princípio básico enunciado no texto:",
+        "opcoes": [
+          "Supressão de eleições de representantes políticos.",
+          "Intervenção em áreas de vulnerabilidade pela Igreja.",
+          "Disseminação de projetos sociais em universidades.",
+          "Ampliação dos processos de concentração de renda.",
+          "Regulamentação das relações de trabalho pelo Legislativo."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:ba0130b3",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 71"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.117Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:878adc6d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Brasileiros levam mais tempo de casa para o trabalho\n\nPesquisa do IBGE aponta que a situação é mais grave no Sudeste: 13% das pessoas levam mais de uma hora para chegar ao trabalho. Nas regiões metropolitanas de São Paulo e do Rio, o IBGE registrou os maiores percentuais de trabalhadores que levam mais de uma hora no trajeto até o emprego. Quem vê o Marcelo chegar ao trabalho nem imagina a maratona que ele enfrenta todos os dias antes das 5 h. “Acordo 4 h 30, saio de casa 5 h, pego trem 5 h 20, chego na Central umas 6 h 50, pego ônibus e chego no trabalho mais ou menos 7 h 10”, conta. Segundo especialista, são os mais pobres os que moram mais longe do emprego.\n\nDisponível em: www.portaldotransito.com.br. Acesso em: 23 nov. 2021 (adaptado).\n\nA pesquisa desenvolvida retrata a seguinte dinâmica populacional:",
+        "opcoes": [
+          "Fluxo de retorno.",
+          "Migração interna.",
+          "Mudança sazonal.",
+          "Movimento pendular.",
+          "Deslocamento forçado."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:878adc6d",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 72"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.118Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:34996727",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Ahistória do Primeiro de Maio de 1890 — na França e na Europa, o primeiro de todos os Primeiros de Maio — é, sob vários aspectos, exemplar. Resultante de um ato político deliberado, essa manifestação ilustra o lado voluntário da construção de uma classe — a classe operária — à qual os socialistas tentam dar uma unidade política e cultural através daquela pedagogia da festa cujo princípio, eficácia e limites há muito tempo tinham sido experimentados pela Revolução Francesa.\n\nPERROT, M. Os excluídos da história: operários, mulheres e prisioneiros.\n\nRio de Janeiro: Paz e Terra, 1988.\n\nCom base no texto, a fixação dessa data comemorativa tinha por objetivo",
+        "opcoes": [
+          "valorizar um sentimento burguês.",
+          "afirmar uma identidade coletiva.",
+          "edificar uma memória nacional.",
+          "criar uma comunidade cívica.",
+          "definir uma tradição popular."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:34996727",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 73"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.118Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:1c7da9b8",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O povo Kambeba é o povo das águas. Os mais velhos costumam contar que o povo nasceu de uma gota-d’água que caiu do céu em uma grande chuva. Nessa gota estavam duas gotículas: o homem e a mulher. “Por essa narrativa e cosmologia indígena de que nós somos o povo das águas é que o rio nos tem fundamental importância”, diz Márcia Wayna Kambeba, mestre em Geografia e escritora. Todos os dias, ela ia com o pai observar o rio. Ia em silêncio e, antes que tomasse para si a palavra, era interrompida. “Ouça o rio”, o pai dizia. Depois de cerca de duas horas a ouvir as águas do Solimões, ela mergulhava. “Confie no rio e aprenda com ele”. “Fui entender mais tarde, com meus estudos e vivências, que meu pai estava me apresentando à sabedoria milenar do rio”.\n\nRios amazônicos influenciam no agro e em reservatórios do Sudeste.\n\nDisponível em: www.uol.com.br. Acesso em: 14 out. 2021.\n\nPelo descrito no texto, o povo Kambeba tem o rio como um(a)",
+        "opcoes": [
+          "objeto tombado e museográfico.",
+          "herança religiosa e sacralizada.",
+          "cenário bucólico e paisagístico.",
+          "riqueza individual e efêmera.",
+          "patrimônio cultural e afetivo."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:1c7da9b8",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 75"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.240Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:91c2b1c4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Lá embaixo está o Açude Itans, com seu formigueiro a cavar a terra. É mesmo impressionante o esforço daquele formigar de homens ao sol, lavados em suor, que não param, em longas filas pacientes acompanhando centenas de burricos que sobem e descem, numa ciranda comovente e silenciosa, cada burrico com duas caixas de terra no lombo. É o labor organizado para a salvação da terra e do homem. Depois do semideserto que tanto nos acabrunhou o espírito por falta de chuvas, o esforço destes milhares de sertanejos, todos vestidos de brim mescla e calçando alpercatas, no combate consciente à esterilidade da natureza, com as famílias alojadas em pequeninas casas de taipa e telha — embrião de futura cidade — impressionava-nos profundamente.\n\nVALLE, F. M. História do Açude Itans, município de Caicó (RN).\n\nBrasília, 1994 (adaptado).\n\nNa construção do empreendimento descrito, destaca-se a presença de",
+        "opcoes": [
+          "engenheiros na execução de canais fluviais.",
+          "coronéis na ampliação de antigas fazendas.",
+          "operários na distribuição dos recursos hídricos.",
+          "trabalhadores na formação de novos espaços.",
+          "negociantes na organização de redes comerciais."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:91c2b1c4",
+        "version": 1,
+        "skillIds": [
+          "soc:desigualdade-social-estrutura"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 76"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.242Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:a6e98cec",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Empédocles estabelece quatro elementos corporais — fogo, ar, água e terra —, que são eternos e que mudam aumentando e diminuindo mediante mistura e separação; mas os princípios propriamente ditos, pelos quais aqueles são movidos, são o Amor e o Ódio. Pois é preciso que os elementos permaneçam alternadamente em movimento, sendo ora misturados pelo Amor, ora separados pelo Ódio.\n\nSIMPLÍCIO. Física, 25, 21. In: Os pré-socráticos. São Paulo: Nova Cultural, 1996.\n\nO texto propõe uma reflexão sobre o entendimento de Empédocles acerca da arché, uma preocupação típica do pensamento pré-socrático, porque",
+        "opcoes": [
+          "exalta a investigação filosófica.",
+          "transcende ao mundo sensível.",
+          "evoca a discussão cosmogônica.",
+          "fundamenta as paixões humanas.",
+          "corresponde à explicação mitológica."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:a6e98cec",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 86"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.362Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2022:d8c97429",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Em Vitória (ES), no bairro Goiabeiras, encontramos as paneleiras, mulheres que são conhecidas pelos saberes/fazeres das tradicionais panelas de barro, ícones da culinária capixaba. A tradição passada de mãe para filha é de origem indígena e sofreu influência de outras etnias, como a afro e a luso. Dessa mistura, acredita-se que a fabricação das panelas de barro já tenha 400 anos. A fabricação das panelas de barro se dá em várias etapas, desde a obtenção de matéria-prima à confecção das panelas. As matérias-primas tradicionalmente utilizadas são provenientes do meio natural, como: argila, retirada do barreiro no Vale do Mulembá; madeira, atualmente proveniente das sobras da construção civil; e tinta, extraída da casca do manguezal, o popular mangue-vermelho.\n\nTRISTÃO, M. A educação ambiental e o pós-colonialismo.\n\nRevista de Educação, n. 53, ago. 2014.\n\nUma característica de práticas tradicionais como a exemplificada no texto é a vinculação entre os recursos do mundo natural e a",
+        "opcoes": [
+          "manutenção dos modos de vida.",
+          "conservação dos plantios da roça.",
+          "atualização do modelo de gestão.",
+          "participação na sociedade de consumo.",
+          "especialização nas etapas de produção."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2022"
+      },
+      "meta": {
+        "id": "oficial:2022:d8c97429",
+        "version": 1,
+        "skillIds": [
+          "soc:cultura-identidade-sociedade"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2022,
+          "ref": "ENEM 2022 · 1º dia · caderno 1 azul · questão 90"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:00.365Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

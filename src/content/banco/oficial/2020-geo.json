@@ -1,0 +1,1100 @@
+{
+  "subjectId": "geo",
+  "items": [
+    {
+      "id": "oficial:2020:291d9ac6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Embora inegáveis os benefícios que ambas as economias têm auferido do intercâmbio comercial, o Brasil tem reiterado seu objetivo de desenvolver com a China uma relação comercial menos assimétrica. Os números revelam com clareza a assimetria. As exportações brasileiras de produtos básicos, especialmente soja, minério de ferro e petróleo, compõem, dependendo do ano, algo entre 75% e 80% da pauta, ao passo que as importações brasileiras consistem, aproximadamente, em 95% de produtos industrializados chineses, que vão desde os mais variados bens de consumo até máquinas e equipamentos de alto valor.\n\nLEÃO, V. C. Prefácio. In: CINTRA, M. A. M.; SILVA FILHO, E. B.; PINTO, E. C. (Org.). China em transformação: dimensões econômicas e geopolíticas do desenvolvimento.\n\nRio de Janeiro: Ipea, 2015.\n\nUma ação estatal de longo prazo capaz de reduzir a assimetria na balança comercial brasileira, conforme exposto no texto, é o(a)",
+        "opcoes": [
+          "expansão do setor extrativista.",
+          "incremento da atividade agrícola.",
+          "diversificação da matriz energética.",
+          "fortalecimento da pesquisa científica.",
+          "monitoramento do fluxo alfandegário."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:291d9ac6",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 46"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.480Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:c713463a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As estatísticas mais recentes do Brasil rural revelam um paradoxo que interessa a toda sociedade: o emprego de natureza agrícola definha em praticamente todo o país, mas a população residente no campo voltou a crescer; ou pelo menos parou de cair. Esses sinais trocados sugerem que a dinâmica agrícola, embora fundamental, já não determina sozinha os rumos da demografia no campo. Esse novo cenário é explicado em parte pelo incremento do emprego não agrícola no campo. Ao mesmo tempo, aumentou a massa de desempregados, inativos e aposentados que mantêm residência rural.\n\nSILVA, J. G. Velhos e novos mitos do rural brasileiro. Estudos Avançados, n. 43, dez. 2001.\n\nSobre o espaço brasileiro, o texto apresenta argumentos que refletem a",
+        "opcoes": [
+          "heterogeneidade do modo de vida agrário.",
+          "redução do fluxo populacional nas cidades.",
+          "correlação entre força de trabalho e migração sazonal.",
+          "indissociabilidade entre local de moradia e acesso à renda.",
+          "desregulamentação das propriedades nas zonas de fronteira."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:c713463a",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 47"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.481Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:828ed6c1",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A expansão das cidades e a formação das aglomerações urbanas no Brasil foram marcadas pela produção industrial e pela consolidação das metrópoles como locais de seu desenvolvimento. Na segunda metade do século XX, as metrópoles brasileiras estenderam-se por áreas de ocupação contínua, configurando densas regiões urbanizadas.\n\nMOURA, R. Arranjos urbano-regionais no Brasil: especificidades e reprodução de padrões. Disponível em: www.ub.edu. Acesso em: 11 fev. 2015.\n\nO resultado do processo geográfico descrito foi o(a)",
+        "opcoes": [
+          "valorização da escala local.",
+          "crescimento das áreas periféricas.",
+          "densificação do transporte ferroviário.",
+          "predomínio do planejamento estadual.",
+          "inibição de consórcios intermunicipais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:828ed6c1",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 50"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.482Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:80e8da74",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Será que as coisas lhe pareceriam diferentes se, de fato, todas elas existissem apenas na sua mente — se tudo o que você julgasse ser o mundo externo real fosse apenas um sonho ou alucinação gigante, de que você jamais fosse despertar? Se assim fosse, então é claro que você nunca poderia despertar, como faz quando sonha, pois significaria que não há mundo “real” no qual despertar. Logo, não seria exatamente igual a um sonho ou alucinação normal.\n\nNAGEL, T. Uma breve introdução à filosofia. São Paulo: Martins Fontes, 2011.\n\nO texto confere visibilidade a uma doutrina filosófica contemporânea conhecida como:",
+        "opcoes": [
+          "Personalismo, que vincula a realidade circundante aos domínios do pessoal.",
+          "Falsificacionismo, que estabelece ciclos de problemas para refutar uma conjectura.",
+          "Falibilismo, que rejeita mecanismos mentais para sustentar uma crença inequívoca.",
+          "Idealismo, que nega a existência de objetos independentemente do trabalho cognoscente.",
+          "Solipsismo, que reconhece limitações cognitivas para compreender uma experiência compartilhada."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:80e8da74",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 55"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.976Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:06ecd929",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A demanda mundial para a produção de alimentos aumenta progressivamente a taxas muito altas. Atualmente, na maioria dos países, continentes e regiões, a água consumida na agricultura é de cerca de 70% da disponibilidade total.\n\nTUNDISI, J. G. Recursos hídricos no futuro: problemas e soluções.\n\nEstudos Avançados, n. 63, 2008 (adaptado).\n\nPara que haja a redução da pressão sobre o recurso natural mencionado, a expansão da agricultura demanda melhorias no(a)",
+        "opcoes": [
+          "fertilização química do solo.",
+          "escoamento hídrico do terreno.",
+          "manutenção de poços artesianos.",
+          "eficiência das técnicas de irrigação.",
+          "velocidade das máquinas colheitadeiras."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:06ecd929",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 56"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.977Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:06c6fb60",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No caso do Departamento de Defesa dos Estados Unidos, a ênfase está posta no traçado de uma estratégia geral de desarticulação, não só dos inimigos reais como dos potenciais, inserida na concepção preventiva que supõe que a mínima dissidência é um sinal de perigo e de guerra futura. Deve-se ter capacidade para responder a uma guerra convencional tanto quanto para enfrentar um inimigo difuso, atentando simultaneamente para todas as áreas geográficas do planeta. Trata-se, sem dúvida, da estratégia com pretensões mais abrangentes que se desenvolveu até agora.\n\nCECEÑA, A. E. Hegemonias e emancipações no século XXI.\n\nBuenos Aires: Clacso, 2005 (adaptado).\n\nTomando o texto como parâmetro, qual tendência contemporânea impulsiona a formulação de estratégias mais abrangentes por parte do Estado americano?",
+        "opcoes": [
+          "Erradicação dos conflitos em territórios.",
+          "Propagação de organizações em redes.",
+          "Eliminação das diferenças regionais.",
+          "Ampliação de modelo democrático.",
+          "Projeção da diplomacia mundial."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:06c6fb60",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 57"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.977Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:3a8be955",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O planejamento deixou de controlar o crescimento urbano e passou a encorajá-lo por todos os meios possíveis e imagináveis. Cidades, a nova mensagem soou em alto e bom som, eram máquinas de produzir riquezas; o primeiro e principal objetivo do planejamento devia ser o de azeitar a máquina.\n\nHALL, P. Cidades do amanhã: uma história intelectual do planejamento e do projeto\nurbanos no século XX. São Paulo: Perspectiva, 2016 (adaptado).\n\nO modelo de planejamento urbano problematizado no texto é marcado pelo(a)",
+        "opcoes": [
+          "primazia da gestão popular.",
+          "uso de práticas sustentáveis.",
+          "construção do bem-estar social.",
+          "soberania do poder governamental.",
+          "ampliação da participação empresarial."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:3a8be955",
+        "version": 1,
+        "skillIds": [
+          "geo:urbanizacao-processos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 58"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.977Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:a6fb44cf",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Escudos antigos ou maciços cristalinos são blocos imensos de rochas antigas. Estes escudos são constituídos por rochas cristalinas (magmáticoplutônicas), formadas em eras pré-cambrianas, ou por rochas metamórficas (material sedimentar) do Paleozoico. São resistentes, estáveis, porém bastante desgastadas. Correspondem a 36% da área territorial e dividem-se em duas grandes porções: o Escudo das Guianas (norte da Planície Amazônica) e o Escudo Brasileiro (porção centro-oriental brasileira).\n\nDisponível em: http://ambientes.ambientebrasil.com.br. Acesso em: 25 jun. 2015.\n\nAs estruturas geológicas indicadas no texto são importantes economicamente para o Brasil por concentrarem",
+        "opcoes": [
+          "fontes de águas termais.",
+          "afloramentos de sal-gema.",
+          "jazidas de minerais metálicos.",
+          "depósitos de calcário agrícola.",
+          "reservas de combustível fóssil."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:a6fb44cf",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 59"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.978Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:263de181",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Divisão Internacional do Trabalho significa que alguns países se especializam em ganhar e outros, em perder. Nossa comarca no mundo, que hoje chamamos América Latina, foi precoce: especializou-se em perder desde os remotos tempos em que os europeus do Renascimento se aventuraram pelos mares e lhe cravaram os dentes na garganta. Passaram-se os séculos e a América Latina aprimorou suas funções.\n\nGALEANO, E. As veias abertas da América Latina. São Paulo: Paz e Terra, 1978.\n\nEscrito na década de 1970, o texto considera a participação da América Latina na Divisão Internacional do Trabalho marcada pela",
+        "opcoes": [
+          "produção inovadora de padrões de tecnologia.",
+          "superação paulatina do caráter agroexportador.",
+          "apropriação imperialista dos recursos territoriais.",
+          "valorização econômica dos saberes tradicionais.",
+          "dependência externa do suprimento de alimentos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:263de181",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 61"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:10.979Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:7713e81f",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\n[[imagem:1]]\n\nO conjunto representado pelo agronegócio demanda condições específicas que passam a ser exigidas dos territórios. Como há uma elevação da formação de fluxos, materiais e imateriais, a crescente articulação com as escalas que vão do local ao global terminam por pressionar o Estado a agir visando uma instalação no território de fixos diversos, bem como de uma regulação específica.\n\nLIMA, R. C.; PENNA, N. A. A logística de transportes do agronegócio em Mato Grosso (Brasil). Confins, n. 26, fev. 2016.\n\nO mapa e o texto se complementam indicando que a expansão das rodovias se deu como resposta ao(à)",
+        "opcoes": [
+          "alteração da matriz econômica.",
+          "substituição do modal hidroviário.",
+          "retração do contingente demográfico.",
+          "projeção do escoamento produtivo.",
+          "estagnação de lavouras policultoras."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q065-1.webp",
+            "alt": "Imagem da questão 65 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1000,
+            "altura": 1064
+          },
+          {
+            "url": "/content/img/2020/d1-q065-2.webp",
+            "alt": "Imagem 2 da questão 65 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 572,
+            "altura": 64
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:7713e81f",
+        "version": 1,
+        "skillIds": [
+          "geo:meio-ambiente-impactos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 65"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.099Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:79fe3686",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Um dos resquícios franceses na dança são os comandos proferidos pelo marcador da quadrilha. Seu papel é anunciar os próximos passos da coreografia. O abrasileiramento de termos franceses deu origem, por exemplo, ao saruê (soirée — reunião social noturna, ordem para todos se juntarem no centro do salão), anarriê (en arrière — para trás) e anavã (en avant — para frente).\n\nDisponível em: www.ebc.com.br. Acesso em: 6 jul. 2015.\n\nA característica apresentada dessa manifestação popular resulta do seguinte processo socio-histórico:",
+        "opcoes": [
+          "Massificação da arte erudita.",
+          "Rejeição de hábitos elitistas.",
+          "Laicização dos rituais religiosos.",
+          "Restauração dos costumes antigos.",
+          "Apropriação de práticas estrangeiras."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:79fe3686",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 66"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.099Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:1262a28d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "[[imagem:0]]\n\nOs aspectos físicos apresentados originam-se da atuação da força natural de",
+        "opcoes": [
+          "colisão de placas tectônicas.",
+          "rifteamento da crosta terrestre.",
+          "subducção da plataforma oceânica.",
+          "formação de cadeias montanhosas.",
+          "metamorfismo de bordas continentais."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q067-1.webp",
+            "alt": "Imagem da questão 67 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: Vale da Grande\nFenda\nVulcões\nDisponível em: https://noticias.uol.com.br. Acesso em: 13 jun. 2018 (adaptado).",
+            "largura": 1004,
+            "altura": 1369
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:1262a28d",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 67"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.226Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:438a3967",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Declaração de Salamanca – 1994\n\nAcreditamos e proclamamos que: toda criança tem direito fundamental à educação e deve ser dada a oportunidade de atingir e manter o nível adequado de aprendizagem; toda criança possui características, interesses, habilidades e necessidades de aprendizagem que são únicas; sistemas educacionais deveriam ser designados e programas educacionais deveriam ser implementados no sentido de se levar em conta a vasta diversidade de tais características e necessidades.\n\nDisponível em: http://portal.mec.gov.br. Acesso em: 4 out. 2015.\n\nComo signatário da Declaração citada, o Brasil comprometeu-se com a elaboração de políticas públicas educacionais que contemplem a",
+        "opcoes": [
+          "criação de privilégios.",
+          "contenção dos gastos.",
+          "pluralidade dos sujeitos.",
+          "padronização do currículo.",
+          "valorização da meritocracia."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:438a3967",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 73"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.229Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:3147eb07",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Afirmar que a cartografia da época moderna integrou o processo de invenção da América por parte dos europeus significa que os conhecimentos dos ameríndios sobre o território foram ignorados pela cartografia europeia ou que eles foram privados de sua representação territorial e da autoridade que seus conhecimentos tinham sobre o espaço.\n\nOLIVEIRA, T. K. Desconstruindo mapas, revelando espacializações: reflexões sobre o uso\nda cartografia em estudos sobre o Brasil colonial. Revista Brasileira de História,\nn. 68, 2014 (adaptado).\n\nNa análise contida no texto, a representação cartográfica da América foi marcada por",
+        "opcoes": [
+          "asserção da cultura dos nativos.",
+          "avanço dos estudos do ambiente.",
+          "afirmação das formas de dominação.",
+          "exatidão da demarcação das regiões.",
+          "aprimoramento do conceito de fronteira."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:3147eb07",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 75"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.230Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:30218e0e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O toyotismo, a partir dos anos 1970, teve grande impacto no mundo ocidental, quando se mostrou para os países avançados como uma opção possível para a superação de uma crise de acumulação.\n\nANTUNES, R. Os sentidos do trabalho: ensaio sobre a afirmação e a negação do trabalho.\n\nSão Paulo: Boitempo, 2009 (adaptado).\n\nA característica organizacional do modelo em questão, requerida no contexto de crise, foi o(a)",
+        "opcoes": [
+          "expansão dos grandes estoques.",
+          "incremento da fabricação em massa.",
+          "adequação da produção à demanda.",
+          "aumento da mecanização do trabalho.",
+          "centralização das etapas de planejamento."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:30218e0e",
+        "version": 1,
+        "skillIds": [
+          "geo:meio-ambiente-impactos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 78"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.232Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:0d598c77",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "As cidades de Puebla, no México, e Legazpi, nas Filipinas, não têm quase nada em comum. Estão muito longe uma da outra e são habitadas por povos muito diferentes. O que as une é um trágico detalhe de sua geografia. Elas foram erguidas na vizinhança de alguns dos vulcões mais perigosos do mundo: o mexicano Popocatepétl e o filipino Mayon. Seus habitantes precisam estar prontos para correr a qualquer hora. Eles fazem parte dos 550 milhões de indivíduos que moram em zonas de risco vulcânico no mundo. Ao contrário do que seria sensato, continuam ali, indiferentes ao perigo que os espreita.\n\nANGELO, C. Disponível em: http://super.abril.com.br. Acesso em: 24 out. 2015 (adaptado).\n\nA característica física que justifica a fixação do homem nos locais apresentados no texto é a ocorrência de",
+        "opcoes": [
+          "solo fértil.",
+          "encosta íngreme.",
+          "vegetação diversificada.",
+          "drenagem eficiente.",
+          "clima ameno."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:0d598c77",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 82"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.235Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:bc29c715",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A colisão entre uma placa continental e uma oceânica provocará a subducção desta última sob a placa continental, que, a exemplo dos arcos e ilhas, produzirá um arco magmático na borda do continente, composto por rochas vulcânicas acompanhado de deformações e metamorfismo tanto de rochas preexistentes como de parte das rochas formadas no processo.\n\nTEIXEIRA, W. et al. (Org.). Decifrando a Terra. São Paulo: Oficina de Textos, 2000.\n\nQual feição fisiográfica é gerada pelo processo tectônico apresentado?",
+        "opcoes": [
+          "Planícies abissais.",
+          "Planaltos cristalinos.",
+          "Depressões absolutas.",
+          "Bacias sedimentares.",
+          "Dobramentos modernos."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:bc29c715",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 84"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.237Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:4edd6cc6",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na Grécia, o conceito de povo abrange tão somente aqueles indivíduos considerados cidadãos. Assim é possível perceber que o conceito de povo era muito restritivo. Mesmo tendo isso em conta, a forma democrática vivenciada e experimentada pelos gregos atenienses nos séculos IV e V a.C. pode ser caracterizada, fundamentalmente, como direta.\n\nMANDUCO, A. Ciência política. São Paulo: Saraiva, 2011.\n\nNaquele contexto, a emergência do sistema de governo mencionado no excerto promoveu o(a)",
+        "opcoes": [
+          "competição para a escolha de representantes.",
+          "campanha pela revitalização das oligarquias.",
+          "estabelecimento de mandatos temporários.",
+          "declínio da sociedade civil organizada.",
+          "participação no exercício do poder."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:4edd6cc6",
+        "version": 1,
+        "skillIds": [
+          "geo:geopolitica-globalizacao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 87"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.238Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:a4215afb",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\n[[imagem:0]]\n\nRio Tietê, São Paulo (SP). Foto: Delfim Martins/Pulsar.\n\nTEXTO II\n\nO Rio Tietê está morto. Ao menos uma parte dele: 137 quilômetros, para ser mais preciso. Uma pesquisa da Fundação SOS Mata Atlântica mostra que, em 2016, o trecho do rio com qualidade de água classificada como ruim ou péssima começa em Itaquaquecetuba, passa por toda a Região Metropolitana de São Paulo e chega até Cabreúva, já no interior de São Paulo. Nesse trecho, a água não tem oxigênio suficiente para abrigar vida.\n\nDisponível em: http://epoca.globo.com. Acesso em: 7 dez. 2017 (adaptado).\n\nConsiderando a análise dos textos, a condição atual desse rio tem como origem a",
+        "opcoes": [
+          "valorização do sítio urbano.",
+          "extinção da vegetação nativa.",
+          "recepção de densa carga de dejetos.",
+          "captação desordenada do regime pluvial.",
+          "expansão do uso de defensivos químicos."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020",
+        "imagens": [
+          {
+            "url": "/content/img/2020/d1-q088-1.webp",
+            "alt": "Imagem da questão 88 do ENEM 2020 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1004,
+            "altura": 628
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2020:a4215afb",
+        "version": 1,
+        "skillIds": [
+          "geo:climatologia-fenomenos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 88"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.559Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2020:1e3dc450",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nO aumento de casos suspeitos de febre amarela em Minas pode estar relacionado à tragédia de Mariana, em 2015, segundo a bióloga da Fiocruz Márcia Chame. A hipótese tem como ponto de partida a localização das cidades mineiras que identificaram até o momento casos de pacientes com sintomas da doença. Grande parte está na região próxima do Rio Doce, afetado pelo rompimento da Barragem de Fundão, em novembro de 2015.\n\nFORMENTI, L. Para bióloga, surto de febre amarela pode ter relação com tragédia de\nMariana. O Estado de São Paulo, 14 jan. 2017.\n\nTEXTO II\n\nPor outro lado, Servio Ribeiro considera remota a possibilidade de influência da tragédia de Mariana (MG) neste surto de febre amarela em Minas Gerais. “A febre amarela é uma doença de interior de floresta. O mosquito que a transmite põe ovos em cavidades de árvores e em bromélias. É um mosquito da estrutura da floresta. Ele não se relaciona muito com grandes corpos-d’água e com rios. As cidades afetadas pela doença estão em uma região onde os rejeitos não chegaram com força para derrubar a floresta”, diz o biólogo.\n\nRODRIGUES, L. Especialistas investigam relação entre febre amarela e degradação\nambiental. Agência Brasil, 25 jan. 2017.\n\nSobre a tragédia de Mariana, os textos apresentam divergência quanto ao(à)",
+        "opcoes": [
+          "poluição dos rios locais.",
+          "identificação da área afetada.",
+          "destruição da vegetação nativa.",
+          "aparecimento de enfermidade endêmica.",
+          "surgimento de comunidades desabrigadas."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2020"
+      },
+      "meta": {
+        "id": "oficial:2020:1e3dc450",
+        "version": 1,
+        "skillIds": [
+          "geo:meio-ambiente-impactos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2020,
+          "ref": "ENEM 2020 · 1º dia · caderno 1 azul · questão 90"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:13:11.560Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,535 @@
+{
+  "subjectId": "fil",
+  "items": [
+    {
+      "id": "oficial:2023:89c7716b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "No Cerrado, o conhecimento local está sendo cada vez mais subordinado à lógica do agronegócio. De um lado, o capital impõe os conhecimentos biotecnológicos, como mecanismo de universalização de práticas agrícolas e de novas tecnologias, e de outro, o modelo capitalista subordina homens e mulheres à lógica do mercado. Assim, as águas, as sementes, os minerais, as terras (bens comuns) tornam-se propriedade privada. Além do mais, há outros fatores negativos, como a mecanização pesada, a “pragatização” dos seres humanos e não humanos, a violência simbólica, a superexploração, as chuvas de veneno e a violência contra a pessoa.\n\nCALAÇA, M.; SILVA, E. B.; JESUS, J. N. Territorialização do agronegócio e subordinação\ndo campesinato no Cerrado. Élisée, Rev. Geo. UEG, n. 1, jan.-jun. 2021 (adaptado).\n\nOs elementos descritos no texto, a respeito da territorialização da produção, demonstram que há um",
+        "opcoes": [
+          "cerco aos camponeses, inviabilizando a manutenção das condições para a vida.",
+          "descaso aos latifundiários, impactando a plantação de alimentos para a exportação.",
+          "desprezo ao assalariado, afetando o engajamento dos sindicatos para o trabalhador.",
+          "desrespeito aos governantes, comprometendo a criação de empregos para o lavrador.",
+          "assédio ao empresariado, dificultando o investimento de maquinários para a produção."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:89c7716b",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 48"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.815Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:08f69571",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Superar a história da escravidão como principal marca da trajetória do negro no país tem sido uma tônica daqueles que se dedicam a pesquisar as heranças de origem afro à cultura brasileira. A esse esforço de reconstrução da própria história do país, alia-se agora a criação da plataforma digital Ancestralidades. “A história do negro no Brasil vai continuar sendo contada, e cada passo que a gente dá para trás é um passo que a gente avança”, diz Márcio Black, idealizador da plataforma, sobre o estudo de figuras ainda encobertas pela perspectiva histórica imposta pelos colonizadores da América.\n\nFIORATI, G. Projeto joga luz sobre negros e revê perspectiva histórica. Disponível em: www1.folha.uol.com.br. Acesso em: 10 nov. 2021 (adaptado).\n\nEm relação ao conhecimento sobre a formação cultural brasileira, iniciativas como a descrita no texto favorecem o(a)",
+        "opcoes": [
+          "recuperação do tradicionalismo.",
+          "estímulo ao antropocentrismo.",
+          "reforço do etnocentrismo.",
+          "resgate do teocentrismo.",
+          "crítica ao eurocentrismo."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:08f69571",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 50"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:25.618Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:fafc6a5e",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nComo presença consciente no mundo não posso escapar à responsabilidade ética no meu mover-me no mundo. Se sou puro produto da determinação genética ou cultural ou de classe, sou irresponsável pelo que faço no meu mover-me no mundo e, se careço de responsabilidade, não posso falar em ética.\n\nFREIRE, P. Pedagogia da autonomia: saberes necessários\nà prática educativa. São Paulo: Paz e Terra, 1996.\n\nTEXTO II\nPaulo Freire construiu uma pedagogia da esperança. Na sua concepção, a história não é algo pronto e acabado. As estruturas de opressão e as desigualdades, apesar de serem naturalizadas, são sócio e historicamente construídas. Daí a importância de os educandos tomarem consciência da sua realidade para, assim, transformá-la.\n\nDEMARCHI, J. L. Paulo Freire. Disponível em: https://diplomatique.org.br.\n\nAcesso em: 6 out. 2021 (adaptado).\n\nCom base no conceito de ética pedagógica presente nos textos, os educandos tornam-se responsáveis pela",
+        "opcoes": [
+          "participação sociopolítica.",
+          "definição estético-cultural.",
+          "competição econômica local.",
+          "manutenção do sistema escolar.",
+          "capacitação de mobilidade individual."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:fafc6a5e",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 52"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:25.620Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:1f98350a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Eu poderia concluir que a raiva é um pensamento, que estar com raiva é pensar que alguém é detestável, e que esse pensamento, como todos os outros — assim como Descartes o mostrou —, não poderia residir em nenhum fragmento de matéria. A raiva seria, portanto, espírito. Porém, quando me volto para minha própria experiência da raiva, devo confessar que ela não estava fora do meu corpo, mas inexplicavelmente nele.\n\nMERLEAU-PONTY, M. Quinta conversa: o homem visto de fora.\n\nSão Paulo: Martins Fontes, 1948 (adaptado).\n\nNo que se refere ao problema do corpo, a filosofia cartesiana apresenta-se como contraponto ao entendimento expresso no texto por",
+        "opcoes": [
+          "apresentar uma visão dualista.",
+          "confirmar uma tese naturalista.",
+          "demonstrar uma premissa realista.",
+          "sustentar um argumento idealista.",
+          "defender uma posição intencionalista."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:1f98350a",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 54"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.821Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:5cde5cda",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Quem se mete pelo caminho do pedido de perdão deve estar pronto a escutar uma palavra de recusa. Entrar na atmosfera do perdão é aceitar medir-se com a possibilidade sempre aberta do imperdoável. Perdão pedido não é perdão a que se tem direito [devido]. É com o preço destas reservas que a grandeza do perdão se manifesta.\n\nRICOEUR, P. O perdão pode curar. Disponível em: www.lusosofia.net. Acesso em: 14 out. 2019.\n\nA reflexão sobre o perdão apresentada no texto encontra fundamento na(s)",
+        "opcoes": [
+          "rejeição particular amparada pelo desejo de poder.",
+          "decisão subjetiva determinada pela vontade divina.",
+          "liberdade mitigada pela predestinação do espírito.",
+          "escolhas humanas definidas pelo conhecimento empírico.",
+          "relações interpessoais mediadas pela autonomia dos indivíduos."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:5cde5cda",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 57"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:33.906Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:3f317a6b",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Seda, madeiras aromáticas e têxteis, obras de arte, lã, cristais e muitas, muitas peças de porcelana chegaram ao Brasil ao longo dos séculos XVII e XVIII. A opulência proporcionada pelo ouro fez com que esses itens fossem ainda mais presentes em cidades mineiras como Ouro Preto, Mariana e Sabará. Esses objetos inspiraram a criação das chinesices, termo que designa um tipo de arte que evoca motivos chineses, presentes em várias igrejas barrocas de Minas Gerais. No Brasil, é bem provável que a inspiração para as pinturas nas igrejas barrocas com pássaros, elefantes, tigres, mandarins e pagodes tenha sido tirada de gravuras, tecidos, móveis e, principalmente, das porcelanas chinesas que circulavam livremente em uma sociedade enriquecida pelo comércio do ouro e pedras preciosas.\n\nMARIUZZO, P. Estudos interdisciplinares ampliam conhecimento sobre chinesice no barroco mineiro. Disponível em: http://cienciaecultura.bvs.br.\n\nAcesso em: 23 nov. 2021 (adaptado).\n\nO desenvolvimento do processo artístico descrito no texto foi possível pelo(a)",
+        "opcoes": [
+          "representação arquitetônica.",
+          "intercâmbio transcontinental.",
+          "dependência econômica.",
+          "intervenção estatal.",
+          "padrão estético."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:3f317a6b",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 63"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:25.719Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:a6f2dd41",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "TEXTO I\n\nGerineldo dorme porque já está conformado com o seu mundo. Porque já sabe tudo o que lhe pode acontecer após haver submetido todos os objetos que o rodeiam a um minucioso inventário de possibilidades. Seu apartamento, mais que um apartamento, é uma teoria de sorte e de azar. Melhor que ninguém, Gerineldo conhece o coeficiente da dilatação de suas janelas e mantém marcado no termômetro, com uma linha vermelha, o ponto em que se quebrarão os vidros, despedaçados em estilhaços de morte. Sabe que os arquitetos e os engenheiros já previram tudo, menos o que nunca já aconteceu.\n\nMÁRQUEZ, G. G. O pessimista. In: Textos do Caribe. Rio de Janeiro: Record, 1981.\n\nTEXTO II\n\nA situação é o sujeito inteiro (ele não é nada a não ser a sua situação) e é também a coisa inteira (nunca há mais nada senão as coisas). É o sujeito a elucidar as coisas pela sua própria superação, se assim quisermos; ou são as coisas a reenviar ao sujeito a imagem dele. É a total facticidade, a contingência absoluta do mundo, do meu nascimento, do meu lugar, do meu passado, dos meus redores — e é a minha liberdade sem limites que faz com que haja para mim uma facticidade.\n\nSARTRE, J.-P. O ser e o nada: ensaio de ontologia fenomenológica.\n\nPetrópolis: Vozes, 1997 (adaptado).\n\nA postura determinista adotada pelo personagem Gerineldo contrasta com a ideia existencialista contida no pensamento filosófico de Sartre porque",
+        "opcoes": [
+          "evidencia a manifestação do inconsciente.",
+          "nega a possibilidade de transcendência.",
+          "contraria o conhecimento difuso.",
+          "sustenta a fugacidade da vida.",
+          "refuta a evolução biológica."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:a6f2dd41",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 79"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:26.262Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:e827ec87",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Durante a Revolução Francesa, um certo padre Niollant escondeu-se no pequeno castelo de L’Escarbas. Pagou amplamente a hospitalidade do velho fidalgo ocupando-se da educação de sua filha, Anaïs. A presença da mãe em nada modificou essa educação masculina dada a uma jovem criatura já muito inclinada à independência em virtude da vida no campo. O padre transmitiu à aluna sua intrepidez de opiniões e sua facilidade de julgamento, sem pensar que essas qualidades, tão necessárias num homem, se tornam defeitos numa mulher destinada aos humildes afazeres de mãe de família. Embora o padre recomendasse continuamente à aluna ser tanto mais graciosa e modesta quanto seu saber era mais extenso, a senhorita de Nègrepelisse ficou com excelente opinião de si mesma.\n\nBALZAC, H. Ilusões perdidas. São Paulo: Penguin Classics;\n\nCia. das Letras, 2011 (adaptado).\n\nO comportamento desenvolvido pela personagem evidencia uma postura de",
+        "opcoes": [
+          "abandono de laços afetivos.",
+          "negação da ideia de subjetividade.",
+          "aceitação da hierarquia de gênero.",
+          "consolidação da estratificação social.",
+          "ruptura de valores institucionalizados."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:e827ec87",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 86"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:34.347Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:b4cb8f74",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Concorrer e competir não são a mesma coisa. A concorrência pode até ser saudável sempre que a batalha entre agentes, para melhor empreender uma tarefa e obter melhores resultados finais, exige o respeito a certas regras de convivência preestabelecidas ou não. Já a competitividade se funda na invenção de novas armas de luta, num exercício em que a única regra é a conquista da melhor posição. A competitividade é uma espécie de guerra em que tudo vale e, desse modo, sua prática provoca um afrouxamento dos valores morais e um convite ao exercício da violência.\n\nSANTOS, M. Por uma outra globalização: do pensamento único\nà consciência universal. Rio de Janeiro: Record, 2006.\n\nDe acordo com a diferenciação feita pelo autor, que prática econômica é considerada moralmente condenável?",
+        "opcoes": [
+          "Adoção do dumping comercial.",
+          "Fusão da função administrativa.",
+          "Criação de holding empresarial.",
+          "Limitação do mercado monopolista.",
+          "Modernização da produção industrial."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:b4cb8f74",
+        "version": 1,
+        "skillIds": [
+          "fil:etica-correntes-filosoficas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 88"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:34.349Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:895174ab",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Não tinha outra filosofia. Nem eu. Não digo que a Universidade me não tivesse ensinado alguma; mas eu decorei-lhe só as fórmulas, o vocabulário, o esqueleto. Tratei-a como tratei o latim; embolsei três versos de Virgílio, dois de Horácio, uma dúzia de locuções morais e políticas, para as despesas da conversação. Tratei-os como tratei a história e a jurisprudência. Colhi de todas as cousas a fraseologia, a casca, a ornamentação.\n\nASSIS, M. Memórias póstumas de Brás Cubas. Belo Horizonte: Autêntica, 1999.\n\nA descrição crítica do personagem de Machado de Assis assemelha-se às características dos sofistas, contestados pelos filósofos gregos da Antiguidade, porque se mostra alinhada à",
+        "opcoes": [
+          "elaboração conceitual de entendimentos.",
+          "utilização persuasiva do discurso.",
+          "narração alegórica dos rapsodos.",
+          "investigação empírica da physis.",
+          "expressão pictográfica da pólis."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:895174ab",
+        "version": 1,
+        "skillIds": [
+          "fil:epistemologia-conhecimento"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 1º dia · caderno 1 azul · questão 90"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:34.707Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}

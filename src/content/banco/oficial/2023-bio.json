@@ -2,6 +2,112 @@
   "subjectId": "bio",
   "items": [
     {
+      "id": "oficial:2023:ec11ae1d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "É comum em viagens de avião sermos solicitados a desligar aparelhos cujo funcionamento envolva a emissão ou a recepção de ondas eletromagnéticas, como celulares. A justificativa dada para esse procedimento é, entre outras coisas, a necessidade de eliminar fontes de sinais eletromagnéticos que possam interferir nas comunicações, via rádio, dos pilotos com a torre de controle.\n\nEssa interferência poderá ocorrer somente se as ondas emitidas pelo celular e as recebidas pelo rádio do avião",
+        "opcoes": [
+          "forem ambas audíveis.",
+          "tiverem a mesma potência.",
+          "tiverem a mesma frequência.",
+          "tiverem a mesma intensidade.",
+          "propagarem-se com velocidades diferentes."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:ec11ae1d",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 91"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:43.594Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:55e90d99",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Avaliação de substâncias genotóxicas\n\nO ensaio de micronúcleos é um teste de avaliação de genotoxicidade que associa a presença de micronúcleos (pequenos núcleos que aparecem próximo aos núcleos das células) com lesões genéticas. Os micronúcleos são fragmentos de DNA encapsulados, provenientes do fuso mitótico durante a divisão celular.\n\nDIAS, V. M. Micronúcleos em células tumorais: biologia e implicações para a tumorigênese. Dissertação de Mestrado. USP, 2006 (adaptado).\n\nOs micronúcleos se originam dos(as)",
+        "opcoes": [
+          "nucléolos.",
+          "lisossomos.",
+          "ribossomos.",
+          "mitocôndrias.",
+          "cromossomos."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:55e90d99",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 96"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:36.028Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
       "id": "oficial:2023:015ab1af",
       "exercise": {
         "type": "multipla-escolha",
@@ -52,6 +158,326 @@
         "examProfiles": [
           "enem"
         ]
+      }
+    },
+    {
+      "id": "oficial:2023:2822d790",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os solos amazônicos, ricos em silicato, não são apropriados para o cultivo por serem incapazes de reter nutrientes. Contudo, descobertas arqueológicas têm demonstrado que os antigos habitantes da Amazônia dominavam a técnica de preparo de um insumo agrícola natural, denominado terra preta. Esse insumo era constituído principalmente de uma espécie de biocarvão (biochar) obtido da queima de matéria orgânica, como troncos de árvores, pedaços de ossos e esterco, capaz de manter um solo fértil por anos.\n\nAdmite-se que o efeito do biocarvão na fertilização do solo estava, em parte, relacionado à presença de grupos orgânicos do tipo carboxilato em sua superfície, carregados negativamente (—COO⁻). Esses grupos atraem íons positivos necessários como nutrientes, tais quais os provenientes do potássio (K), do cálcio (Ca) e do magnésio (Mg), além de micronutrientes, como zinco (Zn) e ferro (Fe). Essa ligação no solo fertilizado é predominantemente iônica, conforme ilustra a figura, em que Mⁿ⁺representa os cátions metálicos. De acordo com a escala de Pauling, a eletronegatividade do elemento oxigênio é igual a 3,44.\n\n[[imagem:0]]\n\n[[imagem:1]]\n\n[[imagem:2]]\n\nO quadro apresenta os valores de eletronegatividade desses cinco elementos metálicos.\n\n[[tabela:0]]\n\nMICHALOVIC, M. Ancient Soil Chemists of the Amazon. ChemMatters, fev. 2009 (adaptado).\n\nO cátion que resultará em uma interação de maior caráter iônico com o ânion carboxilato será aquele proveniente do elemento",
+        "opcoes": [
+          "potássio.",
+          "cálcio.",
+          "magnésio.",
+          "zinco.",
+          "ferro."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023",
+        "imagens": [
+          {
+            "url": "/content/img/2023/d2-q104-1.webp",
+            "alt": "Imagem da questão 104 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O O –\nSolo com biocarvão",
+            "largura": 484,
+            "altura": 266
+          },
+          {
+            "url": "/content/img/2023/d2-q104-2.webp",
+            "alt": "Imagem 2 da questão 104 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "descricao": "Texto na imagem: O O – M n+\nSolo fertilizado",
+            "largura": 480,
+            "altura": 266
+          },
+          {
+            "url": "/content/img/2023/d2-q104-3.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 104 do ENEM 2023 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 212,
+            "altura": 71
+          }
+        ],
+        "tabelas": [
+          {
+            "cabecalho": [
+              "Elemento metálico",
+              "Eletronegatividade"
+            ],
+            "linhas": [
+              [
+                "K",
+                "0,82"
+              ],
+              [
+                "Ca",
+                "1,00"
+              ],
+              [
+                "Mg",
+                "1,31"
+              ],
+              [
+                "Zn",
+                "1,65"
+              ],
+              [
+                "Fe",
+                "1,83"
+              ]
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2023:2822d790",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 104"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:30:20.201Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:406ba302",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal.\n\nDentro do corpo do vegetal, esses contaminantes serão",
+        "opcoes": [
+          "digeridos por enzimas.",
+          "acumulados nos tecidos.",
+          "eliminados pelos estômatos.",
+          "metabolizados por glândulas.",
+          "utilizados como fonte energética."
+        ],
+        "correta": 1,
+        "explicacao": "Metais tóxicos, ao contrário de moléculas orgânicas, não são quebrados por enzimas nem usados como fonte de energia — plantas usadas em fitorremediação de metais funcionam retendo (acumulando) esses elementos em seus tecidos, tirando-os do ambiente.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:406ba302",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 2,
+        "irt": {
+          "a": 1,
+          "b": -0.8,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao",
+          "diagnostico"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 110"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-09-25T00:06:34.720Z",
+          "reviewer": "solucionador-independente",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ]
+      }
+    },
+    {
+      "id": "oficial:2023:f4377ce0",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Informações digitais — dados — são gravadas em discos ópticos, como CD e DVD, na forma de cavidades microscópicas. A gravação e a leitura óptica dessas informações são realizadas por um laser (fonte de luz monocromática). Quanto menores as dimensões dessas cavidades, mais dados são armazenados na mesma área do disco. O fator limitante para a leitura de dados é o espalhamento da luz pelo efeito de difração, fenômeno que ocorre quando a luz atravessa um obstáculo com dimensões da ordem de seu comprimento de onda. Essa limitação motivou o desenvolvimento de lasers com emissão em menores comprimentos de onda, possibilitando armazenar e ler dados em cavidades cada vez menores.\n\nEm qual região espectral se situa o comprimento de onda do laser que otimiza o armazenamento e a leitura de dados em discos de uma mesma área?",
+        "opcoes": [
+          "Violeta.",
+          "Azul.",
+          "Verde.",
+          "Vermelho.",
+          "Infravermelho."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:f4377ce0",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 115"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.426Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:747919b4",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função específica atuando no mesmo compartimento celular de sempre.\n\nDisponível em: https://sbim.org.br. Acesso em: 29 nov. 2021 (adaptado).\n\nA imunização produzida por esse tipo de vacina é alcançada por meio da",
+        "opcoes": [
+          "estimulação de leucócitos induzida pela capa lipídica contendo RNAm.",
+          "atuação do RNAm como sequestrador do vírus para o meio extracelular.",
+          "tradução do RNAm em proteína viral, desencadeando a resposta antigênica.",
+          "competição entre o RNAm vacinal e o RNA viral pelos sítios dos ribossomos.",
+          "incorporação do RNAm viral ao genoma do hospedeiro, gerando novo fenótipo."
+        ],
+        "correta": 2,
+        "explicacao": "Gabarito oficial: alternativa C. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:747919b4",
+        "version": 1,
+        "skillIds": [
+          "bio:genetica-leis-mendel"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 117"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.562Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:cc16a496",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Na fertilização in vitro, espermatozoides são adicionados aos gametas femininos retirados de uma mulher. Após o período de incubação, a fecundação é favorecida pela ação de enzimas. Em um procedimento realizado, observou-se que nenhum dos gametas femininos foi fertilizado e, posteriormente, verificou-se que havia sido adicionado, equivocadamente, um coquetel de inibidores das enzimas do acrossomo, no lugar de um dos nutrientes constituintes do meio de cultura.\n\nO coquetel de inibidores impediu o(a)",
+        "opcoes": [
+          "formação do pronúcleo masculino.",
+          "início da divisão mitótica do zigoto.",
+          "término da segunda divisão meiótica do ovócito.",
+          "passagem do espermatozoide pela corona radiata e zona pelúcida.",
+          "fusão das membranas plasmáticas do ovócito e do espermatozoide."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:cc16a496",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 118"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.468Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     },
     {
@@ -108,38 +534,37 @@
       }
     },
     {
-      "id": "oficial:2023:406ba302",
+      "id": "oficial:2023:7a2ff054",
       "exercise": {
         "type": "multipla-escolha",
-        "pergunta": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal.\n\nDentro do corpo do vegetal, esses contaminantes serão",
+        "pergunta": "Durante a evolução das plantas, ocorreu uma transição do ambiente aquático para o ambiente terrestre graças ao surgimento de algumas estruturas que as tornaram independentes da água. Esse fato permitiu maior dispersão desse grupo de seres vivos, sendo possível observá-los em diferentes ambientes na atualidade.\n\nQual estrutura possibilitou a independência da água para a fecundação dos seres vivos citados acima?",
         "opcoes": [
-          "digeridos por enzimas.",
-          "acumulados nos tecidos.",
-          "eliminados pelos estômatos.",
-          "metabolizados por glândulas.",
-          "utilizados como fonte energética."
+          "Fruto.",
+          "Esporo.",
+          "Semente.",
+          "Tubo polínico.",
+          "Vaso condutor."
         ],
-        "correta": 1,
-        "explicacao": "Metais tóxicos, ao contrário de moléculas orgânicas, não são quebrados por enzimas nem usados como fonte de energia — plantas usadas em fitorremediação de metais funcionam retendo (acumulando) esses elementos em seus tecidos, tirando-os do ambiente.",
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
         "fonte": "ENEM 2023"
       },
       "meta": {
-        "id": "oficial:2023:406ba302",
+        "id": "oficial:2023:7a2ff054",
         "version": 1,
         "skillIds": [
-          "bio:ecologia-relacoes-ecossistema"
+          "bio:evolucao-selecao-natural"
         ],
-        "difficulty": 2,
+        "difficulty": 3,
         "irt": {
           "a": 1,
-          "b": -0.8,
+          "b": 0,
           "c": 0.2,
           "source": "estimado"
         },
         "roles": [
           "pratica",
-          "revisao",
-          "diagnostico"
+          "revisao"
         ],
         "estimatedSeconds": 90,
         "dontKnowAllowed": true,
@@ -147,17 +572,336 @@
           "kind": "oficial",
           "exam": "ENEM",
           "year": 2023,
-          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 110"
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 123"
         },
         "validation": {
           "status": "oficial-conferida",
-          "reviewedAt": "2026-09-25T00:06:34.720Z",
-          "reviewer": "solucionador-independente",
+          "reviewedAt": "2026-10-02T19:14:37.469Z",
+          "reviewer": "importador-inep",
           "reviewKind": "gabarito-oficial"
         },
         "examProfiles": [
           "enem"
-        ]
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:ca2a85ca",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O vidro contendo alumínio em sua composição é um excelente material para acondicionar medicamentos e suplementos, porque pode ser esterilizado por aquecimento. No entanto, quando o medicamento ou suplemento contém substâncias que se ligam for temente ao íon desse metal, a dissolução do alumínio é promovida em função do deslocamento do equilíbrio químico estabelecido entre a espécie imobilizada no vidro e a espécie em solução. Por essa razão, recomenda-se que suplementos de nutrição de recém-nascidos contendo gluconato de cálcio sejam acondicionados em embalagens plásticas, e não nesse tipo de vidro.\n\nAtualização da recomendação da Sociedade Portuguesa de Neonatologia.\n\nDisponível em: www.spneonatologia.pt. Acesso em: 22 out. 2021 (adaptado).\n\nCaso esse suplemento seja acondicionado em embalagem desse tipo de vidro, o risco de contaminação por alumínio será maior se o(a)",
+        "opcoes": [
+          "vidro do frasco for translúcido.",
+          "concentração de gluconato de cálcio for alta.",
+          "frasco de vidro apresentar uma maior espessura.",
+          "vidro for previamente esterilizado em altas temperaturas.",
+          "reação do alumínio com gluconato de cálcio for endotérmica."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:ca2a85ca",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 124"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.564Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:e4e0865a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Barbatimão é o nome popular de uma árvore cuja casca é utilizada para fins medicinais. Essa casca é constituída principalmente de dois tecidos vegetais: periderme e floema. A extração da casca tem levado à morte muitos indivíduos dessa espécie, quando o corte retira um anel completo ao longo da circunferência do tronco. Aqueles que têm parte da casca retirada sem completar essa circunferência podem sobreviver.\n\nA morte desses indivíduos, decorrente da retirada do anel completo da casca, é provocada pela interrupção da",
+        "opcoes": [
+          "fotossíntese.",
+          "transpiração.",
+          "troca de gases.",
+          "formação de brotos.",
+          "nutrição das raízes."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:e4e0865a",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 125"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.470Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:ce51b817",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Há muito tempo são conhecidas espécies de lesmas-do-mar com uma capacidade ímpar: guardar par te da maquinaria das células das algas que consomem — os cloroplastos — e mantê-los funcionais dentro das suas próprias células, obtendo assim parte do seu alimento. Investigadores portugueses descobriram que essas lesmas-do-mar podem ser mais eficientes nesse processo do que as próprias algas que consomem.\n\nDisponível em: www.cienciahoje.pt. Acesso em: 10 fev. 2015 (adaptado).\n\nEssa adaptação confere a esse organismo a capacidade de obter primariamente",
+        "opcoes": [
+          "ácidos nucleicos.",
+          "carboidratos.",
+          "proteínas.",
+          "vitaminas.",
+          "lipídios."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:ce51b817",
+        "version": 1,
+        "skillIds": [
+          "bio:organelas-funcao"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 127"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.565Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:519a47b3",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A leishmaniose visceral é uma zoonose causada por um protozoário do gênero Leishmania que é encontrado em diversos tecidos. Ela é transmitida ao homem de forma indireta, por vetores do ambiente doméstico. O cão é considerado um importante hospedeiro desse protozoário, podendo ou não apresentar os sintomas da doença, como perda de peso, anemia, ferimentos na pele, diarreia, conjuntivite e insuficiência renal. Em uma região que sofre com alta incidência dessa doença, uma campanha do centro de zoonoses buscou verificar a presença desse protozoário nos cães para tentar controlar a doença.\n\nEm qual material biológico dos cães a presença desse protozoário representa risco de transmissão dessa zoonose?",
+        "opcoes": [
+          "Urina.",
+          "Saliva.",
+          "Fezes.",
+          "Sangue.",
+          "Secreção ocular."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:519a47b3",
+        "version": 1,
+        "skillIds": [
+          "bio:fisiologia-humana-sistemas"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 128"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.471Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:f3b8f070",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de sementes de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.\n\nDARAYA, V. Disponível em: http://planetasustentavel.abril.com.br.\n\nAcesso em: 2 fev. 2015 (adaptado).\n\nEsse método contribui para a preservação das abelhas porque",
+        "opcoes": [
+          "reduz sua predação.",
+          "reduz o uso de pesticidas.",
+          "reduz a competição por abrigo.",
+          "aumenta a oferta de alimento.",
+          "aumenta os locais de reprodução."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:f3b8f070",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 130"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:06:45.634Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2023:bf412cd5",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Os mais antigos cozinhavam o feijão na panela de ferro a fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento para liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica, sendo essencial para a manutenção da vida humana.\n\nAs estratégias citadas eram utilizadas com o objetivo de",
+        "opcoes": [
+          "tratar a diarreia.",
+          "prevenir a anemia.",
+          "evitar as verminoses.",
+          "remediar o raquitismo.",
+          "combater a febre amarela."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2023"
+      },
+      "meta": {
+        "id": "oficial:2023:bf412cd5",
+        "version": 1,
+        "skillIds": [
+          "bio:ecologia-relacoes-ecossistema"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2023,
+          "ref": "ENEM 2023 · 2º dia · caderno 8 rosa · questão 131"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:14:37.471Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
       }
     }
   ]

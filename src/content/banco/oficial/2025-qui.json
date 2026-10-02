@@ -1,0 +1,391 @@
+{
+  "subjectId": "qui",
+  "items": [
+    {
+      "id": "oficial:2025:66a53b3a",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A filtração em carvão é uma das mais antigas formas de purificação de água. O carvão ativado, diferentemente do carvão comum, é útil para ser empregado na remoção de material orgânico, cloro e outros contaminantes. Essa capacidade decorre de suas propriedades de adsorção. A origem do material utilizado para produzir o carvão ativado pode influenciar sua porosidade e, consequentemente, interferir na capacidade do material de remover impurezas. Na figura, é ilustrada esquematicamente a diferença entre as estruturas físicas do carvão comum e do carvão ativado.\n\n[[imagem:0]]\n\nQual característica do carvão ativado explica a sua maior eficiência nesse processo?",
+        "opcoes": [
+          "Massa.",
+          "Dureza.",
+          "Densidade.",
+          "Superfície.",
+          "Condutividade."
+        ],
+        "correta": 3,
+        "explicacao": "Gabarito oficial: alternativa D. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q091-1.webp",
+            "alt": "Imagem da questão 91 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "CORRÊA, M. A. Cosmetologia: ciência e técnica. São Paulo: Medfarma, 2012 (adaptado).",
+            "largura": 960,
+            "altura": 424
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:66a53b3a",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 91"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:36.794Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:df76507d",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A Figura 1 apresenta o esquema de um tubo de imagem em que um filamento, na posição A, libera elétrons por efeito termiônico. Esses elétrons formam um feixe estreito, que é acelerado por campos elétricos em direção à parte interna da tela. Nesse caminho, o feixe de elétrons passa por outro campo elétrico, na região B, atingindo, em seguida, a parte interna da tela do tubo, a qual é recoberta por um material que emite luz ao receber o impacto dos elétrons.\n\n[[imagem:0]]\n\nNa Figura 2, a carga negativa representa o feixe de elétrons que é acelerado e, posteriormente, atinge um ponto da tela. O campo elétrico na região B apresenta a seguinte configuração:\n\n[[imagem:1]]\n\nFigura 2\n\nGrupo de Reelaboração do Ensino de Física. Física 3:\n\neletromagnetismo. São Paulo: Edusp, 2000 (adaptado).\n\nNessa situação, qual ponto da tela será atingido pelo feixe de elétrons?",
+        "opcoes": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q113-1.webp",
+            "alt": "Imagem da questão 113 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 972,
+            "altura": 692
+          },
+          {
+            "url": "/content/img/2025/d2-q113-2.webp",
+            "alt": "Imagem 2 da questão 113 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 664,
+            "altura": 360
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:df76507d",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 113"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:37.681Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:74891d97",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "A dimetilamina é uma substância de elevada toxidez que entra em ebulição a 7 °C. Na madrugada de um dia frio, essa substância se espalhou por uma rodovia após um acidente de trânsito envolvendo um caminhão que transportava esse produto. Para minimizar a agressão ao meio ambiente, bem como evitar a evaporação da dimetilamina com a elevação da temperatura ao longo do dia, um químico considerou o uso de algumas substâncias ou misturas como água, vinagre, óleo de soja, sal de cozinha e bicarbonato de sódio.\n\nDentre as opções apresentadas, o tratamento correto para minimizar esse problema é usar\n\nA água.\nB vinagre.\nC óleo de soja.\nD sal de cozinha.\nE bicarbonato de sódio.\n\nO uso do campo magnético variável tem a finalidade de",
+        "opcoes": [
+          "imantar o material da panela por indução.",
+          "movimentar os átomos de ferro concentrados no fundo da panela.",
+          "emitir radiação eletromagnética, aquecendo a panela através do vidro cerâmico.",
+          "induzir corrente elétrica na parte inferior da panela, aquecendo-a por efeito Joule.",
+          "gerar um fluxo de corrente de convecção no ar contido entre a região da bobina e o vidro cerâmico."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025"
+      },
+      "meta": {
+        "id": "oficial:2025:74891d97",
+        "version": 1,
+        "skillIds": [
+          "qui:estrutura-atomica-modelos"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 121"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:15:38.037Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:1609d324",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "Apaixonada por culinária e química, uma chefe de cozinha calculou que, para promover o crescimento adequado da massa durante o cozimento de um bolo a 180 °C (453 K) e 1,00 atm, ela precisaria utilizar uma quantidade de fermento químico suficiente para produzir um volume de gás igual a 4,00 L. Com esse objetivo, ela escolheu utilizar o bicarbonato de amônio, um composto que, sob aquecimento, degrada-se em três gases distintos, que são os responsáveis pelo crescimento da massa. A decomposição do bicarbonato de amônio ocorre conforme a equação química apresentada e, nas condições do cozimento, seu rendimento é de 80%.\n\n[[imagem:0]]\n\nConsidere que a mistura dos gases se comporta como gás ideal nas condições de cozimento utilizadas pela chefe.\n\n[[imagem:1]]\n\nR = 0,082 atm ⋅ L ⋅ mol⁻¹ ⋅ K⁻¹.\nA massa, em grama, de bicarbonato de amônio que ela deve utilizar é mais próxima de",
+        "opcoes": [
+          "2,3 g.",
+          "3,5 g.",
+          "5,9 g.",
+          "6,8 g.",
+          "8,9 g."
+        ],
+        "correta": 1,
+        "explicacao": "Gabarito oficial: alternativa B. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q125-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 125 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 699,
+            "altura": 58
+          },
+          {
+            "url": "/content/img/2025/d2-q125-2.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 125 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 945,
+            "altura": 48
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:1609d324",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 125"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:18.464Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:3343b6fd",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O Brasil é o maior produtor mundial de nióbio (massa molar = 93 g mol⁻¹ ), metal utilizado na fabricação de vários tipos de aço: automotivos, estruturais e inoxidáveis. O processo utilizado na produção do nióbio é a redução aluminotérmica de Nb2O5 com excesso de 10% de Al (massa molar = 27 g mol⁻¹), em relação à quantidade estequiométrica da reação, representada pela equação química:\n\n[[imagem:0]]\n\nUma engenheira metalúrgica estimou a massa de alumínio necessária para produzir 9,3 kg de nióbio, nas condições descritas, para a produção de um lote de peças de aço encomendado por uma indústria, considerando um rendimento de 100%.\n\nDisponível em: www.cbmm.com.br. Acesso em: 17 out. 2015 (adaptado).\n\nA massa de alumínio, em quilograma, estimada pela engenheira é mais próxima de",
+        "opcoes": [
+          "2,7 kg.",
+          "3,0 kg.",
+          "4,1 kg.",
+          "4,5 kg.",
+          "5,0 kg."
+        ],
+        "correta": 4,
+        "explicacao": "Gabarito oficial: alternativa E. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q131-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 131 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 752,
+            "altura": 58
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:3343b6fd",
+        "version": 1,
+        "skillIds": [
+          "qui:estequiometria-calculo-mols"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 131"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:19.075Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    },
+    {
+      "id": "oficial:2025:2d3343a7",
+      "exercise": {
+        "type": "multipla-escolha",
+        "pergunta": "O despejo acidental de óleo nos oceanos tem ocasionado incontáveis prejuízos à vida marinha e à economia de regiões costeiras. Métodos tradicionais de tratamento do despejo geram resíduos de difícil descarte e nem sempre são eficazes. Por isso, pesquisadores desenvolveram um filtro capaz de separar óleo e água. O dispositivo é montado sobre uma malha de aço com uma sequência de camadas. A primeira camada é formada por um polímero de carga positiva, a segunda é composta por\n\n[[imagem:0]]\n\npolímero e a última é um surfactante, conforme apresentado na figura.\n\nRepresentação esquemática do dispositivo\n\n[[imagem:1]]\n\nNa utilização desse dispositivo, a retenção do óleo ocorre",
+        "opcoes": [
+          "no surfactante.",
+          "na camada superior de polímero.",
+          "nas nanopartículas de sílica.",
+          "na camada inferior de polímero.",
+          "na malha de aço."
+        ],
+        "correta": 0,
+        "explicacao": "Gabarito oficial: alternativa A. Peça para a Foca IA explicar o raciocínio.",
+        "fonte": "ENEM 2025",
+        "imagens": [
+          {
+            "url": "/content/img/2025/d2-q133-1.webp",
+            "alt": "Trecho com fórmula ou símbolo da questão 133 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "largura": 1013,
+            "altura": 48
+          },
+          {
+            "url": "/content/img/2025/d2-q133-2.webp",
+            "alt": "Imagem 2 da questão 133 do ENEM 2025 (descrição em revisão)",
+            "altAutomatico": true,
+            "credito": "BROWN, P. S.; BHUSHAN, B. Mechanically durable, superoleophobic coatings prepared by layer-by-layer technique for anti-smudge and oil-water separation. Scientific Reports, v. 5, mar. 2015 (adaptado).",
+            "largura": 976,
+            "altura": 600
+          }
+        ]
+      },
+      "meta": {
+        "id": "oficial:2025:2d3343a7",
+        "version": 1,
+        "skillIds": [
+          "qui:quimica-organica-funcoes"
+        ],
+        "difficulty": 3,
+        "irt": {
+          "a": 1,
+          "b": 0,
+          "c": 0.2,
+          "source": "estimado"
+        },
+        "roles": [
+          "pratica",
+          "revisao"
+        ],
+        "estimatedSeconds": 90,
+        "dontKnowAllowed": true,
+        "source": {
+          "kind": "oficial",
+          "exam": "ENEM",
+          "year": 2025,
+          "ref": "ENEM 2025 · 2º dia · caderno 7 azul · questão 133"
+        },
+        "validation": {
+          "status": "oficial-conferida",
+          "reviewedAt": "2026-10-02T19:43:19.185Z",
+          "reviewer": "importador-inep",
+          "reviewKind": "gabarito-oficial"
+        },
+        "examProfiles": [
+          "enem"
+        ],
+        "explicacaoPendente": true
+      }
+    }
+  ]
+}
