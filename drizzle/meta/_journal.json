@@ -43,6 +43,13 @@
       "when": 1790968769153,
       "tag": "0005_missoes",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790973133726,
+      "tag": "0006_simulado",
+      "breakpoints": true
     }
   ]
 }

@@ -83,7 +83,7 @@ describe("puro", () => {
 });
 
 describe("portões", () => {
-  test("Free não tem nenhuma função; Basic tem caderno/cronograma/offline; Pro tem todas menos o simulado (parado)", async () => {
+  test("Free não tem nenhuma função; Basic tem caderno/cronograma/offline; Pro tem todas, inclusive o simulado (aberto na spec 50 F10)", async () => {
     const free = await aluno("fp-free@foca.dev");
     const basic = await aluno("fp-basic@foca.dev", "basic");
     const pro = await aluno("fp-pro@foca.dev", "pro");
@@ -91,7 +91,8 @@ describe("portões", () => {
     expect(await alunoTemFuncao(amb.db, basic, "cronograma", AGORA)).toBe(true);
     expect(await alunoTemFuncao(amb.db, basic, "corretorRedacao", AGORA)).toBe(false);
     expect(await alunoTemFuncao(amb.db, pro, "corretorRedacao", AGORA)).toBe(true);
-    expect(await alunoTemFuncao(amb.db, pro, "simulado", AGORA)).toBe(false);
+    expect(await alunoTemFuncao(amb.db, pro, "simulado", AGORA)).toBe(true);
+    expect(await alunoTemFuncao(amb.db, basic, "simulado", AGORA)).toBe(false);
   });
   test("FUNCOES_DESLIGADAS fecha a função sem mexer no plano", () => {
     process.env.FUNCOES_DESLIGADAS = "caderno, treino";

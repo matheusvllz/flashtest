@@ -108,3 +108,36 @@ export async function areaDoItem(itemId: string): Promise<"LC" | "CH" | "CN" | "
   }
   return null;
 }
+
+export interface ItemOficial {
+  id: string;
+  ano: number;
+  dia: 1 | 2;
+  numero: number;
+  area: "LC" | "CH" | "CN" | "MT";
+  skillIds: string[];
+}
+
+let oficiais: ItemOficial[] | undefined;
+
+/**
+ * Questões oficiais do ENEM nos pacotes (spec 50 §5.9.4), com ano, dia, número e área tirados da referência do
+ * caderno ("ENEM 2022 · 2º dia · caderno 7 azul · questão 136"). A área sai do número: dia 1, 1–45 Linguagens e
+ * 46–90 Humanas; dia 2, 91–135 Natureza e 136–180 Matemática. Itens retirados (`retired`) ficam fora.
+ */
+export function itensOficiais(): ItemOficial[] {
+  if (oficiais) return oficiais;
+  oficiais = [];
+  for (const item of indice().values()) {
+    const meta = item.meta as { source?: { kind?: string; exam?: string; year?: number; ref?: string }; retired?: boolean; skillIds?: string[] } | undefined;
+    const s = meta?.source;
+    if (!s || s.kind !== "oficial" || s.exam !== "ENEM" || !s.year || meta?.retired) continue;
+    const dia = /(\d)º dia/.exec(s.ref ?? "")?.[1];
+    const numero = Number(/questão (\d+)/.exec(s.ref ?? "")?.[1]);
+    if ((dia !== "1" && dia !== "2") || !numero) continue;
+    const area = numero <= 45 ? "LC" : numero <= 90 ? "CH" : numero <= 135 ? "CN" : "MT";
+    oficiais.push({ id: item.id, ano: s.year, dia: Number(dia) as 1 | 2, numero, area, skillIds: meta?.skillIds ?? [] });
+  }
+  oficiais.sort((a, b) => a.ano - b.ano || a.numero - b.numero);
+  return oficiais;
+}

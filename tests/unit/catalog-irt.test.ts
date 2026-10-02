@@ -187,7 +187,8 @@ describe("recalibrar-irt-dificuldade — script", () => {
 
   test("todo arquivo do banco já está na forma canônica (o script não gera diff além do irt)", () => {
     for (const f of jsonDoBanco()) {
-      const bruto = readFileSync(f, "utf-8");
+      // A forma canônica é do JSON; a quebra de linha (CRLF no checkout do Windows com autocrlf) não conta.
+      const bruto = readFileSync(f, "utf-8").replace(/\r\n/g, "\n");
       expect(serializar(JSON.parse(bruto))).toBe(bruto);
     }
   });

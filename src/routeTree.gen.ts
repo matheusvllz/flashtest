@@ -55,6 +55,8 @@ import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as RedacaoCorretorRouteImport } from './routes/redacao.corretor'
 import { Route as RedacaoTreinoRouteImport } from './routes/redacao.treino'
+import { Route as SimuladoIndexRouteImport } from './routes/simulado.index'
+import { Route as SimuladoIdRouteImport } from './routes/simulado.$id'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
@@ -290,6 +292,16 @@ const RedacaoTreinoRoute = RedacaoTreinoRouteImport.update({
   path: '/redacao/treino',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SimuladoIndexRoute = SimuladoIndexRouteImport.update({
+  id: '/simulado/',
+  path: '/simulado/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SimuladoIdRoute = SimuladoIdRouteImport.update({
+  id: '/simulado/$id',
+  path: '/simulado/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VideoIdRoute = VideoIdRouteImport.update({
   id: '/video/$id',
   path: '/video/$id',
@@ -357,8 +369,10 @@ export interface FileRoutesByFullPath {
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
+  '/simulado/$id': typeof SimuladoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
+  '/simulado/': typeof SimuladoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
@@ -409,8 +423,10 @@ export interface FileRoutesByTo {
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
+  '/simulado/$id': typeof SimuladoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao': typeof RedacaoIndexRoute
+  '/simulado': typeof SimuladoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
@@ -462,8 +478,10 @@ export interface FileRoutesById {
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
+  '/simulado/$id': typeof SimuladoIdRoute
   '/video/$id': typeof VideoIdRoute
   '/redacao/': typeof RedacaoIndexRoute
+  '/simulado/': typeof SimuladoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
@@ -516,8 +534,10 @@ export interface FileRouteTypes {
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
+    | '/simulado/$id'
     | '/video/$id'
     | '/redacao/'
+    | '/simulado/'
     | '/api/auth/$'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
@@ -568,8 +588,10 @@ export interface FileRouteTypes {
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
+    | '/simulado/$id'
     | '/video/$id'
     | '/redacao'
+    | '/simulado'
     | '/api/auth/$'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
@@ -620,8 +642,10 @@ export interface FileRouteTypes {
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
+    | '/simulado/$id'
     | '/video/$id'
     | '/redacao/'
+    | '/simulado/'
     | '/api/auth/$'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
@@ -673,8 +697,10 @@ export interface RootRouteChildren {
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   RedacaoCorretorRoute: typeof RedacaoCorretorRoute
   RedacaoTreinoRoute: typeof RedacaoTreinoRoute
+  SimuladoIdRoute: typeof SimuladoIdRoute
   VideoIdRoute: typeof VideoIdRoute
   RedacaoIndexRoute: typeof RedacaoIndexRoute
+  SimuladoIndexRoute: typeof SimuladoIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
   ApiPagamentosWebhookRoute: typeof ApiPagamentosWebhookRoute
@@ -1004,6 +1030,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RedacaoTreinoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/simulado/': {
+      id: '/simulado/'
+      path: '/simulado'
+      fullPath: '/simulado/'
+      preLoaderRoute: typeof SimuladoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/simulado/$id': {
+      id: '/simulado/$id'
+      path: '/simulado/$id'
+      fullPath: '/simulado/$id'
+      preLoaderRoute: typeof SimuladoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/video/$id': {
       id: '/video/$id'
       path: '/video/$id'
@@ -1081,8 +1121,10 @@ const rootRouteChildren: RootRouteChildren = {
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   RedacaoCorretorRoute: RedacaoCorretorRoute,
   RedacaoTreinoRoute: RedacaoTreinoRoute,
+  SimuladoIdRoute: SimuladoIdRoute,
   VideoIdRoute: VideoIdRoute,
   RedacaoIndexRoute: RedacaoIndexRoute,
+  SimuladoIndexRoute: SimuladoIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiCronRetencaoRoute: ApiCronRetencaoRoute,
   ApiPagamentosWebhookRoute: ApiPagamentosWebhookRoute,

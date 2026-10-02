@@ -28,7 +28,7 @@ type Periodo = "mensal" | "anual";
 interface Linha {
   texto: string;
   entrega: Entrega;
-  /** Parado mesmo com a entrega publicada: simulado (DV49-09) e corretor até a rubrica (DV49-08). */
+  /** Parado mesmo com a entrega publicada: corretor até a rubrica (DV49-08). O simulado abriu na spec 50 (F10). */
   emBreve?: boolean;
 }
 
@@ -57,7 +57,7 @@ function linhas(plano: Plano): Linha[] {
     { texto: b.iaDiaFotos(BENEFICIOS.pro.iaMensagensDia, BENEFICIOS.pro.iaFotosDia), entrega: "E1" },
     { texto: b.funcoesPro, entrega: "E3" },
     { texto: b.corretor(BENEFICIOS.pro.correcoesRedacaoMes), entrega: "E3", emBreve: true },
-    { texto: b.simulados, entrega: "E3", emBreve: true },
+    { texto: b.simulados, entrega: "E3" },
     { texto: b.protetoresBonus(BENEFICIOS.pro.protetoresBonusMes, BENEFICIOS.pro.protetoresEstoqueMax), entrega: "E2" },
   ];
 }

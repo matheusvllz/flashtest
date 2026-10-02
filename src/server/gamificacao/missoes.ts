@@ -9,6 +9,7 @@ import { MISSOES_DO_DESAFIO, mesDe, sortearMissoes, type ContextoDasMissoes, typ
 import { chavePerola, PEROLAS_DESAFIO_DO_MES, PEROLAS_MISSOES_COMPLETAS, PEROLAS_POR_MISSAO } from "@/lib/perolas";
 import { nivelDeXp } from "@/lib/niveis";
 import { dominioPorArea } from "@/lib/dominio-por-area";
+import { MINIMO_PARA_MINI, semanaDe } from "@/lib/simulado";
 import type { SkillModelEntry } from "@/lib/learning/types";
 import type { NovidadesDoServidor } from "@/lib/sync/contrato";
 import type { Banco } from "../db/client";
@@ -29,11 +30,21 @@ import {
 } from "../db/schema";
 import type { Tx } from "../estudo/sincronizar";
 import { creditar } from "../economia/perolas";
+import { itensOficiais } from "../estudo/conteudo";
 import { alunoTemFuncao, recursoLigado } from "../planos/funcoes";
 
 type Leitor = Banco | Tx;
 
 /* ------------------------------------------------------------ contexto e sorteio --- */
+
+async function miniFeito(db: Leitor, userId: string, dia: string): Promise<boolean> {
+  const [s] = await db
+    .select({ fim: simulado.concluidoEm })
+    .from(simulado)
+    .where(eq(simulado.id, `mini:${userId}:${semanaDe(dia)}`))
+    .limit(1);
+  return !!s?.fim;
+}
 
 async function contextoDasMissoes(db: Leitor, userId: string, dia: string, agora: Date): Promise<ContextoDasMissoes> {
   const [doc] = await db.select({ doc: learningDoc.doc }).from(learningDoc).where(eq(learningDoc.userId, userId)).limit(1);
@@ -69,7 +80,8 @@ async function contextoDasMissoes(db: Leitor, userId: string, dia: string, agora
     areaComLacuna: comLacuna,
     cadernoParaHoje,
     temEscrita: recursoLigado("escrita"),
-    miniDisponivel: false,
+    // A missão do mini só entra se ele está aberto e o aluno ainda não fez o desta semana.
+    miniDisponivel: recursoLigado("miniSimulado") && itensOficiais().length >= MINIMO_PARA_MINI && !(await miniFeito(db, userId, dia)),
     flashcardsDevidos: 0,
   };
 }

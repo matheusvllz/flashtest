@@ -2,6 +2,7 @@ import { FeedbackSheet, type ModoOutroJeito } from "@/components/lessons/Feedbac
 import { DontKnowButton } from "@/components/learning/DontKnowButton";
 import { ExplanationLayers, hasExplanationLayers } from "@/components/learning/ExplanationLayers";
 import { FiguraDaQuestao } from "@/components/questao/FiguraDaQuestao";
+import { ReportarQuestao } from "@/components/questao/ReportarQuestao";
 import { COPY } from "@/lib/copy";
 import type { AnswerFeedback } from "@/lib/feedback/types";
 import { exerciseViewFor } from "@/lib/lessons/registry";
@@ -114,6 +115,9 @@ export function QuestionStepView({
           </FeedbackSheet>
         )
       )}
+
+      {/* Questão oficial: "Reportar problema" depois de respondida (spec 50 §5.9.2). */}
+      {checked && !silent && step.exerciseId.startsWith("oficial:") && <ReportarQuestao itemId={step.exerciseId} />}
     </div>
   );
 }

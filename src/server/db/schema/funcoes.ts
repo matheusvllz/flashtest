@@ -82,9 +82,42 @@ export const simulado = pgTable(
     iniciadoEm: quando("iniciado_em").notNull().defaultNow(),
     concluidoEm: quando("concluido_em"),
     resultado: jsonb("resultado").$type<JsonObjeto>(),
+    /** Spec 50 §5.9.4: rótulo honesto ("Prova do ENEM 2022 · Matemática" ou "Simulado nível ENEM"). */
+    rotulo: text("rotulo"),
+    ano: integer("ano"),
+    cronometro: boolean("cronometro").notNull().default(false),
+    /** Tempo com a prova aberta e não pausada (informado pelo aparelho; só informativo). */
+    tempoMs: integer("tempo_ms").notNull().default(0),
+    marcadas: jsonb("marcadas").$type<string[]>().notNull().default(sql`'[]'::jsonb`),
+    ultimaAtividadeEm: quando("ultima_atividade_em"),
   },
-  (t) => [index("simulado_user_idx").on(t.userId), check("simulado_tipo_ck", sql`${t.tipo} in ('area', 'dia')`)],
+  (t) => [
+    index("simulado_user_idx").on(t.userId),
+    check("simulado_tipo_ck", sql`${t.tipo} in ('area', 'dia', 'prova', 'nivel', 'mini')`),
+  ],
 );
+
+/** Reporte de problema numa questão (spec 50 §5.9.2): motivo fixo, sem texto livre. Duas iguais retiram o item. */
+export const questaoReporte = pgTable(
+  "questao_reporte",
+  {
+    userId: idUsuario(),
+    itemId: text("item_id").notNull(),
+    motivo: text("motivo").notNull(),
+    criadoEm: quando("criado_em").notNull().defaultNow(),
+  },
+  (t) => [
+    primaryKey({ columns: [t.userId, t.itemId, t.motivo] }),
+    check("questao_reporte_motivo_ck", sql`${t.motivo} in ('texto', 'imagem', 'gabarito', 'outro')`),
+  ],
+);
+
+/** Itens retirados por reporte até a conferência (spec 50 §5.9.2). */
+export const questaoRetirada = pgTable("questao_retirada", {
+  itemId: text("item_id").primaryKey(),
+  motivo: text("motivo").notNull(),
+  retiradaEm: quando("retirada_em").notNull().defaultNow(),
+});
 
 /** Redações corrigidas e treinos por partes (Pro). Texto apagável pelo aluno. */
 export const redacao = pgTable(

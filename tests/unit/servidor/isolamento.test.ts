@@ -75,6 +75,13 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/economia.ts#encerrarMetaOfensiva": "encerrar(db, s.userId)",
   "src/lib/api/economia.ts#calendarioDaOfensiva": "calendario(db, s.userId, mes)",
   "src/lib/api/missoes.ts#minhasMissoes": "ler(db, s.userId, dia) — missões sorteadas pelo próprio userId",
+  // Spec 50 F10 — simulado e reporte: tudo pelo userId da sessão; gabarito só depois de terminar.
+  "src/lib/api/simulado.ts#meusSimulados": "opcoesDeSimulado(db, s.userId)",
+  "src/lib/api/simulado.ts#iniciarSimulado": "iniciar(db, s.userId, pedido) — Pro checado no servidor",
+  "src/lib/api/simulado.ts#verSimulado": "estadoDoSimulado(db, s.userId, id) — prova: 'outro aluno não vê, não responde e não conclui'",
+  "src/lib/api/simulado.ts#responderSimulado": "responder(db, s.userId, id, …)",
+  "src/lib/api/simulado.ts#concluirSimulado": "concluir(db, s.userId, id) — correção do servidor",
+  "src/lib/api/simulado.ts#reportarQuestao": "reportar(db, s.userId, itemId, motivo) — um reporte por pessoa e motivo",
   "src/lib/api/retrospectiva.ts#minhaRetrospectiva": "ler(db, s.userId, hoje) — só contagens do próprio aluno",
 };
 

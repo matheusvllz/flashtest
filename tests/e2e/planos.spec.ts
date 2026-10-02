@@ -23,10 +23,10 @@ test("planos: preços do catálogo no mensal e no anual, e o que ainda não exis
   await expect(page.getByTestId("cartao-basic")).toContainText("R$ 24,90 por mês", { timeout: 20_000 });
   await expect(page.getByTestId("cartao-pro")).toContainText("R$ 39,90 por mês");
   await expect(page.getByTestId("cartao-gratis")).toContainText("Seu plano", { timeout: 20_000 });
-  // E1–E3 publicadas: vidas aparecem como benefício; simulado e corretor seguem "em breve" (DV49-08, DV49-09).
+  // E1–E3 publicadas: vidas aparecem como benefício; simulado aberto na spec 50 (F10); corretor segue "em breve" (DV49-08).
   await expect(page.getByTestId("cartao-gratis")).toContainText("5 vidas por dia");
   await expect(page.getByTestId("cartao-gratis")).not.toContainText("(em breve)");
-  await expect(page.getByTestId("cartao-pro")).toContainText("Simulados cronometrados (em breve)");
+  await expect(page.getByTestId("cartao-pro")).toContainText("Simulados e provas do ENEM");
   await expect(page.getByTestId("cartao-pro")).toContainText("Corretor de redação: 10 por mês (em breve)");
   await expect(page.getByTestId("cartao-pro")).toContainText("Explica de outro jeito e treino de redação por partes");
   await page.getByRole("radio", { name: "Anual" }).click();
