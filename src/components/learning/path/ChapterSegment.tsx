@@ -1,4 +1,6 @@
 import { useMemo } from "react";
+import { Link } from "@tanstack/react-router";
+import { FastForward } from "lucide-react";
 import { ChapterBanner } from "./ChapterBanner";
 import { ChapterMilestone } from "./ChapterMilestone";
 import { FocusCallout } from "./FocusCallout";
@@ -7,6 +9,7 @@ import { PathConnector } from "./PathConnector";
 import { PathNode, rowStyle } from "./PathNode";
 import type { FocaExpression } from "@/components/brand/FocaMark";
 import { buildChapterRows, highlightPlan, type PathFocus } from "@/lib/learning/path-layout";
+import { COPY } from "@/lib/copy";
 import type { ContinueTarget, TrailChapter } from "@/lib/learning/trail";
 import type { VozSlot } from "@/lib/voz";
 
@@ -61,6 +64,20 @@ export function ChapterSegment({
         onToggle={onToggle}
         listId={listId}
       />
+      {/* "Pular para cá" (spec 50 §5.7.1): só no capítulo-alvo da matéria. Fora do banner (que já é um botão). */}
+      {chapter.puloAqui ? (
+        <div className="mb-1 flex justify-end">
+          <Link
+            to="/pulo/$capituloId"
+            params={{ capituloId: chapter.id }}
+            className="btn-outline inline-flex min-h-11 items-center gap-1.5 px-4 py-2 text-sm"
+            aria-label={COPY.pulo.botaoAria(chapter.title)}
+            data-testid="pular-para-ca"
+          >
+            <FastForward size={16} aria-hidden="true" /> {COPY.pulo.botao}
+          </Link>
+        </div>
+      ) : null}
       {expanded ? (
         <ol id={listId} className="path-list" aria-label={chapter.title}>
           {rows.map((row) =>

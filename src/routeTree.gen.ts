@@ -52,6 +52,7 @@ import { Route as CadastroCompletarRouteImport } from './routes/cadastro_.comple
 import { Route as LearnLessonIdRouteImport } from './routes/learn.$lessonId'
 import { Route as PlanosRetornoRouteImport } from './routes/planos_.retorno'
 import { Route as PraticarErrosRouteImport } from './routes/praticar_.erros'
+import { Route as PuloCapituloIdRouteImport } from './routes/pulo.$capituloId'
 import { Route as RedacaoIndexRouteImport } from './routes/redacao.index'
 import { Route as RedacaoLicaoIdRouteImport } from './routes/redacao.$licaoId'
 import { Route as RedacaoCorretorRouteImport } from './routes/redacao.corretor'
@@ -281,6 +282,11 @@ const PraticarErrosRoute = PraticarErrosRouteImport.update({
   path: '/praticar/erros',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PuloCapituloIdRoute = PuloCapituloIdRouteImport.update({
+  id: '/pulo/$capituloId',
+  path: '/pulo/$capituloId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RedacaoIndexRoute = RedacaoIndexRouteImport.update({
   id: '/redacao/',
   path: '/redacao/',
@@ -391,6 +397,7 @@ export interface FileRoutesByFullPath {
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos/retorno': typeof PlanosRetornoRoute
   '/praticar/erros': typeof PraticarErrosRoute
+  '/pulo/$capituloId': typeof PuloCapituloIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
@@ -449,6 +456,7 @@ export interface FileRoutesByTo {
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos/retorno': typeof PlanosRetornoRoute
   '/praticar/erros': typeof PraticarErrosRoute
+  '/pulo/$capituloId': typeof PuloCapituloIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
@@ -508,6 +516,7 @@ export interface FileRoutesById {
   '/learn/$lessonId': typeof LearnLessonIdRoute
   '/planos_/retorno': typeof PlanosRetornoRoute
   '/praticar_/erros': typeof PraticarErrosRoute
+  '/pulo/$capituloId': typeof PuloCapituloIdRoute
   '/redacao/$licaoId': typeof RedacaoLicaoIdRoute
   '/redacao/corretor': typeof RedacaoCorretorRoute
   '/redacao/treino': typeof RedacaoTreinoRoute
@@ -568,6 +577,7 @@ export interface FileRouteTypes {
     | '/learn/$lessonId'
     | '/planos/retorno'
     | '/praticar/erros'
+    | '/pulo/$capituloId'
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
@@ -626,6 +636,7 @@ export interface FileRouteTypes {
     | '/learn/$lessonId'
     | '/planos/retorno'
     | '/praticar/erros'
+    | '/pulo/$capituloId'
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
@@ -684,6 +695,7 @@ export interface FileRouteTypes {
     | '/learn/$lessonId'
     | '/planos_/retorno'
     | '/praticar_/erros'
+    | '/pulo/$capituloId'
     | '/redacao/$licaoId'
     | '/redacao/corretor'
     | '/redacao/treino'
@@ -743,6 +755,7 @@ export interface RootRouteChildren {
   LearnLessonIdRoute: typeof LearnLessonIdRoute
   PlanosRetornoRoute: typeof PlanosRetornoRoute
   PraticarErrosRoute: typeof PraticarErrosRoute
+  PuloCapituloIdRoute: typeof PuloCapituloIdRoute
   RedacaoLicaoIdRoute: typeof RedacaoLicaoIdRoute
   RedacaoCorretorRoute: typeof RedacaoCorretorRoute
   RedacaoTreinoRoute: typeof RedacaoTreinoRoute
@@ -1061,6 +1074,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PraticarErrosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pulo/$capituloId': {
+      id: '/pulo/$capituloId'
+      path: '/pulo/$capituloId'
+      fullPath: '/pulo/$capituloId'
+      preLoaderRoute: typeof PuloCapituloIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/redacao/': {
       id: '/redacao/'
       path: '/redacao'
@@ -1199,6 +1219,7 @@ const rootRouteChildren: RootRouteChildren = {
   LearnLessonIdRoute: LearnLessonIdRoute,
   PlanosRetornoRoute: PlanosRetornoRoute,
   PraticarErrosRoute: PraticarErrosRoute,
+  PuloCapituloIdRoute: PuloCapituloIdRoute,
   RedacaoLicaoIdRoute: RedacaoLicaoIdRoute,
   RedacaoCorretorRoute: RedacaoCorretorRoute,
   RedacaoTreinoRoute: RedacaoTreinoRoute,

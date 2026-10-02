@@ -100,6 +100,11 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/amigos.ts#desbloquear": "desbloq(db, s.userId, ref) — só apaga bloqueio com user_id = sessão",
   "src/lib/api/amigos.ts#denunciar": "denunciarNoServidor(db, s.userId, data) — prova: 'B não lê nem altera as duplas de A com C'",
   "src/lib/api/retrospectiva.ts#minhaRetrospectiva": "ler(db, s.userId, hoje) — só contagens do próprio aluno",
+  // Spec 50 E7 — "pular para cá": posição, teste, correção e recompensas pelo userId da sessão; provas em
+  // tests/unit/servidor/pulo.test.ts ('B não vê, não retoma e não conclui o teste de A').
+  "src/lib/api/pulo.ts#previaDoPulo": "previa(db, s.userId, capituloId) — posição pelas conclusões do próprio aluno",
+  "src/lib/api/pulo.ts#iniciarPulo": "iniciar(db, s.userId, capituloId) — teste gravado com o userId da sessão",
+  "src/lib/api/pulo.ts#concluirPulo": "concluir(db, s.userId, id) — prova: 'B não vê, não retoma e não conclui o teste de A'",
 };
 
 function arquivos(dir: string): string[] {
