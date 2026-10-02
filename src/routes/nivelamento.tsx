@@ -12,8 +12,10 @@ import type { ExerciseAnswer } from "@/lib/lessons/types";
 import type { EnemArea } from "@/content/taxonomy/types";
 import type { QuestionStep } from "@/lib/learning/types";
 import {
+  cotasParaRetomar,
   currentPlacementArea,
   pickPlacementItem,
+  totalDoNivelamento,
   placementConcluido,
   type PlacementPoolItem,
   type PlacementScope,
@@ -25,6 +27,7 @@ import { usePlacementReconciliation } from "@/hooks/usePlacementReconciliation";
 import { SUBJECTS } from "@/data/subjects";
 import { FEATURES } from "@/lib/features";
 import { carregarTodosOsPacotes } from "@/lib/content/preload";
+import { PLACEMENT_SEGUNDOS_POR_QUESTAO } from "@/lib/adaptive/constants";
 import { COPY } from "@/lib/copy";
 import {
   beginPlacement,
@@ -114,6 +117,8 @@ function Nivelamento() {
   const [answer, setAnswer] = useState<ExerciseAnswer | null>(null);
   const [checked, setChecked] = useState(false);
   const [lastCorrect, setLastCorrect] = useState<boolean | null>(null);
+  // Abertura com o número de questões (spec 49 D49-11): aparece antes da 1ª questão; quem retoma não a vê de novo.
+  const [abriu, setAbriu] = useState(false);
 
   // Itens diagnósticos de pacote só entram no pool com o pacote em memória
   // (docs/30 §21.3). Sem a flag, nada a carregar.
@@ -179,7 +184,12 @@ function Nivelamento() {
       beginPlacement(seedRef.current);
       return;
     }
-    if (!emAndamento || !escolha) return;
+    if (!emAndamento) return;
+    if (!placement.cotas) {
+      setPlacementState({ ...placement, cotas: cotasParaRetomar(placement, scope, (a) => poolDiagnosticoDaArea(a).length) });
+      return;
+    }
+    if (!escolha) return;
     seedRef.current = placement.seed;
 
     if (escolha.item) {
@@ -248,6 +258,28 @@ function Nivelamento() {
 
   const area = currentPlacementArea(placement, scope);
   const itemAtual = checked && itemTravadoRef.current ? itemTravadoRef.current : (escolha?.item ?? null);
+  const total = totalDoNivelamento(placement);
+  const respondidas = Object.values(placement.areas).reduce((acc, a) => acc + a.itemIds.length, 0);
+
+  if (placement.cotas && respondidas === 0 && !abriu) {
+    return (
+      <PhoneFrame variant="reading">
+        <div className="flex min-h-screen flex-col bg-neve px-6 pb-8 pt-10" data-testid="nivelamento-abertura">
+          <p className="ds-label">{COPY.nivelamento.tituloRota}</p>
+          <h1 className="mt-3 font-display text-2xl font-bold text-abismo">{COPY.nivelamento.introTitulo(total)}</h1>
+          <p className="mt-3 text-sm leading-relaxed text-abismo">
+            {COPY.nivelamento.introCorpo(Math.round((total * PLACEMENT_SEGUNDOS_POR_QUESTAO) / 60))}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-nevoa">{COPY.nivelamento.introNaoSei}</p>
+          <div className="mt-auto pt-8">
+            <button type="button" onClick={() => setAbriu(true)} className="btn-primary w-full">
+              {COPY.nivelamento.introCta}
+            </button>
+          </div>
+        </div>
+      </PhoneFrame>
+    );
+  }
 
   if (!itemAtual) {
     return (
@@ -294,7 +326,7 @@ function Nivelamento() {
         <header className="px-5 pt-6">
           <p className="ds-label">{COPY.nivelamento.tituloRota}</p>
           <p className="mt-1 text-xs font-semibold text-nevoa">
-            {area ? AREA_NAMES[area] : ""} · {totalRespondidas + 1}
+            {area ? AREA_NAMES[area] : ""} · {COPY.nivelamento.progresso(totalRespondidas + 1, total)}
           </p>
           <p className="mt-2 text-xs leading-relaxed text-nevoa">{COPY.nivelamento.duranteHint}</p>
         </header>
@@ -325,7 +357,7 @@ function Nivelamento() {
             onDontKnow={() => responder(true)}
             isLast={false}
             questionNumber={totalRespondidas + 1}
-            questionTotal={totalRespondidas + 1}
+            questionTotal={total}
             silent
           />
         </div>

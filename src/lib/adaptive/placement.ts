@@ -17,9 +17,11 @@ import {
   PLACEMENT_MAX_ITENS_AREA_NORMAL,
   PLACEMENT_MAX_ITENS_AREA_PRIORITARIA,
   PLACEMENT_MAX_ITENS_TOTAL,
+  PLACEMENT_PESO_PRIORITARIA,
   PLACEMENT_PRIOR_MEAN,
   PLACEMENT_PRIOR_SD,
   PLACEMENT_SE_STOP,
+  PLACEMENT_TOTAL_ITENS,
 } from "./constants";
 
 /** Um item elegível pro nivelamento — forma mínima que o motor precisa (docs/30 §12.3). `incidence` vem do `SkillDef` (docs/30 §8.2), resolvido por quem monta o pool. */
@@ -111,6 +113,65 @@ export function fisherInformation3PL(theta: number, irt: ItemIrtLike): number {
 
 export function maxItensDaArea(prioritaria: boolean): number {
   return prioritaria ? PLACEMENT_MAX_ITENS_AREA_PRIORITARIA : PLACEMENT_MAX_ITENS_AREA_NORMAL;
+}
+
+/**
+ * Divide as `total` questões entre as áreas do escopo (spec 49 D49-11): peso 1,5 para prioritária e 1 para normal,
+ * maior resto para arredondar, nunca acima do que o pool da área tem; o que sobra de uma área curta vai para as
+ * outras. Com 2 prioritárias e 2 normais: 9, 9, 6, 6. Se o pool inteiro tiver menos que `total`, a soma é menor.
+ */
+export function cotasDoNivelamento(
+  scope: PlacementScope,
+  tamanhoDoPool: (area: EnemAreaLike) => number,
+  total = PLACEMENT_TOTAL_ITENS,
+): Record<string, number> {
+  const areas = scope.areas;
+  const cap = new Map(areas.map((a) => [a, Math.max(0, tamanhoDoPool(a))]));
+  const cotas = new Map(areas.map((a) => [a, 0]));
+  let restante = total;
+  // Distribui em rodadas: cada rodada reparte o que falta entre as áreas que ainda têm item.
+  for (let rodada = 0; rodada < 10 && restante > 0; rodada++) {
+    const abertas = areas.filter((a) => cotas.get(a)! < cap.get(a)!);
+    if (abertas.length === 0) break;
+    const peso = (a: EnemAreaLike) => (scope.priorityAreas.has(a) ? PLACEMENT_PESO_PRIORITARIA : 1);
+    const somaPesos = abertas.reduce((acc, a) => acc + peso(a), 0);
+    const ideais = abertas.map((a) => ({ a, ideal: (restante * peso(a)) / somaPesos }));
+    const partes = ideais.map(({ a, ideal }) => ({ a, n: Math.floor(ideal), resto: ideal - Math.floor(ideal) }));
+    let sobra = restante - partes.reduce((acc, p) => acc + p.n, 0);
+    // Maior resto primeiro; empate fica com a ordem do escopo (prioritárias vêm antes).
+    for (const p of [...partes].sort((x, y) => y.resto - x.resto)) {
+      if (sobra <= 0) break;
+      p.n += 1;
+      sobra -= 1;
+    }
+    for (const p of partes) {
+      const cabe = Math.min(p.n, cap.get(p.a)! - cotas.get(p.a)!);
+      cotas.set(p.a, cotas.get(p.a)! + cabe);
+      restante -= cabe;
+    }
+  }
+  return Object.fromEntries(cotas);
+}
+
+/** Total de questões do nivelamento: a soma das cotas, ou o teto antigo quando o estado não tem cotas. */
+export function totalDoNivelamento(state: Pick<PlacementState, "cotas">): number {
+  return state.cotas ? Object.values(state.cotas).reduce((acc, n) => acc + n, 0) : PLACEMENT_MAX_ITENS_TOTAL;
+}
+
+/**
+ * Cotas para um nivelamento já em andamento que ainda não as tem (começado antes da 49): calcula as cotas novas e
+ * garante que nenhuma área fique abaixo do que já foi respondido nela.
+ */
+export function cotasParaRetomar(
+  state: PlacementState,
+  scope: PlacementScope,
+  tamanhoDoPool: (area: EnemAreaLike) => number,
+): Record<string, number> {
+  const cotas = cotasDoNivelamento(scope, tamanhoDoPool);
+  for (const [area, a] of Object.entries(state.areas)) {
+    cotas[area] = Math.max(cotas[area] ?? 0, a.itemIds.length);
+  }
+  return cotas;
 }
 
 /** Critério de parada de UMA área (docs/30 §12.3): SE baixo, limite de itens da área, ou orçamento total esgotado. */
@@ -221,7 +282,9 @@ export function advancePlacement(
   const areaState = comResposta.areas[area]!;
   const totalItens = Object.values(comResposta.areas).reduce((acc, a) => acc + a.itemIds.length, 0);
   const prioritaria = scope.priorityAreas.has(area);
-  const parar = shouldStopArea(areaState, prioritaria, PLACEMENT_MAX_ITENS_TOTAL - totalItens);
+  const parar = comResposta.cotas
+    ? areaState.itemIds.length >= (comResposta.cotas[area] ?? 0) || totalItens >= totalDoNivelamento(comResposta)
+    : shouldStopArea(areaState, prioritaria, PLACEMENT_MAX_ITENS_TOTAL - totalItens);
   if (!parar) return comResposta;
   return { ...comResposta, areas: { ...comResposta.areas, [area]: { ...areaState, done: true } } };
 }
@@ -232,10 +295,11 @@ export function currentPlacementArea(
   scope: PlacementScope,
 ): EnemAreaLike | null {
   const totalItens = Object.values(state.areas).reduce((acc, a) => acc + a.itemIds.length, 0);
-  if (totalItens >= PLACEMENT_MAX_ITENS_TOTAL) return null;
+  if (totalItens >= totalDoNivelamento(state)) return null;
   for (const area of scope.areas) {
     const areaState = state.areas[area];
     if (areaState?.done) continue;
+    if (state.cotas && (areaState?.itemIds.length ?? 0) >= (state.cotas[area] ?? 0)) continue;
     return area;
   }
   return null;

@@ -455,6 +455,11 @@ export interface PlacementState {
   appliedAt?: string | null;
   /** `PLACEMENT_APPLY_VERSION` vigente quando aplicou — reaplicar se for menor que a atual. */
   appliedVersion?: number;
+  /**
+   * Quantas questões cada área recebe (spec 49 D49-11, nivelamento de tamanho fixo). Ausente = nivelamento começado
+   * antes da 49, que segue a regra antiga (parada por SE, 6/4 por área, 24 no total) até a rota atribuir as cotas.
+   */
+  cotas?: Record<string, number>;
 }
 
 /** Sessão de foco TEMPORÁRIA ("só hoje") — distinta de `prefs.studyFocus` (permanente, docs/30 §15). */

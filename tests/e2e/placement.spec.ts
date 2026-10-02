@@ -37,8 +37,19 @@ async function pronto(page: import("@playwright/test").Page): Promise<boolean> {
  * O ÚLTIMO item fecha o placement assim que verificado, pulando a tela "Resposta registrada." — e, desde
  * a T-03.3 (docs/36), o resultado só aparece DEPOIS de aplicar o nivelamento ("Montando sua trilha…" no
  * meio). Por isso, depois do "Verificar", espera ou o botão de seguir ou o "Pronto." (o que vier). */
+/** Abertura do nivelamento (spec 49 D49-11): avisa as 30 questões; o CAT começa no toque. Quem retoma não vê a abertura. */
+async function comecarNivelamento(page: import("@playwright/test").Page) {
+  const abrir = page.getByRole("button", { name: "Começar nivelamento" });
+  await abrir.or(page.getByRole("radio").first()).first().waitFor({ timeout: 15_000 });
+  if (await abrir.isVisible()) {
+    await expect(page.getByRole("heading", { name: "São 30 questões" })).toBeVisible();
+    await abrir.click();
+  }
+  await page.getByRole("radio").first().waitFor({ timeout: 15_000 });
+}
+
 async function responderCicloReal(page: import("@playwright/test").Page) {
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 40; i++) {
     if (await pronto(page)) return;
     await page.getByRole("radio").first().click();
     await page.getByRole("button", { name: "Verificar" }).click();
@@ -47,7 +58,7 @@ async function responderCicloReal(page: import("@playwright/test").Page) {
     if (await pronto(page)) return;
     await seguir.click();
   }
-  throw new Error("nivelamento não chegou em 'Pronto.' depois de 30 rodadas");
+  throw new Error("nivelamento não chegou em 'Pronto.' depois de 40 rodadas");
 }
 
 /**
@@ -119,12 +130,14 @@ test("flag desligada: /nivelamento redireciona pra /trilha", async ({ page }) =>
 test("flag ligada, pool real (Onda 1, F11.6): CAT responde de ponta a ponta e mede pelo menos uma área", async ({
   page,
 }) => {
-  test.setTimeout(90_000); // até 24 itens reais (PLACEMENT_MAX_ITENS_TOTAL) — o default de 30s não alcança.
+  test.setTimeout(150_000); // 30 itens reais (PLACEMENT_TOTAL_ITENS, spec 49 D49-11) — o default de 30s não alcança.
   await ligarNivelamento(page);
   await seedEstado(page);
   await page.goto("/nivelamento?debug=1", { waitUntil: "domcontentloaded" });
 
-  await page.getByRole("radio").first().waitFor({ timeout: 15000 }); // pacotesProntos + primeiro item
+  await comecarNivelamento(page);
+  // Contador fixo (spec 49 D49-11): o total é sempre o mesmo do aviso.
+  await expect(page.getByText(/Questão 1 de 30/)).toBeVisible();
   await responderCicloReal(page);
   await expect(page.getByRole("heading", { name: "Pronto. Sua trilha foi ajustada." })).toBeVisible();
 
@@ -157,11 +170,11 @@ test("flag ligada, pool real (Onda 1, F11.6): CAT responde de ponta a ponta e me
 test("refazer nivelamento (perfil) começa um placement novo quando o anterior já estava concluído", async ({
   page,
 }) => {
-  test.setTimeout(120_000); // 2 CATs reais nesta única prova (o de antes + o refeito).
+  test.setTimeout(240_000); // 2 CATs reais nesta única prova (o de antes + o refeito), 30 itens cada.
   await ligarNivelamento(page);
   await seedEstado(page);
   await page.goto("/nivelamento?debug=1", { waitUntil: "domcontentloaded" });
-  await page.getByRole("radio").first().waitFor({ timeout: 15000 });
+  await comecarNivelamento(page);
   await responderCicloReal(page);
   await expect(page.getByText("Pronto.")).toBeVisible();
 
@@ -170,7 +183,7 @@ test("refazer nivelamento (perfil) começa um placement novo quando o anterior j
   await expect(botao).toBeVisible({ timeout: 15000 });
   await botao.click();
   await page.waitForURL(/\/nivelamento/, { timeout: 15000 });
-  await page.getByRole("radio").first().waitFor({ timeout: 15000 });
+  await comecarNivelamento(page);
 });
 
 /**
@@ -199,7 +212,7 @@ test("término normal aplica priors, grava appliedAt e replaneja a fila (docs/36
   expect(idsAntes.length).toBeGreaterThan(0);
 
   await page.goto("/nivelamento?debug=1", { waitUntil: "domcontentloaded" });
-  await page.getByRole("radio").first().waitFor({ timeout: 15_000 });
+  await comecarNivelamento(page);
   await responderCicloReal(page);
   await expect(page.getByText("Pronto.")).toBeVisible();
   // A rota recompôs a fila com o nivelamento aplicado ANTES de mostrar o resultado (T-06.1).

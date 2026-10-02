@@ -181,6 +181,16 @@ export const PLACEMENT_MAX_ITENS_AREA_PRIORITARIA = 6;
 export const PLACEMENT_MAX_ITENS_AREA_NORMAL = 4;
 export const PLACEMENT_MIN_ITENS_ELEGIVEIS_AREA = 4;
 export const PLACEMENT_MAX_ITENS_TOTAL = 24;
+/**
+ * Nivelamento de tamanho fixo (spec 49 D49-11): 30 questões, sem parada antecipada por SE — o aviso "São 30
+ * questões" tem de ser verdadeiro. As constantes acima (SE, 6/4 por área, 24 no total) continuam valendo só para
+ * nivelamentos começados antes (estado sem `cotas`).
+ */
+export const PLACEMENT_TOTAL_ITENS = 30;
+/** Peso de uma área prioritária na divisão das 30 (2 prioritárias + 2 normais = 9, 9, 6, 6). */
+export const PLACEMENT_PESO_PRIORITARIA = 1.5;
+/** Minutos estimados por questão no aviso de abertura (30 × 50 s ≈ 25 min). */
+export const PLACEMENT_SEGUNDOS_POR_QUESTAO = 50;
 /** σ mínimo do prior aplicado a habilidades não medidas da área (§12.3). */
 export const PLACEMENT_SIGMA_MIN_PRIOR = 0.9;
 /** a/c nominais pra Fisher information quando o item real não tem `a`/`c` calibrados (mesmo espírito de `select-items.ts`). */
