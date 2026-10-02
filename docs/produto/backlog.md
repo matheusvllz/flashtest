@@ -93,12 +93,12 @@ Pendências reais do Foca, consolidadas dos registros de execução e dos achado
 | B-069 | Tela de resultado do checkpoint ("Subiu", "Firme", "Vale revisar" por habilidade, `30` §13.5): não existe (`CheckpointResult.tsx` ausente; a conclusão usa a tela genérica do `MicroLessonPlayer`). O motivo do adiamento (recalibração não integrada) caiu com o `36` T-04.4 | 32 Fase 14, divergência 3; 37 §5 | P2 | produto | — | agente | **feito, validado localmente** → 48 T-48.5.1 |
 | B-070 | Resultado do nivelamento com indicador visual (hoje só texto de faixa) | 32 F15.3 (recomendação) | P2 | produto | Contrato de tela do `36` §F.5 (sem nota nem %) | agente | **feito, validado localmente** → 48 T-48.5.2 |
 | B-071 | Remover o caminho de rollback `dashboard.tsx` e `NAV_ITEMS_V1` depois que o backend estabilizar | 46 §C.6; 25 (rollback) | P2 | técnico | 46 F14 | agente | aberto |
-| B-072 | Service worker (offline real): há `site.webmanifest`, não há service worker. Pré-requisito provável de APK/TWA | 45 §6; 46 §A.2, §I.3 | P2 | produto | — | agente | aberto |
+| B-072 | ~~Service worker (offline real)~~ Feito na 49 T-49.9.3 (só Basic/Pro; teste em aparelho: B-170): há `site.webmanifest`, não há service worker. Pré-requisito provável de APK/TWA | 45 §6; 46 §A.2, §I.3 | P2 | produto | — | agente | feito na 49, não publicado |
 | B-073 | Notificações (não existem): decidir se existem e se a Foca aparece com arte ou só texto | 15 §9; 46 §A.2, §B.3 | P2 | produto | Avaliação ECA Digital (46 T-11.2) | proprietário | aberto |
 | B-074 | Telas de lista secundárias (redação, flashcards, plano, ranking, tópicos) sem grade própria no desktop (coluna de 680 px) | 45 §10 | P2 | produto | — | agente | **feito, validado localmente** → 48 T-48.7.1 (ranking: só layout) |
 | B-075 | Conquistas/badges, desafio opcional de capítulo e simulado completo | 22 §6; 26 §8; 46 §B.3 | P2 | produto | Revisão de `16` §9 por alguém de fora (16 §11); ECA Digital | proprietário | aberto (fora do escopo do 46) |
 | B-076 | Medir a tese: retorno no dia seguinte e conversão da landing, com privacidade. Analytics externo segue proibido sem spec própria (`20` §14, §22; público menor de idade) | 16 §11; 08 §10; 14 §10; 41 §9 DEP-7; 46 §I.3 | P1 | produto | Spec própria; contas (B-060) | proprietário | aberto |
-| B-077 | Ranking real entre alunos (o fictício sai de produção no B-064) | 16 §11; 46 §B.3 | P2 | produto | B-062; ECA Digital | proprietário | aberto (fora do escopo do 46) |
+| B-077 | Ranking real entre alunos (o fictício sai de produção no B-064) — feito na 49 F8 (só 18+) | 16 §11; 46 §B.3 | P2 | produto | B-062; ECA Digital | proprietário | feito na 49, não publicado |
 
 ## Técnico
 
@@ -117,6 +117,10 @@ Pendências reais do Foca, consolidadas dos registros de execução e dos achado
 | B-090 | `learning.rewardLedger` sem limite de tamanho | 46 §A.3 | P2 | técnico | Autoridade do servidor (46 T-06.4) | agente | aberto |
 | B-165 | Separar metadados das lições de redação (ids, títulos, contagem, habilidades por exercício) do texto dos exercícios: `trilhas-*.js` tem 158 KB comprimidos no caminho da trilha | 48 `desempenho.md` | P1 | técnico | — | agente | aberto (precisa de tarefa com testes do motor) |
 | B-166 | Tarefas longas na landing (~850 ms somados com CPU 4×) na hidratação | 48 `desempenho.md` | P2 | técnico | — | agente | aberto |
+| B-167 | Itens do caderno de erros entrarem na jornada como revisão escolhida pelo motor (hoje a revisão é uma sessão própria em `/caderno`) — pede contrato em `contratos.md` | 49 DV49-10 | P2 | produto | — | agente (com spec) | aberto |
+| B-168 | Simulado cronometrado do Pro: liberar quando houver itens revisados suficientes por área (45 por área, 90 por dia de prova) | 49 DV49-09, T-49.9.5 | P1 | conteúdo | B-040, B-041 | revisão externa + agente | aberto |
+| B-169 | Corretor de redação: rubrica revisada por professor externo antes de ligar `CORRETOR_HABILITADO`; depois, foto com transcrição conferida | 49 DV49-08, T-49.9.7 | P1 | conteúdo | B-040 | proprietário (contratação) + agente | aberto |
+| B-170 | Teste real do estudo sem internet no preview (aparelho em modo avião depois de "Baixar a semana") | 49 DV49-11, T-49.9.3 | P2 | produto | — | proprietário | aberto |
 
 ## Segurança e IA
 

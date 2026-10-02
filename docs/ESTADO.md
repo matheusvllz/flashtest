@@ -15,9 +15,13 @@ canonico-de: [estado atual, próxima tarefa]
 - Tutorial do proprietário: [specs/49-planos-e-monetizacao/preparacao.md](specs/49-planos-e-monetizacao/preparacao.md)
 - Registro: [specs/49-planos-e-monetizacao/registro.md](specs/49-planos-e-monetizacao/registro.md)
 - **Feito:** T-49.0.1 (aprovação) e T-49.0.2 (notas nas regras revistas; o texto novo entra por entrega publicada). Preparação: Asaas sandbox e credenciais em `.env.asaas-sandbox`, bypass da Vercel, webhook do Asaas e URI do Google para o preview, `ads.txt` publicado (`df46bc6`).
-- **Bloqueios do proprietário:** conta do AdSense em análise (o Ad Manager só abre depois); e-mail de suporte (passo 7); publicar o login com Google (passo 4.1); teste da rolagem no Instagram (passo 10, depois do diagnóstico da F1).
-- **Feito na E1:** preview (T-49.0.3), T-49.1.1 (diagnóstico; o teste em aparelho é do proprietário), T-49.1.3, T-49.1.4, T-49.4.1, T-49.4.2, T-49.2.1. **Bloqueada:** T-49.1.2 (correção da rolagem) até os diagnósticos do iPhone e do Android.
-- **Próximo passo:** F2 (migração `0001_planos`, plano decidido no servidor, cota da Foca IA e teto por plano) e F3 (checkout, webhook e assinatura no sandbox do Asaas). Proprietário: chave Pix no sandbox (tutorial 1.4) e o teste da rolagem no Instagram (Passo 10, link `https://www.focaedu.com/?diagnostico-rolagem=1`).
+- **Feito (branch `spec-49`, preview `https://foca-git-spec-49-foca3.vercel.app`; nada disso está na `main`, exceto o que foi publicado em `9337ce4`):**
+  - **E1:** preview (T-49.0.3), diagnóstico da rolagem (T-49.1.1), perfil com dados da conta, "Criar conta" e Google novo pelo quiz, nivelamento de 30 (T-49.1.3, T-49.1.4, T-49.4.1, T-49.4.2), catálogo (T-49.2.1); F2 (plano no servidor, migração 0001, cota da Foca IA por plano) e F3 (checkout do Asaas sandbox, webhook idempotente, assinatura, cancelar, reembolso, tela de planos).
+  - **E2:** vidas do Free, anúncios não personalizados com consentimento e provedor falso, protetores por plano e avulsos (F5–F7; migração 0002).
+  - **E3:** ranking 18+ (F8) e funções pagas (F9): caderno de erros, cronograma, estudo sem internet, explica de outro jeito, corretor de redação (desligado até a rubrica: DV49-08) e treino por partes (migração 0003). **Simulado parado** por falta de itens revisados (DV49-09, B-168).
+  - Migrações 0001–0003 aplicadas **só** na branch `dev` do Neon.
+- **Bloqueios do proprietário:** T-49.1.2 (correção da rolagem) espera o teste no Instagram (iPhone e Android, link `https://www.focaedu.com/?diagnostico-rolagem=1`); pagamento de teste na página do Asaas (reCAPTCHA) e chave Pix no sandbox (tutorial 1.4); AdSense em análise (o Ad Manager só abre depois); chave da OpenAI; revisão jurídica das cláusulas (`docs/legal/rascunho-clausulas-49.md`); rubrica do corretor (B-169); CNPJ e Vercel Pro antes de vender de verdade; e-mail de suporte (passo 7); publicar o login com Google (passo 4.1).
+- **Próximo passo:** revisão L3 final (T-49.10.1) feita na branch; publicar E1–E3 na `main` **só com pedido explícito** do proprietário — junto com aplicar as migrações 0001–0003 em produção, atualizar `ENTREGAS_PUBLICADAS` em `src/lib/planos.ts` e trocar os textos legais. Flags de produção continuam desligadas até lá.
 - **Produção:** `main` = `9337ce4` (02/10): correção de segurança DV49-01, nivelamento de 30, perfil com dados da conta, "Criar conta" pelo quiz, painel `?diagnostico-rolagem=1` e catálogo de planos (inerte). Contas com Google e e-mail; Foca IA em fallback local.
 
 ### Iniciativa anterior
@@ -43,6 +47,8 @@ canonico-de: [estado atual, próxima tarefa]
 - **Landing (D-20):** todos os CTAs de começar levam ao quiz, mesmo com flags antigas salvas no aparelho; "Entrar" continua separado. Fluxo até cadastro no final validado localmente. Alterações D-19/D-20 presentes no working tree, sem commit nem publicação.
 
 ## Último checkpoint verde
+
+- **49 E1–E3 (02/10, branch `spec-49`):** tipos ✅ · unitários **1471 pass / 0 fail** · lint 0 erros / 17 avisos · build e build `vercel` ✅ · docs:check ✅ · `test:neon` 7 pass (branch `dev`) · **E2E completo 561 passed / 0 failed / 82 skipped** · `spec-verifier` rodado e achados corrigidos (registro da 49). Validado localmente; não publicado.
 
 - **Publicação da 48 (01/10, `382a359`):** tipos ✅ · unitários ✅ · lint 0 erros · build e build `vercel` ✅ · E2E completo **542 passed / 1 instável / 73 skipped** · produção: `/api/saude` banco ok, rotas 200/307/401 esperadas, Google redireciona com o `client_id` e o retorno certos. CI do GitHub falha no `docs:check` por caminhos gerados de `public/content/` (preexistente, não bloqueia a Vercel).
 - **48 completa (30/09, working tree, sem commit):** tipos ✅ · unitários **1381 pass / 0 fail** · lint 0 erros / 17 avisos · build e build `vercel` ✅ · docs:check ✅ · **E2E completo 540 passed / 0 failed / 73 skipped** · `test:neon` **7 pass**. Validado localmente (F1–F9) e em ambiente integrado (Neon). Nada publicado.

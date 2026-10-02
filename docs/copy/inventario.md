@@ -252,6 +252,22 @@ Escrito com `better-writing` contra o [COPY.md](../COPY.md): termos do produto (
 | `COPY.conta.dadosTitulo` / `exportar*` / `excluir*` | "Seus dados" · "Baixar meus dados" · "Você já baixou seus dados há pouco. Tente de novo daqui a uma hora." · "Excluir conta" · "Excluir sua conta?" · "Isso apaga sua conta e todo o estudo salvo nela, sem volta. O que está só neste aparelho também sai." · "Se você entrou com o Google, deixe em branco." · "Excluir minha conta" · "Senha incorreta. Confira e tente de novo." | Perfil, com conta real | Destrutivo: tom sério, consequência repetida no botão |
 | `COPY.tutor.sugestoesGeral[0]` | "Por onde eu começo?" (era "Quais são minhas lacunas?") | Sugestão do tutor sem questão em foco | As "lacunas" eram a heurística do perfil |
 
+### 2.14 Planos, vidas, anúncios, ranking 18+ e funções pagas (docs/specs/49-planos-e-monetizacao E1–E3, 02/10/2026)
+
+Escrito direto contra o [COPY.md](../COPY.md), sem skill de escrita (plugins não carregados; anotado no registro da 49): sem urgência, sem "grátis para sempre", sem culpa quando a vida, o plano ou a cota acabam, e nunca "sua nota no ENEM". Nenhum conteúdo pedagógico alterado. **Revisão humana de tom pendente** antes da publicação.
+
+| Chave | Exemplo | Uso | Regra que cumpre |
+|---|---|---|---|
+| `COPY.planos.*` | "Seu plano" · "Dá para cancelar quando quiser, em Perfil, sem perder o que você estudou." · "Nos primeiros 7 dias, o reembolso é integral." · "Pronto, seu plano Basic está ativo." | `/planos`, retorno do pagamento, perfil | §6 da spec 49: preço e periodicidade por extenso; sem contagem regressiva |
+| `COPY.vidas.*` / `COPY.anuncios.*` | "Suas vidas de hoje acabaram" · "Elas voltam amanhã." · Aceitar/Recusar com o mesmo peso | Folha sem vidas, folha de cookies | R-GAM-2 revisto: sem "você perdeu", sem contagem |
+| `COPY.protetores.*` | "Cada protetor cobre um dia parado, sozinho. Seu plano guarda até {n}." | Folha da sequência, `/planos` | Nenhuma oferta no momento de risco da sequência |
+| `COPY.ranking.*` | "O ranking é para maiores de 18. O resto do Foca continua igual para você." · "Reportar apelido" | `/ranking` | D49-06; substitui o texto da turma fictícia (item "Ranking" da seção 3 resolvido) |
+| `COPY.caderno.*` | "As questões que você errou voltam aqui em 1, 3, 7 e 14 dias…" · "Nada para revisar hoje." · "Pedir para a Foca IA explicar" | `/caderno` | Errar não é falha (R-MASC-2); Foca IA só no toque |
+| `COPY.cronograma.*` | "Faltam {n} dias para a prova." · "Data estimada: o INEP ainda não publicou a data oficial." | `/plan` | Data padrão sempre marcada como estimada |
+| `COPY.feedback.outroJeito.*` | "Passo a passo" · "Exemplo do dia a dia" · "O que a questão pediu" | Folha de feedback (Pro) | Regra dura 7 |
+| `COPY.redacaoIa.*` | "Estimativa da Foca IA, não é a nota oficial." · "Tema escrito pelo Foca para treinar. Não é tema oficial nem previsão de prova." · comentários automáticos do treino | `/redacao/corretor`, `/redacao/treino` | §5.9: nunca "sua nota no ENEM"; nada de citação inventada |
+| `COPY.offline.*` | "Baixar a semana" · "{n} respostas esperando a internet." | `/offline` | Substitui o marcador demonstrativo (item "offline.tsx" da seção 3 resolvido) |
+
 ## 3. Pendente — inventariado, não revisado
 
 Levantamento por arquivo (não por string individual — a granularidade da seção 2 é o padrão a aplicar quando cada um destes for revisado). Nenhum destes foi confirmado livre de tom incompatível; tratar como não verificado.
