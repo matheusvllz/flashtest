@@ -268,6 +268,21 @@ Escrito direto contra o [COPY.md](../COPY.md), sem skill de escrita (plugins nã
 | `COPY.redacaoIa.*` | "Estimativa da Foca IA, não é a nota oficial." · "Tema escrito pelo Foca para treinar. Não é tema oficial nem previsão de prova." · comentários automáticos do treino | `/redacao/corretor`, `/redacao/treino` | §5.9: nunca "sua nota no ENEM"; nada de citação inventada |
 | `COPY.offline.*` | "Baixar a semana" · "{n} respostas esperando a internet." | `/offline` | Substitui o marcador demonstrativo (item "offline.tsx" da seção 3 resolvido) |
 
+### 2.15 Questões com imagem e tabela, visualizador e `/creditos` (docs/specs/50-gamificacao-e-pratica T-50.9.2 e T-50.9.7, 02/10/2026)
+
+Escrito direto contra o [COPY.md](../COPY.md) e o [03](03-ux-writing.md) §2 (rótulos e aria-labels, sem skill de escrita; plugins não carregados na sessão). "Gire o celular para ver melhor" é texto literal da spec 50 §5.9.3. Nenhum nome acessível contém "Verificar", "Continuar" ou "responder" (colisão por substring no Playwright, §2.4). Nenhum conteúdo pedagógico alterado. **Revisão humana de tom pendente** antes da publicação.
+
+| Chave | Texto | Uso | Revisão |
+|---|---|---|---|
+| `COPY.questao.ampliarImagem` / `ampliarImagemDe(alt)` | "Ampliar imagem" · "Ampliar imagem: {alt}" | Nome do botão que envolve a imagem do enunciado e do botão de ampliar da alternativa-imagem | `tests/e2e/questao-imagem.spec.ts` |
+| `COPY.questao.verDescricao` / `esconderDescricao` | "Ver descrição" · "Esconder descrição" | Disclosure da descrição longa (`aria-expanded`) | idem |
+| `COPY.questao.descricaoAutomatica` | "Descrição gerada automaticamente." | Abaixo da descrição longa quando `altAutomatico` | idem |
+| `COPY.questao.gireOCelular` | "Gire o celular para ver melhor" | Imagem larga em retrato, uma vez por sessão | idem |
+| `COPY.questao.tabelaSemLegenda` / `tabelaRolar` | "Tabela da questão" · "Role para o lado para ver a tabela inteira." | Caption só para leitor de tela quando a tabela não tem legenda; dica quando a tabela passa da largura | idem |
+| `COPY.questao.visualizadorTitulo` / `visualizadorDica` | "Imagem da questão" · "Use + e − para ampliar ou reduzir, 0 para voltar ao tamanho normal e as setas para mover a imagem." | Título e descrição (`aria-describedby`) do visualizador | idem |
+| `COPY.questao.fechar` / `diminuirZoom` / `aumentarZoom` / `zoomAtual(n)` | "Fechar" · "Diminuir zoom" · "Aumentar zoom" · "Zoom {n}" | Controles do visualizador; `zoomAtual` em `aria-live="polite"` | idem |
+| `COPY.creditos.*` | "Créditos e fontes" · "Questões do ENEM, ENEM PPL e ENCCEJA" · citação literal do rodapé do INEP · "Questões do Foca" · "Pedir a retirada de uma questão" · "Esse botão chega numa próxima versão do app." | Página `/creditos` e linha no Perfil | idem; sem juridiquês, sem prometer e-mail ou formulário que não existem |
+
 ## 3. Pendente — inventariado, não revisado
 
 Levantamento por arquivo (não por string individual — a granularidade da seção 2 é o padrão a aplicar quando cada um destes for revisado). Nenhum destes foi confirmado livre de tom incompatível; tratar como não verificado.

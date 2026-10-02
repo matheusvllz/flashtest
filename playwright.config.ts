@@ -8,6 +8,14 @@ const SESSAO_ALUNO = "tests/e2e/.auth/aluno.json";
 const comConta = { dependencies: ["setup"] as string[] };
 
 /**
+ * Origem do servidor de teste. Padrão: a 8080 de sempre. `E2E_ORIGEM` (ex.: `http://localhost:8091`) sobe o
+ * servidor de desenvolvimento noutra porta, para rodar os E2E de um worktree enquanto outro `bun run dev` ocupa a
+ * 8080 (com `reuseExistingServer`, o teste usaria o código do outro checkout). Mesma variável em `helpers/conta.ts`.
+ */
+const ORIGEM = process.env.E2E_ORIGEM ?? "http://localhost:8080";
+const PORTA_PROPRIA = process.env.E2E_ORIGEM ? new URL(process.env.E2E_ORIGEM).port : undefined;
+
+/**
  * Config mínima da Fase 0 (docs/20 §19.1/§19.3): servidor local, projeto
  * desktop Chromium, fixtures isoladas (cada teste usa seu próprio contexto de
  * navegador, então `localStorage` nunca vaza entre testes) e captura em falha.
@@ -21,7 +29,7 @@ export default defineConfig({
   retries: 0,
   reporter: [["list"]],
   use: {
-    baseURL: "http://localhost:8080",
+    baseURL: ORIGEM,
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
     viewport: { width: 390, height: 844 }, // largura mínima da matriz (§19.2)
@@ -51,7 +59,7 @@ export default defineConfig({
     ).map(([name, width, height]) => ({
       name,
       // `LP_BASE_URL` roda a landing contra o build de produção (NITRO_PRESET=node-server, docs/44 §9).
-      use: { ...devices["Desktop Chrome"], viewport: { width, height }, baseURL: process.env.LP_BASE_URL ?? "http://localhost:8080" },
+      use: { ...devices["Desktop Chrome"], viewport: { width, height }, baseURL: process.env.LP_BASE_URL ?? ORIGEM },
       testMatch: ["**/marketing/*.spec.ts"],
     })),
     // Layout em tela larga (docs/36 §F.6, RU-30) — só os specs marcados como
@@ -76,11 +84,14 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "bun run dev",
-    url: "http://localhost:8080",
+    command: PORTA_PROPRIA ? `bun run dev --port ${PORTA_PROPRIA} --strictPort` : "bun run dev",
+    url: ORIGEM,
     reuseExistingServer: true,
     // Todos os testes saem do mesmo IP: sem isto o rate limit do login barraria os E2E (ignorado em produção).
-    env: { AUTH_RATE_LIMIT_DESLIGADO: "true" },
+    env: {
+      AUTH_RATE_LIMIT_DESLIGADO: "true",
+      ...(PORTA_PROPRIA ? { BETTER_AUTH_URL: ORIGEM } : {}),
+    },
     timeout: 30_000,
   },
 });

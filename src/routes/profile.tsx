@@ -338,6 +338,7 @@ function Profile() {
           />
           <Row label={COPY.conta.termos} onClick={() => nav({ to: "/termos" })} />
           <Row label={COPY.conta.privacidade} onClick={() => nav({ to: "/privacidade" })} />
+          <Row label={COPY.creditos.titulo} onClick={() => nav({ to: "/creditos" })} />
         </div>
 
         {conta && !conta.comConta && (

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { readFileSync } from "node:fs";
-import { validateExercise, type ValidateContext } from "../../scripts/content/validate";
+import { readdirSync, readFileSync } from "node:fs";
+import { validarMidia, validateExercise, type ValidateContext } from "../../scripts/content/validate";
 import { avisoPosicaoLote, avisosDeForma, metricasForma, parseExcecoes } from "../../scripts/content/qualidade-forma";
 import { isPublishable, temAvisoAlto } from "../../scripts/content/publish";
 import type { Candidate } from "../../scripts/content/pipeline-types";
@@ -460,5 +460,74 @@ describe("isPublishable: aviso ALTO exige aprovação explícita (docs/36 T-07.2
     const c = cand({ validation: { ok: true, issues: [], warnings: [{ regra: "dispersao-tamanhos", severidade: "info", detalhe: "x" }] } });
     expect(temAvisoAlto(c)).toBe(false);
     expect(isPublishable(c, true)).toBe(true);
+  });
+});
+
+describe("validarMidia — imagens, tabelas e marcadores (spec 50 §5.9.3)", () => {
+  const img = (url = "/content/img/2019/d1-q001-1.webp") => ({ url, alt: "Gráfico de barras sintético", largura: 800, altura: 400 });
+
+  test("imagem com marcador válido passa; o marcador não conta como palavra do enunciado", () => {
+    const ex = itemBase({ pergunta: `${itemBase().pergunta}\n[[imagem:0]]`, imagens: [img()] });
+    expect(validarMidia(ex, { oficial: true })).toEqual([]);
+    expect(validateExercise(ex, "mat:x", ctxOk).ok).toBe(true);
+  });
+
+  test("marcador para índice que não existe falha", () => {
+    const r = validarMidia(itemBase({ pergunta: "Texto.\n[[imagem:1]]", imagens: [img()] }));
+    expect(r.some((i) => i.rule === "marcador-indice")).toBe(true);
+  });
+
+  test("marcador de tabela sem tabela falha", () => {
+    const r = validarMidia(itemBase({ pergunta: "Texto.\n[[tabela:0]]" }));
+    expect(r.some((i) => i.rule === "marcador-indice")).toBe(true);
+  });
+
+  test("marcador no meio da linha e marcador repetido falham", () => {
+    const r = validarMidia(itemBase({ pergunta: "Veja [[imagem:0]] aqui.\n[[imagem:0]]", imagens: [img()] }));
+    expect(r.some((i) => i.rule === "marcador-linha")).toBe(true);
+    expect(r.some((i) => i.rule === "marcador-repetido")).toBe(true);
+  });
+
+  test("alt ausente ou curto falha", () => {
+    const r = validarMidia(itemBase({ imagens: [{ ...img(), alt: " " }] }));
+    expect(r.some((i) => i.rule === "imagem-alt")).toBe(true);
+  });
+
+  test("item oficial exige largura e altura; item comum não", () => {
+    const semDim = { url: "/content/img/2019/x.webp", alt: "Mapa sintético do Brasil" };
+    expect(validarMidia(itemBase({ imagens: [semDim] }), { oficial: true }).some((i) => i.rule === "imagem-dimensoes")).toBe(true);
+    expect(validarMidia(itemBase({ imagens: [semDim] })).some((i) => i.rule === "imagem-dimensoes")).toBe(false);
+  });
+
+  test("url externa em imagens[] continua barrada; url local fora de /content/img/ também", () => {
+    expect(validarMidia(itemBase({ imagens: [img("https://exemplo.com/a.webp")] })).some((i) => i.rule === "sem-imagem-externa")).toBe(true);
+    expect(validarMidia(itemBase({ imagens: [img("/outra/a.webp")] })).some((i) => i.rule === "imagem-local")).toBe(true);
+  });
+
+  test("opcoesImagem precisa ter o tamanho de opcoes e rótulo na alternativa-imagem", () => {
+    const curta = validarMidia(itemBase({ opcoesImagem: [img(), null] }));
+    expect(curta.some((i) => i.rule === "opcoes-imagem-tamanho")).toBe(true);
+    const certa = itemBase({
+      opcoes: ["Alternativa A (imagem)", "Setenta reais", "Oitenta reais", "Cinquenta reais"],
+      opcoesImagem: [img(), null, null, null],
+    });
+    expect(validarMidia(certa, { oficial: true })).toEqual([]);
+    const semRotulo = itemBase({ opcoes: [" ", "Setenta reais", "Oitenta reais", "Cinquenta reais"], opcoesImagem: [img(), null, null, null] });
+    expect(validarMidia(semRotulo).some((i) => i.rule === "opcoes-imagem-rotulo")).toBe(true);
+  });
+
+  test("tabela com linha de tamanho diferente do cabeçalho falha", () => {
+    const r = validarMidia(
+      itemBase({ pergunta: "Texto.\n[[tabela:0]]", tabelas: [{ cabecalho: ["a", "b"], linhas: [["1", "2"], ["3"]] }] }),
+    );
+    expect(r.some((i) => i.rule === "tabela-forma")).toBe(true);
+  });
+
+  test("todos os itens oficiais publicados passam na validação de mídia", () => {
+    const dir = "src/content/banco/oficial";
+    for (const f of readdirSync(dir).filter((x) => x.endsWith(".json"))) {
+      const { items } = JSON.parse(readFileSync(`${dir}/${f}`, "utf-8")) as { items: Array<{ id: string; exercise: Exercise }> };
+      for (const it of items) expect(validarMidia(it.exercise, { oficial: true }), it.id).toEqual([]);
+    }
   });
 });

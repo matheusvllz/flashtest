@@ -9,6 +9,7 @@ import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
 import { DontKnowButton } from "@/components/learning/DontKnowButton";
 import { ExplanationLayers, hasExplanationLayers } from "@/components/learning/ExplanationLayers";
+import { FiguraDaQuestao } from "@/components/questao/FiguraDaQuestao";
 import { CelebracaoAula } from "./CelebracaoAula";
 import { FeedbackSheet } from "./FeedbackSheet";
 import { useExerciseSession } from "@/hooks/useExerciseSession";
@@ -300,21 +301,7 @@ export function LessonPlayer({ trilha, lesson }: { trilha: Trilha; lesson: Lesso
             checked && !session.feedback?.correct ? "anim-shake" : "anim-slide-up",
           )}
         >
-          {exercise.imagem && (
-            <figure className="mb-5">
-              <img
-                src={exercise.imagem.url}
-                alt={exercise.imagem.alt}
-                loading="lazy"
-                className="mx-auto max-h-64 w-auto rounded-xl border-2 border-gelo bg-cards"
-              />
-              {exercise.imagem.credito && (
-                <figcaption className="mt-1.5 text-center text-[11px] text-nevoa">
-                  {exercise.imagem.credito}
-                </figcaption>
-              )}
-            </figure>
-          )}
+          {exercise.imagem && <FiguraDaQuestao imagem={exercise.imagem} className="mb-5" />}
           <View
             exercise={exercise}
             answer={answer}
