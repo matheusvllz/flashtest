@@ -2,6 +2,7 @@
 export * from "./auth";
 export * from "./social";
 export * from "./estudo";
+export * from "./lembretes";
 export * from "./pagamentos";
 export * from "./recompensas";
 export * from "./funcoes";

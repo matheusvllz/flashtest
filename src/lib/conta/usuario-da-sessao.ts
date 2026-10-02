@@ -1,9 +1,9 @@
 /**
- * De quem é a sessão aberta neste navegador (docs/specs/46-producao T-07.2). Módulo mínimo (só o removedor do cache offline, sem dependências): a raiz
+ * De quem é a sessão aberta neste navegador (docs/specs/46-producao T-07.2). Módulo mínimo (só a limpeza do aparelho: cache offline e lembrete; sem dependências): a raiz
  * do app o alimenta (guarda das rotas) sem importar o store — regra de code splitting —, e o store o assina para
  * nunca mostrar o estado local de OUTRA conta (aparelho compartilhado).
  */
-import { removerOffline } from "@/lib/offline/service-worker";
+import { limparAparelho } from "@/lib/offline/service-worker";
 
 type Ouvinte = (userId: string) => void;
 
@@ -25,8 +25,9 @@ export function definirUsuarioDaSessao(userId: string | null | undefined): void 
   if (!userId) return;
   esquecido = false;
   if (userId === atual) return;
-  // Troca de conta no mesmo aparelho: as páginas guardadas para estudar sem internet levam a conta anterior (spec 49 T-49.9.3).
-  if (atual !== null) void removerOffline();
+  // Troca de conta no mesmo aparelho: as páginas guardadas para estudar sem internet levam a conta anterior (spec 49
+  // T-49.9.3), e o lembrete deste aparelho era da conta anterior (spec 50 §5.2.5).
+  if (atual !== null) void limparAparelho();
   atual = userId;
   ouvintes.forEach((o) => o(userId));
 }
@@ -45,8 +46,9 @@ export function informarUsuarioDaPrimeiraCarga(userId: string | null | undefined
 export function esquecerUsuarioDaSessao(): void {
   atual = null;
   esquecido = true;
-  // Sair da conta apaga o que foi baixado para estudar sem internet (as páginas guardadas levam a conta).
-  void removerOffline();
+  // Sair da conta apaga o que foi baixado para estudar sem internet (as páginas guardadas levam a conta) e cancela a
+  // assinatura do lembrete deste aparelho (spec 50 §5.2.5).
+  void limparAparelho();
 }
 
 export function aoMudarUsuarioDaSessao(o: Ouvinte): () => void {

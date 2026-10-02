@@ -116,7 +116,7 @@ test("Pro: explica de outro jeito só no toque; treino comenta cada parte; corre
   await page.goto("/offline", { waitUntil: "domcontentloaded" });
   await page.getByRole("button", { name: "Baixar a semana" }).click({ timeout: 20_000 });
   await expect(page.getByTestId("offline-pronto")).toBeVisible({ timeout: 60_000 });
-  const registrado = await page.evaluate(async () => (await navigator.serviceWorker.getRegistrations()).some((r) => r.active?.scriptURL.endsWith("/sw-offline.js")));
+  const registrado = await page.evaluate(async () => (await navigator.serviceWorker.getRegistrations()).some((r) => r.active?.scriptURL.endsWith("/sw.js")));
   expect(registrado).toBe(true);
   await page.getByRole("button", { name: "Apagar o que foi baixado" }).click();
   await expect(page.getByTestId("offline-pronto")).toHaveCount(0);

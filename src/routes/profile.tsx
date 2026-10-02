@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { AppShell } from "@/components/AppShell";
 import { DadosDaConta } from "@/components/conta/DadosDaConta";
 import { SecaoConta } from "@/components/conta/SecaoConta";
+import { SecaoLembrete } from "@/components/lembretes/SecaoLembrete";
 import { SecaoAssinatura } from "@/components/planos/SecaoAssinatura";
 import { BottomSheet } from "@/components/ds/BottomSheet";
 import { ProgressBar } from "@/components/ds/ProgressBar";
@@ -211,6 +212,7 @@ function Profile() {
             ))}
           </div>
         </div>
+        <SecaoLembrete />
 
         <div className="card-soft p-4">
           <p className="ds-label">Vestibular</p>

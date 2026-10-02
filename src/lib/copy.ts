@@ -1031,6 +1031,37 @@ export const COPY = {
     "nivel-5": { nome: "Nível 5", criterio: "Chegue ao nível 5." },
     "nivel-10": { nome: "Nível 10", criterio: "Chegue ao nível 10." },
   } as Record<string, { nome: string; criterio: string }>,
+  /**
+   * Lembrete do dia (spec 50 §5.2.5): desligado por padrão, 1 por dia, só se o aluno ainda não estudou. Sem pressão,
+   * sem urgência (§0.3 A). Horários "por volta de": o cron do plano atual tem precisão de 1 hora.
+   */
+  lembrete: {
+    titulo: "Lembrete do dia",
+    explica: "Um aviso por dia, no horário que você escolher, só nos dias em que você ainda não estudou.",
+    ligar: "Ligar lembrete",
+    ligando: "Ligando…",
+    desligar: "Desligar lembrete",
+    desligando: "Desligando…",
+    ligado: (hora: string) => `Ligado neste aparelho. O aviso chega por volta das ${hora}.`,
+    horario: "Horário",
+    janelas: { manha: "Manhã", tarde: "Tarde", "fim-de-tarde": "Fim de tarde", noite: "Noite" },
+    horas: { manha: "9h", tarde: "14h", "fim-de-tarde": "18h", noite: "20h" },
+    aproximado: "Horário de Brasília, aproximado: pode chegar até uma hora depois.",
+    pausado: "Pausamos o lembrete. Quer ligar de novo?",
+    religar: "Ligar de novo",
+    iphone: "No iPhone e no iPad, o lembrete só funciona com o Foca na Tela de Início.",
+    iphonePassos: [
+      "Abra o Foca no Safari.",
+      "Toque em Compartilhar.",
+      "Toque em Adicionar à Tela de Início.",
+      "Abra o Foca pelo ícone novo e ligue o lembrete aqui.",
+    ],
+    semSuporte: "Este navegador não recebe notificações. No celular, use o Chrome no Android ou o Foca na Tela de Início do iPhone.",
+    bloqueado: "As notificações do Foca estão bloqueadas neste navegador. Para ligar o lembrete, libere nas configurações do navegador.",
+    negado: "Sem permissão para notificações, o lembrete fica desligado.",
+    erro: "Não deu para ligar o lembrete agora. Tente de novo.",
+    erroDesligar: "Não deu para desligar agora. Tente de novo.",
+  },
   /** Praticar (spec 50 §5.7.2). */
   praticar: {
     titulo: "Praticar",

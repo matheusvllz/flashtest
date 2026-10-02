@@ -1,4 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
+import webpush from "web-push";
+
+/** Lembrete (spec 50 §5.2.5): chaves VAPID descartáveis, geradas a cada execução, só para o servidor de teste. */
+const VAPID_DE_TESTE = webpush.generateVAPIDKeys();
 
 /**
  * Estudar exige conta (decisão 0006): o projeto "setup" cria uma conta real e verificada e grava a sessão; os projetos
@@ -91,6 +95,9 @@ export default defineConfig({
     env: {
       AUTH_RATE_LIMIT_DESLIGADO: "true",
       ...(PORTA_PROPRIA ? { BETTER_AUTH_URL: ORIGEM } : {}),
+      LEMBRETES_HABILITADO: "true",
+      VAPID_PUBLIC_KEY: VAPID_DE_TESTE.publicKey,
+      VAPID_PRIVATE_KEY: VAPID_DE_TESTE.privateKey,
     },
     timeout: 30_000,
   },

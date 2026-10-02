@@ -9,9 +9,12 @@
  *   com mais de 90 dias.
  * - spec 50 §9: resultados da liga saem com o participante; dupla encerrada há mais de 30 dias; convite com mais de 7;
  *   denúncia resolvida há mais de 90. Bloqueio fica enquanto as duas contas existirem.
+ * - lembrete por push (spec 50 §5.2.5, §9): assinatura sem poder entregar há 30 dias — pausada há mais de 30 dias,
+ *   ou com falha pendente e sem nenhuma entrega nos últimos 30 dias. (Quem estuda todo dia não recebe lembrete e
+ *   continua com a assinatura: "sem entrega" aqui é não conseguir entregar, não não precisar.)
  * Nada aqui toca conta verificada, tentativa, conclusão, XP ou documento de estudo.
  */
-import { and, eq, isNotNull, isNull, lt, sql } from "drizzle-orm";
+import { and, eq, gt, isNotNull, isNull, lt, or, sql } from "drizzle-orm";
 import type { Banco } from "../db/client";
 import {
   aiBudget,
@@ -24,6 +27,7 @@ import {
   denuncia,
   ligaResultado,
   missaoDia,
+  pushAssinatura,
   rankingGrupo,
   rankingParticipante,
   rateLimit,
@@ -49,6 +53,8 @@ export interface ResultadoRetencao {
   gamificacao: number;
   /** Spec 50 §9: resultados da liga de quem saiu, duplas encerradas (30 dias), convites (7) e denúncias resolvidas (90). */
   social: number;
+  /** Spec 50 §5.2.5: assinaturas de push sem poder entregar há 30 dias. */
+  lembretes: number;
 }
 
 export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<ResultadoRetencao> {
@@ -96,6 +102,19 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
   await db.delete(rankingGrupo).where(lt(rankingGrupo.semana, dia(trintaDias)));
   const combos = await db.delete(comboDia).where(lt(comboDia.localDate, dia(trintaDias))).returning({ d: comboDia.localDate });
   const missoes = await db.delete(missaoDia).where(lt(missaoDia.localDate, limiteIA)).returning({ d: missaoDia.localDate });
+  const lembretes = await db
+    .delete(pushAssinatura)
+    .where(
+      or(
+        lt(pushAssinatura.pausadaEm, trintaDias),
+        and(
+          gt(pushAssinatura.falhas, 0),
+          lt(pushAssinatura.criadaEm, trintaDias),
+          or(sql`${pushAssinatura.ultimoEnvioDia} is null`, lt(pushAssinatura.ultimoEnvioDia, dia(trintaDias))),
+        ),
+      ),
+    )
+    .returning({ id: pushAssinatura.id });
   const verif = await db.delete(verification).where(lt(verification.expiresAt, agora)).returning({ id: verification.id });
   const limites = await db
     .delete(rateLimit)
@@ -111,5 +130,6 @@ export async function aplicarRetencao(db: Banco, agora = new Date()): Promise<Re
     ranking: n(saiu),
     gamificacao: n(combos) + n(missoes),
     social: n(resultadosLiga) + n(duplas) + n(convites) + n(denuncias),
+    lembretes: n(lembretes),
   };
 }

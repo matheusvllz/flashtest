@@ -5,9 +5,17 @@
   "regions": ["gru1"],
   "crons": [
     { "path": "/api/cron/retencao", "schedule": "0 7 * * *" },
-    { "path": "/api/cron/ligas", "schedule": "10 3 * * *" }
+    { "path": "/api/cron/ligas", "schedule": "10 3 * * *" },
+    { "path": "/api/cron/lembretes?janela=manha", "schedule": "0 12 * * *" },
+    { "path": "/api/cron/lembretes?janela=tarde", "schedule": "0 17 * * *" },
+    { "path": "/api/cron/lembretes?janela=fim-de-tarde", "schedule": "0 21 * * *" },
+    { "path": "/api/cron/lembretes?janela=noite", "schedule": "0 23 * * *" }
   ],
   "headers": [
+    {
+      "source": "/sw.js",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+    },
     {
       "source": "/sw-offline.js",
       "headers": [{ "key": "Cache-Control", "value": "no-cache" }]

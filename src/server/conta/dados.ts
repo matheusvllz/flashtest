@@ -31,6 +31,7 @@ import {
   legalAcceptance,
   profile,
   protetorCredito,
+  pushAssinatura,
   rankingParticipante,
   redacao,
   studyDay,
@@ -116,6 +117,23 @@ export async function exportarDadosDoAluno(db: Banco, userId: string, agora = ne
       .select({ contexto: denuncia.contexto, motivo: denuncia.motivo, em: denuncia.criadaEm, resolvidaEm: denuncia.resolvidaEm })
       .from(denuncia)
       .where(eq(denuncia.autorId, userId)),
+    // Spec 50 §5.2.5, §9: só se está ligado, a janela e a pausa; o endereço de push e as chaves (identificadores
+    // técnicos do aparelho) não saem na exportação.
+    lembrete: await lembreteExportado(db, userId),
+  };
+}
+
+async function lembreteExportado(db: Banco, userId: string) {
+  const linhas = await db
+    .select({ janela: pushAssinatura.janela, pausadaEm: pushAssinatura.pausadaEm, ultimoEnvioDia: pushAssinatura.ultimoEnvioDia })
+    .from(pushAssinatura)
+    .where(eq(pushAssinatura.userId, userId));
+  return {
+    ligado: linhas.length > 0,
+    janela: linhas[0]?.janela ?? null,
+    aparelhos: linhas.length,
+    pausado: linhas.some((l) => l.pausadaEm !== null),
+    ultimoLembrete: linhas.map((l) => l.ultimoEnvioDia).filter((d): d is string => !!d).sort().at(-1) ?? null,
   };
 }
 

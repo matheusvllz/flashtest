@@ -66,6 +66,11 @@ const INVENTARIO: Record<string, string> = {
   "src/lib/api/redacao.ts#apagarRedacao": "apagar(db, s.userId, id) — prova: 'aluno B não apaga o texto de A'",
   "src/lib/api/redacao.ts#meuTreino": "estadoDoTreino(db, s.userId)",
   "src/lib/api/redacao.ts#enviarParte": "comentarParte(db, s.userId, data)",
+  // Spec 50 E9 — lembrete por push: assinatura pelo userId da sessão; provas em tests/unit/servidor/lembretes.test.ts.
+  "src/lib/api/lembretes.ts#chavePublicaDoLembrete": "chavePublica() — só a chave pública VAPID, igual para todos; exige sessão",
+  "src/lib/api/lembretes.ts#meuLembrete": "estadoDoLembrete(db, s.userId, endpoint) — prova: 'B com o endereço de A não vê A ligado'",
+  "src/lib/api/lembretes.ts#salvarLembrete": "salvarAssinatura(db, s.userId, data) — prova: 'a janela de B não muda a de A'",
+  "src/lib/api/lembretes.ts#removerLembrete": "removerAssinatura(db, s.userId, endpoint) — prova: 'B não apaga a assinatura de A'",
   // Spec 50 E3 — economia e ofensiva: tudo pelo userId da sessão; saldo, preço e estoque só do servidor.
   "src/lib/api/economia.ts#minhaEconomia": "saldoDePerolas/minhaOfensiva(db, s.userId)",
   "src/lib/api/economia.ts#meuHistoricoDePerolas": "historicoDePerolas(db, s.userId)",

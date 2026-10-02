@@ -61,6 +61,7 @@ import { Route as SimuladoIdRouteImport } from './routes/simulado.$id'
 import { Route as VideoIdRouteImport } from './routes/video.$id'
 import { Route as AmigosConviteCodigoRouteImport } from './routes/amigos_.convite.$codigo'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiCronLembretesRouteImport } from './routes/api/cron/lembretes'
 import { Route as ApiCronLigasRouteImport } from './routes/api/cron/ligas'
 import { Route as ApiCronRetencaoRouteImport } from './routes/api/cron/retencao'
 import { Route as ApiPagamentosWebhookRouteImport } from './routes/api/pagamentos/webhook'
@@ -325,6 +326,11 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCronLembretesRoute = ApiCronLembretesRouteImport.update({
+  id: '/api/cron/lembretes',
+  path: '/api/cron/lembretes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiCronLigasRoute = ApiCronLigasRouteImport.update({
   id: '/api/cron/ligas',
   path: '/api/cron/ligas',
@@ -394,6 +400,7 @@ export interface FileRoutesByFullPath {
   '/simulado/': typeof SimuladoIndexRoute
   '/amigos/convite/$codigo': typeof AmigosConviteCodigoRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/lembretes': typeof ApiCronLembretesRoute
   '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
@@ -451,6 +458,7 @@ export interface FileRoutesByTo {
   '/simulado': typeof SimuladoIndexRoute
   '/amigos/convite/$codigo': typeof AmigosConviteCodigoRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/lembretes': typeof ApiCronLembretesRoute
   '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
@@ -509,6 +517,7 @@ export interface FileRoutesById {
   '/simulado/': typeof SimuladoIndexRoute
   '/amigos_/convite/$codigo': typeof AmigosConviteCodigoRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/cron/lembretes': typeof ApiCronLembretesRoute
   '/api/cron/ligas': typeof ApiCronLigasRoute
   '/api/cron/retencao': typeof ApiCronRetencaoRoute
   '/api/pagamentos/webhook': typeof ApiPagamentosWebhookRoute
@@ -568,6 +577,7 @@ export interface FileRouteTypes {
     | '/simulado/'
     | '/amigos/convite/$codigo'
     | '/api/auth/$'
+    | '/api/cron/lembretes'
     | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
@@ -625,6 +635,7 @@ export interface FileRouteTypes {
     | '/simulado'
     | '/amigos/convite/$codigo'
     | '/api/auth/$'
+    | '/api/cron/lembretes'
     | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
@@ -682,6 +693,7 @@ export interface FileRouteTypes {
     | '/simulado/'
     | '/amigos_/convite/$codigo'
     | '/api/auth/$'
+    | '/api/cron/lembretes'
     | '/api/cron/ligas'
     | '/api/cron/retencao'
     | '/api/pagamentos/webhook'
@@ -740,6 +752,7 @@ export interface RootRouteChildren {
   SimuladoIndexRoute: typeof SimuladoIndexRoute
   AmigosConviteCodigoRoute: typeof AmigosConviteCodigoRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiCronLembretesRoute: typeof ApiCronLembretesRoute
   ApiCronLigasRoute: typeof ApiCronLigasRoute
   ApiCronRetencaoRoute: typeof ApiCronRetencaoRoute
   ApiPagamentosWebhookRoute: typeof ApiPagamentosWebhookRoute
@@ -1111,6 +1124,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/cron/lembretes': {
+      id: '/api/cron/lembretes'
+      path: '/api/cron/lembretes'
+      fullPath: '/api/cron/lembretes'
+      preLoaderRoute: typeof ApiCronLembretesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/cron/ligas': {
       id: '/api/cron/ligas'
       path: '/api/cron/ligas'
@@ -1188,6 +1208,7 @@ const rootRouteChildren: RootRouteChildren = {
   SimuladoIndexRoute: SimuladoIndexRoute,
   AmigosConviteCodigoRoute: AmigosConviteCodigoRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiCronLembretesRoute: ApiCronLembretesRoute,
   ApiCronLigasRoute: ApiCronLigasRoute,
   ApiCronRetencaoRoute: ApiCronRetencaoRoute,
   ApiPagamentosWebhookRoute: ApiPagamentosWebhookRoute,
