@@ -314,7 +314,8 @@ export const COPY = {
       tudoDoBasic: "Tudo do Basic",
       funcoesBasic: "Caderno de erros, cronograma até o ENEM e estudo sem internet",
       corretor: (n: number) => `Corretor de redação: ${n} por mês`,
-      funcoesPro: "Simulados, explica de outro jeito e treino de redação",
+      funcoesPro: "Explica de outro jeito e treino de redação por partes",
+      simulados: "Simulados cronometrados",
     },
     retorno: {
       confirmando: "Confirmando seu pagamento…",

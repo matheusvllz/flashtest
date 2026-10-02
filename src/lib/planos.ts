@@ -153,4 +153,4 @@ export const NOME_DO_PRODUTO: Readonly<Record<CodigoProduto, string>> = {
  * planos: vender função que ainda não existe seria propaganda enganosa (CDC art. 37). Atualizar a cada entrega.
  */
 export type Entrega = "E1" | "E2" | "E3";
-export const ENTREGAS_PUBLICADAS: ReadonlySet<Entrega> = new Set<Entrega>(["E1"]);
+export const ENTREGAS_PUBLICADAS: ReadonlySet<Entrega> = new Set<Entrega>(["E1", "E2", "E3"]);

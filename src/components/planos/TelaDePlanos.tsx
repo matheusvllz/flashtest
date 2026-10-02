@@ -28,6 +28,8 @@ type Periodo = "mensal" | "anual";
 interface Linha {
   texto: string;
   entrega: Entrega;
+  /** Parado mesmo com a entrega publicada: simulado (DV49-09) e corretor até a rubrica (DV49-08). */
+  emBreve?: boolean;
 }
 
 function linhas(plano: Plano): Linha[] {
@@ -53,8 +55,9 @@ function linhas(plano: Plano): Linha[] {
   return [
     { texto: b.tudoDoBasic, entrega: "E1" },
     { texto: b.iaDiaFotos(BENEFICIOS.pro.iaMensagensDia, BENEFICIOS.pro.iaFotosDia), entrega: "E1" },
-    { texto: b.corretor(BENEFICIOS.pro.correcoesRedacaoMes), entrega: "E3" },
     { texto: b.funcoesPro, entrega: "E3" },
+    { texto: b.corretor(BENEFICIOS.pro.correcoesRedacaoMes), entrega: "E3", emBreve: true },
+    { texto: b.simulados, entrega: "E3", emBreve: true },
     { texto: b.protetoresBonus(BENEFICIOS.pro.protetoresBonusMes, BENEFICIOS.pro.protetoresEstoqueMax), entrega: "E2" },
   ];
 }
@@ -127,7 +130,7 @@ export function TelaDePlanos() {
                 <Preco plano={plano} periodo={periodo} />
                 <ul className="mt-4 flex-1 space-y-2 text-sm text-abismo">
                   {linhas(plano).map((l) => {
-                    const breve = !ENTREGAS_PUBLICADAS.has(l.entrega);
+                    const breve = l.emBreve === true || !ENTREGAS_PUBLICADAS.has(l.entrega);
                     return (
                       <li key={l.texto} className={cn("flex gap-2", breve && "text-nevoa")}>
                         {breve ? <Clock size={16} className="mt-0.5 shrink-0" aria-hidden /> : <Check size={16} className="mt-0.5 shrink-0 text-success-texto" aria-hidden />}
