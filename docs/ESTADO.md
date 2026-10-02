@@ -21,8 +21,9 @@ canonico-de: [estado atual, próxima tarefa]
   - **E3:** ranking 18+ (F8) e funções pagas (F9): caderno de erros, cronograma, estudo sem internet, explica de outro jeito, corretor de redação (desligado até a rubrica: DV49-08) e treino por partes (migração 0003). **Simulado parado** por falta de itens revisados (DV49-09, B-168).
   - Migrações 0001–0003 aplicadas **só** na branch `dev` do Neon.
 - **Bloqueios do proprietário:** T-49.1.2 (correção da rolagem) espera o teste no Instagram (iPhone e Android, link `https://www.focaedu.com/?diagnostico-rolagem=1`); pagamento de teste na página do Asaas (reCAPTCHA) e chave Pix no sandbox (tutorial 1.4); AdSense em análise (o Ad Manager só abre depois); chave da OpenAI; revisão jurídica das cláusulas (`docs/legal/rascunho-clausulas-49.md`); rubrica do corretor (B-169); CNPJ e Vercel Pro antes de vender de verdade; e-mail de suporte (passo 7); publicar o login com Google (passo 4.1).
-- **Próximo passo:** revisão L3 final (T-49.10.1) feita na branch; publicar E1–E3 na `main` **só com pedido explícito** do proprietário — junto com aplicar as migrações 0001–0003 em produção, atualizar `ENTREGAS_PUBLICADAS` em `src/lib/planos.ts` e trocar os textos legais. Flags de produção continuam desligadas até lá.
-- **Produção:** `main` = `9337ce4` (02/10): correção de segurança DV49-01, nivelamento de 30, perfil com dados da conta, "Criar conta" pelo quiz, painel `?diagnostico-rolagem=1` e catálogo de planos (inerte). Contas com Google e e-mail; Foca IA em fallback local.
+- **Publicado em 02/10 (`main` = `9c96afa`):** E1–E3, com as migrações 0001–0003 aplicadas em produção antes do deploy. Em produção as funções novas estão **desligadas por configuração** (nenhuma variável de venda, vidas, anúncios, ranking ou corretor): ninguém assina e nada novo é coletado.
+- **Próximo passo:** ligar a venda e as funções em produção, uma por vez e só com pedido do proprietário, depois dos bloqueios abaixo; trocar os textos legais com a revisão jurídica; T-49.1.2 quando chegarem os diagnósticos da rolagem.
+- **Produção:** `main` = `9c96afa` (02/10): spec 49 E1–E3 com as funções novas desligadas por configuração. Contas com Google e e-mail; Foca IA em fallback local.
 
 ### Iniciativa anterior
 
