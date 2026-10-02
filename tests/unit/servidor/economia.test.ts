@@ -59,6 +59,34 @@ describe("combo no servidor (spec 50 §5.1.3)", () => {
     expect(r3.agregado.novidades?.vidasDoCombo).toBe(0);
   });
 
+  test("Basic e Pro não têm vidas: o combo não devolve vida (RF-2)", async () => {
+    const { userId } = await alunoVerificado(amb, "combo-basic@foca.dev");
+    await amb.db.insert(assinatura).values({
+      id: randomUUID(),
+      userId,
+      provedor: "teste",
+      origem: "web",
+      idExterno: randomUUID(),
+      produto: "basic_mensal",
+      plano: "basic",
+      estado: "ativa",
+      validoAte: new Date("2026-12-01T00:00:00Z"),
+    });
+    const r = await aplicarEventos(amb.db, userId, Array.from({ length: 10 }, () => resposta(certa)), AGORA);
+    expect(r.agregado.novidades?.vidasDoCombo ?? 0).toBe(0);
+    expect(r.agregado.combo?.atual).toBe(10);
+  });
+
+  test("bônus de XP do combo tem teto de 20 por dia (RF-3)", async () => {
+    const { userId } = await alunoVerificado(amb, "combo-teto@foca.dev");
+    for (const [key, licao] of [["t1", "porcentagem-valor"], ["t2", "porcentagem-aumento-desconto"], ["t3", "citologia-membrana"]]) {
+      const fim = eventoEstudo.parse({ tipo: "licao-concluida", id: id(), licaoId: licao, tipoLicao: "micro", acertos: 10, total: 10, attemptKey: key, ocorreuEm: AGORA.toISOString(), dataLocal: HOJE });
+      await aplicarEventos(amb.db, userId, [...Array.from({ length: 10 }, () => resposta(certa, { attemptKey: key })), fim], AGORA);
+    }
+    const bonus = (await amb.db.select().from(xpLedger).where(eq(xpLedger.userId, userId))).filter((l) => l.key.startsWith("combo:"));
+    expect(bonus.reduce((s, l) => s + l.xp, 0)).toBe(20);
+  });
+
   test("checagem dentro da lição (não pontuada) e revisão não contam nem zeram", async () => {
     const { userId } = await alunoVerificado(amb, "combo-checagem@foca.dev");
     const errada = (certa + 1) % 4;
@@ -126,6 +154,9 @@ describe("Pérolas (spec 50 §5.3)", () => {
     await aplicarEventos(amb.db, userId, [...Array.from({ length: 4 }, () => resposta(certa, { attemptKey: "p1" })), fim("p1")], AGORA);
     const ajudada = [...Array.from({ length: 3 }, () => resposta(certa, { attemptKey: "p2" })), resposta(certa, { attemptKey: "p2", assistida: true })];
     await aplicarEventos(amb.db, userId, [...ajudada, fim("p2")], AGORA);
+    // "Não sei" (resposta nula) também tira a lição perfeita (RF-5).
+    const naoSei = [...Array.from({ length: 4 }, () => resposta(certa, { attemptKey: "p3" })), resposta(null, { attemptKey: "p3" })];
+    await aplicarEventos(amb.db, userId, [...naoSei, fim("p3")], AGORA);
     const perfeitas = await amb.db
       .select()
       .from(perolaMovimento)
