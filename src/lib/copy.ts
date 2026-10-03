@@ -1109,6 +1109,7 @@ export const COPY = {
       FORA_DO_ALCANCE: "Este capítulo não é o próximo da sua trilha agora. Volte para a trilha para ver onde o teste está.",
       SEM_QUESTOES: "Ainda não temos questões novas suficientes para este teste.",
       DESLIGADO: "O teste para pular está fora do ar agora.",
+      TESTE_EXPIRADO: "Este teste era de outro dia. Volte para a trilha e comece de novo quando quiser.",
     } as Record<string, string>,
     erro: "Não deu para carregar o teste agora. Tente de novo.",
     erroEnvio: "Não deu para enviar suas respostas agora. Elas continuam aqui: tente de novo.",

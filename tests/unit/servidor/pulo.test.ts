@@ -233,6 +233,14 @@ describe("limites", () => {
     expect(await codigo(iniciarPulo(amb.db, u, MAT[1].id, AGORA))).toBe("sem erro");
   });
 
+  test("o teste vale só no dia em que começou (revisão L2): concluir no dia seguinte é recusado", async () => {
+    const u = await aluno("pulo-vencido@foca.dev");
+    const t = await iniciarPulo(amb.db, u, POR[1].id, AGORA);
+    const amanha = new Date(AGORA.getTime() + 86_400_000);
+    await expect(concluirPulo(amb.db, u, t.id, await respostas(t.itens, () => true), amanha)).rejects.toMatchObject({ codigo: "TESTE_EXPIRADO" });
+    expect(await xpDaChave(u, `pulo:capitulo:${POR[1].id}`)).toBeNull();
+  });
+
   test("respostas incompletas são recusadas sem gastar nada", async () => {
     const u = await aluno("pulo-incompleto@foca.dev");
     const t = await iniciarPulo(amb.db, u, POR[1].id, AGORA);

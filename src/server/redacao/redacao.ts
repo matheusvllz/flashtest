@@ -87,8 +87,9 @@ export interface EstadoDoCorretor {
   historico: ResumoCorrecao[];
 }
 
-/** "Sem estimativa" não conta; a reserva em andamento (resultado ainda nulo) conta. */
-const contaNaCota = sql`coalesce(${redacao.resultado}->>'situacao', 'estimada') <> 'sem-estimativa'`;
+/** "Sem estimativa" e falha da IA não contam na cota; a reserva em andamento (resultado ainda nulo) conta. Todas contam
+ * no teto técnico de chamadas do mês (uma falha forçada não vira chamada ilimitada; revisão L2). */
+const contaNaCota = sql`coalesce(${redacao.resultado}->>'situacao', 'estimada') not in ('sem-estimativa', 'falha')`;
 
 async function usadasNoMes(db: Pick<Banco, "select">, userId: string, agora: Date): Promise<{ estimativas: number; chamadas: number }> {
   const [r] = await db
@@ -178,15 +179,20 @@ export async function corrigirRedacao(db: Banco, userId: string, entrada: { tema
     if (!correcao) falha = ia?.motivo ?? (ia?.texto ? "formato" : "desconhecido");
   }
   if (!correcao) {
-    // Falhou de novo: a reserva volta para o mês do aluno ("Sua vaga do mês continua").
-    await db.delete(redacao).where(and(eq(redacao.id, id), eq(redacao.userId, userId)));
+    // Falhou de novo: a vaga de estimativa volta para o mês do aluno ("Sua vaga do mês continua"), mas a chamada conta no
+    // teto técnico. O texto não fica guardado.
+    await db
+      .update(redacao)
+      .set({ texto: "", resultado: { situacao: "falha" } as unknown as JsonObjeto })
+      .where(and(eq(redacao.id, id), eq(redacao.userId, userId)));
     log("aviso", "redacao.falha_ia", { motivo: falha });
     return { ok: false, motivo: "falha" };
   }
   await db
     .update(redacao)
     .set({ resultado: correcao as unknown as JsonObjeto })
-    .where(and(eq(redacao.id, id), eq(redacao.userId, userId)));
+    // Se o aluno apagou o texto enquanto a IA respondia, a correção não é gravada.
+    .where(and(eq(redacao.id, id), eq(redacao.userId, userId), ne(redacao.texto, "")));
   log("info", "redacao.correcao", { situacao: correcao.situacao, total: correcao.total });
   return { ok: true, id, correcao };
 }

@@ -157,7 +157,7 @@ test("RF-9: foco 'Física' definido em /profile -> ao voltar pra /trilha a fila 
   await page.getByRole("button", { name: "Daqui pra frente" }).click();
 
   // Navegação de cliente (sem recarregar): a Home monta com o estado que o /profile gravou.
-  await page.getByRole("link", { name: "Aprender" }).click();
+  await page.locator('nav[aria-label="Principal"]:visible').first().getByRole("link", { name: "Trilha" }).click();
   await page.getByText(/Nível \d/).waitFor({ timeout: 15000 });
   await expect(page.getByText("Foco: Física")).toBeVisible();
 

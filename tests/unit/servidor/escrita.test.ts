@@ -48,8 +48,13 @@ afterEach(() => {
   redefinirEnv();
 });
 
-async function aluno(email: string, plano?: "basic" | "pro"): Promise<string> {
+/** Aluno com os nós "Escreva" abertos (as lições que vêm antes das tarefas concluídas no servidor), salvo `abrir: false`. */
+async function aluno(email: string, plano?: "basic" | "pro", abrir = true): Promise<string> {
   const { userId } = await alunoVerificado(amb, email);
+  if (abrir)
+    await amb.db
+      .insert(completion)
+      .values([...new Set(TAREFAS_DE_ESCRITA.map((t) => t.depoisDe))].map((l) => ({ userId, key: `licao:redacao:${l}#t`, kind: "licao-redacao", completedAt: AGORA })));
   if (plano)
     await amb.db.insert(assinatura).values({
       id: randomUUID(),
@@ -93,7 +98,7 @@ describe("enviar tarefa de escrita (todos os planos)", () => {
     const [dia] = await amb.db.select().from(studyDay).where(and(eq(studyDay.userId, u), eq(studyDay.localDate, HOJE)));
     expect(dia.blocks).toBe(1);
 
-    const de_novo = await enviarEscrita(amb.db, u, { tarefaId: "argumentacao-complete-paragrafo", texto: `${TRECHO} Isso pesa na saúde mental.` }, AGORA);
+    const de_novo = await enviarEscrita(amb.db, u, { tarefaId: "argumentacao-complete-paragrafo", texto: `${TRECHO} Isso pesa na saúde mental.` }, new Date(AGORA.getTime() + 86_400_000));
     expect(de_novo.xp).toBe(0);
     expect(de_novo.bloco).toBe(true);
     const xp = await amb.db.select().from(xpLedger).where(and(eq(xpLedger.userId, u), eq(xpLedger.key, "escrita:argumentacao-complete-paragrafo")));
@@ -177,12 +182,27 @@ describe("enviar tarefa de escrita (todos os planos)", () => {
   });
 
   test("a missão de escrita só entra no sorteio de quem tem um nó 'Escreva' aberto", async () => {
-    const u = await aluno("esc-aberta@foca.dev");
+    const u = await aluno("esc-aberta@foca.dev", undefined, false);
     expect(await temTarefaDeEscritaAberta(amb.db, u)).toBe(false);
     await amb.db.insert(completion).values({ userId: u, key: "licao:redacao:redacao-argumentacao-05-falacias#x", kind: "licao-redacao", completedAt: AGORA });
     expect(await temTarefaDeEscritaAberta(amb.db, u)).toBe(false);
     await amb.db.insert(completion).values({ userId: u, key: "licao:redacao:redacao-argumentacao-01-tipos-argumento#import", kind: "licao-redacao", completedAt: AGORA });
     expect(await temTarefaDeEscritaAberta(amb.db, u)).toBe(true);
+  });
+
+  test("tarefa fechada (lição anterior não concluída) guarda o texto mas não paga; 1 bloco por tarefa por dia; autocuidado local para todos", async () => {
+    const fechado = await aluno("esc-fechada@foca.dev", undefined, false);
+    const r = await enviarEscrita(amb.db, fechado, { tarefaId: "argumentacao-coesao", texto: TRECHO }, AGORA);
+    expect(r.ok && r.xp).toBe(0);
+    expect(r.ok && r.bloco).toBe(false);
+    const u = await aluno("esc-um-por-dia@foca.dev");
+    const a = await enviarEscrita(amb.db, u, { tarefaId: "argumentacao-coesao", texto: TRECHO }, AGORA);
+    expect(a.ok && a.bloco).toBe(true);
+    const b = await enviarEscrita(amb.db, u, { tarefaId: "argumentacao-coesao", texto: `${TRECHO} Outra versão.` }, AGORA);
+    expect(b.ok && b.bloco).toBe(false);
+    const free = await aluno("esc-autocuidado@foca.dev");
+    const c = await enviarEscrita(amb.db, free, { tarefaId: "argumentacao-coesao", texto: `${TRECHO} Às vezes eu quero me matar.` }, AGORA);
+    expect(c.ok && c.avisoIa).toBe("autocuidado");
   });
 
   test("minhas tarefas: contagem e último envio; apagar limpa o texto e mantém a contagem", async () => {

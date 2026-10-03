@@ -381,9 +381,17 @@ Regras:
 - Nunca invente citação, autor, lei, dado ou número. Não reescreva o texto do aluno inteiro.
 - Nunca diga que é a nota oficial, nunca preveja a nota do ENEM, nunca use ironia nem humilhe.`;
 
-/** Tira as marcas de dentro do texto do aluno (ninguém fecha o bloco antes da hora) e limita o tamanho. */
-function semMarcas(s: string, max: number): string {
-  return s.replace(/<<<|>>>/g, "").slice(0, max);
+/**
+ * Neutraliza as marcas dentro do texto do aluno (ninguém fecha o bloco antes da hora) e limita o tamanho. Troca `<` e
+ * `>` por aspas angulares em vez de remover `<<<`/`>>>` uma vez só: a remoção montava uma marca nova
+ * (`<>>><<FIM_DO_TEXTO>><<<>` virava `<<<FIM_DO_TEXTO>>>`; revisão L2).
+ */
+export function semMarcas(s: string, max: number): string {
+  return s
+    .replace(/</g, "‹")
+    .replace(/>/g, "›")
+    .replace(/(INICIO|FIM)_DO_TEXTO/gi, "")
+    .slice(0, max);
 }
 
 /** Texto do aluno entre marcas: a IA o recebe como dado (teste de injeção em `redacao-ia.test.ts`). */

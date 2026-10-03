@@ -26,6 +26,7 @@ export const previaDoPulo = createServerFn({ method: "GET" })
     try {
       const s = await exigirSessao();
       const db = await banco();
+      await limitar(db, `pulo-previa:${s.userId}`, 3600, 120);
       return { ok: true, ...(await previa(db, s.userId, data.capituloId, new Date())) };
     } catch (e) {
       return respostaDeErro(e);

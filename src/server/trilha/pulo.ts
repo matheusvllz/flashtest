@@ -225,6 +225,8 @@ export async function concluirPulo(db: Banco, userId: string, id: string, respos
   const [linha] = await db.select().from(puloTentativa).where(and(eq(puloTentativa.userId, userId), eq(puloTentativa.id, id))).limit(1);
   if (!linha) throw new ErroApp(404, "NAO_ENCONTRADO");
   if (linha.concluidoEm && linha.detalhe) return linha.detalhe as unknown as ResultadoDoPulo;
+  // O teste vale só no dia em que começou (revisão L2): ninguém abre, sai para procurar as respostas e conclui depois.
+  if (linha.localDate !== (await hojeDoAluno(db, userId, agora))) throw new ErroApp(409, "TESTE_EXPIRADO");
   const porItem = new Map(respostas.map((r) => [r.itemId, r]));
   if (linha.itens.some((i) => !porItem.has(i.itemId))) throw new ErroApp(400, "RESPOSTAS_INCOMPLETAS");
 

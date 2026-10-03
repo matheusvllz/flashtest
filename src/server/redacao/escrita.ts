@@ -12,7 +12,7 @@
  * - Reenviar o mesmo texto da última vez guarda, mas não paga bloco de novo (anti-repetição).
  */
 import { randomUUID } from "node:crypto";
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, like, sql } from "drizzle-orm";
 import { COPY } from "@/lib/copy";
 import { checagemAutomatica, LIMITES_DA_ESCRITA, XP_DA_TAREFA, type Checagem } from "@/lib/escrita";
 import { BLOCOS_PAGOS_POR_DIA, PEROLAS_POR_BLOCO, chavePerola } from "@/lib/perolas";
@@ -21,13 +21,14 @@ import type { JsonObjeto } from "@/lib/json";
 import type { NovidadesDoServidor } from "@/lib/sync/contrato";
 import { tarefaDeEscrita, TAREFAS_DE_ESCRITA } from "@/content/tarefas-escrita";
 import type { Banco } from "../db/client";
-import { profile, redacao, xpLedger } from "../db/schema";
+import { completion, profile, redacao, xpLedger } from "../db/schema";
 import { creditar, movimentosNoDia } from "../economia/perolas";
 import { dataNoFuso, marcarDia, pagarXp } from "../estudo/sincronizar";
 import { avaliarConquistas, progredirMissoes } from "../gamificacao/missoes";
 import { avaliarOfensiva, historicoDoAluno } from "../gamificacao/ofensiva";
 import { ErroApp, log } from "../http";
 import { alunoTemFuncao, recursoLigado } from "../planos/funcoes";
+import { sinalLocalDeAutolesao } from "../tutor/moderacao";
 import { moderar } from "../tutor/moderacao";
 import { comentarioDaIA, portasDaIA, temChave, type Bloqueio } from "./redacao";
 
@@ -105,6 +106,12 @@ export async function enviarEscrita(db: Banco, userId: string, entrada: { tarefa
     }
   }
 
+  // Autocuidado para todos os planos (revisão L2): o sinal local não usa rede, então o texto de Free e Basic não sai do Foca.
+  if (avisoIa !== "autocuidado" && sinalLocalDeAutolesao(texto)) {
+    avisoIa = "autocuidado";
+    textoDoAviso = COPY.tutor.autocuidado;
+  }
+
   const id = randomUUID();
   const novidades = novidadesVazias();
   let xp = 0;
@@ -112,7 +119,27 @@ export async function enviarEscrita(db: Banco, userId: string, entrada: { tarefa
   await db.transaction(async (tx) => {
     await tx.insert(profile).values({ userId }).onConflictDoNothing();
     const [perfil] = await tx.select({ tz: profile.timezone }).from(profile).where(eq(profile.userId, userId)).for("update");
-    const hoje = dataNoFuso(agora, perfil?.tz ?? "America/Sao_Paulo");
+    const tz = perfil?.tz ?? "America/Sao_Paulo";
+    const hoje = dataNoFuso(agora, tz);
+    // A tarefa só paga com o nó aberto: a lição que vem antes dela concluída no servidor.
+    const [aberta] = await tx
+      .select({ k: completion.key })
+      .from(completion)
+      .where(and(eq(completion.userId, userId), like(completion.key, `licao:redacao:${tarefa.depoisDe}#%`)))
+      .limit(1);
+    // No máximo 1 bloco por tarefa por dia (alternar dois textos não vira bloco a cada envio).
+    const [jaHoje] = await tx
+      .select({ id: redacao.id })
+      .from(redacao)
+      .where(
+        and(
+          eq(redacao.userId, userId),
+          eq(redacao.tipo, "tarefa"),
+          eq(redacao.tarefaId, tarefa.id),
+          sql`to_char(${redacao.criadaEm} at time zone ${tz}, 'YYYY-MM-DD') = ${hoje}`,
+        ),
+      )
+      .limit(1);
     const [ultimo] = await tx
       .select({ texto: redacao.texto })
       .from(redacao)
@@ -129,7 +156,7 @@ export async function enviarEscrita(db: Banco, userId: string, entrada: { tarefa
       resultado: { checagem, comentarioIa } as unknown as JsonObjeto,
       criadaEm: agora,
     });
-    if (ultimo && mesmoTexto(ultimo.texto, texto)) return;
+    if (!aberta || jaHoje || (ultimo && mesmoTexto(ultimo.texto, texto))) return;
     bloco = true;
     // XP só na primeira vez de cada tarefa: a chave é por tarefa e o livro nunca paga a mesma chave duas vezes.
     const chaveXp = `escrita:${tarefa.id}`;

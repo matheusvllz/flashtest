@@ -235,6 +235,7 @@ function Teste({ teste, aoTerminar }: { teste: TesteDoPulo; aoTerminar: (r: Resu
   const [respostas, setRespostas] = useState<Resposta[]>([]);
   const [enviando, setEnviando] = useState(false);
   const [falhou, setFalhou] = useState(false);
+  const [expirou, setExpirou] = useState(false);
   const inicio = useRef(Date.now());
   const itemId = teste.itens[indice];
   const ex = itemId ? exercicio(itemId) : null;
@@ -254,7 +255,8 @@ function Teste({ teste, aoTerminar }: { teste: TesteDoPulo; aoTerminar: (r: Resu
       if (!r.ok) throw new Error(r.codigo);
       aplicarResultado(r.resultado, new Map(lista.map((x) => [x.itemId, x.ms])));
       aoTerminar(r.resultado);
-    } catch {
+    } catch (e) {
+      if (e instanceof Error && e.message === "TESTE_EXPIRADO") setExpirou(true);
       setFalhou(true);
       setEnviando(false);
     }
@@ -274,7 +276,14 @@ function Teste({ teste, aoTerminar }: { teste: TesteDoPulo; aoTerminar: (r: Resu
   if (enviando || falhou || respostas.length >= teste.itens.length) {
     return (
       <div className="space-y-3" data-testid="pulo-enviando">
-        {falhou ? (
+        {expirou ? (
+          <>
+            <p className="card-soft p-4 text-sm text-abismo">{t.motivos.TESTE_EXPIRADO}</p>
+            <Link to="/trilha" className="btn-primary w-full">
+              {t.voltar}
+            </Link>
+          </>
+        ) : falhou ? (
           <>
             <p className="card-soft p-4 text-sm text-abismo">{t.erroEnvio}</p>
             <button type="button" className="btn-primary w-full" onClick={() => void enviar(respostas)}>
