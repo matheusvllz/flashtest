@@ -1,6 +1,6 @@
 ---
 estado: em-execucao
-atualizado: 2026-10-02
+atualizado: 2026-10-03
 canonico-de: [estado atual, próxima tarefa]
 ---
 
@@ -27,10 +27,14 @@ canonico-de: [estado atual, próxima tarefa]
 
 ### Em execução (nova)
 
-**50 — Lição viva, Pérolas, ofensiva, missões, Foca animada, simulado, redação por tarefas, social 18+, lembretes, navegação e som no celular.** **Aprovada em 02/10/2026** ("Aprovo a Spec"; "Pode fazer todas as entregas"), com §21 respondido (imagens: risco aceito; rótulo "Foca IA"; vestibulares: só INEP por enquanto). Em execução na branch local `spec-50` (sem commit, push ou deploy sem pedido).
-- Spec: [specs/50-gamificacao-e-pratica/spec.md](specs/50-gamificacao-e-pratica/spec.md) — decisões D50-01…16, entregas E1–E9, matriz de cobertura dos 31 itens (§22), decisões que ainda dependem do dono (§21)
-- Tarefas: [specs/50-gamificacao-e-pratica/tarefas.md](specs/50-gamificacao-e-pratica/tarefas.md) · Registro: [specs/50-gamificacao-e-pratica/registro.md](specs/50-gamificacao-e-pratica/registro.md) (divergências DV50-01…10)
-- **Próximo passo:** T-50.0.2…T-50.0.5 e a E1 (som e lição), na ordem de `tarefas.md`.
+**50 — Lição viva, Pérolas, ofensiva, missões, Foca animada, simulado, redação por tarefas, social 18+, lembretes, navegação e som no celular.** **Aprovada em 02/10/2026** ("Aprovo a Spec"; "Pode fazer todas as entregas"), com §21 respondido. O dono autorizou commit e publicação na `main` ao terminar ("Eu deixo você commitar e publicar na main quando finalizar").
+- Spec: [specs/50-gamificacao-e-pratica/spec.md](specs/50-gamificacao-e-pratica/spec.md) · Tarefas: [specs/50-gamificacao-e-pratica/tarefas.md](specs/50-gamificacao-e-pratica/tarefas.md) · Registro: [specs/50-gamificacao-e-pratica/registro.md](specs/50-gamificacao-e-pratica/registro.md) (divergências DV50-01…34)
+- **Feito (branch `spec-50`):** E1 (som no celular e lição viva), E2 (Foca de corpo inteiro e ícone das Pérolas), E3 (Pérolas, loja, ofensiva), E4 (missões, conquistas, 5 abas, retrospectiva), E5 (questões com imagem, importador do INEP com 906 questões de 2019–2025, `/creditos`), F10 (simulado: mini da semana, provas do ENEM e nível ENEM; reporte de questão), E6 (tarefas "Escreva", checagem automática, corretor v2 desligado), E7 ("Pular para cá"), E8 (ligas 18+ e ofensiva com amigos, desligadas em produção), E9 (lembrete por push, desligado em produção). Revisão L2 e `spec-verifier` rodados; achados corrigidos ou registrados.
+- **Migrações:** 0004–0010, todas aditivas (as únicas remoções são checks recriados mais amplos).
+- **Publicação:** migrações 0004–0010 aplicadas no Neon `production` em 03/10 antes do push (11/11, 49 tabelas); `spec-50` enviada para a `main` em 03/10 (deploy de produção pela Vercel).
+- **Em produção, ligado por padrão para todos:** Pérolas, missões, mini-simulado, escrita, retrospectiva (nov–jan) e "pular para cá" (pausáveis sem deploy por `FUNCOES_DESLIGADAS`). **Desligado até pedido do dono:** ligas e amigos (`LIGAS_HABILITADO`, `AMIGOS_HABILITADO`, revisão jurídica), lembretes (`LEMBRETES_HABILITADO` + chaves VAPID), corretor (`CORRETOR_HABILITADO` + chave da OpenAI + validação de §5.10.5).
+- **Bloqueios do dono:** teste do som no iPhone e no Android (`?diagnostico-audio=1`, T-50.1.2); avaliação visual da Foca de corpo inteiro e do ícone das Pérolas (DV50-14); revisão factual dos trechos e temas das tarefas de escrita (DV50-31); chave da OpenAI e conjuntos A/B/C do corretor (T-50.11.6); teste do lembrete em aparelho (T-50.15.5); revisão jurídica antes de ligar ligas, amigos e lembretes.
+- **Próximo passo:** depois dos bloqueios, ligar as funções uma por vez, só com pedido; backlog B-171…B-178 (alts das figuras oficiais em B-174 é P1).
 
 ### Iniciativa anterior
 
@@ -56,6 +60,7 @@ canonico-de: [estado atual, próxima tarefa]
 
 ## Último checkpoint verde
 
+- **50 E1–E9 (03/10, branch `spec-50`):** tipos ✅ · unitários **1825 pass / 0 fail** · lint 0 erros / 17 avisos · build e build `vercel` ✅ · docs:check ✅ · `test:neon` 7 pass (Neon `dev` com 0001–0010) · **E2E completo 604 passed / 1 failed / 81 skipped** (a falha era o teste de foco com o rótulo antigo da navegação; corrigido e reexecutado com escrita e pulo: 10 passed) · unitários finais **1828 pass / 0 fail** · revisão L2 (duas rodadas) e `spec-verifier` com achados corrigidos ou registrados
 - **49 E1–E3 (02/10, branch `spec-49`):** tipos ✅ · unitários **1471 pass / 0 fail** · lint 0 erros / 17 avisos · build e build `vercel` ✅ · docs:check ✅ · `test:neon` 7 pass (branch `dev`) · **E2E completo 561 passed / 0 failed / 82 skipped** · `spec-verifier` rodado e achados corrigidos (registro da 49). Validado localmente; não publicado.
 
 - **Publicação da 48 (01/10, `382a359`):** tipos ✅ · unitários ✅ · lint 0 erros · build e build `vercel` ✅ · E2E completo **542 passed / 1 instável / 73 skipped** · produção: `/api/saude` banco ok, rotas 200/307/401 esperadas, Google redireciona com o `client_id` e o retorno certos. CI do GitHub falha no `docs:check` por caminhos gerados de `public/content/` (preexistente, não bloqueia a Vercel).
